@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de conjuntos de datos
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '843'
 ht-degree: 9%
 
 ---
@@ -37,15 +37,13 @@ La ingesta de datos de Adobe Experience Platform representa los múltiples méto
 
 Consulte la [Resumen de ingesta de datos](../../ingestion/home.md) para obtener más información.
 
-## Aplicación de etiquetas de uso a conjuntos de datos
+## Etiquetas aplicadas a conjuntos de datos de esquemas
 
-Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El marco de trabajo de control de datos le permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se apliquen a esos datos.
+Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes para garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. El marco de trabajo de control de datos le permite aplicar etiquetas de uso para categorizar los datos según las políticas de uso que se apliquen a esos datos. Las etiquetas se pueden aplicar a esquemas individuales, campos dentro de esos esquemas y conjuntos de datos individuales completos. Cuando las etiquetas se aplican directamente a un esquema, esas etiquetas se propagan a todos los conjuntos de datos existentes y futuros basados en ese esquema.
 
 >[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
-
-Las etiquetas de uso de datos se pueden aplicar a conjuntos de datos completos o campos de conjuntos de datos individuales. Todas las etiquetas agregadas en el nivel del conjunto de datos las heredan todos los campos dentro de ese conjunto de datos.
+>Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](../../data-governance/e2e.md#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
 
 Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre el servicio. Para ver los pasos sobre cómo trabajar con etiquetas de uso en [!DNL Platform], consulte las siguientes guías:
 

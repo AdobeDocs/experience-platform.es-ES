@@ -2,10 +2,10 @@
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 6%
+source-wordcount: '795'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Todos los datos introducidos en Adobe Experience Platform están restringidos po
 
 Una etiqueta aplicada a un campo de esquema indica las políticas de uso que se aplican a los datos contenidos en ese campo específico.
 
-Aunque las etiquetas se pueden aplicar a conjuntos de datos individuales (y a campos dentro de esos conjuntos de datos), también puede aplicar etiquetas en el nivel de esquema. Cuando las etiquetas se aplican directamente a un esquema, esas etiquetas se propagan a todos los conjuntos de datos existentes y futuros basados en ese esquema.
+Las etiquetas se pueden aplicar a esquemas y campos individuales dentro de esos esquemas. Cuando las etiquetas se aplican directamente a un esquema, esas etiquetas se propagan a todos los conjuntos de datos existentes y futuros basados en ese esquema.
 
 Además, cualquier etiqueta de campo que agregue en un esquema se propaga a todos los demás esquemas que emplean el mismo campo desde una clase o grupo de campos compartidos. Esto ayuda a garantizar que las reglas de uso para campos similares sean coherentes en todo el modelo de datos.
 
@@ -46,11 +46,11 @@ Para editar las etiquetas de un campo individual, puede seleccionar el campo en 
 
 ![Seleccione un campo del lienzo del Editor de esquemas](../images/tutorials/labels/manage-access.png)
 
-También puede seleccionar la variable **[!UICONTROL Etiquetas]** , elija el campo que desee en la lista y seleccione **[!UICONTROL Editar etiquetas de gobernanza]** en el carril derecho.
+También puede seleccionar la variable **[!UICONTROL Etiquetas]** , elija el campo que desee en la lista y seleccione **[!UICONTROL Aplicar etiquetas de acceso y de gobernanza de datos]** en el carril derecho.
 
 ![Seleccione un campo de la [!UICONTROL Etiquetas] pestaña](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Para editar las etiquetas para todo el esquema, seleccione el icono de lápiz (![](../images/tutorials/labels/pencil-icon.png)) junto al nombre del esquema en la sección **[!UICONTROL Etiquetas]** pestaña.
+Para editar las etiquetas para todo el esquema, en la variable **[!UICONTROL Etiquetas]** , seleccione la casilla de verificación situada debajo del icono de filtro. Esto selecciona todos los campos disponibles en el esquema. A continuación, seleccione **[!UICONTROL Aplicar etiquetas de acceso y de gobernanza de datos]** en el carril derecho.
 
 ![Seleccione el nombre del esquema en la lista [!UICONTROL Etiquetas] pestaña](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -60,11 +60,11 @@ Para editar las etiquetas para todo el esquema, seleccione el icono de lápiz (!
 >
 >![Exención de responsabilidad por uso de etiquetas](../images/tutorials/labels/disclaimer.png)
 
-## Editar las etiquetas del esquema o campo
+## Editar las etiquetas del esquema o campo {#edit-labels}
 
 Aparece un cuadro de diálogo que le permite editar las etiquetas del campo seleccionado. Si ha seleccionado un campo de tipo de objeto individual, el carril derecho muestra los subcampos a los que se propagarán las etiquetas aplicadas.
 
-![Campos seleccionados mostrados](../images/tutorials/labels/edit-labels.png)
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos con los campos seleccionados resaltados.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,19 +72,19 @@ Aparece un cuadro de diálogo que le permite editar las etiquetas del campo sele
 
 Utilice la lista mostrada para seleccionar las etiquetas que desea añadir al esquema o campo. A medida que se eligen las etiquetas, la variable **[!UICONTROL Etiquetas aplicadas]** se actualiza la sección para mostrar las etiquetas seleccionadas hasta el momento.
 
-![Etiquetas aplicadas mostradas](../images/tutorials/labels/applied-labels.png)
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos con las etiquetas aplicadas resaltadas.](../images/tutorials/labels/applied-labels.png)
 
 Para filtrar las etiquetas mostradas por tipo, seleccione la categoría deseada en el carril izquierdo. Para crear una nueva etiqueta personalizada, seleccione **[!UICONTROL Crear etiqueta]**.
 
-![Filtrar las etiquetas mostradas o crear una nueva etiqueta](../images/tutorials/labels/filter-and-create-custom.png)
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos con un filtro de tipo de etiqueta aplicado y Crear etiqueta resaltada.](../images/tutorials/labels/filter-and-create-custom.png)
 
 Cuando esté satisfecho con las etiquetas seleccionadas, seleccione **[!UICONTROL Guardar]** para aplicarlos al campo o esquema.
 
-![Guardar las etiquetas seleccionadas](../images/tutorials/labels/save-labels.png)
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos con Guardar resaltado.](../images/tutorials/labels/save-labels.png)
 
 El **[!UICONTROL Etiquetas]** vuelve a aparecer y muestra las etiquetas aplicadas al esquema.
 
-![Etiquetas de campo aplicadas](../images/tutorials/labels/field-labels-added.png)
+![La pestaña Etiquetas del espacio de trabajo de esquemas con las etiquetas de campo aplicadas resaltadas.](../images/tutorials/labels/field-labels-added.png)
 
 ## Pasos siguientes
 

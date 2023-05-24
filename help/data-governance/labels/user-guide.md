@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1380'
 ht-degree: 17%
 
 ---
@@ -16,73 +16,31 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gobernanza del uso de datos en Platform"
->abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
+>abstract="<h2>Descripción</h2><p>El marco de trabajo de control de datos en Experience Platform le permite etiquetar atributos y esquemas según las restricciones de uso de datos y configurar políticas que identifiquen y respeten estas restricciones para acciones de marketing específicas.</p>"
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en [!DNL Experience Platform] interfaz de usuario.
 
-## Administrar etiquetas en el nivel de conjunto de datos
+## Administrar etiquetas en el nivel de esquema
 
->[!IMPORTANT]
->
->La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+Para administrar etiquetas de uso de datos en el nivel de esquema, debe seleccionar un esquema existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir **[!UICONTROL Esquemas]** workspace. Esta página lista todos los esquemas creados que pertenecen a su organización, junto con detalles útiles relacionados con cada esquema.
 
-Para administrar las etiquetas de uso de datos en el nivel de conjunto de datos, debe seleccionar un conjunto de datos existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir **[!UICONTROL Conjuntos de datos]** workspace. Esta página enumera todos los conjuntos de datos creados que pertenecen a su organización, junto con detalles útiles relacionados con cada conjunto de datos.
+![Interfaz de usuario de Adobe Experience Platform con la pestaña Esquema resaltada.](../images/labels/schema-tab.png)
 
-![Pestaña Conjunto de datos de Data Workspace](../images/labels/datasets-tab.png)
+En la siguiente sección se proporcionan los pasos para crear un nuevo esquema al que aplicar etiquetas. Si desea editar las etiquetas para un esquema existente, seleccione el esquema en la lista y vaya directamente a [adición de etiquetas de uso de datos al esquema](#add-labels).
 
-En la siguiente sección se proporcionan los pasos para crear un nuevo conjunto de datos al que aplicar etiquetas. Si desea editar las etiquetas de un conjunto de datos existente, seleccione el conjunto de datos de la lista y vaya directamente a [adición de etiquetas de uso de datos al conjunto de datos](#add-labels).
+### Creación de un nuevo esquema
 
-### Crear un nuevo conjunto de datos
+Para crear un nuevo esquema, seleccione **[!UICONTROL Crear esquema]** en la esquina superior derecha de la **[!UICONTROL Esquemas]** workspace. Consulte la guía de [Cómo crear un esquema con el Editor de esquemas](../../xdm/tutorials/create-schema-ui.md#create) para obtener instrucciones completas. Como alternativa, puede [crear un esquema con la API de Registro de esquemas](../../xdm/tutorials/create-schema-api.md) si es necesario.
 
->[!NOTE]
->
->En este ejemplo, se crea un conjunto de datos con una variable preconfigurada [!DNL Experience Data Model] Esquema (XDM). Para obtener más información sobre los esquemas XDM, consulte la [Información general del sistema XDM](../../xdm/home.md) y [conceptos básicos de composición de esquemas](../../xdm/schema/composition.md).
+### Añadir etiquetas de uso de datos al esquema {#add-labels-to-schema}
 
-Para crear un nuevo conjunto de datos, seleccione **[!UICONTROL Crear conjunto de datos]** en la esquina superior derecha de la **[!UICONTROL Conjuntos de datos]** workspace.
+Después de crear un nuevo esquema o seleccionar un esquema existente de la lista en la [!UICONTROL Examinar] de la pestaña [!UICONTROL Esquemas] En Workspace, seleccione un campo del esquema en el Editor de esquemas. En el [!UICONTROL Propiedades del campo] barra lateral, seleccione **[!UICONTROL Aplicar etiquetas de acceso y de gobernanza de datos]**.
 
-![](../images/labels/create-dataset.png)
+![La pestaña Schemas workspace Structure muestra la visualización del esquema con las etiquetas Aplicar acceso y Gobernanza de datos resaltadas.](../images/labels/schema-label-governance.png)
 
-El **[!UICONTROL Crear conjunto de datos]** aparece la pantalla. Desde aquí, seleccione **[!UICONTROL Crear conjunto de datos a partir de esquema]**.
+Aparece un cuadro de diálogo que le permite aplicar y administrar etiquetas de uso de datos en el nivel de esquema y en el nivel de campo. Consulte el tutorial XDM para obtener instrucciones completas sobre [Adición o edición de etiquetas de uso de datos para esquemas XDM](../../xdm/tutorials/labels.md#select-schema-field).
 
-![Crear conjunto de datos a partir de esquema](../images/labels/create-from-dataset.png)
-
-El **[!UICONTROL Seleccionar esquema]** , que enumera todos los esquemas disponibles que puede utilizar para crear un conjunto de datos. Seleccione el botón de opción situado junto a un esquema para seleccionarlo. El **[!UICONTROL Esquemas]** en la parte derecha muestra detalles adicionales sobre el esquema seleccionado. Una vez seleccionado un esquema, seleccione **[!UICONTROL Siguiente]**.
-
-![Seleccionar esquema de conjunto de datos](../images/labels/select-schema.png)
-
-El **[!UICONTROL Configurar conjunto de datos]** aparece la pantalla. Proporcione un nombre (obligatorio) y una descripción (opcional, pero recomendada) para el nuevo conjunto de datos y seleccione **[!UICONTROL Finalizar]**.
-
-![Configurar conjunto de datos con nombre y descripción](../images/labels/configure-dataset.png)
-
-El **[!UICONTROL Actividad de conjunto de datos]** , mostrando información sobre el conjunto de datos recién creado. En este ejemplo, el conjunto de datos se denomina &quot;Miembros socio&quot;, por lo que se muestra la navegación superior **Conjuntos de datos > Miembros socio**.
-
-![Página Actividad de Conjunto de Datos](../images/labels/dataset-created.png)
-
-### Añadir etiquetas de uso de datos al conjunto de datos {#add-labels}
-
-Después de crear un nuevo conjunto de datos o seleccionar uno existente de la lista en la **[!UICONTROL Conjuntos de datos]** workspace, seleccione **[!UICONTROL Gobernanza de datos]** para abrir **[!UICONTROL Gobernanza de datos]** workspace. El espacio de trabajo le permite administrar etiquetas de uso de datos en el nivel de conjunto de datos y de campo.
-
-![Pestaña Control de datos del conjunto de datos](../images/labels/dataset-governance.png)
-
-Para editar las etiquetas de uso de datos en el nivel de conjunto de datos, comience seleccionando el icono de lápiz junto al nombre del conjunto de datos.
-
-![Editar etiquetas de nivel de conjunto de datos](../images/labels/dataset-level-edit.png)
-
-El **[!UICONTROL Editar etiquetas de gobernanza]** se abre. En el cuadro de diálogo, marque las casillas junto a las etiquetas que desee aplicar al conjunto de datos. Recuerde que todos los campos del conjunto de datos heredarán estas etiquetas. El **[!UICONTROL Etiquetas aplicadas]** el encabezado se actualiza a medida que marca cada casilla y muestra las etiquetas que ha elegido. Una vez seleccionadas las etiquetas deseadas, seleccione **[!UICONTROL Guardar cambios]**.
-
-![Aplicar etiquetas de gobernanza en el nivel de conjunto de datos](../images/labels/apply-labels-dataset.png)
-
-El **[!UICONTROL Gobernanza de datos]** workspace vuelve a aparecer y muestra las etiquetas que ha aplicado en el nivel de conjunto de datos. También puede ver que las etiquetas se heredan hasta cada uno de los campos dentro del conjunto de datos.
-
-![Etiquetas de conjuntos de datos heredadas por campos](../images/labels/dataset-labels-applied.png)
-
-Observe que aparece una &quot;x&quot; junto a las etiquetas en el nivel del conjunto de datos, lo que le permite eliminar las etiquetas. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot; sin capacidad para eliminarlas o editarlas. Esto se debe a **los campos heredados son de solo lectura**, lo que significa que no se pueden eliminar en el nivel de campo.
-
-El **[!UICONTROL Mostrar etiquetas heredadas]** alternar está activado de forma predeterminada, lo que le permite ver cualquier etiqueta heredada desde el conjunto de datos a sus campos. Al desactivar, se ocultan las etiquetas heredadas dentro del conjunto de datos.
-
-![Ocultar etiquetas heredadas](../images/labels/inherited-labels.png)
-
-## Administrar etiquetas en el nivel de campo del conjunto de datos {#manage-labels-at-dataset-field-level}
+### Añadir etiquetas de uso de datos a un conjunto de datos específico {#add-labels-to-dataset}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
@@ -91,31 +49,55 @@ El **[!UICONTROL Mostrar etiquetas heredadas]** alternar está activado de forma
 
 >[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de campo del conjunto de datos solo se admite en los casos de uso del control de datos. Si está intentando crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+>Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
-Continuación del flujo de trabajo para [adición y edición de etiquetas de uso de datos en el nivel de conjunto de datos](#add-labels), también puede administrar etiquetas de nivel de campo dentro del **[!UICONTROL Gobernanza de datos]** espacio de trabajo de ese conjunto de datos.
+Las etiquetas se pueden aplicar a todo el conjunto de datos desde el **[!UICONTROL Gobernanza de datos]** de la pestaña **[!UICONTROL Conjuntos de datos]** workspace. El espacio de trabajo le permite administrar etiquetas de uso de datos en el nivel de conjunto de datos.
 
-Para aplicar etiquetas de uso de datos a un campo individual, seleccione la casilla de verificación situada junto al nombre del campo y, a continuación, seleccione **[!UICONTROL Editar etiquetas de gobernanza]**.
+![El [!UICONTROL Gobernanza de datos] de la pestaña [!UICONTROL Conjuntos de datos] espacio de trabajo con Gobernanza de datos resaltado.](../images/labels/dataset-governance.png)
 
-![Editar etiquetas de campo](../images/labels/field-label-edit.png)
+Para editar las etiquetas de uso de datos en el nivel de conjunto de datos, comience seleccionando el icono de lápiz (![Un icono de lápiz.](../images/labels/edit-icon.png)) en la fila del nombre del conjunto de datos.
 
-El **[!UICONTROL Editar etiquetas de gobernanza]** aparece el cuadro de diálogo. El cuadro de diálogo muestra los encabezados con los campos seleccionados, las etiquetas aplicadas y las etiquetas heredadas. Observe que las etiquetas heredadas (C2 y C5) aparecen atenuadas en el cuadro de diálogo. Son etiquetas de solo lectura heredadas del nivel del conjunto de datos y, por lo tanto, solo se pueden editar en el nivel del conjunto de datos.
+![El [!UICONTROL Gobernanza de datos] de la pestaña [!UICONTROL Conjuntos de datos] workspace con el icono de lápiz de edición resaltado.](../images/labels/dataset-level-edit.png)
 
-![Editar etiquetas de gobernanza para un campo individual](../images/labels/field-label-inheritance.png)
+El **[!UICONTROL Editar etiquetas de gobernanza]** se abre. En el cuadro de diálogo, marque las casillas junto a las etiquetas que desee aplicar al conjunto de datos. Recuerde que todos los campos del conjunto de datos heredarán estas etiquetas. El **[!UICONTROL Etiquetas aplicadas]** el encabezado se actualiza a medida que marca cada casilla y muestra las etiquetas que ha elegido. Una vez seleccionadas las etiquetas deseadas, seleccione **[!UICONTROL Guardar cambios]**.
 
-Seleccione etiquetas de nivel de campo seleccionando la casilla junto a cada etiqueta que desee utilizar. A medida que selecciona etiquetas, la variable **[!UICONTROL Etiquetas aplicadas]** el encabezado se actualiza para mostrar las etiquetas aplicadas a los campos mostrados en la **[!UICONTROL Campos seleccionados]** encabezado. Cuando haya terminado de seleccionar etiquetas de nivel de campo, seleccione **[!UICONTROL Guardar cambios]**.
+![El cuadro de diálogo Editar etiquetas de gobernanza con casillas de verificación de etiqueta y Guardar cambios resaltados.](../images/labels/apply-labels-dataset.png)
 
-![Aplicar etiquetas de nivel de campo](../images/labels/apply-labels-field.png)
+El **[!UICONTROL Gobernanza de datos]** workspace vuelve a aparecer y muestra las etiquetas que ha aplicado en el nivel de conjunto de datos en la fila inicial de la tabla. También puede ver las etiquetas, indicadas por tarjetas individuales, que se heredan hasta cada uno de los campos dentro del conjunto de datos.
 
-El **[!UICONTROL Gobernanza de datos]** workspace vuelve a aparecer y ahora muestra las etiquetas de nivel de campo seleccionadas en la fila junto al nombre del campo. Observe que la etiqueta de nivel de campo tiene una &quot;x&quot; junto a ella, lo que le permite quitar la etiqueta.
+![El [!UICONTROL Gobernanza de datos] de la pestaña [!UICONTROL Conjuntos de datos] espacio de trabajo con etiquetas de nivel de conjunto de datos aplicadas y etiquetas de campo de conjunto de datos heredadas resaltadas.](../images/labels/applied-dataset-labels.png)
 
-![Campo que muestra etiquetas de nivel de campo](../images/labels/field-labels-applied.png)
+### Eliminación de etiquetas de un conjunto de datos {#remove-labels-from-a-dataset}
 
-Puede repetir estos pasos para seguir agregando y editando etiquetas de nivel de campo para campos adicionales, incluida la selección de varios campos para aplicar etiquetas de nivel de campo simultáneamente.
+Las etiquetas agregadas en el nivel del conjunto de datos tienen una &quot;x&quot; junto a su tarjeta. Esto le permite eliminar las etiquetas de todo el conjunto de datos. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot;. Estos **las etiquetas heredadas son de solo lectura**, lo que significa que no se pueden eliminar ni editar en el nivel de campo.
 
-![Seleccione varios campos para aplicar etiquetas de nivel de campo simultáneamente.](../images/labels/multiple-fields.png)
+<!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-Es importante recordar que la herencia solo se mueve del nivel superior hacia abajo (conjuntos de datos → campos), lo que significa que las etiquetas aplicadas en el nivel de campo no se propagan a otros campos o conjuntos de datos.
+<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+
+![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
+
+Next, select the **[!UICONTROL Data Governance]** tab to show the labels that have been applied to the dataset. You can also see that the labels are inherited down to each of the fields within the dataset.
+
+![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
+
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+
+<!--Beleive can cut above here  -->
+
+El **[!UICONTROL Mostrar etiquetas heredadas]** Esta opción está activada de forma predeterminada, lo que le permite ver cualquier etiqueta heredada desde el esquema a sus campos. Al desactivar, se ocultan las etiquetas heredadas dentro del conjunto de datos.
+
+![La pestaña Control de datos del espacio de trabajo Conjuntos de datos con la opción Mostrar etiquetas heredadas resaltada.](../images/labels/inherited-labels.png)
+
+<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+
+>[!NOTE]
+>
+>Las etiquetas que se aplicaban antes de que la función de etiquetado de conjuntos de datos quedara obsoleta se pueden eliminar del conjunto de datos buscando el conjunto de datos correspondiente y seleccionando el icono Cancelar de la etiqueta.
+>![La pestaña Control de datos del espacio de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
+>Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
 ## Administrar etiquetas en el nivel de esquema
 
@@ -132,25 +114,25 @@ Consulte el tutorial sobre [administrar etiquetas de nivel de esquema](../../xdm
 
 Puede crear sus propias etiquetas de uso personalizadas dentro de la variable **[!UICONTROL Políticas]** workspace en [!DNL Experience Platform] IU. Seleccionar **[!UICONTROL Políticas]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Etiquetas]** para ver una lista de etiquetas existentes. Desde aquí, seleccione **[!UICONTROL Crear etiqueta]**.
 
-![](../images/labels/create-label-btn.png)
+![Espacio de trabajo de directivas con la opción Crear directiva resaltada.](../images/labels/create-label-btn.png)
 
 El **[!UICONTROL Crear etiqueta]** aparece el cuadro de diálogo. A partir de aquí, proporcione la siguiente información para la nueva etiqueta:
 
-* **[!UICONTROL Identificador]**: Un identificador único para la etiqueta. Este valor se utiliza con fines de búsqueda y, por lo tanto, debe ser corto y conciso.
-* **[!UICONTROL Nombre]**: Un nombre para mostrar descriptivo para la etiqueta.
+* **[!UICONTROL Nombre]**: Un identificador único para la etiqueta. Este valor se utiliza con fines de búsqueda y, por lo tanto, debe ser corto y conciso.
+* **[!UICONTROL Nombre descriptivo]**: Un nombre para mostrar descriptivo para la etiqueta.
 * **[!UICONTROL Descripción]**: (Opcional) Una descripción de la etiqueta para proporcionar un contexto adicional.
 
 Cuando termine, seleccione **[!UICONTROL Crear]**.
 
-![](../images/labels/create-label.png)
+![El cuadro de diálogo Crear etiqueta del espacio de trabajo Políticas con Crear resaltado.](../images/labels/create-label-dialog.png)
 
 El cuadro de diálogo se cierra y la etiqueta personalizada recién creada aparece en la lista debajo de **[!UICONTROL Etiquetas]** pestaña.
 
-![](../images/labels/label-created.png)
+![La pestaña Etiquetas del espacio de trabajo Políticas con la nueva etiqueta personalizada resaltada.](../images/labels/label-created.png)
 
 La etiqueta ahora se puede seleccionar en **[!UICONTROL Etiquetas personalizadas]** al editar etiquetas de uso para conjuntos de datos y campos, o al crear políticas de uso de datos.
 
-<img src="../images/labels/add-custom-label.png" width="600" /><br>
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos con las etiquetas personalizadas resaltadas.](../images/labels/add-custom-label.png)
 
 ## Pasos siguientes
 
@@ -158,8 +140,10 @@ Ahora que ha agregado etiquetas de uso de datos en el conjunto de datos y nivel 
 
 Ahora también puede definir políticas de uso de datos basadas en las etiquetas aplicadas. Para obtener más información, consulte la [información general sobre políticas de uso de datos](../policies/overview.md).
 
-## Recursos adicionales
+<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
 
-El siguiente vídeo tiene como objetivo ayudarle a comprender la gobernanza de datos y describe cómo aplicar etiquetas a un conjunto de datos y a campos individuales.
+## Additional resources
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
+The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1485'
 ht-degree: 7%
 
 ---
@@ -122,9 +122,9 @@ Para habilitar un conjunto de datos para el perfil, acceda a su **[!UICONTROL Ac
 
 ![La opción Perfil se resalta en la página de detalles del conjunto de datos.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Administración y aplicación del control de datos en un conjunto de datos
+## Administración y aplicación del control de datos en un conjunto de datos {#manage-and-enforce-data-governance}
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario sobre etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a conjuntos de datos.
+Las etiquetas de uso de datos, aplicadas en el nivel de esquema, le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario sobre etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a esquemas para su propagación a conjuntos de datos.
 
 ## Eliminar un conjunto de datos {#delete}
 

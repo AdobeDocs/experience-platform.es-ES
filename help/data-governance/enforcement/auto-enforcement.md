@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar segmentos en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Cuando se activa un segmento por primera vez, [!DNL Policy Service] comprueba la
 
 El linaje de datos desempeña un papel clave en la forma en que se aplican las políticas en Platform. En términos generales, el linaje de datos hace referencia al origen de un conjunto de datos y a lo que le sucede (o a dónde se mueve) a lo largo del tiempo.
 
-En el contexto de la gobernanza de datos, el linaje permite que las etiquetas de uso de datos se propaguen de conjuntos de datos a servicios descendentes que consumen sus datos, como el perfil del cliente en tiempo real y los destinos. Esto permite evaluar y aplicar las políticas en varios puntos clave del recorrido de los datos a través de Platform y proporciona contexto a los consumidores de datos para saber por qué se ha producido una infracción de política.
+En el contexto de la gobernanza de datos, el linaje permite que las etiquetas de uso de datos se propaguen desde esquemas a servicios descendentes que consumen sus datos, como el perfil del cliente en tiempo real y los destinos. Esto permite evaluar y aplicar las políticas en varios puntos clave del recorrido de los datos a través de Platform y proporciona contexto a los consumidores de datos para saber por qué se ha producido una infracción de política.
 
 En Experience Platform, la aplicación de políticas se refiere al siguiente linaje:
 
@@ -69,7 +69,7 @@ Cada etapa de la cronología anterior representa una entidad que puede contribui
 
 | Fase de linaje de datos | Función en la aplicación de políticas |
 | --- | --- |
-| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de conjunto de datos o campo) que definen para qué casos de uso se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directivas si se utiliza un conjunto de datos o un campo que contenga determinadas etiquetas para un fin restringido por una directiva.<br><br>Cualquier atributo de consentimiento recopilado de sus clientes también se almacena en conjuntos de datos. Si tiene acceso a las políticas de consentimiento, los perfiles que no cumplan los requisitos de atributo de consentimiento de las políticas se excluirán de los segmentos activados en un destino. |
+| Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de campo de esquema o en todo el nivel de conjunto de datos) que definen para qué casos de uso se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directivas si se utiliza un conjunto de datos o un campo que contenga determinadas etiquetas para un fin restringido por una directiva.<br><br>Cualquier atributo de consentimiento recopilado de sus clientes también se almacena en conjuntos de datos. Si tiene acceso a las políticas de consentimiento, los perfiles que no cumplan los requisitos de atributo de consentimiento de las políticas se excluirán de los segmentos activados en un destino. |
 | Política de combinación | Las políticas de combinación son las reglas que utiliza Platform para determinar la prioridad que se dará a los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directivas si las políticas de combinación se configuran de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [resumen de políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
 | Segmento | Las reglas de segmentos definen qué atributos deben incluirse de los perfiles de clientes. Según los campos que incluya una definición de segmento, el segmento heredará las etiquetas de uso aplicadas a esos campos. Se producirán violaciones de política si activa un segmento cuyas etiquetas heredadas estén restringidas por las políticas aplicables del destino de destino, según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Las infracciones de las políticas de uso de datos se producen si activa un segmento cuyas etiquetas de uso están restringidas para la acción de marketing del destino de destino.<br><br>(Beta) Cuando se activa un segmento, los perfiles que no contienen los atributos de consentimiento necesarios para la acción de marketing (según se definen en las políticas de consentimiento) se excluyen de la audiencia activada. |

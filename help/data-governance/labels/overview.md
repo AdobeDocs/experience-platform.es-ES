@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Resumen de etiquetas de uso de datos
 description: Descubra cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos en Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 15%
+source-wordcount: '802'
+ht-degree: 14%
 
 ---
 
@@ -57,21 +57,17 @@ Puede administrar las etiquetas de uso de datos mediante [!DNL Experience Platfo
 
 ### Uso de la IU
 
-El **[!UICONTROL Políticas]** workspace en [!DNL Experience Platform] La interfaz de usuario de le permite ver y administrar las etiquetas principales y personalizadas de su organización. Puede usar el complemento **[!UICONTROL Esquemas]** espacio de trabajo a [aplicar etiquetas a los esquemas XDM (Experience Data Model)](../../xdm/tutorials/labels.md), o puede usar el **[!DNL Datasets]** espacio de trabajo a [aplicar etiquetas a conjuntos de datos](./user-guide.md) en su lugar.
+El **[!UICONTROL Políticas]** workspace en [!DNL Experience Platform] La interfaz de usuario de le permite ver y administrar las etiquetas principales y personalizadas de su organización. Puede usar el complemento **[!UICONTROL Esquemas]** espacio de trabajo a [aplicar etiquetas a los esquemas XDM (Experience Data Model)](../../xdm/tutorials/labels.md)o aprenda a hacer lo siguiente [crear y administrar etiquetas personalizadas en el **[!UICONTROL Políticas] IU](./user-guide.md) leyendo la guía del usuario sobre etiquetas de uso de datos en su lugar.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si está intentando crear directivas de acceso para los datos, debe aplicar etiquetas al esquema en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+>Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](../e2e.md#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
 
 ### Uso de API
 
 El `/labels` punto final en la [API del servicio de directivas](https://www.adobe.io/experience-platform-apis/references/policy-service/) permite administrar etiquetas de uso de datos mediante programación, incluida la creación de etiquetas personalizadas. Consulte la [guía de extremo de etiquetas](../api/labels.md) para obtener más información.
 
 El [API del servicio de conjunto de datos](https://www.adobe.io/experience-platform-apis/references/dataset-service/) se utiliza para administrar etiquetas para conjuntos de datos y campos. Consulte la guía de [administrar etiquetas de conjuntos de datos](./dataset-api.md) para obtener más información.
-
->[!NOTE]
->
->La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 ## Pasos siguientes
 

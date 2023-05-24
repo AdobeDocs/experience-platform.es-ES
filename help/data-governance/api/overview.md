@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API del servicio de directivas
 description: La API del servicio de directivas permite a los desarrolladores administrar las etiquetas y directivas de uso de datos en Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Para ver todos los extremos disponibles y las operaciones de CRUD, visite la [[!
 
 ## Etiquetas
 
-Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan etiquetar los datos en cuanto se incorporen en [!DNL Experience Platform]o en cuanto los datos estén disponibles para su uso en [!DNL Platform]. Puede crear, ver, editar y eliminar etiquetas utilizando `/labels` punto final. Para aprender a utilizar este punto de conexión, visite la [guía de extremo de etiquetas](./labels.md).
+Aplique etiquetas de uso de datos a los esquemas para categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas recomiendan etiquetar los datos en cuanto se incorporen en [!DNL Experience Platform]o en cuanto los datos estén disponibles para su uso en [!DNL Platform]. Puede crear, ver, editar y eliminar etiquetas utilizando `/labels` punto final. Para aprender a utilizar este punto de conexión, visite la [guía de extremo de etiquetas](./labels.md).
 
 ## Acciones de marketing
 
@@ -44,7 +44,7 @@ Para obtener información sobre cómo administrar directivas en la API, consulte
 
 ## Evaluación
 
-Una vez aplicadas las etiquetas de uso de datos a [!DNL Platform] Se han definido conjuntos de datos y políticas de uso de datos para acciones de marketing contra esas etiquetas. Las capacidades de control de datos le permiten aplicar esas políticas y evitar operaciones de datos que constituyan violaciones de políticas.
+Una vez que las etiquetas de uso de datos se han aplicado a los esquemas de Platform y se han definido las políticas de uso de datos para las acciones de marketing contra esas etiquetas, las capacidades de control de datos le permiten aplicar esas políticas e impedir operaciones de datos que constituyan violaciones de políticas.
 
 El [!DNL Policy Service] La API proporciona puntos finales que le permiten probar acciones de marketing contra conjuntos de datos o combinaciones arbitrarias de etiquetas de uso de datos para comprobar si se produce alguna infracción de directiva. En función de la respuesta de la API, puede configurar protocolos dentro de la aplicación de experiencia para aplicar correctamente el cumplimiento de la política de uso de datos. Consulte la [guía de extremos de evaluación](./evaluation.md) para obtener más información.
 

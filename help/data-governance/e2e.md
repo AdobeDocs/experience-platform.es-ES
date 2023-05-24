@@ -2,9 +2,9 @@
 title: Guía completa de administración de datos
 description: Siga el proceso completo para aplicar restricciones de uso de datos para campos y conjuntos de datos en Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Para controlar qué acciones de marketing se pueden realizar en determinados conjuntos de datos y campos en Adobe Experience Platform, debe configurar lo siguiente:
 
-1. [Aplicar etiquetas](#labels) a los conjuntos de datos y campos cuyo uso desee restringir.
+1. [Aplicar etiquetas](#labels) a los campos de esquemas o conjuntos de datos completos, cuyo uso desea restringir.
 1. [Configurar y habilitar directivas de gobernanza de datos](#policy) que determinan qué tipos de datos etiquetados se pueden utilizar para determinadas acciones de marketing.
 1. [Aplicación de acciones de marketing a sus destinos](#destinations) para indicar qué políticas se aplican a los datos enviados a esos destinos.
 
@@ -32,6 +32,12 @@ Esta guía muestra el proceso completo de configuración y aplicación de una po
 
 ## Aplicar etiquetas {#labels}
 
+>[!IMPORTANT]
+>
+>Las etiquetas ya no se pueden aplicar a campos individuales en el nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Sin embargo, aún puede etiquetar un conjunto de datos completo. Cualquier etiqueta aplicada anteriormente a campos de conjuntos de datos individuales seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la sección sobre [migración de etiquetas aplicadas anteriormente](#migrate-labels) para obtener instrucciones sobre cómo hacerlo.
+
+Puede [aplicación de etiquetas a un esquema](#schema-labels) para que todos los conjuntos de datos basados en ese esquema hereden las mismas etiquetas. Esto le permite administrar las etiquetas de control de datos, consentimiento y control de acceso en un solo lugar. Al aplicar restricciones de uso de datos en el nivel de esquema, el efecto se propaga de forma descendente a todos los conjuntos de datos basados en ese esquema. Las etiquetas aplicadas en el nivel de campo de esquema admiten casos de uso de gobernanza de datos y se pueden detectar en el espacio de trabajo Conjuntos de datos [!UICONTROL Gobernanza de datos] debajo de la pestaña [!UICONTROL Nombre de campo] como etiquetas de solo lectura.
+
 Si hay un conjunto de datos específico en el que desea aplicar restricciones de uso de datos, puede [aplicar etiquetas directamente a ese conjunto de datos](#dataset-labels) o campos específicos dentro de ese conjunto de datos.
 
 Como alternativa, puede [aplicación de etiquetas a un esquema](#schema-labels) para que todos los conjuntos de datos basados en ese esquema hereden las mismas etiquetas.
@@ -40,27 +46,19 @@ Como alternativa, puede [aplicación de etiquetas a un esquema](#schema-labels) 
 >
 >Para obtener más información sobre las distintas etiquetas de uso de datos y su uso previsto, consulte la [referencia de etiquetas de uso de datos](./labels/reference.md). Si las etiquetas principales disponibles no abarcan todos los casos de uso deseados, puede [definir sus propias etiquetas personalizadas](./labels/user-guide.md#manage-custom-labels) y también.
 
-### Aplicar etiquetas a un conjunto de datos {#dataset-labels}
+### Aplicar etiquetas a todo un conjunto de datos {#dataset-labels}
 
 Seleccionar **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo, seleccione el nombre del conjunto de datos al que desee aplicar las etiquetas. Si lo desea, puede utilizar el campo de búsqueda para reducir la lista de conjuntos de datos mostrados.
 
-![Imagen que muestra un conjunto de datos seleccionado en la IU de Platform](./images/e2e/select-dataset.png)
+![La pestaña Examinar del espacio de trabajo de conjuntos de datos con Conjuntos de datos y una fila de conjunto de datos resaltada.](./images/e2e/select-dataset.png)
 
-Aparecerá la vista de detalles del conjunto de datos. Seleccione el **[!UICONTROL Gobernanza de datos]** para ver una lista de los campos del conjunto de datos y las etiquetas que ya se les han aplicado. Seleccione las casillas de verificación situadas junto a los campos a los que desee agregar etiquetas y, a continuación, seleccione **[!UICONTROL Editar etiquetas de gobernanza]** en el carril derecho.
+Aparecerá la vista de detalles del conjunto de datos. Seleccione el **[!UICONTROL Gobernanza de datos]** para ver una lista de los campos del conjunto de datos y las etiquetas que ya se les han aplicado. Seleccione el icono de lápiz para editar las etiquetas de los conjuntos de datos.
 
-![Imagen que muestra varios campos de conjuntos de datos seleccionados para el etiquetado](./images/e2e/dataset-field-label.png)
+![La pestaña Control de datos para el conjunto de datos de miembros socio con el icono de lápiz resaltado.](./images/e2e/edit-dataset-labels.png)
 
->[!NOTE]
->
->Si desea agregar etiquetas a todo el conjunto de datos, seleccione la casilla de verificación situada junto a **[!UICONTROL Nombre de campo]** para resaltar todos los campos antes de seleccionar **[!UICONTROL Editar etiquetas de gobernanza]**.
->
->![Imagen que muestra todos los campos resaltados para un conjunto de datos](./images/e2e/label-whole-dataset.png)
+El [!UICONTROL Editar etiquetas de gobernanza] aparece el cuadro de diálogo. Seleccione la etiqueta de gobernanza adecuada y seleccione **[!UICONTROL Guardar]**.
 
-En el siguiente cuadro de diálogo, seleccione las etiquetas que desee aplicar a los campos del conjunto de datos que eligió anteriormente. Cuando termine, seleccione **[!UICONTROL Guardar cambios]**.
-
-![Imagen que muestra todos los campos resaltados para un conjunto de datos](./images/e2e/save-dataset-labels.png)
-
-Siga los pasos anteriores para aplicar etiquetas a diferentes campos (o conjuntos de datos diferentes) según sea necesario. Cuando termine, puede continuar con el siguiente paso de [habilitar directivas de gobernanza de datos](#policy).
+![El cuadro de diálogo Editar etiquetas de gobernanza con la casilla de verificación de etiqueta y Guardar resaltados.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Aplicación de etiquetas a un esquema {#schema-labels}
 
@@ -72,9 +70,9 @@ Seleccionar **[!UICONTROL Esquemas]** en el panel de navegación izquierdo, sele
 >
 >![Imagen que muestra un vínculo al esquema de un conjunto de datos](./images/e2e/schema-from-dataset.png)
 
-La estructura del esquema aparece en el Editor de esquemas. Aquí, seleccione la **[!UICONTROL Etiquetas]** para mostrar una vista de lista de los campos del esquema y las etiquetas que ya se han aplicado a ellos. Seleccione las casillas de verificación situadas junto a los campos a los que desee agregar etiquetas y, a continuación, seleccione **[!UICONTROL Editar etiquetas de gobernanza]** en el carril derecho.
+La estructura del esquema aparece en el Editor de esquemas. Aquí, seleccione la **[!UICONTROL Etiquetas]** para mostrar una vista de lista de los campos del esquema y las etiquetas que ya se han aplicado a ellos. Seleccione las casillas de verificación situadas junto a los campos a los que desee agregar etiquetas y, a continuación, seleccione **[!UICONTROL Aplicación de etiquetas de acceso y de gobernanza de datos]** en el carril derecho.
 
-![Imagen que muestra un único campo de esquema seleccionado para etiquetas de gobernanza](./images/e2e/schema-field-label.png)
+![La pestaña Etiquetas del espacio de trabajo de esquema con un solo campo de esquema seleccionado y Aplicar etiquetas de acceso y control de datos resaltadas.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -82,11 +80,30 @@ La estructura del esquema aparece en el Editor de esquemas. Aquí, seleccione la
 >
 >![Imagen que muestra el icono de lápiz seleccionado en la vista de etiquetas de esquema](./images/e2e/label-whole-schema.png)
 
-En el siguiente cuadro de diálogo, seleccione las etiquetas que desee aplicar a los campos de esquema que eligió anteriormente. Cuando termine, seleccione **[!UICONTROL Guardar]**.
+El [!UICONTROL Aplicación de etiquetas de acceso y de gobernanza de datos] aparece el cuadro de diálogo. Seleccione las etiquetas que desee aplicar al campo de esquema elegido. Cuando termine, seleccione **[!UICONTROL Guardar]**.
 
-![Imagen que muestra varias etiquetas agregadas a un campo de esquema](./images/e2e/save-schema-labels.png)
+![El cuadro de diálogo Aplicar etiquetas de acceso y control de datos muestra varias etiquetas que se agregan a un campo de esquema.](./images/e2e/save-schema-labels.png)
 
 Siga los pasos anteriores para aplicar etiquetas a diferentes campos (o esquemas) según sea necesario. Cuando termine, puede continuar con el siguiente paso de [habilitar directivas de gobernanza de datos](#policy).
+
+### Migrar etiquetas aplicadas anteriormente en el nivel de conjunto de datos {#migrate-labels}
+
+Seleccionar **[!UICONTROL Conjunto de datos]** en el panel de navegación izquierdo, seleccione el nombre del conjunto de datos desde el que desea migrar las etiquetas. Si lo desea, puede utilizar el campo de búsqueda para reducir la lista de conjuntos de datos mostrados.
+
+![La pestaña Examinar del área de trabajo Conjuntos de datos con el conjunto de datos de miembros de fidelidad resaltado.](./images/e2e/select-dataset.png)
+
+Aparecerá la vista de detalles del conjunto de datos. Seleccione el **[!UICONTROL Gobernanza de datos]** para ver una lista de los campos del conjunto de datos y las etiquetas que ya se les han aplicado. Seleccione el icono Cancelar junto a cualquier etiqueta que desee eliminar de un campo. Aparecerá un cuadro de diálogo de confirmación, seleccione [!UICONTROL Quitar etiqueta] para confirmar sus opciones.
+
+![La pestaña Control de datos del espacio de trabajo Conjuntos de datos con una etiqueta para un campo resaltado para su eliminación.](./images/e2e/remove-label.png)
+
+Una vez eliminada la etiqueta del campo del conjunto de datos, vaya al Editor de esquemas para agregar la etiqueta al esquema. Las instrucciones para hacerlo se encuentran en la sección [sección sobre aplicación de etiquetas a un esquema](#schema-labels).
+
+>[!TIP]
+>
+>Puede seleccionar el nombre del esquema en el carril derecho, seguido del vínculo en el cuadro de diálogo que aparece para desplazarse al esquema adecuado.
+>![La pestaña Control de datos del espacio de trabajo Conjuntos de datos con el nombre del esquema en la barra lateral y el vínculo de diálogo resaltado.](./images/e2e/navigate-to-schema.png)
+
+Después de migrar las etiquetas necesarias, asegúrese de que dispone de las etiquetas correctas [políticas de gobernanza de datos habilitadas](#policy).
 
 ## Habilitar políticas de gobernanza de datos {#policy}
 
