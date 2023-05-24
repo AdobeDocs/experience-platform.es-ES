@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 0%
 
 ---
 
@@ -439,9 +439,11 @@ El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en func
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en func
 | `type` | El tipo de paginación utilizado para devolver datos. |
 | `limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. |
 | `limitValue` | El número de registros que se recuperarán en una página. |
+| `initialPageIndex` | (Opcional) El índice de página inicial define el número de página desde el que se iniciará la paginación. Este campo se puede utilizar para orígenes en los que la paginación no comienza desde 0. Si no se proporciona, el índice de página inicial se establecerá de forma predeterminada en 0. Este campo espera un entero. |
+| `endPageIndex` | (Opcional) El índice de página final permite establecer una condición final y detener la paginación. Este campo se puede utilizar cuando las condiciones de finalización predeterminadas para detener la paginación no están disponibles. Este campo también se puede utilizar si el número de páginas que se van a introducir o el último número de página se proporcionan a través del encabezado de respuesta, que es común al utilizar `PAGE` escriba paginación. El valor del índice de página final puede ser el último número de página o un valor de expresión de tipo cadena del encabezado de respuesta. Por ejemplo, puede utilizar `headers.x-pagecount` para asignar un índice de página final a `x-pagecount` valor de los encabezados de respuesta. **Nota**: `x-pagecount` es un encabezado de respuesta obligatorio para algunas fuentes y contiene el valor número de páginas que se van a introducir. |
 | `pageParamName` | Nombre del parámetro que debe anexar a los parámetros de consulta para recorrer diferentes páginas de los datos devueltos. Por ejemplo, `https://abc.com?pageIndex=1` devolvería la segunda página de la carga útil devuelta de una API. |
 | `maximumRequest` | Número máximo de solicitudes que un origen puede realizar para una ejecución incremental determinada. El límite predeterminado actual es 10000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
