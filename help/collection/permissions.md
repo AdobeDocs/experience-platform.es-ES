@@ -2,9 +2,9 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 6%
 
 ---
@@ -54,6 +54,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 | --- | --- | --- |
 | Plataformas | Web | Concede acceso a [propiedades web](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
 | Plataformas | Dispositivo móvil | Concede acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
+| Plataformas | Edge | Concede acceso a [Propiedades de Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
 | Propiedades | (N/A) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario solo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
 | Derechos de propiedad | Aprobar | Concede la capacidad de aprobar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de propiedad | Desarrollo | Concede la capacidad de desarrollar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
