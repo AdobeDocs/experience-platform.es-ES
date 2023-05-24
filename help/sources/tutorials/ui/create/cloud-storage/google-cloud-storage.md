@@ -40,7 +40,7 @@ Para acceder a su [!DNL Google Cloud Storage] En Platform, debe proporcionar los
 | ---------- | ----------- |
 | ID de clave de acceso | Una cadena alfanumérica de 61 caracteres utilizada para autenticar su [!DNL Google Cloud Storage] a Platform. |
 | Clave de acceso secreta | Una cadena de 40 caracteres codificada en base 64 que se utiliza para autenticar su [!DNL Google Cloud Storage] a Platform. |
-| Nombre del cubo | El nombre de su [!DNL Google Cloud Storage] cubo. Debe especificar un nombre de bloque si desea proporcionar acceso a una subcarpeta específica del almacenamiento en la nube. |
+| Nombre del segmento | El nombre de su [!DNL Google Cloud Storage] cubo. Debe especificar un nombre de bloque si desea proporcionar acceso a una subcarpeta específica del almacenamiento en la nube. |
 | Ruta de carpeta | La ruta a la carpeta a la que desea proporcionar acceso. |
 
 Para obtener más información sobre estos valores, consulte la [Claves HMAC de Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guía. Para obtener información sobre cómo generar su propio ID de clave de acceso y clave de acceso secreta, consulte la [[!DNL Google Cloud Storage] descripción general](../../../../connectors/cloud-storage/google-cloud-storage.md).

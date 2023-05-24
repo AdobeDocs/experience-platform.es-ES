@@ -6,13 +6,13 @@ exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Administración de datos en Real-Time CDP
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) reúne datos de varios sistemas empresariales, lo que permite a los especialistas en marketing identificar, comprender y captar mejor a sus clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por disposiciones legales. Por lo tanto, es importante asegurarse de que Real-Time CDP cumpla con las políticas de uso al administrar los datos.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) reúne datos de varios sistemas empresariales, lo que permite a los especialistas en marketing identificar, comprender y captar mejor a sus clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que Real-Time CDP cumpla con las políticas de uso al administrar los datos.
 
 Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de Real-Time CDP, ya que le permite definir políticas de uso, categorizar los datos en función de esas políticas y comprobar violaciones de políticas al realizar determinadas acciones de marketing.
 

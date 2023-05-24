@@ -1,6 +1,6 @@
 ---
-description: Obtenga información sobre las cualificaciones de perfil históricas admitidas por los destinos creados con Destination SDK.
-title: Calificaciones históricas de perfil
+description: Obtenga información acerca de las cualificaciones de perfil históricas admitidas por los destinos creados con Destination SDK.
+title: Cualificaciones históricas del perfil
 source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
 workflow-type: tm+mt
 source-wordcount: '214'
@@ -9,23 +9,23 @@ ht-degree: 1%
 ---
 
 
-# Calificaciones históricas de perfil
+# Cualificaciones históricas del perfil
 
-De forma predeterminada, todos los destinos creados mediante Destination SDK admiten las cualificaciones de perfil del historial. Esto significa que, cuando los usuarios configuran por primera vez un flujo de datos de activación para sus destinos, la primera exportación contiene todos los miembros del segmento que alguna vez han cumplido los requisitos para ese segmento.
+Todos los destinos creados mediante Destination SDK admiten cualificaciones de perfil históricas de forma predeterminada. Esto significa que, cuando los usuarios configuran por primera vez un flujo de datos de activación en sus destinos, la primera exportación contiene todos los miembros del segmento que alguna vez se han clasificado para ese segmento.
 
 Este comportamiento se define mediante la variable `"backfillHistoricalProfileData":true` en la configuración de destino.
 
 >[!IMPORTANT]
 >
->Las cualificaciones de perfil históricas están habilitadas para todos los destinos creados mediante el Destination SDK y el `backfillHistoricalProfileData` no es configurable por el usuario.
+>Las cualificaciones de perfil históricas están habilitadas para todos los destinos creados mediante Destination SDK y `backfillHistoricalProfileData` El parámetro no se puede configurar por el usuario.
 
-## Tipos de integración compatibles {#supported-integration-types}
+## Tipos de integración admitidos {#supported-integration-types}
 
-Consulte la siguiente tabla para obtener más información sobre los tipos de integraciones que admiten la funcionalidad descrita en esta página.
+Consulte la tabla siguiente para obtener detalles sobre qué tipos de integraciones admiten la funcionalidad descrita en esta página.
 
 | Tipo de integración | Admite funcionalidad |
 |---|---|
-| Integraciones en tiempo real (flujo continuo) | Sí |
+| Integraciones en tiempo real (streaming) | Sí |
 | Integraciones basadas en archivos (por lotes) | Sí |
 
 
@@ -40,18 +40,18 @@ Consulte la siguiente tabla para obtener más información sobre los tipos de in
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este artículo, debe saber que el Experience Platform exporta automáticamente una población histórica de todos los perfiles que alguna vez hayan cumplido los requisitos para un segmento activado cuando el segmento se exporta por primera vez al destino. Esta opción no se puede configurar en el Destination SDK ni en la interfaz de usuario del Experience Platform.
+Después de leer este artículo, debe saber que Experience Platform exporta automáticamente una población histórica de todos los perfiles que alguna vez se han clasificado para un segmento activado cuando el segmento se exporta por primera vez al destino. Esta opción no se puede configurar en Destination SDK ni en la interfaz de usuario de Experience Platform.
 
-Para obtener más información sobre los otros componentes de destino, consulte los siguientes artículos:
+Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Autenticación del cliente](customer-authentication.md)
 * [Autenticación OAuth2](oauth2-authentication.md)
 * [Campos de datos del cliente](customer-data-fields.md)
-* [Atributos de interfaz de usuario](ui-attributes.md)
+* [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)
 * [Configuración del área de nombres de identidad](identity-namespace-configuration.md)
-* [Configuraciones de asignación admitidas](supported-mapping-configurations.md)
-* [Entrega de destino](destination-delivery.md)
+* [Configuraciones de asignación compatibles](supported-mapping-configurations.md)
+* [Envío de destino](destination-delivery.md)
 * [Configuración de metadatos de audiencia](audience-metadata-configuration.md)
 * [Política de agregación](aggregation-policy.md)
 * [Configuración por lotes](batch-configuration.md)

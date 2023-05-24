@@ -1,7 +1,8 @@
 ---
 title: Devolver y usar variables de comercialización desde datos de análisis
 description: Obtenga información sobre cómo proporcionar campos XDM y consultas de muestra para acceder a las variables de comercialización en los conjuntos de datos de Analytics.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 4%

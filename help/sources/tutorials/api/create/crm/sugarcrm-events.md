@@ -1,7 +1,8 @@
 ---
 title: Cree una conexión de origen y un flujo de datos para los eventos de SugarCRM mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a eventos de Sugar CRM mediante la API de Flow Service.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 2%

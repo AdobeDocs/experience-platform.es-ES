@@ -5,7 +5,7 @@ exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -84,8 +84,8 @@ El panel Perfiles muestra una instantánea de los datos de atributo (registro) q
 | Función | Descripción |
 | --- | --- |
 | Widget de perfiles no segmentados | El widget proporciona el número total de todos los perfiles no adjuntos a ningún segmento. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
-| Widget de tendencias de perfiles no segmentados | Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
-| Perfiles no segmentados por widget de identidad | Este widget categoriza el número total de perfiles no segmentados por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Widget de tendencias de perfiles no segmentados | Este widget proporciona una ilustración gráfica de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Perfiles no segmentados por widget de identidad | Este widget clasifica el número total de perfiles no segmentados por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 | Widget de perfiles de identidad única | Este widget proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad, ya sea un correo electrónico o un ECID. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ El panel Destinos muestra una instantánea de los destinos que su organización 
 
 | Función | Descripción |
 | --- | --- |
-| Widget de recuento de destinos | El widget proporciona el número total de puntos de conexión disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos activos e inactivos. Consulte la [destinos documentación de widget estándar](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
+| Widget de recuento de destinos | El widget proporciona el número total de puntos de conexión disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos. Consulte la [destinos documentación de widget estándar](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
 
 {style="table-layout:auto"}
 

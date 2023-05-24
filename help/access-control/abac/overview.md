@@ -6,7 +6,7 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1826'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -29,12 +29,12 @@ El control de acceso basado en atributos implica los siguientes componentes:
 | Terminología | Definición |
 | --- | --- |
 | Atributos | Los atributos son identificadores que indican la correlación entre un usuario y los recursos de Platform a los que tiene acceso. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios. |
-| Etiquetas | Las etiquetas permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan a Platform o en cuanto los datos están disponibles para su uso en Platform. |
+| Etiquetas | Las etiquetas permiten clasificar los conjuntos de datos y campos según las directivas de uso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan a Platform o en cuanto los datos están disponibles para su uso en Platform. |
 | Permisos | Los permisos incluyen la capacidad de ver o utilizar funciones de Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
 | Conjuntos de permisos | Los conjuntos de permisos representan un grupo de permisos que un administrador puede aplicar a una función. Un administrador puede asignar conjuntos de permisos a una función, en lugar de asignar permisos individuales. Esto le permite crear funciones personalizadas a partir de una función predefinida que contiene un grupo de permisos. |
-| Políticas | Las políticas son declaraciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas pueden ser locales o globales, y pueden anular otras directivas. |
+| Políticas | Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Las directivas pueden ser locales o globales, y pueden anular otras directivas. |
 | Recurso | Un recurso es el recurso o el objeto al que puede tener acceso o al que no puede tener acceso un sujeto. Los recursos pueden ser segmentos o campos de esquema. |
-| Funciones | Las funciones son formas de categorizar los tipos de usuarios que interactúan con la instancia de Platform y que constituyen bloques generadores de las directivas de control de acceso. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de acceso de visualización o escritura que necesiten. |
+| Funciones | Las funciones son formas de clasificar los tipos de usuarios que interactúan con la instancia de Platform y que son componentes básicos de las directivas de control de acceso. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. |
 | Asunto | Un asunto es el usuario que solicita acceso a un recurso para realizar una acción. |
 | Grupos de usuarios | Los grupos de usuarios son varios usuarios que se han agrupado y tienen acceso para ejecutar las mismas funciones. |
 

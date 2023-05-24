@@ -82,7 +82,7 @@ Para guardar el widget nuevo y volver al [!UICONTROL Personalizado] pestaña, se
 
 ![El cuadro de diálogo Crear widget con las opciones de visualización y Crear resaltadas.](../images/customization/create-widget-select-attribute.png)
 
-El nuevo widget ya está disponible para añadirse a un panel seleccionando el widget de la biblioteca y haciendo clic en **[!UICONTROL Añadir widget]**.
+El nuevo widget ya está disponible para añadirse a un panel seleccionando el widget de la biblioteca y haciendo clic en **[!UICONTROL Agregar widget]**.
 
 ![La pestaña Personalizado del espacio de trabajo de la biblioteca de widgets con el nuevo widget y Agregar widget resaltados.](../images/customization/custom-widgets-new.png)
 

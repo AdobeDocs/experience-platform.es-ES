@@ -21,7 +21,7 @@ Esta guía explica cómo utilizar la consola de desarrollador de Adobe para reco
 
 ## Obtener acceso de desarrollador a Adobe Experience Platform
 
-Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una vez que haya completado el paso &quot;Obtener acceso de usuario&quot;, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
+Para poder generar valores de autenticación para la API de Reactor, debe tener acceso de desarrollador a Experience Platform. Para obtener acceso de desarrollador, siga los pasos iniciales en el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una vez que haya finalizado el paso &quot;Obtener acceso de usuario&quot;, vuelva a este tutorial para generar las credenciales específicas de la API de Reactor.
 
 ## Generar credenciales de acceso
 
@@ -31,7 +31,7 @@ Con Adobe Developer Console, debe generar las tres credenciales de acceso siguie
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-El ID de su organización (`{ORG_ID}`) y clave de API (`{API_KEY}`) se puede reutilizar en futuras llamadas de API después de haberlas generado inicialmente. Sin embargo, el token de acceso (`{ACCESS_TOKEN}`) es temporal y debe regenerarse cada 24 horas.
+El ID de su organización (`{ORG_ID}`) y clave de API (`{API_KEY}`) se pueden reutilizar en futuras llamadas de API después de haberlas generado inicialmente. Sin embargo, el token de acceso (`{ACCESS_TOKEN}`) es temporal y debe regenerarse cada 24 horas.
 
 Los pasos para generar estos valores se tratan en detalle a continuación.
 
@@ -61,7 +61,7 @@ La siguiente pantalla le solicita que seleccione uno o más perfiles de producto
 
 >[!NOTE]
 >
->Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contienen conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
+>Su organización gestiona los perfiles de producto a través de Adobe Admin Console y contiene conjuntos específicos de permisos para funciones granulares. Los perfiles de producto y sus permisos solo los pueden administrar usuarios con privilegios de administrador en su organización. Si no está seguro de qué perfiles de producto desea seleccionar para la API, póngase en contacto con su administrador.
 
 Seleccione los perfiles de producto que desee en la lista y, a continuación, seleccione **Guardar API configurada** para completar el registro de la API.
 

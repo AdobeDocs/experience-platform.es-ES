@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->El [!DNL Couchbase] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El [!DNL Couchbase] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 

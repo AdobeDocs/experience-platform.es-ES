@@ -1,119 +1,119 @@
 ---
-title: Configurar anulaciones del almacén de datos
-description: Obtenga información sobre cómo configurar las anulaciones del almacén de datos en la interfaz de usuario de Datastreams y activarlas mediante el SDK web.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+title: Configurar anulaciones de secuencia de datos
+description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante el SDK web.
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
+# Configurar anulaciones de secuencia de datos
 
-# Configurar anulaciones del almacén de datos
+Las anulaciones de flujos de datos permiten definir configuraciones adicionales para los flujos de datos, que se pasan a la red perimetral mediante el SDK web.
 
-Las anulaciones del almacén de datos le permiten definir configuraciones adicionales para sus conjuntos de datos, que se pasan a la red perimetral mediante el SDK web.
+Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos diferentes a los predeterminados, sin crear un nuevo flujo de datos ni modificar la configuración existente.
 
-Esto le ayuda a almacenar en déclencheur diferentes comportamientos del conjunto de datos que los predeterminados, sin necesidad de crear un nuevo conjunto de datos ni modificar la configuración existente.
+La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
-La anulación de la configuración del almacén de datos es un proceso de dos pasos:
+1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](configure.md).
+2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante el SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
 
-1. En primer lugar, debe definir las anulaciones de configuración del conjunto de datos en la variable [página de configuración del almacén de datos](configure.md).
-2. A continuación, debe enviar las anulaciones a la red perimetral a través de un comando Web SDK o utilizando el SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
+Este artículo explica el proceso de anulación de la configuración de la secuencia de datos de extremo a extremo para cada tipo de anulación admitida.
 
-Este artículo explica el proceso de anulación de la configuración del conjunto de datos de extremo a extremo para cada tipo de anulación admitida.
+## Configuración de anulaciones de flujos de datos en la IU de flujos de datos {#configure-overrides}
 
-## Configurar anulaciones del almacén de datos en la interfaz de usuario de Datastreams {#configure-overrides}
+Las anulaciones de configuración de secuencia de datos permiten modificar las siguientes configuraciones de secuencia de datos:
 
-Las anulaciones en la configuración del almacén de datos le permiten modificar las siguientes configuraciones del conjunto de datos:
-
-* conjuntos de datos de eventos del Experience Platform
-* Tokens de propiedad de Adobe Target
+* conjuntos de datos de evento del Experience Platform
+* tokens de propiedad de Adobe Target
 * Contenedores de sincronización de ID de Audience Manager
 * Grupos de informes de Adobe Analytics
 
-### Anulaciones del almacén de datos para Adobe Target {#target-overrides}
+### Anulaciones de flujos de datos para Adobe Target {#target-overrides}
 
-Para configurar las anulaciones del conjunto de datos para un conjunto de datos de Adobe Target, primero debe tener creado un conjunto de datos de Adobe Target. Siga las instrucciones para [configurar un conjunto de datos](configure.md) con la variable [Adobe Target](configure.md#target) servicio.
+Para configurar las anulaciones de secuencia de datos para una secuencia de datos de Adobe Target, primero debe tener creada una secuencia de datos de Adobe Target. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el [Adobe Target](configure.md#target) servicio.
 
-Una vez creado el conjunto de datos, edite el [Adobe Target](configure.md#target) que ha agregado y use el **[!UICONTROL Anulaciones de tokens de propiedad]** para agregar las anulaciones del conjunto de datos deseadas, como se muestra en la imagen siguiente. Agregue un token de propiedad por línea.
+Una vez creado el conjunto de datos, edite el [Adobe Target](configure.md#target) que ha añadido y utilice el **[!UICONTROL Invalidaciones de token de propiedad]** para añadir las anulaciones de flujo de datos deseadas, como se muestra en la siguiente imagen. Agregue un token de propiedad por línea.
 
-![Captura de pantalla de la interfaz de usuario de Datastreams que muestra la configuración del servicio Adobe Target, con las anulaciones de token de propiedad resaltadas.](../assets/datastreams/overrides/override-target.png)
+![Captura de pantalla de la IU de flujos de datos que muestra la configuración del servicio Adobe Target, con las anulaciones de token de propiedad resaltadas.](../assets/datastreams/overrides/override-target.png)
 
-Después de agregar las anulaciones deseadas, guarde la configuración del conjunto de datos.
+Después de agregar las invalidaciones deseadas, guarde la configuración del conjunto de datos.
 
-Ahora debería tener configuradas las anulaciones del almacén de datos de Adobe Target. Ahora puede [enviar las anulaciones a la red perimetral mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Target. Ahora puede [Enviar las invalidaciones a la red perimetral mediante el SDK web](#send-overrides).
 
-### Anulaciones del almacén de datos para Adobe Analytics {#analytics-overrides}
+### Anulaciones de flujos de datos para Adobe Analytics {#analytics-overrides}
 
-Para configurar las anulaciones del almacén de datos para un conjunto de datos de Adobe Analytics, primero debe tener un [Adobe Analytics](configure.md#analytics) datastream creado. Siga las instrucciones para [configurar un conjunto de datos](configure.md) con la variable [Adobe Analytics](configure.md#analytics) servicio.
+Para configurar las anulaciones de secuencia de datos para una secuencia de datos de Adobe Analytics, primero debe tener un [Adobe Analytics](configure.md#analytics) secuencia de datos creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el [Adobe Analytics](configure.md#analytics) servicio.
 
-Una vez creado el conjunto de datos, edite el [Adobe Analytics](configure.md#target) que ha agregado y use el **[!UICONTROL Anulaciones de grupos de informes]** para agregar las anulaciones del conjunto de datos deseadas, como se muestra en la imagen siguiente.
+Una vez creado el conjunto de datos, edite el [Adobe Analytics](configure.md#target) que ha añadido y utilice el **[!UICONTROL Anulaciones de grupos de informes]** para añadir las anulaciones de flujo de datos deseadas, como se muestra en la siguiente imagen.
 
-Select **[!UICONTROL Mostrar modo de lote]** para habilitar la edición por lotes de las anulaciones de grupos de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes, introduciendo un grupo de informes por línea.
+Seleccionar **[!UICONTROL Mostrar modo por lotes]** para habilitar la edición por lotes de las anulaciones del grupo de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes introduciendo un grupo de informes por línea.
 
-![Captura de pantalla de la interfaz de usuario de Datastreams que muestra la configuración del servicio Adobe Analytics, con las anulaciones del grupo de informes resaltadas.](../assets/datastreams/overrides/override-analytics.png)
+![Captura de pantalla de la IU de flujos de datos que muestra la configuración del servicio Adobe Analytics, con las anulaciones del grupo de informes resaltadas.](../assets/datastreams/overrides/override-analytics.png)
 
-Después de agregar las anulaciones deseadas, guarde la configuración del conjunto de datos.
+Después de agregar las invalidaciones deseadas, guarde la configuración del conjunto de datos.
 
-Ahora debería tener configuradas las anulaciones del almacén de datos de Adobe Analytics. Ahora puede [enviar las anulaciones a la red perimetral mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Analytics. Ahora puede [Enviar las invalidaciones a la red perimetral mediante el SDK web](#send-overrides).
 
-### Anulaciones de almacén de datos para conjuntos de datos de eventos de Experience Platform {#event-dataset-overrides}
+### Anulaciones de flujos de datos para conjuntos de datos de eventos del Experience Platform {#event-dataset-overrides}
 
-Para configurar las anulaciones del almacén de datos para los conjuntos de datos de eventos de Experience Platform, primero debe tener un [Adobe Experience Platform](configure.md#aep) datastream creado. Siga las instrucciones para [configurar un conjunto de datos](configure.md) con la variable [Adobe Experience Platform](configure.md#aep) servicio.
+Para configurar las anulaciones de flujos de datos para conjuntos de datos de evento de Experience Platform, primero debe tener un [Adobe Experience Platform](configure.md#aep) secuencia de datos creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el [Adobe Experience Platform](configure.md#aep) servicio.
 
-Una vez creado el conjunto de datos, edite el [Adobe Experience Platform](configure.md#aep) que ha agregado y seleccione el **[!UICONTROL Agregar conjunto de datos de evento]** para agregar uno o más conjuntos de datos de evento anulados, como se muestra en la imagen siguiente.
+Una vez creado el conjunto de datos, edite el [Adobe Experience Platform](configure.md#aep) que ha añadido y seleccione la opción **[!UICONTROL Agregar conjunto de datos de evento]** para añadir uno o más conjuntos de datos de evento de anulación, como se muestra en la siguiente imagen.
 
-![Captura de pantalla de la interfaz de usuario de Datastreams que muestra la configuración del servicio Adobe Experience Platform, con las anulaciones del conjunto de datos de evento resaltadas.](../assets/datastreams/overrides/override-aep.png)
+![Captura de pantalla de la IU de flujos de datos que muestra la configuración del servicio Adobe Experience Platform, con las anulaciones del conjunto de datos de evento resaltadas.](../assets/datastreams/overrides/override-aep.png)
 
-Después de agregar las anulaciones deseadas, guarde la configuración del conjunto de datos.
+Después de agregar las invalidaciones deseadas, guarde la configuración del conjunto de datos.
 
-Ahora debería tener configuradas las anulaciones del almacén de datos de Adobe Experience Platform. Ahora puede [enviar las anulaciones a la red perimetral mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Experience Platform. Ahora puede [Enviar las invalidaciones a la red perimetral mediante el SDK web](#send-overrides).
 
-### Anulaciones de almacén de datos para contenedores de sincronización de ID de terceros {#container-overrides}
+### Anulaciones de flujos de datos para contenedores de sincronización de ID de terceros {#container-overrides}
 
-Para configurar las anulaciones del almacén de datos para los contenedores de sincronización de ID de terceros, primero debe crear un conjunto de datos. Siga las instrucciones para [configurar un conjunto de datos](configure.md) para crear uno.
+Para configurar las anulaciones de flujos de datos para los contenedores de sincronización de ID de terceros, primero debe haber creado un flujo de datos. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) para crear uno.
 
-Una vez creado el conjunto de datos, vaya a **[!UICONTROL Opciones avanzadas]** y habilite **[!UICONTROL Sincronización de ID de terceros]** .
+Una vez creado el conjunto de datos, vaya a **[!UICONTROL Opciones avanzadas]** y habilite la **[!UICONTROL Sincronización de ID de terceros]** opción.
 
-A continuación, utilice el **[!UICONTROL Anulaciones de ID de contenedor]** para agregar los ID de contenedor que desea que anulen la configuración predeterminada, como se muestra en la imagen siguiente.
+A continuación, utilice el **[!UICONTROL Anulaciones de ID de contenedor]** para añadir los ID de contenedor que desea que anulen la configuración predeterminada, como se muestra en la siguiente imagen.
 
 >[!IMPORTANT]
 >
->Los ID de contenedor deben ser valores numéricos, como `1234567`y no cadenas, como `"1234567"`. Si envía un valor de cadena a través del SDK web como anulación de ID de contenedor, recibirá un error.
+>Los ID de contenedor deben ser valores numéricos, como `1234567`y no cadenas, como `"1234567"`. Si envía un valor de cadena mediante el SDK web como una anulación de ID de contenedor, recibirá un error.
 
-![Captura de pantalla de la interfaz de usuario de Datastreams que muestra la configuración del conjunto de datos, con las anulaciones del contenedor de sincronización de ID de terceros resaltadas.](../assets/datastreams/overrides/override-container.png)
+![Captura de pantalla de la IU de flujos de datos que muestra la configuración del flujo de datos, con las anulaciones del contenedor de sincronización de ID de terceros resaltadas.](../assets/datastreams/overrides/override-container.png)
 
-Después de agregar las anulaciones deseadas, guarde la configuración del conjunto de datos.
+Después de agregar las invalidaciones deseadas, guarde la configuración del conjunto de datos.
 
-Ahora debería tener configuradas las anulaciones del contenedor de sincronización de ID. Ahora puede [enviar las anulaciones a la red perimetral mediante el SDK web](#send-overrides).
+Ahora debería tener configuradas las anulaciones del contenedor de sincronización de ID. Ahora puede [Enviar las invalidaciones a la red perimetral mediante el SDK web](#send-overrides).
 
-## Envío de las anulaciones a la red perimetral mediante el SDK web {#send-overrides}
+## Envíe las invalidaciones a la red perimetral mediante el SDK web {#send-overrides}
 
 >[!NOTE]
 >
->Como alternativa al envío de las anulaciones de configuración mediante comandos del SDK web, puede añadir las anulaciones de configuración al SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
+>Como alternativa al envío de las anulaciones de configuración mediante comandos del SDK web, puede agregar las anulaciones de configuración al SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
 
-Después [configuración de las anulaciones del almacén de datos](#configure-overrides) en la interfaz de usuario de recopilación de datos, ahora puede enviar las anulaciones a la red perimetral a través del SDK web.
+Después [configuración de las anulaciones de secuencia de datos](#configure-overrides) en la IU de recopilación de datos, ahora puede enviar las invalidaciones a la red perimetral mediante el SDK web.
 
-El envío de las anulaciones a la red perimetral mediante el SDK web es el segundo y último paso para activar las anulaciones de configuración del conjunto de datos.
+El envío de las invalidaciones a la red perimetral mediante el SDK web es el segundo y último paso de activar las invalidaciones de configuración del flujo de datos.
 
-Las anulaciones de la configuración del conjunto de datos se envían a la red perimetral a través del `edgeConfigOverrides` SDK web. Este comando crea anulaciones del conjunto de datos que se pasan al [!DNL Edge Network] en el siguiente comando o, en el caso de la variable `configure` para cada solicitud.
+Las anulaciones de configuración de la secuencia de datos se envían a la red perimetral a través de `edgeConfigOverrides` Comando del SDK web. Este comando crea invalidaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando, o, en el caso del `configure` para cada solicitud.
 
-La variable `edgeConfigOverrides` crea anulaciones del conjunto de datos que se pasan al [!DNL Edge Network] en el siguiente comando o, en el caso de `configure`, para cada solicitud.
+El `edgeConfigOverrides` El comando crea anulaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando, o, en el caso de `configure`, para cada solicitud.
 
-Cuando se envía una anulación de configuración con la variable `configure` , se incluye en los siguientes comandos admitidos.
+Cuando se envía una anulación de la configuración con el `configure` se incluye en los siguientes comandos admitidos.
 
 * [sendEvent](../fundamentals/tracking-events.md)
 * [setConsent](../consent/iab-tcf/overview.md)
 * [getIdentity](../identity/overview.md)
 * [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configure](../fundamentals/configuring-the-sdk.md)
+* [configurar](../fundamentals/configuring-the-sdk.md)
 
-Las opciones especificadas globalmente se pueden anular mediante la opción de configuración de comandos individuales.
+Las opciones especificadas globalmente pueden ser anuladas por la opción de configuración en comandos individuales.
 
-### Envío de anulaciones de configuración a través del `sendEvent` command {#send-event}
+### Envío de anulaciones de configuración mediante el `sendEvent` mando {#send-event}
 
-El ejemplo siguiente muestra cómo podría verse una anulación de configuración en una `sendEvent` comando.
+El ejemplo siguiente muestra el aspecto que podría tener una anulación de la configuración en un `sendEvent` comando.
 
 ```js {line-numbers="true" highlight="5-25"}
 alloy("sendEvent", {
@@ -148,9 +148,9 @@ alloy("sendEvent", {
 });
 ```
 
-### Envío de anulaciones de configuración a través del `configure` command {#send-configure}
+### Envío de anulaciones de configuración mediante el `configure` mando {#send-configure}
 
-El ejemplo siguiente muestra cómo podría verse una anulación de configuración en una `configure` comando.
+El ejemplo siguiente muestra el aspecto que podría tener una anulación de la configuración en un `configure` comando.
 
 ```js {line-numbers="true" highlight="8-30"}
 alloy("configure", {
@@ -233,4 +233,3 @@ Los ejemplos anteriores generan un [!DNL Edge Network] carga útil similar a est
   }
 }
 ```
-

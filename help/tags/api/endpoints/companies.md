@@ -11,7 +11,7 @@ ht-degree: 93%
 
 # Extremo empresarial
 
-Una compañía representa una organización de clientes, normalmente una empresa. En la API de Reactor, estas empresas coinciden con 1:1 con el ID de organización. Los usuarios de API solo tienen visibilidad de las compañías a las que tienen acceso. Una compañía puede contener muchas [propiedades](./properties.md). Una propiedad pertenece a exactamente una compañía.
+Una compañía representa una organización de clientes, normalmente una empresa. En la API de Reactor, estas compañías coinciden 1:1 con el ID de organización. Los usuarios de API solo tienen visibilidad de las compañías a las que tienen acceso. Una compañía puede contener muchas [propiedades](./properties.md). Una propiedad pertenece a exactamente una compañía.
 
 El extremo `/companies` de la API de reactor le permite recuperar mediante programación las empresas a las que tiene acceso dentro de su aplicación de experiencia.
 

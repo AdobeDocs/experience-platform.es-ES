@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;segmentación;servicio de segmentación;audiencias;audiencia;API;api;
-title: Punto final de la API de audiencias
-description: El punto final de audiencias en la API del servicio de segmentación de Adobe Experience Platform le permite administrar audiencias mediante programación para su organización.
+keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;audiencias;audiencia;API;api;
+title: Extremo de API de audiencias
+description: El extremo de audiencias de la API del servicio de segmentación de Adobe Experience Platform le permite administrar audiencias de su organización mediante programación.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
@@ -12,50 +12,50 @@ ht-degree: 5%
 
 ---
 
-# Punto final de audiencia
+# Extremo de audiencias
 
 >[!IMPORTANT]
 >
 >El extremo de audiencia está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
-Una audiencia es una colección de personas que comparten comportamientos y/o características similares. Estas colecciones de personas se pueden generar mediante Adobe Experience Platform o desde fuentes externas. Puede usar la variable `/audiences` en la API de segmentación, que le permite recuperar, crear, actualizar y eliminar audiencias mediante programación.
+Una audiencia es un conjunto de personas que comparten comportamientos o características similares. Estas colecciones de personas se pueden generar mediante Adobe Experience Platform o desde fuentes externas. Puede usar el complemento `/audiences` en la API de segmentación, lo que le permite recuperar, crear, actualizar y eliminar audiencias mediante programación.
 
 ## Primeros pasos
 
-Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, revise la [guía de introducción](./getting-started.md) para obtener información importante que debe conocer para realizar correctamente llamadas a la API, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
-## Recuperar una lista de audiencias {#list}
+## Recuperación de una lista de audiencias {#list}
 
-Puede recuperar una lista de todas las audiencias de su organización realizando una solicitud de GET al `/audiences` punto final.
+Puede recuperar una lista de todas las audiencias de su organización realizando una solicitud de GET a `/audiences` punto final.
 
 **Formato de API**
 
-La variable `/audiences` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir los costes generales cuando se incluyen recursos. Si realiza una llamada a este extremo sin parámetros, se recuperarán todas las audiencias disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`).
+El `/audiences` el punto de conexión admite varios parámetros de consulta para filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir la costosa sobrecarga al enumerar recursos. Si realiza una llamada a este extremo sin parámetros, se recuperarán todas las audiencias disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo et (`&`).
 
 ```http
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
-Los siguientes parámetros de consulta se pueden utilizar al recuperar una lista de audiencias:
+Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámetros de consulta:
 
 | Parámetro de consulta | Descripción | Ejemplo |
 | --------------- | ----------- | ------- |
-| `start` | Especifica el desplazamiento inicial para las audiencias devueltas. | `start=5` |
+| `start` | Especifica el desplazamiento inicial de las audiencias devueltas. | `start=5` |
 | `limit` | Especifica el número máximo de audiencias devueltas por página. | `limit=10` |
-| `sort` | Especifica el orden por el que se ordenarán los resultados. Esto se escribe en el formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | Un filtro que le permite especificar audiencias que **Exactamente** coincide con el valor de un atributo. Esto se escribe en el formato `property=` | `property=audienceId==test-audience-id` |
-| `name` | Filtro que permite especificar audiencias cuyos nombres **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `name=Sample` |
-| `description` | Filtro que permite especificar audiencias cuyas descripciones **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `description=Test Description` |
+| `sort` | Especifica el orden por el que se ordenan los resultados. Esto se escribe con el formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | Un filtro que le permite especificar audiencias que **exacto** coincide con el valor de un atributo. Esto se escribe con el formato `property=` | `property=audienceId==test-audience-id` |
+| `name` | Un filtro que le permite especificar audiencias cuyos nombres **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `name=Sample` |
+| `description` | Un filtro que le permite especificar audiencias cuyas descripciones **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `description=Test Description` |
 | `withMetrics` | Filtro que devuelve las métricas además de las audiencias. | `property=withMetrics==true` |
 
 >[!IMPORTANT]
 >
->Para las audiencias, las métricas se devuelven en la sección `metrics` y contiene información sobre recuentos de perfiles, creación y actualización de marcas de tiempo.
+>Para las audiencias, las métricas se devuelven en la variable `metrics` y contiene información sobre los recuentos de perfiles, la creación y la actualización de marcas de tiempo.
 
 **Sin métricas**
 
-Se utiliza el siguiente par de solicitud/respuesta cuando se usa la variable `withMetrics` El parámetro de consulta no está presente.
+El siguiente par de solicitud/respuesta se utiliza cuando la variable `withMetrics` el parámetro de consulta no está presente.
 
 **Solicitud**
 
@@ -71,11 +71,11 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
 
 **Respuesta** {#no-metrics}
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias que se crearon en su organización como JSON.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias creadas en su organización como JSON.
 
 >[!NOTE]
 >
->La siguiente respuesta se ha truncado para el espacio y solo muestra la primera audiencia devuelta.
+>La siguiente respuesta se ha truncado para el espacio y muestra solo la primera audiencia devuelta.
 
 ```json
 {
@@ -147,27 +147,27 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias q
 
 | Propiedad | Tipo de audiencia | Descripción |
 | -------- | ------------- | ----------- | 
-| `id` | Ambas | Identificador de solo lectura generado por el sistema para la audiencia. |
-| `audienceId` | Ambas | Si la audiencia es una audiencia generada por plataforma, es el mismo valor que la variable `id`. Si la audiencia se genera externamente, el cliente proporciona este valor. |
-| `schema` | Ambas | Esquema del Modelo de datos de experiencia (XDM) de la audiencia. |
+| `id` | Ambas | Un identificador de solo lectura generado por el sistema para la audiencia. |
+| `audienceId` | Ambas | Si la audiencia es una audiencia generada por Platform, este es el mismo valor que la `id`. Si la audiencia se genera externamente, el cliente proporciona este valor. |
+| `schema` | Ambas | El esquema Experience Data Model (XDM) de la audiencia. |
 | `imsOrgId` | Ambas | El ID de la organización a la que pertenece la audiencia. |
-| `sandbox` | Ambas | Información sobre el entorno limitado al que pertenece la audiencia. Encontrará más información sobre los entornos limitados en [información general sobre los entornos limitados](../../sandboxes/home.md). |
+| `sandbox` | Ambas | Información sobre la zona protegida a la que pertenece la audiencia. Encontrará más información sobre las zonas protegidas en la [información general sobre zonas protegidas](../../sandboxes/home.md). |
 | `name` | Ambas | El nombre de la audiencia. |
-| `description` | Ambas | Descripción de la audiencia. |
-| `expression` | Generado por la plataforma | Expresión del lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
-| `mergePolicyId` | Generado por la plataforma | El ID de la política de combinación a la que está asociada la audiencia. Puede encontrar más información sobre las políticas de combinación en la sección [guía de políticas de combinación](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Generado por la plataforma | Muestra cómo se evaluará la audiencia. Los métodos de evaluación posibles incluyen el lote, la transmisión o el borde. Encontrará más información sobre los métodos de evaluación en la [información general sobre segmentación](../home.md) |
-| `dependents` | Ambas | Matriz de ID de audiencia que dependen de la audiencia actual. Se utilizaría si está creando una audiencia que es un segmento de un segmento. |
-| `dependencies` | Ambas | Matriz de ID de audiencia de la que depende la audiencia. Se utilizaría si está creando una audiencia que es un segmento de un segmento. |
-| `type` | Ambas | Campo generado por el sistema que muestra si la audiencia es generada por Platform o si es una audiencia generada externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que una `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
-| `createdBy` | Ambas | ID del usuario que creó la audiencia. |
-| `labels` | Ambas | Etiquetas de control de acceso basadas en atributos y uso de datos a nivel de objeto que son relevantes para la audiencia. |
-| `namespace` | Ambas | El espacio de nombres al que pertenece la audiencia. Los valores posibles incluyen `AAM`, `AAMSegments`, `AAMTraits`y `AEPSegments`. |
-| `audienceMeta` | Externo | Metadatos creados externamente a partir de la audiencia creada externamente. |
+| `description` | Ambas | Una descripción de la audiencia. |
+| `expression` | Generado por Platform | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
+| `mergePolicyId` | Generado por Platform | El ID de la política de combinación a la que está asociada la audiencia. Encontrará más información sobre las políticas de combinación en la [guía de políticas de combinación](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | Generado por Platform | Muestra cómo se evaluará la audiencia. Los posibles métodos de evaluación incluyen batch, streaming o edge. Encontrará más información sobre los métodos de evaluación en la [resumen de segmentación](../home.md) |
+| `dependents` | Ambas | Una matriz de ID de audiencia que dependen de la audiencia actual. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
+| `dependencies` | Ambas | Una matriz de ID de audiencia de los que depende la audiencia. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
+| `type` | Ambas | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
+| `createdBy` | Ambas | El ID del usuario que creó la audiencia. |
+| `labels` | Ambas | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
+| `namespace` | Ambas | El área de nombres al que pertenece la audiencia. Los valores posibles incluyen `AAM`, `AAMSegments`, `AAMTraits`, y `AEPSegments`. |
+| `audienceMeta` | Externo | Metadatos creados externamente desde la audiencia creada externamente. |
 
 **Con métricas**
 
-Se utiliza el siguiente par de solicitud/respuesta cuando se usa la variable `withMetrics` está presente el parámetro de consulta .
+El siguiente par de solicitud/respuesta se utiliza cuando la variable `withMetrics` el parámetro de consulta está presente.
 
 **Solicitud**
 
@@ -187,7 +187,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias, 
 
 >[!NOTE]
 >
->La siguiente respuesta se ha truncado para el espacio y solo muestra la primera audiencia devuelta.
+>La siguiente respuesta se ha truncado para el espacio y muestra solo la primera audiencia devuelta.
 
 ```json
 {
@@ -283,22 +283,22 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias, 
 }
 ```
 
-Las siguientes listas contienen propiedades **exclusivo** a `withMetrics` respuesta. Si desea conocer las propiedades de audiencia estándar, lea la [sección anterior](#no-metrics).
+A continuación se enumeran las propiedades **exclusivo** a la `withMetrics` respuesta. Si desea conocer las propiedades de audiencia estándar, lea la [sección anterior](#no-metrics).
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `metrics.imsOrgId` | ID de organización de la audiencia. |
-| `metrics.sandbox` | La información del entorno limitado relacionada con la audiencia. |
+| `metrics.imsOrgId` | El ID de organización de la audiencia. |
+| `metrics.sandbox` | La información de la zona protegida relacionada con la audiencia. |
 | `metrics.jobId` | El ID del trabajo del segmento que está procesando la audiencia. |
 | `metrics.type` | El tipo de trabajo del segmento. Esto puede ser `export` o `batch_segmentation`. |
 | `metrics.id` | El ID de la audiencia. |
-| `metrics.data` | Métricas relacionadas con la audiencia. Esto incluye información como el número total de perfiles incluidos en la audiencia, el número total de perfiles por espacio de nombres y el número total de perfiles por estado. |
-| `metrics.createEpoch` | Marca de tiempo que muestra cuándo se creó la audiencia. |
-| `metrics.updateEpoch` | Marca de tiempo que muestra la última actualización de la audiencia. |
+| `metrics.data` | Métricas relacionadas con la audiencia. Esto incluye información como el número total de perfiles incluidos en la audiencia, el número total de perfiles por área de nombres y el número total de perfiles por estado. |
+| `metrics.createEpoch` | Una marca de tiempo que indica cuándo se creó la audiencia. |
+| `metrics.updateEpoch` | Una marca de tiempo que indica cuándo se actualizó la audiencia por última vez. |
 
 ## Crear una audiencia nueva {#create}
 
-Puede crear una audiencia nueva realizando una solicitud de POST al `/audiences` punto final.
+Puede crear una audiencia nueva realizando una solicitud de POST a `/audiences` punto final.
 
 **Formato de API**
 
@@ -337,11 +337,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | Propiedad | Descripción |
 | -------- | ----------- | 
 | `name` | El nombre de la audiencia. |
-| `description` | Descripción de la audiencia. |
-| `type` | Campo que muestra si la audiencia se genera en la plataforma o si es una audiencia generada externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que una `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
-| `expression` | Expresión del lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
-| `schema` | Esquema del Modelo de datos de experiencia (XDM) de la audiencia. |
-| `labels` | Etiquetas de control de acceso basadas en atributos y uso de datos a nivel de objeto que son relevantes para la audiencia. |
+| `description` | Una descripción de la audiencia. |
+| `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
+| `expression` | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
+| `schema` | El esquema Experience Data Model (XDM) de la audiencia. |
+| `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
 
 **Respuesta**
 
@@ -409,9 +409,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 }
 ```
 
-## Buscar una audiencia específica {#get}
+## Búsqueda de una audiencia especificada {#get}
 
-Puede consultar información detallada sobre una audiencia específica realizando una solicitud de GET al `/audiences` y proporcionando el ID de la audiencia que desea recuperar en la ruta de solicitud.
+Puede buscar información detallada sobre una audiencia específica realizando una solicitud de GET a la `/audiences` y proporciona el ID de la audiencia que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -422,8 +422,8 @@ GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
 
 | Parámetro | Descripción |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | ID de la audiencia que intenta recuperar. |
-| `property=withmetrics==true` | Un parámetro de consulta opcional que puede usar si desea recuperar una audiencia específica con las métricas de audiencia. |
+| `{AUDIENCE_ID}` | El ID de la audiencia que intenta recuperar. |
+| `property=withmetrics==true` | Un parámetro de consulta opcional que puede utilizar si desea recuperar una audiencia especificada con las métricas de audiencia. |
 
 **Solicitud**
 
@@ -439,7 +439,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia especificada. La respuesta variará según si la audiencia se genera con Adobe Experience Platform o fuentes externas.
 
-**Generado por la plataforma**
+**Generado por Platform**
 
 ```json
 {
@@ -537,9 +537,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 }
 ```
 
-## Actualizar un campo en una audiencia {#update-field}
+## Actualización de un campo en una audiencia {#update-field}
 
-Puede actualizar los campos de una audiencia específica realizando una solicitud de PATCH al `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
+Puede actualizar los campos de una audiencia específica realizando una solicitud al PATCH de la `/audiences` y proporciona el ID de la audiencia que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -577,7 +577,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `op` | Para actualizar audiencias, este valor siempre es `add`. |
-| `path` | Ruta del campo que desea actualizar. |
+| `path` | La ruta del campo que desea actualizar. |
 | `value` | El valor al que desea actualizar el campo. |
 
 **Respuesta**
@@ -647,9 +647,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 }
 ```
 
-## Actualizar una audiencia {#put}
+## Actualización de una audiencia {#put}
 
-Puede actualizar (sobrescribir) una audiencia específica realizando una solicitud de PUT al `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
+Puede actualizar (sobrescribir) una audiencia específica realizando una solicitud de PUT a `/audiences` y proporciona el ID de la audiencia que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -682,18 +682,18 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `audienceId` | ID de la audiencia. La utilizan audiencias externas |
+| `audienceId` | El ID de la audiencia. Las audiencias externas lo utilizan |
 | `name` | El nombre de la audiencia. |
 | `namespace` |  |
-| `description` | Descripción de la audiencia. |
-| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o si es una audiencia generada externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que una `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
-| `lifecycle` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published`, `inactive`y `archived`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, `inactive` cuando la audiencia ya no está activa, y `archived` si se elimina la audiencia. |
-| `datasetId` | El ID del conjunto de datos con el que se pueden encontrar los datos de audiencia. |
-| `labels` | Etiquetas de control de acceso basadas en atributos y uso de datos a nivel de objeto que son relevantes para la audiencia. |
+| `description` | Una descripción de la audiencia. |
+| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
+| `lifecycle` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published`, `inactive`, y `archived`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, `inactive` cuando la audiencia ya no está activa, y `archived` si se elimina la audiencia. |
+| `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos de audiencia. |
+| `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia recién actualizada. Tenga en cuenta que los detalles de la audiencia variarán según si se trata de una audiencia generada por la plataforma o una audiencia generada externamente.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia recién actualizada. Tenga en cuenta que los detalles de la audiencia variarán según se trate de una audiencia generada por Platform o por un público generado externamente.
 
 ```json
 {
@@ -723,7 +723,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
 
 ## Eliminar una audiencia {#delete}
 
-Puede eliminar una audiencia específica realizando una solicitud de DELETE al `/audiences` y proporcionando el ID de la audiencia que desea eliminar en la ruta de solicitud.
+Puede eliminar una audiencia específica realizando una solicitud de DELETE a `/audiences` y proporciona el ID de la audiencia que desea eliminar en la ruta de solicitud.
 
 **Formato de API**
 

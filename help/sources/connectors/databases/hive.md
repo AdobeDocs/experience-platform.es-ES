@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El conector Apache Hive en Azure HDInsights está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El conector Apache Hive en Azure HDInsights está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 

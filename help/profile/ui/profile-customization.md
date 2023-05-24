@@ -74,7 +74,7 @@ Para personalizar aún más el aspecto de los perfiles dentro de Experience Plat
 
 ![Se resalta el botón Personalizar detalles del perfil.](../images/profile-customization/customize-profile-details.png)
 
-A continuación, seleccione **[!UICONTROL Añadir widget]** en la esquina superior izquierda del panel.
+A continuación, seleccione **[!UICONTROL Agregar widget]** en la esquina superior izquierda del panel.
 
 ![Se resaltará el botón Añadir widget.](../images/profile-customization/add-widget.png)
 

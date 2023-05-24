@@ -8,7 +8,7 @@ exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ Puede crear una nueva definición de segmento realizando una solicitud de POST a
 
 Para obtener una explicación detallada sobre cómo definir un segmento, lea la [guía para desarrolladores de definición de segmentos](../api/segment-definitions.md#create).
 
-## Estimar y previsualizar una audiencia {#estimate-and-preview-an-audience}
+## Calcular y previsualizar una audiencia {#estimate-and-preview-an-audience}
 
 A medida que desarrolle su definición de segmento, puede utilizar las herramientas de estimación y vista previa dentro de [!DNL Real-Time Customer Profile] para ver información de resumen que le ayude a aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las vistas previas proporcionan listas paginadas de perfiles aptos para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 

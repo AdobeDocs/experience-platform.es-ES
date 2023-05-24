@@ -5,7 +5,7 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -46,7 +46,7 @@ Una vez enviados los mensajes, se desea mejorar el perfil del cliente en Adobe E
 
 El resultado son campañas en canales múltiples que son más coherentes en todo el ecosistema de Adobe Experience Cloud y un perfil de cliente enriquecido que se adapta y aprende rápidamente.
 
-[Obtenga más información sobre la integración de Adobe Campaign con Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+[Obtenga más información sobre la integración de Adobe Campaign con Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=es)
 
 ## Identidades admitidas {#supported-identities}
 
@@ -111,7 +111,7 @@ Para obtener más información sobre las acciones de marketing, consulte la [inf
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
+Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
 
 ### Asignar atributos e identidades {#map}
 

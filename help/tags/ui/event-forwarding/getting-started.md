@@ -29,7 +29,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 ## Requisitos previos
 
-* Adobe Experience Platform Collection Enterprise (póngase en contacto con el equipo de su cuenta de Adobe para obtener más información sobre los precios)
+* Adobe Experience Platform Collection Enterprise (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
 * SDK web o móvil de Adobe Experience Platform, configurados para enviar datos a Edge Network
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
@@ -42,7 +42,7 @@ En Adobe Experience Platform, puede crear su propio esquema.
 
 1. Asigne al esquema un nombre y una descripción breve.
 
-1. Puede añadir el grupo de campos &quot;Detalles web de ExperienceEvent&quot; seleccionando **[!UICONTROL Agregar]** junto a **[!UICONTROL Grupos de campos]**.
+1. Puede añadir el grupo de campo Detalles web de ExperienceEvent seleccionando **[!UICONTROL Añadir]** junto a **[!UICONTROL Grupos de campos]**.
 
    >[!NOTE]
    >
@@ -65,13 +65,13 @@ En el **[!UICONTROL Etiquetas]** espacio de trabajo, crear una propiedad de tipo
 1. Seleccione **[!UICONTROL Guardar]**.
 
 Después de crear la propiedad, vaya a la pestaña **[!UICONTROL Entornos]** de la nueva propiedad y tome
-nota de los ID de entorno. Si la organización de Adobe utilizada en el conjunto de datos difiere de la organización de Adobe utilizada en el reenvío de eventos, puede copiar el ID de entorno del **[!UICONTROL Entornos]** y péguelo al crear un conjunto de datos. De lo contrario, puede seleccionar el entorno de un menú desplegable.
+nota de los ID de entorno. Si la organización de Adobe utilizada en el conjunto de datos difiere de la organización de Adobe utilizada en el reenvío de eventos, puede copiar el ID de entorno del **[!UICONTROL Entornos]** y péguelo al crear una secuencia de datos. De lo contrario, puede seleccionar el entorno de un menú desplegable.
 
 ## Crear un flujo de datos
 
 Para crear un flujo de datos en Adobe Experience Platform, utilice el ID de entorno generado al crear la propiedad de reenvío de eventos.
 
-1. Select **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
+1. Seleccionar **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
 1. Asigne un nombre a la configuración y proporcione una descripción opcional.
 La descripción ayuda a identificar las configuraciones en una lista de varias configuraciones.
@@ -82,7 +82,7 @@ La descripción ayuda a identificar las configuraciones en una lista de varias c
 
 A continuación, configure Edge Network para enviar datos a reenvío de eventos y a otros productos de Adobe.
 
-1. En el **[!UICONTROL Datastreams]** espacio de trabajo, seleccione la propiedad que ha creado.
+1. En el **[!UICONTROL Datastreams]** workspace, seleccione la propiedad que ha creado.
 
 1. Seleccione el entorno Desarrollo, Producción o Ensayo.
 
@@ -96,17 +96,17 @@ A continuación, configure Edge Network para enviar datos a reenvío de eventos 
 
 Después de realizar la configuración, anote los ID de entorno para la nueva propiedad.
 
-## Configurar la extensión web SDK de Platform para que envíe datos al conjunto de datos creado anteriormente
+## Configure la extensión del SDK web de Platform para enviar datos al conjunto de datos creado anteriormente
 
-Cree su propiedad en la variable **[!UICONTROL Etiquetas]** espacio de trabajo y, a continuación, vaya a **[!UICONTROL Extensiones]** y seleccione la extensión del SDK web de Experience Platform del catálogo para configurarlo e instalarlo.
+Cree su propiedad en **[!UICONTROL Etiquetas]** espacio de trabajo y, a continuación, vaya a **[!UICONTROL Extensiones]** y seleccione la extensión del SDK web de Experience Platform en el catálogo para configurarla e instalarla.
 
-Consulte la [Documentación de la extensión del SDK web](../../extensions/client/sdk/overview.md) para obtener más información sobre las opciones de configuración.
+Consulte la [Documentación de extensión del SDK web](../../extensions/client/sdk/overview.md) para obtener más información sobre las opciones de configuración.
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 
 Cuando todo lo anterior esté listo, podrá generar las definiciones de datos, las reglas, etc. que utilicen el reenvío de eventos y etiquetas, pero que solo necesiten una única solicitud de la página.
 
-Cree una regla de carga de página con la extensión web SDK de Platform y el tipo de acción &quot;Enviar evento&quot;:
+Cree una regla de carga de página con la extensión del SDK web de Platform y el tipo de acción Enviar evento:
 
 1. Abra la pestaña **[!UICONTROL Reglas]** y seleccione **[!UICONTROL Crear nueva regla]**.
 

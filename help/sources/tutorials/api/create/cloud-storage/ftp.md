@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 

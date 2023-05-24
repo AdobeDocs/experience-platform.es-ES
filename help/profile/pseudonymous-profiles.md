@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conjunto de datos;conjunto de datos;tiempo de vida;ttl;tiempo de vida;seudónimo;perfiles seudónimos;caducidad de datos;caducidad;
+keywords: Experience Platform;inicio;temas populares;conjunto de datos;Conjunto de datos;tiempo de vida;ttl;tiempo de vida;seudónimo;perfiles seudónimos;caducidad de datos;caducidad;
 solution: Experience Platform
-title: Pseudónimo Caducidad de datos de perfil
-description: Este documento proporciona una guía general sobre la configuración de la caducidad de los datos para los perfiles seudónimos dentro de Adobe Experience Platform.
+title: Caducidad de datos de perfil seudónimo
+description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
 workflow-type: tm+mt
@@ -13,71 +13,71 @@ ht-degree: 0%
 
 # Caducidad de datos de perfiles seudónimos
 
-En Adobe Experience Platform, puede configurar los tiempos de caducidad de los perfiles seudónimos, lo que le permite eliminar automáticamente los datos del Almacenamiento de perfiles que ya no son válidos ni útiles para sus casos de uso.
+En Adobe Experience Platform, puede configurar los tiempos de caducidad de los perfiles seudónimos, lo que le permite eliminar automáticamente los datos del almacén de perfiles que ya no son válidos o útiles para sus casos de uso.
 
 ## Perfil seudónimo {#pseudonymous-profile}
 
-Se considera un perfil para la caducidad de datos seudónimos si cumple las siguientes condiciones:
+Un perfil se considera para la caducidad de datos seudónimos si cumple las siguientes condiciones:
 
-- Las áreas de nombres de identidad del perfil enlazado coinciden con lo que el cliente ha especificado como un área de nombres de identidad seudónima o desconocida.
-   - Por ejemplo, si el área de nombres de identidad del perfil es `ECID`, `GAID`o `AAID`. El perfil identificado no tiene ID de ningún otro espacio de nombres de identidad. En este ejemplo, un perfil identificado sí **not** tienen una identidad de correo electrónico o CRM.
-- No se ha producido ninguna actividad en una cantidad de tiempo definida por el usuario. La actividad se define mediante cualquier evento de experiencia que se ingrese o actualizaciones iniciadas por el cliente de los atributos de perfil.
-   - Por ejemplo, un nuevo evento de vista de página o una actualización de atributo de página se consideran una actividad. Sin embargo, una actualización de pertenencia a segmentos no iniciada por el usuario es **not** se considera una actividad. Actualmente, para calcular la caducidad de los datos, el seguimiento a nivel de perfil se basa en el tiempo del evento para los eventos de experiencia y el tiempo de ingesta para los atributos de perfil.
+- Las áreas de nombres de identidad del perfil vinculado coinciden con lo que el cliente ha especificado como área de nombres de identidad seudónima o desconocida.
+   - Por ejemplo, si el área de nombres de identidad del perfil es `ECID`, `GAID`, o `AAID`. El perfil identificado no tiene ID de ninguna otra área de nombres de identidad. En este ejemplo, un perfil identificado hace lo siguiente **no** tiene una identidad de correo electrónico o CRM.
+- No se ha realizado ninguna actividad en un período de tiempo definido por el usuario. La actividad se define mediante la ingesta de eventos de experiencia o mediante actualizaciones iniciadas por el cliente en los atributos de perfil.
+   - Por ejemplo, un nuevo evento de vista de página o una actualización de atributo de página se consideran una actividad. Sin embargo, una actualización de abono de segmentos iniciada por un no usuario es **no** se considera una actividad de. Actualmente, para calcular la caducidad de los datos, el seguimiento a nivel de perfil se basa en el momento del evento para Eventos de experiencia y el momento de la ingesta para atributos de perfil.
 
 ## Acceso {#access}
 
-La caducidad de los datos del perfil pseudoanónima no se puede configurar a través de la interfaz de usuario de Platform o las API. En su lugar, debe ponerse en contacto con el servicio de asistencia técnica para habilitar esta función. Al ponerse en contacto con el servicio de asistencia técnica, incluya la siguiente información:
+La caducidad de los datos del perfil seudónimo no se puede configurar mediante la interfaz de usuario o las API de Platform. En su lugar, debe ponerse en contacto con el servicio de asistencia para habilitar esta función. Cuando contacte con el servicio de asistencia, incluya la siguiente información:
 
-- Los espacios de nombres de identidad que se deben tener en cuenta para las eliminaciones de perfiles seudónimos.
+- Las áreas de nombres de identidad que se deben tener en cuenta para las eliminaciones de perfiles seudónimos.
    - Por ejemplo: `ECID` solo, `AAID` solo, o una combinación de `ECID` y `AAID`.
-- Cantidad de tiempo de espera antes de eliminar un perfil seudónomo. La recomendación predeterminada para los clientes es de 14 días. Sin embargo, este valor puede variar en función del caso de uso.
+- Cantidad de tiempo que se debe esperar antes de eliminar un perfil seudónimo. La recomendación predeterminada para los clientes de es de 14 días. Sin embargo, este valor puede diferir según el caso de uso.
 
 ## Preguntas frecuentes {#faq}
 
-La siguiente sección enumera las preguntas más frecuentes sobre la caducidad de datos de perfiles seudónimos:
+La siguiente sección enumera las preguntas más frecuentes sobre la caducidad de los datos de perfiles seudónimos:
 
-### ¿En qué se diferencia la caducidad de los datos del perfil seudónimos de la caducidad de los datos del evento de experiencia?
+### ¿En qué se diferencia la caducidad de datos del perfil seudónimo de la caducidad de datos del evento de experiencia?
 
-La caducidad de los datos del perfil y la caducidad de los datos del evento de experiencia son características complementarias.
+La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de experiencia son funciones complementarias.
 
 #### Granularidad
 
-La caducidad de datos de perfil pseudoanónima funciona en un **entorno limitado** nivel. Como resultado, la caducidad de los datos afectará a todos los perfiles del simulador para pruebas.
+La caducidad de datos del perfil seudónimo funciona en un **espacio aislado** nivel. Como resultado, la caducidad de los datos afectará a todos los perfiles de la zona protegida.
 
-La caducidad de datos de Evento de experiencia funciona en un evento **conjunto de datos** nivel. Como resultado, cada conjunto de datos puede tener una configuración de caducidad de datos diferente.
+La caducidad de los datos del Experience Event funciona en una **conjunto de datos** nivel. Como resultado, cada conjunto de datos puede tener una configuración de caducidad de datos diferente.
 
 #### Tipos de identidad
 
-Pseudónimo Caducidad de datos de perfil **only** considera perfiles que tienen gráficos de identidad que contienen áreas de nombres de identidad seleccionadas por el cliente, como `ECID`, `AAID`, u otros tipos de cookies. Si el perfil contiene **any** área de nombres de identidad adicional que era **not** en la lista seleccionada del cliente, el perfil **not** se eliminará.
+Caducidad de datos de perfil seudónimo **solamente** considera los perfiles que tienen gráficos de identidad que contienen áreas de nombres de identidad seleccionadas por el cliente, como `ECID`, `AAID`u otros tipos de cookies. Si el perfil contiene **cualquiera** área de nombres de identidad adicional que se **no** en la lista seleccionada por el cliente, el perfil **no** se eliminarán.
 
-La caducidad de los datos del evento de experiencia elimina eventos **only** en función de la marca de tiempo del registro de evento. Las áreas de nombres de identidad incluidas son **ignorado** para fines de caducidad.
+La caducidad de datos de Experience Event elimina los eventos **solamente** se basa en la marca de tiempo del registro de evento. Las áreas de nombres de identidad incluidas son **ignorado** para fines de caducidad.
 
 #### Elementos eliminados
 
-La caducidad de datos de perfil pseudonímica elimina **both** registros de evento y perfil. Como resultado, también se eliminarán los datos de la clase de perfil.
+Eliminación de la caducidad de datos de perfil seudónimo **ambos** registros de eventos y perfiles. Como resultado, los datos de clase de perfil también se eliminarán.
 
-Caducidad de datos de Evento de experiencia **only** elimina eventos y hace **not** quitar datos de clase de perfil. Los datos de la clase de perfil solo se eliminan cuando se eliminan todos los datos de **all** conjuntos de datos y hay **no** registros de clase de perfil restantes para el perfil.
+Caducidad de datos de Experience Event **solamente** elimina eventos y hace **no** quitar datos de clase de perfil. Los datos de clase de perfil solo se eliminan cuando se eliminan todos los datos en **todo** conjuntos de datos y hay **no** registros de clase de perfil restantes para el perfil.
 
-### ¿Cómo se puede utilizar la caducidad de datos de perfil seudónimos junto con la caducidad de datos de eventos de experiencia?
+### ¿Cómo se puede usar la caducidad de datos de perfil seudónimo junto con la caducidad de datos de Experience Event?
 
-La caducidad de los datos del perfil y la caducidad de los datos del evento de experiencia pueden utilizarse para complementarse.
+La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de experiencia se pueden utilizar para complementarse.
 
-Debería **always** configure la caducidad de los datos de Experience Event en sus conjuntos de datos, según sus necesidades de retención de datos sobre sus clientes conocidos. Una vez configurada la caducidad de los datos de los eventos de experiencia, puede utilizar la caducidad de los datos de perfil seudónimos para eliminar automáticamente los perfiles seudónimos. Normalmente, el periodo de caducidad de los datos para los perfiles seudónimos es inferior al periodo de caducidad de los eventos de experiencia.
+Usted debe **siempre** configure la caducidad de datos de Experience Event en sus conjuntos de datos, en función de sus necesidades de retención de datos sobre sus clientes conocidos. Una vez configurada la caducidad de datos del Evento de experiencia, puede utilizar la caducidad de datos del Perfil seudónimo para eliminar automáticamente los Perfiles seudónimos. Normalmente, el periodo de caducidad de los datos de los perfiles seudónimos es menor que el periodo de caducidad de los datos de los eventos de experiencia.
 
-En un caso de uso típico, puede configurar la caducidad de los datos de los eventos de experiencia en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos de perfil seudónimos en una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de las licencias de Platform.
+En un caso de uso típico, puede establecer la caducidad de los datos de Experience Event en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos del perfil seudónimo en una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de la licencia de Platform.
 
-### ¿Qué usuarios deberían utilizar la caducidad de datos de perfiles seudónimos?
+### ¿Qué usuarios deben utilizar la caducidad de datos de perfiles seudónimos?
 
 - Si utiliza el SDK web para enviar datos directamente a Platform.
 - Si tiene un sitio web que sirve a clientes no autenticados en masa.
-- Si tiene recuentos de perfiles excesivos en sus conjuntos de datos y ha confirmado que este recuento excesivo de perfiles se debe a un espacio de nombres de identidad basado en cookies anónimas.
-   - Para determinarlo, debe utilizar el informe de superposición de área de nombres de identidad. Puede encontrar más información sobre este informe en la sección [sección de informe de superposición de identidad](./api/preview-sample-status.md#identity-overlap-report) de la guía de API de vista previa del estado de muestra.
+- Si tiene recuentos de perfiles excesivos en los conjuntos de datos y ha confirmado que este recuento excesivo de perfiles se debe a un área de nombres de identidad anónima basada en cookies.
+   - Para determinarlo, debe utilizar el informe de superposición del área de nombres de identidad. Encontrará más información sobre este informe en la [sección de informe de superposición de identidad](./api/preview-sample-status.md#identity-overlap-report) de la guía de API de estado de muestra de previsualización.
 
 ### ¿Cuáles son algunas advertencias que debe tener en cuenta antes de utilizar la caducidad de datos de perfiles seudónimos?
 
-- La caducidad de los datos de perfil pseudoanónimos se ejecutará en la variable **producción** simulador de pruebas.
-- Una vez activada esta función, la eliminación de perfiles se realiza **permanente**. Hay **no** forma de restaurar o revertir los perfiles eliminados.
-- Esto es **not** un trabajo de limpieza de una sola vez. La caducidad de los datos de perfil pseudonimous se ejecutará continuamente una vez al día y eliminará los perfiles que coincidan con la entrada del cliente.
-- **Todo** los perfiles definidos como perfiles seudónimos se verán afectados por la caducidad de los datos del perfil seudónimos. Sí **not** importa si el perfil es solo Evento de experiencia o si solo contiene atributos de perfil.
-- Esta limpieza **only** en Perfil. El servicio de identidad puede seguir mostrando las identidades eliminadas dentro del gráfico después de la limpieza en los casos en que el perfil tenga dos o más identidades seudónimas asociadas (como `AAID` y `ECID`). Esta discrepancia se solucionará en un futuro próximo.
+- La caducidad de los datos de perfil seudónimos se ejecutará en el **producción** zona protegida.
+- Una vez activada esta función, la eliminación de perfiles es **permanente**. No hay **no** forma de revertir o restaurar los perfiles eliminados.
+- Esto es **no** un trabajo de limpieza único. La caducidad de los datos de perfil seudónimos se ejecutará continuamente una vez al día y eliminará los perfiles que coincidan con los datos introducidos por el cliente.
+- **Todo** Los perfiles definidos como perfiles seudónimos se verán afectados por la caducidad de los datos de perfil seudónimos. Sí lo tiene **no** no importa si el perfil es solo Evento de experiencia o si solo contiene atributos de perfil.
+- Esta limpieza **solamente** se producen en el perfil. El servicio de identidad puede seguir mostrando las identidades eliminadas dentro del gráfico después de la limpieza en casos en los que el perfil tenga dos o más identidades seudónimas asociadas (como `AAID` y `ECID`). Esta discrepancia se solucionará en un futuro próximo.
 

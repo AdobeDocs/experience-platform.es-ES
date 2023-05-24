@@ -7,11 +7,11 @@ exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '348'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# Resumen de ingesta de streaming
+# Información general sobre la ingesta de flujo continuo
 
 La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor a [!DNL Experience Platform] en tiempo real.
 

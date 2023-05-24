@@ -21,7 +21,7 @@ La función de bloques anónimos es una forma eficaz de realizar una secuencia d
 
 La tabla proporciona un desglose de las secciones principales del bloque: ejecución y control de excepciones. Las secciones se definen mediante las palabras clave `BEGIN`, `END`, y `EXCEPTION`.
 
-| sección | description |
+| sección | descripción |
 |---|---|
 | ejecución | Una sección ejecutable comienza con la palabra clave `BEGIN` y termina con la palabra clave `END`. Cualquier conjunto de instrucciones incluidas en `BEGIN` y `END` Las palabras clave se ejecutan en secuencia y garantiza que las consultas posteriores no se ejecuten hasta que se haya completado la consulta anterior de la secuencia. |
 | control de excepciones | La sección opcional de control de excepciones comienza con la palabra clave `EXCEPTION`. Contiene el código para detectar y controlar las excepciones en caso de que alguna de las instrucciones SQL de la sección de ejecución falle. Si alguna de las consultas falla, se detiene todo el bloque. |

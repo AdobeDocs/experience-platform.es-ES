@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consulta;plantillas de consulta;guía de api;plantillas;servicio de consulta;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;plantillas de consultas;guía de api;plantillas;servicio de consultas;
 solution: Experience Platform
-title: Extremo de API de plantillas de consulta
-description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consulta.
+title: Punto final de API de plantillas de consulta
+description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consultas.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 4%
 
 # Extremo de plantillas de consulta
 
-## Ejemplo de llamadas a API
+## Llamadas de API de muestra
 
-Las secciones siguientes describen las distintas llamadas a la API que puede realizar mediante el [!DNL Query Service] API. Cada llamada incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las secciones siguientes describen las distintas llamadas de API que puede realizar mediante el [!DNL Query Service] API. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
-Consulte la [Documentación de plantillas de consulta de interfaz de usuario](../ui/query-templates.md) para obtener información sobre la creación de plantillas a través de la interfaz de usuario del Experience Platform.
+Consulte la [Documentación de plantillas de consulta de IU](../ui/query-templates.md) para obtener información sobre la creación de plantillas a través de la interfaz de usuario de Experience Platform.
 
-### Recuperar una lista de plantillas de consulta
+### Recuperación de una lista de plantillas de consulta
 
-Puede recuperar una lista de todas las plantillas de consulta de su organización realizando una solicitud de GET al `/query-templates` punto final.
+Puede recuperar una lista de todas las plantillas de consultas de su organización realizando una solicitud de GET a la variable `/query-templates` punto final.
 
 **Formato de API**
 
@@ -32,18 +32,18 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Parámetros agregados a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros separados por el símbolo &quot;et&quot; (`&`). A continuación se enumeran los parámetros disponibles. |
+| `{QUERY_PARAMETERS}` | (*Opcional*) Parámetros añadidos a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros separados por el símbolo et (`&`). Los parámetros disponibles se enumeran a continuación. |
 
 **Parámetros de consulta**
 
-La siguiente es una lista de parámetros de consulta disponibles para listar plantillas de consulta. Todos estos parámetros son opcionales. Al realizar una llamada a este extremo sin parámetros, se recuperarán todas las plantillas de consulta disponibles para su organización.
+A continuación se muestra una lista de los parámetros de consulta disponibles para enumerar las plantillas de consulta. Todos estos parámetros son opcionales. Si realiza una llamada a este extremo sin parámetros, se recuperarán todas las plantillas de consulta disponibles para su organización.
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo mediante el cual se deben solicitar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` clasificará los resultados por creación en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos creando en orden descendente. |
+| `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por creados en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos por creados en orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuestas utilizando la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta de la lista. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados según los campos. Los filtros **must** se escapó el HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `name` y `userId`. El único operador admitido es `==` (igual a). Por ejemplo, `name==my_template` devolverá todas las plantillas de consulta con el nombre `my_template`. |
+| `start` | Desplaza la lista de respuestas mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta enumerada. (*Valor predeterminado: 0*) |
+| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `name` y `userId`. El único operador admitido es `==` (igual a). Por ejemplo, `name==my_template` devolverá todas las plantillas de consulta con el nombre `my_template`. |
 
 **Solicitud**
 
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de consulta para la organización especificada. La siguiente respuesta devuelve la última plantilla de consulta creada para su organización.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de consulta para la organización especificada. La siguiente respuesta devuelve la plantilla de consulta más reciente creada para su organización.
 
 ```json
 {
@@ -108,11 +108,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.delete` a [eliminar la plantilla de consulta](#delete-a-specified-query-template).
+>Puede usar el valor de `_links.delete` hasta [elimine la plantilla de consulta](#delete-a-specified-query-template).
 
 ### Creación de una plantilla de consulta
 
-Puede crear una plantilla de consulta realizando una solicitud de POST al `/query-templates` punto final.
+Puede crear una plantilla de consulta realizando una solicitud de POST a `/query-templates` punto final.
 
 **Formato de API**
 
@@ -139,9 +139,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetro. Para utilizar una sustitución de parámetros en SQL, debe anteponer la clave de parámetro a una `$`. Por ejemplo, `$key`y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en la variable `queryParameters` campo . Los valores que se pasan aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la solicitud del POST. |
-| `name` | El nombre de la plantilla de consulta. |
-| `queryParameters` | Enlace de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación del tipo de valor en estos pares de valor clave. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para utilizar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key`y proporcionan los parámetros utilizados en SQL como pares de valor clave JSON en `queryParameters` field. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe hacerlo en la solicitud del POST. |
+| `name` | Nombre de la plantilla de consulta. |
+| `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
 
 **Respuesta**
 
@@ -175,11 +175,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.delete` a [eliminar la plantilla de consulta](#delete-a-specified-query-template).
+>Puede usar el valor de `_links.delete` hasta [elimine la plantilla de consulta](#delete-a-specified-query-template).
 
 ### Recuperar una plantilla de consulta especificada
 
-Puede recuperar una plantilla de consulta específica realizando una solicitud de GET al `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de solicitud.
+Puede recuperar una plantilla de consulta específica realizando una solicitud de GET a `/query-templates/{TEMPLATE_ID}` y proporciona el ID de la plantilla de consulta en la ruta de solicitud.
 
 **Formato de API**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | La variable `id` de la plantilla de consulta que desea recuperar. |
+| `{TEMPLATE_ID}` | El `id` valor de la plantilla de consulta que desea recuperar. |
 
 **Solicitud**
 
@@ -233,11 +233,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.delete` a [eliminar la plantilla de consulta](#delete-a-specified-query-template).
+>Puede usar el valor de `_links.delete` hasta [elimine la plantilla de consulta](#delete-a-specified-query-template).
 
 ### Actualizar una plantilla de consulta especificada
 
-Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT al `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de solicitud.
+Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT a `/query-templates/{TEMPLATE_ID}` y proporciona el ID de la plantilla de consulta en la ruta de solicitud.
 
 **Formato de API**
 
@@ -247,13 +247,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | La variable `id` de la plantilla de consulta que desea recuperar. |
+| `{TEMPLATE_ID}` | El `id` valor de la plantilla de consulta que desea recuperar. |
 
 **Solicitud**
 
 >[!NOTE]
 >
->La solicitud del PUT requiere que se rellenen el campo sql y el campo name, y **sobrescribir** el contenido actual de esa plantilla de consulta.
+>La solicitud del PUT requiere que se rellene el campo SQL y Nombre, y lo hará **sobrescribir** el contenido actual de esa plantilla de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -272,13 +272,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetro. Para utilizar una sustitución de parámetros en SQL, debe anteponer la clave de parámetro a una `$`. Por ejemplo, `$key`y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en la variable `queryParameters` campo . Los valores que se pasan aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la solicitud del POST. |
-| `name` | El nombre de la plantilla de consulta. |
-| `queryParameters` | Enlace de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación del tipo de valor en estos pares de valor clave. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para utilizar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key`y proporcionan los parámetros utilizados en SQL como pares de valor clave JSON en `queryParameters` field. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe hacerlo en la solicitud del POST. |
+| `name` | Nombre de la plantilla de consulta. |
+| `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con la información actualizada para la plantilla de consulta especificada.
+Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con la información actualizada de la plantilla de consulta especificada.
 
 ```json
 {
@@ -309,11 +309,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con la informació
 
 >[!NOTE]
 >
->Puede utilizar el valor de `_links.delete` a [eliminar la plantilla de consulta](#delete-a-specified-query-template).
+>Puede usar el valor de `_links.delete` hasta [elimine la plantilla de consulta](#delete-a-specified-query-template).
 
 ### Eliminar una plantilla de consulta especificada
 
-Puede eliminar una plantilla de consulta específica realizando una solicitud de DELETE al `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla de consulta en la ruta de solicitud.
+Puede eliminar una plantilla de consulta específica realizando una solicitud de DELETE a `/query-templates/{TEMPLATE_ID}` y proporciona el ID de la plantilla de consulta en la ruta de solicitud.
 
 **Formato de API**
 
@@ -323,7 +323,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | La variable `id` de la plantilla de consulta que desea recuperar. |
+| `{TEMPLATE_ID}` | El `id` valor de la plantilla de consulta que desea recuperar. |
 
 **Solicitud**
 
@@ -337,7 +337,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con el siguiente mensaje.
+Una respuesta correcta devuelve el estado HTTP 202 (Accepted) con el siguiente mensaje.
 
 ```json
 {

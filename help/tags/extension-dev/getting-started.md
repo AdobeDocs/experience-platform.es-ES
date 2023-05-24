@@ -64,4 +64,4 @@ Por ejemplo, esto puede devolver si el explorador del usuario es Chrome, si est�
 
 ## Pasos siguientes
 
-* Siga las [Información general del proceso de envío](./submit/overview.md) y prepararse para [validate](./submit/upload-and-test.md#validate) y [cargar](./submit/upload-and-test.md#integration) la extensión para realizar pruebas dentro del ecosistema de etiquetas.
+* Siga las [Resumen del proceso de envío](./submit/overview.md) y prepararse para [validate](./submit/upload-and-test.md#validate) y [cargar](./submit/upload-and-test.md#integration) Seleccione la extensión para realizar pruebas dentro del ecosistema de etiquetas.

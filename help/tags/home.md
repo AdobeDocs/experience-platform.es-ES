@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->El reenvío de eventos es una función de pago que se incluye como parte de las ofertas Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
+>El reenvío de eventos es una función de pago que se incluye como parte de las ofertas de Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -38,7 +38,7 @@ Este documento describe las notas de la versión de la extensión de Adobe Exper
 
 * Esta versión contiene la última versión, Visitor 5.3.0, que tiene las siguientes actualizaciones nuevas:
 
-   * Algoritmo actualizado para generar ECID local
+   * Se ha actualizado el algoritmo para generar ECID local
    * Última inclusión con `Secure` y `SameSite` indicadores de la cookie de privacidad
    * Se ha corregido un problema con el navegador Firefox cuando una página se carga en un iFrame secundario
 

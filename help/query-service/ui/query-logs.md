@@ -1,7 +1,8 @@
 ---
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%

@@ -3,7 +3,8 @@ title: Actualización de las especificaciones de flujo para el SDK de streaming 
 description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de Flow Service para fuentes de autoservicio (SDK de streaming).
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 2%

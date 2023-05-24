@@ -3,13 +3,13 @@ keywords: Experience Platform;guía de usuario;inteligencia artificial aplicada 
 feature: Customer AI
 title: Políticas de gobernanza para la inteligencia artificial aplicada al cliente
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
-
 
 # Políticas de gobernanza
 

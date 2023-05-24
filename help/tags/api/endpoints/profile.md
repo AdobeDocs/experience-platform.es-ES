@@ -13,7 +13,7 @@ ht-degree: 75%
 
 En la API de Reactor, un perfil representa a un usuario de Adobe Experience Platform. La API de Reactor no mantiene su propia base de datos de usuarios y permisos, sino que se basa en los ID de Adobe administrados por el [Sistema de administración de identidades (IMS) de Adobe](https://helpx.adobe.com/es/enterprise/using/identity.html).
 
-Un perfil contiene toda la información sobre el usuario que ha iniciado sesión, incluidas todas las organizaciones a las que pertenece, los perfiles de producto a los que pertenece dentro de cada organización y los derechos que tiene de cada perfil de producto.
+Un perfil contiene toda la información acerca del usuario que ha iniciado sesión, incluidas todas las organizaciones a las que pertenece, los perfiles de producto a los que pertenece dentro de cada organización y los derechos que tiene de cada perfil de producto.
 
 ## Primeros pasos
 

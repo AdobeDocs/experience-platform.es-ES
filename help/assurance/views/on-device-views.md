@@ -1,19 +1,19 @@
 ---
 title: Vistas en el dispositivo
-description: Esta guía muestra el aspecto que tienen las diferentes vistas en un dispositivo que utiliza Adobe Experience Platform Assurance.
-source-git-commit: e054c8a605557a8c78d89c1a9bf562b9298cc260
+description: Esta guía muestra el aspecto de las distintas vistas en un dispositivo que utiliza Adobe Experience Platform Assurance.
+exl-id: aa0b09e6-88e0-4f06-be57-df7536a9fa2f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
-
 # Vistas en el dispositivo
 
 ## Conectado
 
-(indicada por el Adobe rojo &quot;A&quot;)
+(indicado con el Adobe rojo &quot;A&quot;)
 
 ![](./images/on-device-views/connected.png)
 

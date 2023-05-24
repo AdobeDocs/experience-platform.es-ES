@@ -2,18 +2,18 @@
 keywords: Experience Platform;inicio;temas populares;DULE;dule
 solution: Experience Platform
 title: Información general sobre gobernanza de datos
-description: Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de marketing
+description: Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 # Resumen de gobernanza de datos
 
-Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por disposiciones legales. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las políticas de uso de datos.
+Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las políticas de uso de datos.
 
 Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de [!DNL Experience Platform] en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado de uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de marketing.
 

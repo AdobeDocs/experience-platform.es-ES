@@ -5,13 +5,13 @@ exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
 # Visualizador de gráficos de identidad
 
-Un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales. Adobe Experience Platform Identity Service administra y actualiza colectivamente todos los gráficos de identidad de los clientes en tiempo casi real, en respuesta a la actividad de los clientes.
+Un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales. El servicio de identidad de Adobe Experience Platform administra y actualiza todos los gráficos de identidad de los clientes de forma colectiva casi en tiempo real como respuesta a la actividad de los clientes.
 
 El visualizador de gráficos de identidad en la interfaz de usuario de Platform le permite visualizar y comprender mejor qué identidades de clientes se vinculan y de qué maneras. El visor le permite arrastrar e interactuar con diferentes partes del gráfico, lo que le permite examinar relaciones de identidad complejas, depurar de forma más eficaz y beneficiarse de una mayor transparencia con la forma en que se utiliza la información.
 

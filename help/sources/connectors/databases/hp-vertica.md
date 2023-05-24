@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El [!DNL HP Vertica] el conector está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El [!DNL HP Vertica] el conector está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de bases de datos como [!DNL Microsoft], MySQL y [!DNL Azure]. Puede introducir los datos de estos sistemas en [!DNL Platform].
 

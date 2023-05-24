@@ -7,7 +7,7 @@ exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
@@ -25,11 +25,11 @@ Estos extremos se describen a continuación. Visite las guías de extremos indiv
 
 ## Funciones
 
-Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de acceso de visualización o escritura que necesiten. Consulte la [guía de extremo de funciones](./roles.md) para obtener más información sobre cómo trabajar con funciones en la API.
+Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten. Consulte la [guía de extremo de funciones](./roles.md) para obtener más información sobre cómo trabajar con funciones en la API.
 
 ## Políticas
 
-Las políticas son declaraciones que unen atributos para establecer acciones permisibles e inadmisibles. Las directivas pueden ser locales o globales, y pueden anular otras directivas. El `/policies` el punto de conexión le permite administrar directivas mediante programación en su organización. Consulte la [guía de extremo de directivas](./policies.md) para obtener más información sobre cómo trabajar con directivas en la API.
+Las directivas son declaraciones que reúnen atributos para establecer acciones permitidas y no permitidas. Las directivas pueden ser locales o globales, y pueden anular otras directivas. El `/policies` el punto de conexión le permite administrar directivas mediante programación en su organización. Consulte la [guía de extremo de directivas](./policies.md) para obtener más información sobre cómo trabajar con directivas en la API.
 
 ## Productos
 

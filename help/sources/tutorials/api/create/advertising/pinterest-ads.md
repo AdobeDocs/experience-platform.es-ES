@@ -1,52 +1,53 @@
 ---
-title: Crear una conexión de origen y un flujo de datos para Pinterest Ads mediante la API de servicio de flujo
-description: Obtenga información sobre cómo conectar Adobe Experience Platform a Pinterest Ads mediante la API de servicio de flujo.
-badge: "Beta"
+title: Crear una conexión de origen y un flujo de datos para Pinterest Ads mediante la API de Flow Service
+description: Obtenga información sobre cómo conectar Adobe Experience Platform a Pinterest Ads mediante la API de Flow Service.
+badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 6a549a8c747db8e0e4b9c2feaeb8e84386c63d32
+exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 2%
 
 ---
 
-# Crear una conexión de origen y un flujo de datos para [!DNL Pinterest Ads] usando la variable [!DNL Flow Service] API
+# Crear una conexión de origen y un flujo de datos para [!DNL Pinterest Ads] uso del [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La variable [!DNL Pinterest Ads] el origen está en versión beta. Lea el [información general sobre fuentes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes con etiquetas beta.
+>El [!DNL Pinterest Ads] el origen está en versión beta. Lea el [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
-El siguiente tutorial le guía por los pasos para crear un [!DNL Pinterest Ads] conexión de origen y flujo de datos para traer [[!DNL Pinterest Ads]](https://ads.pinterest.com/) datos a Adobe Experience Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+El siguiente tutorial le guiará para crear una [!DNL Pinterest Ads] conexión de origen y flujo de datos para traer [[!DNL Pinterest Ads]](https://ads.pinterest.com/) datos a Adobe Experience Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos {#getting-started}
 
-Esta guía requiere una comprensión práctica de los siguientes componentes del Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos de varias fuentes, al mismo tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Pinterest Ads] usando la variable [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Pinterest Ads] uso del [!DNL Flow Service] API.
 
 ### Requisitos previos {#prerequisites}
 
-Para conectarse [!DNL Pinterest Ads] para Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse [!DNL Pinterest Ads] para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 * Las [!DNL Pinterest] `accessToken`.
 * Las [!DNL Pinterest] `adAccountId`.
 * Uno de [!DNL Pinterest] `campaign`, `adGroup` o `ad` ID según sea necesario.
 
-Para obtener más información sobre estas propiedades de conexión, lea la [[!DNL Pinterest Ads] información general](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
+Para obtener más información acerca de estas propiedades de conexión, lea la [[!DNL Pinterest Ads] descripción general](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-## Connect [!DNL Pinterest Ads] a Platform que utiliza la variable [!DNL Flow Service] API {#connect-platform-to-flow-api}
+## Connect [!DNL Pinterest Ads] a Platform mediante el [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-A continuación se describen los pasos que se deben seguir para conectar [!DNL Pinterest Ads] al Experience Platform.
+A continuación se describen los pasos que debe seguir para conectarse [!DNL Pinterest Ads] al Experience Platform.
 
-### Creación de una conexión base {#base-connection}
+### Crear una conexión base {#base-connection}
 
-Una conexión base retiene información entre la fuente y la plataforma, incluidas las credenciales de autenticación de la fuente, el estado actual de la conexión y el ID de conexión base único. El ID de conexión base le permite explorar y navegar archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
+Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` al proporcionar su [!DNL Pinterest Ads] credenciales de autenticación como parte del cuerpo de la solicitud.
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Pinterest Ads] credenciales de autenticación como parte del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -85,13 +86,13 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión base. Asegúrese de que el nombre de la conexión base sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión base. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión base. |
-| `connectionSpec.id` | El ID de especificación de conexión de su origen. Esta ID se puede recuperar después de registrar y aprobar el origen mediante la variable [!DNL Flow Service] API. |
+| `connectionSpec.id` | El ID de especificación de conexión de su origen. Este ID se puede recuperar una vez registrado su origen y aprobado mediante el [!DNL Flow Service] API. |
 | `auth.specName` | El tipo de autenticación que utiliza para autenticar el origen en Platform. |
-| `auth.params.accessToken` | Contiene el [!DNL Pinterest] Valor del token de acceso necesario para autenticar el origen. |
+| `auth.params.accessToken` | Contiene el [!DNL Pinterest] Valor de token de acceso necesario para autenticar el origen. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve la conexión base recién creada, incluido su identificador de conexión único (`id`). Este ID es necesario para explorar la estructura de archivos y el contenido de la fuente en el siguiente paso.
+Una respuesta correcta devuelve la conexión base recién creada, incluido su identificador de conexión único (`id`). Este ID es necesario para explorar la estructura de archivos y el contenido de origen en el siguiente paso.
 
 ```json
 {
@@ -100,7 +101,7 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 }
 ```
 
-### Explorar la fuente {#explore}
+### Explorar su origen {#explore}
 
 Con el ID de conexión base que generó en el paso anterior, puede explorar archivos y directorios realizando solicitudes de GET.
 Utilice las siguientes llamadas para encontrar la ruta del archivo que desea introducir en Platform:
@@ -111,19 +112,19 @@ Utilice las siguientes llamadas para encontrar la ruta del archivo que desea int
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-Al realizar solicitudes de GET para explorar la estructura de archivos y el contenido del origen, debe incluir los parámetros de consulta que se enumeran en la siguiente tabla:
+Al realizar solicitudes para explorar la estructura de archivos y el contenido de origen, debe incluir los parámetros de GET que se enumeran en la tabla siguiente:
 
 
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base generado en el paso anterior. |
-| `objectType=rest` | Tipo de objeto que desea explorar. Actualmente, este valor siempre está establecido en `rest`. |
+| `objectType=rest` | El tipo de objeto que desea explorar. Actualmente, este valor siempre se establece en `rest`. |
 | `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. |
-| `fileType=json` | Tipo de archivo del archivo que desea traer a Platform. Actualmente, `json` es el único tipo de archivo admitido. |
-| `{PREVIEW}` | Valor booleano que define si el contenido de la conexión admite la vista previa. |
-| `{SOURCE_PARAMS}` | Define parámetros para el archivo de origen que desea traer a Platform. Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar todo el `{"ad_account_id":"{PINTEREST_AD_ACCOUNT_ID}","object_ids":"{COMMA_SEPERATED_OBJECT_IDS}","object_type":"{OBJECT_TYPE}}"}` en base64. |
+| `fileType=json` | El tipo de archivo del archivo que desea llevar a Platform. Actualmente, `json` es el único tipo de archivo compatible. |
+| `{PREVIEW}` | Un valor booleano que define si el contenido de la conexión admite la vista previa. |
+| `{SOURCE_PARAMS}` | Define parámetros para el archivo de origen que desea llevar a Platform. Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar todo el `{"ad_account_id":"{PINTEREST_AD_ACCOUNT_ID}","object_ids":"{COMMA_SEPERATED_OBJECT_IDS}","object_type":"{OBJECT_TYPE}}"}` cadena en base64. |
 
-[!DNL Pinterest Ads] admite varias [!DNL Pinterest] Puntos finales de API de Analytics. Según el tipo de objeto que utilice, la solicitud que se enviará es la siguiente:
+[!DNL Pinterest Ads] admite varios [!DNL Pinterest] Extremos de la API de Analytics. Según el tipo de objeto que utilice, la solicitud que se va a enviar es la siguiente:
 
 **Solicitud**
 
@@ -144,7 +145,7 @@ curl -X GET \
 
 >[!TAB Grupos de publicidad]
 
-Para [!DNL Pinterest Ads], al aprovechar la API de análisis de grupos de anuncios, el valor de `{SOURCE_PARAMS}` se pasa como `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. Cuando se codifica en base64, equivale a `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` como se muestra a continuación.
+Para [!DNL Pinterest Ads], al aprovechar la API de análisis de grupos de publicidad, el valor de `{SOURCE_PARAMS}` se pasa como `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. Cuando se codifica en base64, equivale a `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` como se muestra a continuación.
 
 ```shell
 curl -X GET \
@@ -180,7 +181,7 @@ curl -X GET \
 
 >[!TAB Campañas]
 
-Una respuesta correcta devuelve la estructura de datos del [!DNL Pinterest Ads] API a la que llamó.
+Una respuesta correcta devuelve la estructura de datos del [!DNL Pinterest Ads] API a la que ha llamado.
 
 ```json
 {
@@ -438,7 +439,7 @@ Una respuesta correcta devuelve la estructura de datos del [!DNL Pinterest Ads] 
 
 ### Crear una conexión de origen {#source-connection}
 
-Puede crear una conexión de origen realizando una solicitud de POST al [!DNL Flow Service] API. Una conexión de origen consiste en un ID de conexión base, una ruta al archivo de datos de origen y un ID de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST a [!DNL Flow Service] API. Una conexión de origen consta de un Id. de conexión base, una ruta de acceso al archivo de datos de origen y un Id. de especificación de conexión.
 
 **Formato de API**
 
@@ -448,7 +449,7 @@ POST /sourceConnections
 
 **Solicitud**
 
-La variable [!DNL Pinterest Ads] el origen admite varios [!DNL Pinterest] Puntos finales de API de Analytics. Según el tipo de objeto que utilice la siguiente solicitud, se crea una conexión de origen:
+El [!DNL Pinterest Ads] la fuente admite varios [!DNL Pinterest] Extremos de la API de Analytics. Según el tipo de objeto que utilice, la siguiente solicitud crea una conexión de origen:
 
 >[!BEGINTABS]
 
@@ -487,10 +488,10 @@ curl -X POST \
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
 | `baseConnectionId` | El ID de conexión base de [!DNL Pinterest Ads]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato de la variable [!DNL Pinterest Ads] datos que desea ingerir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | El formato del [!DNL Pinterest Ads] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
 | `params.ad_account_id` | Las [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Como [!DNL Pinterest] El extremo de la API de Campaign Analytics es obligatorio, el valor sería `campaigns`. |
-| `params.object_ids` | Lista separada por comas de [!DNL Pinterest] ID de campaña. |
+| `params.object_type` | Como el [!DNL Pinterest] Se requiere el punto final de la API de Campaign Analytics. El valor sería `campaigns`. |
+| `params.object_ids` | La lista separada por comas de [!DNL Pinterest] ID de campaña. |
 
 >[!TAB Grupos de publicidad]
 
@@ -527,10 +528,10 @@ curl -X POST \
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
 | `baseConnectionId` | El ID de conexión base de [!DNL Pinterest Ads]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato de la variable [!DNL Pinterest Ads] datos que desea ingerir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | El formato del [!DNL Pinterest Ads] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
 | `params.ad_account_id` | Las [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Como [!DNL Pinterest] El extremo de la API de análisis de grupos de anuncios es obligatorio, el valor sería `ad_groups`. |
-| `params.object_ids` | Lista separada por comas de [!DNL Pinterest] ID de grupos de anuncios. |
+| `params.object_type` | Como el [!DNL Pinterest] El punto final de la API de análisis de grupos de anuncios es obligatorio, el valor sería `ad_groups`. |
+| `params.object_ids` | La lista separada por comas de [!DNL Pinterest] ID de grupos de publicidad. |
 
 >[!TAB Anuncios]
 
@@ -567,10 +568,10 @@ curl -X POST \
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
 | `baseConnectionId` | El ID de conexión base de [!DNL Pinterest Ads]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato de la variable [!DNL Pinterest Ads] datos que desea ingerir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | El formato del [!DNL Pinterest Ads] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
 | `params.ad_account_id` | Las [!DNL Pinterest] `Ad account ID`. |
-| `params.object_type` | Como [!DNL Pinterest] El extremo de la API de Ad Analytics es obligatorio, el valor sería `ads`. |
-| `params.object_ids` | Lista separada por comas de [!DNL Pinterest] ID de anuncio. |
+| `params.object_type` | Como el [!DNL Pinterest] Se requiere el punto final de la API de Ad Analytics, el valor sería `ads`. |
+| `params.object_ids` | La lista separada por comas de [!DNL Pinterest] ID de anuncios. |
 
 >[!ENDTABS]
 
@@ -587,23 +588,23 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ### Creación de un esquema XDM de destino {#target-schema}
 
-Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se contienen los datos de origen.
+Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST al [API del Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
-### Creación de un conjunto de datos de destino {#target-dataset}
+### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporciona el ID del esquema de destino dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial en [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
 ### Creación de una conexión de destino {#target-connection}
 
 Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos, un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la variable [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -643,13 +644,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
-| `connectionSpec.id` | El ID de especificación de conexión correspondiente a [!DNL Data Lake]. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | El formato de la variable [!DNL Pinterest Ads] datos que desea traer a Platform. |
-| `params.dataSetId` | El ID del conjunto de datos de destino recuperado en un paso anterior. |
+| `connectionSpec.id` | Id. de especificación de conexión correspondiente a [!DNL Data Lake]. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | El formato del [!DNL Pinterest Ads] datos que desee llevar a Platform. |
+| `params.dataSetId` | ID del conjunto de datos de destino recuperado en un paso anterior. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único de la nueva conexión de destino (`id`). Este ID se requiere en pasos posteriores.
+Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Este ID es necesario en pasos posteriores.
 
 ```json
 {
@@ -660,7 +661,7 @@ Una respuesta correcta devuelve el identificador único de la nueva conexión de
 
 ### Creación de una asignación {#mapping}
 
-Para que los datos de origen se introduzcan en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiera el conjunto de datos de destino. Esto se logra realizando una solicitud de POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 
 **Formato de API**
 
@@ -756,9 +757,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `outputSchema.schemaRef.id` | El ID de la variable [esquema XDM de destino](#target-schema) generado en un paso anterior. |
-| `mappings.sourceType` | El tipo de atributo de origen que se está asignando. |
-| `mappings.source` | El atributo de origen que debe asignarse a una ruta XDM de destino. |
+| `outputSchema.schemaRef.id` | El ID del [esquema XDM de destino](#target-schema) se ha generado en un paso anterior. |
+| `mappings.sourceType` | El tipo de atributo de origen que se asigna. |
+| `mappings.source` | Atributo de origen que debe asignarse a una ruta XDM de destino. |
 | `mappings.destination` | Ruta XDM de destino a la que se asigna el atributo de origen. |
 
 **Respuesta**
@@ -776,17 +777,17 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 }
 ```
 
-### Crear un flujo {#flow}
+### Creación de un flujo {#flow}
 
-El último paso para obtener datos de [!DNL Pinterest Ads] a Platform es crear un flujo de datos. A partir de ahora, se han preparado los siguientes valores obligatorios:
+El último paso para obtener datos de [!DNL Pinterest Ads] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source-connection)
-* [ID de conexión de Target](#target-connection)
+* [ID de conexión de destino](#target-connection)
 * [ID de asignación](#mapping)
 
-Un flujo de datos es responsable de programar y recopilar datos de un origen. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
+Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
 
-Para programar una ingesta, primero debe establecer el valor de la hora de inicio en hora de inicio en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas, sin embargo, para crear una ingesta única no es necesario configurar un intervalo. Para las demás frecuencias, el valor del intervalo debe establecerse en igual o bueno que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas; sin embargo, la creación de una ingesta única no requiere que se establezca un intervalo. Para las demás frecuencias, el valor del intervalo debe ser igual o bueno que `15`.
 
 **Formato de API**
 
@@ -835,23 +836,23 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | El nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en el flujo de datos. |
+| `name` | Nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en él. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre el flujo de datos. |
 | `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este ID fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Versión correspondiente del ID de especificación de flujo. Este valor se establece de forma predeterminada en `1.0`. |
-| `sourceConnectionIds` | La variable [ID de conexión de origen](#source-connection) generado en un paso anterior. |
-| `targetConnectionIds` | La variable [ID de conexión de target](#target-connection) generado en un paso anterior. |
-| `transformations` | Esta propiedad contiene las distintas transformaciones que deben aplicarse a los datos. Esta propiedad es necesaria al llevar datos que no sean compatibles con XDM a Platform. |
+| `flowSpec.version` | La versión correspondiente del ID de especificación de flujo. El valor predeterminado es `1.0`. |
+| `sourceConnectionIds` | El [ID de conexión de origen](#source-connection) se ha generado en un paso anterior. |
+| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) se ha generado en un paso anterior. |
+| `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Platform. |
 | `transformations.name` | El nombre asignado a la transformación. |
-| `transformations.params.mappingId` | La variable [ID de asignación](#mapping) generado en un paso anterior. |
-| `transformations.params.mappingVersion` | Versión correspondiente del ID de asignación. Este valor se establece de forma predeterminada en `0`. |
-| `scheduleParams.startTime` | Esta propiedad contiene información sobre la programación de ingesta del flujo de datos. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`o `week`. |
-| `scheduleParams.interval` | El intervalo designa el periodo entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un número entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser bueno o igual que `15` para otros valores de frecuencia. |
+| `transformations.params.mappingId` | El [ID de asignación](#mapping) se ha generado en un paso anterior. |
+| `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
+| `scheduleParams.startTime` | Esta propiedad contiene información sobre la programación de la ingesta del flujo de datos. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser bueno o igual a `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. Puede utilizar este ID para supervisar, actualizar o eliminar el flujo de datos.
+Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
 
 ```json
 {
@@ -862,24 +863,24 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. 
 
 ## Apéndice {#appendix}
 
-La siguiente sección proporciona información sobre los pasos que puede seguir para supervisar, actualizar y eliminar el flujo de datos.
+En la siguiente sección se proporciona información sobre los pasos que puede seguir para monitorizar, actualizar y eliminar el flujo de datos.
 
-### Monitorizar el flujo de datos {#monitor-dataflow}
+### Monitorización del flujo de datos {#monitor-dataflow}
 
-Una vez creado el flujo de datos, puede supervisar los datos que se están incorporando a través de él para ver información sobre ejecuciones de flujo, estado de finalización y errores. Para ver ejemplos completos de API, consulte la guía de [monitorización de los flujos de datos de fuentes mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de la API, lea la guía de [monitorización de los flujos de datos de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Actualizar el flujo de datos {#update-dataflow}
 
-Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH al `/flows` punto final de [!DNL Flow Service] al proporcionar el ID de su flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única de su flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de API, consulte la guía de [actualización de flujos de datos de fuentes mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH a `/flows` punto final de [!DNL Flow Service] API, mientras proporciona el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única del flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de flujos de datos de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
-### Actualizar la cuenta {#update-account}
+### Actualice su cuenta {#update-account}
 
-Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud de PATCH al [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la variable única de la cuenta de origen `etag` en el `If-Match` encabezado. Para ver ejemplos completos de API, consulte la guía de [actualizar la cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud al PATCH de [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la cuenta de origen única `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de la cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Eliminar el flujo de datos {#delete-dataflow}
 
-Elimine el flujo de datos realizando una solicitud de DELETE al [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de API, consulte la guía de [eliminación de los flujos de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Elimine el flujo de datos realizando una solicitud de DELETE a [!DNL Flow Service] API al proporcionar el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de la API, lea la guía de [eliminación de flujos de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Eliminar su cuenta {#delete-account}
 
-Elimine la cuenta realizando una solicitud de DELETE al [!DNL Flow Service] mientras proporciona el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, consulte la guía de [eliminación de la cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Elimine la cuenta realizando una solicitud de DELETE a [!DNL Flow Service] al proporcionar el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de la API, lea la guía de [Eliminar la cuenta de origen mediante la API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

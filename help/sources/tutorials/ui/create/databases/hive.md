@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> El [!DNL Apache Hive] el [!DNL Azure HDInsights] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+> El [!DNL Apache Hive] el [!DNL Azure HDInsights] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear una [!DNL Apache Hive] el [!DNL Azure HDInsights] conector de origen mediante [!DNL Platform] interfaz de usuario.
 

@@ -5,7 +5,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Este documento proporciona un tutorial para administrar el acceso a los datos co
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Sistema de modelo de datos de experiencia (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Aprenda a crear y administrar esquemas y otros recursos en la IU de Platform.
+   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=es): Aprenda a crear y administrar esquemas y otros recursos en la IU de Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): Aprenda cómo [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
 * [Control de acceso basado en atributos](../../access-control/abac/overview.md): el control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo de esquema ad hoc o normal. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 

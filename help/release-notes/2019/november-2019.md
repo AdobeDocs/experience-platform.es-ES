@@ -111,7 +111,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] permite a los científic
 | Función | Descripción |
 | -----------| ---------- |
 | Acceso a datos mediante [!DNL Platform] SDK | Fórmulas creadas previamente y portátiles de lanzamiento en [!DNL Python] ahora utilice [!DNL Platform] SDK para acceder a datos. |
-| Compatibilidad con zonas protegidas | Compatibilidad con las próximas funciones de zona protegida (actualmente en fase beta), incluida la capacidad de aislar blocs de notas y fórmulas en zonas protegidas de desarrollo o producción. Consulte la [información general sobre zonas protegidas](../../sandboxes/home.md) para obtener más información. |
+| Compatibilidad con zonas protegidas | Compatibilidad con las próximas funciones de zona protegida (actualmente en fase beta), incluida la capacidad de aislar blocs de notas y fórmulas en zonas protegidas de desarrollo o producción. Consulte la [información general sobre las zonas protegidas](../../sandboxes/home.md) para obtener más detalles. |
 
 Para obtener más información, consulte la [Resumen de Data Science Workspace](../../data-science-workspace/home.md).
 

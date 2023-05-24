@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 16%
 * [Información general del sistema XDM](home.md)
 * Esquemas {#schema}
    * [Conceptos básicos de composición de esquemas](schema/composition.md)
-   * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
+   * [Prácticas recomendadas para el modelo de datos](schema/best-practices.md)
    * [Datos confidenciales y personales](./schema/sensitive-and-personal-data.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Espaciado de nombres en XDM](./schema/namespaces.md)
@@ -25,7 +25,7 @@ ht-degree: 16%
       * [Información general](./schema/industries/overview.md)
       * [Comercial](./schema/industries/retail.md)
       * [Servicios financieros](./schema/industries/financial.md)
-      * [Sanidad](./schema/industries/healthcare.md)
+      * [Atención sanitaria](./schema/industries/healthcare.md)
       * [Telecomunicaciones](./schema/industries/telecom.md)
       * [Viajes y hospitalidad](./schema/industries/travel-hospitality.md)
    * [Diccionario de campos XDM](schema/field-dictionary.md)

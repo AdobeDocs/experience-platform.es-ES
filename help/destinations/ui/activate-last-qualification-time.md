@@ -3,7 +3,8 @@ title: Utilice el atributo XDM Última hora de calificación en los nuevos desti
 description: Aprenda a utilizar el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta
 hidefromtoc: y
 hide: y
-source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
+exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%

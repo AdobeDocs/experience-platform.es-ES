@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Azure Table Storage;Azure Table Storage;ATS;ats
+keywords: Experience Platform;inicio;temas populares;Azure Table Storage;almacenamiento de tablas de Azure;ATS;ats
 solution: Experience Platform
 title: Información general sobre el conector de origen de Azure Table Storage
 description: Obtenga información sobre cómo conectar Azure Table Storage a Adobe Experience Platform mediante API o la interfaz de usuario.

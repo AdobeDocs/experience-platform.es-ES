@@ -6,15 +6,15 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 # Administrar funciones
 
-Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y los miembros de su organización pueden asignarse a una o más funciones, según el ámbito de acceso de visualización o escritura que necesiten.
+Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten.
 
-## Crear una función nueva
+## Crear una nueva función
 
 Para crear una función nueva, seleccione la opción **[!UICONTROL Funciones]** en la barra lateral y seleccione **[!UICONTROL Crear rol]**.
 

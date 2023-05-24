@@ -7,7 +7,7 @@ exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Platform está diseñado para enriquecer las aplicaciones de experien
 
 Para satisfacer la necesidad de flexibilidad de desarrollo, Experience Platform proporciona entornos limitados que dividen una sola instancia de Platform en entornos virtuales independientes para ayudarle a desarrollar aplicaciones de experiencia digital basadas en su propio ciclo de vida de desarrollo.
 
-Consulte la [información general sobre zonas protegidas](../../sandboxes/home.md) para obtener más información.
+Consulte la [información general sobre las zonas protegidas](../../sandboxes/home.md) para obtener más detalles.
 
 ## Pasos siguientes
 

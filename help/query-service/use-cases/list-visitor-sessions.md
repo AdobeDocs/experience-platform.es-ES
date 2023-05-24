@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de experienceevent;consulta de experienceevent;consulta de Experience Event;
 title: Enumeración de las vistas de página de un usuario
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para crear una lista de las últimas 100 páginas que ha utilizado un usuario especificado.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%

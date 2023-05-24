@@ -3,7 +3,8 @@ title: Cree una nueva especificación de conexión para el SDK de streaming medi
 description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service e integrar una nueva fuente a través de fuentes de autoservicio.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 1%

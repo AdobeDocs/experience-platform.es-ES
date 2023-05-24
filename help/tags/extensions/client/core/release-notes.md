@@ -19,10 +19,10 @@ ht-degree: 71%
 
 Versión 3.4.1
 
-* Añade nuevos eventos delegados nativos de la web:
+* Agrega nuevos eventos delegados nativos web:
    * Keydown
    * KeyUp
-* Agrega la capacidad de realizar pruebas con muchos valores (&quot;Agregar otra&quot; opciones) frente a los siguientes delegados:
+* Agrega la capacidad de probar con muchos valores (opciones &quot;Agregar otro&quot;) con los siguientes delegados:
    * Eventos
       * Cambiar
    * Condiciones
@@ -31,66 +31,66 @@ Versión 3.4.1
       * Query String Parameter
       * Traffic Source
       * Variable
-* Cambia el delegado events/EntersViewport para que use el [API de observador de intersección](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) en lugar de la detección manual de elementos que entran en la ventanilla.
-* Quita el código que migraba cookies de DTM a LocalStorage.
-* Registra una advertencia a la consola cuando las API LocalStorage y SessionStorage no están disponibles.
+* Cambia el delegado events/EntersViewport para utilizar el [API de observación de intersección](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) en lugar de la detección manual de elementos que entran en la ventanilla móvil.
+* Quita el código que migraba las cookies de DTM a LocalStorage.
+* Registra una advertencia en la consola cuando las API LocalStorage y SessionStorage no están disponibles.
 
 ## 4 de enero de 2022
 
 Versión 3.3.0
 
-* Modifica el [Acción de llamada directa de déclencheur](./overview.md#direct-call-action) para poder proporcionar información de evento personalizada para enviar a las reglas de llamada directa.
+* Modifica el [Acción de llamada directa de déclencheur](./overview.md#direct-call-action) para poder proporcionar información de evento personalizada para enviar a reglas de llamada directa.
 
 ## 8 de octubre de 2021
 
 Versión 3.2.2
 
-* Se ha corregido el esquema JSON del elemento de datos de valor condicional para todos los operadores disponibles.
-* Corrección https://github.com/adobe/reactor-extension-core/issues/64.
+* Corrija el esquema JSON del elemento de datos de valor condicional para todos los operadores disponibles.
+* Corregir https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23 de septiembre de 2021
 
 Versión 3.2.1
 
-* Se ha corregido un error en el que la inicialización de la vista de elementos de datos de valor condicional no funcionaba correctamente cuando los valores de campo eran 0.
+* Se corrigió un error en el cual la inicialización de la vista del elemento de datos de valor condicional no funcionaba correctamente cuando los valores de campo eran 0.
 
 ## 23 de septiembre de 2021
 
 Versión 3.2.0
 
-Se introdujeron los siguientes cambios en el elemento de datos Valor condicional :
+Se introdujeron los siguientes cambios en el elemento de datos Valor condicional:
 
-* Agregue una casilla para los valores condicionales y de reserva que permita al usuario elegir si desea que el valor devuelto sea undefined .
-* Los valores numéricos se exponen como números en el objeto de configuración.
-* Ya no es necesario un valor condicional para que se pueda comportar del mismo modo que el valor de reserva.
+* Agregue una casilla de verificación para los valores condicionales y de reserva que permita al usuario elegir si desea que el valor devuelto sea indefinido.
+* Los valores de número se exponen como números en el objeto de configuración.
+* El valor condicional ya no es necesario para que pueda comportarse del mismo modo que el valor de reserva.
 
 ## 17 de septiembre de 2021
 
 Versión 3.1.1
 
-* Se ha corregido un error de JS que impedía que se cargara la vista de condición del intervalo de fechas.
+* Se ha corregido un error de JS que impedía cargar la vista de condición de intervalo de fechas.
 
 ## 16 de septiembre de 2021
 
 Versión 3.1.0
 
-Se agregaron nuevos elementos de datos:
+Se han añadido nuevos elementos de datos:
 
-* Objeto combinado : seleccione varios elementos de datos que proporcionen un objeto. Estos objetos se combinarán en profundidad (recursivamente) para producir un nuevo objeto.
-* Valor condicional - Devuelve uno de dos valores (conditionalValue o fallbackValue) en función del resultado de la comparación.
-* Entorno de tiempo de ejecución: Devuelva una de las siguientes variables de entorno de Launch: etapa de entorno, fecha de compilación de la biblioteca, nombre de propiedad, ID de propiedad, nombre de regla, id de regla, tipo de evento, carga útil de detalle del evento, identificador de llamada directa.
-* Herramientas de JavaScript: wrapper para operaciones comunes de JavaScript: manipulación de cadenas básica (reemplazar, subcadena, coincidencia regex, primer y último índice, división, fracción), operaciones de matriz básicas (fracción, unión, pop, desplazamiento) y operaciones universales básicas (fracción, longitud).
-* Atributos del dispositivo : devuelven atributos del dispositivo como el tamaño de la ventana o el tamaño de la pantalla.
+* Objeto combinado: seleccione varios elementos de datos que proporcionarán un objeto cada uno. Estos objetos se combinarán profunda (recursivamente) para producir un nuevo objeto.
+* Valor condicional: Devuelva uno de los dos valores (conditionalValue o fallbackValue) en función del resultado de la comparación.
+* Entorno de tiempo de ejecución: devuelva una de las siguientes variables de entorno de Launch: fase de entorno, fecha de compilación de la biblioteca, nombre de propiedad, ID de propiedad, nombre de regla, ID de regla, tipo de evento, carga útil de detalle del evento, identificador de llamada directa.
+* Herramientas de JavaScript: contenedor para operaciones comunes de JavaScript: manipulación básica de cadenas (reemplazar, subcadena, coincidencia de regex, primer y último índice, división, fracción), operaciones básicas de matrices (división, unión, desplazamiento) y operaciones básicas universales (división, longitud).
+* Atributos del dispositivo: devuelven atributos del dispositivo como el tamaño de la ventana o el tamaño de la pantalla.
 
 ## 11 de agosto de 2021
 
 Versión 3.0.0
 
-* PDCL-6153: Añade compatibilidad para extraer de forma fiable la URL completa para las acciones de código personalizado en caché.
+* PDCL-6153: Añade compatibilidad para extraer de forma fiable la URL completa para acciones de código personalizado en caché.
 
-La versión 3.0.0 de la extensión principal de está unida a los cambios en [v27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por Adobe si la empresa del usuario admite CDN Premium.
+La versión 3.0.0 de la extensión Core está asociada con cambios en [Versión 27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por Adobe si la empresa del usuario admite CDN Premium.
 
-Esta actualización es opcional y retrocompatible para los usuarios sin CDN Premium, y obligatoria para los clientes que tienen CDN Premium habilitado en su empresa.
+Esta actualización es opcional y compatible con versiones anteriores para usuarios sin CDN Premium, y obligatoria para los clientes que tienen CDN Premium habilitado en su empresa.
 
 ## 20 de mayo de 2021
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts internos que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede obtener más información sobre el uso de etiquetas con un CSP [here](../../../ui/client-side/content-security-policy.md).
+* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts internos que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede obtener más información sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junio de 2019
 

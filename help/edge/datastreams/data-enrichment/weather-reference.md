@@ -1,13 +1,13 @@
 ---
 title: Asignaciones de campos de datos meteorológicos
 description: Página de referencia para los campos de datos meteorológicos disponibles que están disponibles como parte de la integración con The Weather Channel.
-source-git-commit: 3e5ca8fe67e5ad9ce0fe70d0c9f1e2fbc20cee17
+exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '12238'
 ht-degree: 0%
 
 ---
-
 
 # Asignaciones de campos de datos meteorológicos
 

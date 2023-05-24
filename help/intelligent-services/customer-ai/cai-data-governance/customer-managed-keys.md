@@ -2,7 +2,8 @@
 keywords: perspectivas;inteligencia artificial aplicada al cliente;perspectivas de inteligencia artificial aplicada al cliente;servicio de consulta de AAI;consultas de inteligencia artificial aplicada al cliente;puntuaciones de inteligencia artificial aplicada al cliente; claves administradas por el cliente en CAI
 title: Claves administradas por el cliente en Customer AI.
 description: Obtenga información sobre cómo configurar claves administradas por el cliente para la inteligencia artificial aplicada al cliente.
-source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
+exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 21%

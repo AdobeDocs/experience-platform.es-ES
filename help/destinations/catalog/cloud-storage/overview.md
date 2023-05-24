@@ -6,7 +6,7 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform admite los siguientes destinos de almacenamiento en la
 Para enviar segmentos a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
 
 
-## Usar macros para crear una carpeta en la ubicación de almacenamiento {#use-macros}
+## Utilice macros para crear una carpeta en su ubicación de almacenamiento {#use-macros}
 
 >[!NOTE]
 >

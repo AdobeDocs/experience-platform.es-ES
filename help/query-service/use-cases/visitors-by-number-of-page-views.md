@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de experienceevent;consulta de experienceevent;consulta de Experience Event;
 title: Enumeración de visitantes por número de vistas de página
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para recuperar una lista de visitantes organizada por el número de vistas de página.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

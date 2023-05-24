@@ -133,8 +133,8 @@ A continuación se indican algunos aspectos que se deben tener en cuenta al util
    * Cuando se recibe la respuesta de carga de página
    * Cuando se agota el tiempo de espera de la solicitud de página
    * Cuando se agota el tiempo de espera del propio fragmento
-* La acción &quot;Fire Page Load Request&quot; debe usarse en todas las páginas utilizando el fragmento de ocultamiento previo para minimizar su duración.
-* La ocultación del cuerpo también debe estar habilitada en la acción de solicitud de carga de página de la regla de carga de página que use para Target; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
+* La acción &quot;Fire Page Load Request&quot; debe usarse en todas las páginas utilizando el fragmento de preocultación para minimizar su duración.
+* También debe habilitarse la opción de ocultar el cuerpo en la acción de solicitud de carga de página de la regla de carga de página que use para Target; de lo contrario, todas las cargas de página permanecerán ocultas durante el periodo de espera.
 
 El fragmento de código de preocultamiento es el siguiente y se puede minimizar. Las opciones configurables se encuentran al final:
 

@@ -123,7 +123,7 @@ Este error se produce cuando se proporciona una carga útil no válida para un t
 
 Este error se produce cuando no se encuentra un lote válido al intentar crear una solicitud de eliminación de datos de perfil. Compruebe que ha introducido el ID correcto para un conjunto de datos con perfil habilitado antes de intentarlo de nuevo.
 
-### Aún no se ha creado el destino de la proyección.
+### Aún no se ha creado el destino de la proyección
 
 ```json
 {

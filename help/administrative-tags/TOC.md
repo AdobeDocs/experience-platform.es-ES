@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Etiquetas unificadas (beta){#administrative-tags}
 
-* [Información general sobre las etiquetas unificadas (beta)](overview.md)
+* [Resumen de etiquetas unificadas (beta)](overview.md)
 * IU de etiquetas unificadas {#ui}
    * [Administración de etiquetas](ui/managing-tags.md)
    * [Categorías de etiquetas](ui/tags-categories.md)

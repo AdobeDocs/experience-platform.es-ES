@@ -47,7 +47,7 @@ Aparecerá un menú desplegable con opciones para editar la programación del fl
 
 Seleccionar **[!UICONTROL Eliminar]** para eliminar el flujo de datos.
 
-![eliminar](../../images/tutorials/delete/delete.png)
+![delete](../../images/tutorials/delete/delete.png)
 
 Aparecerá un cuadro de diálogo de confirmación final. Seleccionar **[!UICONTROL Eliminar]** para completar el proceso.
 

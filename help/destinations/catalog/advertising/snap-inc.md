@@ -1,6 +1,6 @@
 ---
-title: Conexión a Snap Inc
-description: Obtenga información sobre cómo conectarse a la plataforma de anuncios de Snapchat y exportar los segmentos de audiencia desde el Experience Platform.
+title: Conexión de Snap Inc
+description: Aprenda a conectarse a la plataforma de anuncios de Snapchat y a exportar los segmentos de audiencia desde Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
 workflow-type: tm+mt
@@ -9,82 +9,82 @@ ht-degree: 1%
 
 ---
 
-# Conexión a Snap Inc
+# Conexión de Snap Inc
 
 ## Información general {#overview}
 
-[Publicidades de Snapchat](https://forbusiness.snapchat.com/) están hechos para cada empresa, sin importar el tamaño o la industria. Conviértase en parte de las conversaciones diarias de Snapchatters con anuncios digitales de pantalla completa que inspiran la acción de las personas que más importan para su negocio.
+[Anuncios de Snapchat](https://forbusiness.snapchat.com/) están hechos para cada negocio, no importa el tamaño o la industria. Forma parte de las conversaciones cotidianas de los Snapchatters con anuncios digitales en pantalla completa que inspiran la acción de las personas que más importan a tu negocio.
 
 >[!IMPORTANT]
 >
->Esta página de documentación la creó el *Snap Inc* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en *dev-support@snap.com*
+>Esta página de documentación fue creada por el *Snap Inc* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *dev-support@snap.com*
 
 ## Casos de uso {#use-cases}
 
-Este destino permite a los especialistas en marketing importar segmentos de usuario creados en Experience Platform en anuncios de Snapchat y utilizarlos para dirigir sus anuncios.
+Este destino permite a los especialistas en marketing importar segmentos de usuarios creados en Experience Platform a anuncios de Snapchat y utilizarlos para segmentar sus anuncios.
 
 ## Requisitos previos {#prerequisites}
 
-Para utilizar este destino, debe tener una cuenta de Snapchat Ads. Consulte esta documentación para obtener información sobre cómo crear una:
+Para usar este destino, debes tener una cuenta de Snapchat Ads. Consulte esta documentación para obtener información sobre cómo crear una:
 
-[Introducción a la publicidad de Snapchat](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[Introducción a Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## Limitaciones {#limitations}
 
 * Snap Inc no admite varias identidades para un segmento de audiencia determinado. Asigne solo una identidad al activar un segmento.
 * Snap Inc no admite el cambio de nombre de segmentos. Para cambiar el nombre de un segmento, debe desactivarlo, cambiarle el nombre y, a continuación, activarlo.
-* No es posible definir un periodo de retención para los miembros de un segmento de audiencia. Todos los miembros tienen retención de duración y permanecerán en el segmento hasta que se eliminen.
+* No es posible definir un período de retención para los miembros de un segmento de audiencia. Todos los miembros tienen retención de duración y estarán en el segmento hasta que se eliminen.
 
-## Identidades compatibles {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
-La variable *Snap Inc* destination admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+El *Snap Inc* El destino de admite la activación de las identidades descritas en la siguiente tabla. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-Todos los identificadores enviados al *Snap Inc* el destino debe tener un valor hash en formato SHA-256. Para hash de los identificadores de texto sin formato antes de enviarlos al destino, marque la casilla de verificación **[!UICONTROL Aplicar transformación]** al asignar identificadores de destino.
+Todos los identificadores enviados a *Snap Inc* El destino debe tener un cifrado hash en formato SHA-256. Para hash los identificadores de texto sin formato antes de enviarlos al destino, marque la **[!UICONTROL Aplicar transformación]** opción al asignar identificadores de destino para el destino.
 
 >[!WARNING]
 > 
-> Los identificadores sin hash no serán aceptados por el destino de Snap Inc y su envío podría causar errores.
+> El destino Snap Inc no aceptará identificadores no hash y su envío podría provocar errores.
 
 
 >[!IMPORTANT]
 > 
-> El destino de Snap Inc no admite varias identidades. Seleccione solo una identidad.
+> El destino Snap Inc no admite varias identidades. Seleccione solo una identidad.
 
-| Identidad de Target | Descripción | Consideraciones |
+| Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| Dirección de correo electrónico | Dirección de correo electrónico con hash SHA-256 | Asignación de direcciones de correo electrónico al campo de identidad de destino *emailAddress*. |
-| N.º de teléfono | Número de teléfono con hash SHA-256 | Asignación de direcciones de correo electrónico al campo de identidad de destino *phoneNumber*. |
-| GAID | ID de publicidad de Google con hash SHA-256 | Asignación de ID de publicidad de Google al campo de identidad de destino *gaid*. |
-| IDFA | ID de publicidad de Apple con hash SHA-256 | Asignación de ID de publicidad de Apple al campo de identidad de destino *idfa*. |
+| Dirección de correo electrónico | Dirección de correo electrónico con hash SHA-256 | Asignación de direcciones de correo electrónico al campo de identidad de destinatario *emailAddress*. |
+| N.º de teléfono | Número de teléfono con hash SHA-256 | Asignación de direcciones de correo electrónico al campo de identidad de destinatario *phoneNumber*. |
+| GAID | ID de publicidad de Google con hash SHA-256 | Asignación de ID de publicidad de Google al campo de identidad de destinatario *gaid*. |
+| IDFA | ID de publicidad de Apple con hash SHA-256 | Asignación de ID de publicidad de Apple al campo de identidad de destinatario *idfa*. |
 
 {style="table-layout:auto"}
 
-## Tipo de exportación y frecuencia {#export-type-frequency}
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en la variable *YOURDESTINATION* destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en *SU DESTINO* destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Conexión a Snap Inc {#connect}
+## Conectando con Snap Inc {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-### Autenticar en destino {#authenticate}
+### Autenticar en el destino {#authenticate}
 
 Para autenticarse en el destino, siga estos pasos:
 
-1. Busque la *Snap Inc* destino del catálogo de destino de Adobe Experience Platform y seleccione **Configurar**.
-2. Select **[!UICONTROL Conectarse al destino]**. Se le redirigirá a la siguiente pantalla:
+1. Busque el *Snap Inc* en el catálogo de destino de Adobe Experience Platform y seleccione **Configurar**.
+2. Seleccionar **[!UICONTROL Conectar con destino]**. Se le redirigirá a la siguiente pantalla:
    ![Pantalla de autenticación 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Introduzca sus credenciales de Snapchat y seleccione **Iniciar sesión**.
-4. Se le mostrarán los datos de Snapchat a los que Adobe Experience Platform podrá acceder. Select **Continuar** para continuar con el proceso de conexión.
+4. Se te mostrarán los datos de Snapchat a los que Adobe Experience Platform podrá acceder. Seleccionar **Continuar** para continuar con el proceso de conexión.
 
 ![Pantalla de autenticación 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
@@ -92,21 +92,21 @@ Después de seleccionar continuar, espere hasta que se le redirija de nuevo a Ad
 
 ### Rellenar detalles de destino {#destination-details}
 
-![Detalles de destino](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![Detalles del destino](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
 Para configurar los detalles del destino, rellene los campos obligatorios y seleccione **[!UICONTROL Siguiente]**.
 
-* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
-* **[!UICONTROL Descripción]**: Descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: El ID de cuenta de anuncio asociado a la cuenta de anuncio a la que desea importar los segmentos. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el centro de ayuda de Snapchat Business](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
+* **[!UICONTROL ID de cuenta]**: ID de la cuenta de publicidad asociada a la cuenta de publicidad a la que desea importar los segmentos. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el Centro de ayuda empresarial de Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Si se introduce un ID de cuenta de anuncio de Snapchat incorrecto o no válido, se producirá un error en la activación del segmento. Compruebe que ha introducido el ID de cuenta de anuncio adecuado.
+>Si se introduce un ID de cuenta de publicidad de Snapchat incorrecto o no válido, la activación del segmento fallará. Compruebe que ha introducido el ID de cuenta de publicidad correcto.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -114,21 +114,21 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lectura [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
-## Validación de la exportación de datos {#exported-data}
+## Validar exportación de datos {#exported-data}
 
-Después de activar segmentos en la variable *Snap Inc* destino, podrá ver los segmentos en el informe del Administrador de Snap Ads [**Audiencias** sección](https://businesshelp.snapchat.com/s/article/audience-sharing). Para acceder a esta sección, siga estos pasos:
+Después de activar los segmentos en *Snap Inc* destino, podrá ver los segmentos en la lista de segmentos del Administrador de anuncios de Snap [**Audiencias** sección](https://businesshelp.snapchat.com/s/article/audience-sharing). Para desplazarse a esta sección, siga estos pasos:
 
-1. Inicie sesión en el [Administrador de anuncios de instantáneas](https://ads.snapchat.com/)
-2. Select **Audiencias** en el menú desplegable de la esquina superior izquierda de la pantalla. Verá los segmentos que activó en Adobe Experience Platform en la Biblioteca de audiencias:
+1. Inicie sesión en [Administrador de anuncios de Snap](https://ads.snapchat.com/)
+2. Seleccionar **Audiencias** en el menú desplegable situado en la esquina superior izquierda de la pantalla. Verá los segmentos que activó en Adobe Experience Platform en la biblioteca de audiencias:
 
 ![Audiencias](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tenga en cuenta que cuando un segmento de Adobe se activa por primera vez en Snap Inc, inicialmente lo verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa el segmento. Para obtener más información sobre cómo se evalúan los segmentos en el Experience Platform, consulte la [Información general del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Tenga en cuenta que cuando se activa por primera vez un segmento de Adobe en Snap Inc, inicialmente lo verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa el segmento. Para obtener más información sobre cómo se evalúan los segmentos en Experience Platform, consulte la [Resumen del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
-## Uso y gobernanza de los datos {#data-usage-governance}
+## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] exige el control de datos; consulte [Información general sobre la administración de datos](/help/data-governance/home.md).
+Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos. Consulte la [Resumen de gobernanza de datos](/help/data-governance/home.md).

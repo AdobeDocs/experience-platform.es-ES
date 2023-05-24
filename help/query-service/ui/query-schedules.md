@@ -1,7 +1,8 @@
 ---
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -67,5 +68,3 @@ Seleccione una programación de las filas de programaciones disponibles. Puede u
 Seleccionar **[!UICONTROL Eliminar una programación]** para eliminar la programación deshabilitada.
 
 ![Espacio de trabajo de programaciones con las opciones Deshabilitar programación y Eliminar programación resaltadas.](../images/ui/query-schedules/delete-schedule.png)
-
-

@@ -35,7 +35,7 @@ Si está copiando una regla o un elemento de datos, en el cuadro de diálogo Cop
 
 >[!NOTE]
 >
->No es posible copiar recursos en otra propiedad si una propiedad está configurada para el desarrollo de extensiones y la otra propiedad no.
+>No se pueden copiar recursos a otra propiedad si una propiedad está configurada para el desarrollo de extensiones y la otra propiedad no.
 
 Una vez que haya configurado el comportamiento deseado, seleccione **[!UICONTROL Copiar]**.
 

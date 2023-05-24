@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;perfil;perfil del cliente en tiempo real;interfaz de usuario;IU;personalización;panel de perfiles;panel
-title: Guía del panel de destinos
-description: Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización.
+keywords: Experience Platform;perfil;perfil de cliente en tiempo real;interfaz de usuario;IU;personalización;tablero de perfiles;tablero
+title: Guía del panel Destinos
+description: Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
@@ -13,57 +13,57 @@ ht-degree: 21%
 
 # [!UICONTROL Destinos] tablero
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero en el que puede ver información importante sobre los destinos activos de su organización, tal como se captura durante una instantánea diaria. Esta guía describe cómo acceder y trabajar con el panel de destinos en la interfaz de usuario y proporciona más información sobre las métricas que se muestran en el panel.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder al panel de destinos de la interfaz de usuario y trabajar con él, y proporciona más información sobre las métricas que se muestran en el panel.
 
-Para obtener una descripción general de los destinos, así como un catálogo de todos los destinos disponibles en Experience Platform, visite [documentación de destinos](../../destinations/home.md).
+Para obtener una descripción general de los destinos, así como un catálogo de todos los destinos disponibles dentro de Experience Platform, visite el [documentación de destinos](../../destinations/home.md).
 
-## [!UICONTROL Destinos] datos de tablero {#destinations-dashboard-data}
+## [!UICONTROL Destinos] datos del panel {#destinations-dashboard-data}
 
-El panel Destinos muestra una instantánea de los destinos que su organización ha habilitado en el Experience Platform. Los datos de la instantánea muestran los datos exactamente como aparecen en el momento concreto en que se tomó la instantánea. En otras palabras, la instantánea no es una aproximación o muestra de los datos y el panel de destinos no se actualiza en tiempo real.
-
->[!NOTE]
->
->Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el panel hasta que se tome la siguiente instantánea.
-
-## Explorar el [!UICONTROL Destinos] tablero {#explore}
-
-Para ir al panel de destinos dentro de la interfaz de usuario de Platform, seleccione **[!UICONTROL Destinos]** en el carril izquierdo, seleccione la opción **[!UICONTROL Información general]** para mostrar el tablero.
-
-La fecha y la hora de la instantánea más reciente se muestran en la parte superior del [!UICONTROL Información general] junto al menú desplegable de destino. Todos los datos del widget son precisos a partir de esa fecha y hora. La marca de tiempo de la instantánea se proporciona en UTC; no está en la zona horaria del usuario u organización individual.
+El panel Destinos muestra una instantánea de los destinos que su organización ha activado en Experience Platform. Los datos de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y el panel de destinos no se actualiza en tiempo real.
 
 >[!NOTE]
 >
->Si su organización es nueva para Experience Platform y aún no tiene destinos activos, consulte el panel Destinos y [!UICONTROL Información general] no están visibles. En su lugar, seleccione [!UICONTROL Destinos] en la navegación izquierda, se muestra la variable [!UICONTROL Catálogo] pestaña . Para obtener más información sobre [!UICONTROL Catálogo] , consulte [[!UICONTROL Destinos] guía del espacio de trabajo](../../destinations/ui/destinations-workspace.md).
+>Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
 
-![Información general sobre los destinos de la interfaz de usuario de Platform, con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
+## Explore la [!UICONTROL Destinos] tablero {#explore}
 
-### Modifique el [!UICONTROL Destinos] tablero {#modify}
+Para navegar al panel de destinos dentro de la IU de Platform, seleccione **[!UICONTROL Destinos]** en el carril izquierdo, seleccione **[!UICONTROL Información general]** para mostrar el tablero.
 
-Select **[!UICONTROL Modificar tablero]** para cambiar el aspecto del panel de destinos. Esto permite mover, agregar y quitar widgets del tablero, así como acceder a la biblioteca de widgets. Desde la biblioteca de utilidades, puede explorar las utilidades disponibles y crear utilidades personalizadas para su organización.
+La fecha y la hora de la instantánea más reciente se muestran en la parte superior de la [!UICONTROL Información general] junto al menú desplegable de destino. Todos los datos del widget son precisos a partir de esa fecha y hora. La marca de tiempo de la instantánea se proporciona en formato UTC; no se encuentra en la zona horaria del usuario u organización individual.
 
-Consulte la [modificación de tableros](../customize/modify.md) y [información general de la biblioteca de utilidades](../customize/widget-library.md) documentación para obtener más información.
+>[!NOTE]
+>
+>Si su organización es nueva en Experience Platform y aún no tiene destinos activos, el panel Destinos y [!UICONTROL Información general] no son visibles. En su lugar, seleccione [!UICONTROL Destinos] desde la navegación izquierda se muestra el [!UICONTROL Catálogo] pestaña. Para obtener más información sobre [!UICONTROL Catálogo] , consulte la [[!UICONTROL Destinos] guía de workspace](../../destinations/ui/destinations-workspace.md).
 
-### Agregar widgets {#add-widget}
+![Información general sobre los destinos de la interfaz de usuario de Platform con la instantánea más reciente resaltada.](../images/destinations/snapshot-timestamp.png)
 
-Select **[!UICONTROL Agregar utilidad]** para ir a la biblioteca de widgets y ver una lista de las utilidades disponibles para agregarlas al tablero.
+### Modifique la [!UICONTROL Destinos] tablero {#modify}
 
-![Información general del panel Destinos con la utilidad Agregar resaltada.](../images/destinations/destinations-overview-add-widget.png)
+Seleccionar **[!UICONTROL Modificar tablero]** para cambiar el aspecto del panel destinos. Esto permite mover, añadir y eliminar widgets del tablero, así como acceder a la biblioteca de widgets. Desde la biblioteca de widgets, puede explorar los widgets disponibles y crear widgets personalizados para su organización.
 
-Desde la biblioteca de utilidades, puede examinar la selección de utilidades de segmento estándar y personalizadas. Para obtener información sobre cómo añadir utilidades, consulte la documentación de la biblioteca de utilidades sobre cómo [agregar una utilidad](../customize/widget-library.md#add-widgets).
+Consulte la [modificación de paneles](../customize/modify.md) y [introducción a la biblioteca de widgets](../customize/widget-library.md) para obtener más información.
+
+### Añadir widgets {#add-widget}
+
+Seleccionar **[!UICONTROL Agregar widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
+
+![Información general del panel Destinos con el widget Agregar resaltado.](../images/destinations/destinations-overview-add-widget.png)
+
+Desde la biblioteca de widgets, puede examinar la selección de widgets de segmento estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
 
 ## Widgets estándar {#standard-widgets}
 
-Adobe proporciona varios widgets estándar que puede utilizar para visualizar distintas métricas relacionadas con los destinos y evaluar la integridad de los segmentos disponibles para el análisis de datos. También puede crear utilidades personalizadas para compartirlas con su organización mediante la [!UICONTROL Biblioteca de utilidades]. Para obtener más información sobre la creación de widgets personalizados, lea la [Información general de la biblioteca de utilidades](../customize/widget-library.md).
+Adobe proporciona varios widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con los  y evaluar la integridad de los segmentos disponibles para el análisis de datos. También puede crear widgets personalizados para compartirlos con su organización mediante el [!UICONTROL Biblioteca de widgets]. Para obtener más información sobre la creación de widgets personalizados, comience por leer el [Resumen de biblioteca de widgets](../customize/widget-library.md).
 
 ### Requisitos previos {#prerequisites}
 
-Antes de continuar con las descripciones de las utilidades estándar, asegúrese de estar familiarizado con las definiciones de los siguientes términos clave utilizados en toda la documentación:
+Antes de continuar con las descripciones de los widgets estándar, asegúrese de estar familiarizado con las definiciones de los siguientes términos clave utilizados en la documentación:
 
-* **Segmento:** Un segmento es **el conjunto de reglas** que incluyen atributos y datos de evento que califican una cantidad de perfiles como audiencia.
-* **Audiencia**: Una audiencia es **el conjunto de perfiles** que cumplen los criterios de una definición de segmento.
-* **Asignado/Asignación**: La asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
-* **Identidad**: Una identidad es un identificador que representa de forma exclusiva a un cliente individual, como un ID de cookie, un ID de dispositivo o un ID de correo electrónico.
-* **Activar**: Activar es la acción que realiza un usuario para asignar un segmento o perfiles a un destino como, por ejemplo, Oracle Eloqua, Google o Marketing Cloud de Salesforce.
+* **Segmento:** Un segmento es **el conjunto de reglas** que incluyen atributos y datos de evento que clasifican una serie de perfiles como audiencia.
+* **Audiencia**: una audiencia es **el conjunto de perfiles** que cumplan los criterios de una definición de segmento.
+* **Asignado/asignación**: la asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
+* **Identidad**: una identidad es un identificador que representa de forma exclusiva a un cliente individual, como un ID de cookie, un ID de dispositivo o un ID de correo electrónico.
+* **Activar**: Activar es la acción realizada por un usuario para asignar un segmento o perfiles a un destino como Oracle Eloqua, Google o Marketing Cloud de Salesforce.
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
@@ -90,13 +90,13 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >title="Destinos más utilizados"
 >abstract="Este widget muestra los destinos más activos de su organización según el número de segmentos asignados. Estos números son precisos en el momento de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan más actualmente, al tiempo que resalta los que pueden estar infrautilizados."
 
-La variable **[!UICONTROL Destinos más utilizados]** muestra los principales destinos de su organización según el número de segmentos asignados, a partir de la última instantánea. Esta clasificación proporciona una perspectiva sobre los destinos que se utilizan, al tiempo que muestra los que pueden estar infrautilizados.
+El **[!UICONTROL Destinos más utilizados]** widget muestra los principales destinos de su organización según el número de segmentos asignados, a partir de la última instantánea. Esta clasificación proporciona una perspectiva de los destinos que se están utilizando, pero también muestra potencialmente aquellos que pueden estar infrautilizados.
 
-Por ejemplo, si configuró un destino ayer pero no le ha asignado ningún segmento, podría ver que el destino está infrautilizado.
+Por ejemplo, si configuró un destino ayer pero no le ha asignado ningún segmento, podrá ver que el destino está actualmente infrautilizado.
 
-El número de segmentos asignados que se muestra en la columna de recuento de segmentos es preciso a partir de la última instantánea diaria. La asignación de un nuevo segmento al destino no actualizará el recuento hasta que se tome la siguiente instantánea.
+El número de segmentos asignados que se muestran en la columna de recuento de segmentos es preciso a partir de la última instantánea diaria. Al asignar un nuevo segmento al destino, el recuento no se actualizará hasta que se tome la siguiente instantánea.
 
-Al seleccionar el nombre de un destino en la lista que se muestra en el widget, se accederá a los detalles de destino vinculados desde el **[!UICONTROL Examinar]** pestaña . También puede seleccionar **[!UICONTROL Ver todo]** para navegar hasta el **[!UICONTROL Examinar]** y, a continuación, seleccione el nombre de un destino para ver sus detalles.
+Al seleccionar el nombre de un destino en la lista que se muestra en el widget, se le dirigirán a los detalles de destino como vinculados desde el **[!UICONTROL Examinar]** pestaña. También puede seleccionar **[!UICONTROL Ver todo]** para ir al **[!UICONTROL Examinar]** y, a continuación, seleccione el nombre de un destino para ver sus detalles.
 
 ![La pestaña Información general del panel Destinos con el widget Destinos más utilizados resaltado.](../images/destinations/most-used-destinations.png)
 
@@ -107,15 +107,15 @@ Al seleccionar el nombre de un destino en la lista que se muestra en el widget, 
 >title="Destinos creados recientemente"
 >abstract="Este widget muestra una lista de los destinos configurados más recientemente dentro de su organización."
 
-La variable **[!UICONTROL Destinos creados recientemente]** permite ver una lista de los destinos configurados más recientemente en su organización.
+El **[!UICONTROL Destinos creados recientemente]** Este widget le permite ver una lista de los destinos configurados más recientemente para su organización.
 
-La fecha creada mostrada es precisa para la última instantánea diaria. En otras palabras, si crea un nuevo destino, no aparecerá en la lista hasta que se haya tomado la siguiente instantánea.
+La fecha de creación que se muestra es la exacta de la última instantánea diaria. En otras palabras, si crea un nuevo destino, no aparecerá en la lista hasta que se tome la siguiente instantánea.
 
-Al seleccionar el nombre de un destino en la lista que se muestra en el widget, se accederá a los detalles de destino vinculados desde el **[!UICONTROL Examinar]** pestaña . También puede seleccionar **[!UICONTROL Ver todo]** para navegar hasta el **[!UICONTROL Examinar]** y, a continuación, seleccione el nombre de un destino para ver sus detalles.
+Al seleccionar el nombre de un destino en la lista que se muestra en el widget, se le dirigirán a los detalles de destino como vinculados desde el **[!UICONTROL Examinar]** pestaña. También puede seleccionar **[!UICONTROL Ver todo]** para ir al **[!UICONTROL Examinar]** y, a continuación, seleccione el nombre de un destino para ver sus detalles.
 
-Para obtener más información sobre cómo configurar tipos de destinos específicos, visite [documentación de destinos](../../destinations/home.md).
+Para obtener más información sobre cómo configurar tipos específicos de destinos, visite la [documentación de destinos](../../destinations/home.md).
 
-![La pestaña Información general del panel Destinos con el widget Destinos creados recientemente resaltado.](../images/destinations/recently-created-destinations.png)
+![La pestaña Información general del panel Destinos con el widget de destinos creados recientemente resaltado.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Segmentos activados recientemente] {#recently-activated-segments}
 
@@ -124,15 +124,15 @@ Para obtener más información sobre cómo configurar tipos de destinos específ
 >title="Segmentos activados recientemente"
 >abstract="Este widget proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea."
 
-La variable **[!UICONTROL Segmentos activados recientemente]** proporciona una lista de los segmentos que se han asignado más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea.
+El **[!UICONTROL Segmentos activados recientemente]** widget proporciona una lista de los segmentos asignados más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea.
 
-La fecha actualizada que se muestra muestra muestra la última vez que se activó el segmento en el destino y es precisa para la última instantánea diaria. En otras palabras, si activa un segmento en el destino, la fecha de actualización no cambiará hasta que se tome la siguiente instantánea.
+La fecha actualizada que se muestra muestra la última vez que se activó el segmento en el destino y es precisa para la última instantánea diaria. En otras palabras, si activa un segmento en el destino, la fecha de actualización no cambiará hasta que se tome la siguiente instantánea.
 
-Si selecciona el nombre de un segmento en la lista que se muestra en la utilidad, obtendrá los detalles del segmento. También puede seleccionar **[!UICONTROL Ver todo]** para ir a la pestaña de exploración del segmento y, a continuación, seleccione el nombre de un segmento para ver sus detalles.
+Si selecciona el nombre de un segmento en la lista que aparece en el widget, accederá a los detalles del segmento. También puede seleccionar **[!UICONTROL Ver todo]** para ir a la pestaña examinar segmento y, a continuación, seleccione el nombre de un segmento para ver sus detalles.
 
-Para obtener más información sobre el trabajo con segmentos en Experience Platform, consulte la [Información general del servicio de segmentación](../../segmentation/home.md).
+Para obtener más información sobre cómo trabajar con segmentos en Experience Platform, consulte la [Resumen del servicio de segmentación](../../segmentation/home.md).
 
-![La pestaña Información general del panel Destinos con el widget Segmentos activados recientemente resaltado.](../images/destinations/recently-activated-segments.png)
+![La pestaña Información general del panel Destinos con el widget de segmentos activados recientemente resaltado.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Segmentos activados recientemente por destino] {#recently-activated-segments-by-destination}
 
@@ -141,15 +141,15 @@ Para obtener más información sobre el trabajo con segmentos en Experience Plat
 >title="Segmentos activados recientemente por destino"
 >abstract="Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en el menú desplegable Información general."
 
-La variable **[!UICONTROL Segmentos activados recientemente por destino]** muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable Información general . Es similar a la variable [!UICONTROL Segmentos activados recientemente] , pero los datos mostrados **only** se aplica al destino seleccionado.
+El **[!UICONTROL Segmentos activados recientemente por destino]** widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido en la lista desplegable de información general. Es similar a la [!UICONTROL Segmentos activados recientemente] widget, pero se muestran los datos **solamente** se aplica al destino seleccionado.
 
-Esta utilidad contiene dos métricas: el nombre del segmento y la fecha en la que se activó por última vez el segmento en el destino. Los datos mostrados son correctos a partir de la última instantánea diaria.
+Este widget contiene dos métricas: el nombre del segmento y la fecha en que se activó por última vez el segmento en el destino. Los datos mostrados son correctos desde la última instantánea diaria.
 
-Puede ver los detalles de un segmento seleccionando el nombre de un segmento en la lista mostrada.
+Puede ver los detalles de un segmento seleccionando el nombre de un segmento en la lista que se muestra.
 
-![Los segmentos activados recientemente por el widget de destino.](../images/destinations/recently-activated-segments-by-destination.png)
+![El widget Segmentos activados recientemente por destino.](../images/destinations/recently-activated-segments-by-destination.png)
 
-Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
+Consulte la sección de requisitos previos para obtener la [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ### [!UICONTROL Tendencia de tamaño de audiencia] {#audience-size-trend}
 
@@ -158,17 +158,17 @@ Consulte la sección de requisitos previos para [definiciones de los términos u
 >title="Tendencia de tamaño de audiencia"
 >abstract="Este widget ilustra la cantidad de perfiles contenidos en el segmento que se envía diariamente a la cuenta de destino. El primer menú desplegable ajusta el período de tiempo de la tendencia de audiencia. El segundo menú desplegable de widgets selecciona el segmento para su análisis. El destino se elige en el menú desplegable Información general."
 
-La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad representa la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino. La utilidad utiliza un gráfico de líneas para ilustrar el número de perfiles contenidos en el segmento que se envían diariamente a la cuenta de destino.
+El **[!UICONTROL Tendencia de tamaño de audiencia]** widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino. El widget utiliza un gráfico de líneas para ilustrar el número de perfiles contenidos en el segmento, que se envían diariamente a la cuenta de destino.
 
-Se puede ajustar un período de tiempo para la tendencia de audiencia en los últimos 30 días, 90 días o 12 meses mediante el primer menú desplegable.
+Se puede ajustar un periodo de tiempo para la tendencia de la audiencia en los últimos 30 días, 90 días o 12 meses mediante el primer menú desplegable.
 
 El segundo menú desplegable enumera todos los segmentos disponibles que se pueden enviar a la cuenta de destino elegida en la parte superior del panel.
 
-![El widget de tendencia del tamaño de la audiencia.](../images/destinations/audience-size-trend.png)
+![El widget de tendencia Tamaño de audiencia.](../images/destinations/audience-size-trend.png)
 
-La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad proporciona un [!UICONTROL Subtítulos] en la parte superior derecha del widget. Select **[!UICONTROL Subtítulos]** para abrir el cuadro de diálogo rótulos automáticos. Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes analizando los datos de gráficos y segmentos.
+El **[!UICONTROL Tendencia de tamaño de audiencia]** El widget proporciona un [!UICONTROL Subtítulos] en la parte superior derecha del widget. Seleccionar **[!UICONTROL Subtítulos]** para abrir el diálogo subtítulos automáticos. Un modelo de aprendizaje automático genera automáticamente subtítulos para describir las tendencias clave y los eventos importantes mediante el análisis de los datos de gráficos y segmentos.
 
-![Cuadro de diálogo de rótulos automáticos para el widget de tendencia de tamaño de audiencia.](../images/destinations/audience-size-trend-captions.png)
+![Cuadro de diálogo de subtítulos automáticos para el widget de tendencia de tamaño de audiencia.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Segmentos no asignados por identidad] {#unmapped-segments-by-identity}
 
@@ -177,15 +177,15 @@ La variable **[!UICONTROL Tendencia del tamaño de la audiencia]** La utilidad p
 >title="Segmentos no asignados por identidad"
 >abstract="Este widget enumera los cinco segmentos principales **sin asignar** clasificados por recuento de identidad descendente para un destino e identidad determinados. Los ID de filtro enumerados en el menú desplegable del widget cambian según la cuenta de destino seleccionada en la parte superior de la página de información general."
 
-La variable **[!UICONTROL Segmentos no asignados por identidad]** La utilidad enumera las cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Destaca los segmentos que son los más beneficiosos de asignar a la cuenta de destino elegida en función del ID elegido.
+El **[!UICONTROL Segmentos no asignados por identidad]** widget enumera los cinco principales **sin asignar** los segmentos clasificados por identidad descendente cuentan para un destino e identidad determinados. Resalta los segmentos que son más beneficiosos para asignar a la cuenta de destino elegida en función del ID elegido.
 
-La lista desplegable ID de destino filtra los segmentos disponibles. Los ID de filtro enumerados en el menú desplegable del cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
+La lista desplegable de ID de destino filtra los segmentos disponibles. Los ID de filtro enumerados en el menú desplegable del cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
 
-La columna identidades cuenta el número de ID de origen dentro del segmento que podrían asignarse al ID elegido en la lista desplegable ID de la utilidad.
+La columna de identidades cuenta el número de ID de origen dentro del segmento que podrían asignarse al ID elegido en la lista desplegable ID del widget.
 
-![Segmentos no asignados por el widget de identidad.](../images/destinations/unmapped-segments-by-identity.png)
+![El widget Segmentos no asignados por identidad.](../images/destinations/unmapped-segments-by-identity.png)
 
-Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
+Consulte la sección de requisitos previos para obtener la [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ### [!UICONTROL Segmentos asignados por identidad] {#mapped-segments-by-identity}
 
@@ -196,9 +196,9 @@ Consulte la sección de requisitos previos para [definiciones de los términos u
 
 Este widget proporciona una lista de los cinco segmentos principales **asignados**. La lista se ordena de mayor a menor según el número de ID de origen que contienen los segmentos. El ID de destino que se va a contar se selecciona en el menú desplegable situado debajo del título del widget. Los ID de destino disponibles en la lista desplegable del widget cambiarán según el filtro de cuenta de destino elegido en la parte superior del panel de información general.
 
-![Segmentos asignados por el widget de identidad.](../images/destinations/mapped-segments-by-identity.png)
+![El widget Segmentos asignados por identidad.](../images/destinations/mapped-segments-by-identity.png)
 
-La variable **[!UICONTROL Segmentos asignados por identidad]** La utilidad resalta de un vistazo la probabilidad de segmentar correctamente las oportunidades de perfil para una campaña dentro del destino elegido. Una campaña de objetivo eficaz no depende del número de perfiles enviados al destino, sino del número de ID de origen que es probable que se comparen con los ID de destino para proporcionar datos útiles y procesables.
+El **[!UICONTROL Segmentos asignados por identidad]** de un vistazo, el widget resalta la probabilidad de segmentar correctamente las oportunidades de perfil para una campaña dentro del destino elegido. Una campaña objetivo eficaz no depende del número de perfiles enviados al destino, sino del número de ID de origen que es probable que coincidan con los ID de destino para proporcionar datos útiles y procesables.
 
 ### Audiencias comunes {#common-audiences}
 
@@ -207,19 +207,19 @@ La variable **[!UICONTROL Segmentos asignados por identidad]** La utilidad resal
 >title="Audiencias comunes"
 >abstract="Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior."
 
-La variable **[!UICONTROL Audiencias comunes]** proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable de la utilidad. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior.
+El **[!UICONTROL Audiencias comunes]** widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget. La lista de segmentos se ordena según la fecha de activación. El segmento activado más recientemente se muestra en la parte superior.
 
-La variable [!UICONTROL TAMAÑO DE LA AUDIENCIA] proporciona el recuento total de perfiles de cada segmento enumerado.
+El [!UICONTROL TAMAÑO DE AUDIENCIA] proporciona el recuento total de perfiles de cada segmento enumerado.
 
 ![El widget de audiencias comunes.](../images/destinations/common-audiences.png)
 
 ### Audiencias asignadas {#mapped-audiences}
 
-La variable [!UICONTROL Audiencias asignadas] muestra el número total de audiencias asignadas que se pueden activar en el destino seleccionado en la parte superior de la página.
+El [!UICONTROL Audiencias asignadas] widget muestra el número total de audiencias asignadas que se pueden activar al destino seleccionado en la parte superior de la página.
 
-Select **[!UICONTROL Segmentos]** para navegar al panel Segmentos [!UICONTROL Examinar] pestaña . Este espacio de trabajo muestra una lista de todas las definiciones de segmentos para su organización.
+Seleccionar **[!UICONTROL Segmentos]** para ir al panel Segmentos [!UICONTROL Examinar] pestaña. Este espacio de trabajo muestra una lista de todas las definiciones de segmentos de su organización.
 
-![El widget Audiencias asignadas .](../images/destinations/mapped-audiences.png)
+![El widget Audiencias asignadas.](../images/destinations/mapped-audiences.png)
 
 ### Estado de audiencia asignado {#mapped-audience-health}
 
@@ -228,21 +228,21 @@ Select **[!UICONTROL Segmentos]** para navegar al panel Segmentos [!UICONTROL Ex
 >title="Estado de audiencia asignado"
 >abstract="Este widget proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio de 30 días asignado a ese destino. Proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media durante los últimos 30 días. Los tamaños de audiencia se ordenan de mayor a menor."
 
-El widget proporciona una lista de hasta 20 segmentos asignados cuyos recuentos totales de perfiles, desde la última instantánea diaria, se desvían por un factor de al menos una desviación estándar del tamaño de audiencia medio asignado a ese destino de 30 días.
+El widget proporciona una lista de hasta 20 segmentos asignados cuyo recuento total de perfiles, a partir de la última instantánea diaria, se desvía por un factor de al menos una desviación estándar del tamaño medio de audiencia asignado a ese destino a los 30 días.
 
-En resumen, proporciona una métrica calculada para la dispersión de los tamaños de audiencia de la media a lo largo de los últimos 30 días. Compara si el tamaño de audiencia de hoy está fuera de la desviación estándar histórica que se ha visto en los datos en los últimos 30 días.
+En resumen, proporciona una métrica calculada para la dispersión de los tamaños de audiencia desde la media de los últimos 30 días. Compara si el tamaño de la audiencia actual está fuera de la desviación estándar histórica vista en los datos de los últimos 30 días.
 
-Todos los tamaños de audiencia del sistema se ordenan de un tamaño de audiencia alto a bajo, como se indica en la sección [!UICONTROL TAMAÑO MÁS RECIENTE] para abrir el Navegador.
+Todos los tamaños de audiencia del sistema se ordenan de alto a bajo, tal como se indica en la [!UICONTROL ÚLTIMO TAMAÑO] columna.
 
-Si el recuento de perfiles asignado a un segmento no es una desviación estándar del tamaño de perfil asignado promedio durante los últimos 30 días, esto indica una anomalía en el sistema y debe investigarse.
+Si el recuento de perfiles asignados al segmento se encuentra fuera de una desviación estándar con respecto al tamaño de perfil asignado promedio en los últimos 30 días, esto indica una anomalía en el sistema y debe investigarse.
 
-Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada] se está desviando por un amplio margen, debe consultar el gráfico de tendencias del tamaño de audiencia y localizar el segmento anómalo. La tendencia puede proporcionar más información sobre el estado de su segmento.
+Si un segmento dentro de [!UICONTROL Estado de audiencia asignado] Un widget se desvía por un amplio margen, debe consultar el gráfico de tendencias del tamaño de la audiencia y localizar el segmento anómalo. La tendencia puede proporcionar más información sobre el estado de su segmento.
 
 >[!NOTE]
 >
->El tamaño predeterminado del widget de salud de la audiencia asignada puede obstruir la información de la tabla. Modifique el tamaño de la utilidad para mejorar la legibilidad de los nombres de segmentos asignados y los títulos de columnas. Consulte la documentación de modificación de paneles para obtener instrucciones sobre [cambiar el tamaño de un widget](../customize/modify.md).
+>El tamaño predeterminado del widget de estado de audiencia asignado puede obstruir la información de la tabla. Modifique el tamaño del widget para mejorar la legibilidad de los nombres de segmentos asignados y los títulos de columnas. Consulte la documentación de modificación de paneles para obtener instrucciones sobre [cómo cambiar el tamaño de un widget](../customize/modify.md).
 
-![El widget de estado de la audiencia asignado.](../images/destinations/mapped-audience-health.png)
+![El widget de estado de audiencia asignado.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Recuento de destinos] {#destinations-count}
 
@@ -251,56 +251,56 @@ Si un segmento dentro de la variable [!UICONTROL Estado de la audiencia asignada
 >title="Recuento de destinos"
 >abstract="Este widget proporciona el número total de puntos finales disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos."
 
-La variable [!UICONTROL Recuento de destinos] proporciona el número total de extremos disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
+El [!UICONTROL Recuento de destinos] widget proporciona el número total de puntos de conexión disponibles donde se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos.
 
-Debajo del recuento total, seleccione **[!UICONTROL Destinos]** para desplazarse a la pestaña de exploración destinos . Esta página enumera todos los destinos con los que ha establecido una conexión hasta la fecha.
+Debajo del recuento total, seleccione **[!UICONTROL Destinos]** para ir a la pestaña destinos examinar. Esta página lista todos los destinos con los que ha establecido una conexión hasta la fecha.
 
-![La utilidad Recuento de destinos .](../images/destinations/destinations-count.png)
+![El widget Recuento de destinos.](../images/destinations/destinations-count.png)
 
 ### [!UICONTROL Estado del destino] {#destination-status}
 
-La variable [!UICONTROL Estado del destino] muestra el número total de destinos habilitados como una única métrica y utiliza un gráfico circular para ilustrar la diferencia proporcional entre los destinos habilitados y deshabilitados.
+El [!UICONTROL Estado del destino] widget muestra el número total de destinos habilitados como una sola métrica y utiliza un gráfico de anillo para ilustrar la diferencia proporcional entre los destinos habilitados y deshabilitados.
 
-Los recuentos individuales de los destinos habilitados o deshabilitados se muestran en un cuadro de diálogo cuando el cursor se sitúa sobre la sección correspondiente del gráfico circular.
+Los recuentos individuales de los destinos habilitados o deshabilitados se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
 ![El widget de estado de destino.](../images/destinations/destination-status.png)
 
 ### [!UICONTROL Destinos activos por plataforma de destino] {#active-destinations-by-destination-platform}
 
-El widget proporciona una tabla de dos columnas para mostrar una lista de plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. La lista de plataformas de destino está ordenada de mayor a menor.
+El widget proporciona una tabla de dos columnas para mostrar una lista de las plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. La lista de plataformas de destino se ordena de alta a baja.
 
 ![El widget Destinos activos por plataforma de destino.](../images/destinations/active-destinations-by-destination-platform.png)
 
 ### [!UICONTROL Audiencias activadas en todos los destinos] {#activated-audiences-across-all-destinations}
 
-La variable [!UICONTROL Audiencias activadas en todos los destinos] proporciona el número total de audiencias activadas en todos los destinos de una única métrica.
+El [!UICONTROL Audiencias activadas en todos los destinos] widget proporciona el número total de audiencias activadas en todos los destinos en una sola métrica.
 
 >[!NOTE]
 >
->Este widget muestra el recuento de audiencias y no el de segmentos.
+>Este widget muestra el recuento de audiencias y no el recuento de segmentos.
 
-Este número es preciso para la instantánea más reciente.
+Este número corresponde a la instantánea más reciente.
 
-![La utilidad Audiencias activadas en todos los destinos .](../images/destinations/activated-audiences-across-all-destinations.png)
+![El widget Audiencias activadas en todos los destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Select **[!UICONTROL Audiencias]** para navegar a los destinos [!UICONTROL Examinar] pestaña . Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para obtener más información sobre la [[!UICONTROL Examinar] ficha](../../destinations/ui/destinations-workspace.md#browse).
+Seleccionar **[!UICONTROL Audiencias]** para ir a los destinos [!UICONTROL Examinar] pestaña. Esta página proporciona una lista de todos los destinos habilitados y una variedad de métricas relevantes. Consulte la documentación para obtener más información sobre [[!UICONTROL Examinar] pestaña](../../destinations/ui/destinations-workspace.md#browse).
 
-Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
+Consulte la sección de requisitos previos para obtener la [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ### [!UICONTROL Audiencias activadas] {#activated-audiences}
 
-Esta utilidad proporciona una única métrica para el número total de audiencias activadas en un destino.
+Este widget proporciona una sola métrica para el número total de audiencias activadas en un destino.
 
-![El widget de audiencias activadas.](../images/destinations/activated-audiences.png)
+![El widget Audiencias activadas.](../images/destinations/activated-audiences.png)
 
-Select **[!UICONTROL Audiencias]** para navegar a la página de detalles del panel de destinos. La variable [!UICONTROL Datos de activación] muestra una lista de segmentos que se han asignado al destino, incluida la fecha de inicio y la fecha de finalización (si corresponde), así como otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de un segmento en particular, seleccione su nombre en la lista.
+Seleccionar **[!UICONTROL Audiencias]** para ir a la página de detalles del panel destinos. El [!UICONTROL Datos de activación] Esta pestaña muestra una lista de los segmentos que se han asignado al destino, incluida su fecha de inicio y finalización (si corresponde), y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de un segmento concreto, seleccione su nombre en la lista.
 
 ![La página de detalles del panel de destinos con la pestaña de datos de activación resaltada.](../images/destinations/activation-data-tab.png)
 
-Esta utilidad le ayuda a comprender el valor de los destinos en función del número de audiencias activadas de un vistazo. También facilita el acceso a información más detallada para su análisis posterior.
+Este widget le ayuda a comprender el valor de sus destinos en función del número de audiencias activadas de un vistazo. También facilita el acceso a información más detallada para un análisis más detallado.
 
-Consulte la sección de requisitos previos para [definiciones de los términos utilizados](#prerequisites) en esta descripción.
+Consulte la sección de requisitos previos para obtener la [definiciones de los términos utilizados](#prerequisites) en esta descripción.
 
 ## Pasos siguientes
 
-Al seguir este documento, debería poder localizar el panel de destinos y comprender las métricas que se muestran en los widgets disponibles. Para obtener más información sobre cómo trabajar con los destinos en Experience Platform, consulte la [documentación de destinos](../../destinations/home.md).
+Al seguir este documento, ahora debería poder localizar el panel de destinos y comprender las métricas mostradas en los widgets disponibles. Para obtener más información sobre cómo trabajar con destinos en Experience Platform, consulte la [documentación de destinos](../../destinations/home.md).

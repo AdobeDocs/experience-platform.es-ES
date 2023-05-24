@@ -2,7 +2,8 @@
 keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;consultas de experienceevent;consulta de experienceevent;consulta de Experience Event;
 title: Creación de un informe de tendencias de eventos
 description: Obtenga información sobre cómo escribir consultas que utilizan eventos de experiencia para crear un informe de tendencias de eventos en un intervalo de fechas especificado, agrupados por fecha.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

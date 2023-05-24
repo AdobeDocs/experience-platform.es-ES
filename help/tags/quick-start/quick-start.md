@@ -31,13 +31,13 @@ Flujo de trabajo de etiquetas básico:
 
 Las etiquetas están totalmente integradas con su Adobe ID. Los permisos de usuario se administran mediante la Admin Console con otros productos y soluciones de Adobe desde [!DNL Creative Cloud], [!DNL Document Cloud] y Experience Cloud.
 
-Las etiquetas tienen un sistema de administración de usuarios basado en los derechos. Esto significa que los derechos individuales deben concederse explícitamente. Estos derechos se asignan a grupos, y los usuarios se añaden a los grupos correspondientes para obtener acceso. Aunque su organización tenga acceso a la recopilación de datos, los usuarios individuales no pueden hacer nada hasta que un administrador les conceda explícitamente algunos derechos.
+Las etiquetas tienen un sistema de administración de usuarios basado en los derechos. Esto significa que los derechos individuales deben concederse explícitamente. Estos derechos se asignan a grupos, y los usuarios se añaden a los grupos correspondientes para obtener acceso. Incluso si su organización tiene acceso a la recopilación de datos, los usuarios individuales no pueden hacer nada hasta que un administrador les conceda explícitamente algún derecho.
 
-Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuarios a las etiquetas, consulte [guía de permisos de recopilación de datos](../../collection/permissions.md).
+Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuarios para etiquetas, consulte la [guía de permisos de recopilación de datos](../../collection/permissions.md).
 
 ## 2. Iniciar sesión
 
-Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario del Experience Platform o en la de recopilación de datos. Para ello, navegue directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experience.adobe.com/)y seleccionando **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
+Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experience.adobe.com/)y seleccionando una de las siguientes opciones **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >

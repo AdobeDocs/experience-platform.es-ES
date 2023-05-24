@@ -2,7 +2,8 @@
 keywords: perspectivas;inteligencia artificial aplicada a la atribución;perspectivas de inteligencia artificial aplicada a la atribución;servicio de consultas de AAI;consultas de atribución;puntuaciones de atribución
 title: Registros de auditoría en Información general de Attribution AI
 description: Obtenga información sobre cómo ver y administrar registros de auditoría en Attribution AI.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 38%
@@ -22,4 +23,3 @@ En un sentido estricto, un registro de auditoría informa de quién realizó qu�
 Cuando la función está habilitada para su organización, los registros de auditoría se recopilan automáticamente a medida que se produce la actividad. No es necesario habilitar manualmente la recopilación de registros.
 
 Para ver y exportar los registros de auditoría, se debe contar con el permiso de control Acceso a registros de auditoría en la consola de Adobe. Para obtener información sobre cómo administrar permisos individuales para funciones de Attribution AI, consulte la [documentación de control de acceso](../aai-data-governance/access-controls.md).
-

@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> El [!DNL Couchbase] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+> El [!DNL Couchbase] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
 Conectores de origen en [!DNL Adobe Experience Platform] permite introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear una [!DNL Couchbase] conector de origen mediante [!DNL Platform] interfaz de usuario.
 

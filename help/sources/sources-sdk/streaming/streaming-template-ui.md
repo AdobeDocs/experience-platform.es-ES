@@ -3,7 +3,8 @@ title: Plantilla de autoservicio de documentación para la interfaz de usuario d
 description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe Experience Platform mediante la interfaz de usuario de.
 hide: true
 hidefromtoc: true
-source-git-commit: eba86ab8aa7d4deac967f5dfb13b2a691bc7c773
+exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 1%
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas que admitimos. Agregaremos etiquetas a su documentación después de que la envíe.*
 
-Este tutorial proporciona los pasos para crear una *SU ORIGEN* conector de origen mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear una *SU FUENTE* conector de origen mediante la interfaz de usuario de Platform.
 
 ## Información general
 
@@ -37,7 +38,7 @@ Este tutorial proporciona los pasos para crear una *SU ORIGEN* conector de orige
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU FUENTE* En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse *SU ORIGEN* En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -47,7 +48,7 @@ Para poder conectarse *SU FUENTE* En Platform, debe proporcionar valores para la
 
 Para obtener más información sobre estas credenciales, consulte la *SU FUENTE* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
-### Integrar *SU ORIGEN* con su webhook
+### Integrar *SU FUENTE* con su webhook
 
 *El SDK de streaming requiere que su fuente admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
 
@@ -57,7 +58,7 @@ En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de nave
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el **Transmisión** categoría, seleccionar *SU ORIGEN*, y luego seleccione **[!UICONTROL Añadir datos]**.
+En el **Transmisión** categoría, seleccionar *SU FUENTE*, y luego seleccione **[!UICONTROL Añadir datos]**.
 
 >[!TIP]
 >

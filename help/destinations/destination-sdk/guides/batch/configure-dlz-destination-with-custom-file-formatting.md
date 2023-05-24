@@ -9,21 +9,21 @@ ht-degree: 1%
 
 ---
 
-# Configure un [!DNL Data Landing Zone (DLZ)] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
+# Configurar un [!DNL Data Landing Zone (DLZ)] destino con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada
 
 ## Información general {#overview}
 
-En esta página se describe cómo utilizar Destination SDK para configurar un [!DNL Data Landing Zone] destino con personalizado [opciones de formato de archivo](configure-file-formatting-options.md) y un [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+En esta página se describe cómo utilizar Destination SDK para configurar un [!DNL Data Landing Zone] destino con personalizado [opciones de formato de archivo](configure-file-formatting-options.md) y un personalizado [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Esta página muestra todas las opciones de configuración disponibles para [!DNL Data Landing Zone] destinos. Puede editar las configuraciones que se muestran en los pasos siguientes o eliminar ciertas partes de las configuraciones, según sea necesario.
 
-Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [opciones de configuración en el SDK de Destinations](../../functionality/configuration-options.md).
+Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [Opciones de configuración en el SDK de destinos](../../functionality/configuration-options.md).
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos descritos a continuación, lea la [introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos descritos a continuación, lea la [Introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
-## Paso 1: Creación de una configuración de servidor y archivo {#create-server-file-configuration}
+## Paso 1: Crear un servidor y una configuración de archivo {#create-server-file-configuration}
 
 Comience por usar la variable `/destination-server` extremo a [crear una configuración de servidor y archivo](../../authoring-api/destination-server/create-destination-server.md).
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Solicitud**
 
 La siguiente solicitud crea una nueva configuración del servidor de destino, configurada por los parámetros proporcionados en la carga útil.
-La carga útil siguiente incluye un [!DNL Data Landing Zone] configuración, con [Formato del archivo CSV](../../functionality/destination-server/file-formatting.md) parámetros de configuración que los usuarios pueden definir en la interfaz de usuario del Experience Platform.
+La carga útil siguiente incluye un genérico [!DNL Data Landing Zone] configuración, con personalización [Formato de archivo CSV](../../functionality/destination-server/file-formatting.md) Parámetros de configuración que los usuarios pueden definir en la interfaz de usuario de Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -118,13 +118,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Una respuesta correcta devuelve la nueva configuración del servidor de destino, incluido el identificador único (`instanceId`) de la configuración. Almacene este valor como sea necesario en el siguiente paso.
+Una respuesta correcta devuelve la nueva configuración del servidor de destino, incluido el identificador único (`instanceId`) de la configuración. Almacene este valor tal como se requiere en el siguiente paso.
 
-## Paso 2: Crear configuración de destino {#create-destination-configuration}
+## Paso 2: Crear la configuración de destino {#create-destination-configuration}
 
-Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, ahora puede usar la variable `/destinations` extremo de API para crear una configuración de destino.
+Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, ahora puede utilizar el `/destinations` Punto final de API para crear una configuración de destino.
 
-Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, reemplace la variable `destinationServerId` en la solicitud de API que aparece a continuación con el valor obtenido al crear el servidor de destino en [paso 1](#create-server-file-configuration).
+Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, sustituya el `destinationServerId` valor en la solicitud de API siguiente con el valor obtenido al crear su servidor de destino en [paso 1](#create-server-file-configuration).
 
 **Formato de API**
 
@@ -409,48 +409,48 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Una respuesta correcta devuelve la nueva configuración de destino, incluido el identificador único (`instanceId`) de la configuración. Almacene este valor tal como es necesario si necesita realizar más solicitudes HTTP para actualizar la configuración de destino.
+Una respuesta correcta devuelve la nueva configuración de destino, incluido el identificador único (`instanceId`) de la configuración. Almacene este valor como es necesario si necesita realizar más solicitudes HTTP para actualizar la configuración de destino.
 
-## Paso 3: Verificación de la interfaz de usuario del Experience Platform {#verify-ui}
+## Paso 3: Verificar la interfaz de usuario de Experience Platform {#verify-ui}
 
-En función de las configuraciones anteriores, el catálogo de Experience Platform ahora mostrará una nueva tarjeta de destino privada que puede usar.
+En función de las configuraciones anteriores, el catálogo de Experience Platform ahora mostrará una nueva tarjeta de destino privada para que la utilice.
 
 ![Grabación de pantalla que muestra la página del catálogo de destinos con una tarjeta de destino seleccionada.](../../assets/guides/batch/dlz-destination-card.gif)
 
-En las imágenes y grabaciones siguientes, observe cómo las opciones de la sección [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coincida con las opciones que ha seleccionado en la configuración de destino.
+En las imágenes y grabaciones que aparecen a continuación, observe cómo aparecen las opciones en la [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coincida con las opciones seleccionadas en la configuración de destino.
 
-Cuando rellene los detalles sobre el destino, observe cómo los campos mostrados son los campos de datos personalizados que configuró en la configuración.
+Al rellenar detalles sobre el destino, observe cómo aparecen los campos como campos de datos personalizados que se configuran en la configuración.
 
 >[!TIP]
 >
->El orden en que se agregan los campos de datos personalizados a la configuración de destino no se refleja en la interfaz de usuario. Los campos de datos personalizados siempre se muestran en el orden mostrado en la grabación de pantalla siguiente.
+>El orden en que se agregan los campos de datos personalizados a la configuración de destino no se refleja en la interfaz de usuario. Los campos de datos personalizados siempre se muestran en el orden mostrado en la grabación de pantalla a continuación.
 
-![rellene los detalles de destino](../../assets/guides/batch/file-configuration-options.gif)
+![rellenar detalles de destino](../../assets/guides/batch/file-configuration-options.gif)
 
-Al programar intervalos de exportación, observe cómo los campos mostrados son los campos configurados en la variable `batchConfig` configuración.
-![exportar opciones de programación](../../assets/guides/batch/file-export-scheduling.png)
+Al programar intervalos de exportación, observe cómo aparecen los campos configurados en la variable `batchConfig` configuración.
+![opciones de programación de exportación](../../assets/guides/batch/file-export-scheduling.png)
 
-Cuando vea las opciones de configuración del nombre del archivo, observe cómo los campos mostrados representan la variable `filenameConfig` que configure en la configuración.
-![opciones de configuración del nombre de archivo](../../assets/guides/batch/file-naming-options.gif)
+Al ver las opciones de configuración de nombre de archivo, observe cómo los campos que aparecen representan el `filenameConfig` opciones que se configuran en la configuración.
+![opciones de configuración de nombre](../../assets/guides/batch/file-naming-options.gif)
 
-Si desea ajustar cualquiera de los campos mencionados anteriormente, repita [paso uno](#create-server-file-configuration) y [two](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
+Si desea ajustar cualquiera de los campos mencionados anteriormente, repita lo siguiente [pasos uno](#create-server-file-configuration) y [dos](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
 
-## Paso 4: (Opcional) Publique el destino {#publish-destination}
-
->[!NOTE]
->
->Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
-
-Después de configurar el destino, use la variable [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración a Adobe para su revisión.
-
-## Paso 5: (Opcional) Documentar el destino {#document-destination}
+## Paso 4: (Opcional) Publicar el destino {#publish-destination}
 
 >[!NOTE]
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que crea un [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación de producto para su destino en el [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
+Después de configurar el destino, utilice el [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe para su revisión.
+
+## Paso 5: (Opcional) Documente su destino {#document-destination}
+
+>[!NOTE]
+>
+>Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
+
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino en [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este artículo, ahora sabe cómo crear una [!DNL Data Landing Zone] destino mediante Destination SDK. A continuación, su equipo puede usar la variable [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.
+Al leer este artículo, ahora sabe cómo crear un personalizado [!DNL Data Landing Zone] destino mediante Destination SDK. A continuación, su equipo puede utilizar el [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.

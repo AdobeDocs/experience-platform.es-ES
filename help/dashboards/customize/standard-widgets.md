@@ -42,13 +42,13 @@ Se muestran los widgets estándar de la categoría seleccionada. Cada widget apa
 
 ## Añadir widget estándar al tablero
 
-Para elegir un widget estándar para agregar al tablero, resalte el widget y marque la casilla de verificación. Con al menos un widget seleccionado, la variable **[!UICONTROL Añadir widget]** está disponible.
+Para elegir un widget estándar para agregar al tablero, resalte el widget y marque la casilla de verificación. Con al menos un widget seleccionado, la variable **[!UICONTROL Agregar widget]** está disponible.
 
 >[!NOTE]
 >
 >El contador de la esquina superior derecha de la biblioteca de widgets muestra la cantidad total de widgets seleccionados.
 
-Seleccionar **[!UICONTROL Añadir widget]** para añadir los widgets seleccionados al tablero.
+Seleccionar **[!UICONTROL Agregar widget]** para añadir los widgets seleccionados al tablero.
 
 ![El espacio de trabajo de la biblioteca de widgets con un widget seleccionado y Añadir widget y Cancelar resaltados.](../images/customization/add-widget.png)
 

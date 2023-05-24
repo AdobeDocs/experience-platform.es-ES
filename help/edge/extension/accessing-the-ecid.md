@@ -12,13 +12,13 @@ ht-degree: 3%
 
 # Acceso al ECID
 
-La variable [!DNL Experience Cloud Identity (ECID)] es un identificador persistente asignado a un usuario que visita su sitio web. En determinadas circunstancias, es posible que prefiera acceder a la variable [!DNL ECID] (para enviarlo a un tercero, por ejemplo). Otro caso de uso es configurar la variable [!DNL ECID] en un campo XDM personalizado, además de tenerlo en el mapa de identidad.
+El [!DNL Experience Cloud Identity (ECID)] es un identificador persistente asignado a un usuario cuando visita su sitio web. En determinadas circunstancias, es posible que prefiera acceder a [!DNL ECID] (para enviarlo a un tercero, por ejemplo). Otro caso de uso es la configuración de [!DNL ECID] en un campo XDM personalizado, además de tenerlo en el mapa de identidad.
 
 Puede acceder al ECID a través de [Preparación de datos para la recopilación de datos](../datastreams/data-prep.md) (recomendado) o mediante etiquetas.
 
-## Acceso al ECID mediante la preparación de datos (método preferido) {#accessing-ecid-data-prep}
+## Acceso al ECID a través de la preparación de datos (método preferido) {#accessing-ecid-data-prep}
 
-Si desea configurar el ECID en un campo XDM personalizado, además de tenerlo en el mapa de identidad, puede hacerlo estableciendo la variable `source` a la siguiente ruta:
+Si desea establecer el ECID en un campo XDM personalizado, además de tenerlo en el mapa de identidad, puede hacerlo estableciendo el `source` a la siguiente ruta:
 
 ```js
 xdm.identityMap.ECID[0].id
@@ -30,12 +30,12 @@ A continuación, establezca el objetivo en una ruta XDM donde el campo sea del t
 
 ## Etiquetas
 
-Si necesita acceder a la [!DNL ECID] en el lado del cliente, utilice el enfoque de etiquetas como se describe a continuación.
+Si necesita acceder a la [!DNL ECID] en el lado del cliente, utilice el método de etiquetas como se describe a continuación.
 
-1. Asegúrese de que la propiedad esté configurada con [secuenciación de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) activada.
+1. Asegúrese de que la propiedad esté configurada con [Secuencia de componentes de regla](../../tags/ui/managing-resources/rules.md#sequencing) activado.
 1. Crear una regla nueva.
-1. Agregue un [!UICONTROL Biblioteca cargada] a la regla.
-1. Agregue un [!UICONTROL Condición personalizada] acción a la regla con el siguiente código (suponiendo que el nombre que ha configurado para la instancia de SDK sea `alloy`):
+1. Añadir un [!UICONTROL Library Loaded] a la regla.
+1. Añadir un [!UICONTROL Condición personalizada] acción a la regla con el siguiente código (suponiendo que el nombre configurado para la instancia del SDK sea `alloy`):
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ Si necesita acceder a la [!DNL ECID] en el lado del cliente, utilice el enfoque 
 
 1. Guarde la regla.
 
-Entonces debería poder acceder al [!DNL ECID] en reglas posteriores que utilicen `%ECID%` o `_satellite.getVar("ECID")`, como si tuviera acceso a cualquier otro elemento de datos.
+A continuación, debería poder acceder a la [!DNL ECID] en reglas subsiguientes utilizando `%ECID%` o `_satellite.getVar("ECID")`, como si tuviera acceso a cualquier otro elemento de datos.

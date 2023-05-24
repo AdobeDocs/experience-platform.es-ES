@@ -1,25 +1,26 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;
-title: Borrador de flujos de datos mediante la API de servicio de flujo
-description: Aprenda a configurar los flujos de datos en estado borrador mediante la API de servicio de flujo.
-badge: label="New Feature" type="Positive"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
+title: Borradores de flujos de datos mediante la API de Flow Service
+description: Obtenga información sobre cómo establecer los flujos de datos en estado de borrador mediante la API de Flow Service.
+badge: label="Nueva función" type="Positiva"
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 3%
 
 ---
 
-# Borrador de flujos de datos mediante la API del servicio de flujo
+# Borradores de flujos de datos mediante la API de Flow Service
 
-Guarde los flujos de datos como borradores al utilizar la API de servicio de flujo suministrando la variable `mode=draft` durante la llamada de creación de flujo. Los borradores se pueden actualizar posteriormente con nueva información y luego publicar una vez que estén listos. Este tutorial trata los pasos para establecer los flujos de datos en estado de borrador mediante la API de servicio de flujo.
+Guarde los flujos de datos como borradores al utilizar la API de Flow Service suministrando la variable `mode=draft` parámetro de consulta durante la llamada de creación de flujo. Los borradores se pueden actualizar más tarde con información nueva y, a continuación, publicar una vez que estén listos. Este tutorial cubre los pasos para establecer los flujos de datos en estado de borrador mediante la API de Flow Service.
 
 ## Primeros pasos
 
-Este tutorial requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes, al mismo tiempo que permite estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y desarrollar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Requisitos previos
 
@@ -32,19 +33,19 @@ Este tutorial requiere que ya haya generado los recursos necesarios para crear u
 * Una conexión de destino
 * Una asignación
 
-Si todavía no tiene estos valores, seleccione una fuente de [el catálogo en la descripción general de las fuentes](../../home.md). A continuación, siga las instrucciones de esa fuente determinada para generar los recursos necesarios para crear un flujo de datos.
+Si todavía no tiene estos valores, seleccione un origen de [información general sobre el catálogo en orígenes](../../home.md). A continuación, siga las instrucciones de esa fuente para generar los recursos necesarios para redactar un flujo de datos.
 
-### Uso de las API de plataforma
+### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
 
-## Establecer un flujo de datos en estado de borrador
+## Definir un flujo de datos en estado de borrador
 
-Las siguientes secciones describen el proceso para establecer un flujo de datos como borrador, actualizar el flujo de datos, publicar el flujo de datos y, finalmente, eliminar el flujo de datos.
+En las siguientes secciones se describe el proceso para establecer un flujo de datos como borrador, actualizarlo, publicarlo y, finalmente, eliminarlo.
 
-### Crear un flujo de datos
+### Borrador de un flujo de datos
 
-Para establecer un flujo de datos como borrador, realice una solicitud de POST a la variable `/flows` al agregar la variable `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
+Para establecer un flujo de datos como borrador, realice una solicitud de POST a `/flows` al añadir el `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
 
 **Formato de API**
 
@@ -54,11 +55,11 @@ POST /flows?mode=draft
 
 | Parámetro | Descripción |
 | --- | --- |
-| `mode` | Un parámetro de consulta proporcionado por el usuario que decide el estado del flujo de datos. Para establecer un flujo de datos como borrador, establezca `mode` a `draft`. |
+| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado del flujo de datos. Para establecer un flujo de datos como borrador, establezca `mode` hasta `draft`. |
 
 **Solicitud**
 
-La siguiente solicitud crea un flujo de datos borrador.
+La siguiente solicitud crea un flujo de datos de borrador.
 
 ```shell
   'https://platform-int.adobe.io/data/foundation/flowservice/flows?mode=draft' \
@@ -84,7 +85,7 @@ La siguiente solicitud crea un flujo de datos borrador.
 
 **Respuesta**
 
-Una respuesta correcta devuelve el valor `id` y el `etag` del flujo de datos.
+Una respuesta correcta devuelve el valor `id` y el correspondiente `etag` del flujo de datos.
 
 ```json
 {
@@ -93,9 +94,9 @@ Una respuesta correcta devuelve el valor `id` y el `etag` del flujo de datos.
 }
 ```
 
-### Actualizar un flujo de datos
+### Actualización de un flujo de datos
 
-Para actualizar el borrador, realice una solicitud de PATCH al `/flows` al proporcionar el ID del flujo de datos que desea actualizar. Durante este paso, también debe proporcionar un `If-Match` parámetro header, que corresponde al parámetro `etag` del flujo de datos que desea actualizar.
+Para actualizar el borrador, realice una solicitud de PATCH a `/flows` al proporcionar el ID del flujo de datos que desea actualizar. Durante este paso, también debe proporcionar un `If-Match` parámetro de encabezado, que corresponde a la variable `etag` del flujo de datos que desea actualizar.
 
 **Formato de API**
 
@@ -105,7 +106,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-Las siguientes solicitudes añaden transformaciones de asignación al flujo de datos redactado.
+Las siguientes solicitudes añaden transformaciones de asignación al flujo de datos esbozado.
 
 ```shell
 curl -X PATCH \
@@ -134,7 +135,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve su ID de flujo y `etag`. Para comprobar el cambio, puede realizar una solicitud de GET a la variable `/flows` al proporcionar su ID de flujo.
+Una respuesta correcta devuelve su ID de flujo y `etag`. Para comprobar el cambio, puede realizar una solicitud de GET al `/flows` al proporcionar su ID de flujo.
 
 ```json
 {
@@ -143,9 +144,9 @@ Una respuesta correcta devuelve su ID de flujo y `etag`. Para comprobar el cambi
 }
 ```
 
-### Publicar un flujo de datos
+### Publicación de un flujo de datos
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/flows` al proporcionar el ID del flujo de datos borrador que desea publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/flows` al proporcionar el ID del flujo de datos de borrador que desea publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -155,11 +156,11 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parámetro | Descripción |
 | --- | --- |
-| `op` | Operación de acción que actualiza el estado del flujo de datos consultado. Para publicar un flujo de datos de borrador, establezca `op` a `publish`. |
+| `op` | Operación de acción que actualiza el estado del flujo de datos consultado. Para publicar un flujo de datos de borrador, establezca `op` hasta `publish`. |
 
 **Solicitud**
 
-La siguiente solicitud publica el flujo de datos borrador.
+La siguiente solicitud publica el flujo de datos de borrador.
 
 ```shell
 curl -X POST \
@@ -172,7 +173,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID y el valor correspondiente `etag` del flujo de datos.
+Una respuesta correcta devuelve el ID y el correspondiente `etag` del flujo de datos.
 
 ```json
 {
@@ -181,6 +182,6 @@ Una respuesta correcta devuelve el ID y el valor correspondiente `etag` del fluj
 }
 ```
 
-### Eliminar un flujo de datos
+### Eliminación de un flujo de datos
 
-Para eliminar el flujo de datos, realice una solicitud de DELETE al `/flows` al proporcionar el ID del flujo de datos que desea eliminar. Para ver los pasos detallados sobre cómo eliminar un flujo de datos mediante la API de servicio de flujo, consulte la guía de [eliminación de un flujo de datos en la API](./delete-dataflows.md).
+Para eliminar el flujo de datos, realice una solicitud de DELETE a `/flows` al proporcionar el ID del flujo de datos que desea eliminar. Para ver los pasos detallados sobre cómo eliminar un flujo de datos mediante la API de Flow Service, lea la guía sobre [eliminación de un flujo de datos en la API](./delete-dataflows.md).

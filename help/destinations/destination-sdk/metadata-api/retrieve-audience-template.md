@@ -13,27 +13,27 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Punto de conexión de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar una plantilla de metadatos de audiencia mediante el uso de la variable `/authoring/audience-templates` extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar una plantilla de metadatos de audiencia mediante `/authoring/audience-templates` Extremo de API.
 
-Para obtener una descripción detallada de las capacidades que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
+Para obtener una descripción detallada de las funciones que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **con distinción de mayúsculas y minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los parámetros nombres y valores exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
-## Introducción a las operaciones de API de plantilla de audiencia {#get-started}
+## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, revise la [guía de introducción](../getting-started.md) para obtener información importante que debe conocer para realizar llamadas correctamente a la API de , incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
 
 ## Recuperación de una plantilla de audiencia {#retrieve}
 
-Puede recuperar una plantilla de audiencia existente realizando una `GET` solicitud al `/authoring/audience-templates` punto final.
+Puede recuperar una plantilla de audiencia existente realizando una `GET` solicitud a la `/authoring/audience-templates` punto final.
 
 **Formato de API**
 
-Utilice el siguiente formato de API para recuperar todas las plantillas de audiencia de su cuenta.
+Utilice el siguiente formato de API para recuperar todas las plantillas de audiencia de la cuenta.
 
 ```http
 GET /authoring/audience-templates
@@ -45,7 +45,7 @@ Utilice el siguiente formato de API para recuperar una plantilla de audiencia es
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Las dos solicitudes siguientes recuperan todas las plantillas de audiencia de su organización IMS o una plantilla de audiencia específica, en función de si pasa la variable `INSTANCE_ID` en la solicitud.
+Las dos solicitudes siguientes recuperan todas las plantillas de audiencia de la organización IMS o una plantilla de audiencia específica, en función de si pasa la variable `INSTANCE_ID` en la solicitud.
 
 Seleccione cada pestaña a continuación para ver la carga útil correspondiente.
 
@@ -53,7 +53,7 @@ Seleccione cada pestaña a continuación para ver la carga útil correspondiente
 
 >[!TAB Recuperar todas las plantillas de audiencia]
 
-La siguiente solicitud recuperará la lista de plantillas de audiencia a las que tiene acceso, según [!DNL IMS Org ID] y configuración del entorno limitado.
+La siguiente solicitud recupera la lista de plantillas de audiencia en la que tiene acceso, según [!DNL IMS Org ID] y la configuración de zona protegida.
 
 +++Solicitud
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de audiencia a las que tiene acceso, según la variable [!DNL IMS Org ID] y el nombre del entorno limitado que ha utilizado. One `instanceId` corresponde a una plantilla de audiencia.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de audiencia a las que tiene acceso en función de la variable [!DNL IMS Org ID] y el nombre de la zona protegida que ha utilizado. Uno `instanceId` corresponde a una plantilla de audiencia.
 
 ```json
 {
@@ -182,7 +182,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 >[!TAB Recuperar una plantilla de audiencia específica]
 
-La siguiente solicitud recuperará la lista de plantillas de audiencia a las que tiene acceso, según [!DNL IMS Org ID] y configuración del entorno limitado.
+La siguiente solicitud recupera la lista de plantillas de audiencia en la que tiene acceso, según [!DNL IMS Org ID] y la configuración de zona protegida.
 
 +++Solicitud
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la plantilla de audiencia correspondiente a la variable `{INSTANCE_ID}` en la llamada.
+Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la plantilla de audiencia correspondientes a `{INSTANCE_ID}` proporcionada en la llamada.
 
 ```json
 {
@@ -315,10 +315,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la planti
 
 >[!ENDTABS]
 
-## Gestión de errores de API {#error-handling}
+## Administración de errores de API {#error-handling}
 
-Los extremos de la API del Destination SDK siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores en el encabezado de la solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
+Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo recuperar detalles sobre la configuración del servidor de destino mediante el `/authoring/destination-servers` extremo de API. Lectura [cómo usar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración de su destino.
+Después de leer este documento, ahora sabe cómo recuperar detalles acerca de la configuración del servidor de destino mediante el `/authoring/destination-servers` Extremo de API. Leer [cómo utilizar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.

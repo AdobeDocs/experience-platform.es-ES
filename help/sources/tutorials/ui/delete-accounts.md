@@ -57,7 +57,7 @@ Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea
 
 Aparece un cuadro de diálogo de confirmación final, seleccione **[!UICONTROL Eliminar]** para completar el proceso.
 
-![eliminar](../../images/tutorials/delete-accounts/confirm.png)
+![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Pasos siguientes
 

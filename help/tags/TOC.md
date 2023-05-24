@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '984'
 ht-degree: 37%
 
 ---
@@ -234,8 +234,6 @@ ht-degree: 37%
       * [API de conversiones de Snap](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Información general](./extensions/server/splunk/overview.md)
-      * [!DNL Twitter] {#twitter}
-         * [Información general](./extensions/server/twitter/overview.md)
       * [!DNL Zendesk] API de eventos {#zendesk}
          * [Información general](./extensions/server/zendesk/overview.md)
 * Desarrollo de extensiones {#extension-dev}

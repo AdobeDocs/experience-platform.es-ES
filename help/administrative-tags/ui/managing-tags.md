@@ -2,7 +2,8 @@
 keywords: Experience Platform;administrar etiquetas;tags;
 title: Administración de etiquetas unificadas
 description: Este documento proporciona información sobre la administración de etiquetas unificadas en Adobe Experience Cloud
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+exl-id: 179b0618-3bd3-435c-9d17-63681177ca47
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%

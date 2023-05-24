@@ -215,7 +215,7 @@ Una respuesta correcta devuelve los detalles del grupo de campos. Los campos que
 }
 ```
 
-## Creación de un grupo de campos {#create}
+## Cree un grupo de campos {#create}
 
 Puede definir un grupo de campos personalizados en `tenant` contenedor realizando una solicitud de POST.
 

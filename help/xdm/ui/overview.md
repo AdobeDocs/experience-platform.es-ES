@@ -7,13 +7,13 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '296'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
 # [!UICONTROL Esquemas] Información general de IU
 
-El [!UICONTROL Esquemas] El espacio de trabajo de en la interfaz de usuario de Adobe Experience Platform le permite administrar recursos del Modelo de datos de experiencia (XDM), incluidos esquemas, clases, grupos de campos de esquema y tipos de datos. Puede ver y explorar los recursos principales proporcionados por Adobe y crear recursos y esquemas personalizados para su organización.
+El [!UICONTROL Esquemas] El espacio de trabajo de en la interfaz de usuario de Adobe Experience Platform le permite administrar recursos del Modelo de datos de experiencia (XDM), incluidos esquemas, clases, grupos de campos de esquema y tipos de datos. Puede ver y explorar los recursos principales proporcionados por Adobe y crear esquemas y recursos personalizados para su organización.
 
 Para acceder al espacio de trabajo en la IU de Platform, seleccione **[!UICONTROL Esquemas]** en el carril izquierdo.
 

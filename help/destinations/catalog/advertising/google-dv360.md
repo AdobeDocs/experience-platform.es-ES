@@ -1,7 +1,7 @@
 ---
-keywords: DoubleClick Gestor de ofertas;DoubleClick Gestor de ofertas;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
-title: Conexión de pantalla y vídeo de Google 360
-description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager, es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de dispositivos de visualización, vídeo y móviles.
+keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;video 360;Display 360;display and video
+title: Conexión de Google Display & Video 360
+description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager es una herramienta utilizada para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
 workflow-type: tm+mt
@@ -10,66 +10,66 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Google Display & Video 360] connection
+# [!DNL Google Display & Video 360] conexión
 
 ## Información general {#overview}
 
-[!DNL Display & Video 360], anteriormente conocido como [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales de redireccionamiento y segmentación de audiencia en todas las fuentes de inventario de pantalla, vídeo y dispositivos móviles.
+[!DNL Display & Video 360], anteriormente conocido como [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeo y móviles.
 
-## Detalles de destino {#specifics}
+## Detalles del destino {#specifics}
 
-Tenga en cuenta los siguientes detalles que son específicos de [!DNL Google Display & Video 360] destinos:
+Tenga en cuenta los siguientes detalles específicos de [!DNL Google Display & Video 360] destinos:
 
-* Las audiencias activadas se crean mediante programación en la plataforma Google.
-* La activación de los rellenos de audiencia a la variable [!DNL Google Display & Video 360] El destino está programado para producirse entre 24 y 48 horas después de que un segmento se asigne por primera vez a una conexión de destino. Esta actualización responde a la política de Google de esperar 24 horas hasta la ingesta de datos y está diseñada para mejorar las tasas de coincidencia entre CDP en tiempo real y [!DNL Google Display & Video 360]. Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
+* Las audiencias activadas se crean mediante programación en la plataforma de Google.
+* La activación de los rellenos de audiencia en [!DNL Google Display & Video 360] está programado que el destino se produzca de 24 a 48 horas después de que un segmento se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la política de Google de esperar 24 horas hasta la ingesta de datos y está pensada para mejorar las tasas de coincidencia entre Real-time CDP y [!DNL Google Display & Video 360]. Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con Google Display &amp; Video 360 y no ha habilitado el [Funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el servicio de consultoría de Adobe o el servicio de atención al cliente para habilitar las sincronizaciones de ID. Si anteriormente había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que había configurado se transfieren a Platform.
+>Si desea crear su primer destino con Google Display &amp; Video 360 y no ha activado la opción [Funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el Servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con el Servicio de consultoría de Adobe o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado integraciones de Google en Audience Manager, las sincronizaciones de ID que configuró se transfieren a Platform.
 
-## Identidades compatibles {#supported-identities}
+## Identidades admitidas {#supported-identities}
 
 [!DNL Google Display & Video 360] admite la activación de identidades descritas en la tabla siguiente.
 
-| Identidad de Target | Descripción | Consideraciones |
+| Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres GAID. |
+| GAID | [!DNL Google Advertising ID] | Seleccione esta identidad de destino cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
-| UUID de AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Uso de Google [UUID de AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=es) para dirigirse a usuarios de California y al ID de cookie de Google para el resto de usuarios. |
+| AAM UUID DE USUARIO | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. Un ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Google utiliza [AAM UUID DE USUARIO](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=es) para dirigirse a los usuarios de California y el ID de cookie de Google para todos los demás usuarios. |
 | [!DNL Google] ID de cookie | [!DNL Google] ID de cookie | [!DNL Google] utiliza este ID para dirigirse a usuarios fuera de California. |
 | RIDA | ID de Roku para publicidad. Este ID identifica de forma exclusiva los dispositivos Roku. |  |
-| MAID | ID de publicidad de Microsoft. Este ID identifica de forma exclusiva los dispositivos que ejecutan Windows 10. |  |
+| CRIADA | ID de publicidad de Microsoft. Este ID identifica de forma exclusiva los dispositivos que ejecutan Windows 10. |  |
 | ID de Amazon Fire TV | Este ID identifica de forma exclusiva los Amazon Fire TV. |  |
 
-## Tipo de exportación y frecuencia {#export-type-frequency}
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) al destino de Google. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de flujo continuo son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como un perfil se actualiza en el Experience Platform en función de la evaluación de segmentos, el conector envía la actualización descendente a la plataforma de destino. Más información sobre [destinos de flujo continuo](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) al destino de Google. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Requisitos previos {#prerequisites}
 
-### Permitir inclusión en la lista {#allow-listing}
+### Lista de permitidos {#allow-listing}
 
 >[!NOTE]
 >
->La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Display & Video 360] destino en Platform. Asegúrese de que el proceso de inclusión en la lista de permitidos descrito a continuación se haya completado antes de [!DNL Google] antes de crear un destino.
->La excepción a esta regla es para [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) clientes. Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los pasos siguientes.
+>La inclusión en la lista de permitidos es obligatoria antes de configurar la primera [!DNL Google Display & Video 360] en Platform. Asegúrese de que ha completado el proceso de inclusión en la lista de permitidos descrito a continuación [!DNL Google] antes de crear un destino.
+>La excepción a esta regla es para [Audience Manager](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) clientes. Si ya ha creado una conexión con este destino de Google en Audience Manager, no es necesario volver a pasar por el proceso de inclusión en la lista de permitidos y puede continuar con los siguientes pasos.
 
-Antes de crear la variable [!DNL Google Display & Video 360] en Platform, debe ponerse en contacto con Google para solicitar que se incluya el Adobe en la lista de proveedores de datos permitidos y que su cuenta se añada a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
+Antes de crear el [!DNL Google Display & Video 360] en Platform, debe ponerse en contacto con Google para solicitar que el Adobe se incluya en la lista de proveedores de datos permitidos y que se añada su cuenta a la lista de permitidos. Póngase en contacto con Google y proporcione la siguiente información:
 
 * **ID de cuenta**: ID de cuenta de Adobe con Google. ID de cuenta: 87933855.
 * **ID de cliente**: ID de cuenta de cliente de Adobe con Google. ID de cliente: 89690775.
-* **Su tipo de cuenta**: use **[!DNL Invite advertiser]** para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360 o que se utilicen **[!DNL Invite partner]** para permitir que las audiencias se compartan con todas las marcas de su cuenta de Display &amp; Video 360.
+* **Su tipo de cuenta**: uso **[!DNL Invite advertiser]** para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360 o utilice **[!DNL Invite partner]** para permitir que las audiencias se compartan con todas las marcas en su cuenta de Display &amp; Video 360.
 
-## Conectarse al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita la variable **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -77,20 +77,20 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 
-* **[!UICONTROL Nombre]**: Rellene el nombre preferido para este destino.
-* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña utiliza este destino.
+* **[!UICONTROL Nombre]**: complete el nombre preferido para este destino.
+* **[!UICONTROL Descripción]**: Opcional. Por ejemplo, puede mencionar para qué campaña está usando este destino.
 * **[!UICONTROL Tipo de cuenta]**: Seleccione una opción, en función de su cuenta con Google:
-   * Uso `Invite Advertiser` para permitir que las audiencias se compartan únicamente con una marca específica de su cuenta de Display &amp; Video 360.
-   * Uso `Invite Partner` para permitir que las audiencias se compartan con todas las marcas de su cuenta de Display &amp; Video 360.
-* **[!UICONTROL ID de cuenta]**: Rellene su **[!DNL Invite partner]** o **[!DNL Invite advertiser]** ID de cuenta con Google. Normalmente, se trata de un ID de seis o siete dígitos.
+   * Uso `Invite Advertiser` para permitir que las audiencias se compartan únicamente con una marca específica de la cuenta de Display &amp; Video 360.
+   * Uso `Invite Partner` para permitir que las audiencias se compartan con todas las marcas en su cuenta de Display &amp; Video 360.
+* **[!UICONTROL ID de cuenta]**: Rellene el **[!DNL Invite partner]** o **[!DNL Invite advertiser]** ID de cuenta con Google. Normalmente, se trata de un ID de seis o siete dígitos.
 
 >[!NOTE]
 >
->Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su [!DNL Google Account Manager] o representante de Adobes para comprender qué tipo de cuenta tiene.
+>Al configurar un [!DNL Google Display & Video 360] destino, trabaje con su [!DNL Google Account Manager] o un representante del Adobe para comprender qué tipo de cuenta tiene.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar las alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista para suscribirse y recibir notificaciones sobre el estado de su flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
@@ -98,20 +98,20 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita la variable **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general sobre el control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre la activación de segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ## Datos exportados
 
-Para verificar si los datos se han exportado correctamente a la variable [!DNL Google Display & Video 360] destino, compruebe su [!DNL Google Display & Video 360] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
+Para comprobar si los datos se han exportado correctamente a [!DNL Google Display & Video 360] destino, compruebe su [!DNL Google Display & Video 360] cuenta. Si la activación se ha realizado correctamente, las audiencias se rellenan en la cuenta.
 
 ## Resolución de problemas {#troubleshooting}
 
-### 400 Mensaje de error de solicitud incorrecta {#bad-request}
+### 400 Mensaje de error de solicitud incorrecto {#bad-request}
 
 Al configurar este destino, puede recibir el siguiente error:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Este error se produce cuando las cuentas de cliente no cumplen con las [requisitos previos](#prerequisites). Para solucionar este problema, póngase en contacto con Google y asegúrese de que su cuenta esté incluida en la lista de permitidos.
+Este error se produce cuando las cuentas de cliente no cumplen con la [requisitos previos](#prerequisites). Para solucionar este problema, póngase en contacto con Google y asegúrese de que su cuenta esté incluida en la lista de permitidos.

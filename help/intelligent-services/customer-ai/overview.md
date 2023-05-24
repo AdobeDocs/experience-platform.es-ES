@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;información general;ayuda al cliente;temas populares;información general sobre el cliente
+keywords: Experience Platform;información general;inteligencia artificial aplicada al cliente;temas populares;información general de inteligencia artificial aplicada al cliente
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Información general sobre Customer AI
@@ -17,39 +17,39 @@ ht-degree: 29%
 
 # Información general sobre Customer AI 
 
-Customer AI, como parte de Servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones de clientes a nivel individual con explicaciones.
+La inteligencia artificial aplicada al cliente, como parte de los servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones sobre clientes a nivel individual con explicaciones.
 
 Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los expertos en marketing pueden beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados.
 
-## Información sobre Customer AI
+## Explicación de Customer AI
 
 La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. Esto se obtiene sin necesidad de transformar las necesidades comerciales en un problema de aprendizaje automático, elegir un algoritmo, entrenar o implementar.
 
-La Customer AI está diseñada para:
+La inteligencia artificial aplicada al cliente está diseñada para:
 
-- Proporcionar modelos de propensión del cliente de alta precisión para lograr una segmentación y un targeting más sólidos.
-- Ayudar a comprender los factores influyentes y la probabilidad detrás de ciertos comportamientos del cliente.
+- Proporcione modelos de tendencia de los clientes de alta precisión para una segmentación y una segmentación más sólidas.
+- Ayudar a comprender los factores influyentes y la probabilidad detrás de ciertos comportamientos de los clientes.
 - Proporcione opciones personalizables para los casos de uso y los datos únicos de su empresa.
-- Mejore el Perfil del cliente en tiempo real con puntuaciones de inclinación del cliente como la pérdida y la conversión.
+- Mejore el perfil del cliente en tiempo real con puntuaciones de tendencia de los clientes, como la pérdida y la conversión.
 - Mejore los perfiles de los clientes con factores influyentes para las puntuaciones de tendencia.
-- Cree segmentos de clientes basados en factores influyentes y puntuaciones de tendencia.
+- Cree segmentos de clientes en función de factores influyentes y puntuaciones de tendencia.
 
-El cliente no está creado para:
+El cliente no está diseñado para:
 
-- La AI del cliente no debe utilizarse para predecir precios dinámicos ni el punto de precio en el que el cliente realizará una compra.
-- La AI del cliente no puede determinar si al ofrecer una oferta es más probable que el cliente compre un artículo. Aunque decida enviar ofertas de descuento basadas en puntuaciones de inclinación, no es necesariamente la mejor manera de convertir a estos clientes.
-- Customer AI no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no use Customer AI como proxy para una solución de recomendaciones de producto real como [!DNL Adobe Target].
-- La AI del cliente no puede predecir en qué fase del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en etapas de &quot;conocimiento&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
-- No utilice Customer AI para determinar los clientes que probablemente compren un lanzamiento de producto en el futuro. Esto requiere que algunos eventos de éxito estén presentes en el pasado para que la AI del cliente pueda entrenar correctamente el algoritmo de aprendizaje automático en sus datos.
+- La inteligencia artificial aplicada al cliente no debe utilizarse para predecir los precios dinámicos o el punto de precio en el que el cliente va a realizar una compra.
+- La inteligencia artificial aplicada al cliente no puede determinar si al realizar una oferta es más probable que el cliente compre un artículo. Aunque puede que decida enviar ofertas de descuento basadas en puntuaciones de tendencia, no es necesariamente la mejor manera de convertir a esos clientes.
+- La inteligencia artificial aplicada al cliente no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no utilice la inteligencia artificial aplicada al cliente como proxy para una solución de recomendaciones de productos real como [!DNL Adobe Target].
+- La inteligencia artificial aplicada al cliente no puede predecir en qué fase del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en las fases de &quot;conocimiento&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
+- No utilice la inteligencia artificial aplicada al cliente para determinar qué clientes tienen probabilidades de comprar un producto para su lanzamiento en el futuro. Esto requiere que ciertos eventos de éxito estén presentes en el pasado para que la inteligencia artificial aplicada al cliente entrene correctamente el algoritmo de aprendizaje automático en los datos.
 
-El siguiente vídeo está diseñado para ayudarle a comprender la AI del cliente.
+El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada al cliente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Funcionamiento
 
-La AI del cliente funciona analizando los datos existentes de Evento de la experiencia del consumidor para predecir las puntuaciones de tendencia de pérdida o conversión. El Adobe es consciente de que la definición de pérdida y conversión no es uniforme en todos los casos de uso y, por este motivo, tiene la capacidad de definir objetivos personalizados como un conjunto de condiciones. Puede configurar el objetivo previsto siempre que el evento de interés esté presente en los datos de entrada de Evento de experiencia del consumidor.
+La inteligencia artificial aplicada al cliente funciona analizando los datos de evento de experiencia del consumidor existentes para predecir puntuaciones de pérdida o tendencia de conversión. El Adobe se da cuenta de que la definición de pérdida y conversión no es uniforme en todos los casos de uso y, por este motivo, tiene la capacidad de definir objetivos de Target personalizados como un conjunto de condiciones. Puede configurar el objetivo predicho siempre y cuando el evento de interés esté presente en los datos de entrada de Evento de experiencia del consumidor.
 
 ## Pasos siguientes
 
-Puede empezar por seguir la [introducción](./getting-started.md) guía. Esta guía lo acompaña durante la configuración de todos los requisitos previos necesarios para Customer AI. Si ya tiene todas sus credenciales y todos los datos preparados, visite  [configuración de una instancia de Customer AI](./user-guide/configure.md). Proporciona los pasos para utilizar Customer AI.
+Puede empezar siguiendo las [introducción](./getting-started.md) guía. Esta guía le explica cómo configurar todos los requisitos previos necesarios para la inteligencia artificial aplicada al cliente. Si ya tiene todas sus credenciales y datos listos, visite  [configuración de una instancia de Customer AI](./user-guide/configure.md). Proporciona los pasos para utilizar la inteligencia artificial aplicada al cliente.

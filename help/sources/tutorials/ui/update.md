@@ -45,7 +45,7 @@ Seleccione el origen con el que desea trabajar para ver una lista de sus cuentas
 
 Aparecerá un menú desplegable con las opciones siguientes **[!UICONTROL Añadir datos]**, **[!UICONTROL Editar detalles]**, y **[!UICONTROL Eliminar]**. Seleccionar **[!UICONTROL Editar detalles]** en el menú para actualizar su cuenta.
 
-![actualizar](../../images/tutorials/update/update.png)
+![update](../../images/tutorials/update/update.png)
 
 El **[!UICONTROL Editar detalles de la cuenta]** permite actualizar el nombre, la descripción y las credenciales de autenticación de una cuenta. Cuando haya actualizado la información deseada, seleccione **[!UICONTROL Guardar]**.
 

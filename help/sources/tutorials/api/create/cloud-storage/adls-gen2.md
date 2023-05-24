@@ -93,7 +93,7 @@ curl -X POST \
 | `auth.params.url` | Punto final de URL de la cuenta ADLS Gen2. |
 | `auth.params.servicePrincipalId` | El ID principal de servicio de su cuenta ADLS Gen2. |
 | `auth.params.servicePrincipalKey` | La clave principal de servicio de su cuenta de ADLS Gen2. |
-| `auth.params.tenant` | La información de inquilino de su cuenta de ADLS Gen2. |
+| `auth.params.tenant` | La información de inquilino de su cuenta ADLS Gen2. |
 | `connectionSpec.id` | ID de especificación de conexión ADLS Gen2: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **Respuesta**

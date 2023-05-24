@@ -3,14 +3,15 @@ title: Plantilla de autoservicio de documentación para la API del SDK de stream
 description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe Experience Platform mediante la API de Flow Service.
 hide: true
 hidefromtoc: true
-source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Crear una conexión de origen y un flujo de datos para transmitir *SU ORIGEN* datos con el [!DNL Flow Service] API
+# Crear una conexión de origen y un flujo de datos para transmitir *SU FUENTE* datos con el [!DNL Flow Service] API
 
 *A medida que avanza por esta plantilla, reemplace o elimine todos los párrafos en cursiva (empezando por esta).*
 
@@ -22,7 +23,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el *SU ORIGEN* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
+>Esta página de documentación fue creada por el *SU FUENTE* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
 
 ## Requisitos previos
 
@@ -35,7 +36,7 @@ ht-degree: 1%
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU ORIGEN* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse *SU FUENTE* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -43,15 +44,15 @@ Para poder conectarse *SU ORIGEN* para acceder a Experience Platform, debe propo
 | *credencial dos* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 | *credencial tres* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 
-Para obtener más información sobre estas credenciales, consulte la *SU FUENTE* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
+Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
 ### Integrar *SU FUENTE* con su webhook
 
 *El SDK de streaming requiere que su fuente admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
 
-## Connect *SU ORIGEN* a Platform mediante el [!DNL Flow Service] API
+## Connect *SU FUENTE* a Platform mediante el [!DNL Flow Service] API
 
-El siguiente tutorial le guiará para crear una *SU FUENTE* conexión de origen y cree un flujo de datos para *SU ORIGEN* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+El siguiente tutorial le guiará para crear una *SU FUENTE* conexión de origen y cree un flujo de datos para *SU FUENTE* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Crear una conexión de origen {#source-connection}
 
@@ -135,7 +136,7 @@ POST /targetConnections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión de destino para *SU FUENTE*:
+La siguiente solicitud crea una conexión de destino para *SU ORIGEN*:
 
 
 ```shell
@@ -252,7 +253,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ### Creación de un flujo {#flow}
 
-El último paso para obtener datos de *SU ORIGEN* a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
+El último paso para obtener datos de *SU FUENTE* a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
 * [ID de conexión de origen](#source-connection)
 * [ID de conexión de destino](#target-connection)

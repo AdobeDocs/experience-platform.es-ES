@@ -63,7 +63,7 @@ Seleccionar **[!DNL OK]** después de confirmar los detalles de la base de datos
 
 ### Autenticación {#authentication}
 
-Después de confirmar el modo de conectividad de datos, aparece un mensaje en el que se solicita la configuración del nombre de usuario, la contraseña y la aplicación. En este caso, el nombre de usuario es su ID de organización y la contraseña es su token de autenticación. Ambos se encuentran en la página de credenciales del servicio de consulta.
+Después de confirmar el modo de conectividad de datos, aparece un mensaje en el que se solicita la configuración de su nombre de usuario, contraseña y aplicación. En este caso, el nombre de usuario es su ID de organización y la contraseña es su token de autenticación. Ambos se encuentran en la página de credenciales del servicio de consulta.
 
 Rellene estos detalles y seleccione **[!DNL Connect]** para continuar con el paso siguiente.
 

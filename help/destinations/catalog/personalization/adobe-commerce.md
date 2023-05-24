@@ -5,7 +5,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -53,7 +53,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 - **[!UICONTROL Nombre]**: complete el nombre preferido para este destino.
 - **[!UICONTROL Descripción]**: introduzca una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
 - **[!UICONTROL Alias de integración]**: este valor se envía al SDK web de Experience Platform como nombre de objeto JSON.
-- **[!UICONTROL ID de flujo de datos]**: Determina qué flujo de datos de recopilación de datos contiene las audiencias que se incluyen en la respuesta a la página. El menú desplegable solo muestra las secuencias de datos que tienen la configuración de destino habilitada. Consulte [Configuración de una secuencia de datos](../../../edge/datastreams/overview.md) para obtener más información.
+- **[!UICONTROL ID de flujo de datos]**: Determina qué flujo de datos de recopilación de datos contiene las audiencias que se incluyen en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Consulte [Configuración de una secuencia de datos](../../../edge/datastreams/overview.md) para obtener más información.
 
 ### Habilitar alertas {#enable-alerts}
 

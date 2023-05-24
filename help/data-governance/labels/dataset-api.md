@@ -17,7 +17,7 @@ El [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/re
 
 >[!IMPORTANT]
 >
->La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si intenta crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
+>La aplicación de etiquetas en el nivel de conjunto de datos solo es compatible con casos de uso de gobernanza de datos. Si está intentando crear directivas de acceso para los datos, debe [aplicar etiquetas al esquema](../../xdm/tutorials/labels.md) en el que se basa el conjunto de datos. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener más información.
 
 Este documento explica cómo administrar etiquetas para conjuntos de datos y campos mediante [!DNL Dataset Service API]. Para ver los pasos sobre cómo administrar las propias etiquetas de uso de datos mediante llamadas a la API, consulte la [guía de extremo de etiquetas](../api/labels.md) para el [!DNL Policy Service API].
 

@@ -25,7 +25,7 @@ Un tipo de propiedad móvil puede contener varias aplicaciones. Por ejemplo, en 
 
 ## Prácticas recomendadas para la planificación de propiedades {#best-practices-for-planning-properties}
 
-Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Cuentan con una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y zonas geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de su organización.
+Cada implementación de etiquetas en Adobe Experience Platform puede ser muy diferente. Cuentan con una amplia variedad de necesidades de recopilación de datos, uso de variables, extensiones, etiquetas de terceros, otros sistemas y tecnologías, personas, equipos y zonas geográficas, entre otros. Debe estructurar las propiedades de forma que coincidan con el flujo de trabajo y los procesos de la organización.
 
 Considerar lo siguiente a la hora de planificar las propiedades
 

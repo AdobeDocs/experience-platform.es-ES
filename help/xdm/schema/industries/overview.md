@@ -37,7 +37,7 @@ Los DRE se proporcionan para los siguientes mercados verticales de la industria:
 
 * [[!UICONTROL Comercial]](./retail.md)
 * [[!UICONTROL Servicios financieros]](./financial.md)
-* [[!UICONTROL Sanidad]](./healthcare.md)
+* [[!UICONTROL Atención sanitaria]](./healthcare.md)
 * [[!UICONTROL Telecomunicaciones]](./telecom.md)
 * [[!UICONTROL Viajes y hospitalidad]](./travel-hospitality.md)
 

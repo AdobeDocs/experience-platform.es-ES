@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Prácticas recomendadas para el modelado de datos
+# Prácticas recomendadas para el modelo de datos
 
 [!DNL Experience Data Model] (XDM) es el marco de trabajo principal que estandariza los datos de experiencia del cliente al proporcionar estructuras y definiciones comunes para su uso en servicios de Adobe Experience Platform descendentes. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común que le permite obtener información valiosa de las acciones del cliente, definir audiencias del cliente a través de segmentos y expresar atributos del cliente con fines de personalización.
 

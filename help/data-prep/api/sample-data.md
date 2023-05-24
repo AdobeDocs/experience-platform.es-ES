@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;inicio;temas populares;preparación de datos;guía de api;datos de ejemplo;
 solution: Experience Platform
-title: Punto final de API de datos de muestra
-description: Puede utilizar el extremo `/samples` en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar mediante programación datos de ejemplo de asignación.
+title: Punto final de API de datos de ejemplo
+description: Puede utilizar el extremo /samples en la API de Adobe Experience Platform para recuperar, crear, actualizar y validar mediante programación los datos de ejemplo de asignación.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '399'
@@ -11,17 +11,17 @@ ht-degree: 7%
 ---
 
 
-# Punto de conexión de datos de ejemplo
+# Extremo de datos de muestra
 
-Se pueden utilizar datos de ejemplo al crear un esquema para el conjunto de asignaciones. Puede usar la variable `/samples` en la API de preparación de datos para recuperar, crear y actualizar datos de ejemplo mediante programación.
+Se pueden utilizar datos de muestra al crear un esquema para el conjunto de asignaciones. Puede usar el complemento `/samples` en la API de preparación de datos para recuperar, crear y actualizar datos de ejemplo mediante programación.
 
-## Lista de datos de ejemplo
+## Enumerar datos de muestra
 
 Puede recuperar una lista de todos los datos de ejemplo de asignación para su organización realizando una solicitud de GET al `/samples` punto final.
 
 **Formato de API**
 
-La variable `/samples` el extremo admite varios parámetros de consulta para ayudar a filtrar los resultados. Actualmente, debe incluir ambos `start` y `limit` como parte de la solicitud.
+El `/samples` el punto de conexión admite varios parámetros de consulta para filtrar los resultados. Actualmente, debe incluir tanto la variable `start` y `limit` parámetros como parte de la solicitud de.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -86,7 +86,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre los do
 
 ## Crear datos de ejemplo
 
-Puede crear datos de ejemplo realizando una solicitud de POST al `/samples` punto final.
+Puede crear datos de ejemplo realizando una solicitud de POST a la variable `/samples` punto final.
 
 ```http
 POST /samples
@@ -125,9 +125,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre los da
 }
 ```
 
-## Crear datos de ejemplo cargando un archivo
+## Creación de datos de ejemplo cargando un archivo
 
-Puede crear datos de ejemplo utilizando un archivo realizando una solicitud de POST al `/samples/upload` punto final.
+Puede crear datos de ejemplo utilizando un archivo realizando una solicitud de POST a la variable `/samples/upload` punto final.
 
 **Formato de API**
 
@@ -166,7 +166,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre los da
 
 ## Buscar un objeto de datos de ejemplo específico
 
-Puede buscar un objeto específico de datos de ejemplo proporcionando su ID en la ruta de una solicitud de GET al `/samples` punto final.
+Puede buscar un objeto específico de datos de ejemplo proporcionando su ID en la ruta de una petición GET a `/samples` punto final.
 
 **Formato de API**
 
@@ -176,7 +176,7 @@ GET /samples/{SAMPLE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | ID del objeto de datos de ejemplo que desea recuperar. |
+| `{SAMPLE_ID}` | El ID del objeto de datos de ejemplo que desea recuperar. |
 
 **Solicitud**
 
@@ -205,9 +205,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con información del objeto d
 }
 ```
 
-## Actualización de datos de ejemplo
+## Actualizar datos de ejemplo
 
-Puede actualizar un objeto de datos de ejemplo específico proporcionando su ID en la ruta de una solicitud del PUT al `/samples` punto final.
+Puede actualizar un objeto de datos de ejemplo específico proporcionando su ID en la ruta de una petición del PUT a `/samples` punto final.
 
 **Formato de API**
 
