@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '273'
 ht-degree: 18%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 18%
    - [Carga incremental](essential-concepts/incremental-load.md)
    - [Deduplicación de datos](essential-concepts/deduplication.md)
    - [Ejemplos de conjuntos de datos](essential-concepts/dataset-samples.md)
+   - [Cálculo de estadísticas de conjuntos de datos](essential-concepts/dataset-statistics.md)
 - Referencia SQL {#sql}
    - [Resumen de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)

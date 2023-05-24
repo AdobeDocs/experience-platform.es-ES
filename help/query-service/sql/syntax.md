@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 2%
 
 ---
@@ -568,7 +568,7 @@ Para devolver el valor de cualquier configuración, utilice `SET [property key]`
 
 Las subsecciones siguientes cubren las siguientes [!DNL PostgreSQL] comandos admitidos por el servicio de consultas.
 
-### ANALIZAR TABLA
+### ANALIZAR TABLA {#analyze-table}
 
 El `ANALYZE TABLE` El comando calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada en almacenamiento acelerado.
 
@@ -591,6 +591,61 @@ A continuación se muestra una lista de cálculos estadísticos disponibles desp
 | `min` | El valor mínimo de la tabla analizada. |
 | `mean` | El valor promedio de la tabla analizada. |
 | `stdev` | La desviación estándar de la tabla analizada. |
+
+#### ESTADÍSTICAS DE CÁLCULO {#compute-statistics}
+
+Ahora puede calcular las estadísticas de nivel de columna en [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
+
+`COMPUTE STATISTICS` amplía el `ANALYZE TABLE` comando. Sin embargo, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` los comandos no son compatibles con las tablas de data warehouse. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS.
+
+**Ejemplo**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` calcula las estadísticas sobre un subconjunto del conjunto de datos en función de la condición de filtro proporcionada, y `FOR COLUMNS` selecciona columnas específicas para el análisis.
+
+La salida de la consola aparece de la siguiente manera.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+A continuación, puede utilizar el ID de estadísticas devuelto para buscar las estadísticas calculadas con la variable `SHOW STATISTICS` comando.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` no admite los tipos de datos array o map. Puede establecer un `skip_stats_for_complex_datatypes` indicador al que notificar o error si el marco de datos de entrada tiene columnas con matrices y tipos de datos de asignación. De forma predeterminada, el indicador se establece en true. Para habilitar las notificaciones o los errores, utilice el siguiente comando: `SET skip_stats_for_complex_datatypes = false`.
+
+Consulte la [documentación de estadísticas de conjuntos de datos](../essential-concepts/dataset-statistics.md) para obtener más información.
+
+#### TABLESAMPLE {#tablesample}
+
+El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas.
+Las muestras de conjuntos de datos se utilizan mejor cuando no necesita una respuesta exacta para una operación de agregado sobre un conjunto de datos. Esta función le permite realizar consultas exploratorias más eficientes en conjuntos de datos grandes emitiendo una consulta aproximada para devolver una respuesta aproximada.
+
+Los conjuntos de datos de muestra se crean con muestras aleatorias uniformes de las existentes [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS), utilizando solo un porcentaje de registros del original. La función de ejemplo del conjunto de datos amplía la variable `ANALYZE TABLE` con el comando `TABLESAMPLE` y `SAMPLERATE` Comandos SQL.
+
+En los ejemplos siguientes, la línea uno muestra cómo calcular una muestra del 5 % de la tabla. La línea dos muestra cómo calcular una muestra del 5 % a partir de una vista filtrada de los datos de la tabla.
+
+**ejemplo**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+Consulte la [documentación de muestras de conjuntos de datos](../essential-concepts/dataset-samples.md) para obtener más información.
 
 ### COMENZAR
 
