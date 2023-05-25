@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;área de nombres;área de nombres;áreas de nombres;área de nombres de identidad;área de nombres de identidad;área de nombres de identidad;área de nombres de identidad;identidad;identidad;servicio de identidad;servicio de identidad
-solution: Experience Platform
 title: Información general de área de nombres
 description: Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID numérico de CRM.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
+source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1718'
 ht-degree: 9%
 
 ---
@@ -50,6 +48,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
 | Correo electrónico Dirección | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren áreas de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |
+| ID de socio | Los ID de socio son identificadores utilizados por socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos determinísticos con gráficos de identidad. |
 | Número de teléfono | Los números de teléfono suelen estar asociados a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen PII. Esto indica que [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 
 ### Áreas de nombres estándar {#standard}

@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de mayo de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
+source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1360'
 ht-degree: 4%
 
 ---
@@ -33,6 +33,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [Control de datos](#data-governance)
 - [Ingesta de datos](#data-ingestion)
 - [Destinos](#destinations)
+- [Servicio de identidad](#identity-service)
 - [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
 
@@ -108,6 +109,18 @@ Para obtener más información sobre la ingesta de datos, lea la [información g
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
+## Servicio de identidad {#identity-service}
+
+El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
+
+**Actualización de funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Compatibilidad con ID de socio dentro de las aplicaciones de Adobe Experience Cloud | Los ID de socio ya están disponibles en el servicio de identidad. Los ID de socio son identificadores utilizados por socios de datos para representar a personas. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para la activación de audiencias ampliada y el enriquecimiento de datos. Los ID de socio no se almacenan en el gráfico de identidad. Para obtener más información, lea la documentación sobre [tipos de identidad](../../identity-service/namespaces.md#identity-types). |
+
+Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md)
+
 ## Servicio de consultas {#query-service}
 
 Query Service permite utilizar SQL estándar para consultar datos en Adobe Experience Platform [!DNL data lake]. Puede unir cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Data Science Workspace o para su inserción en el Perfil del cliente en tiempo real.
@@ -132,6 +145,7 @@ Experience Platform proporciona una API RESTful y una interfaz de usuario intera
 
 | Función | Descripción |
 | --- | --- |
+| Compatibilidad con API para streaming de datos desde [!DNL Snowflake] database | Ahora puede transmitir datos desde un [[!DNL Snowflake] origen](../../sources/connectors/databases/snowflake-streaming.md) uso del [!DNL Flow Service] API. |
 | Compatibilidad de API ampliada para el modo borrador | Ahora puede pausar y guardar el progreso durante el flujo de trabajo de orígenes al utilizar el [!DNL Flow Service] API en cualquier momento. Utilice el `mode=draft` estado para guardar las conexiones base, origen y destino como borradores. Todas las entidades de dibujo se pueden volver a consultar para su finalización más adelante. Lea la guía de [configuración de su [!DNL Flow Service] entidades a estado de borrador](../../sources/tutorials/api/draft.md) para obtener más información. |
 | Disponibilidad general del [!DNL Salesforce Marketing Cloud] origen | El [[!DNL Salesforce Marketing Cloud source] ahora está en GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Utilice esta fuente para traer su [!DNL Salesforce Marketing Cloud] datos al Experience Platform. |
 | [!DNL Google Ads] actualizaciones de autenticación | Ahora puede proporcionar un ID de cliente de inicio de sesión al autenticar su [!DNL Google Ads] cuenta de origen para recuperar los datos del informe de un cliente operativo específico. Lea el [[!DNL Google Ads] documentación de origen](../../sources/connectors/advertising/ads.md) para obtener más información. |
@@ -142,5 +156,3 @@ Experience Platform proporciona una API RESTful y una interfaz de usuario intera
 {style="table-layout:auto"}
 
 Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
