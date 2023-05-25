@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Resumen de origen de Marketing Cloud de Salesforce
 description: Obtenga información sobre cómo conectar el Marketing Cloud de Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+last-substantial-update: 2023-03-25T00:00:00Z
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%

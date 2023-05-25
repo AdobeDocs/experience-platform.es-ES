@@ -2,8 +2,9 @@
 keywords: Experience Platform;inicio;temas populares;Nube de servicios de Oracle;Nube de servicios de oracle
 title: Información general sobre el conector de origen de Oracle Service Cloud
 description: Obtenga información sobre cómo conectar Oracle Service Cloud a Adobe Experience Platform mediante API o la interfaz de usuario.
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
