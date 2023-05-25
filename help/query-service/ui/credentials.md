@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1462'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ El **[!UICONTROL Credenciales que caducan]** proporciona la siguiente informaci�
 
 Puede utilizar credenciales que no caduquen para configurar una conexión más permanente con un cliente externo.
 
+>[!NOTE]
+>
+>Las credenciales que no caducan tienen las siguientes limitaciones:<br><ul><li>Los usuarios deben iniciar sesión con un nombre de usuario y una contraseña que incluyan `{technicalAccountId}:{credential}`. Encontrará más información en la [Generar credenciales](#generate-credentials) sección.</li><li>Tras la creación de las credenciales que caducan, se crea una nueva función con un conjunto de permisos básicos que permite a los usuarios ver esquemas y conjuntos de datos. El permiso &quot;administrar consultas&quot; también se asigna a esta función para su uso con el servicio de consultas.</li><li>Los clientes de terceros pueden tener un rendimiento diferente del esperado al enumerar objetos de consulta. Por ejemplo, algunos clientes de terceros como [!DNL DB Visualizer] no mostrará el nombre de la vista en el panel izquierdo. Sin embargo, el nombre de vista es accesible si se llama dentro de una consulta SELECT. Del mismo modo, [!DNL PowerUI] es posible que no muestre las vistas temporales creadas a través de SQL que se van a seleccionar para la creación de tableros.</li></ul>
+
 ### Requisitos previos
 
 Para poder generar credenciales que no caduquen, debe completar los siguientes pasos en Adobe Admin Console:
@@ -63,7 +67,7 @@ Para obtener más información sobre cómo asignar permisos, lea la documentaci�
 
 Todos los permisos necesarios ahora están configurados en la consola de Adobe Developer para que el usuario utilice la función de credenciales que caducan.
 
-### Generar credenciales
+### Generar credenciales {#generate-credentials}
 
 Para crear un conjunto de credenciales que no caduquen, vuelva a la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** desde la navegación izquierda para acceder a [!UICONTROL Consultas] workspace. A continuación, seleccione la **[!UICONTROL Credenciales]** seguido de **[!UICONTROL Generar credenciales]**.
 
