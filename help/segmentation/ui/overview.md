@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: El servicio de segmentación de Adobe Experience Platform proporciona una interfaz de usuario para crear y administrar definiciones de segmentos.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '2650'
+source-wordcount: '2646'
 ht-degree: 4%
 
 ---
@@ -69,12 +69,13 @@ Esta vista muestra información sobre la definición del segmento, incluido el r
 
 Puede añadir campos adicionales a esta visualización seleccionando ![el icono de atributo de filtro](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen desglose, método de evaluación e ID de trabajo.
 
-Si se selecciona desglose, la visualización muestra un gráfico de barras que describe el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados de perfiles calculados: [!UICONTROL Realizado] y [!UICONTROL Saliendo]. Además, el desglose que se muestra en la [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere de lo que se indica en la variable [!UICONTROL Información general] , debe utilizar los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de las pestañas solo se actualizan una vez al día.
+Si se selecciona desglose, la visualización muestra un gráfico de barras que describe el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados de perfiles calculados: [!UICONTROL Realizado], [!UICONTROL Existente], y [!UICONTROL Saliendo]. Además, el desglose que se muestra en la [!UICONTROL Examinar] es el desglose más preciso del estado del segmento. Si este número difiere de lo que se indica en la variable [!UICONTROL Información general] , debe utilizar los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de las pestañas solo se actualizan una vez al día.
 
 | Estado | Descripción |
 | ------ | ----------- |
-| Realizado | El recuento de perfiles que cumplen los requisitos para el segmento en las últimas 24 horas. Por lo tanto, el número de perfiles que cumplen los requisitos para el segmento desde la última vez que se ejecutó el trabajo de segmento por lotes. |
-| Saliendo | El recuento de perfiles que abandonaron el segmento en las últimas 24 horas. Por lo tanto, el número de perfiles que ya no cumplen los requisitos para el segmento desde la última vez que se ejecutó el trabajo de segmentación por lotes. |
+| [!UICONTROL Realizado] | El recuento de perfiles que **cualificado** para el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
+| [!UICONTROL Existente] | El recuento de perfiles que **permanecido** en el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
+| [!UICONTROL Saliendo] | El recuento de perfiles que **abandonado** el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
 
 El método de evaluación puede ser streaming, por lotes o Edge. Los segmentos de flujo continuo se evalúan constantemente a medida que los datos entran en el sistema. Los segmentos por lotes se evalúan de acuerdo con una programación establecida. Los segmentos de Edge se evalúan en tiempo real, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 
