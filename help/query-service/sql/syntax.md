@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 2%
 
 ---
@@ -570,7 +570,11 @@ Las subsecciones siguientes cubren las siguientes [!DNL PostgreSQL] comandos adm
 
 ### ANALIZAR TABLA {#analyze-table}
 
-El `ANALYZE TABLE` El comando calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada en almacenamiento acelerado.
+El `ANALYZE TABLE` realiza un análisis de distribución y cálculos estadísticos para la tabla o tablas con nombre. El uso de `ANALYZE TABLE` varía en función de si los conjuntos de datos se almacenan en la variable [almacén acelerado](#compute-statistics-accelerated-store) o el [lago de datos](#compute-statistics-data-lake). Consulte sus secciones respectivas para obtener más información sobre su uso.
+
+#### ESTADÍSTICAS DE CÁLCULO en el almacén acelerado {#compute-statistics-accelerated-store}
+
+El `ANALYZE TABLE` El comando calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada del almacén acelerado.
 
 **Ejemplo**
 
@@ -592,9 +596,9 @@ A continuación se muestra una lista de cálculos estadísticos disponibles desp
 | `mean` | El valor promedio de la tabla analizada. |
 | `stdev` | La desviación estándar de la tabla analizada. |
 
-#### ESTADÍSTICAS DE CÁLCULO {#compute-statistics}
+#### ESTADÍSTICAS DE CÁLCULO en el lago de datos {#compute-statistics-data-lake}
 
-Ahora puede calcular las estadísticas de nivel de columna en [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
+Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
 
 `COMPUTE STATISTICS` amplía el `ANALYZE TABLE` comando. Sin embargo, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` los comandos no son compatibles con las tablas de data warehouse. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS.
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` calcula las estadísticas sobre un subconjunto del conjunto de datos en función de la condición de filtro proporcionada, y `FOR COLUMNS` selecciona columnas específicas para el análisis.
 
-La salida de la consola aparece de la siguiente manera.
+La salida de la consola aparece como se ve a continuación.
 
 ```console
   Statistics ID 

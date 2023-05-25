@@ -1,16 +1,16 @@
 ---
 title: Cálculo de estadísticas de conjuntos de datos
-description: Este documento describe cómo calcular las estadísticas de nivel de columna en los conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
-source-git-commit: b063bcf7b3d2079715ac18fde55f47cea078b609
+description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
 # Cálculo de estadísticas de conjuntos de datos
 
-Ahora puede calcular las estadísticas de nivel de columna en [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Los comandos SQL que calculan las estadísticas del conjunto de datos son una extensión del `ANALYZE TABLE` comando. Detalles completos sobre la `ANALYZE TABLE` El comando se encuentra en [Documentación de referencia SQL](../sql/syntax.md#analyze-table).
+Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Los comandos SQL que calculan las estadísticas del conjunto de datos son una extensión del `ANALYZE TABLE` comando. Detalles completos sobre la `ANALYZE TABLE` El comando se encuentra en [Documentación de referencia SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 Puede combinar el límite de columnas y el filtro para crear consultas computacionales altamente específicas para las columnas del conjunto de datos. Por ejemplo, la siguiente consulta calcula las estadísticas de las columnas `commerce`, `id`, y `timestamp` para el conjunto de datos `tableName`, donde la marca de tiempo de la columna tiene valores entre el rango especificado de `2023-04-01 00:00:00` y `2023-04-05 00:00:00`.
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -125,7 +125,6 @@ Un resultado puede ser similar al ejemplo siguiente.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -137,7 +136,7 @@ Un resultado puede ser similar al ejemplo siguiente.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Pasos siguientes {#next-steps}
