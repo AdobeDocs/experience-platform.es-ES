@@ -4,9 +4,9 @@ title: Resumen de destinos de marketing de correo electrónico
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como para enviar campañas de correo electrónico promocionales. Descubra qué ESP son compatibles como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
+source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '374'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,7 @@ Adobe Experience Platform admite los siguientes destinos de marketing por correo
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [Categorías de interés en Mailchimp](mailchimp-interest-categories.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Archivos) Oracle Eloqua](oracle-eloqua.md)
