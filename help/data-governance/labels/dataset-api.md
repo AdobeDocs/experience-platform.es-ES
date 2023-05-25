@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 description: La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -103,7 +103,7 @@ La siguiente solicitud de POST de ejemplo actualiza todo el conjunto de datos co
 
 >[!NOTE]
 >
->Si existen etiquetas para el conjunto de datos en cuestión, solo se pueden añadir nuevas etiquetas mediante una solicitud del PUT, que requiere un `If-Match` encabezado. Una vez añadidas las etiquetas a un conjunto de datos, se puede `etag` se asigna un valor que puede utilizarse para actualizar o quitar las etiquetas más adelante.
+>Si existen etiquetas para el conjunto de datos en cuestión, solo se pueden añadir nuevas etiquetas mediante una solicitud del PUT, que requiere un `If-Match` encabezado. Una vez añadidas las etiquetas a un conjunto de datos, las más recientes `etag` es necesario para actualizar o quitar las etiquetas más adelante.
 
 Para recuperar la versión más reciente de la entidad dataset-label, cree un [petición de GET](#look-up) a la `/datasets/{DATASET_ID}/labels` punto final. El valor actual se devuelve en la respuesta en un `etag` encabezado. Al actualizar las etiquetas de conjuntos de datos existentes, la práctica recomendada es realizar primero una solicitud de búsqueda para el conjunto de datos para recuperar su última versión `etag` antes de usar ese valor en `If-Match` encabezado de la solicitud de PUT posterior.
 
