@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asignación de campos;asignación de campos;asignación;marketo;B2B;b2b
 title: Campos de asignación de Microsoft Dynamics
 description: Las siguientes tablas contienen las asignaciones entre los campos de origen de Microsoft Dynamics y sus campos XDM correspondientes.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '524'
 ht-degree: 9%
 
 ---

@@ -3,14 +3,19 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 9%
+source-wordcount: '1601'
+ht-degree: 8%
 
 ---
 
-# Creación de un flujo de datos de origen mediante plantillas en la IU
+# Creación de un flujo de datos de origen mediante plantillas en la IU {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Plantillas para fuentes en la IU de Platform"
+>abstract="Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a un Experience Platform. Puede actualizar los recursos generados automáticamente para personalizarlos según sus casos de uso."
 
 >[!IMPORTANT]
 >

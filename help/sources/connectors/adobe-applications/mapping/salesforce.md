@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce;asignación de campos;asignación de campos;asignación;marketo;B2B;b2b
 title: Campos de asignación de Salesforce
 description: Las siguientes tablas contienen las asignaciones entre los campos de origen de Salesforce y sus campos XDM correspondientes.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 9%
+source-wordcount: '462'
+ht-degree: 10%
 
 ---
 

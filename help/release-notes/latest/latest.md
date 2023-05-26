@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de mayo de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
@@ -117,7 +117,7 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con ID de socio dentro de las aplicaciones de Adobe Experience Cloud | Los ID de socio ya están disponibles en el servicio de identidad. Los ID de socio son identificadores utilizados por socios de datos para representar a personas. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para la activación de audiencias ampliada y el enriquecimiento de datos. Los ID de socio no se almacenan en el gráfico de identidad. Para obtener más información, lea la documentación sobre [tipos de identidad](../../identity-service/namespaces.md#identity-types). |
+| Compatibilidad con ID de socio dentro de las aplicaciones de Adobe Experience Cloud [!BADGE Beta]{type=Informative} | Los ID de socio ya están disponibles en el servicio de identidad. Los ID de socio son identificadores utilizados por socios de datos para representar a personas. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para la activación de audiencias ampliada y el enriquecimiento de datos. Los ID de socio no se almacenan en el gráfico de identidad. Para obtener más información, lea la documentación sobre [tipos de identidad](../../identity-service/namespaces.md#identity-types). |
 
 Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md)
 
