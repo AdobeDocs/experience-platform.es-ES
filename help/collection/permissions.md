@@ -2,9 +2,9 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1274'
 ht-degree: 6%
 
 ---
@@ -41,11 +41,6 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Permisos de recopilación de datos Adobe Experience Platform
 
 Los permisos en Recopilación de datos de Adobe Experience Platform controlan el acceso a las etiquetas y las funciones de reenvío de eventos, incluidas las propiedades, extensiones y entornos. Para ver los pasos sobre cómo configurar los permisos de recopilación de datos de Adobe Experience Platform, consulte la [sección siguiente](#manage).
@@ -54,6 +49,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 | --- | --- | --- |
 | Plataformas | Web | Concede acceso a [propiedades web](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
 | Plataformas | Dispositivo móvil | Concede acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
+| Plataformas | Edge | Concede acceso a [Propiedades de Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
 | Propiedades | (N/A) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario solo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
 | Derechos de propiedad | Aprobar | Concede la capacidad de aprobar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de propiedad | Desarrollo | Concede la capacidad de desarrollar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
@@ -72,16 +68,16 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 
 ## Administración de permisos {#manage}
 
-Como se describe en la sección anterior, los permisos para la recopilación de datos se administran mediante dos designaciones de producto en Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**.
+Los permisos para la recopilación de datos se administran mediante dos designaciones de producto: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**.
 
-Para administrar estos permisos, inicie sesión en [Admin Console](https://adminconsole.adobe.com/) y seleccione **[!UICONTROL Productos]** desde la barra de navegación superior. Aquí, seleccione la tarjeta de producto para los permisos que desee configurar. Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar los permisos relevantes en cada producto en Admin Console:
+Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar los permisos relevantes en cada producto en Admin Console:
 
 * [Permisos de Adobe Experience Platform](#manage-platform)
 * [Permisos de recopilación de datos Adobe Experience Platform](#manage-collection)
 
 ### Administración de permisos en Adobe Experience Platform {#manage-platform}
 
-Desde el **[!UICONTROL Productos]** ver en Admin Console, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**. Seleccione el perfil de producto para el que desea editar los permisos y, a continuación, vaya al **[!UICONTROL Permisos]** pestaña.
+Desde el **[!UICONTROL Permisos]** área en Adobe Experience Platform seleccione la función que desea editar.
 
 Para acceder a las funciones de recopilación de datos, debe habilitar todos los permisos en la **[!UICONTROL Zonas protegidas]**, **[!UICONTROL Modelado de datos]**, **[!UICONTROL Identity Management]**, y **[!UICONTROL Recopilación de datos]** categorías.
 
@@ -95,7 +91,7 @@ Consulte la [guía de IU de control de acceso](../access-control/ui/overview.md)
 
 ### Administración de permisos en Recopilación de datos de Adobe Experience Platform {#manage-collection}
 
-Desde el **[!UICONTROL Productos]** ver en Admin Console, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
+Para administrar estos permisos, inicie sesión en el Admin Console y seleccione **[!UICONTROL Productos]** en la barra de navegación superior, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
 
 ![Imagen que muestra la tarjeta de producto de recopilación de datos en Admin Console](./images/permissions/data-collection-card.png)
 

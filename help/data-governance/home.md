@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre gobernanza de datos
 description: Administración de datos de Adobe Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de uso de los datos y el control del uso de los datos para las acciones de marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Consulte la información general sobre [etiquetas de uso de datos](./labels/over
 
 Para que las etiquetas de uso de datos respalden con eficacia el cumplimiento, deben implementarse políticas de uso de datos. Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de [!DNL Experience Platform].
 
-Un ejemplo de acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que declare que la información de identificación personal (PII) no se puede exportar y se ha aplicado una etiqueta &quot;I&quot; (datos de identidad) al conjunto de datos, [!DNL Policy Service] evita cualquier acción que pueda exportar este conjunto de datos a un destino de terceros. Si se produce uno de estos intentos de acción, el Servicio de directivas envía un mensaje para informarle de que se ha infringido una directiva de uso de datos.
+Un ejemplo de acción de marketing puede ser el deseo de exportar un conjunto de datos a un servicio de terceros. Si existe una política que declare que la información de identificación personal (PII) no se puede exportar y se ha aplicado una etiqueta &quot;I&quot; (datos de identidad) al nivel de campo o conjunto de datos, [!DNL Policy Service] evita cualquier acción que pueda exportar este conjunto de datos a un destino de terceros. Si se produce uno de estos intentos de acción, el Servicio de directivas envía un mensaje para informarle de que se ha infringido una directiva de uso de datos.
 
 Hay dos tipos de directivas disponibles:
 

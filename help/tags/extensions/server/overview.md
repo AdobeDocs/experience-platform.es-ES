@@ -2,10 +2,10 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación sobre las extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 17%
+source-wordcount: '158'
+ht-degree: 18%
 
 ---
 
@@ -33,7 +33,6 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [[!DNL Braze]](./braze/overview.md)
 * [Núcleo](./core/overview.md)
 * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
-* [API de conversiones de facebook](https://exchange.adobe.com/apps/ec/105509)
 * [Conversiones mejoradas de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -42,4 +41,5 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [API de conversiones de Snap](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] API de eventos](./zendesk/overview.md)
