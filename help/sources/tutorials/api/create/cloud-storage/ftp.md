@@ -5,7 +5,7 @@ title: Creación de una conexión base FTP mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor FTP (File Transfer Protocol) mediante la API de Flow Service.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>El conector FTP está en versión beta. Las funciones y la documentación están sujetas a cambios. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 

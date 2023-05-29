@@ -5,7 +5,7 @@ title: Crear un Apache Hive en una conexión base de Azure HDInsights mediante l
 type: Tutorial
 description: Aprenda a conectar Apache Hive en Azure HDInsights a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->El [!DNL Apache Hive] el [!DNL Azure HDInsights] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
+>El [!DNL Apache Hive] el [!DNL Azure HDInsights] el conector está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 

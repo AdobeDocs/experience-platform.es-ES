@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;fuentes;conectores;conectores de origen;sd
 title: Crear una conexión de origen de Zendesk en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 6%

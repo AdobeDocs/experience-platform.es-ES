@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;
 title: (Beta) Cree una conexión de origen de Adobe Workfront en la interfaz de usuario
 description: Este tutorial proporciona pasos para crear una conexión de origen de Adobe Workfront para llevar los datos de Workfront a Adobe Experience Platform mediante la interfaz de usuario.
 exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 1%

@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: (Beta) Crear una conexión de origen y un flujo de datos para el panel Mixpanel mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Mixpanel mediante la API de Flow Service.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 2%

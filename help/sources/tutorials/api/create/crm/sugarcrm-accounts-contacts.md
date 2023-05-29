@@ -2,7 +2,7 @@
 title: Cree una conexión de origen y un flujo de datos para cuentas y contactos de SugarCRM mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a cuentas y contactos de Sugar CRM mediante la API de Flow Service.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 2%

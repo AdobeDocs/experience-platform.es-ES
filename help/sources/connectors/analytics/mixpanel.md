@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;
 title: (Beta) Información General Sobre El Conector De Origen De Mixpanel
 description: Obtenga información sobre cómo conectar Mixpanel a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%

@@ -3,7 +3,7 @@ title: Resumen de origen de Pendo
 description: Aprenda a conectar Pendo a Adobe Experience Platform mediante API o la interfaz de usuario aprovechando los webhooks
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%

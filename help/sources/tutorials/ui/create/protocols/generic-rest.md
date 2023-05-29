@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;API REST genérica
 title: Crear una conexión de origen API REST genérica en la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de API REST genérica mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%

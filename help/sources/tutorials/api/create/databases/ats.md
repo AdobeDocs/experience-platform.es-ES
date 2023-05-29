@@ -5,7 +5,7 @@ title: Crear una conexión base de Azure Table Storage mediante la API de Flow S
 type: Tutorial
 description: Obtenga información sobre cómo conectar Azure Table Storage a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 2%

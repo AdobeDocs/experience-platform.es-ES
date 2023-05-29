@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el conector de origen Phoenix
 description: Obtenga información sobre cómo conectar Phoenix a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

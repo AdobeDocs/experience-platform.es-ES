@@ -3,7 +3,7 @@ title: Creación de una conexión de origen de Chatelio en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Chatlio mediante la interfaz de usuario de Adobe Experience Platform.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%

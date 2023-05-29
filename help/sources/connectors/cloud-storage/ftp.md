@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre el conector de origen FTP
 description: Obtenga información sobre cómo conectar un servidor FTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%

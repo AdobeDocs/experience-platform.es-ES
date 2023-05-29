@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;Google Ads;anuncios de goog
 title: Información general sobre orígenes de Google Ads
 description: Obtenga información sobre cómo conectar Google Ads a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%

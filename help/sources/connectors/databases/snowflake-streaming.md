@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear una conexión de origen y un
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* El [!DNL Snowflake] la fuente de streaming está en versión beta. Lea el [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
->* El [!DNL Snowflake] La fuente de streaming está disponible en el catálogo de fuentes para los clientes que han adquirido Real-Time CDP Ultimate.
+>* El [!DNL Snowflake] La fuente de flujo continuo está disponible en la API para los clientes que han adquirido Real-Time CDP Ultimate.
 
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.

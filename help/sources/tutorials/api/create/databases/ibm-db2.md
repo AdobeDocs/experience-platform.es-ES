@@ -5,7 +5,7 @@ title: Creación de una IBM [!DNL IBM DB2] Conexión base mediante la API de Flo
 type: Tutorial
 description: Obtenga información sobre cómo conectar IBM [!DNL IBM DB2] a Adobe Experience Platform mediante la API de Flow Service.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 2%

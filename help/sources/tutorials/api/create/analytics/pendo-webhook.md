@@ -3,7 +3,7 @@ title: Crear una conexión de origen y un flujo de datos para Pendo mediante la 
 description: Aprenda a conectar Adobe Experience Platform a Pendo mediante la API de Flow Service.
 badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 2%
