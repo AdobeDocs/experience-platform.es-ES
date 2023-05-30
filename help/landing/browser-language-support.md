@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma para la IU de Experience Platform
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '256'
 ht-degree: 21%
 
 ---
@@ -38,7 +38,13 @@ Actualmente, la interfaz de usuario de Platform está disponible en los siguient
 * Inglés
 * Francés
 * Alemán
+* Español
 * Japonés
+* Italiano
+* Coreano
+* Chino (taiwanés)
+* Chino (tradicional)
+* brasileño
 
 ### Cambiar idioma predeterminado
 
