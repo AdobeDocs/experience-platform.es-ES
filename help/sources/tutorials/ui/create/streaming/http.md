@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo;crear conexión de flujo continuo;guía de iu;tutorial;crear una conexión de flujo continuo;ingesta de flujo continuo;ingesta;
-solution: Experience Platform
 title: Creación de una conexión de flujo HTTP API mediante la IU
-type: Tutorial
 description: Esta guía de la interfaz de usuario le ayudará a crear una conexión de flujo continuo mediante Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ Con los datos cargados, puede utilizar el lado derecho de la interfaz para obten
 
 El [!UICONTROL Asignación] Este paso aparece y proporciona una interfaz para asignar los datos de origen a un conjunto de datos de Platform.
 
-Los archivos de parquet deben ser compatibles con XDM y no requieren que configure manualmente la asignación, mientras que los archivos CSV requieren que configure explícitamente la asignación, pero le permiten elegir qué campos de datos de origen asignar. Los archivos JSON, si están marcados como una queja XDM, no requieren configuración manual. Sin embargo, si no está marcado como compatible con XDM, deberá configurar explícitamente la asignación.
+El [!DNL HTTP API] source admite la ingesta de archivos JSON. Los archivos JSON no requieren configuración manual si están marcados como quejas de XDM. Si no es así, debe configurar explícitamente la asignación.
 
 Elija un conjunto de datos para los datos de entrada que se van a introducir en. Puede utilizar un conjunto de datos existente o crear uno nuevo.
 
@@ -88,7 +85,6 @@ Para utilizar un conjunto de datos existente, seleccione **[!UICONTROL Conjunto 
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Asignar campos estándar
-
 
 En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignación y los campos calculados, consulte la [Guía de IU de preparación de datos](../../../../../data-prep/ui/mapping.md).
 
