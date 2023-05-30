@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos XDM en la IU
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Al definir un nuevo campo, pueden aparecer opciones de configuración adicionale
 
 | Propiedad de campo | Tipos compatibles | Descripción |
 | --- | --- | --- |
-| [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asignará a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo. |
+| [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asigna a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo.<br><br>Los valores predeterminados no se guardan en el conjunto de datos en el momento de la ingesta, ya que pueden cambiar con el tiempo. Los servicios y aplicaciones de Platform secundarios infieren los valores predeterminados establecidos en el esquema cuando leen los datos del conjunto de datos. Por ejemplo, al consultar los datos mediante el servicio de consulta, si el atributo tiene un valor NULL, pero el valor predeterminado está establecido en `5` en el nivel de esquema, se espera que el servicio de consultas devuelva lo siguiente `5` en lugar de NULL. Tenga en cuenta que este comportamiento no es uniforme actualmente en todos los servicios de AEP. |
 | [!UICONTROL Patrón] | [!UICONTROL Cadena] | A [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que el valor de este campo debe cumplir para que se acepte durante la ingesta. |
 | [!UICONTROL Formato] | [!UICONTROL Cadena] | Seleccione de una lista de formatos predefinidos para cadenas con los que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL fecha-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longitud mínima] | [!UICONTROL Cadena] | Número mínimo de caracteres que debe contener la cadena para que el valor se acepte durante la ingesta. |
