@@ -3,10 +3,10 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 8%
+source-wordcount: '2258'
+ht-degree: 7%
 
 ---
 
@@ -91,6 +91,83 @@ Para crear una nueva cuenta, seleccione **[!UICONTROL Nueva cuenta]** y, a conti
 >[!ENDTABS]
 
 ### Seleccionar plantillas
+
+Con la cuenta autenticada, ahora puede seleccionar la plantilla que desee utilizar para el flujo de datos.
+
++++[!DNL Marketo Engage] templates La siguiente tabla describe las plantillas disponibles para el [!DNL Marketo Engage] origen.
+
+| [!DNL Marketo Engage] templates | Descripción |
+| --- | --- |
+| Actividades | La plantilla Actividades captura instantáneas basadas en eventos de actividades como interacciones por correo electrónico, interacciones con sitios web y llamadas de ventas. |
+| Compañías | La plantilla Compañías captura los detalles de la cuenta empresarial, como la información de firmografía de la compañía, la ubicación y la información de facturación. |
+| Cuentas con nombre | La plantilla Cuentas con nombre captura los detalles de las cuentas que se han determinado como cuentas de destino que se deben seguir. |
+| Oportunidades | La plantilla Oportunidades captura los detalles de la oportunidad comercial, como el tipo, la fase de ventas y las cuentas relacionadas. |
+| Roles de contacto de oportunidad | La plantilla Funciones de contacto de oportunidad captura detalles sobre las funciones de los posibles clientes asociados a una oportunidad concreta. |
+| Personas | La plantilla Personas captura atributos de personas individuales, como detalles demográficos, información de contacto y preferencias de consentimiento. |
+| Pertenencias al programa | La plantilla Miembros del programa captura los detalles de los contactos asociados con una campaña empresarial, incluidas las cadencias de nutrición y las respuestas de contacto. |
+| Programas | La plantilla Programas captura los detalles de la campaña empresarial como el estado, los canales, los plazos y los costes. |
+| Pertenencias a lista estática | La plantilla Pertenencias a listas estáticas captura las relaciones entre las personas y su pertenencia a listas estáticas. |
+| Listas estáticas | La plantilla Lista estática captura listas instanciadas de personas para casos de uso específicos. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Plantillas B2B La siguiente tabla describe las plantillas B2B disponibles para [!DNL Salesforce] origen.
+
+| [!DNL Salesforce] Plantillas B2B | Descripción |
+| --- | --- |
+| Relación de contacto de cuenta | La plantilla Relación de contacto de cuenta captura la relación entre un contacto y una o más cuentas. |
+| Cuentas | La plantilla Cuenta captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
+| Miembros de campaña | La plantilla Miembros de campaña captura la relación entre un posible cliente o contacto individual y un contacto específico [!DNL Salesforce] campaña. |
+| Campañas | La plantilla Campañas captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
+| Contactos | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Posibles clientes | La plantilla de posibles clientes captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
+| Oportunidades | La plantilla Oportunidades captura los detalles de la oportunidad comercial, como el tipo, la fase de ventas y la cuenta relacionada. |
+| Roles de contacto de oportunidad | La plantilla Funciones de contacto de oportunidad captura detalles sobre las funciones de los posibles clientes asociados a una oportunidad concreta. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Plantillas B2C La siguiente tabla describe las plantillas B2C disponibles para [!DNL Salesforce] origen.
+
+| [!DNL Salesforce] Plantillas B2C | Descripción |
+| --- | --- |
+| Contacto | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Posible cliente | La plantilla de posible cliente captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Plantillas B2B La siguiente tabla describe las plantillas B2B disponibles para [!DNL Microsoft Dynamics] origen.
+
+| [!DNL Microsoft Dynamics] Plantillas B2B | Descripción |
+| --- | --- |
+| Cuentas | La plantilla Cuenta captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
+| Campañas | La plantilla Campañas captura los detalles de la cuenta empresarial, como la información de firmografía de la empresa, la ubicación y la información de facturación. |
+| Contactos | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Posibles clientes | La plantilla de posibles clientes captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
+| Lista de marketing | La plantilla Lista de marketing captura un grupo de clientes existentes o potenciales creados para una campaña de marketing u otros fines de ventas. |
+| Miembros de lista de marketing | Los miembros de la lista de marketing capturan los detalles de cualquier tipo de registro de cliente, como posibles clientes, cuentas o contactos, en una lista de marketing. |
+| Oportunidades | La plantilla Oportunidades captura los detalles de la oportunidad comercial, como el tipo, la fase de ventas y la cuenta relacionada. |
+| Roles de contacto de oportunidad | La plantilla Funciones de contacto de oportunidad captura detalles sobre las funciones de los posibles clientes asociados a una oportunidad concreta. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Plantillas B2C La siguiente tabla describe las plantillas B2C disponibles para [!DNL Microsoft Dynamics] origen.
+
+| [!DNL Microsoft Dynamics] Plantillas B2C | Descripción |
+| --- | --- |
+| Contacto | La plantilla Contacto captura atributos para contactos como detalles demográficos, información de contacto y entidades comerciales relacionadas. |
+| Posible cliente | La plantilla de posible cliente captura los atributos de los posibles clientes, como los detalles demográficos, la información de contacto y las entidades comerciales relacionadas. |
+
+{style="table-layout:auto"}
+
++++
 
 Según el tipo de empresa seleccionado, aparecerá una lista de plantillas. Seleccione el icono de previsualización ![icono de previsualización](../../images/tutorials/templates/preview-icon.png) junto al nombre de una plantilla para previsualizar los datos de ejemplo de la plantilla.
 
