@@ -3,10 +3,10 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 8%
 
 ---
 
@@ -14,18 +14,21 @@ ht-degree: 7%
 
 ## Registro de cambios de destino {#changelog}
 
->[!IMPORTANT]
->
->Con el lanzamiento beta del conector de destino mejorado de Adobe Target V2, es posible que vea dos tarjetas de Adobe Target en el catálogo de destinos.
->El conector de destino de Adobe Target V2 está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por la tarjeta de Adobe V1, el conector de Target V2 agrega una [paso de asignación](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, lo que permite la personalización en la misma página y en la siguiente página basada en atributos.
+| Mes de lanzamiento | Tipo de actualización | Descripción |
+|---|---|---|
+| Abril de 2023 | Actualización de funcionalidad y documentación | A partir de abril de 2023, la **[!UICONTROL Adobe Target]** compatibilidad de conexión [personalización basada en atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) y está disponible para todos los clientes. |
 
-![Imagen de las dos tarjetas de destino de Adobe Target en una vista en paralelo.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## Información general {#overview}
 
 Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 
 Adobe Target es una conexión de personalización del catálogo de destinos de Adobe Experience Platform.
+
+Vea el siguiente vídeo para obtener una breve descripción general sobre cómo configurar la conexión de Adobe Target en Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## Requisitos previos {#prerequisites}
 
@@ -37,7 +40,7 @@ La configuración de la conexión de Adobe Target sin utilizar un ID de conjunto
 
 >[!IMPORTANT]
 >
->Antes de crear un [!DNL Adobe Target] conexión, lea la guía sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para los casos de uso de personalización de la misma página y de la página siguiente, en varios componentes de Experience Platform. La personalización de la misma página y de la página siguiente requiere que utilice un ID de flujo de datos al configurar la conexión de Adobe Target.
+>Antes de crear un [!DNL Adobe Target] conexión, lea la guía sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md). Esta guía le guía a través de los pasos de configuración necesarios para los casos de uso de personalización de la misma página y de la página siguiente, en varios componentes de Experience Platform. La personalización de la misma página y de la página siguiente requiere que utilice un ID de flujo de datos al configurar la conexión de Adobe Target.
 
 ### Requisitos previos en Adobe Target {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
-
-## Casos de uso {#use-cases}
-
-**Personalización de un titular de página de inicio**
-
-Una empresa de ventas y alquiler de viviendas quiere personalizar su página de inicio con un banner, según las cualificaciones del segmento de clientes en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviarlas a Adobe Target como criterios de segmentación para su oferta de Target.
 
 ## Conectar con el destino {#connect}
 
@@ -92,7 +89,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 
 | No se han seleccionado flujos de datos | Flujo de datos seleccionado |
 |---|---|
-| <ul><li>[Segmentación de Edge](../../../segmentation/ui/edge-segmentation.md) no es compatible.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) no son compatibles.</li><li>Solo puede compartir segmentos con la conexión de Adobe Target para *zona protegida de producción predeterminada*.</li><li>Para configurar la personalización de la sesión siguiente sin utilizar un ID de conjunto de datos, utilice [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentación de Edge funciona según lo esperado.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/configure-personalization-destinations.md) son compatibles.</li><li>El uso compartido de segmentos es compatible con otras zonas protegidas.</li></ul> |
+| <ul><li>[Segmentación de Edge](../../../segmentation/ui/edge-segmentation.md) no es compatible.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md) no son compatibles.</li><li>Solo puede compartir segmentos con la conexión de Adobe Target para *zona protegida de producción predeterminada*.</li><li>Para configurar la personalización de la sesión siguiente sin utilizar un ID de conjunto de datos, utilice [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentación de Edge funciona según lo esperado.</li><li>[Personalización de la misma página y de la página siguiente](../../ui/activate-edge-personalization-destinations.md) son compatibles.</li><li>El uso compartido de segmentos es compatible con otras zonas protegidas.</li></ul> |
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -106,7 +103,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-profile-request-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y segmentos en destinos de solicitud de perfil](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ## Datos exportados {#exported-data}
 

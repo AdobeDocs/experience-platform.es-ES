@@ -2,7 +2,7 @@
 title: Resumen de personalización
 description: Aprenda a utilizar la API del servidor de red perimetral de Adobe Experience Platform para recuperar contenido personalizado de las soluciones de personalización de Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 10%
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 Con el [!DNL Server API], puede recuperar contenido personalizado de las soluciones de personalización de Adobe, incluyendo [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html) y [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
-Además, la variable [!DNL Server API] potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) y el [conexión de personalización personalizada](../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../destinations/ui/configure-personalization-destinations.md).
+Además, la variable [!DNL Server API] potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) y el [conexión de personalización personalizada](../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../destinations/ui/activate-edge-personalization-destinations.md).
 
 Al utilizar la API de servidor, debe integrar la respuesta proporcionada por el motor de personalización con la lógica utilizada para representar contenido en el sitio. A diferencia del [SDK web](../edge/home.md), el [!DNL Server API] no tiene un mecanismo para aplicar automáticamente el contenido devuelto por [!DNL Adobe Target] y [!DNL Offer Decisioning].
 

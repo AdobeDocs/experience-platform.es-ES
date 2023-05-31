@@ -3,7 +3,7 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Los destinos de exportación de segmentos reciben datos de segmentos del Experie
 
 Los destinos de personalización de Edge en Experience Platform incluyen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y el [Destino de personalización personalizado](/help/destinations/catalog/personalization/custom-personalization.md). Al utilizar estos destinos, puede habilitar casos de uso de personalización de la misma página y de la siguiente página para sus clientes.
 
-Obtenga más información sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](/help/destinations/ui/configure-personalization-destinations.md).
+Obtenga más información sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Destinos de exportación de perfiles y segmentos: vídeo introductorio {#video}
 
