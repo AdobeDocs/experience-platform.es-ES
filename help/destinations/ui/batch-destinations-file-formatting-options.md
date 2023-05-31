@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
 title: (Beta) Configurar las opciones de formato de archivo para los destinos basados en archivos
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1226'
 ht-degree: 19%
 
 ---
@@ -111,8 +111,8 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 Utilice este control para establecer la representación de cadena de un valor vacío. Esta opción determina cómo se representan los valores vacíos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Nulo (nulo)]**
+* **Cadena vacía entre comillas dobles (&quot;&quot;)**
 * **[!UICONTROL Cadena vacía]**
 
 #### Ejemplos
@@ -136,8 +136,8 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 Utilice este control para establecer la representación de cadena de un valor nulo dentro de los archivos exportados. Esta opción determina cómo se representan los valores nulos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Nulo (nulo)]**
+* **Cadena vacía entre comillas dobles (&quot;&quot;)**
 * **[!UICONTROL Cadena vacía]**
 
 #### Ejemplos

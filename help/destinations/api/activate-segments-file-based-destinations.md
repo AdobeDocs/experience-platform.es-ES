@@ -4,10 +4,10 @@ title: Activar segmentos en destinos basados en archivos mediante la API de Flow
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
-ht-degree: 2%
+source-wordcount: '4442'
+ht-degree: 3%
 
 ---
 
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propiedad | Descripción |
+| --------- | ----------- |
+| `specName` | En su lugar, utilice `SFTP with Password`. |
+| `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
+| `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
+| `password` | Contraseña para iniciar sesión en la ubicación de almacenamiento SFTP. |
+| `port` | El puerto que utiliza su ubicación de almacenamiento SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Propiedad | Descripción |
+| --------- | ----------- |
+| `specName` | En su lugar, utilice `SFTP with Password`. |
+| `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
+| `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
+| `sshKey` | La clave SSH privada utilizada para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña. |
+| `port` | El puerto que utiliza su ubicación de almacenamiento SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 
