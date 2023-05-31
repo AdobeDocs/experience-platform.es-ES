@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;análisis de recorrido del cliente;orquestación de campaña;orquestación;recorrido del cliente;recorrido;orquestación de recorrido;capacidad;región
 solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma para la IU de Experience Platform
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
+source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '236'
+ht-degree: 24%
 
 ---
 
@@ -42,9 +41,9 @@ Actualmente, la interfaz de usuario de Platform está disponible en los siguient
 * Japonés
 * Italiano
 * Coreano
-* Chino (taiwanés)
+* Chino (simplificado)
 * Chino (tradicional)
-* brasileño
+* Portugués de Brasil
 
 ### Cambiar idioma predeterminado
 
