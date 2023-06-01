@@ -2,9 +2,9 @@
 title: (Beta) Conexión de Azure Data Lake Storage Gen2
 description: Obtenga información sobre cómo conectarse a Azure Data Lake Storage Gen2 para activar segmentos y exportar conjuntos de datos.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
 * **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados.
+* 
+   * **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc.
 
 ### Habilitar alertas {#enable-alerts}
 
