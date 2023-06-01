@@ -3,9 +3,9 @@ title: (Beta) Audiencias del Experience Cloud
 description: Aprenda a compartir segmentos desde Experience Platform a varias soluciones de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1576'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,14 @@ Tenga en cuenta las siguientes limitaciones conocidas y llamadas importantes en 
 * Al conectarse al destino, puede ver una opción para lo siguiente [habilitar alertas de flujo de datos](#enable-alerts). Aunque esté visible en la interfaz de usuario de, la variable **no se admite la opción habilitar alertas** en la versión beta.
 * **No se admiten rellenos**. La primera exportación a soluciones de Audience Manager u otros Experience Cloud no incluye una población histórica de los segmentos.
 * En la versión beta, puede crear lo siguiente **una única conexión de destino al destino de Audiencias del Experience Cloud**, en todos los entornos limitados que pertenecen a su organización de Experience Platform.
-* Hay un **latencia de cuatro horas** entre el momento en que los datos se activan en Experience Platform y el momento en que están listos para utilizarse en Audience Manager y otras soluciones de Experience Cloud.
+
+### Latencia al activar audiencias {#audience-activation-latency}
+
+Hay una latencia de cuatro horas entre el momento en que las audiencias se activan por primera vez en Experience Platform y el momento en que están listas para utilizarse en soluciones de Audience Manager y otras soluciones de Experience Cloud para determinados casos de uso.
+
+Las audiencias pueden tardar hasta 24 horas en estar totalmente disponibles en Audience Manager Experience Cloud para todos los casos de uso y hasta 48 horas en aparecer en los informes de Audience Manager.
+
+Los metadatos, como los nombres de los segmentos, están disponibles en Audience Manager pocos minutos después de configurar la exportación al destino de Audiencias del Experience Cloud.
 
 ## Identidades admitidas {#supported-identities}
 
