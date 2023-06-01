@@ -1,17 +1,16 @@
 ---
-keywords: Dirección IP, intervalo de IP, destinos de lista de permitidos, lista de permitidos
-title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube
+title: Destinos SFTP de lista de permitidos de direcciones IP
 type: Documentation
-description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su servidor SFTP, Amazon S3 o Azure Blob Storage.
+description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su servidor SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
-# LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube {#ip-address-allow-list}
+# LISTA DE PERMITIDOS de direcciones IP para destinos SFTP {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
