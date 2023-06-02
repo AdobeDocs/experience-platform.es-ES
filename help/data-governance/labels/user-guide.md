@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 17%
+source-wordcount: '1462'
+ht-degree: 16%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 17%
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en [!DNL Experience Platform] interfaz de usuario.
 
+## Administrar etiquetas {#manage-labels}
+
+Para aplicar etiquetas a los datos, necesita el **[!UICONTROL Administrar etiquetas de uso]** Permiso de uso en la zona protegida de producción. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables y, actualmente, no se admite la eliminación de etiquetas.
+
+Consulte la guía sobre cómo [configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o el [información general de control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso al Admin Console de su organización, póngase en contacto con el administrador de la organización.
+
 ## Administrar etiquetas en el nivel de esquema
+
+Puede agregar etiquetas directamente a un esquema o campos dentro de ese esquema. Cualquier campo aplicado en el nivel de esquema se propagará a todos los conjuntos de datos basados en ese esquema.
 
 Para administrar etiquetas de uso de datos en el nivel de esquema, debe seleccionar un esquema existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir **[!UICONTROL Esquemas]** workspace. Esta página lista todos los esquemas creados que pertenecen a su organización, junto con detalles útiles relacionados con cada esquema.
 
@@ -32,7 +40,7 @@ En la siguiente sección se proporcionan los pasos para crear un nuevo esquema a
 
 Para crear un nuevo esquema, seleccione **[!UICONTROL Crear esquema]** en la esquina superior derecha de la **[!UICONTROL Esquemas]** workspace. Consulte la guía de [Cómo crear un esquema con el Editor de esquemas](../../xdm/tutorials/create-schema-ui.md#create) para obtener instrucciones completas. Como alternativa, puede [crear un esquema con la API de Registro de esquemas](../../xdm/tutorials/create-schema-api.md) si es necesario.
 
-### Añadir etiquetas de uso de datos al esquema {#add-labels-to-schema}
+### Añadir etiquetas de uso de datos a un esquema {#add-labels-to-schema}
 
 Después de crear un nuevo esquema o seleccionar un esquema existente de la lista en la [!UICONTROL Examinar] de la pestaña [!UICONTROL Esquemas] En Workspace, seleccione un campo del esquema en el Editor de esquemas. En el [!UICONTROL Propiedades del campo] barra lateral, seleccione **[!UICONTROL Aplicar etiquetas de acceso y de gobernanza de datos]**.
 
@@ -98,12 +106,6 @@ El **[!UICONTROL Mostrar etiquetas heredadas]** Esta opción está activada de f
 >Las etiquetas que se aplicaban antes de que la función de etiquetado de conjuntos de datos quedara obsoleta se pueden eliminar del conjunto de datos buscando el conjunto de datos correspondiente y seleccionando el icono Cancelar de la etiqueta.
 >![La pestaña Control de datos del espacio de trabajo Conjuntos de datos con una etiqueta eliminable resaltada.](../images/labels/remove-governance-labels.png)
 >Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
-
-## Administrar etiquetas en el nivel de esquema
-
-Puede agregar etiquetas directamente a un esquema o campos dentro de ese esquema. Cualquier campo aplicado en el nivel de esquema se propagará a todos los conjuntos de datos basados en ese esquema.
-
-Consulte el tutorial sobre [administrar etiquetas de nivel de esquema](../../xdm/tutorials/labels.md) para obtener más información.
 
 ## Administrar etiquetas personalizadas {#manage-custom-labels}
 
