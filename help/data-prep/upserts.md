@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Filas Al Servicio De Perfiles Mediante La Preparación De Datos
 description: Este documento proporciona información sobre cómo enviar actualizaciones de filas parciales al servicio de perfil mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -37,20 +37,20 @@ Esta descripción general requiere una comprensión práctica de los siguientes 
 
 Actualizaciones de streaming en [!DNL Data Prep] funciona de la siguiente manera:
 
-* Primero debe crear y habilitar un conjunto de datos para [!DNL Profile] consumo. Consulte la guía de [habilitar un conjunto de datos para [!DNL Profile]](../catalog/datasets/enable-for-profile.md) para obtener más información;
-* Si se deben vincular nuevas identidades, también se debe crear un conjunto de datos adicional **con el mismo esquema** como su [!DNL Profile] conjunto de datos;
+* Primero debe crear y habilitar un conjunto de datos para [!DNL Profile] consumo. Consulte la guía de [habilitar un conjunto de datos para [!DNL Profile]](../catalog/datasets/enable-for-profile.md) para obtener más información.
+* Si se deben vincular nuevas identidades, también se debe crear un conjunto de datos adicional **con el mismo esquema** como su [!DNL Profile] conjunto de datos.
 * Una vez preparados los conjuntos de datos, debe crear un flujo de datos para asignar la solicitud entrante a [!DNL Profile] conjunto de datos;
 * A continuación, debe actualizar la solicitud entrante para incluir los encabezados necesarios. Estos encabezados definen:
-   * La operación de datos que se debe realizar con [!DNL Profile]: `create`, `merge`, y `delete`;
+   * La operación de datos que se debe realizar con [!DNL Profile]: `create`, `merge`, y `delete`.
    * La operación de identidad opcional que se va a realizar con [!DNL Identity Service]: `create`.
 
 ### Configuración del conjunto de datos de identidad
 
 Si se deben vincular nuevas identidades, debe crear y pasar un conjunto de datos adicional en la carga útil entrante. Al crear un conjunto de datos de identidad, debe asegurarse de que se cumplan los siguientes requisitos:
 
-* El conjunto de datos de identidad debe tener su esquema asociado como [!DNL Profile] conjunto de datos. Una discrepancia en los esquemas puede provocar un comportamiento incoherente del sistema;
-* Sin embargo, debe asegurarse de que el conjunto de datos de identidad sea diferente al de [!DNL Profile] conjunto de datos. Si los conjuntos de datos son los mismos, los datos se sobrescribirán en lugar de actualizarse;
-* Mientras que el conjunto de datos inicial debe estar habilitado para [!DNL Profile], el conjunto de datos de identidad **no debe** estar habilitado para [!DNL Profile]. De lo contrario, los datos también se sobrescribirán en lugar de actualizarse.
+* El conjunto de datos de identidad debe tener su esquema asociado como [!DNL Profile] conjunto de datos. Una discrepancia en los esquemas puede provocar un comportamiento incoherente del sistema.
+* Sin embargo, debe asegurarse de que el conjunto de datos de identidad sea diferente al de [!DNL Profile] conjunto de datos. Si los conjuntos de datos son los mismos, los datos se sobrescribirán en lugar de actualizarse.
+* Mientras que el conjunto de datos inicial debe estar habilitado para [!DNL Profile], el conjunto de datos de identidad **no debe estar habilitado** para [!DNL Profile]. De lo contrario, los datos también se sobrescribirán en lugar de actualizarse. Sin embargo, el conjunto de datos de identidad **debe estar habilitado** para [!DNL Identity Service].
 
 #### Campos obligatorios en los esquemas asociados al conjunto de datos de identidad {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
