@@ -1,11 +1,10 @@
 ---
-keywords: SFTP;sftp
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '906'
 ht-degree: 7%
 
 ---
@@ -106,8 +105,7 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta en la ubicación SFTP donde se exportarán los archivos.
 * **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino.
-* 
-   * **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino.
+* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino.
 
 ## Activar segmentos en este destino {#activate}
 
