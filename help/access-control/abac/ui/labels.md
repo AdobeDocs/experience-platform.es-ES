@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Etiquetas de administración de control de acceso basado en atributos
 description: Este documento proporciona información sobre la administración de etiquetas a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 10%
+source-wordcount: '190'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ Las etiquetas permiten categorizar conjuntos de datos y campos según las polít
 
 >[!NOTE]
 >
->Debe tener derechos administrativos para crear una etiqueta personalizada. Actualmente no se admite la eliminación de etiquetas.
+>Hay una sola lista de etiquetas para toda una organización. Para crear una etiqueta personalizada, necesitará lo siguiente **[!UICONTROL Administrar etiquetas de uso]** permisos en la zona protegida de producción. En este momento no se admite la eliminación de etiquetas.
 
 Para crear una etiqueta nueva, seleccione **[!UICONTROL Etiquetas]** en la barra lateral y seleccione **[!UICONTROL Crear etiqueta]**.
 
