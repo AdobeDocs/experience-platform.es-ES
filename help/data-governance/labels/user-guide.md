@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1465'
 ht-degree: 16%
 
 ---
@@ -22,7 +22,7 @@ Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de 
 
 ## Administrar etiquetas {#manage-labels}
 
-Para aplicar etiquetas a los datos, necesita el **[!UICONTROL Administrar etiquetas de uso]** Permiso de uso en la zona protegida de producción. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables y, actualmente, no se admite la eliminación de etiquetas.
+Para aplicar etiquetas a los datos, necesita el **[!UICONTROL Administrar etiquetas de uso]** permiso de uso en la zona protegida de producción predeterminada llamada &quot;prod&quot;. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables y, actualmente, no se admite la eliminación de etiquetas.
 
 Consulte la guía sobre cómo [configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o el [información general de control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso al Admin Console de su organización, póngase en contacto con el administrador de la organización.
 
