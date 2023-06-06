@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '520'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 | Barrera | Límite | Notas |
 | --- | --- | --- |
-| Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. El gráfico de identidad no se actualizará una vez que se alcance el límite. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
+| Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. Una vez que el número de identidades alcanza las 150 o más, no se agregarán nuevas identidades y el gráfico de identidades no se actualizará. Los gráficos pueden mostrar identidades buenas a 150 como resultado de la vinculación de uno o más gráficos con menos de 150 identidades. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de gráficos | Ninguna | No hay límites en la cantidad de gráficos de identidad que se pueden crear. |
