@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 1%
@@ -81,9 +81,11 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL ID de anunciante de Amazon Ads]**: seleccione el ID de la cuenta de Amazon Ads de destino utilizada para el destino.
+
 >[!NOTE]
 >
 >Después de guardar la configuración de destino, no podrá cambiar el ID del anunciante de Amazon Ads aunque se vuelva a autenticar con su cuenta de Amazon. Para utilizar un ID de anunciante de Amazon Ads diferente, debe crear una nueva conexión de destino.
+
 * **[!UICONTROL Región del anunciante]**: seleccione la región adecuada en la que está alojado el anunciante. Para obtener más información sobre los mercados admitidos en cada región, visite la [Documentación de Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Para obtener documentación de ayuda adicional, visite los siguientes recursos d
 
 * [Centro de ayuda de Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### Changelog {#changelog}
+## Changelog {#changelog}
 
 Esta sección recoge la funcionalidad y las actualizaciones significativas de la documentación realizadas en este conector de destino.
 
@@ -144,7 +146,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Mayo de 2023 | Actualización de funcionalidad y documentación | <ul><li>Se ha agregado compatibilidad con la selección de Región del anunciante en el flujo de trabajo de conexión de destino.</li><li>Se ha actualizado la documentación para reflejar la adición de la selección Región del anunciante. Para obtener más información sobre la selección de la región del anunciante correcta, consulte la [Documentación de Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mayo de 2023 | Actualización de funcionalidad y documentación | <ul><li>Se ha agregado compatibilidad para la selección de Región del anunciante en [flujo de trabajo de conexión de destino](#destination-details).</li><li>Se ha actualizado la documentación para reflejar la adición de la selección Región del anunciante. Para obtener más información sobre la selección de la región del anunciante correcta, consulte la [Documentación de Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Marzo de 2023 | Versión inicial | Versión de destino inicial y documentación publicada. |
 
 {style="table-layout:auto"}
