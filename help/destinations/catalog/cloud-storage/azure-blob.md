@@ -2,10 +2,10 @@
 title: Conexión de Azure Blob
 description: Cree una conexión saliente activa al almacenamiento del blob de Azure para exportar periódicamente archivos de datos CSV de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 4%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -32,6 +32,11 @@ Mejoras en el nuevo [!DNL Azure Blob] la tarjeta de destino incluye:
 ## Información general {#overview}
 
 [!DNL Azure Blob] (en lo sucesivo denominados [!DNL Blob]) es la solución de almacenamiento de objetos de Microsoft para la nube. Este tutorial proporciona los pasos para crear una [!DNL Blob] destino con el [!DNL Platform] interfaz de usuario.
+
+## Conéctese a su [!UICONTROL Azure Blob] mediante API o IU {#connect-api-or-ui}
+
+* Para conectarse a su [!UICONTROL Azure Blob] Ubicación de almacenamiento mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar segmentos en este destino](#activate) más abajo.
+* Para conectarse a su [!UICONTROL Azure Blob] ubicación de almacenamiento mediante programación, lea el [Activación de segmentos en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Primeros pasos
 
@@ -79,7 +84,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
 * **[!UICONTROL Cadena de conexión]**: la cadena de conexión es necesaria para acceder a los datos del almacenamiento del blob. El [!DNL Blob] el patrón de cadena de conexión comienza con: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * Para obtener más información sobre la configuración de [!DNL Blob] cadena de conexión, consulte [Configurar una cadena de conexión para una cuenta de almacenamiento de Azure](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
+   * Para obtener más información sobre la configuración de [!DNL Blob] cadena de conexión, consulte [Configurar una cadena de conexión para una cuenta de almacenamiento de Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) en la documentación de Microsoft.
 * **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
    ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -112,7 +117,10 @@ Consulte [Activar datos de audiencia en destinos de exportación de perfiles por
 
 ## (Beta) Exportar conjuntos de datos {#export-datasets}
 
-Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea la [tutorial de exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+
+* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Datos exportados {#exported-data}
 

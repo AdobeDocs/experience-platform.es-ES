@@ -2,10 +2,10 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 14%
+source-wordcount: '1054'
+ht-degree: 13%
 
 ---
 
@@ -32,6 +32,11 @@ Mejoras en el nuevo [!DNL Amazon S3] la tarjeta de destino incluye:
 ## Información general {#overview}
 
 Cree una conexión saliente activa con su [!DNL Amazon S3] para exportar periódicamente archivos de datos de Adobe Experience Platform a sus propios contenedores de S3.
+
+## Conéctese a su [!DNL Amazon S3] mediante API o IU {#connect-api-or-ui}
+
+* Para conectarse a su [!DNL Amazon S3] Ubicación de almacenamiento mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar segmentos en este destino](#activate) más abajo.
+* Para conectarse a su [!DNL Amazon S3] ubicación de almacenamiento mediante programación, lea el [Activación de segmentos en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -132,7 +137,10 @@ Consulte [Activar datos de audiencia en destinos de exportación de perfiles por
 
 ## (Beta) Exportar conjuntos de datos {#export-datasets}
 
-Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea la [tutorial de exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+
+* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Datos exportados {#exported-data}
 

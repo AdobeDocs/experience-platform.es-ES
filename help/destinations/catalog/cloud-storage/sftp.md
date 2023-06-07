@@ -2,9 +2,9 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '987'
 ht-degree: 7%
 
 ---
@@ -36,6 +36,11 @@ Cree una conexión saliente activa a su servidor SFTP para exportar periódicame
 >[!IMPORTANT]
 >
 > Aunque Experience Platform admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL SFTP].
+
+## Conectarse al SFTP mediante la API o la IU {#connect-api-or-ui}
+
+* Para conectarse a la ubicación de almacenamiento SFTP mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar segmentos en este destino](#activate) más abajo.
+* Para conectarse mediante programación a la ubicación de almacenamiento SFTP, lea la [Activación de segmentos en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -70,12 +75,13 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >title="Clave SSH privada"
 >abstract="La clave SSH privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña."
 
-Si selecciona la opción **[!UICONTROL Autenticación básica]** escriba para conectarse a su ubicación SFTP:
+Si selecciona la opción **[!UICONTROL SFTP con contraseña]** tipo de autenticación para conectarse a su ubicación SFTP:
 
 ![Autenticación básica de destino SFTP](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Host]**: la dirección de la ubicación de almacenamiento SFTP;
+* **[!UICONTROL Dominio]**: la dirección de la ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: el nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP;
+* **[!UICONTROL Puerto]**: el puerto utilizado por la ubicación de almacenamiento SFTP;
 * **[!UICONTROL Contraseña]**: contraseña para iniciar sesión en la ubicación de almacenamiento SFTP.
 * **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
@@ -117,12 +123,15 @@ Consulte [Activar datos de audiencia en destinos de exportación de perfiles por
 
 ## (Beta) Exportar conjuntos de datos {#export-datasets}
 
-Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea la [tutorial de exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+
+* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Datos exportados {#exported-data}
 
 Para [!DNL SFTP] destinos, Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) en el tutorial de activación de segmentos.
 
-## LISTA DE PERMITIDOS de direcciones IP
+## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allow-list}
 
 Consulte [LISTA DE PERMITIDOS de direcciones IP para destinos SFTP](ip-address-allow-list.md) si necesita agregar direcciones IP de Adobe a una lista de permitidos.
