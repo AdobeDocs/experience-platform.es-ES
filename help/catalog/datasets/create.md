@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear un conjunto de datos mediante API
 description: Este documento proporciona pasos generales para crear un conjunto de datos mediante las API de Adobe Experience Platform y rellenar el conjunto de datos con un archivo.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,7 @@ Todos los recursos de [!DNL Experience Platform] están aisladas para zonas prot
 >
 >Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
 
-Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
-
-* Content-Type: application/json
+Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un `Content-Type: application/json` encabezado. Para solicitudes JSON+PATCH, la variable `Content-Type` debería ser `application/json-patch+json`.
 
 ## Tutorial
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respuesta que contiene detalles del lote recién creado, incluido su `id`, una cadena generada por el sistema de solo lectura.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y un objeto de respuesta. El objeto response consiste en una matriz que contiene el ID del lote recién creado con el formato `"@/batches/{BATCH_ID}"`. El ID de lote es una cadena generada por el sistema de solo lectura que se utiliza para hacer referencia al lote en las llamadas API.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ Un lote completado correctamente devuelve un cuerpo de respuesta en blanco y el 
 
 ## Monitorización de la ingesta
 
-Según el tamaño de los datos, los lotes tardan distintos periodos en ingerirse. Puede controlar el estado de un lote adjuntando un `batch` parámetro de solicitud que contiene el ID del lote a `GET /batches` solicitud. La API sondea el conjunto de datos para ver el estado del lote desde la ingesta hasta el `status` en la respuesta indica finalización (&quot;éxito&quot; o &quot;error&quot;).
+Según el tamaño de los datos, los lotes tardan distintos periodos en ingerirse. Puede controlar el estado de un lote añadiendo el ID de un lote a un `GET /batches` solicitud.
 
 **Formato de API**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parámetro | Descripción |
