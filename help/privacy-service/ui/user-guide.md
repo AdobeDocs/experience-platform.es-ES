@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración de trabajos de privacidad en la IU de Privacy Service
 description: Aprenda a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1473'
 ht-degree: 14%
 
 ---
@@ -58,7 +58,7 @@ El tablero de [!DNL Privacy Service] La interfaz de usuario proporciona dos widg
 
 Los trabajos de cada tipo de regulación se rastrean por separado. Para cambiar entre tipos de regulación, seleccione **[!UICONTROL Tipo de regulación]** y seleccione la regulación que desee en la lista.
 
-![Lista desplegable Tipo de regulación](../images/user-guide/regulation.png)
+![La consola Privacy Service con la lista desplegable Tipo de regulación.](../images/user-guide/regulation.png)
 
 Al cambiar el tipo de regulación, el panel se actualiza para mostrar todas las operaciones, filtros, widgets y cuadros de diálogo de creación de trabajos que se aplican a la regulación seleccionada.
 

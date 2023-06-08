@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administrar las políticas de uso de datos en la IU
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el área de trabajo Directivas en la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 19%
+source-wordcount: '1788'
+ht-degree: 17%
 
 ---
 
@@ -59,7 +59,19 @@ Dependiendo de si forma parte de la versión beta de las directivas de consentim
 
 * Si no forma parte de la versión beta, se le redirige inmediatamente al flujo de trabajo para [creación de una política de gobernanza de datos](#create-governance-policy).
 * Si forma parte de la versión beta, un cuadro de diálogo proporciona una opción adicional para lo siguiente [crear una directiva de consentimiento](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### Uso conjunto de la gobernanza de datos y las políticas de consentimiento {#combine-policies}
+
+>[!NOTE]
+>
+>Actualmente, las políticas de consentimiento solo están disponibles para las organizaciones que han adquirido Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
+
+Las políticas de gobernanza y consentimiento se pueden usar juntas para crear reglas sólidas para gobernar audiencias asignadas a un destino. Las políticas de consentimiento son de naturaleza inclusiva, lo que significa que dictan qué perfiles se pueden incluir en cada experiencia de marketing. Por el contrario, las directivas de gobernanza excluyen el uso de atributos etiquetados específicos para que no se configuren para la activación.
+
+Con este comportamiento, puede configurar una combinación de directivas y reglas de consentimiento que incluyan los perfiles correctos, pero que impidan incluir datos que vayan en contra de las reglas organizativas establecidas. Un ejemplo de escenario sería, en el que desee excluir la inclusión de datos confidenciales pero que aún puedan dirigirse a usuarios con consentimiento para su marketing a través de los medios sociales. Los pasos necesarios para este escenario se describen en la infografía siguiente.
+
+![Una infografía que describe los pasos para utilizar juntas las políticas de gobernanza y consentimiento para crear reglas sólidas para gobernar las audiencias.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Crear una política de gobernanza de datos {#create-governance-policy}
 
