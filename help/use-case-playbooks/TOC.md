@@ -5,10 +5,10 @@ breadcrumb-title: Manuales de casos de uso de Adobe Experience Platform
 user-guide-description: Utilice los libros de reproducción de Adobe Experience Platform para generar recursos y empezar a usar varios casos prácticos de marketing.
 feature: Playbooks
 hide: true
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 4%
+source-wordcount: '52'
+ht-degree: 1%
 
 ---
 
@@ -17,5 +17,6 @@ ht-degree: 4%
 
 * Manuales {#playbooks}
    * [Información general](/help/use-case-playbooks/playbooks/overview.md)
-   * [Cómo habilitar y reutilizar libros de reproducción](/help/use-case-playbooks/playbooks/ui-guide.md)
-   * [Resolución de problemas](/help/use-case-playbooks/playbooks/troubleshooting.md)
+   * [Descubra el manual adecuado](/help/use-case-playbooks/playbooks/discover.md)
+   * [Creación, uso compartido y reutilización de instancias de libros de reproducción](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+   * [Solución de problemas y limitaciones conocidas](/help/use-case-playbooks/playbooks/troubleshooting.md)

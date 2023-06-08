@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Información general sobre Playbooks
+title: Resumen de casos de uso
 description: Aprenda a utilizar la función Manuales de casos de uso en Experience Platform para empezar a usar varios casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 Lo que encontrará en esta guía de documentación:
 
 * **[Descripción general de los libros de reproducción de casos de uso](#overview)**
-* [Ver un manual y generar recursos](ui-guide.md#view-playbook-generate-assets)
-* [Habilitar, utilizar y reutilizar una instancia de un manual de implementación ](ui-guide.md#enable-playbook)
+* [Descubra el manual adecuado](/help/use-case-playbooks/playbooks/discover.md)
+* [Creación, uso compartido y reutilización de instancias de libros de reproducción](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Solución de problemas y limitaciones conocidas](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Cree una instancia de un manual para generar recursos específicos como esquemas
 
 Algunos [!UICONTROL Manuales de casos de uso] se adaptan a los casos de uso de CDP en tiempo real, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso.
 
-## Guía de IU
+## Guías de IU
 
-Después de decidir el manual que desea utilizar, selecciónelo en la interfaz de usuario y comience con él. Lea la guía de IU sobre [cómo habilitar y reutilizar libros de reproducción](/help/use-case-playbooks/playbooks/ui-guide.md) para obtener información completa sobre cómo crear instancias y sacar el máximo partido a un manual de implementación.
+Después de decidir el manual que desea utilizar, selecciónelo en la interfaz de usuario y comience con él. Lea las guías de IU sobre [cómo descubrir el manual de instrucciones correcto](/help/use-case-playbooks/playbooks/discover.md) para usted y [cómo crear, compartir y reutilizar instancias de libro de estrategias](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener información completa sobre cómo crear instancias y sacar el máximo partido a un manual de implementación.
 
 ## Solución de problemas y limitaciones conocidas
 
