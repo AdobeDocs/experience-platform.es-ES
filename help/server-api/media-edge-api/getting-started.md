@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Introducción a las API de Media Edge
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
@@ -206,6 +206,8 @@ En la solicitud de ejemplo anterior, ocurre lo mismo `sessionId` que se devuelve
 
 Para obtener más información sobre los parámetros y ejemplos del extremo de Inicio del búfer, consulte el archivo Media Edge Swagger.
 
+La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
+
 ## Reproducir solicitud de evento
 
 El evento de reproducción se envía cuando el reproductor de contenido cambia su estado a &quot;reproduciendo&quot; desde otro estado, como &quot;almacenamiento en búfer&quot;, &quot;en pausa&quot; o &quot;error&quot;. Para realizar una solicitud de evento de reproducción, utilice su `sessionId` en la carga útil de una llamada al siguiente extremo:
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
 
 Para obtener más información sobre los parámetros y ejemplos de puntos de conexión de reproducción, consulte el archivo Media Edge Swagger.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Para obtener más información sobre los parámetros y ejemplos de extremo de finalización de sesión, consulte el archivo Media Edge Swagger.
+La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
 
 ## Códigos de respuesta
 
