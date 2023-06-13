@@ -4,9 +4,9 @@ description: Aprenda a complementar los perfiles de origen con atributos de soci
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: c4f34afb7a05707ed9f62f09685ff50a1de2ef93
+source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -66,15 +66,21 @@ Lea las páginas de documentación siguientes para obtener más información:
 * [Descripción general de [!UICONTROL Perfil individual de XDM] clase](/help/xdm/classes/individual-profile.md)
 * [Crear y editar esquemas en la interfaz de usuario](/help/xdm/ui/resources/schemas.md)
 * [Creación y edición de grupos de campos de esquema en la interfaz de usuario](/help/xdm/ui/resources/field-groups.md)
-* [Crear y editar esquemas mediante la API](/help/xdm/api/schemas.md#create)
-* [Actualizar un esquema existente para agregar grupos de campos mediante la API](/help/xdm/api/schemas.md#patch)
-* Vincular a la nueva página de documentación de grupo de campos cuando existe
+
+<!--
+
+Commenting out links for now
+* [Create and edit schemas using the API](/help/xdm/api/schemas.md#create)
+* [Update an existing schema to add field groups using the API](/help/xdm/api/schemas.md#patch)
+* Link to new field group documentation page when it exists
+
+-->
 
 También en este paso, piense en cómo cambia el modelo de gobernanza de datos a medida que amplía su estrategia de administración de datos para incluir datos de terceros proporcionados por el socio. Explore las consideraciones de los vínculos de documentación siguientes:
 
-* (**Muy pronto**) Mantener los datos de terceros en un conjunto de datos independiente para que eliminarlos y deshacer integraciones sea fácil
-* (**Muy pronto**) Usar TTL en el conjunto de datos para clientes que tienen el complemento de higiene de datos
-* (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que una vez mezclados, la única solución para eliminar los datos de terceros es eliminar todo el conjunto de datos derivado
+* (**Muy pronto**) Mantenga los datos de terceros en un conjunto de datos independiente para que sea fácil eliminarlos y deshacer integraciones.
+* (**Muy pronto**) Usar el tiempo de vida (TTL) en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
+* (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que una vez mezclados, la única solución para eliminar los datos de terceros es eliminar todo el conjunto de datos derivado.
 
 >[!TIP]
 >
@@ -111,7 +117,7 @@ Algunos conectores de origen recomendados para este fin pueden ser:
 
 Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso descrito en esta página:
 
-Si decide utilizar ID de socio, tenga en cuenta que no se utilizan en para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
+Si decide utilizar ID de socio, tenga en cuenta que estos ID no se utilizan para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 
