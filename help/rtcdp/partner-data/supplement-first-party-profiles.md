@@ -1,12 +1,12 @@
 ---
-title: (Beta) Complementar perfiles de origen con atributos proporcionados por los socios
-description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar la optimización de audiencias
+title: (Beta) Complementar perfiles de origen con atributos proporcionados por el socio
+description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar la optimización de audiencias.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 1. As a **cliente**, los atributos de licencia del **socio de datos**.
 2. As a **cliente**, puede ampliar los datos de perfil y el modelo de gobernanza para dar cabida a **socio** Atributos proporcionados por.
-3. As a **cliente**, incorporará las audiencias que desee ampliar al socio de datos. Por lo general, estas audiencias están marcadas por identificadores de entrada como elementos de información de identificación personal (PII) como correo electrónico, nombre, dirección u otros.
+3. As a **cliente**, incorporará las audiencias que desea enriquecer con el socio de datos. Por lo general, estas audiencias están marcadas por identificadores de entrada como elementos de información de identificación personal (PII) como correo electrónico, nombre, dirección u otros.
 4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, una [ID de socio](/help/identity-service/namespaces.md) se puede incluir e ingerir en el área de nombres de ID con ámbito de socio.
 5. As a **cliente**, puede cargar atributos del socio de datos en perfiles de clientes en Real-Time CDP.
 
@@ -50,7 +50,7 @@ Lea las secciones siguientes, que incluyen vínculos a documentación adicional,
 
 ### Atributos de licencia del socio {#license-attributes-from-partner}
 
-Este paso se cubre en los requisitos previos y el Adobe supone que tiene los acuerdos contractuales adecuados con proveedores de datos de confianza para aumentar sus perfiles de origen.
+Este paso se trata en la [requisitos previos](#prerequisites-and-planning) y el Adobe de supone que dispone de los acuerdos contractuales adecuados con proveedores de datos de confianza para aumentar sus perfiles de origen.
 
 ### Amplíe los datos de perfil y el modelo de gobernanza para dar cabida a los atributos proporcionados por los socios. {#extend-governance-model}
 
@@ -58,7 +58,7 @@ En este punto, está ampliando el marco de trabajo de administración de datos e
 
 Tiene la opción de crear un nuevo esquema del **[!UICONTROL Perfil individual de XDM]** o ampliar un esquema existente del mismo tipo para incluir atributos proporcionados por el socio. Adobe recomienda encarecidamente crear un nuevo esquema con un nuevo conjunto de grupos de campos que representen mejor los atributos adicionales del proveedor de datos. Esto garantiza que los esquemas de datos estén limpios y puedan evolucionar de forma independiente entre sí.
 
-Para incluir atributos proporcionados por el socio en un esquema, puede crear un nuevo grupo de campos con los atributos esperados o utilizar uno de los grupos de campos predeterminados proporcionados por Adobe.
+Para incluir atributos proporcionados por el socio en un esquema, puede crear un nuevo grupo de campos con los atributos esperados o utilizar uno de los grupos de campos preconfigurados proporcionados por Adobe.
 
 Lea las páginas de documentación siguientes para obtener más información:
 
@@ -79,7 +79,7 @@ Commenting out links for now
 También en este paso, piense en cómo cambia el modelo de gobernanza de datos a medida que amplía su estrategia de administración de datos para incluir datos de terceros proporcionados por el socio. Explore las consideraciones de los vínculos de documentación siguientes:
 
 * (**Muy pronto**) Mantenga los datos de terceros en un conjunto de datos independiente para que sea fácil eliminarlos y deshacer integraciones.
-* (**Muy pronto**) Usar el tiempo de vida (TTL) en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
+* (**Muy pronto**) Uso [Tiempo de vida (TTL)](/help/hygiene/ui/dataset-expiration.md) en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
 * (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que una vez mezclados, la única solución para eliminar los datos de terceros es eliminar todo el conjunto de datos derivado.
 
 >[!TIP]
@@ -87,10 +87,9 @@ También en este paso, piense en cómo cambia el modelo de gobernanza de datos a
 >Si decide complementar los perfiles del cliente con un identificador basado en persona del proveedor de datos, puede crear un nuevo tipo de identidad del tipo **[[!UICONTROL ID de socio]](/help/identity-service/namespaces.md)**.
 >
 >Obtenga más información sobre el ID de socio en la [sección tipos de identidad](/help/identity-service/namespaces.md).
-> Más información [definición de campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario del Experience Platform.
+>Más información [definición de campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario del Experience Platform.
 
-
-### Exporte las audiencias que quiera que se enriquezcan con claves de información de identificación personal (PII) o con hash-PII {#export-audiences}
+### Exportar audiencias que desee enriquecer cuando se introduzca información de identificación personal (PII) o PII con hash {#export-audiences}
 
 Exporte las audiencias que desea que el socio enriquezca. Utilice los destinos de almacenamiento en la nube proporcionados por Real-Time CDP, como Amazon S3 o SFTP. Lea las siguientes páginas de documentación para completar este paso:
 
@@ -99,10 +98,9 @@ Exporte las audiencias que desea que el socio enriquezca. Utilice los destinos d
 * Cómo: [conexión a un destino](/help/destinations/ui/connect-destination.md)
 * Cómo: [exportar datos a un destino de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Su socio de datos adjunta atributos con licencia para los perfiles con los que pueden coincidir {#partner-appends-attributes}
 
-### El socio adjunta atributos con licencia para los perfiles con los que pueden coincidir {#partner-appends-attributes}
-
-En este paso, el socio añade atributos con licencia para la audiencia exportada. La salida suele estar disponible como archivo plano que se puede volver a introducir en Real-Time CDP.
+En este paso, el socio de datos anexa atributos con licencia para la audiencia exportada. La salida suele estar disponible como archivo plano que se puede volver a introducir en Real-Time CDP. Más información sobre [ingesta de archivos en Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP anexa atributos enriquecidos al perfil del cliente {#ingest-data}
 
@@ -117,7 +115,7 @@ Algunos conectores de origen recomendados para este fin pueden ser:
 
 Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso descrito en esta página:
 
-Si decide utilizar ID de socio, tenga en cuenta que estos ID no se utilizan para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
+* Si decide utilizar ID de socio, tenga en cuenta que estos ID no se utilizan para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 

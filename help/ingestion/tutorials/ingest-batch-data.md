@@ -5,7 +5,7 @@ title: Ingesta De Datos En El Experience Platform
 type: Tutorial
 description: Adobe Experience Platform permite importar fácilmente datos como archivos por lotes en forma de archivos de Parquet o datos que se ajusten a un esquema conocido de Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Para empezar a agregar datos al conjunto de datos, haga clic en **[!UICONTROL A�
 
 ![Pestaña Añadir datos](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Cargar un archivo
+## Cargar un archivo {#upload-file}
 
 Una vez que arrastre y suelte (o examine y seleccione) un archivo Parquet o JSON que desee cargar, [!DNL Platform] comenzará inmediatamente a procesar el archivo y una **[!UICONTROL Cargando]** El cuadro de diálogo aparecerá en **[!UICONTROL Añadir datos]** pestaña que muestra el progreso de la carga del archivo.
 
