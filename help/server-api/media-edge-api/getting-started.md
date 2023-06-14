@@ -3,9 +3,9 @@ keywords: Experience Platform;media edge;temas populares;intervalo de fechas
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Introducción a las API de Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '979'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ Esta guía proporciona instrucciones para realizar interacciones iniciales corre
 * sessionComplete
 * statesUpdate
 
-Cada evento tiene su propio punto final. Todos los extremos de la API de Media Edge son métodos de POST, con cuerpos de solicitud JSON para datos de evento. Para obtener más información sobre los extremos, los parámetros y los ejemplos de la API de Media Edge, consulte el archivo Swagger de Media Edge.
+Cada evento tiene su propio punto final. Todos los extremos de la API de Media Edge son métodos de POST, con cuerpos de solicitud JSON para datos de evento. Para obtener más información sobre los extremos, parámetros y ejemplos de la API de Media Edge, consulte la [Archivo Swagger de Media Edge](swagger.md).
 
 Esta guía muestra cómo realizar un seguimiento de los siguientes eventos después de iniciar la sesión:
 
@@ -43,7 +43,7 @@ Esta guía muestra cómo realizar un seguimiento de los siguientes eventos despu
 
 ## Implementación de la API
 
-Aparte de pequeñas diferencias en el modelo y las rutas denominadas, la API de Media Edge es la misma que la API de Media Collection. Los detalles de implementación de Media Collection siguen siendo válidos para la API de Media Edge, tal como se describe en la siguiente documentación:
+Aparte de pequeñas diferencias en el modelo y las rutas denominadas, la API de Media Edge tiene la misma implementación que la API de Media Collection. Los detalles de implementación de Media Collection siguen siendo válidos para la API de Media Edge, tal como se describe en la siguiente documentación:
 
 * [Configuración del tipo de solicitud HTTP en el reproductor](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Envío de eventos ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -61,7 +61,7 @@ Para iniciar la sesión de contenido en el servidor, utilice el punto final de I
 
 Antes de realizar la solicitud de inicio de sesión, necesitará lo siguiente:
 
-* El `datastreamId` es un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=es).
+* El `datastreamId`: un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=es).
 
 * Un objeto JSON para la carga útil de la solicitud que contiene los datos mínimos requeridos (como se muestra en la solicitud de ejemplo siguiente).
 
@@ -98,7 +98,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-En la solicitud de ejemplo anterior, la variable `eventType` el valor contiene el prefijo `media` según el [Modelo de datos de experiencia (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es) para especificar dominios.
+En la solicitud de ejemplo anterior, la variable `eventType` el valor contiene el prefijo `media.` según el [Modelo de datos de experiencia (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es) para especificar dominios.
 
 Además, la asignación de tipos de datos para `eventType` en el ejemplo anterior son las siguientes:
 
@@ -165,7 +165,7 @@ x-content-type-options: nosniff
 
 En la respuesta de ejemplo anterior, la variable `sessionId` se muestra como `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. Utilizará este ID en solicitudes de eventos posteriores como parámetro obligatorio.
 
-Para obtener más información sobre los parámetros y ejemplos de extremo de inicio de sesión, consulte el archivo Media Edge Swagger.
+Para obtener más información sobre los parámetros y ejemplos de extremo de inicio de sesión, consulte la [Media Edge Swagger](swagger.md) archivo.
 
 Para obtener más información sobre los parámetros de datos de medios XDM, consulte [Esquema de información de detalles de medios](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
@@ -201,11 +201,12 @@ curl -X 'POST' \
 }'
 ```
 
-En la solicitud de ejemplo anterior, ocurre lo mismo `sessionId` que se devuelve en la llamada anterior se utiliza como parámetro requerido en la solicitud de inicio del búfer.
-
-Para obtener más información sobre los parámetros y ejemplos del extremo de Inicio del búfer, consulte el archivo Media Edge Swagger.
+En la solicitud de ejemplo anterior, lo mismo `sessionId` que se devuelve en la llamada anterior se utiliza como parámetro requerido en la solicitud de inicio del búfer.
 
 La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
+
+Para obtener más información sobre los parámetros y ejemplos del extremo de Inicio del búfer, consulte la [Media Edge Swagger](swagger.md) archivo.
+
 
 ## Reproducir solicitud de evento
 
@@ -240,7 +241,7 @@ curl -X 'POST' \
 
 La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
 
-Para obtener más información sobre los parámetros y ejemplos de puntos de conexión de reproducción, consulte el archivo Media Edge Swagger.
+Para obtener más información sobre los parámetros y ejemplos del punto de conexión de reproducción, consulte la [Media Edge Swagger](swagger.md) archivo.
 
 ## Solicitud de evento de sesión completa
 
@@ -275,6 +276,8 @@ curl -X 'POST' \
 
 La respuesta correcta indica un estado de 200 y no incluye ningún contenido.
 
+Para obtener más información sobre los parámetros y ejemplos de extremo de finalización de sesión, consulte la [Media Edge Swagger](swagger.md) archivo.
+
 ## Códigos de respuesta
 
 La siguiente tabla muestra los posibles códigos de respuesta resultantes de las solicitudes de API de Media Edge:
@@ -282,10 +285,10 @@ La siguiente tabla muestra los posibles códigos de respuesta resultantes de las
 | Estado | Descripción |
 | ---------- | --------- |
 | 200 | La sesión se ha creado correctamente |
-| 207 | Problema con uno de los servicios que se conectan a Experience Edge Network (consulte más información en la guía de solución de problemas) |
+| 207 | Problema con uno de los servicios que se conectan a Experience Edge Network (consulte más información en el [guía de solución de problemas](troubleshooting.md)) |
 | de 400 niveles | Solicitud incorrecta |
 | de 500 niveles | Error del servidor |
 
-Para obtener más información sobre la gestión de errores y códigos de respuesta fallidos, consulte la Guía de solución de problemas de Media Edge.
+Para obtener más información sobre la gestión de errores y los códigos de respuesta erróneos, consulte la [Guía de solución de problemas de Media Edge](troubleshooting.md).
 
 

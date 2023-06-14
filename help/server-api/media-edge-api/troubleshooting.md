@@ -3,9 +3,9 @@ keywords: Experience Platform;media edge;temas populares;intervalo de fechas
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Guía de solución de problemas de las API de Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -110,17 +110,17 @@ En la tabla siguiente se proporcionan instrucciones para controlar los errores d
 
 | Código de error | Descripción |
 | ---------- | --------- |
-| 4xx Solicitud incorrecta | La mayoría de los errores 4xx (por ejemplo, 400, 403, 404) no deben ser reintentados por el usuario. Si se vuelve a intentar la solicitud, la respuesta no se realizará correctamente. El usuario debe corregir el error antes de volver a intentar la solicitud. Los eventos que generan códigos de estado 4xx no se rastrean, lo que podría afectar a la precisión de los datos en las sesiones que recibieron respuestas 4xx. |
-| 410 desaparecido | Indica que la sesión destinada al seguimiento ya no se calcula en el lado del servidor. El motivo más común es que la sesión dura más de 24 horas. Después de recibir 410, intente iniciar una nueva sesión y rastrearla. |
+| 4xx Solicitud incorrecta | La mayoría de los errores 4xx (p. ej. `400`, `403`, `404`) no debería volver a intentarlo el usuario. Si se vuelve a intentar la solicitud, la respuesta no se realizará correctamente. El usuario debe corregir el error antes de volver a intentar la solicitud. Los eventos que generan códigos de estado 4xx no se rastrean, lo que podría afectar a la precisión de los datos en las sesiones que recibieron respuestas 4xx. |
+| 410 desaparecido | Indica que la sesión destinada al seguimiento ya no se calcula en el lado del servidor. El motivo más común es que la sesión dura más de 24 horas. Después de recibir una `410`, intente iniciar una nueva sesión y realice un seguimiento de la misma. |
 | Demasiadas solicitudes | Este código de respuesta indica que el servidor limita la velocidad de las solicitudes. Siga las **Retry-After** instrucciones en el encabezado de respuesta con cuidado. Las respuestas que regresen deben llevar el código de respuesta HTTP con un código de error específico del dominio. |
-| 500 Error interno del servidor | 500 errores son errores genéricos, captall. 500 errores no se deben volver a intentar, excepto para 502, 503 y 504. |
+| 500 Error interno del servidor | `500` los errores son errores genéricos y captaces. `500` los errores no se deben volver a intentar, excepto para `502`, `503` y `504`. |
 | 502 Puerta de enlace incorrecta | Este código de error indica que el servidor, mientras actuaba como puerta de enlace, recibió una respuesta no válida de los servidores de flujo ascendente. Esto puede deberse a problemas de red entre servidores. El problema de red temporal puede resolverse solo, por lo que si vuelve a intentar la solicitud, puede resolverse. |
-| Servicio no disponible | Este código de error indica que el servicio no está disponible temporalmente. Esto puede ocurrir durante los períodos de mantenimiento. Los destinatarios de errores 503 pueden reintentar la solicitud, pero también deben seguir el **Retry-After** instrucciones de encabezado. |
+| 503 Servicio no disponible | Este código de error indica que el servicio no está disponible temporalmente. Esto puede ocurrir durante los períodos de mantenimiento. Destinatarios de `503` Los errores de pueden reintentar la solicitud, pero también deben seguir el **Retry-After** instrucciones de encabezado. |
 
 
-Poner eventos en cola cuando las respuestas de sesión son lentas
+## Poner eventos en cola cuando las respuestas de sesión son lentas
 
-Después de iniciar una sesión de seguimiento de contenido, el reproductor de contenido puede activarse antes de recibir la respuesta de inicio de sesión (con el parámetro ID de sesión) del servidor. Si esto sucede, la aplicación debe poner en cola los eventos de seguimiento que lleguen entre la Solicitud de sesión y su respuesta. Cuando llega la respuesta de sesiones, primero debe procesar los eventos en cola y, a continuación, iniciar el procesamiento de eventos en directo.
+Después de iniciar una sesión de seguimiento de contenido, el reproductor de contenido puede activarse antes de recibir la respuesta de inicio de sesión (con el parámetro ID de sesión) del servidor. Si esto sucede, la aplicación debe poner en cola los eventos de seguimiento que lleguen entre la Solicitud de inicio de sesión y su respuesta. Cuando llega la respuesta de sesiones, primero debe procesar los eventos en cola y, a continuación, iniciar el procesamiento de eventos en directo.
 
 Para obtener los mejores resultados, consulte el reproductor de referencia de su distribución para obtener instrucciones sobre cómo procesar eventos antes de recibir un ID de sesión.
 
