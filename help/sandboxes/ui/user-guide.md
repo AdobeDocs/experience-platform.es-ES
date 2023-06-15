@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU de Sandbox
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con los entornos limitados de la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 8%
+source-wordcount: '953'
+ht-degree: 7%
 
 ---
 
@@ -77,7 +77,30 @@ Una vez que haya terminado de crear la zona protegida, actualice la página y ap
 
 >[!WARNING]
 >
->A continuación se muestra una lista de excepciones que pueden impedir el restablecimiento de la zona protegida de producción predeterminada o de una creada por el usuario: <ul><li>La zona protegida de producción predeterminada no se puede restablecer si Adobe Analytics también está utilizando el gráfico de identidades alojado en esta zona protegida para [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) función.</li><li>La zona protegida de producción predeterminada no se puede restablecer si Adobe Audience Manager también está utilizando el gráfico de identidades alojado en esta zona protegida para [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es).</li><li>La zona protegida de producción predeterminada no se puede restablecer si contiene datos para las funciones de CDA y PBD.</li><li>Una zona protegida de producción creada por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de Audience se puede restablecer después de un mensaje de advertencia.</li></ul>
+>A continuación se muestra una lista de excepciones que pueden impedir el restablecimiento de la zona protegida de producción predeterminada o de una creada por el usuario:
+>* La zona protegida de producción predeterminada no se puede restablecer si Adobe Analytics también está utilizando el gráfico de identidades alojado en esta zona protegida para [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) función.
+>* La zona protegida de producción predeterminada no se puede restablecer si Adobe Audience Manager también está utilizando el gráfico de identidades alojado en esta zona protegida para [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es).
+>* La zona protegida de producción predeterminada no se puede restablecer si contiene datos para las funciones de CDA y PBD.
+>* Una zona protegida de producción creada por el usuario que se utiliza para compartir segmentos bidireccionales con Adobe Audience Manager o el servicio principal de Audience se puede restablecer después de un mensaje de advertencia.
+>* Antes de iniciar el restablecimiento de una zona protegida, se le pedirá que elimine sus composiciones manualmente para asegurarse de que los datos de audiencia asociados se limpien correctamente.
+
+### Eliminar composiciones de audiencia
+
+La composición de audiencias no está integrada actualmente con la capacidad de restablecimiento de la zona protegida, por lo que las audiencias deberán eliminarse manualmente antes de realizar el restablecimiento de la zona protegida.
+
+Seleccionar **[!UICONTROL Audiencias]** en el panel de navegación izquierdo y seleccione **[!UICONTROL Composiciones]**.
+
+![El [!UICONTROL Composiciones] en la pestaña [!UICONTROL Audiencias] workspace.](../images/ui/audiences.png)
+
+A continuación, seleccione los puntos suspensivos (`...`) junto a la primera audiencia y seleccione **[!UICONTROL Eliminar]**.
+
+![El menú de audiencia que resalta el [!UICONTROL Eliminar] opción.](../images/ui/delete-composition.png)
+
+Se mostrará una confirmación de la eliminación correcta y volverá a la página de **[!UICONTROL Composiciones]** pestaña.
+
+Repita los pasos anteriores con todas las composiciones. Se eliminarán todas las audiencias del inventario de audiencias. Una vez eliminadas todas las audiencias, puede seguir restableciendo la zona protegida.
+
+### Restablecimiento de una zona protegida
 
 Al restablecer una zona protegida de producción o desarrollo, se eliminan todos los recursos asociados a ella (esquemas, conjuntos de datos, etc.), al tiempo que se mantienen el nombre y los permisos asociados. Esta zona protegida &quot;limpia&quot; sigue estando disponible con el mismo nombre para los usuarios que tienen acceso a ella.
 
