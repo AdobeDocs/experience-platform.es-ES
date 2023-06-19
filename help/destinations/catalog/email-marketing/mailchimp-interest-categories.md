@@ -2,10 +2,10 @@
 title: Categorías de interés en Mailchimp
 description: Mailchimp (también conocido como Intuit Mailchimp) es una popular plataforma de automatización de marketing y servicio de marketing por correo electrónico que utilizan las empresas para administrar y hablar con contactos (clientes, clientes u otras partes interesadas) mediante listas de correo y campañas de marketing por correo electrónico. Utilice este conector para ordenar los contactos según sus intereses y preferencias.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2371'
-ht-degree: 0%
+source-wordcount: '2357'
+ht-degree: 1%
 
 ---
 
@@ -110,9 +110,9 @@ En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, buscar [!DNL Mailchim
 
 Para autenticarse en el destino, rellene los campos obligatorios a continuación y seleccione **[!UICONTROL Conectar con destino]**.
 
-| [!DNL Mailchimp] destino | [!DNL Mailchimp] |
+| Campo | Descripción |
 | --- | --- |
-| **[!UICONTROL Nombre de usuario]** | Su [!DNL Salesforce Marketing Cloud] prefijo de dominio. <br>Por ejemplo, si el dominio es<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> debe proporcionar `mcq4jrssqdlyc4lph19nnqgzzs84` como el valor de nombre de usuario. |
+| **[!UICONTROL Nombre de usuario]** | Su [!DNL Mailchimp Interest Categories] nombre de usuario. |
 | **[!UICONTROL Contraseña]** | Su [!DNL Mailchimp] **Clave de API**, que había anotado en el [Reunir [!DNL Mailchimp] credenciales](#gather-credentials) sección.<br> La clave de API adopta la forma de `{KEY}-{DC}`, donde la variable `{KEY}` hace referencia al valor anotado en la sección [[!DNL Mailchimp] Clave de API](#gather-credentials) y la sección `{DC}` La parte hace referencia a [[!DNL Mailchimp] centro de datos](#identify-data-center). <br>Puede proporcionar cualquiera de las `{KEY}` parte o todo el formulario.<br> Por ejemplo, si la clave de API es <br>*`0123456789abcdef0123456789abcde-us14`*,<br> puede proporcionar lo siguiente *`0123456789abcdef0123456789abcde`*o *`0123456789abcdef0123456789abcde-us14`*como el valor. |
 
 {style="table-layout:auto"}
