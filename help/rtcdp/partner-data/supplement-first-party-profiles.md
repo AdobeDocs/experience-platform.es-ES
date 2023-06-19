@@ -1,12 +1,12 @@
 ---
-title: (Beta) Complementar perfiles de origen con atributos proporcionados por el socio
+title: (Beta) Complementar perfiles de origen con atributos proporcionados por los socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar la optimización de audiencias.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 También en este paso, piense en cómo cambia el modelo de gobernanza de datos a medida que amplía su estrategia de administración de datos para incluir datos de terceros proporcionados por el socio. Explore las consideraciones de los vínculos de documentación siguientes:
 
 * (**Muy pronto**) Mantenga los datos de terceros en un conjunto de datos independiente para que sea fácil eliminarlos y deshacer integraciones.
-* (**Muy pronto**) Uso [Tiempo de vida (TTL)](/help/hygiene/ui/dataset-expiration.md) en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
+* (**Muy pronto**) Use el [caducidad del conjunto de datos](/help/hygiene/ui/dataset-expiration.md) funcionalidad en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
 * (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que una vez mezclados, la única solución para eliminar los datos de terceros es eliminar todo el conjunto de datos derivado.
 
 >[!TIP]
