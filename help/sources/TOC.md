@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
+source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 14%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 14%
    - Analytics {#analytics}
       - [Conector Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
+      - [RainFocus](connectors/analytics/rainfocus.md)
    - Almacenamiento en la nube {#cloud-storage}
       - [Conector Kinesis de Amazon](connectors/cloud-storage/kinesis.md)
       - [Conector de Amazon S3](connectors/cloud-storage/s3.md)
@@ -237,6 +238,7 @@ ht-degree: 14%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+         - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
       - Almacenamiento en la nube {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
