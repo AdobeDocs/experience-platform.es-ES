@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en Identity Service
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 1930d235b57b59f9967f9f53c8c1faf25cea9051
+source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -110,9 +110,9 @@ Dependiendo de si también ha incluido el Perfil del cliente en tiempo real (`Pr
 
 | Productos incluidos | Efectos |
 | --- | --- |
-| `identity` solamente | La identidad proporcionada se elimina inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan. Los datos asociados con el perfil también permanecen en el lago de datos. |
+| `identity` solamente | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan. Los datos asociados con el perfil también permanecen en el lago de datos. |
 | `identity` y `ProfileService` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. Los datos asociados con el perfil permanecen en el lago de datos. |
-| `identity` y `aepDataLake` | La identidad proporcionada se elimina inmediatamente en cuanto Platform envía la confirmación de que se recibió la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos [!DNL Platform] servicio. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
+| `identity` y `aepDataLake` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación. El perfil construido a partir de ese gráfico de identidad aún se mantiene, pero no se actualizará a medida que se incorporen nuevos datos, ya que las asociaciones de identidad ahora se eliminan.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos [!DNL Platform] servicio. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
 | `identity`, `ProfileService`, y `aepDataLake` | La identidad proporcionada se elimina en cuanto Platform envía la confirmación de que se ha recibido la solicitud de eliminación.<br><br>Cuando el producto del lago de datos responde que la solicitud se recibió y se está procesando actualmente, los datos asociados con el perfil se eliminan de forma suave y, por lo tanto, ningún usuario puede acceder a ellos [!DNL Platform] servicio. Una vez finalizado el trabajo, los datos se eliminan por completo del lago de datos. |
 
 Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#monitor) para obtener más información sobre el seguimiento de estados de trabajos.
