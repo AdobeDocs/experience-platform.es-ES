@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;media edge;temas populares;intervalo de fechas
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Guía de solución de problemas de las API de Media Edge
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -22,7 +21,7 @@ Para ayudar a solucionar problemas de respuestas fallidas, los errores van acomp
 
 ## Validando inicios de sesión
 
-La mayoría de los problemas al generar solicitudes de Inicio de sesión generan una respuesta de varios estados 207.
+La mayoría de los problemas con las solicitudes de Inicio de sesión provocan una respuesta de varios estados 207.
 La carga útil es similar a los errores no graves de la API del servidor de red de Experience Edge. Todos los errores de Media Analytics tienen el siguiente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Los números mostrados en la respuesta corresponden al estado de error.
 
 El siguiente ejemplo muestra un cuerpo de respuesta para una solicitud de inicio de sesión que carece de un campo obligatorio y tiene uno no válido.
