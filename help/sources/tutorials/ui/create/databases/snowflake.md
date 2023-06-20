@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Snowflake
 title: Crear una conexión de origen de Snowflake en la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
 
 # Crear un [!DNL Snowflake] conexión de origen en la interfaz de usuario
+
+>[!IMPORTANT]
+>
+>El [!DNL Snowflake] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Este tutorial proporciona los pasos para crear una [!DNL Snowflake] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -33,9 +37,14 @@ Para acceder a su cuenta de Snowflake en [!DNL Platform], debe proporcionar el s
 | Base de datos | El [!DNL Snowflake] La base de datos de contiene los datos que desea traer a Platform. |
 | Nombre de usuario | El nombre de usuario de [!DNL Snowflake] cuenta. |
 | Una contraseña | La contraseña para el [!DNL Snowflake] cuenta de usuario. |
+| Función | La función de control de acceso predeterminada que se utilizará en [!DNL Snowflake] sesión. La función debe ser una función existente que ya se haya asignado al usuario especificado. La función predeterminada es `PUBLIC`. |
 | Cadena de conexión | La cadena de conexión utilizada para conectarse a su [!DNL Snowflake] ejemplo. El patrón de cadena de conexión para [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Para obtener más información, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Debe configurar la variable `PREVENT_UNLOAD_TO_INLINE_URL` marcar como `FALSE` para permitir la descarga de datos desde [!DNL Snowflake] base de datos a Experience Platform.
 
 ## Conecte su cuenta de Snowflake
 

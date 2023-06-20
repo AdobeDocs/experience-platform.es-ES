@@ -1,22 +1,24 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Snowflake;snowflake
-solution: Experience Platform
 title: Creación de una conexión base de Snowflake mediante la API de Flow Service
-type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Snowflake mediante la API de Flow Service.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 2%
+source-wordcount: '589'
+ht-degree: 1%
 
 ---
 
 # Crear un [!DNL Snowflake] conexión base mediante el [!DNL Flow Service] API
 
+>[!IMPORTANT]
+>
+>El [!DNL Snowflake] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Snowflake] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Snowflake] uso del [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Primeros pasos
 
@@ -42,10 +44,15 @@ Para que [!DNL Flow Service] para conectar con [!DNL Snowflake], debe proporcion
 | `database` | El [!DNL Snowflake] La base de datos de contiene los datos que desea traer a Platform. |
 | `username` | El nombre de usuario de [!DNL Snowflake] cuenta. |
 | `password` | La contraseña para el [!DNL Snowflake] cuenta de usuario. |
+| `role` | La función de control de acceso predeterminada que se utilizará en [!DNL Snowflake] sesión. La función debe ser una función existente que ya se haya asignado al usuario especificado. La función predeterminada es `PUBLIC`. |
 | `connectionString` | La cadena de conexión utilizada para conectarse a su [!DNL Snowflake] ejemplo. El patrón de cadena de conexión para [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Snowflake] es `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Para obtener más información sobre cómo empezar, consulte esta [[!DNL Snowflake] documento](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Debe configurar la variable `PREVENT_UNLOAD_TO_INLINE_URL` marcar como `FALSE` para permitir la descarga de datos desde [!DNL Snowflake] base de datos a Experience Platform.
 
 ## Crear una conexión base
 
