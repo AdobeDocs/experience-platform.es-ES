@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;Zendesk;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK;zendesk;Zendesk
 title: Crear una conexión de origen de Zendesk en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '764'
 ht-degree: 6%
 
 ---
 
-# (Beta) Cree una [!DNL Zendesk] conexión de origen en la interfaz de usuario
-
->[!NOTE]
->
->El [!DNL Zendesk] el origen está en versión beta. Consulte la [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+# Crear un [!DNL Zendesk] conexión de origen en la interfaz de usuario
 
 Este tutorial proporciona los pasos para crear una [!DNL Zendesk] conexión de origen mediante la interfaz de usuario de Adobe Experience Platform.
 

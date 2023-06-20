@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
-title: (Beta) Crear una conexión de origen y un flujo de datos para el panel Mixpanel mediante la API de Flow Service
+title: Crear una conexión de origen y un flujo de datos para el panel Mixpanel mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Mixpanel mediante la API de Flow Service.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2019'
 ht-degree: 2%
 
 ---
 
-# (Beta) Crear una conexión de origen y un flujo de datos para [!DNL Mixpanel] uso del [!DNL Flow Service] API
-
->[!NOTE]
->
->El [!DNL Mixpanel] el origen está en versión beta. Consulte la [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+# Crear una conexión de origen y un flujo de datos para [!DNL Mixpanel] uso del [!DNL Flow Service] API
 
 El siguiente tutorial le guiará por los pasos para crear una conexión de origen y un flujo de datos que traer [!DNL Mixpanel] datos a Adobe Experience Platform mediante el [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
