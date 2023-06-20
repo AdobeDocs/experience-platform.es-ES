@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '996'
 ht-degree: 37%
 
 ---
@@ -215,6 +215,7 @@ ht-degree: 37%
       * [!DNL Braze] {#braze}
          * [Información general](./extensions/server/braze/overview.md)
       * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud Connector para Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Núcleo {#core}
          * [Información general](./extensions/server/core/overview.md)
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
