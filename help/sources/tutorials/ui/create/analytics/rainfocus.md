@@ -2,9 +2,7 @@
 title: Conecte su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario de
 description: Aprenda a conectar su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: e90f05c44943f55630bd02d3b8bf04b01d07f320
+source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%

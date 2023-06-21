@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;centro de eventos;centro de eventos de Azure;centro de eventos
-solution: Experience Platform
 title: Crear una conexión de origen de Azure Event Hubs mediante la API de Flow Service
-type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Azure Event Hubs mediante la API de Flow Service.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
 
-
 # Crear un [!DNL Azure Event Hubs] conexión de origen mediante [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>El [!DNL Azure Event Hubs] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Este tutorial lo acompañará durante los pasos para conectarse [!DNL Azure Event Hubs] (en lo sucesivo, &quot;[!DNL Event Hubs]&quot;) al Experience Platform, utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -103,6 +104,10 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Crear una conexión de origen
 
+>[!TIP]
+>
+>Un [!DNL Event Hubs] el grupo de consumidores solo se puede utilizar para un único flujo en un momento determinado.
+
 Una conexión de origen crea y administra la conexión con el origen externo desde el que se incorporan los datos. Una conexión de origen consta de información como el origen de datos, el formato de datos y un ID de conexión de origen necesario para crear un flujo de datos. Una instancia de conexión de origen es específica de un inquilino y una organización.
 
 Para crear una conexión de origen, realice una solicitud de POST al `/sourceConnections` punto final del [!DNL Flow Service] API.
@@ -153,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | El nombre de su [!DNL Event Hubs] origen. |
 | `params.dataType` | Este parámetro define el tipo de datos que se están introduciendo. Los tipos de datos admitidos son: `raw` y `xdm`. |
 | `params.reset` | Este parámetro define cómo se leerán los datos. Uso `latest` para empezar a leer los datos más recientes, y utilice `earliest` para comenzar a leer los primeros datos disponibles en la secuencia. Este parámetro es opcional y el valor predeterminado es `earliest` si no se proporciona. |
-| `params.consumerGroup` | Mecanismo de publicación o suscripción que se utilizará para [!DNL Event Hubs]. Este parámetro es opcional y el valor predeterminado es `$Default` si no se proporciona. Consulte esta sección [[!DNL Event Hubs] guía para consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obtener más información. |
+| `params.consumerGroup` | Mecanismo de publicación o suscripción que se utilizará para [!DNL Event Hubs]. Este parámetro es opcional y el valor predeterminado es `$Default` si no se proporciona. Consulte esta sección [[!DNL Event Hubs] guía para consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obtener más información. **Nota**: Un [!DNL Event Hubs] el grupo de consumidores solo se puede utilizar para un único flujo en un momento determinado. |
 
 ## Pasos siguientes
 
