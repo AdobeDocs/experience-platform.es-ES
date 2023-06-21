@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,18 @@ Para el conjunto de datos de salida, tiene la opción de utilizar un conjunto de
 >[!IMPORTANT]
 >
 > Dado que está utilizando un conjunto de datos existente o está creando uno nuevo, puede hacer lo siguiente **no** debe incluir lo siguiente `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de la consulta, ya que los conjuntos de datos ya están configurados. Incluyendo cualquiera `INSERT INTO` o `CREATE TABLE AS SELECT` como parte de las consultas programadas, producirá un error.
+
+Si no tiene acceso a las consultas parametrizadas, continúe con el [eliminar o deshabilitar una programación](#delete-schedule) sección.
+
+### Definir parámetros para una consulta parametrizada programada {#set-parameters}
+
+>[!IMPORTANT]
+>
+>La función de IU de consulta parametrizada está disponible actualmente en un **solo versión limitada** y no está disponible para todos los clientes.
+
+Si está creando una consulta programada para una consulta parametrizada, debe establecer los valores de parámetro para estas ejecuciones de consulta.
+
+![La sección Detalles del programa del flujo de trabajo de creación del programa con la sección Parámetros de consulta resaltada.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 Después de confirmar todos estos detalles, seleccione **[!UICONTROL Guardar]** para crear una programación. Volverá al espacio de trabajo de programaciones que muestra los detalles de la programación recién creada, incluido el ID de programación, la propia programación y el conjunto de datos de salida de la programación. Puede utilizar el ID de programación para buscar más información sobre las ejecuciones de la propia consulta programada. Para obtener más información, lea la [guía de extremos de ejecución de consulta programada](../api/runs-scheduled-queries.md).
 
