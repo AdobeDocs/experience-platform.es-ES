@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '278'
 ht-degree: 18%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 18%
    - [Uso de estructuras de datos anidadas](essential-concepts/nested-data-structures.md)
    - [Acoplar estructuras de datos anidadas](essential-concepts/flatten-nested-data.md)
    - [Bloque anónimo](essential-concepts/anonymous-block.md)
+   - [Plantilla en línea](essential-concepts/inline-templates.md)
    - [Carga incremental](essential-concepts/incremental-load.md)
    - [Deduplicación de datos](essential-concepts/deduplication.md)
    - [Ejemplos de conjuntos de datos](essential-concepts/dataset-samples.md)
