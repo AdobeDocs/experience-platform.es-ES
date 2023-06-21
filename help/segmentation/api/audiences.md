@@ -5,7 +5,7 @@ description: El extremo de audiencias de la API del servicio de segmentación de
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 5%
@@ -62,7 +62,7 @@ El siguiente par de solicitud/respuesta se utiliza cuando la variable `withMetri
 La siguiente solicitud recupera las últimas cinco audiencias creadas en su organización.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | El ID de la audiencia. Las audiencias externas lo utilizan |
 | `name` | El nombre de la audiencia. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
 | `lifecycle` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published`, `inactive`, y `archived`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, `inactive` cuando la audiencia ya no está activa, y `archived` si se elimina la audiencia. |

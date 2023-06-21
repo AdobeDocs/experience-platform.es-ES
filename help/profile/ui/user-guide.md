@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,14 @@ Desde el principal **[!UICONTROL Perfiles]** , seleccione la opción **[!UICONTR
 Para obtener más información sobre los esquemas de unión, visite la [guía de IU del esquema de unión](union-schema.md).
 
 ![La pestaña Esquema de unión está resaltada. Se muestran los esquemas de unión que pertenecen a la organización.](../images/user-guide/union-schema.png)
+
+## Atributos calculados {#computed-attributes}
+
+Desde el principal **[!UICONTROL Perfiles]** , seleccione la opción **[!UICONTROL Atributos calculados]** para ver una lista de atributos calculados que pertenecen a su organización.
+
+Para obtener más información sobre los atributos calculados, lea la [información general sobre atributos calculados](../computed-attributes/overview.md). Para obtener más información sobre cómo utilizar atributos calculados en la IU de Platform, lea la [guía de IU de atributos calculados](../computed-attributes/ui.md).
+
+IMAGEN
 
 ## Pasos siguientes
 
