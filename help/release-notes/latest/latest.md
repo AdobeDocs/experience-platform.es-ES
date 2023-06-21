@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de junio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 72a1ab9203d7cafac5d445f5ca3d2e65bcd1a45c
+source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '768'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Extensión de  | [!DNL Google Cloud Platform] extensión de reenvío de eventos | El [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) la extensión de reenvío de eventos permite reenviar datos de evento a Google para su activación mediante [!DNL Google Pub/Sub]. |
 | Extensión de  | [!DNL Cloud connector for Google Analytics 4 (ga4)] Extensión | El [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) la extensión de reenvío de eventos permite rastrear analytics mediante el nuevo [!DNL Google Analytics 4 (ga4)] estándar. |
 | Secreto | Secreto JWT de OAuth 2 | El [Secreto JWT de OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite utilizar el Adobe y [!DNL Google] Tokens de servicio para admitir interacciones servidor-servidor en el reenvío de eventos. |
-| Reenvío de etiquetas y eventos | Atribución de usuario | La atribución de usuarios ofrece datos de actividad clave en todo el [Etiquetas](../../tags/home.md) y [Reenvío de eventos](../../tags/ui/event-forwarding/overview.md) IU.<br><br>Los datos incluyen quién realizó qué cambios y a qué hora. Estos datos son visibles en la interfaz de usuario de Etiquetas y Reenvío de eventos en las pantallas siguientes:<br><br>* Resumen de propiedades<br><br><ul><li> Resumen de propiedades</li><li> Extensiones instaladas</li><li>Comparación y revisión de reglas</li><li>Elementos de datos comparar revisión</li><li>Las extensiones comparan la revisión</li><li>Cambios en recursos de biblioteca</li><li>Última compilación y publicación de la biblioteca</li></ul> |
+| Reenvío de etiquetas y eventos | Atribución de usuario | La atribución de usuarios ofrece datos de actividad clave en todo el [Etiquetas](../../tags/home.md) y [Reenvío de eventos](../../tags/ui/event-forwarding/overview.md) IU.<br><br>Los datos incluyen quién realizó qué cambios y a qué hora. Estos datos son visibles en la interfaz de usuario de Etiquetas y Reenvío de eventos en las pantallas siguientes:<br><ul><li> Resumen de propiedades</li><li> Extensiones instaladas</li><li>Comparación y revisión de reglas</li><li>Elementos de datos comparar revisión</li><li>Las extensiones comparan la revisión</li><li>Cambios en recursos de biblioteca</li><li>Última compilación y publicación de la biblioteca</li></ul> |
 
 {style="table-layout:auto"}
 
