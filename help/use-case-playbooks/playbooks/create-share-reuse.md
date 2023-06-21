@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Creación, uso compartido y reutilización de instancias de libros de reproducción
 description: Aprenda a crear, compartir y reutilizar instancias del manual para lograr su caso práctico de marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ El comportamiento descrito anteriormente es verdadero para todos los recursos qu
 >
 >Una vez generados los objetos, puede seguir probando en los entornos limitados de desarrollo añadiendo datos. Puede probar los recursos todo el tiempo que desee en el entorno limitado de desarrollo y duplicar la lógica de recursos (definiciones de segmentos, recorridos, esquemas, etc.) en el entorno limitado de producción cuando esté listo.
 
-### Reutilizar libros de reproducción {#reuse-playbooks}
+## Reutilizar libros de reproducción {#reuse-playbooks}
 
 Al crear varias instancias del mismo manual, puede implementar el mismo caso de uso más adelante, sin modificar los detalles de la implementación anterior del caso de uso.
 
-### Compartir el manual y los recursos generados con otros integrantes del equipo {#share-playbook}
+## Compartir el manual y los recursos generados con otros integrantes del equipo {#share-playbook}
 
 Puede compartir la instancia y los recursos generados con otros integrantes del equipo. Para ello, copie el vínculo URL del explorador y compártalo con su equipo para darles una visión general de los recursos generados.
 

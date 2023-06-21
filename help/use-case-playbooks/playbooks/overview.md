@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Resumen de casos de uso
 description: Aprenda a utilizar la función Manuales de casos de uso en Experience Platform para empezar a usar varios casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 Lo que encontrará en esta guía de documentación:
 
 * **[Descripción general de los libros de reproducción de casos de uso](#overview)**
+* [Introducción ](/help/use-case-playbooks/playbooks/get-started.md)
 * [Descubra el manual adecuado](/help/use-case-playbooks/playbooks/discover.md)
 * [Creación, uso compartido y reutilización de instancias de libros de reproducción](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Solución de problemas y limitaciones conocidas](troubleshooting.md)
