@@ -1,12 +1,12 @@
 ---
 title: Ingesta de datos cifrados
-description: Adobe Experience Platform le permite introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube.
+description: Obtenga información sobre cómo introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube mediante la API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,29 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 ### Uso de API de Platform
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+
+### Extensiones de archivo compatibles con archivos cifrados
+
+La lista de extensiones de archivo admitidas para archivos cifrados es la siguiente:
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>La ingesta de archivos cifrados en fuentes de Adobe Experience Platform admite openPGP y no cualquier versión propietaria específica de PGP.
 
 ## Crear par de claves de cifrado {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Después de crear una conexión base, debe seguir los pasos descritos en el tuto
 >[!NOTE]
 >
 >Debe tener lo siguiente para crear un flujo de datos para la ingesta de datos cifrados:
+>
 >* [ID de clave pública](#create-encryption-key-pair)
 >* [ID de conexión de origen](../api/collect/cloud-storage.md#source)
 >* [ID de conexión de destino](../api/collect/cloud-storage.md#target)
 >* [ID de asignación](../api/collect/cloud-storage.md#mapping)
-
 
 Para crear un flujo de datos, realice una solicitud de POST a `/flows` punto final del [!DNL Flow Service] API. Para introducir datos cifrados, debe añadir una `encryption` a la sección `transformations` e incluir la propiedad `publicKeyId` que se creó en un paso anterior.
 
