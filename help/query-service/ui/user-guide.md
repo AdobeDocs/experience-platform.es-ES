@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -113,11 +113,7 @@ Este panel también muestra metadatos útiles, como la última vez que se modifi
 
 Las consultas que se han guardado como plantilla se pueden programar desde el Editor de consultas. Esto le permite automatizar las ejecuciones de consulta que se ejecutan en una cadencia personalizada. Puede programar consultas en función de la frecuencia, la fecha y la hora, y también elegir un conjunto de datos de salida para los resultados si es necesario. Las programaciones de consultas también se pueden deshabilitar o eliminar a través de la interfaz de usuario.
 
-Las programaciones se establecen desde el Editor de consultas. A continuación se muestra una lista de limitaciones para las consultas programadas al utilizar el Editor de consultas. No se aplican al [!DNL Query Service] API:
-
-- Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.
-- Usted **no puede** añada una programación a una consulta parametrizada.
-- Consultas programadas **no puede** contiene un bloque anónimo.
+Las programaciones se establecen en el Editor de consultas. Al utilizar el Editor de consultas, sólo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado. Esto no se aplica al [!DNL Query Service] API:
 
 Consulte la documentación de programaciones de consultas para obtener información sobre cómo [crear programaciones de consultas en la interfaz de usuario](./query-schedules.md). También puede aprender a añadir programaciones mediante la API leyendo el [guía de extremo de consultas programadas](../api/scheduled-queries.md).
 

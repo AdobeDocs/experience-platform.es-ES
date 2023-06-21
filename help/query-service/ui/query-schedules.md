@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Puede automatizar las ejecuciones de consultas creando programaciones de consult
 
 >[!IMPORTANT]
 >
->A continuación se muestra una lista de limitaciones para las consultas programadas al utilizar el Editor de consultas. No se aplican al [!DNL Query Service] API:<br/>Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.<br/>Usted **no puede** añada una programación a una consulta parametrizada.<br/>Consultas programadas **no puede** contiene un bloque anónimo.
+>Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.
 
 Todas las consultas programadas se agregan a la lista de la [!UICONTROL Consultas programadas] pestaña. Desde ese espacio de trabajo, puede monitorizar el estado de todos los trabajos de consulta programados a través de la interfaz de usuario. En el [!UICONTROL Consultas programadas] pestaña puede encontrar información importante sobre las ejecuciones de consultas y suscribirse a alertas. La información disponible incluye el estado, los detalles de la programación y los mensajes/códigos de error en caso de que falle una ejecución. Consulte la [Documento de supervisión de consultas programadas](./monitor-queries.md) para obtener más información.
 
@@ -69,7 +69,9 @@ Después de confirmar todos estos detalles, seleccione **[!UICONTROL Guardar]** 
 
 ## Eliminar o deshabilitar una programación {#delete-schedule}
 
-Puede eliminar o deshabilitar una programación del espacio de trabajo de programaciones. Debe seleccionar una plantilla de consulta de la [!UICONTROL Plantillas] o la pestaña [!UICONTROL Consultas programadas] para ir al Editor de consultas y seleccionar **[!UICONTROL Programación]** para acceder al espacio de trabajo programaciones.
+Puede eliminar o deshabilitar una programación desde el espacio de trabajo de programaciones de una consulta concreta o desde el [!UICONTROL Consultas programadas] espacio de trabajo que enumera todas las consultas programadas.
+
+Para acceder a [!UICONTROL Horarios] de la consulta elegida, debe seleccionar el nombre de una plantilla de consulta de la [!UICONTROL Plantillas] o la pestaña [!UICONTROL Consultas programadas] pestaña. Se desplaza al Editor de consultas de esa consulta. En el Editor de consultas, seleccione **[!UICONTROL Horarios]** para acceder al espacio de trabajo programaciones.
 
 Seleccione una programación de las filas de programaciones disponibles. Puede utilizar la opción para deshabilitar o habilitar la consulta programada.
 
@@ -80,3 +82,5 @@ Seleccione una programación de las filas de programaciones disponibles. Puede u
 Seleccionar **[!UICONTROL Eliminar una programación]** para eliminar la programación deshabilitada.
 
 ![Espacio de trabajo de programaciones con las opciones Deshabilitar programación y Eliminar programación resaltadas.](../images/ui/query-schedules/delete-schedule.png)
+
+Alternativamente, la variable [!UICONTROL Consultas programadas] ofrece una colección de acciones en línea para cada consulta programada. Las acciones en línea disponibles incluyen [!UICONTROL Desactivar programación] o [!UICONTROL Habilitar programación], [!UICONTROL Eliminar programación], y [!UICONTROL Suscribirse] a alertas para la consulta programada. Para obtener instrucciones completas sobre cómo eliminar o deshabilitar una consulta programada a través de la pestaña Consultas programadas, consulte la [guía de monitorización de consultas programadas](./monitor-queries.md#inline-actions).
