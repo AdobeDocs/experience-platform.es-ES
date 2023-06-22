@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de junio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
+source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '988'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,19 @@ ht-degree: 5%
 
 Actualizaciones de funciones existentes en Adobe Experience Platform:
 
+- [Autenticación en las API de Experience Platform](#authentication-platform-apis)
 - [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Servicio de consultas](#query-service)
 - [Fuentes](#sources)
+
+## Autenticación en las API de Experience Platform {#authentication-platform-apis}
+
+Para los usuarios de API Experience Platform, ahora se simplifica el método para obtener los tokens de acceso necesarios para autenticarse y realizar llamadas a los extremos de la API. El método JWT para obtener tokens de acceso está obsoleto y se ha sustituido por un método de autenticación de servidor a servidor OAuth más sencillo.<p>![Nuevo método de autenticación OAuth para resaltar los tokens de acceso.](/help/landing/images/api-authentication/oauth-authentication-method.png "Nuevo método de autenticación OAuth para resaltar los tokens de acceso."){width="100" zoomable="yes"}</p>
+
+Aunque las integraciones de API existentes que utilicen el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Lea la guía de [migración de la credencial de cuenta de servicio (JWT) a la credencial de servidor a servidor OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+Lea el [tutorial de autenticación de Experience Platform](/help/landing/api-authentication.md) para obtener más información.
 
 ## Recopilación de datos {#data-collection}
 
@@ -35,6 +45,40 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 {style="table-layout:auto"}
 
 Para obtener más información sobre la recopilación de datos, lea la [resumen de recopilación de datos](../../tags/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+
+**Destinos nuevos o actualizados** {#new-updated-destinations}
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] conexión](../../destinations/catalog/advertising/amazon-ads.md) | El [!DNL Amazon Ads] La integración de con Adobe Experience Platform ahora admite el enrutamiento regional a los distintos [!DNL Amazon Ads] mercados. Obtenga más información en la [changelog de destino](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Servicio de consultas {#query-service}
 
