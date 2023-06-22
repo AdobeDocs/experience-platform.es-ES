@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -101,7 +101,7 @@ Para quitar un usuario de un rol, seleccione la opción **X** junto al nombre de
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## Administrar credenciales de API para la función
+## Administrar credenciales de API para la función {#manage-api-credentials-for-role}
 
 Seleccione el **[!UICONTROL Credenciales de API]** para abrir la página credenciales de la API de funciones y, a continuación, seleccione **[!UICONTROL Añadir credenciales de API]** para asignar credenciales de API a la función.
 
