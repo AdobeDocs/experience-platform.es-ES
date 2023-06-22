@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
-solution: Experience Platform
 title: Información general sobre el conector de origen de Azure Event Hubs
 description: Obtenga información sobre cómo conectar Azure Event Hubs a Adobe Experience Platform mediante API o la interfaz de usuario.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
+# [!DNL Azure Event Hubs] origen
 
-# [!DNL Azure Event Hubs] conector
+>[!IMPORTANT]
+>
+>El [!DNL Azure Event Hubs] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform], y [!DNL Azure]. Puede llevar los datos de estos sistemas a Platform.
 

@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Google Big Query;google big query;GBQ;gbq
-solution: Experience Platform
 title: Creación de una conexión de origen de Google Big Query en la IU
-type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Google Big Query mediante la interfaz de usuario de Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # Crear un [!DNL Google Big Query] conexión de origen en la interfaz de usuario
+
+>[!IMPORTANT]
+>
+>El [!DNL Google BigQuery] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
 Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear una [!DNL Google Big Query] conexión de origen mediante la interfaz de usuario de Platform.
 
