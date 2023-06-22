@@ -1,9 +1,9 @@
 ---
 title: Plantillas en línea
 description: Aprenda a reutilizar varias condiciones en numerosas consultas con plantillas en línea.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Puede utilizar plantillas para almacenar una o varias condiciones. No es necesar
 
 >
 >
->En la interfaz de usuario de Adobe Experience Platform, las plantillas en línea en forma de consultas parametrizadas solo se admiten en el nivel principal. Esto significa que las consultas parametrizadas solo funcionan cuando se utilizan en la plantilla original. La plantilla secundaria debe ser una plantilla estática y no puede tener parámetros dinámicos.
+>En la interfaz de usuario de Adobe Experience Platform, las plantillas en línea en forma de consultas parametrizadas solo se admiten en el nivel principal. Esto significa que las consultas parametrizadas solo funcionan cuando se utilizan en la plantilla original. La plantilla secundaria debe ser una plantilla estática y no puede tener parámetros dinámicos. Consulte la [documentación de consultas parametrizadas](../ui/parameterized-queries.md) para obtener más información.
 
 ## Pasos siguientes
 

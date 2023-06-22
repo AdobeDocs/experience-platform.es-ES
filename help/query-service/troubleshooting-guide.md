@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4309'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 También debe consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y mediante [la API](./api/scheduled-queries.md).
 
-A continuación se ofrece una lista de consideraciones para las consultas programadas al utilizar el [!DNL Query Editor]. No se aplican al [!DNL Query Service] API:<br/>Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.<br/>Usted **no puede** añada una programación a una consulta parametrizada.<br/>Consultas programadas **no puede** contiene un bloque anónimo.<br/>Solo puede programar **uno** plantilla de consulta mediante la interfaz de usuario. Si desea agregar programaciones adicionales a una plantilla de consulta, deberá utilizar la API. Si ya se ha agregado una programación mediante la API, no podrá agregar programaciones adicionales mediante la interfaz de usuario.
+Tenga en cuenta lo siguiente al utilizar [!DNL Query Editor] solo puede agregar una programación a una consulta que ya se haya creado, guardado y ejecutado. Esto no se aplica al [!DNL Query Service] API.
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?
