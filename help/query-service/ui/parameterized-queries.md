@@ -1,9 +1,9 @@
 ---
 title: Consultas con parámetros
 description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Utilice el `'$'` para introducir un parámetro de consulta en la consulta en el 
 
 Si elimina un parámetro e intenta ejecutar la consulta de nuevo después de ejecutarla, aparece un mensaje de error en la variable [!UICONTROL Parámetros de consulta] para avisarle.
 
+>[!NOTE]
+>
+>Si la consulta no acepta parámetros, aún puede introducir parámetros innecesarios dentro del Editor de consultas. El Editor de consultas ignora todos los pares clave-valor innecesarios y no tienen ningún efecto en la ejecución ni en los resultados de la consulta.
+
 ![El Editor de consultas con un campo de valor vacío y el error de parámetros de consulta resaltado.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Utilice los detalles de registros de consulta para comprobar los valores de parámetros {#check-parameter-values}
@@ -77,4 +81,4 @@ Los valores de parámetro se guardan al programar una consulta parametrizada. Pa
 
 Al leer este documento, ha aprendido a parametrizar consultas en la interfaz de usuario de Adobe Experience Platform y a utilizarlas en ejecuciones de consultas programadas. El documento también resaltaba cómo comprobar los registros para los valores de parámetro utilizados en las ejecuciones de consultas.
 
-Si aún no lo ha hecho, se recomienda leer la guía en [supervisión de consultas programadas](./monitor-queries.md) para comprender mejor el estado de todos los trabajos de consulta a través de la IU de Platform.
+A continuación, se recomienda leer la guía sobre [supervisión de consultas programadas](./monitor-queries.md) para comprender mejor el estado de todos los trabajos de consulta a través de la IU de Platform.
