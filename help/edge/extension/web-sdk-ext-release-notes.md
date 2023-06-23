@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8d612c826164bab48a78d04649c5cca27e5797b0
+source-git-commit: d145aa43274c9406e1ff8d96513667edaa7d07bf
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1688'
 ht-degree: 38%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 38%
 # Notas de la versión de la extensión Adobe Experience Platform Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión del propio SDK, consulte la [Notas de la versión de Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=es).
+
+## Versión 2.19.0: 21 de junio de 2023
+
+* El **[!UICONTROL Variable]** elemento de datos y **[!UICONTROL Actualizar variable]** Las acciones de ya están disponibles de forma general.
 
 ## Versión 2.18.0: 18 de mayo de 2023
 
