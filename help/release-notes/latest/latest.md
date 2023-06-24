@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de junio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 5%
@@ -124,11 +124,12 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 
 | Función | Descripción |
 | --- | --- |
-| Plantillas en línea | Query Service ahora admite el uso de plantillas que hacen referencia a otras plantillas dentro de SQL. Reduzca su carga de trabajo y evite errores aprovechando las plantillas en línea en sus consultas. Puede reutilizar instrucciones o condiciones y hacer referencia a plantillas anidadas para una buena flexibilidad en el SQL. No hay límite en el tamaño de las consultas que se pueden almacenar como plantillas o en el número de plantillas a las que se puede hacer referencia desde la consulta original. Para obtener más información, lea la [guía de plantilla en línea](../../query-service/essential-concepts/inline-templates.md). |
-| Actualizaciones programadas de la IU de consultas | Administre todas sus consultas programadas desde una ubicación de la interfaz de usuario con [[!UICONTROL Pestaña Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). El [!UICONTROL Consultas programadas] La interfaz de usuario se ha mejorado con la adición de acciones de consulta en línea y la nueva columna de estado de consulta. Las adiciones recientes incluyen la capacidad de habilitar, deshabilitar y eliminar una programación, o suscribirse a alertas para próximas ejecuciones de consulta directamente desde [!UICONTROL Consultas programadas] vista. <p>![Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista.](../../query-service/images/ui/monitor-queries/disable-inline.png "Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista."){width="100" zoomable="yes"}</p> |
+| Plantillas en línea | El servicio de consultas ahora admite el uso de plantillas que hacen referencia a otras plantillas dentro de SQL. Reduzca su carga de trabajo y evite errores aprovechando las plantillas en línea en sus consultas. Puede reutilizar instrucciones o condiciones y hacer referencia a plantillas anidadas para una buena flexibilidad en el SQL. No hay límite en el tamaño de las consultas que se pueden almacenar como plantillas o en el número de plantillas a las que se puede hacer referencia desde la consulta original. Para obtener más información, lea la [guía de plantilla en línea](../../query-service/essential-concepts/inline-templates.md). |
+| Actualizaciones programadas de la IU de consulta | Administre todas las consultas programadas desde una ubicación de la IU con [[!UICONTROL Pestaña Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). El [!UICONTROL Consultas programadas] La interfaz de usuario se ha mejorado con la adición de acciones de consulta en línea y la nueva columna de estado de consulta. Las adiciones recientes incluyen la capacidad de habilitar, deshabilitar y eliminar una programación, o suscribirse a alertas para próximas ejecuciones de consulta directamente desde [!UICONTROL Consultas programadas] vista. <p>![Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista.](../../query-service/images/ui/monitor-queries/disable-inline.png "Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
-Para obtener más información sobre Query Service, consulte la [Introducción al servicio de consultas](../../query-service/home.md).
+
+Para obtener más información sobre Query Service, consulte [Introducción al servicio de consultas](../../query-service/home.md).
 
 ## Fuentes {#sources}
 
