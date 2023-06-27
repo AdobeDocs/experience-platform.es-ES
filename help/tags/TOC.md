@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1005'
 ht-degree: 37%
 
 ---
@@ -279,7 +279,7 @@ ht-degree: 37%
    * [Estándar de compatibilidad con versiones anteriores](./extension-dev/backwards-compatibility.md)
 * API de Reactor {#api}
    * [Información general](./api/overview.md)
-   * [Primeros pasos](./api/getting-started.md)
+   * [Autenticación y acceso a la API de Reactor](./api/getting-started.md)
    * Puntos de conexión {#endpoints}
       * [Compañías](./api/endpoints/companies.md)
       * [Propiedades](./api/endpoints/properties.md)

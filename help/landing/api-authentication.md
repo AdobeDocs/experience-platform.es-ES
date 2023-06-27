@@ -4,9 +4,9 @@ title: Autenticar y acceder a las API de Experience Platform
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: cf8450bd7382169d8e62b62f03dd861ca61c7be3
+source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2240'
 ht-degree: 7%
 
 ---
@@ -87,7 +87,7 @@ A continuación, seleccione el tipo de autenticación para generar tokens de acc
 
 >[!IMPORTANT]
 >
->Seleccione el **[!UICONTROL Servidor a servidor OAuth]** ya que será el único método admitido a partir de ahora. El **[!UICONTROL Cuenta de servicio (JWT)]** El método está obsoleto. Aunque las integraciones que utilizan el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
+>Seleccione el **[!UICONTROL Servidor a servidor OAuth]** ya que este será el único método admitido a partir de ahora. El **[!UICONTROL Cuenta de servicio (JWT)]** El método está obsoleto. Aunque las integraciones que utilizan el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
 
 ![Seleccione API de Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
