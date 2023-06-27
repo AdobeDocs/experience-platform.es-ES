@@ -3,9 +3,9 @@ title: (Beta) Exportar conjuntos de datos a destinos de almacenamiento en la nub
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1425'
 ht-degree: 5%
 
 ---
@@ -18,8 +18,7 @@ ht-degree: 5%
 >* Esta funcionalidad beta admite la exportación de datos de primera generación, tal como se definen en Real-time Customer Data Platform [descripción del producto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Esta funcionalidad está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Póngase en contacto con el representante del Adobe para obtener más información.
 
-
-Este artículo explica el flujo de trabajo necesario para exportar [conjuntos de datos](/help/catalog/datasets/overview.md) desde Adobe Experience Platform hasta su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage] mediante la interfaz de usuario de Experience Platform.
+Este artículo explica el flujo de trabajo necesario para exportar [conjuntos de datos](/help/catalog/datasets/overview.md) de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage] mediante la interfaz de usuario de Experience Platform.
 
 También puede utilizar las API de Experience Platform para exportar conjuntos de datos. Lea el [tutorial de API de exportar conjuntos de datos](/help/destinations/api/export-datasets.md) para obtener más información.
 
@@ -135,11 +134,22 @@ El nombre de archivo predeterminado se genera de forma aleatoria y garantiza que
 
 La presencia de estos archivos en su ubicación de almacenamiento es la confirmación de una exportación correcta. Para comprender cómo se estructuran los archivos exportados, puede descargar un ejemplo [archivo .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [archivo .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### Archivos de conjuntos de datos comprimidos {#compressed-dataset-files}
+
+En el [flujo de trabajo conectar con destino](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), puede seleccionar los archivos del conjunto de datos exportados que se van a comprimir, como se muestra a continuación:
+
+![Tipo de archivo y selección de compresión al conectarse a un destino para exportar conjuntos de datos.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Tenga en cuenta la diferencia de formato de archivo entre los dos tipos de archivo al comprimirlos:
+
+* Al exportar archivos JSON comprimidos, el formato de archivo exportado es `json.gz`
+* Al exportar ficheros de parquet comprimidos, el formato de fichero exportado es `gz.parquet`
+
 ## Quitar conjunto de datos de destino {#remove-dataset}
 
 Para eliminar un conjunto de datos de un flujo de datos existente, siga los pasos a continuación:
 
-1. Inicie sesión en [IU de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccionar **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
+1. Inicie sesión en [IU de Experience Platform](https://experience.adobe.com/platform/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccionar **[!UICONTROL Examinar]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
    ![Vista de exploración de destino con una conexión de destino mostrada y el resto borroso.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

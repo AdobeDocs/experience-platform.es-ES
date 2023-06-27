@@ -4,9 +4,9 @@ title: (Beta) Exportar conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
+source-wordcount: '3524'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 4%
 >* La funcionalidad para exportar conjuntos de datos está actualmente en versión beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 >* Esta funcionalidad beta admite la exportación de datos de primera generación, tal como se definen en Real-time Customer Data Platform [descripción del producto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Esta funcionalidad está disponible para los clientes que hayan adquirido el paquete Real-Time CDP Prime o Ultimate. Póngase en contacto con el representante del Adobe para obtener más información.
-
 
 Este artículo explica el flujo de trabajo necesario para utilizar [!DNL Flow Service API] para exportar [conjuntos de datos](/help/catalog/datasets/overview.md) desde Adobe Experience Platform hasta su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage].
 
@@ -48,7 +47,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Todos los datos que se incorporan correctamente en Adobe Experience Platform se conservan dentro de la variable [!DNL Data Lake] como conjuntos de datos. Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los conjuntos de datos también contienen metadatos que describen varios aspectos de los datos que almacenan.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesita conocer para exportar conjuntos de datos a destinos de almacenamiento en la nube en Platform.
+Las secciones siguientes proporcionan información adicional que debe conocer para exportar conjuntos de datos a destinos de almacenamiento en la nube en Platform.
 
 ### Permisos necesarios {#permissions}
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 Puede encontrar información sobre el [Varios parámetros devueltos por el flujo de datos ejecuta la API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) en la documentación de referencia de la API.
+
+## Verificar exportación correcta del conjunto de datos {#verify}
+
+Al exportar conjuntos de datos, el Experience Platform crea un `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se deposite un nuevo archivo en su ubicación de almacenamiento según el programa de exportación que proporcionó cuando [creación de un flujo de datos](#create-dataflow).
+
+Experience Platform crea una estructura de carpetas en la ubicación de almacenamiento especificada, donde deposita los archivos del conjunto de datos exportados. Se crea una nueva carpeta para cada tiempo de exportación, siguiendo el patrón siguiente:
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+El nombre de archivo predeterminado se genera de forma aleatoria y garantiza que los nombres de archivo exportados sean únicos.
+
+### Archivos de conjuntos de datos de muestra {#sample-files}
+
+La presencia de estos archivos en su ubicación de almacenamiento es la confirmación de una exportación correcta. Para comprender cómo se estructuran los archivos exportados, puede descargar un ejemplo [archivo .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [archivo .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### Archivos de conjuntos de datos comprimidos {#compressed-dataset-files}
+
+En el paso a [creación de una conexión de destino](#create-target-connection), puede seleccionar los archivos del conjunto de datos exportados que se van a comprimir.
+
+Tenga en cuenta la diferencia de formato de archivo entre los dos tipos de archivo al comprimirlos:
+
+* Al exportar archivos JSON comprimidos, el formato de archivo exportado es `json.gz`
+* Al exportar ficheros de parquet comprimidos, el formato de fichero exportado es `gz.parquet`
 
 ## Administración de errores de API {#api-error-handling}
 
