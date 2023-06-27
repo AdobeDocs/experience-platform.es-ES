@@ -2,10 +2,10 @@
 title: Personalización mediante Offer decisioning
 description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas mediante el Offer decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 3%
+source-wordcount: '580'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 3%
 La API del servidor de red perimetral puede ofrecer experiencias personalizadas administradas en [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) al canal web.
 
 [!DNL Offer Decisioning] admite una interfaz no visual para crear, activar y ofrecer sus actividades y experiencias de personalización.
+
+## Requisitos previos {#prerequisites}
+
+Personalización mediante [!DNL Offer Decisioning] requiere que tenga acceso a [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es) antes de configurar la integración.
 
 ## Configuración de la secuencia de datos {#configure-your-datastream}
 
