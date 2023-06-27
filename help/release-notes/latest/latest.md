@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Notas de la versión de junio de 2023 de Adobe Experience Platform.
+description: Las notas de la versión de junio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 5%
+ht-degree: 63%
 
 ---
 
@@ -32,29 +32,29 @@ Lea el [tutorial de autenticación de Experience Platform](/help/landing/api-aut
 
 ## Recopilación de datos {#data-collection}
 
-Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Funciones nuevas o actualizadas**
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Extensión de  | [!DNL Google Cloud Platform] extensión de reenvío de eventos | El [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) la extensión de reenvío de eventos permite reenviar datos de evento a Google para su activación mediante [!DNL Google Pub/Sub]. |
-| Extensión de  | [!DNL Cloud connector for Google Analytics 4 (ga4)] Extensión | El [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) la extensión de reenvío de eventos permite rastrear analytics mediante el nuevo [!DNL Google Analytics 4 (ga4)] estándar. |
-| Secreto | Secreto JWT de OAuth 2 | El [Secreto JWT de OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite utilizar el Adobe y [!DNL Google] Tokens de servicio para admitir interacciones servidor-servidor en el reenvío de eventos. |
+| Extensión | Extensión de reenvío de eventos de [!DNL Google Cloud Platform] | La extensión de reenvío de eventos de [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) permite reenviar datos de evento a Google para su activación mediante [!DNL Google Pub/Sub]. |
+| Extensión | [!DNL Cloud connector for Google Analytics 4 (ga4)] Extensión | La extensión de reenvío de eventos de [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) permite rastrear análisis mediante el nuevo estándar [!DNL Google Analytics 4 (ga4)]. |
+| Secreto | Secreto JWT de OAuth 2 | El [Secreto JWT de OAuth 2](../../tags/ui/event-forwarding/secrets.md) permite utilizar Adobe y tokens de servicio de [!DNL Google] para admitir interacciones de servidor a servidor en el reenvío de eventos. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre la recopilación de datos, lea la [resumen de recopilación de datos](../../tags/home.md).
+Para obtener más información acerca de la recopilación de datos, lea la [información general de recopilación de datos](../../tags/home.md).
 
 ## Destinos {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Destinos nuevos o actualizados** {#new-updated-destinations}
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] conexión](../../destinations/catalog/advertising/amazon-ads.md) | El [!DNL Amazon Ads] La integración de con Adobe Experience Platform ahora admite el enrutamiento regional a los distintos [!DNL Amazon Ads] mercados. Obtenga más información en la [changelog de destino](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| [[!BADGE Beta]{type=Informative}Conexión de  [!DNL Amazon Ads] ](../../destinations/catalog/advertising/amazon-ads.md) | La integración de [!DNL Amazon Ads] con Adobe Experience Platform ahora admite el enrutamiento regional a los distintos mercados de [!DNL Amazon Ads]. Más información en el [registro de cambios de destino](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Para obtener más información sobre la recopilación de datos, lea la [resumen 
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| Compatibilidad de Workspace con [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinos. | Ahora puede seleccionar el espacio de trabajo de Adobe Target en el que desea compartir audiencias al configurar una nueva conexión de destino de Adobe Target. Consulte la [parámetros de conexión](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) para obtener más información. Además, consulte el tutorial sobre [configuración de espacios de trabajo](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) en Adobe Target para obtener más información sobre los espacios de trabajo. |
+| Compatibilidad del espacio de trabajo con destinos de [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md). | Ahora puede seleccionar el espacio de trabajo de Adobe Target con el que desea compartir públicos al configurar una nueva conexión de destino de Adobe Target. Consulte la sección [parámetros de conexión](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) para obtener más información. Además, consulte el tutorial sobre [configuración de espacios de trabajo](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=es) en Adobe Target para obtener más información acerca de los espacios de trabajo. |
 
 {style="table-layout:auto"}
 
@@ -84,8 +84,8 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Extensión (Prospect-Profile) | [[!UICONTROL Adobe Servicio de perfil unificado Extensión de unión de perfil de cliente potencial]](https://github.com/adobe/xdm/pull/1735/files) | Se han añadido los campos obligatorios para el esquema de unión Prospect-Profile. |
-| Extensión de  | [[!UICONTROL Recurso de decisión]](https://github.com/adobe/xdm/pull/1732/files) | Agregue un tipo de datos para representar los recursos utilizados en la toma de decisiones. [!UICONTROL Recurso de decisión] proporciona una referencia a los recursos utilizados para procesar `decisionItems`. |
+| Extensión (Perfil de cliente potencial) | [[!UICONTROL Adobe Servicio de perfil unificado Extensión de unión de perfil de cliente potencial]](https://github.com/adobe/xdm/pull/1735/files) | Se han añadido los campos obligatorios para el esquema de unión Prospect-Profile. |
+| Extensión | [[!UICONTROL Recurso de decisión]](https://github.com/adobe/xdm/pull/1732/files) | Agregue un tipo de datos para representar los recursos utilizados en la toma de decisiones. [!UICONTROL Recurso de decisión] proporciona una referencia a los recursos utilizados para procesar `decisionItems`. |
 | Tipo de datos | [[!UICONTROL Comercio]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Comercio] almacena registros relacionados con la actividad de compra y venta. |
 | Grupo de campos | [[!UICONTROL Enriquecimiento de socio de perfil (ejemplo)]](https://github.com/adobe/xdm/pull/1747/files) | Se ha añadido un esquema de muestra para el enriquecimiento del socio de perfil. |
 | Grupo de campos | [[!UICONTROL Detalles del cliente potencial del socio (ejemplo)]](https://github.com/adobe/xdm/pull/1747/files) | Se ha añadido un esquema de muestra para las extensiones de perfil del proveedor de datos. |
@@ -103,12 +103,12 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Grupo de campos | [[!UICONTROL Detalles de abono de segmento]](https://github.com/adobe/xdm/pull/1735/files) | Se ha agregado a la clase Perfil de cliente potencial. |
 | Esquema | [[!UICONTROL Esquema del sistema de atributos calculados]](https://github.com/adobe/xdm/pull/1735/files) | Mapa de identidad añadido a [!UICONTROL Esquema del sistema de atributos calculados]. |
 | Tipo de datos | [[!UICONTROL Red de distribución de contenido]](https://github.com/adobe/xdm/pull/1733/files) | Campo añadido a [!UICONTROL Información de detalles de sesión] para describir la red de distribución de contenido utilizada. |
-| Extensión de  | [[!UICONTROL Extensión de unión de cuentas del servicio de perfiles unificado de Adobe]](https://github.com/adobe/xdm/pull/1731/files) | Mapa de identidad añadido a [!UICONTROL Extensión de unión de cuentas del servicio de perfiles unificado de Adobe]. |
+| Extensión | [[!UICONTROL Extensión de unión de cuentas del servicio de perfiles unificado de Adobe]](https://github.com/adobe/xdm/pull/1731/files) | Mapa de identidad añadido a [!UICONTROL Extensión de unión de cuentas del servicio de perfiles unificado de Adobe]. |
 | Tipo de datos | [[!UICONTROL Pedido]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` se ha añadido a [!UICONTROL Pedido]. Esto indica la diferencia entre el precio de pedido normal y el precio especial. Se aplica a todo el pedido en lugar de a productos individuales. |
 | Esquema | [[!UICONTROL Solicitud de operación de higiene AEP]](https://github.com/adobe/xdm/pull/1728/files) | El `targetServices` Se agregó un campo para proporcionar los nombres de los servicios que procesan las operaciones de higiene de datos. |
 | Tipo de datos | [[!UICONTROL Envío]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` se agregó a la información de envío de uno o más productos. Es un código de divisa alfabético en formato ISO 4217 usado para poner el precio al producto. |
 | Tipo de datos | [[!UICONTROL Aplicación]](https://github.com/adobe/xdm/pull/1726/files) | El `language` Este campo se ha añadido para proporcionar a la aplicación las preferencias lingüísticas, geográficas o culturales del usuario. |
-| Extensión de  | [[!UICONTROL Campos de entidad de AJO]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL Entidad de marca de tiempo AJO] se agregó para indicar la hora en que se modificó el mensaje por última vez. |
+| Extensión | [[!UICONTROL Campos de entidad de AJO]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL Entidad de marca de tiempo AJO] se agregó para indicar la hora en que se modificó el mensaje por última vez. |
 | Tipo de datos | (Múltiple) | [Se han eliminado varios detalles multimedia](https://github.com/adobe/xdm/pull/1739/files) en varios tipos de datos para mantener la coherencia. |
 
 {style="table-layout:auto"}
@@ -117,36 +117,36 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el lago de datos de Adobe Experience Platform. Puede unir cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Data Science Workspace o para su inserción en el Perfil del cliente en tiempo real.
+El servicio de consulta le permite utilizar SQL estándar para consultar datos en el lago de datos de Adobe Experience Platform. Puede unir cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su inserción en el Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Plantillas en línea | El servicio de consultas ahora admite el uso de plantillas que hacen referencia a otras plantillas dentro de SQL. Reduzca su carga de trabajo y evite errores aprovechando las plantillas en línea en sus consultas. Puede reutilizar instrucciones o condiciones y hacer referencia a plantillas anidadas para una buena flexibilidad en el SQL. No hay límite en el tamaño de las consultas que se pueden almacenar como plantillas o en el número de plantillas a las que se puede hacer referencia desde la consulta original. Para obtener más información, lea la [guía de plantilla en línea](../../query-service/essential-concepts/inline-templates.md). |
-| Actualizaciones programadas de la IU de consulta | Administre todas las consultas programadas desde una ubicación de la IU con [[!UICONTROL Pestaña Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). El [!UICONTROL Consultas programadas] La interfaz de usuario se ha mejorado con la adición de acciones de consulta en línea y la nueva columna de estado de consulta. Las adiciones recientes incluyen la capacidad de habilitar, deshabilitar y eliminar una programación, o suscribirse a alertas para próximas ejecuciones de consulta directamente desde [!UICONTROL Consultas programadas] vista. <p>![Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista.](../../query-service/images/ui/monitor-queries/disable-inline.png "Acciones en línea resaltadas en la [!UICONTROL Consultas programadas] vista."){width="100" zoomable="yes"}</p> |
+| Plantillas en línea | El servicio de consultas ahora admite el uso de plantillas que hacen referencia a otras plantillas dentro de SQL. Reduzca su carga de trabajo y evite errores aprovechando las plantillas en línea en sus consultas. Puede reutilizar instrucciones o condiciones y hacer referencia a plantillas anidadas para una mayor flexibilidad en su SQL. No hay límite en el tamaño de las consultas que se pueden almacenar como plantillas o en el número de plantillas a las que se puede hacer referencia desde la consulta original. Para obtener más información, lea la [guía de plantilla en línea](../../query-service/essential-concepts/inline-templates.md). |
+| Actualizaciones programadas de la IU de consulta | Administre todas las consultas programadas desde una ubicación de la IU con [[!UICONTROL Pestaña Consultas programadas]](../../query-service/ui/monitor-queries.md#inline-actions). La IU [!UICONTROL Consultas programadas] se ha mejorado con la adición de acciones de consulta en línea y la nueva columna de estado de consulta. Las adiciones recientes incluyen la capacidad de habilitar, deshabilitar y eliminar una programación, o suscribirse a alertas para próximas ejecuciones de consulta directamente desde la vista [!UICONTROL Consultas programadas]. <p>![Acciones en línea resaltadas en la vista [!UICONTROL Consultas programadas].](../../query-service/images/ui/monitor-queries/disable-inline.png "Acciones en línea resaltadas en la vista [!UICONTROL Consultas programadas]."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre Query Service, consulte [Introducción al servicio de consultas](../../query-service/home.md).
+Para obtener más información sobre Query Service, consulte la [Introducción al Servicio de consultas](../../query-service/home.md).
 
 ## Fuentes {#sources}
 
 Adobe Experience Platform puede introducir datos de fuentes externas y le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Compatibilidad con eliminación de flujos de datos de origen de clasificación Adobe Analytics | Ahora puede eliminar flujos de datos de origen que utilicen clasificaciones de Adobe Analytics como origen. En **[!UICONTROL Fuentes]** > **[!UICONTROL Flujos de datos]**, seleccione el flujo de datos deseado y, a continuación, seleccione eliminar. Para obtener más información, lea la guía de [creación de una conexión de origen para datos de clasificaciones de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
-| Filtrado de compatibilidad con [!DNL Microsoft Dynamics] uso de la API | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la variable [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) origen. Para obtener más información, lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md). |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Ahora puede utilizar la variable [!DNL RainFocus] integración de fuentes para obtener datos de análisis y administración de eventos de su [!DNL RainFocus] cuenta para el Experience Platform. Para obtener más información, lea la [[!DNL RainFocus] descripción general de origen](../../sources/connectors/analytics/rainfocus.md). |
-| Compatibilidad con Adobe Commerce | Ahora puede utilizar la integración de fuentes de Adobe Commerce para llevar los datos de su cuenta de Adobe Commerce al Experience Platform. Para obtener más información, lea la [Resumen de origen de Adobe Commerce](../../sources/connectors/adobe-applications/commerce.md). |
-| Compatibilidad con [!DNL Mixpanel] | Ahora puede utilizar la variable [!DNL Mixpanel] integración de fuentes para obtener datos de analytics de su [!DNL Mixpanel] cuenta al Experience Platform mediante las API de o la interfaz de usuario de. Para obtener más información, lea la [[!DNL Mixpanel] descripción general de origen](../../sources/connectors/analytics/mixpanel.md). |
-| Compatibilidad con [!DNL Zendesk] | Ahora puede utilizar la variable [!DNL Zendesk] integración de fuentes para obtener datos de éxito de los clientes desde su [!DNL Zendesk] cuenta al Experience Platform mediante las API de o la interfaz de usuario de. Para obtener más información, lea la [[!DNL Zendesk] descripción general de origen](../../sources/connectors/customer-success/zendesk.md). |
+| Compatibilidad con eliminación de flujos de datos de fuentes de clasificación Adobe Analytics | Ahora puede eliminar flujos de datos de origen que utilicen clasificaciones de Adobe Analytics como origen. En **[!UICONTROL Fuentes]** > **[!UICONTROL Flujos de datos]**, seleccione el flujo de datos deseado y, a continuación, Eliminar. Para obtener más información, lea la guía de [creación de una conexión de origen para datos de clasificaciones de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
+| Filtrado de compatibilidad con [!DNL Microsoft Dynamics] mediante API | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la fuente [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md). Para obtener más información, lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md). |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Ahora puede utilizar la integración de fuentes de [!DNL RainFocus] para obtener datos de análisis y administración de eventos de su cuenta de [!DNL RainFocus] para Experience Platform. Para obtener más información, lea la [[!DNL RainFocus] información general de fuentes](../../sources/connectors/analytics/rainfocus.md). |
+| Soporte para Adobe Commerce | Ahora puede utilizar la integración de fuentes de Adobe Commerce para llevar los datos de su cuenta de Adobe Commerce a Experience Platform. Para obtener más información, lea la [Información general de fuentes de Adobe Commerce](../../sources/connectors/adobe-applications/commerce.md). |
+| Compatibilidad con [!DNL Mixpanel] | Ahora puede utilizar la integración de fuentes de [!DNL Mixpanel] para llevar datos de análisis de su cuenta de [!DNL Mixpanel] a Experience Platform mediante las API de o la interfaz de usuario. Para obtener más información, lea la [[!DNL Mixpanel] Información general de fuentes](../../sources/connectors/analytics/mixpanel.md). |
+| Compatibilidad con [!DNL Zendesk] | Ahora puede utilizar la integración de fuentes [!DNL Zendesk] para llevar los datos de éxito de los clientes de su cuenta de [!DNL Zendesk] a Experience Platform mediante las API o la interfaz de usuario. Para obtener más información, lea la [[!DNL Zendesk] Información general de fuentes](../../sources/connectors/customer-success/zendesk.md). |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
+Para obtener más información acerca de las fuentes, lea la [Información general de fuentes](../../sources/home.md).
