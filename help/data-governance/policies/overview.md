@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre políticas de uso de datos
 description: Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -94,6 +94,7 @@ En la tabla siguiente se describen las acciones de marketing principales que se 
 | Combinación con datos directamente identificables | Una acción que combina cualquier información de identificación personal (PII) con datos anónimos. Los contratos para datos procedentes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros suelen incluir prohibiciones contractuales específicas sobre el uso de dichos datos con datos directamente identificables. |
 | Segmentación entre sitios | Una acción que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. |
 | Ciencia de datos | Una acción que utiliza datos para flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para la ciencia de datos. A veces se formulan en términos que prohíben el uso de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado. |
+| Exportación de datos | Una acción que exporta datos a cualquier ubicación o destino fuera de los productos y servicios de Adobe. Por ejemplo: descargar datos en el equipo local, copiar datos de la pantalla, programar el envío de datos a una ubicación fuera del Adobe, proyectos programados por el Customer Journey Analytics, descargar informes, API de informes, etc. |
 | Segmentación de correo electrónico | Una acción que utiliza datos en campañas de direccionamiento de correo electrónico. |
 | Exportar a terceros | Una acción que exporta datos a procesadores y entidades que no tienen relaciones directas con los clientes. Muchos proveedores de datos tienen condiciones en los contratos que prohíben la exportación de datos desde el lugar donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de datos que se reciben de ellas. |
 | Publicidad in situ | Una acción que utiliza datos para anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, o para medir el envío y la eficacia de dichos anuncios. |
