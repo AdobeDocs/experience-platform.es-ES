@@ -3,10 +3,10 @@ title: Tipos de acción en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de los diferentes tipos de acción que proporciona la extensión de etiqueta SDK web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 2%
+source-wordcount: '778'
+ht-degree: 3%
 
 ---
 
@@ -34,10 +34,6 @@ Hay otros campos en el tipo de acción Enviar evento que también pueden ser út
 Una vez que haya recibido el consentimiento de su usuario, este se debe comunicar al SDK para web de Adobe Experience Platform mediante el tipo de acción Definir consentimiento. Actualmente se admiten dos tipos de estándares: Adobe y IAB TCF. Consulte [Preferencias de consentimiento del cliente de soporte](../consent/supporting-consent.md). Al utilizar la versión 2.0 del Adobe, solo se admite un valor de elemento de datos. Deberá crear un elemento de datos que se resuelva en el objeto de consentimiento.
 
 En esta acción, también se le proporciona un campo opcional para incluir un mapa de identidad, de modo que las identidades se puedan sincronizar una vez recibido el consentimiento. La sincronización es útil cuando el consentimiento está configurado como Pendiente o Fuera porque la llamada de consentimiento es probablemente la primera llamada a activación.
-
-## Restablecer ID de combinación de eventos {#reset-event-merge-id}
-
-Si desea restablecer el ID de combinación de eventos en la página, puede hacerlo con esta acción. Para restablecer su ID, seleccione el ID de combinación que desee restablecer y active la acción según sea necesario.
 
 ## Actualizar variable {#update-variable}
 

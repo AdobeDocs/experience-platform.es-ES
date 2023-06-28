@@ -2,10 +2,10 @@
 title: Tipos de elementos de datos en la extensión SDK para web de Adobe Experience Platform
 description: Obtenga información acerca de los distintos tipos de elementos de datos que proporciona la extensión de etiqueta del SDK web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 5%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # Tipos de elementos de datos
 
 Después de configurar su [tipos de acción](action-types.md) en el [Extensión de etiqueta de SDK web de Adobe Experience Platform](web-sdk-extension-configuration.md), debe configurar los tipos de elementos de datos. Esta página describe los tipos de elementos de datos disponibles.
-
-## ID de combinación de eventos {#event-merge-id}
-
-Este elemento de datos proporciona un ID de combinación de eventos cuando se utiliza. No se necesita ninguna configuración para este elemento de datos. El elemento de datos que se proporciona permanece igual hasta que el visitante abandona la página o hasta que **[!UICONTROL Restablecer ID de combinación de eventos]** se utiliza el tipo de acción.
 
 ## Mapa de identidad {#identity-map}
 
