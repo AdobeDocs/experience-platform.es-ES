@@ -3,9 +3,9 @@ title: Tipos de acción en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de los diferentes tipos de acción que proporciona la extensión de etiqueta SDK web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ En esta acción, también se le proporciona un campo opcional para incluir un ma
 
 Si desea restablecer el ID de combinación de eventos en la página, puede hacerlo con esta acción. Para restablecer su ID, seleccione el ID de combinación que desee restablecer y active la acción según sea necesario.
 
-## (Beta) Actualizar variable {#update-variable}
+## Actualizar variable {#update-variable}
 
 >[!IMPORTANT]
 >

@@ -2,9 +2,9 @@
 title: Tipos de elementos de datos en la extensión SDK para web de Adobe Experience Platform
 description: Obtenga información acerca de los distintos tipos de elementos de datos que proporciona la extensión de etiqueta del SDK web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ Tenga en cuenta que cuando abre ciertos campos del esquema, como `web.webPageDet
 >
 >Rellene únicamente los datos que le interesen recopilar. Todo lo que no se rellene se omitirá cuando se envíen los datos a las soluciones.
 
-## Variable (Beta) {#variable}
+## Variable {#variable}
 
 >[!IMPORTANT]
 >
