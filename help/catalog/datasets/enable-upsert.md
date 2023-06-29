@@ -4,9 +4,9 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con funcionalidades de "actualización" y así poder realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Este tutorial cubre el proceso de activación de un conjunto de datos con funcio
 
 >[!NOTE]
 >
->El flujo de trabajo de actualización solo funciona para la ingesta por lotes. La ingesta por streaming es **no** compatible.
+>El flujo de trabajo descrito en este tutorial solo funciona para la ingesta por lotes. Para actualizaciones de la ingesta por streaming, consulte la guía de [envío de actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos](../../data-prep/upserts.md).
 
 ## Primeros pasos
 
