@@ -3,7 +3,7 @@ title: Uso de Adobe Journey Optimizer con el SDK web de Platform
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Experience Platform mediante Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe recorrido optimizer;renderDecisions;superficies;decisiones;propuestas;ámbito;esquema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Para empezar a utilizar [!DNL Adobe Journey Optimizer], siga los pasos a continu
    })
    ```
 
-3. Si lo desea, puede especificar superficies adicionales en los eventos. De forma predeterminada, el SDK web generará automáticamente la superficie web para la página web actual e la incluirá en la solicitud a la red perimetral. Si es necesario, se pueden incluir superficies adicionales en la solicitud especificándolas en el `personalization.surfaces` de la opción `sendEvent` o en el comando correspondiente **[!UICONTROL Superficies]** [[!UICONTROL Enviar evento] acción](../../extension/action-types.md#send-event) configuración de la extensión del SDK web.
+3. Si lo desea, puede especificar superficies adicionales en los eventos. De forma predeterminada, el SDK web generará automáticamente la superficie web para la página web actual e la incluirá en la solicitud a la red perimetral. Si es necesario, se pueden incluir superficies adicionales en la solicitud especificándolas en el `personalization.surfaces` de la opción `sendEvent` o en el comando correspondiente **[!UICONTROL Superficies]** [[!UICONTROL Enviar evento] acción](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuración de la extensión del SDK web.
 
    ```javascript
    alloy("sendEvent", {

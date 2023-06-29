@@ -2,7 +2,7 @@
 title: Referencia de extensiones de etiquetas
 description: Busque documentación sobre las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 10%
@@ -39,7 +39,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Servicio de Adobe Experience Cloud ID](./id-service/overview.md)
 * [Demostración de Adobe Experience Platform](./platform-demo/overview.md)
-* [SDK web de Adobe Experience Platform](./sdk/overview.md)
+* [SDK web de Adobe Experience Platform](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Medium Analytics para audio y vídeo](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Experiencias con guepardos](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Complementos comunes de Analytics](./plugins/overview.md)
-* [Complementos comunes del SDK web](./web-sdk-plugins/overview.md)
+* [Complementos comunes del SDK web](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)

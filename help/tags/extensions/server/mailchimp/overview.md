@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 5%
@@ -103,7 +103,7 @@ La extensión de ya está instalada y configurada para su uso en la propiedad.
 
 ## Recopilación de datos
 
-Cuando se utiliza esta extensión en una [regla](../../../ui/managing-resources/rules.md)Sin embargo, hay varios valores de datos que la extensión envía a Mailchimp con cada evento. Para una implementación típica, puede configurar las variables [Extensión de SDK web de Adobe Experience Platform](../../client/sdk/overview.md) para enviar esos datos a [!DNL Platform Edge Network] para su uso por la extensión en la propiedad de reenvío de eventos.
+Cuando se utiliza esta extensión en una [regla](../../../ui/managing-resources/rules.md)Sin embargo, hay varios valores de datos que la extensión envía a Mailchimp con cada evento. Para una implementación típica, puede configurar las variables [Extensión de SDK web de Adobe Experience Platform](../../client/web-sdk/overview.md) para enviar esos datos a [!DNL Platform Edge Network] para su uso por la extensión en la propiedad de reenvío de eventos.
 
 Los datos requeridos por esta extensión se pueden enviar desde el SDK web como datos XDM o como datos no XDM. Consulte la documentación para obtener más información sobre [envío de datos XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 

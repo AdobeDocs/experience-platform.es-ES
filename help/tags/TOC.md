@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1027'
 ht-degree: 37%
 
 ---
@@ -96,8 +96,16 @@ ht-degree: 37%
          * [Notas de la versión](./extensions/client/id-service/release-notes.md)
       * Demostración de Adobe Experience Platform {#platform-demo}
          * [Información general](./extensions/client/platform-demo/overview.md)
-      * SDK web de Adobe Experience Platform {#sdk}
-         * [Información general](./extensions/client/sdk/overview.md)
+      * SDK web de Adobe Experience Platform {#web-sdk}
+         * [Información general](./extensions/client/web-sdk/overview.md)
+         * [Configurar la extensión de etiqueta del SDK web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Tipos de eventos](./extensions/client/web-sdk/event-types.md)
+         * [Tipos de acción](./extensions/client/web-sdk/action-types.md)
+         * [Tipos de elementos de datos](./extensions/client/web-sdk/data-element-types.md)
+         * [Acceso al ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Complementos del SDK web](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Notas de la versión de la extensión Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Notas de la versión de complementos de SDK web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Información general](./extensions/client/asset-insights/overview.md)
          * [Notas de la versión](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 37%
       * Complementos comunes de Analytics {#plugins}
          * [Información general](./extensions/client/plugins/overview.md)
          * [Notas de la versión](./extensions/client/plugins/release-notes.md)
-      * Complementos comunes del SDK web {#web-sdk-plugins}
-         * [Información general](./extensions/client/web-sdk-plugins/overview.md)
-         * [Notas de la versión](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)

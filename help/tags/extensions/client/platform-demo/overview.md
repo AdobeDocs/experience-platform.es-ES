@@ -2,7 +2,7 @@
 title: Información general sobre la extensión de demostración de Adobe Experience Platform
 description: Obtenga más información sobre la extensión de demostración de Adobe Experience Platform en Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 98%
@@ -17,7 +17,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Esta extensión quedará obsoleta y la sustituirá [el SDK web de Adobe Experience Platform](../sdk/overview.md).
+>Esta extensión quedará obsoleta y la sustituirá [el SDK web de Adobe Experience Platform](../web-sdk/overview.md).
 
 Las características de esta extensión se transfieren a la nueva. Aquí tiene una rápida comparación de las funciones actuales.
 
@@ -26,11 +26,11 @@ Las características de esta extensión se transfieren a la nueva. Aquí tiene u
 | Compatibilidad con ID de cliente personalizados | Compatibilidad con ID de cliente personalizados |
 | IU de asignación del lado del cliente para XDM | Generar en ECID (no es necesario usar visitor.js) |
 | Capacidad para crear una conexión de flujo continuo | Compatibilidad con el servicio de inclusión |
-|  | Compatibilidad con XDM como elemento de datos |
-|  | Compatibilidad con dominios de origen |
-|  | Herramientas de depuración integradas |
-|  | Recopila el contexto del explorador de forma automática |
-|  | Código fuente totalmente abierto |
+| | Compatibilidad con XDM como elemento de datos |
+| | Compatibilidad con dominios de origen |
+| | Herramientas de depuración integradas |
+| | Recopila el contexto del explorador de forma automática |
+| | Código fuente totalmente abierto |
 
 
 ## Configurar la extensión de Adobe Experience Platform

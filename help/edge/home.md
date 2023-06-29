@@ -1,9 +1,9 @@
 ---
 title: Información general del SDK web de Adobe Experience Platform
 description: Aprenda a utilizar el SDK web de Adobe Experience Platform para integrar las funcionalidades de Platform en su sitio web.
-keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK web;SDK web;Launch;launch
+keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Información general del SDK web de Adobe Experience Platform {#overview}
 
-El SDK web de Adobe Experience Platform es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con los distintos servicios de [!DNL Experience Cloud] a través de Adobe Experience Platform Edge Network. Además de la biblioteca JavaScript de, hay una [extensión de etiqueta](./extension/web-sdk-extension-configuration.md) para ayudarle con las configuraciones del SDK web.
+El SDK web de Adobe Experience Platform es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con los distintos servicios de [!DNL Experience Cloud] a través de Adobe Experience Platform Edge Network. Además de la biblioteca JavaScript de, hay una [extensión de etiqueta](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para ayudarle con las configuraciones del SDK web.
 
 Para obtener una guía paso a paso sobre la configuración del SDK web con etiquetas y el envío de datos a las soluciones, consulte nuestra [Tutorial de implementación de Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en).
 
@@ -74,7 +74,7 @@ Esto significa que puede utilizar el SDK web en una página y dejar las bibliote
 
 ### Consideraciones sobre la migración de at.js a SDK web {#considerations}
 
-Antes de migrar páginas que utilizan [!DNL at.js] Para configurar el SDK web, asegúrese de habilitar las siguientes opciones de configuración del SDK web. Esto garantiza que el perfil del visitante se mantenga mientras se navega desde las páginas con [!DNL at.js ] a páginas que utilizan SDK web.
+Antes de migrar páginas que utilizan [!DNL at.js] Para configurar el SDK web, asegúrese de habilitar las siguientes opciones de configuración del SDK web. Esto garantiza que el perfil del visitante se mantenga mientras se navega desde las páginas con [!DNL at.js] a páginas que utilizan SDK web.
 
 * [&quot;idMigrationEnabled&quot;](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [&quot;targetMigrationEnabled&quot;](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
@@ -85,7 +85,6 @@ Antes de migrar páginas que utilizan [!DNL at.js] Para configurar el SDK web, a
 >Las siguientes funciones de Target no son compatibles al migrar de at.js a SDK web:
 > * [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
 > * [Compatibilidad con CNAME y entre dominios](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
-
 
 Después de migrar de at.js a SDK web, debe eliminar el `targetMigrationEnabled` en la configuración.
 

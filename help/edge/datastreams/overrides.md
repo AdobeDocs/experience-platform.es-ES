@@ -2,7 +2,7 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante el SDK web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos dife
 La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](configure.md).
-2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante el SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
+2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante el SDK web [extensión de etiqueta](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Este artículo explica el proceso de anulación de la configuración de la secuencia de datos de extremo a extremo para cada tipo de anulación admitida.
 
@@ -91,7 +91,7 @@ Ahora debería tener configuradas las anulaciones del contenedor de sincronizaci
 
 >[!NOTE]
 >
->Como alternativa al envío de las anulaciones de configuración mediante comandos del SDK web, puede agregar las anulaciones de configuración al SDK web [extensión de etiqueta](../extension/web-sdk-extension-configuration.md).
+>Como alternativa al envío de las anulaciones de configuración mediante comandos del SDK web, puede agregar las anulaciones de configuración al SDK web [extensión de etiqueta](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Después [configuración de las anulaciones de secuencia de datos](#configure-overrides) en la IU de recopilación de datos, ahora puede enviar las invalidaciones a la red perimetral mediante el SDK web.
 
