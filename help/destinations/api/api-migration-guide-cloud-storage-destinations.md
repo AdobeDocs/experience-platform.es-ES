@@ -4,7 +4,7 @@ title: Guía de migración de API para destinos de almacenamiento en la nube
 description: Obtenga información acerca de los cambios en el flujo de trabajo para activar los destinos de almacenamiento en la nube como parte de la migración a las nuevas tarjetas de destino de almacenamiento en la nube con funcionalidad adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -16,7 +16,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >* La funcionalidad descrita en esta página está disponible para los clientes que han adquirido los paquetes Real-Time CDP Prime y Ultimate. Póngase en contacto con el representante del Adobe para obtener más información.
-
 
 ## Contexto de migración {#migration-context}
 
@@ -783,7 +782,7 @@ Observe en el ejemplo de configuración siguiente cómo `profileSelectors` Los c
 
 ## Cronología de la migración y elementos de acción {#timeline-and-action-items}
 
-La migración de flujos de datos heredados a las nuevas tarjetas de destino para [!DNL Amazon S3], [!DNL Azure Blob]Los destinos SFTP y se producirán en cuanto su organización esté lista para la migración y no más tarde de **30 de junio de 2023**.
+La migración de flujos de datos heredados a las nuevas tarjetas de destino para [!DNL Amazon S3], [!DNL Azure Blob]Los destinos SFTP y se producirán en cuanto su organización esté lista para la migración y no más tarde de **26 de julio de 2023**.
 
 Recibirá correos electrónicos de recordatorio del Adobe a medida que se aproxime la fecha de migración. Como preparación, lea la sección Elementos de acción a continuación para prepararse para la migración.
 
@@ -791,11 +790,11 @@ Recibirá correos electrónicos de recordatorio del Adobe a medida que se aproxi
 
 A fin de prepararse para la migración de [!DNL Amazon S3], [!DNL Azure Blob], y los destinos de almacenamiento en la nube SFTP para las nuevas tarjetas, prepárese para actualizar los scripts y las llamadas de API automatizadas como se sugiere a continuación.
 
-1. Actualizar cualquier script o llamada de API automatizada para cualquier [!DNL Amazon S3], [!DNL Azure Blob]o destinos de almacenamiento en la nube SFTP antes del 30 de junio de 2023. Cualquier llamada o script de API automatizado que aproveche las especificaciones de conexión o las especificaciones de flujo heredadas debe actualizarse a las nuevas especificaciones de conexión o de flujo.
-2. Póngase en contacto con el representante de su cuenta de Adobe cuando las secuencias de comandos se hayan actualizado antes del 30 de junio.
+1. Actualizar cualquier script o llamada de API automatizada para cualquier [!DNL Amazon S3], [!DNL Azure Blob]o destinos de almacenamiento en la nube SFTP antes del 26 de julio de 2023. Cualquier llamada o script de API automatizado que aproveche las especificaciones de conexión o las especificaciones de flujo heredadas debe actualizarse a las nuevas especificaciones de conexión o de flujo.
+2. Póngase en contacto con el representante de su cuenta de Adobe cuando las secuencias de comandos se hayan actualizado antes del 26 de julio.
 3. Por ejemplo, la variable `targetConnectionSpecId` se puede utilizar como indicador para determinar si el flujo de datos se ha migrado a la nueva tarjeta de destino. Puede actualizar los scripts con un `if` condición para ver las especificaciones de conexión de destino heredadas y actualizadas en `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` y determine si el flujo de datos se ha migrado. Puede ver los ID de especificaciones de conexión nuevos y heredados en las secciones específicas de esta página para cada destino.
 4. El equipo de la cuenta de Adobe se pondrá en contacto con usted para proporcionarle más información sobre cuándo se migrarán los flujos de datos.
-5. Después del 30 de junio, se migrarán todos los flujos de datos. Todos los flujos de datos existentes ahora tendrán nuevas entidades de flujo (especificaciones de conexión, especificaciones de flujo, conexiones base y conexiones de destino). Cualquier script o llamada a la API por su parte que utilice las entidades de flujo heredadas dejará de funcionar.
+5. A partir del 26 de julio, se migrarán todos los flujos de datos. Todos los flujos de datos existentes ahora tendrán nuevas entidades de flujo (especificaciones de conexión, especificaciones de flujo, conexiones base y conexiones de destino). Cualquier script o llamada a la API por su parte que utilice las entidades de flujo heredadas dejará de funcionar.
 
 ## Otras consideraciones de migración {#other-considerations}
 
