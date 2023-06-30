@@ -2,9 +2,9 @@
 title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar segmentos y exportar conjuntos de datos.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1378'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 1%
 >
 >* Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a [!DNL Data Landing Zone] conexión, póngase en contacto con el representante del Adobe y proporcione a [!DNL Organization ID].
 >* Esta página de documentación hace referencia a [!DNL Data Landing Zone] *destino*. También hay un [!DNL Data Landing Zone] *origen* en el catálogo de fuentes. Para obtener más información, lea la [[!DNL Data Landing Zone] origen](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentación.
-
 
 
 ## Información general {#overview}
@@ -72,6 +71,12 @@ Debe utilizar las API de Platform para recuperar los [!DNL Data Landing Zone] cr
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Parámetros de consulta | Descripción |
+| --- | --- |
+| `dlz_destination` | El `dlz_destination` permite a la API distinguir un contenedor de destino de zona de aterrizaje de otros tipos de contenedores disponibles para usted. |
+
+{style="table-layout:auto"}
+
 **Solicitud**
 
 El siguiente ejemplo de solicitud recupera las credenciales de una zona de aterrizaje existente.
@@ -104,6 +109,52 @@ La siguiente respuesta devuelve la información de credenciales de la zona de at
 | `containerName` | El nombre de su zona de aterrizaje. |
 | `SASToken` | El token de firma de acceso compartido para su zona de aterrizaje. Esta cadena contiene toda la información necesaria para autorizar una solicitud. |
 | `SASUri` | El URI de firma de acceso compartido para su zona de aterrizaje. Esta cadena es una combinación del URI de la zona de aterrizaje para la que se está autenticando y su token SAS correspondiente, |
+
+{style="table-layout:auto"}
+
+## Actualizar [!DNL Data Landing Zone] credenciales
+
+También puede actualizar sus credenciales cuando lo desee. Puede actualizar su `SASToken` realizando una petición de POST a la `/credentials` punto final del [!DNL Connectors] API.
+
+**Formato de API**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Parámetros de consulta | Descripción |
+| --- | --- |
+| `dlz_destination` | El `dlz_destination` permite a la API distinguir un contenedor de destino de zona de aterrizaje de otros tipos de contenedores disponibles para usted. |
+| `refresh` | El `refresh` Esta acción le permite restablecer las credenciales de su zona de aterrizaje y generar automáticamente una nueva `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Solicitud**
+
+La siguiente solicitud actualiza las credenciales de la zona de aterrizaje.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Respuesta**
+
+La siguiente respuesta devuelve valores actualizados para su `SASToken` y `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
