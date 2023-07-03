@@ -2,14 +2,14 @@
 title: Extensión de reenvío de eventos de Google Cloud Platform
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '570'
 ht-degree: 2%
 
 ---
 
-# [!DNL Google Cloud Platform] extensión de reenvío de eventos
+# Extensión de reenvío de eventos de [!DNL Google Cloud Platform]
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) es una plataforma de computación en la nube que ofrece una amplia variedad de servicios, como computación distribuida, almacenamiento de bases de datos, entrega de contenido y servicios de integración de software como servicio (SaaS) para la administración de la relación con los clientes (CRM) y la planificación de recursos empresariales (ERP).
 
@@ -17,7 +17,7 @@ El [!DNL Google Cloud Platform] [reenvío de eventos](../../../ui/event-forwardi
 
 ## Requisitos previos
 
-Para utilizar esta extensión, debe tener un [!DNL Google Cloud Platform] cuenta con un existente [!DNL Cloud Pub/Sub] tema. Si no tiene un flujo de datos preexistente, consulte la [!DNL AWS] documentación sobre [crear un nuevo flujo de datos utilizando [!DNL AWS] Consola de administración](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Para utilizar esta extensión, debe tener un [!DNL Google Cloud Platform] cuenta con un existente [!DNL Cloud Pub/Sub] tema. Si no tiene ningún tema preexistente, consulte la [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentación sobre la creación y administración de temas.
 
 ### Creación de un secreto y un elemento de datos
 
