@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gobernanza del uso de datos en Platform"
->abstract="<h2>Descripción</h2><p>El marco de trabajo de control de datos en Experience Platform le permite etiquetar atributos y esquemas según las restricciones de uso de datos y configurar políticas que identifiquen y respeten estas restricciones para acciones de marketing específicas.</p>"
+>abstract="<h2>Descripción</h2><p>El marco de Gobernanza de datos de Experience Platform le permite etiquetar atributos y conjuntos de datos según las restricciones de uso de datos, así como establecer directivas que identifiquen y apliquen estas limitaciones para acciones de marketing específicas.</p>"
 
 Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de datos en [!DNL Experience Platform] interfaz de usuario.
 
