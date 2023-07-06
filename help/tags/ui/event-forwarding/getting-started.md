@@ -3,9 +3,9 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '875'
 ht-degree: 79%
 
 ---
@@ -29,7 +29,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 ## Requisitos previos
 
-* Adobe Experience Platform Collection Enterprise (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
+* Adobe Real-Time CDP Connections, Prime o Ultimate (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
 * SDK web o móvil de Adobe Experience Platform, configurados para enviar datos a Edge Network
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
