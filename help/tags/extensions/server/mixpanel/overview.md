@@ -4,9 +4,9 @@ title: Extensión de reenvío de eventos API de seguimiento de eventos de Mixpan
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Los equipos de análisis pueden aprovechar [!DNL Mixpanel's] capacidades para pr
 
 Para obtener más información sobre casos de uso específicos de [!DNL Mixpanel], consulte la siguiente documentación:
 
-* [Nuevo en [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Nuevo en [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [¿Qué es  [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 intentos obligatorios [!DNL Mixpanel] características](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Comience a crear una nueva regla en la propiedad de reenvío de eventos. En **[!
 | --- | --- | --- |
 | [!UICONTROL Token de proyecto] | Este campo debe asignarse al token de proyecto asociado a su [!DNL Mixpanel] cuenta. | Sí |
 | [!UICONTROL Tipo de evento] | Nombre del evento. | Sí |
-| [!UICONTROL Hora del evento] | La hora del evento. |  |
-| [!UICONTROL ID distinto de Mixpanel] | El identificador único del usuario que realizó el evento. |  |
-| [!UICONTROL Insertar ID] | Identificador único del evento que se utiliza para la anulación de duplicación. |  |
-| [!UICONTROL Propiedades del evento] | Objeto JSON que contiene propiedades personalizadas del evento. Seleccione entre proporcionar JSON sin procesar o utilizar un conjunto simplificado de entradas de clave-valor. |  |
+| [!UICONTROL Hora del evento] | La hora del evento. | |
+| [!UICONTROL ID distinto de Mixpanel] | El identificador único del usuario que realizó el evento. | |
+| [!UICONTROL Insertar ID] | Identificador único del evento que se utiliza para la anulación de duplicación. | |
+| [!UICONTROL Propiedades del evento] | Objeto JSON que contiene propiedades personalizadas del evento. Seleccione entre proporcionar JSON sin procesar o utilizar un conjunto simplificado de entradas de clave-valor. | |
 
 >[!NOTE]
 >

@@ -3,16 +3,16 @@ keywords: extensión de reenvío de eventos;twitter;extensión de reenvío de ev
 title: Extensión de reenvío de eventos de twitter
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en Twitter para los requisitos de su empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1143'
 ht-degree: 3%
 
 ---
 
-# [!DNL Twitter] extensión de reenvío de eventos
+# Extensión de reenvío de eventos de [!DNL Twitter]
 
-[[!DNL Twitter]](https://www.twitter.com) es un servicio de redes sociales y redes sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con Twitter mediante un explorador, software de front-end móvil o mediante programación a través de su [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) es un servicio de redes sociales y redes sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con Twitter mediante un explorador, software de front-end móvil o mediante programación a través de su [API](https://developer.twitter.com/en/docs/twitter-api)
 
 El [!DNL Twitter] API de conversiones web [reenvío de eventos](../../../ui/event-forwarding/overview.md) La extensión de le permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Twitter]. Este documento describe los casos de uso de la extensión, cómo instalarla y cómo integrar sus funcionalidades en el reenvío de eventos [reglas](../../../ui/managing-resources/rules.md).
 
@@ -32,7 +32,7 @@ Para obtener más información sobre casos de uso específicos de [!DNL Twitter]
 
 Debe tener un válido [!DNL Twitter] para utilizar esta extensión. Vaya a la [[!DNL Twitter] página de registro](https://help.twitter.com/en/using-twitter/create-twitter-account) para registrarse y crear una cuenta si aún no la tiene.
 
-Debe configurar su cuenta como [!DNL Twitter] cuenta de desarrollador de. Para obtener información sobre cómo registrarse como desarrollador, consulte la [[!DNL Twitter] cuenta de desarrollador](https://developer.twitter.com/en/support/twitter-api/developer-account).
+Debe configurar su cuenta como [!DNL Twitter] cuenta de desarrollador de. Para obtener información sobre cómo registrarse como desarrollador, consulte la [[!DNL Twitter] cuenta de desarrollador](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### Protecciones de API {#guardrails}
 
@@ -44,7 +44,7 @@ Para conectar al Experience Platform a [!DNL Twitter], se requieren las siguient
 
 | Tipo de clave | Descripción |
 | --- | --- |
-| Clave de consumidor | Clave de API de la aplicación para acceder a [!DNL Twitter] API. Consulte la [!DNL Twitter] documentación sobre [claves y secretos de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener orientación. |  |
+| Clave de consumidor | Clave de API de la aplicación para acceder a [!DNL Twitter] API. Consulte la [!DNL Twitter] documentación sobre [claves y secretos de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener orientación. | |
 | Secreto del consumidor | El Secreto de la API permite que su aplicación acceda al [!DNL Twitter] API. Consulte la [!DNL Twitter] documentación sobre [claves y secretos de api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obtener orientación. |
 | Secreto de token | El secreto de token que no caduca de su aplicación, que se utiliza para autenticarse en el [!DNL Twitter] API mediante OAuth. Consulte la [!DNL Twitter] documentación sobre [obtención de tokens de acceso de usuario](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obtener orientación. |
 | Token de acceso | El token de acceso de su aplicación, que no caduca y que se utiliza para la autenticación en [!DNL Twitter] API mediante OAuth. Consulte la [!DNL Twitter] documentación sobre [obtención de tokens de acceso de usuario](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obtener orientación. |

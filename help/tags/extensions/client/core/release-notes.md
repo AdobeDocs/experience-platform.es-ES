@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Core
 description: Últimas notas de la versión de la extensión Core en Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 71%
+source-wordcount: '1644'
+ht-degree: 62%
 
 ---
 
@@ -123,7 +123,7 @@ Versión 2.0.4
 
 Versión 1.9.0
 
-* **Nueva acción “Trigger Direct Call”**: la extensión principal ahora incluye un nuevo tipo de acción llamado `Trigger Direct Call`. Esto se puede utilizar cuando se desea activar una regla de llamada directa a través de una acción desde una regla diferente. Esta se asigna directamente al método `_satellite.track()`. Muchas gracias a [Jan Exner](https://twitter.com/jexner) por esta contribución.
+* **Nueva acción &quot;Llamada directa de Déclencheur&quot;** : La extensión principal ahora incluye un nuevo tipo de acción llamado `Trigger Direct Call`.  Esto se puede utilizar cuando se desea activar una regla de llamada directa a través de una acción desde una regla diferente. Esta se asigna directamente al método `_satellite.track()`. Muchas gracias a Jan Exner por esta contribución.
 
 ## 8 de diciembre de 2020
 
@@ -163,25 +163,25 @@ Consulte la [referencia de Core Extension](./overview.md) en Condiciones > Códi
 
 Versión 1.7.3
 
-* **Aumento de la longitud del campo de texto**: los campos de entrada de texto se cambiaron a una presentación flexible para utilizar mejor el ancho de pantalla del usuario y dejar más espacio para cadenas de texto más largas.
+* **Aumento de la longitud del campo de texto**: Los campos de entrada de texto se cambiaron a una presentación flexible para utilizar mejor el ancho de pantalla del usuario y dejar más espacio para cadenas de texto más largas.
 
 ## 1 de noviembre de 2019
 
 Versión 1.7.0
 
-* **Acceso a la variable `event` dentro del elemento de datos de Custom Code**: Ahora puede hacer referencia un evento desde un elemento de datos de Custom Code cuando se ejecuta en el contexto de una regla. El objeto contendrá información útil sobre el evento que activó la regla. Muchas gracias a [Stewart Schilling](https://twitter.com/sdi_stewart) por esta contribución.
+* **Acceso a la variable `event` dentro del elemento de datos de Custom Code**: Ahora puede hacer referencia un evento desde un elemento de datos de Custom Code cuando se ejecuta en el contexto de una regla. El objeto contendrá información útil sobre el evento que activó la regla. Muchas gracias a Stewart Schilling por esta contribución.
 
 ## 7 de octubre de 2019
 
 v1.6.2
 
-* **Nuevo tipo de elemento de datos “Constant”**: la extensión principal ahora incluye un nuevo elemento de datos llamado `Constant`. Se puede utilizar cuando necesite almacenar un valor constante al que se hará referencia en varias condiciones, acciones o Custom Code. Muchas gracias a [Jan Exner](https://twitter.com/jexner) por esta contribución.
+* **Nuevo tipo de elemento de datos “Constant”**: La extensión principal ahora incluye un nuevo elemento de datos llamado `Constant`.  Se puede utilizar cuando necesite almacenar un valor constante al que se hará referencia en varias condiciones, acciones o código personalizado. Muchas gracias a Jan Exner por esta contribución.
 
 ## 11 de septiembre de 2019
 
 v1.6.1
 
-* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts internos que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede obtener más información sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
+* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts en línea que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede obtener más información sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junio de 2019
 
@@ -194,8 +194,8 @@ v1.5.0
 v1.4.3
 
 * **Campos de entrada**: Los campos de entrada son mucho más largos.
-* **Custom Event**: Ahora se puede utilizar el tipo de Custom Event con eventos distribuidos fuera de ventana.
-* **Corrección de errores**: Se ha corregido un error en el que la condición de Value Comparison no tenía un valor 0.
+* **Evento personalizado**: Ahora se puede utilizar el tipo de evento personalizado con eventos distribuidos fuera de ventana.
+* **Corrección de errores**: Se ha corregido un error en el que la condición de comparación valor no tenía un valor 0.
 * **Corrección de errores**: Se ha actualizado el campo exhange\_url, por lo que ahora puede ver el listado de la extensión principal en Adobe Exchange.
 
 ## 8 de enero de 2019
@@ -208,9 +208,9 @@ v1.4.2
 
 ## 8 de noviembre de 2018
 
-* **Opción Persist Cohort**: La opción para mantener una cohorte se ha añadido a la condición de Muestreo. Esto causa que se mantenga a un usuario dentro o fuera de la cohorte de muestra entre sesiones. Por ejemplo, si la casilla “persist cohort” está marcada y la condición devuelve el valor “True” la primera vez que se ejecute para un visitante determinado, devolverá ese valor en todas las ejecuciones posteriores de la condición para el mismo visitante. De forma similar, si la casilla “persist cohort” está marcada y la condición devuelve el valor “False” la primera vez que se ejecuta para un visitante determinado, devolverá el mismo valor en todas las ejecuciones posteriores de la condición para el mismo visitante.
+* **Opción Persist Cohort**: La opción para mantener una cohorte se ha añadido a la condición de Muestreo. Esto causa que se mantenga a un usuario dentro o fuera de la cohorte de muestra entre sesiones. Por ejemplo, si la casilla &quot;persist cohort&quot; está marcada y la condición devuelve el valor &quot;True&quot; la primera vez que se ejecute para un visitante determinado, devolverá ese valor en todas las ejecuciones posteriores de la condición para el mismo visitante. Del mismo modo, si la casilla &quot;persist cohort&quot; está marcada y la condición devuelve el valor &quot;False&quot; la primera vez que se ejecuta para un visitante determinado, devolverá el mismo valor en todas las ejecuciones posteriores de la condición para el mismo visitante.
 * **Corrección de errores**: Se ha corregido un problema por el que una regla con un evento Page Bottom y una acción Custom Code en una página donde se estaban cargando etiquetas síncronas, pero incorrectamente (sin llamada a `_satellite.pageBottom()`) borraba el contenido del sitio web.
-* **Corrección de errores**: Se ha corregido un problema en el que Enters Viewpoint no funcionaba si la biblioteca de etiquetas se cargaba de forma asíncrona y terminaba de cargarse después de activarse el evento DOMContentLoaded del explorador.
+* **Corrección de errores** : Se ha corregido un problema en el que Enters Viewport no funcionaba si la biblioteca de etiquetas se cargaba de forma asíncrona y terminaba de cargarse después de activarse el evento DOMContentLoaded del explorador.
 
 ## 24 de mayo de 2018
 
