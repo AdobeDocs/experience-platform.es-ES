@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform;inicio;temas populares;asignación de destino;asignación de destino
 solution: Experience Platform
 title: Asignación de datos de evento de Adobe Target a XDM
 description: Obtenga información sobre cómo asignar campos de evento de Adobe Target a un esquema de modelo de datos de experiencia (XDM) para su uso en Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # Asignaciones de campo de asignación de destino
 
-Adobe Experience Platform le permite introducir datos de Adobe Target a través del conector de origen de Target. Al utilizar el conector, todos los datos de los campos de Target deben asignarse al [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md) campos asociados a la clase XDM ExperienceEvent.
-
-En la tabla siguiente se describen los campos de un esquema de Evento de experiencia (*Campo de ExperienceEvent de XDM*) y los campos de Target correspondientes a los que deben asignarse (*Campo de solicitud de destino*). También se proporcionan notas adicionales para algunas asignaciones.
+En la tabla siguiente se describen los campos de un esquema de evento de experiencia del modelo de datos de experiencia (XDM) y los campos correspondientes de Adobe Target a los que se deben asignar. También se proporcionan notas adicionales para algunas asignaciones.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ En la tabla siguiente se describen los campos de un esquema de Evento de experie
 | Campo de ExperienceEvent de XDM | Campo de solicitud de destino | Notas |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Un identificador de solicitud único |
-| **`dataSource`** |  | Configurado en &quot;1&quot; para todos los clientes. |
+| **`dataSource`** | | Configurado en &quot;1&quot; para todos los clientes. |
 | `dataSource._id` | Un valor generado por el sistema que no se puede pasar con la solicitud. | El ID único de esta fuente de datos. Esto lo proporciona la persona o sistema que creó la fuente de datos. |
 | `dataSource.code` | Un valor generado por el sistema que no se puede pasar con la solicitud. | Un acceso directo al @id completo. Se puede utilizar al menos uno de los códigos o @id. En ocasiones, este código se denomina código de integración de la fuente de datos. |
 | `dataSource.tags` | Un valor generado por el sistema que no se puede pasar con la solicitud. | Las etiquetas se utilizan para indicar cómo las aplicaciones que utilizan los alias representados por una fuente de datos determinada deben interpretarlos.<br><br>Ejemplos:<br><ul><li>`isAVID`: Fuentes de datos que representan los ID de visitante de Analytics.</li><li>`isCRSKey`: fuentes de datos que representan alias que deben utilizarse como claves en CRS.</li></ul>Las etiquetas se establecen cuando se crea la fuente de datos, pero también se incluyen en los mensajes de canalización al hacer referencia a una fuente de datos determinada. |
@@ -76,7 +73,7 @@ En la tabla siguiente se describen los campos de un esquema de Evento de experie
 | `placeContext.geo.postalCode` | El código postal se resuelve en función de la dirección IP de la solicitud. |
 | `placeContext.geo.stateProvince` | Estado o provincia resueltos en función de la dirección IP de la solicitud. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Se configura solo si los detalles del pedido están presentes en la solicitud. |
+| **`commerce`** | | Se configura solo si los detalles del pedido están presentes en la solicitud. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
