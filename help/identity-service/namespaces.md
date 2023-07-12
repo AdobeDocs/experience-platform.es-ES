@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID numérico de CRM.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
 workflow-type: tm+mt
-source-wordcount: '1719'
-ht-degree: 9%
+source-wordcount: '1766'
+ht-degree: 8%
 
 ---
 
@@ -48,8 +48,10 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
 | Correo electrónico Dirección | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren áreas de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |
-| ID de socio [!BADGE Beta]{type=Informative} | Los ID de socio son identificadores utilizados por socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos determinísticos con gráficos de identidad. |
+| ID de socio [!BADGE Beta]{type=Informative} | <ul><li>Los ID de socio son identificadores utilizados por socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
 | Número de teléfono | Los números de teléfono suelen estar asociados a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen PII. Esto indica que [!DNL Identity Service] para gestionar el valor de forma confidencial. |
+
+{style="table-layout:auto"}
 
 ### Áreas de nombres estándar {#standard}
 
