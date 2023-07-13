@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2022
 description: Notas de la versión de septiembre de 2022 de Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2940'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -95,13 +95,13 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 | Etiqueta en uso | Cuando se visualiza en la biblioteca de widgets, la etiqueta en uso identifica fácilmente la presencia de widgets existentes en el tablero. Esto facilita evitar la duplicación, aunque puede añadir el mismo widget más de una vez si lo desea. |
 | Paneles definidos por el usuario | Los paneles definidos por el usuario ayudan a acelerar las perspectivas y personalizar las visualizaciones, lo que le permite crear y administrar paneles personalizados. Con los paneles definidos por el usuario puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización. Lea el [guía de características](../../dashboards/user-defined-dashboards.md) para obtener más información. |
 | Modelo de datos de perspectivas de Customer Data Platform | La función del modelo de datos de perspectivas de la plataforma de datos del cliente (CDP) expone los modelos de datos y SQL que alimenta las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para los casos de uso de indicadores de rendimiento clave y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Lea el [Guía de funciones del modelo de datos de CDP Insights](../../dashboards/cdp-insights-data-model.md) para obtener más información. |
-| Widget del informe de superposición de audiencia | Este widget está disponible tanto para como para [!UICONTROL Perfiles] y [!UICONTROL Segmentos] paneles. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos para el segmento elegido. Desde el [!UICONTROL Perfiles] tablero puede filtrar y ver la superposición de audiencias mediante una política de combinación a partir de todos los segmentos disponibles. El [!UICONTROL Segmentos] los paneles le permiten filtrar la superposición de audiencias según un segmento específico.<br>Utilice este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos que perseguir. Lea los respectivos [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/segments.md#audience-overlap-report) guías de widget para obtener más información. |
+| Widget del informe de superposición de audiencia | Este widget está disponible tanto para como para [!UICONTROL Perfiles] y [!UICONTROL Segmentos] paneles. El informe proporciona una lista ordenada de audiencias clasificadas según los porcentajes de superposición más altos o más bajos para el segmento elegido. Desde el [!UICONTROL Perfiles] tablero puede filtrar y ver la superposición de audiencias mediante una política de combinación a partir de todos los segmentos disponibles. El [!UICONTROL Segmentos] los paneles le permiten filtrar la superposición de audiencias según un segmento específico.<br>Utilice este análisis para generar nuevos segmentos de alto rendimiento y evitar enviar la misma audiencia a diferentes destinos. El informe también ayuda a identificar perspectivas ocultas para mejorar la segmentación o localizar perfiles únicos que perseguir. Lea los respectivos [perfiles](../../dashboards/guides/profiles.md#audience-overlap-report) y [segmentos](../../dashboards/guides/audiences.md#audience-overlap-report) guías de widget para obtener más información. |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] descripción general](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
-Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Funciones nuevas o actualizadas**
 
@@ -120,7 +120,7 @@ Para obtener más información sobre la recopilación de datos en Platform, cons
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Funciones nuevas o actualizadas**
 
@@ -225,7 +225,7 @@ Consulte la [documentación de alertas de consulta](../../query-service/api/aler
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Funciones actualizadas**
 
@@ -237,4 +237,4 @@ Experience Platform proporciona una API RESTful y una interfaz de usuario intera
 | Compatibilidad con API para reintentar ejecuciones de flujo de datos fallidas para orígenes por lotes | Utilice el `re-trigger` para reintentar el flujo de datos fallido a través de la API. Lea la guía de [reintentar ejecuciones de flujo de datos fallidas mediante la API](../../sources/tutorials/api/retry-flows.md) para obtener más información. |
 | Compatibilidad de la API para filtrar datos de nivel de fila para [!DNL Google BigQuery] y [!DNL Snowflake] orígenes | Utilice operadores lógicos y de comparación para filtrar los datos de nivel de fila para la variable [!DNL Google BigQuery] y [!DNL Snowflake] fuentes. Lea la guía de [filtrado de datos para una fuente mediante la API](../../sources/tutorials/api/filter.md) para obtener más información. |
 
-Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
+Para obtener más información acerca de las fuentes, lea la [Información general de fuentes](../../sources/home.md).

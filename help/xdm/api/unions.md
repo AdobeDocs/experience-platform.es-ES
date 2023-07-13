@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extremo de API de uniones
 description: El extremo /union de la API de Registro de esquemas le permite administrar mediante programación esquemas de unión XDM en la aplicación de experiencia.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ El `timeSeriesEvents` matriz es una lista de eventos de series temporales relaci
 
 ### Asignación de abono de segmento
 
-El `segmentMembership` map almacena los resultados de las evaluaciones de segmentos. Cuando los trabajos de segmentos se ejecutan correctamente utilizando [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), el mapa se actualiza. `segmentMembership` también almacena cualquier segmento de audiencia evaluado previamente que se incorpora en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de segmentos mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
+El `segmentMembership` map almacena los resultados de la evaluación de una definición de segmento. Cuando los trabajos de segmentos se ejecutan correctamente utilizando [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), el mapa se actualiza. `segmentMembership` también almacena cualquier audiencia preevaluada que se incorpora en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de audiencias mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
 ## Recuperación de una lista de uniones {#list}
 

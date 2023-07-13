@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre políticas de uso de datos
 description: Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 4%
@@ -55,7 +55,7 @@ Consulte el apéndice de este documento para obtener una lista de [acciones de m
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ En la tabla siguiente se describen las acciones de marketing principales que se 
 | Exportar a terceros | Una acción que exporta datos a procesadores y entidades que no tienen relaciones directas con los clientes. Muchos proveedores de datos tienen condiciones en los contratos que prohíben la exportación de datos desde el lugar donde se recopilaron originalmente. Por ejemplo, los contratos de redes sociales suelen restringir la transferencia de datos que se reciben de ellas. |
 | Publicidad in situ | Una acción que utiliza datos para anuncios en el sitio, incluida la selección y el envío de anuncios en los sitios web o las aplicaciones de la organización, o para medir el envío y la eficacia de dichos anuncios. |
 | Personalización in situ | Una acción que utiliza datos para la personalización de contenido en el sitio. La personalización en el sitio es cualquier dato que se utiliza para hacer deducciones sobre los intereses de los usuarios, y se utiliza para seleccionar qué contenido o anuncios se muestran en función de esas deducciones. |
-| Coincidencia de segmentos | Una acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite a dos o más usuarios de Platform intercambiar datos de segmentos. Al habilitar las directivas que hacen referencia a esta acción, puede restringir qué datos se utilizan para la coincidencia de segmentos. Por ejemplo, si la directiva principal &quot;Restringir el uso compartido de datos&quot; está habilitada, cualquier dato con un [Etiqueta C11](../labels/reference.md#c11) no se puede usar para la coincidencia de segmentos. |
+| Coincidencia de segmentos | Una acción que utiliza datos para la coincidencia de segmentos de Adobe Experience Platform, lo que permite a dos o más usuarios de Platform intercambiar datos de audiencia. Al habilitar las directivas que hacen referencia a esta acción, puede restringir qué datos se utilizan para la coincidencia de segmentos. Por ejemplo, si la directiva principal &quot;Restringir el uso compartido de datos&quot; está habilitada, cualquier dato con un [Etiqueta C11](../labels/reference.md#c11) no se puede usar para la coincidencia de segmentos. |
 | Personalización de identidad única | Una acción que requiere que se utilice una sola identidad con fines de personalización en lugar de vincular identidades de varias fuentes. |

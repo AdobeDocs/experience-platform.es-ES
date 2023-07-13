@@ -2,7 +2,7 @@
 title: Paneles definidos por el usuario
 description: Obtenga información sobre cómo crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 4%
@@ -170,7 +170,7 @@ Aparecerá un widget duplicado en el tablero definido por el usuario. Seleccione
 
 Al leer este documento, tiene una mejor comprensión de cómo crear un panel personalizado y cómo crear, editar y actualizar widgets personalizados para ese panel.
 
-Para descubrir las métricas y visualizaciones preconfiguradas disponibles para [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/segments.md#standard-widgets), y [destinos](./guides/destinations.md#standard-widgets) En los paneles, consulte la lista de widgets estándar en su documentación respectiva.
+Para descubrir las métricas y visualizaciones preconfiguradas disponibles para [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/audiences.md#standard-widgets), y [destinos](./guides/destinations.md#standard-widgets) En los paneles, consulte la lista de widgets estándar en su documentación respectiva.
 
 Para comprender mejor los paneles definidos por el usuario en Experience Platform, vea el siguiente vídeo:
 

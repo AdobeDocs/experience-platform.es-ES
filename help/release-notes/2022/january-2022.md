@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2022
 description: Notas de la versión de enero de 2022 de Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 3%
+ht-degree: 12%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Pies de ilustración inteligentes | Un algoritmo de aprendizaje automático proporciona automáticamente información sobre sus datos de perfil y audiencia, e ilustra patrones y tendencias en un periodo de 30 a 90 días o 12 meses. Los subtítulos incluyen información sobre <ul><li>Forma general y estadísticas</li><li>Tendencias y cambios abruptos</li><li>Patrones estacionales</li><li>Anomalías inesperadas</li></ul> Encontrará más información en la [paneles de perfiles](../../dashboards/guides/profiles.md#profiles-count-trend) y [paneles de segmentos](../../dashboards/guides/segments.md#audience-size-trend) documentación. |
+| Pies de ilustración inteligentes | Un algoritmo de aprendizaje automático proporciona automáticamente información sobre sus datos de perfil y audiencia, e ilustra patrones y tendencias en un periodo de 30 a 90 días o 12 meses. Los subtítulos incluyen información sobre <ul><li>Forma general y estadísticas</li><li>Tendencias y cambios abruptos</li><li>Patrones estacionales</li><li>Anomalías inesperadas</li></ul> Encontrará más información en la [paneles de perfiles](../../dashboards/guides/profiles.md#profiles-count-trend) y [paneles de segmentos](../../dashboards/guides/audiences.md#audience-size-trend) documentación. |
 | Inventario de paneles | Acceda a los informes preconfigurados de paneles de perfiles, segmentos y destinos, incluidas las integraciones instaladas como Power BI, en una ubicación centralizada. Para obtener más información, consulte la [[!DNL Dashboards] documentación de inventario](../../dashboards/inventory.md). |
 | Plantillas de informe de Power BI | Cree, personalice o amplíe métricas a partir de los modelos de datos de perfil, segmentos y sistemas de informes de destino con nuevos gráficos de Power BI. El flujo de trabajo de instalación automatizada le permite compartir sus perspectivas de marketing con toda su organización desde el entorno de Power BI. Para obtener más información, consulte la [Documentación de plantilla de informe de Power BI](../../dashboards/integrations/power-bi.md). |
 
@@ -63,7 +63,7 @@ Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data P
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Funciones nuevas o actualizadas**
 
@@ -124,7 +124,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [R
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 | Función | Descripción |
 | --- | --- |

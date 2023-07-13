@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 6%
@@ -285,12 +285,12 @@ Para obtener más información sobre cómo trabajar con [!DNL Profile], consulte
 
 Todos los archivos de datos que se incorporan a [!DNL Experience Platform] debe ajustarse a la estructura de un esquema XDM. Para obtener más información sobre cómo dar formato a los archivos de datos para que cumplan con las jerarquías XDM (incluidos los archivos de ejemplo), consulte el documento sobre [transformaciones de ETL de muestra](../../etl/transformations.md). Para obtener información general sobre la ingesta de archivos de datos en [!DNL Experience Platform], consulte la [introducción a la ingesta por lotes](../../ingestion/batch-ingestion/overview.md).
 
-## Esquemas para segmentos externos
+## Esquemas para audiencias externas
 
-Si va a llevar segmentos de sistemas externos a Platform, debe utilizar los siguientes componentes para capturarlos en los esquemas:
+Si va a llevar audiencias de sistemas externos a Platform, debe utilizar los siguientes componentes para capturarlas en los esquemas:
 
 * [[!UICONTROL Definición del segmento] clase](../classes/segment-definition.md): Utilice esta clase estándar para capturar atributos clave de una definición de segmento externa.
-* [[!UICONTROL Detalles de abono de segmento] grupo de campos](../field-groups/profile/segmentation.md): Añada este grupo de campos a su [!UICONTROL Perfil individual de XDM] para asociar perfiles de clientes con segmentos específicos.
+* [[!UICONTROL Detalles de abono de segmento] grupo de campos](../field-groups/profile/segmentation.md): Añada este grupo de campos a su [!UICONTROL Perfil individual de XDM] para asociar perfiles de clientes con audiencias específicas.
 
 ## Pasos siguientes
 
@@ -321,7 +321,7 @@ Mediante el uso de objetos incrustados, los esquemas XDM pueden representar dire
 
 Los sistemas digitales modernos generan grandes cantidades de señales de comportamiento (datos de transacción, registros web, Internet de las cosas, visualización, etc.). Estos big data ofrecen oportunidades extraordinarias para optimizar experiencias, pero su uso es complicado debido a la escala y variedad de los datos. Para obtener valor de los datos, su estructura, formato y definiciones deben estandarizarse para que se puedan procesar de forma coherente y eficaz.
 
-Los esquemas resuelven este problema permitiendo que los datos se integren desde múltiples fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se haga sobre los datos, alejándose del enfoque tradicional del modelado de datos, donde todas las preguntas que se harán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
+Los esquemas resuelven este problema al permitir que los datos se integren desde varias fuentes, se estandaricen a través de estructuras y definiciones comunes y se compartan entre soluciones. Esto permite que los procesos y servicios subsiguientes respondan a cualquier tipo de pregunta que se haga sobre los datos, alejándose del enfoque tradicional del modelado de datos, donde todas las preguntas que se harán sobre los datos se conocen de antemano y los datos se modelan para ajustarse a esas expectativas.
 
 ### Objetos en comparación con campos de forma libre {#objects-v-freeform}
 

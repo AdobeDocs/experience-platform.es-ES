@@ -3,9 +3,9 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;consul
 title: Ejemplo de caso de uso para el servicio de consultas de Adobe Experience Platform
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consultas de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este documento y el vídeo que lo acompaña proporcionan un flujo de trabajo com
 * Formas de generar la consulta en función de la arquitectura de datos existente.
 * Garantice una calidad de datos que satisfaga sus necesidades y métodos para mitigar cualquier déficit.
 * Proceso para programar una consulta de modo que se ejecute con una frecuencia determinada para su uso descendente en la segmentación y en los destinos de personalización.
-* La facilidad con la que los especialistas en marketing pueden incluir atributos derivados en sus segmentos a través del poder de [!DNL Query Service].
+* La facilidad con la que los especialistas en marketing pueden incluir atributos derivados en sus audiencias gracias al poder de [!DNL Query Service].
 
 ## Objetivos {#objectives}
 
@@ -63,9 +63,9 @@ La presentación de vídeo que se muestra a continuación proporciona un caso de
 
 ## Ventajas de [!DNL Query Service] {#benefits}
 
-Las funciones que proporciona [!DNL Query Service] tiene muchos propósitos. Puede utilizarla para dar cabida a una lógica compleja para la segmentación, para calcular varios atributos personalizados para usarlos en fases posteriores o para simplificar en gran medida la forma de crear los segmentos.
+Las funciones que proporciona [!DNL Query Service] tiene muchos propósitos. Puede utilizarlo para dar cabida a una lógica compleja para la segmentación, para calcular varios atributos personalizados para su uso descendente o para simplificar en gran medida la forma en que crea sus audiencias.
 
-[!DNL Query Service] permite incluir restricciones en las consultas para simplificar el proceso de creación de segmentos. Esto mejora la calidad de los datos al garantizar que los datos adecuados cumplen los requisitos de sus segmentos y crea audiencias más precisas. Mantener la calidad de la consulta resulta en una audiencia precisa y ayuda con la fiabilidad de los datos. También puede guardar la audiencia creando esquemas y tablas personalizadas basadas en atributos derivados de la consulta. Se puede habilitar una tabla personalizada para el perfil y puede utilizar estos puntos de datos para la segmentación y personalización. Esta función ayuda a los especialistas en marketing que desean crear una audiencia nítida de personas.
+[!DNL Query Service] permite incluir restricciones en las consultas para simplificar el proceso de creación de audiencias. Esto mejora la calidad de los datos al garantizar que los datos adecuados cumplen los requisitos de sus audiencias. Mantener la calidad de la consulta resulta en una audiencia precisa y ayuda con la fiabilidad de los datos. También puede guardar la audiencia creando esquemas y tablas personalizadas basadas en atributos derivados de la consulta. Se puede habilitar una tabla personalizada para el perfil y puede utilizar estos puntos de datos para la segmentación y personalización. Esta función ayuda a los especialistas en marketing que desean crear una audiencia nítida de personas.
 
 Además, al incluir en la consulta lógica que cumpla cualquier condición recurrente o estática, [!DNL Query Service] extrae la carga de una segmentación detallada.
 

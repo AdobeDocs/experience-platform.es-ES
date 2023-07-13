@@ -2,9 +2,9 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ La siguiente infografía muestra el ciclo de recopilación, manipulación, anál
 
 ![La infografía de ida y vuelta de los datos de la observación al análisis a la acción.](../images/use-cases/infographic-use-case-cycle.png)
 
-Este caso de uso de extremo a extremo muestra cómo se pueden capturar y modificar las señales de datos para calcular el atributo derivado del valor de duración del cliente. Estos atributos derivados se pueden aplicar a los datos de perfil de Real-Time CDP y están disponibles para usarlos con paneles definidos por el usuario para crear un panel para el análisis de perspectivas. A través de Data Distiller, puede ampliar el modelo de datos de perspectivas de Real-Time CDP y utilizar las perspectivas de atributos y tableros derivadas de CLV para crear un nuevo segmento y activarlo en el destino deseado. Estos segmentos se pueden usar para crear audiencias de alto rendimiento para impulsar su próxima campaña de marketing.
+Este caso de uso de extremo a extremo muestra cómo se pueden capturar y modificar las señales de datos para calcular el atributo derivado del valor de duración del cliente. Estos atributos derivados se pueden aplicar a los datos de perfil de Real-Time CDP y están disponibles para usarlos con paneles definidos por el usuario para crear un panel para el análisis de perspectivas. A través de Data Distiller, puede ampliar el modelo de datos de perspectivas de Real-Time CDP y utilizar las perspectivas de atributos y tableros derivadas de CLV para crear una nueva audiencia y activarla en el destino deseado. Estas audiencias de alto rendimiento se pueden usar para impulsar la próxima campaña de marketing.
 
 Esta guía se ha diseñado para ayudarle a comprender mejor la experiencia del cliente mediante la medición de señales de datos en puntos de contacto clave que controlan el CLV y la implementación de un caso de uso similar en su entorno. Todo el proceso se resume en la siguiente imagen.
 
@@ -28,7 +28,7 @@ Esta guía se ha diseñado para ayudarle a comprender mejor la experiencia del c
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Servicio de consultas](../home.md): Proporciona una interfaz de usuario y una API RESTful en las que se pueden utilizar consultas SQL para analizar y enriquecer datos.
-* [Servicio de segmentación](../../segmentation/home.md): Permite generar segmentos y audiencias a partir de los datos del perfil del cliente en tiempo real.
+* [Servicio de segmentación](../../segmentation/home.md): Permite generar audiencias a partir de los datos del perfil del cliente en tiempo real.
 
 ## Requisitos previos
 
@@ -71,23 +71,23 @@ A continuación se muestran ejemplos de widgets de CLV personalizados que utiliz
 
 ![Colección de widgets de CLTV personalizados basados en deciles.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Cree y active segmentos para crear audiencias de alto rendimiento {#create-and-activate-segments}
+## Crear y activar audiencias de alto rendimiento {#create-and-activate-audiences}
 
-El siguiente paso es generar segmentos y audiencias a partir de los datos del perfil del cliente en tiempo real. Consulte la guía de la IU del Generador de segmentos para obtener información sobre cómo [creación y activación de segmentos en Platform](../../segmentation/ui/segment-builder.md). La guía proporciona secciones sobre cómo:
+El siguiente paso es crear una definición de segmento y generar audiencias a partir de los datos del perfil del cliente en tiempo real. Consulte la guía de la IU del Generador de segmentos para obtener información sobre cómo [crear y activar audiencias en Platform](../../segmentation/ui/segment-builder.md). La guía proporciona secciones sobre cómo:
 
 * Cree definiciones de segmentos utilizando una combinación de atributos, eventos y audiencias existentes como componentes básicos.
-* Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentos.
+* Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentación.
 * Vea estimaciones de su audiencia potencial, lo que le permite ajustar sus definiciones de segmento según sea necesario.
 * Habilite todas las definiciones de segmentos para la segmentación programada.
 * Habilite las definiciones de segmento especificadas para la segmentación de flujo continuo.
 
-Si lo prefiere, también dispone de [tutorial de vídeo del generador de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) disponible para obtener más información.
+Si lo prefiere, también dispone de [tutorial de vídeo del generador de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponible para obtener más información.
 
-## Activación del segmento para una campaña de correo electrónico {#activate-segment-for-campaign}
+## Activar la audiencia para una campaña de correo electrónico {#activate-audience-for-campaign}
 
-Una vez creado el segmento, está listo para activarlo en un destino. Platform admite una variedad de proveedores de servicios de correo electrónico (ESP) que le permiten administrar sus actividades de marketing por correo electrónico, como enviar campañas de correo electrónico promocionales.
+Una vez creada la audiencia, está listo para activarla en un destino. Platform admite una variedad de proveedores de servicios de correo electrónico (ESP) que le permiten administrar sus actividades de marketing por correo electrónico, como enviar campañas de correo electrónico promocionales.
 
-Compruebe la [resumen de destinos de marketing por correo electrónico](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) para obtener una lista de los destinos admitidos a los que desea exportar datos (por ejemplo, [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) página).
+Compruebe la [resumen de destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#connect-destination) para obtener una lista de los destinos admitidos a los que desea exportar datos (por ejemplo, [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) página).
 
 ## Ver los datos de análisis devueltos de la campaña {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ Los datos de las fuentes ahora se pueden [procesado gradualmente](../essential-c
 
 Una vez actualizado el modelo de datos, los widgets de panel personalizados proporcionan señales significativas que le permiten medir y visualizar el valor de duración del cliente.
 
-![Un widget personalizado para mostrar el número de correos electrónicos abiertos según su segmento y campaña de correo electrónico.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![Un widget personalizado para mostrar el número de correos electrónicos abiertos según su audiencia y campaña de correo electrónico.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Se proporcionan varias opciones de visualización para el análisis personalizado.
 

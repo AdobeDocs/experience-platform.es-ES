@@ -2,7 +2,7 @@
 title: Guía de información de Query Accelerated Store Reporting
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de creación de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -15,7 +15,7 @@ El almacén acelerado de consultas le permite reducir el tiempo y la potencia de
 
 El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar un modelo de datos de Adobe Real-time Customer Data Platform existente. A continuación, puede interactuar con sus perspectivas de creación de informes o incrustarlas en un marco de creación de informes o visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../../dashboards/cdp-insights-data-model.md).
 
-El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona perspectivas sobre perfiles, segmentos y destinos y habilita los paneles de perspectivas de Real-Time CDP. Este documento le guía a través del proceso de creación del modelo de datos de perspectivas de creación de informes y también cómo ampliar los modelos de datos de Real-Time CDP según sea necesario.
+El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona perspectivas sobre perfiles, audiencias y destinos y habilita los paneles de perspectivas de Real-Time CDP. Este documento le guía a través del proceso de creación del modelo de datos de perspectivas de creación de informes y también cómo ampliar los modelos de datos de Real-Time CDP según sea necesario.
 
 ## Requisitos previos
 
@@ -37,7 +37,7 @@ Al principio, tiene un modelo de datos inicial de sus fuentes (potencialmente de
 
 ![Un diagrama relacional de entidades (ERD) del modelo de usuario de Audience Insight.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-En este ejemplo, la variable `externalaudiencereach` La tabla o el conjunto de datos se basa en un ID y rastrea los límites inferior y superior para el recuento de coincidencias. El `externalaudiencemapping` La tabla/conjunto de datos de dimensión asigna el ID externo a un destino y un segmento en Platform.
+En este ejemplo, la variable `externalaudiencereach` La tabla o el conjunto de datos se basa en un ID y rastrea los límites inferior y superior para el recuento de coincidencias. El `externalaudiencemapping` La tabla/conjunto de datos de dimensión asigna el ID externo a un destino y a una audiencia en Platform.
 
 ## Creación de un modelo para informar sobre perspectivas con Data Distiller
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Ampliación del modelo de datos con el modelo de datos de perspectivas de Real-Time CDP
 
-Puede ampliar el modelo de audiencia con detalles adicionales para crear una tabla de dimensiones más completa. Por ejemplo, puede asignar el nombre del segmento y el nombre del destino al identificador de audiencia externo. Para ello, utilice el servicio de consulta para crear o actualizar un nuevo conjunto de datos y añadirlo al modelo de audiencia que combina segmentos y destinos con una identidad externa. El diagrama siguiente ilustra el concepto de esta extensión del modelo de datos.
+Puede ampliar el modelo de audiencia con detalles adicionales para crear una tabla de dimensiones más completa. Por ejemplo, puede asignar el nombre de audiencia y el nombre de destino al identificador de audiencia externo. Para ello, utilice el servicio de consulta para crear o actualizar un nuevo conjunto de datos y añadirlo al modelo de audiencia que combina audiencias y destinos con una identidad externa. El diagrama siguiente ilustra el concepto de esta extensión del modelo de datos.
 
 ![Diagrama de ERD que vincula el modelo de datos de Real-Time CDP insight y el modelo de almacén acelerado de consultas.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ Utilice el servicio de consultas para agregar atributos descriptivos clave de lo
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ Utilice el `SHOW datagroups;` para confirmar la creación del comando adicional 
 
 ## Consulte el modelo de datos de perspectivas de informes de tienda acelerados extendidos
 
-Ahora que la variable `audienceinsight` El modelo de datos de se ha aumentado, está listo para consultarse. El siguiente SQL muestra la lista de destinos y segmentos asignados.
+Ahora que la variable `audienceinsight` El modelo de datos de se ha aumentado, está listo para consultarse. El siguiente SQL muestra la lista de destinos y audiencias asignados.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 La consulta devuelve todos los conjuntos de datos del almacén acelerado de consultas:
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Ahora que ha creado su modelo de datos personalizado, está listo para visualizar los datos con consultas personalizadas y paneles definidos por el usuario.
 
-El siguiente SQL proporciona un desglose del recuento de coincidencias por audiencias en un destino y un desglose de cada destino de audiencias por segmento.
+El siguiente SQL proporciona un desglose del recuento de coincidencias por audiencias en un destino y un desglose de cada destino de audiencias por audiencia.
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 La siguiente imagen proporciona un ejemplo de las posibles visualizaciones personalizadas que se pueden usar con el modelo de datos de perspectivas de creación de informes.
 
-![Un recuento de coincidencias por destino y widget de segmentos creado a partir del nuevo modelo de datos de perspectivas de informes.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Un recuento de coincidencias por destino y widget de audiencia creado a partir del nuevo modelo de datos de perspectivas de informes.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 El modelo de datos personalizado se encuentra en la lista de modelos de datos disponibles en el espacio de trabajo del panel definido por el usuario. Consulte la [guía de panel definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener instrucciones sobre cómo utilizar el modelo de datos personalizado.

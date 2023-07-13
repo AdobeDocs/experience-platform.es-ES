@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de etiquetas de uso de datos
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform en la actualidad.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ C4 incluye etiquetas [C5](#c5), [C6](#c6), y [C7](#c7). Es una de las etiquetas 
 
 La segmentación basada en intereses, o personalización, se produce si se cumplen las tres condiciones siguientes: Los datos recopilados en el sitio se (1) utilizan para hacer deducciones sobre los intereses de un usuario, (2) se utilizan en otro contexto, como en otro sitio o aplicación (fuera del sitio) Y (3) se utilizan para seleccionar qué contenido o anuncios se muestran en función de esas deducciones.
 
-La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los distintos sitios representan contextos diferentes, de modo que el uso de datos entre sitios en cualquier contexto es diferente al original. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. Como resultado, el uso de datos entre sitios para segmentar anuncios o contenido suele calificarse como segmentación basada en intereses, independientemente de si el anuncio o el contenido aparece en el sitio o fuera de él. Por ejemplo, si los datos in situ se utilizaran en combinación con datos externos para seleccionar qué anuncio mostrar a un usuario en el sitio de una organización, ese uso podría considerarse como una segmentación basada en intereses. Otro ejemplo: es probable que la reorientación de anuncios a usuarios fuera del sitio también se califique como segmentación basada en intereses.
+La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los distintos sitios representan contextos diferentes, de modo que el uso de datos entre sitios en cualquier contexto es diferente al original. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. Como resultado, el uso de datos entre sitios para segmentar anuncios o contenido suele calificarse como segmentación basada en intereses, independientemente de si el anuncio o el contenido aparece en el sitio o fuera de él. Por ejemplo, si los datos in situ se utilizaran en combinación con datos externos para seleccionar qué anuncio mostrar a un usuario en el sitio de una organización, ese uso podría calificarse como segmentación basada en intereses. Otro ejemplo: es probable que la reorientación de anuncios a usuarios fuera del sitio también se califique como segmentación basada en intereses.
 
 Es probable que el uso de datos externos únicamente para la segmentación también se califique como segmentación basada en intereses, ya que los datos externos generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios.
 
@@ -134,11 +134,11 @@ Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para 
 
 #### C10 {#c10}
 
-Algunas políticas de gobernanza de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a los segmentos si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
+Algunas políticas de gobernanza de datos restringen el uso de datos de identidad vinculados para la personalización. La etiqueta C10 se aplica automáticamente a las audiencias si sus políticas de combinación utilizan la opción &quot;gráfico privado&quot;.
 
 #### C11 {#c11}
 
-La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir segmentos de origen con preferencias de privacidad y consentimiento, lo que facilita la obtención de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 indica datos que no deben utilizarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de Coincidencia de segmentos y agregar la etiqueta C11 en consecuencia, el flujo de trabajo de Coincidencia de segmentos aplica automáticamente la etiqueta.
+La coincidencia de segmentos de Adobe Experience Platform le permite hacer coincidir audiencias generadas por Platform con preferencias de privacidad y consentimiento, lo que facilita la obtención de perfiles enriquecidos y perspectivas descendentes. La etiqueta C11 indica datos que no deben utilizarse en [!DNL Segment Match] procesos. Después de determinar qué conjuntos de datos o campos desea excluir de Coincidencia de segmentos y agregar la etiqueta C11 en consecuencia, el flujo de trabajo de Coincidencia de segmentos aplica automáticamente la etiqueta.
 
 #### C12 {#c12}
 

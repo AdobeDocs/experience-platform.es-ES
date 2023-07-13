@@ -2,7 +2,7 @@
 title: Dejar de utilizar un campo XDM en la IU
 description: Obtenga información sobre cómo retirar los campos del Modelo de datos de experiencia (XDM) mediante el Editor de esquemas en Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 El modelo de datos de experiencia (XDM) le ofrece la flexibilidad para administrar su modelo de datos a medida que cambian sus necesidades comerciales al dejar obsoletos los campos de esquema una vez introducidos los datos. Los campos no deseados pueden quedar obsoletos para eliminarlos de la vista de la interfaz de usuario y también ocultarlos de las interfaces de usuario descendentes. De manera práctica, una casilla de verificación en el Editor de esquemas permite mostrar los campos obsoletos y, si es necesario, también puede dejar de utilizarlos.
 
-Como los campos obsoletos están ocultos de la interfaz de usuario de forma predeterminada, esto optimiza el esquema en el Editor de esquemas y evita que se agreguen campos no deseados a dependencias descendentes, como el Generador de segmentos, el Diseñador de recorridos, etc. La desuso de los campos también es compatible con versiones anteriores. Otros sistemas que utilizan campos obsoletos, como segmentos y consultas, seguirán evaluándolos según lo previsto. Si se utiliza un campo obsoleto en un segmento existente, se trata normalmente, lo que significa que el campo se muestra como se espera en el lienzo del generador de segmentos o se evalúa en función de los datos disponibles en los campos obsoletos. Se trata de un cambio permanente que no afecta negativamente a ningún flujo de datos existente.
+Como los campos obsoletos están ocultos de la interfaz de usuario de forma predeterminada, esto optimiza el esquema en el Editor de esquemas y evita que se agreguen campos no deseados a dependencias descendentes como el Generador de segmentos, el Diseñador de recorridos, etc. La desuso de los campos también es compatible con versiones anteriores. Otros sistemas que utilizan campos obsoletos, como audiencias y consultas, seguirán evaluándolos según lo previsto. Si se utiliza un campo obsoleto en una audiencia existente, se trata normalmente, lo que significa que el campo se muestra como se espera en el lienzo del Generador de segmentos o se evalúa en función de los datos disponibles en los campos obsoletos. Se trata de un cambio permanente que no afecta negativamente a ningún flujo de datos existente.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ El campo ahora se elimina de la vista de la interfaz de usuario.
 
 >[!NOTE]
 >
->Una vez obsoletas, las interfaces de usuario descendentes, como los paneles de segmentación, Customer Journey Analytics y Adobe Journey Optimizer, ya no muestran los campos obsoletos como parte de su flujo de trabajo. Sin embargo, las IU descendentes tienen la opción de mostrar los campos obsoletos si es necesario y seguir tratando el campo obsoleto como algo normal. Consulte su documentación correspondiente para obtener más información. Las consultas y los segmentos que utilicen el campo obsoleto seguirán ejecutándose según lo esperado.
+>Una vez obsoletas, las interfaces de usuario descendentes, como los paneles de segmentación, Customer Journey Analytics y Adobe Journey Optimizer, ya no muestran los campos obsoletos como parte de su flujo de trabajo. Sin embargo, las IU descendentes tienen la opción de mostrar los campos obsoletos si es necesario y seguir tratando el campo obsoleto como algo normal. Consulte su documentación correspondiente para obtener más información. Las consultas y audiencias que utilicen el campo obsoleto seguirán ejecutándose según lo esperado.
 
 ## Mostrar campos obsoletos {#show-deprecated}
 

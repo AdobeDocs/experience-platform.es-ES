@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 1%
@@ -41,7 +41,7 @@ En la IU del Experience Platform, seleccione **[!UICONTROL Audiencias]** en la n
 
 El **[!UICONTROL Audiencias]** el tablero describe las métricas clave relacionadas con los datos de audiencia de su organización.
 
-Para obtener más información, visite la [guía del panel de audiencias](../../dashboards/guides/segments.md).
+Para obtener más información, visite la [guía del panel de audiencias](../../dashboards/guides/audiences.md).
 
 ![Se muestra el panel de audiencias. Muestra varios widgets, incluido el tamaño de la audiencia, los perfiles por identidad, la superposición de identidades y la tendencia de cambio de tamaño de la audiencia.](../../dashboards/images/segments/dashboard-overview.png)
 

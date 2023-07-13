@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de trabajos de privacidad
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 2%
@@ -165,7 +165,7 @@ curl -X POST \
 | `expandIDs` | Una propiedad opcional que, cuando se establece en `true`, representa una optimización para procesar los ID en las aplicaciones (actualmente solo compatible con [!DNL Analytics]). Si se omite, el valor predeterminado es `false`. |
 | `priority` | Propiedad opcional utilizada por Adobe Analytics que establece la prioridad para procesar solicitudes. Los valores aceptados son `normal` y `low`. If `priority` se omite, el comportamiento predeterminado es `normal`. |
 | `analyticsDeleteMethod` | Una propiedad opcional que especifica cómo debe gestionar Adobe Analytics los datos personales. Se aceptan dos valores posibles para este atributo: <ul><li>`anonymize`: todos los datos a los que hace referencia la colección de ID de usuario dada se hacen anónimos. If `analyticsDeleteMethod` se omite, este es el comportamiento predeterminado.</li><li>`purge`: todos los datos se eliminan por completo.</li></ul> |
-| `mergePolicyId` | Al realizar solicitudes de privacidad para el Perfil del cliente en tiempo real (`profileService`), si lo desea, puede proporcionar el ID del específico [política de combinación](../../profile/merge-policies/overview.md) que desee utilizar para la vinculación de ID. Al especificar una política de combinación, las solicitudes de privacidad pueden incluir información de segmentos al devolver datos de un cliente. Solo se puede especificar una política de combinación por solicitud. Si no se proporciona ninguna política de combinación, la información de segmentación no se incluye en la respuesta. |
+| `mergePolicyId` | Al realizar solicitudes de privacidad para el Perfil del cliente en tiempo real (`profileService`), si lo desea, puede proporcionar el ID del específico [política de combinación](../../profile/merge-policies/overview.md) que desee utilizar para la vinculación de ID. Al especificar una política de combinación, las solicitudes de privacidad pueden incluir información de la audiencia al devolver datos de un cliente. Solo se puede especificar una política de combinación por solicitud. Si no se proporciona ninguna política de combinación, la información de segmentación no se incluye en la respuesta. |
 | `regulation` **(Obligatorio)** | La regulación del trabajo de privacidad. Se aceptan los siguientes valores: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulte la información general sobre [regulaciones compatibles](../regulations/overview.md) para obtener más información sobre las normas de privacidad que representan los valores anteriores. |
 
 {style="table-layout:auto"}

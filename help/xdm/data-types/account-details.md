@@ -2,7 +2,7 @@
 title: Tipo de datos de detalles de cuenta
 description: Este documento proporciona información general sobre el tipo de datos del modelo de datos de experiencia (XDM) de detalles de cuenta.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 5%
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `jigsaw` | Cadena | La clave Data.com de la organización. |
 | `linkedinPageUrl` | Cadena | Un vínculo al sitio web de la cuenta de LinkedIn de la organización. |
 | `logoUrl` | Cadena | Una ruta que se combinará con la URL de una instancia de Salesforce (por ejemplo, `https://yourInstance.salesforce.com/`) para generar una URL para solicitar la imagen de perfil de la red social asociada a la organización. La URL generada devuelve un redireccionamiento HTTP (código 302) a la imagen de perfil de la red social de la organización. |
-| `marketSegment` | Cadena | El segmento de mercado nombrado en el que participa la organización. Este es un campo de forma libre, y es aconsejable utilizar un valor estructurado para consultas o para utilizar la variable `xdm:identifier` propiedad. |
+| `marketSegment` | Cadena | La audiencia de mercado designada en la que participa la organización. Este es un campo de forma libre, y es aconsejable utilizar un valor estructurado para consultas o para utilizar la variable `xdm:identifier` propiedad. |
 | `numberOfEmployees` | Número entero | El número de empleados de la organización. |
 | `organizationType` | Cadena | Una etiqueta que describe el tipo de organización. |
 | `primaryEmailDomain` | Cadena | El dominio de correo electrónico principal que utiliza la organización para su personal. |

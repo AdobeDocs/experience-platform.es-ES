@@ -4,10 +4,10 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 10%
+source-wordcount: '3393'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ Seleccionar **[!UICONTROL Agregar widget]** para desplazarse a la biblioteca de 
 
 ![Información general del panel Perfiles con el widget de adición resaltado.](../images/profiles/profiles-overview-add-widget.png)
 
-Desde la biblioteca de widgets puede examinar la selección de widgets de segmento estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
+Desde la biblioteca de widgets, puede examinar la selección de widgets de audiencia estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,7 +67,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Examen de perfiles {#browse-profiles}
 
-El [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante que pertenece al perfil con respecto a sus preferencias, eventos anteriores, interacciones y segmentos
+El [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante que pertenece al perfil de con respecto a sus preferencias, eventos anteriores, interacciones y audiencias.
 
 Para obtener más información acerca de las funcionalidades de visualización de perfiles proporcionadas en la IU de Platform, consulte la documentación sobre [exploración de perfiles en Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -256,9 +256,9 @@ Pase el ratón sobre las barras individuales para ver un cuadro de diálogo que 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfiles no segmentados"
->abstract="Este widget proporciona el número total de perfiles que no están adjuntos a ningún segmento y representa la oportunidad de activar perfiles en toda la organización."
+>abstract="Este widget proporciona el número total de perfiles no adjuntos a ninguna audiencia y representa la oportunidad de activar perfiles en toda la organización."
 
-El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de todos los perfiles no adjuntos a ningún segmento. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
+El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de perfiles no adjuntos a ninguna audiencia. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
 
 ![El widget Perfiles no segmentados.](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de t
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendencia de perfiles no segmentados"
->abstract="Este widget proporciona una ilustración gráfica de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia de perfiles no adjuntos a ningún segmento se puede visualizar en periodos de 30 días, 90 días y 12 meses."
+>abstract="Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ninguna audiencia durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a una audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses."
 
-El [!UICONTROL Los perfiles no segmentados cambian de tendencia] El widget utiliza un gráfico de líneas para ilustrar el número de perfiles agregados desde la última instantánea diaria que no están adjuntos a ningún segmento. La tendencia de cambio de los perfiles no adjuntos a ningún segmento se puede visualizar en períodos de 30 días, 90 días y 12 meses. El período de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje Y y el tiempo en el eje X.
+El [!UICONTROL Los perfiles no segmentados cambian de tendencia] el widget utiliza un gráfico de líneas para ilustrar el número de perfiles agregados desde la última instantánea diaria que no están adjuntos a ninguna audiencia. La tendencia de cambio de perfiles no adjuntos a ninguna audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. El período de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje Y y el tiempo en el eje X.
 
 ![Los perfiles no segmentados cambian el widget de tendencia.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Audiencias] {#audiences}
 
-Este widget proporciona el número total de segmentos que están listos para activarse, según la política de combinación elegida aplicada a los datos del perfil.
+Este widget proporciona el número total de audiencias que están listas para activarse, según la política de combinación elegida aplicada a los datos del perfil.
 
 Seleccionar **[!UICONTROL Audiencias]** para ir al [!UICONTROL Segmentos] tablero [!UICONTROL Examinar] pestaña. Desde aquí puede ver una lista de todas las definiciones de segmentos de su organización.
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Informe de superposición de audiencia] {#audience-overlap-report}
 
-Este widget tabula los datos de superposición de audiencias de todos los segmentos disponibles filtrados por políticas de combinación. Se proporciona una lista de cinco audiencias clasificadas entre los porcentajes de superposición más altos y más bajos para la política de combinación elegida en el menú desplegable de la parte superior de la pantalla. Los dos segmentos analizados se enumeran en la variable [!UICONTROL NOMBRE DEL SEGMENTO A] y [!UICONTROL NOMBRE DEL SEGMENTO B] columnas. La superposición porcentual se indica en la tercera columna con una precisión de doce decimales.
+Este widget tabula la superposición de datos de todas las audiencias disponibles filtradas por la política de combinación. Se proporciona una lista de cinco audiencias clasificadas entre los porcentajes de superposición más altos y más bajos para la política de combinación elegida en el menú desplegable de la parte superior de la pantalla. Las dos audiencias analizadas se enumeran en la sección [!UICONTROL NOMBRE DE LA AUDIENCIA A] y [!UICONTROL NOMBRE DE LA AUDIENCIA B] columnas. La superposición porcentual se indica en la tercera columna con una precisión de doce decimales.
 
-El informe de superposición de audiencias le ayuda a crear nuevos segmentos de alto rendimiento. La observación de superposiciones de alto porcentaje le permite suprimir audiencias e impedir que se envíe la misma audiencia a diferentes destinos. También le ayudan a identificar perspectivas ocultas que pueden ayudarle con una mejor segmentación. La superposición de bajo porcentaje ayuda a localizar perfiles únicos que perseguir.
+El informe de superposición de audiencias le ayuda a crear audiencias nuevas y de alto rendimiento. La observación de superposiciones de alto porcentaje le permite suprimir audiencias e impedir que se envíe la misma audiencia a diferentes destinos. También le ayudan a identificar perspectivas ocultas que pueden ayudarle con una mejor segmentación. La superposición de bajo porcentaje ayuda a localizar perfiles únicos que perseguir.
 
 Seleccionar **[!UICONTROL Ver más]** para abrir un cuadro de diálogo de pantalla completa que contenga más datos de superposición de audiencias.
 
@@ -347,23 +347,23 @@ Los recuentos individuales de audiencias asignadas o no asignadas se muestran en
 
 ### [!UICONTROL Tamaño de audiencia] {#audiences-size}
 
-El [!UICONTROL Tamaño de audiencia] widget proporciona una tabla de dos columnas que enumera hasta 20 segmentos y el número total de audiencias que contiene cada segmento. La lista se ordena de alta a baja según el número total de audiencias. El número total de tamaño de audiencia depende de la política de combinación aplicada.
+El [!UICONTROL Tamaño de audiencia] El widget proporciona una tabla de dos columnas que enumera los nombres de hasta 20 audiencias y el número total de perfiles contenidos en cada audiencia. La lista se ordena de alta a baja según el número total de perfiles contenidos dentro de la audiencia. El recuento total de tamaño de audiencia depende de la política de combinación aplicada.
 
 ![El widget de tamaño de audiencias.](../images/profiles/audiences-size.png)
 
-Para ver información completa sobre un segmento, seleccione un nombre de segmento en la lista proporcionada para navegar hasta el [!UICONTROL Segmentos] [!UICONTROL Detalle] página. Además, seleccionando **[!UICONTROL Ver todos los segmentos]** desde el final del widget, puede navegar hasta el [!UICONTROL Segmentos] [!UICONTROL Examinar] para buscar cualquier segmento existente.
+Para ver información completa sobre una audiencia, seleccione un nombre de audiencia de la lista proporcionada para navegar hasta el [!UICONTROL Audiencias] [!UICONTROL Detalle] página. Además, seleccionando **[!UICONTROL Ver todas las audiencias]** desde el final del widget, puede navegar hasta el [!UICONTROL Audiencias] [!UICONTROL Examinar] para buscar cualquier audiencia existente.
 
-![El widget de tamaño Audiencias con un nombre de segmento y texto de ver todos los segmentos resaltados.](../images/profiles/audiences-size-view-all-segments.png)
+![El widget Tamaño de audiencia con un nombre y el texto Ver todas las audiencias resaltados.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulte la documentación para obtener más información sobre [[!UICONTROL Segmentos] [!UICONTROL  Examinar] pestaña](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulte la documentación para obtener más información sobre [[!UICONTROL Audiencias] [!UICONTROL  Examinar] pestaña](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Superposición de audiencias por política de combinación] {#audience-overlap-by-merge-policy}
 
-Este widget utiliza un diagrama de Venn para mostrar la superposición de dos segmentos seleccionados. La política de combinación se elige en el menú desplegable de información general en la parte superior de la página y los segmentos para el análisis se seleccionan de dos menús desplegables dentro del widget. El número total de perfiles contenidos dentro de la definición del segmento correspondiente se puede ver pasando el ratón por encima de un círculo o de la intersección.
+Este widget utiliza un diagrama de Venn para mostrar la superposición de dos audiencias seleccionadas. La política de combinación se elige en el menú desplegable de información general en la parte superior de la página y las audiencias para el análisis se seleccionan de dos menús desplegables dentro del widget. El número total de perfiles contenidos dentro de la definición del segmento correspondiente se puede ver pasando el ratón por encima de un círculo o de la intersección.
 
 A medida que el widget muestra el cruce visual de las definiciones de segmentos, puede optimizar su estrategia de segmentación estudiando las similitudes entre las definiciones de segmentos.
 
-![El panel Perfiles de la IU de Platform con la lista desplegable de la política de combinación y las listas desplegables de segmentos del widget resaltadas.](../images/profiles/audience-overlap-by-merge-policy.png)
+![El panel Perfiles de la interfaz de usuario de Platform con la lista desplegable de la política de combinación y los desplegables de audiencia del widget resaltados.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

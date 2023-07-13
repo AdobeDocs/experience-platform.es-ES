@@ -2,7 +2,7 @@
 title: Guía del panel de perfiles de cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Desde el [!UICONTROL Perfiles de cuenta] tablero puede hacer lo siguiente [exami
 
 ## Examinar perfiles de cuenta {#browse-account-profiles}
 
-El [!UICONTROL Examinar] permite buscar y ver los perfiles de cuenta de solo lectura introducidos en su organización mediante un ID de cuenta de una fuente empresarial conectada o introduciendo directamente los detalles de la fuente. Desde aquí puede ver información importante que pertenece al perfil de cuenta, como, por ejemplo, su nombre, sector, ingresos y segmento, entre otros.
+El [!UICONTROL Examinar] permite buscar y ver los perfiles de cuenta de solo lectura introducidos en su organización mediante un ID de cuenta de una fuente empresarial conectada o introduciendo directamente los detalles de la fuente. Desde aquí puede ver información importante que pertenece al perfil de la cuenta, como su nombre, sector, ingresos y audiencia, entre otros.
 
 Seleccione el [!UICONTROL ID de perfil] de los resultados mostrados en la [!UICONTROL Examinar] para abrir el [!UICONTROL Detalles] para el perfil de cuenta.
 

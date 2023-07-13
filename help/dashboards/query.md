@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Explorar, comprobar y procesar conjuntos de datos del panel mediante el servicio de consultas
 type: Documentation
-description: Aprenda a utilizar el servicio de consultas para explorar y procesar conjuntos de datos sin procesar y activar paneles de perfil, segmento y destino en Experience Platform.
+description: Aprenda a utilizar el servicio de consultas para explorar y procesar conjuntos de datos sin procesar y activar paneles de perfil, audiencia y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 # Explorar, comprobar y procesar conjuntos de datos de tableros mediante [!DNL Query Service]
 
-Adobe Experience Platform proporciona información importante sobre los datos de perfil, segmento y destinos de su organización a través de los paneles disponibles en la interfaz de usuario de Experience Platform. A continuación, puede utilizar Adobe Experience Platform [!DNL Query Service] para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan estos paneles en el lago de datos.
+Adobe Experience Platform proporciona información importante sobre los datos de perfil, audiencia y destinos de su organización a través de los paneles disponibles en la interfaz de usuario de Experience Platform. A continuación, puede utilizar Adobe Experience Platform [!DNL Query Service] para explorar, verificar y procesar los conjuntos de datos sin procesar que alimentan estos paneles en el lago de datos.
 
 ## Introducción a [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Para obtener más información acerca de [!DNL Query Service] y su función dent
 
 ## Acceso a conjuntos de datos disponibles
 
-Puede utilizar [!DNL Query Service] para consultar conjuntos de datos sin procesar sobre paneles de perfiles, segmentos y destinos. Para ver los conjuntos de datos disponibles, en la interfaz de usuario del Experience Platform, seleccione **Conjuntos de datos** en el panel de navegación izquierdo para abrir el panel Conjuntos de datos. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere y el estado de la ejecución de la ingesta más reciente.
+Puede utilizar [!DNL Query Service] para consultar conjuntos de datos sin procesar paneles de perfil, audiencia y destinos. Para ver los conjuntos de datos disponibles, en la interfaz de usuario del Experience Platform, seleccione **Conjuntos de datos** en el panel de navegación izquierdo para abrir el panel Conjuntos de datos. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere y el estado de la ejecución de la ingesta más reciente.
 
 ![El panel Examinar conjunto de datos con la pestaña Conjuntos de datos resaltada en el panel de navegación izquierdo.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ El `adwh_dim_merge_policies` dataset contiene los campos siguientes:
 
 Este conjunto de datos se puede explorar mediante la interfaz de usuario del Editor de consultas en Experience Platform. Para obtener más información sobre el uso del Editor de consultas, consulte la [Guía de IU del Editor de consultas](../query-service/ui/user-guide.md).
 
-### Conjunto de datos de metadatos de segmento
+### Conjunto de datos de metadatos de audiencia
 
-Hay un conjunto de datos de metadatos de segmento disponible en el lago de datos que contiene metadatos para cada uno de los segmentos de su organización.
+Hay un conjunto de datos de metadatos de audiencia disponible en el lago de datos que contiene metadatos para cada una de las audiencias de la organización.
 
 La convención de nombres de este conjunto de datos es **Segmentdefinition-Snapshot-Export** seguido de un valor alfanumérico. Por ejemplo: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Para comprender el esquema completo de cada conjunto de datos de exportación de instantáneas de definición de segmento, puede obtener una vista previa y explorar los conjuntos de datos [uso del visor de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario de Experience Platform.
-
-![Vista previa del conjunto de datos Segmentdefinition-Snapshot-Export.](images/query/segment-metadata.png)
 
 ### Conjunto de datos de metadatos de destino
 
@@ -92,7 +90,7 @@ Para comprender el esquema completo del conjunto de datos de destino DIM, puede 
 
 La función de modelos de datos de perspectivas de CDP expone el SQL que alimenta las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de KPI y marketing.
 
-Los informes de CDP proporcionan perspectivas sobre los datos de perfil y su relación con segmentos y destinos. Consulte la documentación del modelo de datos de perspectivas de CDP para obtener información detallada sobre cómo [aplique los modelos de datos de perspectivas de CDP a sus casos de uso de KPI particulares](./cdp-insights-data-model.md).
+Los informes de CDP proporcionan perspectivas sobre los datos de perfil y su relación con las audiencias y los destinos. Consulte la documentación del modelo de datos de perspectivas de CDP para obtener información detallada sobre cómo [aplique los modelos de datos de perspectivas de CDP a sus casos de uso de KPI particulares](./cdp-insights-data-model.md).
 
 ## Consultas de ejemplo
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Recuento de perfiles por segmento
+### Recuento de perfiles por audiencia
 
-Esta perspectiva de audiencia proporciona el número total de perfiles combinados dentro de cada segmento del conjunto de datos. Este número es el resultado de aplicar la política de combinación de segmentos a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en el segmento.
+Esta perspectiva de audiencia proporciona el número total de perfiles combinados dentro de cada audiencia en el conjunto de datos. Este número es el resultado de aplicar la política de combinación de audiencias a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en la audiencia.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Pasos siguientes
 
-Al leer esta guía, ahora puede utilizar [!DNL Query Service] para realizar varias consultas para explorar y procesar los conjuntos de datos sin procesar que alimentan los paneles de perfil, segmento y destinos.
+Al leer esta guía, ahora puede utilizar [!DNL Query Service] para realizar varias consultas para explorar y procesar los conjuntos de datos sin procesar y alimentar los paneles de perfil, audiencia y destinos.
 
 Para obtener más información acerca de cada panel y sus métricas, seleccione un panel de la lista de paneles disponibles en la navegación de la documentación.

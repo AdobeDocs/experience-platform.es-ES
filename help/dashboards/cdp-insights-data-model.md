@@ -2,10 +2,10 @@
 title: Modelo de datos de Real-time Customer Data Platform Insights
 description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights para personalizar sus propios informes de Real-Time CDP para los casos de uso de marketing y KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Esta guía requiere una comprensión práctica de la [función de paneles defini
 
 ## Informes de perspectivas y casos de uso de Real-Time CDP
 
-Los informes de Real-Time CDP proporcionan perspectivas sobre los datos de perfil y su relación con los segmentos y destinos. Se desarrollaron varios modelos de esquema de estrella para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
+Los informes de Real-Time CDP proporcionan perspectivas sobre los datos de perfil y su relación con las audiencias y los destinos. Se desarrollaron varios modelos de esquema de estrella para responder a una variedad de casos de uso de marketing comunes y cada modelo de datos puede admitir varios casos de uso.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Modelo de segmento {#segment-model}
+### Modelo de audiencia {#audience-model}
 
-El modelo de segmentos consta de los siguientes conjuntos de datos:
+El modelo de audiencia consta de los siguientes conjuntos de datos:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ El modelo de segmentos consta de los siguientes conjuntos de datos:
 
 La siguiente imagen contiene los campos de datos relevantes en cada conjunto de datos.
 
-![Un ERD del modelo de segmento.](./images/cdp-insights/segment-model.png)
+![Un ERD del modelo de audiencia.](./images/cdp-insights/audience-model.png)
 
 #### Caso de uso de tamaño de audiencia
 
-La lógica utilizada para la variable [!UICONTROL Tamaño de audiencia] widget devuelve el número total de perfiles combinados dentro del segmento seleccionado en el momento de la instantánea más reciente. Consulte la [[!UICONTROL Tamaño de audiencia] documentación del widget](./guides/segments.md#audience-size) para obtener más información.
+La lógica utilizada para la variable [!UICONTROL Tamaño de audiencia] widget devuelve el número total de perfiles combinados dentro de la audiencia seleccionada en el momento de la instantánea más reciente. Consulte la [[!UICONTROL Tamaño de audiencia] documentación del widget](./guides/audiences.md#audience-size) para obtener más información.
 
 El SQL que genera el [!UICONTROL Tamaño de audiencia] El widget se ve en la sección contraíble a continuación.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Caso de uso de tendencia de cambio de tamaño de audiencia
 
-La lógica utilizada para la variable [!UICONTROL Tendencia de cambio de tamaño de audiencia] El widget proporciona una ilustración de un gráfico de líneas de la diferencia en el número total de perfiles aptos para un segmento determinado entre las instantáneas diarias más recientes. Consulte la [[!UICONTROL Tendencia de cambio de tamaño de audiencia] documentación del widget](./guides/segments.md#audience-size-change-trend) para obtener más información.
+La lógica utilizada para la variable [!UICONTROL Tendencia de cambio de tamaño de audiencia] El widget proporciona una ilustración de un gráfico de líneas de la diferencia en el número total de perfiles aptos para una audiencia determinada entre las instantáneas diarias más recientes. Consulte la [[!UICONTROL Tendencia de cambio de tamaño de audiencia] documentación del widget](./guides/audiences.md#audience-size-change-trend) para obtener más información.
 
 El SQL que genera el [!UICONTROL Tendencia de cambio de tamaño de audiencia] El widget se ve en la sección contraíble a continuación.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Caso de uso de destinos más utilizados
 
-La lógica utilizada en la variable [!UICONTROL Destinos más utilizados] widget enumera los destinos más utilizados de su organización según el número de segmentos asignados a ellos. Esta clasificación proporciona una perspectiva de los destinos que se están utilizando, pero también muestra potencialmente aquellos que pueden estar infrautilizados. Consulte la documentación de la [[!UICONTROL Destinos más utilizados] widget](./guides/destinations.md#most-used-destinations) para obtener más información.
+La lógica utilizada en la variable [!UICONTROL Destinos más utilizados] widget enumera los destinos más utilizados de su organización según el número de audiencias asignadas a ellos. Esta clasificación proporciona una perspectiva de los destinos que se están utilizando, pero también muestra potencialmente aquellos que pueden estar infrautilizados. Consulte la documentación de la [[!UICONTROL Destinos más utilizados] widget](./guides/destinations.md#most-used-destinations) para obtener más información.
 
 El SQL que genera el [!UICONTROL Destinos más utilizados] El widget se ve en la sección contraíble a continuación.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### Caso de uso de segmentos activados recientemente
+#### Caso de uso de audiencias activadas recientemente
 
-La lógica del [!UICONTROL Segmentos activados recientemente] widget proporciona una lista de los segmentos asignados más recientemente a un destino. Esta lista proporciona una instantánea de los segmentos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea. Consulte la [[!UICONTROL Segmentos activados recientemente] documentación del widget](./guides/destinations.md#recently-activated-segments) para obtener más información.
+La lógica del [!UICONTROL Audiencias activadas recientemente] widget proporciona una lista de las audiencias asignadas más recientemente a un destino. Esta lista proporciona una instantánea de las audiencias y los destinos que se utilizan de forma activa en el sistema y puede ayudar a solucionar cualquier asignación errónea. Consulte la [[!UICONTROL Audiencias activadas recientemente] documentación del widget](./guides/destinations.md#recently-activated-audiences) para obtener más información.
 
-El SQL que genera el [!UICONTROL Segmentos activados recientemente] El widget se ve en la sección contraíble a continuación.
+El SQL que genera el [!UICONTROL Audiencias activadas recientemente] El widget se ve en la sección contraíble a continuación.
 
 +++Consulta SQL
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Modelo de área de nombres-segmento
+### Modelo Área de nombres-audiencia
 
-El modelo de espacio de nombres-segmento consta de los siguientes conjuntos de datos:
+El modelo de espacio de nombres-audiencia consta de los siguientes conjuntos de datos:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ El modelo de espacio de nombres-segmento consta de los siguientes conjuntos de d
 
 La siguiente imagen contiene los campos de datos relevantes en cada conjunto de datos.
 
-![Un ERD del modelo de área de nombres-segmento.](./images/cdp-insights/namespace-segment-model.png)
+![Un ERD del modelo de área de nombres-audiencia.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Perfiles por identidad para un caso de uso de segmento
+#### Perfiles por identidad para un caso de uso de audiencia
 
-La lógica utilizada en la variable [!UICONTROL Perfiles por identidad] El widget proporciona un desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles para un segmento determinado. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](./guides/segments.md#profiles-by-identity) para obtener más información.
+La lógica utilizada en la variable [!UICONTROL Perfiles por identidad] El widget proporciona un desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles para una audiencia determinada. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](./guides/audiences.md#profiles-by-identity) para obtener más información.
 
 El SQL que genera el [!UICONTROL Perfiles por identidad] El widget se ve en la sección contraíble a continuación.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Superponer área de nombres por modelo de segmento
+### Superponer área de nombres por modelo de audiencia
 
-El área de nombres de superposición por modelo de segmento consta de los siguientes conjuntos de datos:
+El área de nombres de superposición por modelo de audiencia consta de los siguientes conjuntos de datos:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ El área de nombres de superposición por modelo de segmento consta de los sigui
 
 La siguiente imagen contiene los campos de datos relevantes en cada conjunto de datos.
 
-![Un ERD del área de nombres de superposición por modelo de segmento.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Un ERD del área de nombres de superposición por modelo de audiencia.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Caso de uso de superposición de identidad (segmentos)
+#### Caso de uso de superposición de identidad (audiencias)
 
-La lógica utilizada en la variable [!UICONTROL Segmentos] tablero [!UICONTROL Superposición de identidad] widget ilustra la superposición de perfiles que contienen las dos identidades seleccionadas para un segmento en particular. Para obtener más información, consulte la [[!UICONTROL Superposición de identidad] sección de widget de [!UICONTROL Segmentación] documentación del panel](./guides/segments.md#identity-overlap).
+La lógica utilizada en la variable [!UICONTROL Audiencias] tablero [!UICONTROL Superposición de identidad] widget ilustra la superposición de perfiles que contienen las dos identidades seleccionadas para una audiencia particular. Para obtener más información, consulte la [[!UICONTROL Superposición de identidad] sección de widget de [!UICONTROL Audiencias] documentación del panel](./guides/audiences.md#identity-overlap).
 
 El SQL que genera el [!UICONTROL Superposición de identidad] El widget se ve en la sección contraíble a continuación.
 

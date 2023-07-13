@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, abril de 2022
 description: Notas de la versión de abril de 2022 de Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -57,7 +57,7 @@ Los siguientes widgets están disponibles a través de la biblioteca Widget en s
 
 {style="table-layout:auto"}
 
-Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), y [[!DNL Segments]](../../dashboards/guides/segments.md) paneles.
+Consulte la documentación para obtener más información sobre [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), y [[!DNL Segments]](../../dashboards/guides/audiences.md) paneles.
 
 ## Flujos de datos {#dataflows}
 
@@ -88,7 +88,7 @@ Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data P
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Funciones nuevas o actualizadas**
 
@@ -173,7 +173,7 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Los servicios de IA/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones concretas de las necesidades de una compañía mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos.
+Los servicios de IA/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones específicas de las necesidades de una empresa mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos.
 
 ### Inteligencia artificial aplicada a la atribución
 
@@ -216,7 +216,7 @@ Para obtener más información sobre Real-time Customer Data Platform B2B Editio
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Funciones actualizadas**
 

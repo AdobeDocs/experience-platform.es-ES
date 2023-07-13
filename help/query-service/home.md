@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general del servicio de consultas
 description: Este documento proporciona información general sobre la función que desempeña el servicio de consultas dentro del Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] utiliza aprendizaje auto
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] permite a los usuarios dividir sus clientes en grupos más pequeños que comparten características similares. Estos segmentos se pueden evaluar posteriormente para proporcionar un mejor análisis de su [!DNL Real-Time Customer Profile] datos. [!DNL Query Service] se puede usar para proporcionar este análisis ejecutando consultas en estos datos de segmento dentro del [!DNL Data Lake]. Lea el [!DNL Segmentation Service] información general para obtener más información sobre la segmentación y la [!DNL Profile Query Language] Guía de (PQL) para obtener más información sobre cómo analizar segmentos.
+Adobe Experience Platform [!DNL Segmentation Service] permite a los usuarios dividir sus clientes en grupos más pequeños que comparten características similares. Estas audiencias pueden evaluarse posteriormente para proporcionar un mejor análisis de su [!DNL Real-Time Customer Profile] datos. [!DNL Query Service] se puede usar para proporcionar este análisis ejecutando consultas sobre estos datos de audiencia en el [!DNL Data Lake]. Lea el [!DNL Segmentation Service] información general para obtener más información sobre la segmentación y la [!DNL Profile Query Language] Guía de (PQL) para obtener más información sobre cómo analizar audiencias.
 
 ## Casos de uso
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] permite a los usuarios div
 
 ### Abandono de exploración de Adobe Analytics
 
-Esta [el ejemplo de abandono de la exploración se centra en el uso del Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) datos para crear una audiencia procesable concreta. [!DNL Query Service] admite una lógica compleja para la segmentación a fin de calcular varios atributos personalizados para su uso descendente o para simplificar en gran medida la forma de crear los segmentos.
+Esta [el ejemplo de abandono de la exploración se centra en el uso del Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) datos para crear una audiencia procesable concreta. [!DNL Query Service] admite una lógica compleja para la segmentación a fin de calcular varios atributos personalizados para su uso descendente o para simplificar en gran medida la forma de crear audiencias.
 
 ### Paneles de Looker BI
 
