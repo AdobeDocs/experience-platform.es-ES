@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
+source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 7%
+source-wordcount: '2548'
+ht-degree: 4%
 
 ---
 
@@ -43,24 +43,90 @@ En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Conjuntos de datos
 
 ![Imagen que resalta el elemento Conjuntos de datos en la barra de navegación izquierda.](../images/datasets/user-guide/browse-datasets.png)
 
-De forma predeterminada, solo se muestran los conjuntos de datos que ha introducido. Si desea ver los conjuntos de datos generados por el sistema, habilite la variable **[!UICONTROL Mostrar conjuntos de datos del sistema]** alternar. Los conjuntos de datos generados por el sistema solo se utilizan para procesar otros componentes. Por ejemplo, el conjunto de datos de exportación de perfiles generado por el sistema se utiliza para procesar el panel de perfiles.
-
-![Se resalta el conmutador que le permite elegir si se deben mostrar o no conjuntos de datos del sistema.](../images/datasets/user-guide/system-datasets.png)
-
-Seleccione el nombre de un conjunto de datos para acceder a su **[!UICONTROL Actividad de conjunto de datos]** y ver los detalles del conjunto de datos seleccionado. La pestaña actividad incluye un gráfico que visualiza la tasa de consumo de los mensajes, así como una lista de lotes correctos y fallidos.
+Seleccione el nombre de un conjunto de datos en la [!UICONTROL Examinar] para acceder a su **[!UICONTROL Actividad de conjunto de datos]** y ver los detalles del conjunto de datos seleccionado. La pestaña actividad incluye un gráfico que visualiza la tasa de consumo de los mensajes, así como una lista de lotes correctos y fallidos.
 
 ![Se resaltan los detalles del conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Se resaltan los lotes de muestra que pertenecen al conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## Previsualización de un conjunto de datos
+## Acciones de conjuntos de datos en línea {#inline-actions}
 
-Desde el **[!UICONTROL Actividad de conjunto de datos]** pantalla, seleccione **[!UICONTROL Previsualizar conjunto de datos]** cerca de la esquina superior derecha de la pantalla para obtener una vista previa de hasta 100 filas de datos. Si el conjunto de datos está vacío, el vínculo de vista previa se desactivará y, en su lugar, indicará que la vista previa no está disponible.
+La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para cada conjunto de datos disponible. Seleccione los puntos suspensivos de un conjunto de datos que desee administrar para ver las opciones disponibles en un menú emergente. Las acciones disponibles incluyen: [[!UICONTROL Previsualizar conjunto de datos]](#preview), [[!UICONTROL Administración de datos y etiquetas de acceso]](#manage-and-enforce-data-governance), [[!UICONTROL Habilitar perfil unificado]](#enable-profile), [[!UICONTROL Administración de etiquetas]](#add-tags), y [[!UICONTROL Eliminar]](#delete). Puede encontrar más información sobre estas acciones disponibles en sus secciones respectivas.
+
+### Añadir etiquetas de conjuntos de datos {#add-tags}
+
+Añada etiquetas personalizadas creadas para organizar conjuntos de datos y mejorar las capacidades de búsqueda, filtrado y ordenación. Desde el [!UICONTROL Examinar] de la pestaña [!UICONTROL Conjuntos de datos] espacio de trabajo, seleccione los puntos suspensivos de un conjunto de datos que desee administrar seguido de **[!UICONTROL Administración de etiquetas]** en el menú desplegable.
+
+![La pestaña Examinar del espacio de trabajo Conjuntos de datos con la opción de puntos suspensivos y Administrar etiquetas resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/manage-tags.png)
+
+El [!UICONTROL Administración de etiquetas] aparece el cuadro de diálogo. Escriba una breve descripción para crear una etiqueta personalizada o elija una etiqueta preexistente para etiquetar el conjunto de datos. Seleccionar **[!UICONTROL Guardar]** para confirmar la configuración.
+
+![Cuadro de diálogo Administrar etiquetas con etiquetas personalizadas resaltadas.](../images/datasets/user-guide/manage-tags-dialog.png)
+
+El [!UICONTROL Administración de etiquetas] El cuadro de diálogo también puede eliminar las etiquetas existentes de un conjunto de datos. Simplemente, seleccione la &quot;x&quot; junto a la etiqueta que desee eliminar y seleccione **[!UICONTROL Guardar]**.
+
+Una vez que se ha añadido una etiqueta a un conjunto de datos, los conjuntos de datos se pueden filtrar según la etiqueta correspondiente. Consulte la sección sobre cómo [filtrar conjuntos de datos por etiquetas](#enable-profile) para obtener más información.
+
+Para obtener más información sobre cómo clasificar objetos empresariales para facilitar su detección y categorización, consulte la guía sobre [administración de taxonomías de metadatos](../../administrative-tags/ui/managing-tags.md). Esta guía detalla cómo un usuario con los permisos adecuados puede crear etiquetas predefinidas, asignar categorías a las etiquetas y realizar todas las operaciones de CRUD relacionadas en etiquetas y categorías de etiquetas en la IU de Platform.
+
+## Buscar y filtrar conjuntos de datos {#search-and-filter}
+
+Para buscar o filtrar la lista de conjuntos de datos disponibles, seleccione el icono de filtro (![El icono de filtro.](../images/datasets/user-guide/icon.png)), en la parte superior izquierda del espacio de trabajo. Aparecerá un conjunto de opciones de filtro en el carril izquierdo. Existen varios métodos para filtrar los conjuntos de datos disponibles. Estos incluyen: [[!UICONTROL Mostrar conjuntos de datos del sistema]](#show-system-datasets), [[!UICONTROL Incluido en el perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Etiquetas]](#filter-by-tag), [[!UICONTROL Fecha de creación]](#filter-by-creation-date), [[!UICONTROL Fecha de modificación], [!UICONTROL Creado por]](#filter-by-creation-date), y [[!UICONTROL Esquema]](#filter-by-schema).
+
+La lista de filtros aplicados se muestra encima de los resultados filtrados.
+
+![La pestaña Examinar del espacio de trabajo Conjuntos de datos con la lista de filtros aplicados resaltada.](../images/datasets/user-guide/applied-filters.png)
+
+### Mostrar conjuntos de datos del sistema {#show-system-datasets}
+
+De forma predeterminada, solo se muestran los conjuntos de datos en los que ha introducido datos. Si desea ver los conjuntos de datos generados por el sistema, seleccione la **[!UICONTROL Sí]** casilla de verificación en la [!UICONTROL Mostrar conjuntos de datos del sistema] sección. Los conjuntos de datos generados por el sistema solo se utilizan para procesar otros componentes. Por ejemplo, el conjunto de datos de exportación de perfiles generado por el sistema se utiliza para procesar el panel de perfiles.
+
+![Las opciones de filtro del espacio de trabajo Conjuntos de datos con [!UICONTROL Mostrar conjuntos de datos del sistema] sección resaltada.](../images/datasets/user-guide/show-system-datasets.png)
+
+### Filtrar conjuntos de datos habilitados para perfil {#filter-profile-enabled-datasets}
+
+Los conjuntos de datos que se han habilitado para los datos de perfil se utilizan para rellenar perfiles de clientes después de introducir los datos. Consulte la sección sobre [habilitar conjuntos de datos para el perfil](#enable-profile) para obtener más información.
+
+Para filtrar el conjunto de datos en función de si se han habilitado para el perfil, seleccione la variable [!UICONTROL Sí] de las opciones de filtro.
+
+![Las opciones de filtro del espacio de trabajo Conjuntos de datos con [!UICONTROL Incluido en el perfil] sección resaltada.](../images/datasets/user-guide/included-in-profile.png)
+
+### Filtrar conjuntos de datos por etiqueta {#filter-by-tag}
+
+Introduzca el nombre de la etiqueta personalizada en [!UICONTROL Etiquetas] introduzca y, a continuación, seleccione la etiqueta de la lista de opciones disponibles para buscar y filtrar conjuntos de datos que correspondan a esa etiqueta.
+
+![Las opciones de filtro del espacio de trabajo Conjuntos de datos con [!UICONTROL Etiquetas] icono de entrada y filtro resaltado.](../images/datasets/user-guide/filter-tags.png)
+
+### Filtrar conjuntos de datos por fecha de creación {#filter-by-creation-date}
+
+Los conjuntos de datos se pueden filtrar por fecha de creación durante un período de tiempo personalizado. Esto se puede utilizar para excluir datos históricos o para generar perspectivas e informes de datos cronológicos específicos. Elija una [!UICONTROL Fecha de inicio] y un [!UICONTROL Fecha de finalización] seleccionando el icono de calendario de cada campo. Después de lo cual, solo los conjuntos de datos que se ajusten a ese criterio aparecerán en la pestaña Examinar.
+
+### Filtrar conjuntos de datos por fecha de modificación {#filter-by-modified-date}
+
+De forma similar al filtro para la fecha de creación, puede filtrar los conjuntos de datos en función de la fecha en la que se modificaron por última vez. En el [!UICONTROL Fecha de modificación] , Elegir una [!UICONTROL Fecha de inicio] y un [!UICONTROL Fecha de finalización] seleccionando el icono de calendario de cada campo. Después de lo cual, solo los conjuntos de datos modificados durante ese período aparecerán en la pestaña Examinar.
+
+### Filtrar por esquema {#filter-by-schema}
+
+Puede filtrar conjuntos de datos en función del esquema que define su estructura. Seleccione el icono desplegable o introduzca el nombre del esquema en el campo de texto. Aparecerá una lista de posibles coincidencias. Seleccione el esquema adecuado de la lista.
+
+## Ordenar conjuntos de datos por fecha de creación {#sort}
+
+Conjuntos de datos en [!UICONTROL Examinar] La pestaña se puede ordenar por fechas en orden ascendente o descendente. Seleccione el [!UICONTROL Creado] o [!UICONTROL Última actualización] encabezados de columna para alternar entre ascendente y descendente. Una vez seleccionada, la columna lo indica con una flecha hacia arriba o hacia abajo a un lado del encabezado de la columna.
+
+![La pestaña Examinar del área de trabajo Conjuntos de datos con la columna Creado y Última actualización resaltada.](../images/datasets/user-guide/ascending-descending-columns.png)
+
+## Previsualización de un conjunto de datos {#preview}
+
+Puede obtener una vista previa de los datos de ejemplo del conjunto de datos desde las opciones en línea del [!UICONTROL Examinar] y también la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea previsualizar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** de la lista de opciones disponibles. Si el conjunto de datos está vacío, el vínculo de vista previa se desactivará y, en su lugar, indicará que la vista previa no está disponible.
+
+![La pestaña Examinar del espacio de trabajo de conjuntos de datos con la opción de puntos suspensivos y Vista previa del conjunto de datos resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/preview-dataset-option.png)
+
+Esto abre la ventana de vista previa, donde la vista jerárquica del esquema para el conjunto de datos se muestra a la derecha.
+
+![Se muestra el cuadro de diálogo de vista previa del conjunto de datos con información sobre la estructura y los valores de muestra del conjunto de datos.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternativamente, desde el **[!UICONTROL Actividad de conjunto de datos]** pantalla, seleccione **[!UICONTROL Previsualizar conjunto de datos]** cerca de la esquina superior derecha de la pantalla para obtener una vista previa de hasta 100 filas de datos.
 
 ![Se resaltará el botón Vista previa del conjunto de datos.](../images/datasets/user-guide/select-preview.png)
-
-En la ventana de vista previa, la vista jerárquica del esquema para el conjunto de datos se muestra a la derecha.
-
-![Se muestra una vista previa del conjunto de datos. Se muestra información sobre la estructura y los valores de muestra.](../images/datasets/user-guide/preview-dataset.png)
 
 Para obtener métodos más sólidos para acceder a los datos, [!DNL Experience Platform] proporciona servicios descendentes como [!DNL Query Service] y [!DNL JupyterLab] para explorar y analizar datos. Consulte los siguientes documentos para obtener más información:
 
@@ -92,6 +158,8 @@ El **[!UICONTROL Configurar conjunto de datos]** aparece el paso. Proporcione al
 
 ![Se insertan los detalles de configuración del conjunto de datos. Esto incluye detalles como el nombre y la descripción del conjunto de datos.](../images/datasets/user-guide/configure-dataset-schema.png)
 
+Los conjuntos de datos se pueden filtrar desde la lista de conjuntos de datos disponibles en la interfaz de usuario con el filtro de esquema. Consulte la sección sobre cómo [filtrar conjuntos de datos por esquema](#filter-by-schema) para obtener más información.
+
 ### Creación de un conjunto de datos con un archivo CSV {#csv}
 
 Cuando se crea un conjunto de datos con un archivo CSV, se crea un esquema ad hoc para proporcionar al conjunto de datos una estructura que coincida con el archivo CSV proporcionado. En el **[!UICONTROL Crear conjunto de datos]** pantalla, seleccione **[!UICONTROL Crear conjunto de datos a partir de archivo CSV]**.
@@ -119,7 +187,11 @@ Cada conjunto de datos tiene la capacidad de enriquecer los perfiles de los clie
 
 Para obtener más información sobre la activación de un esquema para [!DNL Profile], consulte la [Guía del usuario del Editor de esquemas](../../xdm/tutorials/create-schema-ui.md).
 
-Para habilitar un conjunto de datos para el perfil, acceda a su **[!UICONTROL Actividad de conjunto de datos]** y seleccione la **[!UICONTROL Perfil]** alternar dentro de **[!UICONTROL Propiedades]** columna. Una vez habilitados, los datos que se incorporen al conjunto de datos también se utilizarán para rellenar perfiles de clientes.
+Puede habilitar un conjunto de datos para el perfil desde las opciones en línea del [!UICONTROL Examinar] y también la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] de la pestaña [!UICONTROL Conjuntos de datos] , seleccione los puntos suspensivos de un conjunto de datos que desee habilitar para el perfil. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Habilitar perfil unificado]** de la lista de opciones disponibles.
+
+![La pestaña Examinar del espacio de trabajo Conjuntos de datos con los puntos suspensivos y Habilitar perfil unificado resaltados.](../images/datasets/user-guide/enable-for-profile.png)
+
+Alternativamente, desde el **[!UICONTROL Actividad de conjunto de datos]** , seleccione la **[!UICONTROL Perfil]** alternar dentro de **[!UICONTROL Propiedades]** columna. Una vez habilitados, los datos que se incorporen al conjunto de datos también se utilizarán para rellenar perfiles de clientes.
 
 >[!NOTE]
 >
@@ -127,13 +199,23 @@ Para habilitar un conjunto de datos para el perfil, acceda a su **[!UICONTROL Ac
 
 ![La opción Perfil se resalta en la página de detalles del conjunto de datos.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
+Los conjuntos de datos que se han habilitado para el perfil también se pueden filtrar según este criterio. Consulte la sección sobre cómo [filtrar conjuntos de datos habilitados para perfil](#filter-profile-enabled-datasets) para obtener más información.
+
 ## Administración y aplicación del control de datos en un conjunto de datos {#manage-and-enforce-data-governance}
+
+Puede administrar las etiquetas de control de datos de un conjunto de datos seleccionando las opciones en línea del [!UICONTROL Examinar] pestaña. Seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea administrar, seguidos de **[!UICONTROL Administración de datos y etiquetas de acceso]** en el menú desplegable.
 
 Las etiquetas de uso de datos, aplicadas en el nivel de esquema, le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario sobre etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a esquemas para su propagación a conjuntos de datos.
 
 ## Eliminar un conjunto de datos {#delete}
 
-Puede eliminar un conjunto de datos accediendo primero a su **[!UICONTROL Actividad de conjunto de datos]** pantalla. A continuación, seleccione **[!UICONTROL Eliminar conjunto de datos]** para eliminarlo.
+Puede eliminar un conjunto de datos de las acciones en línea del conjunto de datos en [!UICONTROL Examinar] o en la parte superior derecha de la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea eliminar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Eliminar]** en el menú desplegable.
+
+![La pestaña Examinar del espacio de trabajo Conjuntos de datos con los puntos suspensivos y la opción Eliminar resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+Aparecerá un cuadro de diálogo de confirmación. Seleccionar **[!UICONTROL Eliminar]** para confirmar.
+
+Como alternativa, seleccione **[!UICONTROL Eliminar conjunto de datos]** desde el **[!UICONTROL Actividad de conjunto de datos]** pantalla.
 
 >[!NOTE]
 >
@@ -161,7 +243,7 @@ Puede seleccionar un individuo **[!UICONTROL ID de lote]** para acceder a **[!UI
 
 ![Se muestran los detalles del lote seleccionado. Esto incluye el número de registros introducidos, el número de registros fallidos, el estado del lote, el tamaño del archivo, las horas de inicio y finalización de la ingesta, los ID de conjunto de datos y lote, el ID de organización, el nombre del conjunto de datos y la información de acceso.](../images/datasets/user-guide/batch-overview.png)
 
-Si desea eliminar el lote, puede hacerlo seleccionando **[!UICONTROL Eliminar lote]** se encuentra cerca de la parte superior derecha del panel. Al hacerlo, también se eliminarán sus registros del conjunto de datos en el que se ingirió originalmente el lote.
+Si desea eliminar el lote, seleccione **[!UICONTROL Eliminar lote]** cerca de la parte superior derecha del panel. Al eliminar un lote también se eliminan sus registros del conjunto de datos en el que se ingirió originalmente el lote.
 
 ![El botón Eliminar lote se resalta en la página de detalles del conjunto de datos.](../images/datasets/user-guide/delete-batch.png)
 
