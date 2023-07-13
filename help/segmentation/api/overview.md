@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;API;api;
 title: Guía de API del servicio de segmentación
 description: La API del servicio de segmentación permite a los desarrolladores administrar mediante programación las operaciones de segmentación en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 3%
+source-wordcount: '560'
+ht-degree: 2%
 
 ---
 
 # Guía de API del servicio de segmentación
 
-[!DNL Adobe Experience Platform Segmentation Service] le permite generar segmentos y audiencias en [!DNL Adobe Experience Platform] de su [!DNL Real-Time Customer Profile] datos.
+Adobe Experience Platform [!DNL Segmentation Service] le permite crear audiencias a través de definiciones de segmentos u otras fuentes en Adobe Experience Platform desde su [!DNL Real-Time Customer Profile] datos.
 
 El [!DNL Segmentation Service] La API de proporciona varios extremos que le permiten administrar mediante programación las operaciones de segmentación en [!DNL Experience Platform]. Este documento de información general proporciona introducciones de alto nivel a cada uno de estos extremos y vínculos a sus guías de extremos asociadas para obtener más detalles. Antes de leer las guías de extremos individuales, consulte la [guía de introducción](./getting-started.md) para obtener información importante sobre los encabezados necesarios, la lectura de llamadas de API de ejemplo y mucho más.
 
 Para ver todos los extremos disponibles y las operaciones de CRUD, consulte la [Referencia de API del servicio de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## Audiencias
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Las audiencias son una colección de personas que comparten comportamientos o características similares. Se pueden generar mediante Platform o desde fuentes externas. Puede usar el complemento `/audiences` extremo para recuperar todas las audiencias, crear una audiencia nueva, recuperar detalles de una audiencia específica, actualizar una audiencia específica o eliminar una audiencia específica.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+Para obtener más información sobre el uso de este extremo, lea la [guía de extremo de audiencias](./audiences.md).
 
 ## Exportar trabajos
 
@@ -46,13 +45,13 @@ Para obtener más información sobre el uso de este extremo, lea la [guía de ex
 
 ## Definiciones de segmentos
 
-Las definiciones de segmentos definen qué perfiles formarán parte de qué segmentos de audiencia. Puede usar el complemento `/segment/definitions` extremo para administrar definiciones de segmentos.
+Las definiciones de segmentos definen qué perfiles formarán parte de qué audiencia. Puede usar el complemento `/segment/definitions` extremo para administrar definiciones de segmentos.
 
 Para obtener más información sobre el uso de este extremo, lea la [guía de extremo de definiciones de segmento](./segment-definitions.md).
 
 ## Trabajos de segmento
 
-Los trabajos de segmentos procesan las definiciones de segmentos establecidas anteriormente para generar un segmento de audiencia. Puede usar el complemento `/segment/jobs` extremo para administrar trabajos de segmentos.
+Los trabajos de segmentos procesan las definiciones de segmentos establecidas anteriormente para generar una audiencia. Puede usar el complemento `/segment/jobs` extremo para administrar trabajos de segmentos.
 
 Para obtener más información sobre el uso de este extremo, lea la [guía de extremo de trabajos de segmento](./segment-jobs.md).
 

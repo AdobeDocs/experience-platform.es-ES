@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de consulta de perfil;funciones booleanas;booleano;
 solution: Experience Platform
 title: Funciones booleanas PQL
 description: Las funciones booleanas se utilizan para realizar lógica booleana en diferentes elementos del lenguaje de consulta de perfil (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 5%
+source-wordcount: '237'
+ht-degree: 6%
 
 ---
 

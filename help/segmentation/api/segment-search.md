@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;segmentación;servicio de segmentación;solución de problemas;API;seg;segmento;segmento;búsqueda;búsqueda de segmentos;
 title: Extremo de API de búsqueda de segmentos
 description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolvérselos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -97,7 +96,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
+| `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
 | `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en la que desea buscar. |
 | `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, todos los registros asociados con `schema.name` se devolverán. Puede encontrar una explicación más detallada en la [apéndice](#appendix) de este documento. |
 | `entityId={ENTITY_ID}` | *(Opcional)* Limita la búsqueda a la carpeta designada, especificada con {ENTITY_ID}. |
@@ -168,7 +167,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parámetros | Descripción |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
+| `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado a los objetos de búsqueda. Actualmente, solo `_xdm.context.segmentdefinition` es compatible. |
 | `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en la que desea buscar. |
 | `entityId={ENTITY_ID}` | **(Obligatorio)** El ID del objeto de búsqueda sobre el que desea obtener la información estructural, especificado con {ENTITY_ID}. |
 
@@ -223,9 +222,9 @@ Después de leer esta guía, ahora comprende mejor cómo funciona la búsqueda d
 
 ## Apéndice {#appendix}
 
-Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. AAM Por lo tanto, por ejemplo, para buscar un segmento llamado o, haga lo siguiente [!DNL Platform], se utilizaría la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
+Las secciones siguientes proporcionan información adicional sobre cómo funcionan los términos de búsqueda. Las consultas de búsqueda se escriben de la siguiente manera: `s={FieldName}:{SearchExpression}`. AAM Por lo tanto, por ejemplo, para buscar una definición de segmento denominada o, haga lo siguiente [!DNL Platform], se utilizaría la siguiente consulta de búsqueda: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Para prácticas recomendadas, la expresión de búsqueda debe estar codificada con el HTML, como en el ejemplo anterior.
+>  Para prácticas recomendadas, la expresión de búsqueda debe estar codificada con el HTML, como en el ejemplo anterior.
 
 ### Campos de búsqueda {#search-fields}
 
@@ -235,16 +234,16 @@ En la tabla siguiente se enumeran los campos en los que se puede buscar dentro d
 | ---------- | ----------- |
 | folderId | Carpeta o carpetas que tienen el ID de carpeta de la búsqueda especificada. |
 | folderLocation | La ubicación o ubicaciones que tienen la ubicación de carpeta de la búsqueda especificada. |
-| parentFolderId | El segmento o la carpeta que tienen el ID de carpeta principal de la búsqueda especificada. |
-| segmentId | El segmento coincide con el ID de segmento de la búsqueda especificada. |
-| segmentName | El segmento coincide con el nombre del segmento de la búsqueda especificada. |
-| segmentDescription | El segmento coincide con la descripción del segmento de la búsqueda especificada. |
+| parentFolderId | La definición del segmento o la carpeta que tienen el ID de carpeta principal de la búsqueda especificada. |
+| segmentId | La definición del segmento que coincide con el ID del segmento de la búsqueda especificada. |
+| segmentName | La definición del segmento que coincide con el nombre del segmento de la búsqueda especificada. |
+| segmentDescription | La definición del segmento que coincide con la descripción del segmento de la búsqueda especificada. |
 
 ### Expresión de búsqueda {#search-expression}
 
 En la tabla siguiente se enumeran los aspectos específicos del funcionamiento de las consultas de búsqueda al utilizar la API de búsqueda de segmentos.
 
->!![NOTE] Los siguientes ejemplos se muestran en un formato no codificado en el HTML para una mejor claridad. Para obtener prácticas recomendadas, el HTML de codifica la expresión de búsqueda.
+>  Los siguientes ejemplos se muestran en un formato no codificado en el HTML para una mejor claridad. Para obtener prácticas recomendadas, el HTML de codifica la expresión de búsqueda.
 
 | Ejemplo de expresión de búsqueda | Descripción |
 | ------------------------- | ----------- |

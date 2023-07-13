@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación de Edge;segmentación de Edge;streaming edge;
 solution: Experience Platform
 title: Segmentación de Edge mediante la API
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de Edge con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -17,9 +16,9 @@ ht-degree: 1%
 >
 >En el siguiente documento se explica cómo realizar la segmentación de extremos mediante la API. Para obtener información acerca de la segmentación de Edge mediante la interfaz de usuario, lea la [guía de IU de segmentación de Edge](../ui/edge-segmentation.md).
 >
->La segmentación de Edge ahora está disponible de forma general para todos los usuarios de Platform. Si ha creado segmentos perimetrales durante la versión beta, estos seguirán funcionando.
+>La segmentación de Edge ahora está disponible de forma general para todos los usuarios de Platform. Si ha creado definiciones de segmentos perimetrales durante la versión beta, estas definiciones de segmentos seguirán funcionando.
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
+La segmentación de Edge es la capacidad de evaluar definiciones de segmentos en Adobe Experience Platform de forma instantánea en Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 
 >[!IMPORTANT]
 >
@@ -32,7 +31,7 @@ La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experienc
 Esta guía para desarrolladores requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de Edge. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real, basado en los datos agregados de varias fuentes.
-- [[!DNL Segmentation]](../home.md): permite crear segmentos y audiencias a partir de [!DNL Real-Time Customer Profile] datos.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): le permite crear audiencias a partir de [!DNL Real-Time Customer Profile] datos.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Para realizar llamadas correctamente a cualquier extremo de API de Experience Platform, lea la guía de [introducción a las API de Platform](../../landing/api-guide.md) para obtener más información sobre los encabezados necesarios y cómo leer llamadas de API de ejemplo.

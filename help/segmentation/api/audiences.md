@@ -1,22 +1,15 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;audiencias;audiencia;API;api;
 title: Extremo de API de audiencias
-description: El extremo de audiencias de la API del servicio de segmentación de Adobe Experience Platform le permite administrar audiencias de su organización mediante programación.
+description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-hide: true
-hidefromtoc: true
-source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1515'
-ht-degree: 5%
+source-wordcount: '2124'
+ht-degree: 4%
 
 ---
 
 # Extremo de audiencias
-
->[!IMPORTANT]
->
->El extremo de audiencia está actualmente en fase beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
 
 Una audiencia es un conjunto de personas que comparten comportamientos o características similares. Estas colecciones de personas se pueden generar mediante Adobe Experience Platform o desde fuentes externas. Puede usar el complemento `/audiences` en la API de segmentación, lo que le permite recuperar, crear, actualizar y eliminar audiencias mediante programación.
 
@@ -47,35 +40,28 @@ Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámet
 | `property` | Un filtro que le permite especificar audiencias que **exacto** coincide con el valor de un atributo. Esto se escribe con el formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Un filtro que le permite especificar audiencias cuyos nombres **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `name=Sample` |
 | `description` | Un filtro que le permite especificar audiencias cuyas descripciones **contain** el valor proporcionado. Este valor no distingue entre mayúsculas y minúsculas. | `description=Test Description` |
-| `withMetrics` | Filtro que devuelve las métricas además de las audiencias. | `property=withMetrics==true` |
-
->[!IMPORTANT]
->
->Para las audiencias, las métricas se devuelven en la variable `metrics` y contiene información sobre los recuentos de perfiles, la creación y la actualización de marcas de tiempo.
-
-**Sin métricas**
-
-El siguiente par de solicitud/respuesta se utiliza cuando la variable `withMetrics` el parámetro de consulta no está presente.
 
 **Solicitud**
 
-La siguiente solicitud recupera las últimas cinco audiencias creadas en su organización.
+La siguiente solicitud recupera las dos últimas audiencias creadas en su organización.
+
++++Solicitud de ejemplo para recuperar una lista de audiencias.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
- -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id:  {IMS_ORG}' \
- -H 'x-api-key:  {API_KEY}' \
- -H 'x-sandbox-name:  {SANDBOX_NAME}'
+curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Respuesta** {#no-metrics}
++++
+
+**Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias creadas en su organización como JSON.
 
->[!NOTE]
->
->La siguiente respuesta se ha truncado para el espacio y muestra solo la primera audiencia devuelta.
++++Una respuesta de ejemplo que contiene las dos últimas audiencias creadas que pertenecen a su organización
 
 ```json
 {
@@ -133,15 +119,56 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
             ],
             "dependencies": [],
             "type": "SegmentDefinition",
+            "originName": "REAL_TIME_CUSTOMER_PROFILE",
             "overridePerformanceWarnings": false,
             "createdBy": "{CREATED_BY_ID}",
-            "lifecycle": "published",
+            "lifecycleState": "published",
             "labels": [
                 "core/C1"
             ],
             "namespace": "AEPSegments"
+        },
+        {
+            "id": "32a83b5d-a118-4bd6-b3cb-3aee2f4c30a1",
+            "audienceId": "test-external-audience-id",
+            "name": "externalSegment1",
+            "namespace": "aam",
+            "imsOrgId": "{ORG_ID}",
+            "sandbox":{
+                "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "isSystem": false,
+            "description": "Last 30 days",
+            "type": "ExternalSegment",
+            "originName": "CUSTOM_UPLOAD",
+            "lifecycleState": "published",
+            "createdBy": "{CREATED_BY_ID}",
+            "datasetId": "6254cf3c97f8e31b639fb14d",
+            "labels":[
+                "core/C1"
+            ],
+            "linkedAudienceRef": {
+                "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+            },
+            "creationTime": 1642745034000000,
+            "updateEpoch": 1649926314,
+            "updateTime": 1649926314000,
+            "createEpoch": 1642745034
         }
-    ]
+    ],
+    "_page":{
+      "totalCount": 111,
+      "pageSize": 2,
+      "next": "1"
+   },
+   "_links":{
+      "next":{
+         "href":"@/audiences?start=1&limit=2&totalCount=111"
+      }
+   }
 }
 ```
 
@@ -156,145 +183,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 | `description` | Ambas | Una descripción de la audiencia. |
 | `expression` | Generado por Platform | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
 | `mergePolicyId` | Generado por Platform | El ID de la política de combinación a la que está asociada la audiencia. Encontrará más información sobre las políticas de combinación en la [guía de políticas de combinación](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Generado por Platform | Muestra cómo se evaluará la audiencia. Los posibles métodos de evaluación incluyen batch, streaming o edge. Encontrará más información sobre los métodos de evaluación en la [resumen de segmentación](../home.md) |
+| `evaluationInfo` | Generado por Platform | Muestra cómo se evaluará la audiencia. Los posibles métodos de evaluación incluyen por lotes, sincrónico (streaming) o continuo (edge). Encontrará más información sobre los métodos de evaluación en la [resumen de segmentación](../home.md) |
 | `dependents` | Ambas | Una matriz de ID de audiencia que dependen de la audiencia actual. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
 | `dependencies` | Ambas | Una matriz de ID de audiencia de los que depende la audiencia. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
-| `type` | Ambas | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
+| `type` | Ambas | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `originName` | Ambas | Campo que hace referencia al nombre del origen de la audiencia. Para audiencias generadas por Platform, este valor es `REAL_TIME_CUSTOMER_PROFILE`. Para las audiencias generadas en Audience Orchestration, este valor es `AUDIENCE_ORCHESTRATION`. Para las audiencias generadas en Adobe Audience Manager, este valor es `AUDIENCE_MANAGER`. Para otras audiencias generadas externamente, este valor será `CUSTOM_UPLOAD`. |
 | `createdBy` | Ambas | El ID del usuario que creó la audiencia. |
 | `labels` | Ambas | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
 | `namespace` | Ambas | El área de nombres al que pertenece la audiencia. Los valores posibles incluyen `AAM`, `AAMSegments`, `AAMTraits`, y `AEPSegments`. |
-| `audienceMeta` | Externo | Metadatos creados externamente desde la audiencia creada externamente. |
+| `linkedAudienceRef` | Ambas | Un objeto que contiene identificadores de otros sistemas relacionados con la audiencia. |
 
-**Con métricas**
-
-El siguiente par de solicitud/respuesta se utiliza cuando la variable `withMetrics` el parámetro de consulta está presente.
-
-**Solicitud**
-
-La siguiente solicitud recupera las últimas cinco audiencias, con métricas, creadas en su organización.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetrics==true&limit=5&sort=totalProfiles:desc \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias, con métricas, para la organización especificada como JSON.
-
->[!NOTE]
->
->La siguiente respuesta se ha truncado para el espacio y muestra solo la primera audiencia devuelta.
-
-```json
-{
-    "children": [
-        {
-            "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "ttlInDays": 60,
-            "profileInstanceId": "ups",
-            "imsOrgId": "{ORG_ID}",
-            "sandbox": {
-                "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "isSystem": false,
-            "name": "People who ordered in the last 30 days",
-            "description": "Last 30 days",
-            "expression": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"US\""
-            },
-            "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-            "evaluationInfo": {
-                "batch": {
-                    "enabled": false
-                },
-                "continuous": {
-                    "enabled": true
-                },
-                "synchronous": {
-                    "enabled": false
-                }
-            },
-            "dataGovernancePolicy": {
-                "excludeOptOut": true
-            },
-            "creationTime": 1650374572000,
-            "updateEpoch": 1650374573,
-            "updateTime": 1650374573000,
-            "createEpoch": 1650374572,
-            "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-            "dependents": [],
-            "definedOn": [
-                {
-                    "meta: resourceType": "unions",
-                    "meta: containerId": "tenant",
-                    "$ref": "https: //ns.adobe.com/xdm/context/profile__union"
-                }
-            ],
-            "dependencies": [],
-            "metrics": {
-                "type": "export",
-                "jobId": "test-job-id",
-                "id": "32a83b5d-a118-4bd6-b3cb-3aee2f4c30a1",
-                "data": {
-                    "totalProfiles": 11200769,
-                    "totalProfilesByNamespace": {
-                        "crmid": 11400769
-                    },
-                    "totalProfilesByStatus": {
-                        "realized": 11400769
-                    }
-                },
-                "createEpoch": 1653583927,
-                "updateEpoch": 1653583927
-            },
-            "type": "SegmentDefinition",
-            "overridePerformanceWarnings": false,
-            "createdBy": "{CREATED_BY_ID}",
-            "lifecycle": "published",
-            "labels": [
-                "core/C1"
-            ],
-            "namespace": "AEPSegments"
-        }
-   ],
-   "_page": {
-      "totalCount": 111,
-      "pageSize": 5,
-      "next": "1"
-   },
-   "_links": {
-      "next": {
-         "href": "@/audiences?start=1&limit=5&totalCount=111"
-      }
-   }
-}
-```
-
-A continuación se enumeran las propiedades **exclusivo** a la `withMetrics` respuesta. Si desea conocer las propiedades de audiencia estándar, lea la [sección anterior](#no-metrics).
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `metrics.imsOrgId` | El ID de organización de la audiencia. |
-| `metrics.sandbox` | La información de la zona protegida relacionada con la audiencia. |
-| `metrics.jobId` | El ID del trabajo del segmento que está procesando la audiencia. |
-| `metrics.type` | El tipo de trabajo del segmento. Esto puede ser `export` o `batch_segmentation`. |
-| `metrics.id` | El ID de la audiencia. |
-| `metrics.data` | Métricas relacionadas con la audiencia. Esto incluye información como el número total de perfiles incluidos en la audiencia, el número total de perfiles por área de nombres y el número total de perfiles por estado. |
-| `metrics.createEpoch` | Una marca de tiempo que indica cuándo se creó la audiencia. |
-| `metrics.updateEpoch` | Una marca de tiempo que indica cuándo se actualizó la audiencia por última vez. |
++++
 
 ## Crear una audiencia nueva {#create}
 
@@ -307,6 +206,12 @@ POST /audiences
 ```
 
 **Solicitud**
+
+>[!BEGINTABS]
+
+>[!TAB Audiencia generada por Platform]
+
++++ Una solicitud de ejemplo para crear una audiencia generada por Platform
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/audiences
@@ -330,7 +235,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ]
+        ],
+        "ttlInDays": 60
     }'
 ```
 
@@ -338,12 +244,70 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | El nombre de la audiencia. |
 | `description` | Una descripción de la audiencia. |
-| `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
+| `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
 | `expression` | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
 | `schema` | El esquema Experience Data Model (XDM) de la audiencia. |
 | `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
+| `ttlInDays` | Representa el valor de caducidad de los datos de la audiencia, en días. |
+
++++
+
+>[!TAB Audiencia generada externamente]
+
++++ Una solicitud de ejemplo para crear una audiencia generada externamente
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "audienceId":"test-external-audience-id",
+        "name":"externalAudience",
+        "namespace":"aam",
+        "description":"Last 30 days",
+        "type":"ExternalSegment",
+        "originName":"CUSTOM_UPLOAD",
+        "lifecycleState":"published",
+        "datasetId":"6254cf3c97f8e31b639fb14d",
+        "labels":[
+            "core/C1"
+        ],
+        "linkedAudienceRef":{
+            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+        }
+    }'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- | 
+| `audienceId` | ID proporcionado por el usuario para la audiencia. |
+| `name` | El nombre de la audiencia. |
+| `namespace` | El área de nombres de la audiencia. |
+| `description` | Una descripción de la audiencia. |
+| `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `originName` | Nombre del origen de la audiencia. Para audiencias generadas externamente, el valor predeterminado es `CUSTOM_UPLOAD`. Otros valores admitidos son `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, y `AUDIENCE_MATCH`. |
+| `lifecycleState` | Campo opcional que determina el estado inicial de la audiencia que intenta crear. Los valores admitidos incluyen `draft`, `published`, y `inactive`. |
+| `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos que comprenden la audiencia. |
+| `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
+| `audienceMeta` | Metadatos que pertenecen a la audiencia generada externamente. |
+| `linkedAudienceRef` | Un objeto que contiene identificadores de otros sistemas relacionados con la audiencia. Esto puede incluir lo siguiente: <ul><li>`flowId`: este ID se utiliza para conectar la audiencia al flujo de datos utilizado para introducir los datos de audiencia. Encontrará más información sobre los ID necesarios en la [crear una guía de flujo de datos](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: este ID se utiliza para conectar la audiencia a una composición de Audience Orchestration relacionada.&lt;/li/> <li>`payloadFieldGroupRef`: este ID se utiliza para hacer referencia al esquema de grupo de campos XDM que describe la estructura de la audiencia. Encontrará más información sobre el valor de este campo en la [Guía de extremo de grupo de campos XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: este ID se utiliza para hacer referencia al ID de carpeta de Adobe Audience Manager para la audiencia. Encontrará más información sobre esta API en la [Guía de API de Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+
++++
+
+>[!ENDTABS]
 
 **Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia recién creada.
+
+>[!BEGINTABS]
+
+>[!TAB Audiencia generada por Platform]
+
++++Una respuesta de ejemplo al crear una audiencia generada por Platform.
 
 ```json
 {
@@ -399,15 +363,58 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     ],
     "dependencies": [],
     "type": "SegmentDefinition",
+    "originName": "REAL_TIME_CUSTOMER_PROFILE",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
       "core/C1"
     ],
     "namespace": "AEPSegments"
 }
 ```
+
++++
+
+>[!TAB Audiencia generada externamente]
+
++++Una respuesta de ejemplo al crear una audiencia generada externamente.
+
+```json
+{
+   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
+   "audienceId": "test-external-audience-id",
+   "name": "externalAudience",
+   "namespace": "aam",
+   "imsOrgId": "{ORG_ID}",
+   "sandbox":{
+      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+      "sandboxName": "prod",
+      "type": "production",
+      "default": true
+   },
+   "isSystem": false,
+   "description": "Last 30 days",
+   "type": "ExternalSegment",
+   "originName": "CUSTOM_UPLOAD",
+   "lifecycleState": "published",
+   "createdBy": "{CREATED_BY_ID}",
+   "datasetId": "6254cf3c97f8e31b639fb14d",
+   "labels": [
+      "core/C1"
+   ],
+   "linkedAudienceRef": {
+      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+   },
+   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+   "creationTime": 1650251290000,
+   "updateEpoch": 1650251290,
+   "updateTime": 1650251290000,
+   "createEpoch": 1650251290
+}
+```
+
++++
 
 ## Búsqueda de una audiencia especificada {#get}
 
@@ -417,15 +424,15 @@ Puede buscar información detallada sobre una audiencia específica realizando u
 
 ```http
 GET /audiences/{AUDIENCE_ID}
-GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
 ```
 
 | Parámetro | Descripción |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | El ID de la audiencia que intenta recuperar. |
-| `property=withmetrics==true` | Un parámetro de consulta opcional que puede utilizar si desea recuperar una audiencia especificada con las métricas de audiencia. |
+| `{AUDIENCE_ID}` | El ID de la audiencia que intenta recuperar. Tenga en cuenta que esta es la `id` , y es **no** el `audienceId` field. |
 
 **Solicitud**
+
++++Una solicitud de ejemplo para recuperar una audiencia.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -435,11 +442,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia especificada. La respuesta variará según si la audiencia se genera con Adobe Experience Platform o fuentes externas.
 
-**Generado por Platform**
+>[!BEGINTABS]
+
+>[!TAB Audiencia generada por Platform]
+
++++Respuesta de ejemplo al recuperar una audiencia generada por Platform.
 
 ```json
 {
@@ -497,7 +510,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
         "core/C1"
     ],
@@ -505,13 +518,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 }
 ```
 
-**Generado externamente**
++++
+
+>[!TAB Audiencia generada externamente]
+
++++Una respuesta de ejemplo al recuperar una audiencia generada externamente.
 
 ```json
 {
-    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
     "audienceId": "test-external-audience-id",
-    "name": "externalSegment1",
+    "name": "externalAudience",
     "namespace": "aam",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -520,10 +537,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
         "type": "production",
         "default": true
     },
-    "isSystem":false,
+    "isSystem": false,
     "description": "Last 30 days",
     "type": "ExternalSegment",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -537,6 +554,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 }
 ```
 
++++
+
+>[!ENDTABS]
+
 ## Actualización de un campo en una audiencia {#update-field}
 
 Puede actualizar los campos de una audiencia específica realizando una solicitud al PATCH de la `/audiences` y proporciona el ID de la audiencia que desea actualizar en la ruta de solicitud.
@@ -549,9 +570,11 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | El ID de la audiencia que desea actualizar. |
+| `{AUDIENCE_ID}` | El ID de la audiencia que desea actualizar. Tenga en cuenta que esta es la `id` , y es **no** el `audienceId` field. |
 
 **Solicitud**
+
++++Solicitud de ejemplo para actualizar un campo en una audiencia.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -580,9 +603,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 | `path` | La ruta del campo que desea actualizar. |
 | `value` | El valor al que desea actualizar el campo. |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia recién actualizada.
+
++++Una respuesta de ejemplo al actualizar un campo en una audiencia.
 
 ```json
 {
@@ -639,13 +666,15 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
       "core/C1"
     ],
     "namespace": "AEPSegments"
 }
 ```
+
++++
 
 ## Actualización de una audiencia {#put}
 
@@ -657,7 +686,13 @@ Puede actualizar (sobrescribir) una audiencia específica realizando una solicit
 PUT /audiences/{AUDIENCE_ID}
 ```
 
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | El ID de la audiencia que desea actualizar. Tenga en cuenta que esta es la `id` , y es **no** el `audienceId` field. |
+
 **Solicitud**
+
++++Una solicitud de ejemplo para actualizar una audiencia completa.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -667,14 +702,14 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId":"test-external-audience-id",
-    "name":"new externalSegment",
-    "namespace":"aam",
-    "description":"Last 30 days",
-    "type":"ExternalSegment",
-    "lifecycle":"published",
-    "datasetId":"6254cf3c97f8e31b639fb14d",
-    "labels":[
+    "audienceId": "test-external-audience-id",
+    "name": "New external audience",
+    "namespace": "aam",
+    "description": "Last 30 days",
+    "type": "ExternalSegment",
+    "lifecycleState": "published",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "labels": [
         "core/C1"
     ]
 }' 
@@ -682,24 +717,28 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `audienceId` | El ID de la audiencia. Las audiencias externas lo utilizan |
+| `audienceId` | El ID de la audiencia. Para audiencias generadas externamente, este valor lo puede proporcionar el usuario. |
 | `name` | El nombre de la audiencia. |
-| `namespace` | |
+| `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
-| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalAudience`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalAudience` hace referencia a una audiencia que no se generó en Platform. |
-| `lifecycle` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published`, `inactive`, y `archived`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, `inactive` cuando la audiencia ya no está activa, y `archived` si se elimina la audiencia. |
+| `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `lifecycleState` | El estado de la audiencia. Entre los posibles valores se incluyen `draft`, `published` y `inactive`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, y `inactive` cuando la audiencia ya no está activa. |
 | `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos de audiencia. |
 | `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
+
++++
 
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia recién actualizada. Tenga en cuenta que los detalles de la audiencia variarán según se trate de una audiencia generada por Platform o por un público generado externamente.
 
++++Una respuesta de ejemplo al actualizar una audiencia completa.
+
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-external-audience-id",
-    "name": "new externalSegment",
+    "name": "New external audience",
     "namespace": "aam",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -710,7 +749,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
     },
     "description": "Last 30 days",
     "type": "ExternalSegment",
-    "lifecycle": "published",
+    "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
@@ -720,6 +759,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
     "createEpoch": 1650251290
 }
 ```
+
++++
 
 ## Eliminar una audiencia {#delete}
 
@@ -733,18 +774,305 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | El ID de la audiencia que desea eliminar. |
+| `{AUDIENCE_ID}` | El ID de la audiencia que desea eliminar. Tenga en cuenta que esta es la `id` , y es **no** el `audienceId` field. |
 
 **Solicitud**
+
++++ Una solicitud de ejemplo para eliminar una audiencia.
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 204 sin mensaje.
+
+## Recuperar varias audiencias {#bulk-get}
+
+Puede recuperar varias audiencias realizando una solicitud al POST de `/audiences/bulk-get` y proporciona los ID de las audiencias que desea recuperar.
+
+**Formato de API**
+
+```http
+POST /audiences/bulk-get
+```
+
+**Solicitud**
+
++++ Una solicitud de ejemplo para recuperar varias audiencias.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d ' {
+    "ids": [
+        {
+            "id": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd"
+        },
+        {
+            "id": "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075"
+        }
+    ]
+ }
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 207 con información sobre las audiencias solicitadas.
+
++++ Una respuesta de ejemplo al recuperar varias audiencias.
+
+```json
+{
+   "results":{
+      "72c393ea-caed-441a-9eb6-5f66bb1bd6cd":{
+         "id": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd",
+         "audienceId": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd",
+         "schema": {
+            "name": "_xdm.context.profile"
+         },
+         "ttlInDays": 30,
+         "imsOrgId": "{ORG_ID}",
+         "sandbox": {
+            "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "sandboxName": "prod",
+            "type": "production",
+            "default": true
+         },
+         "name": "Sample audience",
+         "expression": {
+            "type": "pql",
+            "format": "pql/text",
+            "value": "_id = \"abc\""         
+        },
+         "mergePolicyId": "87c94d51-239c-4391-932c-29c2412100e5",
+         "evaluationInfo": {
+            "batch": {
+               "enabled": false
+            },
+            "continuous": {
+               "enabled": true
+            },
+            "synchronous": {
+               "enabled": false
+            }
+         },
+         "ansibleUiEnabled": false,
+         "dataGovernancePolicy": {
+            "excludeOptOut": true
+         },
+         "creationTime": 1623889553000000,
+         "updateEpoch": 1674646369,
+         "updateTime": 1674646369000,
+         "createEpoch": 1623889552,
+         "_etag": "\"61030ec7-0000-0200-0000-63d113610000\"",
+         "dependents": [],
+         "definedOn": [
+            {
+               "meta:resourceType": "unions",
+               "meta:containerId": "tenant",
+               "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+            }
+         ],
+         "dependencies": [],
+         "type": "SegmentDefinition",
+         "state": "enabled",
+         "overridePerformanceWarnings": false,
+         "lastModifiedBy": "{CREATED_ID}",
+         "lifecycleState": "published",
+         "namespace": "AEPSegments",
+         "isSystem": false,
+         "saveSegmentMembership": true,
+         "originName": "REAL_TIME_CUSTOMER_PROFILE"
+      },
+      "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075":{
+         "id": "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+         "name": "label test24764489707692",
+         "namespace": "AO",
+         "imsOrgId": "{ORG_ID}",
+         "sandbox":{
+            "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "sandboxName": "prod",
+            "type": "production",
+            "default": true
+         },
+         "type": "ExternalSegment",
+         "lifecycleState": "published",
+         "sourceId": "source-id",
+         "createdBy": "{USER_ID}",
+         "datasetId": "62bf31a105e9891b63525c92",
+         "_etag": "\"3100da6d-0000-0200-0000-62bf31a10000\"",
+         "creationTime": 1656697249000,
+         "updateEpoch": 1656697249,
+         "updateTime": 1656697249000,
+         "createEpoch": 1656697249,
+         "audienceId": "test-audience-id",
+         "isSystem": false,
+         "saveSegmentMembership": true,
+         "linkedAudienceRef": {
+            "aoWorkflowId": "62bf31858e87e34c8364befa"
+         },
+         "originName": "AUDIENCE_ORCHESTRATION"
+      }
+   }
+}
+```
+
++++
+
+## Actualizar varias audiencias {#bulk-patch}
+
+Puede actualizar el perfil y registrar el recuento de varias audiencias realizando una solicitud al POST de `/audiences/bulk-patch-metric` y proporciona los ID de las audiencias que desea actualizar.
+
+**Formato de API**
+
+```http
+POST /audiences/bulk-patch-metric
+```
+
+**Solicitud**
+
++++ Una solicitud de ejemplo para actualizar varias audiencias.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d ' {
+    "jobId": "12345",
+    "jobType": "AO",
+    "resources": [
+        {
+            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "namespace": "AAMTraits",
+            "operations": [
+                {
+                    "op": "add",
+                    "path": "/metrics/data",
+                    "value": {
+                        "totalProfiles": 11037
+                    }
+                },
+            ]
+        },
+        {
+            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "namespace": "AAMTraits",
+            "operations": [
+                {
+                    "op": "add",
+                    "path": "/metrics/data",
+                    "value": {
+                        "totalProfiles": 523
+                    }
+                }
+            ]
+        }
+    ]
+    }
+```
+
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jobId</code></td>
+<td>El ID del trabajo que ejecutará la actualización.</td>
+</tr>
+<tr>
+<td><code>jobType</code></td>
+<td>El tipo de trabajo que ejecutará la actualización. Este valor puede ser <code>export</code> o <code>AO</code>.</td>
+</tr>
+<tr>
+<td><code>audienceId</code></td>
+<td>El ID de las audiencias que desea actualizar. Tenga en cuenta que esta es la <code>audienceId</code> valor, y <strong>no</strong> el <code>id</code> valor de las audiencias.</td>
+</tr>
+<tr>
+<td><code>namespace</code></td>
+<td>El área de nombres de la audiencia que desea actualizar.</td>
+</tr>
+<tr>
+<td><code>operations</code></td>
+<td>Objeto que contiene la información utilizada para actualizar la audiencia.</td>
+</tr>
+<tr>
+<td><code>operations.op</code></td>
+<td>La operación utilizada para el parche. Cuando se actualizan varias audiencias, este valor es <strong>siempre</strong> <code>add</code>.</td>
+</tr>
+<tr>
+<td><code>operations.path</code></td>
+<td>Ruta del campo que se va a actualizar. Actualmente, solo se admiten dos rutas: <code>/metrics/data</code> al actualizar el <strong>perfil</strong> count y <code>/recordMetrics/data</code> al actualizar el <strong>registro</strong> count.</td>
+</tr>
+<tr>
+<td><code>operations.value</code></td>
+<td>
+El valor del campo que se va a actualizar. Al actualizar el recuento de perfiles, este valor tendrá el siguiente aspecto: 
+<pre>
+{ "totalProfiles": 123456 }
+</pre>
+Al actualizar el recuento de registros, este valor tendrá el siguiente aspecto: 
+<pre>
+{ "recordCount": 123456 }
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 207 con detalles sobre las audiencias actualizadas.
+
++++ Una respuesta de ejemplo para actualizar varias audiencias.
+
+```json
+{
+   "resources":[
+      {
+         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+
+         "namespace": "AAMTraits",
+         "status":200
+      },
+      {
+         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+
+         "namespace": "AAMTraits",
+         "status":200
+      }
+   ]
+}
+```
+
+| Parámetro | Descripción |
+| --------- | ----------- |
+| `status` | El estado de la audiencia actualizada. Si el estado devuelto es 200, la audiencia se actualizó correctamente. Si no se ha podido actualizar la audiencia, se devolverá un error que explica por qué no se ha actualizado. |
+
++++
+
+## Pasos siguientes
+
+Después de leer esta guía, ahora comprende mejor cómo crear, administrar y eliminar audiencias mediante la API de Adobe Experience Platform. Para obtener más información sobre la gestión de público mediante la interfaz de usuario de, lea la [Guía de IU de segmentación](../ui/overview.md).

@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;inicio;temas populares;exclusión;Segmentación;Servicio de segmentación;servicio de segmentación;servicio de segmentación;aceptar exclusiones;exclusiones;exclusión;exclusión;exclusiones;consentimiento;compartir;recopilar;
 solution: Experience Platform
 title: Respeto del consentimiento en los segmentos
 description: Aprenda a cumplir las preferencias de consentimiento del cliente para la recopilación de datos personales y el uso compartido en operaciones de segmentos.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # Respeto del consentimiento en los segmentos
+
+>[!NOTE]
+>
+>Esta guía explica cómo cumplir los consentimientos dentro de **definiciones de segmentos**.
 
 Regulaciones legales de privacidad, como la [!DNL California Consumer Privacy Act] (CCPA) otorga a los consumidores el derecho de optar por no recopilar o compartir sus datos personales con terceros. Adobe Experience Platform proporciona componentes de modelo de datos de experiencia (XDM) estándar destinados a capturar estas preferencias de consentimiento del cliente en datos de perfil del cliente en tiempo real.
 
@@ -23,7 +26,7 @@ El cumplimiento de los valores de consentimiento del cliente requiere una compre
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): le permite generar segmentos de audiencia a partir de [!DNL Real-Time Customer Profile] datos.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): le permite crear audiencias a partir de [!DNL Real-Time Customer Profile] datos.
 
 ## Campos del esquema de consentimiento
 
@@ -35,7 +38,7 @@ Una vez agregado el grupo de campos a una [Esquema con perfil habilitado](../xdm
 
 ## Gestión del consentimiento en la segmentación
 
-Para garantizar que los perfiles de exclusión no se incluyan en los segmentos, se deben añadir campos especiales a los segmentos existentes e incluirlos al crear cualquier segmento nuevo.
+Para garantizar que los perfiles de exclusión no se incluyan en las definiciones de segmentos, se deben añadir campos especiales a las definiciones de segmentos existentes e incluirlos al crear nuevas definiciones de segmentos.
 
 Los pasos siguientes muestran cómo agregar los campos adecuados para dos tipos de indicadores de exclusión:
 
@@ -44,13 +47,13 @@ Los pasos siguientes muestran cómo agregar los campos adecuados para dos tipos 
 
 >[!NOTE]
 >
->Aunque esta guía se centra en los dos indicadores de exclusión anteriores, también puede configurar sus segmentos para incorporar señales de consentimiento adicionales. El [guía de referencia de preferencias y consentimientos](../xdm/field-groups/profile/consents.md) proporciona más información sobre cada una de estas opciones y sus casos de uso previstos.
+>Aunque esta guía se centra en los dos indicadores de exclusión anteriores, puede configurar sus definiciones de segmento para incorporar también señales de consentimiento adicionales. El [guía de referencia de preferencias y consentimientos](../xdm/field-groups/profile/consents.md) proporciona más información sobre cada una de estas opciones y sus casos de uso previstos.
 
-Al crear un segmento en la interfaz de usuario de, en **[!UICONTROL Atributos]**, vaya a **[!UICONTROL Perfil individual de XDM]**, luego seleccione **[!UICONTROL Consentimientos y preferencias]**. Desde aquí puede ver las opciones de **[!UICONTROL Recopilación de datos]** y **[!UICONTROL Compartir datos]**.
+Al crear una definición de segmento en la interfaz de usuario de, en **[!UICONTROL Atributos]**, vaya a **[!UICONTROL Perfil individual de XDM]**, luego seleccione **[!UICONTROL Consentimientos y preferencias]**. Desde aquí puede ver las opciones de **[!UICONTROL Recopilación de datos]** y **[!UICONTROL Compartir datos]**.
 
 ![](./images/opt-outs/consents.png)
 
-Comience por seleccionar la **[!UICONTROL Recopilación de datos]** categoría y, a continuación, arrastre **[!UICONTROL Valor de opción]** en el generador de segmentos. Al agregar el atributo al segmento, puede especificar el [valores de consentimiento](../xdm/field-groups/profile/consents.md#choice-values) que deben incluirse o excluirse.
+Comience por seleccionar la **[!UICONTROL Recopilación de datos]** categoría y, a continuación, arrastre **[!UICONTROL Valor de opción]** en el generador de segmentos. Al agregar el atributo a la definición del segmento, puede especificar la variable [valores de consentimiento](../xdm/field-groups/profile/consents.md#choice-values) que deben incluirse o excluirse.
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -66,11 +69,11 @@ En **[!UICONTROL Atributos]** en el carril izquierdo, vuelva a la **[!UICONTROL 
 
 ![](./images/opt-outs/share.png)
 
-Con ambos **[!UICONTROL Recopilación de datos]** y **[!UICONTROL Compartir datos]** Si se añaden valores de consentimiento al segmento, los clientes que hayan optado por no utilizar sus datos se excluirán de la audiencia resultante. Desde aquí puede seguir personalizando la definición del segmento antes de seleccionar **[!UICONTROL Guardar]** para finalizar el proceso.
+Con ambos **[!UICONTROL Recopilación de datos]** y **[!UICONTROL Compartir datos]** valores de consentimiento añadidos a la definición del segmento, los clientes que hayan optado por no utilizar sus datos se excluirán de la audiencia resultante. Desde aquí puede seguir personalizando la definición del segmento antes de seleccionar **[!UICONTROL Guardar]** para finalizar el proceso.
 
 ## Pasos siguientes
 
-Al seguir este tutorial, debería comprender mejor cómo cumplir los consentimientos y preferencias de los clientes al crear segmentos en Experience Platform.
+Al seguir este tutorial, debería comprender mejor cómo cumplir los consentimientos y preferencias de los clientes al crear definiciones de segmentos en Experience Platform.
 
 Para obtener más información sobre la administración del consentimiento en Platform, consulte la siguiente documentación:
 

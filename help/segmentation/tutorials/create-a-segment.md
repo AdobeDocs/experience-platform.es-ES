@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmento;Segmento;crear segmento;segmentación;crear un segmento;Servicio de segmentación;
 solution: Experience Platform
-title: Creación de segmentos mediante la API del servicio de segmentación
+title: Creación de una definición de segmento mediante la API del servicio de segmentación
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
 
-# Cree un segmento con la API del servicio de segmentación
+# Creación de una definición de segmento mediante la API del servicio de segmentación
 
 Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Para obtener información sobre cómo generar segmentos mediante la interfaz de usuario, consulte la [Guía del Generador de segmentos](../ui/overview.md).
+Para obtener información sobre cómo generar definiciones de segmentos mediante la interfaz de usuario, consulte la [Guía del Generador de segmentos](../ui/overview.md).
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de segmentos de audiencia. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
+Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de definiciones de segmentos. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite crear segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite crear audiencias utilizando definiciones de segmentos u otras fuentes externas a partir de datos del perfil del cliente en tiempo real.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Platform] API.
@@ -54,11 +53,11 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Desarrollar una definición de segmento
 
-El primer paso de la segmentación es definir un segmento, representado en una construcción denominada definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas del segmento en función de las condiciones relacionadas con cualquier registro o dato de serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
+El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST a `/segment/definitions` punto final en la [!DNL Segmentation] API. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que un segmento se defina correctamente.
+Puede crear una nueva definición de segmento realizando una solicitud de POST a `/segment/definitions` punto final en la [!DNL Segmentation] API. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
 
-Para obtener una explicación detallada sobre cómo definir un segmento, lea la [guía para desarrolladores de definición de segmentos](../api/segment-definitions.md#create).
+Para obtener una explicación detallada sobre cómo definir una definición de segmento, lea la [guía para desarrolladores de definición de segmentos](../api/segment-definitions.md#create).
 
 ## Calcular y previsualizar una audiencia {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ A medida que desarrolle su definición de segmento, puede utilizar las herramien
 
 Al estimar y previsualizar la audiencia, puede probar y optimizar los predicados PQL hasta que produzcan un resultado deseado, donde luego se pueden utilizar en una definición de segmento actualizada.
 
-Hay dos pasos necesarios para obtener una vista previa o una estimación del segmento:
+Existen dos pasos necesarios para obtener una vista previa o una estimación de la definición de su segmento:
 
 1. [Creación de un trabajo de vista previa](#create-a-preview-job)
 2. [Ver estimación o previsualización](#view-an-estimate-or-preview) uso del ID del trabajo de vista previa
 
 ### Cómo se generan las estimaciones
 
-Las muestras de datos se utilizan para evaluar segmentos y estimar el número de perfiles cualificados. Los nuevos datos se cargan en la memoria cada mañana (entre las 00:00 y las 02:00 PT, que oscila entre las 07:00 y las 09:00 UTC), y todas las consultas de segmentación se calculan con los datos de muestra de ese día. En consecuencia, cualquier nuevo campo añadido o datos adicionales recopilados se reflejarán en las estimaciones al día siguiente.
+Las muestras de datos se utilizan para evaluar las definiciones de segmentos y estimar el número de perfiles correspondiente. Los nuevos datos se cargan en la memoria cada mañana (entre las 00:00 y las 02:00 PT, que oscila entre las 07:00 y las 09:00 UTC), y todas las consultas de segmentación se calculan con los datos de muestra de ese día. En consecuencia, cualquier nuevo campo añadido o datos adicionales recopilados se reflejarán en las estimaciones al día siguiente.
 
 El tamaño de la muestra depende del número total de entidades del almacén de perfiles. Estos tamaños de muestra se representan en la siguiente tabla:
 

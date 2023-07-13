@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;previsualizaciones;estimaciones;previsualizaciones;previsualizaciones y estimaciones;estimaciones y previsualizaciones;api;API;
 solution: Experience Platform
 title: Previsualizaciones y estimaciones de extremos de API
 description: A medida que se desarrollan las definiciones de segmentos, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver información de resumen a fin de asegurarse de aislar la audiencia esperada.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---

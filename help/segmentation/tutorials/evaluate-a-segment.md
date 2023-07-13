@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;inicio;temas populares;evaluación de segmentos;servicio de segmentación;segmentación;segmentación;evaluar un segmento;acceder a los resultados del segmento;evaluar y acceder al segmento;
 solution: Experience Platform
 title: Evaluar y acceder a los resultados del segmento
 type: Tutorial
-description: Siga este tutorial para aprender a evaluar segmentos y acceder a resultados de segmentos mediante la API del servicio de segmentación de Adobe Experience Platform.
+description: Siga este tutorial para aprender a evaluar las definiciones de segmentos y acceder a los resultados de la segmentación mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
-# Evaluación y acceso a los resultados del segmento
+# Evaluación y acceso a resultados de definición de segmentos
 
-Este documento proporciona un tutorial para evaluar segmentos y acceder a los resultados de segmentos mediante el [[!DNL Segmentation API]](../api/getting-started.md).
+Este documento proporciona un tutorial para evaluar definiciones de segmentos y acceder a estos resultados mediante la variable [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de segmentos de audiencia. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
+Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de audiencias. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): le permite generar segmentos de audiencia a partir de [!DNL Real-Time Customer Profile] datos.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): le permite crear audiencias a partir de [!DNL Real-Time Customer Profile] datos.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 - [Zonas protegidas](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
@@ -45,13 +44,13 @@ Todas las solicitudes de POST, PUT y PATCH requieren un encabezado adicional:
 
 - Content-Type: application/json
 
-## Evaluación de un segmento {#evaluate-a-segment}
+## Evaluación de una definición de segmento {#evaluate-a-segment}
 
-Una vez que haya desarrollado, probado y guardado su definición de segmento, puede evaluar el segmento mediante la evaluación programada o la evaluación bajo demanda.
+Una vez que haya desarrollado, probado y guardado la definición del segmento, puede evaluarla mediante la evaluación programada o la evaluación bajo demanda.
 
 [Evaluación programada](#scheduled-evaluation) (también conocida como &quot;segmentación programada&quot;) permite crear una programación recurrente para ejecutar un trabajo de exportación a una hora específica, mientras que [evaluación a la carta](#on-demand-evaluation) implica crear un trabajo de segmento para crear la audiencia inmediatamente. A continuación se describen los pasos de cada uno.
 
-Si todavía no ha completado la [Cree un segmento con la API de segmentación](./create-a-segment.md) tutorial o creación de una definición de segmento utilizando [Generador de segmentos](../ui/overview.md), hágalo antes de continuar con este tutorial.
+Si todavía no ha completado la [Creación de una definición de segmento mediante la API de segmentación](./create-a-segment.md) tutorial o creación de una definición de segmento utilizando [Generador de segmentos](../ui/overview.md), hágalo antes de continuar con este tutorial.
 
 ## Evaluación programada {#scheduled-evaluation}
 
@@ -81,11 +80,11 @@ Encontrará información más detallada sobre el uso de este punto de conexión 
 
 ## Evaluación a la carta
 
-La evaluación bajo demanda le permite crear un trabajo de segmentación para generar un segmento de audiencia siempre que lo necesite. A diferencia de la evaluación programada, esto solo ocurrirá cuando se solicite y no sea recurrente.
+La evaluación bajo demanda le permite crear un trabajo de segmentación para generar una audiencia siempre que lo necesite. A diferencia de la evaluación programada, esto solo ocurrirá cuando se solicite y no sea recurrente.
 
 ### Creación de un trabajo de segmentación
 
-Un trabajo de segmentación es un proceso asincrónico que crea un segmento de audiencia bajo demanda. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle el modo en que [!DNL Real-Time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmentación se completa correctamente, puede recopilar información diversa acerca del segmento, como los errores que se hayan podido producir durante el procesamiento y el tamaño final de la audiencia. Se debe ejecutar un trabajo de segmento cada vez que desee actualizar la audiencia que actualmente cumple los requisitos para la definición del segmento.
+Un trabajo de segmentación es un proceso asincrónico que crea un segmento de audiencia bajo demanda. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle el modo en que [!DNL Real-Time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmentación se completa correctamente, puede recopilar información diversa acerca de la definición del segmento, como los errores que se hayan podido producir durante el procesamiento y el tamaño final de la audiencia. Se debe ejecutar un trabajo de segmento cada vez que desee actualizar la audiencia a la que se clasifica actualmente la definición del segmento.
 
 Puede crear un nuevo trabajo de segmentación realizando una solicitud de POST a `/segment/jobs` punto final en la [!DNL Real-Time Customer Profile] API.
 
@@ -97,9 +96,9 @@ Puede usar el complemento `id` para que un trabajo de segmento específico reali
 
 Encontrará información más detallada sobre el uso de este punto de conexión en la [guía de extremo de trabajos de segmento](../api/segment-jobs.md#get)
 
-## Interpretación de resultados de segmentos
+## Interpretar resultados del trabajo del segmento
 
-Cuando los trabajos de segmentos se ejecutan correctamente, la variable `segmentMembership` el mapa se actualiza para cada perfil incluido en el segmento. `segmentMembership` también almacena cualquier segmento de audiencia evaluado previamente que se haya introducido en [!DNL Platform], permitiendo la integración con otras soluciones como [!DNL Adobe Audience Manager].
+Cuando los trabajos de segmentos se ejecutan correctamente, la variable `segmentMembership` el mapa se actualiza para cada perfil incluido en la definición del segmento. `segmentMembership` también almacena cualquier audiencia evaluada previamente que se incorpora en [!DNL Platform], permitiendo la integración con otras soluciones como [!DNL Adobe Audience Manager].
 
 El siguiente ejemplo muestra lo que puede hacer el `segmentMembership` Este atributo tiene el siguiente aspecto para cada registro de perfil individual:
 
@@ -128,14 +127,14 @@ El siguiente ejemplo muestra lo que puede hacer el `segmentMembership` Este atri
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `lastQualificationTime` | La marca de tiempo cuando se realizó la afirmación del abono del segmento y el perfil entró o salió del segmento. |
-| `status` | El estado de la participación en el segmento como parte de la solicitud actual. Debe ser igual a uno de los siguientes valores conocidos: <ul><li>`realized`: la entidad cumple los requisitos para el segmento.</li><li>`exited`: la entidad está saliendo del segmento.</li></ul> |
+| `lastQualificationTime` | La marca de tiempo cuando se realizó la afirmación del abono del segmento y el perfil entró o salió de la definición del segmento. |
+| `status` | El estado de participación de la definición del segmento como parte de la solicitud actual. Debe ser igual a uno de los siguientes valores conocidos: <ul><li>`realized`: la entidad cumple los requisitos para la definición del segmento.</li><li>`exited`: la entidad está saliendo de la definición del segmento.</li></ul> |
 
 >[!NOTE]
 >
 >Cualquier pertenencia a segmento que esté en la variable `exited` estado durante más de 30 días, según el `lastQualificationTime`, estará sujeto a eliminación.
 
-## Acceso a resultados de segmentos
+## Acceder a resultados de trabajo de segmentos
 
 Se puede acceder a los resultados de un trabajo de segmentación de una de las dos maneras siguientes: puede acceder a perfiles individuales o exportar una audiencia completa a un conjunto de datos.
 
@@ -160,7 +159,7 @@ Se requieren los siguientes pasos para exportar la audiencia:
 
 Al exportar una audiencia, primero se debe crear un conjunto de datos de destinatario. Es importante que el conjunto de datos esté configurado correctamente para garantizar que la exportación se realice correctamente.
 
-Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de ejemplo de API que aparece a continuación). Para exportar un segmento, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase, en este caso la clase XDM Individual Profile. Para obtener más información sobre los esquemas de vista de unión, consulte la [Sección Perfil del cliente en tiempo real de la guía para desarrolladores de Registro de esquemas](../../xdm/api/getting-started.md).
+Una de las consideraciones clave es el esquema en el que se basa el conjunto de datos (`schemaRef.id` en la solicitud de ejemplo de API que aparece a continuación). Para exportar una definición de segmento, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de esquemas que comparten la misma clase, en este caso la clase XDM Individual Profile. Para obtener más información sobre los esquemas de vista de unión, consulte la [Sección Perfil del cliente en tiempo real de la guía para desarrolladores de Registro de esquemas](../../xdm/api/getting-started.md).
 
 Existen dos formas de crear el conjunto de datos necesario:
 
@@ -213,7 +212,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID único de solo lec
 
 ### Generar perfiles para los miembros de la audiencia {#generate-profiles}
 
-Una vez que tenga un conjunto de datos que persiste en la unión, puede crear un trabajo de exportación para mantener los miembros de la audiencia en el conjunto de datos realizando una solicitud del POST a `/export/jobs` punto final en la [!DNL Real-Time Customer Profile] y proporciona el ID del conjunto de datos y la información del segmento para los segmentos que desea exportar.
+Una vez que tenga un conjunto de datos que persiste en la unión, puede crear un trabajo de exportación para mantener los miembros de la audiencia en el conjunto de datos realizando una solicitud del POST a `/export/jobs` punto final en la [!DNL Real-Time Customer Profile] y proporciona el ID del conjunto de datos y la información de definición del segmento para las definiciones de segmento que desea exportar.
 
 Encontrará información más detallada sobre el uso de este punto de conexión en la [guía de extremo de trabajos de exportación](../api/export-jobs.md#create)
 
@@ -225,10 +224,10 @@ Encontrará información más detallada sobre el uso de este punto de conexión 
 
 ## Pasos siguientes
 
-Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el [!DNL Data Lake] in [!DNL Experience Platform]. A continuación, puede utilizar la variable [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos utilizando `batchId` asociado con la exportación. Según el tamaño del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
+Una vez que la exportación se haya completado correctamente, los datos estarán disponibles en el [!DNL Data Lake] in [!DNL Experience Platform]. A continuación, puede utilizar la variable [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) para acceder a los datos utilizando `batchId` asociado con la exportación. Según el tamaño de la definición del segmento, los datos pueden estar en fragmentos y el lote puede constar de varios archivos.
 
 Para obtener instrucciones paso a paso acerca de cómo usar el complemento [!DNL Data Access] API para acceder y descargar archivos por lotes, siga las [Tutorial de acceso a datos](../../data-access/tutorials/dataset-data.md).
 
-También puede acceder a los datos de segmentos exportados correctamente mediante [!DNL Adobe Experience Platform Query Service]. Uso de la interfaz de usuario o la API de RESTful, [!DNL Query Service] permite escribir, validar y ejecutar consultas sobre datos dentro de [!DNL Data Lake].
+También puede acceder a los datos de definición de segmento exportados correctamente mediante [!DNL Adobe Experience Platform Query Service]. Uso de la interfaz de usuario o la API de RESTful, [!DNL Query Service] permite escribir, validar y ejecutar consultas sobre datos dentro de [!DNL Data Lake].
 
 Para obtener más información sobre cómo consultar datos de audiencia, consulte la documentación sobre [[!DNL Query Service]](../../query-service/home.md).

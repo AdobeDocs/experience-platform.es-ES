@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;PQL;pql;lenguaje de consulta de perfil
 solution: Experience Platform
 title: Información general sobre el lenguaje de consulta de perfil (PQL)
 description: Esta guía proporciona información general sobre el PQL, e incluye directrices de formato y expresiones PQL de ejemplo.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '706'
 ht-degree: 3%
 
 ---
@@ -67,7 +66,6 @@ PQL proporciona compatibilidad con los siguientes tipos literales:
 | Matriz | Un tipo de datos que se comprende como un grupo de otros valores literales. Utiliza corchetes para agrupar y comas para delimitar entre distintos valores. <br> **Nota:** No puede acceder directamente a las propiedades de los elementos de una matriz. Por lo tanto, si necesita acceder a una propiedad dentro de una matriz, el método admitido es `select X from array where X.item = ...`. <br> PQL reserva la palabra `xEvent` para hacer referencia a una matriz de eventos de experiencia vinculados a un perfil. | `[1, 4, 7]`, `["US", "CA"]` |
 | Referencias de tiempo relativo | Palabras reservadas que se pueden utilizar para formar referencias de intervalo de tiempo y marca de tiempo. <ul><li>ahora, hoy, ayer, mañana</li><li>esto, lo último, lo siguiente</li><li>antes, después y desde</li><li>milisegundo(s), segundo(s), minuto(s), hora(s), día(s), semana(s), mes(es), año(s), década(s), siglo/siglos, milenio/milenio</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
-
 ## Funciones PQL
 
 La siguiente tabla describe las diferentes categorías de funciones PQL admitidas, incluidos los vínculos a documentación adicional para obtener más información.
@@ -89,4 +87,4 @@ La siguiente tabla describe las diferentes categorías de funciones PQL admitida
 
 ## Pasos siguientes
 
-Ahora que ha aprendido a utilizar [!DNL Profile Query Language], puede utilizar PQL al crear y modificar segmentos. Para obtener más información sobre la segmentación, lea la [resumen de segmentación](../home.md).
+Ahora que ha aprendido a utilizar [!DNL Profile Query Language], puede utilizar PQL al crear y modificar definiciones de segmentos. Para obtener más información sobre la segmentación, lea la [resumen de segmentación](../home.md).

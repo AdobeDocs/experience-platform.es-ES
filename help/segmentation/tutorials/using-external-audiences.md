@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Importación y uso de audiencias externas
 description: Siga este tutorial para aprender a utilizar audiencias externas con Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
 
 # Importación y uso de audiencias externas
 
-Adobe Experience Platform admite la capacidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva definición de segmento. Este documento proporciona un tutorial para configurar Experience Platform para importar y utilizar audiencias externas.
+>[!IMPORTANT]
+>
+>Esta documentación contiene información de una versión anterior de la documentación de Audiences y, como resultado, no está actualizada.
+
+Adobe Experience Platform admite la capacidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva audiencia. Este documento proporciona un tutorial para configurar Experience Platform para importar y utilizar audiencias externas.
 
 ## Primeros pasos
 
-Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de segmentos de audiencia. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
+Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de audiencias. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [Servicio de segmentación](../home.md): Permite crear segmentos de audiencia a partir de datos del perfil del cliente en tiempo real.
+- [Servicio de segmentación](../home.md): Permite crear audiencias a partir de los datos del perfil del cliente en tiempo real.
 - [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [Modelo de datos de experiencia (XDM)](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 - [Conjuntos de datos](../../catalog/datasets/overview.md): La construcción de almacenamiento y administración para la persistencia de datos en Experience Platform.
 - [Ingesta por streaming](../../ingestion/streaming-ingestion/overview.md): el modo en que el Experience Platform ingiere y almacena datos de dispositivos del lado del cliente y del servidor en tiempo real.
 
-### Datos de segmentos frente a metadatos de segmentos
+### Audiencias o definiciones de segmentos
 
-Antes de empezar a importar y usar audiencias externas, es importante comprender la diferencia entre los datos de los segmentos y los metadatos de los segmentos.
+Antes de empezar a importar y usar audiencias externas, es importante comprender la diferencia entre las audiencias y las definiciones de segmentos.
 
-Los datos de segmentos hacen referencia a los perfiles que cumplen los criterios de calificación de segmentos y, por lo tanto, forman parte de la audiencia.
+Las audiencias se refieren al grupo de perfiles por el que intenta filtrar. Al utilizar definiciones de segmentos, puede crear una audiencia creando una definición de segmento que filtre los perfiles al subconjunto que cumpla los criterios de calificación de segmentos.
 
-Los metadatos del segmento son información sobre el propio segmento, que incluye el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con los perfiles individuales que cumplen con la calificación del segmento y forman parte de la audiencia resultante.
+Las definiciones de segmentos incluyen información como el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con los perfiles individuales que cumplen con la calificación del segmento y forman parte de la audiencia resultante.
 
-| Datos de segmentos | Metadatos de segmentos |
-| ------------ | ---------------- |
-| Perfiles que cumplen los requisitos de calificación de segmentos | Información sobre el propio segmento |
+| Audiencias | Definición del segmento |
+| --------- | ---------------- |
+| El grupo de perfiles que está intentando encontrar. Al utilizar definiciones de segmentos, esto significa que será el grupo de perfiles que cumplan con la calificación de segmentos. | El grupo de reglas utilizadas para segmentar la audiencia que está buscando. |
 
 ## Crear un área de nombres de identidad para la audiencia externa
 
-El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Platform asocie el lugar desde el que se origina un segmento.
+El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Platform asocie el lugar desde el que se origina una audiencia.
 
 Para crear un área de nombres de identidad, siga las instrucciones de la [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] as a **[!UICONTROL Identificador de no personas]**.
 

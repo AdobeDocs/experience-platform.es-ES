@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de consulta de perfil;funciones de fecha y hora;funciones de fecha y hora;fecha y hora;fecha y hora;
 solution: Experience Platform
 title: Funciones de fecha y hora PQL
 description: Las funciones de fecha y hora se utilizan para realizar operaciones de fecha y hora en valores dentro del lenguaje de consulta de perfil (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 3%
+source-wordcount: '485'
+ht-degree: 4%
 
 ---
 

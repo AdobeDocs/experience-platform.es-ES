@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;definición de segmento;definiciones de segmento;api;API;
 solution: Experience Platform
 title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1209'
 ht-degree: 4%
 
 ---
 
 # Extremo de definiciones de segmento
 
-Adobe Experience Platform le permite crear segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
+Adobe Experience Platform le permite crear definiciones de segmentos que definen un grupo de atributos o comportamientos específicos a partir de un grupo de perfiles. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Las definiciones de segmentos se aplican a perfiles para crear audiencias. Este objeto (definición de segmento) también se denomina predicado PQL. Los predicados PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
 
 Esta guía proporciona información para ayudarle a comprender mejor las definiciones de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | **Requerido.** Un nombre único por el que hacer referencia al segmento. |
-| `description` | Una descripción de la definición del segmento que está creando. |
-| `evaluationInfo` | El tipo de segmento que está creando. Si desea crear un segmento por lotes, defina `evaluationInfo.batch.enabled` para ser verdad. Si desea crear un segmento de flujo continuo, establezca `evaluationInfo.continuous.enabled` para ser verdad. Si desea crear un segmento de borde, defina `evaluationInfo.synchronous.enabled` para ser verdad. Si se deja vacío, el segmento se creará como **lote** segmento. |
-| `schema` | **Requerido.** El esquema asociado a las entidades del segmento. Consta de un `id` o `name` field. |
-| `expression` | **Requerido.** Una entidad que contiene campos e información sobre la definición del segmento. |
+| `name` | Un nombre único para hacer referencia a la definición del segmento. |
+| `description` | (Opcional.) Una descripción de la definición del segmento que está creando. |
+| `evaluationInfo` | (Opcional.) El tipo de definición de segmento que está creando. Si desea crear un segmento por lotes, defina `evaluationInfo.batch.enabled` para ser verdad. Si desea crear un segmento de flujo continuo, establezca `evaluationInfo.continuous.enabled` para ser verdad. Si desea crear un segmento de borde, defina `evaluationInfo.synchronous.enabled` para ser verdad. Si se deja vacía, la definición del segmento se creará como **lote** segmento. |
+| `schema` | El esquema asociado a las entidades del segmento. Consta de un `id` o `name` field. |
+| `expression` | Una entidad que contiene campos e información sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
 | `expression.format` | Indica la estructura de la expresión en el valor. Actualmente, se admite el siguiente formato: <ul><li>`pql/text`: una representación textual de una definición de segmento, según la gramática PQL publicada.  Por ejemplo, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Una expresión que se ajuste al tipo indicado en `expression.format`. |
-| `description` | Una descripción legible en lenguaje natural de la definición. |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `id` | ID de solo lectura generado por el sistema para la definición del segmento. |
-| `name` | Un nombre único por el que hacer referencia al segmento. |
+| `name` | Un nombre único para hacer referencia a la definición del segmento. |
 | `schema` | El esquema asociado a las entidades del segmento. Consta de un `id` o `name` field. |
 | `expression` | Una entidad que contiene campos e información sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
@@ -472,7 +470,7 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `id` | ID de solo lectura generado por el sistema para la definición del segmento. |
-| `name` | Un nombre único por el que hacer referencia al segmento. |
+| `name` | Un nombre único para hacer referencia a la definición del segmento. |
 | `schema` | El esquema asociado a las entidades del segmento. Consta de un `id` o `name` field. |
 | `expression` | Una entidad que contiene campos e información sobre la definición del segmento. |
 | `expression.type` | Especifica el tipo de expresión. Actualmente, solo se admite &quot;PQL&quot;. |
@@ -487,7 +485,7 @@ Puede solicitar que se elimine una definición de segmento específica realizand
 
 >[!NOTE]
 >
-> Lo hará **no** poder eliminar un segmento que se utilice en una activación de destino.
+> Definición de segmento que se utiliza en una activación de destino **no puede** se eliminarán.
 
 **Formato de API**
 

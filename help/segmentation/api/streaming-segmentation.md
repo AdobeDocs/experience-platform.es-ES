@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;segmentación de streaming;Segmentación de streaming;Evaluación continua;
 solution: Experience Platform
 title: Evaluar eventos en tiempo casi real con segmentación de streaming
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1992'
 ht-degree: 2%
 
 ---
@@ -25,14 +24,14 @@ Segmentación de streaming en [!DNL Adobe Experience Platform] permite a los cli
 >
 >La segmentación por flujo funciona en todos los datos que se ingirieron con una fuente de flujo continuo. Los segmentos ingeridos mediante una fuente basada en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación por transmisión.
 >
->Además, los segmentos evaluados con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si el segmento se basa en otro segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
+>Además, las definiciones de segmentos evaluadas con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si la definición del segmento se basa en otra definición de segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
 ## Primeros pasos
 
 Esta guía para desarrolladores requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de streaming. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real, basado en los datos agregados de varias fuentes.
-- [[!DNL Segmentation]](../home.md): permite crear segmentos y audiencias a partir de [!DNL Real-Time Customer Profile] datos.
+- [[!DNL Segmentation]](../home.md): Proporciona la capacidad de crear audiencias utilizando definiciones de segmentos y otras fuentes externas de [!DNL Real-Time Customer Profile] datos.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Platform] API.
@@ -69,7 +68,7 @@ Es posible que se requieran encabezados adicionales para completar solicitudes e
 >
 >Deberá habilitar la segmentación programada para la organización a fin de que la segmentación de streaming funcione. Encontrará información sobre la activación de la segmentación programada en la [habilitar sección de segmentación programada](#enable-scheduled-segmentation)
 
-Para que un segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
+Para que una definición de segmento se evalúe mediante la segmentación de flujo continuo, la consulta debe cumplir las siguientes directrices.
 
 | Tipo de consulta | Detalles |
 | ---------- | ------- |
@@ -98,15 +97,15 @@ Tenga en cuenta las siguientes directrices a la hora de realizar la segmentació
 
 Si se modifica una definición de segmento para que ya no cumpla los criterios de segmentación de flujo continuo, la definición de segmento cambiará automáticamente de &quot;Flujo&quot; a &quot;Lote&quot;.
 
-Además, la descalificación de segmentos, de manera similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si una audiencia ya no cumple los requisitos para un segmento, se elimina inmediatamente. Por ejemplo, si la definición del segmento solicita &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente se calificaron para la definición del segmento serán no calificados.
+Además, la descalificación de segmentos, de manera similar a la calificación de segmentos, se produce en tiempo real. Como resultado, si un perfil ya no cumple los requisitos para una definición de segmento, se descalifica inmediatamente. Por ejemplo, si la definición del segmento solicita &quot;Todos los usuarios que compraron zapatos rojos en las últimas tres horas&quot;, después de tres horas, todos los perfiles que inicialmente se calificaron para la definición del segmento serán no calificados.
 
-## Recupere todos los segmentos habilitados para la segmentación de streaming
+## Recupere todas las definiciones de segmentos habilitadas para la segmentación de streaming
 
-Puede recuperar una lista de todos los segmentos habilitados para la segmentación de flujo continuo dentro de su organización realizando una solicitud de GET a `/segment/definitions` punto final.
+Puede recuperar una lista de todas las definiciones de segmentos habilitadas para la segmentación de streaming en su organización realizando una solicitud de GET a `/segment/definitions` punto final.
 
 **Formato de API**
 
-Para recuperar segmentos habilitados para flujo continuo, debe incluir el parámetro de consulta `evaluationInfo.continuous.enabled=true` en la ruta de solicitud.
+Para recuperar definiciones de segmentos habilitados para flujo continuo, debe incluir el parámetro de consulta `evaluationInfo.continuous.enabled=true` en la ruta de solicitud.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -126,7 +125,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una matriz de segmentos en su organización que están habilitados para la segmentación de flujo continuo.
+Una respuesta correcta devuelve una matriz de definiciones de segmentos en su organización que están habilitadas para la segmentación de flujo continuo.
 
 ```json
 {
@@ -213,9 +212,9 @@ Una respuesta correcta devuelve una matriz de segmentos en su organización que 
 }
 ```
 
-## Creación de un segmento habilitado para streaming
+## Creación de una definición de segmento habilitada para streaming
 
-Un segmento se habilitará automáticamente para la transmisión si coincide con uno de los [tipos de segmentación de streaming enumerados arriba](#query-types).
+Una definición de segmento se habilitará automáticamente para flujo continuo si coincide con uno de los [tipos de segmentación de streaming enumerados arriba](#query-types).
 
 **Formato de API**
 
@@ -261,7 +260,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Esta es una solicitud estándar de &quot;creación de segmentos&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de segmentos](../tutorials/create-a-segment.md).
+>Esta es una solicitud estándar de &quot;creación de definición de segmento&quot;. Para obtener más información sobre la creación de una definición de segmento, lea el tutorial sobre [creación de una definición de segmento](../tutorials/create-a-segment.md).
 
 **Respuesta**
 
@@ -307,7 +306,7 @@ Una respuesta correcta devuelve los detalles de la definición del segmento habi
 
 ## Habilitar evaluación programada {#enable-scheduled-segmentation}
 
-Una vez habilitada la evaluación de la transmisión, se debe crear una línea de base (después de la cual el segmento siempre estará actualizado). La evaluación programada (también conocida como segmentación programada) debe habilitarse primero para que el sistema realice la línea de base automáticamente. Con la segmentación programada, su organización puede adherirse a una programación recurrente para ejecutar automáticamente los trabajos de exportación y evaluar los segmentos.
+Una vez habilitada la evaluación de la transmisión, se debe crear una línea de base (después de la cual la definición del segmento siempre estará actualizada). La evaluación programada (también conocida como segmentación programada) debe habilitarse primero para que el sistema realice la línea de base automáticamente. Con la segmentación programada, su organización puede adherirse a una programación recurrente para ejecutar automáticamente los trabajos de exportación y evaluar las definiciones de segmentos.
 
 >[!NOTE]
 >
@@ -351,7 +350,7 @@ curl -X POST \
 | `name` | **(Obligatorio)** Nombre de la programación. Debe ser una cadena. |
 | `type` | **(Obligatorio)** El tipo de trabajo en formato de cadena. Los tipos admitidos son `batch_segmentation` y `export`. |
 | `properties` | **(Obligatorio)** Objeto que contiene propiedades adicionales relacionadas con la programación. |
-| `properties.segments` | **(Necesario cuando `type` igual a `batch_segmentation`)** Uso de `["*"]` garantiza que todos los segmentos estén incluidos. |
+| `properties.segments` | **(Necesario cuando `type` igual a `batch_segmentation`)** Uso de `["*"]` garantiza que todas las definiciones de segmentos estén incluidas. |
 | `schedule` | **(Obligatorio)** Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. El ejemplo mostrado (`0 0 1 * * ?`) significa que el trabajo se activa cada día a las 1:00:00 UTC. Para obtener más información, consulte el apéndice del [formato de expresión cron](./schedules.md#appendix) dentro de la documentación sobre programaciones dentro de la segmentación. |
 | `state` | *(Opcional)* Cadena que contiene el estado de programación. Valores disponibles: `active` y `inactive`. El valor predeterminado es `inactive`. Una organización solo puede crear una programación. Los pasos para actualizar la programación están disponibles más adelante en este tutorial. |
 
@@ -422,9 +421,9 @@ Se puede utilizar la misma operación para desactivar una programación sustituy
 
 ## Pasos siguientes
 
-Ahora que ha habilitado tanto los segmentos nuevos como los existentes para la segmentación de flujo continuo, y ha habilitado la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear segmentos habilitados para flujo continuo para su organización.
+Ahora que ha habilitado definiciones de segmentos nuevas y existentes para la segmentación de flujo continuo, y ha habilitado la segmentación programada para desarrollar una línea de base y realizar evaluaciones recurrentes, puede empezar a crear definiciones de segmentos habilitadas para flujo continuo para su organización.
 
-Para aprender a realizar acciones similares y trabajar con segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
+Para aprender a realizar acciones similares y trabajar con definiciones de segmentos mediante la interfaz de usuario de Adobe Experience Platform, visite [Guía del usuario del Generador de segmentos](../ui/segment-builder.md).
 
 ## Apéndice
 
@@ -432,26 +431,26 @@ En la siguiente sección se enumeran las preguntas más frecuentes sobre la segm
 
 ### ¿La &quot;descalificación&quot; de la segmentación de streaming también se produce en tiempo real?
 
-En la mayoría de los casos, la descalificación de la segmentación de streaming se produce en tiempo real. Sin embargo, los segmentos de flujo continuo que utilizan segmentos de segmentos sí lo hacen **no** descalificar en tiempo real, en lugar de descalificar después de 24 horas.
+En la mayoría de los casos, la descalificación de la segmentación de streaming se produce en tiempo real. Sin embargo, las definiciones de segmentos de flujo continuo que utilizan segmentos de segmentos sí lo hacen **no** descalificar en tiempo real, en lugar de descalificar después de 24 horas.
 
 ### ¿En qué datos funciona la segmentación por streaming?
 
 La segmentación por flujo funciona en todos los datos que se ingirieron con una fuente de flujo continuo. Los segmentos ingeridos mediante una fuente basada en lotes se evaluarán todas las noches, incluso si cumplen los requisitos para la segmentación por transmisión. Los eventos transmitidos al sistema con una marca de tiempo de más de 24 horas se procesarán en el trabajo por lotes siguiente.
 
-### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
+### ¿Cómo se definen las definiciones de segmentos como segmentación por lotes o de flujo continuo?
 
-Un segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de los segmentos que se evaluarán como segmento de flujo continuo en la [sección tipos de consulta de segmentación de streaming](#query-types).
+Una definición de segmento se define como segmentación por lotes o de flujo continuo basada en una combinación de tipo de consulta y duración del historial de eventos. Puede encontrar una lista de las definiciones de segmentos que se evaluarán como segmento de flujo continuo en la [sección tipos de consulta de segmentación de streaming](#query-types).
 
-Tenga en cuenta que si un segmento contiene **ambos** un `inSegment` y una cadena de evento único directa, no cumple los requisitos para la segmentación de flujo continuo. Si desea que este segmento cumpla los requisitos para la segmentación de flujo continuo, debe convertir la cadena de evento único directo en su propio segmento.
+Tenga en cuenta que si un segmento contiene **ambos** un `inSegment` y una cadena de evento único directa, no cumple los requisitos para la segmentación de flujo continuo. Si desea que esta definición de segmento cumpla los requisitos de la segmentación de flujo continuo, debe hacer de la cadena de evento único directo su propia definición de segmento.
 
-### ¿Por qué sigue aumentando el número de segmentos &quot;cualificados totales&quot; mientras que el número de &quot;últimos X días&quot; permanece en cero dentro de la sección de detalles del segmento?
+### ¿Por qué sigue aumentando el número de definiciones de segmento &quot;cualificadas totales&quot; mientras que el número de &quot;últimos X días&quot; permanece en cero dentro de la sección de detalles de la definición del segmento?
 
-El número total de segmentos cualificados se obtiene del trabajo de segmentación diario, que incluye audiencias que cumplen los requisitos para los segmentos por lotes y de flujo continuo. Este valor se muestra para los segmentos por lotes y de flujo continuo.
+El número total de definiciones de segmentos cualificados se obtiene del trabajo de segmentación diario, que incluye audiencias que cumplen los requisitos para las definiciones de segmentos por lotes y de flujo continuo. Este valor se muestra para las definiciones de segmentos por lotes y de flujo continuo.
 
-El número bajo los &quot;últimos X días&quot; **solamente** incluye audiencias que cumplen los requisitos de la segmentación de streaming y **solamente** aumenta si ha transmitido datos al sistema y estos se contabilizan en esa definición de transmisión. Este valor es **solamente** se muestra para segmentos de flujo continuo. Como resultado, este valor **mayo** mostrar como 0 para los segmentos por lotes.
+El número bajo los &quot;últimos X días&quot; **solamente** incluye audiencias que cumplen los requisitos de la segmentación de streaming y **solamente** aumenta si ha transmitido datos al sistema y estos se contabilizan en esa definición de transmisión. Este valor es **solamente** Se muestra para definiciones de segmentos de streaming. Como resultado, este valor **mayo** mostrar como 0 para las definiciones de segmentos por lotes.
 
-Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y el gráfico de líneas también informa de cero, tiene **no** transmite al sistema todos los perfiles aptos para ese segmento.
+Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y el gráfico de líneas también informa de cero, tiene **no** transmite al sistema todos los perfiles que cumplen los requisitos para esa definición de segmento.
 
-### ¿Cuánto tiempo tarda un segmento en estar disponible?
+### ¿Cuánto tiempo tarda una definición de segmento en estar disponible?
 
-Un segmento puede tardar hasta una hora en estar disponible.
+Una definición de segmento tarda hasta una hora en estar disponible.

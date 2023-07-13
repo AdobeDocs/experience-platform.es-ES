@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;pql;PQL;Lenguaje de consulta de perfil;cuantificadores lógicos;cuantificador lógico;
 solution: Experience Platform
 title: Cuantificadores lógicos PQL
 description: Los cuantificadores lógicos se pueden utilizar para afirmar condiciones con matrices en el lenguaje de consulta de perfil (PQL).
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 5%
 
 ---

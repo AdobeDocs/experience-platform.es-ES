@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;segmentación;Segmentación;Servicio de segmentación;programaciones;programación;api;API;
 solution: Experience Platform
 title: Programa el extremo de API
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '1996'
 ht-degree: 4%
 
 ---

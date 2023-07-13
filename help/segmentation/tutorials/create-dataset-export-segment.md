@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Servicio de segmentación;segmentación;Segmentación;crear un conjunto de datos;exportar segmento de audiencia;exportar segmento;
 solution: Experience Platform
-title: Crear un conjunto de datos para exportar un segmento de audiencia
+title: Crear un conjunto de datos para exportar una audiencia
 type: Tutorial
-description: Este tutorial recorre los pasos necesarios para crear un conjunto de datos que se pueda utilizar para exportar un segmento de audiencia mediante la interfaz de usuario del Experience Platform.
+description: Obtenga información sobre cómo crear un conjunto de datos que se pueda utilizar para exportar una audiencia mediante la interfaz de usuario de Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
-# Crear un conjunto de datos para exportar un segmento de audiencia
+# Crear un conjunto de datos para exportar una audiencia
 
-[!DNL Adobe Experience Platform] le permite segmentar perfiles de clientes en audiencias en función de atributos específicos. Una vez creado un segmento, puede exportar esa audiencia a un conjunto de datos al que se pueda acceder y sobre el que se pueda actuar. Para que la exportación se realice correctamente, el conjunto de datos debe estar configurado correctamente.
+[!DNL Adobe Experience Platform] le permite segmentar perfiles de clientes en audiencias en función de atributos específicos. Una vez creada una definición de segmento, puede exportar la audiencia resultante a un conjunto de datos al que se pueda acceder y sobre el que se pueda actuar. Para que la exportación se realice correctamente, el conjunto de datos debe estar configurado correctamente.
 
-Este tutorial recorre los pasos necesarios para crear un conjunto de datos que se pueda utilizar para exportar un segmento de audiencia utilizando [!DNL Experience Platform] IU.
+Este tutorial recorre los pasos necesarios para crear un conjunto de datos que se pueda utilizar para exportar una audiencia mediante [!DNL Experience Platform] IU.
 
-Este tutorial está directamente relacionado con los pasos descritos en el tutorial sobre [evaluación y acceso a los resultados de los segmentos](./evaluate-a-segment.md). El tutorial de evaluación de segmentos proporciona los pasos para crear un conjunto de datos con la variable [!DNL Catalog Service] API, mientras que este tutorial describe los pasos para crear un conjunto de datos utilizando la variable [!DNL Experience Platform] IU.
+Este tutorial está directamente relacionado con los pasos descritos en el tutorial sobre [evaluación y acceso a los resultados de segmentación](./evaluate-a-segment.md). El tutorial de evaluación de definición de segmento proporciona los pasos para crear un conjunto de datos con la variable [!DNL Catalog Service] API, mientras que este tutorial describe los pasos para crear un conjunto de datos utilizando la variable [!DNL Experience Platform] IU.
 
 ## Primeros pasos
 
-Para exportar un segmento, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile Union Schema]. Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de todos los esquemas que comparten la misma clase. Para obtener más información sobre los esquemas de unión, consulte la guía de [los conceptos básicos de composición de esquemas](../../xdm/schema/composition.md#union).
+Para exportar una audiencia, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile Union Schema]. Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de todos los esquemas que comparten la misma clase. Para obtener más información sobre los esquemas de unión, consulte la guía de [los conceptos básicos de composición de esquemas](../../xdm/schema/composition.md#union).
 
 Para ver los esquemas de unión en la IU, seleccione **[!UICONTROL Perfiles]** en el panel de navegación izquierdo, seleccione **[!UICONTROL Esquema de unión]** como se muestra a continuación.
 
@@ -70,7 +69,7 @@ En la pantalla siguiente, debe asignar un nombre al conjunto de datos. También 
 
 * Los nombres de los conjuntos de datos deben ser cortos y descriptivos para que se puedan encontrar fácilmente en la biblioteca más adelante.
 * Los nombres de los conjuntos de datos deben ser únicos, lo que significa que también deben ser lo suficientemente específicos para que no se reutilicen en el futuro.
-* Se recomienda proporcionar información adicional sobre el conjunto de datos mediante el campo de descripción, ya que puede ayudar a otros usuarios a diferenciar entre conjuntos de datos en el futuro.
+* Debe proporcionar información adicional sobre el conjunto de datos mediante el campo de descripción, ya que puede ayudar a otros usuarios a diferenciar entre conjuntos de datos en el futuro.
 
 Una vez que el conjunto de datos tenga un nombre y una descripción, seleccione **[!UICONTROL Finalizar]**.
 
@@ -80,12 +79,12 @@ Una vez que el conjunto de datos tenga un nombre y una descripción, seleccione 
 
 Una vez creado el conjunto de datos, se le mostrará la página de actividad de ese conjunto de datos. Debería ver el nombre del conjunto de datos en la esquina superior izquierda del espacio de trabajo, junto con una notificación que indique que no se han agregado lotes. Esto es lo que cabe esperar, ya que todavía no ha añadido ningún lote a este conjunto de datos.
 
-El carril derecho contiene información relacionada con el nuevo conjunto de datos, como el ID del conjunto de datos, el nombre, la descripción, el esquema, etc. Tome nota de la **[!UICONTROL ID de conjunto de datos]**, ya que este valor es necesario para completar el flujo de trabajo de exportación de segmentos de audiencia.
+El carril derecho contiene información relacionada con el nuevo conjunto de datos, como el ID del conjunto de datos, el nombre, la descripción, el esquema, etc. Tome nota de la **[!UICONTROL ID de conjunto de datos]**, ya que este valor es necesario para completar el flujo de trabajo de exportación de audiencias.
 
 ![Se muestra la página de actividad del conjunto de datos. El ID del conjunto de datos se resalta, ya que este valor debe tenerse en cuenta para pasos futuros.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Pasos siguientes
 
-Ahora que ha creado un conjunto de datos basado en la variable [!DNL XDM Individual Profile Union Schema], puede utilizar la ID del conjunto de datos para continuar con la [evaluación y acceso a los resultados de los segmentos](./evaluate-a-segment.md) tutorial.
+Ahora que ha creado un conjunto de datos basado en la variable [!DNL XDM Individual Profile Union Schema], puede utilizar la ID del conjunto de datos para continuar con la [evaluación y acceso a los resultados de definición del segmento](./evaluate-a-segment.md) tutorial.
 
-En este momento, vuelva al tutorial de evaluación de resultados del segmento y recoja de la [generación de perfiles para miembros de audiencia](./evaluate-a-segment.md#generate-profiles) paso de exportación de un flujo de trabajo de segmentos.
+En este momento, vuelva al tutorial de evaluación de resultados de definición de segmentos y recoja de la [generación de perfiles para miembros de audiencia](./evaluate-a-segment.md#generate-profiles) paso del flujo de trabajo exportar una audiencia.

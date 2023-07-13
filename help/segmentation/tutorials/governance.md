@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;inicio;temas populares;conformidad con el uso de los datos;aplicar;conformidad con el uso de los datos;Servicio de segmentación;segmentación;Segmentación;
 solution: Experience Platform
 title: Aplicar el cumplimiento de uso de datos para un segmento de audiencia mediante API
 type: Tutorial
-description: Este tutorial cubre los pasos para aplicar el cumplimiento del uso de datos para los segmentos de audiencia del Perfil del cliente en tiempo real mediante API.
+description: Este tutorial cubre los pasos para aplicar definiciones de segmentos conformes con el uso de datos mediante API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1355'
 ht-degree: 2%
 
 ---
 
-# Aplicar el cumplimiento del uso de datos para un segmento de audiencia mediante API
+# Aplicar el cumplimiento del uso de datos para una definición de segmento mediante API
 
-Este tutorial trata los pasos para aplicar el cumplimiento del uso de datos para [!DNL Real-Time Customer Profile] segmentos de audiencia que utilizan API.
+Este tutorial cubre los pasos para aplicar el cumplimiento del uso de datos para definiciones de segmentos mediante API.
 
 ## Primeros pasos
 
@@ -57,7 +56,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Búsqueda de una política de combinación para una definición de segmento {#merge-policy}
 
-Este flujo de trabajo comienza accediendo a un segmento de audiencia conocido. Segmentos que están habilitados para su uso en [!DNL Real-Time Customer Profile] contienen un ID de política de combinación dentro de su definición de segmento. Esta política de combinación contiene información sobre qué conjuntos de datos se van a incluir en el segmento, que a su vez contienen cualquier etiqueta de uso de datos aplicable.
+Este flujo de trabajo comienza accediendo a una definición de segmento conocida. Definiciones de segmentos que están habilitadas para su uso en [!DNL Real-Time Customer Profile] contienen un ID de política de combinación dentro de su definición de segmento. Esta política de combinación contiene información sobre qué conjuntos de datos se van a incluir en la definición del segmento, que a su vez contienen cualquier etiqueta de uso de datos aplicable.
 
 Uso del [!DNL Segmentation] API, puede buscar una definición de segmento por su ID para encontrar su política de combinación asociada.
 
@@ -367,20 +366,20 @@ Con los datos devueltos en la respuesta de API, puede configurar protocolos en s
 
 ## Filtrar campos de datos
 
-Si el segmento de audiencia no supera la evaluación, puede ajustar los datos incluidos en el segmento mediante uno de los dos métodos descritos a continuación.
+Si la definición del segmento no supera la evaluación, puede ajustar los datos incluidos en la definición del segmento mediante uno de los dos métodos descritos a continuación.
 
 ### Actualizar la política de combinación de la definición del segmento
 
 Al actualizar la política de combinación de una definición de segmento, se ajustarán los conjuntos de datos y los campos que se incluirán cuando se ejecute el trabajo de segmentación. Consulte la sección sobre [actualizar una política de combinación existente](../../profile/api/merge-policies.md#update) en el tutorial de la política de combinación de API para obtener más información.
 
-### Restringir campos de datos específicos al exportar el segmento
+### Restringir campos de datos específicos al exportar la definición del segmento
 
-Al exportar un segmento a un conjunto de datos mediante [!DNL Segmentation] API, puede filtrar los datos que se incluyen en la exportación utilizando `fields` parámetro. Cualquier campo de datos añadido a este parámetro se incluirá en la exportación, mientras que el resto de campos de datos se excluirán.
+Al exportar una definición de segmento a un conjunto de datos mediante [!DNL Segmentation] API, puede filtrar los datos que se incluyen en la exportación utilizando `fields` parámetro. Cualquier campo de datos añadido a este parámetro se incluirá en la exportación, mientras que el resto de campos de datos se excluirán.
 
-Imagine un segmento con campos de datos llamados &quot;A&quot;, &quot;B&quot; y &quot;C&quot;. Si solo desea exportar el campo &quot;C&quot;, la variable `fields` El parámetro contendría el campo &quot;C&quot; solo. Al hacerlo, los campos &quot;A&quot; y &quot;B&quot; se excluirían al exportar el segmento.
+Imagine una definición de segmento que tenga campos de datos llamados &quot;A&quot;, &quot;B&quot; y &quot;C&quot;. Si solo desea exportar el campo &quot;C&quot;, la variable `fields` El parámetro contendría el campo &quot;C&quot; solo. Al hacerlo, los campos &quot;A&quot; y &quot;B&quot; se excluirían al exportar la definición del segmento.
 
-Consulte la sección sobre [exportación de segmentos](./evaluate-a-segment.md#export) en el tutorial de segmentación para obtener más información.
+Consulte la sección sobre [exportación de una definición de segmento](./evaluate-a-segment.md#export) en el tutorial de segmentación para obtener más información.
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha buscado las etiquetas de uso de datos asociadas a un segmento de audiencia y las ha probado para detectar infracciones de directivas en relación con acciones de marketing específicas. Para obtener más información sobre la gobernanza de datos en [!DNL Experience Platform], lea la descripción general de [Gobernanza de datos](../../data-governance/home.md).
+Al seguir este tutorial, ha buscado las etiquetas de uso de datos asociadas a una definición de segmento y las ha probado para detectar infracciones de directivas en acciones de marketing específicas. Para obtener más información sobre la gobernanza de datos en [!DNL Experience Platform], lea la descripción general de [Gobernanza de datos](../../data-governance/home.md).
