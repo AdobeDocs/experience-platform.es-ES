@@ -3,7 +3,7 @@ title: (Beta) Audiencias del Experience Cloud
 description: Aprenda a compartir audiencias de Experience Platform a varias soluciones de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### Para clientes que utilizan la solución heredada de uso compartido de audiencias
 
-Si ya está compartiendo audiencias de Experience Platform a Audience Manager y otras soluciones de Experience Cloud a través de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), debe ponerse en contacto con el Servicio de atención al cliente o con el equipo de su cuenta de Adobe para deshabilitar la integración heredada. Los equipos del Servicio de atención al cliente y de la cuenta de Adobe AAM deben presentar un ticket de Jira (consulte ticket de plantilla-52354) para deshabilitar la integración.
+Si ya está compartiendo audiencias de Experience Platform a Audience Manager y otras soluciones de Experience Cloud a través de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), debe ponerse en contacto con el Servicio de atención al cliente o con el equipo de su cuenta de Adobe para deshabilitar la integración heredada. Los equipos del Servicio de atención al cliente y de la cuenta de Adobe deben presentar un ticket Jira (consulte ticket de plantilla PLAT-160986) para deshabilitar la integración.
 
 El tiempo de respuesta para resolver el ticket de desabastecimiento para los clientes de la versión beta es de seis días hábiles o menos. Una vez deshabilitada la integración heredada existente, puede continuar con [creación de una conexión](#connect) a través de la tarjeta de destino de autoservicio.
 
