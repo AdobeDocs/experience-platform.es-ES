@@ -4,9 +4,9 @@ title: Conexión de Microsoft Dynamics 365
 description: El destino de Microsoft Dynamics 365 le permite exportar los datos de su cuenta y activarlos en Microsoft Dynamics 365 para sus necesidades comerciales.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) es una plataforma de aplicaciones empresariales basada en la nube que combina Planificación de recursos empresariales (ERP) y Gestión de relaciones con el cliente (CRM) junto con aplicaciones de productividad y herramientas de IA, para ofrecer operaciones de extremo a extremo más suaves y controladas, un mejor potencial de crecimiento y costes reducidos.
 
-Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), que le permite actualizar identidades dentro de un segmento en [!DNL Dynamics 365].
+Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), que le permite actualizar identidades dentro de una audiencia en [!DNL Dynamics 365].
 
 [!DNL Dynamics 365] utiliza OAuth 2 con la concesión de autorización como mecanismo de autenticación para comunicarse con [!DNL Contact Entity Reference API]. Instrucciones para autenticarse en su [!DNL Dynamics 365] más abajo, en la sección [Autenticar en el destino](#authenticate) sección.
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede generar segmentos a partir de los datos sin conexión y enviarlos a [!DNL Dynamics 365], para que se muestren en las fuentes de los usuarios en cuanto los segmentos y perfiles se actualicen en Adobe Experience Platform.
+Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede crear audiencias a partir de los datos sin conexión y enviarlas a [!DNL Dynamics 365], para que se muestren en las fuentes de los usuarios en cuanto las audiencias y los perfiles se actualicen en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
@@ -31,7 +31,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a los usuar
 
 Antes de activar los datos en [!DNL Dynamics 365] destino, debe tener un [esquema](/help/xdm/schema/composition.md), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creado en [!DNL Experience Platform].
 
-Consulte la documentación del Adobe para [Grupo de campos de esquema Detalles de pertenencia a segmento](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de los segmentos.
+Consulte la documentación del Adobe para [Grupo de campos de esquema Detalles de pertenencia a segmento](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
 
 ### [!DNL Microsoft Dynamics 365] requisitos previos {#prerequisites-destination}
 
@@ -43,7 +43,7 @@ Vaya a la [!DNL Dynamics 365] [prueba](https://dynamics.microsoft.com/en-us/dyna
 
 #### Crear campo en [!DNL Dynamics 365] {#prerequisites-custom-field}
 
-Crear el campo personalizado de tipo `Simple` con tipo de datos de campo como `Single Line of Text` qué Experience Platform utilizará para actualizar el estado del segmento en [!DNL Dynamics 365].
+Crear el campo personalizado de tipo `Simple` con tipo de datos de campo como `Single Line of Text` qué Experience Platform utilizará para actualizar el estado de audiencia en [!DNL Dynamics 365].
 Consulte la [!DNL Dynamics 365] documentación para [crear un campo (atributo)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) si necesita orientación adicional.
 
 Un ejemplo de configuración en [!DNL Dynamics 365] se muestra a continuación:
@@ -87,8 +87,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Cada estado del segmento en [!DNL Dynamics 365] se actualiza con el estado del segmento correspondiente de Platform, en función de la variable **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de segmentos](#schedule-segment-export-example) paso.</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Cada estado de audiencia en [!DNL Dynamics 365] se actualiza con el estado de audiencia correspondiente de Platform, en función de la variable **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example) paso.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -129,13 +129,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
@@ -149,25 +149,25 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform a 
 
 1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione el tipo de campo de destino al que desea asignar el campo de origen.
    * **[!UICONTROL Seleccionar área de nombres de identidad]**: seleccione esta opción para asignar el campo de origen a un área de nombres de identidad de la lista.
-      ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Añada la siguiente asignación entre su esquema de perfil XDM y su [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| Obligatoria| |—|—|—| |`contactId`|`contactId`| Sí |
 
    * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en la **[!UICONTROL Nombre de atributo]** field. Consulte [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obtener una lista completa de los atributos admitidos.
-      ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
 
-      >[!IMPORTANT]
-      >
-      >Si tiene un campo de origen de fecha u hora asignado a una [!DNL Dynamics 365] [fecha o marca de tiempo](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) campo de destino, asegúrese de que el valor asignado que se está mostrando no esté vacío. Si el valor pasado está vacío, se encontrará con un *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensaje de error y los datos no se actualizarán. Este es un [!DNL Dynamics 365] limitación.
+     >[!IMPORTANT]
+     >
+     >Si tiene un campo de origen de fecha u hora asignado a una [!DNL Dynamics 365] [fecha o marca de tiempo](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) campo de destino, asegúrese de que el valor asignado que se está mostrando no esté vacío. Si el valor pasado está vacío, se encontrará con un *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensaje de error y los datos no se actualizarán. Este es un [!DNL Dynamics 365] limitación.
 
    * Por ejemplo, según los valores que desee actualizar, añada la siguiente asignación entre el esquema de perfil XDM y la variable [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-      ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+     ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
-### Programar exportación de segmentos y ejemplo {#schedule-segment-export-example}
+### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
-En el [[!UICONTROL Programar exportación de segmentos]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flujo de trabajo de activación, debe asignar manualmente los segmentos de Platform al atributo de campo personalizado en [!DNL Dynamics 365].
+En el [[!UICONTROL Programar exportación de audiencias]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flujo de trabajo de activación, debe asignar manualmente las audiencias de Platform al atributo de campo personalizado en [!DNL Dynamics 365].
 
 Para ello, seleccione cada segmento e introduzca el atributo de campo personalizado correspondiente en [!DNL Dynamics 365] en el **[!UICONTROL ID de asignación]** field.
 
@@ -176,7 +176,7 @@ Para ello, seleccione cada segmento e introduzca el atributo de campo personaliz
 >El valor utilizado para **[!UICONTROL ID de asignación]** debe coincidir exactamente con el nombre del atributo de campo personalizado creado en [!DNL Dynamics 365]. Consulte [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) si necesita ayuda para encontrar los atributos de campo personalizados.
 
 A continuación se muestra un ejemplo:
-![Captura de pantalla de la IU de Platform que muestra Programar exportación de segmentos.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Captura de pantalla de la IU de Platform que muestra Programar exportación de audiencias.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## Validar exportación de datos {#exported-data}
 
@@ -188,14 +188,14 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Seleccione el destino y valide que el estado es **[!UICONTROL activado]**.
    ![Captura de pantalla de la IU de Platform que muestra Destinations Dataflow Run.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
-1. Cambie a la **[!DNL Activation data]** y, a continuación, seleccione un nombre de segmento.
+1. Cambie a la **[!DNL Activation data]** y, a continuación, seleccione un nombre de audiencia.
    ![Captura de pantalla de la IU de Platform que muestra los datos de activación de destinos.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
-1. Monitorice el resumen del segmento y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
+1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
    ![Captura de pantalla de la IU de Platform que muestra el segmento.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Inicie sesión en [!DNL Dynamics 365] sitio web y, a continuación, vaya al [!DNL Customers] > [!DNL Contacts] y compruebe si se han añadido los perfiles del segmento. Puede ver que cada estado del segmento en [!DNL Dynamics 365] se ha actualizado con el estado del segmento correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de segmentos](#schedule-segment-export-example) paso.
-   ![Captura de pantalla de la interfaz de usuario de Dynamics 365 que muestra la página Contactos con estados de segmento actualizados.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
+1. Inicie sesión en [!DNL Dynamics 365] sitio web y, a continuación, vaya al [!DNL Customers] > [!DNL Contacts] y compruebe si se han añadido los perfiles de la audiencia. Puede ver que cada estado de la audiencia en [!DNL Dynamics 365] se ha actualizado con el estado de audiencia correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example) paso.
+   ![Captura de pantalla de la interfaz de usuario de Dynamics 365 que muestra la página Contactos con estados de audiencia actualizados.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
@@ -209,7 +209,7 @@ Al comprobar la ejecución de un flujo de datos, si obtiene el siguiente mensaje
 
 ![Captura de pantalla de la IU de Platform que muestra un error de solicitud incorrecto.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-Para corregir este error, compruebe que la variable **[!UICONTROL ID de asignación]** ha proporcionado en [!DNL Dynamics 365] El para el segmento de Platform es válido y existe en [!DNL Dynamics 365].
+Para corregir este error, compruebe que la variable **[!UICONTROL ID de asignación]** ha proporcionado en [!DNL Dynamics 365] La para la audiencia de Platform es válida y existe en [!DNL Dynamics 365].
 
 ## Recursos adicionales {#additional-resources}
 

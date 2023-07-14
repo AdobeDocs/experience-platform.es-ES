@@ -2,7 +2,7 @@
 title: Configuración de exportación configurable y común en destinos
 description: Descubra qué configuración de exportación de destinos se puede configurar en un nivel de destino y cuáles son fijos y no se pueden editar.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Obtenga más información acerca de las diferentes opciones y pasos disponibles 
 
 * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [Activar datos de audiencia en destinos empresariales](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportar archivos bajo demanda a destinos por lotes](/help/destinations/ui/export-file-now.md)
 * [(Beta) Exportar conjuntos de datos a destinos de almacenamiento en la nube](/help/destinations/ui/export-datasets.md)
 

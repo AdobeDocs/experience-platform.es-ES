@@ -3,10 +3,10 @@ keywords: publicidad; mostrador comercial; mostrador comercial de publicidad
 title: La conexión con la Oficina de Comercio
 description: Trade Desk es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en pantallas, vídeos y fuentes de inventario móviles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 2%
+source-wordcount: '725'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al dest
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, quiero poder utilizar segmentos creados a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales de retargeting o segmentación de audiencia.
+Como especialista en marketing, quiero poder usar audiencias creadas a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales de retargeting o segmentación de audiencia.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -36,14 +36,28 @@ Como experto en marketing, quiero poder utilizar segmentos creados a partir de [
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) al destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia al destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,17 +96,17 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) , debe asignar manualmente los segmentos a su ID correspondiente o nombre descriptivo en la plataforma de destino.
+En el [Programación de audiencia](../../ui/activate-segment-streaming-destinations.md#scheduling) , debe asignar manualmente las audiencias a su ID correspondiente o nombre descriptivo en la plataforma de destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre del segmento de Platform o una forma más corta de él, para facilitar el uso. Sin embargo, el ID o el nombre del segmento en su destino no tienen por qué coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
+Al asignar segmentos, le recomendamos que utilice el nombre de audiencia de Platform o una forma más corta de él, para facilitar el uso. Sin embargo, el ID de audiencia o el nombre en el destino no tienen por qué coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
 Si utiliza varias asignaciones de dispositivos (ID de cookie, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] Los agregará todos en un solo segmento, con un desglose por dispositivo.
 

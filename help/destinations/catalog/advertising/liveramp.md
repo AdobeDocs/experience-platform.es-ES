@@ -4,9 +4,9 @@ description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias 
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1736'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ Utilice la conexión LiveRamp para incorporar audiencias de Adobe Real-time Cust
 >
 ><p>Esta conexión de destino está actualmente en fase alfa y solo está disponible para una selección limitada de clientes. La funcionalidad y la documentación están sujetas a cambios.</p>
 &gt;<p>La versión final de esta conexión de destino puede requerir la migración del cliente.</p>
-
 
 ## Casos de uso {#use-cases}
 
@@ -45,8 +44,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en [!DNL LiveRamp SFTP] destino. |
-| Frecuencia de exportación | **[!UICONTROL Lote diario]** | A medida que los perfiles se actualizan en Experience Platform en función de la evaluación de segmentos, los perfiles (identidades) se actualizan una vez al día de forma descendente a la plataforma de destino. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en [!DNL LiveRamp SFTP] destino. |
+| Frecuencia de exportación | **[!UICONTROL Lote diario]** | A medida que los perfiles se actualizan en Experience Platform según la evaluación de audiencias, los perfiles (identidades) se actualizan una vez al día de forma descendente a la plataforma de destino. Más información sobre [destinos basados en archivos por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 * **[!UICONTROL Contraseña]**: La contraseña de su [!DNL LiveRamp SFTP] ubicación de almacenamiento.
 * **[!UICONTROL Clave de cifrado PGP/GPG]**: Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen. Si proporciona una clave de cifrado, también debe proporcionar un **[!UICONTROL ID de subclave de cifrado]** en el [detalles del destino](#destination-details) sección.
 
-   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP con autenticación de clave SSH** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ Para autenticarse en el destino, rellene los campos obligatorios y seleccione **
 
 * **[!UICONTROL Clave de cifrado PGP/GPG]**: Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Si proporciona una clave de cifrado, también debe proporcionar un **[!UICONTROL ID de subclave de cifrado]** en el [detalles del destino](#destination-details) sección. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
-   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -110,28 +109,28 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Programación {#scheduling}
 
-En el [!UICONTROL Programación] paso, cree una programación de exportación para cada segmento con la configuración que se muestra a continuación.
+En el [!UICONTROL Programación] , cree una programación de exportación para cada audiencia con la configuración que se muestra a continuación.
 
 >[!IMPORTANT]
 >
->Todos los segmentos activados en este destino deben configurarse con la misma programación, como se muestra a continuación.
+>Todas las audiencias activadas en este destino deben configurarse con la misma programación, como se muestra a continuación.
 
 * **[!UICONTROL Opciones de exportación de archivos]**: [!UICONTROL Exportar archivos completos]. [Exportaciones incrementales de archivos](../../ui/activate-batch-profile-destinations.md#export-incremental-files) actualmente no son compatibles con [!DNL LiveRamp] destino.
 * **[!UICONTROL Frecuencia]**: [!UICONTROL Diario]
-* Establezca el tiempo de exportación en **[!UICONTROL Después de la evaluación de segmentos]**. Exportaciones de segmentos programadas y [exportaciones de archivos bajo demanda](../../ui/export-file-now.md) actualmente no son compatibles con [!DNL LiveRamp] destino.
+* Establezca el tiempo de exportación en **[!UICONTROL Después de la evaluación de segmentos]**. Exportaciones de audiencia programadas y [exportaciones de archivos bajo demanda](../../ui/export-file-now.md) actualmente no son compatibles con [!DNL LiveRamp] destino.
 * **[!UICONTROL Fecha]**: seleccione las horas de inicio y finalización de la exportación según desee.
 
-![Captura de pantalla de la IU de Platform que muestra el paso de programación del segmento.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Captura de pantalla de la IU de Platform que muestra el paso de programación de audiencias.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 El nombre del archivo exportado no se puede configurar por el usuario en este momento. Todos los archivos exportados a [!DNL LiveRamp SFTP] Los nombres de los destinos de se asignan automáticamente en función de la siguiente plantilla:
 
@@ -179,28 +178,28 @@ Los datos se exportan a [!DNL LiveRamp SFTP] ubicación de almacenamiento que ha
 
 Al exportar archivos a [!DNL LiveRamp SFTP] destino, Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md).
 
-Por ejemplo, consideremos los siguientes segmentos:
+Por ejemplo, consideremos las siguientes audiencias:
 
-* Segmento A (política de combinación 1)
-* Segmento B (política de combinación 2)
-* Segmento C (política de combinación 1)
-* Segmento D (política de combinación 1)
+* Audiencia A (política de combinación 1)
+* Audiencia B (política de combinación 2)
+* Audiencia C (política de combinación 1)
+* Audience D (política de combinación 1)
 
 Platform exportará dos archivos CSV a [!DNL LiveRamp SFTP]:
 
-* Un archivo CSV que contiene los segmentos A, C y D;
-* Un archivo CSV que contiene el segmento B.
+* Un archivo CSV que contiene las audiencias A, C y D;
+* Un archivo CSV que contiene la audiencia B.
 
-Los archivos CSV exportados contienen perfiles con los atributos seleccionados y el estado del segmento correspondiente, en columnas independientes, con el nombre del atributo y los ID de segmento como encabezados de columna.
+Los archivos CSV exportados contienen perfiles con los atributos seleccionados y el estado de audiencia correspondiente, en columnas independientes, con el nombre del atributo y los ID de audiencia como encabezados de columna.
 
-Los perfiles incluidos en los archivos exportados pueden coincidir con uno de los siguientes estados de calificación de segmentos:
+Los perfiles incluidos en los archivos exportados pueden coincidir con uno de los siguientes estados de cualificación de audiencia:
 
-* `Active`: el perfil está cualificado actualmente para el segmento.
-* `Expired`: el perfil ya no está cualificado para el segmento, pero lo ha estado en el pasado.
-* `""`(cadena vacía): El perfil nunca cumplió los requisitos para el segmento.
+* `Active`: el perfil está cualificado actualmente para la audiencia.
+* `Expired`: el perfil ya no está cualificado para la audiencia, pero lo ha estado en el pasado.
+* `""`(cadena vacía): El perfil nunca cumplió los requisitos para la audiencia.
 
 
-Por ejemplo, un archivo CSV exportado con una `email` y 3 segmentos podrían tener este aspecto:
+Por ejemplo, un archivo CSV exportado con una `email` y 3 audiencias podrían tener este aspecto:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Dado que Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md)Además, también genera una ejecución de flujo de datos independiente para cada ID de política de combinación.
 
-Esto significa que la variable **[!UICONTROL Identidades activadas]** y **[!UICONTROL Perfiles recibidos]** métricas en la [ejecuciones de flujo de datos](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Las páginas se agregan para cada grupo de segmentos que utilizan la misma política de combinación, en lugar de mostrarse para cada segmento.
+Esto significa que la variable **[!UICONTROL Identidades activadas]** y **[!UICONTROL Perfiles recibidos]** métricas en la [ejecuciones de flujo de datos](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Las páginas se agregan para cada grupo de audiencias que utilizan la misma política de combinación, en lugar de mostrarse para cada audiencia.
 
-Como consecuencia de la generación de ejecuciones de flujo de datos para un grupo de segmentos que utilizan la misma política de combinación, los nombres de segmentos no se muestran en la variable [panel de monitorización](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Como consecuencia de la generación de ejecuciones de flujo de datos para un grupo de audiencias que utilizan la misma política de combinación, los nombres de audiencia no se muestran en la [panel de monitorización](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Captura de pantalla de la IU del Experience Platform que muestra la métrica de identidades activadas.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

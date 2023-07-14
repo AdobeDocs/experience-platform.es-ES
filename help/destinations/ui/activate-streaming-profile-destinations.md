@@ -1,17 +1,18 @@
 ---
 keywords: activar destinos de perfil;activar destinos;activar datos; activar destinos de marketing por correo electrónico; activar destinos de almacenamiento en la nube
-title: Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo
+title: Activación de audiencias en destinos de exportación de perfiles de flujo continuo
 type: Tutorial
-description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando segmentos a destinos basados en perfiles de flujo continuo.
+description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '760'
 ht-degree: 5%
 
 ---
 
-# Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo
+
+# Activación de audiencias en destinos de exportación de perfiles de flujo continuo
 
 >[!IMPORTANT]
 > 
@@ -34,35 +35,31 @@ Para activar los datos en los destinos, debe haber [conectado a un destino](./co
 
    ![Imagen que muestra la pestaña del catálogo de destino.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Seleccionar **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino donde desea activar los segmentos, como se muestra en la siguiente imagen.
+1. Seleccionar **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
-   ![Imagen que resalta el control activate segments en la pestaña de catálogo de destinos.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Imagen que resalta el control activar audiencias en la pestaña catálogo de destinos.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Seleccione la conexión de destino que desee utilizar para activar los segmentos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+1. Seleccione la conexión de destino que desee utilizar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
    ![Imagen que muestra una selección de dos destinos a los que puede conectarse.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. Mover a la sección siguiente para [seleccione sus segmentos](#select-segments).
+1. Mover a la sección siguiente para [seleccionar las audiencias](#select-audiences).
 
-## Seleccione sus segmentos {#select-segments}
+## Selección de audiencias {#select-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de segmentos para seleccionar los segmentos que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Siguiente]**.
 
-![Imagen que resalta la selección de casillas de verificación en el paso Seleccionar segmentos del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+Puede seleccionar entre varios tipos de audiencias, según su origen:
+
+* **[!UICONTROL Servicio de segmentación]**: Audiencias generadas dentro de Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
+* **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+* Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
+
+![Imagen que resalta la selección de casillas de verificación en el paso Seleccionar audiencias del flujo de trabajo de activación.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Seleccionar atributos de perfil {#select-attributes}
 
 En el **[!UICONTROL Asignación]** , seleccione los atributos de perfil que desea enviar al destino de destino.
-
->[!NOTE]
->
-> Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia desde su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
-
-Las exportaciones de archivos variarán de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
-* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
-* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
-
-![Imagen que muestra los atributos recomendados rellenados previamente en el paso de asignación.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
 
@@ -76,14 +73,13 @@ Las exportaciones de archivos variarán de las siguientes maneras, dependiendo d
 
    ![Imagen que muestra una selección de campos XDM que puede seleccionar como campos de origen.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-
-1. Para agregar más asignaciones, repita los pasos del 1 al 3 y seleccione **[!UICONTROL Siguiente]**.
+1. Para agregar más campos, repita los pasos del 1 al 3 y luego seleccione **[!UICONTROL Siguiente]**.
 
 ## Consulte {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
-![Resumen de la selección en el paso de revisión.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
+![Resumen de la selección en el paso de revisión.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
@@ -91,21 +87,21 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de segmentos hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
+En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
 
 ![infracción de política de datos](../assets/common/data-policy-violation.png)
 
-### Filtrar segmentos. {#filter-segments}
+### Filtrado de audiencias {#filter-audiences}
 
-Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo los segmentos cuya programación o asignación se haya actualizado como parte de este flujo de trabajo.
+Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo las audiencias cuya programación o asignación se haya actualizado como parte de este flujo de trabajo.
 
-![Grabación de pantalla que muestra los filtros de segmento disponibles en el paso de revisión.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+![Grabación de pantalla que muestra los filtros de audiencia disponibles en el paso de revisión.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
 Si está satisfecho con la selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
-## Verificar activación de segmento {#verify}
+## Verificar activación de audiencia {#verify}
 
-Su exportado [!DNL Experience Platform] Los datos de aterrizan en el destino de destino en formato JSON. Por ejemplo, el siguiente evento contiene el atributo de perfil de dirección de correo electrónico de una audiencia que cumple los requisitos para un segmento determinado y sale de otro. Las identidades de este cliente potencial son ECID y correo electrónico.
+Su exportado [!DNL Experience Platform] Los datos de aterrizan en el destino de destino en formato JSON. Por ejemplo, el siguiente evento contiene el atributo de dirección de correo electrónico de un perfil que cumple los requisitos para una audiencia determinada y sale de otra. Las identidades para este cliente potencial son `ECID` y `email_lc_sha256`.
 
 ```json
 {

@@ -3,18 +3,18 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;actualiza
 solution: Experience Platform
 title: Actualización de flujos de datos de destino mediante la API de Flow Service
 type: Tutorial
-description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar segmentos y atributos mediante la API de Flow Service.
+description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # Actualización de flujos de datos de destino mediante la API de Flow Service
 
-Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar segmentos y atributos mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre la edición de flujos de datos de destino mediante la IU de Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
+Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre la edición de flujos de datos de destino mediante la IU de Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
 
 ## Primeros pasos {#get-started}
 
@@ -26,7 +26,7 @@ Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de fl
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 * [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante [!DNL Flow Service] API.
@@ -447,9 +447,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Añadir un segmento a un flujo de datos {#add-segment}
+## Añadir una audiencia a un flujo de datos {#add-segment}
 
-Para añadir un segmento al flujo de datos de destino, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el segmento que desea añadir.
+Para añadir una audiencia al flujo de datos de destino, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y la audiencia que desea agregar.
 
 **Formato de API**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud agrega un nuevo segmento a un flujo de datos de destino existente.
+La siguiente solicitud agrega una audiencia nueva a un flujo de datos de destino existente.
 
 ```shell
 curl -X PATCH \
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para añadir un segmento a un flujo de datos, utilice el `add` operación. |
-| `path` | Define la parte del flujo que se va a actualizar. Al añadir un segmento a un flujo de datos, utilice la ruta especificada en el ejemplo. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para añadir una audiencia a un flujo de datos, utilice el `add` operación. |
+| `path` | Define la parte del flujo que se va a actualizar. Al añadir una audiencia a un flujo de datos, utilice la ruta especificada en el ejemplo. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
-| `id` | Especifique el ID del segmento que está agregando al flujo de datos de destino. |
-| `name` | **(Opcional)**. Especifique el nombre del segmento que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede agregar correctamente un segmento al flujo de datos de destino sin proporcionar su nombre. |
-| `filenameTemplate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las opciones disponibles son las siguientes: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: Obligatorio. Los archivos exportados contienen el ID del segmento exportado.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre del segmento exportado.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
-| `exportMode` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
-| `startDate` | Seleccione la fecha en la que el segmento debe comenzar a exportar perfiles a su destino. |
-| `frequency` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. <br> <ul><li>Para el `"DAILY_FULL_EXPORT"` modo de exportación, puede seleccionar `ONCE` o `DAILY`.</li><li>Para el `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportación, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `id` | Especifique el ID de la audiencia que está agregando al flujo de datos de destino. |
+| `name` | **(Opcional)**. Especifique el nombre de la audiencia que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede añadir correctamente una audiencia al flujo de datos de destino sin proporcionar su nombre. |
+| `filenameTemplate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las opciones disponibles son las siguientes: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: Obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
+| `exportMode` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
+| `startDate` | Seleccione la fecha en la que la audiencia debe comenzar a exportar perfiles a su destino. |
+| `frequency` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. <br> <ul><li>Para el `"DAILY_FULL_EXPORT"` modo de exportación, puede seleccionar `ONCE` o `DAILY`.</li><li>Para el `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportación, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Para *destinos por lotes* solo. Este campo solo es necesario al seleccionar la variable `"DAILY_FULL_EXPORT"` en el `frequency` selector. <br> Obligatorio. <br> <ul><li>Seleccionar `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.</li><li>Seleccionar `"SCHEDULED"` para que el trabajo de activación se ejecute a una hora fija. Esto garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles exportados no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe añadir una `startTime` para indicar a qué hora en UTC deben producirse las exportaciones diarias.</li></ul> |
-| `endDate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br> Establece la fecha en la que los miembros del segmento dejan de exportarse al destino. |
-| `startTime` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se agrega un segmento a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione el momento en que se deben generar y exportar al destino los archivos que contienen miembros del segmento. |
+| `endDate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br> Establece la fecha en la que los miembros de la audiencia dejan de exportarse al destino. |
+| `startTime` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione el momento en que se deben generar y exportar al destino los archivos que contienen miembros de la audiencia. |
 
 **Respuesta**
 
@@ -518,9 +518,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Eliminación de segmentos de un flujo de datos {#remove-segment}
+## Eliminación de una audiencia de un flujo de datos {#remove-segment}
 
-Para eliminar un segmento de un flujo de datos de destino existente, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del segmento que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que aparece más abajo elimina el primer y el segundo segmento del flujo de datos.
+Para eliminar una audiencia de un flujo de datos de destino existente, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice de la audiencia que desea eliminar. La indexación comienza en `0`. Por ejemplo, la solicitud de ejemplo que se muestra más abajo elimina la primera y la segunda audiencia del flujo de datos.
 
 **Formato de API**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-La siguiente solicitud elimina dos segmentos de un flujo de datos de destino existente.
+La siguiente solicitud elimina dos audiencias de un flujo de datos de destino existente.
 
 ```shell
 curl -X PATCH \
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar un segmento de un flujo de datos, utilice el `remove` operación. |
-| `path` | Especifica qué segmento existente debe eliminarse del flujo de datos de destino, según el índice del selector de segmentos. Para recuperar el orden de los segmentos en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar una audiencia de un flujo de datos, utilice el `remove` operación. |
+| `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar la primera audiencia en el flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Respuesta**
@@ -579,9 +579,9 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-## Actualización de componentes de un segmento en un flujo de datos {#update-segment}
+## Actualización de componentes de una audiencia en un flujo de datos {#update-segment}
 
-Puede actualizar los componentes de un segmento en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice del segmento que desea actualizar. La indexación comienza en `0`. Por ejemplo, la solicitud siguiente actualiza el noveno segmento de un flujo de datos.
+Puede actualizar los componentes de una audiencia en un flujo de datos de destino existente. Por ejemplo, puede cambiar la frecuencia de exportación o editar la plantilla de nombre de archivo. Para ello, realice una solicitud de PATCH a [!DNL Flow Service] al proporcionar su ID de flujo, versión y el selector de índice de la audiencia que desea actualizar. La indexación comienza en `0`. Por ejemplo, la solicitud siguiente actualiza la novena audiencia de un flujo de datos.
 
 **Formato de API**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitud**
 
-Al actualizar un segmento en un flujo de datos de destino existente, primero debe realizar una operación de GET para recuperar los detalles del segmento que desea actualizar. A continuación, proporcione toda la información del segmento en la carga útil, no solo los campos que desee actualizar. En el ejemplo siguiente, se agrega texto personalizado al final de la plantilla de nombre de archivo y la frecuencia de programación de exportación se actualiza de 6 horas a 12 horas.
+Al actualizar una audiencia en un flujo de datos de destino existente, primero debe realizar una operación de GET para recuperar los detalles de la audiencia que desea actualizar. A continuación, proporcione toda la información de audiencia en la carga útil, no solo los campos que desee actualizar. En el ejemplo siguiente, se agrega texto personalizado al final de la plantilla de nombre de archivo y la frecuencia de programación de exportación se actualiza de 6 horas a 12 horas.
 
 ```shell
 curl -X PATCH \
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-Para obtener descripciones de las propiedades de la carga útil, consulte la sección [Añadir un segmento a un flujo de datos](#add-segment).
+Para obtener descripciones de las propiedades de la carga útil, consulte la sección [Añadir una audiencia a un flujo de datos](#add-segment).
 
 
 **Respuesta**
@@ -640,13 +640,13 @@ Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede
 }
 ```
 
-Consulte los ejemplos siguientes para ver más ejemplos de componentes de segmentos que puede actualizar en un flujo de datos.
+Consulte los ejemplos siguientes para ver más ejemplos de componentes de audiencia que puede actualizar en un flujo de datos.
 
-## Actualizar el modo de exportación de un segmento de programado a después de la evaluación del segmento {#update-export-mode}
+## Actualizar el modo de exportación de una audiencia de programada a después de la evaluación de audiencia {#update-export-mode}
 
-+++ Haga clic para ver un ejemplo en el que una exportación de segmentos se actualiza de ser activada todos los días a una hora especificada a ser activada todos los días después de que se complete el trabajo de segmentación por lotes de Platform.
++++ Haga clic para ver un ejemplo en el que una exportación de audiencia se actualiza desde que se activa todos los días a una hora especificada a que se activa todos los días después de que se complete el trabajo de segmentación por lotes de Platform.
 
-El segmento se exporta todos los días a las 16:00 UTC.
+La audiencia se exporta todos los días a las 16:00 UTC.
 
 ```json
 {
@@ -669,7 +669,7 @@ El segmento se exporta todos los días a las 16:00 UTC.
 }
 ```
 
-El segmento se exporta cada día después de que se complete el trabajo de segmentación por lotes.
+La audiencia se exporta todos los días después de que se complete el trabajo de segmentación por lotes diario.
 
 ```json
 {
@@ -697,7 +697,7 @@ El segmento se exporta cada día después de que se complete el trabajo de segme
 
 +++ Haga clic para ver un ejemplo en el que la plantilla de nombre de archivo se actualiza para incluir campos adicionales en el nombre del archivo
 
-Los archivos exportados contienen el nombre de destino y el ID del segmento del Experience Platform
+Los archivos exportados contienen el nombre de destino y el ID de audiencia del Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ Los archivos exportados contienen el nombre de destino y el ID del segmento del 
 }
 ```
 
-Los archivos exportados contienen el nombre de destino, el ID del segmento del Experience Platform, la fecha y la hora en que el Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
+Los archivos exportados contienen el nombre de destino, el ID de audiencia del Experience Platform, la fecha y la hora en que el Experience Platform generó el archivo y el texto personalizado anexado al final de los archivos.
 
 
 ```json
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar un segmento de un flujo de datos, utilice el `remove` operación. |
-| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de segmentos. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.profileSelectors` propiedad. Para eliminar el primer segmento del flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar una audiencia de un flujo de datos, utilice el `remove` operación. |
+| `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.profileSelectors` propiedad. Para eliminar la primera audiencia en el flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Respuesta**
@@ -859,4 +859,4 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha aprendido a actualizar varios componentes de un flujo de datos de destino, como añadir o eliminar segmentos o atributos de perfil mediante [!DNL Flow Service] API. Para obtener más información sobre los destinos, consulte la [información general sobre destinos](../home.md).
+Al seguir este tutorial, ha aprendido a actualizar varios componentes de un flujo de datos de destino, como añadir o eliminar audiencias o atributos de perfil mediante [!DNL Flow Service] API. Para obtener más información sobre los destinos, consulte la [información general sobre destinos](../home.md).

@@ -1,9 +1,9 @@
 ---
 description: El servicio de destinos de Adobe Experience Platform utiliza puntos finales de configuración para varios componentes que crean la funcionalidad de destinos. Descubra cómo estos componentes combinados permiten a Experience Platform conectarse a socios de destino, enviar mensajes personalizados y activar datos de perfil en todo el ecosistema digital.
 title: Opciones de configuración en Destination SDK
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,14 @@ Consulte la documentación siguiente para obtener detalles sobre cada uno de los
 * [Configuración del esquema](destination-configuration/schema-configuration.md): Aprenda a definir el esquema de destino al que los usuarios pueden asignar atributos e identidades de perfil.
 * [Configuración del área de nombres de identidad](destination-configuration/identity-namespace-configuration.md): Obtenga información sobre cómo configurar las identidades admitidas en el destino. Esta configuración rellena las identidades de destinatario en la variable [paso de asignación](../../ui/activate-segment-streaming-destinations.md#mapping) de la interfaz de usuario de Experience Platform, donde los usuarios asignan identidades y atributos de sus esquemas XDM al esquema de destino.
 * [Envío de destino](destination-configuration/destination-delivery.md): Obtenga información sobre cómo configurar a dónde van exactamente los datos exportados y qué regla de autenticación se utiliza en la ubicación donde aterrizarán los datos.
-* [Configuración de metadatos de audiencia](destination-configuration/audience-metadata-configuration.md): Descubra cómo los metadatos de segmentos, como nombres de segmentos o ID, deben compartirse entre el Experience Platform y el destino.
+* [Configuración de metadatos de audiencia](destination-configuration/audience-metadata-configuration.md): Descubra cómo los metadatos de audiencia, como nombres de audiencias o ID, deben compartirse entre el Experience Platform y el destino.
 * [Política de agregación](destination-configuration/aggregation-policy.md): Obtenga información sobre cómo configurar una directiva de agregación para determinar cómo se deben agrupar y agrupar las solicitudes HTTP al destino.
 * [Configuración por lotes](destination-configuration/batch-configuration.md): configure los distintos ajustes de nomenclatura de archivos y programación de exportación disponibles para los usuarios al conectarse al destino en la interfaz de usuario del Experience Platform.
 * [Cualificaciones históricas del perfil](destination-configuration/historical-profile-qualifications.md): obtenga información acerca de las cualificaciones de perfil históricas admitidas por los destinos creados con Destination SDK.
 
 ## Configuración de metadatos de audiencia {#audience-metadata-configuration}
 
-Este componente le permite configurar cómo se crean, actualizan o eliminan las audiencias o los segmentos en el destino mediante programación. En el caso de los destinos basados en archivos, permite configurar una notificación cada vez que los archivos se envían correctamente al destino. Puede configurar esta funcionalidad mediante las opciones [extremo de audience-templates](../metadata-api/create-audience-template.md).
+Este componente le permite configurar cómo se crean, actualizan o eliminan las audiencias en el destino mediante programación. En el caso de los destinos basados en archivos, permite configurar una notificación cada vez que los archivos se envían correctamente al destino. Puede configurar esta funcionalidad mediante las opciones [extremo de audience-templates](../metadata-api/create-audience-template.md).
 
 ## Pasos siguientes {#next-steps}
 

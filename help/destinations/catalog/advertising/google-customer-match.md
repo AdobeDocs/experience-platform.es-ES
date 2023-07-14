@@ -3,9 +3,9 @@ keywords: coincidencia de cliente de google;coincidencia de cliente de Google;co
 title: Conexión de Google Customer Match
 description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Para ayudarle a comprender mejor cómo y cuándo usar el [!DNL Google Customer M
 
 ### Caso de uso #1
 
-Una marca de ropa deportiva quiere llegar a los clientes existentes mediante [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y crear segmentos a partir de sus propios datos sin conexión. A continuación, puede enviar estos segmentos a [!DNL Google Customer Match] para usar en [!DNL Search] y [!DNL Shopping], optimizando su gasto en publicidad.
+Una marca de ropa deportiva quiere llegar a los clientes existentes mediante [!DNL Google Search] y [!DNL Google Shopping] para personalizar ofertas y artículos en función de sus compras anteriores y del historial de navegación. La marca de ropa puede introducir direcciones de correo electrónico de su propio CRM al Experience Platform y crear audiencias a partir de sus propios datos sin conexión. A continuación, puede enviar estas audiencias a [!DNL Google Customer Match] para usar en [!DNL Search] y [!DNL Shopping], optimizando su gasto en publicidad.
 
 ### Caso de uso #2
 
 Una destacada compañía tecnológica lanzó un nuevo teléfono. Para promocionar este nuevo modelo de teléfono, buscan concienciar sobre las nuevas funciones y funcionalidades del teléfono a los clientes que poseen modelos anteriores de sus teléfonos.
 
-Para promocionar la versión, cargan direcciones de correo electrónico desde su base de datos de CRM en Experience Platform, utilizando las direcciones de correo electrónico como identificadores. Los segmentos se crean en función de los clientes que poseen modelos de teléfono más antiguos. A continuación, los segmentos se envían a [!DNL Google Customer Match], para que la compañía pueda dirigirse a clientes actuales, clientes que sean propietarios de modelos de teléfono más antiguos y clientes similares en [!DNL YouTube].
+Para promocionar la versión, cargan direcciones de correo electrónico desde su base de datos de CRM en Experience Platform, utilizando las direcciones de correo electrónico como identificadores. Las audiencias se crean en función de los clientes que poseen modelos de teléfono más antiguos. A continuación, las audiencias se envían a [!DNL Google Customer Match], para que la compañía pueda dirigirse a clientes actuales, clientes que sean propietarios de modelos de teléfono más antiguos y clientes similares en [!DNL YouTube].
 
 ## Gobernanza de datos para [!DNL Google Customer Match] destinos {#data-governance}
 
@@ -50,14 +50,28 @@ Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones par
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en [!DNL Google Customer Match] destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono y otros) utilizados en [!DNL Google Customer Match] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 >
 > * El **[!UICONTROL Combinar con PII]** acción de marketing está seleccionada de forma predeterminada para [!DNL Google Customer Match] destino y no se pueden eliminar.
 
-
 ### Habilitar alertas {#enable-alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-En el **[!UICONTROL Programación de segmentos]** paso, debe proporcionar el [!UICONTROL ID de aplicación] al enviar [!DNL IDFA] o [!DNL GAID] segmentos a [!DNL Google Customer Match].
+En el **[!UICONTROL Programación de segmentos]** paso, debe proporcionar el [!UICONTROL ID de aplicación] al enviar [!DNL IDFA] o [!DNL GAID] audiencias a [!DNL Google Customer Match].
 
 ![ID de aplicación de Customer Match de Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ Los datos de origen de los atributos no se cifran automáticamente. Si el campo 
 
 ![Transformación de asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Verificar que la activación del segmento se haya realizado correctamente {#verify-activation}
+## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 
-Después de completar el flujo de activación, cambie a **[!UICONTROL Google Ads]** cuenta. Los segmentos activados se muestran en su cuenta de Google como listas de clientes. Tenga en cuenta que, según el tamaño del segmento, algunas audiencias no se rellenan a menos que haya más de 100 usuarios activos para servir.
+Después de completar el flujo de activación, cambie a **[!UICONTROL Google Ads]** cuenta. Las audiencias activadas se muestran en su cuenta de Google como listas de clientes. Tenga en cuenta que, según el tamaño de la audiencia, algunas audiencias no se rellenan a menos que haya más de 100 usuarios activos para ofrecer.
 
-Al asignar un segmento a ambos [!DNL IDFA] y [!DNL GAID] ID de móviles, [!DNL Google Customer Match] crea un segmento independiente para cada asignación de ID. Su [!DNL Google Ads] La cuenta de muestra dos segmentos diferentes, uno para [!DNL IDFA]y uno para el [!DNL GAID] asignación.
+Al asignar una audiencia a ambos [!DNL IDFA] y [!DNL GAID] ID de móviles, [!DNL Google Customer Match] crea una audiencia independiente para cada asignación de ID. Su [!DNL Google Ads] La cuenta de muestra dos segmentos diferentes, uno para [!DNL IDFA]y uno para el [!DNL GAID] asignación.
 
 ## Resolución de problemas {#troubleshooting}
 

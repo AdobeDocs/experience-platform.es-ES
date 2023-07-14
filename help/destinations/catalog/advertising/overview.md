@@ -3,7 +3,7 @@ keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre destinos publicitarios
 description: Conecte Adobe Experience Platform DSP a una plataforma de publicidad de terceros (por ejemplo, una red de publicidad, un SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 1%
@@ -59,4 +59,4 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 
 ## Conectar con un nuevo destino de publicidad {#connect-destination}
 
-Para enviar segmentos a destinos publicitarios para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar audiencias a destinos publicitarios para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.

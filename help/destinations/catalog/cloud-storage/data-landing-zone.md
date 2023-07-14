@@ -1,10 +1,10 @@
 ---
 title: Destino de zona de aterrizaje de datos
-description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar segmentos y exportar conjuntos de datos.
+description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -27,8 +27,22 @@ Platform aplica un estricto tiempo de vida de siete días (TTL) a todos los arch
 
 ## Conéctese a su [!UICONTROL Zona de aterrizaje de datos] mediante API o IU {#connect-api-or-ui}
 
-* Para conectarse a su [!UICONTROL Zona de aterrizaje de datos] Ubicación de almacenamiento mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar segmentos en este destino](#activate) más abajo.
-* Para conectarse a su [!UICONTROL Zona de aterrizaje de datos] ubicación de almacenamiento mediante programación, lea el [Activación de segmentos en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Para conectarse a su [!UICONTROL Zona de aterrizaje de datos] Ubicación de almacenamiento mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar audiencias en este destino](#activate) más abajo.
+* Para conectarse a su [!UICONTROL Zona de aterrizaje de datos] ubicación de almacenamiento mediante programación, lea el [Activación de audiencias en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
+
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -201,13 +215,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Programación
 

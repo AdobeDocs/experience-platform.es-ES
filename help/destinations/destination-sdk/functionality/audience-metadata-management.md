@@ -1,9 +1,9 @@
 ---
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, se utilizará por Adobe para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
-source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ Según la configuración de la API, puede que necesite o no utilizar el punto de
 
 ## Casos de uso admitidos por la gestión de metadatos de audiencia {#use-cases}
 
-Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino del Experience Platform, puede proporcionar a los usuarios de Platform una de varias opciones al asignar y activar segmentos en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros del [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
+Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino del Experience Platform, puede proporcionar a los usuarios de Platform una de las varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros del [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
 
 ### Caso de uso 1: Tiene una API de terceros y los usuarios no necesitan introducir ID de asignación
 
-Si tiene un punto final de API para crear, actualizar o eliminar segmentos o audiencias, puede utilizar plantillas de metadatos de audiencia para configurar Destination SDK de modo que coincida con las especificaciones del punto final de creación, actualización o eliminación de segmentos. El Experience Platform puede crear, actualizar o eliminar segmentos mediante programación y sincronizar los metadatos con el Experience Platform.
+Si tiene un punto final de API para crear, actualizar o eliminar audiencias o audiencias, puede utilizar plantillas de metadatos de audiencia para configurar Destination SDK de modo que coincida con las especificaciones de su punto final de creación, actualización o eliminación de audiencia. El Experience Platform puede crear, actualizar o eliminar audiencias mediante programación y sincronizar los metadatos con el Experience Platform.
 
-Al activar segmentos en su destino en la interfaz de usuario (IU) de Experience Platform, los usuarios no necesitan rellenar manualmente un campo de ID de asignación de segmentos en el flujo de trabajo de activación.
+Al activar audiencias en el destino en la interfaz de usuario (IU) de Experience Platform, los usuarios no necesitan rellenar manualmente un campo de ID de asignación de audiencia en el flujo de trabajo de activación.
 
-### Caso de uso 2: Los usuarios deben crear primero un segmento en el destino y deben introducir manualmente el ID de asignación
+### Caso de uso 2: Los usuarios deben crear primero una audiencia en el destino y deben introducir manualmente el ID de asignación
 
-Si los socios o usuarios deben crear manualmente los segmentos y otros metadatos en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de segmentos en el flujo de trabajo de activación para sincronizar los metadatos del segmento entre el destino y el Experience Platform.
+Si los socios o usuarios deben crear audiencias y otros metadatos manualmente en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de audiencia en el flujo de trabajo de activación para sincronizar los metadatos de audiencia entre el destino y el Experience Platform.
 
 ![ID de asignación de entrada](../assets/functionality/input-mapping-id.png)
 
-### Caso de uso 3: Su destino acepta el ID de segmento del Experience Platform, los usuarios no necesitan introducir manualmente el ID de asignación
+### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform, los usuarios no necesitan introducir manualmente el ID de asignación
 
-Si el sistema de destino acepta el ID de segmento del Experience Platform, puede configurarlo en la plantilla de metadatos de audiencia. Los usuarios no tienen que rellenar un ID de asignación de segmentos al activar un segmento.
+Si el sistema de destino acepta el ID de audiencia de Experience Platform, puede configurarlo en la plantilla de metadatos de audiencia. Los usuarios no tienen que rellenar un ID de asignación de audiencia al activar un segmento.
 
 ## Plantilla de audiencia genérica y ampliable {#generic-and-extensible}
 
@@ -525,13 +525,13 @@ Busque descripciones de todos los parámetros en la plantilla en la [Creación d
 
 ## Macros utilizadas en plantillas de metadatos de audiencia
 
-Para pasar información como ID de segmento, tokens de acceso, mensajes de error y mucho más entre Experience Platform y la API, las plantillas de audiencia incluyen macros que puede utilizar. Lea a continuación una descripción de las macros que se utilizan en los tres ejemplos de configuración de esta página:
+Para pasar información como ID de audiencia, tokens de acceso, mensajes de error y mucho más entre Experience Platform y la API, las plantillas de audiencia incluyen macros que puede utilizar. Lea a continuación una descripción de las macros que se utilizan en los tres ejemplos de configuración de esta página:
 
 | Macro | Descripción |
 |--- |--- |
-| `{{segment.alias}}` | Permite acceder al alias del segmento en Experience Platform. |
-| `{{segment.name}}` | Permite acceder al nombre del segmento en Experience Platform. |
-| `{{segment.id}}` | Permite acceder al ID del segmento en el Experience Platform. |
+| `{{segment.alias}}` | Permite acceder al alias de audiencia en Experience Platform. |
+| `{{segment.name}}` | Permite acceder al nombre de la audiencia en Experience Platform. |
+| `{{segment.id}}` | Permite acceder al ID de audiencia en Experience Platform. |
 | `{{customerData.accountId}}` | Permite acceder al campo ID de cuenta que configuró en la configuración de destino. |
 | `{{oauth2ServiceAccessToken}}` | Permite generar dinámicamente un token de acceso basado en la configuración de OAuth 2. |
 | `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Uso `{{authData.accessToken}}` si el Experience Platform debe utilizar tokens que no caduquen para conectarse a su destino, de lo contrario, utilice `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |

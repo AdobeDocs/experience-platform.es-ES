@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;correo electrónico;destinos d
 title: Conexión de Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y entregar campañas en todos sus canales en línea y sin conexión.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 2%
 
 Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y entregar campañas en todos sus canales en línea y sin conexión. Consulte [Introducción a Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html?lang=es) para obtener más información.
 
-Para enviar datos de segmentos a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en Adobe Experience Platform y, a continuación [configuración de una importación de datos](#import-data-into-campaign) desde su ubicación de almacenamiento a Adobe Campaign.
+Para enviar datos de audiencia a Adobe Campaign, primero debe [conectar el destino](#connect-destination) en Adobe Experience Platform y, a continuación [configuración de una importación de datos](#import-data-into-campaign) desde su ubicación de almacenamiento a Adobe Campaign.
+
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -74,22 +88,22 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Atributos de destino {#destination-attributes}
 
-Al activar segmentos en este destino, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
+Al activar audiencias en este destino, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Adobe Campaign] destinos, [!DNL Platform] crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
+Para [!DNL Adobe Campaign] destinos, [!DNL Platform] crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
 
 ## Configuración de la importación de datos en Adobe Campaign {#import-data-into-campaign}
 
@@ -98,7 +112,6 @@ Para [!DNL Adobe Campaign] destinos, [!DNL Platform] crea un `.csv` en la ubicac
 >* Tenga en cuenta lo siguiente [!DNL SFTP] límites de almacenamiento, límites de almacenamiento de la base de datos y límites de perfil activo según el contrato de Adobe Campaign al realizar esta integración.
 >* Debe programar, importar y asignar los segmentos exportados en Adobe Campaign mediante [!DNL Campaign] flujos de trabajo. Consulte [Configuración de una importación recurrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) Adobe Campaign Classic en la documentación y [Acerca de las actividades de gestión de datos](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) en la documentación de Adobe Campaign Standard.
 >* El método preferido para enviar datos a Adobe Campaign es mediante [!DNL Amazon S3] o [!DNL Azure Blob].
-
 
 Después de conectar [!DNL Platform] a su [!DNL Amazon S3] o [!DNL Azure Blob] almacenamiento, debe configurar la importación de datos desde su ubicación de almacenamiento en Adobe Campaign. Para aprender a hacerlo, consulte las siguientes páginas de documentación de Adobe Campaign:
 * [Introducción a la importación y exportación de datos](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=es) y [Carga de datos (archivo)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) en la documentación de Adobe Campaign Classic.

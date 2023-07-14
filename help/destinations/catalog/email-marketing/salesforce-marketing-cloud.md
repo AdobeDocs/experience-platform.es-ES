@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;correo electrónico;destinos d
 title: Conexión de Marketing Cloud de Salesforce
 description: El Marketing Cloud de Salesforce es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '803'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 2%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 
-Para enviar datos de segmentos a [!DNL Salesforce Marketing Cloud], primero debe [conectar el destino](#connect-destination) en Platform y luego [configuración de una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento a [!DNL Salesforce Marketing Cloud].
+Para enviar datos de audiencia a [!DNL Salesforce Marketing Cloud], primero debe [conectar el destino](#connect-destination) en Platform y luego [configuración de una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento a [!DNL Salesforce Marketing Cloud].
+
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
@@ -83,21 +97,21 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Atributos de destino {#destination-attributes}
 
-Al activar segmentos en este destino, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
+Al activar audiencias en este destino, Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Seleccione el identificador único y cualquier otro campo XDM que desee exportar al destino. Para obtener más información, consulte [prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico](overview.md#best-practices).
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Salesforce Marketing Cloud] destinos, Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de segmentos](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de segmentos.
+Para [!DNL Salesforce Marketing Cloud] destinos, Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
 
 ## Configuración de la importación de datos en [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 

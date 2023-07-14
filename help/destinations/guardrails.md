@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 3%
@@ -22,7 +22,6 @@ Esta página proporciona límites predeterminados de uso y velocidad con respect
 >* La mayoría de los clientes no superan estos límites predeterminados. Si desea obtener más información sobre los límites personalizados, póngase en contacto con su representante del servicio de atención al cliente.
 >* Los límites descritos en este documento se mejoran constantemente. Vuelva regularmente para ver las actualizaciones.
 >* Según las limitaciones descendentes individuales, algunos destinos pueden tener protecciones más estrictas que las documentadas en esta página. Asegúrese de comprobar también el [catalogar](/help/destinations/catalog/overview.md) del destino al que se están conectando y activando los datos.
-
 
 ## Tipos de límite {#limit-types}
 
@@ -42,7 +41,7 @@ Las protecciones que se indican a continuación se aplican generalmente a la act
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Número máximo de segmentos a un solo destino | 250 | Leve | La recomendación es asignar un máximo de 250 segmentos a un único destino en un flujo de datos. <br><br> Si necesita activar más de 250 segmentos en un destino, puede: <ul><li> Anule la asignación de segmentos que ya no quiera activar, o</li><li>Cree un nuevo flujo de datos al destino deseado y asigne segmentos a este nuevo flujo de datos.</li></ul> <br> Tenga en cuenta que en el caso de algunos destinos, se puede limitar a menos de 250 segmentos asignados al destino. Estos destinos se indican más adelante en la página, en sus secciones respectivas. |
+| Número máximo de audiencias a un solo destino | 250 | Leve | La recomendación es asignar un máximo de 250 audiencias a un solo destino en un flujo de datos. <br><br> Si necesita activar más de 250 audiencias en un destino, puede hacer lo siguiente: <ul><li> Anule la asignación de audiencias que ya no desee activar, o</li><li>Cree un nuevo flujo de datos al destino deseado y asigne las audiencias a este nuevo flujo de datos.</li></ul> <br> Tenga en cuenta que en el caso de algunos destinos, se puede limitar a menos de 250 audiencias asignadas al destino. Estos destinos se indican más adelante en la página, en sus secciones respectivas. |
 | Número máximo de destinos | 100 | Leve | La recomendación es crear un máximo de 100 destinos a los que pueda conectar y activar datos *por zona protegida*. [Destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) puede constituir un máximo de 10 de los 100 destinos recomendados. |
 | Número máximo de atributos asignados a un destino | 50 | Leve | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Grave | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
@@ -67,7 +66,7 @@ Las siguientes protecciones se aplican a la activación mediante [destinos por l
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Frecuencia de activación | Una exportación completa diaria o exportaciones incrementales más frecuentes cada 3, 6, 8 o 12 horas. | Grave | Lea el [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) secciones de documentación para obtener más información sobre los incrementos de frecuencia para las exportaciones por lotes. |
-| Número máximo de segmentos que pueden exportarse a una hora determinada | 100 | Leve | Se recomienda añadir un máximo de 100 segmentos a los flujos de datos de destino por lotes. |
+| Número máximo de audiencias que pueden exportarse a una hora determinada | 100 | Leve | Se recomienda añadir un máximo de 100 audiencias a los flujos de datos de destino por lotes. |
 | Número máximo de filas (registros) por archivo que activar | 5 millones | Grave | Adobe Experience Platform divide automáticamente los archivos exportados en 5 millones de registros (filas) por archivo. Cada fila representa un perfil. Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obtener más información, lea la [sección de programación](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) del tutorial activar destinos por lotes. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ Las siguientes limitaciones se aplican al [activación ad hoc](/help/destination
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Segmentos activados por trabajo de activación ad hoc | 80 | Grave | Actualmente, cada trabajo de activación ad-hoc puede activar hasta 80 segmentos. Si se intenta activar más de 80 segmentos por trabajo, el trabajo fallará. Este comportamiento está sujeto a cambios en futuras versiones. |
-| Trabajos de activación ad hoc simultáneos por segmento | 1 | Grave | No ejecute más de un trabajo de activación ad hoc simultáneo por segmento. |
+| Audiencias activadas por trabajo de activación ad hoc | 80 | Grave | Actualmente, cada trabajo de activación ad-hoc puede activar hasta 80 audiencias. Si se intentan activar más de 80 audiencias por trabajo, el trabajo fallará. Este comportamiento está sujeto a cambios en futuras versiones. |
+| Trabajos de activación ad hoc simultáneos por audiencia | 1 | Grave | No ejecute más de un trabajo de activación ad hoc simultáneo por audiencia. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ Las siguientes protecciones se aplican a la activación mediante [destinos de pe
 | --- | --- | --- | --- |
 | Número máximo de [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) destinos | 10 | Leve | Puede configurar flujos de datos a 10 destinos de personalización personalizados por zona protegida. |
 | Número máximo de atributos asignados a un destino de personalización por zona protegida | 30 | Grave | Se puede asignar un máximo de 30 atributos en un flujo de datos a un destino de personalización por zona protegida. |
-| Número máximo de segmentos asignados a un único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Leve | Puede activar un máximo de 50 segmentos en un flujo de activación a un único destino de Adobe Target. |
+| Número máximo de audiencias asignadas a un único [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destino | 50 | Leve | Puede activar un máximo de 50 audiencias en un flujo de activación para un único destino de Adobe Target. |
 
 {style="table-layout:auto"}
 

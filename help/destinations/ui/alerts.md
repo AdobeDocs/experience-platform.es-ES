@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares; alertas;destinos
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscribirse a alertas de destino en contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -22,7 +22,7 @@ Este documento proporciona pasos sobre cómo suscribirse y recibir mensajes de a
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
-* [Destinos](../home.md): integraciones creadas previamente con plataformas de destino que permiten la activación perfecta de los datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+* [Destinos](../home.md): integraciones creadas previamente con plataformas de destino que permiten la activación perfecta de los datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 * [Observabilidad](../../observability/home.md): [!DNL Observability Insights] le permite monitorizar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
    * [Alertas](../../observability/alerts/overview.md): Cuando se alcanza un determinado conjunto de condiciones en las operaciones de Platform (como un problema potencial cuando el sistema supera un umbral), Platform puede enviar mensajes de alerta a cualquier usuario de la organización que se haya suscrito a ellos.
 
@@ -51,10 +51,10 @@ Las alertas disponibles para los flujos de datos de destino se describen en la s
 
 | Alertas | Descripción |
 | --- | --- |
-| Retraso de ejecución de flujo de destino | Esta alerta le notifica cuando una ejecución de flujo de destino tarda más de 150 minutos en activar un segmento. |
-| Error de ejecución de flujo de destino | Esta alerta le notifica cuando se produce un error al activar un segmento en un destino. |
-| Ejecución correcta de flujo de destino | Esta alerta le notifica cuando un segmento se activa correctamente en un destino. |
-| Inicio de ejecución de flujo de destino | Esta alerta le notifica cuando una ejecución de flujo de destino comienza a activar un segmento. |
+| Retraso de ejecución de flujo de destino | Esta alerta le notifica cuando una ejecución de flujo de destino tarda más de 150 minutos en activar una audiencia. |
+| Error de ejecución de flujo de destino | Esta alerta le avisa cuando se produce un error al activar una audiencia en un destino. |
+| Ejecución correcta de flujo de destino | Esta alerta le notifica cuando una audiencia se activa correctamente en un destino. |
+| Inicio de ejecución de flujo de destino | Esta alerta le avisa cuando una ejecución de flujo de destino comienza a activar una audiencia. |
 | Tasa de activación omitida superada | Esta alerta le notifica cuando la tasa de omisión de activación ha superado el 1 % del total de activaciones. Las identidades se omiten durante la activación cuando faltan atributos o una infracción de consentimiento. |
 
 ## Recepción de alertas {#receiving-alerts}

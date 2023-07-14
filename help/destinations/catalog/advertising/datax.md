@@ -2,9 +2,9 @@
 title: Conexión de Verizon MediaYahoo DataX
 description: DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de una manera segura, automatizada y escalable.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '776'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ Más información sobre [Metadatos de taxonomía](https://developer.verizonmedia
 
 >[!IMPORTANT]
 >
->Al activar más de 100 segmentos en [!DNL Verizon Media/Yahoo DataX], es posible que reciba errores de limitación de velocidad del destino. Al activar segmentos en este destino, intente activar menos de 100 segmentos en un flujo de datos de activación. Si necesita activar más segmentos, cree un nuevo destino en la misma cuenta.
+>Cuando se activan más de 100 audiencias a [!DNL Verizon Media/Yahoo DataX], es posible que reciba errores de limitación de velocidad del destino. Al activar audiencias en este destino, intente activar menos de 100 audiencias en un flujo de datos de activación. Si necesita activar más segmentos, cree un nuevo destino en la misma cuenta.
 
 [!DNL DataX] está limitado por las tasas según los límites de cuotas para publicaciones de taxonomía y audiencias descritos en la sección [Documentación de DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Está exportando todos los miembros de un segmento (audiencia) con los identificadores (correo electrónico, GAID, IDFA) usados en el destino de Verizon Media. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Estás exportando a todos los miembros de una audiencia con los identificadores (correo electrónico, GAID, IDFA) usados en el destino de Verizon Media. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Casos de uso {#use-cases}
 
-[!DNL DataX] Las API están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con claves de direcciones de correo electrónico en [!DNL Verizon Media] (VMG) puede crear rápidamente un nuevo segmento e insertar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
+[!DNL DataX] Las API están disponibles para los anunciantes que deseen dirigirse a un grupo de audiencia específico con claves de direcciones de correo electrónico en [!DNL Verizon Media] (VMG) puede crear rápidamente una nueva audiencia e insertar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
 
 ## Conectar con destino {#connect}
 
@@ -116,13 +116,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en un destino](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en destinos.
+Leer [Activación de perfiles y audiencias en un destino](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en destinos.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

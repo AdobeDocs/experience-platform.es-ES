@@ -3,10 +3,10 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 3%
+source-wordcount: '1395'
+ht-degree: 4%
 
 ---
 
@@ -22,9 +22,9 @@ Este documento proporciona respuestas a las preguntas frecuentes acerca de los d
 
 +++Respuesta: Se trata de un comportamiento normal debido a la forma en que el Experience Platform realiza la segmentación.
 
-La segmentación por transmisión actualiza el recuento de perfiles de los segmentos de transmisión por secuencias a lo largo del día, mientras que la segmentación por lotes actualiza el recuento de perfiles de los segmentos por lotes una vez cada 24 horas.
+La segmentación por lotes actualiza el recuento de perfiles de las audiencias de streaming a lo largo del día, mientras que la segmentación por lotes actualiza el recuento de perfiles de las audiencias por lotes una vez cada 24 horas.
 
-Cuando la programación de exportación de segmentos difiere de la programación de segmentación, el perfil cuenta entre la interfaz de usuario y el segmento exportado [!DNL CSV] El archivo será diferente, especialmente cuando se trata de segmentos de flujo continuo.
+Cuando la programación de exportación de la audiencia difiere de la programación de segmentación, el perfil cuenta entre la interfaz de usuario y el contenido exportado [!DNL CSV] El archivo será diferente, especialmente cuando se trata de audiencias de streaming.
 
 Consulte la [Documentación del Servicio de segmentación](../segmentation/home.md) para obtener más información.
 +++
@@ -33,7 +33,7 @@ Consulte la [Documentación del Servicio de segmentación](../segmentation/home.
 
 ### ¿Qué debo hacer antes de poder activar audiencias en? [!DNL Facebook Custom Audiences]?
 
-+++Respuesta Antes de poder enviar los segmentos de audiencia a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
++++Responda Antes de enviar sus audiencias a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
 * Su [!DNL Facebook] la cuenta de usuario debe tener el **[!DNL Manage campaigns]** permiso habilitado para la cuenta de Ad que planea usar.
 * El **Adobe Experience Cloud** La cuenta comercial de debe añadirse como socio de publicidad en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
@@ -91,9 +91,9 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 
 ## Coincidencia de clientes de Google {#google-customer-match}
 
-### Al exportar segmentos a Google Customer Match, ¿por qué veo números adicionales anexados al final de los nombres de segmentos en la interfaz de Google?
+### Al exportar audiencias a Customer Match de Google, ¿por qué veo números adicionales anexados al final de los nombres de audiencia en la interfaz de Google?
 
-+++Answer Google requiere que los nombres de los segmentos sean únicos. Los números que está viendo son [Marcas de tiempo UNIX](https://www.unixtimestamp.com/) y se anexan para mantener los nombres de segmento únicos, si ha asignado el mismo segmento a varios destinos de Google.
++++Answer Google requiere que los nombres de audiencia sean únicos. Los números que está viendo son [Marcas de tiempo UNIX](https://www.unixtimestamp.com/) y se anexan para mantener los nombres de audiencia únicos, si ha asignado la misma audiencia a varios destinos de Google.
 +++
 
 ## Audiencias coincidentes de linkedIn {#linkedin}
@@ -130,7 +130,7 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 
 +++No de respuesta, [SDK web](../edge/home.md) no es necesario para activar audiencias en [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Sin embargo, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) se utiliza en lugar del SDK web, solo se admite la personalización de la sesión siguiente.
+Sin embargo, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es) se utiliza en lugar del SDK web, solo se admite la personalización de la sesión siguiente.
 
 Para [personalización de la misma página y de la página siguiente](ui/activate-edge-personalization-destinations.md) Casos de uso de, debe utilizar cualquiera de los siguientes [SDK web](../edge/home.md) o el [API del servidor de red perimetral](../server-api/overview.md). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
 +++
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++Responda Sí, la API del servidor de red perimetral funciona con el destino de Personalización personalizada. Dado que los atributos de perfil pueden contener datos confidenciales, para protegerlos, el destino de Personalización personalizada requiere que utilice la API del servidor de red perimetral para la recopilación de datos. Además, todas las llamadas de API deben realizarse en un [contexto autenticado](../server-api/authentication.md).
 +++
 
-### Solo puedo tener una política de combinación activa en Edge. ¿Puedo crear audiencias que usen una política de combinación diferente y luego enviarlas a Adobe Target como segmentos de flujo continuo?
+### Solo puedo tener una política de combinación activa en Edge. ¿Puedo crear audiencias que utilicen una política de combinación diferente y seguir enviándolas a Adobe Target como audiencias de streaming?
 
 +++Nº de respuesta Todas las audiencias que desee activar en Adobe Target deben utilizar un perfil activo en Edge [política de combinación](../profile/merge-policies/ui-guide.md).
 +++

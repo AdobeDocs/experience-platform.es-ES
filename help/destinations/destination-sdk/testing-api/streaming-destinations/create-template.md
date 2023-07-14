@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para probar la plantilla de transformación de mensajes de destino de flujo continuo antes de publicar el destino.
 title: Creación y prueba de una plantilla de transformación de mensajes
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -24,7 +24,7 @@ A continuación se ilustra cómo la creación y prueba de una plantilla de trans
 
 ## Por qué necesita crear y probar una plantilla de transformación de mensajes {#why-create-message-transformation-template}
 
-Uno de los primeros pasos para crear el destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a segmentos, identidades y atributos de perfil al exportarse de Adobe Experience Platform a su destino. Busque información acerca de la transformación entre el esquema XDM de Adobe y el esquema de destino en la [documento de formato de mensaje](../../functionality/destination-server/message-format.md#using-templating).
+Uno de los primeros pasos para crear su destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a audiencias, identidades y atributos de perfil al exportarlo desde Adobe Experience Platform a su destino. Busque información acerca de la transformación entre el esquema XDM de Adobe y el esquema de destino en la [documento de formato de mensaje](../../functionality/destination-server/message-format.md#using-templating).
 
 Para que la transformación tenga éxito, debe proporcionar una plantilla de transformación, similar a este ejemplo: [Crear una plantilla que envíe segmentos, identidades y atributos de perfil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe proporciona una herramienta de plantilla que le permite crear y probar la 
 Antes de crear la plantilla, asegúrese de completar los pasos siguientes:
 
 1. [Crear una configuración de servidor de destino](../../authoring-api/destination-server/create-destination-server.md). La plantilla que va a generar difiere según el valor que proporcione para `maxUsersPerRequest` parámetro.
-   * Uso `maxUsersPerRequest=1` si desea que una llamada de API a su destino incluya un solo perfil, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
-   * Uso `maxUsersPerRequest` con un valor bueno que uno si desea que una llamada de API a su destino incluya varios perfiles, junto con sus cualificaciones de segmento, identidades y atributos de perfil.
+   * Uso `maxUsersPerRequest=1` si desea que una llamada de API a su destino incluya un solo perfil, junto con sus cualificaciones de audiencia, identidades y atributos de perfil.
+   * Uso `maxUsersPerRequest` con un valor bueno que si desea que una llamada de API a su destino incluya varios perfiles, junto con sus cualificaciones de audiencia, identidades y atributos de perfil.
 2. [Crear una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) y agregue el ID de la configuración del servidor de destino en `destinationDelivery.destinationServerId`.
 3. [Obtener el ID de la configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que acaba de crear, para que pueda utilizarlo en la herramienta de creación de plantillas.
 4. Comprender [qué funciones y filtros puede utilizar](../../functionality/destination-server/supported-functions.md) en la plantilla de transformación de mensajes.
@@ -100,7 +100,7 @@ Si el ID de destino proporcionado corresponde a una configuración de destino co
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -136,7 +136,7 @@ Si el ID de destino proporcionado corresponde a una plantilla de servidor de des
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

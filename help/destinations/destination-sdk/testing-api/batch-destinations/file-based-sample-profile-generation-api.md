@@ -2,7 +2,7 @@
 description: En esta página se explica cómo utilizar el extremo de la API /sample-profiles del Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de muestra para probar la configuración de destino basada en archivos.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Antes de usar el `/sample-profiles` extremo, asegúrese de cumplir las siguiente
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform. El `/sample-profiles` El punto de conexión crea los perfiles en función del esquema de origen definido en el flujo de activación. Consulte la [tutorial de activación](../../../ui/activate-batch-profile-destinations.md) para obtener información sobre cómo crear un flujo de activación.
 * Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-   ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Generar perfiles de muestra para las pruebas de destino {#generate-sample-profiles}
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a segmento, identidades y atributos de perfil que corresponden al esquema XDM de origen.
+Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a audiencia, identidades y atributos de perfil que corresponden al esquema XDM de origen.
 
 >[!NOTE]
 >
-> La respuesta solo devuelve el abono de segmentos, las identidades y los atributos de perfil que se utilizan en la instancia de destino. Aunque el esquema de origen tenga otros campos, estos se ignoran.
+> La respuesta solo devuelve la pertenencia a audiencias, identidades y atributos de perfil que se utilizan en la instancia de destino. Aunque el esquema de origen tenga otros campos, estos se ignoran.
 
 ```json
 [
@@ -105,9 +105,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentMembership` | Un objeto map que describe las pertenencias de segmentos del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de abono de segmento](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Una marca de tiempo de la última vez que este perfil se clasificó para el segmento. |
-| `status` | Campo de cadena que indica si se ha realizado la inscripción a segmento como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil se está saliendo del segmento como parte de la solicitud actual.</li></ul> |
+| `status` | Campo de cadena que indica si el abono a audiencia se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil se está saliendo de la audiencia como parte de la solicitud actual.</li></ul> |
 | `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, consulte [base de composición de esquema](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

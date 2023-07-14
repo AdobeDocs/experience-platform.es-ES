@@ -4,7 +4,7 @@ title: Eliminar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar cuentas de destino en la interfaz de usuario de Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Siga los pasos a continuación para eliminar las cuentas de destino existentes.
 
    ![Filtrar destinos](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparecerá un panel emergente con las opciones siguientes **[!UICONTROL Activar segmentos]**, **[!UICONTROL Editar detalles]**, y **[!UICONTROL Eliminar]** la cuenta. Seleccione el ![Botón Eliminar](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Eliminar]** para eliminar la cuenta deseada.
+3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparecerá un panel emergente con las opciones siguientes **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]**, y **[!UICONTROL Eliminar]** la cuenta. Seleccione el ![Botón Eliminar](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Eliminar]** para eliminar la cuenta deseada.
 
    ![Eliminar cuenta de destino](../assets/ui/delete-accounts/delete-accounts.png)
 

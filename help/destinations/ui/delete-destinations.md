@@ -4,7 +4,7 @@ title: Eliminar destinos
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar un destino existente en la interfaz de usuario de Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 En la interfaz de usuario de Adobe Experience Platform, puede eliminar las conexiones existentes con los destinos.
 
-Al eliminar un destino, se eliminan los flujos de datos existentes en ese destino. Todos los segmentos activados en los destinos que elimine se desasignan antes de que se elimine el flujo de datos.
+Al eliminar un destino, se eliminan los flujos de datos existentes en ese destino. Todas las audiencias activadas en los destinos que elimine se desasignan antes de que se elimine el flujo de datos.
 
 Existen dos maneras de eliminar destinos desde el [!DNL Platform] [!DNL UI]. Puede hacer lo siguiente:
 
@@ -61,11 +61,11 @@ Siga los pasos a continuación para eliminar un destino de la página de detalle
 
    * Si el destino tiene flujos de datos existentes, se le redirige a [!UICONTROL Ejecuciones de flujo de datos] pestaña.
 
-      ![Pestaña Ejecuciones de flujo de datos](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Pestaña Ejecuciones de flujo de datos](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Si el destino no tiene flujos de datos existentes, se le redirige a una página vacía en la que puede empezar a activar audiencias.
 
-      ![Detalles del destino](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Detalles del destino](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Seleccionar **[!UICONTROL Eliminar]** en el carril derecho.
 

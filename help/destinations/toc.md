@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1167'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
    * [Guía de migración de API para destinos de almacenamiento en la nube](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Conéctese a destinos de flujo continuo y active los datos mediante la API de Flow Service](./api/streaming-destinations.md)
    * [Conéctese a destinos de marketing por correo electrónico y almacenamiento en la nube por lotes y active los datos mediante la API de Flow Service](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Active los segmentos de audiencia en destinos por lotes a través de la API de activación ad hoc](./api/ad-hoc-activation-api.md)
+   * [(Beta) Active audiencias en destinos por lotes a través de la API de activación ad hoc](./api/ad-hoc-activation-api.md)
    * [Editar destino](./api/edit-destination.md)
    * [Actualizar flujos de datos de destino](./api/update-destination-dataflows.md)
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 5%
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
    * Activar datos de audiencia en destinos{#activate}
       * [Información general de Activation](./ui/activation-overview.md)
-      * [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](./ui/activate-segment-streaming-destinations.md)
-      * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md)
-      * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](./ui/activate-batch-profile-destinations.md)
-      * [Activar datos de audiencia en destinos de personalización de Edge](./ui/activate-edge-personalization-destinations.md)
+      * [Activar audiencias en destinos de exportación de audiencia de flujo continuo](./ui/activate-segment-streaming-destinations.md)
+      * [Activación de audiencias en destinos de exportación de perfiles de flujo continuo](./ui/activate-streaming-profile-destinations.md)
+      * [Activar audiencias para destinos de exportación de perfiles por lotes](./ui/activate-batch-profile-destinations.md)
+      * [Activación de audiencias en destinos de personalización de Edge](./ui/activate-edge-personalization-destinations.md)
       * [(Beta) Exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform](./ui/export-file-now.md)
       * [(Beta) Exportación de conjuntos de datos mediante la interfaz de usuario del Experience Platform](./ui/export-datasets.md)
       * [(Beta) Utilice el atributo XDM Tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 5%
       * [Audiencias de Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Uso compartido de segmentos de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos publicitarios{#advertising}
       * [Información general sobre destinos publicitarios](./catalog/advertising/overview.md)
       * [Conexión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -258,7 +258,7 @@ ht-degree: 5%
       * API de prueba de destino de streaming {#streaming-destinations}
          * [Resumen de API de prueba de destino de streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Generar perfiles de muestra basados en un esquema de origen](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-         * [Generar una plantilla de transformación de mensaje de ejemplo ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [Generar una plantilla de transformación de mensaje de ejemplo](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [Validar estructura de perfil exportada](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [Prueba del destino de flujo continuo con perfiles de muestra](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Creación y prueba de una plantilla de transformación de mensajes](./destination-sdk/testing-api/streaming-destinations/create-template.md)

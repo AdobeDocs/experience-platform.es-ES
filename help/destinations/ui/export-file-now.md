@@ -3,9 +3,9 @@ title: (Beta) Exportar archivos bajo demanda a destinos por lotes mediante la in
 type: Tutorial
 description: Obtenga información sobre cómo exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '741'
 ht-degree: 8%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 8%
 
 En este artículo se explica cómo utilizar la interfaz de usuario de Experience Platform para exportar archivos bajo demanda a destinos por lotes como [almacenamiento en la nube](/help/destinations/catalog/cloud-storage/overview.md) y [marketing por correo electrónico](/help/destinations/catalog/email-marketing/overview.md) destinos.
 
-El **[!UICONTROL Exportar archivo ahora]** permite exportar un archivo completo sin interrumpir la programación de exportación actual de un segmento programado anteriormente. Esta exportación se realiza además de las exportaciones programadas anteriormente y no cambia la frecuencia de exportación del segmento. La exportación de archivos se activa inmediatamente y recoge los resultados más recientes de las ejecuciones de segmentación de Experience Platform.
+El **[!UICONTROL Exportar archivo ahora]** permite exportar un archivo completo sin interrumpir la programación de exportación actual de una audiencia programada anteriormente. Esta exportación se realiza además de las exportaciones programadas anteriormente y no cambia la frecuencia de exportación de la audiencia. La exportación de archivos se activa inmediatamente y recoge los resultados más recientes de las ejecuciones de segmentación de Experience Platform.
 
-También puede utilizar las API de Experience Platform para este fin. Lea cómo [activar segmentos de audiencia a la carta en destinos por lotes mediante la API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+También puede utilizar las API de Experience Platform para este fin. Lea cómo [activar audiencias bajo demanda en destinos por lotes mediante la API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Requisitos previos {#prerequisites}
 
@@ -48,11 +48,11 @@ Para exportar archivos bajo demanda a destinos por lotes, debe tener [conectado 
 
    ![Imagen que resalta un flujo de datos filtrado.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Seleccione el **[!UICONTROL Datos de activación]** y seleccione el segmento para el que desea exportar un archivo bajo demanda y seleccione la pestaña **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo al destino del lote.
+3. Seleccione el **[!UICONTROL Datos de activación]** y seleccione la audiencia para la que desea exportar un archivo bajo demanda y seleccione la **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo al destino del lote.
 
    >[!IMPORTANT]
    >
-   >Actualmente, la IU no admite la selección de varios segmentos para exportar archivos bajo demanda y por lotes. Utilice el [API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md) con ese fin.
+   >Actualmente, la IU no admite la selección de varias audiencias para exportar archivos bajo demanda y por lotes. Utilice el [API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md) con ese fin.
 
    ![Imagen que resalta el botón Exportar archivo ahora.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -70,9 +70,9 @@ Para exportar archivos bajo demanda a destinos por lotes, debe tener [conectado 
 
 Tenga en cuenta las siguientes consideraciones al utilizar el **[!UICONTROL Exportar archivo ahora]** control:
 
-* **[!UICONTROL Exportar archivo ahora]** solo funciona para segmentos cuya programación en el flujo de datos de activación por lotes se superpone con la fecha actual. Esto incluye segmentos con programaciones que no tienen fecha de finalización (frecuencia de exportación de **[!UICONTROL Una]**), o donde la fecha de finalización aún no haya pasado.
-* Cuando agregue un segmento a un flujo de datos existente, espere al menos 15 minutos hasta que utilice el **[!UICONTROL Exportar archivo ahora]** control.
-* Si cambia la política de combinación de un segmento, o si crea un segmento que utiliza una nueva política de combinación, espere 24 horas hasta que utilice el **[!UICONTROL Exportar archivo ahora]** control.
+* **[!UICONTROL Exportar archivo ahora]** solo funciona para audiencias cuya programación en el flujo de datos de activación por lotes se superpone con la fecha actual. Esto incluye audiencias con programaciones que no tienen fecha de finalización (frecuencia de exportación de **[!UICONTROL Una]**), o donde la fecha de finalización aún no haya pasado.
+* Cuando añada una audiencia a un flujo de datos existente, espere al menos 15 minutos hasta que utilice el **[!UICONTROL Exportar archivo ahora]** control.
+* Si cambia la política de combinación de una audiencia o crea una audiencia que utiliza una nueva política de combinación, espere 24 horas hasta que utilice la variable **[!UICONTROL Exportar archivo ahora]** control.
 
 ## Mensajes de error de IU {#ui-error-messages}
 
@@ -80,10 +80,10 @@ Al usar el **[!UICONTROL Exportar archivo ahora]** , podría encontrar cualquier
 
 | Mensaje de error | Resolución |
 |---------|----------|
-| La ejecución ya está en curso para el segmento `segment ID` para pedido `dataflow ID` con id de ejecución `flow run ID` | Este mensaje de error indica que hay un flujo de activación ad hoc en curso para un segmento. Espere a que finalice el trabajo antes de volver a activar el trabajo de activación. |
-| Segmentos `<segment name>` no forman parte de este flujo de datos o están fuera del intervalo programado. | Este mensaje de error indica que los segmentos que seleccionó para activar no están asignados al flujo de datos o que la programación de activación configurada para los segmentos ha caducado o aún no se ha iniciado. Compruebe si el segmento está realmente asignado al flujo de datos y que la programación de activación del segmento se superpone con la fecha actual. |
+| La ejecución ya está en marcha para la audiencia `segment ID` para pedido `dataflow ID` con id de ejecución `flow run ID` | Este mensaje de error indica que hay un flujo de activación ad-hoc en curso para una audiencia. Espere a que finalice el trabajo antes de volver a activar el trabajo de activación. |
+| Audiencias `<segment name>` no forman parte de este flujo de datos o están fuera del intervalo programado. | Este mensaje de error indica que las audiencias que seleccionó para activar no están asignadas al flujo de datos o que la programación de activación configurada para las audiencias ha caducado o aún no se ha iniciado. Compruebe si la audiencia está realmente asignada al flujo de datos y que la programación de activación de audiencia se superpone con la fecha actual. |
 
 ## Información relacionada {#related-information}
 
-* [Activar segmentos de audiencia en destinos por lotes bajo demanda mediante las API de Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
+* [Activar audiencias en destinos por lotes bajo demanda mediante las API de Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
 * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md)

@@ -2,9 +2,9 @@
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de la experiencia del cliente (CXM) para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >* Si ya está activando datos en el **[!UICONTROL Marketo V1]** destino: cree nuevos flujos de datos para el **[!UICONTROL Marketo V2]** destino y eliminación de flujos de datos existentes en **[!UICONTROL Marketo V1]** destino para febrero de 2023. A partir de esa fecha, la variable **[!UICONTROL Marketo V1]** se eliminará la tarjeta de destino.
 >* Si todavía no ha creado ningún flujo de datos en **[!UICONTROL Marketo V1]** destino, utilice el nuevo **[!UICONTROL Marketo V2]** para conectarse y exportar datos a Marketo.
 
-
 ![Imagen de las dos tarjetas de destino de Marketo en una vista en paralelo.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Las mejoras en el destino de Marketo V2 incluyen las siguientes:
@@ -31,7 +30,7 @@ Las mejoras en el destino de Marketo V2 incluyen las siguientes:
 
 [!DNL Marketo Engage] es la única solución de administración de la experiencia del cliente (CXM) de extremo a extremo para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 
-El destino permite a los especialistas en marketing insertar segmentos creados en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
+El destino permite a los especialistas en marketing insertar audiencias creadas en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
 
 ## Identidades y atributos admitidos {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ El destino permite a los especialistas en marketing insertar segmentos creados e
 
 Puede asignar atributos de Experience Platform a cualquiera de los atributos a los que su organización tiene acceso en Marketo. En Marketo, puede utilizar el complemento [Describir solicitud de API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) para recuperar los campos de atributos a los que su organización tiene acceso.
 
+## Compatibilidad con audiencias externas {#external-audiences-support}
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias externas que se describen en la tabla siguiente.
+
+| Tipo de audiencia externa | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (correo electrónico, ECID) utilizados en [!DNL Marketo Engage] destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (correo electrónico, ECID) utilizados en [!DNL Marketo Engage] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Configuración del destino y activación de segmentos {#set-up}
+## Configuración del destino y activación de audiencias {#set-up}
 
 >[!IMPORTANT]
 > 
 >* Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions).
 >* Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
+Para obtener instrucciones detalladas sobre cómo configurar el destino y activar audiencias, lea [Insertar una audiencia de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) en la documentación de Marketo.
 
-Para obtener instrucciones detalladas sobre cómo configurar el destino y activar segmentos, lea [Insertar un segmento de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) en la documentación de Marketo.
-
-El siguiente vídeo también muestra los pasos para configurar un destino de Marketo y activar segmentos.
+El siguiente vídeo también muestra los pasos para configurar un destino de Marketo y activar audiencias.
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ El siguiente vídeo también muestra los pasos para configurar un destino de Mar
 > 
 >* La tarjeta de destino que debe utilizar en la interfaz de usuario de Experience Platform es **[!UICONTROL Marketo V2]**.
 >* El vídeo no muestra el nuevo **[!UICONTROL Creación de personas]** en el flujo de trabajo conectar con destino.
->* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a segmentos que se admitía en el momento de grabar el vídeo. También puede exportar miembros de segmentos a Marketo que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
->* En el **[!UICONTROL Paso Programar segmento]** del flujo de trabajo de activación, en Marketo V1, debía añadir manualmente una **[!UICONTROL ID de asignación]** para exportar correctamente datos a Marketo. Este paso manual ya no es necesario en Marketo V2.
-
+>* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a audiencias compatible en el momento de grabar el vídeo. También puede exportar a Marketo miembros de la audiencia que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
+>* En el **[!UICONTROL Paso Programar audiencia]** del flujo de trabajo de activación, en Marketo V1, debía añadir manualmente una **[!UICONTROL ID de asignación]** para exportar correctamente datos a Marketo. Este paso manual ya no es necesario en Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

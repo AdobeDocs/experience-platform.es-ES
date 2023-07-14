@@ -1,7 +1,7 @@
 ---
 description: Experience Platform Destination SDK utiliza plantillas Pebble, lo que permite transformar los datos exportados desde Experience Platform al formato requerido por el destino.
 title: Funciones de transformación compatibles en Destination SDK
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 3%
@@ -29,7 +29,7 @@ La plantilla de transformación de mensajes se utiliza en la [configuración del
 
 Para comprender los conceptos y las funciones de esta página de referencia, lea la [formato del mensaje](message-format.md) documento primero. Debe comprender el [estructura de un perfil](message-format.md#profile-structure) en Experience Platform antes de poder usar [!DNL Pebble] plantillas para transformar y los datos exportados.
 
-Antes de avanzar a las funciones documentadas a continuación, revise los ejemplos de creación de plantillas en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a segmentos](message-format.md#using-templating). Los ejemplos comienzan muy simples y aumentan en complejidad.
+Antes de avanzar a las funciones documentadas a continuación, revise los ejemplos de creación de plantillas en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias](message-format.md#using-templating). Los ejemplos comienzan muy simples y aumentan en complejidad.
 
 ## Admitido [!DNL Pebble] Funciones {#supported-functions}
 
@@ -46,7 +46,6 @@ Desde el [!DNL Pebble] sección de etiquetas, el Destination SDK solo admite:
 >
 > * Para ver un ejemplo de un elemento de matriz, piense en las identidades de una matriz [identityMap](message-format.md#identities) área de nombres, donde puede iterar a través de elementos como `identityMap.gaid`, `identityMap.email`, o similar.
 > * Para ver un ejemplo de un elemento de mapa, piense en [segmentMembership](message-format.md#segment-membership).
-
 
 Desde el [!DNL Pebble] filtro, el Destination SDK admite todas las funciones. Un ejemplo más abajo muestra cómo se puede usar la función `date` se puede utilizar dentro de Destination SDK.
 
@@ -92,7 +91,7 @@ Además de las funciones integradas que proporciona el [!DNL Pebble], consulte a
 
 #### Caso de uso
 
-Estas funciones se pueden utilizar para obtener una lista de segmentos que se añadieron o eliminaron de un perfil.
+Estas funciones se pueden utilizar para obtener una lista de audiencias que se añadieron o eliminaron de un perfil.
 
 #### Ejemplo
 
@@ -143,7 +142,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

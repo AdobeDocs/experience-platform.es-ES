@@ -1,7 +1,7 @@
 ---
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
-source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 4%
@@ -15,7 +15,7 @@ Utilice las opciones de configuración por lotes en Destination SDK para permiti
 
 Al crear destinos basados en archivos mediante Destination SDK, puede configurar los nombres de archivo predeterminados y las programaciones de exportación, o puede dar a los usuarios la opción de configurar estos ajustes desde la interfaz de usuario de Platform. Por ejemplo, puede configurar comportamientos como:
 
-* Incluir información específica en el nombre del archivo, como ID de segmento, ID de destino o información personalizada.
+* Incluir información específica en el nombre del archivo, como ID de audiencia, ID de destino o información personalizada.
 * Permite a los usuarios personalizar el nombre de archivo desde la interfaz de usuario de Platform.
 * Configure las exportaciones de archivos para que se produzcan a intervalos de tiempo establecidos.
 * Defina las opciones de nomenclatura de archivos y de personalización de programación de exportación que los usuarios pueden ver en la IU de Platform.
@@ -46,7 +46,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 ## Parámetros admitidos {#supported-parameters}
 
-Los valores que configure aquí aparecen en la variable [Programar exportación de segmentos](../../../ui/activate-batch-profile-destinations.md#scheduling) paso del flujo de trabajo de activación de destinos basados en archivos.
+Los valores que configure aquí aparecen en la variable [Programar exportación de audiencias](../../../ui/activate-batch-profile-destinations.md#scheduling) paso del flujo de trabajo de activación de destinos basados en archivos.
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ Los valores que configure aquí aparecen en la variable [Programar exportación 
 | `allowedScheduleFrequency` | Lista | Define la frecuencia de exportación de archivos disponible para los clientes. Valores compatibles:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enumeración | Define la frecuencia predeterminada de exportación de archivos. Valores compatibles:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> El valor predeterminado es `DAILY`. |
 | `defaultStartTime` | Cadena | Define la hora de inicio predeterminada para la exportación de archivos. Utiliza el formato de archivo de 24 horas. El valor predeterminado es 00:00. |
-| `filenameConfig.allowedFilenameAppendOptions` | Cadena | *Requerido*. Lista de macros de nombre de archivo disponibles para que los usuarios elijan. Esto determina qué elementos se anexan a los nombres de archivo exportados (ID de segmento, nombre de organización, fecha y hora de exportación, etc.). Al configurar `defaultFilename`, asegúrese de evitar la duplicación de macros. <br><br>Valores compatibles: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independientemente del orden en el que defina las macros, la interfaz de usuario de Experience Platform siempre las mostrará en el orden presentado aquí. <br><br> If `defaultFilename` está vacío, la variable `allowedFilenameAppendOptions` La lista debe contener al menos una macro. |
+| `filenameConfig.allowedFilenameAppendOptions` | Cadena | *Requerido*. Lista de macros de nombre de archivo disponibles para que los usuarios elijan. Esto determina qué elementos se anexan a los nombres de archivo exportados (ID de audiencia, nombre de organización, fecha y hora de exportación, etc.). Al configurar `defaultFilename`, asegúrese de evitar la duplicación de macros. <br><br>Valores compatibles: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independientemente del orden en el que defina las macros, la interfaz de usuario de Experience Platform siempre las mostrará en el orden presentado aquí. <br><br> If `defaultFilename` está vacío, la variable `allowedFilenameAppendOptions` La lista debe contener al menos una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Cadena | *Requerido*. Macros de nombre de archivo predeterminado preseleccionadas que los usuarios pueden desmarcar.<br><br> Las macros de esta lista son un subconjunto de las definidas en `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Cadena | *Opcional*. Define las macros de nombre de archivo predeterminadas para los archivos exportados. Los usuarios no pueden sobrescribirlos. <br><br>Cualquier macro definida por `allowedFilenameAppendOptions` se adjuntará después de `defaultFilename` macros. <br><br>If `defaultFilename` está vacío, debe definir al menos una macro en `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Booleano | Define si las audiencias activadas deben exportarse en un solo archivo o en varios archivos, según la audiencia [política de combinación](../../../../profile/merge-policies/overview.md). Valores compatibles: <ul><li>`true`: exporta un archivo por política de combinación.</li><li>`false`: exporta un archivo por audiencia, independientemente de la política de combinación. Este es el comportamiento predeterminado. Puede lograr el mismo resultado omitiendo este parámetro por completo.</li></ul> |
@@ -113,8 +113,8 @@ Utilice macros de configuración de nombres de archivo para definir qué nombres
 | Macro | Etiqueta de IU | Descripción | Ejemplo |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destino] | Nombre del destino en la interfaz de usuario. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL ID del segmento] | ID de segmento único generado por Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nombre del segmento] | Nombre del segmento definido por el usuario | VIP suscriptor del servicio de asistencia |
+| `SEGMENT_ID` | [!UICONTROL ID del segmento] | ID de audiencia único y generado por la plataforma | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nombre del segmento] | Nombre de audiencia definido por el usuario | VIP suscriptor del servicio de asistencia |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL ID de destino] | ID único y generado por Platform de la instancia de destino | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nombre del destino] | Nombre definido por el usuario de la instancia de destino. | Mi destino publicitario de 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nombre de la organización] | Nombre de la organización del cliente en Adobe Experience Platform. | Nombre de mi organización |
@@ -122,8 +122,8 @@ Utilice macros de configuración de nombres de archivo para definir qué nombres
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Fecha y hora] | `DATETIME` y `TIMESTAMP` ambos definen cuándo se generó el archivo, pero en formatos diferentes. <br><br><ul><li>`DATETIME` utiliza el siguiente formato: AAAAMMDD_HHMMSS.</li><li>`TIMESTAMP` utiliza el formato Unix de 10 dígitos. </li></ul> `DATETIME` y `TIMESTAMP` son mutuamente excluyentes y no pueden utilizarse simultáneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Texto personalizado] | Texto personalizado definido por el usuario que se incluirá en el nombre del archivo. No se puede usar en `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Fecha y hora] | Marca de tiempo de 10 dígitos de la hora en la que se generó el archivo, en formato Unix. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL ID de política de combinación] | El ID del [política de combinación](../../../../profile/merge-policies/overview.md) se utiliza para generar la audiencia exportada. Utilice esta macro cuando agrupe segmentos exportados en archivos, según la política de combinación. Utilice esta macro junto con `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Nombre de política de combinación] | El nombre del [política de combinación](../../../../profile/merge-policies/overview.md) se utiliza para generar la audiencia exportada. Utilice esta macro cuando agrupe segmentos exportados en archivos, según la política de combinación. Utilice esta macro junto con `segmentGroupingEnabled:true`. | Mi política de combinación personalizada |
+| `MERGE_POLICY_ID` | [!UICONTROL ID de política de combinación] | El ID del [política de combinación](../../../../profile/merge-policies/overview.md) se utiliza para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Utilice esta macro junto con `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Nombre de política de combinación] | El nombre del [política de combinación](../../../../profile/merge-policies/overview.md) se utiliza para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Utilice esta macro junto con `segmentGroupingEnabled:true`. | Mi política de combinación personalizada |
 
 {style="table-layout:auto"}
 

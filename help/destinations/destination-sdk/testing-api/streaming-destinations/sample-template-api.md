@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para generar una plantilla de transformación de mensaje de prueba para su destino.
 title: Generar una plantilla de transformación de mensaje de ejemplo
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 2%
@@ -29,7 +29,6 @@ Puede obtener una plantilla de ejemplo realizando una solicitud de GET a la vari
 >[!TIP]
 >
 >* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte la [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
-
 
 **Formato de API**
 
@@ -83,7 +82,7 @@ Si el ID de destino proporcionado corresponde a una configuración de destino co
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -119,7 +118,7 @@ Si el ID de destino proporcionado corresponde a una plantilla de servidor de des
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

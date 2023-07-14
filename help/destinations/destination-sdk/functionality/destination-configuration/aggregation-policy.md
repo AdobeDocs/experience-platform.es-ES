@@ -1,7 +1,7 @@
 ---
 description: Obtenga información sobre cómo configurar una directiva de agregación para determinar cómo se deben agrupar y agrupar las solicitudes HTTP al destino.
 title: Política de agregación
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 2%
@@ -112,8 +112,8 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 | `configurableAggregation.maxBatchAgeInSecs` | Número entero | Se utiliza en combinación con `maxNumEventsInBatch`, este parámetro determina cuánto tiempo debe esperar el Experience Platform hasta enviar una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 1800</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
 | `configurableAggregation.maxNumEventsInBatch` | Número entero | Utilizado en conjunto con `maxBatchAgeInSecs`Sin embargo, este parámetro determina cuántos perfiles cualificados deben agregarse en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
 | `configurableAggregation.aggregationKey` | - | Permite agregar los perfiles exportados asignados al destino en función de los parámetros que se describen a continuación. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar los perfiles exportados a su destino por ID de segmento. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` hasta `true`, si desea agrupar los perfiles exportados a su destino por ID de segmento y estado de segmento. |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar perfiles exportados a su destino por ID de audiencia. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` hasta `true`, si desea agrupar perfiles exportados a su destino por ID de audiencia y estado de audiencia. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Establezca este parámetro en `true` si desea agrupar perfiles exportados a su destino por área de nombres de identidad. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Establezca este parámetro en `true` si desea que los perfiles exportados se agreguen en grupos en función de una sola identidad (GAID, IDFA, números de teléfono, correo electrónico, etc.). |
 | `configurableAggregation.aggregationKey.groups` | Matriz | Cree listas de grupos de identidad si desea agrupar perfiles exportados a su destino por grupos de áreas de nombres de identidad. Por ejemplo, puede combinar perfiles que contengan los identificadores móviles IDFA y GAID en una llamada a su destino y correos electrónicos en otra mediante la configuración que se muestra en el ejemplo anterior. |

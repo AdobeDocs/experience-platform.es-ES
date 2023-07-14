@@ -3,9 +3,9 @@ keywords: crm;CRM;destinos de crm;salesforce crm;destino de crm de salesforce
 title: Conexión de Salesforce CRM
 description: El destino de CRM de Salesforce le permite exportar los datos de su cuenta y activarlos dentro de CRM de Salesforce para sus necesidades comerciales.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: edf49d8a52eeddea65a18c1dad0035ec7e5d2c12
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '3086'
+source-wordcount: '3085'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm), que admite ambos tipos de perfiles descritos anteriormente.
 
-Cuándo [activar segmentos](#activate), puede seleccionar entre posibles clientes o contactos y actualizar los atributos y los datos de segmentos en [!DNL Salesforce CRM].
+Cuándo [activar segmentos](#activate), puede seleccionar entre posibles clientes o contactos y actualizar los atributos y los datos de audiencia en [!DNL Salesforce CRM].
 
 [!DNL Salesforce CRM] utiliza OAuth 2 con concesión de contraseña como mecanismo de autenticación para comunicarse con la API de REST de Salesforce. Instrucciones para autenticarse en su [!DNL Salesforce CRM] más abajo, en la sección [Autenticar en el destino](#authenticate) sección.
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede generar segmentos a partir de los datos sin conexión y enviarlos a Salesforce CRM para que se muestren en las fuentes de los usuarios en cuanto los segmentos y los perfiles se actualicen en Adobe Experience Platform.
+Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede crear audiencias a partir de los datos sin conexión y enviarlas a Salesforce CRM para que se muestren en las fuentes de los usuarios en cuanto las audiencias y los perfiles se actualicen en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
@@ -70,16 +70,16 @@ Por último, asegúrese de que la variable `password` la concesión está habili
 
 #### Creación de campos personalizados dentro de [!DNL Salesforce] {#prerequisites-custom-field}
 
-Al activar segmentos en [!DNL Salesforce CRM] destino, debe introducir un valor en la variable **[!UICONTROL ID de asignación]** para cada segmento activado, en el campo **[Programación de segmentos](#schedule-segment-export-example)** paso.
+Al activar audiencias en [!DNL Salesforce CRM] destino, debe introducir un valor en la variable **[!UICONTROL ID de asignación]** para cada audiencia activada, en el campo **[Programación de audiencia](#schedule-segment-export-example)** paso.
 
-[!DNL Salesforce CRM] requiere este valor para leer e interpretar correctamente los segmentos que llegan desde Experience Platform y actualizar su estado de segmento en [!DNL Salesforce]. Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a segmento](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de los segmentos.
+[!DNL Salesforce CRM] requiere este valor para leer e interpretar correctamente las audiencias que llegan desde Experience Platform y actualizar su estado de audiencia en [!DNL Salesforce]. Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a audiencia](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
 
-Para cada segmento que active de Platform a [!DNL Salesforce CRM], debe crear un campo personalizado del tipo `Text Area (Long)` dentro [!DNL Salesforce]. Puede definir la longitud de caracteres de campo de cualquier tamaño entre 256 y 131 072 caracteres según sus necesidades comerciales. Consulte la [!DNL Salesforce] [Tipos de campos personalizados](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) para obtener más información sobre los tipos de campos personalizados. Consulte también la [!DNL Salesforce] documentación para [crear campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si necesita ayuda para la creación de campos.
+Para cada audiencia que active desde Platform a [!DNL Salesforce CRM], debe crear un campo personalizado del tipo `Text Area (Long)` dentro [!DNL Salesforce]. Puede definir la longitud de caracteres de campo de cualquier tamaño entre 256 y 131 072 caracteres según sus necesidades comerciales. Consulte la [!DNL Salesforce] [Tipos de campos personalizados](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) para obtener más información sobre los tipos de campos personalizados. Consulte también la [!DNL Salesforce] documentación para [crear campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si necesita ayuda para la creación de campos.
 
 >[!IMPORTANT]
 >
 >No incluya espacios en blanco en el nombre del campo. En su lugar, utilice el guion bajo `(_)` como separador.
->En [!DNL Salesforce] debe crear campos personalizados con una **[!UICONTROL Nombre de campo]** que coincide exactamente con el valor especificado en **[!UICONTROL ID de asignación]** para cada segmento de Platform activado. Por ejemplo, la captura de pantalla siguiente muestra un campo personalizado denominado `crm_2_seg`. Al activar un segmento en este destino, añada `crm_2_seg` as **[!UICONTROL ID de asignación]** para rellenar audiencias de segmento desde Experience Platform en este campo personalizado.
+>En [!DNL Salesforce] debe crear campos personalizados con una **[!UICONTROL Nombre de campo]** que coincide exactamente con el valor especificado en **[!UICONTROL ID de asignación]** para cada segmento de Platform activado. Por ejemplo, la captura de pantalla siguiente muestra un campo personalizado denominado `crm_2_seg`. Al activar una audiencia en este destino, añada `crm_2_seg` as **[!UICONTROL ID de asignación]** para rellenar audiencias de audiencia de Experience Platform en este campo personalizado.
 
 Ejemplo de creación de campos personalizados en [!DNL Salesforce], *Paso 1: Selección del tipo de datos*, se muestra a continuación:
 ![Captura de pantalla de la interfaz de usuario de Salesforce que muestra la creación de campos personalizados, Paso 1: Selección del tipo de datos.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -89,16 +89,14 @@ Ejemplo de creación de campos personalizados en [!DNL Salesforce], *Paso 2: Int
 
 >[!TIP]
 >
->* Para distinguir entre campos personalizados utilizados para segmentos de Platform y otros campos personalizados dentro de [!DNL Salesforce] puede incluir un prefijo o un sufijo reconocible al crear el campo personalizado. Por ejemplo, en lugar de `test_segment`, use `Adobe_test_segment` o `test_segment_Adobe`
->* Si ya ha creado otros campos personalizados en [!DNL Salesforce], puede utilizar el mismo nombre que el segmento de Platform para identificar fácilmente el segmento en [!DNL Salesforce].
-
+>* Para distinguir entre campos personalizados utilizados para audiencias de Platform y otros campos personalizados dentro de [!DNL Salesforce] puede incluir un prefijo o un sufijo reconocible al crear el campo personalizado. Por ejemplo, en lugar de `test_segment`, use `Adobe_test_segment` o `test_segment_Adobe`
+>* Si ya ha creado otros campos personalizados en [!DNL Salesforce], puede utilizar el mismo nombre que el segmento de Platform para identificar fácilmente la audiencia en [!DNL Salesforce].
 
 >[!NOTE]
 >
 >* Los objetos de Salesforce están restringidos a 25 campos externos. Consulte [Atributos de campo personalizados](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
->* Esta restricción implica que solo puede tener un máximo de 25 suscripciones a segmentos de Experience Platform activas en cualquier momento.
->* Si ha alcanzado este límite en Salesforce, debe eliminar de Salesforce los atributos personalizados que se utilizaron para almacenar el estado del segmento con segmentos antiguos de Experience Platform antes que un nuevo **[!UICONTROL ID de asignación]** se puede utilizar.
-
+>* Esta restricción implica que solo puede tener un máximo de 25 suscripciones a la audiencia de Experience Platform activas en cualquier momento.
+>* Si ha alcanzado este límite en Salesforce, debe eliminar de Salesforce los atributos personalizados que se utilizaron para almacenar el estado de audiencia en audiencias antiguas de Experience Platform antes que una nueva **[!UICONTROL ID de asignación]** se puede utilizar.
 
 #### Reunir [!DNL Salesforce CRM] credenciales {#gather-credentials}
 
@@ -106,12 +104,12 @@ Tenga en cuenta los elementos siguientes antes de autenticarse en el [!DNL Sales
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
-| `Username` | Su [!DNL Salesforce] nombre de usuario de cuenta. |  |
-| `Password` | Su [!DNL Salesforce] contraseña de la cuenta. |  |
+| `Username` | Su [!DNL Salesforce] nombre de usuario de cuenta. | |
+| `Password` | Su [!DNL Salesforce] contraseña de la cuenta. | |
 | `Security Token` | Su [!DNL Salesforce] token de seguridad que adjuntará más adelante al final de su [!DNL Salesforce] Contraseña para crear una cadena concatenada para utilizarla como **[!UICONTROL Contraseña]** cuando [autenticación en el destino](#authenticate).<br> Consulte la [!DNL Salesforce] documentación para [restablecer el token de seguridad](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) para aprender a regenerarlo desde el [!DNL Salesforce] si no dispone del token de seguridad. |  |
 | `Custom Domain` | Su [!DNL Salesforce] prefijo de dominio. <br> Consulte la [[!DNL Salesforce] documentación](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) para obtener información sobre cómo obtener este valor de [!DNL Salesforce] interfaz. | Si su [!DNL Salesforce] el dominio es<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> usted necesitará `d5i000000isb4eak-dev-ed` como el valor. |
-| `Client ID` | Su Salesforce `Consumer Key`. <br> Consulte la [[!DNL Salesforce] documentación](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para obtener información sobre cómo obtener este valor de [!DNL Salesforce] interfaz. |  |
-| `Client Secret` | Su Salesforce `Consumer Secret`. <br> Consulte la [[!DNL Salesforce] documentación](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para obtener información sobre cómo obtener este valor de [!DNL Salesforce] interfaz. |  |
+| `Client ID` | Su Salesforce `Consumer Key`. <br> Consulte la [[!DNL Salesforce] documentación](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para obtener información sobre cómo obtener este valor de [!DNL Salesforce] interfaz. | |
+| `Client Secret` | Su Salesforce `Consumer Secret`. <br> Consulte la [[!DNL Salesforce] documentación](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para obtener información sobre cómo obtener este valor de [!DNL Salesforce] interfaz. | |
 
 ### Mecanismos de protección {#guardrails}
 
@@ -121,7 +119,7 @@ Si su [!DNL Salesforce] el administrador de la cuenta ha impuesto restricciones 
 
 >[!IMPORTANT]
 >
->Cuándo [activar segmentos](#activate) debe seleccionar entre *Contacto* o *Posible cliente* tipos. Debe asegurarse de que los segmentos tengan la asignación de datos adecuada según el tipo seleccionado.
+>Cuándo [activar segmentos](#activate) debe seleccionar entre *Contacto* o *Posible cliente* tipos. Debe asegurarse de que las audiencias tengan la asignación de datos adecuada según el tipo seleccionado.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -137,8 +135,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Cada estado del segmento en [!DNL Salesforce CRM] se actualiza con el estado del segmento correspondiente de Platform, en función de la variable **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de segmentos](#schedule-segment-export-example) paso.</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Cada estado de audiencia en [!DNL Salesforce CRM] se actualiza con el estado de audiencia correspondiente de Platform, en función de la variable **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example) paso.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -178,13 +176,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
@@ -207,42 +205,40 @@ Para asignar correctamente los campos XDM a [!DNL (API) Salesforce CRM] campos d
    * Si está trabajando con *Contactos* dentro del segmento, consulte la Referencia de objeto en Salesforce para [Contacto](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) para definir asignaciones para los campos que se van a actualizar.
    * Puede identificar los campos obligatorios buscando la palabra *Requerido*, que se menciona en las descripciones de los campos en el vínculo anterior.
    * Según los campos que desee exportar o actualizar, agregue asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce CRM]: Notas de |Campo de origen|Campo de destino| | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Apellidos del contacto de hasta 80 caracteres. |\
-      |`xdm: person.name.firstName`|`Attribute: FirstName`| El nombre del contacto puede tener hasta 40 caracteres. | |`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del contacto. |
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| El nombre del contacto puede tener hasta 40 caracteres. | |`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del contacto. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-      ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Uso de posibles clientes**
 
    * Si está trabajando con *Posibles clientes* dentro del segmento, consulte la Referencia de objeto en Salesforce para [Posible cliente](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) para definir asignaciones para los campos que se van a actualizar.
    * Puede identificar los campos obligatorios buscando la palabra *Requerido*, que se menciona en las descripciones de los campos en el vínculo anterior.
    * Según los campos que desee exportar o actualizar, agregue asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce CRM]: Notas de |Campo de origen|Campo de destino| | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Apellidos del posible cliente de hasta 80 caracteres. |\
-      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. La compañía del líder. | |`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del posible cliente. |
+     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. La compañía del líder. | |`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del posible cliente. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-      ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
-
-
+     ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Cuando haya terminado de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-### Programar exportación de segmentos y ejemplo {#schedule-segment-export-example}
+### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
-Al realizar la [Programar exportación de segmentos](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Paso debe asignar manualmente los segmentos activados de Platform a su campo personalizado correspondiente en [!DNL Salesforce].
+Al realizar la [Programar exportación de audiencias](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Este paso requiere asignar manualmente las audiencias activadas desde Platform a su campo personalizado correspondiente en [!DNL Salesforce].
 
 Para ello, seleccione cada segmento y, a continuación, introduzca el nombre del campo personalizado en [!DNL Salesforce] en el [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** field. Consulte la [Creación de campos personalizados dentro de [!DNL Salesforce]](#prerequisites-custom-field) para obtener instrucciones y prácticas recomendadas sobre la creación de campos personalizados en [!DNL Salesforce].
 
-Por ejemplo, si su [!DNL Salesforce] el campo personalizado es `crm_2_seg`, especifique este valor en [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** para rellenar audiencias de segmento desde Experience Platform en este campo personalizado.
+Por ejemplo, si su [!DNL Salesforce] el campo personalizado es `crm_2_seg`, especifique este valor en [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** para rellenar audiencias de audiencia de Experience Platform en este campo personalizado.
 
 Un campo personalizado de ejemplo de [!DNL Salesforce] se muestra a continuación:
 ![[!DNL Salesforce] Captura de pantalla de IU que muestra el campo personalizado.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 Ejemplo que indica la ubicación del [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** se muestra a continuación:
-![Captura de pantalla de la IU de Platform que muestra Programar exportación de segmentos.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![Captura de pantalla de la IU de Platform que muestra Programar exportación de audiencias.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 Como se muestra arriba, [!DNL Salesforce] **[!UICONTROL Nombre de campo]** coincide exactamente con el valor especificado en [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]**.
 
-Según el caso de uso, todos los segmentos activados se pueden asignar al mismo [!DNL Salesforce] campo personalizado o a diferentes **[!UICONTROL Nombre de campo]** in [!DNL Salesforce CRM]. Un ejemplo típico basado en la imagen mostrada arriba podría ser.
+Según el caso de uso, todas las audiencias activadas se pueden asignar a la misma [!DNL Salesforce] campo personalizado o a diferentes **[!UICONTROL Nombre de campo]** in [!DNL Salesforce CRM]. Un ejemplo típico basado en la imagen mostrada arriba podría ser.
 | [!DNL Salesforce CRM] nombre del segmento | [!DNL Salesforce] **[!UICONTROL Nombre de campo]** | [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** | | — | — | — | | crm_1_seg | `crm_1_seg` | `crm_1_seg` | | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
 Repita esta sección para cada segmento de Platform activado.
@@ -257,30 +253,29 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Seleccione el destino y valide que el estado es **[!UICONTROL activado]**.
    ![Captura de pantalla de la IU de Platform que muestra Destinations Dataflow Run.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. Cambie a la **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de segmento.
+1. Cambie a la **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de audiencia.
    ![Captura de pantalla de la IU de Platform que muestra los datos de activación de destinos.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
-1. Monitorice el resumen del segmento y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
+1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
    ![Captura de pantalla de la IU de Platform que muestra el segmento.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finalmente, inicie sesión en el sitio web de Salesforce y valide si los perfiles del segmento se han agregado o actualizado.
+1. Finalmente, inicie sesión en el sitio web de Salesforce y valide si los perfiles de la audiencia se han agregado o actualizado.
 
    **Trabajar con contactos**
 
    * Si ha seleccionado *Contactos* en el segmento de Platform, vaya a **[!DNL Apps]** > **[!DNL Contacts]** página.
-      ![Captura de pantalla de CRM de Salesforce que muestra la página Contactos con los perfiles del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
+     ![Captura de pantalla de CRM de Salesforce que muestra la página Contactos con los perfiles del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * Seleccione una *Contacto* y compruebe si los campos se han actualizado. Puede ver que cada estado del segmento en [!DNL Salesforce CRM] se ha actualizado con el estado del segmento correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de segmentos](#schedule-segment-export-example).
-      ![Captura de pantalla de CRM de Salesforce que muestra la página Detalles de contacto con estados de segmento actualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
+   * Seleccione una *Contacto* y compruebe si los campos se han actualizado. Puede ver que cada estado de la audiencia en [!DNL Salesforce CRM] se ha actualizado con el estado de audiencia correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example).
+     ![Captura de pantalla de CRM de Salesforce que muestra la página Detalles de contacto con estados de audiencia actualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Uso de posibles clientes**
 
    * Si ha seleccionado *Posibles clientes* en el segmento de Platform y, a continuación, vaya a **[!DNL Apps]** > **[!DNL Leads]** página.
-      ![Captura de pantalla de CRM de Salesforce que muestra la página de posibles clientes con los perfiles del segmento.](../../assets/catalog/crm/salesforce/leads.png)
+     ![Captura de pantalla de CRM de Salesforce que muestra la página de posibles clientes con los perfiles del segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * Seleccione una *Posible cliente* y compruebe si los campos se han actualizado. Puede ver que cada estado del segmento en [!DNL Salesforce CRM] se ha actualizado con el estado del segmento correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de segmentos](#schedule-segment-export-example).
-      ![Captura de pantalla de CRM de Salesforce que muestra la página Detalles del posible cliente con estados de segmento actualizados.](../../assets/catalog/crm/salesforce/lead-info.png)
-
+   * Seleccione una *Posible cliente* y compruebe si los campos se han actualizado. Puede ver que cada estado de la audiencia en [!DNL Salesforce CRM] se ha actualizado con el estado de audiencia correspondiente de Platform, según el **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example).
+     ![Captura de pantalla de CRM de Salesforce que muestra la página Detalles del posible cliente con estados de audiencia actualizados.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
@@ -291,8 +286,7 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas
 ### Se detectaron errores desconocidos al insertar eventos en el destino {#unknown-errors}
 
 * Al comprobar la ejecución de un flujo de datos, puede encontrar el siguiente mensaje de error: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-
-   ![Captura de pantalla de la IU de Platform que muestra un error.](../../assets/catalog/crm/salesforce/error.png)
+  ![Captura de pantalla de la IU de Platform que muestra un error.](../../assets/catalog/crm/salesforce/error.png)
 
    * Para corregir este error, compruebe que la variable **[!UICONTROL ID de asignación]** que ha proporcionado en el flujo de trabajo de activación a la [!DNL Salesforce CRM] el destino coincide exactamente con el valor del tipo de campo personalizado que ha creado en [!DNL Salesforce]. Consulte la [Creación de campos personalizados dentro de [!DNL Salesforce]](#prerequisites-custom-field) para obtener instrucciones.
 

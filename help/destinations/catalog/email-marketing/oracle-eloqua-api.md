@@ -3,9 +3,9 @@ title: (API) Conexión de Oracle Eloqua
 description: El Oracle (API) Eloqua permite exportar los datos de la cuenta y activarlos dentro de Oracle Eloqua para satisfacer sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2124'
 ht-degree: 3%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite a los especialistas en marketing planificar y ejecutar campañas al tiempo que ofrecen una experiencia del cliente personalizada para sus posibles clientes. Con una administración de posibles clientes integrada y una creación de campañas sencilla, ayuda a los especialistas en marketing a atraer a la audiencia adecuada en el momento adecuado en el recorrido del comprador y se escala de forma elegante para llegar a audiencias de varios canales, incluidos correo electrónico, búsqueda en pantalla, vídeo y móvil. Los equipos de ventas pueden cerrar más acuerdos a una velocidad más rápida, lo que aumenta el retorno de la inversión de marketing a través de una perspectiva en tiempo real.
 
-Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operación desde el [!DNL Oracle Eloqua] API de REST, que le permite **actualizar identidades** dentro de un segmento en [!DNL Oracle Eloqua].
+Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operación desde el [!DNL Oracle Eloqua] API de REST, que le permite **actualizar identidades** dentro de una audiencia en [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] utiliza [Autenticación básica](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) para comunicarse con el [!DNL Oracle Eloqua] API DE REST. Instrucciones para autenticarse en su [!DNL Oracle Eloqua] más abajo, en la sección [Autenticar en el destino](#authenticate) sección.
 
 ## Casos de uso {#use-cases}
 
-El departamento de marketing de una plataforma en línea desea difundir una campaña de marketing basada en correo electrónico a una audiencia seleccionada de posibles clientes. El equipo de marketing de la plataforma puede actualizar la información de posibles clientes existente a través de Adobe Experience Platform, generar segmentos a partir de sus propios datos sin conexión y enviar estos segmentos a [!DNL Oracle Eloqua], que se puede utilizar para enviar el correo electrónico de la campaña de marketing.
+El departamento de marketing de una plataforma en línea desea difundir una campaña de marketing basada en correo electrónico a una audiencia seleccionada de posibles clientes. El equipo de marketing de la plataforma puede actualizar la información de posibles clientes existente a través de Adobe Experience Platform, crear audiencias a partir de sus propios datos sin conexión y enviar estas audiencias a [!DNL Oracle Eloqua], que se puede utilizar para enviar el correo electrónico de la campaña de marketing.
 
 ## Requisitos previos {#prerequisites}
 
@@ -29,7 +29,7 @@ El departamento de marketing de una plataforma en línea desea difundir una camp
 
 Antes de activar los datos en [!DNL Oracle Eloqua] destino, debe tener un [esquema](/help/xdm/schema/composition.md), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creado en [!DNL Experience Platform].
 
-Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a segmento](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de los segmentos.
+Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a audiencia](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
 
 ### [!DNL Oracle Eloqua] requisitos previos {#prerequisites-destination}
 
@@ -54,11 +54,10 @@ Consulte la [Iniciando sesión en [!DNL Oracle Eloqua]](https://docs.oracle.com/
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] los campos de contacto personalizados se crean automáticamente con los nombres de los segmentos seleccionados durante la **[!UICONTROL Seleccionar segmentos]** paso.
-
+>* [!DNL Oracle Eloqua] los campos de contacto personalizados se crean automáticamente con los nombres de las audiencias seleccionadas durante la **[!UICONTROL Seleccionar segmentos]** paso.
 
 * [!DNL Oracle Eloqua] tiene un límite máximo de 250 campos de contacto personalizados.
-* Antes de exportar nuevos segmentos, asegúrese de que el número de segmentos de Platform y el número de segmentos existentes dentro de [!DNL Oracle Eloqua] no supere este límite.
+* Antes de exportar nuevas audiencias, asegúrese de que el número de audiencias de Platform y el número de audiencias existentes dentro de [!DNL Oracle Eloqua] no supere este límite.
 * Si se supera este límite, se producirá un error en el Experience Platform. Esto se debe a que [!DNL Oracle Eloqua] La API no puede validar la solicitud y responde con un - *400: Error de validación* - mensaje de error que describe el problema.
 * Si ha alcanzado el límite especificado anteriormente, debe eliminar las asignaciones existentes de su destino y eliminar los campos de contacto personalizados correspondientes en su [!DNL Oracle Eloqua] cuenta antes de poder exportar más segmentos.
 
@@ -78,8 +77,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Para cada segmento seleccionado en Platform, la variable [!DNL Oracle Eloqua] El estado del segmento se actualiza con su estado del segmento de Platform.</li></ul> |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Para cada audiencia seleccionada en Platform, la correspondiente [!DNL Oracle Eloqua] El estado del segmento se actualiza con su estado de audiencia de Platform.</li></ul> |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -130,13 +129,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
@@ -150,7 +149,7 @@ Para asignar los campos XDM a [!DNL Oracle Eloqua] campos de destino, siga estos
    * Repita estos pasos para agregar las asignaciones de atributos necesarias y deseadas entre el esquema de perfil XDM y [!DNL Oracle Eloqua]: | Campo de origen | Campo de destino | Obligatorio | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Sí | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Sí | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
    * A continuación, se muestra un ejemplo con las asignaciones anteriores:
-      ![Ejemplo de captura de pantalla de la IU de Platform con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![Ejemplo de captura de pantalla de la IU de Platform con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -178,22 +177,22 @@ Cuando haya terminado de proporcionar las asignaciones para la conexión de dest
 
 >[!NOTE]
 >
->El destino sufijo automáticamente un identificador único a los nombres de segmento seleccionados en cada ejecución al enviar la información del campo de contacto a [!DNL Oracle Eloqua]. Esto garantiza que los nombres de los campos de contacto correspondientes a sus nombres de segmento no se superpongan. Consulte la [Validar exportación de datos](#exported-data) captura de pantalla de sección ejemplo de un [!DNL Oracle Eloqua] Página de detalles del contacto con el campo de contacto personalizado creado con los nombres de los segmentos.
+>El destino sufijo automáticamente un identificador único a los nombres de audiencia seleccionados en cada ejecución al enviar la información del campo de contacto a [!DNL Oracle Eloqua]. Esto garantiza que los nombres de los campos de contacto correspondientes a sus nombres de audiencia no se superpongan. Consulte la [Validar exportación de datos](#exported-data) captura de pantalla de sección ejemplo de un [!DNL Oracle Eloqua] Página de detalles del contacto con campo de contacto personalizado creado con los nombres de las audiencias.
 
 ## Validar exportación de datos {#exported-data}
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
 1. Seleccionar **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y vaya a la lista de destinos.
-1. A continuación, seleccione el destino y cambie a **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de segmento.
+1. A continuación, seleccione el destino y cambie a **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de audiencia.
    ![Captura de pantalla de la IU de Platform que muestra los datos de activación de destinos.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. Monitorice el resumen del segmento y asegúrese de que el recuento de perfiles corresponda al recuento dentro del segmento.
+1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento dentro del segmento.
    ![Captura de pantalla de la IU de Platform que muestra el segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Inicie sesión en [!DNL Oracle Eloqua] sitio web y, a continuación, vaya al **[!UICONTROL Información general de contactos]** para comprobar si se han añadido los perfiles del segmento. Para ver el estado del segmento, explore en profundidad un **[!UICONTROL Detalles de contacto]** y compruebe si se ha creado el campo de contacto con el nombre del segmento seleccionado como prefijo.
+1. Inicie sesión en [!DNL Oracle Eloqua] sitio web y, a continuación, vaya al **[!UICONTROL Información general de contactos]** para comprobar si se han añadido los perfiles de la audiencia. Para ver el estado de la audiencia, explore en profundidad un **[!UICONTROL Detalles de contacto]** y compruebe si se ha creado el campo de contacto con el nombre de audiencia seleccionado como prefijo.
 
-![Captura de pantalla de la IU de Eloqua de oracle que muestra la página Detalles de contacto con el campo de contacto personalizado creado con el nombre del segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Captura de pantalla de la IU de Eloqua de oracle que muestra la página Detalles de contacto con el campo de contacto personalizado creado con el nombre de la audiencia.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

@@ -3,9 +3,9 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1087'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Activar perfiles para su [!DNL LinkedIn] campañas de segmentación, personaliza
 
 Para ayudarle a comprender mejor cómo y cuándo usar el [!DNL LinkedIn Matched Audiences] Destino, este es un caso de uso que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
 
-Una empresa de software organiza una conferencia y desea mantenerse en contacto con los participantes y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede introducir direcciones de correo electrónico o ID de dispositivos móviles desde su propio equipo [!DNL CRM] en Adobe Experience Platform. A continuación, pueden generar segmentos a partir de sus propios datos sin conexión y enviarlos a [!DNL LinkedIn] plataforma social, optimizando su gasto en publicidad.
+Una empresa de software organiza una conferencia y desea mantenerse en contacto con los participantes y mostrarles ofertas personalizadas basadas en su estado de asistencia a la conferencia. La empresa puede introducir direcciones de correo electrónico o ID de dispositivos móviles desde su propio equipo [!DNL CRM] en Adobe Experience Platform. A continuación, puede crear audiencias a partir de sus propios datos sin conexión y enviarlas a [!DNL LinkedIn] plataforma social, optimizando su gasto en publicidad.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -36,14 +36,28 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono y otros) utilizados en [!DNL LinkedIn Matched Audiences] destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono y otros) utilizados en [!DNL LinkedIn Matched Audiences] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-El siguiente vídeo también muestra los pasos para configurar una [!DNL LinkedIn Matched Audiences] Destino y activación de segmentos.
+El siguiente vídeo también muestra los pasos para configurar una [!DNL LinkedIn Matched Audiences] Destino y activación de audiencias.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -127,18 +141,18 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Datos exportados {#exported-data}
 
-Una activación correcta significa que un [!DNL LinkedIn] la audiencia personalizada se crearía mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a segmentos en la audiencia se añadiría y eliminaría a medida que los usuarios se calificaran o descalificaran para los segmentos activados.
+Una activación correcta significa que un [!DNL LinkedIn] la audiencia personalizada se crearía mediante programación en [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). La pertenencia a audiencias se añadiría y eliminaría a medida que los usuarios se calificaran o descalificaran para las audiencias activadas.
 
 >[!TIP]
 >
->La integración entre Adobe Experience Platform y [!DNL LinkedIn Matched Audiences] admite rellenos de audiencia históricos. Todas las clasificaciones de segmentos históricas se envían a [!DNL LinkedIn] al activar los segmentos en el destino.
+>La integración entre Adobe Experience Platform y [!DNL LinkedIn Matched Audiences] admite rellenos de audiencia históricos. Todas las cualificaciones de audiencia históricas se envían a [!DNL LinkedIn] al activar las audiencias en el destino.

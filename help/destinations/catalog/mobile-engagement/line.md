@@ -1,12 +1,12 @@
 ---
 keywords: móvil;destinos de participación móvil;LINE;destino de participación móvil de LINE
 title: Conexión LINE
-description: El destino LINE le permite añadir perfiles al segmento de Platform y ofrecer experiencias personalizadas a los usuarios conectados.
+description: El destino LINE le permite añadir perfiles a la audiencia de Platform y ofrecer experiencias personalizadas a los usuarios conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [[!DNL LINE]](https://line.me/en/) es una popular plataforma de comunicación que conecta personas, servicios e información y que ha crecido desde una aplicación de chat hasta un centro para actividades de entretenimiento, sociales y diarias.
 
-Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL LINE] API de mensajería](https://developers.line.biz/en/reference/messaging-api/). Puede activar perfiles de los segmentos de Experience Platform como conexiones dentro de [!DNL LINE] para sus necesidades empresariales.
+Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL LINE] API de mensajería](https://developers.line.biz/en/reference/messaging-api/). Puede activar perfiles de las audiencias de Experience Platform como conexiones dentro de [!DNL LINE] para sus necesidades empresariales.
 
 [!DNL LINE] utiliza tokens de portador como mecanismo de autenticación para comunicarse con el [!DNL LINE] API de mensajería. Instrucciones para autenticarse en su [!DNL LINE] están más abajo, dentro de [Autenticar en el destino](#authenticate) sección.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en marketing, puede dirigirse a los usuarios en un destino de participación móvil con segmentos integrados [!DNL Adobe Experience Platform]. Además, puede ofrecerles experiencias personalizadas en función de los atributos de sus [!DNL Adobe Experience Platform] perfiles, en cuanto los segmentos y perfiles se actualicen en [!DNL Adobe Experience Platform].
+Como especialista en marketing, puede segmentar usuarios en un destino de participación móvil, con audiencias integradas [!DNL Adobe Experience Platform]. Además, puede ofrecerles experiencias personalizadas en función de los atributos de sus [!DNL Adobe Experience Platform] perfiles, en cuanto las audiencias y los perfiles se actualicen en [!DNL Adobe Experience Platform].
 
 ## Requisitos previos {#prerequisites}
 
@@ -67,8 +67,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en [!DNL LINE] destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en [!DNL LINE] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 >
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 
@@ -129,13 +129,13 @@ Si la identidad de destinatario es *ID para anunciantes (IFA)* necesitará lo si
 
 ## Validar exportación de datos {#exported-data}
 
-Una vez que la exportación de datos de Experience Platform se haya realizado correctamente, la variable [!DNL LINE] destino crea una nueva audiencia dentro de [!DNL LINE] utilizando el nombre del segmento seleccionado.
+Una vez que la exportación de datos de Experience Platform se haya realizado correctamente, la variable [!DNL LINE] destino crea una nueva audiencia dentro de [!DNL LINE] utilizando el nombre de audiencia seleccionado.
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
 1. Entrada [!DNL LINE], inicie sesión en [Consola de responsable](https://manager.line.biz/).
 
-1. A continuación, vaya a **[!UICONTROL Controles de datos]** > **[!UICONTROL Audiencias]** y compruebe que el nombre coincide con el segmento seleccionado en la **[!UICONTROL Nombre de audiencia]** columna.
+1. A continuación, vaya a **[!UICONTROL Controles de datos]** > **[!UICONTROL Audiencias]** y compruebe que el nombre coincida con la audiencia seleccionada en la **[!UICONTROL Nombre de audiencia]** columna.
 
 1. El volumen actualizado coincidiría con el recuento dentro del segmento.
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Editar conexiones de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo editar varios componentes de una conexión de destino mediante la API de Flow Service.
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -28,7 +28,7 @@ Este tutorial requiere que tenga un ID de flujo de datos válido. Si no tiene un
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+* [Destinos](../home.md): [!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 * [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante [!DNL Flow Service] API.
@@ -245,7 +245,7 @@ Una respuesta correcta devuelve el ID de conexión de destino y una etiqueta ele
 
 **Solicitud**
 
-La siguiente solicitud actualiza los parámetros de un [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) conexión para agregar el nuevo [**[!UICONTROL Anexar ID de segmento al nombre del segmento]**](/help/release-notes/2023/april-2023.md#destinations) field.
+La siguiente solicitud actualiza los parámetros de un [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) conexión para agregar el nuevo [**[!UICONTROL Anexar ID de audiencia al nombre de audiencia]**](/help/release-notes/2023/april-2023.md#destinations) field.
 
 ```shell
 curl -X PATCH \

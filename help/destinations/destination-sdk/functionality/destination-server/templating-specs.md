@@ -1,7 +1,7 @@
 ---
 description: Obtenga información sobre cómo dar formato a las solicitudes HTTP enviadas al extremo. Utilice el extremo /authoring/destination-servers para configurar las especificaciones de creación de plantillas del servidor de destino en Adobe Experience Platform Destination SDK.
 title: Plantillas de especificaciones para destinos creados con Destination SDK
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 4%
@@ -46,7 +46,7 @@ El Adobe utiliza un lenguaje de plantilla similar al siguiente [Jinja](https://j
 Para obtener más información sobre la transformación, visite los siguientes vínculos:
 
 * [Formato del mensaje](message-format.md)
-* [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a segmentos ](message-format.md#using-templating)
+* [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias](message-format.md#using-templating)
 
 >[!TIP]
 >

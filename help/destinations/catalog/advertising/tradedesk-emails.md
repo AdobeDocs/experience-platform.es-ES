@@ -3,9 +3,9 @@ title: (Beta) La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Este documento se ha diseñado para ayudarle a activar perfiles en su [!DNL Trad
 
 ## Requisitos previos {#prerequisites}
 
-Antes de activar segmentos en [!DNL The Trade Desk], debe ponerse en contacto con su [!DNL The Trade Desk] administrador de cuentas para firmar el contrato de incorporación a CRM. [!DNL The Trade Desk] concederá permiso y compartirá su ID de anunciante para configurar su destino.
+Antes de activar audiencias en [!DNL The Trade Desk], debe ponerse en contacto con su [!DNL The Trade Desk] administrador de cuentas para firmar el contrato de incorporación a CRM. [!DNL The Trade Desk] concederá permiso y compartirá su ID de anunciante para configurar su destino.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (correo electrónico o correo electrónico con hash) utilizados en el destino de la oficina de comercio. |
-| Frecuencia de exportación | **[!UICONTROL Lote diario]** | Como un perfil se actualiza en Experience Platform en función de la evaluación de segmentos, el perfil (las identidades) se actualiza una vez al día de forma descendente a la plataforma de destino. Más información sobre [exportaciones por lotes](/help/destinations/destination-types.md#file-based). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (correo electrónico o correo electrónico con hash) utilizados en el destino de la oficina de comercio. |
+| Frecuencia de exportación | **[!UICONTROL Lote diario]** | Como el perfil se actualiza en Experience Platform en función de la evaluación de audiencias, el perfil (las identidades) se actualiza una vez al día de forma descendente a la plataforma de destino. Más información sobre [exportaciones por lotes](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Para poder enviar o activar datos de audiencia a un destino, debe configurar una
 
 Al conectarse al destino, la configuración de una directiva de control de datos es completamente opcional. Consulte al Experience Platform [información general sobre gobernanza de datos](/help/data-governance/policies/overview.md) para obtener más información.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
-Leer [activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en un destino.
+Leer [activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en un destino.
 
-En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada segmento que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
+En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
-![Captura de pantalla de la IU de Platform para programar la activación de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Captura de pantalla de la IU de Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Todos los segmentos activados a [!DNL The Trade Desk] Los destinos CRM se establecen automáticamente en una frecuencia diaria y exportación de archivos completa.
+>Todas las audiencias activadas a [!DNL The Trade Desk] Los destinos CRM se establecen automáticamente en una frecuencia diaria y exportación de archivos completa.
 
-![Captura de pantalla de la IU de Platform para programar la activación de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Captura de pantalla de la IU de Platform para programar la activación de audiencias.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 En el **[!UICONTROL Asignación]** , debe seleccionar atributos o áreas de nombres de identidad de la columna de origen y asignarlos a la columna de destino.
 
-![Captura de pantalla de la IU de Platform para asignar la activación de segmentos.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Captura de pantalla de la IU de Platform para asignar la activación de audiencia.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-A continuación se muestra un ejemplo de asignación de identidad correcta al activar segmentos en [!DNL The Trade Desk] Destino CRM.
+A continuación se muestra un ejemplo de asignación de identidad correcta al activar audiencias en [!DNL The Trade Desk] Destino CRM.
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Selección de campos de destino:
 
 ## Validar exportación de datos {#validate}
 
-Para validar que los datos se exportan correctamente desde Experience Platform a [!DNL The Trade Desk], busque los segmentos en el mosaico de datos de Adobe 1PD en [!DNL The Trade Desk] Plataforma de administración de datos (DMP). Estos son los pasos para encontrar el ID correspondiente dentro de la variable [!DNL Trade Desk] IU:
+Para validar que los datos se exportan correctamente desde Experience Platform a [!DNL The Trade Desk], busque las audiencias en el mosaico de datos Adobe 1PD en [!DNL The Trade Desk] Plataforma de administración de datos (DMP). Estos son los pasos para encontrar el ID correspondiente dentro de la variable [!DNL Trade Desk] IU:
 
 1. Primero, haga clic en **[!UICONTROL Datos]** Tabulación y revisión **[!UICONTROL De Origen]**.
 2. Desplácese hacia abajo por la página, debajo de **[!UICONTROL Datos importados]**, encontrará la variable **[!UICONTROL Mosaico 1PD de Adobe]**.
-3. Haga clic en**[!UICONTROL Adobe 1PD]** mosaico y se enumerarán todos los segmentos activados en el [!DNL Trade Desk] destino del anunciante. También puede utilizar la función de búsqueda.
+3. Haga clic en**[!UICONTROL Adobe 1PD]** mosaico y se enumerarán todas las audiencias activadas en el [!DNL Trade Desk] destino del anunciante. También puede utilizar la función de búsqueda.
 4. El ID de segmento # del Experience Platform aparecerá como el Nombre del segmento en la [!DNL Trade Desk] IU.
 
 ## Uso de datos y gobernanza {#data-usage-governance}

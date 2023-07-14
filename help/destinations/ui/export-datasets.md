@@ -3,7 +3,7 @@ title: (Beta) Exportar conjuntos de datos a destinos de almacenamiento en la nub
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 >* Esta funcionalidad beta admite la exportación de datos de primera generación, tal como se definen en Real-time Customer Data Platform [descripción del producto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Esta funcionalidad está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Póngase en contacto con el representante del Adobe para obtener más información.
 
-Este artículo explica el flujo de trabajo necesario para exportar [conjuntos de datos](/help/catalog/datasets/overview.md) de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage] mediante la interfaz de usuario de Experience Platform.
+Este artículo explica el flujo de trabajo necesario para exportar [conjuntos de datos](/help/catalog/datasets/overview.md) desde Adobe Experience Platform hasta su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage] mediante la interfaz de usuario de Experience Platform.
 
 También puede utilizar las API de Experience Platform para exportar conjuntos de datos. Lea el [tutorial de API de exportar conjuntos de datos](/help/destinations/api/export-datasets.md) para obtener más información.
 
@@ -35,14 +35,14 @@ Actualmente, puede exportar conjuntos de datos a los destinos de almacenamiento 
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Cuándo activar segmentos o exportar conjuntos de datos {#when-to-activate-segments-or-activate-datasets}
+## Cuándo activar audiencias o exportar conjuntos de datos {#when-to-activate-audiences-or-activate-datasets}
 
-Algunos destinos basados en archivos del catálogo de Experience Platform admiten la activación de segmentos y la exportación de conjuntos de datos.
+Algunos destinos basados en archivos del catálogo de Experience Platform admiten la activación de audiencias y la exportación de conjuntos de datos.
 
-* Considere la posibilidad de activar segmentos cuando desee estructurar los datos en perfiles agrupados por intereses o cualificaciones de audiencia.
+* Considere la posibilidad de activar audiencias cuando desee estructurar los datos en perfiles agrupados por intereses o cualificaciones de audiencia.
 * Alternativamente, considere las exportaciones de conjuntos de datos cuando desee exportar conjuntos de datos sin procesar, que no están agrupados o estructurados por intereses o cualificaciones de audiencia. Puede utilizar estos datos para la creación de informes, los flujos de trabajo de ciencia de datos, para satisfacer los requisitos de cumplimiento y muchos otros casos de uso.
 
-Este documento contiene toda la información necesaria para exportar conjuntos de datos. Si desea activar segmentos en destinos de marketing por correo electrónico o almacenamiento en la nube, lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md).
+Este documento contiene toda la información necesaria para exportar conjuntos de datos. Si desea activar audiencias en destinos de marketing por correo electrónico o almacenamiento en la nube, lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Requisitos previos {#prerequisites}
 

@@ -1,9 +1,9 @@
 ---
 keywords: destinos;destino;página de detalles de destinos;página de detalles de destinos
 title: Ver detalles de destino
-description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, los segmentos asignados al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
+description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 1%
@@ -50,8 +50,8 @@ La siguiente tabla recoge los controles y detalles proporcionados por el carril 
 
 | Elemento del carril derecho | Descripción |
 | --- | --- |
-| [!UICONTROL Activar segmentos] | Seleccione este control para editar qué segmentos se asignan al destino, actualizar las programaciones de exportación o añadir y eliminar atributos e identidades asignados. Consulte las guías sobre [activación de datos de audiencia en destinos de flujo de segmentos](./activate-segment-streaming-destinations.md), [activación de datos de audiencia en destinos basados en perfiles por lotes](./activate-batch-profile-destinations.md), y [activación de datos de audiencia a destinos basados en perfiles de streaming](./activate-streaming-profile-destinations.md) para obtener más información. |
-| [!UICONTROL Eliminar] | Permite eliminar este flujo de datos y desasigna los segmentos que se activaron anteriormente, si los hay. |
+| [!UICONTROL Activar audiencias] | Seleccione este control para editar qué audiencias se asignan al destino, actualizar las programaciones de exportación o añadir y eliminar atributos e identidades asignados. Consulte las guías sobre [activación de datos de audiencia en destinos de streaming de audiencia](./activate-segment-streaming-destinations.md), [activación de datos de audiencia en destinos basados en perfiles por lotes](./activate-batch-profile-destinations.md), y [activación de datos de audiencia a destinos basados en perfiles de streaming](./activate-streaming-profile-destinations.md) para obtener más información. |
+| [!UICONTROL Eliminar] | Permite eliminar este flujo de datos y desasigna las audiencias que se activaron anteriormente, si las hay. |
 | [!UICONTROL Nombre del destino] | Este campo se puede editar para actualizar el nombre del destino. |
 | [!UICONTROL Descripción] | Este campo se puede editar para actualizar o añadir una descripción opcional al destino. |
 | [!UICONTROL Destino] | Representa la plataforma de destino a la que se envían las audiencias. Consulte la [catálogo de destinos](../catalog/overview.md) para obtener más información. |
@@ -81,7 +81,6 @@ El [!UICONTROL Ejecuciones de flujo de datos] Esta pestaña proporciona datos de
 >* Actualmente, la funcionalidad de monitorización de destinos es compatible con todos los destinos de Experience Platform *excepto* el [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md) y [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
 >* Para el [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), y [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinos, se estiman las métricas relacionadas con identidades excluidas, fallidas y activadas. Los volúmenes más altos de datos de activación conducen a una mayor precisión de las métricas.
 
-
 ![Vista de ejecuciones de flujo de datos](../assets/ui/details-page/dataflow-runs.png)
 
 ### Duración de ejecuciones de flujo de datos {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Para obtener más información, consulte [el flujo de datos se ejecuta en destin
 
 ### Destinos basados en archivos {#file-based}
 
-Para las ejecuciones de flujo de datos a destinos basados en archivos, la variable **[!UICONTROL Duración del procesamiento]** depende del tamaño de los datos que se exportan y de la carga del sistema. Tenga en cuenta también que el flujo de datos se ejecuta en destinos basados en archivos y se desglosa por segmento.
+Para las ejecuciones de flujo de datos a destinos basados en archivos, la variable **[!UICONTROL Duración del procesamiento]** depende del tamaño de los datos que se exportan y de la carga del sistema. Tenga en cuenta también que el flujo de datos se ejecuta en destinos basados en archivos y se desglosa por audiencia.
 
 ![Imagen de la página de ejecución del flujo de datos con la columna Tiempo de procesamiento resaltada para un destino basado en archivos.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Para obtener más información, consulte [el flujo de datos se ejecuta en destin
 
 ## [!UICONTROL Datos de activación] {#activation-data}
 
-El [!UICONTROL Datos de activación] Esta pestaña muestra una lista de los segmentos que se han asignado al destino, incluida su fecha de inicio y finalización (si corresponde), y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de un segmento concreto, seleccione su nombre en la lista.
+El [!UICONTROL Datos de activación] La pestaña muestra una lista de audiencias que se han asignado al destino, incluida su fecha de inicio y finalización (si corresponde) y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia en particular, seleccione su nombre en la lista.
 
 >[!TIP]
 >
->Para ver y editar detalles sobre los atributos y las identidades asignadas a un destino, seleccione **[!UICONTROL Activar segmentos]** en el [carril derecho](#right-rail).
+>Para ver y editar detalles sobre los atributos y las identidades asignadas a un destino, seleccione **[!UICONTROL Activar audiencias]** en el [carril derecho](#right-rail).
 
 ![Destino del lote de vista de datos de activación](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ El [!UICONTROL Datos de activación] Esta pestaña muestra una lista de los segm
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo explorar la página de detalles de un segmento, consulte la [Resumen de IU de segmentación](../../segmentation/ui/overview.md#segment-details).
+>Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [Resumen de IU de segmentación](../../segmentation/ui/overview.md#segment-details).

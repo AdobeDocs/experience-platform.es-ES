@@ -1,9 +1,9 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para crear una plantilla de audiencia a través del Adobe Experience Platform Destination SDK.
 title: Creación de una plantilla de audiencia
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '624'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Para algunos destinos creados con Destination SDK, debe crear una configuración de metadatos de audiencia para crear, actualizar o eliminar mediante programación metadatos de segmento en el destino. Esta página muestra cómo utilizar la variable `/authoring/audience-templates` Punto final de API para crear la configuración.
+Para algunos destinos creados con Destination SDK, debe crear una configuración de metadatos de audiencia para crear, actualizar o eliminar mediante programación metadatos de audiencia en el destino. Esta página muestra cómo utilizar la variable `/authoring/audience-templates` Punto final de API para crear la configuración.
 
 Para obtener una descripción detallada de las funciones que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
 
@@ -190,14 +190,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Propiedad | Tipo | Descripción |
 | -------- | ----------- | ----------- |
 | `name` | Cadena | Nombre de la plantilla de metadatos de audiencia del destino. Este nombre aparece en cualquier mensaje de error específico del socio en la interfaz de usuario del Experience Platform, seguido del mensaje de error analizado desde `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Cadena | La dirección URL y el punto final de su API, que se utiliza para crear, actualizar, eliminar o validar audiencias o segmentos en su plataforma. Dos ejemplos del sector son: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` y `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | Cadena | El método utilizado en el extremo para crear, actualizar, eliminar o validar mediante programación el segmento o la audiencia en el destino. Por ejemplo: `POST`, `PUT`, `DELETE` |
+| `url` | Cadena | La dirección URL y el punto final de su API, que se utiliza para crear, actualizar, eliminar o validar audiencias en su plataforma. Dos ejemplos del sector son: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` y `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | Cadena | Método utilizado en el extremo para crear, actualizar, eliminar o validar la audiencia en el destino mediante programación. Por ejemplo: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Cadena | Especifica cualquier encabezado HTTP que deba agregarse a la llamada a su API. Por ejemplo, `"Content-Type"` |
 | `headers.value` | Cadena | Especifica el valor de los encabezados HTTP que deben agregarse a la llamada a la API. Por ejemplo, `"application/x-www-form-urlencoded"` |
 | `requestBody` | Cadena | Especifica el contenido del cuerpo del mensaje que debe enviarse a la API. Los parámetros que deben añadirse a `requestBody` depende de los campos que acepte su API. Por ejemplo, consulte la [primer ejemplo de plantilla](../functionality/audience-metadata-management.md#example-1) en el documento de funcionalidad de metadatos de Audiencia. |
 | `responseFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se le llama. Por ejemplo, consulte la [ejemplos de plantillas](../functionality/audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de Audiencia. |
 | `responseFields.value` | Cadena | Especifique el valor de los campos de respuesta que devuelve la API cuando se llama a. |
-| `responseErrorFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se le llama. Por ejemplo, consulte la [ ejemplos de plantillas](../functionality/audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de Audiencia. |
+| `responseErrorFields.name` | Cadena | Especifique los campos de respuesta que devuelve la API cuando se le llama. Por ejemplo, consulte la [ejemplos de plantillas](../functionality/audience-metadata-management.md#examples) en el documento de funcionalidad de metadatos de Audiencia. |
 | `responseErrorFields.value` | Cadena | Analiza cualquier mensaje de error devuelto en las respuestas de llamadas de API desde su destino. Estos mensajes de error aparecerán a los usuarios en la interfaz de usuario del Experience Platform. |
 | `validations.field` | Cadena | Indica si se deben ejecutar las validaciones para algún campo antes de realizar llamadas de API al destino. Por ejemplo, puede utilizar `{{validations.accountId}}` para validar el ID de cuenta del usuario. |
 | `validations.regex` | Cadena | Indica cómo se debe estructurar el campo para que se apruebe la validación. |

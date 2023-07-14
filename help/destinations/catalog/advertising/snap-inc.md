@@ -1,10 +1,10 @@
 ---
 title: Conexión de Snap Inc
-description: Aprenda a conectarse a la plataforma de anuncios de Snapchat y a exportar los segmentos de audiencia desde Experience Platform.
+description: Aprenda a conectarse a la plataforma de anuncios de Snapchat y a exportar las audiencias desde Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## Casos de uso {#use-cases}
 
-Este destino permite a los especialistas en marketing importar segmentos de usuarios creados en Experience Platform a anuncios de Snapchat y utilizarlos para segmentar sus anuncios.
+Este destino permite a los especialistas en marketing importar audiencias de usuarios creadas en Experience Platform a anuncios de Snapchat y utilizarlas para segmentar sus anuncios.
 
 ## Requisitos previos {#prerequisites}
 
@@ -33,7 +33,7 @@ Para usar este destino, debes tener una cuenta de Snapchat Ads. Consulte esta do
 
 * Snap Inc no admite varias identidades para un segmento de audiencia determinado. Asigne solo una identidad al activar un segmento.
 * Snap Inc no admite el cambio de nombre de segmentos. Para cambiar el nombre de un segmento, debe desactivarlo, cambiarle el nombre y, a continuación, activarlo.
-* No es posible definir un período de retención para los miembros de un segmento de audiencia. Todos los miembros tienen retención de duración y estarán en el segmento hasta que se eliminen.
+* No es posible definir un período de retención para los miembros de un segmento de audiencia. Todos los miembros tienen retención de duración y estarán en la audiencia hasta que se eliminen.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -65,8 +65,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores (nombre, número de teléfono u otros) utilizados en *SU DESTINO* destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en *SU DESTINO* destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ Para configurar los detalles del destino, rellene los campos obligatorios y sele
 
 * **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: ID de la cuenta de publicidad asociada a la cuenta de publicidad a la que desea importar los segmentos. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el Centro de ayuda empresarial de Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL ID de cuenta]**: ID de la cuenta de publicidad asociado con la cuenta de publicidad a la que desea importar las audiencias. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el Centro de ayuda empresarial de Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Si se introduce un ID de cuenta de publicidad de Snapchat incorrecto o no válido, la activación del segmento fallará. Compruebe que ha introducido el ID de cuenta de publicidad correcto.
+>Si se introduce un ID de cuenta de publicidad de Snapchat incorrecto o no válido, la activación de la audiencia fallará. Compruebe que ha introducido el ID de cuenta de publicidad correcto.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -110,24 +110,24 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Validar exportación de datos {#exported-data}
 
-Después de activar los segmentos en *Snap Inc* destino, podrá ver los segmentos en la lista de segmentos del Administrador de anuncios de Snap [**Audiencias** sección](https://businesshelp.snapchat.com/s/article/audience-sharing). Para desplazarse a esta sección, siga estos pasos:
+Después de activar las audiencias en *Snap Inc* destino, podrá ver las audiencias en el cuadro de diálogo [**Audiencias** sección](https://businesshelp.snapchat.com/s/article/audience-sharing). Para desplazarse a esta sección, siga estos pasos:
 
 1. Inicie sesión en [Administrador de anuncios de Snap](https://ads.snapchat.com/)
-2. Seleccionar **Audiencias** en el menú desplegable situado en la esquina superior izquierda de la pantalla. Verá los segmentos que activó en Adobe Experience Platform en la biblioteca de audiencias:
+2. Seleccionar **Audiencias** en el menú desplegable situado en la esquina superior izquierda de la pantalla. Verá las audiencias que activó en Adobe Experience Platform en la Biblioteca de audiencias:
 
 ![Audiencias](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tenga en cuenta que cuando se activa por primera vez un segmento de Adobe en Snap Inc, inicialmente lo verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa el segmento. Para obtener más información sobre cómo se evalúan los segmentos en Experience Platform, consulte la [Resumen del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [Resumen del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

@@ -4,7 +4,7 @@ title: Actualizar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para actualizar las cuentas de destino en la IU de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Siga los pasos a continuación para actualizar los detalles de conexión a desti
 
    ![Filtrar cuentas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparecerá un panel emergente con las opciones siguientes **[!UICONTROL Activar segmentos]**, **[!UICONTROL Editar detalles]**, y **[!UICONTROL Eliminar]** la cuenta. Seleccione el ![Botón Editar detalles](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalles]** para editar la información de la cuenta.
+3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparecerá un panel emergente con las opciones siguientes **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]**, y **[!UICONTROL Eliminar]** la cuenta. Seleccione el ![Botón Editar detalles](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalles]** para editar la información de la cuenta.
 
    ![Editar cuenta](../assets/ui/update-accounts/accounts-edit.png)
 

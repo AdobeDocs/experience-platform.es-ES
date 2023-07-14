@@ -3,9 +3,9 @@ keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
 description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Airship] es la plataforma líder de participación del cliente, que le ayuda a proporcionar mensajes omnicanal significativos y personalizados a sus usuarios en cada fase del ciclo de vida del cliente.
 
-Esta integración pasa los datos de segmentos de Adobe Experience Platform a [!DNL Airship] as [Etiquetas](https://docs.airship.com/guides/audience/tags/) para segmentar o activar.
+Esta integración pasa los datos de audiencia de Adobe Experience Platform a [!DNL Airship] as [Etiquetas](https://docs.airship.com/guides/audience/tags/) para segmentar o activar.
 
 Para obtener más información acerca de [!DNL Airship], consulte la [Documentos de dirigibles](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ Para obtener más información acerca de [!DNL Airship], consulte la [Documentos
 
 ## Requisitos previos
 
-Antes de poder enviar los segmentos de Adobe Experience Platform a [!DNL Airship], debe:
+Antes de enviar las audiencias de Adobe Experience Platform a [!DNL Airship], debe:
 
 * Cree un grupo de etiquetas en su [!DNL Airship] proyecto.
 * Genere un token de portador para la autenticación.
@@ -36,20 +36,32 @@ Antes de poder enviar los segmentos de Adobe Experience Platform a [!DNL Airship
 > 
 >Crear un [!DNL Airship] cuenta mediante [este vínculo de suscripción](https://go.airship.eu/accounts/register/plan/starter/) si aún no lo ha hecho.
 
+## Compatibilidad con audiencias externas {#external-audiences-support}
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias externas que se describen en la tabla siguiente.
+
+| Tipo de audiencia externa | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) con los identificadores utilizados en el destino Etiquetas de dirigibles. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino de Etiquetas de dirigibles. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Grupos de etiquetas
 
-El concepto de segmentos en Adobe Experience Platform es similar al siguiente [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Aeronave, con ligeras diferencias de implementación. Esta integración asigna el estado del de un usuario de [pertenencia a un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de un [!DNL Airship] etiqueta. Por ejemplo, en un segmento de Platform donde la variable `xdm:status` cambios en `realized`, la etiqueta se añade a [!DNL Airship] canal o usuario con nombre al que está asignado este perfil. Si la variable `xdm:status` cambios en `exited`, se eliminará la etiqueta.
+El concepto de audiencias en Adobe Experience Platform es similar al siguiente [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Aeronave, con ligeras diferencias de implementación. Esta integración asigna el estado del de un usuario de [pertenencia a un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de un [!DNL Airship] etiqueta. Por ejemplo, en una audiencia de Platform donde la variable `xdm:status` cambios en `realized`, la etiqueta se añade a [!DNL Airship] canal o usuario con nombre al que está asignado este perfil. Si la variable `xdm:status` cambios en `exited`, se eliminará la etiqueta.
 
 Para habilitar esta integración, cree un *grupo de etiquetas* in [!DNL Airship] nombrado `adobe-segments`.
 
@@ -75,13 +87,13 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL Airship 
 
 ### Caso de uso #1
 
-Los minoristas o las plataformas de entretenimiento pueden crear perfiles de usuario en sus clientes fieles y pasar esos segmentos a [!DNL Airship] para la segmentación de mensajes en campañas móviles.
+Los minoristas o las plataformas de entretenimiento pueden crear perfiles de usuario sobre sus clientes fieles y pasar esas audiencias a [!DNL Airship] para la segmentación de mensajes en campañas móviles.
 
 ### Caso de uso #2
 
-Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios entren o salgan de segmentos específicos dentro de Adobe Experience Platform.
+Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios entren o salgan de audiencias específicas dentro de Adobe Experience Platform.
 
-Por ejemplo, un minorista configura un segmento específico de marca de jeans en Platform. Ese minorista ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de pantalones vaqueros para una marca específica.
+Por ejemplo, un minorista configura una audiencia específica de marca de jeans en Platform. Ese minorista ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de pantalones vaqueros para una marca específica.
 
 ## Conectar con el destino {#connect}
 
@@ -111,13 +123,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Consideraciones de asignación {#mapping-considerations}
 

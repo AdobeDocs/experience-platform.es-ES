@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;platform;descripción general de de
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![Titular de información general Destinos](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+**[!DNL Destinations]** son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -30,7 +30,7 @@ Una de las funcionalidades principales de Platform es la ingesta de datos de ori
 ## Pasos de destinos {#steps}
 
 * Elija entre una [catálogo de autoservicio](./catalog/overview.md) de todos los destinos disponibles en Platform.
-* Utilice destinos para enviar perfiles o segmentos a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
+* Utilice destinos para enviar perfiles o audiencias a plataformas de automatización de marketing, plataformas de publicidad digital y mucho más.
 * Programe exportaciones de datos a sus destinos preferidos en horas regulares.
 
 ## Controles {#controls}
@@ -40,8 +40,8 @@ Los controles del [destination workspace](./ui/destinations-workspace.md) le per
 * Examine el catálogo de plataformas de destino donde puede activar sus datos;
 * Crear, editar, activar y desactivar flujos de datos a los destinos del catálogo;
 * Crear una cuenta en una ubicación de almacenamiento o vincular Platform a la cuenta en la plataforma de destino.
-* Seleccione qué segmentos deben activarse en los destinos;
-* Seleccione qué [Campos del modelo de datos de experiencia (XDM)](../xdm/home.md) para exportar al activar segmentos a destinos de marketing por correo electrónico.
+* Seleccione qué audiencias deben activarse en los destinos;
+* Seleccione qué [Campos del modelo de datos de experiencia (XDM)](../xdm/home.md) para exportar al activar audiencias a destinos de marketing por correo electrónico.
 
 ## Tipos y categorías de destino {#types-and-categories}
 
@@ -56,8 +56,8 @@ En la tabla siguiente se describen los permisos y las combinaciones de permisos 
 | Nivel de permisos | Descripción |
 | ---- | ----|
 | **[!UICONTROL Administrar destinos]** | Para conectarse a destinos, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar segmentos en destinos y habilitar la variable [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar segmentos en destinos y ocultar [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar audiencias en destinos y habilitar la variable [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar audiencias en destinos y ocultar [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Consulte la documentación de Administración de datos en Platform para obtener 
 
 Para obtener más información sobre la selección de acciones de marketing en el flujo de trabajo Crear destino, consulte las siguientes páginas para los distintos tipos de destino en Platform:
 
-* [Destinos publicitarios - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Destinos publicitarios - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinos publicitarios - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinos publicitarios - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Destinos publicitarios - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinos de almacenamiento en nube](./catalog/cloud-storage/overview.md)
 * [Destinos de marketing por correo electrónico](./catalog/email-marketing/overview.md)
 * [Destinos sociales](./catalog/social/overview.md)
 
-Para obtener más información sobre las infracciones de directivas de datos en el flujo de trabajo de activación de segmentos, consulte la **[!UICONTROL Revisar]** Siga estos pasos en las siguientes guías:
+Para obtener más información sobre las infracciones de directivas de datos en el flujo de trabajo de activación de audiencia, consulte **[!UICONTROL Revisar]** Siga estos pasos en las siguientes guías:
 
-* [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](./ui/activate-segment-streaming-destinations.md#review)
+* [Activar datos de audiencia para transmitir audiencias y exportar destinos](./ui/activate-segment-streaming-destinations.md#review)
 * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](./ui/activate-streaming-profile-destinations.md#review)
 * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](./ui/activate-batch-profile-destinations.md#review)

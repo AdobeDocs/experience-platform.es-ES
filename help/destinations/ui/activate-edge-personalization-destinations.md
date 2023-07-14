@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1833'
 ht-degree: 2%
 
 ---
@@ -130,6 +130,14 @@ Después de completar los requisitos previos, ahora puede seleccionar el destino
 ## Selección de audiencias {#select-audiences}
 
 Utilice las casillas de verificación de la izquierda de los nombres de audiencia para seleccionar las audiencias que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+
+Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Siguiente]**.
+
+Puede seleccionar entre varios tipos de audiencias, según su origen:
+
+* **[!UICONTROL Servicio de segmentación]**: Audiencias generadas dentro de Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
+* **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+* Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Seleccionar audiencias](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

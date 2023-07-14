@@ -3,7 +3,7 @@ keywords: destinos;soluciones de experience cloud; target; destino de target; ad
 title: información general sobre destinos de Adobe
 description: Administre su experiencia de cliente conectando sus datos en Platform a otras soluciones de Adobe Experience Cloud para la segmentación de anuncios, personalización, automatización de marketing y mucho más
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 12%
@@ -45,8 +45,8 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Extensión de Marketo Munchkin](../email/marketo-munchkin.md)
 * [Extensión de personalización web de Marketo](../personalization/marketo-web-personalization.md)
 
-## Uso compartido de segmentos de Experience Platform
+## Uso compartido de audiencias de Experience Platform
 
-Utilice la función de uso compartido de segmentos de Experience Platform para compartir sus segmentos de Experience Platform con destinos de Adobe adicionales. Consulte la página siguiente para obtener más información (se abre en el portal de documentación de Audience Manager):
+Utilice la función de uso compartido de audiencias de Experience Platform para compartir las audiencias de Experience Platform con destinos de Adobe adicionales. Consulte la página siguiente para obtener más información (se abre en el portal de documentación de Audience Manager):
 
-* [Uso compartido de segmentos entre Experience Platform y Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Uso compartido de audiencias de Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

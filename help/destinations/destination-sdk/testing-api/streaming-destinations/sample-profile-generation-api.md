@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para generar perfiles de muestra para su destino de flujo continuo, que puede utilizar en las pruebas de destino.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 2%
@@ -26,7 +26,6 @@ Esta página enumera y describe todas las operaciones de API que puede realizar 
 >* generar perfiles para utilizarlos al [creación y prueba de una plantilla de transformación de mensajes](create-template.md) - mediante *ID de destino* como parámetro de consulta.
 >* generar perfiles para utilizarlos al realizar llamadas a [compruebe si el destino está configurado correctamente](streaming-destination-testing-overview.md) - mediante *ID de instancia de destino* como parámetro de consulta.
 
-
 Puede generar perfiles de muestra basados en el esquema de origen XDM de Adobe (para utilizarlo al probar el destino) o el esquema de destino admitido por el destino (para utilizarlo al crear la plantilla). Para comprender la diferencia entre el esquema de origen XDM de Adobe y el esquema de destino, lea la sección de información general del [Formato del mensaje](../../functionality/destination-server/message-format.md) artículo.
 
 Tenga en cuenta que los propósitos para los que se pueden utilizar los perfiles de muestra no son intercambiables. Perfiles generados en función de la variable *ID de destino* solo se puede utilizar para crear las plantillas de transformación de mensajes y los perfiles generados en función de la variable *ID de instancia de destino* solo se puede usar para probar el punto final de destino.
@@ -47,10 +46,9 @@ Para obtener el ID de una instancia de destino, primero debe crear una conexión
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Leer [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) y [activación de perfiles y segmentos en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener más información.
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Leer [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) y [activación de perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener más información.
 > * Después de establecer la conexión con su destino, obtenga el ID de instancia de destino que debe utilizar en las llamadas API a este extremo cuando [exploración de una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![Imagen de interfaz de usuario cómo obtener el ID de instancia de destino](../../assets/testing-api/get-destination-instance-id.png)
-
+>![Imagen de interfaz de usuario cómo obtener el ID de instancia de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 **Formato de API**
 
@@ -82,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a segmento, identidades y atributos de perfil que corresponden al esquema XDM de origen.
+Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a audiencia, identidades y atributos de perfil que corresponden al esquema XDM de origen.
 
 >[!TIP]
 >
-> La respuesta solo devuelve el abono de segmentos, las identidades y los atributos de perfil que se utilizan en la instancia de destino. Aunque el esquema de origen tenga otros campos, estos se ignoran.
+> La respuesta solo devuelve la pertenencia a audiencias, identidades y atributos de perfil que se utilizan en la instancia de destino. Aunque el esquema de origen tenga otros campos, estos se ignoran.
 
 ```json
 [
@@ -182,9 +180,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentMembership` | Un objeto map que describe las pertenencias de segmentos del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de abono de segmento](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Una marca de tiempo de la última vez que este perfil se clasificó para el segmento. |
-| `xdm:status` | Campo de cadena que indica si se ha realizado la inscripción a segmento como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil se está saliendo del segmento como parte de la solicitud actual.</li></ul> |
+| `xdm:status` | Campo de cadena que indica si el abono a audiencia se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil se está saliendo de la audiencia como parte de la solicitud actual.</li></ul> |
 | `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, lea [Base de composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style="table-layout:auto"}
@@ -200,7 +198,6 @@ Puede generar perfiles de muestra basados en el esquema de destinatario realizan
 >[!TIP]
 >
 >* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
-
 
 **Formato de API**
 
@@ -232,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a segmento, identidades y atributos de perfil que corresponden al esquema XDM de destino.
+Una respuesta correcta devuelve el estado HTTP 200 con el número especificado de perfiles de muestra, con pertenencia a audiencia, identidades y atributos de perfil que corresponden al esquema XDM de destino.
 
 ```json
 [

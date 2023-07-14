@@ -4,7 +4,7 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* Para conectarse a un destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para conectarse a un destino que admita exportaciones de conjuntos de datos, necesita el **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-
 ## Información general {#overview}
 
-Para poder enviar datos de audiencia a un destino, debe configurar una conexión con la plataforma de destino. Este artículo muestra cómo configurar una nueva conexión de destino a la que puede activar segmentos o exportar conjuntos de datos mediante la interfaz de usuario de Adobe Experience Platform.
+Para poder enviar datos de audiencia a un destino, debe configurar una conexión con la plataforma de destino. Este artículo muestra cómo configurar una nueva conexión de destino a la que puede activar audiencias o exportar conjuntos de datos mediante la interfaz de usuario de Adobe Experience Platform.
 
 ## Buscar el destino deseado en el catálogo {#setup}
 
@@ -29,23 +28,23 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
    ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra la página del catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
-2. Las tarjetas de destino del catálogo pueden tener diferentes controles de acción, en función de si tiene una conexión existente con el destino y de si los destinos admiten la activación de segmentos, la exportación de conjuntos de datos o ambos. Puede ver cualquiera de los siguientes controles para las tarjetas de destino:
+2. Las tarjetas de destino del catálogo pueden tener diferentes controles de acción, en función de si tiene una conexión existente con el destino y de si los destinos admiten la activación de audiencias y la exportación de conjuntos de datos, o ambos. Puede ver cualquiera de los siguientes controles para las tarjetas de destino:
 
-   * **[!UICONTROL Configuración de]**. Primero debe configurar una conexión con este destino para poder activar segmentos o exportar conjuntos de datos.
-   * **[!UICONTROL Activar]**. Ya se ha configurado una conexión con este destino. Este destino admite la activación de segmentos y exportaciones de conjuntos de datos.
-   * **[!UICONTROL Activar segmentos]**. Ya se ha configurado una conexión con este destino. Este destino solo admite la activación de segmentos.
+   * **[!UICONTROL Configuración de]**. Primero debe configurar una conexión con este destino para poder activar audiencias o exportar conjuntos de datos.
+   * **[!UICONTROL Activar]**. Ya se ha configurado una conexión con este destino. Este destino admite la activación de audiencias y exportaciones de conjuntos de datos.
+   * **[!UICONTROL Activar audiencias]**. Ya se ha configurado una conexión con este destino. Este destino solo admite la activación de audiencias.
 
    Para obtener más información sobre la diferencia entre estos controles, también puede consultar la [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación de workspace de destino.
 
-   Seleccione una de las opciones **[!UICONTROL Configuración de]**, **[!UICONTROL Activar]**, o **[!UICONTROL Activar segmentos]**, en función del control que esté disponible.
+   Seleccione una de las opciones **[!UICONTROL Configuración de]**, **[!UICONTROL Activar]**, o **[!UICONTROL Activar audiencias]**, en función del control que esté disponible.
 
    ![Captura de pantalla de la interfaz de usuario del Experience Platform, que muestra la página del catálogo de destinos con el control de configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Captura de pantalla de la interfaz de usuario del Experience Platform, que muestra la página del catálogo de destinos con el control Activar segmentos resaltado.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Captura de pantalla de la interfaz de usuario del Experience Platform, que muestra la página del catálogo de destinos con el control Activar audiencias resaltado.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si ha seleccionado **[!UICONTROL Configuración de]**, vaya al paso siguiente, a [autentificar](#authenticate) al destino.
 
-   Si ha seleccionado **[!UICONTROL Activar]**, **[!UICONTROL Activar segmentos]**, o **[!UICONTROL Exportar conjuntos de datos]**, ahora puede ver una lista de las conexiones de destino existentes.
+   Si ha seleccionado **[!UICONTROL Activar]**, **[!UICONTROL Activar audiencias]**, o **[!UICONTROL Exportar conjuntos de datos]**, ahora puede ver una lista de las conexiones de destino existentes.
 
    Seleccionar **[!UICONTROL Configurar nuevo destino]** para establecer una nueva conexión con el destino.
 
@@ -85,11 +84,11 @@ Para los destinos basados en archivos, puede configurar varias opciones relacion
 
 ![Imagen que muestra la selección del tipo de archivo y varias opciones para los archivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurar la conexión de destino para la activación de segmentos o exportaciones de conjuntos de datos {#segment-activation-or-dataset-exports}
+### Configurar la conexión de destino para la activación de audiencias o las exportaciones de conjuntos de datos {#segment-activation-or-dataset-exports}
 
-Algunos destinos basados en archivos admiten la activación de segmentos, así como exportaciones de conjuntos de datos. Para esos destinos, puede elegir si desea crear una conexión que le permita activar segmentos o exportar conjuntos de datos.
+Algunos destinos basados en archivos admiten la activación de audiencias y la exportación de conjuntos de datos. Para esos destinos, puede elegir si desea crear una conexión que le permita activar audiencias o exportar conjuntos de datos.
 
-![Imagen que muestra el control de selección de tipo de datos, que permite a los usuarios seleccionar entre la activación de segmentos y las exportaciones de conjuntos de datos.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Imagen que muestra el control de selección de tipo de datos que permite a los usuarios seleccionar entre activación de audiencia y exportaciones de conjuntos de datos.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Habilitar alertas de destino {#enable-alerts}
 
@@ -113,4 +112,4 @@ Algunos destinos basados en archivos admiten la activación de segmentos, así c
 
 Al leer este documento, ha aprendido a utilizar la interfaz de usuario de Experience Platform para establecer una conexión con un destino. Como recordatorio, los parámetros de conexión disponibles y requeridos varían de un destino a otro. También debe consultar la página de documentación de destino en la [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica sobre las entradas necesarias y las opciones disponibles por tipo de destino.
 
-A continuación, puede continuar con [activar segmentos](/help/destinations/ui/activation-overview.md) o [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) a su destino.
+A continuación, puede continuar con [activación de audiencias](/help/destinations/ui/activation-overview.md) o [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) a su destino.

@@ -4,7 +4,7 @@ title: Guía de migración de API para destinos de almacenamiento en la nube
 description: Obtenga información acerca de los cambios en el flujo de trabajo para activar los destinos de almacenamiento en la nube como parte de la migración a las nuevas tarjetas de destino de almacenamiento en la nube con funcionalidad adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -67,7 +67,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [Tutorial de API para exportar segmentos a destinos de almacenamiento en la nube](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [Tutorial de API para exportar audiencias a destinos de almacenamiento en la nube](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Documentación de referencia de la API del servicio de flujo Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Resumen de cambios incompatibles con versiones anteriores {#summary-backwards-incompatible-changes}
@@ -684,7 +684,7 @@ Encuentre información completa sobre la configuración de `profileMapping` obje
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -752,7 +752,7 @@ Observe en el ejemplo de configuración siguiente cómo `profileSelectors` Los c
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",

@@ -2,7 +2,7 @@
 description: En esta página se muestran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Paso 3: Crear una plantilla de transformación de mensaje: utilice el lenguaje de plantilla para especificar el formato de salida del mensaje {#create-transformation-template}
 
-En función de las cargas útiles que admite su destino, debe crear una plantilla que transforme el formato de los datos exportados del formato XDM de Adobe a un formato compatible con su destino. Consulte los ejemplos de plantilla en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a segmentos](../functionality/destination-server/message-format.md#using-templating) y utilice el [herramienta de creación de plantillas](../testing-api/streaming-destinations/create-template.md) proporcionadas por el Adobe.
+En función de las cargas útiles que admite su destino, debe crear una plantilla que transforme el formato de los datos exportados del formato XDM de Adobe a un formato compatible con su destino. Consulte los ejemplos de plantilla en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias](../functionality/destination-server/message-format.md#using-templating) y utilice el [herramienta de creación de plantillas](../testing-api/streaming-destinations/create-template.md) proporcionadas por el Adobe.
 
 Una vez que haya creado una plantilla de transformación de mensajes que le funcione, agréguela al servidor y a la configuración de plantilla que creó en el paso 1.
 
@@ -273,10 +273,10 @@ Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear
 
 Después de configurar el destino mediante los extremos de configuración de los pasos anteriores, puede utilizar el [herramienta de prueba de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
 
-Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear segmentos en Experience Platform:
+Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
-* [Crear una página de documentación de segmentos](/help/segmentation/ui/overview.md#create-segment)
-* [Tutorial de vídeo sobre Creación de un segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Creación de una página de documentación de audiencia](/help/segmentation/ui/overview.md#create-segment)
+* [Tutorial de Creación de un vídeo de audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Paso 7: Publicar el destino {#publish-destination}
 

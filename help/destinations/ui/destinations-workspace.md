@@ -3,7 +3,7 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 2%
@@ -41,13 +41,13 @@ El [!DNL Platform] La interfaz de usuario de proporciona varias opciones de bús
 
 ![Catálogo de destinos que muestra algunos destinos de publicidad y almacenamiento en la nube.](../assets/ui/workspace/catalog.png)
 
-Las tarjetas de destino contienen opciones de control principales y secundarias. Los controles principales incluyen [!UICONTROL Configuración de], [!UICONTROL Activar], [!UICONTROL Activar segmentos], o [!UICONTROL Exportar conjuntos de datos]. Los controles secundarios permiten ver las opciones. Estos controles se describen a continuación:
+Las tarjetas de destino contienen opciones de control principales y secundarias. Los controles principales incluyen [!UICONTROL Configuración de], [!UICONTROL Activar], [!UICONTROL Activar audiencias], o [!UICONTROL Exportar conjuntos de datos]. Los controles secundarios permiten ver las opciones. Estos controles se describen a continuación:
 
 | Control | Descripción |
 |---------|----------|
 | [!UICONTROL Configuración de] | Permite crear una conexión con el destino. |
-| [!UICONTROL Activar] | Una vez establecida una conexión con el destino, puede activar segmentos o exportar conjuntos de datos a este destino. |
-| [!UICONTROL Activar segmentos] | Una vez establecida una conexión con el destino, puede activar segmentos en este destino. |
+| [!UICONTROL Activar] | Una vez establecida una conexión con el destino, puede activar audiencias o exportar conjuntos de datos a este destino. |
+| [!UICONTROL Activar audiencias] | Una vez establecida una conexión con el destino, puede activar audiencias en este destino. |
 | [!UICONTROL Exportar conjuntos de datos] | Una vez establecida una conexión con el destino, puede exportar conjuntos de datos a este destino. |
 | [!UICONTROL Ver cuenta] | Ver las cuentas que ha conectado para un destino. |
 | [!UICONTROL Ver flujos de datos] | Vea los flujos de activación de datos que existen para un destino. |
@@ -69,10 +69,9 @@ El **[!UICONTROL Cuentas]** La pestaña muestra detalles acerca de las conexione
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Plataforma] y utilice la columna ![Activar control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar ]**/**[!UICONTROL  Activar segmentos ]**/**[!UICONTROL  Exportar conjuntos de datos ]**para exportar segmentos o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Plataforma] y utilice la columna ![Activar control](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar ]**/**[!UICONTROL  Activar audiencias ]**/**[!UICONTROL  Exportar conjuntos de datos ]**para exportar audiencias o conjuntos de datos a ese destino.
 > * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Plataforma] y utilice la columna ![Editar control de detalles](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Editar detalles ]**control a [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
 > * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Plataforma] y utilice la columna ![Eliminar control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**control a [eliminar](delete-destination-account.md) una cuenta de destino existente.
-
 
 ![Pestaña Cuentas](../assets/ui/workspace/destination-account-options.png)
 
@@ -88,27 +87,26 @@ El **[!UICONTROL Cuentas]** La pestaña muestra detalles acerca de las conexione
 
 ## [!UICONTROL Examinar] {#browse}
 
-El **[!UICONTROL Examinar]** La pestaña muestra los destinos con los que se ha establecido una conexión. Destinos con **[!UICONTROL Activado/Desactivado]** alternar activado establezca el destino en activo o inactivo, respectivamente. También puede ver los destinos en los que tiene flujos de datos seleccionando **[!UICONTROL Segmentos]** > **[!UICONTROL Examinar]** y seleccionar un segmento para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada sobre cada destino en la [!UICONTROL Examinar] pestaña:
+El **[!UICONTROL Examinar]** La pestaña muestra los destinos con los que se ha establecido una conexión. Destinos con **[!UICONTROL Activado/Desactivado]** alternar activado establezca el destino en activo o inactivo, respectivamente. También puede ver los destinos en los que tiene flujos de datos seleccionando **[!UICONTROL Audiencias]** > **[!UICONTROL Examinar]** y seleccionar una audiencia para inspeccionar. Consulte la tabla siguiente para obtener toda la información proporcionada sobre cada destino en la [!UICONTROL Examinar] pestaña:
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Activar el control de segmentos](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar ]**para exportar segmentos o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Activar control de audiencias](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activar ]**para exportar audiencias o conjuntos de datos a ese destino.
 > * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Eliminar control](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Eliminar ]**control a [quitar](delete-destinations.md) una conexión existente con un destino.
 > * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Ver en control de monitorización](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Ver en monitorización ]**para ver la información de activación de este destino en la [panel de monitorización](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Suscribirse a alertas ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Suscribirse a alertas ]**para suscribirse a las alertas del flujo de datos de destino. Puede suscribirse a alertas para recibir mensajes sobre el estado, el éxito o el error de la ejecución del flujo. Consulte [Suscribirse a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
-
 
 ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descripción |
 |---------|----------|
-| Nombre | El nombre proporcionado para el flujo de activación a este destino. La misma columna incluye dos controles: [!UICONTROL Activar ] y [!UICONTROL Eliminar destino]. |
+| Nombre | El nombre proporcionado para el flujo de activación a este destino. La misma columna incluye dos controles: [!UICONTROL Activar] y [!UICONTROL Eliminar destino]. |
 | [!UICONTROL Último estado de ejecución de flujo] | El estado de la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Fecha de última ejecución de flujo] | Fecha y hora en la que se produjo la última ejecución del flujo de datos. Consulte [Ver detalles de destino](destination-details-page.md) para obtener más información sobre las ejecuciones de flujo de datos. |
 | [!UICONTROL Destino] | La plataforma de destino seleccionada para el flujo de activación. |
 | [!UICONTROL Tipo de conexión] | Representa el tipo de conexión a su espacio de almacenamiento o destino. <ul><li>Para destinos de marketing por correo electrónico: puede ser S3, FTP o [!DNL Azure Blob].</li><li>Para destinos de publicidad en tiempo real: de servidor a servidor.</li><li>Para destinos de flujo continuo: Puede ser [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nombre de usuario] | Las credenciales de cuenta seleccionadas para el flujo de destino. |
-| [!UICONTROL Datos de activación] | Indica el número de segmentos que se están activando en este destino. Seleccione este control para obtener más información sobre los segmentos activados. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre los segmentos activados. |
+| [!UICONTROL Datos de activación] | Indica la cantidad de audiencias que se están activando en este destino. Seleccione este control para obtener más información sobre las audiencias activadas. Consulte [Datos de activación](/help/destinations/ui/destination-details-page.md#activation-data) en la página de detalles de destino para obtener más información sobre las audiencias activadas. |
 | [!UICONTROL Creado] | La fecha y la hora en formato UTC en que se creó el flujo de activación al destino. Seleccione el símbolo de flecha arriba/abajo para ordenar los flujos de activación por el más reciente primero o el más antiguo primero. |
 | [!UICONTROL Estado] | `Enabled` o `Disabled`. Indica si los datos se están activando en este destino. |
 
@@ -116,7 +114,7 @@ Haga clic en una fila de destino para que aparezca más información sobre el de
 
 ![Haga clic en fila de destino](../assets/ui/workspace/click-destination-row.png)
 
-Seleccione el nombre del destino para ver información sobre los segmentos activados en este destino. Clic **[!UICONTROL Editar activación]** para modificar o añadir segmentos que se envían a este destino.
+Seleccione el nombre del destino para ver información sobre las audiencias activadas en este destino. Clic **[!UICONTROL Editar activación]** para modificar o añadir audiencias que se envían a este destino.
 
 ## [!UICONTROL Vista del sistema] {#system-view}
 

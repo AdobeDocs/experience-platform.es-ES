@@ -2,7 +2,7 @@
 description: En esta página se explica cómo utilizar el extremo de la API /testing/destinationInstance para probar si el destino basado en archivos está configurado correctamente y para comprobar la integridad de los flujos de datos al destino configurado.
 title: Prueba del destino basado en archivos con perfiles de muestra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Antes de usar el `/testing/destinationInstance` extremo, asegúrese de cumplir l
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform.
 * Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-   ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Opcional*: Si desea probar la configuración de destino con un perfil de muestra añadido a la llamada de API, utilice el [/sample-profiles](file-based-sample-profile-generation-api.md) extremo para generar un perfil de muestra basado en el esquema de origen existente. Si no proporciona un perfil de muestra, la API generará uno y lo devolverá en la respuesta.
 
 ## Pruebe la configuración de destino sin añadir perfiles a la llamada {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la carga útil de r
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `activations` | Devuelve el ID de segmento y el ID de ejecución de flujo para cada segmento activado. El número de entradas de activación (y archivos generados asociados) es igual al número de segmentos asignados en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos segmentos a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada segmento activado corresponderá a un archivo exportado. |
+| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos audiencias a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
 | `results` | Devuelve el ID de instancia de destino y los ID de ejecución de flujo que puede utilizar para llamar al [API de resultados](file-based-destination-results-api.md), para probar aún más la integración. |
 | `inputProfiles` | Devuelve los perfiles de muestra generados automáticamente por la API. |
 
@@ -232,7 +232,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la carga útil de r
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `activations` | Devuelve el ID de segmento y el ID de ejecución de flujo para cada segmento activado. El número de entradas de activación (y archivos generados asociados) es igual al número de segmentos asignados en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos segmentos a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada segmento activado corresponderá a un archivo exportado. |
+| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos audiencias a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
 | `results` | Devuelve el ID de instancia de destino y los ID de ejecución de flujo que puede utilizar para llamar al [API de resultados](file-based-destination-results-api.md), para probar aún más la integración. |
 | `inputProfiles` | Devuelve los perfiles de ejemplo personalizados que ha pasado en la solicitud de API. |
 
