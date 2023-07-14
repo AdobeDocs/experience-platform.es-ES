@@ -1,32 +1,33 @@
 ---
-keywords: activar destinos de flujo continuo de segmentos;activar destinos de flujo continuo de segmentos;activar datos
-title: Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo
+keywords: activar destinos de flujo de audiencia;activar destinos de flujo de audiencia;activar datos
+title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
-description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform asignando segmentos a destinos de flujo continuo de segmentos.
+description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 8%
+source-wordcount: '1029'
+ht-degree: 6%
 
 ---
 
-# Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo
+
+# Activar audiencias en destinos de flujo continuo
 
 >[!IMPORTANT]
 > 
-> * Para activar los datos y habilitar la variable [paso de asignación](#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
-> * Para activar los datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar audiencias y activar la variable [paso de asignación](#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+> * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > 
 > Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar los datos de audiencia en los destinos de flujo continuo de segmentos de Adobe Experience Platform.
+En este artículo se explica el flujo de trabajo necesario para activar audiencias en los destinos de flujo de Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
-Para activar los datos en los destinos, debe haber [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar.
+Para activar audiencias en destinos, debe tener [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar.
 
 ## Seleccione su destino {#select-destination}
 
@@ -34,29 +35,35 @@ Para activar los datos en los destinos, debe haber [conectado a un destino](./co
 
    ![Pestaña Catálogo de destino](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Seleccionar **[!UICONTROL Activar segmentos]** en la tarjeta correspondiente al destino donde desea activar los segmentos, como se muestra en la siguiente imagen.
+1. Seleccionar **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
-   ![Activar botones](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+   ![Activar botones](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. Seleccione la conexión de destino que desee utilizar para activar los segmentos y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+1. Seleccione la conexión de destino que desee utilizar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
    ![Seleccionar destino](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. Mover a la sección siguiente para [seleccione sus segmentos](#select-segments).
+1. Mover a la sección siguiente para [seleccionar las audiencias](#select-audiences).
 
-## Seleccione sus segmentos {#select-segments}
+## Selección de audiencias {#select-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de segmentos para seleccionar los segmentos que desea activar en el destino y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Para seleccionar las audiencias que desea activar en el destino, utilice las casillas de verificación a la izquierda de los nombres de audiencia y luego seleccione **[!UICONTROL Siguiente]**.
 
-![Seleccionar segmentos](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
+Puede seleccionar entre varios tipos de audiencias, según su origen:
+
+* **[!UICONTROL Servicio de segmentación]**: Audiencias generadas dentro de Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
+* **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+* Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
+
+![Seleccionar audiencias](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Asignar atributos e identidades {#mapping}
 
 >[!IMPORTANT]
 >
->Este paso solo se aplica a algunos destinos de flujo continuo de segmentos. Si su destino no tiene un **[!UICONTROL Asignación]** paso, saltar a [Programar exportación de segmentos](#scheduling).
+>Este paso solo se aplica a algunos destinos de flujo de audiencia. Si su destino no tiene un **[!UICONTROL Asignación]** paso, saltar a [programación de audiencia](#scheduling).
 
-Algunos destinos de flujo continuo de segmentos requieren que seleccione atributos de origen o áreas de nombres de identidad para asignarlos como identidades de destino en el destino.
+Algunos destinos de flujo de audiencia requieren que seleccione atributos de origen o áreas de nombres de identidad para asignar como identidades de destino en el destino.
 
 1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nueva asignación]**.
 
@@ -91,36 +98,34 @@ Cuando asigne atributos de origen sin hash a atributos de destino que el destino
 
 ![Asignación de identidad](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Programar exportación de segmentos {#scheduling}
+## Programar exportación de audiencias {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Fecha final"
->abstract="No está disponible la adición de una fecha de finalización para la programación de segmentos."
+>abstract="La adición de una fecha de finalización para la programación de audiencias no está disponible."
 
-De forma predeterminada, la variable [!UICONTROL Programación de segmentos] Esta página muestra únicamente los segmentos recién seleccionados que ha elegido en el flujo de activación actual.
+De forma predeterminada, la variable **[!UICONTROL Programación de audiencia]** Esta página muestra únicamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
 
-![Nuevos segmentos](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+Para ver todas las audiencias que se están activando en su destino, utilice la opción de filtrado y deshabilite la **[!UICONTROL Mostrar solo las nuevas audiencias]** filtro.
 
-Para ver todos los segmentos que se están activando en su destino, utilice la opción de filtrado y deshabilite la variable **[!UICONTROL Mostrar solo los segmentos nuevos]** filtro.
+![Todas las audiencias](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-![Todos los segmentos](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
+1. En el **[!UICONTROL Programación de audiencia]** página, seleccione cada audiencia y utilice el **[!UICONTROL Fecha de inicio]** y **[!UICONTROL Fecha de finalización]** para configurar el intervalo de tiempo para enviar datos al destino.
 
-1. En el **[!UICONTROL Programación de segmentos]** página, seleccione cada segmento y, a continuación, utilice el **[!UICONTROL Fecha de inicio]** y **[!UICONTROL Fecha de finalización]** para configurar el intervalo de tiempo para enviar datos al destino.
+   ![Programación de audiencia](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-   ![Programación de segmentos](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
+   * Algunos destinos requieren que seleccione **[!UICONTROL Origen de la audiencia]** para cada audiencia, utilice el menú desplegable situado debajo de los selectores de calendario. Si el destino no incluye este selector, omita este paso.
 
-   * Algunos destinos requieren que seleccione **[!UICONTROL Origen de la audiencia]** para cada segmento, utilice el menú desplegable situado debajo de los selectores de calendario. Si el destino no incluye este selector, omita este paso.
+     ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-      ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+   * Algunos destinos requieren que los asigne manualmente [!DNL Platform] a su homólogo en el destino de destino. Para ello, seleccione cada audiencia e introduzca el ID de audiencia correspondiente en la plataforma de destino en **[!UICONTROL ID de asignación]** field. Si el destino no incluye este campo, omita este paso.
 
-   * Algunos destinos requieren que los asigne manualmente [!DNL Platform] a su homólogo en el destino de destino. Para ello, seleccione cada segmento e introduzca el ID de segmento correspondiente en la plataforma de destino en **[!UICONTROL ID de asignación]** field. Si el destino no incluye este campo, omita este paso.
+     ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-      ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+   * Algunos destinos requieren que escriba un **[!UICONTROL ID de aplicación]** al activar [!DNL IDFA] o [!DNL GAID] audiencias. Si el destino no incluye este campo, omita este paso.
 
-   * Algunos destinos requieren que escriba un **[!UICONTROL ID de aplicación]** al activar [!DNL IDFA] o [!DNL GAID] segmentos. Si el destino no incluye este campo, omita este paso.
-
-      ![ID de aplicación](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![ID de aplicación](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Seleccionar **[!UICONTROL Siguiente]** para ir a [!UICONTROL Revisar] página.
 
@@ -128,7 +133,7 @@ Para ver todos los segmentos que se están activando en su destino, utilice la o
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
-![Resumen de la selección en el paso de revisión.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+![Resumen de la selección en el paso de revisión.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
@@ -136,26 +141,26 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
-En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de segmentos hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
+En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
 
 ![infracción de política de datos](../assets/common/data-policy-violation.png)
 
-### Filtrar segmentos. {#filter-segments}
+### Filtrado de audiencias {#filter-audiences}
 
-Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo los segmentos cuya programación o asignación se haya actualizado como parte de este flujo de trabajo. También puede alternar qué columnas de tabla desea ver.
+Además, en este paso puede utilizar los filtros disponibles en la página para mostrar solo las audiencias cuya programación o asignación se haya actualizado como parte de este flujo de trabajo. También puede alternar qué columnas de tabla desea ver.
 
-![Grabación de pantalla que muestra los filtros de segmento disponibles en el paso de revisión.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+![Grabación de pantalla que muestra los filtros de audiencia disponibles en el paso de revisión.](../assets/ui/activate-segment-streaming-destinations/filter-audiences-review-step.gif)
 
 Si está satisfecho con la selección y no se han detectado infracciones de directivas, seleccione **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
-## Verificar activación de segmento {#verify}
+## Verificar activación de audiencia {#verify}
 
 Compruebe la [documentación de supervisión de destino](../../dataflows/ui/monitor-destinations.md) para obtener información detallada sobre cómo monitorizar el flujo de datos a sus destinos.
 
 <!-- 
-For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership in the audience would be added and removed as users are qualified or disqualified for the activated audiences.
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications are sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

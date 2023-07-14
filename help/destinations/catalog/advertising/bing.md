@@ -3,10 +3,10 @@ keywords: publicidad; bing;
 title: Conexión de Microsoft Bing
 description: Con el destino de conexión de Microsoft Bing, puede ejecutar campañas digitales de retargeting y segmentación de audiencia en toda la publicidad en pantalla de Microsoft.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 8%
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Para enviar datos de perfil a [!DNL Microsoft Bing], primero debe conectarse al 
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, quiero poder utilizar segmentos creados a partir de [!DNL Microsoft Advertising IDs] para dirigirse a los usuarios mediante la publicidad de display en [!DNL Microsoft Advertising] canales.
+Como especialista en marketing, quiero poder usar audiencias creadas a partir de [!DNL Microsoft Advertising IDs] para dirigirse a los usuarios mediante la publicidad de display en [!DNL Microsoft Advertising] canales.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -32,16 +32,30 @@ Como experto en marketing, quiero poder utilizar segmentos creados a partir de [
 
 {style="table-layout:auto"}
 
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo y frecuencia de exportación {#export-type-frequency}
 
-**[!DNL Segment Export]** - está exportando todos los miembros de un segmento (audiencia) a [!DNL Microsoft Bing] destino.
+**[!DNL Audience Export]** - está exportando todos los miembros de una audiencia a [!DNL Microsoft Bing] destino.
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de segmentos]** | Va a exportar todos los miembros de un segmento (audiencia) a [!DNL Microsoft Bing] destino. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de segmentos, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia a [!DNL Microsoft Bing] destino. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID de asignación"
->abstract="Introduzca el ID de segmento numérico de Bing al que desea asignar el segmento seleccionado. Si el [!UICONTROL ID de asignación] proporcionado no corresponde a un ID de segmento en el destino de Bing, no verá los datos de audiencia esperados en su cuenta de Bing."
+>abstract="Introduzca el ID de audiencia numérico de Bing al que desea asignar el segmento seleccionado. Si el proporcionado [!UICONTROL ID de asignación] no se corresponde con un ID de audiencia en el destino de Bing, por lo que no verá los datos de audiencia esperados en su cuenta de Bing."
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de segmentos de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-En el [Programación de segmentos](../../ui/activate-segment-streaming-destinations.md#scheduling) paso, debe asignar manualmente el nombre del segmento en la [!UICONTROL ID de asignación] field. Esto garantiza que los metadatos del segmento se pasen correctamente a [!DNL Bing].
+En el [Programación de audiencia](../../ui/activate-segment-streaming-destinations.md#scheduling) paso, debe asignar manualmente el nombre de la audiencia en la [!UICONTROL ID de asignación] field. Esto garantiza que los metadatos de la audiencia se pasen correctamente a [!DNL Bing].
 
-![Imagen de la interfaz de usuario que muestra la pantalla de programación de segmentos con un ejemplo de cómo asignar el nombre del segmento al ID de asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Imagen de la interfaz de usuario que muestra la pantalla de programación de audiencias con un ejemplo de cómo asignar el nombre de la audiencia al ID de asignación de Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Datos exportados {#exported-data}
 

@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexión
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 4%
+source-wordcount: '1030'
+ht-degree: 1%
 
 ---
 
@@ -36,6 +36,20 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Ad Manager 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Seleccione esta identidad de destino a la que enviar audiencias [!DNL Google Ad Manager 360] |
+
+{style="table-layout:auto"}
+
+## Audiencias compatibles {#supported-audiences}
+
+Esta sección describe todas las audiencias que puede exportar a este destino.
+
+Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+
+| Tipo de audiencia | Descripción |
+---------|----------|
+| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ Para obtener más información sobre estos valores, consulte la [Claves HMAC de 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Adición de ID de segmento al nombre del segmento"
->abstract="Seleccione esta opción para que el nombre del segmento en Google Ad Manager 360 incluya el ID del segmento de Experience Platform, de esta manera: `Segment Name (Segment ID)`"
+>title="Anexar ID de audiencia al nombre de audiencia"
+>abstract="Seleccione esta opción para que el nombre de audiencia en Google Ad Manager 360 incluya el ID de audiencia de Experience Platform, de esta manera: `Audience Name (Audience ID)`"
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -98,7 +112,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Tipo de cuenta]**: Seleccione una opción, según sus [!DNL Google] cuenta:
    * Uso `AdX buyer` para [!DNL Google AdX]
    * Uso `DFP by Google` para [!DNL DoubleClick] para editores
-* **[!UICONTROL Anexar ID de segmento al nombre del segmento]**: seleccione esta opción para que el nombre del segmento en Google Ad Manager 360 incluya el ID de segmento del Experience Platform, de esta manera: `Segment Name (Segment ID)`.
+* **[!UICONTROL Anexar ID de audiencia al nombre de audiencia]**: seleccione esta opción para que el nombre de audiencia en Google Ad Manager 360 incluya el ID de audiencia de Experience Platform, de esta manera: `Audience Name (Audience ID)`.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -106,20 +120,20 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 En el paso de asignación de identidad, puede ver las siguientes asignaciones rellenadas previamente:
 
 | Asignación rellenada previamente | Descripción |
 |---------|----------|
 | `ECID` -> `ppid` | Esta es la única asignación rellenada previamente que puede editar el usuario. Puede seleccionar cualquiera de sus atributos o áreas de nombres de identidad de Platform y asignarlos a `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Asigna nombres de segmentos de Experience Platform a ID de segmentos en la plataforma de Google. |
+| `metadata.segment.alias` -> `list_id` | Asigna nombres de audiencia de Experience Platform a ID de audiencia en la plataforma de Google. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Indica a la plataforma Google cuándo quitar usuarios no cualificados de los segmentos. |
 
 Estas asignaciones son necesarias para [!DNL Google Ad Manager 360] y los crea automáticamente Adobe Experience Platform para todos [!DNL Google Ad Manager 360] conexiones.
