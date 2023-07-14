@@ -1,10 +1,10 @@
 ---
 description: Obtenga información sobre cómo configurar el esquema de socio para destinos creados con Destination SDK.
 title: Configuración del esquema de socio
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 5%
+source-wordcount: '1892'
+ht-degree: 4%
 
 ---
 
@@ -91,7 +91,10 @@ Para crear un esquema estático con atributos de perfil, defina los atributos de
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Para crear un esquema estático con atributos de perfil, defina los atributos de
 | `profileRequired` | Booleano | Opcional | Uso `true` si los usuarios deben poder asignar atributos de perfil de Experience Platform a atributos personalizados en la plataforma de destino. |
 | `segmentRequired` | Booleano | Requerido | Este parámetro es obligatorio para el Destination SDK y siempre debe configurarse como `true`. |
 | `identityRequired` | Booleano | Requerido | Configure como. `true` si los usuarios deben poder asignar [tipos de identidad](identity-namespace-configuration.md) del Experience Platform a los atributos definidos en el `profileFields` matriz . |
+| `segmentNamespaceAllowList` | Matriz | Opcional | Define áreas de nombres de audiencia específicas desde las que los usuarios pueden asignar audiencias al destino. Utilice este parámetro para restringir el acceso de los usuarios de Platform a la exportación de audiencias únicamente desde las áreas de nombres de audiencia definidas en la matriz. Este parámetro no se puede usar junto con `segmentNamespaceDenyList`.<br> <br> Ejemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá a los usuarios asignar solamente audiencias de `AudienceManager` a este destino. <br> <br> Para permitir que los usuarios exporten cualquier audiencia a su destino, puede ignorar este parámetro. <br> <br> Si ambos `segmentNamespaceAllowList` y `segmentNamespaceDenyList` no aparecen en la configuración, los usuarios solo podrán exportar audiencias procedentes de [Servicio de segmentación](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe a los usuarios de la asignación de audiencias al destino, desde los espacios de nombres de audiencia definidos en la matriz. No se puede usar junto con `segmentNamespaceAllowed`. <br> <br> Ejemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` bloqueará a los usuarios la asignación de audiencias del `AudienceManager` a este destino. <br> <br> Para permitir que los usuarios exporten cualquier audiencia a su destino, puede ignorar este parámetro. <br> <br> Si ambos `segmentNamespaceAllowed` y `segmentNamespaceDenyList` no aparecen en la configuración, los usuarios solo podrán exportar audiencias procedentes de [Servicio de segmentación](../../../../segmentation/home.md). <br> <br> Para permitir la exportación de todas las audiencias, independientemente del origen, establezca `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
