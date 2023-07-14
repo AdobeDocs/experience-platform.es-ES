@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;correo electrónico;destinos d
 title: (API) Conexión de Marketing Cloud de Salesforce
 description: El Marketing Cloud de Salesforce (anteriormente conocido como ExactTarget) le permite exportar los datos de su cuenta y activarlos dentro del Marketing Cloud de Salesforce para sus necesidades comerciales.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2924'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Al activar audiencias en [!DNL (API) Salesforce Marketing Cloud] destino, debe i
 
 [!DNL Salesforce] requiere este valor para leer e interpretar correctamente las audiencias que llegan desde Experience Platform y actualizar su estado de audiencia en [!DNL Salesforce Marketing Cloud]. Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a audiencia](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
 
-Para cada audiencia que active desde Platform a [!DNL Salesforce Marketing Cloud], debe crear un atributo del tipo `Text` dentro [!DNL Salesforce]. Utilice el [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] para crear atributos. Los nombres de los campos de atributo se utilizan para [!DNL (API) Salesforce Marketing Cloud] campo de destino y debe crearse en la variable `[!DNL Email Demographics system attribute-set]`. Puede definir el carácter de campo con un máximo de 4000 caracteres, según sus necesidades comerciales. Consulte la [!DNL Salesforce Marketing Cloud] [Tipos de datos de extensiones de datos](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) página documentación para obtener más información sobre los tipos de atributos.
+Para cada audiencia que active desde Platform a [!DNL Salesforce Marketing Cloud], debe crear un atributo del tipo `Text` dentro [!DNL Salesforce]. Utilice el [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] para crear atributos. Los nombres de los campos de atributo se utilizan para [!DNL (API) Salesforce Marketing Cloud] campo de destino durante la **[!UICONTROL Asignación]** paso. Puede definir el carácter de campo con un máximo de 4000 caracteres, según sus necesidades comerciales. Consulte la [!DNL Salesforce Marketing Cloud] [Tipos de datos de extensiones de datos](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) página documentación para obtener más información sobre los tipos de atributos.
 
 Consulte la [!DNL Salesforce Marketing Cloud] documentación para [crear atributos](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si necesita ayuda para crear atributos.
 
@@ -68,7 +68,7 @@ Una vista de la [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] conj
 
 El [!DNL (API) Salesforce Marketing Cloud] El destino utiliza el [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinámicamente los atributos y sus conjuntos de atributos definidos en [!DNL Salesforce Marketing Cloud].
 
-Se muestran en la **[!UICONTROL Campo de destino]** ventana de selección al configurar el [asignación](#mapping-considerations-example) en el flujo de trabajo a [activar audiencias en el destino](#activate). Tenga en cuenta que solo las asignaciones para los atributos definidos dentro de [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` se admiten los conjuntos de atributos.
+Se muestran en la **[!UICONTROL Campo de destino]** ventana de selección al configurar el [asignación](#mapping-considerations-example) en el flujo de trabajo a [activar audiencias en el destino](#activate).
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,8 @@ Como [!DNL Salesforce Marketing Cloud] admite funciones personalizadas según el
 
 Según las funciones que tenga [!DNL Salesforce Marketing Cloud] Cuando se haya asignado un usuario, también deberá asignar permisos al [!DNL Salesforce Marketing Cloud] conjuntos de atributos que contienen los campos que desea actualizar.
 
-Dado que este destino requiere acceso a `[!DNL Email Demographics system attribute-set]`, debe permitir `Email` como se muestra a continuación:
+Dado que este destino requiere acceso a `[!DNL attribute-set]`, debe permitirlos. Por ejemplo, para `Email` [!DNL attribute-set] debe permitir como se muestra a continuación:
+
 ![Interfaz de usuario de Marketing Cloud de Salesforce que muestra el conjunto de atributos de correo electrónico con permisos permitidos.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 Para restringir el nivel de acceso, también puede anular los accesos individuales con privilegios granulares.
@@ -196,15 +197,22 @@ Para asignar correctamente los campos XDM a [!DNL (API) Salesforce Marketing Clo
 
 >[!IMPORTANT]
 >
->Aunque los nombres de atributo deben ser los siguientes [!DNL Salesforce Marketing Cloud] cuenta, las asignaciones para ambos `contactKey` y `personalEmail.address` son obligatorios. Al asignar atributos, solo se admiten atributos del Experience Platform `Email Demographics` el conjunto de atributos debe utilizarse en los campos de destino.
+>* Aunque los nombres de atributo deben ser los siguientes [!DNL Salesforce Marketing Cloud] cuenta, las asignaciones para ambos `contactKey` y `personalEmail.address` son obligatorios.
+>
+>* La integración con [!DNL Salesforce Marketing Cloud] La API de está sujeta a un límite de paginación en cuanto a la cantidad de atributos que el Experience Platform de puede recuperar de Salesforce. Esto significa que durante la **[!UICONTROL Asignación]** , el esquema de campo de destino puede mostrar un máximo de 2000 atributos de su cuenta de Salesforce.
 
 1. En el **[!UICONTROL Asignación]** paso, seleccione **[!UICONTROL Añadir nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
    ![Ejemplo de captura de pantalla de la IU de Platform para Añadir nueva asignación.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione la **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija el **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
-1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione la **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad o elija **[!UICONTROL Seleccionar atributos personalizados]** y seleccione un atributo de la `Email Demographics` atributos mostrados según sea necesario. El [!DNL (API) Salesforce Marketing Cloud] El destino utiliza el [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinámicamente los atributos y sus conjuntos de atributos definidos en [!DNL Salesforce Marketing Cloud]. Se muestran en la **[!UICONTROL Campo de destino]** cuando se configura la variable [asignación](#mapping-considerations-example) en el [activar flujo de trabajo de audiencias](#activate). Tenga en cuenta que solo las asignaciones para los atributos definidos dentro de [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` se admiten los conjuntos de atributos.
+1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione la **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad o elija **[!UICONTROL Seleccionar atributos]** y seleccione un atributo de los conjuntos de atributos que se muestran según sea necesario. El [!DNL (API) Salesforce Marketing Cloud] El destino utiliza el [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinámicamente los atributos y sus conjuntos de atributos definidos en [!DNL Salesforce Marketing Cloud]. Se muestran en la **[!UICONTROL Campo de destino]** cuando se configura la variable [asignación](#mapping-considerations-example) en el [activar flujo de trabajo de audiencias](#activate).
 
-   * Repita estos pasos para agregar las siguientes asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce Marketing Cloud]: |Campo de origen|Campo de destino| obligatorio| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - | |`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+   * Repita estos pasos para agregar las siguientes asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce Marketing Cloud]:
+
+     | Campo de origen | Campo de destino | Obligatorio |
+     |---|---|---|
+     | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
+     | `xdm: person.name.firstName` | `Attribute: First Name` del conjunto de atributos deseado. | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` del conjunto de atributos deseado. | - |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
