@@ -1,9 +1,9 @@
 ---
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de las audiencias.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ La colocación del componente de composición sigue una estructura rígida de la
 
 1. Usted **siempre** empiece con el [!UICONTROL Audiencia] para seleccionar su actividad de inicio. Puede tener un máximo de **uno** [!UICONTROL Audiencia] Bloque.
 2. Si lo desea, puede añadir un [!UICONTROL Excluir] bloque que sigue al [!UICONTROL Audiencia] Bloque.
-3. Si lo desea, puede agregar un [!UICONTROL Rango] o [!UICONTROL Split] Bloque. Puede **solamente** tenga uno de estos bloques por composición.
-4. Usted **siempre** finalizar con un [!UICONTROL Guardar] para guardar la audiencia.
+3. Si lo desea, puede añadir un [!UICONTROL Enriquecer] bloque que sigue al [!UICONTROL Excluir] Bloque.
+4. Si lo desea, puede agregar un [!UICONTROL Rango] o [!UICONTROL Split] Bloque. Puede **solamente** tenga uno de estos bloques por composición.
+5. Usted **siempre** finalizar con un [!UICONTROL Guardar] para guardar la audiencia.
 
 Para obtener más información sobre el uso de Composición de audiencia, lea la [Guía de IU de composición de audiencia](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Para obtener más información sobre el bloque Split, lea la [Guía de IU de com
 
 ## ¿Puedo utilizar todos los tipos de segmentación en el flujo de trabajo de Composición de audiencia?
 
-Sí, todos los tipos de segmentación (segmentación por lotes, segmentación por flujo continuo y segmentación de Edge) son compatibles con el flujo de trabajo de composición de audiencias. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
+Sí, todos los tipos de segmentación ([segmentación por lotes, segmentación de streaming y segmentación de edge](./home.md#evaluate-segments)) son compatibles con el flujo de trabajo de Composición de audiencia. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
 
 ## ¿Cómo puedo confirmar la pertenencia de un perfil a una audiencia?
 

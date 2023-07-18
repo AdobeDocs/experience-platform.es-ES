@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Resumen del perfil del cliente en tiempo real
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ La relación entre el perfil del cliente en tiempo real y otros servicios dentro
 
 ### Composición de entidades de perfil
 
-Un perfil del cliente en tiempo real está compuesto por una entidad principal, denominada **entidad principal** y varias entidades de soporte. En el contexto de Experience Platform, la entidad principal suele ser una **entidad de perfil**, que está compuesto por características, comportamientos y pertenencias a segmentos de una persona individual. Otras entidades permiten que el motor de segmentación utilice datos fuera de la entidad principal del perfil e incluyen lo siguiente:
+Un perfil del cliente en tiempo real está compuesto por una entidad principal, denominada **entidad principal** y varias entidades de soporte. En el contexto de Experience Platform, la entidad principal suele ser una **entidad de perfil**, que está compuesto por características, comportamientos y pertenencias a audiencias de una persona individual. Otras entidades permiten que el motor de segmentación utilice datos fuera de la entidad principal del perfil e incluyen lo siguiente:
 
 - **Entidad dimensional**: entidad que se utiliza para simplificar el proceso de modelado de datos de la información compartida entre eventos o registros de perfil. Esto también se conoce como entidad de búsqueda o entidad de clasificación.
 - **Entidad B2B**: Entidades que describen la relación del perfil con las cuentas y oportunidades entre empresas.
@@ -98,13 +98,13 @@ Para obtener más información sobre los esquemas de unión, incluido cómo acce
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Perfiles y segmentos
+## Perfiles y audiencias
 
-Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para potenciar las experiencias para sus clientes individuales. Cuando se crea un segmento de audiencia, el ID de ese segmento se añade a la lista de suscripciones a segmentos para todos los perfiles cualificados. Las reglas de segmentos se crean y aplican a [!DNL Real-Time Customer Profile] datos mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información acerca de la segmentación, comience leyendo el [Resumen del servicio de segmentación](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para potenciar las experiencias para sus clientes individuales. Cuando se crea una audiencia, su ID se añade a la lista de suscripciones a audiencias de todos los perfiles aptos. Las reglas de segmentos se crean y aplican a [!DNL Real-Time Customer Profile] datos mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información acerca de la segmentación, comience leyendo el [Resumen del servicio de segmentación](../segmentation/home.md).
 
 ### Ingesta de streaming y segmentación de streaming
 
-La entrada en tiempo real es posible mediante un proceso denominado ingesta de transmisión. A medida que se incorporan los datos de perfil y serie temporal, [!DNL Real-Time Customer Profile] decide automáticamente incluir o excluir esos datos de los segmentos a través de un proceso continuo llamado segmentación de streaming, antes de combinarlos con datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos y tomar decisiones de forma instantánea para ofrecer experiencias mejoradas e individualizadas a los clientes mientras interactúan con su marca. Durante la ingesta, los datos también se someten a validación para garantizar que se ingieran correctamente y que se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre la validación realizada durante la ingesta, comience por leer el [resumen de calidad de ingesta de datos](../ingestion/quality/overview.md).
+La entrada en tiempo real es posible mediante un proceso denominado ingesta de transmisión. A medida que se incorporan los datos de perfil y serie temporal, [!DNL Real-Time Customer Profile] decide automáticamente incluir o excluir esos datos de las audiencias a través de un proceso continuo llamado segmentación de streaming, antes de combinarlos con datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos y tomar decisiones de forma instantánea para ofrecer experiencias mejoradas e individualizadas a los clientes mientras interactúan con su marca. Durante la ingesta, los datos también se someten a validación para garantizar que se ingieran correctamente y que se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre la validación realizada durante la ingesta, comience por leer el [resumen de calidad de ingesta de datos](../ingestion/quality/overview.md).
 
 ## Proyecciones de borde
 

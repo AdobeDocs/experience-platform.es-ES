@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -134,7 +134,7 @@ Los campos predeterminados mostrados también se pueden cambiar a nivel organiza
 
 ![La pestaña Detalles aparece resaltada. Se muestran los detalles del perfil.](../images/user-guide/profile-detail.png)
 
-Puede ver información adicional relacionada con el perfil del cliente individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña de pertenencia a segmentos que muestra los segmentos para los que el perfil está cualificado actualmente.
+Puede ver información adicional relacionada con el perfil del cliente individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña pertenencia a audiencias que muestra las audiencias para las que el perfil está cualificado actualmente.
 
 ### Pestaña Atributos
 
@@ -152,13 +152,13 @@ Los eventos también se pueden ver como un objeto JSON seleccionando **[!UICONTR
 
 ![La pestaña Events está resaltada. Se muestran los eventos de perfil.](../images/user-guide/events.png)
 
-### Pestaña Abono de segmentos
+### Pestaña Membresía de audiencia
 
-El **[!UICONTROL Abono de segmentos]** Esta pestaña muestra una lista con el nombre y la descripción de los segmentos a los que pertenece actualmente el perfil del cliente individual. Esta lista se actualiza automáticamente a medida que el perfil cumple los requisitos o caduca de los segmentos. El recuento total de segmentos para los que el perfil está cualificado actualmente se muestra en la parte derecha de la pestaña.
+El **[!UICONTROL Abono a audiencia]** Esta pestaña muestra una lista con el nombre y la descripción de las audiencias a las que pertenece actualmente el perfil del cliente individual. Esta lista se actualiza automáticamente a medida que el perfil cumple los requisitos de las audiencias o caduca. El recuento total de audiencias para las que el perfil está cualificado actualmente se muestra en la parte derecha de la pestaña.
 
 Para obtener más información sobre la segmentación en Experience Platform, consulte la [Documentación del servicio de segmentación del Experience Platform Adobe](../../segmentation/home.md).
 
-![La pestaña inscripción a segmentos está resaltada. Se muestran los detalles de abono del segmento de perfil.](../images/user-guide/segment-membership.png)
+![La pestaña Pertenencia a audiencia aparece resaltada. Se muestran los detalles de pertenencia a audiencias del perfil.](../images/user-guide/segment-membership.png)
 
 ## Políticas de combinación
 

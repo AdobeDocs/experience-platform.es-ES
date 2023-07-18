@@ -4,7 +4,7 @@ title: Resumen de políticas de combinación
 type: Documentation
 description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada cliente. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -60,14 +60,14 @@ A medida que los registros de perfil se incorporan a Experience Platform, se obt
 
 Vinculación de identidad ([!UICONTROL Vinculación de ID]) es el proceso de identificar fragmentos de datos y combinarlos para formar un registro de perfil completo. Para ilustrar los diferentes comportamientos de vinculación, considere la posibilidad de un solo cliente que interactúe con una marca mediante dos direcciones de correo electrónico diferentes.
 
-* **[!UICONTROL Ninguno]:** Cuando se selecciona esta opción, los ID no se vinculan. Cuando se produce la segmentación, las identidades que puedan pertenecer a la misma persona no se vinculan, y la segmentación solo tendrá en cuenta los atributos adjuntos a cada ID individual al determinar si un cliente cumple los requisitos para pertenecer al segmento. Esto podría hacer que un solo cliente tenga varios perfiles y que cada perfil cumpla los requisitos para segmentos diferentes, lo que provocaría que se enviaran varios mensajes de marketing al mismo cliente.
-* **[!UICONTROL Gráfico privado]:** Cuando se selecciona el gráfico privado, se vinculan varias identidades relacionadas con el mismo individuo. Esto hace que el cliente tenga un único perfil y permite que la segmentación tenga en cuenta varios atributos de varias identidades relacionadas al determinar la calificación del segmento. En esta situación, es probable que el cliente tenga un solo perfil, cumpla los requisitos de un segmento en función de la combinación de atributos entre identidades y reciba solo un mensaje de marketing.
+* **[!UICONTROL Ninguno]:** Cuando se selecciona esta opción, los ID no se vinculan. Cuando se produce la segmentación, las identidades que puedan pertenecer a la misma persona no se vinculan, y la segmentación solo tendrá en cuenta los atributos adjuntos a cada ID individual al determinar si un cliente cumple los requisitos para pertenecer a la audiencia. Esto podría hacer que un solo cliente tenga varios perfiles y que cada perfil cumpla los requisitos de audiencias diferentes, lo que provocaría que se enviaran varios mensajes de marketing al mismo cliente.
+* **[!UICONTROL Gráfico privado]:** Cuando se selecciona el gráfico privado, se vinculan varias identidades relacionadas con el mismo individuo. Esto hace que el cliente tenga un único perfil y permite que la segmentación tenga en cuenta varios atributos de varias identidades relacionadas al determinar la calificación del segmento. En esta situación, es probable que el cliente tenga un solo perfil, cumpla los requisitos de una audiencia en función de la combinación de atributos entre identidades y reciba solo un mensaje de marketing.
 
-Para obtener más información sobre las identidades y su función en la generación de perfiles y segmentos, comience por leer el [Introducción al servicio de identidad](../../identity-service/home.md).
+Para obtener más información sobre las identidades y su función en la generación de perfiles y audiencias, comience leyendo el [Introducción al servicio de identidad](../../identity-service/home.md).
 
 ## Política de combinación predeterminada {#default-merge-policy}
 
-Una organización puede crear una política de combinación predeterminada para que la organización la utilice al combinar fragmentos de perfil. Esto permite a los usuarios seleccionar fácilmente la directiva predeterminada al realizar acciones en Experience Platform, como ver perfiles de clientes o crear segmentos. En la mayoría de los casos, a menos que se especifique otra política de combinación, se utilizará la política de combinación predeterminada.
+Una organización puede crear una política de combinación predeterminada para que la organización la utilice al combinar fragmentos de perfil. Esto permite a los usuarios seleccionar fácilmente la directiva predeterminada al realizar acciones en Experience Platform, como ver perfiles de clientes o crear audiencias. En la mayoría de los casos, a menos que se especifique otra política de combinación, se utilizará la política de combinación predeterminada.
 
 Cada organización puede crear varias políticas de combinación relacionadas con una sola clase de esquema XDM, pero solo puede tener una política de combinación predeterminada declarada para cada clase. Por ejemplo, su organización podría tener una política de combinación predeterminada relacionada con la variable [!DNL XDM Individual Profile] y una política de combinación predeterminada diferente para una clase de inventario de productos personalizada.
 
@@ -75,7 +75,7 @@ Si crea una nueva política de combinación y la establece como predeterminada, 
 
 >[!WARNING]
 >
->Los recuentos de perfiles y los segmentos con una política de combinación predeterminada asociada existente pueden verse afectados. Cualquier segmento que tenga aplicada una política de combinación predeterminada se actualizará a la nueva política de combinación predeterminada.
+>Los recuentos de perfiles y las audiencias con una política de combinación predeterminada asociada existente pueden verse afectados. Cualquier audiencia que tenga aplicada una política de combinación predeterminada se actualizará a la nueva política de combinación predeterminada.
 
 ## Pasos siguientes
 

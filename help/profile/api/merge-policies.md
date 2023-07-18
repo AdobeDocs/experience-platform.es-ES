@@ -4,9 +4,9 @@ title: Extremo de API de políticas de combinación
 type: Documentation
 description: Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2467'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Aunque cada organización puede tener potencialmente varias políticas de combin
 >
 >Cuando se establece una nueva política de combinación como predeterminada, cualquier política de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
 
-Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que un segmento se active en Edge (marcado como segmento Edge), debe estar vinculado a una política de combinación que esté marcada como activa en Edge. Si un segmento es **no** vinculado a una política de combinación marcada como activa en edge, el segmento no se marca como activo en edge y se marca como segmento de flujo continuo.
+Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que una audiencia se active en Edge (marcada como audiencia Edge), debe estar vinculada a una política de combinación marcada como activa en Edge. Si una audiencia es **no** ligada a una política de combinación marcada como activa en edge, la audiencia no se marca como activa en edge y se marca como audiencia de flujo continuo.
 
 Además, cada organización solo puede tener **uno** política de combinación activa en edge. Si una política de combinación está activa en Edge, puede utilizarse para otros sistemas en Edge, como Perfil de Edge, Segmentación de Edge y Destinos en Edge.
 
@@ -761,6 +761,6 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes dentro de Platform y para crear segmentos de audiencia a partir de sus [!DNL Real-Time Customer Profile] datos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes dentro de Platform y para crear audiencias a partir de sus [!DNL Real-Time Customer Profile] datos.
 
-Consulte la [Documentación del Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con segmentos.
+Consulte la [Documentación del Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con audiencias.

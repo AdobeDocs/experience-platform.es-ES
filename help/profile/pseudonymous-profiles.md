@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Caducidad de datos de perfil seudónimo
 description: Este documento proporciona instrucciones generales para configurar la caducidad de los datos de los perfiles seudónimos en Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Un perfil se considera para la caducidad de datos seudónimos si cumple las sigu
 - Las áreas de nombres de identidad del perfil vinculado coinciden con lo que el cliente ha especificado como área de nombres de identidad seudónima o desconocida.
    - Por ejemplo, si el área de nombres de identidad del perfil es `ECID`, `GAID`, o `AAID`. El perfil identificado no tiene ID de ninguna otra área de nombres de identidad. En este ejemplo, un perfil identificado hace lo siguiente **no** tiene una identidad de correo electrónico o CRM.
 - No se ha realizado ninguna actividad en un período de tiempo definido por el usuario. La actividad se define mediante la ingesta de eventos de experiencia o mediante actualizaciones iniciadas por el cliente en los atributos de perfil.
-   - Por ejemplo, un nuevo evento de vista de página o una actualización de atributo de página se consideran una actividad. Sin embargo, una actualización de abono de segmentos iniciada por un no usuario es **no** se considera una actividad de. Actualmente, para calcular la caducidad de los datos, el seguimiento a nivel de perfil se basa en el momento del evento para Eventos de experiencia y el momento de la ingesta para atributos de perfil.
+   - Por ejemplo, un nuevo evento de vista de página o una actualización de atributo de página se consideran una actividad. Sin embargo, se actualiza la pertenencia a la audiencia de los usuarios que no hayan iniciado **no** se considera una actividad de. Actualmente, para calcular la caducidad de los datos, el seguimiento a nivel de perfil se basa en el momento del evento para Eventos de experiencia y el momento de la ingesta para atributos de perfil.
 
 ## Acceso {#access}
 

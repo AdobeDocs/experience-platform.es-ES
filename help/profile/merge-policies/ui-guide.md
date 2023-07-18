@@ -4,9 +4,9 @@ title: Guía de IU de políticas de combinación
 type: Documentation
 description: Al unir datos de varias fuentes en Experience Platform, las políticas de combinación son las reglas que utiliza Platform para determinar cómo se priorizarán los datos y qué datos se combinarán para crear la vista unificada. Esta guía proporciona instrucciones paso a paso para trabajar con directivas de combinación mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ El primer paso del flujo de trabajo le permite configurar la política de combin
    * **[!UICONTROL Ninguno]**: no realice ninguna vinculación de identidad.
    * **[!UICONTROL Gráfico privado]**: realice la vinculación de identidad en función del gráfico de identidad privado.
 * **[!UICONTROL Política de combinación predeterminada]**: Botón de alternancia que le permite seleccionar si esta política de combinación será o no la predeterminada para su organización. Si el selector está activado, aparece una advertencia que le solicita que confirme que desea cambiar la política de combinación predeterminada de su organización. Consulte la [resumen de políticas de combinación](overview.md) para obtener más información sobre las políticas de combinación predeterminadas.
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Política de combinación activa en Edge]**: Botón de alternancia que le permite seleccionar si esta política de combinación estará activa o no en Edge. Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que un segmento se active en Edge (marcado como segmento Edge), debe estar vinculado a una política de combinación que esté marcada como activa en Edge. Si un segmento es **no** vinculado a una política de combinación marcada como activa en edge, el segmento no se marca como activo en edge y se marca como segmento de flujo continuo. Además, cada zona protegida de una organización solo puede tener **uno** política de combinación activa en edge.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Política de combinación activa en Edge]**: Botón de alternancia que le permite seleccionar si esta política de combinación estará activa o no en Edge. Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que una audiencia se active en Edge (marcada como audiencia Edge), debe estar vinculada a una política de combinación marcada como activa en Edge. Si una audiencia es **no** ligada a una política de combinación marcada como activa en edge, la audiencia no se marca como activa en edge y se marca como audiencia de flujo continuo. Además, cada zona protegida de una organización solo puede tener **uno** política de combinación activa en edge.
 
 Una vez completados los campos obligatorios, puede seleccionar **[!UICONTROL Siguiente]** para continuar con el flujo de trabajo.
 
@@ -193,7 +193,7 @@ Cuando haya realizado los cambios necesarios, revise la política de combinació
 
 ## Infracciones de directiva de gobernanza de datos
 
-Al crear o actualizar una política de combinación, se realiza una comprobación para determinar si la política de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de la gobernanza de datos de Adobe Experience Platform y son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en determinadas acciones [!DNL Platform] datos. Por ejemplo, si se utilizara una política de combinación para crear un segmento que se activara en un destino de terceros y su organización tuviera una política de uso de datos que impidiera la exportación de datos específicos a terceros, usted recibiría un **[!UICONTROL Infracción de directiva de gobernanza de datos detectada]** al intentar guardar la política de combinación.
+Al crear o actualizar una política de combinación, se realiza una comprobación para determinar si la política de combinación infringe alguna de las políticas de uso de datos definidas por su organización. Las políticas de uso de datos forman parte de la gobernanza de datos de Adobe Experience Platform y son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en determinadas acciones [!DNL Platform] datos. Por ejemplo, si se utilizara una política de combinación para crear una audiencia que se activara en un destino de terceros y su organización tuviera una política de uso de datos que impidiera la exportación de datos específicos a terceros, usted recibiría un **[!UICONTROL Infracción de directiva de gobernanza de datos detectada]** al intentar guardar la política de combinación.
 
 Esta notificación incluye una lista de las políticas de uso de datos que se han violado y le permite ver los detalles de la violación seleccionando una política de la lista. Al seleccionar una directiva infringida, la variable **[!UICONTROL Linaje de datos]** proporciona el motivo de la infracción y las activaciones afectadas, cada una de las cuales proporciona más detalles sobre cómo se ha infringido la política de uso de datos.
 
@@ -203,4 +203,4 @@ Para obtener más información sobre el rendimiento del control de datos en Adob
 
 ## Pasos siguientes
 
-Ahora que ha creado y configurado políticas de combinación para su organización, puede utilizarlas para ajustar la vista de los perfiles de los clientes dentro de Platform y para crear segmentos de audiencia a partir de los datos del perfil. Consulte la [resumen de segmentación](../../segmentation/home.md) para obtener más información sobre cómo crear y trabajar con segmentos mediante [!DNL Experience Platform] IU y API.
+Ahora que ha creado y configurado políticas de combinación para su organización, puede utilizarlas para ajustar la vista de los perfiles de los clientes dentro de Platform y para crear audiencias a partir de los datos del perfil. Consulte la [resumen de segmentación](../../segmentation/home.md) para obtener más información sobre cómo crear y trabajar con audiencias con [!DNL Experience Platform] IU y API.

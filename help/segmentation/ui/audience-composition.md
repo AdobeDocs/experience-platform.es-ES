@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,64 @@ Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que 
 
 ![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Enriquecer] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>En este momento, los atributos de enriquecimiento pueden **solamente** se utilizará en escenarios de Adobe Journey Optimizer descendentes.
+
+El **[!UICONTROL Enriquecer]** el tipo de bloque permite enriquecer la audiencia con atributos adicionales de un conjunto de datos. Puede utilizar estos atributos en casos de uso de personalización.
+
+Para agregar un **[!UICONTROL Enriquecer]** , seleccione la **+** icono, seguido de **[!UICONTROL Enriquecer]**.
+
+![El [!UICONTROL Enriquecer] La opción está seleccionada.](../images/ui/audience-composition/add-enrich-block.png)
+
+El **[!UICONTROL Enriquecer]** se ha añadido un bloque de. Cuando se selecciona este bloque, los detalles sobre el enriquecimiento aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el conjunto de datos de enriquecimiento.
+
+Para seleccionar el conjunto de datos con el que enriquecer la audiencia, seleccione ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+
+![El botón de filtro está resaltado. Si selecciona esta opción, accederá al [!UICONTROL Seleccionar conjunto de datos] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+El **[!UICONTROL Seleccionar conjunto de datos]** aparece la ventana emergente. Seleccione el conjunto de datos que desee agregar para el enriquecimiento, seguido de **[!UICONTROL Seleccionar]** para añadir el conjunto de datos para el enriquecimiento.
+
+![El conjunto de datos seleccionado está seleccionado.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>El conjunto de datos seleccionado **debe** cumplen los siguientes criterios:
+>
+>- El conjunto de datos **debe** ser de tipo registro.
+>   - El conjunto de datos **no puede** ser de tipo de evento, generarse por el sistema o marcarse para Perfil.
+>- El conjunto de datos **debe** ser de 1 GB o menor.
+
+El **[!UICONTROL Criterios de enriquecimiento]** ahora aparece la sección en el carril derecho. En esta sección, puede seleccionar la variable **[!UICONTROL Clave de combinación de origen]** y el **[!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento]**, que le permite vincular el conjunto de datos enriquecido con la audiencia que intenta crear.
+
+![El [!UICONTROL Criterios de enriquecimiento] área resaltada.](../images/ui/audience-composition/enrichment-criteria.png)
+
+Para seleccionar **[!UICONTROL Clave de combinación de origen]**, seleccione la ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+
+![El icono de filtro para [!UICONTROL Clave de combinación de origen] está resaltado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+El **[!UICONTROL Seleccionar un atributo de perfil]** aparece la ventana emergente. Seleccione el atributo de perfil que desee utilizar como clave de unión de origen, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión de origen.
+
+![El atributo que desee utilizar como clave de unión de origen aparece resaltado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+Para seleccionar **[!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento]**, seleccione la ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+
+![El icono de filtro para [!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento] está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+El **[!UICONTROL Atributos de enriquecimiento]** aparece la ventana emergente. Seleccione el atributo que desee utilizar como clave de unión del conjunto de datos de enriquecimiento, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión del conjunto de datos de enriquecimiento.
+
+![El atributo que desee utilizar como clave de unión del conjunto de datos de enriquecimiento aparece resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+Ahora que ha agregado ambas claves de unión, la variable **[!UICONTROL Atributos de enriquecimiento]** aparece la sección. Ahora puede añadir el atributo con el que desee mejorar la audiencia. Para añadir estos atributos, seleccione **[!UICONTROL Añadir atributo]**.
+
+![El [!UICONTROL Añadir atributo] botón resaltado.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+El **[!UICONTROL Atributos de enriquecimiento]** aparece la ventana emergente. Puede seleccionar los atributos del conjunto de datos con los que enriquecer la audiencia, seguidos de **[!UICONTROL Seleccionar]** para añadir los atributos a la audiencia.
+
+![Los atributos de enriquecimiento que desee añadir aparecen resaltados.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ El **[!UICONTROL Split]** el tipo de bloque le permite dividir la nueva audienci
 Para agregar un **[!UICONTROL Split]** , seleccione la **+** icono, seguido de **[!UICONTROL Split]**.
 
 ![La opción Split está seleccionada.](../images/ui/audience-composition/add-split-block.png)
+
+Al dividir la audiencia, puede hacerlo por porcentaje o por atributo.
 
 ### Dividido por porcentaje {#split-percentage}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Para obtener una guía sobre cómo trabajar con [!DNL Real-Time Customer Profile
 
 Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 
-Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin que sea necesario realizar manualmente cálculos complejos cada vez que se necesite la información. Estos valores de atributo calculados se pueden ver en un perfil, utilizarse para crear un segmento o acceder a ellos a través de una serie de patrones de acceso diferentes.
+Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin que sea necesario realizar manualmente cálculos complejos cada vez que se necesite la información. Estos valores de atributo calculados se pueden ver en un perfil, utilizarse para crear una audiencia o acceder a ellos a través de una serie de patrones de acceso diferentes.
 
 Puede crear, ver, editar y eliminar atributos calculados mediante la variable `ca/attributes/` punto final. Para aprender a utilizar atributos calculados, consulte la [información general sobre atributos calculados](../computed-attributes/overview.md). Para operaciones de API, visite la [guía de extremo de API de atributos calculados](../computed-attributes/api.md).
 
@@ -42,7 +42,7 @@ A través de Adobe Experience Platform puede acceder a [!DNL Real-Time Customer 
 
 ## Exportar trabajos ([!DNL Profile] export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] los datos se pueden exportar a un conjunto de datos para un procesamiento posterior, como la exportación de segmentos de audiencia para su activación o atributos de perfil para la creación de informes. Los trabajos de exportación para segmentos de audiencia forman parte de [!DNL Adobe Experience Platform Segmentation Service] API, lea la [guía de extremo de trabajos de exportación de segmentación](../../profile/api/export-jobs.md) para obtener más información. Para obtener instrucciones paso a paso sobre cómo crear y administrar trabajos de exportación para atributos de perfil, visite la [guía de extremo de trabajos de exportación](export-jobs.md).
+[!DNL Real-Time Customer Profile] los datos se pueden exportar a un conjunto de datos para un procesamiento posterior, como la exportación de audiencias para su activación o de atributos de perfil para la creación de informes. Los trabajos de exportación para audiencias forman parte de [!DNL Adobe Experience Platform Segmentation Service] API, lea la [guía de extremo de trabajos de exportación de segmentación](../../profile/api/export-jobs.md) para obtener más información. Para obtener instrucciones paso a paso sobre cómo crear y administrar trabajos de exportación para atributos de perfil, visite la [guía de extremo de trabajos de exportación](export-jobs.md).
 
 ## Políticas de combinación {#merge-policies}
 

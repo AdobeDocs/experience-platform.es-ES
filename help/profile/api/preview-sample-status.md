@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolució
 title: Punto final de API de previsualización de estado de muestra (previsualización de perfil)
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Los resultados de este trabajo de muestra se pueden ver mediante el `/previewsam
 
 >[!NOTE]
 >
->Hay puntos finales de estimación y previsualización disponibles como parte de la API del servicio de segmentación de Adobe Experience Platform que le permiten ver información de resumen con respecto a las definiciones de segmentos para asegurarse de aislar la audiencia esperada. Para ver los pasos detallados para trabajar con la vista previa de segmentos y los extremos estimados, visite la [guía de extremos de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de [!DNL Segmentation] Guía para desarrolladores de API.
+>Hay puntos finales de estimación y previsualización disponibles como parte de la API del servicio de segmentación de Adobe Experience Platform que le permiten ver información de resumen con respecto a las definiciones de segmentos para asegurarse de aislar la audiencia esperada. Para encontrar los pasos detallados para trabajar con los extremos de vista previa y estimación, visite la [guía de extremos de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de [!DNL Segmentation] Guía para desarrolladores de API.
 
 ## Primeros pasos
 
@@ -592,5 +592,5 @@ Este informe proporciona la siguiente información:
 
 ## Pasos siguientes
 
-Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el almacén de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre sus definiciones de segmento. Esta información le ayuda a aislar la audiencia esperada en el segmento. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones de segmentos mediante la API de segmentación, visite [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el almacén de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre sus definiciones de segmento. Esta información le ayuda a aislar la audiencia esperada. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
 

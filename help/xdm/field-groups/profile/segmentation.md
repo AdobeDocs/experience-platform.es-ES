@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;esquemas;segmento;pertenencia a segmento;pertenencia a segmento;pertenencia a segmento;diseño de esquema;mapa;Mapa;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de pertenencia a segmento
 description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de pertenencia a segmentos.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---

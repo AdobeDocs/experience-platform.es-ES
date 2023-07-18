@@ -4,7 +4,7 @@ title: Guía de resolución de problemas del perfil del cliente en tiempo real
 type: Documentation
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -47,13 +47,13 @@ Existen varios métodos para ver los datos de perfil, en función de si utiliza 
 
 Si conoce los ID de las entidades de Perfil a las que desea acceder, puede utilizar el `/entities` (Acceso al perfil) en la API de perfil para buscar esas entidades. Consulte la sección sobre [entidades](./api/entities.md) en la guía para desarrolladores para obtener más información.
 
-También puede utilizar la API del servicio de segmentación de Adobe Experience Platform para acceder a los perfiles individuales de los clientes que cumplen los requisitos para un abono a un segmento. Consulte la [Resumen del servicio de segmentación](../segmentation/home.md) para obtener más información.
+También puede utilizar la API del servicio de segmentación de Adobe Experience Platform para acceder a los perfiles individuales de los clientes que cumplen los requisitos para ser miembros de una audiencia. Consulte la [Resumen del servicio de segmentación](../segmentation/home.md) para obtener más información.
 
 #### Uso de la IU
 
 En la interfaz de usuario de Experience Platform, la variable **[!UICONTROL Examinar]** en la pestaña **[!UICONTROL Perfiles]** workspace le permite ver el recuento total de perfiles y buscar perfiles individuales por su valor de identidad. Consulte la [Guía del usuario del perfil](./ui/user-guide.md) para obtener más información.
 
-También puede ver una lista de sus segmentos en el **[!UICONTROL Examinar]** en la pestaña **[!UICONTROL Segmentos]** workspace. Después de seleccionar un segmento, se muestra una muestra de perfiles cualificados para ese segmento. A continuación, puede seleccionar cualquiera de estos perfiles para ver sus detalles. Consulte la [Resumen de IU de segmentación](../segmentation/ui/overview.md) para obtener más información.
+También puede ver una lista de sus audiencias en la sección **[!UICONTROL Examinar]** en la pestaña **[!UICONTROL Audiencias]** workspace. Después de seleccionar una audiencia, se muestra una muestra de perfiles cualificados para esa audiencia. A continuación, puede seleccionar cualquiera de estos perfiles para ver sus detalles. Consulte la [Resumen de IU de segmentación](../segmentation/ui/overview.md) para obtener más información.
 
 ## Códigos de error
 

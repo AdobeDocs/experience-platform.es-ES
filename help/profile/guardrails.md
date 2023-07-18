@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 5%
@@ -30,7 +30,7 @@ Los siguientes servicios de Experience Platform están implicados en el modelado
 * [[!DNL Real-Time Customer Profile]](home.md): cree perfiles de consumidor unificados con datos de varias fuentes.
 * [Identidades](../identity-service/home.md): vincule identidades de fuentes de datos dispares a medida que se incorporan en Platform.
 * [Esquemas](../xdm/home.md): los esquemas del Modelo de datos de experiencia (XDM) son el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
-* [Segmentos](../segmentation/home.md): el motor de segmentación dentro de Platform se utiliza para crear segmentos a partir de los perfiles de clientes en función de los comportamientos y atributos de los clientes.
+* [Audiencias](../segmentation/home.md): el motor de segmentación dentro de Platform se utiliza para crear audiencias a partir de los perfiles de clientes en función de los comportamientos y atributos de los clientes.
 
 ## Tipos de límite
 
@@ -108,14 +108,14 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 ## Protecciones de segmentación
 
-Las protecciones descritas en esta sección hacen referencia al número y la naturaleza de los segmentos que una organización puede crear dentro de Experience Platform, así como a la asignación y activación de segmentos a destinos.
+Las protecciones descritas en esta sección se refieren al número y la naturaleza de las audiencias que una organización puede crear dentro de Experience Platform, así como a la asignación y activación de audiencias a destinos.
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Segmentos por zona protegida | 4000 | Leve | Una organización puede tener más de 4000 segmentos en total, siempre y cuando haya menos de 4000 segmentos en cada zona protegida individual. El intento de crear segmentos adicionales puede afectar al rendimiento del sistema. |
-| Segmentos de borde por zona protegida | 150 | Leve | Una organización puede tener más de 150 segmentos de Edge en total, siempre y cuando haya menos de 150 segmentos de Edge en cada zona protegida individual. El intento de crear segmentos perimetrales adicionales puede afectar al rendimiento del sistema. |
-| Segmentos de streaming por zona protegida | 500 | Leve | Una organización puede tener más de 500 segmentos de streaming en total, siempre y cuando haya menos de 500 segmentos de streaming en cada zona protegida individual. Si intenta crear segmentos de flujo adicionales, el rendimiento del sistema podría verse afectado. |
-| Segmentos por lotes por zona protegida | 4000 | Leve | Una organización puede tener más de 4000 segmentos por lotes en total, siempre y cuando haya menos de 4000 segmentos por lotes en cada zona protegida individual. El intento de crear segmentos por lotes adicionales puede afectar al rendimiento del sistema. |
+| Audiencias por zona protegida | 4000 | Leve | Una organización puede tener más de 4000 audiencias en total, siempre y cuando haya menos de 4000 audiencias en cada zona protegida individual. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. |
+| Audiencias de Edge por zona protegida | 150 | Leve | Una organización puede tener más de 150 audiencias de Edge en total, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida individual. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. |
+| Audiencias de streaming por zona protegida | 500 | Leve | Una organización puede tener más de 500 audiencias de streaming en total, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida individual. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. |
+| Audiencias por lotes por zona protegida | 4000 | Leve | Una organización puede tener más de 4000 audiencias de lote en total, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida individual. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ Los atributos independientes del tiempo, también conocidos como &quot;datos de 
 
 #### entidad Dimension
 
-Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear segmentos de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/multi-entity-segmentation.md).
+Aunque el almacén de datos de perfil que mantiene los datos de perfil no es un almacén relacional, el perfil permite la integración con entidades de dimensión pequeñas para crear audiencias de una manera simplificada e intuitiva. Esta integración se conoce como [segmentación de varias entidades](../segmentation/multi-entity-segmentation.md).
 
 Su organización también puede definir clases XDM para describir cosas que no sean individuales, como tiendas, productos o propiedades. Estas no son[!DNL XDM Individual Profile] los esquemas se denominan &quot;entidades de dimensión&quot; (también conocidas como &quot;entidades de búsqueda&quot;) y no contienen datos de series temporales. Los esquemas que representan entidades de dimensión se vinculan a entidades de perfil mediante el uso de [relaciones de esquema](../xdm/tutorials/relationship-ui.md).
 
