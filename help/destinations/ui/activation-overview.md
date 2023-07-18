@@ -4,9 +4,9 @@ title: Información general de Activation
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform en varios tipos de destinos.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -49,9 +49,9 @@ Siga los pasos a continuación para activar los datos en sus destinos desde el *
    * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](activate-streaming-profile-destinations.md)
    * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](activate-batch-profile-destinations.md)
 
-### Activar audiencias desde la página de detalles de audiencia {#activate-segment-details}
+### Activar audiencias desde la página de detalles de audiencia {#activate-audience-details}
 
-Puede activar audiencias en destinos desde la página de detalles de audiencias. Consulte [Detalles del segmento](../../segmentation/ui/overview.md#segment-details) para obtener más información.
+Puede activar audiencias en destinos desde la página de detalles de audiencia. Consulte [Detalles de audiencia](../../segmentation/ui/overview.md#audience-details) para obtener más información.
 
 Según el destino seleccionado, siga los pasos descritos en los artículos siguientes para finalizar el flujo de trabajo de activación:
 
