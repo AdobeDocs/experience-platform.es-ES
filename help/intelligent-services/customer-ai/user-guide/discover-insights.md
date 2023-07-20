@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;perspectivas;inteligencia artificial aplicada al cliente;temas populares;perspectivas de inteligencia artificial aplicada al cliente
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Descubra perspectivas con la inteligencia artificial aplicada al cliente
 description: Este documento sirve como guía para interactuar con las perspectivas de la instancia de servicio en la interfaz de usuario de la inteligencia artificial aplicada al cliente de servicios inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
