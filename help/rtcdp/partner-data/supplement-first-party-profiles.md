@@ -4,9 +4,9 @@ description: Aprenda a complementar los perfiles de origen con atributos de soci
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Complementa perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y obtener una mejor optimización de audiencia.
 
-![Enriquezca los perfiles con atributos proporcionados por los socios para obtener información general visual de alto nivel sobre los casos de uso.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Enriquezca los perfiles con atributos proporcionados por los socios para obtener información general visual de alto nivel sobre los casos de uso.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Requisitos previos y planificación {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
-![Enriquezca los perfiles con atributos proporcionados por los socios para obtener información general visual de alto nivel sobre los casos de uso.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Enriquezca los perfiles con atributos proporcionados por los socios para obtener información general visual de alto nivel sobre los casos de uso.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. As a **cliente**, los atributos de licencia del **socio de datos**.
 2. As a **cliente**, puede ampliar los datos de perfil y el modelo de gobernanza para dar cabida a **socio** Atributos proporcionados por.

@@ -4,9 +4,9 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 8f885181f8ec06f719e4a82b2cb5f13641f65607
+source-git-commit: 1dea63c4efc4d8effed56c0cf97a35594f92a8d0
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '231'
 ht-degree: 31%
 
 ---
@@ -67,5 +67,6 @@ ht-degree: 31%
 * Casos de uso {#use-cases}
    * Casos de uso de datos de socios {#partner-data}
       * [Suplemento de perfiles de origen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Capte y adquiera nuevos clientes a través de soporte de prospección](/help/rtcdp/partner-data/prospecting.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
 * [Glosario de Experience Platform](https://www.adobe.com/go/platform-glossary-en)
