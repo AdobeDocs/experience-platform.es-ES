@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="Tamaño de audiencia"
->abstract="Este widget muestra el número total de perfiles combinados dentro de la audiencia seleccionada. Este número depende de las políticas de combinación aplicadas a los datos y es correcto en el momento de la instantánea más reciente."
+>abstract="Este widget muestra el número total de perfiles combinados dentro del público seleccionado. Este número depende de las políticas de combinación aplicadas a los datos y es correcto en el momento de la instantánea más reciente."
 
 El **[!UICONTROL Tamaño de audiencia]** widget muestra el número total de perfiles combinados dentro de la audiencia seleccionada en el momento en que se tomó la instantánea. Este número es el resultado de aplicar la política de combinación de audiencias a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en la audiencia.
 
@@ -181,7 +181,7 @@ Seleccionar **[!UICONTROL Cerrar]** para volver a la [!UICONTROL Audiencias] pan
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Superposición de identidad"
->abstract="Este widget muestra la superposición de perfiles en la audiencia que contienen ambas identidades seleccionadas. Los círculos muestran el tamaño relativo de cada identidad. El número de perfiles que contienen ambas áreas de nombres se representa mediante la superposición entre los círculos."
+>abstract="Este widget muestra la superposición de perfiles en el público que contiene ambas identidades seleccionadas. Los círculos muestran el tamaño relativo de cada identidad. El número de perfiles que contienen ambas áreas de nombres se representa mediante la superposición entre los círculos."
 
 El **[!UICONTROL Superposición de identidad]** Este widget muestra un diagrama de Venn o un diagrama de conjunto que muestra la superposición de perfiles en la audiencia que contiene varias identidades.
 
@@ -198,7 +198,7 @@ Para obtener más información sobre las identidades, visite la [Documentación 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Perfiles por identidad"
->abstract="Este widget muestra el desglose de identidades en cada perfil combinado de la audiencia seleccionada."
+>abstract="Este widget muestra el desglose de identidades en cada perfil combinado del público seleccionado."
 
 El **[!UICONTROL Perfiles por identidad]** widget muestra el desglose de identidades en cada perfil combinado de la audiencia seleccionada. El número total de perfiles por identidad puede ser mayor que el número total de perfiles en la audiencia, ya que un perfil podría tener varias identidades asociadas. En otras palabras, si se suman los valores mostrados para cada identidad, el total puede ser mayor que el tamaño total de la audiencia. Esto se debe a que si un cliente interactúa con su marca en más de un canal, pueden asociarse varias identidades con ese cliente individual.
 

@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -50,17 +50,17 @@ Para obtener más información, visite la [guía del panel de audiencias](../../
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Pérdida"
->abstract="La pérdida representa el porcentaje de perfiles que están cambiando dentro de una audiencia en comparación con la última vez que se ejecutó el trabajo de segmentación."
+>abstract="La pérdida representa el porcentaje de perfiles que cambian dentro de un público en comparación con la última vez que se ejecutó el trabajo del público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de evaluación"
->abstract="Los métodos de evaluación para audiencias incluyen batch, streaming y edge."
+>abstract="Los métodos de evaluación de públicos incluyen lote, streaming y Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Añadir todas las audiencias a la programación"
->abstract="Habilite la opción para incluir todas las audiencias evaluadas mediante la segmentación por lotes en la actualización programada diaria. Deshabilite esta opción para eliminar todas las audiencias de la actualización programada."
+>title="Añadir todos los públicos a la programación"
+>abstract="Habilite la opción para incluir todos los públicos evaluados mediante la segmentación por lotes en la actualización programada diaria. Deshabilite para quitar todos los públicos de la actualización programada."
 
 Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las audiencias de su organización.
 

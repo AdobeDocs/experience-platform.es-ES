@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -256,7 +256,7 @@ Pase el ratón sobre las barras individuales para ver un cuadro de diálogo que 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfiles no segmentados"
->abstract="Este widget proporciona el número total de perfiles no adjuntos a ninguna audiencia y representa la oportunidad de activar perfiles en toda la organización."
+>abstract="Este widget proporciona el número total de perfiles que no están adjuntos a ningún público y representa la oportunidad de activar perfiles en toda la organización."
 
 El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de perfiles no adjuntos a ninguna audiencia. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
 
@@ -267,7 +267,7 @@ El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de p
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendencia de perfiles no segmentados"
->abstract="Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ninguna audiencia durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a una audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses."
+>abstract="Este widget proporciona una ilustración de un gráfico de líneas que muestra el número de perfiles que no están adjuntos a ningún público durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a ningún público se puede visualizar en períodos de 30 días, 90 días y 12 meses."
 
 El [!UICONTROL Los perfiles no segmentados cambian de tendencia] el widget utiliza un gráfico de líneas para ilustrar el número de perfiles agregados desde la última instantánea diaria que no están adjuntos a ninguna audiencia. La tendencia de cambio de perfiles no adjuntos a ninguna audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. El período de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje Y y el tiempo en el eje X.
 

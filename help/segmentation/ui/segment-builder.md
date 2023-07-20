@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
 source-wordcount: '3308'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Los tres tipos de campo que componen una definición de segmento son atributos, eventos y audiencias. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil individual XDM, los eventos permiten crear una audiencia basada en acciones o eventos que se producen mediante elementos de datos XDM ExperienceEvent y las audiencias permiten utilizar audiencias importadas de fuentes externas."
+>abstract="Los tres tipos de campo que componen una definición de segmento son los atributos, eventos y públicos. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil individual XDM, los eventos permiten crear un público basado en acciones o eventos que se producen mediante elementos de datos XDM ExperienceEvent y los públicos permiten utilizar audiencias importadas de fuentes externas."
 
 Los componentes básicos de las definiciones de segmentos son los atributos y los eventos. Además, los atributos y eventos contenidos en las audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 
@@ -224,7 +224,7 @@ Una vez que seleccione **[!UICONTROL Desenvolver contenedor]** el contenedor sec
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Políticas de combinación"
->abstract="Las políticas de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada, o puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para esta audiencia."
+>abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada. También puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
 
 [!DNL Experience Platform] le permite reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
 
@@ -239,12 +239,12 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propiedades de definición del segmento"
->abstract="La sección de propiedades de la definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, con el número de perfiles cualificados en comparación con el número total de perfiles. Esto permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
+>abstract="La sección Propiedades de definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
->abstract="Puede actualizar las estimaciones de la definición del segmento para ver inmediatamente una previsualización de cuántos perfiles cumplen los requisitos para la definición de segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
