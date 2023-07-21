@@ -2,10 +2,10 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 6%
+source-wordcount: '1041'
+ht-degree: 3%
 
 ---
 
@@ -86,7 +86,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Clave SSH privada"
->abstract="La clave SSH privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña."
+>abstract="La clave SSH privada debe ser una cadena con formato RSA y codificación Base64, y no debe estar protegida con contraseña."
 
 Si selecciona la opción **[!UICONTROL SFTP con contraseña]** tipo de autenticación para conectarse a su ubicación SFTP:
 
@@ -108,7 +108,7 @@ Si selecciona la opción **[!UICONTROL SFTP con clave SSH]** tipo de autenticaci
 * **[!UICONTROL Dominio]**: complete la dirección IP o el nombre de dominio de su cuenta SFTP
 * **[!UICONTROL Puerto]**: el puerto utilizado por la ubicación de almacenamiento SFTP;
 * **[!UICONTROL Nombre de usuario]**: el nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP;
-* **[!UICONTROL Clave SSH]**: clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña.
+* **[!UICONTROL Clave SSH]**: clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe ser una cadena codificada en Base64 con formato RSA y no debe estar protegida con contraseña.
 * **[!UICONTROL Clave de cifrado]**: Opcionalmente, puede adjuntar la clave pública con formato RSA para agregar cifrado a los archivos exportados. Vea un ejemplo de una clave de cifrado con formato correcto en la siguiente imagen.
 
   ![Imagen que muestra un ejemplo de una clave PGP con formato correcto en la IU de](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
