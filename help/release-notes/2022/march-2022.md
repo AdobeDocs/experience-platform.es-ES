@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform de marzo de 2022
 description: Notas de la versión de marzo de 2022 de Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 8%
+ht-degree: 15%
 
 ---
 
@@ -108,13 +108,13 @@ Para obtener más información sobre paneles de destinos en Platform, consulte l
 
 ## Recopilación de datos {#data-collection}
 
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
-| Configuración global de flujo de datos | Ahora puede configurar varias opciones globales nuevas al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de una secuencia de datos](../../edge/datastreams/overview.md#create) en la guía de la interfaz de usuario de flujos de datos para obtener más información. |
+| Configuración global de flujo de datos | Ahora puede configurar varias opciones globales nuevas al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de una secuencia de datos](../../datastreams/overview.md#create) en la guía de la interfaz de usuario de flujos de datos para obtener más información. |
 | [API del servidor de red perimetral](../../server-api/overview.md) | La API de servidor permite que los clientes interactúen con la red perimetral de Experience Platform mediante un punto de conexión nuevo y autenticado, para impulsar una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [resumen de recopilación de datos](../../collection/home.md).
@@ -137,7 +137,7 @@ Para obtener más información sobre las funciones disponibles, consulte la [Int
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar la ingesta de datos en todo.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar la ingesta de datos en todo.
 
 **Funciones actualizadas**
 

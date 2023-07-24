@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform de febrero de 2022
 description: Notas de la versión de febrero de 2022 de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 9%
+ht-degree: 23%
 
 ---
 
@@ -39,21 +39,21 @@ Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashb
 
 ## Recopilación de datos {#data-collection}
 
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
-| Flujo de trabajo de IU mejorado para la configuración del flujo de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la IU de recopilación de datos. Al agregar servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluyen en la lista de opciones. Consulte la guía de [configuración de una secuencia de datos](../../edge/datastreams/overview.md) para obtener más información. |
-| Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funcionalidades de preparación de datos para asignar los datos al modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../edge/datastreams/data-prep.md) en la guía de flujos de datos para obtener más información. |
+| Flujo de trabajo de IU mejorado para la configuración del flujo de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la IU de recopilación de datos. Al agregar servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluyen en la lista de opciones. Consulte la guía de [configuración de una secuencia de datos](../../datastreams/overview.md) para obtener más información. |
+| Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funcionalidades de preparación de datos para asignar los datos al modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../datastreams/data-prep.md) en la guía de flujos de datos para obtener más información. |
 | ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a Adobe Experience Platform Edge Network al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa para las recientes restricciones del explorador sobre la duración de las cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../edge/identity/first-party-device-ids.md) para obtener más información. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [resumen de recopilación de datos](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Funciones nuevas o actualizadas**
 
@@ -79,7 +79,7 @@ Para obtener información más general sobre [!DNL Identity Service], consulte l
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Funciones actualizadas**
 

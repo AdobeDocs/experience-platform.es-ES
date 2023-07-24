@@ -2,7 +2,7 @@
 title: Notas de la versión para etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 3%
@@ -54,7 +54,7 @@ Se han lanzado nuevas extensiones:
 
 ## 26 de octubre de 2022
 
-* **Administración de datos confidenciales para flujos de datos**: Las secuencias de datos ahora aprovechan varias tecnologías de Platform para gestionar correctamente los datos confidenciales, tal como se aplica en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Portability and Accountability Act). Consulte la sección sobre [gestión de datos confidenciales en flujos de datos](../../edge/datastreams/overview.md#sensitive) para obtener más información.
+* **Administración de datos confidenciales para flujos de datos**: Las secuencias de datos ahora aprovechan varias tecnologías de Platform para gestionar correctamente los datos confidenciales, tal como se aplica en regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Portability and Accountability Act). Consulte la sección sobre [gestión de datos confidenciales en flujos de datos](../../datastreams/overview.md#sensitive) para obtener más información.
 * **[!DNL Splunk]extensión para reenvío de eventos**: Ahora puede enviar datos a [!DNL Splunk] uso de un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Splunk] información general sobre extensiones](../extensions/server/splunk/overview.md) para obtener más información.
 * **[!DNL Zendesk]extensión para reenvío de eventos**: Ahora puede enviar datos a [!DNL Zendesk] uso de un [reenvío de eventos](../ui/event-forwarding/overview.md) extensión. Consulte la [[!DNL Zendesk] información general sobre extensiones](../extensions/server/zendesk/overview.md) para obtener más información.
 

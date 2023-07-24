@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Introducción a las API de Media Edge
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 6%
+source-wordcount: '959'
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ Para iniciar la sesión de contenido en el servidor, utilice el punto final de I
 
 Antes de realizar la solicitud de inicio de sesión, necesitará lo siguiente:
 
-* El `datastreamId`: un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=es).
+* El `datastreamId`: un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=es).
 
 * Un objeto JSON para la carga útil de la solicitud que contiene los datos mínimos requeridos (como se muestra en la solicitud de ejemplo siguiente).
 

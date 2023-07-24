@@ -2,7 +2,7 @@
 title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 45%
@@ -46,7 +46,7 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | Atributo calculado | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
 | [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para el perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
-| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
@@ -90,6 +90,7 @@ Seleccione un evento de la lista para ver los detalles en el carril derecho.
 ### Filtrar registros de auditoría
 
 >[!NOTE]
+>
 Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
 
 

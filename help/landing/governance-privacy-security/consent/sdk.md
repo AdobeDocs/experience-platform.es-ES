@@ -2,7 +2,7 @@
 title: Procesamiento de datos de consentimiento del cliente mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo integrar el SDK web de Adobe Experience Platform para procesar datos de consentimiento de clientes en Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Este tutorial supone que ya ha determinado cómo generar datos de consentimiento
 
 Esta guía sigue el flujo de trabajo para configurar el SDK mediante la extensión de etiqueta en la interfaz de usuario de. Si no desea utilizar la extensión de y prefiere incrustar directamente la versión independiente del SDK en su sitio, consulte los siguientes documentos en lugar de esta guía:
 
-* [Configurar una secuencia de datos](../../../edge/datastreams/overview.md)
+* [Configurar una secuencia de datos](../../../datastreams/overview.md)
 * [Instalación del SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configuración del SDK para comandos de consentimiento](../../../edge/consent/supporting-consent.md)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar un conjunto de datos para capturar datos de consentimiento y preferencia
 description: Obtenga información sobre cómo configurar un esquema y un conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencia en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -26,7 +26,6 @@ Este documento proporciona información sobre los pasos necesarios para configur
 >* El grupo de campos de consentimiento estandarizado
 >* Un grupo de campos de consentimiento personalizado creado por su organización
 >* Una combinación del grupo de campos de consentimiento estandarizado y los campos adicionales proporcionados por un grupo de campos de consentimiento personalizado
-
 
 ## Requisitos previos
 
@@ -160,7 +159,7 @@ Finalmente, seleccione **[!UICONTROL Activar]** en la ventana emergente de confi
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-El conjunto de datos ahora está guardado y habilitado para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Conjunto de datos de perfil] al configurar su [secuencia de datos](../../../../edge/datastreams/overview.md).
+El conjunto de datos ahora está guardado y habilitado para su uso en [!DNL Profile]. Si planea utilizar el SDK web de Platform para enviar datos de consentimiento al perfil, debe seleccionar este conjunto de datos como [!UICONTROL Conjunto de datos de perfil] al configurar su [secuencia de datos](../../../../datastreams/overview.md).
 
 ## Pasos siguientes
 

@@ -2,7 +2,7 @@
 title: Configuración de la extensión SDK para web de Adobe Experience Platform
 description: Configuración de la extensión de etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 6%
@@ -52,7 +52,7 @@ El [!UICONTROL Dominio de Edge] es el dominio desde el que la extensión de Adob
 
 Cuando se envía una solicitud a Adobe Experience Platform Edge Network, se utiliza un ID de secuencia de datos para hacer referencia a la configuración del lado del servidor. Puede actualizar la configuración sin tener que realizar cambios en el código del sitio web.
 
-Consulte la guía de [flujos de datos](../../../../edge/datastreams/overview.md) para obtener más información.
+Consulte la guía de [flujos de datos](../../../../datastreams/overview.md) para obtener más información.
 
 
 ## [!UICONTROL Privacidad]
@@ -112,10 +112,10 @@ Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos dife
 
 La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
-1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](../../../../edge/datastreams/configure.md).
+1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](../../../../datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante la extensión de etiqueta del SDK web.
 
-Consulte la secuencia de datos [la configuración anula la documentación](../../../../edge/datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
+Consulte la secuencia de datos [la configuración anula la documentación](../../../../datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
 
 Como alternativa a pasar las invalidaciones a través de un comando del SDK web, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 

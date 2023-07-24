@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre la recopilación de datos
 description: Obtenga información acerca de las distintas tecnologías relacionadas con la recopilación de datos sobre experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 9%
@@ -25,7 +25,7 @@ La recopilación de datos se centra en la detección y accesibilidad de conjunto
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Etiquetas](../tags/home.md)
-* [Corrientes de datos](../edge/datastreams/overview.md)
+* [Corrientes de datos](../datastreams/overview.md)
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
 * [SDK móvil de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
@@ -45,9 +45,9 @@ La compresión de estas bibliotecas acelera la recopilación de datos y consolid
 
 ## Red perimetral de plataforma y flujos de datos {#edge}
 
-Platform Edge Network es una red de servidores distribuidos globalmente, rápidos y fiables capaces de recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar lo siguiente [flujos de datos](../edge/datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que le permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
+Platform Edge Network es una red de servidores distribuidos globalmente, rápidos y fiables capaces de recibir y procesar datos a una escala tremenda. Con las etiquetas, puede configurar lo siguiente [flujos de datos](../datastreams/overview.md) para productos como Adobe Target, Adobe Audience Manager y Adobe Analytics, que le permiten activar estos productos en el servidor sin cambiar el código del lado del cliente.
 
-Además, los flujos de datos están integrados con varias funciones de Platform que ayudan a garantizar que los datos confidenciales que envía se gestionen correctamente con respecto a las políticas organizativas y las regulaciones legales. Consulte la sección sobre [gestión de datos confidenciales](../edge/datastreams/overview.md#sensitive) en la documentación de flujos de datos para obtener más información.
+Además, los flujos de datos están integrados con varias funciones de Platform que ayudan a garantizar que los datos confidenciales que envía se gestionen correctamente con respecto a las políticas organizativas y las regulaciones legales. Consulte la sección sobre [gestión de datos confidenciales](../datastreams/overview.md#sensitive) en la documentación de flujos de datos para obtener más información.
 
 ![Flujos de datos y soluciones de Adobe](./images/home/adobe-solutions.png)
 

@@ -2,7 +2,7 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 6%
@@ -36,7 +36,7 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 | Modelado de datos | Esquemas de vistas | Otorga acceso de solo lectura a los esquemas. |
 | Administración de identidades | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/namespaces.md). |
 | Administración de identidades | Ver espacios de nombres de identidad | Otorga acceso de solo lectura a las áreas de nombres de identidad. |
-| Recopilación de datos | Administrar flujos de datos | Concede la capacidad de ver, crear y editar [flujos de datos](../edge/datastreams/overview.md). |
+| Recopilación de datos | Administrar flujos de datos | Concede la capacidad de ver, crear y editar [flujos de datos](../datastreams/overview.md). |
 | Recopilación de datos | Ver flujos de datos | Otorga acceso de solo lectura a las secuencias de datos. |
 
 {style="table-layout:auto"}

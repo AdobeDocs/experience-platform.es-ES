@@ -3,7 +3,7 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 8%
@@ -81,7 +81,7 @@ El **[!UICONTROL Ruta]** el valor del elemento de datos debe seguir el patrón `
 
 ### Reglas {#rules}
 
-La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [secuencia de datos](../../../edge/datastreams/overview.md) y reenvía esos eventos a destinos si se cumplen determinadas condiciones.
+La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [secuencia de datos](../../../datastreams/overview.md) y reenvía esos eventos a destinos si se cumplen determinadas condiciones.
 
 Además, se aplica un tiempo de espera de 30 segundos a un solo evento cuando se procesa en todas las reglas (y, por lo tanto, en todas las acciones) dentro de una propiedad de reenvío de eventos. Esto significa que todas las reglas y todas las acciones de un solo evento deben completarse en este lapso de tiempo.
 

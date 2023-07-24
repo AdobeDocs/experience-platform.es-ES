@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
+source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 31%
+source-wordcount: '169'
+ht-degree: 30%
 
 ---
 
@@ -27,14 +27,6 @@ ht-degree: 31%
    * [Configuración de un CSP](fundamentals/configuring-a-csp.md)
    * [Interactuar con varias propiedades](fundamentals/interacting-with-multiple-properties.md)
    * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
-* Corrientes de datos {#datastreams}
-   * [Información general](./datastreams/overview.md)
-   * [Configurar una secuencia de datos](./datastreams/configure.md)
-   * [Configurar anulaciones de secuencia de datos](./datastreams/overrides.md)
-   * [Preparación de datos para la recopilación de datos](./datastreams/data-prep.md)
-   * Enriquecimiento de datos {#data-enrichment}
-      * [Datos meteorológicos por el canal del tiempo](./datastreams/data-enrichment/weather.md)
-      * [Asignaciones de campos de datos meteorológicos](./datastreams/data-enrichment/weather-reference.md)
 * Identidad {#identity}
    * [Información general](identity/overview.md)
    * [ID de dispositivos de origen](identity/first-party-device-ids.md)

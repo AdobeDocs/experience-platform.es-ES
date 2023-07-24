@@ -3,7 +3,7 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]
 
 ![Configuración de flujo de datos](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones que se describen en la [Documentación del SDK web de Platform](../../edge/datastreams/configure.md#aep).
+Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones que se describen en la [Documentación del SDK web de Platform](../../datastreams/configure.md#aep).
 
 ### Crear un [!DNL Active-On-Edge] política de combinación {#create-merge-policy}
 

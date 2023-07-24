@@ -2,7 +2,7 @@
 title: Autenticación
 description: Obtenga información sobre cómo configurar la autenticación para la API del servidor de red perimetral de Adobe Experience Platform.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%
@@ -17,7 +17,7 @@ El [!DNL Edge Network Server API] administra la recopilación de datos autentica
 
 Para cada solicitud, la variable [!DNL Server API] verifica la secuencia de datos [!DNL access type] configuración. Con esta configuración, los clientes pueden configurar un conjunto de datos para aceptar datos autenticados o tanto datos autenticados como no autenticados. De forma predeterminada, se aceptan ambos tipos de datos.
 
-Para obtener más información sobre la configuración del tipo de acceso al flujo de datos, consulte la documentación sobre cómo [creación y configuración de una secuencia de datos](../edge/datastreams/overview.md#create).
+Para obtener más información sobre la configuración del tipo de acceso al flujo de datos, consulte la documentación sobre cómo [creación y configuración de una secuencia de datos](../datastreams/overview.md#create).
 
 A continuación se muestra un resumen del comportamiento basado en el conjunto de datos [!DNL Access Type] y el punto final en el que se recibe la solicitud.
 

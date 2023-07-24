@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;registro;sdk web;experiencia;plataforma;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Las siguientes subsecciones describen cómo habilitar el registro en el lado del
 
 ### Habilitar el registro en el lado del cliente de Analytics {#enable-analytics-client-side-logging}
 
-Para tener en cuenta el registro del lado del cliente de Analytics habilitado para la implementación, debe deshabilitar la configuración de Adobe Analytics en su [secuencia de datos](../../../datastreams/overview.md).
+Para tener en cuenta el registro del lado del cliente de Analytics habilitado para la implementación, debe deshabilitar la configuración de Adobe Analytics en su [secuencia de datos](../../../../datastreams/overview.md).
 
 ![Configuración de secuencia de datos de Analytics deshabilitada](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Todos los valores de `scopeDetails.characteristics.analyticsToken`, así como `s
 >
 >En los ejemplos de implementación que se proporcionan en la siguiente sección, se recopilan varios tokens de Analytics de forma iterativa. Para concatenar una matriz de tokens de Analytics, utilice una función similar a esta:
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

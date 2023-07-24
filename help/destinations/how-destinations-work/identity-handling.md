@@ -2,7 +2,7 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 2%
@@ -82,7 +82,7 @@ Destinos publicitarios que dependen de cookies de terceros (por ejemplo: [!DNL G
 
 Estos destinos requieren que se produzca una sincronización de ID a través de [!UICONTROL Servicio de ID de Experience Cloud] o mediante [!UICONTROL SDK web de Experience Platform].
 
-Si está utilizando [!UICONTROL SDK web de Experience Platform] y el legado [!UICONTROL Servicio de ID de Experience Cloud] no está implementado en la página, por lo que debe asegurarse de que el conjunto de datos del sitio web en cuestión esté habilitado para permitir la sincronización de ID de terceros, como se describe en la [configuración de documentación de secuencia de datos](/help/edge/datastreams/configure.md#create).
+Si está utilizando [!UICONTROL SDK web de Experience Platform] y el legado [!UICONTROL Servicio de ID de Experience Cloud] no está implementado en la página, por lo que debe asegurarse de que el conjunto de datos del sitio web en cuestión esté habilitado para permitir la sincronización de ID de terceros, como se describe en la [configuración de documentación de secuencia de datos](/help/datastreams/configure.md#create).
 
 Al configurar una secuencia de datos como se describe en la documentación vinculada anteriormente, debe asegurarse de que la variable **[!UICONTROL Sincronización de ID de terceros]** el control deslizante está activado. La mayoría de los clientes dejarían el `container_id` en blanco (el valor predeterminado es 0). Solo debe cambiar este valor si la implementación de Audience Manager heredada utiliza un ID de contenedor específico (tenga en cuenta, sin embargo, que esta sería la gran minoría de clientes).
 

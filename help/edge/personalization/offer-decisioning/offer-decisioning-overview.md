@@ -3,7 +3,7 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de Platform;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -32,28 +32,28 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
 * **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas codificadas en Base64 de JSON que contienen los ID de actividad y ubicación que desea que el servicio de offer decisioning utilice para proponer ofertas.
 
-   *Ámbito de decisión JSON:*
+  *Ámbito de decisión JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Cadena codificada en Base64 del ámbito de decisión:*
+  *Cadena codificada en Base64 del ámbito de decisión:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >Puede copiar el valor del ámbito de decisión desde el **Resumen de actividad** en la interfaz de usuario.
+  >[!TIP]
+  >
+  >Puede copiar el valor del ámbito de decisión desde el **Resumen de actividad** en la interfaz de usuario.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Flujos de datos:** Para obtener más información, lea la [flujos de datos](../../datastreams/overview.md) documentación.
+* **Flujos de datos:** Para obtener más información, lea la [flujos de datos](../../../datastreams/overview.md) documentación.
 
 * **Identidad**: Para obtener más información, lea esta documentación que describe cómo [El SDK web de Platform utiliza el servicio de identidad](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
 Para habilitar el Offer decisioning, realice los siguientes pasos:
 
-1. Se ha habilitado Adobe Experience Platform en su [secuencia de datos](../../datastreams/overview.md) y marque la casilla &quot;Offer decisioning&quot;
+1. Se ha habilitado Adobe Experience Platform en su [secuencia de datos](../../../datastreams/overview.md) y marque la casilla &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ Para habilitar el Offer decisioning, realice los siguientes pasos:
              ]
           })
          ```
+
    * Instalación del SDK mediante etiquetas
 
       1. [Creación de una propiedad de etiqueta](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ Para habilitar el Offer decisioning, realice los siguientes pasos:
 
          * Añada una acción Enviar evento del SDK web de Platform y agregue la acción correspondiente `decisionScopes` a la configuración de esa acción
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [Crear y publicar una biblioteca](../../../tags/ui/publishing/libraries.md) que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
-
-
 
 ## Solicitudes y respuestas de ejemplo
 

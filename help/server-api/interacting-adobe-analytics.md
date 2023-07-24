@@ -2,7 +2,7 @@
 title: Interactuar con Adobe Analytics
 description: Aprenda a utilizar la API del servidor de red perimetral para interactuar con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 2%
@@ -17,7 +17,7 @@ La recopilación de datos de Adobe Analytics funciona traduciendo datos XDM a un
 
 También puede [asignar valores XDM manualmente](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) a variables de Analytics heredadas.
 
-Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configuración de la secuencia de datos](../edge/datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca el ID del grupo de informes en la página de configuración del conjunto de datos.
+Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configuración de la secuencia de datos](../datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca el ID del grupo de informes en la página de configuración del conjunto de datos.
 
 ![Configuración de flujo de datos Adobe Analytics](assets/analytics-datastream.png)
 
@@ -31,7 +31,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Solicitud {#request}
 
-El ejemplo siguiente incluye varios valores asignados automáticamente del `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../edge/datastreams/data-prep.md) para asignar estos valores a un esquema que contenga los grupos de campos a los que se hace referencia anteriormente.
+El ejemplo siguiente incluye varios valores asignados automáticamente del `_experience.analytics` grupo de campos. También incluye capas de datos basadas en JSON. Aunque estas capas de datos no se pueden asignar automáticamente, es posible utilizar [Preparación de datos para la recopilación de datos](../datastreams/data-prep.md) para asignar estos valores a un esquema que contenga los grupos de campos a los que se hace referencia anteriormente.
 
 Todos los valores que los usuarios asignen a esos campos se asignarán automáticamente a los valores de Analytics adecuados, como si se incluyeran en la solicitud de API.
 

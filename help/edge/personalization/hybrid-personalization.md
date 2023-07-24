@@ -3,7 +3,7 @@ title: Personalización híbrida mediante SDK web y API de servidor de red perim
 description: Este artículo muestra cómo se puede utilizar el SDK web junto con la API de servidor para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 3%
@@ -65,7 +65,7 @@ Las solicitudes de API del servidor son necesarias para obtener propuestas y env
 
 Al implementar la personalización híbrida, debe prestar especial atención para que las visitas a la página no se cuenten varias veces en Analytics.
 
-Cuando usted [configuración de una secuencia de datos](../datastreams/overview.md) en Analytics, los eventos se reenvían automáticamente para que se capturen las visitas individuales de la página.
+Cuando usted [configuración de una secuencia de datos](../../datastreams/overview.md) en Analytics, los eventos se reenvían automáticamente para que se capturen las visitas individuales de la página.
 
 El ejemplo de esta implementación utiliza dos flujos de datos diferentes:
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sí. | El ID de la secuencia de datos que utiliza para pasar las interacciones a la red perimetral. Consulte la [información general sobre flujos de datos](../datastreams/overview.md) para aprender a configurar una secuencia de datos. |
+| `dataStreamId` | `String` | Sí. | El ID de la secuencia de datos que utiliza para pasar las interacciones a la red perimetral. Consulte la [información general sobre flujos de datos](../../datastreams/overview.md) para aprender a configurar una secuencia de datos. |
 | `requestId` | `String` | No | ID aleatorio para correlacionar solicitudes internas del servidor. Si no se proporciona ninguno, la red perimetral generará uno y lo devolverá en la respuesta. |
 
 ### Respuesta del lado del servidor {#server-response}

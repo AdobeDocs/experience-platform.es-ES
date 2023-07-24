@@ -2,7 +2,7 @@
 title: Información general de extremo a extremo de recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Seleccionar **[!UICONTROL Datastreams]** en el panel de navegación izquierdo. D
 
 ![Corrientes de datos](./images/e2e/datastreams.png)
 
-Los requisitos de configuración de un conjunto de datos dependen de los productos y las capacidades a los que esté enviando datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [información general sobre flujos de datos](../edge/datastreams/overview.md).
+Los requisitos de configuración de un conjunto de datos dependen de los productos y las capacidades a los que esté enviando datos. Para obtener información detallada sobre las opciones de configuración de cada producto, consulte la [información general sobre flujos de datos](../datastreams/overview.md).
 
 ## Instalación y configuración del SDK web {#install}
 
@@ -250,7 +250,7 @@ Para obtener información sobre cómo crear una biblioteca, añadir extensiones 
 
 Una vez creada la biblioteca y asignada su compilación a un entorno, puede instalar ese entorno en el lado del cliente del sitio web. Consulte la sección sobre [instalación de entornos](../tags/ui/publishing/environments.md#installation) para obtener más información.
 
-Una vez instalado el entorno en el sitio web, puede hacer lo siguiente [prueba de la implementación](../tags/ui/publishing/embed-code-testing.md) con Adobe Experience Platform Debugger.
+Una vez instalado el entorno en el sitio web, puede hacer lo siguiente [prueba de la implementación](../tags/ui/publishing/embed-code-testing.md) usando el Adobe Experience Platform Debugger.
 
 ## Configurar el reenvío de eventos (opcional) {#event-forwarding}
 
