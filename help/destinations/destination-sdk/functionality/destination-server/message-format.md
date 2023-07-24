@@ -1,7 +1,7 @@
 ---
 description: Esta página aborda el formato de mensaje y la transformación de perfil en datos exportados de Adobe Experience Platform a destinos.
 title: Formato del mensaje
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Para comprender el formato de mensaje y el proceso de configuración y transform
 * **Modelo de datos de experiencia (XDM)**. [Información general de XDM](../../../../xdm/home.md) y  [Cómo crear un esquema XDM en Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Clase**. [Crear y editar clases en la interfaz de usuario](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [Diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué segmentos pertenece un perfil. Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a segmento](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué audiencias pertenece un perfil. Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Para comprender los ejemplos que se muestran a continuación en la página, es i
 Los perfiles tienen 3 secciones:
 
 * `segmentMembership` (siempre presente en un perfil)
-   * esta sección contiene todos los segmentos que están presentes en el perfil. Los segmentos pueden tener uno de estos dos estados: `realized` o `exited`.
+   * esta sección contiene todas las audiencias que están presentes en el perfil. Las audiencias pueden tener uno de estos dos estados: `realized` o `exited`.
 * `identityMap` (siempre presente en un perfil)
    * esta sección contiene todas las identidades presentes en el perfil (correo electrónico, GAID de Google, IDFA de Apple, etc.) y que el usuario asignó para la exportación en el flujo de trabajo de activación.
 * atributos (según la configuración de destino, estos pueden estar presentes en el perfil). También hay una ligera diferencia entre los atributos predefinidos y los atributos de forma libre:
@@ -170,15 +170,15 @@ Consulte a continuación dos ejemplos de perfiles en Experience Platform:
 }
 ```
 
-## Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a segmentos {#using-templating}
+## Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias {#using-templating}
 
 El Adobe utiliza [Plantillas de guijarros](https://pebbletemplates.io/), un idioma de creación de plantillas similar a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar los campos del esquema XDM de Experience Platform en un formato compatible con el destino.
 
 Esta sección proporciona varios ejemplos de cómo se realizan estas transformaciones: desde el esquema XDM de entrada, pasando por la plantilla, y la salida en formatos de carga útil aceptados por el destino. Los ejemplos siguientes se presentan por el aumento de la complejidad, de la siguiente manera:
 
-1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para [Atributos de perfil](#attributes), [Abono de segmentos](#segment-membership), y [Identidad](#identities) campos.
-2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Creación de una plantilla que envíe segmentos e identidades](./message-format.md#segments-and-identities) y [Crear una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
-3. Plantillas que incluyen la clave de agregación. Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados al destino en función de criterios como el ID de segmento, el estado del segmento o las áreas de nombres de identidad.
+1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para [Atributos de perfil](#attributes), [Abono a audiencia](#segment-membership), y [Identidad](#identities) campos.
+2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Creación de una plantilla que envíe audiencias e identidades](./message-format.md#segments-and-identities) y [Crear una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
+3. Plantillas que incluyen la clave de agregación. Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados al destino en función de criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
@@ -263,10 +263,10 @@ Perfil 2:
 }
 ```
 
-### Inscripción a segmento {#segment-membership}
+### Abono a audiencia {#audience-membership}
 
-El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué segmentos pertenece un perfil.
-Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a segmento](../../../../xdm/field-groups/profile/segmentation.md).
+El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué audiencias pertenece un perfil.
+Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Entrada**
 
@@ -335,7 +335,7 @@ Perfil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Perfil 2:
 }
 ```
 
-### Creación de una plantilla que envíe segmentos e identidades {#segments-and-identities}
+### Creación de una plantilla que envíe audiencias e identidades {#segments-and-identities}
 
 Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino de socio.
-El ejemplo siguiente muestra cómo transformar el formato de pertenencia e identidades de segmentos y enviarlos a su destino.
+El ejemplo siguiente muestra cómo transformar el formato de pertenencia e identidades de la audiencia y mostrarlos en su destino.
 
 **Entrada**
 
@@ -595,7 +595,7 @@ Perfil 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ El `json` a continuación, se representan los datos exportados fuera de Adobe Ex
 
 Esta sección proporciona un ejemplo de una transformación utilizada comúnmente entre el esquema XDM de Adobe y el esquema de destino de socio.
 
-Otro caso de uso común es la exportación de datos que contienen miembros del segmento, identidades (por ejemplo: dirección de correo electrónico, número de teléfono, ID de publicidad) y atributos de perfil. Para exportar datos de esta manera, consulte el ejemplo siguiente:
+Otro caso de uso común es la exportación de datos que contienen miembros de la audiencia, identidades (por ejemplo: dirección de correo electrónico, número de teléfono, ID de publicidad) y atributos de perfil. Para exportar datos de esta manera, consulte el ejemplo siguiente:
 
 **Entrada**
 
@@ -788,7 +788,7 @@ Perfil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ El `json` a continuación, se representan los datos exportados fuera de Adobe Ex
 
 ### Incluya una clave de agregación en la plantilla para acceder a los perfiles exportados agrupados por varios criterios {#template-aggregation-key}
 
-Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino en función de criterios como ID de segmento, alias de segmento, pertenencia a segmento o áreas de nombres de identidad.
+Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino en función de criterios como ID de audiencia, alias de audiencia, pertenencia de audiencia o áreas de nombres de identidad.
 
 En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice claves de agregación para estructurar el mensaje HTTP exportado fuera del Experience Platform de modo que coincida con el formato y los límites de velocidad esperados por el destino.
 
-#### Usar clave de agregación de ID de segmento en la plantilla {#aggregation-key-segment-id}
+#### Usar clave de agregación de ID de audiencia en la plantilla {#aggregation-key-segment-id}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` Si se establece en true, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de segmento. Consulte a continuación cómo puede acceder al ID de segmento en la plantilla.
+Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` Si se establece en true, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de audiencia. Consulte a continuación cómo puede acceder al ID de audiencia en la plantilla.
 
 **Entrada**
 
 Considere los cuatro perfiles siguientes, donde:
 
-* los dos primeros forman parte del segmento con el ID de segmento `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* el tercer perfil forma parte del segmento con el ID de segmento `8f812592-3f06-416b-bd50-e7831848a31a`
-* el cuarto perfil forma parte de los dos segmentos anteriores.
+* los dos primeros forman parte de la audiencia con el ID de audiencia `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* el tercer perfil forma parte de la audiencia con el ID de audiencia `8f812592-3f06-416b-bd50-e7831848a31a`
+* el cuarto perfil forma parte de las dos audiencias anteriores.
 
 Perfil 1:
 
@@ -965,7 +965,7 @@ Perfil 4:
 >
 >Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe a continuación cómo `audienceId` se utiliza en la plantilla para acceder a los ID de segmento. En este ejemplo se supone que se utiliza `audienceId` para la pertenencia a segmentos en su taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
+Observe a continuación cómo `audienceId` se utiliza en la plantilla para acceder a los ID de audiencia. En este ejemplo se supone que se utiliza `audienceId` para la pertenencia a audiencias en la taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
 
 ```python
 {
@@ -982,7 +982,7 @@ Observe a continuación cómo `audienceId` se utiliza en la plantilla para acced
 
 **Resultado**
 
-Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su ID de segmento.
+Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su ID de audiencia.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su 
 }
 ```
 
-#### Usar clave de agregación de alias de segmento en la plantilla {#aggregation-key-segment-alias}
+#### Usar clave de agregación de alias de audiencia en la plantilla {#aggregation-key-segment-alias}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` si se establece en true, también puede acceder a los alias de segmentos en la plantilla.
+Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` si se establece en true, también puede acceder a alias de audiencia en la plantilla.
 
-Añada la línea siguiente a la plantilla para acceder a los perfiles exportados agrupados por alias de segmento.
+Añada la línea siguiente a la plantilla para acceder a los perfiles exportados agrupados por alias de audiencia.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Usar clave de agregación de estado de segmento en la plantilla {#aggregation-key-segment-status}
+#### Utilizar la clave de agregación del estado de audiencia en la plantilla {#aggregation-key-segment-status}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` y `includeSegmentStatus` si se establece en true, puede acceder al estado del segmento en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben añadirse o eliminarse de los segmentos.
+Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` y `includeSegmentStatus` si el valor es true, se puede acceder al estado de audiencia en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben añadirse o eliminarse de los segmentos.
 
 Los valores posibles son:
 
@@ -1206,10 +1206,10 @@ En la tabla siguiente se proporcionan descripciones de las funciones de los ejem
 | Función | Descripción |
 |---------|----------|
 | `input.profile` | El perfil, representado como [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
-| `destination.segmentAliases` | Mapa desde los ID de segmento en el área de nombres de Adobe Experience Platform a alias de segmento en el sistema del socio. |
-| `destination.segmentNames` | Mapa de nombres de segmento en el área de nombres de Adobe Experience Platform a nombres de segmento en el sistema del socio. |
-| `addedSegments(listOfSegments)` | Devuelve solo los segmentos que tienen estado `realized`. |
-| `removedSegments(listOfSegments)` | Devuelve solo los segmentos que tienen estado `exited`. |
+| `destination.segmentAliases` | Mapa de ID de audiencia en el área de nombres de Adobe Experience Platform a alias de audiencia en el sistema del socio. |
+| `destination.segmentNames` | Mapa de nombres de audiencia en el área de nombres de Adobe Experience Platform a nombres de audiencia en el sistema del socio. |
+| `addedSegments(listOfSegments)` | Devuelve solo las audiencias que tienen estado `realized`. |
+| `removedSegments(listOfSegments)` | Devuelve solo las audiencias que tienen estado `exited`. |
 
 {style="table-layout:auto"}
 
