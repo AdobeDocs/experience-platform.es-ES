@@ -1,23 +1,23 @@
 ---
-title: Administración de permisos para el Privacy Service
+title: Administración de permisos para Privacy Service
 description: Obtenga información sobre cómo administrar permisos de usuario para Adobe Experience Platform Privacy Service mediante Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1634'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Administración de permisos para el Privacy Service
+# Administración de permisos para Privacy Service
 
 >[!IMPORTANT]
 >
->Se han mejorado los permisos de Adobe Experience Platform Privacy Service para aumentar su nivel de granularidad. Estos cambios permiten a los administradores de la organización otorgar a más usuarios acceso con la función y el nivel de permiso deseados. Los usuarios de cuentas técnicas deben actualizar sus permisos de Privacy Service, ya que esta actualización inminente constituye un cambio radical para ellos. La aplicación de este cambio de permisos se realizará el **13 de abril de 2023**. Consulte la documentación sobre [migración de credenciales de API heredadas](#migrate-tech-accounts) para obtener instrucciones sobre cómo resolver este problema.
+>Se han mejorado los permisos de Adobe Experience Platform Privacy Service para aumentar su nivel de granularidad. Estos cambios permiten a los administradores de la organización otorgar accesos a más usuarios con la función y el nivel de permiso deseados. Los usuarios de cuentas técnicas deben actualizar sus permisos de Privacy Service, ya que esta actualización inminente constituye un cambio radical para ellos. La aplicación de este cambio de permisos se realizará el **13 de abril de 2023**. Consulte la documentación sobre [migración de credenciales de API heredadas](#migrate-tech-accounts) para obtener instrucciones sobre cómo resolver este problema.
 >
 >Las cuentas técnicas están disponibles para los clientes empresariales y se crean mediante la consola de desarrolladores de Adobe. El Adobe ID del titular de una cuenta técnica termina en `@techacct.adobe.com`. Si no está seguro de ser el titular de una cuenta técnica, póngase en contacto con el administrador de su organización.
 
-Acceso a [Adobe Experience Platform Privacy Service](./home.md) se controla mediante permisos granulares basados en funciones en Adobe Admin Console. Al crear perfiles de producto que asignan permisos a grupos de usuarios, puede determinar quién tiene acceso a qué funciones del Privacy Service [IU](./ui/overview.md) y [API](./api/overview.md).
+El acceso a [Adobe Experience Platform Privacy Service](./home.md) se controla mediante permisos granulares basados en funciones en Adobe Admin Console. Al crear perfiles de producto que asignan permisos a grupos de usuarios, puede determinar quién tiene acceso a qué funciones de la [IU](./ui/overview.md) y [API](./api/overview.md) de Privacy Service.
 
 >[!NOTE]
 >
@@ -25,27 +25,27 @@ Acceso a [Adobe Experience Platform Privacy Service](./home.md) se controla medi
 
 Esta guía muestra cómo administrar permisos para Privacy Service.
 
-## Primeros pasos
+## Introducción
 
-Para configurar el control de acceso de Privacy Service, debe tener privilegios de administrador en una organización que tenga una integración de productos con Adobe Experience Platform Privacy Service. La función mínima que puede conceder o retirar permisos es una **administrador de perfil de producto**. Otras funciones de administrador que pueden administrar permisos son **administradores de productos** (puede administrar todos los perfiles de un producto) y **administradores del sistema** (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la Guía de administración de Adobe Enterprise para obtener más información.
+Para configurar el control de acceso de Privacy Service, debe tener privilegios de administrador en una organización que tenga una integración de productos con Adobe Experience Platform Privacy Service. La función mínima que puede conceder o retirar permisos es la de **administrador de perfil de producto**. Otras funciones de administrador que pueden administrar permisos son **administradores de productos** (puede administrar todos los perfiles de un producto) y **administradores del sistema** (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la Guía de administración de Adobe Enterprise para obtener más información.
 
-En esta guía se da por hecho que está familiarizado con conceptos básicos de Admin Console, como los perfiles de producto y cómo conceden permisos de producto a usuarios y grupos individuales. Para obtener más información, consulte la [Guía del usuario del Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
+En esta guía se asume que está familiarizado con los conceptos básicos de Admin Console, como los perfiles de producto y la forma en que se conceden los permisos de producto a los usuarios y grupos individuales. Para obtener más información, consulte la [Guía del usuario de Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
 
 ## Permisos disponibles
 
-En la tabla siguiente se describen los permisos disponibles para los Privacy Service con descripciones de las funciones específicas a las que conceden acceso:
+En la tabla siguiente se detallan los permisos disponibles para Privacy Service y las descripciones de las funciones específicas a las que concede acceso.
 
 >[!NOTE]
 >
->Todos los Privacy Service y [!UICONTROL Desactivar la venta] Los permisos de son distintos y están separados entre sí sin superposición funcional. Esto es posible, ya que la API de Privacy Service se considera idempotente.
+>Todos los permisos de Privacy Service y [!UICONTROL exclusión de venta] son distintos y están separados entre sí sin superposición funcional. Esto es posible, ya que la API de Privacy Service se considera idempotente.
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de lectura de privacidad] | Determina si el usuario puede ver las solicitudes de acceso y eliminación existentes, junto con sus detalles. |
-| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de escritura de privacidad] | Determina si un usuario puede crear nuevas solicitudes de acceso y eliminación. |
-| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de lectura (acceso) de entrega de contenido] | Cuando el Privacy Service procesa una solicitud de acceso, se envía a ese cliente un archivo ZIP que contiene los datos del cliente. Al buscar los detalles de una solicitud de acceso, este permiso determina si el usuario puede acceder al vínculo de descarga del archivo ZIP de la solicitud. |
-| [!UICONTROL Permisos de exclusión de venta] | [!UICONTROL Permiso de lectura: Desactivar la venta] | Determina si el usuario puede ver las solicitudes de exclusión de la venta existentes, junto con sus detalles. |
-| [!UICONTROL Permisos de exclusión de venta] | [!UICONTROL Permiso de escritura: exclusión de la venta] | Determina si un usuario puede crear nuevas solicitudes de exclusión de la venta. |
+| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de lectura de Privacy] | Determina si el usuario puede ver las solicitudes de acceso y de eliminación existentes, junto con los detalles. |
+| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de escritura de Privacy] | Determina si un usuario puede crear solicitudes de acceso y eliminación nuevas. |
+| [!UICONTROL Permisos de Privacy Service] | [!UICONTROL Permiso de lectura (acceso) de entrega de contenido] | Cuando Privacy Service procesa una solicitud de acceso, se envía al cliente que lo solicite un archivo ZIP que contiene sus datos. Cuando se buscan los detalles de una solicitud de acceso, este permiso determina si el usuario puede acceder al vínculo de descarga del archivo ZIP solicitado. |
+| [!UICONTROL Permisos de exclusión de venta] | [!UICONTROL Permiso de lectura para exclusión de venta] | Determina si el usuario puede ver las solicitudes de exclusión de la venta existentes, junto con sus detalles. |
+| [!UICONTROL Permisos de exclusión de venta] | [!UICONTROL Permiso de escritura para exclusión de venta] | Determina si un usuario puede crear nuevas solicitudes de exclusión de venta. |
 
 {style="table-layout:auto"}
 
@@ -61,21 +61,21 @@ La siguiente pantalla muestra una lista de perfiles de producto disponibles para
 
 ![Imagen que muestra los perfiles de producto del Privacy Service en Admin Console](./images/permissions/select-or-create-profile.png)
 
-Después de seleccionar un perfil de producto, puede usar el **[!UICONTROL Permisos]** pestaña para iniciar [editar permisos](#edit-permissions) para el perfil o seleccione la opción **[!UICONTROL Usuarios]** pestaña para iniciar [asignación de usuarios](#assign-users) al perfil.
+Después de seleccionar un perfil de producto, puede usar la pestaña **[!UICONTROL Permisos]** para iniciar [editar permisos](#edit-permissions) para el perfil o seleccionar la pestaña **[!UICONTROL Usuarios]** para iniciar la [asignación de usuarios](#assign-users) al perfil.
 
 ![Imagen que muestra la pestaña de permisos de un Admin Console de perfil de producto](./images/permissions/users-permissions-tabs.png)
 
 ### Edición de permisos para el perfil {#edit-permissions}
 
-En el **[!UICONTROL Permisos]** , seleccione cualquiera de las categorías de permisos mostradas para acceder a la vista de edición de permisos.
+En la pestaña **[!UICONTROL Permisos]**, seleccione cualquiera de las categorías de permisos mostradas para acceder a la vista de edición de permisos.
 
-Al editar permisos para un perfil, los permisos disponibles se enumeran en la columna izquierda, mientras que los que se incluyen en el perfil se enumeran en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
+Al editar permisos para un perfil, los permisos disponibles se incluyen en la columna izquierda, mientras que los que se incluyen en el perfil se incluyen en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
 
-![Imagen que muestra las columnas de permisos disponibles e incluidas](./images/permissions/edit-permissions.png)
+![Imagen que muestra las columnas de permisos disponibles incluidas](./images/permissions/edit-permissions.png)
 
-Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la categoría que desee en el panel de navegación izquierdo.
+Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la que desee en el panel de navegación izquierdo.
 
-![Imagen que muestra el [!UICONTROL Desactivar la venta] sección en permisos](./images/permissions/switch-category.png)
+![Imagen que muestra la sección [!UICONTROL Exclusión de venta] en permisos](./images/permissions/switch-category.png)
 
 Seleccionar **[!UICONTROL Guardar]** una vez que haya terminado de configurar los permisos.
 
@@ -87,59 +87,59 @@ La vista de perfil de producto vuelve a aparecer con los permisos añadidos refl
 
 ### Asignación de usuarios al perfil {#assign-users}
 
-Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione **[!UICONTROL Usuarios]** pestaña, seguido de **[!UICONTROL Agregar usuario]**.
+Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione la pestaña **[!UICONTROL Usuarios]**, y a continuación **[!UICONTROL Agregar usuario]**.
 
 ![Imagen que muestra la pestaña de usuarios de un perfil de producto en Admin Console](./images/permissions/manage-users.png)
 
-Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación del Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
+Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación de Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
 
-### Migración de credenciales de API heredadas al perfil {#migrate-tech-accounts}
+### Migración de credenciales de la API heredadas al perfil {#migrate-tech-accounts}
 
 >[!NOTE]
 >
 >Esta sección solo se aplica a las credenciales de API existentes que se crearon antes de que los permisos de Privacy Service se integraran en Adobe Admin Console. Para las nuevas credenciales, los perfiles de producto (y sus permisos) se asignan mediante [Proyectos de la consola Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/projects/) en su lugar.<br><br>Consulte la sección sobre [asignación de perfiles de producto a un proyecto](./api/getting-started.md#product-profiles) en la Guía de introducción a la API de Privacy Service para obtener más información.
 
-Anteriormente, las cuentas técnicas no requerían un perfil de producto para la integración y los permisos. Sin embargo, debido a las recientes mejoras en los permisos de Privacy Service, ahora es necesario migrar las credenciales de API heredadas al perfil del producto. Esta actualización permite conceder permisos granulares a los titulares de cuentas técnicas. Siga los pasos proporcionados a continuación para actualizar los permisos técnicos de la cuenta para Privacy Service.
+Anteriormente, las cuentas técnicas no requerían un perfil de producto para la integración y los permisos. Sin embargo, debido a las recientes mejoras en los permisos de Privacy Service, ahora es necesario migrar las credenciales de API heredadas al perfil del producto. Esta actualización permite conceder permisos granulares a los titulares de cuentas técnicas. Siga los pasos proporcionados a continuación para actualizar los permisos de cuenta técnica para Privacy Service.
 
 #### Actualizar permisos de cuenta técnica {#update-tech-account-permissions}
 
-El primer paso para asignar un conjunto de permisos a la cuenta técnica es ir a [Adobe Admin Console](https://adminconsole.adobe.com/) y cree un nuevo perfil de producto para Privacy Service.
+El primer paso para asignar un conjunto de permisos a la cuenta técnica es ir a [Adobe Admin Console](https://adminconsole.adobe.com/) y crear un nuevo perfil de producto para Privacy Service.
 
-En la interfaz de usuario del Admin Console, seleccione **Productos** en la barra de navegación, seguido de **[!UICONTROL Experience Cloud]** y **[!UICONTROL Adobe Experience Platform Privacy Service]** en la barra lateral izquierda. El [!UICONTROL Perfiles de producto] aparece la pestaña. Seleccionar **Nuevo perfil** para crear un nuevo perfil de producto para Privacy Service.
+En la interfaz de usuario del Admin Console, seleccione **Productos** en la barra de navegación, seguido de **[!UICONTROL Experience Cloud]** y **[!UICONTROL Adobe Experience Platform Privacy Service]** en la barra lateral izquierda. Aparece la pestaña [!UICONTROL Perfiles de producto]. Seleccionar **Nuevo perfil** para crear un perfil de producto nuevo para Privacy Service.
 
-![La pestaña Perfiles de producto del Privacy Service Experience Platform de Adobe Admin Console con el nuevo perfil resaltado.](./images/permissions/create-product-profile.png)
+![La pestaña Perfiles de producto de Privacy Service Experience Platform de Adobe Admin Console con el nuevo perfil resaltado.](./images/permissions/create-product-profile.png)
 
-El [!UICONTROL Crear un nuevo perfil de producto] aparece el cuadro de diálogo. Puede encontrar instrucciones completas sobre cómo crear un perfil de producto en la [Guía de IU para crear perfiles](../access-control/ui/create-profile.md).
+Aparece el cuadro de diálogo [!UICONTROL Crear un nuevo perfil de producto]. Puede encontrar instrucciones completas sobre cómo crear un perfil de producto en la [Guía de IU para crear perfiles](../access-control/ui/create-profile.md).
 
-Una vez guardado el nuevo perfil de producto, vaya a [Consola de Adobe Developer](https://developer.adobe.com/console/home) e inicie sesión en ese producto o proyecto. Seleccionar **[!UICONTROL Proyectos]** desde la barra de navegación superior, seguida de la tarjeta del proyecto.
+Una vez guardado el nuevo perfil de producto, vaya a [Adobe Developer Console](https://developer.adobe.com/console/home) e inicie sesión en ese producto o proyecto. Seleccione **[!UICONTROL Proyectos]** desde la barra de navegación superior, seguida de la tarjeta del proyecto.
 
 >[!NOTE]
 >
 >Es posible que tenga que borrar la caché o esperar un poco para que el nuevo proyecto aparezca en la lista de proyectos de Developer Console.
 
-Después de iniciar sesión en el proyecto, seleccione la **[!UICONTROL API de Privacy Service]** desde la barra lateral izquierda.
+Después de iniciar sesión en el proyecto, seleccione la integración **[!UICONTROL API de Privacy Service]** desde la barra lateral izquierda.
 
-![La pestaña Proyectos de la consola de Adobe Developer con Proyectos y API de Privacy Service resaltados.](./images/permissions/login-to-dev-console-project.png)
+![La pestaña Proyectos de Adobe Developer Console con Proyectos y API de Privacy Service resaltados.](./images/permissions/login-to-dev-console-project.png)
 
-Aparecerá el panel Integración de API de Privacy Service. Desde este panel, puede editar el perfil de producto asociado a ese proyecto. Seleccionar **[!UICONTROL Edición de perfiles de producto]** para comenzar el proceso. El [!UICONTROL Configurar API] aparece el cuadro de diálogo.
+Aparecerá el panel Integración de API de Privacy Service. Desde este panel, puede editar el perfil de producto asociado a ese proyecto. Seleccione **[!UICONTROL Editar perfiles de producto]** para comenzar el proceso. Aparece el cuadro de diálogo [!UICONTROL Configurar API].
 
-![Panel de integración de la API de Privacy Service en la consola de Adobe Developer con Editar perfiles de producto resaltado](./images/permissions/edit-product-profiles.png)
+![Panel de integración de la API de Privacy Service en Adobe Developer Console con Editar perfiles de producto resaltado](./images/permissions/edit-product-profiles.png)
 
-El [!UICONTROL Configurar API] Este cuadro de diálogo muestra los perfiles de producto disponibles actualmente en el servicio. Se correlacionan con los perfiles de producto creados en Admin Console. En la lista de perfiles de producto disponibles, active la casilla de verificación del nuevo perfil de producto que creó para la cuenta técnica en Admin Console. Esto asocia automáticamente esta cuenta técnica con los permisos en el perfil de producto seleccionado. Seleccionar **[!UICONTROL Guardar API configurada]** para confirmar la configuración.
+El cuadro de diálogo [!UICONTROL Configurar API] muestra los perfiles de producto disponibles actualmente en el servicio. Se correlacionan con los perfiles de producto creados en Admin Console. En la lista de perfiles de producto disponibles, active la casilla de verificación del nuevo perfil de producto que creó para la cuenta técnica en Admin Console. Esto asocia automáticamente esta cuenta técnica con los permisos en el perfil de producto seleccionado. Seleccione **[!UICONTROL Guardar API configurada]** para confirmar la configuración.
 
 >[!NOTE]
 >
 >Si una cuenta técnica ya está asociada a un perfil de producto, una de las casillas de verificación de la lista de perfiles de producto disponibles ya estará seleccionada.
 
-![La casilla de verificación Configurar API en la consola de Adobe Developer con un perfil de producto y Guardar API configurada están resaltadas.](./images/permissions/select-profile-for-tech-account.png)
+![El cuadro de diálogo Configurar API en Adobe Developer Console con la casilla de verificación Perfil de producto y Guardar API configurada resaltada.](./images/permissions/select-profile-for-tech-account.png)
 
-#### Confirme que se ha aplicado la configuración. {#confirm-applied-settings}
+#### Confirme que se ha aplicado la configuración {#confirm-applied-settings}
 
-Para confirmar que la configuración se ha aplicado a la cuenta. Vuelva a la [Admin Console](https://adminconsole.adobe.com/) y vaya al perfil de producto recién creado. Seleccione el **[!UICONTROL Credenciales de API]** para ver una lista de los proyectos asociados. El proyecto utilizado en Developer Console donde asignó el perfil de producto a la cuenta técnica se muestra en la lista de credenciales. El nombre de cada credencial de la API está compuesto por el nombre del proyecto con un número generado aleatoriamente con el sufijo al final. Seleccione una credencial para abrir [!UICONTROL Detalles] panel.
+Para confirmar que la configuración se ha aplicado a la cuenta. Vuelva a la [Admin Console](https://adminconsole.adobe.com/) y vaya al perfil de producto recién creado. Seleccione la pestaña **[!UICONTROL Credenciales de API]** para ver una lista de los proyectos asociados. El proyecto utilizado en Developer Console donde asignó el perfil de producto a la cuenta técnica se muestra en la lista de credenciales. El nombre de cada credencial de la API está compuesto por el nombre del proyecto con un número generado aleatoriamente con el sufijo al final. Seleccione una credencial para abrir el panel [!UICONTROL Detalles].
 
-![Un perfil de producto en el Admin Console con la pestaña Credenciales de API y una fila de credenciales de proyecto resaltadas.](./images/permissions/confirm-credentials-in-admin-console.png)
+![Un perfil de producto en el Admin Console con la pestaña credenciales de API y una fila de credenciales de proyecto resaltadas.](./images/permissions/confirm-credentials-in-admin-console.png)
 
-El [!UICONTROL Detalles] El panel contiene información sobre la credencial de la API, incluido el ID técnico asociado, la clave de la API, la fecha de creación y la última modificación, así como los productos de Adobe asociados.
+El panel [!UICONTROL Detalles] contiene información sobre la credencial de la API, incluido el ID técnico asociado, la clave de la API, la fecha de creación y la última modificación, así como los productos de Adobe asociados.
 
 ![El panel de detalles resaltado de una credencial de API dentro de Admin Console.](./images/permissions/admin-console-details-panel.png)
 
