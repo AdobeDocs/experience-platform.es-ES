@@ -4,9 +4,9 @@ user-guide-title: Servicio de ID de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
-source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
+source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '119'
 ht-degree: 30%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 30%
 - [Introducción al servicio de identidad](home.md)
 - [Información general de área de nombres de identidad](namespaces.md)
 - [Protecciones para datos de identidad](guardrails.md)
+- [Protecciones para datos de identidad con lógica de eliminación](guardrails-beta.md)
 - API del servicio de identidad {#api}
    - [Primeros pasos](api/getting-started.md)
    - [Etiquetado de un campo como identidad](api/label-identities.md)
