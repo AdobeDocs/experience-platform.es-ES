@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Introducción
-description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de libros de reproducción de casos de uso.
+description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '315'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
@@ -15,19 +15,19 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
 
 ## Creación de una zona protegida de desarrollo {#create-development-sandbox}
 
-Para empezar y obtener acceso a la [[!UICONTROL Manuales de casos de uso]](/help/use-case-playbooks/playbooks/overview.md) funcionalidad, [crear una nueva zona protegida de desarrollo](/help/sandboxes/ui/user-guide.md#create) (asegúrese de no seleccionar una zona protegida de producción) con el nombre (no el título) que contiene `-ucp` o `-UCP` en el sufijo, como se muestra a continuación.
+Para empezar y obtener acceso a la funcionalidad [[!UICONTROL Manuales de tácticas de casos de uso]](/help/use-case-playbooks/playbooks/overview.md), [cree una nueva zona protegida de desarrollo](/help/sandboxes/ui/user-guide.md#create) (asegúrese de no seleccionar una zona protegida de producción) con el nombre (no el título) que contiene `-ucp` o `-UCP` en el sufijo, como se muestra a continuación.
 
-![Creación de una zona protegida de desarrollo para libros de reproducción de casos de uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
+![Creación de una zona protegida de desarrollo para manuales de tácticas de casos de uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-Ahora debería ver [!UICONTROL Manuales] en el carril izquierdo debajo de [!UICONTROL Manuales de casos de uso] o en [!UICONTROL Área de marketing].
+Ahora debería ver [!UICONTROL Manuales de tácticas] en el carril izquierdo debajo de [!UICONTROL Manuales de tácticas de casos de uso] o en [!UICONTROL Área de experto en marketing].
 
-![Libros de casos de uso en la IU después de crear una zona protegida.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
+![Manuales de tácticas de casos de uso en la IU después de crear una zona protegida.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
-Si no ve [!UICONTROL Manuales] en el carril izquierdo, como se muestra arriba, utilice este vínculo `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` para ir directamente allí. En el vínculo, `<YOUR_ORG>` es el nombre de su organización y `<YOUR_SANDBOX_NAME>` es el nombre de la zona protegida de desarrollo que ha creado.
+Si no ve [!UICONTROL Manuales de tácticas] en el carril izquierdo, como se muestra arriba, utilice este vínculo `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` para ir directamente allí. En el vínculo, `<YOUR_ORG>` es el nombre de su organización y `<YOUR_SANDBOX_NAME>` es el nombre de la zona protegida de desarrollo que ha creado.
 
 ### Configuración de zona protegida para usuarios de Adobe Journey Optimizer {#sandbox-configuration-journey-optimizer}
 
@@ -35,11 +35,11 @@ Si su organización tiene licencia para [Adobe Journey Optimizer](https://experi
 
 ## Conceda a su equipo los permisos de acceso necesarios {#grant-access-permissions}
 
-Para empezar con [!UICONTROL Manuales de casos de uso]Sin embargo, los miembros de su equipo de operaciones de marketing necesitan los permisos adecuados. Puede conceder permisos de este modo a su equipo:
+Para empezar con [!UICONTROL Manuales de tácticas de casos de uso], los miembros de su equipo de operaciones de marketing necesitan los permisos adecuados. Puede conceder permisos a su equipo de este modo:
 
-* Los miembros del equipo de operaciones de marketing que solo deseen examinar los libros de reproducción pueden obtener **leer** permiso.
-* Los miembros del equipo de operaciones de marketing que deseen crear instancias a partir de libros de reproducción pueden obtener lo siguiente **leer y escribir** permisos.
+* Los integrantes del equipo de operaciones de marketing que solo deseen examinar los manuales de tácticas pueden obtener permiso de **lectura**.
+* Los integrantes del equipo de operaciones de marketing que deseen crear instancias a partir de manuales de tácticas pueden obtener los siguientes permisos de **lectura y escritura**.
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ya sabe cómo empezar a usar [!UICONTROL Manuales de casos de uso]. A continuación, lea cómo [descubra el manual adecuado](/help/use-case-playbooks/playbooks/discover.md) para ti y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Después de leer este documento, ya sabe cómo empezar a usar los [!UICONTROL Manuales de tácticas de casos de uso]. A continuación, lea cómo [descubrir el manual de tácticas adecuado](/help/use-case-playbooks/playbooks/discover.md) para usted y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).
