@@ -1,9 +1,8 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '296'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 # Contribución
@@ -20,7 +19,7 @@ Informe de cualquier comportamiento inaceptable en la dirección [Grp-opensource
 
 ## Documentación de la Guía del colaborador
 
-Consulte la [Guía del colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Consulte la [Guía del colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es).
 
 ## ¿Tiene alguna pregunta?
 
@@ -36,7 +35,7 @@ Un usuario necesita enviar un único acuerdo de colaboración de Adobe, por lo q
 
 ## Revisiones de código
 
-Todas las solicitudes deben llegar en forma de solicitudes “pull” y el comité de proyectos deberá revisarlas. Consulte la [documentación de las solicitudes “pull”](https://help.github.com/es/github/collaborating-with-issues-and-pull-requests/about-pull-requests) para obtener más información sobre cómo enviar solicitudes “pull”.
+Todas las solicitudes deben llegar en forma de solicitudes “pull” y el comité de proyectos deberá revisarlas. Consulte la [documentación de las solicitudes “pull”](https://help.github.com/es/articles/about-pull-requests/) para obtener más información sobre cómo enviar solicitudes “pull”.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
