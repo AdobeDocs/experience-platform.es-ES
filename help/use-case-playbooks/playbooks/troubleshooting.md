@@ -4,9 +4,9 @@ title: Solución de problemas con libros de reproducción
 description: Conozca los problemas comunes con los libros de reproducción y cómo solucionarlos
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '121'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
 
-Para la versión beta de [!UICONTROL Manuales de casos de uso], tenga en cuenta las sugerencias de solución de problemas y las limitaciones conocidas.
+Para la versión Beta de [!UICONTROL Manuales de casos de uso], tenga en cuenta las sugerencias de solución de problemas y las limitaciones conocidas.
 
 ## Limitaciones conocidas {#known-limitations}
 
-Al crear una nueva instancia de un manual, se generan nuevos recursos. Sin embargo, para los esquemas generados, si se genera un esquema en una instancia de un libro de reproducción y lo edita, otro esquema *no* se generan si habilita otra instancia del manual de implementación. En su lugar, también seguirá utilizando el esquema editado en la nueva instancia.
+Al crear una nueva instancia de un manual de tácticas, se generan nuevos recursos. Sin embargo, para los esquemas generados, si se genera un esquema en una instancia de un manual de tácticas y lo edita, otro esquema *no* se generará si habilita otra instancia del manual de tácticas. En su lugar, también seguirá utilizando el esquema editado en la nueva instancia.
 
 
 
