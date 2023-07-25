@@ -4,7 +4,7 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3393'
 ht-degree: 10%
@@ -339,7 +339,7 @@ Seleccionar **[!UICONTROL Cerrar]** para volver a la [!UICONTROL Perfiles] panel
 
 ### [!UICONTROL Audiencias asignadas al estado de destino] {#audiences-mapped-to-destination-status}
 
-El [!UICONTROL Audiencias asignadas al estado de destino] widget muestra el número total de audiencias asignadas y no asignadas en una sola métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre sus totales. Los números calculados dependen de la política de combinación elegida.
+El [!UICONTROL Audiencias asignadas al estado de destino] widget muestra el número total de audiencias asignadas y no asignadas en una sola métrica y utiliza un gráfico de anillo para ilustrar la diferencia proporcional entre sus totales. Los números calculados dependen de la política de combinación elegida.
 
 Los recuentos individuales de audiencias asignadas o no asignadas se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
