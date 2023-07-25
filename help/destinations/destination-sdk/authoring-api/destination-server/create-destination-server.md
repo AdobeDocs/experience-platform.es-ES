@@ -1,9 +1,9 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para crear un servidor de destino a través del Adobe Experience Platform Destination SDK.
 title: Crear una configuración de servidor de destino
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1696'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,11 @@ Puede crear una nueva configuración de servidor de destino realizando una `POST
 POST /authoring/destination-servers
 ```
 
-Según el tipo de destino que cree, debe configurar un tipo ligeramente diferente de servidor de destino. Consulte en las pestañas siguientes ejemplos de servidores de destino para todos los tipos de destino admitidos en Destination SDK.
+Según el tipo de destino que cree, debe configurar un tipo ligeramente diferente de servidor de destino.
+
+### Crear servidores de destino de esquema estático {#static-destination-servers}
+
+Consulte en las pestañas siguientes ejemplos de servidores de destino para destinos que utilizan [esquemas estáticos](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 Las siguientes cargas útiles de ejemplo incluyen todos los parámetros admitidos por cada tipo de servidor de destino. No es necesario incluir todos los parámetros en la solicitud. La carga útil se puede personalizar según sus necesidades.
 
@@ -770,6 +774,18 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 +++
 
+>[!ENDTABS]
+
+### Crear servidores de destino de esquema dinámico {#dynamic-schema-servers}
+
+Los esquemas dinámicos le permiten recuperar dinámicamente los atributos de destino admitidos y generar esquemas basados en su propia API. Debe configurar un servidor de destino para esquemas dinámicos antes de poder configurar el esquema.
+
+Consulte en la pestaña siguiente un ejemplo de un servidor de destino para destinos que utilizan [esquemas dinámicos](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+La carga útil de ejemplo siguiente incluye todos los parámetros necesarios para un servidor de esquema dinámico.
+
+>[!BEGINTABS]
+
 >[!TAB Servidor de esquema dinámico]
 
 **Creación de un servidor de esquema dinámico**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configuración del servidor de destino recién creada.
 
 +++
+
 
 >[!ENDTABS]
 
