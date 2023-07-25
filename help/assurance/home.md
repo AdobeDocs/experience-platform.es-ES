@@ -3,9 +3,9 @@ title: Información general sobre Adobe Experience Platform Assurance
 description: Adobe Experience Platform Assurance le permite inspeccionar, comprobar, simular y validar cómo recopila datos o sirve experiencias en sus aplicaciones móviles.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '824'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -15,35 +15,35 @@ Adobe Experience Platform Assurance es un producto de [Adobe Experience Cloud](h
 
 >[!IMPORTANT]
 >
-> El proyecto Griffon ahora se conoce como **Assurance**!
+> El proyecto Griffon ahora se conoce como **Assurance**.
 >
-> Project Griffon ya está disponible para **todo** Clientes de Adobe Experience Cloud como Assurance. Para obtener más información sobre esta transición, lea la [guía de acceso del usuario](./user-access.md).
+> El proyecto Griffon ya está disponible para **todos** los clientes de Adobe Experience Cloud como Assurance. Para obtener más información sobre esta transición, lea la [guía de acceso del usuario](./user-access.md).
 
 >[!INFO]
 >
 >Las API públicas de Assurance están disponibles.
 >
->[Las API de Assurance](https://developer.adobe.com/adobe-assurance-public-apis/) son una colección de API que permiten a los usuarios probar y depurar sus aplicaciones web y móviles, cuando se equipan con el SDK móvil de Adobe Assurance.
+>[Las API de Assurance](https://developer.adobe.com/adobe-assurance-public-apis/) son una colección que permite a los usuarios probar y depurar sus aplicaciones web y móviles, cuando se equipan con el SDK móvil de Adobe Assurance.
 
 ## Disponibilidad general
 
-A partir del 15 de octubre de 2022, Assurance estará disponible para todos los Adobe Experience Cloud.
+A partir del 15 de octubre de 2022, Assurance estará disponible para Adobe Experience Cloud.
 
 ### ¿Qué está cambiando?
 
-El 15 de octubre: el acceso a Assurance se gestionará a través de Admin Console. Lea el [guía de acceso del usuario](./user-access.md) para garantizar que sigue teniendo acceso ininterrumpido.
+El 15 de octubre: el acceso a Assurance se gestionará a través de Admin Console. Lea la [guía de acceso del usuario](./user-access.md) para garantizar que siga teniendo acceso ininterrumpido.
 
-No se esperan otros cambios o interrupciones en las integraciones, sesiones y eventos de Assurance existentes. Se puede seguir accediendo a Assurance a través de [https://griffon.adobe.com](https://griffon.adobe.com) **o** puede utilizar (y marcador) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
+No se esperan otros cambios o interrupciones en las integraciones, sesiones y eventos de Assurance existentes. Se puede seguir accediendo a Assurance a través de [https://griffon.adobe.com](https://griffon.adobe.com) **o** puede utilizar (y añadir como marcador) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
 
 ## ¿Qué puede hacer Assurance por usted?
 
 ### Configuración rápida
 
-Empiece rápidamente con unas pocas líneas de código. En el caso de las aplicaciones móviles, Assurance funciona con el SDK móvil de Adobe Experience Platform para ayudarle a inspeccionar, simular y validar eventos de aplicaciones, señales de ubicación, parámetros de configuración, registros de SDK, información de dispositivos y mucho más.
+Empiece con unas pocas líneas de código. En el caso de las aplicaciones móviles, Assurance funciona con el SDK móvil de Adobe Experience Platform para ayudarle a inspeccionar, simular y validar eventos de aplicaciones, señales de ubicación, parámetros de configuración, registros de SDK, información de dispositivos y mucho más.
 
 ### Conexión sin complicaciones
 
-Con Assurance, la conexión de la aplicación con Platform es sencilla y fiable. No es necesario que utilice proxies de red, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)), y otras gimnasias de red: conectar la aplicación a Assurance es tan fácil como escanear un código QR o pulsar un botón.
+Con Assurance, la conexión de la aplicación con Platform es sencilla y fiable. No es necesario que utilice proxies de red ([MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) u otras gimnasias de red: conectar la aplicación a Assurance es tan fácil como escanear un código QR o pulsar un botón.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,9 +67,9 @@ Assurance le ayuda a inspeccionar los eventos de SDK sin procesar generados por 
 
 ### Adobe Analytics
 
-La vista Adobe Analytics > Eventos de Analytics es una vista centrada que muestra eventos relacionados con la implementación de Adobe Analytics Mobile. La vista de lista muestra los eventos de ciclo vital o acción/estado, el &quot;estado&quot; posterior al procesamiento, junto con los detalles de evento necesarios en una vista con formato especial. El estado Posterior al procesamiento muestra cómo Adobe Analytics ha procesado el evento después de aplicar las reglas de procesamiento al evento.
+La vista Adobe Analytics > Eventos de Analytics es una vista centrada que muestra eventos relacionados con la implementación de Adobe Analytics Mobile. La vista de lista muestra los eventos de ciclo vital o acción/estado, el “estado” posterior al procesamiento, junto con los detalles de evento necesarios en una vista con formato especial. El estado Posterior al procesamiento muestra cómo Adobe Analytics ha procesado el evento después de aplicar las reglas de procesamiento al evento.
 
-### Adobe Analytics para medios de transmisión
+### Adobe Analytics para medios de streaming
 
 La vista Adobe Analytics > Eventos de Media Analytics muestra eventos para la implementación de análisis de audio y vídeo. La vista de detalles de eventos muestra metadatos estándar y personalizados que se rastrean en cada sesión de reproducción. Además, puede ver el estado posprocesado y los datos de análisis de medios posprocesados, como el tiempo invertido en medios o la duración total del búfer.
 
@@ -81,14 +81,14 @@ La vista Servicios de ubicación es una vista en el dispositivo que muestra los 
 
 Assurance dispone de las siguientes medidas de seguridad:
 
-* Tanto Assurance como la interfaz de usuario web Assurance tienen un protocolo de enlace seguro basado en PIN para una conexión. El usuario debe crear explícitamente un protocolo de enlace, que evita que un usuario final cree conexiones de Assurance &quot;accidentales&quot;.
+* Tanto Assurance como la interfaz de usuario web de Assurance tienen un protocolo de enlace seguro basado en PIN para la conexión. El usuario debe crear explícitamente un protocolo de enlace, que evita que un usuario final cree conexiones de Assurance “accidentales”.
 * Solo se admiten conexiones entre Assurance y la IU web de Assurance que pertenezcan al mismo ID de organización de Adobe Experience Cloud.
 * Los eventos del SDK de Adobe Experience Platform Mobile se transportan a través de HTTPS.
 * Los SDK de Assurance y Adobe Experience Platform Mobile utilizan TLS 1.2
 * Las sesiones de Assurance se eliminan a los 30 días.
 * Los datos de la sesión de Assurance se cifran en reposo, según las prácticas recomendadas de almacenamiento.
 
-## Primeros pasos
+## Introducción
 
 Para configurar Assurance, primero debe instalar la extensión de Assurance en la aplicación. Para aprender a hacer esto, lea el tutorial sobre [implementación de la extensión Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
