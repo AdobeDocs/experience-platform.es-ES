@@ -1,7 +1,7 @@
 ---
 description: Obtenga información sobre cómo dar formato a una llamada de API para enviar una solicitud de publicación de destino a través del Adobe Experience Platform Destination SDK.
 title: Crear una solicitud de publicación de destino
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -69,9 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++Respuesta
 
 Una respuesta correcta devuelve el estado HTTP 201 con detalles de la solicitud de publicación de destino.
+
++++
 
 ## Administración de errores de API
 
