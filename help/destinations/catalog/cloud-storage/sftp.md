@@ -2,10 +2,10 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## Registro de cambios de destino {#changelog}
 
->[!IMPORTANT]
->
->Con la versión beta de la funcionalidad exportar conjuntos de datos y la funcionalidad mejorada de exportación de archivos, es posible que ahora vea dos [!DNL SFTP] tarjetas en el catálogo de destinos.
->* Si ya está exportando archivos a **[!UICONTROL SFTP]** destino: cree nuevos flujos de datos para el nuevo **[!UICONTROL SFTP beta]** destino.
->* Si todavía no ha creado ningún flujo de datos en **[!UICONTROL SFTP]** destino, utilice el nuevo **[!UICONTROL SFTP beta]** para exportar archivos a **[!UICONTROL SFTP]**.
+Con la versión del Experience Platform de julio de 2023, el destino SFTP proporciona nuevas funciones, como se indica a continuación:
 
-![Imagen de las dos tarjetas de destino SFTP en una vista en paralelo.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Mejoras en el nuevo [!DNL SFTP] la tarjeta de destino incluye:
-
-* [Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
 * Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través de [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidad para personalizar el formato de archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -122,9 +114,9 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
 * **[!UICONTROL Nombre]**: introduzca un nombre que le ayude a identificar este destino en la interfaz de usuario del Experience Platform;
 * **[!UICONTROL Descripción]**: introduzca una descripción para este destino;
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta en la ubicación SFTP donde se exportarán los archivos.
-* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino.
-* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Esta opción solo está disponible para **[!UICONTROL SFTP beta]** destino.
+* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados.
+* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc.
 
 ## Activar audiencias en este destino {#activate}
 

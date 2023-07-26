@@ -2,10 +2,10 @@
 title: Conexión de Azure Blob
 description: Cree una conexión saliente activa al almacenamiento del blob de Azure para exportar periódicamente archivos de datos CSV de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 3%
+source-wordcount: '973'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## Registro de cambios de destino {#changelog}
 
->[!IMPORTANT]
->
->Con la versión beta de la funcionalidad exportar conjuntos de datos y la funcionalidad mejorada de exportación de archivos, es posible que ahora vea dos [!DNL Azure Blob] tarjetas en el catálogo de destinos.
->* Si ya está exportando archivos a **[!UICONTROL Azure Blob]** destino: cree nuevos flujos de datos para el nuevo **[!UICONTROL Azure Blob beta]** destino.
->* Si todavía no ha creado ningún flujo de datos en **[!UICONTROL Azure Blob]** destino, utilice el nuevo **[!UICONTROL Azure Blob beta]** para exportar archivos a **[!UICONTROL Azure Blob]**.
+Con la versión de julio de 2023 de Experience Platform, la variable [!DNL Azure Blob] El destino proporciona nuevas funciones, como se indica a continuación:
 
-![Imagen de las dos tarjetas de destino de Azure Blob en una vista en paralelo.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-Mejoras en el nuevo [!DNL Azure Blob] la tarjeta de destino incluye:
-
-* [Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
 * Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través de [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidad para personalizar el formato de archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -37,7 +29,7 @@ Mejoras en el nuevo [!DNL Azure Blob] la tarjeta de destino incluye:
 * Para conectarse a su [!UICONTROL Azure Blob] Ubicación de almacenamiento mediante la interfaz de usuario de Platform, lea las secciones [Conectar con el destino](#connect) y [Activar audiencias en este destino](#activate) más abajo.
 * Para conectarse a su [!UICONTROL Azure Blob] ubicación de almacenamiento mediante programación, lea el [Activación de audiencias en destinos basados en archivos mediante el tutorial de la API de Flow Service](../../api/activate-segments-file-based-destinations.md).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -110,9 +102,9 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Descripción]**: introduzca una descripción para este destino.
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
 * **[!UICONTROL Contenedor]**: introduzca el nombre del [!DNL Azure Blob Storage] contenedor que utilizará este destino.
-* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL Azure Blob beta]** destino. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL Azure Blob beta]** destino.
-* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Esta opción solo está disponible para **[!UICONTROL Azure Blob beta]** destino.
+* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados.
+* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc.
 
 ### Habilitar alertas {#enable-alerts}
 

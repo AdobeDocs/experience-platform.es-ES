@@ -4,10 +4,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
 workflow-type: tm+mt
-source-wordcount: '3961'
-ht-degree: 10%
+source-wordcount: '3759'
+ht-degree: 11%
 
 ---
 
@@ -20,8 +20,6 @@ ht-degree: 10%
 > * Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > 
 > Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->
-> Algunos clientes que participan en el programa beta de funcionalidad de exportación de archivos mejorada están viendo el nuevo **[!UICONTROL Asignación]** paso como parte de su flujo de trabajo de activación a [nuevos destinos de almacenamiento en la nube beta](/help/release-notes/2022/october-2022.md#destinations). Considere la [limitaciones conocidas](#known-limitations) como parte de la versión de.
 
 ## Información general {#overview}
 
@@ -193,10 +191,10 @@ El nombre de destino y el ID de audiencia no se pueden eliminar de los nombres d
 | **[!UICONTROL Nombre de audiencia]** | Nombre de la audiencia exportada. |
 | **[!UICONTROL Fecha y hora]** | Seleccione entre añadir un `MMDDYYYY_HHMMSS` o una marca de tiempo UNIX de 10 dígitos de la hora en la que se generan los archivos. Elija una de estas opciones si desea que los archivos tengan un nombre de archivo dinámico generado con cada exportación incremental. |
 | **[!UICONTROL Texto personalizado]** | Cualquier texto personalizado que desee agregar a los nombres de archivo. |
-| **[!UICONTROL ID de destino]** | El ID del flujo de datos de destino que se utiliza para exportar la audiencia. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de funcionalidad de exportación de archivos mejorada. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
-| **[!UICONTROL Nombre del destino]** | Nombre del flujo de datos de destino que se utiliza para exportar la audiencia. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de funcionalidad de exportación de archivos mejorada. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
-| **[!UICONTROL Nombre de organización]** | Nombre de su organización en Experience Platform. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de funcionalidad de exportación de archivos mejorada. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
-| **[!UICONTROL Nombre de la zona protegida]** | El ID de la zona protegida que utiliza para exportar la audiencia. <br> **Nota**: Esta opción de adición de nombre de archivo solo está disponible para los clientes beta que participan en el programa beta de funcionalidad de exportación de archivos mejorada. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder al programa beta. |
+| **[!UICONTROL ID de destino]** | El ID del flujo de datos de destino que se utiliza para exportar la audiencia. |
+| **[!UICONTROL Nombre del destino]** | Nombre del flujo de datos de destino que se utiliza para exportar la audiencia. |
+| **[!UICONTROL Nombre de organización]** | Nombre de su organización en Experience Platform. |
+| **[!UICONTROL Nombre de la zona protegida]** | El ID de la zona protegida que utiliza para exportar la audiencia. |
 
 {style="table-layout:auto"}
 
@@ -208,39 +206,44 @@ Seleccionar **[!UICONTROL Aplicar cambios]** para confirmar la selección.
 
 Cuando haya terminado de configurar todas las audiencias, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-## Seleccionar atributos de perfil {#select-attributes}
+## Asignación {#mapping}
 
-Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
+En este paso, debe seleccionar los atributos de perfil que desea añadir a los archivos exportados al destino de destino. Para seleccionar atributos e identidades de perfil para la exportación:
 
-1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
+1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
 
-   ![Imagen que resalta el botón Añadir nuevo campo.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![Agregue el nuevo control de campo resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de esquema]** entrada.
+1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de origen]** entrada.
 
-   ![Imagen que resalta cómo seleccionar un campo de origen.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+   ![Seleccione el control de campo de origen resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM o las áreas de nombres de identidad que desee enviar al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
+1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione los atributos e identidades de perfil que desee incluir en los archivos exportados al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
 
-   ![Imagen que muestra los distintos campos disponibles como campos de origen.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   >[!TIP]
+   > 
+   >Puede utilizar el campo de búsqueda para reducir la selección, como se muestra en la siguiente imagen.
 
-1. Para agregar más asignaciones, repita los pasos del uno al tres.
+   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
->[!NOTE]
->
-> Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia desde su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-![Imagen que muestra atributos recomendados rellenados previamente en el paso de asignación del flujo de trabajo de activación de audiencia.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
+1. El campo seleccionado para la exportación ahora aparece en la vista de asignación. Si lo desea, puede editar el nombre del encabezado en el archivo exportado. Para ello, seleccione el icono en el campo de destinatario.
 
->[!IMPORTANT]
->
->Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.status` en el campo de esquema, como se muestra a continuación.
->
->![Grabación de pantalla que muestra la solución para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
-Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
-* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
-* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+1. En el **[!UICONTROL Seleccionar campo de destino]** , escriba el nombre que desee para el encabezado en el archivo exportado y, a continuación, elija **[!UICONTROL Seleccionar]**.
+
+   ![Ventana modal que muestra un nombre descriptivo escrito para un encabezado.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. El campo seleccionado para la exportación aparece ahora en la vista de asignación y muestra el encabezado editado en el archivo exportado.
+
+   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Opcional) Puede seleccionar el campo exportado para que sea un [clave obligatoria](#mandatory-keys) o una [clave de deduplicación](#deduplication-keys).
+
+   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. Para agregar más campos para exportar, repita los pasos anteriores.
 
 ### Atributos obligatorios {#mandatory-attributes}
 
@@ -391,7 +394,6 @@ Suponiendo la deduplicación por la clave compuesta `personalEmail + lastName`, 
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-
 El Adobe recomienda seleccionar un área de nombres de identidad como una [!DNL CRM ID] o la dirección de correo electrónico como clave de deduplicación para garantizar que todos los registros de perfil se identifiquen de forma exclusiva.
 
 >[!NOTE]
@@ -402,51 +404,6 @@ El Adobe recomienda seleccionar un área de nombres de identidad como una [!DNL 
 >* Los campos se configuran como atributos proyectados para el destino final.
 >
 > Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino. En el paso de revisión, se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
-
-## Asignación de (beta) {#mapping}
-
->[!IMPORTANT]
-> 
->Determinados clientes de la versión beta pueden ver y mejorar **[!UICONTROL Asignación]** paso que sustituye al [Seleccionar atributos de perfil](#select-attributes) paso descrito anteriormente. Esta nueva **[!UICONTROL Asignación]** Este paso le permite editar los encabezados de los archivos exportados con los nombres personalizados que desee.
-> 
-> La funcionalidad y la documentación están sujetas a cambios. Póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente si desea acceder a este programa beta.
-
-En este paso, debe seleccionar los atributos de perfil que desea añadir a los archivos exportados al destino de destino. Para seleccionar atributos e identidades de perfil para la exportación:
-
-1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
-
-   ![Agregue el nuevo control de campo resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
-
-1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de origen]** entrada.
-
-   ![Seleccione el control de campo de origen resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
-
-1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione los atributos e identidades de perfil que desee incluir en los archivos exportados al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
-
-   >[!TIP]
-   > 
-   >Puede utilizar el campo de búsqueda para reducir la selección, como se muestra en la siguiente imagen.
-
-   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
-
-
-1. El campo seleccionado para la exportación ahora aparece en la vista de asignación. Si lo desea, puede editar el nombre del encabezado en el archivo exportado. Para ello, seleccione el icono en el campo de destinatario.
-
-   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
-
-1. En el **[!UICONTROL Seleccionar campo de destino]** , escriba el nombre que desee para el encabezado en el archivo exportado y, a continuación, elija **[!UICONTROL Seleccionar]**.
-
-   ![Ventana modal que muestra un nombre descriptivo escrito para un encabezado.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
-
-1. El campo seleccionado para la exportación aparece ahora en la vista de asignación y muestra el encabezado editado en el archivo exportado.
-
-   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
-
-1. (Opcional) Puede seleccionar el campo exportado para que sea un [clave obligatoria](#mandatory-keys) o una [clave de deduplicación](#deduplication-keys).
-
-   ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
-
-1. Para agregar más campos para exportar, repita los pasos anteriores.
 
 ### Limitaciones conocidas {#known-limitations}
 
@@ -471,6 +428,46 @@ Actualmente no se admite la selección de áreas de nombres de identidad para ex
 Como solución temporal si necesita agregar áreas de nombres de identidad a los archivos exportados durante la versión beta, puede:
 * Utilice los destinos de almacenamiento en la nube heredados para los flujos de datos donde desee incluir áreas de nombres de identidad en las exportaciones
 * Cargue identidades como atributos en Experience Platform para luego exportarlas a sus destinos de almacenamiento en la nube.
+
+## Seleccionar atributos de perfil {#select-attributes}
+
+>[!IMPORTANT]
+> 
+>Todos los destinos de almacenamiento en la nube del catálogo pueden ver un [[!UICONTROL Asignación] escalón](#mapping) que sustituye a la **[!UICONTROL Seleccionar atributos]** paso descrito en esta sección.
+>
+>Esta **[!UICONTROL Seleccionar atributos]** Este paso aún se muestra para los destinos de marketing por correo electrónico de Adobe Campaign, Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
+
+Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
+
+1. En el **[!UICONTROL Seleccionar atributos]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
+
+   ![Imagen que resalta el botón Añadir nuevo campo.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+
+2. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de esquema]** entrada.
+
+   ![Imagen que resalta cómo seleccionar un campo de origen.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+3. En el **[!UICONTROL Seleccionar campo]** , seleccione los atributos XDM o las áreas de nombres de identidad que desee enviar al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
+
+   ![Imagen que muestra los distintos campos disponibles como campos de origen.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+
+4. Para agregar más asignaciones, repita los pasos del uno al tres.
+
+>[!NOTE]
+>
+> Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia desde su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+![Imagen que muestra atributos recomendados rellenados previamente en el paso de asignación del flujo de trabajo de activación de audiencia.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
+
+>[!IMPORTANT]
+>
+>Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.status` en el campo de esquema, como se muestra a continuación.
+>
+>![Grabación de pantalla que muestra la solución para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
+Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
+* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
+* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
 ## Seleccionar atributos de enriquecimiento {#select-enrichment-attributes}
 

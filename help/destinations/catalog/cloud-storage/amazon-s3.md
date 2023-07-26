@@ -2,10 +2,10 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 12%
+source-wordcount: '975'
+ht-degree: 14%
 
 ---
 
@@ -13,24 +13,12 @@ ht-degree: 12%
 
 ## Registro de cambios de destino {#changelog}
 
->[!IMPORTANT]
->
->Con la versión beta de la funcionalidad exportar conjuntos de datos y la funcionalidad mejorada de exportación de archivos, es posible que ahora vea dos [!DNL Amazon S3] tarjetas en el catálogo de destinos.
->* Si ya está exportando archivos a **[!UICONTROL Amazon S3]** destino, cree nuevos flujos de datos para el nuevo **[!UICONTROL Amazon S3 beta]** destino.
->* Si todavía no ha creado ningún flujo de datos en **[!UICONTROL Amazon S3]** destino, utilice el nuevo **[!UICONTROL Amazon S3 beta]** para exportar archivos a **[!UICONTROL Amazon S3]**.
+Con la versión de julio de 2023 de Experience Platform, la variable [!DNL Amazon S3] El destino proporciona nuevas funciones, como se indica a continuación:
 
-![Imagen de las dos tarjetas de destino de Amazon S3 en una vista en paralelo.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-Mejoras en el nuevo [!DNL Amazon S3] la tarjeta de destino incluye:
-
-* [Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
 * Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través de [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Capacidad para personalizar el formato de archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## Información general {#overview}
-
-Cree una conexión saliente activa con su [!DNL Amazon S3] para exportar periódicamente archivos de datos de Adobe Experience Platform a sus propios contenedores de S3.
 
 ## Conéctese a su [!DNL Amazon S3] mediante API o IU {#connect-api-or-ui}
 
@@ -105,9 +93,9 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Descripción]**: introduzca una descripción para este destino.
 * **[!UICONTROL Nombre del cubo]**: introduzca el nombre del [!DNL Amazon S3] contenedor que utilizará este destino.
 * **[!UICONTROL Ruta de carpeta]**: introduzca la ruta a la carpeta de destino que alojará los archivos exportados.
-* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL Amazon S3 beta]** destino. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados. Esta opción solo está disponible para **[!UICONTROL Amazon S3 beta]** destino.
-* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc. Esta opción solo está disponible para **[!UICONTROL Amazon S3 beta]** destino.
+* **[!UICONTROL Tipo de archivo]**: seleccione el Experience Platform de formato que debe utilizar para los archivos exportados. Al seleccionar la variable [!UICONTROL CSV] , también puede hacer lo siguiente [configurar las opciones de formato de archivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato de compresión]**: seleccione el tipo de compresión que el Experience Platform debe utilizar para los archivos exportados.
+* **[!UICONTROL Incluir archivo de manifiesto]**: active esta opción si desea que las exportaciones incluyan un archivo JSON de manifiesto que contenga información sobre la ubicación de exportación, el tamaño de exportación, etc.
 
 >[!TIP]
 >

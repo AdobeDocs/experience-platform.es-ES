@@ -1,19 +1,15 @@
 ---
-title: (Beta) Conexión de Google Cloud Storage
+title: Conexión de Google Cloud Storage
 description: Obtenga información sobre cómo conectarse a Google Cloud Storage y activar audiencias o exportar conjuntos de datos.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Google Cloud Storage] conexión
-
->[!IMPORTANT]
->
->Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a [!DNL Google Cloud Storage] conexión, póngase en contacto con el representante del Adobe y proporcione a [!DNL Organization ID].
+# [!DNL Google Cloud Storage] conexión
 
 ## Información general {#overview}
 

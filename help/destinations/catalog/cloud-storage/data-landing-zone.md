@@ -2,19 +2,18 @@
 title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1404'
 ht-degree: 1%
 
 ---
 
-# (Beta) Destino de la zona de aterrizaje de datos
+# Destino de zona de aterrizaje de datos
 
 >[!IMPORTANT]
 >
->* Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a [!DNL Data Landing Zone] conexión, póngase en contacto con el representante del Adobe y proporcione a [!DNL Organization ID].
->* Esta página de documentación hace referencia a [!DNL Data Landing Zone] *destino*. También hay un [!DNL Data Landing Zone] *origen* en el catálogo de fuentes. Para obtener más información, lea la [[!DNL Data Landing Zone] origen](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentación.
+>Esta página de documentación hace referencia a [!DNL Data Landing Zone] *destino*. También hay un [!DNL Data Landing Zone] *origen* en el catálogo de fuentes. Para obtener más información, lea la [[!DNL Data Landing Zone] origen](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentación.
 
 
 ## Información general {#overview}

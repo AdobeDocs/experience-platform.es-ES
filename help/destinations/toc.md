@@ -4,17 +4,17 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 5%
+source-wordcount: '1164'
+ht-degree: 9%
 
 ---
 
 
 # Destinos {#destinations}
 
-* [Destinos sobre validación](./home.md)
+* [Información general sobre los destinos](./home.md)
 * [Tipos y categorías de destino](./destination-types.md)
 * [Protecciones de destinos (activación)](./guardrails.md)
 * Cómo funcionan los destinos {#how-destinations-work}
@@ -116,10 +116,10 @@ ht-degree: 5%
       * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión de Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Conexión de Azure Blob](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Conexión de Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
-      * [(Beta) Zona de aterrizaje de datos](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Almacenamiento En La Nube De Google](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Zona de aterrizaje de datos](./catalog/cloud-storage/data-landing-zone.md)
+      * [Almacenamiento de Google Cloud](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos de administración de la relación con los clientes (CRM) {#crm}
