@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre la recopilación de datos
 description: Obtenga información acerca de las distintas tecnologías relacionadas con la recopilación de datos sobre experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 998cc9a9c490124ff21fdbf5f3a7b91abef3e8b8
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 9%
+source-wordcount: '514'
+ht-degree: 8%
 
 ---
 
@@ -29,9 +29,10 @@ La recopilación de datos se centra en la detección y accesibilidad de conjunto
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
 * [SDK móvil de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
+* [API del servidor de red perimetral](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=es)
-* [Modelo de datos de experiencia (XDM)](../xdm/home.md)
-* [Servicio de ID de Adobe Experience Platform](../identity-service/home.md)
+* [Garantía del Experience Platform](../assurance/home.md)
+
 
 Esta guía proporciona una introducción general a la recopilación de datos y a cómo funciona para enviar datos a productos de Adobe Experience Cloud y aplicaciones que no son de Adobe a través de Platform Edge Network.
 
