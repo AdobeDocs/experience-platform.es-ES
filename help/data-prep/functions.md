@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
+source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
 workflow-type: tm+mt
-source-wordcount: '4916'
-ht-degree: 4%
+source-wordcount: '5221'
+ht-degree: 3%
 
 ---
 
@@ -117,8 +117,8 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| now | Recupera la hora actual. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | Recupera la hora Unix actual. |  | timestamp() | timestamp() | 1571850624571 |
+| now | Recupera la hora actual. | | now() | now() | `2021-10-26T10:10:24Z` |
+| timestamp | Recupera la hora Unix actual. | | timestamp() | timestamp() | 1571850624571 |
 | formato | Aplica formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonedDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | formato(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Convierte una marca de tiempo en una cadena de fecha según un formato especificado. | <ul><li>MARCA DE TIEMPO: **Requerido** La marca de tiempo a la que desea dar formato. Esto se escribe en milisegundos.</li><li>FORMATO: **Requerido** El formato en el que desea que se convierta la marca de tiempo.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Convierte una cadena de fecha en un objeto ZonedDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** Cadena que representa la fecha.</li><li>FORMATO: **Requerido** Cadena que representa el formato de la fecha de origen.**Nota:** Esto sí **no** representa el formato en el que desea convertir la cadena de fecha. </li><li>FECHA_PREDETERMINADA: **Requerido** Se devuelve la fecha predeterminada si la fecha proporcionada es nula.</li></ul> | date(FECHA, FORMATO, FECHA_PREDETERMINADA) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -145,9 +145,12 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | to_object | Crea un objeto basado en los pares de clave/valor plano dados. | <ul><li>ENTRADA: **Requerido** Una lista plana de pares de clave/valor.</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un objeto de la cadena de entrada. | <ul><li>CADENA: **Requerido** Cadena que se está analizando para crear un objeto.</li><li>VALUE_DELIMITER: *Opcional* El delimitador que separa un campo del valor. El delimitador predeterminado es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de valor de campo. El delimitador predeterminado es `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: Puede utilizar el `get()` función junto con `str_to_object()` para recuperar los valores de las claves de la cadena. | <ul><li>Ejemplo #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Ejemplo #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Ejemplo de #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Ejemplo #2: &quot;John&quot;</li></ul> |
 | contains_key | Comprueba si el objeto existe en los datos de origen. **Nota:** Esta función sustituye a la función obsoleta. `is_set()` función. | <ul><li>ENTRADA: **Requerido** La ruta que se debe comprobar si existe dentro de los datos de origen.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
-| anular | Establece el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. |  | nullify() | nullify() | `null` |
+| anular | Establece el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. | | nullify() | nullify() | `null` |
 | get_keys | Analiza los pares clave/valor y devuelve todas las claves. | <ul><li>OBJETO: **Requerido** El objeto del que se extraerán las claves.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analiza los pares clave/valor y devuelve el valor de la cadena, en función de la clave dada. | <ul><li>CADENA: **Requerido** La cadena que desea analizar.</li><li>CLAVE: **Requerido** La clave para la que se debe extraer el valor.</li><li>VALUE_DELIMITER: **Requerido** El delimitador que separa el campo y el valor. Si una `null` Si se proporciona una cadena vacía, este valor es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de campo y valor. Si una `null` Si se proporciona una cadena vacía, este valor es `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| map_get_values | Toma un mapa y una entrada de clave. Si la entrada es una clave única, la función devuelve el valor asociado a esa clave. Si la entrada es una matriz de cadenas, la función devuelve todos los valores correspondientes a las claves proporcionadas. Si el mapa entrante tiene claves duplicadas, el valor devuelto debe anular la duplicación de las claves y devolver valores únicos. | <ul><li>MAPA: **Requerido** Los datos del mapa de entrada.</li><li>CLAVE:  **Requerido** La clave puede ser una sola cadena o una matriz de cadenas. Si se proporciona cualquier otro tipo primitivo (datos/número), se trata como una cadena.</li></ul> | get_values(MAP, KEY) | Consulte la [apéndice](#map_get_values) para obtener un ejemplo de código. | |
+| map_has_keys | Si se proporcionan una o más claves de entrada, la función devuelve true. Si se proporciona una matriz de cadenas como entrada, la función devuelve true en la primera clave encontrada. | <ul><li>MAPA:  **Requerido** Los datos del mapa de entrada</li><li>CLAVE:  **Requerido** La clave puede ser una sola cadena o una matriz de cadenas. Si se proporciona cualquier otro tipo primitivo (datos/número), se trata como una cadena.</li></ul> | map_has_keys(MAP, KEY) | Consulte la [apéndice](#map_has_keys) para obtener un ejemplo de código. | |
+| add_to_map | Acepta al menos dos entradas. Se puede proporcionar cualquier cantidad de mapas como entradas. La preparación de datos devuelve un solo mapa que tiene todos los pares clave-valor de todas las entradas. Si se repiten una o más claves (en el mismo mapa o entre mapas), la preparación de datos anula la duplicación de las claves para que el primer par clave-valor persista en el orden en que se pasaron en la entrada. | MAPA: **Requerido** Los datos del mapa de entrada. | add_to_map(MAPA 1, MAPA 2, MAPA 3, ...) | Consulte la [apéndice](#add_to_map) para obtener un ejemplo de código. | |
 
 {style="table-layout:auto"}
 
@@ -234,7 +237,7 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| uuid /<br>guid | Genera un ID pseudoaleatorio. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| uuid /<br>guid | Genera un ID pseudoaleatorio. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Esta función toma una cadena FPID y la convierte en un ECID para su uso en aplicaciones de Adobe Experience Platform y Adobe Experience Cloud. | <ul><li>CADENA: **Requerido** Cadena FPID que se va a convertir en ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
@@ -378,3 +381,77 @@ La tabla siguiente describe una lista de valores de campos de dispositivo y sus 
 | Pirata Informático | Este valor de dispositivo se utiliza en caso de que se detecten scripts en la `useragent` cadena. |
 
 {style="table-layout:auto"}
+
+### Ejemplos de código {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++Seleccione para ver el ejemplo
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++Seleccione para ver el ejemplo
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++Seleccione para ver el ejemplo
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++
