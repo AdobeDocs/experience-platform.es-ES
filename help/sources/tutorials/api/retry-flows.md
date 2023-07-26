@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: Reintentar ejecuciones de flujo de datos fallidas
-description: Este tutorial explica los pasos para reintentar las ejecuciones de flujo de datos fallidas mediante la API de Flow Service
+description: Obtenga información sobre cómo reintentar las ejecuciones de flujo de datos fallidas mediante la API de Flow Service.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '273'
+ht-degree: 2%
 
 ---
 
@@ -18,12 +17,12 @@ ht-degree: 3%
 
 Este tutorial explica los pasos para reintentar las ejecuciones de flujo de datos fallidas mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): el Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Zonas protegidas](../../../sandboxes/home.md): el Experience Platform proporciona entornos limitados virtuales que dividen un solo [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
@@ -45,6 +44,10 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | `op` | Una operación que determina la acción que se va a realizar. Para reintentar una ejecución de flujo de datos fallida, debe especificar `re-trigger` como su operación. |
 
 **Solicitud**
+
+>[!NOTE]
+>
+>Puede usar el complemento `re-trigger` operación para reintentar también ejecuciones correctas del flujo de datos, dado que la ejecución correcta del flujo de datos tiene cero registros ingeridos.
 
 La siguiente solicitud reintenta ejecutar el flujo de datos para el ID de ejecución `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
