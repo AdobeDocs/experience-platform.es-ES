@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85240b7d8f187e3d95762b9afbd8b8507869dabc
+source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 38%
+source-wordcount: '659'
+ht-degree: 33%
 
 ---
 
@@ -29,6 +29,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Tipo | Función | Descripción |
 | --- | --- | --- |
 | Reenvío de eventos y etiquetas | Registros de auditoría de recopilación de datos | Ahora puede ver cuándo se realizó una acción y quién realizó esta acción en Etiquetas y Reenvío de eventos. Esto facilita la resolución de problemas del producto, el control adecuado y las actividades de auditoría interna. Estos datos de auditoría se muestran mediante menús deslizantes en contexto que también incluyen acciones rápidas y actualizaciones de estado de los recursos. Estos datos son visibles en la IU de Etiquetas y Reenvío de eventos en las pantallas siguientes:<br><ul><li>[Información general de propiedad](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[Reglas](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[Elementos de datos](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[Extensiones](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[Revisión de biblioteca](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[Última compilación y publicación de la biblioteca](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| Corrientes de datos | [Búsqueda geográfica](../../datastreams/configure.md#advanced-options) | Ahora puede configurar la geolocalización y la búsqueda de red de flujos de datos para incluir información como: <ul><li>País</li><li>Código postal</li><li>Estado/Provincia</li><li>DMA</li><li>Ciudad</li><li>Latitud </li><li>Longitud</li><li>Portadora</li><li>Domain</li><li>ISP</li></ul> Usted es responsable de garantizar que ha obtenido todos los permisos, consentimientos, autorizaciones y autorizaciones necesarios según las leyes y regulaciones aplicables para recopilar, procesar y transmitir datos personales, incluida información precisa sobre geolocalización. <br> La selección de la ofuscación de la dirección IP no afecta al nivel de información de geolocalización que se derivará de la dirección IP y se enviará a las soluciones de Adobe configuradas. Las búsquedas de geolocalización deben limitarse o deshabilitarse por separado. <br> Consulte la [documentación de flujos de datos](../../datastreams/configure.md#advanced-options) para obtener más información. |
 
 {style="table-layout:auto"}
 
