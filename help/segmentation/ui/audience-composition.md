@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # Guía de IU de composición de audiencia
+
+>[!NOTE]
+>
+>Esta guía explica cómo crear audiencias mediante Composición de audiencias. Para aprender a crear audiencias a través de las definiciones de segmentos mediante el Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md).
 
 Composición de audiencia proporciona un espacio de trabajo para crear y editar audiencias, utilizando bloques que se utilizan para representar diferentes acciones.
 
@@ -90,7 +94,7 @@ El **[!UICONTROL Excluir]** se ha añadido un bloque de. Cuando se selecciona es
 
 ### Excluir por audiencia {#exclude-audience}
 
-Si excluye por audiencia, puede seleccionar qué audiencias desea excluir seleccionando **[!UICONTROL Añadir audiencia]**.
+Si excluye por audiencia, puede seleccionar las audiencias que desea excluir seleccionando **[!UICONTROL Añadir audiencia]**.
 
 ![El [!UICONTROL Añadir audiencia] El botón está seleccionado, lo que le permite elegir qué audiencia desea excluir.](../images/ui/audience-composition/add-excluded-audience.png)
 

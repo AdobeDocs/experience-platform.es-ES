@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
+source-wordcount: '3607'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [!DNL Adobe Experience Platform Segmentation Service] proporciona una interfaz de usuario para crear y administrar audiencias y definiciones de segmentos.
 
-## Primeros pasos
+## Introducción
 
 El trabajo con audiencias y definiciones de segmentos requiere comprender las distintas [!DNL Experience Platform] servicios relacionados con la segmentación. Antes de leer esta guía del usuario, consulte la documentación de los siguientes servicios:
 
@@ -27,7 +27,7 @@ También debe comprender dos términos clave que se utilizan en este documento y
 
 - **Audiencia**: conjunto de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante las definiciones de segmentos o la composición de audiencias (audiencia generada por Platform), o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente).
 - **Definición del segmento**: Las reglas que utiliza Adobe Experience Platform para describir las características clave o el comportamiento de una audiencia objetivo.
-- **Segmento**: Acto de separar Perfiles en audiencias.
+- **Segmentar**: acto de separar Perfiles en públicos.
 
 ## Información general
 
@@ -125,7 +125,7 @@ Seleccionar **[!UICONTROL Crear audiencia]** le permitirá crear una audiencia. 
 >
 > Lo hará **no** poder eliminar una audiencia que se utilice en una activación de destino.
 
-### Filtrado y etiquetado {#manage-audiences}
+### Filtrado, carpetas y etiquetado {#manage-audiences}
 
 Para mejorar la eficacia del trabajo, puede buscar audiencias existentes, añadir etiquetas definidas por el usuario a las audiencias, colocar audiencias en carpetas y filtrar las audiencias mostradas.
 

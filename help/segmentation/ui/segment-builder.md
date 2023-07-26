@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 8%
+source-wordcount: '3338'
+ht-degree: 7%
 
 ---
 
 # [!DNL Segment Builder] Guía de IU
+
+>[!NOTE]
+>
+>Esta guía explica cómo crear audiencias a través de **definiciones de segmentos** uso del Generador de segmentos. Para aprender a crear audiencias con Composición de audiencia, lea la [Guía de IU de composición de audiencia](./audience-composition.md).
 
 [!DNL Segment Builder] proporciona un espacio de trabajo enriquecido que le permite interactuar con [!DNL Profile] elementos de datos. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 
