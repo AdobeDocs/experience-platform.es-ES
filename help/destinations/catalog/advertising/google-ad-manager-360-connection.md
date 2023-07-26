@@ -1,15 +1,15 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] conexión
+title: (Beta) Conexión de  [!DNL Google Ad Manager 360]
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# (Beta) [!DNL Google Ad Manager 360] conexión
+# (Beta) Conexión de [!DNL Google Ad Manager 360]
 
 ## Información general {#overview}
 
@@ -99,8 +99,8 @@ Para obtener más información sobre estos valores, consulte la [Claves HMAC de 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Anexar ID de audiencia al nombre de audiencia"
->abstract="Seleccione esta opción para que el nombre de audiencia en Google Ad Manager 360 incluya el ID de audiencia de Experience Platform, de esta manera: `Audience Name (Audience ID)`"
+>title="Anexar el ID de público al nombre de público"
+>abstract="Seleccione esta opción para que el nombre de público en Google Ad Manager 360 incluya el ID de público de Experience Platform, de esta manera: `Audience Name (Audience ID)`"
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 

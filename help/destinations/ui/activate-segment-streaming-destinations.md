@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -103,7 +103,7 @@ Cuando asigne atributos de origen sin hash a atributos de destino que el destino
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Fecha final"
->abstract="La adición de una fecha de finalización para la programación de audiencias no está disponible."
+>abstract="No está disponible la adición de una fecha de finalización para la programación de público."
 
 De forma predeterminada, la variable **[!UICONTROL Programación de audiencia]** Esta página muestra únicamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
 

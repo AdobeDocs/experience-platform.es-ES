@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -89,8 +89,8 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Anexar ID de audiencia al nombre de audiencia"
->abstract="Seleccione esta opción para que el nombre de la audiencia en Google Ad Manager incluya el ID de audiencia del Experience Platform, de esta manera: `Audience Name (Audience ID)`"
+>title="Anexar el ID de público al nombre de público"
+>abstract="Seleccione esta opción para que el nombre de público en Google Ad Manager incluya el ID de público de Experience Platform, de esta manera: `Audience Name (Audience ID)`"
 
 While [configuración](../../ui/connect-destination.md) Para este destino, debe proporcionar la siguiente información:
 

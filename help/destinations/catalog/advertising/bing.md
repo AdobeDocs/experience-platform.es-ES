@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -96,7 +96,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID de asignación"
->abstract="Introduzca el ID de audiencia numérico de Bing al que desea asignar el segmento seleccionado. Si el proporcionado [!UICONTROL ID de asignación] no se corresponde con un ID de audiencia en el destino de Bing, por lo que no verá los datos de audiencia esperados en su cuenta de Bing."
+>abstract="Introduzca el ID de público numérico de Bing al que desea asignar el segmento seleccionado. Si el [!UICONTROL ID de asignación] proporcionado no corresponde a un ID de público en el destino de Bing, no verá los datos de público esperados en su cuenta de Bing."
 
 >[!IMPORTANT]
 > 

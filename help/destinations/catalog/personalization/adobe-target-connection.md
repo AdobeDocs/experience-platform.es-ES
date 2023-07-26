@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -68,7 +68,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Acerca de los ID de secuencia de datos"
->abstract="Esta opción determina en qué flujo de datos de recopilación de datos se incluirán las audiencias. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Para utilizar la segmentación de Edge, debe seleccionar un ID de la secuencia de datos. Al seleccionar Ninguno, se desactivan todos los casos de uso que utilizan segmentación de Edge."
+>abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los públicos. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Para utilizar la segmentación de Edge, debe seleccionar un ID de la secuencia de datos. Al seleccionar Ninguno, se desactivan todos los casos de uso que utilizan segmentación de Edge."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=es#parameters" text="Obtenga más información sobre la selección de secuencias de datos"
 
 >[!IMPORTANT]

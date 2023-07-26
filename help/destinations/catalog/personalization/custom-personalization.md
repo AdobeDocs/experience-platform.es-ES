@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -67,7 +67,7 @@ Además, este destino también admite la activación de las audiencias que se de
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="Acerca de los ID de secuencia de datos"
->abstract="Esta opción determina en qué flujo de datos de recopilación de datos se incluirán las audiencias en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Debe configurar una secuencia de datos para poder configurar el destino."
+>abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los públicos en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Debe configurar una secuencia de datos para poder configurar el destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=es" text="Obtenga información sobre cómo configurar una secuencia de datos"
 
 >[!IMPORTANT]
