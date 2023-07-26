@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2745'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -50,7 +50,7 @@ Seleccione el nombre de un conjunto de datos en la [!UICONTROL Examinar] para ac
 
 ## Acciones de conjuntos de datos en línea {#inline-actions}
 
-La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para cada conjunto de datos disponible. Seleccione los puntos suspensivos de un conjunto de datos que desee administrar para ver las opciones disponibles en un menú emergente. Las acciones disponibles incluyen: [[!UICONTROL Previsualizar conjunto de datos]](#preview), [[!UICONTROL Administración de datos y etiquetas de acceso]](#manage-and-enforce-data-governance), [[!UICONTROL Habilitar perfil unificado]](#enable-profile), [[!UICONTROL Administración de etiquetas]](#add-tags), y [[!UICONTROL Eliminar]](#delete). Puede encontrar más información sobre estas acciones disponibles en sus secciones respectivas.
+La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para cada conjunto de datos disponible. Seleccione los puntos suspensivos (...) de un conjunto de datos que desee administrar para ver las opciones disponibles en un menú emergente. Las acciones disponibles incluyen: [[!UICONTROL Previsualizar conjunto de datos]](#preview), [[!UICONTROL Administración de datos y etiquetas de acceso]](#manage-and-enforce-data-governance), [[!UICONTROL Habilitar perfil unificado]](#enable-profile), [[!UICONTROL Administración de etiquetas]](#add-tags), [[!UICONTROL Mover a carpetas]](#move-to-folders), y [[!UICONTROL Eliminar]](#delete). Puede encontrar más información sobre estas acciones disponibles en sus secciones respectivas.
 
 ### Añadir etiquetas de conjuntos de datos {#add-tags}
 
@@ -116,7 +116,7 @@ Conjuntos de datos en [!UICONTROL Examinar] La pestaña se puede ordenar por fec
 
 ## Previsualización de un conjunto de datos {#preview}
 
-Puede obtener una vista previa de los datos de ejemplo del conjunto de datos desde las opciones en línea del [!UICONTROL Examinar] y también la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea previsualizar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** de la lista de opciones disponibles. Si el conjunto de datos está vacío, el vínculo de vista previa se desactivará y, en su lugar, indicará que la vista previa no está disponible.
+Puede obtener una vista previa de los datos de ejemplo del conjunto de datos desde las opciones en línea del [!UICONTROL Examinar] y también la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea previsualizar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** de la lista de opciones disponibles. Si el conjunto de datos está vacío, el vínculo de vista previa se desactivará y, en su lugar, indicará que la vista previa no está disponible.
 
 ![La pestaña Examinar del espacio de trabajo de conjuntos de datos con la opción de puntos suspensivos y Vista previa del conjunto de datos resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -203,17 +203,37 @@ Los conjuntos de datos que se han habilitado para el perfil también se pueden f
 
 ## Administración y aplicación del control de datos en un conjunto de datos {#manage-and-enforce-data-governance}
 
-Puede administrar las etiquetas de control de datos de un conjunto de datos seleccionando las opciones en línea del [!UICONTROL Examinar] pestaña. Seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea administrar, seguidos de **[!UICONTROL Administración de datos y etiquetas de acceso]** en el menú desplegable.
+Puede administrar las etiquetas de control de datos de un conjunto de datos seleccionando las opciones en línea del [!UICONTROL Examinar] pestaña. Seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea administrar, seguido de **[!UICONTROL Administración de datos y etiquetas de acceso]** en el menú desplegable.
 
 Las etiquetas de uso de datos, aplicadas en el nivel de esquema, le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario sobre etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a esquemas para su propagación a conjuntos de datos.
 
+### Mover a carpetas {#move-to-folders}
+
+Puede colocar conjuntos de datos dentro de carpetas para una mejor administración de conjuntos de datos. Para mover un conjunto de datos a una carpeta, seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea administrar, seguido de **[!UICONTROL Mover a carpeta]** en el menú desplegable.
+
+![El [!UICONTROL Conjuntos de datos] panel con los puntos suspensivos y [!UICONTROL Mover a carpeta] resaltado.](../images/datasets/user-guide/move-to-folder.png)
+
+El [!UICONTROL Mover] aparece el cuadro de diálogo conjunto de datos a carpeta. Seleccione la carpeta a la que desee mover la audiencia y, a continuación, seleccione **[!UICONTROL Mover]**. Una notificación emergente le informa de que el movimiento del conjunto de datos se ha realizado correctamente.
+
+![El [!UICONTROL Mover] diálogo de conjunto de datos con [!UICONTROL Mover] resaltado.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>También puede crear carpetas directamente desde el cuadro de diálogo Mover conjunto de datos. Para crear una carpeta, seleccione el icono Crear carpeta (![Icono Crear carpeta.](../images/datasets/user-guide/create-folder-icon.png)), en la parte superior derecha del cuadro de diálogo.
+>
+>![El [!UICONTROL Mover] cuadro de diálogo conjunto de datos con el icono crear carpeta resaltado.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Una vez que el conjunto de datos esté en una carpeta, puede elegir mostrar solo los conjuntos de datos que pertenecen a una carpeta específica. Para abrir la estructura de carpetas, seleccione el icono mostrar carpetas (![Icono de mostrar carpetas](../images/datasets/user-guide/show-folders-icon.png)). A continuación, seleccione la carpeta elegida para ver todos los conjuntos de datos asociados.
+
+![El [!UICONTROL Conjuntos de datos] paneles con la estructura de carpetas de conjuntos de datos mostrada, el icono mostrar carpetas y una carpeta seleccionada resaltada.](../images/datasets/user-guide/folder-structure.png)
+
 ## Eliminar un conjunto de datos {#delete}
 
-Puede eliminar un conjunto de datos de las acciones en línea del conjunto de datos en [!UICONTROL Examinar] o en la parte superior derecha de la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos junto al nombre del conjunto de datos que desea eliminar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Eliminar]** en el menú desplegable.
+Puede eliminar un conjunto de datos de las acciones en línea del conjunto de datos en [!UICONTROL Examinar] o en la parte superior derecha de la pestaña [!UICONTROL Actividad de conjunto de datos] vista. Desde el [!UICONTROL Examinar] , seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea eliminar. Aparecerá una lista de opciones de menú. A continuación, seleccione **[!UICONTROL Eliminar]** en el menú desplegable.
 
 ![La pestaña Examinar del espacio de trabajo Conjuntos de datos con los puntos suspensivos y la opción Eliminar resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/inline-delete-dataset.png)
 
-Aparecerá un cuadro de diálogo de confirmación. Seleccionar **[!UICONTROL Eliminar]** para confirmar.
+Aparecerá un cuadro de diálogo de confirmación. Seleccione **[!UICONTROL Eliminar]** para confirmar.
 
 Como alternativa, seleccione **[!UICONTROL Eliminar conjunto de datos]** desde el **[!UICONTROL Actividad de conjunto de datos]** pantalla.
 
