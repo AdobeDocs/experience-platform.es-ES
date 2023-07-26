@@ -5,9 +5,9 @@ title: Creación de una conexión base de Salesforce mediante la API de Flow Ser
 type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '498'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Salesforce] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -37,7 +37,8 @@ Para que [!DNL Flow Service] para conectarse a [!DNL Salesforce], debe proporcio
 | `username` | El nombre de usuario de [!DNL Salesforce] cuenta de usuario. |
 | `password` | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
 | `securityToken` | El token de seguridad para [!DNL Salesforce] cuenta de usuario. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL AdWords] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Para obtener más información sobre cómo empezar, visite [este documento de Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
@@ -49,8 +50,7 @@ Para obtener información sobre cómo realizar llamadas correctamente a las API 
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Salesforce] credenciales de autenticación como parte de los parámetros de solicitud.
-
+Para crear un ID de conexión base, realice una solicitud de POST al `/connections` y proporcione su [!DNL Salesforce] credenciales de autenticación en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -64,28 +64,28 @@ La siguiente solicitud crea una conexión base para [!DNL Salesforce]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Connection",
-        "description": "Connection for Salesforce account",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Connection",
+      "description": "Connection for Salesforce account",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {****
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "securityToken": "{SECURITY_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propiedad | Descripción |

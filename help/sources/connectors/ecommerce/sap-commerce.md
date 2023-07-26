@@ -2,10 +2,8 @@
 title: Resumen de origen de comercio SAP
 description: Obtenga información sobre cómo conectar SAP Commerce a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%

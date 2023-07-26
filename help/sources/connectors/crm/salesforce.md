@@ -1,17 +1,15 @@
 ---
-keywords: Experience Platform;inicio;temas populares;esquema crm;crm;CRM;salesforce;Salesforce
-solution: Experience Platform
 title: Información general sobre el conector de origen de Salesforce
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce] conector
+# [!DNL Salesforce]
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 

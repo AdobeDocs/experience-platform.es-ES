@@ -1,10 +1,8 @@
 ---
 title: Cree una conexión de origen y un flujo de datos para SAP Commerce mediante la API de Flow Service
 description: Aprenda a crear una conexión de origen y un flujo de datos para llevar los datos de SAP Commerce al Experience Platform mediante la API de Flow Service.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 2%
@@ -19,7 +17,7 @@ ht-degree: 2%
 
 El siguiente tutorial le guiará para crear una [!DNL SAP Commerce] conexión de origen y un flujo de datos para traer [[!DNL SAP] Facturación de suscripción](https://www.sap.com/products/financial-management/subscription-billing.html) contactos y datos de clientes a Adobe Experience Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
