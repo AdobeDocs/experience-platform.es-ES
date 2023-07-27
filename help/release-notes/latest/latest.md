@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
+source-git-commit: 261729515ba25f20cd9606d378a3ec39471ee2cb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 33%
+source-wordcount: '1061'
+ht-degree: 28%
 
 ---
 
@@ -17,6 +17,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [Recopilación de datos](#data-collection)
 - [Preparación de los datos](#data-prep)
+- [Destinos](#data-prep)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
@@ -47,7 +48,50 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre la preparación de datos, lea [Información general sobre preparación de datos](../../data-prep/home.md).
+Para obtener más información sobre la preparación de datos, lea [Información general de preparación de datos](../../data-prep/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+
+**Destinos nuevos o actualizados** {#new-updated-destinations}
+
+<!--
+
+LiveRamp commented out until it is officially released tomorrow
+
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
+
+-->
+
+| Destino | Nuevo o actualizado | Descripción |
+| ----------- |----------------|----------- |
+| [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Nuevo | Cree una conexión saliente activa a [!DNL Azure Data Lake Storage Gen2] para exportar periódicamente archivos de datos de Adobe Experience Platform a su propia ubicación de almacenamiento. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Nuevo | [!DNL Data Landing Zone] es un [!DNL Azure Blob] interfaz de almacenamiento aprovisionada por Adobe Experience Platform, que le concede acceso a una función de almacenamiento de archivos segura y basada en la nube para exportar archivos fuera de Platform. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Nuevo | Cree una conexión saliente activa a [!DNL Google Cloud Storage] para exportar periódicamente archivos de datos de Adobe Experience Platform a sus propios contenedores. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL Amazon S3] update](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Actualizado   | Con esta actualización, el destino proporciona una funcionalidad mejorada de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL Azure Blob] update](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Actualizado   | Con esta actualización, el destino proporciona una funcionalidad mejorada de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL SFTP] update](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Actualizado   | Con esta actualización, el destino proporciona una funcionalidad mejorada de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
+| [[!DNL Adobe Campaign Managed Services] conexión](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Actualizado   | El [!DNL Adobe Campaign Managed Services] La integración de con Adobe Experience Platform ahora admite diferentes tipos de sincronización de audiencia. Utilice el control Seleccionar tipo de sincronización para determinar si debe exportar audiencias a Adobe Campaign o audiencias y sus atributos de perfil. <br> ![Nuevo selector Seleccionar tipo de sincronización resaltado.](/help/release-notes/2023/assets/acms-destination-export-type.png "Nuevo selector Seleccionar tipo de sincronización resaltado."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
+La versión de actualización y disponibilidad general de los seis destinos de almacenamiento en la nube anteriores proporciona las siguientes funciones:
+
+- Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+- Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través de [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+- Capacidad para personalizar el [formato de archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+- [!BADGE Beta]{type=Informative}[Compatibilidad con exportación de conjuntos de datos](/help/destinations/ui/export-datasets.md).
+
+
+**Correcciones y mejoras** {#destinations-fixes-and-enhancements}
+
+- Se ha corregido un problema con el destino de Marketing Cloud de Salesforce (API) en el cual en el paso de asignación no se devolvían todos los atributos de destino disponibles de Salesforce. Ahora hay un [límite superior de atributos de target 2000](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) de Salesforce que se pueden mostrar.
+- Se ha corregido un problema con el destino de Microsoft Dynamics 365. El destino ahora admite el enrutamiento regional de datos a través de la [Selector de región](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), para que pueda enrutar sus exportaciones de datos en función de la región en la que esté aprovisionada su compañía dentro del ecosistema de Microsoft. ![Nuevo selector de región resaltado.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nuevo selector de región resaltado."){width="100" zoomable="yes"}
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
