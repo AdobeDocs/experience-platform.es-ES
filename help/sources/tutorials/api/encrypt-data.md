@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo introducir archivos cifrados a tra
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1343'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ El proceso de ingesta de datos cifrados es el siguiente:
 
 Este documento proporciona pasos sobre cómo generar un par de claves de cifrado para cifrar los datos e introducir esos datos cifrados en Experience Platform mediante fuentes de almacenamiento en la nube.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -111,6 +111,65 @@ Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de
 }
 ```
 
+| Propiedad | Descripción |
+| --- | --- |
+| `publicKey` | La clave pública se utiliza para cifrar los datos en el almacenamiento de la nube. Esta clave corresponde a la clave privada que también se creó durante este paso. Sin embargo, la clave privada se envía inmediatamente al Experience Platform. |
+| `publicKeyId` | El ID de clave pública se utiliza para crear un flujo de datos e introducir los datos cifrados del almacenamiento en la nube en Experience Platform. |
+| `expiryTime` | La hora de caducidad define la fecha de caducidad del par de claves de cifrado. Esta fecha se establece automáticamente en 180 días después de la fecha de generación de claves y se muestra en formato unix timestamp. |
+
++++(Opcional) Crear un par de claves de verificación de firma para los datos firmados
+
+### Crear par de claves administrado por el cliente
+
+Si lo desea, puede crear un par de claves de verificación de firma para firmar e introducir los datos cifrados.
+
+Durante esta fase, debe generar su propia combinación de clave privada y clave pública y, a continuación, utilizar la clave privada para firmar los datos cifrados. A continuación, debe codificar la clave pública en Base64 y luego compartirla con Experience Platform para que Platform pueda comprobar su .
+
+### Compartir la clave pública con el Experience Platform
+
+Para compartir la clave pública, realice una solicitud de POST a `/customer-keys` al proporcionar su algoritmo de cifrado y su clave pública codificada en Base64.
+
+**Formato de API**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Solicitud**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parámetro | Descripción |
+| --- | --- |
+| `encryptionAlgorithm` | El tipo de algoritmo de cifrado que está utilizando. Los tipos de cifrado admitidos son `PGP` y `GPG`. |
+| `publicKey` | La clave pública que corresponde a las claves administradas por el cliente utilizadas para firmar el cifrado. Esta clave debe tener codificación Base64. |
+
+**Respuesta**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `publicKeyId` | Este ID de clave pública se devuelve en respuesta a compartir la clave gestionada por el cliente con el Experience Platform. Puede proporcionar este ID de clave pública como ID de clave de verificación de firma al crear un flujo de datos para datos firmados y cifrados. |
+
++++
+
 ## Conecte el origen de almacenamiento en la nube al Experience Platform mediante el [!DNL Flow Service] API
 
 Una vez recuperado el par de claves de cifrado, ahora puede continuar y crear una conexión de origen para la fuente de almacenamiento en la nube y llevar los datos cifrados a Platform.
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Solicitud**
+
+>[!BEGINTABS]
+
+>[!TAB Creación de un flujo de datos para la ingesta de datos cifrados]
 
 La siguiente solicitud crea un flujo de datos para introducir datos cifrados para una fuente de almacenamiento en la nube.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser bueno o igual a `15` para otros valores de frecuencia. |
+
+
+>[!TAB Crear un flujo de datos para introducir datos cifrados y firmados]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `params.signVerificationKeyId` | El ID de la clave de verificación de firma es el mismo que el ID de la clave pública recuperado después de compartir la clave pública codificada en Base64 con Experience Platform. |
+
+>[!ENDTABS]
 
 **Respuesta**
 
