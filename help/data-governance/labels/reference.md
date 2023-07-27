@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de etiquetas de uso de datos
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform en la actualidad.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2207'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Las etiquetas de uso de datos le permiten categorizar conjuntos de datos y campo
 
 Este documento describe las etiquetas de uso de datos principales que proporciona actualmente el Experience Platform.
 
-## Etiquetas de contrato
+## Etiquetas de contrato {#contract}
 
 Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos que tienen obligaciones contractuales o están relacionados con las políticas de gobernanza de datos de su organización.
 
@@ -42,7 +42,7 @@ Las etiquetas del contrato &quot;C&quot; se utilizan para categorizar los datos 
 | [C11](#c11) | Los datos no se pueden compartir con socios de coincidencia de segmentos. |
 | [C12](#c12) | Los datos no se pueden exportar de ninguna manera. |
 
-## Etiquetas de identidad
+## Etiquetas de identidad {#identity}
 
 Las etiquetas de identidad &quot;I&quot; se utilizan para categorizar los datos que pueden identificar o contactar a una persona específica.
 
@@ -63,6 +63,20 @@ Un tipo de datos que puede considerar confidencial puede ser un tipo diferente d
 | **S2** | Datos que pueden utilizarse para determinar un área de geovalla definida en sentido amplio. |
 | **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que el Adobe le permite cargar de forma contractual y que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la información médica protegida (PHI) y otros datos de salud regulados. |
 | **RHD** | Datos que hacen referencia a información médica protegida (PHI) o información sobre un paciente que el Adobe le permite cargar. |
+
+## (Beta) Etiquetas de Partner Ecosystem {#partner}
+
+>[!IMPORTANT]
+>
+>La etiqueta de datos de terceros está en versión beta. No está disponible para todos los usuarios y la documentación está sujeta a cambios.
+
+Las etiquetas de ecosistema de socio se utilizan para categorizar los datos obtenidos de fuentes externas a su organización.
+
+Esta etiqueta se utiliza para regular el uso de los datos de clientes potenciales.
+
+| Etiqueta | Definición |
+| --- | --- |
+| **Terceros** | Los datos de terceros son datos que le proporciona un proveedor de datos de terceros. Un proveedor de datos de terceros es una entidad que ha celebrado un acuerdo con su organización que le autoriza a acceder, utilizar, mostrar y transmitir los datos de terceros junto con Platform. |
 
 ## Apéndice
 
