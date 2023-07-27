@@ -4,10 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Utilice clases y grupos de campo de esquema del Modelo de datos de experiencia (XDM) para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 20%
+source-wordcount: '519'
+ht-degree: 21%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 20%
    * [Plan](./classes/plan.md)
    * [Directiva](./classes/policy.md)
    * [Producto](./classes/product.md)
+   * [Perspectiva](./classes/prospect.md)
    * [Proveedor](./classes/provider.md)
    * [Definición del segmento](./classes/segment-definition.md)
    * Clases B2B {#b2b}
