@@ -4,9 +4,9 @@ description: Aprenda a crear y utilizar audiencias de clientes potenciales para 
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -64,4 +64,4 @@ Para obtener información sobre cómo puede utilizar la funcionalidad de audienc
 
 ## Pasos siguientes
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+Después de leer esta guía, ahora sabe cómo crear y administrar las audiencias de clientes potenciales en Adobe Experience Platform. Para aprender a activar una audiencia potencial en otros servicios descendentes, lea la guía de [activar audiencias de clientes potenciales](../../destinations/ui/activate-prospect-audiences.md).
