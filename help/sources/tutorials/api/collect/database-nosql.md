@@ -5,9 +5,9 @@ title: Crear un flujo de datos para orígenes de base de datos mediante la API d
 type: Tutorial
 description: Este tutorial explica los pasos para recuperar datos de una base de datos e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1408'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Este tutorial explica los pasos para recuperar datos de un origen de base de dat
 >
 >Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que se puede crear una conexión base.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -185,7 +185,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | El `$id` del esquema XDM de destino. |
 | `data.schema.version` | La versión del esquema. Se debe establecer este valor `application/vnd.adobe.xed-full+json;version=1`, que devuelve la última versión secundaria del esquema. |
-| `params.dataSetId` | El ID del conjunto de datos de destinatario recopilado en el paso anterior. |
+| `params.dataSetId` | El ID del conjunto de datos de destinatario generado en el paso anterior. **Nota**: Debe proporcionar un ID de conjunto de datos válido al crear una conexión de destino. Si la ID del conjunto de datos no es válida, se producirá un error. |
 | `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
@@ -683,7 +683,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo monitorizar flujos de datos, consulte el tutorial sobre [monitorización de flujos de datos en la API ](../monitor.md)
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo monitorizar flujos de datos, consulte el tutorial sobre [monitorización de flujos de datos en la API](../monitor.md)
 
 ## Pasos siguientes
 

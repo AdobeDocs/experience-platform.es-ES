@@ -5,9 +5,9 @@ title: Crear un flujo de datos para fuentes de almacenamiento en la nube mediant
 type: Tutorial
 description: Este tutorial cubre los pasos para recuperar datos de un almacenamiento en la nube de terceros e incluirlos en Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1765'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Este tutorial explica los pasos para recuperar datos de una fuente de almacenami
 >
 >Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de almacenamiento en la nube. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#cloud-storage) para obtener una lista de orígenes de almacenamiento en la nube con los que puede crear una conexión base.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -94,7 +94,7 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | El ID de conexión base del origen de almacenamiento en la nube. |
 | `data.format` | El formato de los datos que desea llevar a Platform. Los valores admitidos son: `delimited`, `JSON`, y `parquet`. |
-| `data.properties` | (Opcional) Un conjunto de propiedades que puede aplicar a los datos al crear una conexión de origen. |
+| `data.properties` | (Opcional) Conjunto de propiedades que se pueden aplicar a los datos al crear una conexión de origen. |
 | `data.properties.columnDelimiter` | (Opcional) Un delimitador de columna de un solo carácter que puede especificar al recopilar archivos planos. Cualquier valor de carácter único es un delimitador de columna admisible. Si no se proporciona, escriba una coma (`,`) se usa como valor predeterminado. **Nota**: La `columnDelimiter` La propiedad solo se puede utilizar al ingerir archivos delimitados. |
 | `data.properties.encoding` | (Opcional) Una propiedad que define el tipo de codificación que se utilizará al ingerir los datos en Platform. Los tipos de codificación admitidos son: `UTF-8` y `ISO-8859-1`. **Nota**: La `encoding` El parámetro solo está disponible al ingerir archivos CSV delimitados. Se incorporarán otros tipos de archivo con la codificación predeterminada, `UTF-8`. |
 | `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido para la ingesta. Los tipos de archivo comprimidos admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, y `tar`. **Nota**: La `compressionType` La propiedad solo se puede utilizar al ingerir archivos delimitados o JSON. |
@@ -253,8 +253,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | El `$id` del esquema XDM de destino. |
 | `data.schema.version` | La versión del esquema. Se debe establecer este valor `application/vnd.adobe.xed-full+json;version=1`, que devuelve la última versión secundaria del esquema. |
-| `params.dataSetId` | El ID del conjunto de datos de destinatario. |
-| `connectionSpec.id` | ID de especificación de conexión fija al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | El ID del conjunto de datos de destinatario generado en el paso anterior. **Nota**: Debe proporcionar un ID de conjunto de datos válido al crear una conexión de destino. Si la ID del conjunto de datos no es válida, se producirá un error. |
+| `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
