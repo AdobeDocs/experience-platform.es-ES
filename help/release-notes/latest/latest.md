@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 62a0b6327f1707fcc639a309ae7db5bf0e4c828a
+source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 26%
+source-wordcount: '1017'
+ht-degree: 25%
 
 ---
 
@@ -55,16 +55,9 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 **Destinos nuevos o actualizados** {#new-updated-destinations}
 
-<!--
-
-LiveRamp commented out until it is officially released tomorrow
-
-| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
-
--->
-
 | Destino | Nuevo o actualizado | Descripción |
 | ----------- |----------------|----------- |
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | Nuevo | Incorporación de identidades de Adobe Experience Platform en [!DNL LiveRamp Connect] para poder dirigirse a los usuarios en dispositivos móviles, sitios web abiertos, medios sociales y [!DNL CTV] plataformas, usar el [!DNL Ramp ID] identificador. |
 | [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Nuevo | Cree una conexión saliente activa a [!DNL Azure Data Lake Storage Gen2] para exportar periódicamente archivos de datos de Adobe Experience Platform a su propia ubicación de almacenamiento. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Nuevo | [!DNL Data Landing Zone] es un [!DNL Azure Blob] interfaz de almacenamiento aprovisionada por Adobe Experience Platform, que le concede acceso a una función de almacenamiento de archivos segura y basada en la nube para exportar archivos fuera de Platform. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
 | [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Nuevo | Cree una conexión saliente activa a [!DNL Google Cloud Storage] para exportar periódicamente archivos de datos de Adobe Experience Platform a sus propios contenedores. Este nuevo destino proporciona funciones mejoradas de exportación de archivos y admite [!BADGE Beta]{type=Informative} |
