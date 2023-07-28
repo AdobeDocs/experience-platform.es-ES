@@ -4,10 +4,10 @@ description: Aprenda a atraer y adquirir nuevos clientes a través de casos de u
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
 workflow-type: tm+mt
 source-wordcount: '1953'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad beta está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información sobre estos paquetes en la [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html) y póngase en contacto con el representante del Adobe para obtener más información.
+>* La funcionalidad Beta está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su base de perfiles con perfiles potenciales de socios de datos y comprometerse con ellos para adquirir o llegar a nuevos clientes.
 
@@ -46,7 +46,7 @@ Antes de expandir Real-Time CDP para atraer y adquirir nuevos clientes, asegúre
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
 
-Lea las secciones siguientes, que incluyen vínculos a documentación adicional, para completar cada uno de los pasos de la descripción general de alto nivel anterior.
+Lea las secciones siguientes, que incluyen vínculos a documentación adicional, para completar cada uno de los pasos de la información general de alto nivel anterior.
 
 ### Funcionalidad y elementos de la interfaz de usuario que utilizará {#ui-functionality-and-elements}
 
@@ -83,7 +83,7 @@ Comience creando un nuevo tipo de identidad para los perfiles que recibirá del 
 ![Cree un nuevo área de nombres de identidad de ID de socio.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Obtenga más información acerca de las áreas de nombres de ID de socio en la [sección tipos de identidad](/help/identity-service/namespaces.md).
-* Más información [definición de campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario del Experience Platform.
+* Lea acerca de [cómo definir campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario de Experience Platform.
 
 #### Cree un nuevo esquema con **[!UICONTROL Perfil de cliente potencial individual XDM]** clase
 
@@ -128,8 +128,8 @@ Para realizar esto, siga los pasos a continuación:
 También en este paso, piense en cómo cambia el modelo de gobernanza de datos a medida que amplía su estrategia de administración de datos para incluir datos de terceros proporcionados por el socio. Explore las consideraciones de los vínculos de documentación siguientes:
 
 * (**Muy pronto**) Mantenga los datos de terceros en un conjunto de datos independiente para que sea fácil eliminarlos y deshacer integraciones.
-* (**Muy pronto**) Use el [caducidad del conjunto de datos](/help/hygiene/ui/dataset-expiration.md) funcionalidad en el conjunto de datos para clientes que compraron el complemento de higiene de datos.
-* (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que una vez mezclados, la única solución para eliminar los datos de terceros es eliminar todo el conjunto de datos derivado.
+* (**Muy pronto**) Use la funcionalidad de [caducidad del conjunto de datos](/help/hygiene/ui/dataset-expiration.md) en el conjunto de datos para clientes que compraron el complemento de higiene.
+* (**Muy pronto**) Tenga cuidado al crear conjuntos de datos derivados que extraen datos de terceros, ya que, una vez mezclados, la única solución para quitar los datos de terceros es eliminar todo el conjunto de datos derivado.
 
 ### Cargue la lista de perfiles de clientes potenciales e inspeccione la vista de perfiles de clientes potenciales
 
@@ -204,11 +204,11 @@ Tenga en cuenta que la experiencia de creación de audiencias para perfiles de c
 
 ### Activar perfiles de clientes potenciales en destinos {#activate-to-destinations}
 
-Utilice las audiencias de clientes potenciales exportándolas a destinos. Actualmente, solo determinados destinos como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o el [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) compatibilidad de destino activación de perfiles de clientes potenciales.
+Utilice las audiencias de clientes potenciales exportándolas a destinos. Actualmente, solo determinados destinos como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o el [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) compatibilidad de destino activación de perfiles de clientes potenciales.
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Complementar perfiles de origen con atributos de socios de datos de confianza](/help/rtcdp/partner-data/supplement-first-party-profiles.md) para mejorar la base de datos, obtener nuevos conocimientos de la base de clientes y optimizar la audiencia.
-* (**Muy pronto**) [!BADGE Beta]{type=Informative}**Aproveche el reconocimiento asistido por socios** para personalizar las experiencias en el sitio durante la visita y para volver a direccionar las visitas posteriores fuera del sitio sin que el usuario se autentique ni tenga un historial anterior con su marca.
+* [!BADGE Beta]{type=Informative}[Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* (**Muy pronto**) [!BADGE Beta]{type=Informative}**Aproveche el reconocimiento asistido por socios** para personalizar las experiencias en el sitio durante la visita y volver a direccionar las visitas posteriores fuera del sitio sin que el usuario se autentique ni tenga un historial anterior con su marca.
