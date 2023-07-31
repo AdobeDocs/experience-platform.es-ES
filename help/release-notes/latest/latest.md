@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 26%
+source-wordcount: '1365'
+ht-degree: 28%
 
 ---
 
@@ -17,6 +17,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [Servicio de catálogo](#catalog-service)
 - [Recopilación de datos](#data-collection)
+- [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
 - [Servicio de consultas](#query-service)
 - [Servicio de segmentación](#segmentation)
@@ -48,20 +49,20 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 {style="table-layout:auto"}
 
 Para obtener más información sobre la recopilación de datos, lea la [información general sobre colecciones de datos](../../tags/home.md).
-<!-- 
-## Data Prep {#data-prep}
 
-Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+## Preparación de los datos {#data-prep}
 
-**New or updated features**
+La preparación de datos permite a los ingenieros de datos asignar, transformar y validar datos desde y hacia el modelo de datos de experiencia (XDM).
 
-| Feature | Description |
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
 | --- | --- |
-| New mapper functions | You can now use the following functions when mapping objects in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md#hierarchies---objects). |
+| Nuevas funciones de asignación | Ahora puede utilizar las siguientes funciones al asignar objetos en la preparación de datos: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> Para obtener más información sobre estas funciones, lea la [Guía de funciones de preparación de datos](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
+Para obtener más información sobre la preparación de datos, lea [Información general de preparación de datos](../../data-prep/home.md).
 
 ## Destinos {#destinations}
 
