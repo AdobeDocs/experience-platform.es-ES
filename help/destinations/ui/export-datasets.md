@@ -3,7 +3,7 @@ title: (Beta) Exportar conjuntos de datos a destinos de almacenamiento en la nub
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 5%
@@ -28,12 +28,12 @@ Actualmente, puede exportar conjuntos de datos a los destinos de almacenamiento 
 
 ![Destinos que admiten exportaciones de conjuntos de datos](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Cuándo activar audiencias o exportar conjuntos de datos {#when-to-activate-audiences-or-activate-datasets}
 

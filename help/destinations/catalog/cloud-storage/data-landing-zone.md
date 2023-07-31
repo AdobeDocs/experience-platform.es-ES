@@ -1,8 +1,9 @@
 ---
 title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
+last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1404'
 ht-degree: 1%

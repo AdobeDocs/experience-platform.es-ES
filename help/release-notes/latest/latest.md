@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 26%
@@ -17,7 +17,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [Servicio de catálogo](#catalog-service)
 - [Recopilación de datos](#data-collection)
-- [Destinos](#data-prep)
+- [Destinos](#destinations)
 - [Servicio de consultas](#query-service)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
@@ -95,7 +95,7 @@ La versión de actualización y disponibilidad general de los seis destinos de a
 **Correcciones y mejoras** {#destinations-fixes-and-enhancements}
 
 - Se ha corregido un problema con el destino de Marketing Cloud de Salesforce (API) en el cual en el paso de asignación no se devolvían todos los atributos de destino disponibles de Salesforce. Ahora hay un [límite superior de atributos de target 2000](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) de Salesforce que se pueden mostrar.
-- Se ha corregido un problema con el destino de Microsoft Dynamics 365. El destino ahora admite el enrutamiento regional de datos a través de la [Selector de región](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), para que pueda enrutar sus exportaciones de datos en función de la región en la que esté aprovisionada su compañía dentro del ecosistema de Microsoft. ![Nuevo selector de región resaltado.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nuevo selector de región resaltado."){width="100" zoomable="yes"}
+- Se ha corregido un problema con el destino de Microsoft Dynamics 365. El destino ahora admite el enrutamiento regional de datos a través de la [Selector de región](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), para que pueda enrutar sus exportaciones de datos en función de la región en la que esté aprovisionada su compañía dentro del ecosistema de Microsoft. <br> ![Nuevo selector de región resaltado.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Nuevo selector de región resaltado."){width="100" zoomable="yes"}
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
