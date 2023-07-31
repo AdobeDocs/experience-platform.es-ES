@@ -4,15 +4,19 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3673'
 ht-degree: 11%
 
 ---
 
 
 # Activar audiencias para destinos de exportación de perfiles por lotes
+
+>[!IMPORTANT]
+> 
+> La funcionalidad descrita en la página aún no está disponible de forma general para los clientes. Actualmente, esta página está destinada a equipos internos del Adobe como lectura previa de las próximas funciones. No comparta fuera del Adobe hasta que se elimine esta nota.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Utilice el **[!UICONTROL Programado]** para que el trabajo de activación se eje
 
    ![Imagen que resalta la opción Programado en el flujo de activación para destinos por lotes y muestra el selector de tiempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >Debido al modo en que se configuran los procesos internos del Experience Platform, es posible que la primera exportación de archivo incremental o completa no contenga todos los datos de relleno. <br> <br> Para garantizar una exportación de datos de relleno completa y más actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la primera hora de exportación de archivo después de las 12 PM GMT del día siguiente. Esta limitación se solucionará en futuras versiones.
-
 1. Utilice el **[!UICONTROL Fecha]** selector para elegir el día o el intervalo en el que debe realizarse la exportación. Para las exportaciones diarias, la práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en d
    * **[!UICONTROL Por hora]**: programe las exportaciones de archivos incrementales cada 3, 6, 8 o 12 horas.
 
 1. Utilice el **[!UICONTROL Hora]** selector para elegir la hora del día, en [!DNL UTC] formato, momento en el que se debe realizar la exportación.
-
-   >[!IMPORTANT]
-   >
-   >Debido al modo en que se configuran los procesos internos del Experience Platform, es posible que la primera exportación de archivo incremental o completa no contenga todos los datos de relleno. <br> <br> Para garantizar una exportación de datos de relleno completa y más actualizada tanto para archivos completos como incrementales, Adobe recomienda configurar la primera hora de exportación de archivo después de las 12 PM GMT del día siguiente. Esta limitación se solucionará en futuras versiones.
 
 1. Utilice el **[!UICONTROL Fecha]** selector para elegir el intervalo en el que debe realizarse la exportación. La práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
 
