@@ -3,7 +3,7 @@ title: Widgets de inteligencia artificial aplicada al cliente del panel Audienci
 description: Descubra cómo la inteligencia artificial aplicada al cliente proporciona perspectivas importantes sobre la pérdida o la tendencia de las audiencias del Perfil del cliente en tiempo real de su organización.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 13%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Distribución de puntuaciones de Customer AI] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Distribución de las puntuaciones"
 >abstract="Este widget visualiza la distribución del número total de perfiles por sus puntuaciones de tendencia en incrementos de cinco por ciento. La distribución del recuento de perfiles viene determinada por el modelo de inteligencia artificial y las políticas de combinación seleccionadas. Puede cambiar el modelo de inteligencia artificial desde el menú desplegable debajo del título del widget."
 
@@ -52,7 +52,7 @@ Puede encontrar más información sobre la inteligencia artificial aplicada al c
 ## [!UICONTROL Resumen de puntuación de Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Resumen de las puntuaciones"
 >abstract="Este widget muestra el número total de perfiles puntuados y los clasifica en bloques que contienen una tendencia alta, media y baja. El gráfico de anillo ilustra la composición proporcional de los perfiles totales en las tendencias alta, media y baja."
 

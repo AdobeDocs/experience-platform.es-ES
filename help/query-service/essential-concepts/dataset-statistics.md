@@ -1,7 +1,7 @@
 ---
 title: Cálculo de estadísticas de conjuntos de datos
 description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
-source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
+source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -61,8 +61,8 @@ Si no proporciona un nombre de alias por adelantado, el Servicio de consultas ge
 Ejemplo de salida de un `COMPUTE STATISTICS` La consulta es la siguiente:
 
 ```console
-| Statistics ID    | 
-| ---------------- |
+| Statistics ID         | 
+| --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
 ```
@@ -100,11 +100,11 @@ Puede usar el complemento `SHOW STATISTICS` para mostrar los metadatos de todas 
 Un ejemplo de salida de `SHOW STATISTICS` se ve a continuación.
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
 A continuación se proporciona una descripción de los nombres de las columnas de metadatos.
