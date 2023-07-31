@@ -68,7 +68,7 @@ Además, este destino también admite la activación de las audiencias que se de
 >id="platform_destinations_custom_personalization_datastream"
 >title="Acerca de los ID de secuencia de datos"
 >abstract="Esta opción determina en qué secuencia de datos de recopilación de datos se incluirán los públicos en la respuesta a la página. El menú desplegable muestra solo las secuencias de datos que tienen habilitada la configuración de destino. Debe configurar una secuencia de datos para poder configurar el destino."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=es" text="Obtenga información sobre cómo configurar una secuencia de datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=es" text="Obtenga información sobre cómo configurar una secuencia de datos"
 
 >[!IMPORTANT]
 > 

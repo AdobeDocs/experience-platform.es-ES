@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 2%
+ht-degree: 13%
 
 ---
 
@@ -24,8 +24,8 @@ THe links when required
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_distributionOfScores"
->title="Distribución de puntuaciones"
->abstract="Este widget visualiza la distribución del número total de perfiles por sus puntuaciones de tendencia en incrementos de cinco por ciento. La distribución del recuento de perfiles viene determinada por el modelo de IA y la política de combinación seleccionada. Puede cambiar el modelo de IA desde el menú desplegable debajo del título del widget."
+>title="Distribución de las puntuaciones"
+>abstract="Este widget visualiza la distribución del número total de perfiles por sus puntuaciones de tendencia en incrementos de cinco por ciento. La distribución del recuento de perfiles viene determinada por el modelo de inteligencia artificial y las políticas de combinación seleccionadas. Puede cambiar el modelo de inteligencia artificial desde el menú desplegable debajo del título del widget."
 
 El [!UICONTROL Distribución de puntuaciones de Customer AI] widget categoriza el número total de perfiles según sus puntuaciones de tendencia. La distribución del recuento de perfiles viene determinada por el modelo de IA y la política de combinación seleccionada y, a continuación, se visualiza en incrementos de cinco por ciento que indican su tendencia. El recuento de perfiles se proporciona a lo largo del eje Y y las puntuaciones de tendencia se proporcionan a lo largo del eje X.
 
@@ -53,7 +53,7 @@ Puede encontrar más información sobre la inteligencia artificial aplicada al c
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_audiences_scoringSummary"
->title="Resumen de puntuación"
+>title="Resumen de las puntuaciones"
 >abstract="Este widget muestra el número total de perfiles puntuados y los clasifica en bloques que contienen una tendencia alta, media y baja. El gráfico de anillo ilustra la composición proporcional de los perfiles totales en las tendencias alta, media y baja."
 
 Este widget muestra el número total de perfiles marcados y los clasifica en bloques que contienen alta, media y baja tendencia como verde, amarillo y rojo respectivamente. Se utiliza un gráfico de anillo para ilustrar la composición proporcional de los perfiles totales entre tendencias altas, medias y bajas como el verde, el amarillo y el rojo, respectivamente. Un perfil cumple los requisitos para una alta tendencia a más de 75 años, una tendencia media entre 25 y 74 años y una baja tendencia a menos de 24 años. Una leyenda indica el código de color y los umbrales de tendencia. Los recuentos de perfiles para las tendencias alta, media y baja se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
