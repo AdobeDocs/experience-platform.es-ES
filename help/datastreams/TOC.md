@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Ayuda de flujos de datos Adobe Experience Platform
-breadcrumb-title: Guía de flujos de datos
-user-guide-description: Obtenga información sobre cómo configurar flujos de datos en Adobe Experience Platform.
+user-guide-title: Ayuda de secuencias de datos de Adobe Experience Platform
+breadcrumb-title: Guía de secuencias de datos
+user-guide-description: Obtenga información sobre cómo configurar secuencias de datos en Adobe Experience Platform.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 17%
+ht-degree: 53%
 
 ---
 
