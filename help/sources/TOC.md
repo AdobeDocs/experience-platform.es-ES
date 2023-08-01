@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '987'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # Fuentes {#sources}
 
-- [Resumen de orígenes](home.md)
+- [Información general de fuentes](home.md)
 - Conectores de origen disponibles {#connectors}
    - aplicaciones de Adobe {#adobe-applications}
       - [Fuente de clasificaciones de Analytics](connectors/adobe-applications/classifications.md)
@@ -24,7 +24,6 @@ ht-degree: 14%
       - [fuente de Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fuente de recopilación de datos](connectors/adobe-applications/data-collection.md)
-      - [fuente de Workfront](connectors/adobe-applications/workfront.md)
       - Asignaciones de campos {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -234,7 +233,6 @@ ht-degree: 14%
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Actividades personalizadas de Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
@@ -344,7 +342,7 @@ ht-degree: 14%
       - [Configurar la especificación de exploración](sources-sdk/config/explorespec.md)
    - Guía de API de fuentes de autoservicio (SDK por lotes) {#self-serve-api}
       - [Resumen de la API de fuentes de autoservicio (SDK por lotes)](sources-sdk/api/api-overview.md)
-      - [Primeros pasos](sources-sdk/api/getting-started.md)
+      - [Introducción](sources-sdk/api/getting-started.md)
       - [Crear una especificación de conexión](sources-sdk/api/create.md)
       - [Actualizar una especificación de conexión](sources-sdk/api/update-connection-specs.md)
       - [Actualización de una especificación de flujo](sources-sdk/api/update-flow-specs.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1437'
 ht-degree: 2%
 
 ---
@@ -54,8 +54,6 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 - [[!DNL Marketo Engage] descripción general de origen](connectors/adobe-applications/marketo/marketo.md)
    - [Crear un [!DNL Marketo Engage] conexión de origen en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Crear un [!DNL Marketo Engage] conexión de origen y flujo de datos para datos de actividad personalizados](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Resumen de origen de Adobe Workfront](connectors/adobe-applications/workfront.md)
-   - [Crear una conexión de origen de Workfront en la interfaz de usuario](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 
