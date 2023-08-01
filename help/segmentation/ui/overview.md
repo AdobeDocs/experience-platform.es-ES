@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
-ht-degree: 3%
+source-wordcount: '3610'
+ht-degree: 4%
 
 ---
 
@@ -80,7 +80,7 @@ Puede añadir campos adicionales a esta visualización seleccionando ![el icono 
 | [!UICONTROL Etiquetas] | Las etiquetas definidas por el usuario que pertenecen a la audiencia. Encontrará más información sobre estas etiquetas en la [sección sobre etiquetas](#tags). |
 | [!UICONTROL Desglose] | El desglose del estado del perfil de la audiencia. A continuación, se puede encontrar una descripción más detallada de este desglose del estado del perfil. |
 | [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
-| [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen `On Demand`, `Scheduled`, y `Continuous`. |
+| [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen `On Demand` (Lote), `Scheduled` (Transmisión), y `Continuous` (Edge). |
 | [!UICONTROL Actualizado por última vez por] | El nombre de la persona que actualizó la audiencia por última vez. |
 | [!UICONTROL Descripción] | La descripción de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
