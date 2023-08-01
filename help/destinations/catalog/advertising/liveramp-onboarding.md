@@ -3,9 +3,9 @@ title: 'LiveRamp: conexión de incorporación'
 description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,9 @@ En el [paso de asignación](#map) del flujo de trabajo de activación, debe defi
 
 Esta sección describe todas las audiencias que puede exportar a este destino.
 
-Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
 
-Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+Además, este destino también admite la activación de las audiencias adicionales que se describen en la tabla siguiente.
 
 | Tipo de audiencia | Descripción |
 ---------|----------|
@@ -129,13 +129,8 @@ Leer [Activar datos de audiencia en destinos de exportación de perfiles por lot
 
 En el [!UICONTROL Programación] , cree una programación de exportación para cada audiencia con la configuración que se muestra a continuación.
 
->[!IMPORTANT]
->
->Todas las audiencias activadas en este destino deben configurarse con la misma programación, como se muestra a continuación.
-
 * **[!UICONTROL Opciones de exportación de archivos]**: [!UICONTROL Exportar archivos completos]. [Exportaciones incrementales de archivos](../../ui/activate-batch-profile-destinations.md#export-incremental-files) actualmente no son compatibles con [!DNL LiveRamp] destino.
 * **[!UICONTROL Frecuencia]**: [!UICONTROL Diario]
-* Establezca el tiempo de exportación en **[!UICONTROL Después de la evaluación de segmentos]**. Exportaciones de audiencia programadas y [exportaciones de archivos bajo demanda](../../ui/export-file-now.md) actualmente no son compatibles con [!DNL LiveRamp] destino.
 * **[!UICONTROL Fecha]**: seleccione las horas de inicio y finalización de la exportación según desee.
 
 ![Captura de pantalla de la IU de Platform que muestra el paso de programación de audiencias.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
