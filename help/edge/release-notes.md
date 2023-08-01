@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1589'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,18 @@ ht-degree: 3%
 Este documento describe las notas de la versión del SDK web de Adobe Experience Platform.
 Para obtener las últimas notas de la versión de la extensión de etiquetas del SDK web, consulte la [Notas de la versión de la extensión de etiquetas SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Versión 2.16.0: 17 de mayo de 2023
+## Versión 2.18.0: 31 de julio de 2023
+
+**Nuevas funciones**
+
+* Se ha añadido la compatibilidad con [Anulaciones por comando del ID de la secuencia de datos](../datastreams/overrides.md).
+
+**Correcciones y mejoras**
+
+* Se ha corregido un problema por el cual los vínculos de salida no se clasificaban debido a que el dominio formaba parte de la consulta.
+* Obsoleto `edgeConfigId` a favor de `datastreamId` en la configuración del SDK web.
+
+## Versión 2.17.0: 17 de mayo de 2023
 
 **Correcciones y mejoras**
 
@@ -61,7 +72,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas del
 **Nuevas funciones**
 
 * Se ha añadido la compatibilidad con [Migración completa de página por página](home.md#migrating-to-web-sdk). El perfil de Adobe Target ahora se conservará a medida que un visitante se desplace entre las páginas de at.js y del SDK web.
-* Se ha agregado compatibilidad configurable para [User-Agent Client Hints de alta entropía](fundamentals/user-agent-client-hints.md#high-entropy).
+* Se ha añadido compatibilidad configurable para [User-Agent Client Hints de alta entropía](fundamentals/user-agent-client-hints.md#high-entropy).
 * Se ha añadido compatibilidad con el nuevo `applyResponse` comando. Esto permite la personalización híbrida a través de [API del servidor de red perimetral](../server-api/overview.md).
 * Los vínculos del modo de control de calidad ahora funcionan en varias páginas.
 
