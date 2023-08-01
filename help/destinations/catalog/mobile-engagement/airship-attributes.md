@@ -3,9 +3,9 @@ keywords: atributos del dirigible;destino del dirigible
 title: Conexión de Atributos del dirigible
 description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como atributos de audiencia para segmentar dentro del dirigible.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para obtener más información acerca de [!DNL Airship], consulte la [Documentos
 
 >[!TIP]
 >
->Esta página de documentación fue creada por el [!DNL Airship] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [support.airship.com](https://support.airship.com/).
+>Este conector de destino y la página de documentación los crea y mantiene el [!DNL Airship] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [support.airship.com](https://support.airship.com/).
 
 ## Requisitos previos {#prerequisites}
 

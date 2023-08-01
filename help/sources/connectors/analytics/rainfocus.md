@@ -3,9 +3,9 @@ title: Resumen de fuentes de RainFocus
 description: Aprenda a llevar los datos de análisis y administración de eventos de su cuenta de RainFocus a Experience Platform
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '998'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ Utilice el [!DNL RainFocus] fuente en Adobe Experience Platform y Real-time Cust
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el [!DNL RainFocus] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en clientcare<span>@rainfocus.com o visite [[!DNL RainFocus] Centro de ayuda](https://help.rainfocus.com/hc/en-us)
+>Este conector de origen y esta página de documentación los crea y mantiene el [!DNL RainFocus] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en clientcare<span>@rainfocus.com o visite [[!DNL RainFocus] Centro de ayuda](https://help.rainfocus.com/hc/en-us)
 
 ## Requisitos previos
 

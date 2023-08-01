@@ -2,9 +2,9 @@
 title: Conexión de Snap Inc
 description: Aprenda a conectarse a la plataforma de anuncios de Snapchat y a exportar las audiencias desde Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el *Snap Inc* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *dev-support@snap.com*
+>Este conector de destino y la página de documentación los crea y mantiene el *Snap Inc* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *dev-support@snap.com*
 
 ## Casos de uso {#use-cases}
 
@@ -125,7 +125,7 @@ Después de activar las audiencias en *Snap Inc* destino, podrá ver las audienc
 1. Inicie sesión en [Administrador de anuncios de Snap](https://ads.snapchat.com/)
 2. Seleccionar **Audiencias** en el menú desplegable situado en la esquina superior izquierda de la pantalla. Verá las audiencias que activó en Adobe Experience Platform en la Biblioteca de audiencias:
 
-![Audiencias](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
 Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [Resumen del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 

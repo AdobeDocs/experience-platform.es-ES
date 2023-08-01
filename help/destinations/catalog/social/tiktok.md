@@ -1,12 +1,12 @@
 ---
 title: Conexión de TikTok
-description: Cree audiencias personalizadas en TikTok con sus datos para segmentar con sus campañas publicitarias. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
+description: Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 2%
+source-wordcount: '983'
+ht-degree: 5%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Cree audiencias personalizadas en TikTok con sus datos para segmentar con sus campañas publicitarias. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads. Visita [Centro de ayuda empresarial de TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obtener más información.
+Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads. Visita [Centro de ayuda empresarial de TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obtener más información.
 
 >[!IMPORTANT]
 >
->Esta página de documentación ha sido creada por el equipo de TikTok. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>El equipo de TikTok crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Casos de uso {#use-cases}
 

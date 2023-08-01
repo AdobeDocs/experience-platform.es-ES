@@ -3,10 +3,10 @@ title: Conector De Perfil Pega
 description: Utilice el conector de perfil Pega para Amazon S3 en Adobe Experience Platform para exportar datos de perfil completos o incrementales, o ambos, al almacenamiento en la nube de Amazon S3. En el centro de decisiones del cliente de Pega, los trabajos de datos se pueden programar en el Diseñador de perfiles de cliente para importar datos de perfil periódicamente desde el almacenamiento de Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 0%
+source-wordcount: '1084'
+ht-degree: 2%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Utilice el [!DNL Pega Profile Connector] en Adobe Experience Platform para crear una conexión saliente activa con su [!DNL Amazon Web Services] (AWS) Almacenamiento de S3 para exportar periódicamente datos de perfil a archivos CSV desde Adobe Experience Platform en sus propios contenedores de S3. Entrada [!DNL Pega Customer Decision Hub], puede programar trabajos de datos para importar estos datos de perfil desde el almacenamiento de S3 y actualizar el [!DNL Pega Customer Decision Hub] perfil.
+Utilice el [!DNL Pega Profile Connector] en Adobe Experience Platform para crear una conexión saliente activa con su [!DNL Amazon Web Services] (AWS) Almacenamiento de S3 para exportar periódicamente datos de perfil a archivos CSV desde Adobe Experience Platform en sus propios contenedores de S3. En [!DNL Pega Customer Decision Hub], puede programar trabajos de datos para importar estos datos de perfil desde el almacenamiento de S3 y actualizar el perfil [!DNL Pega Customer Decision Hub].
 
 Este conector ayuda a configurar la exportación inicial de datos de perfil y también ayuda a sincronizar nuevos perfiles periódicamente en [!DNL Pega Customer Decision Hub].  Tener datos actualizados en Customer Decision Hub proporciona una vista mejor y actualizada de su base de clientes para la toma de decisiones de la siguiente mejor acción.
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por Pegasystems. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Pega [aquí](mailto:support@pega.com).
+>Pegasystems crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Pega [aquí](mailto:support@pega.com).
 
 ## Casos de uso
 

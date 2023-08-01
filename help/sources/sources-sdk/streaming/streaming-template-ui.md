@@ -4,9 +4,9 @@ description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe 
 hide: true
 hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1198'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial proporciona los pasos para crear una *SU FUENTE* conector de orige
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el *SU FUENTE* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
+>Este conector de origen y esta página de documentación los crea y mantiene el *SU FUENTE* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
 
 ## Requisitos previos
 
@@ -48,17 +48,17 @@ Para poder conectarse *SU ORIGEN* En Platform, debe proporcionar valores para la
 
 Para obtener más información sobre estas credenciales, consulte la *SU FUENTE* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
-### Integrar *SU FUENTE* con su webhook
+### Integrar *SU ORIGEN* con su webhook
 
 *El SDK de streaming requiere que su fuente admita los webhooks para poder comunicarse con el Experience Platform. En esta sección, debe proporcionar los pasos que los usuarios deberán seguir para integrar YOURSOURCE con un webhook.*
 
-## Conecte su *SU FUENTE* account
+## Conecte su *SU ORIGEN* account
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el **Transmisión** categoría, seleccionar *SU FUENTE*, y luego seleccione **[!UICONTROL Añadir datos]**.
+En el **Transmisión** categoría, seleccionar *SU ORIGEN*, y luego seleccione **[!UICONTROL Añadir datos]**.
 
 >[!TIP]
 >
@@ -124,7 +124,7 @@ Para recuperar el extremo de flujo continuo, vaya a [!UICONTROL Actividad de flu
 
 *Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su fuente, consulte la sección de recursos adicionales a continuación.*
 
-Al seguir este tutorial, ha establecido una conexión con su *SU FUENTE* cuenta. Ahora puede continuar con el siguiente tutorial y [configuración de un flujo de datos para introducir datos en Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Al seguir este tutorial, ha establecido una conexión con su *SU ORIGEN* cuenta. Ahora puede continuar con el siguiente tutorial y [configuración de un flujo de datos para introducir datos en Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionales
 

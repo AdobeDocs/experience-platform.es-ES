@@ -2,9 +2,9 @@
 title: Conexión de Pega Customer Decision Hub
 description: Utilice el destino del centro de decisiones del cliente de Pega en Adobe Experience Platform para enviar atributos de perfil y datos de pertenencia a audiencias al centro de decisiones del cliente de Pega para la toma de decisiones de la mejor acción siguiente.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Abono a audiencia de perfil desde Adobe Experience Platform, cuando se carga en 
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por Pegasystems. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Pega [aquí](mailto:support@pega.com).
+>Pegasystems crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Pega [aquí](mailto:support@pega.com).
 
 ## Casos de uso
 

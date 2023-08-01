@@ -3,9 +3,9 @@ keywords: publicidad; criterios;
 title: Conexión de Criteo
 description: Criteo potencia la publicidad de confianza e impactante para llevar experiencias más ricas a todos los consumidores a través de la internet abierta. Con el conjunto de datos de comercio más grande del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio adecuado, en el momento adecuado.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1010'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Esta página de documentación ha sido creada por Criteo. Actualmente, este es un producto beta y la funcionalidad está sujeta a cambios. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Criteo [aquí](mailto:criteoTechnicalPartnerships@criteo.com).
+>Este conector de destino y la página de documentación son creados y mantenidos por Criteo. Actualmente, este es un producto beta y la funcionalidad está sujeta a cambios. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con Criteo [aquí](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo potencia la publicidad de confianza e impactante para llevar experiencias más ricas a todos los consumidores a través de la internet abierta. Con el conjunto de datos de comercio más grande del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio adecuado, en el momento adecuado.
 

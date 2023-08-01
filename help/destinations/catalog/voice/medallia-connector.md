@@ -2,9 +2,9 @@
 title: Conexión de Medallia
 description: Active perfiles para encuestas de Medallia y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Active perfiles para encuestas de Medallia y recopilación de comentarios para c
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el equipo de Medallia. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en adobe-integrations@medallia.com.
+>El equipo de Medallia crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en adobe-integrations@medallia.com.
 
 ## Casos de uso {#use-cases}
 
@@ -140,8 +140,8 @@ A continuación se proporciona un JSON de muestra de los datos exportados, que u
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

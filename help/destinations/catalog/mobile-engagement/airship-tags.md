@@ -3,9 +3,9 @@ keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
 description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para obtener más información acerca de [!DNL Airship], consulte la [Documentos
 
 >[!TIP]
 >
->Esta página de documentación fue creada por el [!DNL Airship] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [support.airship.com](https://support.airship.com/).
+>Este conector de destino y la página de documentación los crea y mantiene el [!DNL Airship] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [support.airship.com](https://support.airship.com/).
 
 ## Requisitos previos
 

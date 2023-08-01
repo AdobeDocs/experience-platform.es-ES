@@ -2,9 +2,9 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para su destino en el catálogo de Adobe Experience Platform. // Reemplace con el párrafo en la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1530'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el *Su destino* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Inserte un vínculo o una dirección de correo electrónico donde pueda ponerse en contacto con usted para obtener actualizaciones, por ejemplo `support@YourDestination.com`.*
+>Este conector de destino y la página de documentación los crea y mantiene el *Su destino* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Inserte un vínculo o una dirección de correo electrónico donde pueda ponerse en contacto con usted para obtener actualizaciones, por ejemplo `support@YourDestination.com`.*
 
 ## Casos de uso {#use-cases}
 
@@ -130,7 +130,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-*Eliminar según corresponda: si está documentando un nuevo destino de flujo continuo, mantenga el primer párrafo a continuación. Si está documentando un nuevo destino basado en archivos, mantenga el segundo párrafo. Si está documentando un destino que exporta conjuntos de datos, conserve el tercer párrafo.*
+*Eliminar según corresponda: si está documentando un nuevo destino de flujo continuo, mantenga el primer párrafo a continuación. Si está documentando un nuevo destino basado en archivos, conserve el segundo párrafo. Si está documentando un destino que exporta conjuntos de datos, conserve el tercer párrafo.*
 
 Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

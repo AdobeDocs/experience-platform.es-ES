@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1449'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,12 @@ Con Experience Platform, puede centralizar los datos que recopila de fuentes dif
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Fuentes creadas por Adobes y socios {#adobe-and-partner-built-sources}
+
+Algunos de los conectores del catálogo de fuentes de Experience Platform se crean y mantienen mediante Adobe, mientras que otros se crean y mantienen mediante empresas asociadas [SDK de fuentes](/help/sources/sources-sdk/overview.md). Una nota en la parte superior de la página de documentación para cada conector creado por el socio indica si el socio crea y mantiene una fuente. Por ejemplo, la variable [Conector de Amazon S3](/help/sources/connectors/cloud-storage/s3.md) se crea mediante el Adobe, mientras que la variable [Conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) es creado y mantenido por el equipo de RainFocus.
+
+En el caso de los conectores creados y mantenidos por el socio, esto significa que es posible que el equipo del socio tenga que resolver los problemas con el conector (método de contacto proporcionado en la nota de la página de documentación). Para problemas con los conectores creados y mantenidos por el Adobe, póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente.
 
 ## Tipos de fuentes
 

@@ -2,9 +2,9 @@
 title: Conecte su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario de
 description: Aprenda a conectar su cuenta de RainFocus a Experience Platform mediante la interfaz de usuario.
 badge: Beta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ Este tutorial proporciona pasos sobre cómo conectar su [!DNL RainFocus] adminis
 
 >[!IMPORTANT]
 >
->Esta página de documentación fue creada por el [!DNL RainFocus] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en clientcare<span>@rainfocus.com o visite [[!DNL RainFocus] Centro de ayuda](https://help.rainfocus.com/hc/en-us)
+>Este conector de origen y esta página de documentación los crea y mantiene el [!DNL RainFocus] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con ellos directamente en clientcare<span>@rainfocus.com o visite [[!DNL RainFocus] Centro de ayuda](https://help.rainfocus.com/hc/en-us)
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

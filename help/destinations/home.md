@@ -3,10 +3,10 @@ keywords: destinos;adobe experience platform;platform;descripción general de de
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 5%
+source-wordcount: '925'
+ht-degree: 4%
 
 ---
 
@@ -46,6 +46,12 @@ Los controles del [destination workspace](./ui/destinations-workspace.md) le per
 ## Tipos y categorías de destino {#types-and-categories}
 
 Con Experience Platform, puede activar datos en varios tipos de destinos para satisfacer los casos de uso de activación. Los destinos van desde integraciones basadas en API hasta integraciones con sistemas de recepción de archivos, destinos de búsqueda de perfiles y mucho más. Para obtener información detallada sobre todos los destinos disponibles, consulte la [información general sobre tipos y categorías de destino](./destination-types.md).
+
+## Destinos creados por Adobes y socios {#adobe-and-partner-built-destinations}
+
+Algunos de los conectores del catálogo de destinos de Experience Platform se crean y mantienen mediante Adobe, mientras que otros se crean y mantienen mediante compañías asociadas que utilizan [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota en la parte superior de la página de documentación para cada conector creado por el socio indica si el socio crea y mantiene un destino. Por ejemplo, la variable [Conector de Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) se crea mediante el Adobe, mientras que la variable [Conector de TikTok](/help/destinations/catalog/social/tiktok.md) es creado y mantenido por el equipo de TikTok.
+
+En el caso de los conectores creados y mantenidos por el socio, esto significa que es posible que el equipo del socio tenga que resolver los problemas con el conector (método de contacto proporcionado en la nota de la página de documentación). Para problemas con los conectores creados y mantenidos por el Adobe, póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente.
 
 ## Destinos y controles de acceso {#access-controls}
 

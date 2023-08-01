@@ -2,9 +2,9 @@
 title: Conexión de Verizon MediaYahoo DataX
 description: DataX es una infraestructura agregada de Verizon Media/Yahoo que aloja varios componentes que permiten a Verizon Media/Yahoo intercambiar datos con sus socios externos de una manera segura, automatizada y escalable.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '781'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta página de documentación la creó [!DNL Verizon Media/Yahoo]de [!DNL DataX] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Este conector de destino y la página de documentación los crea y mantiene [!DNL Verizon Media/Yahoo]de [!DNL DataX] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Requisitos previos {#prerequisites}
 
