@@ -4,10 +4,10 @@ title: Guía del panel Destinos
 description: Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 21%
+source-wordcount: '3171'
+ht-degree: 20%
 
 ---
 
@@ -39,17 +39,30 @@ La fecha y la hora de la instantánea más reciente se muestran en la parte supe
 
 ### Modifique la [!UICONTROL Destinos] tablero {#modify}
 
-Seleccionar **[!UICONTROL Modificar tablero]** para cambiar el aspecto del panel destinos. Esto permite mover, añadir y eliminar widgets del tablero, así como acceder a la biblioteca de widgets. Desde la biblioteca de widgets, puede explorar los widgets disponibles y crear widgets personalizados para su organización.
+Seleccionar **[!UICONTROL Modificar tablero]** para cambiar el aspecto del panel destinos. Los cambios en el tablero se realizan por usuario y no en toda la organización. Puede mover, añadir, cambiar el tamaño y eliminar widgets del tablero, y acceder a la biblioteca de widgets para personalizar el tablero. Desde la biblioteca de widgets, puede explorar los widgets disponibles y crear widgets personalizados para su organización.
 
 Consulte la [modificación de paneles](../customize/modify.md) y [introducción a la biblioteca de widgets](../customize/widget-library.md) para obtener más información.
 
 ### Añadir widgets {#add-widget}
 
-Seleccionar **[!UICONTROL Agregar widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
+Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
 
 ![Información general del panel Destinos con el widget Agregar resaltado.](../images/destinations/destinations-overview-add-widget.png)
 
 Desde la biblioteca de widgets, puede examinar la selección de widgets de audiencia estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
+
+## Widgets predeterminados {#default-widgets}
+
+Se proporciona una carga de widget predeterminada para todas las instancias nuevas de Adobe Experience Platform que resalta las perspectivas disponibles más recientes de sus datos. Los siguientes widgets están preconfigurados en la vista de segmentos desde el principio. A continuación, se encuentran todos los detalles sobre el propósito y la función de los widgets.
+
+* [[!UICONTROL Destinos más utilizados]](#most-used-destinations)
+* [[!UICONTROL Destinos creados recientemente]](#recently-created-destinations)
+* [[!UICONTROL Segmentos activados recientemente]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>A partir del 26 de julio de 2023, [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] Los paneles de información general se han restablecido a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
+>Consulte la documentación en la [Perfiles](./profiles.md#default-widgets) y [Audiencias](./audiences.md#default-widgets) secciones de widgets predeterminadas para obtener detalles sobre los widgets que se incluyen como parte de las cargas de widgets predeterminadas. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets estándar {#standard-widgets}
 
@@ -60,7 +73,7 @@ Adobe proporciona varios widgets estándar que puede utilizar para visualizar di
 Antes de continuar con las descripciones de los widgets estándar, asegúrese de estar familiarizado con las definiciones de los siguientes términos clave utilizados en la documentación:
 
 * **Definición del segmento:** Una definición de segmento es una **conjunto de reglas** se utiliza para describir las características clave o el comportamiento de una audiencia objetivo. Estas reglas incluyen datos de atributos y eventos que clasifican los perfiles como parte de una audiencia.
-* **Audiencia**: conjunto de personas, cuentas, hogares u otras entidades que comparten características y comportamientos comunes.
+* **Público**: conjunto de personas, cuentas, hogares u otras entidades que comparten características y comportamientos comunes.
 * **Asignado/asignación**: la asignación de datos es el proceso de asignación de campos de datos de origen a campos de destino relacionados en un destino.
 * **Identidad**: una identidad es un identificador que representa de forma exclusiva a un cliente individual, como un ID de cookie, un ID de dispositivo o un ID de correo electrónico.
 * **Activar**: Activar es la acción realizada por un usuario para asignar una audiencia o perfiles a un destino como Oracle Eloqua, Google o Marketing Cloud de Salesforce.
@@ -267,7 +280,7 @@ Los recuentos individuales de los destinos habilitados o deshabilitados se muest
 
 ### [!UICONTROL Destinos activos por plataforma de destino] {#active-destinations-by-destination-platform}
 
-El widget proporciona una tabla de dos columnas para mostrar una lista de las plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. La lista de plataformas de destino se ordena de alta a baja.
+El widget proporciona una tabla de dos columnas para mostrar una lista de las plataformas de destino activas y la cantidad total de destinos activos para cada plataforma de destino. La lista de plataformas de destino se ordena de alta a baja.
 
 ![El widget Destinos activos por plataforma de destino.](../images/destinations/active-destinations-by-destination-platform.png)
 

@@ -4,9 +4,9 @@ title: Guía del panel de audiencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de las audiencias que ha creado su organización.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2232'
 ht-degree: 7%
 
 ---
@@ -45,7 +45,7 @@ Consulte la [modificación de paneles](../customize/modify.md) y [Resumen de bib
 
 ### Añadir widgets {#add-widget}
 
-Seleccionar **[!UICONTROL Agregar widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
+Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
 
 ![El [!UICONTROL Audiencias] información general del tablero con [!UICONTROL Agregar widget] resaltado.](../images/audiences/audiences-overview-add-widget.png)
 
@@ -72,6 +72,20 @@ El [!UICONTROL Audiencias] el tablero está compuesto por widgets, que son métr
 La fecha y la hora de la instantánea más reciente se muestran en la parte superior de la [!UICONTROL Información general] junto al menú desplegable de audiencia. Todos los datos del widget son precisos a partir de esa fecha y hora. La marca de tiempo de la instantánea se proporciona en formato UTC; no se encuentra en la zona horaria del usuario u organización individual.
 
 ![La pestaña Información general de audiencias con una marca de tiempo de widget resaltada.](../images/audiences/widget-timestamp.png)
+
+## Widgets predeterminados {#default-widgets}
+
+Se proporciona una carga de widget predeterminada para todas las instancias nuevas de Adobe Experience Platform que resalta las perspectivas disponibles más recientes de sus datos. Los siguientes widgets están preconfigurados en la vista de segmentos desde el principio. Puede encontrar todos los detalles sobre el propósito y la función de los widgets en sus secciones respectivas.
+
+* [[!UICONTROL Tamaño de audiencia]](#audience-size)
+* [[!UICONTROL Tendencia de cambio de tamaño de audiencia]](#audience-size-change-trend)
+* [[!UICONTROL Superposición de identidad]](#identity-overlap)
+* [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>A partir del 26 de julio de 2023, [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] Los paneles de información general se han restablecido a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
+>Consulte la documentación en la [Perfiles](./profiles.md#default-widgets) y [Destinos](./destinations.md#default-widgets) secciones de widgets predeterminadas para obtener detalles sobre los widgets que se incluyen como parte de las cargas de widgets predeterminadas. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets estándar {#standard-widgets}
 

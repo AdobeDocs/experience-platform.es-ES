@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Widgets del panel estándar
 description: Esta guía proporciona instrucciones paso a paso para agregar widgets estándar a los paneles de Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,12 @@ ht-degree: 0%
 
 En Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos tableros agregando nuevos widgets a la vista de tablero. El Adobe proporciona una selección de widgets estándar que puede elegir añadir a sus paneles.
 
-Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar el [!UICONTROL Perfiles], [!UICONTROL Segmentos], y [!UICONTROL Destinos] paneles en la IU de Platform.
+El [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] cada uno de los paneles tiene una carga de widget predeterminada cuando se crea una nueva instancia de Platform. Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar el [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] paneles en la IU de Platform.
+
+>[!NOTE]
+>
+>A partir del 26 de julio de 2023, [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] Los paneles de información general se han restablecido a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
+>Consulte la documentación en la [Perfiles](../guides/profiles.md#default-widgets), [Audiencias](../guides/audiences.md#default-widgets), y [Destinos](../guides/destinations.md#default-widgets) secciones de widgets predeterminadas para obtener detalles sobre los widgets que se incluyen como parte de las cargas de widgets predeterminadas.
 
 Para obtener más información sobre los widgets personalizados, consulte la guía de [crear widgets personalizados](custom-widgets.md).
 
@@ -48,7 +53,7 @@ Para elegir un widget estándar para agregar al tablero, resalte el widget y mar
 >
 >El contador de la esquina superior derecha de la biblioteca de widgets muestra la cantidad total de widgets seleccionados.
 
-Seleccionar **[!UICONTROL Agregar widget]** para añadir los widgets seleccionados al tablero.
+Seleccionar **[!UICONTROL Añadir widget]** para añadir los widgets seleccionados al tablero.
 
 ![El espacio de trabajo de la biblioteca de widgets con un widget seleccionado y Añadir widget y Cancelar resaltados.](../images/customization/add-widget.png)
 

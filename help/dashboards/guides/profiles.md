@@ -4,9 +4,9 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3520'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de su [!DNL Real-Time Customer Profile] datos, tal como se capturan durante una instantánea diaria. Esta guía describe cómo acceder al panel Perfiles de la interfaz de usuario y trabajar con él, y proporciona información sobre las métricas que se muestran en el panel.
 
-Para obtener una descripción general de todas las funciones de perfil de la interfaz de usuario del Experience Platform, consulte la [Guía de la IU del perfil del cliente en tiempo real](../../profile/ui/user-guide.md).
+Consulte la [Guía de la IU del perfil del cliente en tiempo real](../../profile/ui/user-guide.md) para obtener una descripción general de las funciones de perfil en la interfaz de usuario de Experience Platform.
 
 ## Datos del panel de perfil
 
@@ -39,13 +39,13 @@ Para navegar al panel Perfiles dentro de la IU de Platform, seleccione **[!UICON
 
 ### Modificación del panel Perfiles
 
-Puede modificar el aspecto del tablero de mandos Perfiles seleccionando **[!UICONTROL Modificar tablero]**. Esto le permite mover, añadir y quitar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de widgets]** para explorar los widgets disponibles y crear widgets personalizados para su organización.
+Puede modificar el aspecto del tablero de mandos Perfiles seleccionando **[!UICONTROL Modificar tablero]**. Puede mover, añadir, cambiar el tamaño y eliminar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de widgets]** para explorar los widgets disponibles y crear widgets personalizados para su organización.
 
-Consulte la [modificación de paneles](../customize/modify.md) y [Resumen de biblioteca de widgets](../customize/widget-library.md) para obtener más información.
+Para obtener más información, consulte la [modificación de paneles](../customize/modify.md) y [Resumen de biblioteca de widgets](../customize/widget-library.md) documentación.
 
 ### Añadir widgets {#add-widget}
 
-Seleccionar **[!UICONTROL Agregar widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
+Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
 
 ![Información general del panel Perfiles con el widget de adición resaltado.](../images/profiles/profiles-overview-add-widget.png)
 
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 El [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante que pertenece al perfil de con respecto a sus preferencias, eventos anteriores, interacciones y audiencias.
 
-Para obtener más información acerca de las funcionalidades de visualización de perfiles proporcionadas en la IU de Platform, consulte la documentación sobre [exploración de perfiles en Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Para obtener más información sobre las funcionalidades de visualización de perfiles proporcionadas en la IU de Platform, consulte la documentación sobre [exploración de perfiles en Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Políticas de combinación {#merge-policies}
 
@@ -77,7 +77,7 @@ Las métricas que se muestran en el panel Perfiles se basan en las políticas de
 
 Para obtener más información sobre las políticas de combinación, incluido cómo crear, editar y declarar una política de combinación predeterminada para su organización, consulte la [resumen de políticas de combinación](../../profile/merge-policies/overview.md).
 
-El panel seleccionará automáticamente una política de combinación para utilizar. La política de combinación aplicada se puede cambiar utilizando el menú desplegable situado junto al nombre de la política de combinación.
+El panel selecciona automáticamente una política de combinación para su uso. La política de combinación aplicada se puede cambiar utilizando el menú desplegable situado junto al nombre de la política de combinación.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ El [!UICONTROL Esquema de unión] El panel muestra el esquema de unión de una c
 
 Los esquemas de unión están compuestos por varios esquemas que comparten la misma clase y que se han habilitado para Perfil. Permiten ver en una sola vista una amalgamación de todos los campos contenidos en cada esquema que comparte la misma clase.
 
-Consulte la guía de la interfaz de usuario del esquema de unión para obtener más información sobre [visualización de esquemas de unión en la IU de Platform](../../profile/ui/union-schema.md#view-union-schemas).
+Para obtener más información acerca de [visualización de esquemas de unión en la IU de Platform](../../profile/ui/union-schema.md#view-union-schemas), consulte la guía de IU del esquema de unión.
 
 ## Widgets y métricas
 
@@ -100,6 +100,20 @@ El tablero está compuesto por widgets, que son métricas de solo lectura que pr
 La fecha y la hora de la instantánea más reciente se muestran en la parte superior de la [!UICONTROL Información general] junto al menú desplegable de política de combinación. Todos los datos del widget son precisos a partir de esa fecha y hora. La marca de tiempo de la instantánea se proporciona en formato UTC; no se encuentra en la zona horaria del usuario u organización individual.
 
 ![La pestaña Información general del panel Perfiles con la marca de tiempo de la instantánea más reciente resaltada.](../images/profiles/snapshot-timestamp.png)
+
+## Widgets predeterminados {#default-widgets}
+
+Se proporciona una carga de widget predeterminada para todas las instancias nuevas de Adobe Experience Platform que resalta las perspectivas disponibles más recientes de sus datos. Los siguientes widgets están preconfigurados en la vista de segmentos desde el principio. A continuación, se encuentran todos los detalles sobre el propósito y la función de los widgets.
+
+* [[!UICONTROL Recuento de perfiles]](#profile-count)
+* [[!UICONTROL Cambio de recuento de perfiles]](#profile-count-change)
+* [[!UICONTROL Tendencia de cambio de recuento de perfiles]](#profiles-count-change-trend)
+* [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
+* [[!UICONTROL Superposición de identidad]](#identity-overlap)
+
+>[!NOTE]
+>
+>A partir del 26 de julio de 2023, la [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] Los paneles de información general se han restablecido a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores. Consulte la documentación en la [Destinos](./destinations.md#default-widgets) y [Audiencias](./audiences.md#default-widgets) secciones de widgets predeterminadas para obtener detalles sobre los widgets que se incluyen como parte de las cargas de widgets predeterminadas. Puede seguir personalizando los widgets del tablero como antes.
 
 ## Widgets estándar {#standard-widgets}
 
@@ -119,7 +133,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles no segmentados]](#unsegmented-profiles)
 * [[!UICONTROL Los perfiles no segmentados cambian de tendencia]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Perfiles no segmentados por identidad]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audiencias]](#audiences)
+* [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamaño de audiencia]](#audiences-size)
 * [[!UICONTROL Superposición de audiencias por política de combinación]](#audience-overlap-by-merge-policy)
@@ -138,7 +152,7 @@ Consulte la [sección sobre políticas de combinación anteriormente en este doc
 
 >[!NOTE]
 >
->El [!UICONTROL Recuento de perfiles] widget puede mostrar un número diferente al recuento de perfiles que se muestra en la [!UICONTROL Examinar] en la pestaña [!UICONTROL Perfiles] de la interfaz de usuario de por varios motivos. El motivo más común es que la variable [!UICONTROL Examinar] hace referencia al número total de perfiles combinados en función de la política de combinación predeterminada de su organización, mientras que la pestaña [!UICONTROL Recuento de perfiles] widget hace referencia al número total de perfiles combinados en función de la política de combinación que ha seleccionado para ver en el tablero.
+>El [!UICONTROL Recuento de perfiles] widget puede mostrar un número diferente al recuento de perfiles que se muestra en la [!UICONTROL Examinar] en la pestaña [!UICONTROL Perfiles] de la interfaz de usuario de por varios motivos. La razón más común de esta diferencia es que la variable [!UICONTROL Examinar] hace referencia al número total de perfiles combinados en función de la política de combinación predeterminada de su organización, mientras que la pestaña [!UICONTROL Recuento de perfiles] widget hace referencia al número total de perfiles combinados en función de la política de combinación que ha seleccionado para ver en el tablero.
 >
 >Otro motivo común se debe a las diferencias entre el momento en que se toma la instantánea del panel y el momento en que se ejecuta el trabajo de muestra para [!UICONTROL Examinar] pestaña. Se puede ver cuando la variable [!UICONTROL Recuento de perfiles] La última actualización del widget se realizó mirando la marca de tiempo del widget. Para obtener más información sobre cómo se activa el trabajo de muestra en la [!UICONTROL Examinar] , consulte la [sección recuento de perfiles en la guía de la IU del perfil del cliente en tiempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
@@ -161,7 +175,7 @@ El **[!UICONTROL Cambio de recuento de perfiles]** Este widget muestra el númer
 
 >[!NOTE]
 >
->El [!UICONTROL Cambio de recuento de perfiles] widget refleja el número de perfiles añadidos **después** la ingesta inicial de perfiles y la configuración del Almacenamiento de perfiles. En otras palabras, si su organización configura el Almacenamiento de perfiles e ingiere 4 000 000 de en el día 1, en un plazo de 24 horas el tablero estaría disponible, aunque la variable [!UICONTROL Cambio de recuento de perfiles] el widget se establecería en 0. Esto se hace para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización introducirá 1 000 000 de perfiles adicionales en el almacén de perfiles de. Una vez que se toma la siguiente instantánea, [!UICONTROL Cambio de recuento de perfiles] El widget mostraría un total de 1 000 000 de perfiles agregados, mientras que el [!UICONTROL Recuento de perfiles] El widget mostraría 5 000 000 de perfiles totales.
+>El [!UICONTROL Cambio de recuento de perfiles] widget refleja el número de perfiles añadidos **después** la ingesta inicial de perfiles y la configuración del Almacenamiento de perfiles. En otras palabras, si su organización configura el Almacenamiento de perfiles e ingiere 4 000 000 de en el día 1, en un plazo de 24 horas el tablero estaría disponible, aunque la variable [!UICONTROL Cambio de recuento de perfiles] el widget se establecería en 0. Este método de contabilización se realiza para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización introducirá 1 000 000 de perfiles adicionales en el almacén de perfiles de. Una vez que se toma la siguiente instantánea, [!UICONTROL Cambio de recuento de perfiles] El widget mostraría un total de 1 000 000 de perfiles agregados, mientras que el [!UICONTROL Recuento de perfiles] El widget mostraría 5 000 000 de perfiles totales.
 
 ![El panel Perfiles de la interfaz de usuario de Platform con el widget Cambio de recuento de perfiles resaltado.](../images/profiles/profile-count-change.png)
 
@@ -174,9 +188,9 @@ El **[!UICONTROL Cambio de recuento de perfiles]** Este widget muestra el númer
 
 El **[!UICONTROL Tendencia de cambio de recuento de perfiles]** widget muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si tuviera que introducir perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
-Consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies) para obtener más información.
+Para obtener más información, consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies).
 
-El **[!UICONTROL Tendencia de cambio de recuento de perfiles]** widget muestra un botón &quot;subtítulos&quot; en la parte superior derecha del widget. Seleccionar **[!UICONTROL Subtítulos]** para abrir el diálogo subtítulos automáticos.
+El **[!UICONTROL Tendencia de cambio de recuento de perfiles]** widget muestra un botón &quot;subtítulos&quot; en la parte superior derecha del widget. Para abrir el cuadro de diálogo de subtítulos automáticos, seleccione **[!UICONTROL Subtítulos]**.
 
 ![La pestaña Información general de perfil que muestra el widget de tendencia Cambio de recuento de perfiles con el botón de subtítulos resaltado.](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -188,7 +202,7 @@ Un modelo de aprendizaje automático genera automáticamente subtítulos para de
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-Este widget filtra el recuento de perfiles en función de la identidad de origen y la política de combinación seleccionadas y, a continuación, ilustra el cambio en el número de una variedad de períodos mediante un gráfico de líneas. La política de combinación se selecciona en el menú desplegable de información general en la parte superior de la página, la identidad de origen y el periodo de tiempo se seleccionan en los menús desplegables del widget. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses.
+Este widget filtra el recuento de perfiles en función de una identidad de origen seleccionada y combina la política, a continuación, ilustra el cambio en el número de varios períodos mediante un gráfico de líneas. La política de combinación se selecciona en el menú desplegable de información general en la parte superior de la página, la identidad de origen y el periodo de tiempo se seleccionan en los menús desplegables del widget. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses.
 
 Este widget le ayuda a administrar sus necesidades de activación de destino mostrando el patrón de crecimiento de perfiles filtrados por una identidad requerida.
 
@@ -203,17 +217,17 @@ Este widget le ayuda a administrar sus necesidades de activación de destino mos
 
 El **[!UICONTROL Perfiles por identidad]** Este widget muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias áreas de nombres a ese cliente individual.
 
-Consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies) para obtener más información.
+Para obtener más información, consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies).
 
 ![El panel Información general de perfiles con el widget Perfiles por identidad resaltado.](../images/profiles/profiles-by-identity.png)
 
-Seleccionar **[!UICONTROL Subtítulos]** para abrir el diálogo subtítulos automáticos.
+Para abrir el cuadro de diálogo de subtítulos automáticos, seleccione **[!UICONTROL Subtítulos]**.
 
 ![Cuadro de diálogo Perfiles por subtítulos de identidad.](../images/profiles/profiles-by-identity-captions.png)
 
 Un modelo de aprendizaje automático genera automáticamente perspectivas de datos analizando la distribución general y las dimensiones clave de los datos.
 
-Para obtener más información sobre las identidades, visite la [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
+Para obtener más información sobre las identidades, consulte la [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
 ### [!UICONTROL Superposición de identidad] {#identity-overlap}
 
@@ -224,11 +238,11 @@ Para obtener más información sobre las identidades, visite la [Documentación 
 
 El **[!UICONTROL Superposición de identidad]** Este widget utiliza un diagrama de Venn, o diagrama de conjunto, para mostrar la superposición de perfiles en el Almacenamiento de perfiles que contienen las dos identidades seleccionadas.
 
-Utilice los menús desplegables del widget para seleccionar las identidades que desea comparar. Los círculos muestran el recuento total relativo de perfiles que contienen cada identidad. El número de perfiles que contienen ambas identidades se representa mediante el tamaño de la superposición entre los círculos. Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades a ese cliente individual, por lo que es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
+Utilice los menús desplegables del widget para seleccionar las identidades que desea comparar. Los círculos muestran el recuento total relativo de perfiles que contienen cada identidad. El número de perfiles que contienen ambas identidades se representa mediante el tamaño de la superposición entre los círculos. Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades a ese cliente individual. En esta situación, es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
 
-Para obtener más información sobre los fragmentos de perfil, consulte la sección sobre [fragmentos de perfil frente a perfiles combinados](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) en la Información general del Perfil del cliente en tiempo real.
+Para obtener más información sobre los fragmentos de perfil, consulte la sección sobre [fragmentos de perfil frente a perfiles combinados](../../profile/home.md#profile-fragments-vs-merged-profiles) en la Información general del Perfil del cliente en tiempo real.
 
-Para obtener más información sobre las identidades, visite la [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
+Para obtener más información sobre las identidades, consulte la [Documentación del servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
 
 ![Información general del panel Perfiles con el widget Superposición de identidades resaltado.](../images/profiles/identity-overlap.png)
 
@@ -247,7 +261,7 @@ El [!UICONTROL Perfiles de identidad únicos] Este widget proporciona un recuent
 
 Este widget utiliza un gráfico de barras para ilustrar el número total de perfiles que se identifican con un solo identificador único. El widget admite hasta cinco de las identidades más comunes.
 
-Pase el ratón sobre las barras individuales para ver un cuadro de diálogo que detalle el recuento total de perfiles de una identidad.
+Para ver un cuadro de diálogo que detalla el recuento total de perfiles de una identidad, utilice el cursor para pasar el ratón sobre barras individuales.
 
 ![El widget de perfiles de identidad única por identidad.](../images/profiles/single-identity-profiles-by-identity.png)
 
@@ -277,7 +291,7 @@ El [!UICONTROL Los perfiles no segmentados cambian de tendencia] el widget utili
 
 >[!NOTE]
 >
->El widget Perfiles no segmentados por identidad ha quedado obsoleto en octubre de 2022 y ya no está disponible.
+>Los perfiles no segmentados por widget de identidad han quedado obsoletos a partir de octubre de 2022 y ya no están disponibles.
 
 <!-- 
 
@@ -290,11 +304,11 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL Audiencias] {#audiences}
+### [!UICONTROL Audiences] {#audiences}
 
 Este widget proporciona el número total de audiencias que están listas para activarse, según la política de combinación elegida aplicada a los datos del perfil.
 
-Seleccionar **[!UICONTROL Audiencias]** para ir al [!UICONTROL Segmentos] tablero [!UICONTROL Examinar] pestaña. Desde aquí puede ver una lista de todas las definiciones de segmentos de su organización.
+Seleccionar **[!UICONTROL Audiencias]** para ir al [!UICONTROL Audiencias] tablero [!UICONTROL Examinar] pestaña. A partir de ahí, puede ver una lista de todas las definiciones de segmentos de su organización.
 
 ![El widget Audiencias.](../images/profiles/audiences.png)
 
@@ -303,7 +317,7 @@ Seleccionar **[!UICONTROL Audiencias]** para ir al [!UICONTROL Segmentos] tabler
 <!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
 <!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
-This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.
 
 The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
 
@@ -319,19 +333,19 @@ Seleccionar **[!UICONTROL Ver más]** para abrir un cuadro de diálogo de pantal
 
 ![El widget Informe de superposición de audiencias con la opción Ver más resaltada](../images/profiles/profiles-audience-overlap-report.png)
 
-El [!UICONTROL Informe de superposición de audiencia] aparece el cuadro de diálogo. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Seleccione el icono de configuración (![El icono de configuración.](../images/profiles/settings-icon.png)) para quitar o agregar columnas de la tabla.
+El [!UICONTROL Informe de superposición de audiencia] aparece el cuadro de diálogo. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Para quitar o agregar columnas de la tabla, seleccione el icono de configuración (![El icono de configuración.](../images/profiles/settings-icon.png)).
 
 ![Cuadro de diálogo Informe de superposición de audiencias.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Seleccione el **[!UICONTROL Superposición]** encabezado de columna para cambiar la clasificación de los resultados entre mayor a menor o menor a mayor.
+>Para cambiar la clasificación de los resultados entre mayor a menor o menor a mayor, seleccione la opción **[!UICONTROL Superposición]** encabezado de columna.
 
 Para descargar todo el informe en formato de PDF, seleccione el menú de opciones (**`...`**) seguido de **[!UICONTROL Descargar]**.
 
 ![El cuadro de diálogo Informe de superposición de audiencias con los puntos suspensivos y la opción Descargar resaltadas.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
-Seleccione una fila del informe para abrir un diagrama de Venn del análisis de superposición. Pase el ratón sobre una sección del diagrama de Venn para ver el recuento de perfiles en un cuadro de diálogo.
+Para abrir un diagrama de Venn del análisis de superposición, seleccione una fila del informe. Para ver el recuento de perfiles en un cuadro de diálogo, pase el ratón sobre una sección del diagrama de Venn.
 
 ![Cuadro de diálogo Informe de superposición de audiencias con un diagrama de Venn y una fila resaltada.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
