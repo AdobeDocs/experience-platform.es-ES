@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1907'
 ht-degree: 6%
 
 ---
@@ -52,13 +52,13 @@ A continuación, puede utilizar sus datos sin conexión, incluidos los ID de per
 
 Esta sección describe todas las audiencias que puede exportar a este destino.
 
-Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
 
-Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de audiencia | Descripción |
 ---------|----------|
-| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

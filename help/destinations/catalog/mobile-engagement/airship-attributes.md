@@ -3,9 +3,9 @@ keywords: atributos del dirigible;destino del dirigible
 title: Conexión de Atributos del dirigible
 description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como atributos de audiencia para segmentar dentro del dirigible.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,15 @@ Antes de enviar las audiencias a [!DNL Airship], debe:
 >
 >Crear un [!DNL Airship] cuenta mediante [este vínculo de suscripción](https://go.airship.eu/accounts/register/plan/starter/) si aún no lo ha hecho.
 
-## Compatibilidad con audiencias externas {#external-audiences-support}
+## Audiencias compatibles {#supported-audiences}
 
-Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
 
-Además, este destino también admite la activación de las audiencias externas que se describen en la tabla siguiente.
+*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de audiencia externa | Descripción |
 ---------|----------|
-| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de la experiencia del cliente (CXM) para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 1%
 
 ---
@@ -51,15 +51,15 @@ El destino permite a los especialistas en marketing insertar audiencias creadas 
 
 Puede asignar atributos de Experience Platform a cualquiera de los atributos a los que su organización tiene acceso en Marketo. En Marketo, puede utilizar el complemento [Describir solicitud de API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) para recuperar los campos de atributos a los que su organización tiene acceso.
 
-## Compatibilidad con audiencias externas {#external-audiences-support}
+## Audiencias compatibles {#supported-audiences}
 
-Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
 
-Además, este destino también admite la activación de las audiencias externas que se describen en la tabla siguiente.
+Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de audiencia externa | Descripción |
 ---------|----------|
-| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

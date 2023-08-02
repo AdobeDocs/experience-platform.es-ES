@@ -3,9 +3,9 @@ title: (Beta) Audiencias del Experience Cloud
 description: Aprenda a compartir audiencias de Experience Platform a varias soluciones de Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1632'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 >[!IMPORTANT]
 >
-> * Este destino está disponible para [Adobe Real-time Customer Data Platform Prime y Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clientes.
+> * Este destino está disponible para [Adobe Real-time Customer Data Platform Prime y Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) clientes.
 > * Necesita una licencia de Audience Manager para habilitar el [Casos de uso de Data Management Platform](#dmp-use-cases) mencionado anteriormente.
 > * Usted *no necesita* una licencia de Audience Manager para compartir audiencias de Experience Platform con Adobe Advertising Cloud, Adobe Target, Marketo y otras soluciones de Experience Cloud, mencionadas en la [sección anterior](#share-segments-with-other-solutions).
 
@@ -107,13 +107,13 @@ Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los d
 
 Esta sección describe todas las audiencias que puede exportar a este destino.
 
-Todos los destinos admiten la activación de audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
 
-Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
+*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
 | Tipo de audiencia | Descripción |
 ---------|----------|
-| Cargas personalizadas | Audiencias introducidas en Experience Platform desde archivos CSV. |
+| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
