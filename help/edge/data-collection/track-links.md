@@ -3,7 +3,7 @@ title: Seguimiento de vínculos mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo enviar datos de vínculo a Adobe Analytics con el SDK web de Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;interacción web;vistas de página;seguimiento de vínculos;vínculos de seguimiento;clickCollection;colección de clics;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # Seguimiento de vínculos
 
-Los vínculos se pueden configurar manualmente o rastrear [automáticamente](#automaticLinkTracking). El seguimiento manual se realiza añadiendo los detalles en la `web.webInteraction` forma parte del esquema. Hay tres variables requeridas:
+Los vínculos se pueden configurar manualmente o rastrear [automáticamente](#automaticLinkTracking). El seguimiento manual se realiza añadiendo los detalles en la `web.webInteraction` forma parte del esquema. Hay dos variables requeridas:
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
