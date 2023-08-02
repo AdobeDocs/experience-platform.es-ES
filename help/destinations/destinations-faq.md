@@ -3,9 +3,9 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 4%
 
 ---
@@ -28,6 +28,27 @@ Cuando la programación de exportación de la audiencia difiere de la programaci
 
 Consulte la [Documentación del Servicio de segmentación](../segmentation/home.md) para obtener más información.
 +++
+
+### ¿Por qué veo tasas de coincidencia bajas al desactivar y reactivar una audiencia actualizada en el mismo destino?
+
++++Respuesta
+
+La desactivación y eliminación de una audiencia desde un destino de flujo continuo no almacena en déclencheur un relleno tras la reactivación de la audiencia al mismo destino de flujo continuo.
+
+**Ejemplo**
+
+Ha activado una audiencia de 10 perfiles en un destino de flujo continuo.
+
+Después de activar la audiencia, se da cuenta de que desea cambiar la configuración de la audiencia, por lo que desactiva la audiencia y cambia sus criterios de población, lo que da como resultado una población de audiencia de 100 perfiles.
+
+La audiencia actualizada se vuelve a activar en el mismo destino, pero como no hay relleno activado, el destino no recibe los 90 perfiles adicionales.
+
+**Solución**
+
+Para asegurarse de que todos los perfiles se envían a su destino, debe crear una audiencia nueva con la nueva configuración y, a continuación, activarla en su destino.
+
++++
+
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
