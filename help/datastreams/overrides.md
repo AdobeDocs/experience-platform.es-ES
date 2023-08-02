@@ -2,10 +2,10 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante el SDK web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -25,6 +25,26 @@ Este artículo explica el proceso de anulación de la configuración de la secue
 >[!IMPORTANT]
 >
 >Las anulaciones de flujos de datos solo se admiten para [SDK web](../edge/home.md) integraciones. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) y [API de servidor](../server-api/overview.md) en este momento, las integraciones no admiten invalidaciones de conjuntos de datos.
+><br><br>
+>Las anulaciones de flujos de datos deben utilizarse cuando necesite enviar datos diferentes a flujos de datos diferentes. No debe utilizar las anulaciones de flujos de datos para casos de uso de personalización o datos de consentimiento.
+
+## Casos de uso {#use-cases}
+
+Para comprender mejor cómo y cuándo utilizar las anulaciones de flujos de datos, estos son algunos casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
+
+**Recopilación de datos de varias regiones**
+
+Una compañía tiene diferentes sitios web o subdominios para diferentes países en los que opera. Lo han hecho [configurado](configure.md) separe flujos de datos con los grupos de informes específicos de analytics correspondientes, los tokens de propiedad de Adobe Target específicos del país, los esquemas específicos del país, los conjuntos de datos, las configuraciones de Journey Optimizer, etc. La empresa también tiene un conjunto global de configuraciones en las que se agregan todos los datos específicos de países.
+
+Al utilizar las anulaciones de flujos de datos, la empresa puede cambiar dinámicamente el flujo de datos a diferentes flujos de datos, en lugar del comportamiento predeterminado de enviar datos a un flujo de datos.
+
+Un caso de uso común podría ser enviar datos a un conjunto de datos específico de un país y también enviar datos a un conjunto de datos global en el que los clientes realicen una acción importante, como realizar un pedido o actualizar su perfil de usuario.
+
+**Diferenciación de perfiles e identidades para diferentes unidades de negocio**
+
+Una empresa con varias unidades de negocio desea utilizar varios entornos limitados de Experience Platform para almacenar datos específicos de cada unidad de negocio.
+
+En lugar de enviar datos a un conjunto de datos predeterminado, la empresa puede usar las invalidaciones del conjunto de datos para asegurarse de que cada unidad comercial tenga su propio conjunto de datos para recibir datos.
 
 ## Configuración de anulaciones de flujos de datos en la IU de flujos de datos {#configure-overrides}
 
