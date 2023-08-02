@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de julio de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: d639b0830b88307b249e7da232b3f48b142ad37b
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 28%
+source-wordcount: '1804'
+ht-degree: 35%
 
 ---
 
@@ -22,6 +22,7 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 - [Servicio de consultas](#query-service)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 
 ## Servicio de catálogo {#catalog-service}
 
@@ -143,3 +144,42 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 {style="table-layout:auto"}
 
 Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
+
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+
+**Nuevos componentes de XDM**
+
+| Tipo de componente | Nombre | Descripción |
+| --- | --- | --- |
+| Clase | [[!UICONTROL Perfil de cliente potencial de XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilice esta clase para incorporar perfiles de clientes potenciales procedentes de los casos de uso de adquisición de clientes principales de los proveedores de datos. |
+| Grupo de campos | [[!UICONTROL Detalles del segmento de evento enriquecido]](https://github.com/adobe/xdm/pull/1754/files) | Una lista de audiencias para las que el perfil cumple los requisitos en el momento de la recopilación del evento. |
+
+{style="table-layout:auto"}
+
+**Componentes XDM actualizados**
+
+| Tipo de componente | Nombre | Actualizar descripción |
+| --- | --- | --- |
+| Grupo de campos | [[!UICONTROL Detalles de interacción de Media Analytics]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado de experimental a `stable`. |
+| Grupo de campos | [[!UICONTROL Detalles de interacción de medios]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `stable` hasta `deprecated`. |
+| Tipo de datos | [[!UICONTROL Información de detalles de sesión]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles de datos de calidad de la experiencia (QoE)]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de datos de estado del reproductor]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental`hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de evento de medios]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles de medios]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles del error]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles del error]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `stable` hasta `deprecated`. |
+| Tipo de datos | [[!UICONTROL Información de detalles de metadatos personalizados]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles del capítulo]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información detallada de Advertising Pod]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Tipo de datos | [[!UICONTROL Información de detalles publicitarios]](https://github.com/adobe/xdm/pull/1756/files) | El `meta:status` se ha actualizado desde `experimental` hasta `stable`. |
+| Extensión (administración del Recorrido del cliente) | [[!UICONTROL Dominio]](https://github.com/adobe/xdm/pull/1756/files) | `Domain` campo añadido a [!UICONTROL Adobe CJM ExperienceEvent: Detalles del perfil de mensaje] para registrar el dominio de la dirección de correo electrónico del destinatario. |
+| Extensión (administración del Recorrido del cliente) | [[!UICONTROL Nombre de variante del canal]](https://github.com/adobe/xdm/pull/1753/files) | Este campo se ha añadido a [!UICONTROL Campos de entidad de AJO] para representar el nombre de variante del canal. |
+| Extensión (Adobe Analytics) | [[!UICONTROL Valor de contexto]](https://github.com/adobe/xdm/pull/1761/files) | `Context value` se ha añadido a [!UICONTROL `Adobe Analytics ExperienceEvent Full Extension`]. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md)
+
