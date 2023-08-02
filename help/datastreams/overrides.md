@@ -2,10 +2,10 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante el SDK web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 4%
 
 ---
 
@@ -17,10 +17,14 @@ Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos dife
 
 La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
-1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](configure.md).
-2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante el SDK web [extensión de etiqueta](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](configure.md).
+2. A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) del SDK web.
 
 Este artículo explica el proceso de anulación de la configuración de la secuencia de datos de extremo a extremo para cada tipo de anulación admitida.
+
+>[!IMPORTANT]
+>
+>Las anulaciones de flujos de datos solo se admiten para [SDK web](../edge/home.md) integraciones. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) y [API de servidor](../server-api/overview.md) en este momento, las integraciones no admiten invalidaciones de conjuntos de datos.
 
 ## Configuración de anulaciones de flujos de datos en la IU de flujos de datos {#configure-overrides}
 
