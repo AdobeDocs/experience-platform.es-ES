@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 2%
@@ -94,7 +94,7 @@ Las siguientes protecciones se aplican a la activación mediante [destinos de pe
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]Exportaciones de conjuntos de datos {type=Informative} {#dataset-exports}
+### [!BADGE Beta]Exportaciones de conjuntos de datos {type=Informative} {#dataset-exports}
 
 Las exportaciones de conjuntos de datos son compatibles actualmente con un **[!UICONTROL Primero Completo y luego Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Las protecciones descritas en esta sección se aplican a la primera exportación completa que se produce después de configurar un flujo de trabajo de exportación de conjuntos de datos.
 
