@@ -7,7 +7,7 @@ landing-page-description: Encuentre respuestas a las preguntas más frecuentes y
 short-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
+source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 5%
@@ -90,7 +90,7 @@ Los siguientes códigos de estado se pueden encontrar en cualquier [!DNL Experie
 |--- | --- | ---|
 | 400 | Solicitud incorrecta | La solicitud se construyó incorrectamente, faltaba información clave o contenía una sintaxis incorrecta. |
 | 401 | Error de autenticación | La solicitud no pasó una comprobación de autenticación. Puede que falte el token de acceso o que no sea válido. Consulte la [Errores de token de OAuth](#oauth-token-is-missing) para obtener más información. |
-| 403 | Prohibido | <p>Se ha encontrado el recurso, pero no tiene las credenciales adecuadas para verlo.</p><p> Una causa probable de este error es que es posible que no tenga el [permisos de control de acceso](/help/access-control/home.md) para acceder o editar el recurso. Lea cómo [obtenga los permisos de control de acceso basados en atributos necesarios](/help/landing/api-authentication.md#get-abac-permissions) para utilizar las API de Platform. </p> |
+| 403 | Prohibido | Se ha encontrado el recurso, pero no tiene las credenciales adecuadas para verlo. <br> Una causa probable de este error es que es posible que no tenga el [permisos de control de acceso](/help/access-control/home.md) para acceder o editar el recurso. Lea cómo [obtenga los permisos de control de acceso basados en atributos necesarios](/help/landing/api-authentication.md#get-abac-permissions) para utilizar las API de Platform. </p> |
 | 404 | No encontrado | No se encontró el recurso solicitado en el servidor. Es posible que el recurso se haya eliminado o que la ruta solicitada se haya introducido incorrectamente. |
 | 500 | Error interno del servidor | Se trata de un error del lado del servidor. Si realiza muchas llamadas simultáneas, es posible que esté alcanzando el límite de la API y necesite filtrar los resultados. (Consulte la [!DNL Catalog Service] Guía para desarrolladores de API sobre [filtrado de datos](../catalog/api/filter-data.md) para obtener más información). Espere un momento antes de volver a intentar la solicitud y, si el problema persiste, póngase en contacto con el administrador. |
 
