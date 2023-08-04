@@ -2,10 +2,10 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 2%
+source-wordcount: '3132'
+ht-degree: 1%
 
 ---
 
@@ -23,11 +23,11 @@ Las siguientes categorías son fundamentales para cumplir con las regulaciones d
 1. Auditoría
 1. Uso de datos
 1. Privacidad
-<!-- 1. Data hygiene -->
+1. Higiene de los datos
 
 Este documento examina cada una de las diferentes áreas de gobernanza y muestra cómo facilitar el cumplimiento de los datos al utilizar el servicio de consulta. Consulte la [información general sobre administración, privacidad y seguridad](../../landing/governance-privacy-security/overview.md) para obtener información más amplia sobre cómo Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normas.
 
-## Seguridad
+## Seguridad {#security}
 
 La seguridad de los datos es el proceso de proteger los datos contra el acceso no autorizado y garantizar un acceso seguro durante todo su ciclo de vida. El acceso seguro se mantiene en Experience Platform mediante la aplicación de funciones y permisos mediante funciones como el control de acceso basado en funciones y el control de acceso basado en atributos. Las credenciales, SSL y el cifrado de datos también se utilizan para garantizar la protección de datos en Platform.
 
@@ -35,8 +35,7 @@ La seguridad con respecto al servicio de consultas se divide en las siguientes c
 
 * [Control de acceso](#access-control): el acceso se controla mediante funciones y permisos, incluidos los permisos de nivel de columna y conjunto de datos.
 * Protección de datos mediante [conectividad](#connectivity): los datos se protegen mediante Platform y clientes externos mediante la consecución de una conexión limitada con credenciales caducadas o credenciales que no caducan.
-* Protección de datos mediante [cifrado y claves a nivel del sistema](#encryption): La seguridad de los datos se garantiza mediante el cifrado cuando los datos están en reposo.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* Protección de datos mediante [cifrado y claves administradas por el cliente (CMK)](#encryption-and-customer-managed-keys): acceso controlado mediante cifrado cuando los datos están en reposo.
 
 ### Control de acceso {#access-control}
 
@@ -132,17 +131,14 @@ Para aumentar la seguridad, el servicio de consultas proporciona compatibilidad 
 
 Consulte la guía de disponibles [Opciones SSL para conexiones de cliente de terceros al servicio de consultas](../clients/ssl-modes.md) para obtener más información, incluido cómo conectarse mediante `verify-full` Valor del parámetro SSL.
 
-### Cifrado {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### Cifrado y claves administradas por el cliente (CMK) {#encryption-and-customer-managed-keys}
 
 El cifrado es el uso de un proceso algorítmico para transformar datos en texto codificado e ilegible para garantizar que la información esté protegida e inaccesible sin una clave de descifrado.
 
 El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Azure Data Lake mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener más información sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, cuando los datos están en reposo en el lago de datos, el cifrado se realiza con la clave de administración del cliente (CMK), que ya es compatible con la administración de lago de datos. La versión admitida actualmente es TLS1.2. Consulte la [documentación de claves administradas por el cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) para obtener información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
+
 
 ## Auditoría {#audit}
 
@@ -206,14 +202,14 @@ Las funciones del servicio de consulta para el control de datos simplifican y op
 
 Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la IU de Platform y el servicio de consulta también le permite [marcar las identidades principales utilizando el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Configuración de una identidad mediante `ALTER TABLE` es especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. Consulte la documentación para obtener instrucciones sobre cómo [definición de campos de identidad en la IU](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## Higiene de los datos {#data-hygiene}
 
-## Data hygiene 
+La &quot;higiene de los datos&quot; se refiere al proceso de reparación o eliminación de datos que pueden estar obsoletos, ser inexactos, tener un formato incorrecto, estar duplicados o ser incompletos. Estos procesos garantizan que los conjuntos de datos sean precisos y coherentes en todos los sistemas. Es importante garantizar una higiene de los datos adecuada en cada paso del recorrido de los datos e incluso desde la ubicación inicial de almacenamiento de datos. En el servicio de consultas de Experience Platform, se trata del lago de datos o del almacén acelerado.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+Puede asignar una identidad a un conjunto de datos derivado para permitir su administración de datos siguiendo los servicios centralizados de higiene de datos de Platform.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+Por el contrario, cuando se crea un conjunto de datos agregado en el almacén acelerado, los datos agregados no se pueden utilizar para derivar los datos originales. Como resultado de esta agregación de datos, se elimina la necesidad de aumentar las solicitudes de higiene de los datos.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+Una excepción a este escenario es el caso de la eliminación. Si se solicita una eliminación de higiene de datos en un conjunto de datos y antes de que se complete la eliminación, se ejecuta otra consulta de conjunto de datos derivado, entonces el conjunto de datos derivado capturará información del conjunto de datos original. En este caso, debe tener en cuenta que si se ha enviado una solicitud para eliminar un conjunto de datos, no debe ejecutar ninguna consulta de conjunto de datos recién derivada utilizando el mismo origen de conjunto de datos.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+Consulte la [resumen de higiene de datos](../../hygiene/home.md) para obtener más información sobre la higiene de los datos en Adobe Experience Platform.
