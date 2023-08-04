@@ -2,7 +2,7 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2843'
 ht-degree: 2%
@@ -36,7 +36,6 @@ La seguridad con respecto al servicio de consultas se divide en las siguientes c
 * [Control de acceso](#access-control): el acceso se controla mediante funciones y permisos, incluidos los permisos de nivel de columna y conjunto de datos.
 * Protección de datos mediante [conectividad](#connectivity): los datos se protegen mediante Platform y clientes externos mediante la consecución de una conexión limitada con credenciales caducadas o credenciales que no caducan.
 * Protección de datos mediante [cifrado y claves a nivel del sistema](#encryption): La seguridad de los datos se garantiza mediante el cifrado cuando los datos están en reposo.
-
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Control de acceso {#access-control}
@@ -211,7 +210,7 @@ Los campos de datos de esquema se pueden establecer como un campo de identidad a
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 

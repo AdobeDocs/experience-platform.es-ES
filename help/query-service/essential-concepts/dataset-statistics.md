@@ -1,9 +1,9 @@
 ---
 title: Cálculo de estadísticas de conjuntos de datos
 description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Para ver las estadísticas que se calcularon con `ANALYZE TABLE COMPUTE STATISTI
 
 >[!IMPORTANT]
 >
->El `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` los comandos no son compatibles con las tablas de data warehouse. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS. Para obtener más información, consulte la [SECCIÓN ANALIZAR TABLA](../sql/syntax.md#analyze-table) de la guía de sintaxis SQL.
+>El `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS. Para obtener más información, consulte la [SECCIÓN ANALIZAR TABLA](../sql/syntax.md#analyze-table) de la guía de sintaxis SQL.
 
 Esta guía le ayuda a estructurar las consultas para que pueda calcular las estadísticas de columna de un conjunto de datos de ADLS. Con estos comandos, puede ver las estadísticas generadas en la sesión a través de un cliente SQL mediante una consulta SQL.
 
@@ -95,7 +95,7 @@ El resultado de las estadísticas calculadas puede ser similar al ejemplo siguie
 
 ## Mostrar los metadatos de análisis estadístico {#show-statistics}
 
-Puede usar el complemento `SHOW STATISTICS` para mostrar los metadatos de todas las tablas de estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
+Puede usar el complemento `SHOW STATISTICS` para mostrar los metadatos de todas las estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
 
 Un ejemplo de salida de `SHOW STATISTICS` se ve a continuación.
 
