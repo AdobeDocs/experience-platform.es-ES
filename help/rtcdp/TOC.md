@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
+source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 31%
+source-wordcount: '242'
+ht-degree: 90%
 
 ---
 
@@ -15,20 +15,20 @@ ht-degree: 31%
 # Ayuda de Real-time Customer Data Platform {#rtcdp}
 
 * [Información general sobre Real-Time CDP](overview.md)
-* [Información general sobre Real-Time CDP B2B Edition](b2b-overview.md)
-* Primeros pasos {#intro}
+* [Información general de Real-time CDP edición B2B](b2b-overview.md)
+* Introducción {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Introducción a Real-Time CDP](get-started.md)
       * [Página de inicio](home-page-dashboards.md)
    * Real-time CDP edición B2B {#rtcdpb2b-intro}
-      * [Ejemplo de caso de uso](./b2b-use-case.md)
+      * [Caso de uso de ejemplo](./b2b-use-case.md)
       * [Tutorial de extremo a extremo](./b2b-tutorial.md)
-      * [Protecciones de Real-Time CDP B2B Edition](b2b-guardrails.md)
+      * [Protección de seguridad de Real-time CDP edición B2B](b2b-guardrails.md)
 * Audience Manager y Real-time CDP {#evolution}
-   * [Evolución desde el Audience Manager](aam-to-rtcdp.md)
+   * [Evolución desde Audience Manager](aam-to-rtcdp.md)
 * Perfiles de cuenta {#account}
-   * [Resumen del perfil de cuenta](accounts/account-profile-overview.md)
-   * [Guía de IU de perfil de cuenta](accounts/account-profile-ui-guide.md)
+   * [Información general del perfil de cuenta](accounts/account-profile-overview.md)
+   * [Guía de IU del perfil de cuenta](accounts/account-profile-ui-guide.md)
 * Administración {#admin}
    * [Información general sobre administración](administration/admin-overview.md)
 * Conjuntos de datos {#datasets}
@@ -40,33 +40,34 @@ ht-degree: 31%
 * Identidades {#identity}
    * [Identidades y áreas de nombres de identidad](profile/identities-overview.md)
 * Políticas de combinación {#merge-policies}
-   * [Resumen de políticas de combinación](profile/merge-policies.md)
+   * [Información general de las políticas de combinación](profile/merge-policies.md)
 * Privacidad y gobernanza de datos {#privacy}
-   * [Resumen de privacidad](privacy/privacy-overview.md)
-   * [Resumen de gobernanza de datos](privacy/data-governance-overview.md)
+   * [Información general de la privacidad](privacy/privacy-overview.md)
+   * [Información general de gobernanza de datos](privacy/data-governance-overview.md)
 * Perfiles {#profile}
-   * [Resumen del perfil](profile/profile-overview.md)
+   * [Información general del perfil](profile/profile-overview.md)
    * [Examen de perfil](profile/profile-browse.md)
-* Servicios AI/ML de Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
+* Servicios de IA/ML de Real-Time CDP edición B2B {#b2b-cdp-ai-ml}
    * [Cuentas relacionadas](b2b-ai-ml-services/related-accounts.md)
-   * [Coincidencia de cliente potencial con cuenta](b2b-ai-ml-services/lead-to-account-matching.md)
+   * [Coincidencia de posible cliente con cuenta](b2b-ai-ml-services/lead-to-account-matching.md)
    * Puntuación predictiva de posibles clientes y cuentas {#predictive-lead-and-account-scoring-intro}
-      * [Información general sobre puntuación de cuenta y posible cliente predictivo](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [Administrar la puntuación predictiva de clientes potenciales y cuentas](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+      * [Información general sobre puntuación predictiva de posibles clientes y cuentas](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Administración de puntuación predictiva de posibles clientes y cuentas](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Esquemas {#schemas}
-   * [Resumen de esquemas](schemas/overview.md)
-   * [Esquemas en Real-Time CDP B2B Edition](schemas/b2b.md)
+   * [Información general de esquemas](schemas/overview.md)
+   * [Esquemas en Real-Time CDP edición B2B](schemas/b2b.md)
 * Segmentos {#segmentation}
-   * [Resumen de segmentación](segmentation/segmentation-overview.md)
+   * [Información general de segmentación](segmentation/segmentation-overview.md)
    * [Guía del generador de segmentos](segmentation/segment-builder-guide.md)
-   * [Segmentación en Real-Time CDP B2B Edition](segmentation/b2b.md)
+   * [Segmentación en Real-Time CDP edición B2B](segmentation/b2b.md)
    * [Inteligencia artificial aplicada al cliente](segmentation/customer-ai.md)
 * Fuentes {#sources}
-   * [Resumen de orígenes](sources/sources-overview.md)
-   * [Fuentes en Real-Time CDP B2B Edition](sources/b2b.md)
+   * [Información general de fuentes](sources/sources-overview.md)
+   * [Fuentes en Real-Time CDP edición B2B](sources/b2b.md)
 * Casos de uso {#use-cases}
    * Casos de uso de datos de socios {#partner-data}
-      * [Suplemento de perfiles de origen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
       * [Capte y adquiera nuevos clientes a través de soporte de prospección](/help/rtcdp/partner-data/prospecting.md)
+      * [Complementar perfiles de origen con atributos proporcionados por el socio](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Utilice el reconocimiento de visitantes asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
-* [Glosario de Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+* [Glosario de Experience Platform](https://www.adobe.com/go/platform-glossary-es)

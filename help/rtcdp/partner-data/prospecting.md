@@ -4,7 +4,7 @@ description: Aprenda a atraer y adquirir nuevos clientes a través de casos de u
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 15%
@@ -76,7 +76,7 @@ Los componentes de identidad, administración de datos y control que utilizará 
 * **(Documentación próximamente)** Grupos de campo adaptados para el soporte de datos de socios
 * **(Documentación próximamente)** Etiquetas de terceros que agregará a los atributos procedentes de socios
 
-#### Crear un área de nombres de identidad de ID de socio
+#### Crear un área de nombres de identidad de ID de socio {#create-partner-id-namespace}
 
 Comience creando un nuevo tipo de identidad para los perfiles que recibirá del socio. Para ello, en la sección Identity, debe crear un nuevo área de nombres de identidad del tipo **[!UICONTROL ID de socio]**.
 
