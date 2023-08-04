@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 2%
 
 ---
@@ -597,9 +597,9 @@ A continuación se muestra una lista de cálculos estadísticos disponibles desp
 
 #### ESTADÍSTICAS DE CÁLCULO en el lago de datos {#compute-statistics-data-lake}
 
-Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
+Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` Comando SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
 
-`COMPUTE STATISTICS` amplía el `ANALYZE TABLE` comando. Sin embargo, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS.
+`COMPUTE STATISTICS` amplía el `ANALYZE TABLE` comando. Sin embargo, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, y `FOR COLUMNS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS.
 
 **Ejemplo**
 
@@ -611,7 +611,7 @@ El `FILTER CONTEXT` El comando calcula las estadísticas de un subconjunto del c
 
 >[!NOTE]
 >
->El `Statistics ID` y las estadísticas generadas solo son válidas para cada sesión y no se puede acceder a ellas en diferentes sesiones de PSQL.<br><br>Limitaciones:<ul><li>La generación de estadísticas no es compatible con los tipos de datos de matriz o asignación</li><li>Las estadísticas calculadas no se mantienen</li></ul><br><br>Opciones:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De forma predeterminada, el indicador se establece en true. Como resultado, cuando se solicitan estadísticas sobre un tipo de datos no admitido, no se produce un error, sino que falla de forma silenciosa.<br>Para activar notificaciones de errores cuando se soliciten estadísticas sobre tipos de datos no admitidos, utilice: `SET skip_stats_for_complex_datatypes = false`.
+>El `Statistics ID` y las estadísticas generadas solo son válidas para cada sesión y no se puede acceder a ellas en diferentes sesiones de PSQL.<br><br>Limitaciones:<ul><li>La generación de estadísticas no es compatible con los tipos de datos de matriz o asignación</li><li>Las estadísticas calculadas son **no** persistió entre sesiones.</li></ul><br><br>Opciones:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De forma predeterminada, el indicador se establece en true. Como resultado, cuando se solicitan estadísticas sobre un tipo de datos no admitido, no se produce un error, pero omite silenciosamente los campos con tipos de datos no admitidos.<br>Para activar notificaciones de errores cuando se soliciten estadísticas sobre tipos de datos no admitidos, utilice: `SET skip_stats_for_complex_datatypes = false`.
 
 La salida de la consola aparece como se ve a continuación.
 
@@ -629,7 +629,7 @@ A continuación, puede consultar las estadísticas calculadas directamente hacie
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilice el `SHOW STATISTICS` para mostrar los metadatos de todas las tablas de estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
+Utilice el `SHOW STATISTICS` para mostrar los metadatos de todas las estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
 
 ```sql
 SHOW STATISTICS;

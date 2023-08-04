@@ -1,16 +1,16 @@
 ---
 title: Cálculo de estadísticas de conjuntos de datos
 description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # Cálculo de estadísticas de conjuntos de datos
 
-Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` y `SHOW STATISTICS` Comandos SQL. Los comandos SQL que calculan las estadísticas del conjunto de datos son una extensión del `ANALYZE TABLE` comando. Detalles completos sobre la `ANALYZE TABLE` El comando se encuentra en [Documentación de referencia SQL](../sql/syntax.md#analyze-table).
+Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` Comando SQL. Los comandos SQL que calculan las estadísticas del conjunto de datos son una extensión del `ANALYZE TABLE` comando. Detalles completos sobre la `ANALYZE TABLE` El comando se encuentra en [Documentación de referencia SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Para ver las estadísticas que se calcularon con `ANALYZE TABLE COMPUTE STATISTI
 
 >[!IMPORTANT]
 >
->El `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, y `SHOW STATISTICS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS. Para obtener más información, consulte la [SECCIÓN ANALIZAR TABLA](../sql/syntax.md#analyze-table) de la guía de sintaxis SQL.
+>El `COMPUTE STATISTICS`, `FILTERCONTEXT`, y `FOR COLUMNS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS. Para obtener más información, consulte la [SECCIÓN ANALIZAR TABLA](../sql/syntax.md#analyze-table) de la guía de sintaxis SQL.
 
 Esta guía le ayuda a estructurar las consultas para que pueda calcular las estadísticas de columna de un conjunto de datos de ADLS. Con estos comandos, puede ver las estadísticas generadas en la sesión a través de un cliente SQL mediante una consulta SQL.
 
