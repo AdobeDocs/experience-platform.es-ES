@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
 workflow-type: tm+mt
-source-wordcount: '3863'
+source-wordcount: '3923'
 ht-degree: 2%
 
 ---
@@ -892,23 +892,44 @@ COPY query
 
 El `ALTER TABLE` El comando permite añadir o soltar restricciones de clave principal o externa, así como añadir columnas a la tabla.
 
-
 #### AGREGAR o SOLTAR RESTRICCIÓN
 
-Las siguientes consultas SQL muestran ejemplos de cómo agregar o quitar restricciones a una tabla.
+Las siguientes consultas SQL muestran ejemplos de cómo agregar o quitar restricciones a una tabla. Las restricciones de clave principal y clave externa se pueden agregar a varias columnas con valores separados por comas. Puede crear claves compuestas pasando dos o más valores de nombre de columna, tal como se ve en los ejemplos siguientes.
+
+**Definir claves principales o compuestas**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
+```
+
+**Definir una relación entre tablas basada en una o más claves**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
+```
+
+**Definición de una columna de identidad**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+```
 
+**Soltar una restricción/relación/identidad**
+
+```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
 
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name1, column_name2 )
+
 ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name1, column_name2 )
 
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 
