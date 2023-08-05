@@ -2,9 +2,9 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante 
 
 >[!NOTE]
 >
->Los datos del lago de datos de Adobe Experience Platform y del almacén de perfiles (CosmosDB) se cifran mediante CMK.
+>Los datos del lago de datos de Adobe Experience Platform y del almacén de perfiles se cifran con CMK. Se consideran sus almacenes de datos principales.
 
 Este documento cubre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform.
 
@@ -110,7 +110,7 @@ La clave configurada aparece en la lista de claves del almacén.
 
 Una vez configurado el almacén de claves, el siguiente paso es registrarse en la aplicación CMK que se vinculará a su [!DNL Azure] inquilino.
 
-### Primeros pasos
+### Introducción
 
 El registro de la aplicación CMK requiere que realice llamadas a las API de Platform. Para obtener más información sobre cómo recopilar los encabezados de autenticación necesarios para realizar estas llamadas, consulte la [Guía de autenticación de Platform API](../../landing/api-authentication.md).
 
@@ -282,12 +282,21 @@ El `status` puede tener uno de los cuatro valores con los significados siguiente
 1. `COMPLETED`: el almacén de claves y el nombre de claves se han añadido a los almacenes de datos.
 1. `FAILED`: Se ha producido un problema, relacionado principalmente con la clave, el almacén de claves o la configuración de aplicaciones de varios inquilinos.
 
-## Pasos siguientes
+## Revocar acceso {#revoke-access}
 
-Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. Los datos que se incorporan a Platform ahora se cifrarán y descifrarán con las claves de [!DNL Azure] Key Vault. Si desea revocar el acceso de Platform a sus datos, puede quitar el rol de usuario asociado a la aplicación del almacén de claves en [!DNL Azure].
-
-Después de deshabilitar el acceso a la aplicación, los datos pueden tardar entre unos minutos y 24 horas en no ser accesibles en Platform. El mismo retraso de tiempo se aplica a los datos que vuelven a estar disponibles cuando se vuelve a habilitar el acceso a la aplicación.
+Si desea revocar el acceso de Platform a sus datos, puede quitar el rol de usuario asociado a la aplicación del almacén de claves en [!DNL Azure].
 
 >[!WARNING]
 >
->Una vez que la aplicación Key Vault, Key o CMK esté deshabilitada y ya no se pueda acceder a los datos en Platform, ya no será posible realizar ninguna operación descendente relacionada con esos datos. Asegúrese de comprender el impacto descendente de la revocación del acceso de Platform a los datos antes de realizar cambios en la configuración.
+>Deshabilitar el almacén de claves, la clave o la aplicación CMK puede provocar un cambio importante. Una vez que la aplicación key vault, Key o CMK esté deshabilitada y ya no se pueda acceder a los datos en Platform, ya no será posible realizar ninguna operación descendente relacionada con esos datos. Asegúrese de comprender el impacto descendente de la revocación del acceso de Platform a la clave antes de realizar cambios en la configuración.
+
+Después de eliminar el acceso a la clave o deshabilitar o eliminar la clave de su [!DNL Azure] en el almacén de claves, esta configuración puede tardar entre unos minutos y 24 horas en propagarse a los almacenes de datos principales. Los flujos de trabajo de Platform también incluyen los almacenes de datos en caché y transitorios necesarios para el rendimiento y la funcionalidad de la aplicación principal. La propagación de la revocación de CMK a través de estos almacenes en caché y transitorios puede tardar hasta siete días, según lo determinado por sus flujos de trabajo de procesamiento de datos. Por ejemplo, esto significa que el panel Perfil conservaría y mostraría datos de su almacén de datos de caché y tardaría siete días en caducar los datos que se mantienen en los almacenes de datos de caché como parte del ciclo de actualización. El mismo retraso de tiempo se aplica a los datos que vuelven a estar disponibles cuando se vuelve a habilitar el acceso a la aplicación.
+
+>[!NOTE]
+>
+>Existen dos excepciones específicas de casos de uso a la caducidad de conjuntos de datos de siete días en datos no principales (almacenados en caché/transitorios). Consulte su documentación correspondiente para obtener más información sobre estas funciones.<ul><li>[Acortador de URL de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms)</li><li>[Proyecciones de Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Pasos siguientes
+
+Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. Los datos que se incorporan a los almacenes de datos principales ahora se cifran y descifran con las claves de su [!DNL Azure] Key Vault.
+
