@@ -3,10 +3,10 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 4%
+source-wordcount: '1638'
+ht-degree: 3%
 
 ---
 
@@ -143,6 +143,7 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 
 +++Respuesta
 [!DNL LinkedIn Matched Audiences] admite la activación de las siguientes identidades: correos electrónicos con hash, [!DNL GAID], y [!DNL IDFA].
+
 +++
 
 ## Personalización de la misma página y de la página siguiente mediante Adobe Target y destinos de Personalización personalizados {#same-next-page-personalization}
@@ -204,3 +205,20 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 +++Conteste Sí. El [Gobernanza de datos y políticas de consentimiento](../data-governance/home.md) Las acciones de marketing creadas y asociadas con las seleccionadas rigen la activación de los atributos seleccionados.
 +++
+
+### ¿Son las [!DNL Adobe Target] y [!DNL Custom Personalization] destinos [!DNL HIPAA]¿Cumple con las normas?
+
++++Respuesta
+[!DNL Adobe Target] no es [!DNL HIPPA]-compatible con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Los clientes deben consultar a sus propios equipos legales lo siguiente [!DNL HIPPA]Preparación para los canales de optimización personalizados antes de utilizar la personalización de Edge mediante [!DNL Adobe Target] o el [!DNL Custom Personalization] destinos.
+
+Para los casos de uso en los que la administración de políticas de consentimiento debe aplicarse a escala, los clientes deben adquirir [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] Las funciones de se venden como un conjunto de funciones avanzadas y no se pueden comprar por separado.
+
+Este servicio incluye claves administradas por el cliente y umbrales elevados para administrar el ciclo de vida de los datos del cliente.
+
+El [!DNL Adobe Target] y [!DNL Custom Personalization] Los destinos de están integrados con el [Etiquetas de uso de datos de Experience Platform](../data-governance/labels/overview.md) y el [Servicio de aplicación de políticas de consentimiento](../data-governance/enforcement/overview.md). Estas funciones están disponibles para todos los clientes.
+
+
+
+
++++
+
