@@ -3,9 +3,9 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 6%
 
 ---
@@ -110,9 +110,7 @@ Para crear un esquema, complete los pasos siguientes:
 
 Para obtener más información sobre la creación de esquemas, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Hay 4 diseños de esquema que se utilizan para el recorrido de renovación de la participación.
-
-Cada esquema requiere que se configuren campos específicos, así como algunos campos que se recomiendan encarecidamente.
+Hay 4 diseños de esquema que se utilizan para el recorrido de renovación de la participación. Cada esquema requiere que se configuren campos específicos, así como algunos campos que se recomiendan encarecidamente.
 
 #### Requisitos de grupo de campos para el esquema de atributos del cliente
 
@@ -315,8 +313,6 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 El esquema del conector web de Adobe es un [!UICONTROL ExperienceEvent de XDM] , que contiene los siguientes grupos de campos:
 
-Los grupos de campos requeridos para el esquema de evento de experiencia para la fuente de datos de Adobe Analytics son los siguientes:
-
 Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 
 | Campos | Requisito | Descripción |
@@ -382,8 +378,6 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 +++
 
 ![Esquema del conector web de Adobe que resalta la lista de grupos de campos.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Creación de un conjunto de datos a partir de un esquema
 
