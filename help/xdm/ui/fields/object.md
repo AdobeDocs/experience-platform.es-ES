@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de objeto en la IU
 description: Obtenga información sobre cómo definir un campo de tipo de objeto en la interfaz de usuario del Experience Platform.
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ Una vez que haya terminado de construir el objeto, es posible que desee reutiliz
 
 ## Pasos siguientes
 
-En esta guía se explica cómo definir un campo de objeto en la interfaz de usuario de. Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].
+En esta guía se explica cómo definir un campo de objeto en la interfaz de usuario. Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de enumeración y valores sugeridos en la IU
 description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario del Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---

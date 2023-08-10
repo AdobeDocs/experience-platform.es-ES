@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo de datos de identidad
 description: Este documento proporciona información general sobre el tipo de datos XDM de identidad.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 3%
+source-wordcount: '283'
+ht-degree: 4%
 
 ---
 

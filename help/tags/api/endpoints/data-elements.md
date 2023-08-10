@@ -2,10 +2,10 @@
 title: Extremo de elementos de datos
 description: Aprenda a realizar llamadas al extremo /data_elements en la API de Reactor.
 exl-id: ea346682-441b-415b-af06-094158eb7c71
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 99%
+source-wordcount: '1368'
+ht-degree: 98%
 
 ---
 

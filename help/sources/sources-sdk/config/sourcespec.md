@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -493,7 +493,7 @@ Con la programación avanzada, puede utilizar expresiones y funciones específic
 | `scheduleParams.incremental` | La consulta incremental del origen. Incremental hace referencia a un método de ingesta en el que solo se incorporan datos nuevos o modificados. |
 | `scheduleParams.backfill` | La consulta de relleno del origen. El relleno se refiere a un método de ingesta en el que se ingieren datos históricos. |
 
-Una vez configurada la programación avanzada, debe consultar la `scheduleParams` en la sección URL, body o header params, según lo que admita la fuente específica. En el ejemplo siguiente, `{SCHEDULE_QUERY}` es un marcador de posición que se utiliza para especificar dónde se utilizarán las expresiones de programación incremental y de relleno. En el caso de un [!DNL Zendesk] origen, `query` se utiliza en la `queryParams` para especificar la programación avanzada.
+Una vez configurada la programación avanzada, debe consultar la `scheduleParams` en la sección URL, body o header params, según lo que admita la fuente concreta. En el ejemplo siguiente, `{SCHEDULE_QUERY}` es un marcador de posición que se utiliza para especificar dónde se utilizarán las expresiones de programación incremental y de relleno. En el caso de un [!DNL Zendesk] origen, `query` se utiliza en la `queryParams` para especificar la programación avanzada.
 
 ```json
 "urlParams": {
@@ -611,4 +611,4 @@ A continuación se muestra un ejemplo de esquema personalizado que puede agregar
 
 ## Pasos siguientes
 
-Una vez rellenadas las especificaciones de origen, puede continuar con la configuración de las especificaciones de exploración del origen que desea integrar en Platform. Consulte el documento en [configuración de especificaciones de exploración](./explorespec.md) para obtener más información.
+Una vez rellenadas las especificaciones de origen, puede continuar con la configuración de las especificaciones de exploración del origen que desea integrar en Platform. Consulte el documento sobre [configuración de especificaciones de exploración](./explorespec.md) para obtener más información.

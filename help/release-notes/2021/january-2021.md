@@ -1,14 +1,14 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2021
-description: Notas de la versión de enero de 2021 de Adobe Experience Platform.
+description: Las notas de la versión de enero de 2021 de Adobe Experience Platform.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 5%
+source-wordcount: '716'
+ht-degree: 27%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 **Fecha de la versión: 27 de enero de 2021**
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
@@ -37,7 +37,7 @@ Para obtener más información, consulte la [[!DNL Data Prep] descripción gener
 
 ## Destinos {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Nuevos destinos**
 
@@ -55,7 +55,7 @@ Para obtener más información, visite la [información general sobre destinos](
 
 ## Perfil del cliente en tiempo real {#profile}
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de los clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
 
 **Nuevas funciones**
 
@@ -70,7 +70,7 @@ Para obtener más información sobre el Perfil del cliente en tiempo real, inclu
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Nuevas funciones**
 

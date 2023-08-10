@@ -2,9 +2,9 @@
 title: Conexión de lista de clientes de pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 2%
 
 ---
@@ -93,4 +93,4 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas
 
 ## Recursos adicionales {#additional-resources}
 
-Consulte la sección [Página del Centro de ayuda de pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obtener más información.
+Consulte la [Página del Centro de ayuda de pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obtener más información.

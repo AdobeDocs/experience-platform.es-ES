@@ -2,9 +2,9 @@
 title: Información general sobre la extensión Adobe Privacy
 description: Obtenga información acerca de la extensión de etiquetas Adobe Privacy en Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '900'
 ht-degree: 9%
 
 ---

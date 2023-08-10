@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2298'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Este tutorial proporciona los pasos para crear una conexión de origen de Adobe Analytics en la interfaz de usuario para introducir datos del grupo de informes de Adobe Analytics en Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -38,7 +38,6 @@ Es importante comprender los siguientes términos clave utilizados en este docum
 >
 >* Un flujo de datos que rellena los datos históricos del grupo de informes con un retraso de 13 meses en el lago de datos. Este flujo de datos finaliza cuando se completa el relleno.
 >* Un flujo de datos que envía datos activos al lago de datos y a [!DNL Real-Time Customer Profile]. Este flujo de datos se ejecuta continuamente.
-
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
 

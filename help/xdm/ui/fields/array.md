@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de matriz en la IU
 description: Obtenga información sobre cómo definir un campo de matriz en la interfaz de usuario del Experience Platform.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -43,4 +43,4 @@ El lienzo se actualiza para reflejar los cambios realizados en el campo. Observe
 
 ## Pasos siguientes
 
-En esta guía se explica cómo definir un campo de matriz en la interfaz de usuario de. Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].
+En esta guía se explica cómo definir un campo de matriz en la interfaz de usuario. Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].

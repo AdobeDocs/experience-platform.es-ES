@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de coincidencia de segmentos
 description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1996'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ La comprobación de consentimiento de inclusión y exclusión determina si puede
 
 La configuración de consentimiento predeterminada para [!DNL Segment Match] se establece en `opt-out`. Para aplicar un modelo de inclusión a sus datos, envíe una solicitud por correo electrónico al equipo de la cuenta de Adobe.
 
-Para obtener más información sobre `share` para establecer el valor del consentimiento de uso compartido de datos, consulte la siguiente documentación sobre [grupo de campos privacidad y consentimientos](../../../xdm/field-groups/profile/consents.md). Para obtener información sobre el grupo de campos específico utilizado para recopilar el consentimiento del consumidor para la recopilación y el uso de datos relacionados con la privacidad, la personalización y las preferencias de marketing, consulte lo siguiente [Ejemplo de consentimiento para las preferencias de privacidad, personalización y marketing de GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
+Para obtener más información sobre `share` se utiliza para establecer el valor del consentimiento de uso compartido de datos, consulte la siguiente documentación sobre [grupo de campos privacidad y consentimientos](../../../xdm/field-groups/profile/consents.md). Para obtener información sobre el grupo de campos específico utilizado para recopilar el consentimiento del consumidor para la recopilación y el uso de datos relacionados con la privacidad, la personalización y las preferencias de marketing, consulte lo siguiente [Ejemplo de consentimiento para las preferencias de privacidad, personalización y marketing de GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Configuración de etiquetas de uso de datos
 

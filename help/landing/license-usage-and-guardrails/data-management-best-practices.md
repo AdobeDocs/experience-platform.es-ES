@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2202'
 ht-degree: 2%
 
 ---
@@ -151,7 +151,7 @@ A continuación se muestra una lista de algunas prácticas recomendadas que pued
 
 ## Resumen de funciones y disponibilidad {#feature-summary}
 
-Las prácticas recomendadas y las herramientas descritas en este documento le ayudarán a administrar mejor el uso de los derechos de licencia en Adobe Experience Platform. Este documento se actualizará a medida que se publiquen funciones adicionales para ayudar a proporcionar visibilidad y control a todos los clientes de Experience Platform.
+Las prácticas recomendadas y las herramientas descritas en este documento le ayudarán a administrar mejor el uso de las autorizaciones en Adobe Experience Platform. Este documento se actualizará a medida que se publiquen funciones adicionales para ayudar a proporcionar visibilidad y control a todos los clientes de Experience Platform.
 
 La siguiente tabla describe la lista de funciones disponibles actualmente para administrar mejor el derecho de uso de licencias.
 

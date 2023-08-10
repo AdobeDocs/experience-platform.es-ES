@@ -3,9 +3,9 @@ title: Coincidencia de clientes potenciales con cuentas en Real-Time CDP B2B
 type: Documentation
 description: Información general y más detalles sobre la función de coincidencia de clientes potenciales con cuentas de Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ El atributo workEmail se puede encontrar como un grupo de campos de nivel superi
 
 Los perfiles obtendrán mejores coincidencias solo si la puntuación de la coincidencia supera un umbral de confianza interna. Los resultados se guardan en un nuevo conjunto de datos del sistema de la relación de persona de la cuenta existente XDM.
 
-El servicio de coincidencia de cliente potencial con cuenta se ejecuta cuando está disponible una nueva instantánea de perfil de persona que se registra una vez cada 24 horas. Consulte la documentación para obtener más información sobre la [configuración del posible cliente para la coincidencia de cuentas](/help/rtcdp/accounts/account-profile-ui-guide.md).
+El servicio de coincidencia de cliente potencial con cuenta se ejecuta cuando está disponible una nueva instantánea de perfil de persona que se registra una vez cada 24 horas. Consulte la documentación para obtener más información sobre [configuración del posible cliente para la coincidencia de cuentas](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Cómo ver el resultado de coincidencia de cliente potencial con cuenta {#how-to-view}
 

@@ -4,9 +4,9 @@ title: Resumen de alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '773'
 ht-degree: 3%
 
 ---

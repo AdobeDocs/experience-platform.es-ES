@@ -1,12 +1,12 @@
 ---
 title: Utilice la encuesta de autoidentificación para crear su perfil personal de Experience Platform
-description: Aprenda a utilizar la interfaz de usuario de la encuesta de autoidentificación para recibir contenido relevante en función de sus funciones laborales y objetivos relacionados.
+description: Aprenda a utilizar la interfaz de usuario de las encuestas de autoidentificación para recibir contenido relevante en función de sus funciones laborales y objetivos relacionados.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 1%
+source-wordcount: '560'
+ht-degree: 4%
 
 ---
 

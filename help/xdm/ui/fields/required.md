@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;api;API;XDM;sistema XDM;mod
 title: Definición de campos obligatorios en la IU
 description: Obtenga información sobre cómo definir un campo XDM requerido en la interfaz de usuario del Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---

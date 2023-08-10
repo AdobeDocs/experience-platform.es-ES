@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo introducir archivos cifrados a tra
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1342'
 ht-degree: 2%
 
 ---
@@ -335,4 +335,4 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado p
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un par de claves de cifrado para los datos de almacenamiento en la nube y un flujo de datos para introducir los datos cifrados mediante [!DNL Flow Service API]. Para obtener actualizaciones de estado sobre la integridad, los errores y las métricas del flujo de datos, lea la guía de [monitorización del flujo de datos mediante [!DNL Flow Service] API](./monitor.md).
+Al seguir este tutorial, ha creado un par de claves de cifrado para los datos de almacenamiento en la nube y un flujo de datos para introducir los datos cifrados mediante [!DNL Flow Service API]. Para obtener actualizaciones de estado sobre la integridad, los errores y las métricas del flujo de datos, lea la guía sobre [monitorización del flujo de datos mediante [!DNL Flow Service] API](./monitor.md).

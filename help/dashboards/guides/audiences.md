@@ -4,9 +4,9 @@ title: Guía del panel de audiencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de las audiencias que ha creado su organización.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2231'
 ht-degree: 7%
 
 ---
@@ -47,7 +47,7 @@ Consulte la [modificación de paneles](../customize/modify.md) y [Resumen de bib
 
 Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de widgets y ver una lista de los widgets disponibles para agregarlos al tablero.
 
-![El [!UICONTROL Audiencias] información general del tablero con [!UICONTROL Agregar widget] resaltado.](../images/audiences/audiences-overview-add-widget.png)
+![El [!UICONTROL Audiencias] información general del tablero con [!UICONTROL Añadir widget] resaltado.](../images/audiences/audiences-overview-add-widget.png)
 
 Desde la biblioteca de widgets, puede examinar la selección de widgets de audiencia estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
 

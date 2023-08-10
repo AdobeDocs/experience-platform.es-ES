@@ -2,10 +2,10 @@
 title: Extremo de propiedades
 description: Aprenda a realizar llamadas al extremo /properties en la API de Reactor.
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 99%
+source-wordcount: '1103'
+ht-degree: 98%
 
 ---
 

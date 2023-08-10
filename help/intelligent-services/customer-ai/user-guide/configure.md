@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configuración de una instancia de Customer AI
 description: Los servicios de inteligencia artificial aplicada al cliente proporcionan inteligencia artificial aplicada al cliente como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. En las secciones siguientes se proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---

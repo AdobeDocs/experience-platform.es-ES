@@ -3,9 +3,9 @@ title: Crear una conexión de origen y un flujo de datos de Customer.io en la IU
 description: Obtenga información sobre cómo crear una conexión de origen Customer.io mediante la interfaz de usuario de Adobe Experience Platform.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Customer.io] conexión de origen y flujo de datos mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -160,7 +160,7 @@ En el [!DNL Customer.io] interfaz de usuario, escriba su [URL de webhook](#get-s
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha configurado correctamente un flujo de datos de flujo continuo para traer su [!DNL Customer.io] datos al Experience Platform. Para monitorizar los datos que se están introduciendo, consulte la guía de [monitorización de flujos de datos de flujo continuo mediante la IU de Platform](../../monitor-streaming.md).
+Al seguir este tutorial, ha configurado correctamente un flujo de datos de flujo continuo para traer su [!DNL Customer.io] datos al Experience Platform. Para monitorizar los datos que se están introduciendo, consulte la guía de [monitorización de flujos de datos de streaming mediante la IU de Platform](../../monitor-streaming.md).
 
 ## Recursos adicionales {#additional-resources}
 

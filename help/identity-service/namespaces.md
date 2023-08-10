@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID numérico de CRM.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1766'
-ht-degree: 8%
+source-wordcount: '1765'
+ht-degree: 9%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 Las áreas de nombres de identidad son un componente de [[!DNL Identity Service]](./home.md) que sirven como indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;nombre&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID numérico de CRM.
 
-## Primeros pasos
+## Introducción
 
 El trabajo con áreas de nombres de identidad requiere comprender los distintos servicios de Adobe Experience Platform implicados. Antes de empezar a trabajar con áreas de nombres, revise la documentación de los servicios siguientes:
 
@@ -25,7 +25,7 @@ El trabajo con áreas de nombres de identidad requiere comprender los distintos 
 
 Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registros en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] Combina datos de perfil; tanto el valor de identidad como el área de nombres deben coincidir.
 
-Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo tanto [!DNL Platform] puede ver que estos fragmentos son en realidad el mismo individuo y y reúne los datos en el gráfico de identidad del individuo.
+Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo tanto [!DNL Platform] puede ver que estos fragmentos son en realidad la misma persona y reúne los datos en el gráfico de identidad de la persona.
 
 ![](images/identity-service-stitching.png)
 
@@ -48,7 +48,7 @@ Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
 | Correo electrónico Dirección | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren áreas de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |
-| ID de socio [!BADGE Beta]{type=Informative} | <ul><li>Los ID de socio son identificadores utilizados por socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
+| ID de socio [!BADGE Beta]{type=Informative} | <ul><li>Los ID de socio son identificadores utilizados por los socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
 | Número de teléfono | Los números de teléfono suelen estar asociados a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen PII. Esto indica que [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Seleccione un área de nombres de identidad de la lista para ver información so
 
 ## Administrar áreas de nombres personalizadas {#manage-namespaces}
 
-Según los datos de organización y los casos de uso, puede requerir áreas de nombres personalizadas. Se pueden crear áreas de nombres personalizadas con la variable [[!DNL Identity Service]](./api/create-custom-namespace.md) API o a través de la IU de.
+Según los datos de su organización y los casos de uso, puede requerir áreas de nombres personalizadas. Se pueden crear áreas de nombres personalizadas con la variable [[!DNL Identity Service]](./api/create-custom-namespace.md) API o a través de la IU de.
 
 Para crear un área de nombres personalizada mediante la interfaz de usuario de, vaya a **[!UICONTROL Identidades]** workspace, seleccione **[!UICONTROL Examinar]**, y luego seleccione **[!UICONTROL Crear área de nombres de identidad]**.
 

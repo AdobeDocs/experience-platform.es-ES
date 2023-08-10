@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a la API del servicio de directivas
 description: La API del servicio de políticas le permite crear y administrar varios recursos relacionados con la administración de datos de Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a la API del servicio de directivas.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---

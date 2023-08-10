@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definición de campos de identidad en la IU
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 5%
 
 ---
@@ -56,6 +56,6 @@ Si ha definido una identidad principal para el esquema, ahora puede continuar co
 
 ## Pasos siguientes
 
-En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario de. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía en la [visor de gráficos de identidad](../../../identity-service/ui/identity-graph-viewer.md) para aprender a explorar el gráfico privado de su organización en la interfaz de usuario.
+En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía en la [visor de gráficos de identidad](../../../identity-service/ui/identity-graph-viewer.md) para aprender a explorar el gráfico privado de su organización en la interfaz de usuario.
 
 Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].

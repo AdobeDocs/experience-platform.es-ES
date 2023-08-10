@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consentimiento para preferencias de privacidad, personalización y marketing está diseñado para admitir la recopilación de permisos y preferencias de clientes generadas por Plataformas de administración de consentimiento (CMP) y otras fuentes a partir de las operaciones de datos.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,6 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consen
 >
 >* [Generación de datos de ejemplo en la IU](../ui/sample.md)
 >* [Generar datos de ejemplo en la API](../api/sample-data.md)
-
 
 ## `consents` {#choices}
 

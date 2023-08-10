@@ -2,9 +2,9 @@
 title: Crear una conexión de origen y un flujo de datos de Marketo Engage para los datos de actividad personalizados en la IU de
 description: Este tutorial proporciona los pasos para crear una conexión de origen de Marketo Engage y un flujo de datos en la IU para llevar los datos de las actividades personalizadas a Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Además de [actividades estándar](../../../../connectors/adobe-applications/mapping/marketo.md#activities), también puede utilizar la variable [!DNL Marketo] fuente para llevar los datos de las actividades personalizadas a Adobe Experience Platform. Este documento proporciona pasos sobre cómo crear una conexión de origen y un flujo de datos para los datos de actividad personalizados utilizando [!DNL Marketo] en la interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -75,7 +75,7 @@ A continuación, añada un nuevo campo al esquema. Este nuevo campo debe configu
 
 Para agregar un nuevo campo, seleccione el signo más (`+`) junto al nombre del esquema. Una entrada para *[!UICONTROL Campo sin título | Tipo]* aparece. A continuación, configure las propiedades del campo mediante la variable *[!UICONTROL Propiedades del campo]* panel. Establezca el nombre del campo como el nombre de la API de su actividad personalizada y establezca el nombre para mostrar como el nombre para mostrar de su actividad personalizada. A continuación, defina el tipo como `object` y asigne el grupo de campos al grupo de campos de actividad personalizada que creó en el paso anterior. Cuando termine, seleccione **[!UICONTROL Aplicar]**.
 
-![La estructura de esquema con el signo más (`+`) signo seleccionado para que se pueda añadir un nuevo campo.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
+![La estructura del esquema con el signo más (`+`) signo seleccionado para que se pueda añadir un nuevo campo.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
 El nuevo campo aparece en el esquema.
 

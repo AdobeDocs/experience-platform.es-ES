@@ -2,10 +2,10 @@
 title: Extremo de componentes de regla
 description: Aprenda a realizar llamadas al extremo /rule_components en la API de Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 94%
+source-wordcount: '1155'
+ht-degree: 92%
 
 ---
 

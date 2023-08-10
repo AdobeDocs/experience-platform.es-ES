@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configurar especificaciones de autenticación para fuentes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -237,4 +237,4 @@ A continuación se muestra un ejemplo de una especificación de autenticación c
 
 ## Pasos siguientes
 
-Una vez rellenadas las especificaciones de autenticación, puede continuar con la configuración de las especificaciones de origen para el origen que desea integrar en Platform. Consulte el documento en [configuración de especificaciones de origen](./sourcespec.md) para obtener más información.
+Una vez rellenadas las especificaciones de autenticación, puede continuar con la configuración de las especificaciones de origen para el origen que desea integrar en Platform. Consulte el documento sobre [configuración de especificaciones de origen](./sourcespec.md) para obtener más información.

@@ -1,9 +1,9 @@
 ---
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '841'
 ht-degree: 4%
 
 ---

@@ -4,9 +4,9 @@ title: Explorar, comprobar y procesar conjuntos de datos del panel mediante el s
 type: Documentation
 description: Aprenda a utilizar el servicio de consultas para explorar y procesar conjuntos de datos sin procesar y activar paneles de perfil, audiencia y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -82,11 +82,7 @@ Para comprender el esquema completo del conjunto de datos de destino DIM, puede 
 
 ![Vista previa del conjunto de datos DIM_Destination.](images/query/destinations-metadata.png)
 
-## (Beta) Informes de perspectivas de la plataforma de datos del cliente (CDP)
-
->[!IMPORTANT]
->
->La función de modelos de datos de perspectivas de CDP está en versión beta. Sus funciones y documentación están sujetas a cambios.
+## Informes de perspectivas de la plataforma de datos del cliente (CDP)
 
 La función de modelos de datos de perspectivas de CDP expone el SQL que alimenta las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes CDP para sus casos de uso de KPI y marketing.
 

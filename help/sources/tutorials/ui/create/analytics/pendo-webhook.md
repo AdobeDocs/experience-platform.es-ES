@@ -3,9 +3,9 @@ title: Crear una conexión de origen pendiente en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Pendo mediante la interfaz de usuario de Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1211'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Pendo] conexión de origen y flujo de datos mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -148,7 +148,7 @@ Una vez creado el webhook, vaya a la página de configuración de su [!DNL Pendo
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha configurado correctamente un flujo de datos de flujo continuo para traer su [!DNL Pendo] datos al Experience Platform. Para monitorizar los datos que se están introduciendo, consulte la guía de [monitorización de flujos de datos de flujo continuo mediante la IU de Platform](../../monitor-streaming.md).
+Al seguir este tutorial, ha configurado correctamente un flujo de datos de flujo continuo para traer su [!DNL Pendo] datos al Experience Platform. Para monitorizar los datos que se están introduciendo, consulte la guía de [monitorización de flujos de datos de streaming mediante la IU de Platform](../../monitor-streaming.md).
 
 ## Recursos adicionales {#additional-resources}
 

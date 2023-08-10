@@ -2,9 +2,9 @@
 description: Esta página proporciona toda la información necesaria para enviar a revisión un destino de productos creado con Destination SDK.
 title: Enviar para revisión un destino de productos creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Puede encontrar información detallada sobre cada elemento en las secciones sigu
 Proporcione una descripción de los casos de uso que el destino resuelve para los clientes de Experience Platform. Las descripciones pueden ser similares a los casos de uso de los socios existentes:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que desean dirigirse a un grupo de audiencia específico que no tiene clave de dirección de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia y enviar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que desean dirigirse a un grupo de audiencia específico que no tiene claves para las direcciones de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia y enviar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
 
 ## Motivo de la actualización {#reason-for-update}
 
@@ -57,7 +57,7 @@ Proporcione una breve descripción del problema que su envío resuelve para el d
 
 ## Resultados de la prueba después de usar la API de destino de prueba {#testing-api-response}
 
-Proporcione los resultados de la prueba después de usar el [probar API de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) extremo para realizar una llamada HTTP a su destino. Esto incluye:
+Proporcione los resultados de la prueba después de usar el [probar API de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) extremo para realizar una llamada HTTP a su destino. Esto incluye lo siguiente:
 
 * La solicitud de API completa (encabezados y cuerpo) realizada al extremo de destino mediante la API de prueba.
 * La respuesta de API recibida desde su extremo de destino.

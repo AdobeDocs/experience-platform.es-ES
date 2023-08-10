@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 7%
+source-wordcount: '1825'
+ht-degree: 17%
 
 ---
 
@@ -76,7 +76,7 @@ Para obtener más información sobre el control de acceso, consulte [informació
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] son integraciones creadas previamente con plataformas de destino que permiten la activación perfecta de los datos de Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -93,7 +93,6 @@ Como administrador, puede utilizar las funcionalidades de control de acceso basa
 >* En el [paso de asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), solo puede ver y seleccionar para su activación los campos para los que tiene permiso de acceso.
 >* Si desea activar segmentos adicionales en un destino existente en el que no tenga acceso a todos los campos asignados para la exportación, el flujo de trabajo de activación se bloqueará por usted.
 
-
 Para obtener más información sobre [!DNL Destinations], consulte la [[!DNL Destinations] descripción general](../../destinations/home.md).
 
 ### Servicio de identidad
@@ -106,7 +105,7 @@ Para obtener más información sobre [!DNL Identity Service], consulte la [[!DNL
 
 ### Perfil del cliente en tiempo real
 
-Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los distintos datos de clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción de clientes.
+Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los distintos datos de clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción de clientes.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -130,7 +129,7 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [[
 
 ### XDM
 
-Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir las audiencias de los clientes mediante segmentos y utilizar los atributos del cliente para fines de personalización.
+Experience Data Model (XDM) es una especificación de código abierto diseñada para mejorar la potencia de las experiencias digitales. Proporciona estructuras y definiciones comunes para cualquier aplicación para comunicarse con servicios en Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
 Con el control de acceso basado en atributos, puede:
 

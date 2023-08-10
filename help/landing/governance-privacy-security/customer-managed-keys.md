@@ -2,9 +2,9 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1773'
 ht-degree: 1%
 
 ---

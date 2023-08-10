@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimientos y preferencias
 description: Este documento proporciona información general del grupo de campos Esquema de consentimientos y preferencias.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,6 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consen
 >* [Generación de datos de ejemplo en la IU](../../ui/sample.md)
 >* [Generar datos de ejemplo en la API](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
 `idSpecific` se puede usar cuando un consentimiento o preferencia en particular no se aplica universalmente a un cliente, pero está restringido a un solo dispositivo o ID. Por ejemplo, un cliente puede excluirse de la recepción de correos electrónicos en una dirección y permitir potencialmente que se envíen correos electrónicos en otra.
@@ -106,7 +105,6 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consen
 >
 >* Si el cliente se ha excluido en el nivel de canal, cualquier consentimiento o preferencia equivalente en `idSpecific` se ignoran.
 >* Si no se establece el consentimiento o la preferencia de nivel de canal, o si el cliente ha elegido, el consentimiento o las preferencias equivalentes en `idSpecific` son honrados.
-
 
 Cada clave de la `idSpecific` representa un área de nombres de identidad específica reconocida por Adobe Experience Platform Identity Service. Aunque puede definir sus propias áreas de nombres personalizadas para categorizar distintos identificadores, se recomienda utilizar una de las áreas de nombres estándar proporcionadas por el servicio de identidad para reducir los tamaños de almacenamiento de Perfil del cliente en tiempo real. Para obtener más información sobre Áreas de nombres de identidad, consulte [información general del área de nombres de identidad](../../../identity-service/namespaces.md) en la documentación del servicio de ID.
 
