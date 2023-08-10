@@ -3,9 +3,9 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3258'
 ht-degree: 5%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->Nota
+>[!NOTE]
 >
 >Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el Perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
