@@ -3,45 +3,47 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 6%
+source-wordcount: '3259'
+ht-degree: 5%
 
 ---
 
 # Vuelva a atraer a sus clientes de forma inteligente para que regresen
 
-La renovación inteligente de la participación le permite configurar una campaña de goteo a medida y en canales múltiples para persuadir a los clientes de realizar una acción en particular. La campaña de inserción está diseñada para funcionar durante una cantidad de tiempo limitada que incluye el envío de correos electrónicos, SMS y anuncios pagados de los clientes que han mostrado intención. Una vez que el cliente haya tomado la acción adecuada, la campaña de nudge finalizará de inmediato.
+La renovación inteligente de la participación le permite configurar una campaña de goteo a medida y en canales múltiples para persuadir a los clientes de realizar una acción en particular. La campaña de inserción está pensada para funcionar durante una cantidad de tiempo limitada, que incluye el envío de clientes que mostraron correos electrónicos, SMS y anuncios pagados con intención. Una vez que el cliente haya tomado la acción adecuada, la campaña de nudge finalizará de inmediato.
 
 ![Resumen visual de alto nivel de renovación inteligente de la participación paso a paso.](../intelligent-re-engagement/images/step-by-step.png)
 
 ## Requisitos previos y planificación {#prerequisites-and-planning}
 
-A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (enumerados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pídale al administrador del sistema que le conceda los permisos necesarios.
+A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (enumerados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : Agrega datos entre fuentes de datos para impulsar la campaña. Estos datos se utilizan para crear las audiencias de campaña y los elementos de datos personalizados utilizados en los mosaicos de promoción de correo electrónico y web (por ejemplo, nombre o información relacionada con la cuenta). El CDP también se utiliza para activar las audiencias en el correo electrónico y la web (a través de Adobe Target).
+* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : Agrega datos entre fuentes de datos para impulsar la campaña. A continuación, estos datos se utilizan para crear las audiencias de campaña y los elementos de datos personalizados de superficie que se utilizan en los mosaicos de promo de correo electrónico y web (por ejemplo, nombre o información relacionada con la cuenta). El CDP también se utiliza para activar audiencias en el correo electrónico y la web (a través de Adobe Target).
    * [Esquemas](/help/xdm/home.md)
    * [Perfiles](/help/profile/home.md)
+   * [Conjuntos de datos](/help/catalog/datasets/overview.md)
    * [Audiencias](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Destinos](/help/destinations/home.md)
    * [Evento o Déclencheur de audiencia](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Audiencias/ Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Acciones de recorrido](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
-Se han creado tres recorridos de renovación de la participación.
+Actualmente se han desarrollado tres recorridos diferentes de renovación de la participación.
 
 >[!BEGINTABS]
 
 >[!TAB Recorrido de renovación de participación]
 
-El recorrido de renovación de la participación se dirige a los exploradores de productos abandonados tanto en el sitio web como en la aplicación. Este recorrido se activa cuando se ha visto un producto sin producto comprado ni añadido al carro de compras. La participación de la marca se activa después de tres días si no hay adiciones de lista en las últimas 24 horas.
+El recorrido de renovación de la participación se dirige a la navegación de productos abandonados tanto en el sitio web como en la aplicación. Este recorrido se activa cuando se ha visto un producto, pero no se ha comprado ni añadido al carro de compras. La participación de la marca se activa después de tres días si no se han realizado adiciones a la lista en las últimas 24 horas.
 
 ![Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. Los datos se agregan a la ingesta de SDK web/SDK móvil/API de red perimetral mediante la red perimetral (método preferido).
+1. Los datos se agregan a la ingesta de SDK web, SDK móvil o API de red perimetral mediante la red perimetral (el método preferido).
 2. As a **cliente**, puede crear conjuntos de datos marcados para [!UICONTROL Perfil].
 3. As a **cliente**, los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
 4. As a **cliente**, las audiencias se crean a partir de la lista de perfiles para comprobar si **usuario** ha realizado un compromiso de marca en los últimos tres días.
@@ -51,11 +53,11 @@ El recorrido de renovación de la participación se dirige a los exploradores de
 
 >[!TAB Recorrido de carro abandonado]
 
-Este recorrido de carro de compras abandonado se dirige a los productos que se han colocado en el carro de compras, pero que no se han comprado en el sitio web ni en la aplicación. Se utiliza para iniciar y detener campañas de medios de pago
+El recorrido de carro de compras abandonado se dirige a los productos que se han incluido en el carro de compras, pero que aún no se han comprado tanto en el sitio web como en la aplicación. Además, las campañas de medios de pago se inician y se detienen mediante este método.
 
 ![Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. Los datos se agregan a la ingesta de SDK web/SDK móvil/API de red perimetral mediante la red perimetral (método preferido).
+1. Los datos se agregan a la ingesta de SDK web, SDK móvil o API de red perimetral mediante la red perimetral (el método preferido).
 2. As a **cliente**, puede crear conjuntos de datos marcados para [!UICONTROL Perfil].
 3. As a **cliente**, los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
 4. As a **cliente**, las audiencias se crean a partir de la lista de perfiles para comprobar si **usuario** ha colocado un artículo en su carro de compras, pero no ha completado la compra. El **[!UICONTROL Añadir al carro de compras]** Este evento desencadena un temporizador que espera durante 30 minutos y, a continuación, comprueba la compra. Si no se ha realizado ninguna compra, la variable **usuario** se añade a **[!UICONTROL Abandonar carro]** audiencias.
@@ -65,11 +67,11 @@ Este recorrido de carro de compras abandonado se dirige a los productos que se h
 
 >[!TAB Recorrido de confirmación de pedido]
 
-Este recorrido de confirmación de pedido se dirige a las compras de productos tanto en el sitio web como en la aplicación.
+El recorrido de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.
 
 ![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. Los datos se agregan a la ingesta de SDK web/SDK móvil/API de red perimetral mediante la red perimetral (método preferido).
+1. Los datos se agregan a la ingesta de SDK web, SDK móvil o API de red perimetral mediante la red perimetral (el método preferido).
 2. As a **cliente**, puede crear conjuntos de datos marcados para [!UICONTROL Perfil].
 3. As a **cliente**, los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
 4. As a **cliente**, las audiencias se crean a partir de la lista de perfiles para comprobar si **usuario** ha realizado una compra.
@@ -80,41 +82,36 @@ Este recorrido de confirmación de pedido se dirige a las compras de productos t
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
 
-Lea las secciones siguientes, que incluyen vínculos a documentación adicional, para completar cada uno de los pasos de la información general de alto nivel descrita anteriormente.
+Para completar cada uno de los pasos de la información general de alto nivel anterior, lea las secciones siguientes, que ofrecen vínculos a más información e instrucciones más detalladas.
 
 ### Funcionalidad y elementos de la interfaz de usuario que utilizará {#ui-functionality-and-elements}
 
-A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (enumerados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pídale al administrador del sistema que le conceda los permisos necesarios.
-
-* [Esquemas](/help/xdm/home.md)
-* [Perfiles](/help/profile/home.md)
-* [Conjuntos de datos](/help/catalog/datasets/overview.md)
-* [Audiencias](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [Destinos](/help/destinations/home.md)
+A medida que complete los pasos para implementar el caso de uso, utilizará la funcionalidad de Real-Time CDP y los elementos de la interfaz de usuario enumerados al principio de este documento. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
 
 ### Crear un diseño de esquema y especificar grupos de campos
 
-Los recursos del Modelo de datos de experiencia (XDM) se administran en la variable [!UICONTROL Esquemas] workspace en Adobe Experience Platform. Puede ver y explorar los recursos principales proporcionados por Adobe y crear esquemas y recursos personalizados para su organización.
+Los recursos del Modelo de datos de experiencia (XDM) se administran en la variable [!UICONTROL Esquemas] workspace en Adobe Experience Platform. Puede ver y explorar los recursos principales proporcionados por Adobe y crear recursos y esquemas personalizados para su organización.
 
-Para crear un esquema, complete los pasos siguientes:
+<!--
+To create a schema, complete the steps below:
 
-1. Vaya a **[!UICONTROL Administración de datos]** > **[!UICONTROL Esquemas]** y seleccione **[!UICONTROL Crear esquema]**.
-2. Seleccionar **[!UICONTROL Perfil individual de XDM]/[!UICONTROL ExperienceEvent de XDM]**.
-3. Vaya a **[!UICONTROL Grupos de campos]** y seleccione **[!UICONTROL Añadir]**.
-4. Utilice el cuadro de búsqueda para buscar y seleccionar el grupo de campos y seleccione **[!UICONTROL Adición de grupos de campos]**.
-5. Asigne un nombre al esquema y, opcionalmente, una descripción.
-6. Seleccione **[!UICONTROL Guardar]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Registro de los pasos para crear un esquema.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 Para obtener más información sobre la creación de esquemas, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Hay 4 diseños de esquema que se utilizan para el recorrido de renovación de la participación. Cada esquema requiere que se configuren campos específicos, así como algunos campos que se recomiendan encarecidamente.
+Hay cuatro diseños de esquema que se utilizan para el recorrido de renovación de la participación. Cada esquema requiere que se configuren campos específicos, así como algunos campos que se recomiendan encarecidamente.
 
-#### Requisitos de grupo de campos para el esquema de atributos del cliente
+#### Esquema de atributos del cliente
 
-El esquema de atributos del cliente es un [!UICONTROL Perfil individual de XDM] , que contiene los siguientes grupos de campos:
+El esquema de atributos del cliente se representa mediante una variable [!UICONTROL Perfil individual de XDM] , que incluye los siguientes grupos de campos:
 
 +++Datos personales de contacto (grupo de campos)
 
@@ -165,11 +162,13 @@ Este grupo de campos se utiliza como práctica recomendada.
 
 +++
 
-![Esquema de atributos del cliente que resalta la lista de grupos de campos.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### Requisitos de grupo de campos para el esquema de transacciones digitales de cliente
+#### Esquema de transacciones digitales del cliente
 
-El esquema de transacciones digitales del cliente es un [!UICONTROL ExperienceEvent de XDM] , que contiene los siguientes grupos de campos:
+El esquema de transacciones digitales del cliente está representado por una variable [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
 +++ExperienceEvent del SDK web de Adobe Experience Platform (grupo de campos)
 
@@ -260,11 +259,13 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 +++
 
-![Esquema de transacciones digitales del cliente que resalta la lista de grupos de campos.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### Requisitos de grupo de campos para el esquema de transacciones sin conexión de cliente
+#### Esquema de transacciones sin conexión del cliente
 
-El esquema de transacciones sin conexión de cliente es un [!UICONTROL ExperienceEvent de XDM] , que contiene los siguientes grupos de campos:
+El esquema de transacciones sin conexión del cliente está representado por una variable [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
 +++Detalles de comercio (grupo de campos)
 
@@ -307,11 +308,13 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 +++
 
-![Esquema de transacciones sin conexión del cliente que resalta la lista de grupos de campos.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Requisitos del grupo de campos para el esquema del conector web de Adobe
+#### esquema del conector web de Adobe
 
-El esquema del conector web de Adobe es un [!UICONTROL ExperienceEvent de XDM] , que contiene los siguientes grupos de campos:
+El esquema del conector web de Adobe se representa mediante una variable [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
 Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 
@@ -377,25 +380,34 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 +++
 
-![Esquema del conector web de Adobe que resalta la lista de grupos de campos.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### Creación de un conjunto de datos a partir de un esquema
 
-Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Para los recorridos inteligentes de renovación de la participación, cada esquema tendrá un conjunto de datos.
+Un conjunto de datos es una estructura de almacenamiento y administración para un grupo de datos, a menudo una tabla con campos (filas) y un esquema (columnas). Cada esquema para recorridos inteligentes de renovación de la participación tendrá un único conjunto de datos.
 
-Para crear un conjunto de datos a partir de un esquema, complete los pasos siguientes:
+Para obtener más información sobre cómo crear un conjunto de datos a partir de un esquema, lea la [Guía de IU de conjuntos de datos](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. Vaya a **[!UICONTROL Administración de datos]** > **[!UICONTROL Conjuntos de datos]** y seleccione **[!UICONTROL Crear conjunto de datos]**.
-2. Seleccione **[!UICONTROL Crear conjunto de datos a partir de esquema]**.
-3. Seleccione el esquema de renovación de la participación correspondiente que ha creado.
-4. Asigne un nombre al conjunto de datos y, opcionalmente, una descripción.
-5. Seleccione **[!UICONTROL Finalizar]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![Registro de los pasos para crear un conjunto de datos a partir de un esquema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-Tenga en cuenta que, de forma similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile)
+>Nota
+>
+>Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el Perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![Habilite el conjunto de datos para el perfil.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### Privacidad, consentimiento y control de datos
 
@@ -405,7 +417,7 @@ Tenga en cuenta que, de forma similar al paso para crear un esquema, debe habili
 >
 >Proporcionar a los clientes la capacidad de cancelar la suscripción a la recepción de comunicaciones de una marca es un requisito legal, así como garantizar que se cumpla esta opción. Obtenga más información acerca de la legislación aplicable en la [Documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Se deben tener en cuenta y utilizar las siguientes políticas de consentimiento al configurar un recorrido de renovación de la participación:
+Al crear una ruta de participación, se deben tener en cuenta y utilizar las siguientes políticas de consentimiento:
 
 * Si conents.marketing.email.val = &quot;Y&quot; entonces Puede enviar un correo electrónico
 * Si conents.marketing.sms.val = &quot;Y&quot; entonces ¿Puede SMS?
@@ -415,15 +427,14 @@ Se deben tener en cuenta y utilizar las siguientes políticas de consentimiento 
 
 #### Etiqueta y aplicación DULE
 
-La dirección de correo electrónico personal se utiliza como datos directamente identificables que pueden utilizarse para identificar o contactar a una persona específica, en lugar de un dispositivo.
+Las direcciones de correo electrónico personales se utilizan como datos de identificación directa que se utilizan para identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo.
 
 * personalEmail.address = I1
 
 #### Políticas de marketing
 
-No hay políticas de marketing adicionales para los recorridos de renovación de la participación; sin embargo, se debe tener en cuenta lo siguiente:
+No se requieren políticas de marketing adicionales para los recorridos de renovación de la participación; sin embargo, lo siguiente debe considerarse como deseado:
 
-* Considere lo que desee
 * Restringir datos confidenciales
 * Restringir publicidad in situ
 * Restringir direccionamiento de correo electrónico
@@ -432,22 +443,26 @@ No hay políticas de marketing adicionales para los recorridos de renovación de
 
 ### Crear una audiencia
 
-Para crear una audiencia, complete los pasos a continuación:
+<!--
+To create an audience, complete the steps below:
 
-1. Vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y seleccione **[!UICONTROL Crear audiencia]**.
-2. Seleccionar **[!UICONTROL Generar regla]** y seleccione **[!UICONTROL Crear]**.
-3. Vaya a **[!UICONTROL Campo]** y seleccione **[!UICONTROL Eventos]** pestaña.
-4. Navegue o utilice el cuadro de búsqueda para encontrar el tipo de evento y, a continuación, arrástrelo al generador. Finalmente, agregue reglas de eventos arrastrando los tipos de eventos.
-5. Asigne un nombre al esquema y, opcionalmente, una descripción.
-6. Seleccione **[!UICONTROL Guardar]**.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Una grabación de los pasos para crear una audiencia.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-Para obtener más información sobre cómo crear audiencias, lea la [Guía de IU de Audience Builder](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### Creación de audiencias para recorridos de renovación de la participación de la marca
 
-Las audiencias para cada recorrido de renovación de la participación deben configurarse con eventos específicos para la calificación de segmentos. Estos detalles específicos se encuentran a continuación en las pestañas correspondientes de cada recorrido.
+Los recorridos de renovación de la participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de dos formas diferentes en Adobe Experience Platform: directamente compuestas como audiencias o a través de definiciones de segmentos derivadas de Platform.
+
+Para obtener más información sobre cómo componer audiencias directamente, lea la [Guía de IU de composición de audiencia](/help/segmentation/ui/audience-composition.md).
+
+Para obtener más información sobre cómo crear audiencias a través de definiciones de segmentos derivadas de Platform, lea la [Guía de IU de Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ Los siguientes eventos se utilizan para el recorrido de renovación de la partic
 
 Incluir audiencia que tenga al menos 1 evento EventType = ProductViews y LUEGO tener al menos 1 evento donde (EventType no es igual a commerce.productListAdds) y se produzca en las últimas 24 horas, y después de 3 días no tenga ningún evento donde (EventType = application.launch o web.webpagedetails.pageViews o commerce.purchases) y se produzca en los últimos 2 días.
 
-![Captura de pantalla de la audiencia de renovación de la participación que muestra el conjunto de reglas.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB Recorrido de carro abandonado]
 
 Los siguientes eventos se utilizan para perfiles que agregaron un producto al carro de compras, pero que no completaron la compra ni lo borraron en las últimas 24 horas.
 
-include EventType = commerce.productListAdds entre 30 minutos y 1440 minutos antes de ahora.
+Incluir EventType = commerce.productListAdds entre 30 minutos y 1440 minutos antes de ahora.
 exclude EventType = commerce.purchases 30 minutos antes de ahora O EventType = commerce.productListRemovals AND Cart ID es igual a Product List Adds1 Cart ID (el evento de inclusión).
 
-![Captura de pantalla de la audiencia de renovación de la participación que muestra el conjunto de reglas.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-Para obtener más información sobre la creación de audiencias, lea la [Guía de IU de Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 ### Configuración del recorrido en Adobe Journey Optimizer
 
@@ -478,13 +495,15 @@ Para obtener más información sobre la creación de audiencias, lea la [Guía d
 >
 >Adobe Journey Optimizer no engloba todo lo que se muestra en los diagramas de la parte superior de esta página. Todos los anuncios de medios de pago se crean en [!UICONTROL Destinos].
 
-Se requiere información específica para los múltiples recorridos que puede tener cada caso de uso. A continuación, en las pestañas correspondientes, se encuentran los datos específicos necesarios para cada rama de Recorrido.
+Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectadas, contextuales y personalizadas. El recorrido del cliente es todo el proceso de interacción de un cliente con la marca. Cada caso de uso puede tener una variedad de recorridos diferentes, cada uno de los cuales requiere información específica. A continuación se enumeran los datos precisos necesarios para cada rama de Recorrido.
 
 >[!BEGINTABS]
 
 >[!TAB Recorrido de renovación de participación]
 
-![Información general sobre el recorrido de renovación de la participación del cliente en Adobe Journey Optimizer](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++Eventos
 
@@ -612,7 +631,9 @@ Se requiere información específica para los múltiples recorridos que puede te
 
 >[!TAB Recorrido de carro abandonado]
 
-![Información general sobre el recorrido del carro de compras abandonado del cliente en Adobe Journey Optimizer](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++Eventos
 
@@ -741,7 +762,9 @@ Se requiere información específica para los múltiples recorridos que puede te
 
 >[!TAB Recorrido de confirmación de pedido]
 
-![Información general sobre el recorrido de confirmación de pedido del cliente en Adobe Journey Optimizer](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++Eventos
 
