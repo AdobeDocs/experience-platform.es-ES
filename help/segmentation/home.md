@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de evaluación"
->abstract="Actualmente, Platform admite tres métodos de evaluación de audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge."
+>abstract="Actualmente, Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
 
-Actualmente, Platform admite tres métodos de evaluación de audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge.
+Actualmente, Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
 
 ### Segmentación de streaming {#streaming}
 
@@ -78,7 +78,7 @@ Para obtener más información acerca de la segmentación de flujo continuo, lea
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Evaluación por lotes"
->abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creada, la audiencia se guarda y almacena para que pueda exportarla y utilizarla."
+>abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, el público se guarda y se almacena para que pueda exportarlo para utilizarlo."
 
 Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creada, la audiencia resultante se guarda y almacena para que pueda exportarla y utilizarla.
 
