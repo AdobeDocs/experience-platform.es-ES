@@ -5,9 +5,9 @@ description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experi
 badgeLimitedAvailability: label="Disponibilidad limitada" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ En Adobe Experience Platform, el modelo de similitud consume tres tipos diferent
 
 Todos estos puntos de datos se convierten en pares de valor clave que se introducen en el modelo de similitud. Solo se conservarán los pares de valor clave con un porcentaje significativo de perfiles coincidentes.
 
-El modelo de similitud se ejecuta con frecuencia, creando y recreando los factores influyentes y los gráficos de similitud para las audiencias base. La puntuación para audiencias similares también se ejecuta con frecuencia.
+En este momento, el modelo de similitud se ejecuta cada 24 horas, creando y recreando los factores influyentes y los gráficos de similitud para las audiencias base. La puntuación para audiencias similares también se ejecuta con frecuencia.
 
 ## Derechos {#entitlements}
 
@@ -52,11 +52,26 @@ Los siguientes derechos se aplican al uso de audiencias de similitud:
 - Los clientes de Real-Time CDP Ultimate tienen derecho a **20** Audiencias de similitud activas en entornos limitados de producción
 - Los entornos limitados de desarrollo están limitados a **5** Audiencias similares para todos los clientes de Real-Time CDP
 
-Hay paquetes de complementos disponibles que aumentan los derechos de las zonas protegidas de producción en 20 audiencias similares por paquete.
+Los paquetes de complementos, que estarán disponibles más adelante, aumentan los derechos de las zonas protegidas de producción en 20 audiencias similares por paquete.
 
 Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto con su representante de Adobe.
 
 ## Ver perspectivas de similitud {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="No apto"
+>abstract="Actualmente, esta audiencia no puede optar a perspectivas de similitud, ya que puede tener menos del número mínimo de perfiles necesarios para la formación o que la exportación de perfiles aún no se ha activado."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Procesamiento"
+>abstract="Esta audiencia se está procesando en este momento. El modelo puede tardar hasta 24 horas en finalizar el procesamiento. Vuelva a comprobarlo más tarde."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Error"
+>abstract="Se ha producido un error al procesar este modelo. Elimine y vuelva a compilar este modelo o inténtelo de nuevo más tarde."
 
 La información sobre similitudes está integrada en la página de detalles de audiencia. Para ver las perspectivas de similitud de una audiencia, seleccione **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]** y la audiencia para la que desee ver las perspectivas.
 
@@ -68,10 +83,10 @@ Aparecerá la página de detalles de la audiencia. Seleccionar **[!UICONTROL Inf
 
 ### Similitud y alcance {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Similitud y alcance"
+>abstract="El gráfico de similitud y alcance traza el alcance esperado de una audiencia similitud compuesta por perfiles superiores a una puntuación de similitud determinada. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
 
 La sección de similitud y alcance muestra un gráfico que representa el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. La puntuación de similitud representa el **Distancia** de similitud entre el perfil de la audiencia base y el perfil de la perspectiva de similitud.
 
@@ -93,11 +108,11 @@ La sección Audiencias de similitud muestra una lista de todas las audiencias de
 
 ### Factores influyentes {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Factores influyentes"
+>abstract="Los factores influyentes son atributos, eventos y pertenencias a audiencias que son importantes para explicar la similitud de un perfil a los miembros de la audiencia base. Las etiquetas y políticas de uso de datos se pueden usar para excluir ciertos datos de la consideración de factores influyentes en modelos de similitud."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Excluir datos"
 
 La sección de factores influyentes muestra los 100 factores que más influyen en el modelo de similitud para la audiencia base seleccionada. Estos factores influyentes son los atributos de perfil, los eventos de experiencia y las suscripciones a audiencias, que son los más importantes para explicar las similitudes en la audiencia base. Comprender los principales factores influyentes le permite personalizar mejor el contenido de marketing para esta audiencia y para cualquier audiencia de similitud que cree a partir de ella. Tenga en cuenta que no se mostrarán todos los factores influyentes que afectan al modelo de similitud.
 
