@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Información general de Data Science Workspace
 description: Esta guía proporciona información general sobre los conceptos clave relacionados con el espacio de trabajo de ciencia de datos en Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2448'
 ht-degree: 0%
 
 ---
 
 # Resumen de Data Science Workspace
+
+>[!NOTE]
+>
+>Tenga en cuenta que la presencia de documentación sobre una función en Experience League no garantiza su disponibilidad para todos los clientes. Esta función solo está disponible para los clientes existentes que compraron una licencia de Adobe Experience Platform o Adobe Experience Platform Intelligence. Consulte la descripción oficial del producto para comprender las funciones y otros detalles asociados con los SKU/productos adquiridos.
+
 
 Adobe Experience Platform [!DNL Data Science Workspace] utiliza el aprendizaje automático y la inteligencia artificial para obtener información de sus datos. Integrado en Adobe Experience Platform, [!DNL Data Science Workspace] le ayuda a hacer predicciones utilizando sus recursos de contenido y datos en todas las soluciones de Adobe.
 
@@ -37,7 +42,7 @@ Con [!DNL Data Science Workspace], Adobe Experience Platform le permite incorpor
 
 Los científicos de datos de todos los niveles de habilidad conseguirán perspectivas más rápidas y experiencias digitales más efectivas antes.
 
-## Primeros pasos
+## Introducción
 
 Antes de profundizar en los detalles de [!DNL Data Science Workspace], aquí tiene un breve resumen de los términos clave:
 
