@@ -3,9 +3,9 @@ title: Conexión de TikTok
 description: Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1010'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,9 @@ Una marca de ropa deportiva quiere llegar a los clientes existentes a través de
 
 ## Requisitos previos {#prerequisites}
 
-Antes de enviar datos a su [!DNL TikTok Ads Manager] cuenta de, deberá dar permiso a Adobe Experience Platform para acceder a su cuenta de publicidad de `Audience Management`. Este permiso se puede proporcionar introduciendo su ID de anunciante en Experience Platform y siguiendo la redirección para conceder el permiso. Puede encontrar más instrucciones en la sección [Documentación de API de TikTok](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Tiene que tener [!DNL Admin] o [!DNL Operator] Acceda a la cuenta de TikTok Ads Manager a la que desee enviar audiencias. Encontrará más instrucciones en la [Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Antes de enviar datos a su cuenta de TikTok Ads Manager, deberá conceder permiso a Adobe Experience Platform para acceder a su cuenta de publicidad de `Audience Management`. Este permiso lo puede proporcionar [introducción de su ID de Ads Manager](#authenticate) en la interfaz de usuario de Experience Platform y conceder el permiso después de ser redirigido a su cuenta de TikTok Ads Manager.
 
 ## Identidades admitidas {#supported-identities}
 
