@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
+source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 19%
@@ -12,7 +12,7 @@ ht-degree: 19%
 
 # Guía completa de control de acceso basado en atributos
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que ofrece a los clientes conscientes de la privacidad y de varias marcas la buena flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder o denegar con directivas basadas en los atributos y la función del objeto. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a los clientes conscientes de la privacidad y de varias marcas una mayor flexibilidad para administrar el acceso de los usuarios. El acceso a objetos individuales, como campos de esquema y segmentos, se puede conceder o denegar con directivas basadas en los atributos y la función del objeto. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
 
 Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con etiquetas que definen ámbitos organizativos o de uso de datos. Puede aplicar estas mismas etiquetas a recorridos, ofertas y otros objetos en Adobe Journey Optimizer. Al mismo tiempo, los administradores pueden definir políticas de acceso relacionadas con los campos de esquema del Modelo de datos de experiencia (XDM) y administrar mejor qué usuarios o grupos (usuarios internos, externos o de terceros) pueden acceder a esos campos.
 
@@ -20,7 +20,7 @@ Esta funcionalidad le permite categorizar campos de esquema, segmentos, etc. con
 >
 >Este documento se centra en el caso de uso de las políticas de control de acceso. Si intenta configurar directivas que gobiernen el **use** de datos en lugar de los usuarios de Platform que tienen acceso a ellos, consulte la guía completa sobre [gobernanza de datos](../../data-governance/e2e.md) en su lugar.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
@@ -45,7 +45,7 @@ Lo hará:
 * [Etiquetado de las funciones de los usuarios](#label-roles): utilice el ejemplo de un proveedor de atención médica (ACME Business Group) cuyo grupo de marketing trabaja con agencias externas.
 * [Etiquetado de recursos (campos y segmentos de esquema)](#label-resources): Asigne el **[!UICONTROL PHI/ Datos de salud regulados]** etiqueta para esquemas de recursos y segmentos.
 * 
-   * [Active la directiva que los vinculará: ](#policy): habilite la directiva predeterminada para evitar el acceso a los campos y segmentos de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
+   * [Active la directiva que los vinculará:](#policy): habilite la directiva predeterminada para evitar el acceso a los campos y segmentos de esquema conectando las etiquetas de los recursos a las etiquetas de la función. Los usuarios con etiquetas coincidentes recibirán acceso al campo de esquema y al segmento en todas las zonas protegidas.
 
 ## Permisos
 
@@ -190,7 +190,7 @@ Se recibe la confirmación de la activación de la directiva y se le devuelve al
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
->abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
