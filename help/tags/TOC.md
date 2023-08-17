@@ -5,7 +5,7 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 37%
@@ -45,7 +45,7 @@ ht-degree: 37%
    * [Bibliotecas](./ui/publishing/libraries.md)
    * [Bibliotecas de alojamiento propio](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Volver a publicar una biblioteca](./ui/publishing/republish.md)
-   * [Compatibilidad con CDN Premium (Beta)](./ui/publishing/premium-cdn.md)
+   * [Etiquetas de Experience Platform (China)](./ui/publishing/premium-cdn.md)
 * Información del lado del cliente {#client-side}
    * [Información general](./ui/client-side/overview.md)
    * [Implementación asíncrona](./ui/client-side/asynchronous-deployment.md)
