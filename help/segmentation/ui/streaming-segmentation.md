@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,7 @@ Una consulta se evaluará automáticamente con la segmentación de flujo continu
 | Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. | ![Se muestra un ejemplo de un solo evento dentro de una ventana de tiempo relativa.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. | ![Se muestra un ejemplo de un solo evento con una ventana de tiempo.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. | |
-| Evento único con un atributo de perfil | Cualquier definición de segmento que haga referencia a un único evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando llega el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil.](../images/ui/streaming-segmentation/profile-hit.png) |
-| Evento único con un atributo de perfil dentro de una ventana de tiempo relativa | Cualquier definición de segmento que haga referencia a un único evento entrante y a uno o más atributos de perfil. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil dentro de una ventana de tiempo relativa.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. | ![Se muestra un ejemplo de un solo evento con un atributo de perfil dentro de una ventana de tiempo relativa.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. | ![Se muestra un ejemplo de un segmento de segmentos.](../images/ui/streaming-segmentation/two-batches.png) |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. | ![Se muestra un ejemplo de varios eventos con un atributo de perfil.](../images/ui/streaming-segmentation/event-history-success.png) |
 

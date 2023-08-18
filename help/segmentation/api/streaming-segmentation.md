@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Evaluar eventos en tiempo casi real con segmentación de streaming
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1956'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Segmentación de streaming en [!DNL Adobe Experience Platform] permite a los cli
 >
 >Además, las definiciones de segmentos evaluadas con la segmentación de flujo continuo pueden variar entre la pertenencia ideal y real si la definición del segmento se basa en otra definición de segmento que se evalúa mediante la segmentación por lotes. Por ejemplo, si el segmento A se basa en el segmento B y el segmento B se evalúa mediante la segmentación por lotes, ya que el segmento B solo se actualiza cada 24 horas, el segmento A se alejará más de los datos reales hasta que se vuelva a sincronizar con la actualización del segmento B.
 
-## Primeros pasos
+## Introducción
 
 Esta guía para desarrolladores requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios relacionados con la segmentación de streaming. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
@@ -76,8 +76,7 @@ Para que una definición de segmento se evalúe mediante la segmentación de flu
 | Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. |
 | Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
 | Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
-| Evento único con un atributo de perfil | Cualquier definición de segmento que haga referencia a un único evento entrante, sin restricción de tiempo, y uno o más atributos de perfil. **Nota:** La consulta se evalúa inmediatamente cuando llega el evento. Sin embargo, en el caso de un evento de perfil, debe esperar 24 horas para incorporarse. |
-| Evento único con un atributo de perfil dentro de una ventana de tiempo relativa | Cualquier definición de segmento que haga referencia a un único evento entrante y a uno o más atributos de perfil. |
+| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
 | Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se utiliza un segmento de segmentos, se producirá la descalificación del perfil **cada 24 horas**. |
 | Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tiene uno o más atributos de perfil. |
 
