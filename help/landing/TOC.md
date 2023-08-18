@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real.
-source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
+source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 27%
+source-wordcount: '260'
+ht-degree: 30%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 27%
 * [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
 * [Una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience.md)
 * [En segundo plano, una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience-bts.md)
-* Primeros pasos {#getting-started}
+* Introducción {#getting-started}
    * [Flujo de trabajo de ejemplo de extremo a extremo](end-to-end-tutorial.md)
    * [Funciones clave (vídeo)](video/key-capabilities.md)
    * [Casos de uso clave (vídeo)](video/platform-use-cases.md)
@@ -30,6 +30,7 @@ ht-degree: 27%
    * [Guía de IU de flujos de trabajo](workflows.md)
    * [Compatibilidad con exploradores e idiomas](browser-language-support.md)
    * [Encuesta de autoidentificación](self-identification.md)
+   * [Asistente de IA](ai-assistant.md)
 * API de Experience Platform {#platform-apis}
    * [Introducción a las API de Platform](api-guide.md)
    * [Autenticación y acceso a las API de Platform](api-authentication.md)
@@ -43,7 +44,7 @@ ht-degree: 27%
    * [Información general](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=es)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integraciones de Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
