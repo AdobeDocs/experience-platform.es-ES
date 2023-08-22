@@ -3,10 +3,10 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: 43e365e20a2fd91a0e822eb6f66bb7db6fc218f5
+source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
 workflow-type: tm+mt
-source-wordcount: '2934'
-ht-degree: 5%
+source-wordcount: '3395'
+ht-degree: 4%
 
 ---
 
@@ -30,12 +30,12 @@ Construirá esquemas, conjuntos de datos y audiencias a medida que trabaje con e
 
 A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (enumerados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : Agrega datos entre fuentes de datos para impulsar la campaña. A continuación, estos datos se utilizan para crear las audiencias de campaña y los elementos de datos personalizados de superficie que se utilizan en los mosaicos de promo de correo electrónico y web (por ejemplo, nombre o información relacionada con la cuenta). El CDP también se utiliza para activar audiencias en el correo electrónico y la web (a través de Adobe Target).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : integra datos en todas las fuentes de datos para impulsar la campaña. A continuación, estos datos se utilizan para crear las audiencias de campaña y los elementos de datos personalizados de superficie que se utilizan en los mosaicos de promo de correo electrónico y web (por ejemplo, nombre o información relacionada con la cuenta). El CDP también se utiliza para activar audiencias en el correo electrónico y la web (a través de [!DNL Adobe Target]).
    * [Esquemas](/help/xdm/home.md)
    * [Perfiles](/help/profile/home.md)
    * [Conjuntos de datos](/help/catalog/datasets/overview.md)
    * [Audiencias](/help/segmentation/home.md)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinos](/help/destinations/home.md)
    * [Evento o Déclencheur de audiencia](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Audiencias/ Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
@@ -49,10 +49,10 @@ A continuación se ofrece una descripción general de alto nivel de los tres rec
 
 >[!TAB Recorrido de renovación de participación]
 
-El recorrido de renovación de la participación se dirige a la navegación de productos abandonados tanto en el sitio web como en la aplicación móvil. Este recorrido se activa cuando se ha visto un producto, pero no se ha comprado ni añadido al carro de compras. La participación de la marca se activa después de tres días si no se han realizado adiciones a la lista en las últimas 24 horas.<p>![Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente."){width="1920" zoomable="yes"}</p>
+El recorrido de renovación de la participación se dirige a la navegación de productos abandonados tanto en el sitio web como en la aplicación móvil. Este recorrido se activa cuando se ha visto un producto, pero no se ha comprado ni añadido al carro de compras. La participación de la marca se activa después de tres días si no se han realizado adiciones a la lista en las últimas 24 horas.<p>![Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente."){width="2560" zoomable="yes"}</p>
 
-1. Puede crear esquemas y conjuntos de datos marcados para [!UICONTROL Perfil].
-2. Los datos se agregan a Experience Platform mediante el SDK web, el SDK móvil perimetral o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+1. Puede crear esquemas y conjuntos de datos y luego marcar para [!UICONTROL Perfil].
+2. Los datos se integran en Experience Platform mediante el SDK web, el SDK móvil de Edge o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
 4. Las audiencias se generan centradas en la lista de perfiles para comprobar si **cliente** ha realizado un compromiso en los últimos tres días.
 5. Puede crear un recorrido de renovación de participación en [!DNL Adobe Journey Optimizer].
@@ -61,26 +61,25 @@ El recorrido de renovación de la participación se dirige a la navegación de p
 
 >[!TAB Recorrido de carro abandonado]
 
-El recorrido de carrito abandonado se dirige a productos que se han incluido en el carrito, pero que aún no se han comprado ni en el sitio web ni en la aplicación móvil. Además, las campañas de medios de pago se inician y se detienen mediante este método.<p>![Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente."){width="1920" zoomable="yes"}</p>
+El recorrido de carrito abandonado se dirige a productos que se han incluido en el carrito, pero que aún no se han comprado ni en el sitio web ni en la aplicación móvil. Además, las campañas de medios de pago se inician y se detienen mediante este método.<p>![Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente."){width="2560" zoomable="yes"}</p>
 
-1. Puede crear esquemas y conjuntos de datos marcados para [!UICONTROL Perfil].
-2. Los datos se agregan a Experience Platform mediante el SDK web, el SDK móvil perimetral o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+1. Se crean esquemas y conjuntos de datos, la marca para [!UICONTROL Perfil].
+2. Los datos se integran en Experience Platform mediante el SDK web, el SDK móvil de Edge o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
 4. Las audiencias se generan centradas en la lista de perfiles para comprobar si **cliente** ha colocado un artículo en su carro de compras, pero no ha completado la compra. El **[!UICONTROL Añadir al carro de compras]** Este evento desencadena un temporizador que espera durante 30 minutos y, a continuación, comprueba la compra. Si no se ha realizado ninguna compra, la variable **cliente** se añade a **[!UICONTROL Abandonar carro]** audiencias.
-5. Puede crear un recorrido de carro de compras abandonado en Adobe Journey Optimizer
+5. Puede crear un recorrido de carro de compras abandonado en [!DNL Adobe Journey Optimizer].
 6. Si es necesario, trabaje con **socio de datos** para la activación de audiencias en destinos de medios de pago deseados.
 7. [!DNL Adobe Journey Optimizer] comprueba el consentimiento y envía las distintas acciones configuradas.
 
 >[!TAB Recorrido de confirmación de pedido]
 
-El recorrido de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente."){width="1920" zoomable="yes"}</p>
+El recorrido de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente."){width="2560" zoomable="yes"}</p>
 
-1. Puede crear esquemas y conjuntos de datos marcados para [!UICONTROL Perfil].
-2. Los datos se agregan a Experience Platform mediante el SDK web, el SDK móvil perimetral o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+1. Puede crear esquemas y conjuntos de datos y luego marcar para [!UICONTROL Perfil].
+2. Los datos se integran en Experience Platform mediante el SDK web, el SDK móvil de Edge o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los perfiles se cargan en Real-Time CDP y se crean políticas de gobernanza para garantizar un uso responsable.
-4. Las audiencias se generan centradas en la lista de perfiles para comprobar si **cliente** ha realizado una compra.
-5. Puede crear un recorrido de confirmación en Adobe Journey Optimizer.
-6. [!DNL Adobe Journey Optimizer] envía un mensaje de confirmación de pedido utilizando el canal preferido.
+4. Puede crear un recorrido de confirmación en [!DNL Adobe Journey Optimizer].
+5. [!DNL Adobe Journey Optimizer] envía un mensaje de confirmación de pedido utilizando el canal preferido.
 
 >[!ENDTABS]
 
@@ -94,13 +93,15 @@ A medida que complete los pasos para implementar el caso de uso, utilizará la f
 
 ### Crear un diseño de esquema y especificar grupos de campos
 
-Los recursos del Modelo de datos de experiencia (XDM) se administran en la variable [!UICONTROL Esquemas] workspace en Adobe Experience Platform. Puede ver y explorar los recursos principales proporcionados por Adobe y crear recursos y esquemas personalizados para su organización.
+Los recursos del Modelo de datos de experiencia (XDM) se administran en la variable [!UICONTROL Esquemas] workspace en [!DNL Adobe Experience Platform]. Puede ver y explorar los recursos principales proporcionados por [!DNL Adobe] (por ejemplo, [!UICONTROL Grupos de campos]) y cree recursos y esquemas personalizados para su organización.
 
-Para obtener más información sobre la creación de esquemas, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md)
+Para obtener más información sobre la creación de [esquemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=es), lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Hay cuatro diseños de esquema que se utilizan para el recorrido de renovación de la participación. Cada esquema requiere que se configuren campos específicos y algunos campos son muy recomendables.
+Hay cuatro diseños de esquema que se utilizan para el caso de uso de renovación de la participación. Cada esquema requiere que se configuren campos específicos y algunos campos son muy recomendables.
 
 #### Esquema de atributos del cliente
+
+Este esquema se utiliza para estructurar y hacer referencia a los datos de perfil que conforman la información de clientes. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] a través de su CRM o sistema similar, y es necesario para hacer referencia a los detalles del cliente que se utilizan para la personalización, el consentimiento de marketing y las funciones de segmentación mejoradas.
 
 El esquema de atributos del cliente se representa mediante una variable [!UICONTROL Perfil individual de XDM] , que incluye los siguientes grupos de campos:
 
@@ -154,6 +155,8 @@ Este grupo de campos se utiliza como práctica recomendada.
 +++
 
 #### Esquema de transacciones digitales del cliente
+
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que componen la actividad del cliente que se produce en el sitio web o en las plataformas digitales asociadas. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] a través del SDK web y es necesario para hacer referencia a los distintos eventos de exploración y conversión que se utilizan para activar recorridos, análisis de clientes en línea detallado y funcionalidades de segmentación mejoradas.
 
 El esquema de transacciones digitales del cliente se representa mediante una [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
@@ -225,18 +228,9 @@ Detalles web es un grupo de campos de esquema estándar para la clase XDM Experi
 | `endUserIDs._experience.emailid.authenticatedState` | Requerido | Estado autenticado de ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.id` | Requerido | ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.namespace.code` | Requerido | Código de área de nombres de ID de dirección de correo electrónico del usuario final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Requerido | Estado autenticado de Adobe Marketing Cloud ID (ECID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | Requerido | Adobe Marketing Cloud ID (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Requerido | Código del área de nombres de Adobe Marketing Cloud ID (MCID). |
-
-+++
-
-+++Valor de clase (grupo de campos)
-
-| Campos | Requisito |
-| --- | --- |
-| `eventType` | Requerido |
-| `timestamp` | Requerido |
+| `endUserIDs._experience.mcid.authenticatedState` | Requerido | [!DNL Adobe] Estado autenticado de ID de Marketing Cloud (ECID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.id` | Requerido | [!DNL Adobe] ID DE Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Requerido | [!DNL Adobe] Código del área de nombres de ID de Marketing Cloud (MCID). |
 
 +++
 
@@ -247,6 +241,8 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 +++
 
 #### Esquema de transacciones sin conexión del cliente
+
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en plataformas fuera del sitio web. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] desde un POS (o sistema similar) y, con mayor frecuencia, se transmite a Platform a través de una conexión API. Su propósito es hacer referencia a los distintos eventos de conversión sin conexión que se utilizan para activar recorridos, realizar análisis de clientes en línea y sin conexión profundos y mejorar las capacidades de segmentación.
 
 El esquema de transacciones sin conexión del cliente se representa mediante una [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
@@ -276,15 +272,6 @@ El esquema de transacciones sin conexión del cliente se representa mediante una
 
 +++
 
-+++Valor de clase (grupo de campos)
-
-| Campos | Requisito |
-| --- | --- |
-| `eventType` | Requerido |
-| `timestamp` | Requerido |
-
-+++
-
 +++Detalles de auditoría del sistema de origen externo (grupo de campos)
 
 Los atributos de auditoría del sistema de origen externo son un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura detalles de auditoría sobre un sistema de origen externo.
@@ -293,7 +280,13 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 #### esquema del conector web de Adobe
 
-El esquema del conector web de Adobe se representa mediante una variable [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
+>[!NOTE]
+>
+>Esta es una implementación opcional si utiliza [!DNL Adobe Analytics Data Connector].
+
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que componen la actividad del cliente que se produce en el sitio web o en las plataformas digitales asociadas. Este esquema es similar al esquema de transacciones digitales del cliente, pero difiere en que está pensado para utilizarse cuando el SDK web no es una opción para la recopilación de datos; por lo tanto, este esquema es necesario cuando se utiliza el [!DNL Adobe Analytics Data Connector] para enviar los datos en línea a [!DNL Adobe Experience Platform] como conjunto de datos principal o secundario.
+
+El [!DNL Adobe] el esquema del conector web se representa mediante una variable [!UICONTROL ExperienceEvent de XDM] , que incluye los siguientes grupos de campos:
 
 Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 
@@ -338,9 +331,9 @@ Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 | `endUserIDs._experience.emailid.authenticatedState` | Requerido | Estado autenticado de ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.id` | Requerido | ID de dirección de correo electrónico del usuario final. |
 | `endUserIDs._experience.emailid.namespace.code` | Requerido | Código de área de nombres de ID de dirección de correo electrónico del usuario final. |
-| `endUserIDs._experience.mcid.authenticatedState` | Requerido | Estado autenticado de Adobe Marketing Cloud ID (ECID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | Requerido | Adobe Marketing Cloud ID (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Requerido | Código del área de nombres de Adobe Marketing Cloud ID (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | Requerido | [!DNL Adobe] Estado autenticado de ID de Marketing Cloud (ECID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.id` | Requerido | [!DNL Adobe] ID DE Marketing Cloud (MCID). El MCID ahora se conoce como ID de Experience Cloud (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Requerido | [!DNL Adobe] Código del área de nombres de ID de Marketing Cloud (MCID). |
 
 +++
 
@@ -361,9 +354,9 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 ### Creación de un conjunto de datos a partir de un esquema
 
-Un conjunto de datos es una estructura de almacenamiento y administración para un grupo de datos, a menudo una tabla con campos (filas) y un esquema (columnas). Cada esquema para los recorridos inteligentes de renovación de la participación tiene un único conjunto de datos.
+Un conjunto de datos es una estructura de almacenamiento y administración para un grupo de datos. Cada esquema para los recorridos inteligentes de renovación de la participación tiene un único conjunto de datos.
 
-Para obtener más información sobre cómo crear un conjunto de datos a partir de un esquema, lea la [Guía de IU de conjuntos de datos](/help/catalog/datasets/user-guide.md).
+Para obtener más información sobre cómo crear un [conjunto de datos](/help/catalog/datasets/overview.md) desde un esquema, lea la [Guía de IU de conjuntos de datos](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE]
 >
@@ -377,23 +370,23 @@ Para obtener más información sobre cómo crear un conjunto de datos a partir d
 >
 >Proporcionar a los clientes la capacidad de cancelar la suscripción a la recepción de comunicaciones de una marca es un requisito legal, así como garantizar que se cumpla esta opción. Obtenga más información acerca de la legislación aplicable en la [Documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Al crear una ruta de participación, se deben tener en cuenta y utilizar las siguientes políticas de consentimiento:
+Al crear una ruta de renovación de la participación, se deben tener en cuenta las siguientes políticas de consentimiento:
 
 * If `consents.marketing.email.val = "Y"` entonces Puede enviar por correo electrónico
 * If `consents.marketing.sms.val = "Y"` entonces Puede SMS
 * If `consents.marketing.push.val = "Y"` entonces Puede insertar
 * If `consents.share.val = "Y"` Entonces puede anunciarse
-* Necesidad definida por la implementación del cliente
 
 #### Etiqueta y aplicación DULE
 
-Las direcciones de correo electrónico personales se utilizan como datos de identificación directa que se utilizan para identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo.
+Al crear una ruta de renovación de la participación, se deben tener en cuenta las siguientes etiquetas DULE:
 
-* `personalEmail.address = I1`
+* Las direcciones de correo electrónico personales se utilizan como datos de identificación directa que se utilizan para identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo.
+   * `personalEmail.address = I1`
 
 #### Políticas de marketing
 
-No se requieren políticas de marketing adicionales para los recorridos de renovación de la participación; sin embargo, lo siguiente debe considerarse como deseado:
+No se requieren políticas de marketing para los recorridos de renovación de la participación; sin embargo, se debe tener en cuenta lo siguiente:
 
 * Restringir datos confidenciales
 * Restringir publicidad in situ
@@ -405,9 +398,9 @@ No se requieren políticas de marketing adicionales para los recorridos de renov
 
 #### Creación de audiencias para recorridos de renovación de la participación de la marca
 
-Los recorridos de renovación de la participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de dos formas diferentes en Adobe Experience Platform: directamente compuestas como audiencias o a través de definiciones de segmentos derivadas de Platform.
+Los recorridos de renovación de la participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de varias formas en [!DNL Adobe Experience Platform].
 
-Para obtener más información sobre cómo componer audiencias directamente, lea la [Guía de IU de composición de audiencia](/help/segmentation/ui/audience-composition.md).
+Para obtener más información sobre cómo componer directamente [Audiencias](/help/segmentation/home.md), lea la [Guía de IU de composición de audiencia](/help/segmentation/ui/audience-composition.md).
 
 Para obtener más información sobre cómo crear audiencias a través de definiciones de segmentos derivadas de Platform, lea la [Guía de IU de Audience Builder](/help/segmentation/ui/segment-builder.md).
 
@@ -415,13 +408,15 @@ Para obtener más información sobre cómo crear audiencias a través de definic
 
 >[!TAB Recorrido de renovación de participación]
 
+Esta audiencia se crea como una mejora del escenario clásico &quot;Abandono del carro de compras&quot;. Mientras que el abandono del carro de compras generalmente se centra en la adición de un carro de compras sin una compra posterior en un período de tiempo determinado, esta audiencia busca una participación anterior, específicamente aquellos que pueden haber explorado un producto en particular, pero no lo agregaron al carro de compras y no tuvieron actividad de seguimiento en el sitio dentro de un marco de tiempo determinado. Esta audiencia le ayuda a mantener su marca &quot;en la mente&quot; de los clientes que cumplen con estos criterios de inclusión y también se puede aprovechar para clientes cuyas propiedades digitales pueden diferir de un modelo de comercio electrónico tradicional.
+
 Los siguientes eventos se utilizan para el recorrido de renovación de la participación, en el que los usuarios vieron los productos en línea y no agregaron al carro de compras en las siguientes 24 horas, seguido de sin participación de la marca en los 3 días siguientes.
 
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
 * `EventType: commerce.productViews`
    * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.productListAdds`
+* `EventType is not: commerce.procuctListAdds`
    * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
 * `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: <= 2 days before now`
@@ -432,16 +427,18 @@ El descriptor del recorrido de renovación de participación aparece de la sigui
 
 >[!TAB Recorrido de carro abandonado]
 
+Esta audiencia se crea para admitir el escenario clásico &quot;Abandono del carro de compras&quot;. Su propósito es encontrar clientes que agregaron un producto al carro de compras, pero que finalmente no siguieron con una compra. Esta audiencia ayudará a mantener no solo su marca &quot;en mente&quot; para sus clientes, sino también los productos que dejaron atrás sin una compra posterior.
+
 Los siguientes eventos se utilizan para el recorrido de carro de compras abandonado, en el que los usuarios agregaron un producto al carro de compras, pero no completaron la compra ni borraron el carro de compras en las últimas 24 horas.
 
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
 * `EventType: commerce.productListAdds`
-   * `Timestamp: >= 30 minutes before now and <= 1440 minutes before now`
+   * `Timestamp: >= 1 days before now and <= 4 days before now `
 * `EventType: commerce.purchases`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 * `EventType: commerce.productListRemovals`
-   * `Timestamp: <= 30 minutes before now`
+   * `Timestamp: <= 4 days before now`
 
 El descriptor del recorrido de carro de compras abandonado aparece de la siguiente manera:
 
@@ -453,17 +450,19 @@ El descriptor del recorrido de carro de compras abandonado aparece de la siguien
 
 >[!NOTE]
 >
->Adobe Journey Optimizer no engloba todo lo que se muestra en los diagramas de la parte superior de esta página. Todos los anuncios de medios de pago se crean en [!UICONTROL Destinos].
+>[!DNL Adobe Journey Optimizer] no abarca todo lo que se muestra en los diagramas. Todos los anuncios de medios de pago se crean en [!UICONTROL Destinos].
 
-Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectadas, contextuales y personalizadas. El recorrido del cliente es todo el proceso de interacción de un cliente con la marca. Cada recorrido de caso de uso requiere información específica. A continuación se enumeran los datos precisos necesarios para cada rama de Recorrido.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) le ayuda a ofrecer experiencias conectadas, contextuales y personalizadas a sus clientes. El recorrido del cliente es todo el proceso de interacción de un cliente con la marca. Cada recorrido de caso de uso requiere información específica. A continuación se enumeran los datos precisos necesarios para cada rama de Recorrido.
 
 >[!BEGINTABS]
 
 >[!TAB Recorrido de renovación de participación]
 
+El recorrido de renovación de la participación se dirige a la navegación de productos abandonados tanto en el sitio web como en la aplicación móvil.<p>![Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del recorrido inteligente de renovación de la participación del cliente."){width="2560" zoomable="yes"}</p>
+
 +++Eventos
 
-* Vistas del producto
+* Evento 1: Vistas del producto
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -489,7 +488,7 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Añadir al carro
+* Evento 2: Agregar al carro
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -516,7 +515,7 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Compromiso de marca
+* Evento 3: Compromiso de marca
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -568,7 +567,7 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
       * `timestamp > timestamp of product last viewed`
 
    * Compruebe si hay al menos una compra sin conexión desde la última vez que vio el producto:
-      * Esquema: Transacciones sin conexión del cliente v.1
+      * Esquema: Transacciones sin conexión del cliente
       * `eventType = commerce.purchases`
       * `timestamp > timestamp of product last viewed`
 
@@ -587,9 +586,11 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
 
 >[!TAB Recorrido de carro abandonado]
 
+El recorrido de carrito abandonado se dirige a productos que se han incluido en el carrito, pero que aún no se han comprado ni en el sitio web ni en la aplicación móvil.<p>![Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del recorrido del carro de compras abandonado por el cliente."){width="2560" zoomable="yes"}</p>
+
 +++Eventos
 
-* Añadir al carro
+* Evento 2: Agregar al carro
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -616,7 +617,7 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Compras en línea
+* Evento 4: Compras en línea
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -642,7 +643,7 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
 
-* Compromiso de marca
+* Evento 3: Compromiso de marca
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -690,12 +691,12 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
 * AuthenticatedState en autenticado
 
 * Condición: compras sin conexión desde que se abandonó el carro por última vez:
-   * Esquema: Transacciones sin conexión del cliente v.1
+   * Esquema: Transacciones sin conexión del cliente
    * `eventType = commerce.purchases`
    * `timestamp > timestamp of cart was last abandoned`
 
 * Condición: carro de compras borrado desde la última vez que se abandonó:
-   * Esquema: Transacciones digitales de cliente v.1
+   * Esquema: Transacciones digitales del cliente
    * `eventType = commerce.cartCleared`
    * `cartID` (ID del carro de compras)
    * `timestamp > timestamp of cart was last abandoned`
@@ -714,9 +715,11 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
 
 >[!TAB Recorrido de confirmación de pedido]
 
+El recorrido de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente."){width="2560" zoomable="yes"}</p>
+
 +++Eventos
 
-* Compras en línea
+* Evento 4: Compras en línea
    * Esquema: Transacciones digitales del cliente
    * Campos:
       * `EventType`
@@ -763,11 +766,11 @@ Adobe Journey Optimizer le ayuda a ofrecer a sus clientes experiencias conectada
 
 >[!ENDTABS]
 
-Para obtener más información sobre la creación de recorridos en [Adobe Journey Optimizer], lea la [Guía de introducción a recorrido](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Para obtener más información sobre la creación de recorridos en [!DNL Adobe Journey Optimizer], lea la [Guía de introducción a recorrido](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configuración de anuncios de medios de pago en destinos
 
-El marco de destinos se utiliza para anuncios de medios de pago. Una vez comprobado el consentimiento, se envía a los distintos destinos configurados. Por ejemplo, correo postal, correo electrónico, push y SMS.
+El marco de destinos se utiliza para anuncios de medios de pago. Una vez comprobado el consentimiento, se envía a los distintos destinos configurados. Para obtener más información sobre los destinos, lea la [Resumen de destinos](/help/destinations/home.md) documento.
 
 #### Datos necesarios para los destinos
 
