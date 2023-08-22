@@ -4,9 +4,9 @@ description: Aprenda a utilizar el asistente de IA para navegar y comprender los
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '2642'
+source-wordcount: '2627'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Desde aquí, puede introducir la pregunta en el cuadro de texto y consultar al a
 
 Considere un caso de uso en el que esté creando una **Esquema de comercio de dispositivos en evento**. Durante el proceso de creación del esquema de ExperienceEvent, se encuentra con el `eventType` field. En este punto, puede dejar el flujo de trabajo y consultar la documentación en [conceptos básicos de una composición de esquema](../xdm/schema/composition.md)o puede utilizar el asistente de IA para recuperar respuestas inmediatas para sus preguntas.
 
-Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el ejemplo siguiente, se proporciona al asistente de IA la pregunta: &quot;¿Qué es el campo eventType en un esquema de Experience Event?&quot;
+Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el siguiente ejemplo, se proporciona al asistente de IA la pregunta: &quot;**¿Qué es el campo eventType en un esquema de Experience Event?**&quot;
 
 ![El asistente de IA para Experience Platform tiene la siguiente pregunta preparada para la consulta: &quot;¿Qué es el campo eventType en un esquema ExperienceEvent?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ A continuación, el asistente de IA consulta su base de conocimiento y calcula u
 
 Puede obtener más información sobre un tema en particular haciendo una pregunta de seguimiento. En el siguiente ejemplo, se pregunta al asistente de IA cómo se puede utilizar eventType en la segmentación.
 
-![Se muestra una pregunta y una respuesta de seguimiento en el asistente de IA para Experience Platform.](./images/ai-assistant/follow-up-question.png)
+![Se muestra una pregunta y una respuesta de seguimiento en el asistente de IA para Experience Platform.](./images/ai-assistant/follow-up-answer.png)
 
 También puede hacer preguntas al asistente de IA sobre el uso de los datos. Al consultar sobre el uso de datos, debe estar en una zona protegida activa para que el asistente de IA pueda responder a su consulta.
 
@@ -100,15 +100,13 @@ Para proporcionar comentarios, seleccione los pulgares hacia arriba o hacia abaj
 
 >[!ENDSHADEBOX]
 
-![El asistente de IA para el Experience Platform muestra las opciones que puede elegir después de consultar.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Mostrar origen]
 
 Seleccionar **[!UICONTROL Mostrar origen]** para obtener una lista de vínculos a la documentación a la que hace referencia el asistente de IA para calcular su respuesta.
 
-![Los vínculos a las citas se muestran en el asistente de IA.](./images/ai-assistant/citations.png)
+![Los vínculos al origen se muestran en el asistente de IA.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Pulgares hacia arriba]
 
@@ -134,7 +132,7 @@ Seleccione el icono de indicador para proporcionar más informes sobre su experi
 
 También puede utilizar las indicaciones preconfiguradas que proporciona el asistente de IA para empezar.
 
-![Las indicaciones proporcionadas en el panel Asistente de IA.](./images/ai-assistant/ideas-to-get-started.png)
+![Las indicaciones proporcionadas en el panel Asistente de IA.](./images/ai-assistant/ideas.png)
 
 ## Más información
 
