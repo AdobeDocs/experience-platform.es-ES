@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="Disponibilidad limitada" type=Caution
 source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -59,12 +59,12 @@ Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto c
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
 >title="No apto"
->abstract="Actualmente, esta audiencia no puede optar a perspectivas de similitud, ya que puede tener menos del número mínimo de perfiles necesarios para la formación o que la exportación de perfiles aún no se ha activado."
+>abstract="Actualmente, este público no puede optar a datos de similitud, ya que puede que tenga menos del número mínimo de perfiles necesarios para la formación o que la exportación de perfiles aún no se haya activado."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
 >title="Procesamiento"
->abstract="Esta audiencia se está procesando en este momento. El modelo puede tardar hasta 24 horas en finalizar el procesamiento. Vuelva a comprobarlo más tarde."
+>abstract="Este público se está procesando en este momento. El modelo puede tardar hasta 24 horas en finalizar el procesamiento. Inténtelo de nuevo más tarde."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_error"
@@ -84,7 +84,7 @@ Aparecerá la página de detalles de la audiencia. Seleccionar **[!UICONTROL Inf
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similitud y alcance"
->abstract="El gráfico de similitud y alcance traza el alcance esperado de una audiencia similitud compuesta por perfiles superiores a una puntuación de similitud determinada. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
+>abstract="El gráfico de similitud y alcance traza el alcance esperado de un público de similitud compuesto por perfiles que superan una determinada puntuación de similitud. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
 
 La sección de similitud y alcance muestra un gráfico que representa el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. La puntuación de similitud representa el **Distancia** de similitud entre el perfil de la audiencia base y el perfil de la perspectiva de similitud.
 
@@ -109,8 +109,8 @@ La sección Audiencias de similitud muestra una lista de todas las audiencias de
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Factores influyentes"
->abstract="Los factores influyentes son atributos, eventos y pertenencias a audiencias que son importantes para explicar la similitud de un perfil a los miembros de la audiencia base. Las etiquetas y políticas de uso de datos se pueden usar para excluir ciertos datos de la consideración de factores influyentes en modelos de similitud."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Excluir datos"
+>abstract="Los factores influyentes son atributos, eventos y pertenencias a públicos que son importantes para explicar la similitud de un perfil de los miembros del público base. Las etiquetas y políticas de uso de datos se pueden utilizar para que ciertos datos no se consideren factores influyentes en modelos de similitud."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=es#exclude" text="Excluir datos"
 
 La sección de factores influyentes muestra los 100 factores que más influyen en el modelo de similitud para la audiencia base seleccionada. Estos factores influyentes son los atributos de perfil, los eventos de experiencia y las suscripciones a audiencias, que son los más importantes para explicar las similitudes en la audiencia base. Comprender los principales factores influyentes le permite personalizar mejor el contenido de marketing para esta audiencia y para cualquier audiencia de similitud que cree a partir de ella. Tenga en cuenta que no se mostrarán todos los factores influyentes que afectan al modelo de similitud.
 
