@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
+source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 14%
       - [Conector PostgreSQL](connectors/databases/postgres.md)
       - [Conector de flujo del Snowflake](connectors/databases/snowflake-streaming.md)
       - [conector del Snowflake](connectors/databases/snowflake.md)
-      - [Conector Teradata Vantage](connectors/databases/teradata-vantage.md)
+      - [Conector Vantage de teradata](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -190,7 +190,7 @@ ht-degree: 14%
          - [OData genérico](tutorials/api/create/protocols/odata.md)
          - [API REST genérica](tutorials/api/create/protocols/generic-rest.md)
       - Transmisión {#streaming}
-         - [API HTTP](tutorials/api/create/streaming/http.md)
+         - [API del HTTP](tutorials/api/create/streaming/http.md)
    - Exploración de datos {#explore}
       - [Exploración de datos publicitarios](tutorials/api/explore/advertising.md)
       - [Explorar datos de almacenamiento en la nube](tutorials/api/explore/cloud-storage.md)
@@ -310,7 +310,7 @@ ht-degree: 14%
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
       - Transmisión {#streaming}
-         - [API HTTP](tutorials/ui/create/streaming/http.md)
+         - [API del HTTP](tutorials/ui/create/streaming/http.md)
    - Configuración de un flujo de datos {#dataflow}
       - [Flujo de datos de Advertising connection](tutorials/ui/dataflow/advertising.md)
       - [Flujo de datos de conexión de Analytics](tutorials/ui/dataflow/analytics.md)
@@ -325,6 +325,7 @@ ht-degree: 14%
       - [Flujo de datos de conexión de pago](tutorials/ui/dataflow/payments.md)
       - [Flujo de datos de conexión de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Creación de un flujo de datos de origen mediante plantillas en la IU](tutorials/ui/templates.md)
+   - [Ingesta bajo demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorización de flujos de datos por lotes](tutorials/ui/monitor.md)
    - [Monitorización de flujos de datos](tutorials/ui/monitor-streaming.md)
    - [Actualización de cuentas](tutorials/ui/update.md)
