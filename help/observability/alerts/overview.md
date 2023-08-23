@@ -4,9 +4,9 @@ title: Resumen de alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '796'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Las alertas no son compatibles con los entornos limitados que no son de producción. Para suscribirse a alertas, debe asegurarse de que está utilizando una zona protegida de producción.
+>Las alertas no son compatibles con los entornos limitados que no son de producción. Para suscribirse a alertas, debe asegurarse de que está utilizando una zona protegida de producción. Todas las alertas de suscripción se restablecerán cuando se restablezca la zona protegida. Todas las alertas de suscripción se borrarán del mismo modo cuando se elimine una zona protegida.
 
 Adobe Experience Platform le permite suscribirse a alertas basadas en eventos relativas a actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de sondear el [[!DNL Observability Insights] API](../api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
 
