@@ -2,10 +2,10 @@
 title: Configuración de la extensión SDK para web de Adobe Experience Platform
 description: Configuración de la extensión de etiqueta SDK web de Adobe Experience Platform en la interfaz de usuario.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 6%
+source-wordcount: '1220'
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ La extensión de etiquetas SDK para web de Adobe Experience Platform envía dato
 
 Este documento explica cómo configurar la extensión en la interfaz de usuario de.
 
-## Primeros pasos
+## Introducción
 
 Si la extensión del SDK web de Platform ya se ha instalado para una propiedad, abra la propiedad en la interfaz de usuario de y seleccione **[!UICONTROL Extensiones]** pestaña. En el SDK web de Platform, seleccione **[!UICONTROL Configurar]**.
 
@@ -112,12 +112,16 @@ Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos dife
 
 La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
-1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página configuración de secuencia de datos](../../../../datastreams/configure.md).
-2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante la extensión de etiqueta del SDK web.
+1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../../../datastreams/configure.md).
+2. A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la extensión de etiqueta del SDK web.
 
 Consulte la secuencia de datos [la configuración anula la documentación](../../../../datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
 
 Como alternativa a pasar las invalidaciones a través de un comando del SDK web, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
+
+>[!IMPORTANT]
+>
+> Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las anulaciones de configuración de la secuencia de datos en la página de extensión de etiquetas del SDK web.](assets/datastream-overrides.png)
 
