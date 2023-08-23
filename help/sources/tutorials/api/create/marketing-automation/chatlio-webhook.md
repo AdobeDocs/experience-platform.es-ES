@@ -1,24 +1,19 @@
 ---
 title: Crear una conexión de origen y un flujo de datos para Chatlio mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a Chatlio mediante la API de Flow Service.
-badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos para [!DNL Chatlio] uso de la API de Flow Service
 
->[!NOTE]
->
->El [!DNL Chatlio] el origen está en versión beta. Lea el [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
-
 El siguiente tutorial le guiará por los pasos para crear una conexión de origen y un flujo de datos que se van a traer [[!DNL Chatlio]](https://chatlio.com/) datos de evento para Adobe Experience Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

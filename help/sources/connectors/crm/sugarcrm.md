@@ -1,21 +1,16 @@
 ---
 title: Resumen de origen de SugarCRM
 description: Aprenda a conectar SugarCRM a Adobe Experience Platform mediante API o la interfaz de usuario.
-badge: Beta
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL SugarCRM]
-
->[!NOTE]
->
->El [!DNL SugarCRM] el origen está en versión beta. Consulte la [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+# [!DNL SugarCRM]
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -28,7 +23,6 @@ El [!DNL SugarCRM] Esta fuente de datos permite introducir datos de cuentas, con
 * [Cuentas](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3)
 * [Contactos](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
 * [Eventos](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5)
-
 
 [!DNL SugarCRM] utiliza tokens de portador como mecanismo de autenticación para comunicarse con el [!DNL SugarCRM] Las API de cuenta y contacto y [!DNL SugarCRM] API de eventos.
 
@@ -53,6 +47,6 @@ Antes de crear un [!DNL SugarCRM] conexión de origen, primero debe asegurarse d
 
 ## Connect [!DNL SugarCRM Events] a Platform
 
-* [Cree una conexión de origen para traer [!DNL SugarCRM Events] datos a Platform mediante API](../../tutorials/api/create/crm/sugarcrm-events.md).
+* [Cree una conexión de origen para traer [!DNL SugarCRM Events] datos a Platform mediante API](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Cree una conexión de origen para traer [!DNL SugarCRM Events] datos a Platform mediante la interfaz de usuario de](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Crear un flujo de datos para una conexión de origen CRM en la interfaz de usuario](../../tutorials/ui/dataflow/crm.md)

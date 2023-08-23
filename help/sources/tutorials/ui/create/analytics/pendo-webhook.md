@@ -1,20 +1,15 @@
 ---
 title: Crear una conexión de origen pendiente en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Pendo mediante la interfaz de usuario de Adobe Experience Platform.
-badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
 
 # Crear un [!DNL Pendo] flujo de datos de la conexión de origen y en la IU
-
->[!NOTE]
->
->El [!DNL Pendo] el origen está en versión beta. Consulte la [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Este tutorial proporciona los pasos para crear una [!DNL Pendo] conexión de origen y flujo de datos mediante la interfaz de usuario de Adobe Experience Platform.
 

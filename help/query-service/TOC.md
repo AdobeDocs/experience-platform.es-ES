@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
+source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 18%
+source-wordcount: '280'
+ht-degree: 20%
 
 ---
 
@@ -34,6 +34,7 @@ ht-degree: 18%
    - [Análisis de atribución](use-cases/attribution-analysis.md)
    - [Filtrado de bots](use-cases/bot-filtering.md)
    - [Creación de un informe de tendencias de eventos](use-cases/trended-report-of-events.md)
+   - [Análisis de consentimiento](use-cases/consent-analysis.md)
    - [Valor de duración del cliente](use-cases/customer-lifetime-value.md)
    - [Atributos derivados basados en deciles](use-cases/deciles-use-case.md)
    - [Coincidencia aproximada](use-cases/fuzzy-match.md)
@@ -67,7 +68,7 @@ ht-degree: 18%
    - [Guía de credenciales](ui/credentials.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
 - Extremos de API del servicio de consultas {#api}
-   - [Primeros pasos](api/getting-started.md)
+   - [Introducción](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parámetros de conexión](api/connection-parameters.md)
    - [Horarios](api/scheduled-queries.md)

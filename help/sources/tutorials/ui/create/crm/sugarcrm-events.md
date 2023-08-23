@@ -2,22 +2,18 @@
 title: Crear una conexión de origen de eventos de SugarCRM en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de eventos de SugarCRM mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
 
-# (Beta) Cree una [!DNL SugarCRM Events] conexión de origen en la interfaz de usuario
-
->[!NOTE]
->
->El [!DNL SugarCRM Events] el origen está en versión beta. Consulte la [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+# Crear un [!DNL SugarCRM Events] conexión de origen en la interfaz de usuario
 
 Este tutorial proporciona los pasos para crear una [!DNL SugarCRM Events] conexión de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

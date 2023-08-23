@@ -1,24 +1,19 @@
 ---
 title: Crear una conexión de origen y un flujo de datos para Pendo mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a Pendo mediante la API de Flow Service.
-badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1441'
 ht-degree: 2%
 
 ---
 
 # Crear una conexión de origen y un flujo de datos para [!DNL Pendo] uso de la API de Flow Service
 
->[!NOTE]
->
->El [!DNL Pendo] el origen está en versión beta. Lea el [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
-
 El siguiente tutorial le guiará por los pasos para crear una conexión de origen y un flujo de datos que traer [[!DNL Pendo]](https://Pendo.com/) datos de evento para Adobe Experience Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

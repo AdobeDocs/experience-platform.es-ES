@@ -1,20 +1,15 @@
 ---
 title: Resumen de origen de Chatlio
 description: Aprenda a conectar Chatlio a Adobe Experience Platform mediante API o la interfaz de usuario de aprovechando los webhooks
-badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
 # [!DNL Chatlio]
-
->[!NOTE]
->
->El [!DNL Chatlio] el origen está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
