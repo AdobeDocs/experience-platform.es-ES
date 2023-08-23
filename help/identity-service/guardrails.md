@@ -3,10 +3,10 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
+source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 2%
+source-wordcount: '999'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Este documento proporciona información sobre los límites de uso y tasa para [!DNL Identity Service] datos para ayudarle a optimizar el uso del gráfico de identidad. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
-## Primeros pasos
+## Introducción
 
 Los siguientes servicios de Experience Platform participan en el modelado de datos de identidad:
 
@@ -31,10 +31,10 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 | Barrera | Límite | Notas |
 | --- | --- | --- |
-| Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. Una vez que el número de identidades alcanza las 150 o más, no se agregarán nuevas identidades y el gráfico de identidades no se actualizará. Los gráficos pueden mostrar identidades buenas a 150 como resultado de la vinculación de uno o más gráficos con menos de 150 identidades. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
+| (Comportamiento actual) Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. Una vez que el número de identidades alcanza las 150 o más, no se agregarán nuevas identidades y el gráfico de identidades no se actualizará. Los gráficos pueden mostrar identidades superiores a 150 como resultado de la vinculación de uno o más gráficos con menos de 150 identidades. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
+| (Comportamiento próximo) Número de identidades en un gráfico [!BADGE Beta]{type=Informative} | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Lea el [apéndice](#appendix) para obtener más información sobre cómo el servicio de identidad elimina las identidades una vez alcanzado el límite. |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
-| Número de gráficos | Ninguna | No hay límites en la cantidad de gráficos de identidad que se pueden crear. |
 | Número de caracteres de un nombre para mostrar o un símbolo de identidad | Ninguna | No hay límites en el número de caracteres de un nombre para mostrar o un símbolo de identidad. |
 
 ### Validación del valor de identidad
@@ -56,3 +56,55 @@ Consulte la siguiente documentación para obtener más información sobre [!DNL 
 
 * [Información general del [!DNL Identity Service]](home.md)
 * [Visualizador de gráficos de identidad](ui/identity-graph-viewer.md)
+
+
+## Apéndice {#appendix}
+
+La siguiente sección contiene información adicional sobre las protecciones del servicio de identidad.
+
+### [!BADGE Beta]{type=Informative} Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidad a capacidad {#deletion-logic}
+
+>[!IMPORTANT]
+>
+>La siguiente lógica de eliminación es un comportamiento próximo del servicio de identidad. Póngase en contacto con el representante de cuentas para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene lo siguiente:
+>
+> * Un área de nombres personalizada en la que los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.
+> * Un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.
+
+
+Cuando se actualiza un gráfico de identidad completo, el servicio de identidad elimina la identidad más antigua del gráfico antes de añadir la identidad más reciente. El objetivo de esto es mantener la precisión y la relevancia de los datos de identidad. Este proceso de eliminación sigue dos reglas principales:
+
+#### La eliminación del #1 de reglas se prioriza según el tipo de identidad de un área de nombres
+
+La prioridad de eliminación es la siguiente:
+
+1. ID de cookie
+2. ID de dispositivo
+3. ID entre dispositivos, correo electrónico y teléfono
+
+#### La eliminación del #2 de reglas se basa en la marca de tiempo almacenada en la identidad
+
+Cada identidad vinculada en un gráfico tiene su propia marca de tiempo correspondiente. Cuando se actualiza un gráfico completo, el servicio de identidad elimina la identidad con la marca de tiempo más antigua.
+
+Cuando se actualiza un gráfico completo con una nueva identidad, estas dos reglas funcionan en conjunto para designar qué identidad anterior se eliminará. El servicio de identidad elimina primero el ID de cookie más antiguo, después el ID de dispositivo más antiguo y, por último, el ID, el correo electrónico o el teléfono entre dispositivos más antiguos.
+
+>[!NOTE]
+>
+>Si la identidad designada para eliminarse está vinculada a varias otras identidades en el gráfico, los vínculos que conectan esa identidad también se eliminarán.
+
+>[!BEGINSHADEBOX]
+
+**Una representación visual de la lógica de eliminación**
+
+![Ejemplo de la identidad más antigua que se elimina para dar cabida a la identidad más reciente](./images/graph-limits-v3.png)
+
+*Notas del diagrama:*
+
+* `t` = timestamp.
+* El valor de una marca de tiempo corresponde a la actualización de una identidad determinada. Por ejemplo, `t1` representa la primera identidad vinculada (la más antigua) y `t51` representaría la identidad vinculada más reciente.
+
+En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que está más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
+
+* En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los ID en función de [XID](./api/list-native-id.md) y realice la eliminación.
+
+>[!ENDSHADEBOX]
