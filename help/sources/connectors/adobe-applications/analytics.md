@@ -2,9 +2,9 @@
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
+source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1161'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ Consulte la [información general sobre reglas de procesamiento](https://experie
 
 ## Modelo de datos de experiencia (XDM)
 
-XDM es una especificación documentada públicamente que proporciona estructuras y definiciones comunes para una aplicación que se utiliza para comunicarse con servicios en Experience Platform.
+XDM es una especificación documentada públicamente que proporciona estructuras y definiciones comunes para que una aplicación se utilice para comunicarse con servicios en Experience Platform.
 
 El cumplimiento de los estándares XDM permite que los datos se incorporen de forma uniforme, lo que facilita la entrega de datos y la recopilación de información.
 
@@ -92,3 +92,7 @@ Estos campos no están marcados como identidades. En su lugar, se copian las mis
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 En el mapa de identidad, si ECID está presente, se marca como la identidad principal del evento. En este caso, AAID puede basarse en ECID debido a la variable [Período de gracia del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). De lo contrario, AAID se marca como la identidad principal del evento. AACUSTOMID nunca se marca como ID principal para el evento. Sin embargo, si AACUSTOMID está presente, AAID se basa en AACUSTOMID debido al orden de operaciones del Experience Cloud.
+
+>[!NOTE]
+>
+>Puede utilizar la preparación de datos para filtrar las identidades secundarias procedentes de Analytics, como AAID y AACUSTOMID. Si se filtran, estas identidades no se incorporarán en el perfil si están disponibles en los datos entrantes de Analytics. Los datos sin filtrar se seguirán cargando en el lago de datos.
