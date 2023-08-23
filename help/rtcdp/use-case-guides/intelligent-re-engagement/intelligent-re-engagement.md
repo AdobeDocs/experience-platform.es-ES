@@ -3,10 +3,10 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 4%
+source-wordcount: '3424'
+ht-degree: 3%
 
 ---
 
@@ -83,7 +83,7 @@ El recorrido de confirmación de pedido se centra en las compras de productos re
 
 >[!ENDTABS]
 
-## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
+## Cómo lograr el caso de uso {#achieve-use-case-instruction}
 
 Para completar cada uno de los pasos de la información general de alto nivel anterior, lea las secciones siguientes, que ofrecen vínculos a más información e instrucciones más detalladas.
 
@@ -91,7 +91,7 @@ Para completar cada uno de los pasos de la información general de alto nivel an
 
 A medida que complete los pasos para implementar el caso de uso, utilizará la funcionalidad de Real-Time CDP y los elementos de la interfaz de usuario enumerados al principio de este documento. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
 
-### Crear un diseño de esquema y especificar grupos de campos
+### Crear un diseño de esquema y especificar grupos de campos {#schema-design}
 
 Los recursos del Modelo de datos de experiencia (XDM) se administran en la variable [!UICONTROL Esquemas] workspace en [!DNL Adobe Experience Platform]. Puede ver y explorar los recursos principales proporcionados por [!DNL Adobe] (por ejemplo, [!UICONTROL Grupos de campos]) y cree recursos y esquemas personalizados para su organización.
 
@@ -337,22 +337,13 @@ Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 
 +++
 
-+++Valor de clase (grupo de campos)
-
-| Campos | Requisito |
-| --- | --- |
-| `eventType` | Requerido |
-| `timestamp` | Requerido |
-
-+++
-
 +++Detalles de auditoría del sistema de origen externo (grupo de campos)
 
 Los atributos de auditoría del sistema de origen externo son un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura detalles de auditoría sobre un sistema de origen externo.
 
 +++
 
-### Creación de un conjunto de datos a partir de un esquema
+### Creación de un conjunto de datos a partir de un esquema {#dataset-from-schema}
 
 Un conjunto de datos es una estructura de almacenamiento y administración para un grupo de datos. Cada esquema para los recorridos inteligentes de renovación de la participación tiene un único conjunto de datos.
 
@@ -362,31 +353,31 @@ Para obtener más información sobre cómo crear un [conjunto de datos](/help/ca
 >
 >Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el Perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacidad, consentimiento y control de datos
+### Privacidad, consentimiento y control de datos {#privacy-consent}
 
 #### Políticas de consentimiento
 
 >[!IMPORTANT]
 >
->Proporcionar a los clientes la capacidad de cancelar la suscripción a la recepción de comunicaciones de una marca es un requisito legal, así como garantizar que se cumpla esta opción. Obtenga más información acerca de la legislación aplicable en la [Documentación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Proporcionar a los clientes la capacidad de cancelar la suscripción a la recepción de comunicaciones de una marca es un requisito legal, así como garantizar que se cumpla esta opción. Obtenga más información acerca de la legislación aplicable en la [Resumen de normas de privacidad](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Al crear una ruta de renovación de la participación, se deben tener en cuenta las siguientes políticas de consentimiento:
+Al crear una ruta de renovación de la participación, siga los siguientes pasos [directivas de consentimiento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) debe considerarse lo siguiente:
 
 * If `consents.marketing.email.val = "Y"` entonces Puede enviar por correo electrónico
 * If `consents.marketing.sms.val = "Y"` entonces Puede SMS
 * If `consents.marketing.push.val = "Y"` entonces Puede insertar
 * If `consents.share.val = "Y"` Entonces puede anunciarse
 
-#### Etiqueta y aplicación DULE
+#### Etiqueta y aplicación de gobernanza de datos
 
-Al crear una ruta de renovación de la participación, se deben tener en cuenta las siguientes etiquetas DULE:
+Al crear una ruta de renovación de la participación, siga los siguientes pasos [Etiquetas de gobernanza de datos](/help/data-governance/labels/overview.md) debe considerarse lo siguiente:
 
 * Las direcciones de correo electrónico personales se utilizan como datos de identificación directa que se utilizan para identificar a una persona específica o ponerse en contacto con ella, en lugar de con un dispositivo.
    * `personalEmail.address = I1`
 
 #### Políticas de marketing
 
-No se requieren políticas de marketing para los recorridos de renovación de la participación; sin embargo, se debe tener en cuenta lo siguiente:
+No hay ninguna [políticas de marketing](/help/data-governance/policies/overview.md) Sin embargo, si se requiere para los recorridos de renovación de la participación, se debe tener en cuenta lo siguiente:
 
 * Restringir datos confidenciales
 * Restringir publicidad in situ
@@ -394,11 +385,13 @@ No se requieren políticas de marketing para los recorridos de renovación de la
 * Restringir la segmentación entre sitios
 * Restringir la combinación de datos directamente identificables con datos anónimos
 
-### Crear una audiencia
+### Crear una audiencia {#create-audience}
 
 #### Creación de audiencias para recorridos de renovación de la participación de la marca
 
 Los recorridos de renovación de la participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de varias formas en [!DNL Adobe Experience Platform].
+
+Para obtener más información sobre cómo crear una audiencia, lea la [Guía de IU del servicio Audience](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Para obtener más información sobre cómo componer directamente [Audiencias](/help/segmentation/home.md), lea la [Guía de IU de composición de audiencia](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ El descriptor del recorrido de carro de compras abandonado aparece de la siguien
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Recorrido de confirmación de pedido]
+
+Este recorrido no requiere que se creen audiencias.
+
 >[!ENDTABS]
 
-### Configuración del recorrido en Adobe Journey Optimizer
+### Configuración del recorrido en Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] no abarca todo lo que se muestra en los diagramas. Todos los anuncios de medios de pago se crean en [!UICONTROL Destinos].
+>[!DNL Adobe Journey Optimizer] no abarca todo lo que se muestra en los diagramas. Todo [anuncios de medios de pago](/help/destinations/catalog/social/overview.md) se crean en [!UICONTROL Destinos].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) le ayuda a ofrecer experiencias conectadas, contextuales y personalizadas a sus clientes. El recorrido del cliente es todo el proceso de interacción de un cliente con la marca. Cada recorrido de caso de uso requiere información específica. A continuación se enumeran los datos precisos necesarios para cada rama de Recorrido.
 
@@ -768,7 +765,7 @@ El recorrido de confirmación de pedido se centra en las compras de productos re
 
 Para obtener más información sobre la creación de recorridos en [!DNL Adobe Journey Optimizer], lea la [Guía de introducción a recorrido](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Configuración de anuncios de medios de pago en destinos
+### Configuración de anuncios de medios de pago en destinos {#paid-media-ads}
 
 El marco de destinos se utiliza para anuncios de medios de pago. Una vez comprobado el consentimiento, se envía a los distintos destinos configurados. Para obtener más información sobre los destinos, lea la [Resumen de destinos](/help/destinations/home.md) documento.
 
@@ -787,6 +784,3 @@ El segmento de carro de compras abandonado se está transmitiendo y, por lo tant
    * [Dispositivo móvil](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destino de streaming](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination SDK personalizado](/help/destinations/destination-sdk/overview.md)
-
-* Archivo/Programado cada tres horas
-   * [Marketing por correo electrónico](/help/destinations/catalog/email-marketing/overview.md)
