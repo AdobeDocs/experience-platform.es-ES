@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Administrar directivas de control de acceso
 description: Este documento proporciona información sobre la administración de directivas de control de acceso a través de la interfaz Permisos en Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,74 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
+
+## Configurar la directiva de una zona protegida
+
+>[!IMPORTANT]
+>
+>De forma predeterminada, la variable [!UICONTROL Inclusión automática] La función está activada para todos los clientes, lo que significa que todas las zonas protegidas se añaden a la directiva.
+
+>[!NOTE]
+>
+>El **[!UICONTROL Default-Label-Based-Access-Control-Policy]** La directiva de es la única disponible para la configuración.
+
+Para ver las zonas protegidas asociadas a una directiva, selecciónela en el **[!UICONTROL Políticas]** pestaña.
+
+![La página de directivas muestra una lista de las directivas disponibles.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+A continuación, seleccione la directiva y, a continuación, seleccione **[!UICONTROL Zonas protegidas]** pestaña. Se muestra una lista de los entornos limitados asociados a la directiva.
+
+![La página de directivas muestra una lista de las directivas disponibles.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Agregar directiva a todas las zonas protegidas
+
+Utilice el **[!UICONTROL Inclusión automática]** active la opción **[!UICONTROL Zonas protegidas]** para activar la directiva en todas las zonas protegidas.
+
+![El [!UICONTROL Zonas protegidas] que muestra la pestaña [!UICONTROL Inclusión automática] alternar.](../../images/flac-ui/abac-policies-auto-include.png)
+
+El **[!UICONTROL Habilitar inclusión automática]** aparece un cuadro de diálogo que le solicita que confirme su selección. Seleccionar **[!UICONTROL Activar]** para completar la configuración.
+
+![El [!UICONTROL Habilitar inclusión automática] resaltado de diálogo [!UICONTROL Activar].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>La directiva se activa para todas las zonas protegidas existentes y se agregará automáticamente a cualquier zona protegida nueva cuando esté disponible.
+
+### Agregar directiva para seleccionar zonas protegidas
+
+>[!IMPORTANT]
+>
+>Las zonas protegidas futuras no se incluirán en la directiva de forma predeterminada si [!UICONTROL Inclusión automática] la opción está desactivada. Deberá administrar y agregar entornos limitados manualmente a la directiva.
+
+Utilice el **[!UICONTROL Inclusión automática]** active la opción **[!UICONTROL Zonas protegidas]** para deshabilitar la directiva en todas las zonas protegidas.
+
+![El [!UICONTROL Zonas protegidas] que muestra la pestaña [!UICONTROL Inclusión automática] alternar.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Desde el **[!UICONTROL Zonas protegidas]** pestaña, seleccione **[!UICONTROL Agregar zonas protegidas]** para seleccionar las zonas protegidas a las que se aplicará esta directiva.
+
+![El [!UICONTROL Zonas protegidas] pestaña que muestra una lista de zonas protegidas agregadas a la directiva.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+Aparecerá una lista de zonas protegidas. Seleccione la zona protegida que desee añadir en la lista. También puede utilizar la barra de búsqueda para buscar la zona protegida. Seleccione **[!UICONTROL Guardar]**.
+
+![El [!UICONTROL Agregar zonas protegidas] página que muestra una lista de las zonas protegidas existentes disponibles para agregar a la directiva.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>Las zonas protegidas seleccionadas se han agregado correctamente a la directiva.
+
+### Eliminación de zonas protegidas de una directiva
+
+Para quitar una zona protegida, seleccione la **X** junto al nombre de la zona protegida.
+
+![El [!UICONTROL Zonas protegidas] pestaña que muestra una lista de zonas protegidas, resaltando la [!UICONTROL X] para eliminar.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+El **[!UICONTROL Eliminar]** aparece un cuadro de diálogo que le solicita que confirme su selección. Seleccionar **[!UICONTROL Confirmar]** para completar la eliminación.
+
+![El [!UICONTROL Eliminar] resaltado de diálogo [!UICONTROL Confirmar].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>La zona protegida seleccionada se ha eliminado correctamente de la directiva.
 
 ## Activar una directiva
 
