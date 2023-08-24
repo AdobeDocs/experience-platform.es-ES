@@ -1,9 +1,7 @@
 ---
 title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 3%
@@ -12,7 +10,7 @@ ht-degree: 3%
 
 # Vuelva a atraer a sus clientes de forma inteligente para que regresen
 
-Vuelva a atraer a los clientes que han abandonado una conversión antes de finalizarla de forma inteligente y responsable. Capte a los clientes caducados a través de experiencias en lugar de recordatorios para mejorar la conversión e impulsar el crecimiento del valor de duración del cliente.
+Vuelva a atraer a los clientes que han abandonado una conversión antes de completarla de forma inteligente y responsable. Capte a los clientes caducados a través de experiencias en lugar de recordatorios para mejorar la conversión e impulsar el crecimiento del valor de duración del cliente.
 
 Utilice consideraciones en tiempo real, tenga en cuenta todas las cualidades y comportamientos de los consumidores y ofrezca una reclasificación rápida basada en eventos en línea y sin conexión.
 
