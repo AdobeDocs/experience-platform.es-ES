@@ -1,13 +1,11 @@
 ---
 title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 8%
 
 ---
 
@@ -82,3 +80,11 @@ Para el resto del flujo de trabajo de activación para exportar audiencias poten
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
+
+Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
+
+* [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Utilice la compatibilidad con datos de terceros en Real-Time CDP para lo siguiente [amplíe su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
+* [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.

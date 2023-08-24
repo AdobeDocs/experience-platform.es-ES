@@ -1,13 +1,10 @@
 ---
-title: (Beta) Captar y adquirir nuevos clientes mediante casos de uso de prospección
+title: Capte y adquiera nuevos clientes a través de casos de uso de prospección
 description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, habilitados por la compatibilidad con datos de socios en Real-Time CDP.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 15%
+source-wordcount: '1941'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->* La funcionalidad Beta está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* La funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su base de perfiles con perfiles potenciales de socios de datos y comprometerse con ellos para adquirir o llegar a nuevos clientes.
 
@@ -57,8 +54,8 @@ A medida que complete los pasos para implementar el caso de uso, utilizará las 
 * [Etiquetas de uso de datos](/help/data-governance/labels/overview.md)
 * [Conjuntos de datos](/help/catalog/datasets/overview.md)
 * [Fuentes](/help/sources/home.md)
-* Perfiles (vínculo a perfiles de clientes potenciales)
-* Audiencias (vínculo a audiencias de clientes potenciales)
+* [Perfiles de clientes potenciales](/help/profile/ui/prospect-profile.md)
+* [Audiencias potenciales](/help/segmentation/ui/prospect-audience.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalles del perfil de terceros de licencia del socio {#license-profiles-from-partner}
@@ -184,7 +181,7 @@ También puede seleccionar cualquier perfil de cliente potencial para realizar u
 
 ![Vista de cómo inspeccionar perfiles de clientes potenciales.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Muy pronto**) Obtenga más información sobre los perfiles de clientes potenciales.
+Más información sobre [perfiles de clientes potenciales](/help/profile/ui/prospect-profile.md).
 
 ### Crear audiencias de clientes potenciales {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Tenga en cuenta que la experiencia de creación de audiencias para perfiles de c
 * Solo evaluación del perfil del lote.
 * No admite la creación de audiencias basadas en eventos de series temporales.
 
-(**Muy pronto**) Más información sobre las audiencias de clientes potenciales.
+Más información sobre [audiencias de clientes potenciales](/help/segmentation/ui/prospect-audience.md).
 
 ### Activar perfiles de clientes potenciales en destinos {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Utilice las audiencias de clientes potenciales exportándolas a destinos. Actual
 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* (**Muy pronto**) [!BADGE Beta]{type=Informative}**Aproveche el reconocimiento asistido por socios** para personalizar las experiencias en el sitio durante la visita y volver a direccionar las visitas posteriores fuera del sitio sin que el usuario se autentique ni tenga un historial anterior con su marca.
+* [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
+* [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.

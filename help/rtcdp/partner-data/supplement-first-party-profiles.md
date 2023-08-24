@@ -1,13 +1,10 @@
 ---
-title: (Beta) Complemento de perfiles de origen con atributos proporcionados por socios
+title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 94%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* La funcionalidad Beta está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* La funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.
 
@@ -32,7 +29,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 >[!WARNING]
 >
->Los atributos adicionales proporcionados por socios introducidos en Real-Time CDP afectan a su *riqueza de perfiles promedio*. Lea la [Descripción del producto de Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información acerca de la riqueza de perfiles.
+>Los atributos adicionales proporcionados por socios introducidos en Real-Time CDP afectan a su *riqueza del perfil promedio*. Lea la [Descripción del producto de Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información acerca de la riqueza del perfil.
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -121,5 +118,6 @@ Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso 
 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
-* (**Muy pronto**) [!BADGE Beta]{type=Informative}**Aproveche el reconocimiento asistido por socios** para personalizar las experiencias en el sitio durante la visita y volver a direccionar las visitas posteriores fuera del sitio sin que el usuario se autentique ni tenga un historial anterior con su marca.
-* (**Muy pronto**) [!BADGE Beta]{type=Informative}**Activación expandida** mediante ID de socios para ecosistemas de publicación que no aceptan PII o PII con hash.
+* Utilice la compatibilidad con datos de terceros en Real-Time CDP para lo siguiente [amplíe su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
+* [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
+* [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.
