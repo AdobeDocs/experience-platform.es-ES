@@ -5,7 +5,7 @@ description: Adobe Experience Platform proporciona un tablero a través del cual
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 1%
@@ -68,7 +68,7 @@ La tabla indica la métrica principal de cada producto, ya que cada producto pue
 
 Todas las métricas disponibles se muestran en la [!UICONTROL Resumen] pestaña. Las métricas disponibles dependen del producto con licencia. Esta vista proporciona lo siguiente **una vista consolidada de todas las métricas en todos los entornos limitados de producción o desarrollo**. El mismo nivel de análisis se proporciona para los entornos limitados de producción y desarrollo.
 
-![La vista de resumen de un producto de Platform que muestra todas las métricas disponibles para ese producto.]()
+![La vista de resumen de un producto de Platform que muestra todas las métricas disponibles para ese producto.](../images/license-usage/summary-tab.png)
 
 En la pestaña Resumen, la tabla incluye lo siguiente [!UICONTROL Métrica] columna. Estas descripciones legibles en lenguaje natural indican todas las métricas utilizadas para ese tipo de zona protegida.
 
@@ -78,7 +78,7 @@ Para cambiar la vista entre los tipos de zona protegida de producción y desarro
 
 Los informes de consumo para las zonas protegidas son acumulativos para todas las zonas protegidas del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todas las zonas protegidas de producción o desarrollo, respectivamente.
 
-![La vista de resumen de un producto de Platform con las zonas protegidas de producción y desarrollo resaltadas.](../images/license-usage/summary-tab.png)
+![La vista de resumen de un producto de Platform con las zonas protegidas de producción y desarrollo resaltadas.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >

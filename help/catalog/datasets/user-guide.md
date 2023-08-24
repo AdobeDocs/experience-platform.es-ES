@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 4%
@@ -207,9 +207,9 @@ Puede administrar las etiquetas de control de datos de un conjunto de datos sele
 
 Las etiquetas de uso de datos, aplicadas en el nivel de esquema, le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información sobre las etiquetas, o consulte la [guía del usuario sobre etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener instrucciones sobre cómo aplicar etiquetas a esquemas para su propagación a conjuntos de datos.
 
-### Mover a carpetas {#move-to-folders}
+## Mover a carpetas {#move-to-folders}
 
-Puede colocar conjuntos de datos dentro de carpetas para una mejor administración de conjuntos de datos. Para mover un conjunto de datos a una carpeta, seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea administrar, seguido de **[!UICONTROL Mover a carpeta]** en el menú desplegable.
+Puede colocar conjuntos de datos en carpetas para administrar mejor los conjuntos de datos. Para mover un conjunto de datos a una carpeta, seleccione los puntos suspensivos (...) junto al nombre del conjunto de datos que desea administrar, seguido de **[!UICONTROL Mover a carpeta]** en el menú desplegable.
 
 ![El [!UICONTROL Conjuntos de datos] panel con los puntos suspensivos y [!UICONTROL Mover a carpeta] resaltado.](../images/datasets/user-guide/move-to-folder.png)
 
@@ -217,7 +217,7 @@ El [!UICONTROL Mover] aparece el cuadro de diálogo conjunto de datos a carpeta.
 
 ![El [!UICONTROL Mover] diálogo de conjunto de datos con [!UICONTROL Mover] resaltado.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >También puede crear carpetas directamente desde el cuadro de diálogo Mover conjunto de datos. Para crear una carpeta, seleccione el icono Crear carpeta (![Icono Crear carpeta.](../images/datasets/user-guide/create-folder-icon.png)), en la parte superior derecha del cuadro de diálogo.
 >
@@ -269,7 +269,7 @@ Si desea eliminar el lote, seleccione **[!UICONTROL Eliminar lote]** cerca de la
 
 ## Pasos siguientes
 
-Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en [!DNL Experience Platform] interfaz de usuario. Para ver los pasos de realización de [!DNL Platform] flujos de trabajo que implican conjuntos de datos, consulte los siguientes tutoriales:
+Esta guía del usuario proporciona instrucciones para realizar acciones comunes al trabajar con conjuntos de datos en [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre la realización de [!DNL Platform] flujos de trabajo que implican conjuntos de datos, consulte los siguientes tutoriales:
 
 * [Creación de un conjunto de datos mediante API](create.md)
 * [Consulta de datos de conjuntos de datos mediante la API de acceso a datos](../../data-access/home.md)
