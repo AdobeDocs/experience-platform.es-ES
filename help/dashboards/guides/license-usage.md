@@ -4,7 +4,7 @@ title: Guía del tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Para elegir una zona protegida para verla en el panel, seleccione [!UICONTROL Pr
 
 Los informes de consumo para las zonas protegidas son acumulativos para todas las zonas protegidas del mismo tipo. En otras palabras, seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] proporciona informes de consumo para todas las zonas protegidas de producción o desarrollo, respectivamente.
 
-![La pestaña Información general del tablero Uso de licencias con el selector de zona protegida resaltado.](../images/license-usage/select-sandbox.png)
+![La pestaña Información general del tablero Uso de licencias con el selector de zona protegida resaltado.](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -55,11 +55,11 @@ Los informes de consumo para las zonas protegidas son acumulativos para todas la
 
 Después de seleccionar una zona protegida, puede utilizar la lista desplegable de intervalo de fechas para seleccionar el período de tiempo que se mostrará en el panel. Hay varias opciones disponibles, incluido el valor predeterminado de los últimos 30 días.
 
-![La pestaña Información general del tablero de uso de licencias con la lista desplegable de intervalos de fechas resaltada.](../images/license-usage/select-date-range.png)
+![La pestaña Información general del tablero de uso de licencias con la lista desplegable de intervalos de fechas resaltada.](../images/license-usage/select-date-range-old.png)
 
 También puede seleccionar **[!UICONTROL Fecha personalizada]** para elegir el período de tiempo que se muestra.
 
-![La pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/select-custom-date.png)
+![La pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/select-custom-date-old.png)
 
 ## Widgets
 
@@ -67,7 +67,7 @@ El tablero de uso de licencias está compuesto por widgets, que muestran métric
 
 Cada widget muestra un gráfico de líneas que compara los números reales de su organización con el total disponible con las licencias de su organización y proporciona un porcentaje del uso total.
 
-![La pestaña Información general del tablero de uso de licencias con el gráfico de líneas del widget de métrica de uso de licencias de muestra resaltado.](../images/license-usage/widgets.png)
+![La pestaña Información general del tablero de uso de licencias con el gráfico de líneas del widget de métrica de uso de licencias de muestra resaltado.](../images/license-usage/widgets-old.png)
 
 ## Métricas disponibles
 
