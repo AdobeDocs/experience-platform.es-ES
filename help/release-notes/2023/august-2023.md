@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de agosto de 2023 de Adobe Experience Platform.
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 32%
@@ -63,10 +63,13 @@ Para obtener más información sobre el control de acceso basado en atributos, c
 Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas**
-palo de golf | Función | Descripción | | — | — | |Caso de uso de análisis de consentimiento y seguimiento | Obtenga información sobre cómo crear un tablero de consentimiento para varios casos de uso de marketing para datos de Real-Time CDP con [documento de análisis de consentimiento y seguimiento](../../dashboards/insights-use-cases/consent-analysis.md). Detalla cómo crear una audiencia con los atributos adecuados para sus necesidades comerciales y luego consumir las perspectivas mediante el uso de widgets preconfigurados en la interfaz de usuario de Adobe Experience Platform. También proporciona instrucciones sobre cómo crear su propio widget personalizado con la función de paneles definida por el usuario. El documento cubre las tendencias de consentimiento y los casos de uso de superposición de consentimiento. |
+
+| Función | Descripción |
+| --- | --- |
+| Caso de uso de análisis de consentimiento y seguimiento | Obtenga información sobre cómo crear un tablero de consentimiento para varios casos de uso de marketing para datos de Real-Time CDP con [documento de análisis de consentimiento y seguimiento](../../dashboards/insights-use-cases/consent-analysis.md). Detalla cómo crear una audiencia con los atributos adecuados para sus necesidades comerciales y luego consumir las perspectivas mediante el uso de widgets preconfigurados en la interfaz de usuario de Adobe Experience Platform. También proporciona instrucciones sobre cómo crear su propio widget personalizado con la función de paneles definida por el usuario. El documento cubre las tendencias de consentimiento y los casos de uso de superposición de consentimiento. |
 
 {style="table-layout:auto"}
-&#x200B;
+
 Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
