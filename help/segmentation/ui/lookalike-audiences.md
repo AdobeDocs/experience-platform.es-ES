@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 badgeLimitedAvailability: label="Disponibilidad limitada" type=Caution
-source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
+source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 10%
 >
 >Tenga en cuenta que las perspectivas de similitud y las audiencias de similitud se encuentran en **disponibilidad limitada**.
 
-En Adobe Experience Platform, las audiencias similares proporcionan perspectivas inteligentes sobre cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing.
+En Adobe Experience Platform, las audiencias de similitud proporcionan una perspectiva inteligente de cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing.
 
-Con las audiencias similares, puede crear audiencias ampliadas destinadas a clientes similares a sus audiencias de alto rendimiento o a clientes similares a audiencias convertidas anteriormente.
+Con las audiencias de similitud, puede crear audiencias ampliadas dirigidas a clientes similares a sus audiencias de alto rendimiento o a clientes de destino similares a audiencias convertidas anteriormente.
 
 ## Terminología {#terminology}
 
@@ -27,34 +27,10 @@ Antes de empezar a usar las audiencias de similitud, asegúrese de comprender lo
 
 - **Audiencia base**: la audiencia base es la audiencia sobre la que desea obtener más información. Esta es la audiencia a la que se asemeja el modelo **basado** en.
 - **Modelo de similitud**: un modelo de similitud es un modelo de aprendizaje automático que se forma en cada audiencia base apta sin necesidad de recibir información del cliente. Cada modelo de similitud crea los factores influyentes y los gráficos de similitud. Un modelo de similitud sí lo hace **no** que te marquen.
-- **Audiencia con similitud**: una audiencia de similitud es la audiencia que se crea cuando se aplica a la audiencia base un modelo de similitud con un umbral de similitud seleccionado. Puede crear varias audiencias de similitud utilizando el mismo modelo de similitud. La audiencia con similitud es lo que se puntúa.
+- **Audiencia de similitudes**: una audiencia de similitud es la audiencia que se crea cuando se aplica a la audiencia base un modelo de similitud con un umbral de similitud seleccionado. Puede crear varias audiencias de similitud utilizando el mismo modelo de similitud. La audiencia de similitud es lo que se puntúa.
 - **Tamaño total de la audiencia a la que se puede dirigir**: el tamaño total de audiencia a la que se puede dirigir es el número total de perfiles en los últimos 30 días menos la población de audiencia base en los últimos 30 días. Por ejemplo, si un cliente tiene 10 millones de perfiles en los últimos 30 días y la audiencia base tiene 1 millón de perfiles en los últimos 30 días, el tamaño total de audiencia direccionable es de 9 millones de perfiles.
 
 ## Detalles del modelo de similitud {#details}
-
-En Adobe Experience Platform, el modelo de similitud consume tres tipos diferentes de puntos de datos:
-
-- Abono a audiencias en los últimos 30 días
-- Experimente eventos de los últimos 30 días que se han introducido en el Perfil del cliente en tiempo real
-- Atributos de perfil de los últimos 30 días que se han introducido en el perfil del cliente en tiempo real
-
-Todos estos puntos de datos se convierten en pares de valor clave que se introducen en el modelo de similitud. Solo se conservarán los pares de valor clave con un porcentaje significativo de perfiles coincidentes.
-
-En este momento, el modelo de similitud se ejecuta cada 24 horas, creando y recreando los factores influyentes y los gráficos de similitud para las audiencias base. La puntuación para audiencias similares también se ejecuta con frecuencia.
-
-## Derechos {#entitlements}
-
-Los siguientes derechos se aplican al uso de audiencias de similitud:
-
-- Los clientes de Real-Time CDP Prime tienen derecho a **5** Audiencias de similitud activas en entornos limitados de producción
-- Los clientes de Real-Time CDP Ultimate tienen derecho a **20** Audiencias de similitud activas en entornos limitados de producción
-- Los entornos limitados de desarrollo están limitados a **5** Audiencias similares para todos los clientes de Real-Time CDP
-
-Los paquetes de complementos, que estarán disponibles más adelante, aumentan los derechos de las zonas protegidas de producción en 20 audiencias similares por paquete.
-
-Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto con su representante de Adobe.
-
-## Ver perspectivas de similitud {#view}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
@@ -71,6 +47,30 @@ Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto c
 >title="Error"
 >abstract="Se ha producido un error al procesar este modelo. Elimine y vuelva a compilar este modelo o inténtelo de nuevo más tarde."
 
+En Adobe Experience Platform, el modelo de similitud consume tres tipos diferentes de puntos de datos:
+
+- Abono a audiencias en los últimos 30 días
+- Experimente eventos de los últimos 30 días que se han introducido en el Perfil del cliente en tiempo real
+- Atributos de perfil de los últimos 30 días que se han introducido en el perfil del cliente en tiempo real
+
+Todos estos puntos de datos se convierten en pares de valor clave que se introducen en el modelo de similitud. Solo se conservarán los pares de valor clave con un porcentaje significativo de perfiles coincidentes.
+
+En este momento, el modelo de similitud se ejecuta cada 24 horas, creando y recreando los factores influyentes y los gráficos de similitud para las audiencias base. La puntuación para audiencias de similitud también se ejecuta con frecuencia.
+
+## Derechos {#entitlements}
+
+Los siguientes derechos se aplican al uso de audiencias de similitud:
+
+- Los clientes de Real-Time CDP Prime tienen derecho a **5** audiencias de similitud activas en zonas protegidas de producción
+- Los clientes de Real-Time CDP Ultimate tienen derecho a **20** audiencias de similitud activas en zonas protegidas de producción
+- Los entornos limitados de desarrollo están limitados a **5** Audiencias similares para todos los clientes de Real-Time CDP
+
+Los paquetes de complementos, que estarán disponibles más adelante, aumentan las autorizaciones de los entornos limitados de producción en 20 audiencias de similitud por paquete.
+
+Para confirmar si tiene acceso a audiencias de similitud, póngase en contacto con su representante de Adobe.
+
+## Ver perspectivas de similitud {#view}
+
 La información sobre similitudes está integrada en la página de detalles de audiencia. Para ver las perspectivas de similitud de una audiencia, seleccione **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]** y la audiencia para la que desee ver las perspectivas.
 
 ![Se resalta el botón Audiencias, así como la audiencia base que se está utilizando para el modelado de similitudes.](../images/ui/lookalike-audiences/browse.png)
@@ -84,7 +84,7 @@ Aparecerá la página de detalles de la audiencia. Seleccionar **[!UICONTROL Inf
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similitud y alcance"
->abstract="El gráfico de similitud y alcance traza el alcance esperado de un público de similitud compuesto por perfiles que superan una determinada puntuación de similitud. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
+>abstract="El gráfico de similitud y alcance traza el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente."
 
 La sección de similitud y alcance muestra un gráfico que representa el alcance esperado de una audiencia de similitud compuesta por perfiles superiores a una puntuación de similitud determinada. La puntuación de similitud representa el **Distancia** de similitud entre el perfil de la audiencia base y el perfil de la perspectiva de similitud.
 
@@ -98,7 +98,7 @@ Tenga en cuenta que el gráfico es **acumulativo** de derecha a izquierda. Esto 
 
 Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente.
 
-### Audiencias con similitud {#list}
+### Audiencias de similitud {#list}
 
 La sección Audiencias de similitud muestra una lista de todas las audiencias de similitud que se han creado anteriormente para la audiencia base seleccionada.
 
@@ -131,13 +131,13 @@ Estos contenedores se vuelven a calcular regularmente para garantizar que los da
 | Valor | El valor varía según el factor influyente que represente. Para atributos de perfil o eventos de experiencia, este campo representa el valor o el rango de valores del campo de datos que indica la similitud con los miembros de la audiencia base. El intervalo de valores se escribe en el formulario `[A -> B]`, donde `A` representa el rango inferior mientras que `B` representa el rango superior. Para las suscripciones a audiencias, este campo es el nombre de la audiencia. |
 | Importancia | El nivel relativo de importancia del factor influyente. Puede ser alto, medio o bajo. |
 
-## Crear una audiencia con similitud {#create}
+## Crear una audiencia de similitud {#create}
 
 >[!IMPORTANT]
 >
->Usted **no puede** Utilice una audiencia de similitud como audiencia base para otra audiencia de similitud. Es decir, tú... **no puede** Crear audiencias de similitud encadenadas.
+>Usted **no puede** usar una audiencia de similitud como audiencia base para otra audiencia de similitud. Es decir, tú... **no puede** crear audiencias de similitud encadenadas.
 
-Para crear una audiencia de similitud, debe seleccionar la audiencia de la que desee basar la audiencia de similitud. Para acceder a la lista de audiencias disponibles, seleccione **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]**. Aparecerá la lista de audiencias. En esta página, puede seleccionar la audiencia que desee utilizar como audiencia base.
+Para crear una audiencia de similitud, debe seleccionar la audiencia en la que desea basar la audiencia de similitud. Para acceder a la lista de audiencias disponibles, seleccione **[!UICONTROL Audiencias]** en la barra de navegación izquierda, seguido de **[!UICONTROL Examinar]**. Aparecerá la lista de audiencias. En esta página, puede seleccionar la audiencia que desee utilizar como audiencia base.
 
 ![Se resalta el botón Audiencias, así como la audiencia base que se está utilizando para el modelado de similitudes.](../images/ui/lookalike-audiences/browse.png)
 
@@ -155,7 +155,7 @@ Puede establecer este porcentaje de similitud de tres formas diferentes:
 - Introduzca el porcentaje de similitud en el cuadro de entrada numérica situado junto al regulador
 - Pase el ratón sobre el gráfico y seleccione la ubicación que desee para definir el porcentaje de similitud
 
-También puede actualizar los detalles sobre la audiencia de similitud, incluidos su nombre y descripción. De forma predeterminada, el nombre de la audiencia de similitud se genera en función del nombre de la audiencia base y el porcentaje de similitud especificado anteriormente.
+También puede actualizar los detalles sobre la audiencia de similitud, incluido su nombre y descripción. De forma predeterminada, el nombre de la audiencia de similitud se genera en función del nombre de la audiencia base y el porcentaje de similitud especificado anteriormente.
 
 ![La información básica se resalta en la variable [!UICONTROL Crear una audiencia similar] popover.](../images/ui/lookalike-audiences/basic-info.png)
 
@@ -163,11 +163,11 @@ Seleccionar **[!UICONTROL Crear]** para terminar de crear su audiencia de simili
 
 ![El botón Crear se resalta dentro de la etiqueta [!UICONTROL Crear una audiencia similar] popover.](../images/ui/lookalike-audiences/create-audience.png)
 
-Se puede acceder a la audiencia de similitud recién creada en el **[!UICONTROL Audiencias de similitud]** de la página de detalles de audiencia y también está disponible en el Portal de audiencias y para otros usos posteriores. Tenga en cuenta que la audiencia con similitud tardará un poco en recibir la puntuación. Hasta que se clasifique, el recuento de perfiles parecerá ser 0.
+Se puede acceder a la audiencia de similitud recién creada en el **[!UICONTROL Audiencias de similitud]** de la página de detalles de audiencia y también está disponible en el Portal de audiencias y para otros usos posteriores. Tenga en cuenta que la audiencia de similitud tardará un poco en recibir la puntuación. Hasta que se clasifique, el recuento de perfiles parecerá ser 0.
 
 ## Ver detalles de audiencias similares {#view-details}
 
-Para ver los detalles de una audiencia similar, seleccione la audiencia similar en la **[!UICONTROL Audiencias con similitud]** de la audiencia base.
+Para ver los detalles de una audiencia de similitud, seleccione la audiencia de similitud en la **[!UICONTROL Audiencias de similitud]** de la audiencia base.
 
 ![Se resalta la sección Audiencias de similitud.](../images/ui/lookalike-audiences/select-laa.png)
 
@@ -177,11 +177,11 @@ Aparecerá la página de detalles de la audiencia. Para obtener más informació
 
 ## Excluir campos de datos del modelado de similitud {#exclude}
 
-Las audiencias similares se pueden configurar para excluir campos de datos restringidos para la acción de marketing &quot;Ciencia de datos&quot; mediante la aplicación de las etiquetas y políticas de uso de datos relevantes. Los datos etiquetados como restringidos para su uso en la ciencia de datos se eliminarán de consideración al entrenar un modelo de audiencia de similitud y al generar una audiencia de similitud a partir del modelo entrenado. 
+Las audiencias similares se pueden configurar para excluir campos de datos restringidos para la acción de marketing &quot;Ciencia de datos&quot; mediante la aplicación de las etiquetas y políticas de uso de datos relevantes. Los datos etiquetados como restringidos del uso para la ciencia de datos se eliminarán de consideración al entrenar un modelo de audiencia de similitud y al generar una audiencia de similitud a partir del modelo entrenado. 
 
 La etiqueta estándar &quot;C9&quot; se puede utilizar para etiquetar datos que no deben utilizarse para la ciencia de datos y se puede aplicar habilitando la directiva estándar &quot;Restringir la ciencia de datos&quot;. También puede crear políticas adicionales para restringir el uso de datos con otras etiquetas, incluidas las etiquetas confidenciales, para la ciencia de datos. Para obtener más información sobre la administración de las políticas de uso de datos, lea la [Guía de IU de políticas de uso de datos](../../data-governance/policies/user-guide.md). Para obtener más información sobre la administración de etiquetas de uso de datos, lea la [guía de IU de etiquetas de uso de datos](../../data-governance/labels/user-guide.md).
 
-De forma predeterminada, el proceso de modelado de audiencias de similitud excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización. Si la audiencia base no tiene etiquetas de contrato, el proceso de modelado excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización.
+De forma predeterminada, el proceso de modelado para audiencias de similitud excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización. Si la audiencia base no tiene etiquetas de contrato, el proceso de modelado excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización.
 
 Tenga en cuenta que **usted** son responsables de garantizar que los datos, incluidos los datos confidenciales, estén etiquetados correctamente y que las políticas de uso de datos se hayan definido y habilitado para cumplir con las obligaciones legales y regulatorias en las que opera. También debe tener en cuenta que los campos de datos o las suscripciones a segmentos que son **no** la correlación directa con los campos de datos asociados normalmente con tipos de datos confidenciales o protegidos puede ser una fuente de sesgo potencial. **Usted** son responsables de analizar los datos para identificar, etiquetar y aplicar las políticas de uso de datos adecuadas a los datos, incluidos los campos de datos que puedan representar tipos de datos confidenciales o protegidos y que deban excluirse del modelado.
 
