@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apéndice de la Guía de API de Registro de esquemas
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API de Registro de esquemas.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Los parámetros de consulta más comunes para la paginación incluyen:
 | --- | --- |
 | `orderby` | Ordene los resultados por una propiedad específica. Ejemplo: `orderby=title` ordenará los resultados por título en orden ascendente (A-Z). Adición de un `-` antes del valor del parámetro (`orderby=-title`) ordenará los elementos por título en orden descendente (Z-A). |
 | `limit` | Cuando se usa junto con un `orderby` parámetro, `limit` restringe el número máximo de elementos que deben devolverse para una solicitud determinada. Este parámetro no se puede utilizar sin un `orderby` parámetro presente.<br><br>El `limit` parámetro especifica un entero positivo (entre `0` y `500`) as a *indicio* en cuanto al número máximo de elementos que deben devolverse. Por ejemplo, `limit=5` devuelve solo cinco recursos de la lista. Sin embargo, este valor no se respeta estrictamente. El tamaño de respuesta real puede ser menor o mayor, ya que está limitado por la necesidad de proporcionar un funcionamiento fiable del `start` parámetro, si se proporciona uno. |
-| `start` | Cuando se usa junto con un `orderby` parámetro, `start` especifica dónde debe comenzar la lista de elementos subconfigurada. Este parámetro no se puede utilizar sin un `orderby` parámetro presente. Este valor se puede obtener del `_page.next` de una respuesta de lista y se utiliza para acceder a la siguiente página de resultados. Si la variable `_page.next` el valor es nulo, por lo que no hay ninguna página adicional disponible.<br><br>Normalmente, este parámetro se omite para obtener la primera página de resultados. Después de eso, `start` debe establecerse en el valor máximo de la propiedad de ordenación principal de la variable `orderby` campo recibido en la página anterior. A continuación, la respuesta de la API devuelve entradas que comienzan por las que tienen una propiedad de ordenación principal de `orderby` estrictamente bueno que (para ascendente) o estrictamente menor que (para descendente) el valor especificado.<br><br>Por ejemplo, si la variable `orderby` El parámetro se ha establecido en `orderby=name,firstname`, el `start` contendría un valor para el parámetro `name` propiedad. En este caso, si desea mostrar las 20 entradas siguientes de un recurso inmediatamente después del nombre &quot;Miller&quot;, debe utilizar: `?orderby=name,firstname&start=Miller&limit=20`. |
+| `start` | Cuando se usa junto con un `orderby` parámetro, `start` especifica dónde debe comenzar la lista de elementos subconfigurada. Este parámetro no se puede utilizar sin un `orderby` parámetro presente. Este valor se puede obtener del `_page.next` de una respuesta de lista y se utiliza para acceder a la siguiente página de resultados. Si la variable `_page.next` el valor es nulo, por lo que no hay ninguna página adicional disponible.<br><br>Normalmente, este parámetro se omite para obtener la primera página de resultados. Después de eso, `start` debe establecerse en el valor máximo de la propiedad de ordenación principal de la variable `orderby` campo recibido en la página anterior. A continuación, la respuesta de la API devuelve entradas que comienzan por las que tienen una propiedad de ordenación principal de `orderby` estrictamente mayor que (para ascendente) o estrictamente menor que (para descendente) el valor especificado.<br><br>Por ejemplo, si la variable `orderby` El parámetro se ha establecido en `orderby=name,firstname`, el `start` contendría un valor para el parámetro `name` propiedad. En este caso, si desea mostrar las 20 entradas siguientes de un recurso inmediatamente después del nombre &quot;Miller&quot;, debe utilizar: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style="table-layout:auto"}
 
@@ -44,10 +44,9 @@ Puede filtrar los resultados utilizando la variable `property` , que se utiliza 
 | `==` | Filtra por si la propiedad es igual al valor proporcionado. | `property=title==test` |
 | `!=` | Filtra por si la propiedad no es igual al valor proporcionado. | `property=title!=test` |
 | `<` | Filtra por si la propiedad es menor que el valor proporcionado. | `property=version<5` |
-| `>` | Filtra por si la propiedad es buena que el valor proporcionado. | `property=version>5` |
+| `>` | Filtra por si la propiedad es mayor que el valor proporcionado. | `property=version>5` |
 | `<=` | Filtra por si la propiedad es menor o igual que el valor proporcionado. | `property=version<=5` |
-| `>=` | Filtra por si la propiedad es buena o igual que el valor proporcionado. | `property=version>=5` |
-| `~` | Filtra por si la propiedad coincide con una expresión regular proporcionada. | `property=title~test$` |
+| `>=` | Filtra por si la propiedad es mayor o igual que el valor proporcionado. | `property=version>=5` |
 | (Ninguna) | Si se indica solo el nombre de la propiedad, solo se devuelven entradas donde exista la propiedad. | `property=title` |
 
 {style="table-layout:auto"}
