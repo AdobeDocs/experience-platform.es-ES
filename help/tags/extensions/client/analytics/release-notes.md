@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión de Adobe Analytics
 description: Últimas notas de la versión de la extensión de etiquetas de Adobe Analytics en Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 90%
+source-wordcount: '1394'
+ht-degree: 87%
 
 ---
 
@@ -17,13 +17,26 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 >
 >La extensión de etiquetas de Analytics si se actualiza con frecuencia en respuesta a las actualizaciones del [Biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte la [Notas de la versión de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
 
+## 19 de julio de 2023
+
+**Extensión de Adobe Analytics 1.9.2**
+
+**Funcionalidades**:
+
+* Se ha actualizado a la versión 2.24.0 del AppMeasurement.
+* Se ha añadido una configuración opcional (`decodeLinkParameters` predeterminado `false`) que descodifica las direcciones URL de los vínculos que incluyen caracteres codificados de doble byte.
+
+**Corrección de errores**:
+* Se ha añadido la administración de errores adicional para exploradores con alta entropía defectuosa [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=es) API de.
+* Cambiado [POST](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Methods/POST) Encabezado de tipo de contenido para usar `x-www-form-urlencoded` de forma predeterminada.
+
 ## 23 de septiembre de 2022
 
 **Extensión de Adobe Analytics 1.9.1**
 
 **Funcionalidades**:
 
-* Se ha actualizado a AppMeasurement 2.23.0.
+* Se ha actualizado a la versión 2.23.0 del AppMeasurement.
 * La extensión ahora puede recopilar alta entropía [sugerencias del cliente user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) como se admite en la última versión de AppMeasurement.
 
 ## 28 de febrero de 2022
@@ -32,7 +45,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* Se han eliminado algunas instrucciones de depuración en AppMeasurement.
+* Se han eliminado algunas instrucciones de depuración en la AppMeasurement.
 
 ## 29 de noviembre de 2021
 
@@ -40,7 +53,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* AppMeasurement actualizado a la versión 2.22.3.
+* Se ha actualizado el AppMeasurement a la versión 2.22.3.
 
 ## 16 de septiembre de 2021
 
@@ -48,7 +61,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Corrección de errores**:
 
-* AppMeasurement actualizado a la versión 2.22.2.
+* Se ha actualizado el AppMeasurement a la versión 2.22.2.
 * Se ha eliminado buildInfo.environment obsoleto
 
 ## 24 de agosto de 2021
