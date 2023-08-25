@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de etiquetas de uso de datos
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform en la actualidad.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2185'
 ht-degree: 3%
 
 ---
@@ -64,11 +64,7 @@ Un tipo de datos que puede considerar confidencial puede ser un tipo diferente d
 | **PSPD** | Los datos personales confidenciales permitidos (PSPD) se refieren a datos que el Adobe le permite cargar de forma contractual y que se consideran &quot;confidenciales&quot;, &quot;categoría especial de datos&quot; o un término similar utilizado por las leyes aplicables. Esto excluye específicamente la información médica protegida (PHI) y otros datos de salud regulados. |
 | **RHD** | Datos que hacen referencia a información médica protegida (PHI) o información sobre un paciente que el Adobe le permite cargar. |
 
-## (Beta) Etiquetas de Partner Ecosystem {#partner}
-
->[!IMPORTANT]
->
->La etiqueta de datos de terceros está en versión beta. No está disponible para todos los usuarios y la documentación está sujeta a cambios.
+## Etiquetas de Partner Ecosystem {#partner}
 
 Las etiquetas de ecosistema de socio se utilizan para categorizar los datos obtenidos de fuentes externas a su organización.
 
