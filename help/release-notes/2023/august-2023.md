@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de agosto de 2023 de Adobe Experience Platform.
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 32%
+source-wordcount: '1749'
+ht-degree: 34%
 
 ---
 
@@ -19,7 +19,8 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 - [Paneles](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Ingesta de datos](#data-ingestion)
-- [Preparación de datos](#data-prep)
+- [Preparación de los datos](#data-prep)
+- [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
 - [Servicio de segmentación](#segmentation)
@@ -111,6 +112,17 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [Resumen de preparación de datos](../../data-prep/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
+- Ahora puede [activar audiencias de clientes potenciales](../../destinations/ui/activate-prospect-audiences.md) a destinos basados en archivos.
+- El general [protección de activación](../../destinations/guardrails.md#general-activation-guardrails) de un máximo de 100 destinos por zona protegida se ha actualizado para que sea un _límite estricto_.
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
