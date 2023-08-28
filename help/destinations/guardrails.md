@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
+source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1270'
 ht-degree: 2%
 
 ---
@@ -42,8 +42,8 @@ Las protecciones que se indican a continuación se aplican generalmente a la act
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
 | Número máximo de audiencias a un solo destino | 250 | Leve | La recomendación es asignar un máximo de 250 audiencias a un solo destino en un flujo de datos. <br><br> Si necesita activar más de 250 audiencias en un destino, puede hacer lo siguiente: <ul><li> Anule la asignación de audiencias que ya no desee activar, o</li><li>Cree un nuevo flujo de datos al destino deseado y asigne las audiencias a este nuevo flujo de datos.</li></ul> <br> Tenga en cuenta que en el caso de algunos destinos, se puede limitar a menos de 250 audiencias asignadas al destino. Estos destinos se indican más adelante en la página, en sus secciones respectivas. |
-| Número máximo de destinos | 100 | Leve | La recomendación es crear un máximo de 100 destinos a los que pueda conectar y activar datos *por zona protegida*. [Destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) puede constituir un máximo de 10 de los 100 destinos recomendados. |
 | Número máximo de atributos asignados a un destino | 50 | Leve | En el caso de varios destinos y tipos de destino, puede seleccionar atributos e identidades de perfil para asignar para la exportación. Para obtener un rendimiento óptimo, se debe asignar un máximo de 50 atributos en un flujo de datos a un destino. |
+| Número máximo de destinos | 100 | Grave | Puede crear un máximo de 100 destinos a los que puede conectar y activar datos, *por zona protegida*. [Destinos de personalización de Edge (personalización personalizada)](#edge-destinations-activation) puede constituir un máximo de 10 de los 100 destinos recomendados. |
 | Tipo de datos activados en los destinos | Datos de perfil, incluidas identidades y mapa de identidad | Grave | Actualmente, solo es posible exportar *atributos de registro de perfil* a destinos. Los atributos XDM que describen datos de evento no son compatibles con la exportación en este momento. |
 | Tipo de datos activados para destinos: compatibilidad con atributos de matriz y asignación | No disponible | Grave | En este momento, lo es **no** posible para exportar *atributos de matriz o asignación* a destinos. La excepción a esta regla es la [mapa de identidad](/help/xdm/field-groups/profile/identitymap.md), que se exporta en las activaciones de flujo continuo y basadas en archivos. |
 
