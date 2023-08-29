@@ -3,7 +3,7 @@ title: 'LiveRamp: conexión de incorporación'
 description: Aprenda a utilizar el conector LiveRamp para incorporar audiencias de Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 3%
@@ -209,7 +209,7 @@ Los perfiles incluidos en los archivos exportados pueden coincidir con uno de lo
 Por ejemplo, un archivo CSV exportado con una `email` atributo, dos audiencias que se originan en el Experience Platform [Servicio de segmentación](../../../segmentation/home.md), y uno [importado](../../../segmentation/ui/overview.md#importing-an-audience) audiencia externa, podría tener este aspecto:
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-En el ejemplo anterior, la variable `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` y `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Las secciones de describen audiencias que se originan en el servicio de segmentación, mientras que `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` describe una audiencia importada en Platform as a [carga personalizada](../../../segmentation/ui/overview.md#importing-an-audience).
+En el ejemplo anterior, la variable `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` y `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Las secciones de describen audiencias que se originan en el servicio de segmentación, mientras que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describe una audiencia importada en Platform as a [carga personalizada](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Dado que Platform genera un archivo CSV para cada [ID de política de combinación](../../../profile/merge-policies/overview.md)Además, también genera una ejecución de flujo de datos independiente para cada ID de política de combinación.
 
