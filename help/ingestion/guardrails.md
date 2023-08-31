@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Este documento proporciona instrucciones sobre las protecciones para la ingesta de datos en Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,14 @@ En la tabla siguiente se describen las protecciones que deben tenerse en cuenta 
 
 ## Protecciones para la ingesta por streaming
 
-En la tabla siguiente se describen las protecciones que deben tenerse en cuenta al utilizar [API de ingesta de streaming](./streaming-ingestion/overview.md) o fuentes de flujo continuo:
+Lea el [información general sobre ingesta de streaming](./streaming-ingestion/overview.md) para obtener información sobre las protecciones para la ingesta de transmisión.
+
+## Protecciones para fuentes de flujo continuo
+
+La siguiente tabla describe las protecciones que se deben tener en cuenta al utilizar fuentes de flujo continuo:
 
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
-| Ingesta de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Puede procesar hasta 2500 solicitudes por segundo en el Perfil.</li><li>Puede procesar hasta 20000 solicitudes por segundo al lago de datos en menos de 15 minutos.</li></ul> | Utilice la API de ingesta por lotes si necesita un mayor rendimiento de datos. |
 | Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al crear una nueva conexión de origen. **Nota**: Puede tardar hasta 30 minutos en que los datos de flujo se procesen completamente en el lago de datos.</li><li>Puede procesar entre 4000 y 5000 solicitudes por segundo al lago de datos. **Nota**: Puede tardar hasta 30 minutos en que los datos de flujo se procesen completamente en el lago de datos.</li></ul> | Fuentes de streaming como [!DNL Kafka], [!DNL Azure Event Hubs], y [!DNL Amazon Kinesis] no utilice el [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [información general de orígenes](../sources/home.md) para un catálogo de fuentes que puede utilizar para la ingesta de datos. |
 
 ## Pasos siguientes

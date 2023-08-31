@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor al Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 4%
