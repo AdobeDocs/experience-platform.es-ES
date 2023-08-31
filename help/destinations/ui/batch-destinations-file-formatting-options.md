@@ -1,15 +1,15 @@
 ---
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
-title: (Beta) Configurar las opciones de formato de archivo para los destinos basados en archivos
+title: Configurar las opciones de formato de archivo para los destinos basados en archivos
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1188'
 ht-degree: 19%
 
 ---
 
-# (Beta) Configurar las opciones de formato de archivo para los destinos basados en archivos
+# Configurar las opciones de formato de archivo para los destinos basados en archivos
 
 >[!IMPORTANT]
 > 
