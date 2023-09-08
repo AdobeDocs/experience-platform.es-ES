@@ -1,27 +1,27 @@
 ---
 title: Preparación de datos para la recopilación de datos
-description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móvil de Adobe Experience Platform.
+description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '914'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Preparación de datos para la recopilación de datos
 
-La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar un perfil habilitado para Platform [secuencia de datos](./overview.md)Además, puede utilizar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Platform Edge Network.
+La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una [secuencia de datos](./overview.md) habilitada para Platform, puede utilizar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Platform Edge Network.
 
 >[!NOTE]
 >
 >Para obtener instrucciones completas sobre todas las funcionalidades de preparación de datos, incluidas las funciones de transformación para los campos calculados, consulte la siguiente documentación:
 >
->* [Resumen de preparación de datos](../data-prep/home.md)
+>* [Información general de preparación de datos](../data-prep/home.md)
 >* [Funciones de asignación de preparación de datos](../data-prep/functions.md)
->* [Administrar formatos de datos con preparación de datos](../data-prep/data-handling.md)
+>* [Administración de formatos de datos con preparación de datos](../data-prep/data-handling.md)
 
-Esta guía explica cómo asignar los datos dentro de la interfaz de usuario de. Para seguir estos pasos, inicie el proceso de creación de un conjunto de datos hasta el (e incluido) [paso de configuración básica](./overview.md#create).
+Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Para seguir estos pasos, inicie el proceso de creación de una secuencia de datos hasta (e incluyendo) el [paso de configuración básica](./overview.md#create).
 
 Para obtener una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
@@ -29,11 +29,11 @@ Para obtener una demostración rápida del proceso de preparación de datos para
 
 ## [!UICONTROL Seleccionar datos] {#select-data}
 
-Seleccionar **[!UICONTROL Guardar y agregar asignación]** después de completar la configuración básica de un conjunto de datos y la **[!UICONTROL Seleccionar datos]** aparece el paso. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Platform.
+Seleccione **[!UICONTROL Guardar y añadir asignación]** después de completar la configuración básica de una secuencia de datos y aparece el paso **[!UICONTROL Seleccionar datos]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que tiene previsto enviar a Platform.
 
-Para capturar propiedades directamente desde la capa de datos, el objeto JSON debe tener una sola propiedad raíz `data`. Las subpropiedades del `data` a continuación, el objeto debe construirse de manera que se asigne a las propiedades de capa de datos que desee capturar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una `data` raíz.
+Para capturar propiedades directamente desde la capa de datos, el objeto JSON debe tener una sola propiedad raíz `data`. Las subpropiedades del objeto `data` deben construirse a continuación de manera que se asigne a las propiedades de capa de datos que desee capturar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una raíz `data`.
 
-+++Archivo JSON de muestra con `data` raíz
++++Archivo JSON de muestra con una raíz `data`
 
 ```json
 {
@@ -96,9 +96,9 @@ Para capturar propiedades directamente desde la capa de datos, el objeto JSON de
 
 +++
 
-Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las mismas reglas al objeto JSON, pero la propiedad raíz debe tener la clave `xdm` en su lugar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una `xdm` raíz.
+Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las mismas reglas al objeto JSON, pero la propiedad raíz debe tener la clave `xdm` en su lugar. Seleccione la sección siguiente para ver un ejemplo de un objeto JSON con formato correcto con una raíz de `xdm`.
 
-+++Archivo JSON de muestra con `xdm` raíz
++++Archivo JSON de muestra con la raíz `xdm`
 
 ```json
 {
@@ -135,18 +135,18 @@ Puede seleccionar la opción para cargar el objeto como un archivo o pegar el ob
 
 ## [!UICONTROL Asignación]
 
-El **[!UICONTROL Asignación]** Este paso aparece, lo que le permite asignar los campos de los datos de origen a los del esquema de evento de destino en Platform. Desde aquí, puede configurar la asignación de dos formas:
+Aparece el paso **[!UICONTROL Asignación]**, lo que le permite asignar los campos de los datos de origen a los del esquema de evento de destino en Platform. Desde aquí, puede configurar la asignación de dos formas:
 
-* [Creación de nuevas reglas de asignación](#create-mapping) para este conjunto de datos a través de un proceso manual.
-* [Importar reglas de asignación](#import-mapping) de un conjunto de datos existente.
+* [Creación de nuevas reglas de asignación](#create-mapping) para esta secuencia de datos a través de un proceso manual.
+* [Importar reglas de asignación](#import-mapping) de una secuencia de datos existente.
 
 ### Creación de una nueva asignación {#create-mapping}
 
-Para empezar, seleccione **[!UICONTROL Añadir nueva asignación]** para crear una nueva fila de asignación.
+Para empezar, seleccione **[!UICONTROL Añadir nueva asignación]** para crear una nueva fila.
 
 ![Adición de una nueva asignación](assets/data-prep/add-new-mapping.png)
 
-Seleccione el icono de origen (![Icono de origen](assets/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el **[!UICONTROL Seleccionar]** para continuar.
+Seleccione el icono de origen (![Icono de origen](assets/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Seleccionar]** para continuar.
 
 ![Selección del campo que desea asignar en el esquema de origen](assets/data-prep/source-mapping.png)
 
@@ -154,47 +154,47 @@ A continuación, seleccione el icono de esquema (![Icono de esquema](assets/data
 
 ![Selección del campo que se va a asignar en el esquema de destino](assets/data-prep/target-mapping.png)
 
-La página de asignación vuelve a aparecer y se muestra la asignación de campos completada. El **[!UICONTROL Asignación en curso]** se actualiza la sección para reflejar el número total de campos que se han asignado correctamente.
+La página de asignación vuelve a aparecer y se muestra la asignación de campos completada. La sección **[!UICONTROL Asignación en curso]** se actualiza para reflejar el número total de campos que se han asignado correctamente.
 
-![Campo asignado correctamente con progreso reflejado](assets/data-prep/field-mapped.png)
+![Campo asignado correctamente con el progreso](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
->Si desea asignar una matriz de objetos (en el campo de origen) a una matriz de objetos diferentes (en el campo de destino), agregue `[*]` después del nombre de la matriz en las rutas de campo de origen y destino, como se muestra a continuación.
+>Si desea asignar una matriz de objetos (en el campo de origen) a una diferente (en el campo de destino), añada `[*]` después del nombre de la matriz en las rutas de campo de origen y destino, tal como se muestra a continuación.
 >
 >![Asignación de objeto de matriz](assets/data-prep/array-object-mapping.png)
 
-### Importar reglas de asignación existentes {#import-mapping}
+### Importación de reglas de asignación existentes {#import-mapping}
 
-Si ha creado anteriormente una secuencia de datos, puede volver a utilizar sus reglas de asignación configuradas para una nueva secuencia de datos.
+Si ha creado anteriormente una secuencia de datos, puede volver a utilizar sus reglas de asignación configuradas para crear una nueva.
 
 >[!WARNING]
 >
->La importación de reglas de asignación desde otro conjunto de datos sobrescribirá las asignaciones de campo que haya agregado antes de la importación.
+>La importación de reglas de asignación desde otra secuencia de datos sobrescribe las asignaciones de campo que haya agregado antes de la importación.
 
 Para empezar, seleccione **[!UICONTROL Importar asignación]**.
 
-![Imagen que muestra el [!UICONTROL Importar asignación] botón seleccionado](assets/data-prep/import-mapping-button.png)
+![Imagen que muestra el botón [!UICONTROL Importar asignación] que se está seleccionando](assets/data-prep/import-mapping-button.png)
 
-En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reglas de asignación desee importar. Una vez elegido el conjunto de datos, seleccione **[!UICONTROL Previsualizar]**.
+En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reglas de asignación desea importar. Una vez elegida la secuencia de datos, seleccione **[!UICONTROL Vista previa]**.
 
-![Imagen que muestra una secuencia de datos existente que se está seleccionando](assets/data-prep/select-mapping-rules.png)
+![Imagen que muestra la secuencia de datos existente que se está seleccionando](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
->Las secuencias de datos solo se pueden importar dentro del mismo [espacio aislado](../sandboxes/home.md). En otras palabras, no se puede importar un conjunto de datos de una zona protegida a otra.
+>Las secuencias de datos solo se pueden importar dentro de la misma [zona protegida](../sandboxes/home.md). En otras palabras, no se puede importar una secuencia de datos de una zona protegida a otra.
 
-La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para el conjunto de datos seleccionado. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Importar]** para confirmar y agregar las asignaciones al nuevo conjunto de datos.
+La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para la secuencia de datos seleccionada. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Importar]** para confirmar y agregar las asignaciones a la nueva secuencia de datos.
 
 ![Imagen que muestra las reglas de asignación que se van a importar](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
->Si algún campo de origen en las reglas de asignación importadas no se incluye en los datos JSON de muestra que [proporcionado anteriormente](#select-data)Sin embargo, esas asignaciones de campos no se incluirán en la importación.
+>Si algún campo de origen en las reglas de asignación importadas no se incluye en los datos JSON de muestra que [ha proporcionado anteriormente](#select-data) estas asignaciones de campos no se incluirán en la importación.
 
 ### Finalización de la asignación
 
-Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino que se establezca como obligatorio debe asignarse para completar este paso. El **[!UICONTROL Campos obligatorios]** counter indica cuántos campos obligatorios aún no están asignados en la configuración actual.
+Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino que se establezca como obligatorio debe asignarse para completar este paso. El contador **[!UICONTROL campos obligatorios]** indica cuántos campos obligatorios aún no están asignados en la configuración actual.
 
 Una vez que el recuento de campos requeridos alcance cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Guardar]** para finalizar los cambios.
 
@@ -202,4 +202,4 @@ Una vez que el recuento de campos requeridos alcance cero y esté satisfecho con
 
 ## Pasos siguientes
 
-En esta guía se explica cómo asignar los datos a XDM al configurar una secuencia de datos en la interfaz de usuario. Si estaba siguiendo el tutorial general de flujos de datos, ahora puede volver al paso en [visualización de detalles de secuencia de datos](./overview.md).
+En esta guía se explica cómo asignar los datos a XDM al configurar una secuencia de datos en la interfaz de usuario. Si estaba siguiendo el tutorial general de secuencia de datos, ahora puede volver al paso sobre [visualización de detalles de secuencia de datos](./overview.md).
