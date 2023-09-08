@@ -6,19 +6,19 @@ breadcrumb-title: Guía de secuencias de datos
 user-guide-description: Obtenga información sobre cómo configurar secuencias de datos en Adobe Experience Platform.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 53%
+ht-degree: 100%
 
 ---
 
 
-# Flujos de datos Adobe Experience Platform {#datastreams}
+# Secuencias de datos de Adobe Experience Platform {#datastreams}
 
-* [Resumen de flujos de datos](overview.md)
+* [Información general de secuencias de datos](overview.md)
 * [Configurar una secuencia de datos](configure.md)
 * [Configurar anulaciones de secuencia de datos](overrides.md)
 * [Preparación de datos para la recopilación de datos](data-prep.md)
 * Enriquecimiento de datos {#data-enrichment}
-   * [Datos meteorológicos por el canal del tiempo](data-enrichment/weather.md)
+   * [Datos meteorológicos de The Weather Channel](data-enrichment/weather.md)
    * [Asignaciones de campos de datos meteorológicos](data-enrichment/weather-reference.md)
