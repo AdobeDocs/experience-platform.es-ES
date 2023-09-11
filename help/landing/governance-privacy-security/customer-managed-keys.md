@@ -2,16 +2,16 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
 
 # Claves administradas por el cliente en Adobe Experience Platform
 
-Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante claves de nivel de sistema. Si utiliza una aplicación basada en Platform, puede optar por utilizar sus propias claves de cifrado, lo que le proporciona el bueno control sobre la seguridad de los datos.
+Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante claves de nivel de sistema. Si utiliza una aplicación basada en Platform, puede optar por utilizar sus propias claves de cifrado, lo que le proporciona un mayor control sobre la seguridad de los datos.
 
 >[!NOTE]
 >
@@ -20,6 +20,10 @@ Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante 
 Este documento cubre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform.
 
 ## Requisitos previos
+
+Para acceder a las API de CMK, debe asignar la variable [!UICONTROL Administrar clave gestionada por el cliente] permiso y acceso a una zona protegida de producción para una función nueva o existente asociada a la credencial de la API. Si desea proporcionar esta credencial de API solo con acceso a CMK, se recomienda crear una nueva función de administrador de CMK con los permisos necesarios mencionados anteriormente.
+
+Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación de configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Para habilitar CMK, su [!DNL Azure] Key Vault debe configurarse con la siguiente configuración:
 

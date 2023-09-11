@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en el perfil del cliente en ti
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
+source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,13 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 >
 >Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de perfil en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform, consulte la guía de [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) además de este tutorial.
 >
->Para ver los pasos sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Para ver los pasos necesarios para realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
 
-## Primeros pasos
+>[!IMPORTANT]
+>
+>La solicitud de privacidad de esta guía sí lo hace **no** abarcan entidades no personales B2B.
+
+## Introducción
 
 Esta guía requiere una comprensión práctica de lo siguiente [!DNL Platform] componentes:
 
@@ -213,9 +217,9 @@ Para eliminar el perfil y todas las asociaciones de identidad de un cliente dete
 ### Limitaciones de políticas de combinación {#merge-policy-limitations}
 
 El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una política de combinación que no realiza la vinculación de identidad. Si utiliza la interfaz de usuario de para confirmar si se están procesando sus solicitudes de privacidad, asegúrese de utilizar una directiva con **[!DNL None]** como su [!UICONTROL Vinculación de ID] escriba. En otras palabras, no puede utilizar una política de combinación en las que [!UICONTROL Vinculación de ID] se establece en [!UICONTROL Gráfico privado].
->>
-![La vinculación de ID de la política de combinación se establece en Ninguno](./images/privacy/no-id-stitch.png)
->
+
+>![La vinculación de ID de la política de combinación se establece en Ninguno](./images/privacy/no-id-stitch.png)
+
 ## Pasos siguientes
 
 Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Experience Platform]. Para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad, siga leyendo la documentación proporcionada a través de esta guía.

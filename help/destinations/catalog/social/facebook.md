@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1905'
 ht-degree: 6%
 
 ---
@@ -50,15 +50,12 @@ A continuación, puede utilizar sus datos sin conexión, incluidos los ID de per
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe todas las audiencias que puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
-
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

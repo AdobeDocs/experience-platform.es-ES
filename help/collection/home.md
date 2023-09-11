@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre la recopilación de datos
 description: Obtenga información acerca de las distintas tecnologías relacionadas con la recopilación de datos sobre experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 998cc9a9c490124ff21fdbf5f3a7b91abef3e8b8
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 8%
+source-wordcount: '515'
+ht-degree: 9%
 
 ---
 
@@ -25,10 +25,10 @@ La recopilación de datos se centra en la detección y accesibilidad de conjunto
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Etiquetas](../tags/home.md)
-* [Corrientes de datos](../datastreams/overview.md)
+* [Secuencias de datos](../datastreams/overview.md)
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK web de Adobe Experience Platform](../edge/home.md)
-* [SDK móvil de Adobe Experience Platform](https://aep-sdks.gitbook.io/docs/)
+* [SDK móvil de Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
 * [API del servidor de red perimetral](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=es)
 * [Garantía del Experience Platform](../assurance/home.md)

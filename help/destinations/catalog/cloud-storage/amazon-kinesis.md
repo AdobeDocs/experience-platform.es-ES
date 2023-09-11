@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destino de kinesis;kinesis
 title: Conexión de Amazon Kinesis
 description: Cree una conexión saliente en tiempo real a su almacenamiento de Amazon Kinesis para transmitir datos desde Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '1980'
 ht-degree: 4%
 
 ---
@@ -36,15 +36,12 @@ Por ejemplo, un cliente potencial descargó un documento técnico que le clasifi
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe todas las audiencias que puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
-
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

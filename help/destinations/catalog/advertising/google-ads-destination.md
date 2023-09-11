@@ -3,9 +3,9 @@ keywords: Google ads;anuncios de google;google adwords;Google AdWords;Google Adw
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas publicar anuncios de pago por clic en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles en la aplicación.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '974'
 ht-degree: 2%
 
 ---
@@ -45,15 +45,12 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Ads] destin
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe todas las audiencias que puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
-
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

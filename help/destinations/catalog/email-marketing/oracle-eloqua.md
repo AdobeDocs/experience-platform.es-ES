@@ -3,9 +3,9 @@ keywords: correo electrónico;correo electrónico;e-mail;destinos de correo elec
 title: (Archivos) Conexión de Oracle Eloqua
 description: Oracle Eloqua es una plataforma de software como servicio (SaaS) para la automatización de marketing que ofrece Oracle y que tiene como objetivo ayudar a los especialistas en marketing y a las organizaciones a administrar las campañas de marketing y la generación de posibles clientes.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '695'
 ht-degree: 1%
 
 ---
@@ -18,15 +18,12 @@ Para enviar datos de audiencia a [!DNL Oracle Eloqua], primero debe [conectar el
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe todas las audiencias que puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
-
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

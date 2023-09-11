@@ -3,9 +3,9 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 6%
 
 ---
@@ -104,7 +104,7 @@ Hay muchas opciones que se pueden configurar durante la configuración. Todas la
 
 ### Uso de at.js
 
-Si utiliza at.js 2.x y habilita la configuración `pageLoadEnabled`, la biblioteca almacenará en déclencheur una llamada a Target Edge con `execute -> pageLoad`. Si todos los ajustes se establecen en los valores predeterminados, no es necesaria ninguna codificación personalizada. Una vez que at.js se añade a la página y el explorador lo carga, se ejecuta una llamada de Target Edge.
+Con at.js 2.x, si activa la configuración `pageLoadEnabled`, la biblioteca almacenará en déclencheur una llamada a Target Edge con `execute -> pageLoad`. Si todos los ajustes se establecen en los valores predeterminados, no es necesaria ninguna codificación personalizada. Una vez que at.js se añade a la página y el explorador lo carga, se ejecuta una llamada de Target Edge.
 
 ### Uso del SDK web
 
@@ -1233,7 +1233,7 @@ Nota: Todas estas funciones de depuración están disponibles con funciones mejo
 
 Dispone de varias funciones de depuración al utilizar el SDK web:
 
-* Uso de [Grifón](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Uso de [Assurance](../../../assurance/home.md)
 * [Depuración del SDK web habilitada](../../../edge/fundamentals/debugging.md)
 * Uso [Enlaces de monitorización del SDK web](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Uso [Adobe Experience Platform Debugger](../../../debugger/home.md)

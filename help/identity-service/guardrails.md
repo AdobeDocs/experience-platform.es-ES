@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,8 @@ La siguiente sección contiene información adicional sobre las protecciones del
 >
 > * Un área de nombres personalizada en la que los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.
 > * Un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.
-
+>
+>Una vez que esta función esté disponible, los gráficos que excedan el límite de 50 identidades se reducirán hasta 50 identidades. En Real-time CDP edición B2C, esto podría provocar un aumento mínimo en el número de perfiles aptos para una audiencia, ya que estos perfiles se ignoraban anteriormente en Segmentación y Activación.
 
 Cuando se actualiza un gráfico de identidad completo, el servicio de identidad elimina la identidad más antigua del gráfico antes de añadir la identidad más reciente. El objetivo de esto es mantener la precisión y la relevancia de los datos de identidad. Este proceso de eliminación sigue dos reglas principales:
 
@@ -108,3 +109,8 @@ En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una n
 * En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los ID en función de [XID](./api/list-native-id.md) y realice la eliminación.
 
 >[!ENDSHADEBOX]
+
+La eliminación solo se produce en los datos del servicio de identidad y no en el perfil del cliente en tiempo real.
+
+* Por lo tanto, este comportamiento podría crear más perfiles con un solo ECID, ya que el ECID ya no forma parte del gráfico de identidad.
+* Para mantenerse dentro de los números de derechos de audiencia a los que se puede dirigir, se recomienda habilitar [caducidad de datos de perfil seudónimos](../profile/pseudonymous-profiles.md) para eliminar los perfiles antiguos.

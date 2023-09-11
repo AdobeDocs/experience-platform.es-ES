@@ -4,9 +4,9 @@ description: Aprenda a utilizar el asistente de IA para navegar y comprender los
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
+source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
 workflow-type: tm+mt
-source-wordcount: '2629'
+source-wordcount: '2369'
 ht-degree: 0%
 
 ---
@@ -154,112 +154,55 @@ También puede hacer preguntas al asistente de IA sobre el uso de datos en los s
 
 * Atributos
 * Conjuntos de datos
-* Destinos
-* Esquemas
+* Destinos (preguntas sobre cuentas y algunas preguntas sobre flujo de datos no se pueden responder en este momento).
+* Esquemas (las preguntas relativas a los grupos de campos no se pueden responder en este momento).
 * Segmentos
-* Fuentes
+* Fuentes (Las preguntas relativas a las cuentas no se pueden responder en este momento).
 
-En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan cada 12 a 24 horas. Es posible que tenga que dar formato a preguntas como: &quot;Cuándo fue el segmento con el título {TITLE} creado?&quot; en lugar de, &quot;¿Cuándo fue la {TITLE} ¿segmento creado?&quot;
+En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Es posible que tenga que dar formato a sus preguntas como: &quot;Cuándo fue el segmento con el título {TITLE} creado?&quot; en lugar de, &quot;¿Cuándo fue la {TITLE} ¿segmento creado?&quot;
 
 Deberá iniciar sesión en una zona protegida para consultar sobre datos específicos relacionados con objetos como esquemas, conjuntos de datos, atributos, destinos y segmentos.
 
-+++Seleccione para obtener una lista de preguntas de uso de datos compatibles
+### Preguntas de uso de datos compatibles
+
++++Seleccione esta opción para ver una lista de las preguntas de uso de datos admitidas
 
 A continuación se muestra una lista de las preguntas de uso de datos admitidas actualmente agrupadas por dominio.
 
->[!BEGINTABS]
-
->[!TAB Segmentos]
-
-* ¿Hay segmentos duplicados?
-* Mostrar todos los segmentos de flujo continuo.
-* Es un segmento con nombre {SEGMENT_ID} evaluado en lote o flujo?
-* ¿Qué segmentos son duplicados?
+* ¿Enumerar los atributos utilizados para este segmento?
 * ¿Cuántos segmentos hay en total?
-* ¿Hay segmentos con los mismos nombres pero ID diferentes?
-* ¿Cuál es la distribución de los métodos de evaluación (por lotes, Edge, streaming) entre segmentos?
 * Muéstreme una lista de los segmentos que se modificaron por última vez en el último mes.
 * ¿Qué segmentos se han modificado en la última semana?
-* ¿Hay algún segmento que no se haya modificado en los últimos seis meses?
-* Enumerar los segmentos creados en el último año.
-* Muéstreme los segmentos que se modificaron por última vez antes de hoy.
-* ¿Existen patrones o tendencias en las fechas de creación de segmentos durante el año pasado?
-* ¿Puede identificar los segmentos que no se han modificado desde su creación?
-* ¿Hay algún segmento que no se haya modificado desde su creación?
-* ¿Cuál es la tendencia en la creación de segmentos a lo largo del tiempo?
-* ¿Cuál es la distribución de las fechas de creación de segmentos?
-* ¿Cuál es la distribución de las fechas de modificación de segmentos?
-* ¿Qué segmentos tienen la mayor cantidad de perfiles de usuario?
-* ¿Qué segmentos tienen el menor número de perfiles de usuario?
-* Enumerar todos los segmentos por lotes.
-* Enumerar todos los segmentos de Edge.
-* ¿Qué segmentos están activados?
-* ¿Qué segmentos se reenvían a Facebook?
-* ¿El segmento llamado &quot;Clientes de APAC&quot; es por lotes o por streaming?
-* ¿Cuántos perfiles tiene el segmento de Trabajo activo?
-* ¿Alguno de mis segmentos tiene 0 perfiles?
-* ¿Qué conjuntos de datos afectan al segmento de lealtad de Bronze?
-* ¿Qué definiciones de segmento utilizan campos XDM que contienen &quot;género&quot;?
-* ¿Qué campos XDM rellenados se producen en los segmentos de flujo continuo?
-* ¿Cuántos campos XDM hay en todas las definiciones de segmentos?
-* ¿Qué segmentos afectan al conjunto de datos &quot;Usuarios profesionales&quot;?
-* ¿Qué segmentos se reenvían a la API HTTP?
-* De los segmentos activados, ¿cuáles se activan con la mayor cantidad de tipos de destino?
+* ¿Para qué sirve el recuento de perfiles? {SEGMENT_NAME} ¿segmento?
+* Enumerar todos los segmentos duplicados.
+* Mostrar los segmentos creados o actualizados en los últimos 7 días.
+* ¿Cuál es la distribución del número de perfiles entre segmentos?
+* ¿Cuántos campos se utilizan en la segmentación?
 * ¿Cuál es el recuento total de segmentos activados?
-* ¿Cuántos segmentos están activados?
-* ¿Cuántos segmentos duplicados están activados?
+* ¿Qué segmentos se activan?
+* ¿Cuántos segmentos duplicados se activan?
+* Enumerar los segmentos creados en el último año.
+* Mostrar los segmentos que se modificaron por última vez antes {DATE}.
+* Cuántos nombres de segmento únicos están asociados con el {SCHEMA_NAME} esquema?
+* ¿Qué esquemas se utilizan con mayor frecuencia entre segmentos?
+* ¿Cuántos esquemas tengo?
+* Qué conjuntos de datos utilizar {SCHEMA_NAME} esquema?
+* Enumerar todos los esquemas modificados en la última semana.
+* ¿Cuántos esquemas tienen habilitado el perfil?
+* ¿Enumerar todos los esquemas de clase de evento de experiencia?
+* Qué conjuntos de datos se incorporan al {SCHEMA_NAME} esquema?
+* ¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?
+* ¿Cuántos conjuntos de datos tengo?
+* ¿Qué conjuntos de datos se utilizan en cada segmento?
+* Qué segmentos utilizan {ATTRIBUTE_NAME} ¿atributo?
+* Qué esquemas tienen {ATTRIBUTE_NAME} ¿atributo en ellos?
+* ¿Cuántos atributos de esquema XDM no se utilizan en ningún segmento?
+* En qué conjunto(s) de datos hay {ATTRIBUTE_NAME} ¿Campos XDM rellenados?
+* Qué conjuntos de datos tienen datos para {ATTRIBUTE_NAME} ¿atributo?
 * ¿Cuántos segmentos se activan para cada destino?
-* ¿Qué segmentos se activan en 0, 1 o varios destinos? Mostrar la distribución.
 * ¿Qué segmentos se activan con la mayor cantidad de destinos?
-* ¿Qué segmentos duplicados están activados?
-* ¿Qué segmentos se activan en Adobe Target?
-* En todos los segmentos, ¿cuántas veces se utiliza cada política de combinación?
-
->[!TAB Esquemas]
-
-* ¿Cuántos esquemas XDM se definen?
-* ¿Cuáles son los esquemas creados más recientemente?
-* ¿Cuántos esquemas para cada clase XDM?
-* ¿Qué esquema utiliza el conjunto de datos &quot;Ingesta de segmentos&quot;?
-* ¿Qué esquemas no se utilizan en ningún conjunto de datos?
-
->[!TAB Destinos]
-
-* ¿Cuántos destinos hay?
-* ¿Cuáles son los destinos creados más recientemente?
-* ¿Qué destinos están asociados a cada segmento?
-
->[!TAB Fuentes]
-
-* ¿Cuántas fuentes se han creado?
-* ¿Cuáles son los orígenes creados más recientemente?
-* ¿Cuántas fuentes hay disponibles, desglosadas por categoría?
-* ¿Puedo crear una conexión de origen desde S3?
-* ¿Qué fuentes contribuyeron al conjunto de datos Mutual365?
-
->[!TAB Conjuntos de datos]
-
-* ¿Cuántos conjuntos de datos hay?
-* ¿Cuáles son los conjuntos de datos creados más recientemente?
-* ¿Qué conjuntos de datos están habilitados para el perfil unificado?
-* ¿Hay un TTL definido para el conjunto de datos de ingesta de segmentos?
-* ¿Cuál es el TTL para el conjunto de datos de usuarios profesionales?
-* ¿Qué conjuntos de datos utilizan el esquema Usuarios profesionales?
-
->[!TAB Atributos]
-
-* ¿Qué campos XDM se rellenan con mayor frecuencia en todos los conjuntos de datos?
-* ¿Qué campos y atributos XDM se utilizan con mayor frecuencia en todos los esquemas?
-* ¿Qué campos y atributos XDM se utilizan en el esquema de usuarios profesionales?
-* Enumeración de los atributos utilizados para este segmento con ID {SEGMENT_ID}.
-* ¿Cuántos campos XDM se utilizan en más de 2 segmentos?
-* ¿Qué campos se utilizan con mayor frecuencia en los segmentos?
-* ¿Hay campos que se utilicen en un solo segmento?
-* ¿Qué atributos se utilizan para el segmento de fidelidad Bronce?
-* ¿Qué atributos no se utilizan en ningún segmento?
-* ¿Qué atributos se utilizan con mayor frecuencia en los segmentos?
-
->[!ENDTABS]
+* ¿Alguno de mis segmentos tiene 0 perfiles?
+* ¿Cuántos flujos de datos tengo?
 
 +++
 
@@ -343,3 +286,5 @@ Lea la tabla siguiente para ver ejemplos:
 | ¿Cuál es mi segmento más grande? | ¿Cuál es mi segmento más grande? Uso de datos. | Indique explícitamente al asistente de IA que desea que la respuesta se base en los datos. |
 | ¿Cuál es mi segmento más grande? | Enumerar mi segmento más grande. | Hay casos en los que una pregunta de &quot;qué...&quot; se puede confundir con una pregunta basada en documentación. El uso de un comando como &quot;lista&quot; es un indicador más seguro de que está haciendo una pregunta con datos en contexto. |
 | ¿Cuántos conjuntos de datos tengo? | Contar mis conjuntos de datos. | La pregunta original funciona para segmentos, pero es posible que no funcione con conjuntos de datos. |
+
+

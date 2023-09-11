@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de agosto de 2023 de Adobe Experience Platform.
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 34%
+source-wordcount: '1750'
+ht-degree: 38%
 
 ---
 
@@ -119,7 +119,7 @@ Para obtener más información, lea la [Resumen de preparación de datos](../../
 
 **Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
 
-- Ahora puede [activar audiencias de clientes potenciales](../../destinations/ui/activate-prospect-audiences.md) a destinos basados en archivos.
+- Ahora puede [activar audiencias de clientes potenciales](../../destinations/ui/activate-prospect-audiences.md) a destinos de almacenamiento en la nube.
 - El general [protección de activación](../../destinations/guardrails.md#general-activation-guardrails) de un máximo de 100 destinos por zona protegida se ha actualizado para que sea un _límite estricto_.
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
@@ -141,7 +141,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Tipo de componente | Nombre | Actualizar descripción |
 | --- | --- | --- |
 | Extensión ([!UICONTROL Extensión completa de Adobe Analytics ExperienceEvent]) | [[!UICONTROL Datos de contexto]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Datos de contexto] objeto de asignación agregado a [!UICONTROL Extensión completa de Adobe Analytics ExperienceEvent] para proporcionar datos de contexto para Adobe Analytics. |
-| Grupo de campos | Múltiple | Se han añadido varios campos a [[!UICONTROL Detalles del segmento de evento enriquecido]](https://github.com/adobe/xdm/pull/1760/files). |
+| Grupo de campo | Múltiple | Se han añadido varios campos a [[!UICONTROL Detalles del segmento de evento enriquecido]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
@@ -161,7 +161,7 @@ Para obtener más información, lea la [Introducción al servicio de identidad](
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] le permite segmentar datos almacenados en [!DNL Experience Platform] que se relaciona con personas (como clientes, clientes potenciales, usuarios u organizaciones) en audiencias. Puede crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus [!DNL Real-Time Customer Profile] datos. Estas audiencias se configuran de forma centralizada y se mantienen en [!DNL Platform]y son fácilmente accesibles desde cualquier solución de Adobe.
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
 **Funciones nuevas o actualizadas**
 

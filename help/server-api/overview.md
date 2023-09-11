@@ -4,12 +4,13 @@ description: Descubra qué es la API del servidor de red perimetral y cómo pued
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: recopilación de datos;recopilación;Adobe Experience Platform Edge Network;api de servidor;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 5%
 
 ---
+
 
 # Información general de API de servidor de red perimetral {#overview}
 
@@ -36,7 +37,7 @@ El [!DNL Server API] admite el siguiente tipo de solicitudes:
 * Solicitudes autenticadas mediante [Adobe I/O](https://developer.adobe.com/), utilizando el nuevo `server.adobedc.net` punto final.
 * Solicitudes no autenticadas a través de `edge.adobedc.net` punto final.
 
-Esto habilita casos de uso que permiten una recopilación segura y autenticada de datos confidenciales, según las políticas de privacidad de su organización. Además de la autenticación, la API de servidor admite el marcado de flujos de datos para aceptar solo la comunicación autenticada a través de la API.
+Esto habilita casos de uso que permiten la recopilación segura y autenticada de datos confidenciales, según las políticas de privacidad de su organización. Además de la autenticación, la API de servidor admite el marcado de flujos de datos para aceptar solo la comunicación autenticada a través de la API.
 
 Vea el siguiente vídeo para obtener una descripción general optimizada de la API de servidor.
 

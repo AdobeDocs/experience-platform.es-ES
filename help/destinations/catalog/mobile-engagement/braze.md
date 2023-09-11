@@ -3,9 +3,9 @@ keywords: mobile; braze; mensajería;
 title: Conexión de Braze
 description: Braze es una plataforma completa de participación del cliente que potencia experiencias relevantes y memorables entre los clientes y las marcas que aman.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1031'
 ht-degree: 1%
 
 ---
@@ -46,13 +46,12 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 
 ## Audiencias compatibles {#supported-audiences}
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia externa | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

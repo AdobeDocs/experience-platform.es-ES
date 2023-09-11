@@ -2,9 +2,9 @@
 title: Configuración de una secuencia de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
-workflow-type: ht
-source-wordcount: '2275'
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+workflow-type: tm+mt
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ Seleccione **[!UICONTROL Opciones avanzadas]** para mostrar controles adicionale
 | [!UICONTROL Sincronización de ID de terceros] | Las sincronizaciones de ID se pueden agrupar en contenedores para permitir que diferentes sincronizaciones de ID se ejecuten en momentos diferentes. Cuando está habilitada, esta configuración le permite especificar qué contenedor de sincronizaciones de ID se ejecuta para esta secuencia de datos. |
 | [!UICONTROL ID del contenedor de sincronización de ID de terceros] | El ID numérico del contenedor que se utilizará para la sincronización de ID de terceros. |
 | [!UICONTROL Anulaciones de ID de contenedor] | En esta sección puede definir los ID de contenedor de sincronización de ID de terceros adicionales que puede utilizar para anular el predeterminado. |
-| [!UICONTROL Tipo de acceso] | Define el tipo de autenticación que Edge Network acepta para la secuencia de datos. <ul><li>**[!UICONTROL Autenticación mixta]**: cuando se selecciona esta opción, Edge Network acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción si tiene previsto utilizar el SDK web o el [SDK móvil](https://aep-sdks.gitbook.io/docs/), junto con la [API de servidor](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: cuando se selecciona esta opción, Edge Network solo acepta solicitudes autenticadas. Seleccione esta opción cuando tenga previsto utilizar únicamente la API de servidor y desee evitar que Edge Network procese solicitudes no autenticadas.</li></ul> |
+| [!UICONTROL Tipo de acceso] | Define el tipo de autenticación que Edge Network acepta para la secuencia de datos. <ul><li>**[!UICONTROL Autenticación mixta]**: cuando se selecciona esta opción, Edge Network acepta solicitudes autenticadas y no autenticadas. Seleccione esta opción si tiene previsto utilizar el SDK web o el [SDK móvil](https://developer.adobe.com/client-sdks/documentation/), junto con la [API de servidor](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticado]**: cuando se selecciona esta opción, Edge Network solo acepta solicitudes autenticadas. Seleccione esta opción cuando tenga previsto utilizar únicamente la API de servidor y desee evitar que Edge Network procese solicitudes no autenticadas.</li></ul> |
 
 A partir de aquí, si está configurando la secuencia de datos para Experience Platform, siga el tutorial de [Preparación de datos para la recopilación de datos](./data-prep.md) para asignar los datos a un esquema de evento de Platform antes de volver a esta guía. De lo contrario, seleccione **[!UICONTROL Guardar]** y continúe a la siguiente sección.
 

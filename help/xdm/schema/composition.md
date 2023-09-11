@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4141'
 ht-degree: 6%
 
 ---
@@ -78,7 +78,7 @@ El principal inconveniente de utilizar `identityMap` es que las identidades se i
 >
 >Un esquema que utiliza `identityMap` se puede utilizar como esquema de origen en una relación, pero no se puede utilizar como esquema de referencia. Esto se debe a que todos los esquemas de referencia deben tener una identidad visible que se pueda asignar en un campo de referencia dentro del esquema de origen. Consulte la guía de IU sobre [relaciones](../tutorials/relationship-ui.md) para obtener más información sobre los requisitos de los esquemas de origen y referencia.
 
-Sin embargo, los mapas de identidad pueden resultar especialmente útiles si reúne datos de fuentes que almacenan identidades (como [!DNL Airship] o Adobe Audience Manager), o cuando hay un número variable de identidades para un esquema. Además, los mapas de identidad son obligatorios si utiliza [SDK de Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
+Sin embargo, los mapas de identidad pueden resultar especialmente útiles si reúne datos de fuentes que almacenan identidades (como [!DNL Airship] o Adobe Audience Manager), o cuando hay un número variable de identidades para un esquema. Además, los mapas de identidad son obligatorios si utiliza [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
 
 Un ejemplo de mapa de identidad simple tendría el siguiente aspecto:
 
@@ -184,11 +184,11 @@ La siguiente captura de pantalla muestra cómo se representan las clases en la i
 
 Para obtener la lista más actualizada de clases XDM estándar disponibles, consulte la [repositorio XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). También puede consultar la guía de [exploración de componentes XDM](../ui/explore.md) si prefiere ver los recursos en la interfaz de usuario.
 
-### Grupo de campos {#field-group}
+### Grupo de campo {#field-group}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
->title="Grupo de campos"
+>title="Grupo de campo"
 >abstract="Los grupos de campos son componentes reutilizables que permiten ampliar esquemas con atributos adicionales. La mayoría de los grupos de campos solo son compatibles con ciertas clases. Puede utilizar grupos de campos estándar definidos por Adobe o puede definir manualmente sus propios grupos de campos personalizados. Consulte la documentación para obtener más información sobre cómo participan los grupos de campos en la composición de esquemas."
 
 >[!CONTEXTUALHELP]
@@ -206,7 +206,7 @@ Por ejemplo, para capturar detalles como &quot;[!UICONTROL Nombre]&quot; y &quot
 
 >[!NOTE]
 >
->Se recomienda encarecidamente utilizar grupos de campos estándar siempre que sea posible en los esquemas, ya que estos campos los entiende implícitamente [!DNL Experience Platform] y proporcionan la buena coherencia cuando se utilizan en [!DNL Platform] componentes.
+>Se recomienda encarecidamente utilizar grupos de campos estándar siempre que sea posible en los esquemas, ya que estos campos los entiende implícitamente [!DNL Experience Platform] y proporcionan una mayor coherencia cuando se utilizan en [!DNL Platform] componentes.
 >
 >Los campos proporcionados por componentes estándar (como &quot;Nombre&quot; y &quot;Dirección de correo electrónico&quot;) contienen connotaciones añadidas más allá de los tipos de campo escalares básicos, lo que indica [!DNL Platform] Tenga en cuenta que cualquier campo que comparta el mismo tipo de datos se comportará de la misma manera. Se puede confiar en que este comportamiento sea coherente independientemente de la procedencia de los datos o en que [!DNL Platform] servicio los datos se están utilizando.
 

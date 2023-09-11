@@ -2,9 +2,9 @@
 title: Destino del Marketo Engage
 description: Marketo Engage es la única solución integral de administración de la experiencia del cliente (CXM) para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -53,13 +53,12 @@ Puede asignar atributos de Experience Platform a cualquiera de los atributos a l
 
 ## Audiencias compatibles {#supported-audiences}
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Además, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia externa | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

@@ -5,14 +5,19 @@ title: Crear y editar tipos de datos mediante la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario de Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
 
-# Creación y edición de tipos de datos mediante la interfaz de usuario
+# Creación y edición de tipos de datos mediante la interfaz de usuario {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_datatype_filter"
+>title="Filtro de tipo de datos estándar o personalizado"
+>abstract="La lista de tipos de datos disponibles se filtra previamente en función de cómo se crearon. Seleccione el botón de opción para elegir entre las opciones Estándar y Personalizado. La opción Estándar muestra las entidades creadas por Adobe y la opción Personalizada muestra las entidades creadas dentro de su organización. Consulte la documentación para obtener más información sobre la creación y edición de tipos de datos."
 
 En el modelo de datos de experiencia (XDM), los tipos de datos son campos reutilizables que contienen varios subcampos. Aunque son similares a los grupos de campos de esquema en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura de esquema, mientras que los grupos de campos solo se pueden añadir en el nivel raíz.
 
@@ -26,7 +31,7 @@ Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Inf
 
 Aunque no es necesario para esta guía, se recomienda seguir el tutorial en [composición de un esquema en la IU](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas capacidades de la [!DNL Schema Editor].
 
-## Abra el [!DNL Schema Editor] para un tipo de datos
+## Abra el [!DNL Schema Editor] para un tipo de datos {#data-type}
 
 En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir [!UICONTROL Esquemas] espacio de trabajo y seleccione **[!UICONTROL Tipos de datos]** pestaña. Se muestra una lista de los tipos de datos disponibles, incluidos los definidos por Adobe y los creados por su organización.
 
@@ -51,7 +56,7 @@ Este tutorial crea un tipo de datos que describe una propiedad de restaurante, d
 
 Desde aquí puede ir directamente a la [sección siguiente](#add-fields) para empezar a agregar campos al nuevo tipo de datos.
 
-### Editar un tipo de datos existente
+### Editar un tipo de datos existente {#edit}
 
 >[!NOTE]
 >

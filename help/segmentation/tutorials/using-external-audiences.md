@@ -5,9 +5,9 @@ description: Siga este tutorial para aprender a utilizar audiencias externas con
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Adobe Experience Platform admite la capacidad de importar audiencias externas, que posteriormente pueden utilizarse como componentes para una nueva audiencia. Este documento proporciona un tutorial para configurar Experience Platform para importar y utilizar audiencias externas.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de audiencias. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
@@ -265,4 +265,4 @@ A continuación se puede ver una muestra de la carga útil de pertenencia a audi
 
 >[!NOTE]
 >
->De forma predeterminada, las suscripciones a audiencias externas solo se conservan durante 30 días. Para conservarlos durante más de 30 días, utilice el `validUntil` al introducir los datos de audiencia. Para obtener más información sobre este campo, lea la guía de [Grupos de campos de esquema Detalles de abono de segmento](../../xdm/field-groups/profile/segmentation.md).
+>De forma predeterminada, las suscripciones a audiencias externas se eliminan a los 30 días. Para evitar su eliminación y conservarlas durante más de 30 días, utilice el `validUntil` al introducir los datos de audiencia. Para obtener más información sobre este campo, lea la guía de [Grupos de campos de esquema Detalles de abono de segmento](../../xdm/field-groups/profile/segmentation.md).

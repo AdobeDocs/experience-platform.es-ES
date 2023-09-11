@@ -4,9 +4,9 @@ title: Reglas de alerta estándar
 description: Este documento describe las reglas de alerta predefinidas proporcionadas por Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ Cuándo [visualización de reglas de alerta en la IU de Platform](./ui.md), pued
 ## Ingesta de datos
 
 Las siguientes reglas de alerta son específicas de [Ingesta de datos](../../ingestion/home.md) y  [orígenes](../../sources/home.md):
+
+>[!NOTE]
+>
+>Las alertas no admiten actualmente fuentes de flujo continuo. Solo puede suscribirse a las notificaciones de alerta para orígenes de lotes.
 
 | Suscripción a evento de E/S | Regla de alerta | Descripción |
 | --- | --- | --- |

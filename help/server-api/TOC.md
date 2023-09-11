@@ -5,19 +5,18 @@ user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
 user-guide-description: Utilice la API del servidor de red perimetral para la recopilación de datos, personalización, publicidad y casos de uso de marketing de datos con los servicios perimetrales de Experience Cloud o de Experience Platform.
 feature: Data Collection
-source-git-commit: be073dcc62f0cf5b94f94082348442e2526604a7
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 41%
+source-wordcount: '99'
+ht-degree: 46%
 
 ---
 
 
 # Documentación de la API del servidor de red perimetral {#edge-network-server-api}
 
-
-* [Información general de API de servidor de red perimetral](overview.md)
-* [Protecciones de rendimiento para la API del servidor de red perimetral](guardrails.md)
+* [Información general](overview.md)
+* [Protecciones de rendimiento](guardrails.md)
 * [Autenticación](authentication.md)
 * Recopilación de datos {#data-collection}
    * [Recopilación de datos de un solo evento](interactive-data-collection.md)

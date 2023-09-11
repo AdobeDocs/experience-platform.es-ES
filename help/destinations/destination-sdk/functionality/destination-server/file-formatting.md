@@ -1,9 +1,9 @@
 ---
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo para destinos basados en archivos creados con Adobe Experience Platform Destination SDK a través del punto de conexión /destination-servers.
 title: Configuración de formato de archivo
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -178,7 +178,7 @@ A continuación se muestra una referencia completa de todas las opciones de form
 | `templatingStrategy` | Requerido | Para cada opción de formato de archivo que configure, es necesario agregar el parámetro `templatingStrategy`, que puede tener dos valores: <br><ul><li>`NONE`: utilice este valor si no planea permitir que los usuarios seleccionen entre valores diferentes para una configuración. Consulte [esta configuración](#file-configuration-templating-none) por ejemplo, donde las opciones de formato de archivo son fijas.</li><li>`PEBBLE_V1`: utilice este valor si desea permitir que los usuarios seleccionen entre valores diferentes para una configuración. En este caso, también debe configurar un campo de datos del cliente correspondiente en la variable `/destination` configuración de extremo, para que aparezcan las distintas opciones a los usuarios en la interfaz de usuario. Consulte [esta configuración](#file-configuration-templating-pebble) por ejemplo, donde los usuarios pueden seleccionar entre diferentes valores para las opciones de formato de archivo.</li></ul> | - | - | - |
 | `compression.value` | Opcional | Códec de compresión que se utilizará al guardar datos en un archivo. Valores compatibles: `none`, `bzip2`, `gzip`, `lz4`, y `snappy`. | `none` | - | - |
 | `fileType.value` | Opcional | Especifica el formato del archivo de salida. Valores compatibles: `csv`, `parquet`, y `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece un solo carácter utilizado para aplicar secuencias de escape a valores entre comillas en los que el separador puede formar parte del valor. | `null` | - | - |
+| `csvOptions.quote.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece un solo carácter utilizado para aplicar secuencias de escape a valores entre comillas en los que el separador puede formar parte del valor. | `null` | Ejemplo de valor predeterminado: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Ejemplo personalizado: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Indica si todos los valores deben ir siempre entre comillas. El valor predeterminado es aplicar secuencias de escape únicamente a los valores que contienen un carácter de comillas. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece un separador para cada campo y valor. Este separador puede tener uno o más caracteres. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Define un carácter único que se utiliza para las comillas de escape dentro de un valor ya entrecomillado. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

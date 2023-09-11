@@ -5,10 +5,10 @@ title: Definición de una relación entre dos esquemas con el Editor de esquemas
 description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en la interfaz de usuario del Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1109'
-ht-degree: 10%
+source-wordcount: '1161'
+ht-degree: 9%
 
 ---
 
@@ -33,13 +33,17 @@ La capacidad de comprender las relaciones entre sus clientes y sus interacciones
 
 Mientras que las relaciones de esquema se pueden inferir mediante el uso del esquema de unión y [!DNL Real-Time Customer Profile], esto solo se aplica a los esquemas que comparten la misma clase. Para establecer una relación entre dos esquemas que pertenecen a clases diferentes, se debe agregar un campo de relación dedicado a un esquema de origen, que hace referencia a la identidad del otro esquema relacionado.
 
+>[!NOTE]
+>
+>Si los esquemas de origen y de destino pertenecen a la misma clase, un campo de relación dedicado debe **no** se utilizará. En este caso, utilice la interfaz de usuario del esquema de unión para ver la relación. Las instrucciones para hacerlo se encuentran en la [ver relaciones](../../profile/ui/union-schema.md#view-relationships) de la guía de IU del esquema de unión.
+
 Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en [!DNL Experience Platform] interfaz de usuario. Para ver los pasos sobre la definición de relaciones de esquema mediante la API, consulte el tutorial sobre [definición de una relación mediante la API de Registro de esquemas](relationship-api.md).
 
 >[!NOTE]
 >
 >Para ver los pasos sobre cómo crear una relación de varios a uno en Adobe Real-time Customer Data Platform B2B Edition, consulte la guía de [creación de relaciones B2B](./relationship-b2b.md).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de [!DNL XDM System] y el Editor de esquemas en el [!DNL Experience Platform] IU. Antes de comenzar este tutorial, revise la siguiente documentación:
 

@@ -2,10 +2,10 @@
 title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 8%
+source-wordcount: '620'
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Este artículo explica el flujo de trabajo necesario para exportar [audiencias d
 
 ## Destinos admitidos {#supported-destinations}
 
-Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña. Utilice el **[!UICONTROL Tipos de datos]** filtrar y seleccionar **[!UICONTROL Posibles clientes]** para ver los destinos que admiten la activación de audiencias de clientes potenciales. Actualmente, la exportación de audiencias de clientes potenciales solo está disponible para [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destino.
+Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña. Utilice el **[!UICONTROL Tipos de datos]** filtrar y seleccionar **[!UICONTROL Posibles clientes]** para ver los destinos que admiten la activación de audiencias de clientes potenciales. Actualmente, la exportación de audiencias potenciales solo está disponible para destinos de almacenamiento en la nube.
 
 ![Destinos que admiten exportaciones de conjuntos de datos](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -86,5 +86,5 @@ Note that we will need to add links to other destination types here as more dest
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
 * [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilice la compatibilidad con datos de terceros en Real-Time CDP para lo siguiente [amplíe su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Utilice la compatibilidad con datos de terceros en Real-Time CDP para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.

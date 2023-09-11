@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares; alertas
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscripción a alertas en contexto en la interfaz de usuario
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '846'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de 
 
 Este documento proporciona pasos sobre cómo suscribirse y recibir mensajes de alertas para los flujos de datos de origen.
 
-## Primeros pasos
+## Introducción
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 
@@ -48,12 +48,15 @@ Puede activar alertas para los flujos de datos durante la [!UICONTROL Detalles d
 
 Las alertas disponibles para los flujos de datos de origen son:
 
+>[!NOTE]
+>
+>Las alertas no admiten actualmente fuentes de flujo continuo. Solo puede suscribirse a las notificaciones de alerta para orígenes de lotes.
+
 | Alertas | Descripción |
 | --- | --- |
-| Inicio de ejecución de flujo de datos | Esta alerta le envía un mensaje cuando se ha iniciado el flujo de datos de origen. |
-| Ejecución correcta del flujo de datos de orígenes | Esta alerta le envía un mensaje cuando los datos de su origen se incorporan correctamente a Platform. |
-| Error al ejecutar flujo de datos de fuentes | Esta alerta le envía un mensaje si se produce un error en el flujo de datos. |
-| ~~Falta de ingesta del flujo de datos de fuentes~~ | ~~Esta alerta le envía un mensaje si la ingesta se retrasa más de siete horas y no se incorporan datos en Platform.~~ <br>**Nota:** Ya no recibirá alertas porque esta alerta ha quedado obsoleta. |
+| Inicio de ejecución de flujo de fuentes | Esta alerta le envía un mensaje cuando se ha iniciado el flujo de datos de origen. |
+| Ejecución correcta de flujo de orígenes | Esta alerta le envía un mensaje cuando los datos de su origen se incorporan correctamente a Platform. |
+| Error de ejecución de flujo de orígenes | Esta alerta le envía un mensaje si se produce un error en el flujo de datos. |
 
 Seleccione las alertas a las que desea suscribirse y, a continuación, seleccione **[!UICONTROL Siguiente]** para revisar y finalizar el flujo de datos.
 

@@ -2,10 +2,10 @@
 title: Conexión de Audiencias personalizadas de twitter
 description: Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 4%
+source-wordcount: '840'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-Dirija su actividad a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform.
+Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
@@ -35,15 +35,12 @@ Antes de configurar su [!DNL Twitter Custom Audiences] destino, asegúrese de re
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe todas las audiencias que puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
-Este destino admite la activación de todas las audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md).
-
-*Adicionalmente* Sin embargo, este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
-
-| Tipo de audiencia | Descripción |
----------|----------|
-| Cargas personalizadas | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +50,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino de Audiencias personalizadas de Twitter. |
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores utilizados en el destino Twitter de audiencias personalizadas. |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -79,7 +76,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 1. Busque el [!DNL Twitter Custom Audiences] en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
 2. Seleccionar **[!UICONTROL Conectar con destino]**.
    ![Autenticar en LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Introduzca sus credenciales de Twitter y seleccione **Iniciar sesión**.
+3. Introduzca las credenciales de Twitter y seleccione **Iniciar sesión**.
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -114,9 +111,9 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas
 
 ## Recursos adicionales {#additional-resources}
 
-Al asignar audiencias a Twitter, asegúrese de cumplir los siguientes requisitos de nomenclatura de audiencias:
+Al asignar audiencias al Twitter, asegúrese de cumplir los siguientes requisitos de nomenclatura de audiencias:
 
 1. Proporcione nombres de asignación de audiencia legibles por humanos. Se recomienda utilizar el mismo nombre que utilizó para los segmentos del Experience Platform.
 2. No utilice caracteres especiales (+ &amp; , % : ; @ / = ? $) en los nombres de asignación de audiencia y audiencia. Si el nombre de la audiencia del Experience Platform contiene estos caracteres, elimínelos antes de asignar la audiencia a un destino de Twitter.
 
-Más información sobre [!DNL List Custom Audiences] en Twitter se puede encontrar en la [Documentación de twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Más información sobre [!DNL List Custom Audiences] en Twitter se puede encontrar en la [documentación del twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

@@ -2,9 +2,9 @@
 title: Resolución de problemas
 description: Obtenga información sobre cómo solucionar errores al usar la API del servidor de red perimetral.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '90'
 ht-degree: 2%
 
 ---
@@ -15,4 +15,4 @@ La API del servidor de red perimetral de Adobe Experience Platform le permite ca
 
 El mismo mecanismo que utiliza el [Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) permite depurar implementaciones basadas en API.
 
-Uso de [Proyecto Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon), puede crear un ID de sesión de depuración que puede seguir utilizando en las solicitudes de red perimetral para rastrear eventos.
+Uso de [Assurance](../assurance/home.md), puede crear un ID de sesión de depuración que puede seguir utilizando en las solicitudes de red perimetral para rastrear eventos.

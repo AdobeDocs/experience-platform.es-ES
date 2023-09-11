@@ -5,9 +5,9 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 30%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 30%
 * Recopilación de datos {#data-collection}
    * [Información recopilada automáticamente](data-collection/automatic-information.md)
    * [Seguimiento de vínculos](data-collection/track-links.md)
-   * [Recopilación de datos de comercio y productos](data-collection/collect-commerce-data.md)
+   * [Recopilación de datos de comercio, productos y pedidos](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Uso de Adobe Analytics con el SDK web de Platform](data-collection/adobe-analytics/analytics-overview.md)
       * [Asignación de variables de Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -54,7 +54,7 @@ ht-degree: 30%
          * [Información general ](personalization/adobe-target/analytics-logging/overview.md)
          * [Lado del cliente registro](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro en el lado del servidor](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer Decisioning {#offer-decisioning}
+   * Toma de decisiones sobre ofertas {#offer-decisioning}
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Información general](personalization/ajo/overview.md)
