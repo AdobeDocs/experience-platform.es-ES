@@ -1,9 +1,9 @@
 ---
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo para destinos basados en archivos creados con Adobe Experience Platform Destination SDK a través del punto de conexión /destination-servers.
 title: Configuración de formato de archivo
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1093'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,11 @@ En el siguiente ejemplo de configuración, todas las opciones de CSV están pred
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ En el ejemplo de configuración que se muestra a continuación, ninguna de las o
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ A continuación se muestra una referencia completa de todas las opciones de form
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece un solo carácter utilizado para omitir el escape del carácter de comillas. | `\` cuando los caracteres de escape y comillas son diferentes. `\0` cuando el carácter de escape y comillas son iguales. | - | - |
 | `csvOptions.emptyValue.value` | Opcional | *Solo para`"fileType.value": "csv"`*. Establece la representación de cadena de un valor vacío. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | Opcional | Indica el número máximo de filas por archivo exportado, entre 1 000 000 y 10 000 000 de filas. | 5,000,000 |
+| `includeFileManifest` | Opcional | Habilita la compatibilidad para exportar un manifiesto de archivo junto con las exportaciones de archivo. El archivo JSON de manifiesto contiene información sobre la ubicación de exportación, el tamaño de exportación, etc. El nombre del manifiesto se asigna mediante el formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Ver una [archivo de manifiesto de muestra](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). El archivo de manifiesto incluye los campos siguientes: <ul><li>`flowRunId`: La [ejecución de flujo de datos](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que generó el archivo exportado.</li><li>`scheduledTime`: La hora en UTC en que se exportó el archivo. </li><li>`exportResults.sinkPath`: Ruta de la ubicación de almacenamiento en la que se deposita el archivo exportado. </li><li>`exportResults.name`: nombre del archivo exportado.</li><li>`size`: tamaño del archivo exportado, en bytes.</li></ul> |
 
 {style="table-layout:auto"}
 
