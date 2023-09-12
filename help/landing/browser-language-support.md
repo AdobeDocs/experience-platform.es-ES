@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma para la IU de Experience Platform
 description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
+source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 24%
+source-wordcount: '247'
+ht-degree: 23%
 
 ---
 
@@ -51,9 +51,11 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 
 Para cambiar el idioma:
 
-1. Seleccione el idioma actual en el pie de página del [!DNL Experience Platform] interfaz de usuario.
-2. En la configuración de perfil, seleccione **[!UICONTROL Cambiar región]**.
-3. Seleccione su región.
+1. Inicie sesión en su cuenta de Experience Platform.
+1. Prensa `Ctrl + i` para que aparezca el menú información de cuenta.
+1. Ir a **[!UICONTROL Idiomas preferidos]**.
+1. Seleccione las preferencias de idioma de origen y destino.
+1. Seleccionar **[!UICONTROL Guardar]** y cierre la ventana.
 
 >[!NOTE]
 >
