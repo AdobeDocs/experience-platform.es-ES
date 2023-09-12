@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo introducir archivos cifrados a tra
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -268,7 +268,7 @@ curl -X POST \
 | `transformations[x].params.publicKeyId` | El ID de clave pública que ha creado. Este ID es la mitad del par de claves de cifrado que se usa para cifrar los datos del almacenamiento en la nube. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser bueno o igual a `15` para otros valores de frecuencia. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
 
 >[!TAB Crear un flujo de datos para introducir datos cifrados y firmados]
@@ -332,6 +332,40 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado p
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Restricciones en la ingesta recurrente**
+
+La ingesta de datos cifrados no admite la ingesta de carpetas recurrentes o de varios niveles en las fuentes. Todos los archivos cifrados deben estar contenidos en una sola carpeta. Tampoco se admiten caracteres comodín con varias carpetas en una sola ruta de origen.
+
+El siguiente es un ejemplo de una estructura de carpetas admitida, donde la ruta de origen es `/ACME-customers/*.csv.gpg`.
+
+En esta situación, los archivos en negrita se incorporan al Experience Platform.
+
+* clientes de ACME
+   * **Archivo1.csv.gpg**
+   * File2.json.gpg
+   * **Archivo3.csv.gpg**
+   * File4.json
+   * **Archivo5.csv.gpg**
+
+El siguiente es un ejemplo de una estructura de carpetas no compatible en la que la ruta de origen es `/ACME-customers/*`.
+
+En este escenario, la ejecución del flujo fallará y devolverá un mensaje de error que indica que los datos no se pueden copiar desde el origen.
+
+* clientes de ACME
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* Lealtad a ACME
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Pasos siguientes
 
