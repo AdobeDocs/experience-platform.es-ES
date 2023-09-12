@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
-solution: Experience Platform
 title: Información general sobre el conector de origen de Azure Data Lake Storage Gen2
 description: Obtenga información sobre cómo conectar Azure Data Lake Storage Gen2 a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f879f2a627e55db96a89796b9f3308744bf93f67
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform], y [!DNL Azure], lo que le permite obtener los datos de estos sistemas.
 
-Las fuentes de almacenamiento en la nube pueden incorporar sus propios datos en [!DNL Platform] sin necesidad de descargar, formatear ni cargar. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. [!DNL Platform] le permite introducir datos de [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) por lotes.
+Las fuentes de almacenamiento en la nube pueden llevar sus propios datos a Experience Platform sin necesidad de descargarlos, formatearlos o cargarlos. Los datos introducidos pueden tener el formato XDM JSON, XDM Parquet o estar delimitados. Cada paso del proceso se integra en el flujo de trabajo de orígenes. Experience Platform le permite introducir datos de [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) por lotes.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
@@ -36,17 +34,21 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta a
 - No se permiten caracteres de ruta de URL no válidos. Puntos de código como `\uE000`, aunque son válidos en los nombres de archivo NTFS, no son caracteres Unicode válidos. Además, algunos caracteres ASCII o Unicode, como los caracteres de control (0x00 a 0x1F, \u0081, etc.), tampoco están permitidos. Para ver las reglas que rigen las cadenas Unicode en HTTP/1.1, consulte [RFC 2616, sección 2.2: Reglas básicas](https://www.ietf.org/rfc/rfc2616.txt) y [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
 
-## Connect [!DNL Azure Data Lake Storage Gen2] hasta [!DNL Platform]
+## Connect [!DNL Azure Data Lake Storage Gen2] al Experience Platform
 
-La siguiente documentación proporciona información sobre cómo conectarse [!DNL Azure Data Lake Storage Gen2] hasta [!DNL Platform] mediante las API de o la interfaz de usuario de:
+>[!NOTE]
+>
+>La entidad de seguridad de servicio utilizada para crear un [!DNL Azure Data Lake Storage Gen2] La cuenta debe tener al menos el **Reader de datos del blob de almacenamiento** función asignada desde el control de acceso (IAM)
+
+La siguiente documentación proporciona información sobre cómo conectarse [!DNL Azure Data Lake Storage Gen2] al Experience Platform mediante las API o la interfaz de usuario de:
 
 ### Uso de API
 
-- [Creación de una conexión base ADLS-Gen2 mediante la API de Flow Service](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Crear un [!DNL Azure Data Lake Storage Gen2] conexión base mediante la API de Flow Service](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Explore la estructura de datos y el contenido de una fuente de almacenamiento en la nube mediante la API de Flow Service](../../tutorials/api/explore/cloud-storage.md)
 - [Cree un flujo de datos para una fuente de almacenamiento en la nube mediante la API de Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Uso de la IU
 
-- [Crear una conexión de origen ADLS-Gen2 en la interfaz de usuario de](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Crear un [!DNL Azure Data Lake Storage Gen2] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Cree un flujo de datos para una conexión de almacenamiento en la nube en la IU](../../tutorials/ui/dataflow/batch/cloud-storage.md)
