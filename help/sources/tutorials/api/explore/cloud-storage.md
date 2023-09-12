@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;almacenamiento en la nube;a
 title: Exploración de carpetas de almacenamiento en la nube mediante la API de Flow Service
 description: Este tutorial utiliza la API de Flow Service para explorar un sistema de almacenamiento en la nube de terceros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ Este tutorial proporciona pasos sobre cómo explorar y previsualizar la estructu
 >
 >Para explorar el almacenamiento en la nube, ya debe tener un ID de conexión base válido para un origen de almacenamiento en la nube. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#cloud-storage) para obtener una lista de orígenes de almacenamiento en la nube con los que puede crear una conexión base.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -106,14 +106,14 @@ Puede inspeccionar la estructura de un archivo de datos desde su origen de almac
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión del conector de origen de almacenamiento en la nube. |
 | `{FILE_PATH}` | La ruta al archivo que desea inspeccionar. |
-| `{FILE_TYPE}` | El tipo de archivo. Los tipos de archivo admitidos son:<ul><li>DELIMITADO</code>: Valor separado por delimitador. Los archivos DSV deben estar separados por comas.</li><li>JSON</code>: Notación de objetos JavaScript. Los archivos JSON deben ser compatibles con XDM</li><li>PARQUET</code>: Apache Parquet. Los archivos de Parquet deben ser compatibles con XDM.</li></ul> |
+| `{FILE_TYPE}` | El tipo de archivo. Los tipos de archivo admitidos son:<ul><li><code>DELIMITADO</code>: Valor separado por delimitador. Los archivos DSV deben estar separados por comas.</li><li><code>JSON</code>: Notación de objetos JavaScript. Los archivos JSON deben ser compatibles con XDM</li><li><code>PARQUET</code>: Apache Parquet. Los archivos de Parquet deben ser compatibles con XDM.</li></ul> |
 | `{QUERY_PARAMS}` | Parámetros de consulta opcionales que se pueden utilizar para filtrar los resultados. Consulte la sección sobre [parámetros de consulta](#query) para obtener más información. |
 
 **Solicitud**
