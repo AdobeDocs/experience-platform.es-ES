@@ -3,10 +3,10 @@ title: Crear una conexión de origen Google PubSub en la interfaz de usuario de
 description: Aprenda a crear un conector PubSub de Google mediante la interfaz de usuario de Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 0%
+source-wordcount: '1043'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Este tutorial proporciona los pasos para crear una [!DNL Google PubSub] (en lo sucesivo, &quot;[!DNL PubSub]&quot;) mediante la interfaz de usuario de Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -34,7 +34,7 @@ Para poder conectarse [!DNL PubSub] En Platform, debe proporcionar un valor vál
 | Credencial | Descripción |
 | ---------- | ----------- |
 | Proyecto  ID | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
-| Credenciales | La credencial o el ID de clave privada necesarios para la autenticación [!DNL PubSub]. |
+| Credenciales | La credencial necesaria para autenticarse [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
 | Nombre del tema | El nombre de su [!DNL PubSub] suscripción. Entrada [!DNL PubSub], las suscripciones le permiten recibir mensajes, suscribiéndose al tema en el que se han publicado los mensajes. **Nota**: Un solo [!DNL PubSub] la suscripción solo se puede utilizar para un flujo de datos. Para poder crear varios flujos de datos, debe tener varias suscripciones. |
 | Nombre de suscripción | El nombre de su [!DNL PubSub] suscripción. Entrada [!DNL PubSub], las suscripciones le permiten recibir mensajes, suscribiéndose al tema en el que se han publicado los mensajes. |
 

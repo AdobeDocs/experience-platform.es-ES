@@ -3,10 +3,10 @@ title: Creación de una conexión de suborigen de PubSub de Google mediante la A
 description: Aprenda a conectar Adobe Experience Platform a una cuenta PubSub de Google mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial lo acompañará durante los pasos para conectarse [!DNL Google PubSub] (en lo sucesivo, &quot;[!DNL PubSub]&quot;) al Experience Platform, utilizando [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -34,7 +34,7 @@ Para que [!DNL Flow Service] para conectarse a [!DNL PubSub], debe proporcionar 
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `projectId` | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
-| `credentials` | La credencial o clave necesaria para autenticarse [!DNL PubSub]. |
+| `credentials` | La credencial necesaria para autenticarse [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
 | `topicName` | El nombre del recurso que representa una fuente de mensajes. Debe especificar un nombre de tema si desea proporcionar acceso a un flujo de datos específico en su [!DNL PubSub] origen. El formato del nombre del tema es: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | El nombre de su [!DNL PubSub] suscripción. Entrada [!DNL PubSub], las suscripciones le permiten recibir mensajes, suscribiéndose al tema en el que se han publicado los mensajes. **Nota**: Un solo [!DNL PubSub] la suscripción solo se puede utilizar para un flujo de datos. Para poder crear varios flujos de datos, debe tener varias suscripciones. El formato del nombre de suscripción es: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino base y de origen. El [!DNL PubSub] ID de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
