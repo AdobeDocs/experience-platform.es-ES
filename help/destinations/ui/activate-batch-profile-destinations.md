@@ -4,19 +4,15 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3633'
 ht-degree: 11%
 
 ---
 
 
 # Activar audiencias para destinos de exportación de perfiles por lotes
-
->[!IMPORTANT]
-> 
-> La funcionalidad descrita en la página aún no está disponible de forma general para los clientes. Actualmente, esta página está destinada a equipos internos del Adobe como lectura previa de las próximas funciones. No comparta fuera del Adobe hasta que se elimine esta nota.
 
 >[!IMPORTANT]
 > 
