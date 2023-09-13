@@ -3,10 +3,10 @@ keywords: mobile; braze; mensajería;
 title: Conexión de Braze
 description: Braze es una plataforma completa de participación del cliente que potencia experiencias relevantes y memorables entre los clientes y las marcas que aman.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 2%
 
 ---
 
@@ -163,6 +163,14 @@ La asignación correcta tendría este aspecto:
 ## Datos exportados {#exported-data}
 
 Para comprobar si los datos se han exportado correctamente a [!DNL Braze] destino, compruebe su [!DNL Braze] cuenta. [!DNL Adobe Experience Platform] Las audiencias de se exportan a [!DNL Braze] en el `AdobeExperiencePlatformSegments` atributo.
+
+## Resolución de problemas {#troubleshooting}
+
+**Se ha producido un error de tiempo de espera al activar mis audiencias en este destino. ¿Qué debo hacer?**
+
+En ocasiones, la activación de audiencias en este destino puede provocar un error de tiempo de espera. Este error no siempre indica un problema de activación.
+
+Si se produce un error de tiempo de espera, compruebe el tamaño de la audiencia en la plataforma de destino. Si el tamaño de la audiencia es correcto, la integración funciona según lo esperado.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
