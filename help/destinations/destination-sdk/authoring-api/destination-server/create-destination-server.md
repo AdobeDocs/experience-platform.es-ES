@@ -1,7 +1,7 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para crear un servidor de destino a través del Adobe Experience Platform Destination SDK.
 title: Crear una configuración de servidor de destino
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 9%
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | Cadena | Nombre de la conexión de destino. |
 | `destinationServerType` | Cadena | Establezca este valor según la plataforma de destino. Para [!DNL SFTP] destinos, establezca esto en `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Cadena | El directorio raíz del almacenamiento de destino. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Cadena | El nombre de host del almacenamiento de destino. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | Cadena | El directorio raíz del almacenamiento de destino. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | Cadena | El nombre de host del almacenamiento de destino. |
 | `port` | Número entero | El puerto del servidor de archivos SFTP. |
 | `encryptionMode` | Cadena | Indica si se debe utilizar el cifrado de archivos. Valores compatibles: <ul><li>PGP</li><li>Ninguna</li></ul> |
 | `fileConfigurations` | N/A | Consulte [configuración de formato de archivo](../../functionality/destination-server/file-formatting.md) para obtener información detallada sobre cómo establecer esta configuración. |
