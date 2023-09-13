@@ -1,26 +1,26 @@
 ---
-title: User-Agent Client Hints
-description: Descubra cómo funcionan las sugerencias del cliente agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
+title: User agent client hints
+description: Descubra cómo funcionan las sugerencias del cliente del agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
 keywords: user-agent;sugerencias del cliente; cadena; cadena de user-agent; baja entropía; alta entropía
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 29679e85943f16bcb02064cc60a249a3de61e022
+source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 7%
+source-wordcount: '1200'
+ht-degree: 6%
 
 ---
 
-# User-Agent Client Hints
+# User agent client hints
 
 ## Información general {#overview}
 
-Cada vez que un explorador web realiza una solicitud a un servidor web, el encabezado de la solicitud incluye información sobre el explorador y el entorno en el que se está ejecutando el explorador. Todos estos datos se acumulan en una cadena, denominada [!DNL User-Agent] cadena.
+Cada vez que un explorador web realiza una solicitud a un servidor web, el encabezado de la solicitud incluye información sobre el explorador y el entorno en el que se está ejecutando el explorador. Todos estos datos se agregan en una cadena, denominada cadena del agente de usuario.
 
-Este es un ejemplo de lo que es [!DNL User-Agent] Este tipo de cadena aparece en una solicitud procedente de un explorador Chrome que se ejecuta en un [!DNL Mac OS] dispositivo.
+A continuación, se muestra un ejemplo del aspecto de una cadena de agente de usuario en una solicitud proveniente de un explorador Chrome que se ejecuta en un [!DNL Mac OS] dispositivo.
 
 >[!NOTE]
 >
->A lo largo de los años, la cantidad de información del explorador y del dispositivo incluida en la [!DNL User-Agent] la cadena ha crecido y se ha modificado varias veces. El ejemplo siguiente muestra una selección de los más comunes [!DNL User-Agent] información.
+>A lo largo de los años, la cantidad de información del explorador y del dispositivo incluida en la cadena del agente de usuario ha aumentado y se ha modificado varias veces. El ejemplo siguiente muestra una selección de la información de agente de usuario más común.
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
@@ -39,32 +39,32 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 ## Casos de uso {#use-cases}
 
-[!DNL User-Agent] las cadenas se han utilizado durante mucho tiempo para proporcionar a los equipos de marketing y desarrollo información importante sobre cómo los exploradores, sistemas operativos y dispositivos muestran el contenido del sitio, así como la forma en que los usuarios interactúan con los sitios web.
+Las cadenas de agente de usuario se han utilizado durante mucho tiempo para proporcionar a los equipos de marketing y desarrollo información importante sobre cómo los navegadores, sistemas operativos y dispositivos muestran el contenido del sitio, así como la forma en que los usuarios interactúan con los sitios web.
 
-[!DNL User-Agent] las cadenas también se utilizan para bloquear el correo no deseado y filtrar bots que rastrean sitios por distintos motivos adicionales.
+Las cadenas de agente de usuario también se utilizan para bloquear el correo no deseado y filtrar bots que rastrean sitios por distintos motivos adicionales.
 
-## [!DNL User-Agent] cadenas en Adobe Experience Cloud {#user-agent-in-adobe}
+## Cadenas del agente de usuario en Adobe Experience Cloud {#user-agent-in-adobe}
 
-Las soluciones de Adobe Experience Cloud utilizan [!DNL User-Agent] cadenas de varias formas.
+Las soluciones de Adobe Experience Cloud utilizan las cadenas del agente de usuario de varias formas.
 
-* Adobe Analytics utiliza el [!DNL User-Agent] cadena para aumentar y obtener información adicional relacionada con los sistemas operativos, exploradores y dispositivos utilizados para visitar un sitio web.
-* Adobe Audience Manager y Adobe Target califican a los usuarios finales para campañas de segmentación y personalización, según la información proporcionada por [!DNL User-Agent] cadena.
+* Adobe Analytics utiliza la cadena del agente de usuario para aumentar y obtener información adicional relacionada con los sistemas operativos, los exploradores y los dispositivos utilizados para visitar un sitio web.
+* Adobe Audience Manager y Adobe Target califican a los usuarios finales para campañas de segmentación y personalización, según la información proporcionada por la cadena del agente de usuario.
 
-## Introducción a User-Agent Client Hints {#ua-ch}
+## Introducción a sugerencias del cliente del agente de usuario {#ua-ch}
 
-En los últimos años, los propietarios de sitios y los proveedores de marketing han utilizado [!DNL User-Agent] cadenas junto con otra información incluida en los encabezados de solicitud para crear huellas digitales. Estas huellas digitales pueden utilizarse como medio para identificar a usuarios sin su conocimiento.
+En los últimos años, los propietarios de sitios y proveedores de marketing han utilizado cadenas de agentes de usuario junto con otra información incluida en los encabezados de solicitud para crear huellas digitales. Estas huellas digitales pueden utilizarse como medio para identificar a usuarios sin su conocimiento.
 
-A pesar del importante propósito de que [!DNL User-Agent] las cadenas sirven para los propietarios del sitio, los desarrolladores de navegadores han decidido cambiar cómo [!DNL User-Agent] Las cadenas de caracteres operan para limitar los posibles problemas de privacidad de los usuarios finales.
+A pesar del importante propósito que tienen las cadenas de agente de usuario para los propietarios del sitio, los desarrolladores de navegadores han decidido cambiar el funcionamiento de las cadenas de agente de usuario para limitar los posibles problemas de privacidad de los usuarios finales.
 
-La solución que desarrollaron se llama [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente siguen permitiendo que los sitios web recopilen la información necesaria sobre el explorador, el sistema operativo y el dispositivo, a la vez que brindan una mayor protección contra los métodos de seguimiento encubiertos, como la huella digital.
+La solución que desarrollaron se llama [sugerencias del cliente del agente de usuario](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las sugerencias del cliente siguen permitiendo que los sitios web recopilen la información necesaria sobre el explorador, el sistema operativo y el dispositivo, a la vez que brindan una mayor protección contra los métodos de seguimiento encubiertos, como la huella digital.
 
-Las Client Hints permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en el [!DNL User-Agent] cadena, pero de una manera que preserva la privacidad.
+Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
 
-Cuando los exploradores modernos envían a un usuario a un servidor web, todo el [!DNL User-Agent] se envía en cada solicitud, independientemente de si es necesaria o no. Las sugerencias del cliente, por otro lado, aplican un modelo en el que el servidor debe solicitar al explorador la información adicional que desea conocer sobre el cliente. Al recibir esta solicitud, el explorador puede aplicar sus propias directivas o configuración de usuario para determinar qué datos se devuelven. En lugar de exponer la totalidad [!DNL User-Agent] cadena de forma predeterminada en todas las solicitudes, el acceso ahora se administra de forma explícita y auditable.
+Cuando los exploradores modernos envían un usuario a un servidor web, toda la cadena del agente de usuario se envía en cada solicitud, independientemente de si es necesaria o no. Las sugerencias del cliente, por otro lado, aplican un modelo en el que el servidor debe solicitar al explorador la información adicional que desea conocer sobre el cliente. Al recibir esta solicitud, el explorador puede aplicar sus propias directivas o configuración de usuario para determinar qué datos se devuelven. En lugar de exponer toda la cadena del agente de usuario de forma predeterminada en todas las solicitudes, el acceso ahora se administra de forma explícita y auditable.
 
 ## Compatibilidad con exploradores {#browser-support}
 
-[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) se introdujeron con [!DNL Google Chrome ]versión 89.
+[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) se introdujeron con [!DNL Google Chrome]versión 89.
 
 Otros exploradores basados en Chromium admiten la API de Client Hints, como:
 
@@ -77,7 +77,7 @@ Otros exploradores basados en Chromium admiten la API de Client Hints, como:
 
 ## Categorías {#categories}
 
-Existen dos categorías de User-Agent Client Hints:
+Existen dos categorías de sugerencias del cliente del agente de usuario:
 
 * [Sugerencias de cliente de baja entropía](#low-entropy)
 * [Sugerencias de cliente de alta entropía](#high-entropy)
@@ -98,7 +98,7 @@ Las sugerencias de cliente de baja entropía están habilitadas de forma predete
 
 Las sugerencias de cliente de alta entropía son información más detallada sobre el dispositivo cliente, como la versión de plataforma, la arquitectura, el modelo, los bits (plataformas de 64 o 32 bits) o la versión completa del sistema operativo. Esta información podría utilizarse potencialmente en la toma de huellas digitales.
 
-| Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en Client Hints de forma predeterminada |
+| Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
 |---|---|---|---|
 | `Sec-CH-UA-Platform-Version` | `platformVersion` | Sí | No |
 | `Sec-CH-UA-Arc` | `architecture` | Sí | No |
@@ -134,7 +134,7 @@ Por ejemplo, para recuperar sugerencias de cliente de alta entropía de las prop
 
 ## Ejemplo {#example}
 
-Las sugerencias del cliente contenidas en los encabezados de la primera solicitud realizada por el explorador a un servidor web contendrán la marca del explorador, la versión principal del explorador y un indicador de si el cliente es un dispositivo móvil. Cada fragmento de datos tendrá su propio valor de encabezado en lugar de agruparse en un solo [!DNL User-Agent] como se muestra a continuación:
+Las sugerencias del cliente contenidas en los encabezados de la primera solicitud realizada por el explorador a un servidor web contendrán la marca del explorador, la versión principal del explorador y un indicador de si el cliente es un dispositivo móvil. Cada fragmento de datos tendrá su propio valor de encabezado en lugar de agruparse en una sola cadena de agente de usuario, como se muestra a continuación:
 
 ```shell
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99"
@@ -150,7 +150,7 @@ El equivalente [!DNL User-Agent] para el mismo explorador tendría este aspecto:
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
 ```
 
-Aunque la información es similar, la primera solicitud al servidor contiene sugerencias del cliente. Estas solo incluyen un subconjunto de lo que está disponible en la variable [!DNL User-Agent] cadena. Falta en la solicitud la arquitectura del sistema operativo, la versión completa del sistema operativo, el nombre del motor de diseño, la versión del motor de diseño y la versión completa del explorador.
+Aunque la información es similar, la primera solicitud al servidor contiene sugerencias del cliente. Solo incluyen un subconjunto de lo que está disponible en la cadena del agente de usuario. Falta en la solicitud la arquitectura del sistema operativo, la versión completa del sistema operativo, el nombre del motor de diseño, la versión del motor de diseño y la versión completa del explorador.
 
 Sin embargo, en solicitudes posteriores, la variable [!DNL Client Hints API] permite a los servidores web solicitar detalles adicionales sobre el dispositivo. Cuando se solicitan estos valores, según la directiva del explorador o la configuración del usuario, la respuesta del explorador puede incluir esa información.
 
