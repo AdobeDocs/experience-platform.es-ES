@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3354'
 ht-degree: 7%
 
 ---
@@ -99,6 +99,10 @@ Una vez asignados los grupos de informes, puede utilizar estos campos recién as
 
 ### Audiencias
 
+>[!NOTE]
+>
+>Para las audiencias creadas en Platform, solo las audiencias que tienen el **igual** se mostrará la política de combinación.
+
 El **[!UICONTROL Audiencias]** La pestaña enumera todas las audiencias importadas desde fuentes externas, como Adobe Audience Manager, así como audiencias creadas dentro de [!DNL Experience Platform].
 
 En el **[!UICONTROL Audiencias]** , puede ver todas las fuentes disponibles como un grupo de carpetas. A medida que selecciona las carpetas, se pueden ver las subcarpetas y audiencias disponibles. Además, puede seleccionar el icono de carpeta (como se muestra en la imagen de la derecha) para ver la estructura de carpetas (una marca de verificación indica la carpeta en la que se encuentra actualmente) y volver a navegar fácilmente por las carpetas seleccionando el nombre de una carpeta en el árbol.
@@ -181,7 +185,7 @@ Después de colocar el evento dentro del contenedor de eventos, seleccione el ic
 
 ![El texto agregado se resalta. Al seleccionar esta opción, puede seleccionar las funciones de agregación.](../images/ui/segment-builder/add-aggregation.png)
 
-Ahora se agrega la agregación. Ahora puede seleccionar la función de agregación, elegir qué atributo agregar, la función de igualdad y el valor. Para el ejemplo siguiente, esta definición de segmento clasificaría cualquier perfil que tenga una suma de valores comprados buena a 100 $, incluso si cada compra individual es inferior a 100 $.
+Ahora se agrega la agregación. Ahora puede seleccionar la función de agregación, elegir qué atributo agregar, la función de igualdad y el valor. Para el ejemplo siguiente, esta definición de segmento clasificaría cualquier perfil que tenga una suma de valores comprados mayor que 100 $, incluso si cada compra individual es menor que 100 $.
 
 ![Las reglas de evento, que muestran una función de agregación.](../images/ui/segment-builder/filled-aggregation.png)
 
