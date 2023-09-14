@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
+source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 3%
+source-wordcount: '1678'
+ht-degree: 4%
 
 ---
 
@@ -100,6 +100,10 @@ En la tabla siguiente se describen los permisos disponibles para los Experience 
 | [!DNL Profile Management] | [!UICONTROL Ver directivas de combinación] | Acceso de solo lectura a las políticas de combinación disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportar audiencia para segmento] | Capacidad para exportar un segmento de audiencia evaluado a un conjunto de datos. |
 | [!DNL Profile Management] | [!UICONTROL Evaluación de un segmento para una audiencia] | Capacidad para generar perfiles para una audiencia evaluando una definición de segmento. |
+| [!DNL Profile Management] | [!UICONTROL Ver IA B2B] | Acceso de solo lectura a los ajustes y configuraciones de todos los servicios AI/ML de B2B. |
+| [!DNL Profile Management] | [!UICONTROL Administración de IA B2B] | Acceso para leer, crear, editar y eliminar ajustes y configuraciones para todos los servicios AI/ML de B2B. |
+| [!DNL Profile Management] | [!UICONTROL Ver perfil B2B] | Acceso de solo lectura a perfiles de entidad B2B (como Cuenta, Oportunidad, etc.), ajustes y configuraciones para todos los servicios AI/ML B2B y widgets de tablero B2B. |
+| [!DNL Profile Management] | [!UICONTROL Administrar perfil B2B] | Acceso para leer, crear, editar y eliminar perfiles de entidad B2B (como Cuenta, Oportunidad, etc.). Acceso de solo lectura para ajustes y configuraciones de todos los servicios AI/ML de B2B y widgets de tablero B2B. |
 | [!DNL Identity Management] | [!UICONTROL Administrar áreas de nombres de identidad] | Acceso para leer, crear, editar y eliminar áreas de nombres de identidad. |
 | [!DNL Identity Management] | [!UICONTROL Ver espacios de nombres de identidad] | Acceso de solo lectura para áreas de nombres de identidad. |
 | [!DNL Identity Management] | [!UICONTROL Ver gráfico de identidad] | Acceso de solo lectura para gráficos de identidad. |
@@ -109,7 +113,7 @@ En la tabla siguiente se describen los permisos disponibles para los Experience 
 | [!DNL Destinations] | [!UICONTROL Administrar destinos] | Acceso para leer, crear y eliminar flujos de activación de destino y cuentas de destino. |
 | [!DNL Destinations] | [!UICONTROL Ver destinos] | Acceso de solo lectura a destinos disponibles en **[!UICONTROL Catálogo]** y destinos autenticados en la pestaña **[!UICONTROL Examinar]** pestaña. |
 | [!DNL Destinations] | [!UICONTROL Activar destinos] | Permite a los usuarios activar segmentos en destinos existentes. Habilita el paso de asignación en el flujo de trabajo de activación. Este permiso requiere: [!UICONTROL Ver destinos] o [!UICONTROL Administrar destinos] se concederá al usuario que activará los datos en los destinos. |
-| [!DNL Destinations] | [!UICONTROL Activar segmento sin asignación] | Permite a los usuarios activar segmentos en destinos existentes, sin mostrar el [paso de asignación](../destinations/ui/activate-batch-profile-destinations.md#mapping). Los usuarios pueden agregar y eliminar segmentos en flujos de trabajo de activación, pero no pueden agregar ni eliminar atributos o identidades asignados. Este permiso requiere lo siguiente [!UICONTROL Activar destinos] permiso que se concederá al usuario que activará los datos en los destinos. |
+| [!DNL Destinations] | [!UICONTROL Activar segmento sin asignación] | Permite a los usuarios activar segmentos en destinos existentes, sin mostrar el [paso de asignación](../destinations/ui/activate-batch-profile-destinations.md#mapping). Los usuarios pueden añadir y quitar segmentos en flujos de trabajo de activación, pero no pueden agregar ni quitar atributos o identidades asignados. Este permiso requiere lo siguiente [!UICONTROL Activar destinos] permiso que se concederá al usuario que activará los datos en los destinos. |
 | [!DNL Destinations] | [!UICONTROL Administrar y activar destinos de conjuntos de datos] | Capacidad para leer, crear, editar y deshabilitar flujos de exportación de conjuntos de datos. Capacidad para activar también datos en conjuntos de datos activos que se han creado. |
 | [!DNL Destinations] | [!UICONTROL Creación de destino] | Capacidad para crear destinos mediante [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Administrar fuentes] | Acceso para leer, crear, editar y deshabilitar orígenes. |
