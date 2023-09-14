@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1748'
 ht-degree: 19%
 
 ---
@@ -255,3 +255,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 Ha completado la aplicación de etiquetas a un rol, campos de esquema y segmentos. La agencia externa asignada a estas funciones tiene restringido el acceso a la visualización de estas etiquetas y sus valores en la vista de esquema, conjunto de datos y perfil. Estos campos también están restringidos para no utilizarse en la definición del segmento al utilizar el Generador de segmentos.
 
 Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](./overview.md).
+
+El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

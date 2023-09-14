@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 17%
 
 ---
@@ -21,6 +21,10 @@ Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de
 >El control de acceso basado en atributos no se debe confundir con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y directivas para controlar cómo se utilizan los datos en Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [información general sobre gobernanza de datos](../../data-governance/home.md) para obtener más información.
 
 Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y el tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+
+El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminología de control de acceso basado en atributos
 
