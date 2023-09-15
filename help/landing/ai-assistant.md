@@ -4,7 +4,7 @@ description: Aprenda a utilizar el asistente de IA para navegar y comprender los
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
+source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
 workflow-type: tm+mt
 source-wordcount: '2369'
 ht-degree: 0%
@@ -286,5 +286,3 @@ Lea la tabla siguiente para ver ejemplos:
 | ¿Cuál es mi segmento más grande? | ¿Cuál es mi segmento más grande? Uso de datos. | Indique explícitamente al asistente de IA que desea que la respuesta se base en los datos. |
 | ¿Cuál es mi segmento más grande? | Enumerar mi segmento más grande. | Hay casos en los que una pregunta de &quot;qué...&quot; se puede confundir con una pregunta basada en documentación. El uso de un comando como &quot;lista&quot; es un indicador más seguro de que está haciendo una pregunta con datos en contexto. |
 | ¿Cuántos conjuntos de datos tengo? | Contar mis conjuntos de datos. | La pregunta original funciona para segmentos, pero es posible que no funcione con conjuntos de datos. |
-
-
