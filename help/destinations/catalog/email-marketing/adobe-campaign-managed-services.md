@@ -2,9 +2,9 @@
 title: Conexión de Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1584'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Ado
 
 * Adobe Experience Platform crea un perfil de cliente que incorpora información como el gráfico de identidades, datos de comportamiento de analytics, combinaciones de datos sin conexión y en línea, etc. Con esta integración, puede aumentar las capacidades de segmentación que ya existen en Adobe Campaign con esas audiencias con tecnología de Adobe Experience Platform y, por lo tanto, activar esos datos en Campaign.
 
-  Por ejemplo, una empresa de atuendos deportivos quiere aprovechar los segmentos inteligentes con tecnología de Adobe Experience Platform y activarlos con Adobe Campaign para llegar a su base de clientes en los diferentes canales admitidos por Adobe Campaign. Una vez enviados los mensajes, se desea mejorar el perfil del cliente en Adobe Experience Platform con datos de experiencia de Adobe Campaign, como envíos, aperturas y clics.
+  Por ejemplo, una empresa de atuendos deportivos quiere aprovechar los segmentos inteligentes con tecnología de Adobe Experience Platform y activarlos con Adobe Campaign para llegar a su base de clientes en los diferentes canales admitidos por Adobe Campaign. Una vez enviados los mensajes, se desea mejorar el perfil del cliente en Adobe Experience Platform con datos de experiencia de Adobe Campaign como envíos, aperturas y clics.
 
   El resultado son campañas en canales múltiples que son más coherentes en todo el ecosistema de Adobe Experience Cloud y un perfil de cliente enriquecido que se adapta y aprende rápidamente.
 
@@ -119,7 +119,8 @@ Para obtener más información sobre las acciones de marketing, consulte la [inf
 
 >[!IMPORTANT]
 > 
->Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
 
