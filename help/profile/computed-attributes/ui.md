@@ -1,10 +1,9 @@
 ---
 title: Guía de IU de Atributos calculados
 description: Obtenga información sobre cómo crear, ver y actualizar atributos calculados mediante la interfaz de usuario de Adobe Experience Platform.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
@@ -12,15 +11,11 @@ ht-degree: 1%
 
 # Guía de IU de atributos calculados
 
->[!IMPORTANT]
->
->Atributos calculados actualmente en **beta** y es **no** disponible para todos los usuarios.
-
 En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 
 Este documento proporciona una guía sobre cómo crear y actualizar atributos calculados mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía de la interfaz de usuario requiere una comprensión de las distintas [!DNL Experience Platform] servicios relacionados con la gestión de [!DNL Real-Time Customer Profiles]. Antes de leer esta guía o de trabajar en la interfaz de usuario de, consulte la documentación de los siguientes servicios:
 
@@ -43,8 +38,18 @@ Para seleccionar qué campos están visibles, puede seleccionar ![el icono confi
 | [!UICONTROL Última evaluación] | Esta marca de tiempo representa la última ejecución correcta de la evaluación. Solo los eventos que se produjeron **antes** esta marca de tiempo se tiene en cuenta en la última evaluación correcta. |
 | [!UICONTROL Último estado de evaluación] | El estado que indica si el atributo calculado se calculó correctamente o no en la última ejecución de evaluación. Los valores posibles incluyen **[!UICONTROL Correcto]** o **[!UICONTROL Error]**. |
 | [!UICONTROL Frecuencia de actualización] | Una indicación de la frecuencia con la que se espera actualizar el atributo calculado. Los valores posibles incluyen horaria, diaria, semanal o mensual. |
-| [!UICONTROL Actualización rápida] | Valor que muestra si la actualización rápida está habilitada o no para este atributo de cálculo. Si la actualización rápida está habilitada, esto permite que el atributo calculado se actualice diariamente, en lugar de cada semana, cada dos semanas o mensualmente. Este valor solo es aplicable a atributos calculados con un periodo retroactivo bueno a una base semanal. |
+| [!UICONTROL Actualización rápida] | Valor que muestra si la actualización rápida está habilitada o no para este atributo de cálculo. Si la actualización rápida está habilitada, esto permite que el atributo calculado se actualice diariamente, en lugar de cada semana, cada dos semanas o mensualmente. Este valor solo es aplicable a atributos calculados con un periodo retroactivo mayor que una base semanal. |
 | [!UICONTROL Estado del ciclo vital] | El estado actual del atributo calculado. Hay tres estados posibles: <ul><li>**[!UICONTROL Borrador]:** El atributo calculado sí **no** aún tiene un campo creado en el esquema. En este estado, se puede editar el atributo calculado. </li><li>**[!UICONTROL Publicado]:** El atributo calculado tiene un campo creado en el esquema y está listo para utilizarse. En este estado, el atributo calculado **no puede** no se puede editar.</li><li>**[!UICONTROL Inactivo]:** El atributo calculado está deshabilitado. Para obtener más información sobre el estado inactivo, lea la [página de preguntas frecuentes](./faq.md#inactive-status). </li> |
+| [!UICONTROL Creado] | Una marca de tiempo que muestra la fecha y la hora en que se creó el atributo calculado. |
+| [!UICONTROL Última modificación] | Una marca de tiempo que muestra la fecha y la hora de la última modificación del atributo calculado. |
+
+También puede filtrar los atributos calculados mostrados en función del estado del ciclo vital. Seleccione el ![canalizar](./images/ui/filter-icon.png) icono.
+
+![El icono de filtro aparece resaltado.](./images/ui/select-filter.png)
+
+Ahora puede elegir filtrar los atributos calculados por estado ([!UICONTROL Borrador], [!UICONTROL Publicado], y [!UICONTROL Inactivo]).
+
+![Se resaltan las opciones por las que puede filtrar los atributos calculados. Estas opciones incluyen [!UICONTROL Borrador], [!UICONTROL Publicado], y [!UICONTROL Inactivo].](./images/ui/view-filters.png)
 
 Además, puede seleccionar un atributo calculado para ver información más detallada al respecto. Para obtener más información sobre la página de detalles de atributos calculados, lea la [ver la sección de detalles de un atributo calculado](#view-details).
 
@@ -91,6 +96,21 @@ Después de elegir una función, puede elegir el campo con el que desea agregar.
 Después de aplicar la función de agregación, debe definir el período retroactivo del atributo calculado. Este período de retrospectiva especifica el período de tiempo en el que desea agregar eventos. Esta duración retrospectiva se puede especificar en términos de horas, días, semanas o meses.
 
 ![Se resaltará la duración de la retrospectiva.](./images/ui/select-lookback-duration.png)
+
+### Actualización rápida {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Actualización rápida"
+>abstract="La actualización rápida permite mantener los atributos actualizados. Al habilitar esta opción, puede actualizar los atributos calculados diariamente, incluso para periodos retrospectivos más largos, lo que le permite reaccionar rápidamente a las actividades del usuario. Este valor solo es aplicable a atributos calculados con un periodo retroactivo mayor que una base semanal."
+
+Al aplicar la función de agregación, puede habilitar la actualización rápida si el período retroactivo es mayor de una semana.
+
+![El [!UICONTROL Actualización rápida] La casilla de verificación está resaltada.](./images/ui/enable-fast-refresh.png)
+
+La actualización rápida permite mantener los atributos actualizados. Al habilitar esta opción, puede actualizar los atributos calculados diariamente, incluso para periodos retrospectivos más largos, lo que le permite reaccionar rápidamente a las actividades del usuario.
+
+Para obtener más información sobre la actualización rápida, lea la [sección de actualización rápida](./overview.md#fast-refresh) de la descripción general de los atributos calculados.
 
 Una vez completados estos pasos, puede elegir guardar este atributo calculado como borrador o publicarlo inmediatamente.
 
