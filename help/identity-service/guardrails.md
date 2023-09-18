@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
+source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1182'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 | Barrera | Límite | Notas |
 | --- | --- | --- |
 | (Comportamiento actual) Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. Una vez que el número de identidades alcanza las 150 o más, no se agregarán nuevas identidades y el gráfico de identidades no se actualizará. Los gráficos pueden mostrar identidades superiores a 150 como resultado de la vinculación de uno o más gráficos con menos de 150 identidades. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
-| (Comportamiento próximo) Número de identidades en un gráfico [!BADGE Beta]{type=Informative} | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Lea el [apéndice](#appendix) para obtener más información sobre cómo el servicio de identidad elimina las identidades una vez alcanzado el límite. |
+| (Comportamiento próximo) Número de identidades en un gráfico [!BADGE Beta]{type=Informative} | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de caracteres de un nombre para mostrar o un símbolo de identidad | Ninguna | No hay límites en el número de caracteres de un nombre para mostrar o un símbolo de identidad. |
@@ -50,32 +50,11 @@ En la tabla siguiente se describen las reglas existentes que debe seguir para ga
 
 A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad se suele introducir a través de [fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y el [fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque el ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con el equipo de la cuenta de Adobe.
 
-## Pasos siguientes
-
-Consulte la siguiente documentación para obtener más información sobre [!DNL Identity Service]:
-
-* [Información general del [!DNL Identity Service]](home.md)
-* [Visualizador de gráficos de identidad](ui/identity-graph-viewer.md)
-
-
-## Apéndice {#appendix}
-
-La siguiente sección contiene información adicional sobre las protecciones del servicio de identidad.
-
-### [!BADGE Beta]{type=Informative} Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidad a capacidad {#deletion-logic}
-
->[!IMPORTANT]
->
->La siguiente lógica de eliminación es un comportamiento próximo del servicio de identidad. Póngase en contacto con el representante de cuentas para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene lo siguiente:
->
-> * Un área de nombres personalizada en la que los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.
-> * Un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.
->
->Una vez que esta función esté disponible, los gráficos que excedan el límite de 50 identidades se reducirán hasta 50 identidades. En Real-time CDP edición B2C, esto podría provocar un aumento mínimo en el número de perfiles aptos para una audiencia, ya que estos perfiles se ignoraban anteriormente en Segmentación y Activación.
+## [!BADGE Beta]{type=Informative} Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidad a capacidad {#deletion-logic}
 
 Cuando se actualiza un gráfico de identidad completo, el servicio de identidad elimina la identidad más antigua del gráfico antes de añadir la identidad más reciente. El objetivo de esto es mantener la precisión y la relevancia de los datos de identidad. Este proceso de eliminación sigue dos reglas principales:
 
-#### La eliminación del #1 de reglas se prioriza según el tipo de identidad de un área de nombres
+### La eliminación del #1 de reglas se prioriza según el tipo de identidad de un área de nombres
 
 La prioridad de eliminación es la siguiente:
 
@@ -83,7 +62,7 @@ La prioridad de eliminación es la siguiente:
 2. ID de dispositivo
 3. ID entre dispositivos, correo electrónico y teléfono
 
-#### La eliminación del #2 de reglas se basa en la marca de tiempo almacenada en la identidad
+### La eliminación del #2 de reglas se basa en la marca de tiempo almacenada en la identidad
 
 Cada identidad vinculada en un gráfico tiene su propia marca de tiempo correspondiente. Cuando se actualiza un gráfico completo, el servicio de identidad elimina la identidad con la marca de tiempo más antigua.
 
@@ -110,7 +89,36 @@ En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una n
 
 >[!ENDSHADEBOX]
 
+### Implicaciones en la implementación
+
+En las siguientes secciones se describen las implicaciones que la lógica de eliminación tiene para el servicio de identidad, el perfil del cliente en tiempo real y el SDK web.
+
+#### Servicio de identidad: cambios en el tipo de identidad del área de nombres personalizada
+
+Póngase en contacto con el equipo de su cuenta de Adobe para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene:
+
+* Un área de nombres personalizada en la que los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.
+* Un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.
+
+Una vez que esta función esté disponible, los gráficos que excedan el límite de 50 identidades se reducirán hasta 50 identidades. Para Real-Time CDP B2C Edition, esto podría provocar un aumento mínimo en el número de perfiles aptos para una audiencia, ya que estos perfiles se ignoraban anteriormente en Segmentación y Activación.
+
+#### Perfil del cliente en tiempo real: configuración de perfil seudónimo
+
 La eliminación solo se produce en los datos del servicio de identidad y no en el perfil del cliente en tiempo real.
 
 * Por lo tanto, este comportamiento podría crear más perfiles con un solo ECID, ya que el ECID ya no forma parte del gráfico de identidad.
 * Para mantenerse dentro de los números de derechos de audiencia a los que se puede dirigir, se recomienda habilitar [caducidad de datos de perfil seudónimos](../profile/pseudonymous-profiles.md) para eliminar los perfiles antiguos.
+
+#### Perfil del cliente en tiempo real y SDK web: eliminación de identidad principal
+
+Si desea conservar los eventos autenticados con el ID de CRM, se recomienda cambiar los ID principales de ECID a ID de CRM. Lea los siguientes documentos para ver los pasos necesarios para implementar este cambio:
+
+* [Configuración del mapa de identidad para las etiquetas de Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Datos de identidad en el SDK web de Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+## Pasos siguientes
+
+Consulte la siguiente documentación para obtener más información sobre [!DNL Identity Service]:
+
+* [Información general del [!DNL Identity Service]](home.md)
+* [Visualizador de gráficos de identidad](ui/identity-graph-viewer.md)

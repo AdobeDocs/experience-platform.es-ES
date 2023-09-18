@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Adobe Campaign Managed Cloud Services;campaña;servicios administrados de campaña
 title: Adobe Campaign Managed Cloud Services
-description: Obtenga información sobre cómo conectar los Cloud Services administrados de Campaign a Platform mediante la interfaz de usuario
+description: Obtenga información sobre cómo conectar los Cloud Service administrados de Campaign a Platform mediante la interfaz de usuario
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 0%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
@@ -75,3 +75,9 @@ Finalmente, debe crear un conjunto de datos para los esquemas. Para obtener inst
 Ahora que ha accedido a los registros de datos en la consola del cliente de Campaign, ha creado un esquema y un conjunto de datos, puede continuar con la creación de una conexión de origen para llevar los datos de Campaign Managed Services a Platform.
 
 Para obtener instrucciones detalladas sobre cómo llevar los datos de registros de envío y registros de seguimiento de Campaign v8 a Experience Platform, lea la guía sobre [creación de una conexión de origen de Managed Services en Campaign en la IU](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>Existe un caso límite en el que la interacción de un destinatario de correo electrónico eliminado recientemente con un correo electrónico podría volver a introducir información personal en Experience Platform. En algunos casos, esto podría volver a habilitar el marketing para ese usuario.
+>
+>* Este escenario solo está activo entre el momento en que se ha ejecutado una solicitud de privacidad en Experience Platform y el momento en que se ha ejecutado en Adobe Campaign Classic. Una vez que la solicitud se ejecuta en Campaign, se realiza una comprobación para asegurarse de que el registro no se exporta a Campaign. Vuelva a emitir una solicitud RGPD después de 72 horas de ejecución para resolverlo.
