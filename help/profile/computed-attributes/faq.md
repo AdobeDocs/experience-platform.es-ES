@@ -1,9 +1,9 @@
 ---
 title: Preguntas más frecuentes sobre los atributos calculados
 description: Encuentre respuestas a las preguntas más frecuentes acerca del uso de atributos calculados.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Preguntas frecuentes
 
 En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización. A continuación se muestra una lista de las preguntas más frecuentes sobre los atributos calculados.
+
+## ¿Cómo puedo obtener acceso a los atributos calculados?
+
+Para obtener acceso a los atributos calculados, debe tener los permisos adecuados (**Ver atributos calculados** y **Administrar atributos calculados**). Para obtener más información sobre los permisos necesarios, lea la [documentación de control de acceso](../../access-control/home.md). Para obtener información sobre cómo aplicar estos permisos, lea la [guía de administración de permisos](../../access-control/ui/permissions.md).
 
 ## ¿Qué conjuntos de datos contribuyen a los cálculos de atributos calculados?
 
@@ -76,10 +80,6 @@ Al igual que cualquier otro atributo de perfil, los atributos calculados están 
 ## ¿Cómo se aplican las etiquetas de uso de datos en los atributos calculados?
 
 Los atributos calculados derivan automáticamente las etiquetas de uso de datos de los campos y conjuntos de datos de origen que se utilizaron para definir los atributos calculados. Esto garantiza que los datos de comportamiento se utilicen correctamente.
-
-## ¿Cómo obtengo acceso a los atributos calculados?
-
-Para obtener acceso a los atributos calculados, debe tener los permisos adecuados. Para obtener más información sobre los permisos necesarios, lea la [documentación de control de acceso](../../access-control/home.md).
 
 ## ¿Cómo se utilizan los atributos calculados con Adobe Journey Optimizer?
 

@@ -1,15 +1,19 @@
 ---
 title: Guía de IU de Atributos calculados
 description: Obtenga información sobre cómo crear, ver y actualizar atributos calculados mediante la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
 
 
 # Guía de IU de atributos calculados
+
+>[!NOTE]
+>
+>Para obtener acceso a los atributos calculados, debe tener los permisos adecuados (**Ver atributos calculados** y **Administrar atributos calculados**). Para obtener más información sobre los permisos necesarios, lea la [documentación de control de acceso](../../access-control/home.md). Para obtener información sobre cómo aplicar estos permisos, lea la [guía de administración de permisos](../../access-control/ui/permissions.md).
 
 En Adobe Experience Platform, los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 
