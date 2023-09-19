@@ -5,32 +5,38 @@ title: Conéctese a destinos por lotes y active los datos mediante la API de Flo
 description: Instrucciones paso a paso para utilizar la API de Flow Service para crear un almacenamiento en la nube por lotes o un destino de marketing por correo electrónico en Experience Platform y activar los datos
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3399'
+source-wordcount: '3446'
 ht-degree: 2%
 
 ---
 
-# Conéctese a destinos por lotes y active los datos mediante la API de Flow Service
+# Conéctese a destinos de marketing por correo electrónico basados en archivos y active los datos mediante la API de Flow Service
 
 >[!IMPORTANT]
 > 
->Para conectarse a un destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions).
+>* Para conectarse a un destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions).
 >
->Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+>* Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+>
+>* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 >
 >Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Este tutorial muestra cómo utilizar la API de Flow Service para crear un lote [almacenamiento en la nube](../catalog/cloud-storage/overview.md) o [destino de marketing por correo electrónico](../catalog/email-marketing/overview.md), cree un flujo de datos al destino recién creado y exporte los datos al destino recién creado mediante archivos CSV.
+Este tutorial muestra cómo utilizar la API de Flow Service para crear un archivo basado en [destino de marketing por correo electrónico](../catalog/email-marketing/overview.md), cree un flujo de datos al destino recién creado y exporte los datos al destino recién creado mediante archivos CSV.
 
-Este tutorial utiliza el [!DNL Adobe Campaign] destino en todos los ejemplos, pero los pasos son idénticos para todos los destinos de marketing por correo electrónico y almacenamiento en la nube por lotes.
+>[!TIP]
+> 
+>Para obtener información sobre cómo activar datos en destinos de almacenamiento en la nube mediante la API de Flow Service, lea la [tutorial de API dedicado](/help/destinations/api/activate-segments-file-based-destinations.md).
+
+Este tutorial utiliza el [!DNL Adobe Campaign] destino en todos los ejemplos, pero los pasos son idénticos para los destinos de marketing por correo electrónico basados en archivos.
 
 ![Información general: Pasos para crear un destino y activar audiencias](../assets/api/email-marketing/overview.png)
 
 Si prefiere utilizar la interfaz de usuario de Platform para conectarse a un destino y activar datos, consulte la [Conectar un destino](../ui/connect-destination.md) y [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../ui/activate-batch-profile-destinations.md) tutoriales.
 
-## Primeros pasos {#get-started}
+## Introducción {#get-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -123,12 +129,9 @@ Para su referencia, la siguiente tabla contiene los ID de especificación de con
 | Destino | ID de especificación de conexión |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -1241,7 +1244,7 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Platform a uno de los destinos de marketing por correo electrónico o almacenamiento en la nube por lotes preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar archivos de datos. Los datos salientes ahora se pueden utilizar en el destino para campañas de correo electrónico, publicidad segmentada y muchos otros casos de uso. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
+Al seguir este tutorial, ha conectado correctamente Platform a uno de sus destinos de marketing por correo electrónico basados en archivos preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar archivos de datos. Los datos salientes ahora se pueden utilizar en el destino para campañas de correo electrónico, publicidad segmentada y muchos otros casos de uso. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)
