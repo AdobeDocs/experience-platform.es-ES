@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución de problemas;protecciones;directrices;límite;entidad;entidad principal;entidad de dimensión;
 title: Protecciones predeterminadas para datos de perfil del cliente en tiempo real
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1965'
 ht-degree: 5%
 
 ---
@@ -23,7 +22,7 @@ Este documento proporciona límites predeterminados de uso y velocidad para ayud
 >
 >La mayoría de los clientes no superan estos límites predeterminados. Si desea obtener más información sobre los límites personalizados, póngase en contacto con su representante del servicio de atención al cliente.
 
-## Primeros pasos
+## Introducción
 
 Los siguientes servicios de Experience Platform están implicados en el modelado de datos del perfil del cliente en tiempo real:
 
