@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 4%
 
 ---
@@ -83,6 +83,8 @@ En la tabla siguiente se describen los permisos disponibles para los Experience 
 | [!DNL Alerts] | [!UICONTROL Resolver alertas] | Acceso para leer, editar y eliminar alertas. |
 | [!DNL Alerts] | [!UICONTROL Ver alertas] | Acceso de solo lectura para alertas. |
 | [!DNL Alerts] | [!UICONTROL Administrar alertas] | Acceso para leer, crear, editar y eliminar el historial de alertas. |
+| [!DNL Computed Attributes] | [!UICONTROL Ver atributos calculados] | Acceso de solo lectura para la pestaña de atributos calculados, inventario y detalles. |
+| [!DNL Computed Attributes] | [!UICONTROL Administrar atributos calculados] | Acceso para leer, crear, eliminar borradores y desactivar atributos calculados. |
 | [!DNL Data Hygiene] | [!UICONTROL Ver higiene de datos] | Acceso de solo lectura para la higiene de los datos. |
 | [!DNL Data Hygiene] | [!UICONTROL Administrar higiene de datos] | Acceso para leer, crear, editar y eliminar la higiene de los datos. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar esquemas] | Acceso para leer, crear, editar y eliminar esquemas y recursos relacionados. |

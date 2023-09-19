@@ -3,14 +3,18 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Etiquetas de administración de control de acceso basado en atributos
 description: Este documento proporciona información sobre la administración de etiquetas a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
+source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 9%
+source-wordcount: '209'
+ht-degree: 8%
 
 ---
 
 # Administrar etiquetas
+
+>[!NOTE]
+>
+>Para crear o ver atributos calculados con campos que contengan una etiqueta determinada, debe tener acceso a esa etiqueta.
 
 Las etiquetas permiten categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan a Platform o en cuanto los datos están disponibles para su uso en Platform.
 
