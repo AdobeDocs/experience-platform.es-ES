@@ -2,7 +2,7 @@
 title: Recopilación de datos interactiva
 description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## Información general {#overview}
 
-Los extremos de recopilación de datos interactivos reciben un único evento y se utilizan cuando el cliente espera que el servidor de Adobe Experience Platform Edge Network devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de Experience Edge, mientras realizan la recopilación de datos.
+Los extremos de recopilación de datos interactivos reciben un único evento y se utilizan cuando el cliente espera que el servidor de Adobe Experience Platform Edge Network devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de red perimetral, mientras realizan la recopilación de datos.
 
 La respuesta del servidor incluye una o más `Handle` como se muestra a continuación.
 

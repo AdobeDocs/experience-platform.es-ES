@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Introducción a las API de Media Edge
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '958'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,7 @@ Para iniciar la sesión de contenido en el servidor, utilice el punto final de I
 
 Antes de realizar la solicitud de inicio de sesión, necesitará lo siguiente:
 
-* El `datastreamId`: un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=es).
+* El `datastreamId`: un parámetro requerido para la solicitud de inicio de sesión de POST. Para recuperar un `datastreamId`, consulte [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=es).
 
 * Un objeto JSON para la carga útil de la solicitud que contiene los datos mínimos requeridos (como se muestra en la solicitud de ejemplo siguiente).
 
@@ -284,7 +284,7 @@ La siguiente tabla muestra los posibles códigos de respuesta resultantes de las
 | Estado | Descripción |
 | ---------- | --------- |
 | 200 | La sesión se ha creado correctamente |
-| 207 | Problema con uno de los servicios que se conectan a Experience Edge Network (consulte más información en el [guía de solución de problemas](troubleshooting.md)) |
+| 207 | Problema con uno de los servicios que se conectan a la red perimetral (consulte más información en la [guía de solución de problemas](troubleshooting.md)) |
 | de 400 niveles | Solicitud incorrecta |
 | de 500 niveles | Error del servidor |
 

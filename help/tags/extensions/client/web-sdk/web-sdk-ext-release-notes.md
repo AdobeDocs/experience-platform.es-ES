@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1758'
 ht-degree: 37%
 
 ---
@@ -145,7 +145,7 @@ Contiene la versión 2.8.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 Contiene la versión 2.7.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
-* Encontrará información adicional de Experience Edge en el evento Enviar evento completado, que incluye `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una versión beta. Para obtener más información, consulte [Seguimiento de eventos.](../../../../edge/fundamentals/tracking-events.md)
+* Encontrará información adicional de la red perimetral en el evento Enviar evento completado, que incluye `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una versión beta. Para obtener más información, consulte [Seguimiento de eventos.](../../../../edge/fundamentals/tracking-events.md)
 
 ## Versión 2.7.3: 7 de septiembre de 2021
 

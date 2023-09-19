@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción al aprendizaje automático en tiempo real
 description: En el siguiente documento se describen los pasos necesarios para crear un modelo de aprendizaje automático en tiempo real en Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Las guías para el aprendizaje automático en tiempo real requieren una comprens
 
 - **DSL:** Idioma específico del dominio.
 - **Edge:** El servicio de puntuación de aprendizaje automático en tiempo real se puede ejecutar en clústeres de Edge más cerca de sus activaciones y aplicaciones.
-- **Concentrador:** El alfa actual está ejecutando el servicio de puntuación de aprendizaje automático en tiempo real en Adobe Experience Platform Hub mientras Experience Edge Network está en desarrollo.
+- **Concentrador:** El alfa actual está ejecutando el servicio de puntuación de aprendizaje automático en tiempo real en Adobe Experience Platform Hub mientras la red perimetral está en desarrollo.
 - **Nodo:** Un nodo es la unidad fundamental de la que se forman los gráficos. Cada nodo realiza una tarea específica y se puede encadenar mediante vínculos para formar un gráfico que represente una canalización XML. La tarea realizada por un nodo representa una operación en los datos de entrada, como una transformación de datos o esquemas o una inferencia de aprendizaje automático. El nodo genera el valor transformado o inferido en el nodo o nodos siguientes.
 
 ## Conjuntos de datos en Adobe Experience Platform

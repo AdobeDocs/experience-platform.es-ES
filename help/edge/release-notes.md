@@ -3,7 +3,7 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 3%
@@ -118,7 +118,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas del
 * Se han optimizado los eventos de cambio de vista para aplicaciones de una sola página. La notificación de visualización ahora se incluye con el evento de cambio de vista cuando se representan experiencias personalizadas.
 * Advertencia de consola eliminada cuando no `eventType` está presente.
 * Se ha corregido un problema por el que `propositions` La propiedad solo se ha devuelto desde un `sendEvent` cuando se solicitaron o recuperaron experiencias de la caché. El `propositions` ahora, la propiedad siempre se definirá como una matriz.
-* Se ha corregido un problema en el cual los contenedores ocultos no se mostraban cuando había un error devuelto desde Adobe Experience Edge.
+* Se ha corregido un problema en el cual los contenedores ocultos no se mostraban cuando se devolvía un error desde la red de Edge.
 * Se ha corregido un problema en el cual los eventos de interacción no se contaban en Adobe Target. Esto se solucionó añadiendo el nombre de la vista al XDM en web.webPageDetails.viewName.
 * Corrección de vínculos de documentación dañados en los mensajes de la consola.
 
@@ -130,7 +130,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas del
 
 ## Versión 2.7.0: 26 de octubre de 2021
 
-* Exponer información adicional de Experience Edge en el valor devuelto desde `sendEvent`, incluido `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una versión beta. Para obtener más información, consulte [Seguimiento de eventos.](fundamentals/tracking-events.md)
+* Exponer información adicional de la red perimetral en el valor devuelto desde `sendEvent`, incluido `inferences` y `destinations`. El formato de estas propiedades puede cambiar a medida que estas funciones se implementan como parte de una versión beta. Para obtener más información, consulte [Seguimiento de eventos.](fundamentals/tracking-events.md)
 
 ## Versión 2.6.4: 7 de septiembre de 2021
 

@@ -2,9 +2,9 @@
 title: ID de dispositivos de origen en el SDK web de Platform
 description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) para el SDK web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -176,7 +176,7 @@ Lo siguiente `identityMap` resultaría en una respuesta de error de la red perim
 }
 ```
 
-La respuesta de error devuelta por Experience Edge en este caso sería similar a la siguiente:
+La respuesta de error devuelta por la red perimetral en este caso sería similar a la siguiente:
 
 ```json
 {

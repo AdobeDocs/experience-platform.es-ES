@@ -3,7 +3,7 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de Platform;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -14,9 +14,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->El uso del Offer decisioning en el SDK web de Adobe Experience Platform está disponible en el acceso anticipado para usuarios seleccionados. Esta funcionalidad no está disponible para todas las organizaciones.
+>El uso de Offer decisioning en el SDK web de Adobe Experience Platform está disponible en el acceso anticipado para usuarios seleccionados. Esta funcionalidad no está disponible para todas las organizaciones.
 
-Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas personalizadas que se administran en Offer decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer decisioning.
+Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas personalizadas que se administran en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario (IU) o las API de Offer decisioning.
 
 ## Requisitos previos
 
@@ -26,11 +26,11 @@ Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas perso
 
 ## Terminología
 
-Es importante comprender la siguiente terminología al trabajar con Offer decisioning. Para obtener más información y ver términos adicionales, visite la [glosario de offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Es importante comprender la siguiente terminología al trabajar con Offer Decisioning. Para obtener más información y ver términos adicionales, visite la [Glosario del offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Contenedor:** Un contenedor es un mecanismo de aislamiento para mantener separadas las diferentes preocupaciones. El ID de contenedor es el primer elemento de ruta para todas las API del repositorio. Todos los objetos de toma de decisiones residen en un contenedor.
 
-* **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas codificadas en Base64 de JSON que contienen los ID de actividad y ubicación que desea que el servicio de offer decisioning utilice para proponer ofertas.
+* **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas codificadas en Base64 de JSON que contienen los ID de actividad y ubicación que desea que el servicio del offer decisioning utilice para proponer ofertas.
 
   *Ámbito de decisión JSON:*
 
@@ -59,14 +59,14 @@ Es importante comprender la siguiente terminología al trabajar con Offer decisi
 
 ## Habilitando Offer decisioning
 
-Para habilitar el Offer decisioning, realice los siguientes pasos:
+Para habilitar Offer Decisioning, realice los siguientes pasos:
 
 1. Se ha habilitado Adobe Experience Platform en su [secuencia de datos](../../../datastreams/overview.md) y marque la casilla &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
 1. Siga las instrucciones de [instalar el SDK](../../fundamentals/installing-the-sdk.md) (El SDK se puede instalar de forma independiente o mediante la interfaz de usuario de. Consulte la [guía de inicio rápido de etiquetas](../../../tags/quick-start/quick-start.md)) para obtener más información.
-1. [Configuración del SDK](../../fundamentals/configuring-the-sdk.md) para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos del Offer decisioning.
+1. [Configuración del SDK](../../fundamentals/configuring-the-sdk.md) para el Offer decisioning. A continuación se proporcionan pasos adicionales específicos para el Offer decisioning.
 
    * Instalación del SDK independiente
 
@@ -332,4 +332,4 @@ Para habilitar el Offer decisioning, realice los siguientes pasos:
 
 ## Limitaciones
 
-Actualmente, algunas restricciones de oferta no son compatibles con los flujos de trabajo de Experience Edge móviles, por ejemplo, Límite. El valor del campo Límite especifica el número de veces que se puede presentar una oferta entre todos los usuarios. Para obtener más información, consulte [Documentación de restricciones y reglas de idoneidad de ofertas](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Actualmente, algunas restricciones de oferta no son compatibles con los flujos de trabajo de red perimetral móvil, por ejemplo, Límite. El valor del campo Límite especifica el número de veces que se puede presentar una oferta entre todos los usuarios. Para obtener más información, consulte [Documentación de restricciones y reglas de idoneidad de ofertas](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

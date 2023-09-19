@@ -1,14 +1,13 @@
 ---
 title: Información general sobre Adobe Experience Platform Web Software Development Kit (SDK)
 description: Aprenda a utilizar el SDK web de Adobe Experience Platform para integrar las funcionalidades de Platform en su sitio web.
-keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;sdk web;SDK;SDK web;Launch;launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '776'
 ht-degree: 3%
 
 ---
+
 
 # Información general del SDK web de Adobe Experience Platform {#overview}
 
@@ -17,17 +16,15 @@ Adobe Experience Platform Web Software Development Kit (SDK) es una biblioteca J
 * Implementación manual mediante `alloy.js`. Esta guía del usuario proporciona documentación para este método de implementación.
 * El [Extensión de etiqueta de SDK web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Consulte [Tutorial de implementación de Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es) para obtener más información.
 
-## Adobe Experience Edge
+## Red perimetral de Experience Platform
 
-El SDK web de Adobe Experience Platform forma parte de la colección que conforma el Adobe Experience Edge. Adobe Experience Edge consta de las siguientes tecnologías:
+El SDK web de Experience Platform forma parte de una colección de herramientas que conforman Adobe Experience Platform Edge Network. La red perimetral consta de los siguientes componentes:
 
-* **[SDK web de Adobe Experience Platform](#overview):** Un SDK de JavaScript y una extensión de etiquetas para simplificar en gran medida la implementación de tecnologías de Adobe.
-* **[SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/):** Extensión del SDK móvil v5 para permitir a los clientes utilizar la nueva metodología de implementación
-* **[Adobe Experience Platform Edge Network](../server-api/overview.md):** Una red distribuida global de servidores que permite una nueva metodología de implementación [!DNL Adobe] products
+* **[SDK web de Experience Platform](#overview):** Un SDK de JavaScript y una extensión de etiquetas para simplificar en gran medida la implementación de tecnologías de Adobe.
+* **[SDK de Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/):** Extensión del SDK móvil v5 para permitir a los clientes utilizar la nueva metodología de implementación
+* **[API del servidor de red perimetral de Experience Platform](../server-api/overview.md):** Una API que se puede utilizar para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y muchos otros dispositivos.
 
-Adobe Experience Edge es una plataforma para la recopilación de datos de baja latencia, la computación conectable y la activación rápida de datos en todos los canales direccionables.
-
-[!DNL Adobe Experience Edge] proporciona un único SDK consolidado para cada canal (JavaScript, móvil, del lado del servidor), que envía datos a un dominio de Adobe común (`adobedc.net`) y recibe una sola carga útil de vuelta para la entrega de datos y experiencia.
+La red perimetral es un marco de trabajo para la recopilación de datos de baja latencia, la computación conectable y la activación rápida de datos en todos los canales direccionables. Proporciona un único SDK consolidado para cada canal (JavaScript, móvil, del lado del servidor), que envía datos a un dominio de Adobe común (`adobedc.net`) y recibe una sola carga útil de vuelta para la entrega de datos y experiencia.
 
 En el lado del servidor, una puerta de enlace perimetral unificada y un marco de servicio de plataforma común ayudan a facilitar la implementación de nuevas funciones en este entorno informático en tiempo real. Esta arquitectura:
 

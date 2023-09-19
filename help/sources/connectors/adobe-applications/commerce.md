@@ -2,9 +2,9 @@
 title: Conector de origen de Adobe Commerce
 description: Aprenda a utilizar la fuente de Adobe Commerce para llevar los datos de comercio a Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Adobe Commerce es una plataforma de comercio ágil B2B y B2C que permite a los comerciantes y marcas acelerar los ingresos mediante experiencias de comercio digital centradas en el cliente en espacios en línea y físicos.
 
-Fuentes de Adobe Experience Platform admite la integración de Adobe Commerce para permitir que los comerciantes envíen datos de tienda y back office a Adobe Experience Edge, de modo que otros productos de Adobe Experience Cloud como Adobe Analytics y Adobe Target puedan utilizar [!DNL Commerce] datos.
+Fuentes de Adobe Experience Platform admite la integración de Adobe Commerce para permitir que los comerciantes envíen datos de tienda y back office a la red perimetral de Experience Platform, de modo que otros productos de Adobe Experience Cloud como Adobe Analytics y Adobe Target puedan utilizar [!DNL Commerce] datos.
 
 * **Eventos de tienda**: Capturar interacciones del comprador como `View Page`, `View Product`, y `Add to Cart`. Para los comerciantes B2B, los eventos de tienda también capturan [listas de solicitudes](<https://experienceleague.adobe.com/docs/commerce-admin/b2b/requisition-lists/requisition-lists.html>).
 * **Eventos de back office**: captura información sobre el estado de un pedido, como si se ha realizado, cancelado, reembolsado, enviado o completado.

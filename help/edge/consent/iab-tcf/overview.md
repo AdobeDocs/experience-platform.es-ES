@@ -3,23 +3,23 @@ title: Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento de IAB TCF 2.0 mediante el SDK web de Adobe Experience Platform
 keywords: consentimiento;setConsent;Grupo de campos de privacidad de perfil;Grupo de campos de privacidad de evento de experiencia;Grupo de campos de privacidad;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
 
-El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento del Interactive Advertising Bureau, versión 2.0 (IAB TCF 2.0). Esta guía muestra los requisitos para admitir IAB TCF 2.0 a través de la integración del SDK web de Adobe Experience Platform con Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics y Experience Edge.
+El SDK web de Adobe Experience Platform es compatible con el marco de transparencia y consentimiento del Interactive Advertising Bureau, versión 2.0 (IAB TCF 2.0). Esta guía muestra los requisitos para admitir IAB TCF 2.0 a través de la integración del SDK web de Adobe Experience Platform con Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics y Edge Network.
 
 Además, las siguientes guías están disponibles para ayudarle a aprender a integrar IAB TCF 2.0 con y sin etiquetas.
 
 - [Con etiquetas](./with-launch.md)
 - [Sin etiquetas](./without-launch.md)
 
-## Primeros pasos
+## Introducción
 
 Para implementar el SDK web con IAB TCF 2.0, se necesita una comprensión práctica del Modelo de datos de experiencia (XDM) y los Eventos de experiencia. Antes de empezar, revise el siguiente documento:
 
@@ -71,9 +71,9 @@ Para obtener más información sobre el consentimiento predeterminado, consulte 
 
 ### Configuración del consentimiento cuando cambia
 
-El SDK web de Adobe Experience Platform tiene un `setConsent` , que comunica las preferencias de consentimiento del cliente a todos los servicios de Adobe mediante IAB TCF 2.0. Si se integra con Real-Time CDP, se actualiza el perfil del cliente. Si se integra con Audience Manager, se actualiza la información del cliente. Al llamar a esto también se establece una cookie con una preferencia de consentimiento de todo o nada que controla si se permite el envío de futuros eventos de experiencia. Se pretende que se llame a esta acción cada vez que cambie el consentimiento. En cargas de páginas futuras, se leerá la cookie de consentimiento de Experience Edge para determinar si se pueden enviar eventos de experiencia y si se puede establecer una cookie de identidad.
+El SDK web de Adobe Experience Platform tiene un `setConsent` , que comunica las preferencias de consentimiento del cliente a todos los servicios de Adobe mediante IAB TCF 2.0. Si se integra con Real-Time CDP, se actualiza el perfil del cliente. Si se integra con Audience Manager, se actualiza la información del cliente. Al llamar a esto también se establece una cookie con una preferencia de consentimiento de todo o nada que controla si se permite el envío de futuros eventos de experiencia. Se pretende que se llame a esta acción cada vez que cambie el consentimiento. En cargas de páginas futuras, se leerá la cookie de consentimiento de red perimetral para determinar si se pueden enviar eventos de experiencia y si se puede establecer una cookie de identidad.
 
-De forma similar a la integración IAB TCF 2.0 de Audience Manager, Experience Edge da su consentimiento cuando un cliente ha dado su consentimiento explícito para los siguientes fines:
+De forma similar a la integración IAB TCF 2.0 de Audience Manager, la red perimetral da su consentimiento cuando un cliente ha dado su consentimiento explícito para los siguientes fines:
 
 - **Objetivo 1:** Almacenar o acceder a información en un dispositivo
 - **Objetivo 10:** Desarrollar y mejorar productos

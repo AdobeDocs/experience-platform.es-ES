@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Guía de solución de problemas de las API de Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para ayudar a solucionar problemas de respuestas fallidas, los errores van acomp
 ## Validando inicios de sesión
 
 La mayoría de los problemas con las solicitudes de Inicio de sesión provocan una respuesta de varios estados 207.
-La carga útil es similar a los errores no graves de la API del servidor de red de Experience Edge. Todos los errores de Media Analytics tienen el siguiente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Los números mostrados en la respuesta corresponden al estado de error.
+La carga útil es similar a [API de servidor](../error-handling.md)Errores no fatales de. Todos los errores de Media Analytics tienen el siguiente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Los números mostrados en la respuesta corresponden al estado de error.
 
 El siguiente ejemplo muestra un cuerpo de respuesta para una solicitud de inicio de sesión que carece de un campo obligatorio y tiene uno no válido.
 
@@ -64,7 +64,7 @@ En el ejemplo anterior, ambos problemas se registran por `name` y `reason` bajo 
 
 ## Validación de eventos
 
-La mayoría de las solicitudes de evento no válidas generan una respuesta 400 de solicitud incorrecta. En estos casos, la carga útil es similar a los errores graves de la API del servidor de red perimetral de Experience Cloud.
+La mayoría de las solicitudes de evento no válidas generan una respuesta 400 de solicitud incorrecta. En estos casos, la carga útil es similar a los errores irrecuperables de la API del servidor.
 
 Para solicitudes de evento, el servicio de API de Edge de medios incluye comprobaciones adicionales que no se capturan en el propio modelo XDM. Esto incluye la comprobación de que la ruta `eventType` coincide con la carga útil solicitada `eventType`.
 

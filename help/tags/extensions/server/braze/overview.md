@@ -1,12 +1,12 @@
 ---
 keywords: extensión de reenvío de eventos;braze;extensión de reenvío de eventos braze
 title: Extensión de reenvío de eventos de Braze
-description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Brazo.
+description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de red perimetral a Brazo.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 5%
 
 ---
@@ -72,7 +72,7 @@ Para instalar la extensión de, [crear una propiedad de reenvío de eventos](../
 
 Seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En el **[!UICONTROL Catálogo]** pestaña, seleccione **[!UICONTROL Instalar]** en la tarjeta de [!DNL Braze] extensión.
 
-![Instale el [!DNL Braze] extensión.](../../../images/extensions/server/braze/install-extension.png)
+![[!DNL Braze]Instalar la extensión.](../../../images/extensions/server/braze/install-extension.png)
 
 En la pantalla siguiente, introduzca lo siguiente [valores de configuración](#configuration-details) que recopiló anteriormente de [!DNL Braze]:
 

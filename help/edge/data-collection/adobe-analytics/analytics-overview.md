@@ -3,9 +3,9 @@ title: Uso de Adobe Analytics con el SDK web de Platform
 description: Obtenga información sobre cómo enviar datos a Adobe Analytics con el SDK web de Adobe Experience Platform.
 keywords: adobe analytics;analytics;datos asignados;variables asignadas;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -74,4 +74,4 @@ Este es un ejemplo de regla de procesamiento que utilizaría estos datos.
 
 >[!NOTE]
 >
->Con la recopilación Edge de Experience, todos los eventos se envían a Analytics, así como a cualquier otro servicio que haya configurado para su flujo de datos. Por ejemplo, si tiene Analytics y Target configurados como servicios y realiza llamadas independientes para la personalización y para Analytics, ambos eventos se enviarán a Analytics y a Target. Estos eventos se registrarán en los informes de Analytics y pueden afectar a métricas como la tasa de salida hacia otro sitio.
+>Con la colección Edge Network, todos los eventos se envían a Analytics, así como a cualquier otro servicio que haya configurado para su flujo de datos. Por ejemplo, si tiene Analytics y Target configurados como servicios y realiza llamadas independientes para la personalización y para Analytics, ambos eventos se enviarán a Analytics y a Target. Estos eventos se registrarán en los informes de Analytics y pueden afectar a métricas como la tasa de salida hacia otro sitio.

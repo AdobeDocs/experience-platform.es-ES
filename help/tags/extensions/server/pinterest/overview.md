@@ -3,14 +3,14 @@ keywords: extensión de reenvío de eventos;pinterest;extensión de reenvío de 
 title: Extensión de reenvío de eventos de pinterest
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en Pinterest para los requisitos de su empresa.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 87c76ef4b95bc05a64d9d124d69c2a51b7b77c08
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 4%
+source-wordcount: '1548'
+ht-degree: 5%
 
 ---
 
-# [!DNL Pinterest] extensión de reenvío de eventos
+# Extensión de reenvío de eventos de [!DNL Pinterest]
 
 [!DNL Pinterest] es un motor de descubrimiento visual para encontrar ideas como recetas, decoración del hogar, inspiración de estilo, y más. Hay miles de millones de pines en [!DNL Pinterest], que también se puede compartir con otros en [!DNL Pinterest]. Puede recopilar los eventos de interacción del usuario y aprovechar [!DNL Pinterest Analytics] para comprender el comportamiento del usuario y ejecutar anuncios dirigidos.
 
@@ -69,7 +69,7 @@ En la pantalla siguiente, introduzca la variable [!UICONTROL ID de cuenta de anu
 
 Una vez configurados todos los elementos de datos, puede empezar a crear reglas de reenvío de eventos que determinen cuándo y cómo se enviarán los eventos a [!DNL Pinterest].
 
-Crear un nuevo [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Pinterest]**. Para enviar eventos de Adobe Experience Edge Network a [!DNL Pinterest], configure el **[!UICONTROL Tipo de acción]** hasta **[!UICONTROL Enviar evento].**
+Crear un nuevo [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Pinterest]**. Para enviar eventos de Edge Network a [!DNL Pinterest], configure el **[!UICONTROL Tipo de acción]** hasta **[!UICONTROL Enviar evento].**
 
 ![El [!DNL Pinterest] [!UICONTROL Enviar evento] creación de reglas.](../../../images/extensions/server/pinterest/rule.png)
 

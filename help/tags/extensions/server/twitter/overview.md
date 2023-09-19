@@ -1,18 +1,18 @@
 ---
 keywords: extensión de reenvío de eventos;twitter;extensión de reenvío de eventos de twitter
-title: Extensión de reenvío de eventos de twitter
-description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en Twitter para los requisitos de su empresa.
+title: extensión de reenvío de eventos de twitter
+description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en el Twitter para sus necesidades comerciales.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
 
 # Extensión de reenvío de eventos de [!DNL Twitter]
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) es un servicio de redes sociales y redes sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con Twitter mediante un explorador, software de front-end móvil o mediante programación a través de su [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) es un servicio de redes sociales y redes sociales en línea, en el que los usuarios publican e interactúan con mensajes de 280 caracteres conocidos como tweets. Los usuarios pueden interactuar con el Twitter mediante un explorador, software de front-end móvil o mediante programación a través de su [API](https://developer.twitter.com/en/docs/twitter-api)
 
 El [!DNL Twitter] API de conversiones web [reenvío de eventos](../../../ui/event-forwarding/overview.md) La extensión de le permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Twitter]. Este documento describe los casos de uso de la extensión, cómo instalarla y cómo integrar sus funcionalidades en el reenvío de eventos [reglas](../../../ui/managing-resources/rules.md).
 
@@ -78,7 +78,7 @@ Cuando termine, seleccione **[!UICONTROL Guardar]**.
 
 Una vez configurados todos los elementos de datos, puede empezar a crear reglas de reenvío de eventos que determinen cuándo y cómo se enviarán los eventos a [!DNL Twitter].
 
-Crear un nuevo [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Twitter]**. Para enviar eventos de Adobe Experience Edge Network a [!DNL Twitter], configure el **[!UICONTROL Tipo de acción]** hasta **[!UICONTROL Enviar conversión web].**
+Crear un nuevo [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Twitter]**. Para enviar eventos de Edge Network a [!DNL Twitter], configure el **[!UICONTROL Tipo de acción]** hasta **[!UICONTROL Enviar conversión web].**
 
 Después de la selección, aparecen controles adicionales para configurar aún más el evento. Debe asignar el [!DNL Twitter] propiedades de evento a los elementos de datos creados anteriormente. Para obtener más información, consulte la [[!DNL Twitter] API de conversiones web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
@@ -98,7 +98,7 @@ Después de la selección, aparecen controles adicionales para configurar aún m
 | --- | --- | --- | --- |
 | [!UICONTROL Tiempo de conversión] | Fecha-hora como cadena en ISO 8601 o en aaaa-MM-dd&#39;T&#39;HH:mm:formato ss:SSSZ. | 18-02-2022:14:00,603Z | Sí |
 | [!UICONTROL ID de evento] | El ID en base 36 de un evento específico. Este ID debe coincidir con un evento preconfigurado contenido en su [!DNL Twitter] cuenta de publicidad. Esto se conoce como ID del evento correspondiente en el Administrador de eventos. | o87ne o tw-o8z6j-o87ne (tw-pixel_id-event-id) | Sí |
-| [!UICONTROL Número de elementos] | El número de artículos que se compran en el evento. Debe ser un número positivo bueno que 0. | 4 | No |
+| [!UICONTROL Número de elementos] | El número de artículos que se compran en el evento. Debe ser un número positivo mayor que 0. | 4 | No |
 | [!UICONTROL Moneda] | La moneda de los artículos que se compran en el evento. Esto se expresa en ISO-4217 y, si no se proporciona, el valor predeterminado es USD. | USD | No |
 | [!UICONTROL Valor] | El valor del precio de los artículos que se compran en el evento. | 100.00 | No |
 | [!UICONTROL ID de conversión] | Identificador de un evento de conversión que se puede utilizar para la deduplicación entre conversiones de API de conversión y píxeles web en la misma etiqueta de evento. | 23294827 | No |

@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2022
-description: Notas de la versión de enero de 2022 de Adobe Experience Platform.
+description: Las notas de la versión de enero de 2022 de Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 12%
+ht-degree: 20%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 **Fecha de la versión: 26 de enero de 2022**
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
@@ -69,7 +69,7 @@ Para obtener más información sobre [!DNL Data Prep], consulte la [[!DNL Data P
 
 | Función | Descripción |
 | ----------- | ----------- |
-| Personalización de la misma página y de la página siguiente | El [función de personalización de la misma página y de la siguiente página](../../destinations/ui/activate-edge-personalization-destinations.md) proporciona una vista compartida y dirigida de los usuarios de las aplicaciones Experience Edge, para mantener la coherencia entre los canales de marketing y los de los clientes. Esta personalización es posible a través de [Conexión de Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y el [Conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para configurar sus campañas de personalización de la misma página o de la página siguiente, consulte la [tutorial dedicado](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| Personalización de la misma página y de la página siguiente | El [función de personalización de la misma página y de la siguiente página](../../destinations/ui/activate-edge-personalization-destinations.md) proporciona una vista compartida y dirigida de los usuarios de las aplicaciones de la red perimetral para mantener la coherencia entre los canales de marketing y de cliente. Esta personalización es posible a través de [Conexión de Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y el [Conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para configurar sus campañas de personalización de la misma página o de la página siguiente, consulte la [tutorial dedicado](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Monitorización de destino de lotes y métricas de nivel de segmento | La funcionalidad de monitorización de destino ahora se expande desde los destinos de streaming para incluir también destinos por lotes y métricas de nivel de segmento para los flujos de datos de activación. Para obtener más información, consulte [panel de supervisión de destinos](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [panel monitorización de trabajos de segmentos](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), y [vista de nivel de segmento](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Programar la edición en la IU para flujos de datos de activación por lotes existentes | Esta versión introduce la opción de editar la programación de los flujos de datos de activación existentes para los destinos por lotes. Para obtener más información, consulte [activar datos de perfil en destinos de perfil por lotes](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Mejoras de destino de Marketo | Los clientes de Experience Platform que utilizan Marketo Engage pueden maximizar su base de datos de Marketo con la nueva capacidad de insertar nuevos registros de persona netos en Marketo Engage desde Experience Platform a través de [Conector de destino de Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Al enviar segmentos de audiencia de Experience Platform a Marketo Engage, se pueden agregar automáticamente a él personas dentro del segmento que no existan en la base de datos de Marketo Engage. Para obtener más información, consulte [Insertar un segmento de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (el paso 9 del tutorial indica cómo insertar nuevos registros de persona en Marketo). |
@@ -118,7 +118,7 @@ Para obtener más información sobre los entornos limitados, consulte la [inform
 | --- | --- |
 | Coincidencia de segmentos | La coincidencia de segmentos es un servicio de colaboración de datos que permite a dos o más usuarios de Platform intercambiar datos, basados en identificadores comunes, de una manera segura, controlada y compatible con la privacidad. La coincidencia de segmentos utiliza estándares de privacidad de Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID. Para obtener más información, consulte la [Resumen de coincidencia de segmentos](../../segmentation/ui/segment-match/overview.md). |
 
-Para obtener más información sobre [!DNL Segmentation Service], consulte la [Resumen de segmentación](../../segmentation/home.md).
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 

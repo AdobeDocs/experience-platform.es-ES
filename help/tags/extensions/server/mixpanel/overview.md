@@ -1,12 +1,12 @@
 ---
 keywords: extensión de reenvío de eventos;mixpanel;extensión de reenvío de eventos de mixpanel
 title: Extensión de reenvío de eventos API de seguimiento de eventos de Mixpanel
-description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Adobe Experience Edge Network a Mixpanel.
+description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de red perimetral a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. E
 
 ## Crear un [!DNL Send Event] regla
 
-Comience a crear una nueva regla en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Mixpanel]**. A continuación, establezca el tipo de acción en **[!UICONTROL Rastrear evento]** para enviar eventos de Adobe Experience Edge Network a [!DNL Mixpanel].
+Comience a crear una nueva regla en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL Mixpanel]**. A continuación, establezca el tipo de acción en **[!UICONTROL Rastrear evento]** para enviar eventos de Edge Network a [!DNL Mixpanel].
 
 | Entrada | Descripción | Requerido |
 | --- | --- | --- |

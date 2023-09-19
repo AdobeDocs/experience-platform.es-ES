@@ -2,11 +2,11 @@
 keywords: Experience Platform;guía para desarrolladores;espacio de trabajo de ciencia de datos;temas populares;aprendizaje automático en tiempo real;
 solution: Experience Platform
 title: Información general sobre el aprendizaje automático en tiempo real
-description: El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferencia en tiempo real y al aprendizaje continuo en Experience Edge.
+description: El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible gracias a la inferencia en tiempo real y al aprendizaje continuo en la red de Experience Platform Edge.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '552'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >El aprendizaje automático en tiempo real aún no está disponible para todos los usuarios. Esta función está en formato alfa y aún se está probando. Este documento está sujeto a cambios.
 
-El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible aprovechando la inferencia en tiempo real y el aprendizaje continuo en la [!DNL Experience Edge].
+El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible aprovechando la inferencia en tiempo real y el aprendizaje continuo en la [!DNL Experience Platform Edge Network].
 
 Una combinación de computación perfecta tanto en el Hub como en el [!DNL Edge] reduce en gran medida la latencia que tradicionalmente se emplea para potenciar las experiencias hiperpersonalizadas que son relevantes y adaptables. Por lo tanto, el aprendizaje automático en tiempo real proporciona deducciones con una latencia increíblemente baja para la toma de decisiones sincrónica. Algunos ejemplos son la representación de contenido de página web personalizado o la aparición de una oferta o descuento para reducir la pérdida y aumentar las conversiones en una tienda web.
 
@@ -43,7 +43,7 @@ Cree un modelo de aprendizaje automático en tiempo real creándolo desde cero o
 
 ### Implementación
 
-Implemente el modelo en [!DNL Experience Edge] para crear un servicio de aprendizaje automático en tiempo real en la [!UICONTROL Galería de servicios] usando el extremo de la API de predicción.
+Implemente el modelo en [!DNL Edge Network] para crear un servicio de aprendizaje automático en tiempo real en la [!UICONTROL Galería de servicios] usando el extremo de la API de predicción.
 
 ### Inferencia
 
@@ -66,10 +66,9 @@ El aprendizaje automático en tiempo real se encuentra actualmente en fase alfa.
 > - Para un aprendizaje profundo, los datos deben enviarse de tal manera que cuando `df.values` se denomina, devuelve una matriz que es aceptable para el modelo DL. Esto se debe a que el nodo de puntuación del modelo ONNX utiliza `df.values` y envía la salida para puntuar con el modelo.
 
 
-
 ### Funcionalidades:
 
-|  | Alfa (mayo) |
+| | Alfa (mayo) |
 | --- | --- |
 | **Funcionalidades** | : con la plantilla del bloc de notas RTML, cree, pruebe e implemente un modelo de aprendizaje automático personalizado. <br> - Soporte para importar modelos de aprendizaje automático formados previamente. <br> - SDK de aprendizaje automático en tiempo real. <br> : conjunto inicial de nodos de creación. <br> : implementado en Adobe Experience Platform Hub. |
 | **Disponibilidad** | América del Norte |
