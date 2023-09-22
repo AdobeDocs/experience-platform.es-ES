@@ -2,9 +2,7 @@
 title: Perfiles de clientes potenciales
 description: Aprenda a crear y utilizar perfiles de clientes potenciales para recopilar información sobre clientes desconocidos mediante información de terceros.
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: 6553643789549aec449ceb4f821ea663a0bfcef3
+source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 7%
