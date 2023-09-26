@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo crear una conexión de origen y un
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Para que [!DNL Flow Service] para conectar con [!DNL Snowflake], debe proporcion
 | Credencial | Descripción |
 | --- | --- |
 | `account` | El nombre completo de la cuenta asociado con su [!DNL Snowflake] cuenta. Un completo [!DNL Snowflake] nombre de cuenta incluye su nombre de cuenta, región y cloud platform. Por ejemplo, `cj12345.east-us-2.azure`. Para obtener más información sobre los nombres de cuenta, consulte esta sección [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén de datos es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
+| `warehouse` | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
 | `database` | El [!DNL Snowflake] La base de datos de contiene los datos que desea traer a Platform. |
 | `username` | El nombre de usuario de [!DNL Snowflake] cuenta. |
 | `password` | La contraseña para el [!DNL Snowflake] cuenta de usuario. |
@@ -72,9 +72,10 @@ Para obtener más información sobre la administración de roles y privilegios, 
 * El [!DNL Snowflake] El origen sondea la base de datos en busca de nuevos datos cada 10 segundos.
 * Opciones de Configuration:
    * Puede activar un `backfill` indicador booleano para su [!DNL Snowflake] origen al crear una conexión de origen.
-      * Si el relleno se establece en true, el valor de timestamp.initial se establece en 0. Esto significa que se recuperan los datos con una columna de marca de tiempo buena a 0 epoch time.
-      * Si el relleno se establece en False, el valor de timestamp.initial se establece en -1. Esto significa que se recuperan los datos con una columna de marca de tiempo buena a la hora actual (la hora en la que el origen comienza a ingerir).
-   * La columna de marca de tiempo debe tener el formato tipo: `TIMESTAMP_LTZ` o `TIMESTAMP_NTZ`. Si la columna de marca de tiempo se establece en `TIMESTAMP_NTZ`, los tipos deben almacenarse en hora UTC en la base de datos.
+      * Si el relleno se establece en true, el valor de timestamp.initial se establece en 0. Esto significa que se recuperan los datos con una columna de marca de tiempo mayor que 0 epoch time.
+      * Si el relleno se establece en False, el valor de timestamp.initial se establece en -1. Esto significa que se recuperan datos con una columna de marca de tiempo mayor que la hora actual (la hora en la que el origen comienza a ingerir).
+   * La columna de marca de tiempo debe tener el formato tipo: `TIMESTAMP_LTZ` o `TIMESTAMP_NTZ`. Si la columna de marca de tiempo se establece en `TIMESTAMP_NTZ`, la zona horaria correspondiente en la que se almacenan los valores debe pasarse a través de `timezoneValue` parámetro. Si no se proporciona, el valor predeterminado será UTC.
+      * `TIMESTAMP_TZ` no se puede utilizar en una columna de marca de tiempo o en una asignación.
 
 ## Pasos siguientes
 

@@ -3,10 +3,10 @@ title: Conexión de la cuenta de flujo de Snowflake a Adobe Experience Platform
 description: Obtenga información sobre cómo conectar Adobe Experience Platform al flujo de Snowflake mediante la API de Flow Service.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 3%
+source-wordcount: '867'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 Este tutorial proporciona pasos sobre cómo conectar y transmitir datos desde su [!DNL Snowflake] a Adobe Experience Platform mediante el [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -197,6 +198,7 @@ curl -X POST \
 | `params.tableName` | El nombre de la tabla en su [!DNL Snowflake] que desee llevar a Platform. |
 | `params.timestampColumn` | Nombre de la columna de marca de tiempo que se utilizará para recuperar los valores incrementales. |
 | `params.backfill` | Un indicador booleano que determina si los datos se recuperan desde el principio (hora de la época 0) o desde el momento en que se inicia el origen. Para obtener más información sobre este valor, lea [[!DNL Snowflake] información general de fuente de streaming](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | El valor de zona horaria indica qué hora actual de la zona horaria debe buscarse al consultar la [!DNL Snowflake] base de datos. Este parámetro se debe proporcionar si la columna de marca de tiempo de la configuración está configurada como `TIMESTAMP_NTZ`. Si no se proporciona, `timezoneValue` el valor predeterminado es UTC. |
 
 **Respuesta**
 
@@ -286,5 +288,5 @@ Una respuesta correcta devuelve su ID de flujo y su etiqueta correspondiente.
 
 Al seguir este tutorial, ha creado un flujo de datos de flujo continuo para su [!DNL Snowflake] datos con el [!DNL Flow Service] API. Visite la siguiente documentación para obtener más información sobre las fuentes de Adobe Experience Platform:
 
-* [Resumen de orígenes](../../../../home.md)
+* [Información general de fuentes](../../../../home.md)
 * [Monitorización del flujo de datos mediante API](../../monitor.md)
