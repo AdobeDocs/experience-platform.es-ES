@@ -5,14 +5,19 @@ description: Adobe Experience Platform proporciona un tablero a través del cual
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
 
 # Tablero de uso de licencias (versión limitada) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Tablero de uso de licencias"
+>abstract="El tablero Uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido su uso para cada una de las métricas principales, así como la cantidad de licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
 
 >[!IMPORTANT]
 >
