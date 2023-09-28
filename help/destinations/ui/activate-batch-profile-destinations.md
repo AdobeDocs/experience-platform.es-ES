@@ -4,9 +4,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,10 @@ El Adobe recomienda seleccionar un área de nombres de identidad como una [!DNL 
 >* Los campos se configuran como atributos proyectados para el destino final.
 >
 > Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino. En el paso de revisión, se mostrará una infracción de la política de uso de datos. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE Beta]{type=Informative} Exportar matrices a través de campos calculados {#export-arrays-calculated-fields}
+
+Seleccione los clientes beta que pueden exportar objetos de matriz desde destinos de Experience Platform a almacenamiento en la nube. Más información sobre [exportación de matrices y campos calculados](/help/destinations/ui/export-arrays-calculated-fields.md) y póngase en contacto con su representante de Adobe para obtener acceso a la funcionalidad.
 
 ### Limitaciones conocidas {#known-limitations}
 
