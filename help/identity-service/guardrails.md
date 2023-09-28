@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 | Barrera | Límite | Notas |
 | --- | --- | --- |
-| (Comportamiento actual) Número de identidades en un gráfico | 150 | El límite se aplica en el nivel de zona protegida. Una vez que el número de identidades alcanza las 150 o más, no se agregarán nuevas identidades y el gráfico de identidades no se actualizará. Los gráficos pueden mostrar identidades superiores a 150 como resultado de la vinculación de uno o más gráficos con menos de 150 identidades. **Nota**: el número máximo de identidades en un gráfico de identidades **para un perfil combinado individual** es 50. Los perfiles combinados basados en gráficos de identidad con más de 50 identidades se excluyen del perfil del cliente en tiempo real. Para obtener más información, lea la guía de [protecciones para datos de perfil](../profile/guardrails.md). |
-| (Comportamiento próximo) Número de identidades en un gráfico [!BADGE Beta]{type=Informative} | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
+| Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de caracteres de un nombre para mostrar o un símbolo de identidad | Ninguna | No hay límites en el número de caracteres de un nombre para mostrar o un símbolo de identidad. |
@@ -50,7 +49,7 @@ En la tabla siguiente se describen las reglas existentes que debe seguir para ga
 
 A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad se suele introducir a través de [fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y el [fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque el ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con el equipo de la cuenta de Adobe.
 
-## [!BADGE Beta]{type=Informative} Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidad a capacidad {#deletion-logic}
+## Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidades en capacidad {#deletion-logic}
 
 Cuando se actualiza un gráfico de identidad completo, el servicio de identidad elimina la identidad más antigua del gráfico antes de añadir la identidad más reciente. El objetivo de esto es mantener la precisión y la relevancia de los datos de identidad. Este proceso de eliminación sigue dos reglas principales:
 
