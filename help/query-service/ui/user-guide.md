@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 0%
+source-wordcount: '2288'
+ht-degree: 3%
 
 ---
 
@@ -17,13 +17,23 @@ ht-degree: 0%
 
 Para obtener más información acerca de los conceptos y características de [!DNL Query Service], consulte la [Introducción al servicio de consultas](../home.md). Para obtener más información sobre cómo navegar por la interfaz de usuario del servicio de consultas en [!DNL Platform], consulte la [Introducción a IU del servicio de consultas](./overview.md).
 
+>[!NOTE]
+>
+>La versión heredada del Editor de consultas no proporciona determinada funcionalidad del Servicio de consultas. Las capturas de pantalla utilizadas en este documento se toman con la versión mejorada del Editor de consultas a menos que se indique lo contrario. Consulte la sección en la [Editor de consultas mejorado](#enhanced-editor-toggle) para obtener más información.
+
 ## Introducción {#getting-started}
 
 [!DNL Query Editor] proporciona una ejecución flexible de consultas conectándose a [!DNL Query Service]Las consultas y solo se ejecutan mientras esta conexión está activa.
 
+## Acceso a [!DNL Query Editor] {#accessing-query-editor}
+
+En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir [!DNL Query Service] workspace. A continuación, para empezar a escribir consultas, seleccione **[!UICONTROL Crear consulta]** en la parte superior derecha de la pantalla. Este vínculo está disponible en cualquiera de las páginas del [!DNL Query Service] workspace.
+
+![La pestaña Información general del espacio de trabajo Consultas con Crear consulta resaltada.](../images/ui/query-editor/create-query.png)
+
 ### Conectando con [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] tarda unos segundos en inicializarse y conectarse a [!DNL Query Service] cuando se abre. La consola le indica cuándo está conectada, como se muestra a continuación. Si intenta ejecutar una consulta antes de que el editor se haya conectado, retrasará la ejecución hasta que se complete la conexión.
+El Editor de consultas tarda unos segundos en inicializarse y conectarse al Servicio de consultas cuando se abre. La consola le indica cuándo está conectada, como se muestra a continuación. Si intenta ejecutar una consulta antes de que el editor se haya conectado, retrasará la ejecución hasta que se complete la conexión.
 
 ![Salida de consola del Editor de consultas tras la conexión inicial.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ Para obtener más información acerca de los conceptos y características de [!D
 
 Consultas ejecutadas desde [!DNL Query Editor] ejecutar de forma interactiva, lo que significa que si cierra el explorador o sale, la consulta se cancela. Lo mismo ocurre con las consultas realizadas para generar conjuntos de datos a partir de resultados de consultas.
 
+La edición mejorada del Editor de consultas le permite escribir más de una consulta en el Editor de consultas y ejecutar todas las consultas secuencialmente. Consulte la sección sobre [ejecución de varias consultas secuenciales](#execute-multiple-sequential-queries) para obtener más información.
+
 ## Creación de consultas mediante [!DNL Query Editor] {#query-authoring}
 
 Uso de [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para datos de experiencia del cliente. Todas las consultas ejecutadas o guardadas en [!DNL Query Editor] están disponibles para todos los usuarios de su organización con acceso a [!DNL Query Service].
 
-### Acceso a [!DNL Query Editor] {#accessing-query-editor}
-
-En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir [!DNL Query Service] workspace. A continuación, para empezar a escribir consultas, seleccione **[!UICONTROL Crear consulta]** en la parte superior derecha de la pantalla. Este vínculo está disponible en cualquiera de las páginas del [!DNL Query Service] workspace.
-
-![La pestaña Información general del espacio de trabajo Consultas con Crear consulta resaltada.](../images/ui/query-editor/create-query.png)
-
-### Alternativa del Editor de consultas mejorado {#enhanced-editor-toggle}
+## Alternancia del editor de consultas mejorado {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ Para habilitar los temas oscuros o claros, seleccione el icono de configuración
 
 ![El Editor de consultas con el icono de configuración y la opción de menú desplegable Habilitar tema oscuro resaltada.](../images/ui/query-editor/query-editor-settings.png)
 
-### Escritura de consultas {#writing-queries}
+### Ejecutar varias consultas secuenciales {#execute-multiple-sequential-queries}
+
+La edición mejorada del Editor de consultas permite escribir más de una consulta en el Editor de consultas y ejecutar todas las consultas de forma secuencial.
+
+La ejecución de varias consultas en una secuencia genera cada una una una entrada de registro. Sin embargo, solo se muestran los resultados de la primera consulta en la consola del Editor de consultas. Consulte el registro de consultas si necesita solucionar problemas o confirmar las consultas que se ejecutaron. Consulte la [documentación de registros de consultas](./query-logs.md) para obtener más información.
+
+>[!NOTE]
+> 
+>Si se ejecuta una consulta CTAS después de la primera consulta en el Editor de consultas, se seguirá creando una tabla, pero no habrá resultados en la consola del Editor de consultas.
+
+### Ejecutar consulta seleccionada {#execute-selected-query}
+
+Si ha escrito varias consultas pero sólo necesita ejecutar una, puede resaltar la consulta elegida y seleccionar
+[!UICONTROL Ejecutar consulta seleccionada] icono. Este icono está desactivado de forma predeterminada a menos que seleccione una consulta en el editor.
+
+![El editor de consultas con [!UICONTROL Ejecutar consulta seleccionada] icono resaltado.](../images/ui/query-editor/run-selected-query.png)
+
+### Recuento de resultados {#result-count}
+
+El Editor de consultas tiene un resultado máximo de 50 000 filas. Sin embargo, solo se muestran 50 filas a la vez en la consola del Editor de consultas. Para cambiar el número de filas que se muestran en la consola, seleccione la **[!UICONTROL Recuento de resultados]** y elija entre valores 50, 100, 150, 300 y 500.
+
+![Editor de consultas con la lista desplegable Recuento de resultados resaltada.](../images/ui/query-editor/result-count.png)
+
+## Escritura de consultas {#writing-queries}
 
 [!UICONTROL Editor de consultas] está organizado para que la escritura de consultas sea lo más sencilla posible. La captura de pantalla siguiente muestra cómo aparece el editor en la interfaz de usuario, con el campo de entrada SQL y **Reproducir** resaltado.
 
@@ -70,7 +99,7 @@ Para habilitar los temas oscuros o claros, seleccione el icono de configuración
 
 Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas con límites en las filas devueltas. Por ejemplo, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Después de comprobar que la consulta produce el resultado esperado, quite los límites y ejecute la consulta con `CREATE TABLE tablename AS SELECT` para generar un conjunto de datos con la salida.
 
-### Herramientas de escritura en [!DNL Query Editor] {#writing-tools}
+## Herramientas de escritura en [!DNL Query Editor] {#writing-tools}
 
 - **Resaltado automático de sintaxis:** Facilita la lectura y organización de SQL.
 
@@ -83,6 +112,18 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 - **Autocompletar tabla y campo:** Empiece a escribir el nombre de tabla que desea `SELECT` en, utilice las teclas de flecha para desplazarse a la tabla que está buscando y pulse **Entrar**. Una vez seleccionada una tabla, el completado automático reconoce los campos de esa tabla.
 
 ![La entrada del Editor de consultas muestra sugerencias de nombres de tablas desplegables.](../images/ui/query-editor/tables-auto.png)
+
+### Dar formato al texto {#format-text}
+
+El [!UICONTROL Dar formato al texto] Esta función hace que la consulta sea más legible al agregar un estilo de sintaxis estandarizado. Seleccionar **[!UICONTROL Dar formato al texto]** para estandarizar todo el texto dentro del Editor de consultas.
+
+![El editor de consultas con [!UICONTROL Dar formato al texto] y las sentencias SQL resaltadas.](../images/ui/query-editor/format-text.png)
+
+### Copiar SQL {#copy-sql}
+
+Seleccione el icono Copiar para copiar SQL desde el Editor de consultas al portapapeles. Esta función de copia está disponible tanto para plantillas de consulta como para consultas recién creadas en el Editor de consultas.
+
+![El espacio de trabajo Consultas con una plantilla de consulta de ejemplo con el icono de copia resaltado.](../images/ui/query-editor/copy-sql.png)
 
 ### Opción de configuración de IU de autocompletar {#auto-complete}
 

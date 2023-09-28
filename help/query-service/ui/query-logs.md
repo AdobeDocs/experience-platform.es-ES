@@ -2,9 +2,9 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,37 @@ También puede seleccionar un nombre de plantilla de consulta en la [!UICONTROL 
 
 ![Vista de detalles del registro de consultas.](../images/ui/query-log/query-log-details.png)
 
+## Editar registros {#edit-logs}
+
 Junto al nombre de plantilla o fragmento SQL de cada fila hay un icono de lápiz (![Un icono de lápiz.](../images/ui/query-log/edit-icon.png)) que puede utilizar para desplazarse al Editor de consultas. A continuación, la consulta se rellena previamente en el editor para su edición.
 
 ![El espacio de trabajo Registro de consultas con un icono de lápiz resaltado.](../images/ui/query-log/edit-query.png)
+
+## Filtrar registros {#filter-logs}
+
+Puede filtrar la lista de registros de consultas en función de diferentes configuraciones. Seleccione el icono de filtro (![El icono de filtro.](../images/ui/query-log/filter-icon.png)), en la parte superior izquierda del espacio de trabajo, para abrir un conjunto de opciones de filtro en el carril izquierdo.
+
+![El espacio de trabajo Registro de consultas con el icono de filtro resaltado.](../images/ui/query-log/log-filter.png)
+
+Se muestra la lista de filtros disponibles.
+
+![El espacio de trabajo Registro de consultas con las opciones de filtro mostradas y resaltadas.](../images/ui/query-log/log-filter-settings.png)
+
+La siguiente tabla muestra una descripción de cada filtro.
+
+| Filtro | Descripción |
+| ------ | ----------- |
+| [!UICONTROL Excluir consultas de panel] | Esta casilla de verificación está activada de forma predeterminada y excluye los registros generados por las consultas utilizadas para generar perspectivas. Estas consultas son generadas por el sistema y oscurecen los registros generados por el usuario necesarios para monitorizar, administrar y solucionar problemas. Para ver los registros generados por el sistema, desactive la casilla de verificación. |
+| [!UICONTROL Fecha de inicio] | Para filtrar los registros de las consultas creadas durante un periodo específico, establezca el [!UICONTROL Inicio] y [!UICONTROL Fin] fechas en la [!UICONTROL Fecha de inicio] sección. |
+| [!UICONTROL Fecha de finalización] | Para filtrar los registros de las consultas que se completaron durante un período específico, establezca el [!UICONTROL Inicio] y [!UICONTROL Fin] fechas en la [!UICONTROL Fecha de finalización] sección. |
+| [!UICONTROL Estado] | Para filtrar registros basados en el [!UICONTROL Estado] de la consulta, seleccione el botón de opción adecuado. Las opciones disponibles incluyen [!UICONTROL Enviado], [!UICONTROL En curso], [!UICONTROL Correcto], y [!UICONTROL Error]. Solo puede filtrar registros en función de una condición de estado a la vez. |
+| [!UICONTROL Cliente] | Para filtrar los registros en función de la consulta utilizada por el cliente, introduzca uno de los siguientes valores aceptados en el campo de texto libre: `API`, `Adobe Query Service UI`, o `QsAccel`. |
+| [!UICONTROL Mis consultas] | Utilice el [!UICONTROL Mis consultas] alterne para filtrar los registros de las consultas ejecutadas por usted. |
+| [!UICONTROL ID de registro de consultas] | Para filtrar según el ID de registro único de una consulta, introduzca el ID de registro en el campo de texto libre. Esta información se encuentra en [!UICONTROL Detalles de registro]. |
+
+Todos los filtros aplicados se muestran encima de los resultados del registro filtrado.
+
+![La pestaña Registro del espacio de trabajo Consultas resalta la lista de filtros aplicados.](../images/ui/query-log/applied-log-filters.png)
 
 ## Pasos siguientes
 
