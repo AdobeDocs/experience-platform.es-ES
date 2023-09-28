@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
 workflow-type: tm+mt
-source-wordcount: '3610'
-ht-degree: 4%
+source-wordcount: '3781'
+ht-degree: 3%
 
 ---
 
@@ -62,37 +62,9 @@ Para obtener más información, visite la [guía del panel de audiencias](../../
 >title="Añadir todos los públicos a la programación"
 >abstract="Habilite la opción para incluir todos los públicos evaluados mediante la segmentación por lotes en la actualización programada diaria. Deshabilite para quitar todos los públicos de la actualización programada."
 
-Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las audiencias de su organización.
+Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las audiencias de su organización. Esta vista muestra información sobre las audiencias, incluido el recuento de perfiles, el origen, la fecha de creación, la fecha de la última modificación, las etiquetas y el desglose.
 
 ![Se muestra la pantalla de exploración. Se muestra una lista de todas las audiencias que pertenecen a la organización.](../images/ui/overview/audience-browse.png)
-
-Esta vista muestra información sobre las audiencias, incluido el recuento de perfiles, el origen, la fecha de creación, la fecha de la última modificación, las etiquetas y el desglose.
-
-Puede añadir campos adicionales a esta visualización seleccionando ![el icono de atributo de filtro](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen el estado del ciclo vital, la frecuencia de actualización, la última actualización por, la descripción, la creación por y las etiquetas de acceso.
-
-| Campo | Descripción |
-| ----- | ----------- |
-| [!UICONTROL Nombre] | El nombre de la audiencia. |
-| [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
-| [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
-| [!UICONTROL Creado] | La fecha y la hora, en UTC, en que se creó la audiencia. |
-| [!UICONTROL Última actualización] | La fecha y la hora, en UTC, en que se actualizó la audiencia por última vez. |
-| [!UICONTROL Etiquetas] | Las etiquetas definidas por el usuario que pertenecen a la audiencia. Encontrará más información sobre estas etiquetas en la [sección sobre etiquetas](#tags). |
-| [!UICONTROL Desglose] | El desglose del estado del perfil de la audiencia. A continuación, se puede encontrar una descripción más detallada de este desglose del estado del perfil. |
-| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
-| [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen `On Demand` (Lote), `Scheduled` (Transmisión), y `Continuous` (Edge). |
-| [!UICONTROL Actualizado por última vez por] | El nombre de la persona que actualizó la audiencia por última vez. |
-| [!UICONTROL Descripción] | La descripción de la audiencia. |
-| [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
-| [!UICONTROL Etiquetas de acceso] | Las etiquetas de acceso para la audiencia. Las etiquetas de acceso le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Estas etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
-
-Si se selecciona desglose, la visualización muestra un gráfico de barras que describe el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados de perfiles calculados: [!UICONTROL Realizado], [!UICONTROL Existente], y [!UICONTROL Saliendo]. Además, el desglose que se muestra en la [!UICONTROL Examinar] es el desglose más preciso del estado de la definición del segmento. Si este número difiere de lo que se indica en la variable [!UICONTROL Información general] , debe utilizar los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de las pestañas solo se actualizan una vez al día.
-
-| Estado | Descripción |
-| ------ | ----------- |
-| [!UICONTROL Realizado] | El recuento de perfiles que **cualificado** para el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
-| [!UICONTROL Existente] | El recuento de perfiles que **permanecido** en el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
-| [!UICONTROL Saliendo] | El recuento de perfiles que **abandonado** el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
 
 Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta opción, se muestra una lista de las acciones rápidas disponibles para la audiencia. Esta lista de acciones difiere según el origen de la audiencia.
 
@@ -110,8 +82,13 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | Aplicar etiquetas de acceso | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | Archivar | Carga personalizada | Archiva la audiencia seleccionada. |
 | Eliminar | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
+| Añadir a paquete | Composición de audiencias, carga personalizada, servicio de segmentación | Permite mover la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
-En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia y crear una nueva.
+>[!NOTE]
+>
+> Lo hará **no** poder eliminar una audiencia que se utilice en una activación de destino.
+
+En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia, crear una audiencia nueva y ver un desglose de la frecuencia de actualización.
 
 Alternar **[!UICONTROL Programar todas las audiencias]** habilitará la segmentación programada. Encontrará más información sobre la segmentación programada en la [sección segmentación programada de esta guía del usuario](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ Seleccionar **[!UICONTROL Crear audiencia]** le permitirá crear una audiencia. 
 
 ![Se resalta la barra de navegación superior de la página de navegación de la audiencia. Esta barra contiene un botón para crear una audiencia y un botón para importar una audiencia.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> Lo hará **no** poder eliminar una audiencia que se utilice en una activación de destino.
+Puede seleccionar **[!UICONTROL Actualizar resumen de frecuencia]** para mostrar un gráfico circular con la frecuencia de actualización.
+
+![Se resaltará el botón Update frequency summary.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+Aparece un gráfico circular que muestra un desglose de las audiencias por frecuencia de actualización. El gráfico muestra el número total de audiencias en el medio. Si pasa el ratón por encima de las diferentes partes de la audiencia, se mostrará el número de audiencias que pertenecen a cada tipo de frecuencia de actualización.
+
+![Se muestra el gráfico circular de frecuencia de actualización.](../images/ui/overview/update-frequency-chart.png)
+
+### Personalizar {#customize}
+
+Puede añadir campos adicionales a la [!UICONTROL Examinar] página seleccionando ![el icono de atributo de filtro](../images/ui/overview/filter-attribute.png). Estos campos adicionales incluyen el estado del ciclo vital, la frecuencia de actualización, la última actualización por, la descripción, la creación por y las etiquetas de acceso.
+
+| Campo | Descripción |
+| ----- | ----------- |
+| [!UICONTROL Nombre] | El nombre de la audiencia. |
+| [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
+| [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
+| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
+| [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen [!UICONTROL Lote], [!UICONTROL Transmisión], [!UICONTROL Edge], y [!UICONTROL No programado]. |
+| [!UICONTROL Actualizado por última vez por] | El nombre de la persona que actualizó la audiencia por última vez. |
+| [!UICONTROL Creado] | La fecha y la hora, en UTC, en que se creó la audiencia. |
+| [!UICONTROL Última actualización] | La fecha y la hora, en UTC, en que se actualizó la audiencia por última vez. |
+| [!UICONTROL Etiquetas] | Las etiquetas definidas por el usuario que pertenecen a la audiencia. Encontrará más información sobre estas etiquetas en la [sección sobre etiquetas](#tags). |
+| [!UICONTROL Descripción] | La descripción de la audiencia. |
+| [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
+| [!UICONTROL Etiquetas de acceso] | Las etiquetas de acceso para la audiencia. Las etiquetas de acceso le permiten categorizar conjuntos de datos y campos según las políticas de uso que se aplican a esos datos. Estas etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Desglose] | El desglose del estado del perfil de la audiencia. A continuación, se puede encontrar una descripción más detallada de este desglose del estado del perfil. |
+
+Si se selecciona desglose, la visualización muestra un gráfico de barras que describe el porcentaje de perfiles que pertenecen a cada uno de los siguientes estados de perfiles calculados: [!UICONTROL Realizado], [!UICONTROL Existente], y [!UICONTROL Saliendo]. Además, el desglose que se muestra en la [!UICONTROL Examinar] es el desglose más preciso del estado de la definición del segmento. Si este número difiere de lo que se indica en la variable [!UICONTROL Información general] , debe utilizar los números de la pestaña [!UICONTROL Examinar] como la fuente de información correcta, ya que la variable [!UICONTROL Información general] los números de las pestañas solo se actualizan una vez al día.
+
+| Estado | Descripción |
+| ------ | ----------- |
+| [!UICONTROL Realizado] | El recuento de perfiles que **cualificado** para el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
+| [!UICONTROL Existente] | El recuento de perfiles que **permanecido** en el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
+| [!UICONTROL Saliendo] | El recuento de perfiles que **abandonado** el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmento por lotes. |
+
+Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione la opción ![icono de flecha](../images/ui/overview/arrow-icon.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
+
+![Se resalta el botón Cambiar tamaño de columna.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filtrado, carpetas y etiquetado {#manage-audiences}
 
@@ -294,7 +307,7 @@ Aparece una ventana emergente que le permite elegir entre componer una audiencia
 
 ![Una ventana emergente que muestra los dos tipos de audiencias que puede crear.](../images/ui/overview/create-audience-type.png)
 
-**Composición de audiencia** {#audience-composition}
+**Composición de público** {#audience-composition}
 
 Seleccionar **[!UICONTROL Componer audiencias]** le lleva a Composición de audiencias. Este espacio de trabajo proporciona controles intuitivos para crear y editar audiencias, como mosaicos de arrastrar y soltar utilizados para representar diferentes acciones. Para obtener más información sobre la creación de audiencias, lea la [Guía de composición de audiencias](./audience-composition.md).
 
@@ -378,7 +391,7 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 | [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
 | [!UICONTROL Creado] | La hora y la fecha de creación de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
-| [!UICONTROL Se han actualizado] | Fecha y hora en la que se actualizó la audiencia por última vez. |
+| [!UICONTROL Actualizado  ] | Fecha y hora en la que se actualizó la audiencia por última vez. |
 | [!UICONTROL Actualizado por] | El nombre de la persona que actualizó la audiencia por última vez. |
 
 Para ver la composición de la audiencia, seleccione el nombre de una audiencia dentro de la [!UICONTROL Audiencias] pestaña.
