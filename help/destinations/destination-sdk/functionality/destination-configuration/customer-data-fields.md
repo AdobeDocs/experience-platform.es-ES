@@ -1,10 +1,10 @@
 ---
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1580'
+ht-degree: 5%
 
 ---
 
@@ -62,7 +62,7 @@ Al crear sus propios campos de datos de cliente, puede utilizar los parámetros 
 | `enum` | Cadena | Opcional | Procesa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
 | `default` | Cadena | Opcional | Define el valor predeterminado a partir de un `enum` lista. |
 | `hidden` | Booleano | Opcional | Indica si el campo de datos del cliente se muestra o no en la interfaz de usuario. |
-| `unique` | Booleano | Opcional | Utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor deba ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, la variable **[!UICONTROL Alias de integración]** en el campo [Personalización personalizada](../../../catalog/personalization/custom-personalization.md) el destino debe ser único, lo que significa que dos flujos de datos independientes a este destino no pueden tener el mismo valor para este campo. |
+| `unique` | Booleano | Opcional | utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor debe ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, el campo **[!UICONTROL Alias de integración]** en el destino [Personalización](../../../catalog/personalization/custom-personalization.md) debe ser único, lo que significa que dos flujos de datos independientes a este destino no pueden tener el mismo valor para este campo. |
 | `readOnly` | Booleano | Opcional | Indica si el cliente puede cambiar el valor del campo o no. |
 
 {style="table-layout:auto"}
@@ -252,6 +252,93 @@ Para ello, utilice el `namedEnum` como se muestra a continuación y configure un
 ```
 
 ![Grabación de pantalla que muestra un ejemplo de selectores desplegables creados con la configuración que se muestra arriba.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Creación de selectores desplegables dinámicos para los campos de datos del cliente {#dynamic-dropdown-selectors}
+
+En situaciones en las que desee llamar dinámicamente a una API y utilizar la respuesta para rellenar dinámicamente las opciones en un menú desplegable, puede utilizar un selector desplegable dinámico.
+
+Los selectores desplegables dinámicos tienen un aspecto idéntico al de [selectores desplegables normales](#dropdown-selectors) en la interfaz de usuario. La única diferencia es que los valores se recuperan dinámicamente de una API.
+
+Para crear un selector desplegable dinámico, debe configurar dos componentes:
+
+**Paso 1.** [Creación de un servidor de destino](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un `responseFields` para la llamada de API dinámica, como se muestra a continuación.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Paso 2.** Utilice el `dynamicEnum` como se muestra a continuación. En el ejemplo siguiente, la variable `User` El menú desplegable se recupera mediante el servidor dinámico.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Configure las variables `destinationServerId` al ID del servidor de destino creado en el paso 1. Puede ver el ID del servidor de destino en la respuesta de [recuperar una configuración de servidor de destino](../../authoring-api/destination-server/retrieve-destination-server.md) Llamada de API.
 
 ## Crear campos de datos de clientes condicionales {#conditional-options}
 

@@ -1,9 +1,9 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para crear un servidor de destino a través del Adobe Experience Platform Destination SDK.
 title: Crear una configuración de servidor de destino
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '2039'
 ht-degree: 9%
 
 ---
@@ -844,6 +844,103 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Crear servidores de destino desplegables dinámicos {#dynamic-dropdown-servers}
+
+Uso [desplegables dinámicos](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) para recuperar y rellenar dinámicamente campos de datos de clientes desplegables, basados en su propia API. Por ejemplo, puede recuperar una lista de cuentas de usuario existentes que desee utilizar para una conexión de destino.
+
+Debe configurar un servidor de destino para los desplegables dinámicos antes de poder configurar el campo de datos de cliente desplegables dinámicos.
+
+Consulte en la pestaña siguiente un ejemplo de un servidor de destino utilizado para recuperar dinámicamente los valores que se mostrarán en un selector desplegable, desde una API.
+
+La carga útil de ejemplo siguiente incluye todos los parámetros necesarios para un servidor de esquema dinámico.
+
+>[!BEGINTABS]
+
+>[!TAB Servidor desplegable dinámico]
+
+**Creación de un servidor desplegable dinámico**
+
+Debe crear un servidor desplegable dinámico similar al que se muestra a continuación cuando configura un destino que recupera los valores de un campo de datos de cliente desplegable desde su propio extremo de API.
+
++++Solicitud
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parámetro | Tipo | Descripción |
+| -------- | ----------- | ----------- |
+| `name` | Cadena | *Requerido.* Representa un nombre descriptivo del servidor desplegable dinámico, visible solo para el Adobe. |
+| `destinationServerType` | Cadena | *Requerido.* Configure como. `URL_BASED` para servidores desplegables dinámicos. |
+| `urlBasedDestination.url.templatingStrategy` | Cadena | *Requerido.* <ul><li>Uso `PEBBLE_V1` si Adobe necesita transformar la dirección URL en `value` Campo inferior. Utilice esta opción si tiene un punto final como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Uso `NONE` si no se necesita ninguna transformación en el lado del Adobe, por ejemplo, si tiene un punto final como: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Cadena | *Requerido.* Rellene la dirección del extremo de API al que el Experience Platform debe conectarse y recupere los valores desplegables. |
+| `httpTemplate.httpMethod` | Cadena | *Requerido.* El método que utilizará el Adobe en las llamadas a su servidor. Para servidores desplegables dinámicos, utilice `GET`. |
+| `httpTemplate.headers` | Objeto | *Optiona.l* Incluya los encabezados necesarios para conectarse al servidor desplegable dinámico. |
+| `responseFields.templatingStrategy` | Cadena | *Requerido.* En su lugar, utilice `PEBBLE_V1`. |
+| `responseFields.value` | Cadena | *Requerido.* Esta cadena es la plantilla de transformación con caracteres de escape que transforma la respuesta recibida de su API en los valores que se mostrarán en la interfaz de usuario de Platform. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la [Uso de la sección de plantillas](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte la [Estándar JSON RFC, sección siete](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Respuesta
+
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configuración del servidor de destino recién creada.
+
++++
 
 >[!ENDTABS]
 
