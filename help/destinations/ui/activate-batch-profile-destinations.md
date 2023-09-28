@@ -4,9 +4,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
+source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
 workflow-type: tm+mt
-source-wordcount: '3707'
+source-wordcount: '3669'
 ht-degree: 11%
 
 ---
@@ -27,11 +27,6 @@ ht-degree: 11%
 En este artículo se explica el flujo de trabajo necesario para activar audiencias en destinos basados en perfiles por lotes de Adobe Experience Platform, como destinos de marketing por correo electrónico y almacenamiento en la nube.
 
 ## Requisitos previos {#prerequisites}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="Compatibilidad con matrices de exportación (Beta)"
->abstract="(Beta) Exporte matrices de valores primitivos de Experience Platform al destino de almacenamiento en la nube deseado. Este texto se actualizará más información. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Más información</a>. "
 
 Para activar audiencias en destinos, debe tener [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar.
 
