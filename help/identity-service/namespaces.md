@@ -1,45 +1,59 @@
 ---
 title: Información general de área de nombres
-description: Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de "name@email.com" como dirección de correo electrónico o "443522" como ID numérico de CRM.
+description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 9%
+source-wordcount: '1699'
+ht-degree: 7%
 
 ---
 
 # Información general de área de nombres de identidad
 
-Las áreas de nombres de identidad son un componente de [[!DNL Identity Service]](./home.md) que sirven como indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;nombre&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID numérico de CRM.
+Lea el siguiente documento para obtener más información sobre lo que puede hacer con las áreas de nombres de identidad en el servicio de identidad de Adobe Experience Platform.
 
 ## Introducción
 
-El trabajo con áreas de nombres de identidad requiere comprender los distintos servicios de Adobe Experience Platform implicados. Antes de empezar a trabajar con áreas de nombres, revise la documentación de los servicios siguientes:
+Áreas de nombres de identidad requiere una comprensión de varios servicios de Adobe Experience Platform. Antes de empezar a trabajar con áreas de nombres, revise la documentación de los servicios siguientes:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
-- [[!DNL Identity Service]](./home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
-- [[!DNL Privacy Service]](../privacy-service/home.md): las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de consumidores deben verse afectados.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
+* [[!DNL Identity Service]](./home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
+* [[!DNL Privacy Service]](../privacy-service/home.md): las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de consumidores deben verse afectados.
 
 ## Explicación de áreas de nombres de identidad
 
-Una identidad completa incluye un valor de ID y un área de nombres. Al hacer coincidir datos de registros en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] Combina datos de perfil; tanto el valor de identidad como el área de nombres deben coincidir.
+Una identidad completa incluye dos componentes: una **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como ID de CRM. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registros en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] Combina datos de perfil; tanto el valor de identidad como el área de nombres deben coincidir.
 
-Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo tanto [!DNL Platform] puede ver que estos fragmentos son en realidad la misma persona y reúne los datos en el gráfico de identidad de la persona.
+Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo que Experience Platform puede ver que estos fragmentos son realmente la misma persona y reúne los datos en el gráfico de identidades para la persona.
 
 ![](images/identity-service-stitching.png)
 
-### Tipos de identidad {#identity-types}
+### Componentes de un área de nombres
+
+Un área de nombres consta de los siguientes componentes:
+
+* **Nombre para mostrar**: nombre descriptivo de un área de nombres determinada.
+* **Símbolo de identidad**: código utilizado internamente por el servicio de identidad para representar un área de nombres.
+* **Tipo de identidad**: la clasificación de un área de nombres determinada.
+* **Descripción**: (Opcional) Cualquier información suplementaria que pueda proporcionar con respecto a un área de nombres determinada.
+
+### Tipo de identidad {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Especificar el tipo de identidad"
->abstract="El tipo de identidad controla si los datos se almacenan o no en el gráfico de identidad. Se almacenarán todos los tipos de identidad, excepto los identificadores que no correspondan a personas."
+>abstract="El tipo de identidad controla si los datos se almacenan o no en el gráfico de identidad. Los gráficos de identidad no se generan para los siguientes tipos de identidad: identificadores de no persona e ID de socio."
 >text="Learn more in documentation"
 
-Los datos se pueden identificar mediante varios tipos de identidad diferentes. El tipo de identidad se especifica en el momento en que se crea el área de nombres de identidad y controla si los datos se mantienen en el gráfico de identidad y cualquier instrucción especial para administrar esos datos. Todos los tipos de identidad excepto **Identificador de no personas** siga el mismo comportamiento al unir un área de nombres y su valor de ID correspondiente a un clúster de gráficos de identidad. Los datos no se vinculan entre sí al utilizar **Identificador de no personas**.
+Un elemento de un área de nombres de identidad es **tipo de identidad**. El tipo de identidad determina:
 
-Los siguientes tipos de identidad están disponibles en [!DNL Platform]:
+* Si se generará un gráfico de identidad:
+   * Los gráficos de identidad no se generan para los siguientes tipos de identidad: identificadores de no persona e ID de socio.
+   * Los gráficos de identidad se generan para todos los demás tipos de identidad.
+* Qué identidades se eliminan del gráfico de identidades cuando se alcanzan los límites del sistema. Para obtener más información, lea la [protecciones para datos de identidad](guardrails.md).
+
+Los siguientes tipos de identidad están disponibles en Experience Platform:
 
 | Tipo de identidad | Descripción |
 | --- | --- |
@@ -88,43 +102,33 @@ Se proporcionan las siguientes áreas de nombres estándar para su uso por todas
 
 Para ver áreas de nombres de identidad en la interfaz de usuario, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y seleccione **[!UICONTROL Examinar]**.
 
-![examinar](./images/browse.png)
+Aparece un directorio de áreas de nombres en su organización, que muestra información sobre sus nombres, símbolos de identidad, fechas de última actualización, tipos de identidad correspondientes y descripción.
 
-Aparece una lista de áreas de nombres de identidad en la interfaz principal de la página, que muestra información sobre sus nombres, símbolos de identidad, fecha de última actualización y si son un área de nombres estándar o personalizada. El carril derecho contiene información sobre [!UICONTROL Intensidad del gráfico de identidad].
+![Directorio de áreas de nombres de identidad personalizadas de su organización.](./images/namespace/browse.png)
 
-![identidades](./images/identities.png)
-
-Platform también proporciona áreas de nombres para fines de integración. Estas áreas de nombres están ocultas de forma predeterminada, ya que se utilizan para conectarse con otros sistemas y no para vincular identidades. Para ver las áreas de nombres de integración, seleccione **[!UICONTROL Ver identidades de integración]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Seleccione un área de nombres de identidad de la lista para ver información sobre un área de nombres específica. Al seleccionar un área de nombres de identidad, se actualiza la visualización en el carril derecho para mostrar los metadatos relativos al área de nombres de identidad que ha seleccionado, incluido el número de identidades introducidas y el número de registros fallidos y omitidos.
-
-![select-namespace](./images/select-namespace.png)
-
-## Administrar áreas de nombres personalizadas {#manage-namespaces}
+## Crear áreas de nombres personalizadas {#create-namespaces}
 
 Según los datos de organización y los casos de uso, puede requerir áreas de nombres personalizadas. Se pueden crear áreas de nombres personalizadas con la variable [[!DNL Identity Service]](./api/create-custom-namespace.md) API o a través de la IU de.
 
-Para crear un área de nombres personalizada mediante la interfaz de usuario de, vaya a **[!UICONTROL Identidades]** workspace, seleccione **[!UICONTROL Examinar]**, y luego seleccione **[!UICONTROL Crear área de nombres de identidad]**.
+Para crear un área de nombres personalizada, seleccione **[!UICONTROL Crear área de nombres de identidad]**.
 
-![select-create](./images/select-create.png)
+![Botón Crear área de nombres de identidad en el área de trabajo de identidades.](./images/namespace/create-identity-namespace.png)
 
-El **[!UICONTROL Crear área de nombres de identidad]** aparece el cuadro de diálogo. Proporcionar un único **[!UICONTROL Nombre para mostrar]** y **[!UICONTROL Símbolo de identidad]** y, a continuación, seleccione el tipo de identidad que desee crear. También puede agregar una descripción opcional para agregar más información sobre el área de nombres. Todos los tipos de identidad excepto **Identificador de no personas** sigue el mismo comportamiento de la vinculación. Si selecciona **Identificador de no personas** como tipo de identidad al crear un área de nombres, no se produce la vinculación. Para obtener información específica sobre cada tipo de identidad, consulte la tabla en [tipos de identidad](#identity-types).
+El [!UICONTROL Crear área de nombres de identidad] aparece una ventana. En primer lugar, debe proporcionar un nombre para mostrar y un símbolo de identidad para el área de nombres personalizada que desea crear. Si lo desea, también puede proporcionar una descripción para agregar más contexto al área de nombres personalizada que está creando.
 
-Cuando termine, seleccione **[!UICONTROL Crear]**.
+![Ventana emergente en la que se puede introducir información sobre el área de nombres de identidad personalizada.](./images/namespace/name-and-symbol.png)
+
+A continuación, seleccione el tipo de identidad que desea asignar al área de nombres personalizada. Cuando termine, seleccione **[!UICONTROL Crear]**.
+
+![Una selección de tipos de identidad que puede elegir y asignar a su área de nombres de identidad personalizada.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Las áreas de nombres que defina son privadas para su organización y requieren un símbolo de identidad único para crearse correctamente.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-De forma similar a las áreas de nombres estándar, puede seleccionar un área de nombres personalizada en el **[!UICONTROL Examinar]** para ver los detalles. Sin embargo, con un área de nombres personalizada también puede editar su nombre para mostrar y su descripción desde el área de detalles.
-
->[!NOTE]
+>* Las áreas de nombres que defina son privadas para su organización y requieren un símbolo de identidad único para crearse correctamente.
 >
->Una vez creado un área de nombres, no se puede eliminar y no se puede cambiar su símbolo de identidad y tipo.
+>* Una vez creado un área de nombres, no se puede eliminar y no se puede cambiar su símbolo de identidad y tipo.
+>
+>* No se admiten áreas de nombres duplicadas. No se puede utilizar un nombre para mostrar y un símbolo de identidad existentes al crear un área de nombres nueva.
 
 ## Áreas de nombres en datos de identidad
 
