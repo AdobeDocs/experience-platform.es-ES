@@ -5,10 +5,10 @@ title: Crear y editar tipos de datos mediante la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario de Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 0%
+source-wordcount: '1354'
+ht-degree: 5%
 
 ---
 
@@ -33,20 +33,21 @@ Aunque no es necesario para esta guía, se recomienda seguir el tutorial en [com
 
 ## Abra el [!DNL Schema Editor] para un tipo de datos {#data-type}
 
-En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir [!UICONTROL Esquemas] espacio de trabajo y seleccione **[!UICONTROL Tipos de datos]** pestaña. Se muestra una lista de los tipos de datos disponibles, incluidos los definidos por Adobe y los creados por su organización.
+En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir [!UICONTROL Esquemas] espacio de trabajo y seleccione **[!UICONTROL Tipos de datos]** pestaña. Se muestra una lista de los tipos de datos disponibles. La lista de tipos de datos se filtra automáticamente en función de cómo se crearon. La configuración predeterminada muestra los tipos de datos definidos por el Adobe. También puede filtrar la lista para mostrar los que ha creado su organización.
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![El [!UICONTROL Esquemas] workspace con [!UICONTROL Esquemas] en el panel de navegación izquierdo y [!UICONTROL Tipos de datos] resaltado.](../../images/ui/resources/data-types/data-types-tab.png)
 
-A partir de aquí, tiene dos opciones:
+A partir de aquí, tiene las siguientes opciones:
 
 - [Crear un nuevo tipo de datos](#create)
+- [Filtrar tipos de datos](#filter)
 - [Seleccione un tipo de datos existente para editarlo](#edit)
 
 ### Crear un nuevo tipo de datos {#create}
 
 Desde el **[!UICONTROL Tipos de datos]** pestaña, seleccione **[!UICONTROL Crear tipo de datos]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![El [!UICONTROL Esquemas] workspace [!UICONTROL Tipos de datos] pestaña con [!UICONTROL Crear tipo de datos] resaltado.](../../images/ui/resources/data-types/create.png)
 
 El [!DNL Schema Editor] aparece, mostrando la estructura actual del nuevo tipo de datos en el lienzo. En el lado derecho del editor, puede proporcionar un nombre para mostrar y una descripción opcional para el tipo de datos. Asegúrese de proporcionar un nombre único y conciso para el tipo de datos, ya que así es como se identificará al agregarlo a un esquema.
 
@@ -56,17 +57,25 @@ Este tutorial crea un tipo de datos que describe una propiedad de restaurante, d
 
 Desde aquí puede ir directamente a la [sección siguiente](#add-fields) para empezar a agregar campos al nuevo tipo de datos.
 
+### Filtrar tipos de datos {#filter}
+
+La lista de tipos de datos disponibles se filtra previamente en función de cómo se crearon. Seleccione el botón de opción para elegir entre las [!UICONTROL Standard] y [!UICONTROL Personalizado] opciones. El [!UICONTROL Standard] muestra las entidades creadas por Adobe y la opción [!UICONTROL Personalizado] Esta opción muestra las entidades creadas dentro de su organización.
+
+![El [!UICONTROL Tipos de datos] de la pestaña [!UICONTROL Esquemas] workspace con [!UICONTROL Standard] y [!UICONTROL Personalizado] resaltado.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### Editar un tipo de datos existente {#edit}
 
 >[!NOTE]
 >
 >Una vez que se utiliza un tipo de datos existente en un esquema que se ha habilitado para su uso en el Perfil del cliente en tiempo real, solo se pueden realizar cambios no destructivos en ese tipo de datos a partir de entonces. Consulte la [reglas de evolución de esquema](../../schema/composition.md#evolution) para obtener más información.
 
-Solo se pueden editar los tipos de datos personalizados definidos por su organización. Para reducir la lista mostrada, seleccione el icono de filtro (![Icono de filtro](../../images/ui/resources/data-types/filter.png)) para mostrar los controles de filtrado basados en [!UICONTROL Propietario]. Seleccionar **[!UICONTROL Cliente]** para mostrar solo los tipos de datos personalizados que son propiedad de su organización.
+Solo se pueden editar los tipos de datos personalizados definidos por su organización. Seleccionar **[!UICONTROL Personalizado]** para mostrar solo los tipos de datos personalizados que son propiedad de su organización.
 
-Seleccione el tipo de datos que desea editar de la lista para abrir el carril derecho, mostrando los detalles del tipo de datos. Seleccione el nombre del tipo de datos en el carril derecho para abrir su estructura en la [!DNL Schema Editor].
+Seleccione el tipo de datos que desea editar de la lista para abrir el carril derecho, mostrando los detalles del tipo de datos. Desde el panel de detalles también puede descargar un archivo de muestra, copiar la estructura JSON o añadir el tipo de datos a un paquete.
 
-![](../../images/ui/resources/data-types/edit.png)
+Seleccione el nombre del tipo de datos en el carril derecho para abrir su estructura en la [!DNL Schema Editor].
+
+![El [!UICONTROL Tipos de datos] de la pestaña [!UICONTROL Esquemas] workspace, con un tipo de datos, [!UICONTROL Personalizado] y el tipo de datos [!UICONTROL Nombre] resaltado.](../../images/ui/resources/data-types/edit.png)
 
 ## Añadir campos al tipo de datos {#add-fields}
 

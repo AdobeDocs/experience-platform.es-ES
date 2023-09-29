@@ -4,9 +4,9 @@ title: Exportación de esquemas XDM en la IU
 description: Obtenga información sobre cómo exportar un esquema existente a una zona protegida u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,9 @@ Aunque la IU de Platform le permite exportar recursos XDM, debe utilizar la API 
 
 ## Generación de una carga útil de exportación {#generate-export-payload}
 
-En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Dentro de [!UICONTROL Esquemas] espacio de trabajo, seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
+Las cargas útiles de exportación se pueden generar en la interfaz de usuario de Platform desde el panel de detalles del [!UICONTROL Examinar] o directamente desde el lienzo del esquema en el Editor de esquemas.
+
+Para generar una carga útil de exportación, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo. Dentro de [!UICONTROL Esquemas] espacio de trabajo, seleccione la fila del esquema que desea exportar para mostrar los detalles del esquema en la barra lateral derecha.
 
 >[!TIP]
 >
@@ -200,6 +202,14 @@ Esto copia una carga útil JSON en el portapapeles, generada en función de la e
   }
 ]
 ```
+
+La carga útil también se puede copiar seleccionando [!UICONTROL Más] en la parte superior derecha del Editor de esquemas. Un menú desplegable ofrece dos opciones: [!UICONTROL Copiar estructura de JSON] y [!UICONTROL Eliminar esquema].
+
+>[!NOTE]
+>
+>Un esquema no se puede eliminar cuando está habilitado para el perfil o tiene conjuntos de datos asociados.
+
+![El Editor de esquemas con [!UICONTROL Más] y [!UICONTROL Copiar a JSON] resaltado.](../images/ui/export/schema-editor-copy-json.png)
 
 La carga útil adopta la forma de una matriz, y cada elemento de matriz es un objeto que representa un recurso XDM personalizado que se va a exportar. En el ejemplo anterior, la variable &quot;[!DNL Loyalty details]&quot; grupo de campos personalizados y &quot;[!DNL Loyalty Members]Se incluyen los esquemas &quot;. Los recursos principales empleados por el esquema no se incluyen en la exportación, ya que estos recursos están disponibles en todas las zonas protegidas y organizaciones.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación y edición de grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario de Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 1%
+source-wordcount: '985'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="Filtro de grupo de campos estándar o personalizado"
->abstract="La lista de grupos de campos disponibles se filtra previamente según cómo se crearon. Seleccione el botón de opción para elegir entre las opciones Estándar y Personalizado. La opción Estándar muestra las entidades creadas por Adobe y la opción Personalizada muestra las entidades creadas dentro de su organización. Consulte la documentación para obtener más información sobre la creación y edición de grupos de campos."
+>abstract="La lista de grupos de campos disponibles se filtra previamente en función de cómo se crearon. Seleccione el botón de opción para elegir entre las opciones Estándar y Personalizado. La opción Estándar muestra las entidades creadas por Adobe y la opción Personalizada muestra las entidades creadas dentro de su organización. Consulte la documentación para obtener más información sobre la creación y edición de grupos de campos."
 
 En el modelo de datos de experiencia (XDM), los grupos de campos de esquema son componentes reutilizables que definen uno o varios campos que implementan determinadas funciones, como detalles personales, preferencias de hotel o dirección. Los grupos de campos están pensados para incluirse como parte de un esquema que implementa una clase compatible.
 
@@ -45,6 +45,12 @@ En el cuadro de diálogo que aparece, seleccione **[!UICONTROL Crear nuevo grupo
 El [!DNL Schema Editor] vuelve a aparecer y el nuevo grupo de campos aparece en el carril izquierdo. Dado que es un grupo de campos completamente nuevo, actualmente no proporciona campos al esquema y, por lo tanto, el lienzo permanece sin cambios. Ahora puede iniciar [adición de campos al grupo de campos](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## Filtrar grupos de campos {#filter}
+
+La lista de grupos de campos disponibles se filtra previamente en función de cómo se crearon. La configuración predeterminada muestra los grupos de campos definidos por el Adobe. Sin embargo, también puede filtrar la lista para mostrar las creadas por su organización. Seleccione el botón de opción para elegir entre las [!UICONTROL Standard] y [!UICONTROL Personalizado] opciones. El [!UICONTROL Standard] muestra las entidades creadas por Adobe y la opción [!UICONTROL Personalizado] Esta opción muestra las entidades creadas dentro de su organización.
+
+![El [!UICONTROL Grupos de campos] de la pestaña [!UICONTROL Esquemas] workspace con [!UICONTROL Standard] y [!UICONTROL Personalizado] resaltado.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Editar un grupo de campos existente {#edit}
 

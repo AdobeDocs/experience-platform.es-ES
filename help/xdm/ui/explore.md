@@ -5,9 +5,9 @@ title: Exploración de los recursos de esquema en la IU
 description: Aprenda a explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ El icono de filtro (![Imagen del icono de filtro](../images/ui/explore/icon.png)
 
 Por ejemplo, para filtrar la lista de modo que solo muestre los tipos de datos estándar proporcionados por Adobe, seleccione **[!UICONTROL Tipo de datos]** y **[!UICONTROL Adobe]** en el **[!UICONTROL Tipo]** y **[!UICONTROL Propietario]** secciones, respectivamente.
 
-El **[!UICONTROL Incluido en el perfil]** permite filtrar los resultados para mostrar solo los recursos que se utilizan en esquemas que se han habilitado para su uso en [Perfil del cliente en tiempo real](../../profile/home.md).
+El **[!UICONTROL Incluido en el perfil]** permite filtrar los resultados para mostrar solo los recursos que se utilizan en esquemas que se han habilitado para su uso en [Perfil del cliente en tiempo real](../../profile/home.md). El **[!UICONTROL Mostrar esquemas ad hoc]** alternar filtra la lista de esquemas creados con campos que tienen un espacio de nombres para su uso exclusivo en un único conjunto de datos.
 
-![](../images/ui/explore/filter.png)
+![El [!UICONTROL Esquemas] workspace [!UICONTROL Examinar] pestaña con el panel filtros resaltado.](../images/ui/explore/filter.png)
 
 Al enumerar recursos en **[!UICONTROL Clases]**, **[!UICONTROL Grupos de campos]**, o **[!UICONTROL Tipos de datos]** pestañas, puede seleccionar **[!UICONTROL Adobe]** para mostrar solo los recursos estándar o **[!UICONTROL Cliente]** para mostrar solo los recursos creados por su organización.
 

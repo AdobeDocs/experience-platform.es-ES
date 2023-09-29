@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glosario de etiquetas de uso de datos
 description: Este documento describe todas las etiquetas de uso de datos que admite Adobe Experience Platform en la actualidad.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 3%
+source-wordcount: '2250'
+ht-degree: 2%
 
 ---
 
@@ -73,6 +73,8 @@ Esta etiqueta se utiliza para regular el uso de los datos de clientes potenciale
 | Etiqueta | Definición |
 | --- | --- |
 | **Terceros** | Los datos de terceros son datos que le proporciona un proveedor de datos de terceros. Un proveedor de datos de terceros es una entidad que ha celebrado un acuerdo con su organización que le autoriza a acceder, utilizar, mostrar y transmitir los datos de terceros junto con Platform. |
+| **Enriquecimiento De Terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a datos de terceros que se utilizan para enriquecer perfiles de origen. |
+| **Prospección de terceros** | Datos recopilados por una organización de terceros que no esté directamente relacionada con el interesado. La etiqueta debe aplicarse a los datos de terceros utilizados para la parte superior de la prospección del canal para los clientes nuevos netos. |
 
 ## Apéndice
 
