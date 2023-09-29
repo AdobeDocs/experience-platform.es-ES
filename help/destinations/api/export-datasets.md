@@ -4,9 +4,9 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
+source-wordcount: '3550'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ Las secciones siguientes proporcionan información adicional que debe conocer pa
 
 ### Permisos necesarios {#permissions}
 
-Para exportar conjuntos de datos, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar conjuntos de datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Ver conjuntos de datos]**, y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que tiene los permisos necesarios para exportar conjuntos de datos y de que el destino admite la exportación de conjuntos de datos, examine el catálogo de destinos. Si un destino tiene un **[!UICONTROL Activar]** o un **[!UICONTROL Exportar conjuntos de datos]** control y, a continuación, dispone de los permisos adecuados.
 
@@ -1149,6 +1149,10 @@ Observe el ID de conexión de la respuesta. Este ID será necesario en el siguie
 ![Diagrama que muestra el paso 4 del flujo de trabajo de exportación de conjuntos de datos](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 A continuación, debe crear una conexión de destino que almacene los parámetros de exportación para los conjuntos de datos. Los parámetros de exportación incluyen ubicación, formato de archivo, compresión y otros detalles. Consulte la `targetSpec` propiedades proporcionadas en la especificación de conexión del destino para comprender las propiedades admitidas para cada tipo de destino. Consulte las pestañas siguientes para ver el `targetSpec` propiedades de todos los destinos admitidos.
+
+>[!WARNING]
+>
+>Las exportaciones a archivos JSON solo se admiten en modo comprimido. Exportaciones a [!DNL Parquet] Los archivos se admiten en modo comprimido y sin comprimir.
 
 >[!BEGINTABS]
 

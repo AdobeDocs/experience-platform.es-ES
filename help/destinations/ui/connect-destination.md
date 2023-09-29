@@ -4,9 +4,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -78,15 +78,19 @@ Según el destino al que se conecte, es posible que se le pida que introduzca di
 
 ![Imagen que muestra los parámetros de entrada opcionales y requeridos al conectarse a un destino de Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Beta) Configurar las opciones de formato de archivo para los archivos exportados {#file-formatting-and-compression-options}
+### Configurar las opciones de formato de archivo para los archivos exportados {#file-formatting-and-compression-options}
 
 Para los destinos basados en archivos, puede configurar varias opciones relacionadas con el formato y la compresión de los archivos exportados. Para obtener más información sobre todas las opciones de formato y compresión disponibles, lea la [Tutorial sobre configuración de opciones de formato de archivo para destinos basados en archivos](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Imagen que muestra la selección del tipo de archivo y varias opciones para los archivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurar la conexión de destino para la activación de audiencias o las exportaciones de conjuntos de datos {#segment-activation-or-dataset-exports}
+### Configurar la conexión de destino para la activación de audiencias, la activación de clientes potenciales o las exportaciones de conjuntos de datos {#segment-activation-or-dataset-exports}
 
-Algunos destinos basados en archivos admiten la activación de audiencias y la exportación de conjuntos de datos. Para esos destinos, puede elegir si desea crear una conexión que le permita activar audiencias o exportar conjuntos de datos.
+Algunos destinos basados en archivos admiten la activación de audiencias a clientes o clientes potenciales conocidos, así como exportaciones de conjuntos de datos. Para esos destinos, puede elegir si desea crear una conexión que le permita [activar audiencias](/help/destinations/ui/activate-batch-profile-destinations.md), [perspectivas](/help/destinations/ui/activate-prospect-audiences.md), o [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Al exportar conjuntos de datos, tenga en cuenta que las exportaciones a archivos JSON solo se admiten en modo comprimido. Exportaciones a [!DNL Parquet] Los archivos se admiten en modo comprimido y sin comprimir.
 
 ![Imagen que muestra el control de selección de tipo de datos que permite a los usuarios seleccionar entre activación de audiencia y exportaciones de conjuntos de datos.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
