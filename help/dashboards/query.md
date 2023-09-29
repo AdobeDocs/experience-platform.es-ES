@@ -4,7 +4,7 @@ title: Explorar, comprobar y procesar conjuntos de datos del panel mediante el s
 type: Documentation
 description: Aprenda a utilizar el servicio de consultas para explorar y procesar conjuntos de datos sin procesar y activar paneles de perfil, audiencia y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Puede utilizar [!DNL Query Service] para consultar conjuntos de datos sin proces
 
 ![El panel Examinar conjunto de datos con la pestaña Conjuntos de datos resaltada en el panel de navegación izquierdo.](./images/query/browse-datasets.png)
 
-### Conjuntos de datos generados por el sistema
+### Conjuntos de datos generados por el sistema {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Aparecerá una barra lateral que contiene dos conmutadores, [!UICONTROL Incluido
 
 ![La pestaña Examinar conjuntos de datos con la opción Mostrar conjuntos de datos del sistema resaltada.](./images/query/show-system-datasets.png)
 
-### Conjuntos de datos de atributos de perfil
+### Conjuntos de datos de atributos de perfil {#profile-attribute-datasets}
 
 La información del panel de perfil está vinculada a las políticas de combinación definidas por su organización. Por cada política de combinación activa, hay un conjunto de datos de atributos de perfil disponible en el lago de datos.
 
