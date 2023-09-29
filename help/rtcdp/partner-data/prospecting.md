@@ -1,10 +1,10 @@
 ---
 title: Atraer y adquirir nuevos clientes a través de casos de uso de prospección
 description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, habilitados por la compatibilidad con datos de socios en Real-Time CDP.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 97%
+source-wordcount: '1953'
+ht-degree: 96%
 
 ---
 
@@ -40,6 +40,12 @@ Antes de expandir Real-Time CDP para atraer y adquirir nuevos clientes, asegúre
 4. Como **cliente**, los públicos se crean a partir de la lista de perfiles de clientes potenciales.
 5. Como **cliente**, activa los públicos de clientes potenciales a destinos que aceptan las identidades disponibles en la lista de clientes potenciales.
 6. Si es necesario, trabaje con el **socio de datos** para la activación en la recta final de públicos a destinos de medios de pago deseados.
+
+## Tutorial de vídeo {#video-walkthrough}
+
+Vea el tutorial en vídeo a continuación para obtener una descripción detallada de cómo llegar a las audiencias de clientes potenciales y participar en ellas:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
 

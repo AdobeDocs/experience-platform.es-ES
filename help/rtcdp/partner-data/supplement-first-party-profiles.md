@@ -1,10 +1,10 @@
 ---
 title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 94%
+source-wordcount: '1110'
+ht-degree: 95%
 
 ---
 
@@ -30,6 +30,12 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 >[!WARNING]
 >
 >Los atributos adicionales proporcionados por socios introducidos en Real-Time CDP afectan a su *riqueza del perfil promedio*. Lea la [Descripción del producto de Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información acerca de la riqueza del perfil.
+
+## Tutorial de vídeo {#video-walkthrough}
+
+Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo complementar las audiencias de origen con atributos proporcionados por los socios:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -118,6 +124,6 @@ Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso 
 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
-* Utilice la compatibilidad con datos de terceros en Real-Time CDP para lo siguiente [amplíe su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Utilice la compatibilidad con datos de terceros en Real-Time CDP para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
 * [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.
