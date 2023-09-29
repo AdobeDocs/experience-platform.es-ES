@@ -2,7 +2,7 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 1%
@@ -137,7 +137,7 @@ El cifrado es el uso de un proceso algorítmico para transformar datos en texto 
 
 El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Azure Data Lake mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener más información sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, cuando los datos están en reposo en el lago de datos, el cifrado se realiza con la clave de administración del cliente (CMK), que ya es compatible con la administración de lago de datos. La versión admitida actualmente es TLS1.2. Consulte la [documentación de claves administradas por el cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) para obtener información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
+Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, cuando los datos están en reposo en el lago de datos, el cifrado se realiza con la clave de administración del cliente (CMK), que ya es compatible con la administración de lago de datos. La versión admitida actualmente es TLS1.2. Consulte la [documentación de claves administradas por el cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) para obtener información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 
 
 ## Auditoría {#audit}

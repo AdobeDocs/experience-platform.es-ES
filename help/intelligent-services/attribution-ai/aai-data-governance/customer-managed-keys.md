@@ -3,7 +3,7 @@ keywords: perspectivas;inteligencia artificial aplicada a la atribución;perspec
 title: Claves gestionadas por el cliente
 description: Obtenga información sobre cómo configurar claves administradas por el cliente para Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%
@@ -12,7 +12,7 @@ ht-degree: 24%
 
 # Claves gestionadas por el cliente
 
-Attribution AI proporciona la opción para [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) y a los clientes de Privacy &amp; Security Shield para que utilicen las claves gestionadas por el cliente de Azure (CMK) que se aplicarán a los datos del Attribution AI. El proceso de configuración es el mismo que [Configuración de Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys.md) y puede seguir los pasos descritos allí.
+Attribution AI proporciona la opción para [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) y a los clientes de Privacy &amp; Security Shield para que utilicen las claves gestionadas por el cliente de Azure (CMK) que se aplicarán a los datos del Attribution AI. El proceso de configuración es el mismo que [Configuración de Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) y puede seguir los pasos descritos allí.
 
 Puede leer la documentación de [Claves gestionadas por el cliente en Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) y siga los pasos descritos para pasar por el proceso de configuración.
 
