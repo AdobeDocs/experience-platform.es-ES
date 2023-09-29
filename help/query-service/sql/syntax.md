@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
+source-wordcount: '4006'
 ht-degree: 2%
 
 ---
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREAR BASE DE DATOS
 
-El `CREATE DATABASE` crea una base de datos de ADLS.
+El `CREATE DATABASE` crea una base de datos de Azure Data Lake Storage (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREAR VISTA
 
-La siguiente sintaxis define un `CREATE VIEW` consulta:
+La siguiente sintaxis define un `CREATE VIEW` consulta de un conjunto de datos. Este conjunto de datos puede ser un ADLS o un conjunto de datos de almacén acelerado.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+La siguiente sintaxis define un `CREATE VIEW` consulta que crea una vista en el contexto de una base de datos y un esquema.
+
+**Ejemplo**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parámetros | Descripción |
+| ------ | ------ |
+| `db_name` | Nombre de la base de datos. |
+| `schema_name` | Nombre del esquema. |
+| `view_name` | Nombre de la vista que se va a crear. |
+| `select_query` | A `SELECT` declaración. La sintaxis del `SELECT` La consulta se puede encontrar en la [sección SELECCIONAR consultas](#select-queries). |
+
+**Ejemplo**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## MOSTRAR VISTAS
+
+La siguiente consulta muestra la lista de vistas.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## COLOCAR VISTA
