@@ -4,10 +4,10 @@ user-guide-title: Ayuda de paneles de Adobe Experience Platform
 breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 34%
+source-wordcount: '85'
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,6 @@ ht-degree: 34%
    * [Audiencias](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso de licencias](guides/license-usage.md)
-   * [Uso de licencias (versión limitada)](guides/license-usage-limited.md)
 * Personalizar paneles {#customize}
    * [Información general de personalización](customize/overview.md)
    * [Modificación de paneles](customize/modify.md)
