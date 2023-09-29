@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
+source-git-commit: 0ef33fda8fab14de1676fc1d8a11029439b967ad
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1164'
 ht-degree: 9%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 9%
    * [Resumen del catálogo de destinos](./catalog/overview.md)
    * destinos de Adobe{#adobe}
       * [información general sobre destinos de Adobe](./catalog/adobe/overview.md)
-      * [Audiencias de Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
