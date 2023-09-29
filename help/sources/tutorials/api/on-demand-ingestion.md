@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;
-title: (Beta) Crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
-description: Este tutorial cubre los pasos para crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
+title: Creación de una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
+description: Obtenga información sobre cómo crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 795b1af6421c713f580829588f954856e0a88277
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
 
-# (Beta) Cree una ejecución de flujo para la ingesta bajo demanda utilizando [!DNL Flow Service] API
-
->[!IMPORTANT]
->
->La ingesta bajo demanda está actualmente en fase beta y es posible que su organización aún no tenga acceso a ella. La funcionalidad descrita en esta documentación está sujeta a cambios.
+# Cree una ejecución de flujo para la ingesta bajo demanda utilizando [!DNL Flow Service] API
 
 Las ejecuciones de flujo representan una instancia de ejecución de flujo. Por ejemplo, si un flujo está programado para ejecutarse por hora a las 9:00, 10:00 y 11:00 a.m., tendría tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
 
@@ -22,7 +18,7 @@ La ingesta bajo demanda permite crear una ejecución de flujo con un flujo de da
 
 Este tutorial trata los pasos sobre cómo utilizar la ingesta bajo demanda y crear una ejecución de flujo utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 >[!NOTE]
 >
@@ -83,9 +79,9 @@ curl -X POST \
 | Parámetro | Descripción |
 | --- | --- |
 | `flowId` | El ID del flujo con el que se creará la ejecución del flujo. |
-| `params.startTime` | Un entero que define la hora de inicio de la ejecución. El valor se representa en unix epoch time. |
-| `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se extraerán los datos. El valor se representa en tiempo Unix. |
-| `params.windowEndTime` | Un entero que define el tiempo de finalización de la ventana durante la cual se extraerán los datos. El valor se representa en tiempo Unix. |
+| `params.startTime` | Hora programada en la que comenzará la ejecución del flujo bajo demanda. Este valor se representa en tiempo Unix. |
+| `params.windowStartTime` | La primera fecha y hora desde la que se recuperarán los datos. Este valor se representa en tiempo Unix. |
+| `params.windowEndTime` | La fecha y hora en que se recuperarán los datos hasta. Este valor se representa en tiempo Unix. |
 | `params.deltaColumn` | La columna delta es necesaria para dividir los datos y separar los datos recién ingeridos de los datos históricos. **Nota**: La `deltaColumn` solo es necesario al crear la primera ejecución de flujo. |
 | `params.deltaColumn.name` | Nombre de la columna delta. |
 
@@ -165,9 +161,9 @@ curl -X POST \
 | Parámetro | Descripción |
 | --- | --- |
 | `flowId` | El ID del flujo con el que se creará la ejecución del flujo. |
-| `params.startTime` | Un entero que define la hora de inicio de la ejecución. El valor se representa en unix epoch time. |
-| `params.windowStartTime` | Un entero que define la hora de inicio de la ventana durante la cual se extraerán los datos. El valor se representa en tiempo Unix. |
-| `params.windowEndTime` | Un entero que define el tiempo de finalización de la ventana durante la cual se extraerán los datos. El valor se representa en tiempo Unix. |
+| `params.startTime` | Hora programada en la que comenzará la ejecución del flujo bajo demanda. Este valor se representa en tiempo Unix. |
+| `params.windowStartTime` | La primera fecha y hora desde la que se recuperarán los datos. Este valor se representa en tiempo Unix. |
+| `params.windowEndTime` | La fecha y hora en que se recuperarán los datos hasta. Este valor se representa en tiempo Unix. |
 
 **Respuesta**
 
@@ -192,4 +188,4 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 
 ## Monitorice las ejecuciones de flujo
 
-Una vez creada la ejecución de flujo, puede monitorizar los datos que se están introduciendo a través de ella para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para monitorizar las ejecuciones de flujo mediante la API, consulte el tutorial sobre [monitorización de flujos de datos en la API ](./monitor.md). Para monitorizar las ejecuciones de flujo mediante la interfaz de usuario de Platform, consulte la guía de [fuentes de supervisión flujos de datos mediante el panel de supervisión](../../../dataflows/ui/monitor-sources.md).
+Una vez creada la ejecución de flujo, puede monitorizar los datos que se están introduciendo a través de ella para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para monitorizar las ejecuciones de flujo mediante la API, consulte el tutorial sobre [monitorización de flujos de datos en la API](./monitor.md). Para monitorizar las ejecuciones de flujo mediante la interfaz de usuario de Platform, consulte la guía de [fuentes de supervisión flujos de datos mediante el panel de supervisión](../../../dataflows/ui/monitor-sources.md).

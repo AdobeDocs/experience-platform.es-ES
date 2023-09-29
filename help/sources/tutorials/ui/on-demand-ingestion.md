@@ -1,10 +1,10 @@
 ---
 title: Ingesta bajo demanda de flujos de datos de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear flujos de datos bajo demanda para las conexiones de origen mediante la interfaz de usuario del Experience Platform.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -44,9 +44,9 @@ Configure la programación de la ingesta bajo demanda. Seleccione el **[!UICONTR
 
 | Configuración de programación | Descripción |
 | --- | --- |
-| [!UICONTROL Hora de inicio de ingesta] | La hora de inicio programada en UTC de cuándo comenzará el flujo de datos bajo demanda. |
-| [!UICONTROL Hora de inicio del intervalo de fecha] | La fecha y hora de inicio a partir de la cual se extraerán los datos. |
-| [!UICONTROL Hora de finalización del intervalo de fecha] | La fecha y hora de finalización desde la que se extraerán los datos hasta. |
+| [!UICONTROL Hora de inicio de ingesta] | Hora programada en la que comenzará la ejecución del flujo bajo demanda. |
+| [!UICONTROL Hora de inicio del intervalo de fecha] | La primera fecha y hora desde la que se recuperarán los datos. |
+| [!UICONTROL Hora de finalización del intervalo de fecha] | La fecha y hora en que se recuperarán los datos hasta. |
 
 Seleccionar **[!UICONTROL Programación]** y espere unos momentos para que el flujo de datos bajo demanda se almacene en déclencheur.
 
