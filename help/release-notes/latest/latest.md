@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2492651fb03e0bfc5c9f68a9b063689a1b9001a3
+source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 26%
+source-wordcount: '1232'
+ht-degree: 25%
 
 ---
 
@@ -21,6 +21,7 @@ Actualizaciones de las funciones existentes en Experience Platform:
 
 - [Alertas](#alerts)
 - [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Servicio de identidad](#identity-service)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
@@ -57,6 +58,45 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 {style="table-layout:auto"}
 
 Para obtener más información sobre la recopilación de datos, lea la [resumen de recopilación de datos](../../tags/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+
+**Destinos nuevos o actualizados** {#new-updated-destinations}
+
+| Destino | Nuevo o actualizado | Descripción |
+| ----------- |----------------|----------- |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuevo | [[!DNL HubSpot]](https://www.hubspot.com) es una plataforma CRM con todo el software, las integraciones y los recursos que necesita para conectar marketing, ventas, gestión de contenido y servicio al cliente. Permite conectar los datos, los equipos y los clientes en una plataforma CRM. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Actualizado   | Se ha añadido la compatibilidad con [!DNL Dynamics 365] prefijos de campo personalizados para campos personalizados que no se crearon dentro de la solución predeterminada en [!DNL Dynamics 365]. Un nuevo campo de entrada, **[!UICONTROL Prefijo de personalización]**, se ha añadido en la [Rellenar detalles de destino](#destination-details) paso. |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+
+Add these to release notes as they go out
+
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
+
+-->
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
+| Funcionalidad | Descripción |
+| ----------- | ----------- |
+| Exportaciones de datos en Real-Time CDP | El [exportación de conjuntos de datos](../../destinations/ui/export-datasets.md) funcionalidad ya está disponible de forma general. Consulte [qué conjuntos de datos puede exportar en función de la aplicación del Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) ha adquirido y consulte la [protecciones para exportar conjuntos de datos](/help/destinations/guardrails.md#dataset-exports). |
+| (Beta) Compatibilidad con la exportación de objetos de tipo matriz | Exporte matrices de valores primitivos (valores de cadena, int o booleanos) como archivos de esquema plano a destinos de almacenamiento en la nube. Obtenga más información sobre la funcionalidad en la [documentación](../../destinations/ui/export-arrays-calculated-fields.md). |
+| Selectores desplegables dinámicos en Destination SDK | Al crear un destino mediante Destination SDK, ahora puede utilizar [selectores desplegables dinámicos](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) para rellenar los campos de un selector desplegable con valores recuperados de una API. |
+
+**Correcciones y mejoras** {#destinations-fixes-and-enhancements}
+
+- Utilizar de [transparencia de supervisión](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) ahora disponible para destinos empresariales ([API HTTP](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) y [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) en el nivel de ejecución del flujo de datos para monitorizar las métricas de activación y el estado en [vista de detalles del flujo de datos](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), con información adicional a través de códigos de error y mensajes para la resolución de problemas.
+- Cuando actualice el nombre de las audiencias asignadas al [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md), [Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)y otros destinos que utilizan [plantillas de actualización de audiencia](../../destinations/destination-sdk/metadata-api/update-audience-template.md)Sin embargo, estos cambios de nombre ahora se reflejan hacia abajo en el destino.
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Servicio de identidad {#identity-service}
 
