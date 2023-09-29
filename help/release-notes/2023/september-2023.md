@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: c2563d43b9ee8b3191954275bd0102507a981071
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -19,9 +19,14 @@ Nuevas funciones de Adobe Experience Platform:
 Actualizaciones de las funciones existentes en Experience Platform:
 
 - [Alertas](#alerts)
+- [Paneles](#dashboards)
 - [Recopilación de datos](#data-collection)
+- [Gobernanza de datos](#data-governance)
+- [Higiene de los datos](#hygiene)
 - [Destinos](#destinations)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
+- [Servicio de consultas](#query-service)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
@@ -43,6 +48,18 @@ Experience Platform permite suscribirse a alertas basadas en eventos para divers
 
 Para obtener más información sobre las alertas, lea la [[!DNL Observability Insights] descripción general](../../observability/home.md).
 
+## Paneles {#dashboards}
+
+Adobe Experience Platform proporciona varios [!DNL dashboards] a través del cual puede ver información importante acerca de los datos de su organización, tal como se capturan durante las instantáneas diarias.
+
+| Función | Descripción |
+| --- | --- |
+| [Mejora del tablero de uso de licencias](../../dashboards/guides/license-usage.md) | Mantenga el control de los acuerdos de licencia con visualizaciones mejoradas de informes y métricas clave con respecto al uso de licencias de su organización. Estas mejoras proporcionan un alto grado de granularidad sobre las métricas de uso de licencias de todos los productos de Experience Platform que ha adquirido. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre el tablero de uso de licencias, consulte la [información general del tablero de uso de licencias](../../dashboards/guides/destinations.md).
+
 ## Recopilación de datos {#data-collection}
 
 Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
@@ -57,6 +74,35 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 {style="table-layout:auto"}
 
 Para obtener más información sobre la recopilación de datos, lea la [resumen de recopilación de datos](../../tags/home.md).
+
+## Control de datos {#data-governance}
+
+La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña una función clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de acceso a los datos y el control de acceso de los datos para las acciones de marketing.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Nuevas etiquetas de Partner Ecosystem para datos de terceros | Hay disponibles nuevas etiquetas de uso de datos para el enriquecimiento y la prospección de terceros. Consulte la [documentación sobre etiquetas de Partner Ecosystem](../../data-governance/labels/reference.md#partner) para obtener más información. |
+
+{style="table-layout:auto"}
+
+Para obtener más información acerca de la gobernanza de datos, lea la [información general de gobernanza de datos](../../data-governance/home.md).
+
+## Higiene de los datos {#hygiene}
+
+Experience Platform proporciona un conjunto de funciones de higiene de datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con cualquiera de las [!UICONTROL Ciclo de datos] en la IU o a través de llamadas a la API de higiene de los datos, puede administrar de forma eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas de la organización lo consideran necesario.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Administre el ciclo de vida de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones avanzadas de administración del ciclo de vida de los datos de Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada de los conjuntos de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.<br>La eliminación de registros permite eliminar perfiles de consumidores individuales segmentando sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [Documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
+| Caducidad de conjuntos de datos | Minimice los datos y mantenga el control de los acuerdos de licencia con Caducidad automatizada del conjunto de datos. Reduzca los volúmenes de datos eliminando conjuntos de datos completos y establezca una fecha y una hora para eliminar el conjunto de datos. Consulte la [documentación sobre caducidades del conjunto de datos](../../hygiene/ui/dataset-expiration.md) para obtener más información. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre las capacidades de higiene de los datos de Platform, consulte la [resumen de higiene de datos](../../hygiene/home.md).
 
 ## Destinos {#destinations}
 
@@ -75,10 +121,10 @@ Para obtener más información sobre la recopilación de datos, lea la [resumen 
 
 <!-- 
 
+
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-
 
 -->
 
@@ -97,6 +143,23 @@ Add these to release notes as they go out
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Acciones rápidas agregadas al Editor de esquemas | Se han añadido nuevas acciones rápidas al lienzo del Editor de esquemas. Ahora puede copiar la estructura JSON o eliminar el esquema directamente desde el editor.<br>![Las acciones rápidas en el Editor de esquemas.](../2023/assets/schema-editor-copy-json.png "Se resaltan el Editor de esquemas con Más y Copiar a JSON."){width="100" zoomable="yes"} |
+| Filtrado de recursos XDM por creador personalizado o estándar | Las listas de esquemas, grupos de campos, tipos de datos y clases disponibles ahora se filtran previamente según su método de creación. Esto le permite filtrar los recursos en función de si se han creado a medida o por Adobe.<br>![Los filtros Estándar y Personalizados del espacio de trabajo Esquemas.](../2023/assets/standard-and-custom-classes.png "Espacio de trabajo Esquemas con los filtros Estándar y Personalizado resaltados."){width="100" zoomable="yes"} <br> Consulte la [creación y edición de la documentación de recursos](../../xdm/ui/resources/classes.md#filter.md) para obtener más información. |
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Flujo de trabajo de creación de esquemas actualizado | Se ha implementado un nuevo flujo de trabajo de creación de esquemas para optimizar el proceso. <br> ![La nueva IU de creación de esquemas.](../2023/assets/schema-class-options.png "Nuevo selector de detalles de esquema resaltado."){width="100" zoomable="yes"} <br> Consulte la [documentación de creación de esquemas](../../xdm/ui/resources/schemas.md#create) para obtener más información. |
+
 ## Servicio de identidad {#identity-service}
 
 El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
@@ -111,6 +174,21 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 {style="table-layout:auto"}
 
 Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md).
+
+## Servicio de consultas {#query-service}
+
+El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos de [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para usar en sistema de informes, espacio de trabajo de ciencia de datos o para su inserción en el perfil del cliente en tiempo real.
+
+**Funciones actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Actualizaciones de IU de filtrado de registros | El filtrado mejorado de los registros de consultas mejora la visibilidad de los registros generados por el usuario para la supervisión, administración y solución de problemas. Puede filtrar la lista de registros de consultas en función de diferentes configuraciones. <br> ![Configuración del filtro de registro de consultas.](../2023/assets/log-filter-settings.png "Se resaltan los nuevos filtros de registro de consultas."){width="100" zoomable="yes"}  <br> Consulte la [documentación de registros de consultas](../../query-service/ui/query-logs.md#filter-logs) para obtener más información. |
+| Varias actualizaciones de la IU del Editor de consultas | Ahora puede Ejecutar varias consultas secuenciales en el Editor de consultas o escribir más de una consulta y ejecutar todas las consultas de forma secuencial. Para añadir más flexibilidad a la ejecución de la consulta, puede resaltar la consulta elegida y seleccionar esa consulta específica para que se ejecute de forma independiente de las demás. Consulte la [Guía de IU del Editor de consultas](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) para obtener más información. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre los servicios de consulta, vea la [Información general del servicio de consulta](../../query-service/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
