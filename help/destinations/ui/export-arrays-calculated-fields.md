@@ -2,21 +2,21 @@
 title: (Beta) Utilice campos calculados para exportar matrices en archivos de esquema plano
 type: Tutorial
 description: Aprenda a utilizar campos calculados para exportar matrices en archivos de esquema plano desde Real-Time CDP a destinos de almacenamiento en la nube.
-badge: "Beta"
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 2%
+source-wordcount: '1479'
+ht-degree: 1%
 
 ---
-
 
 # (Beta) Utilice campos calculados para exportar matrices en archivos de esquema plano {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Compatibilidad con matrices de exportación (Beta)"
->abstract="Exporte matrices simples de valores int, string o boolean desde Experience Platform al destino de almacenamiento en la nube deseado. Se aplican algunas limitaciones. Consulte la documentación para ver ejemplos exhaustivos y funciones compatibles."
+>abstract="Utilice el **Añadir campo calculado** para exportar matrices simples de valores int, string o boolean desde Experience Platform al destino de almacenamiento en la nube deseado. Se aplican algunas limitaciones. Consulte la documentación para ver ejemplos exhaustivos y funciones compatibles."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Ejemplos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitaciones conocidas"
 
@@ -24,7 +24,7 @@ ht-degree: 2%
 >
 >* La funcionalidad para exportar matrices a través de campos calculados está actualmente en Beta. La documentación y las funcionalidades están sujetas a cambios.
 
-Obtenga información sobre cómo exportar matrices a través de campos calculados desde Real-Time CDP en archivos de esquema plano a destinos de almacenamiento en la nube. Lea este documento para comprender los casos de uso habilitados por esta funcionalidad.
+Obtenga información sobre cómo exportar matrices a través de campos calculados desde Real-Time CDP en archivos de esquema plano a [destinos de almacenamiento en la nube](/help/destinations/catalog/cloud-storage/overview.md). Lea este documento para comprender los casos de uso habilitados por esta funcionalidad.
 
 Obtenga información detallada sobre los campos calculados, qué son y por qué importan. Lea las páginas vinculadas a continuación para obtener una introducción a los campos calculados en la preparación de datos y más información sobre todas las funciones disponibles:
 
@@ -50,13 +50,13 @@ Tenga en cuenta las siguientes limitaciones conocidas para la versión beta de e
 
 ## Requisitos previos {#prerequisites}
 
-Progreso a través de [pasos de activación para destinos de cloud storage](/help/destinations/ui/activate-batch-profile-destinations.md) y llegar al [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) paso.
+[Connect](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado, avance en el [pasos de activación para destinos de cloud storage](/help/destinations/ui/activate-batch-profile-destinations.md) y llegar al [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) paso.
 
 ## Cómo exportar campos calculados {#how-to-export-calculated-fields}
 
 En el paso Asignación del flujo de trabajo de activación para los destinos de almacenamiento en la nube, seleccione **[!UICONTROL (Beta) Agregar campo calculado]**.
 
-![Agregar campo calculado para exportar](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Agregue el campo calculado resaltado en el paso de asignación del flujo de trabajo de activación por lotes.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 Se abrirá una ventana modal en la que se pueden seleccionar atributos que se pueden utilizar para exportar atributos fuera de Experience Platform.
 
@@ -64,25 +64,25 @@ Se abrirá una ventana modal en la que se pueden seleccionar atributos que se pu
 >
 >Solo algunos de los campos del esquema XDM están disponibles en la variable **[!UICONTROL Campo]** vista. Puede ver valores de cadena y matrices de valores de cadena, int y booleanos. Por ejemplo, la variable `segmentMembership` matriz no se muestra, ya que incluye otros valores de matriz.
 
-![Ventana modal 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Ventana modal de la funcionalidad de campo calculado sin función seleccionada todavía.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 Por ejemplo, utilice la variable `join` función en el `loyaltyID` como se muestra a continuación para exportar una matriz de ID de fidelidad como una cadena concatenada con un guion bajo en un archivo CSV. Ver [más información sobre este y otros ejemplos más adelante](#join-function-export-arrays).
 
-![Ventana modal 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Ventana modal de la funcionalidad de campo calculado con la función de combinación seleccionada.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Seleccionar **[!UICONTROL Guardar]** para mantener el campo calculado y volver al paso de asignación.
 
-![Ventana modal 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Ventana modal de la funcionalidad de campo calculado con la función de combinación seleccionada y el control Guardar resaltado.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Vuelva a la etapa de asignación del flujo de trabajo y rellene el **[!UICONTROL Campo de destino]** con un valor del encabezado de columna que desee para este campo en los archivos exportados.
 
-![Seleccionar campo de destino 1](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![Paso de asignación con el campo de destino resaltado.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Seleccionar campo de destino 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 Cuando esté listo, seleccione **[!UICONTROL Siguiente]** para continuar con el siguiente paso del flujo de trabajo de activación.
 
-![Seleccione siguiente para continuar](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Paso de asignación con el campo de destino resaltado y un valor de destino rellenado.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Funciones compatibles {#supported-functions}
 
@@ -115,20 +115,20 @@ Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se m
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Captura de pantalla de asignación](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Ejemplo de asignación que incluye la función de unión.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los tres elementos de la matriz se concatenan en una sola cadena utilizando `_` carácter.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` función para exportar matrices {#iif-function-export-arrays}
 
-Utilice el `iif` para exportar elementos de una matriz en ciertas condiciones. Por ejemplo, continuar con `organzations` objeto de matriz desde arriba, puede escribir una función condicional simple como `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Utilice el `iif` para exportar elementos de una matriz en ciertas condiciones. Por ejemplo, continuar con `organizations` objeto de matriz desde arriba, puede escribir una función condicional simple como `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Captura de pantalla de asignación para la primera y la última función](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Ejemplo de asignación que incluye la función iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 En este caso, el archivo de salida tiene el siguiente aspecto. En este caso, el primer elemento de la matriz es Marketing, por lo que la persona es miembro del departamento de marketing.
 
@@ -137,18 +137,33 @@ En este caso, el archivo de salida tiene el siguiente aspecto. En este caso, el 
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` función para exportar matrices {#add-to-array-function-export-arrays}
+
+Utilice el `add_to_array` para añadir elementos a una matriz exportada. Puede combinar esta función con el `join` función descrita anteriormente.
+
+Continuación con el `organizations` objeto de matriz desde arriba, puede escribir una función como `source: join('_', add_to_array(organizations,"2023"))`, que devuelve las organizaciones de las que es miembro una persona en el año 2023.
+
+![Ejemplo de asignación que incluye la función add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los tres elementos de la matriz se concatenan en una sola cadena utilizando `_` y 2023 también se anexa al final de la cadena.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` función para exportar matrices {#coalesce-function-export-arrays}
 
 Utilice el `coalesce` para acceder al primer elemento no nulo de una matriz y exportarlo a una cadena.
 
-Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se muestra en la captura de pantalla de asignación, utilizando un `coalesce(subscriptions.hasPromotion)` sintaxis para devolver el primer valor true de false en la matriz:
+Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se muestra en la captura de pantalla de asignación, utilizando un `coalesce(subscriptions.hasPromotion)` sintaxis para devolver la primera `true` de `false` en la matriz:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` matriz
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Captura de pantalla de asignación para función de unión](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Ejemplo de asignación que incluye la función coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo el primer valor no nulo `true` el valor de la matriz se exporta en el archivo.
 
@@ -156,7 +171,6 @@ En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo el 
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` función para exportar matrices {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se m
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` matriz que indica cinco momentos de compra independientes del cliente
 * `personalEmail.address` string
 
-![Captura de pantalla de asignación para la función size_of](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Ejemplo de asignación que incluye la función size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo la segunda columna indica el número de elementos de la matriz, correspondiente al número de compras independientes realizadas por el cliente.
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 Puede acceder al índice de una matriz para exportar un solo elemento de la matriz. Por ejemplo, similar al ejemplo anterior para `size_of` función, si desea acceder y exportar solo la primera vez que un cliente ha comprado un determinado producto, puede utilizar `purchaseTime[0]` para exportar el primer elemento de la marca de tiempo, `purchaseTime[1]` para exportar el segundo elemento de la marca de tiempo, `purchaseTime[2]` para exportar el tercer elemento de la marca de tiempo, etc.
 
-![Captura de pantalla de asignación para acceder al índice](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Ejemplo de asignación que muestra cómo se puede acceder a un elemento de una matriz.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-En este caso, el archivo de salida tiene el siguiente aspecto:
+En este caso, el archivo de salida tiene el siguiente aspecto, al exportar la primera vez que el cliente ha realizado una compra:
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 Utilice el `first` y `last` funciones para exportar el primer o el último elemento de una matriz. Por ejemplo, continuar con `purchaseTime` Objeto de matriz con varias marcas de tiempo de los ejemplos anteriores, puede utilizarlas para funciones para exportar la primera o la última hora de compra realizada por una persona.
 
-![Captura de pantalla de asignación para la primera y la última función](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Ejemplo de asignación que incluye las funciones primera y última.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-En este caso, el archivo de salida tiene el siguiente aspecto:
+En este caso, el archivo de salida tiene el siguiente aspecto, al exportar la primera y la última vez que el cliente ha realizado una compra:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 Además de las funciones específicas para exportar matrices o elementos de una matriz, puede utilizar funciones hash para cifrar atributos. Por ejemplo, si tiene información de identificación personal en los atributos, puede hash en esos campos al exportarlos.
 
 Puede usar valores de cadena hash directamente, por ejemplo `md5(personalEmail.address)`. Si lo desea, también puede hash elementos individuales de campos de matriz, de esta manera: `md5(purchaseTime[0])`
-
-
-
