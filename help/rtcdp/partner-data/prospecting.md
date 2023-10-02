@@ -1,10 +1,11 @@
 ---
 title: Atraer y adquirir nuevos clientes a través de casos de uso de prospección
 description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, habilitados por la compatibilidad con datos de socios en Real-Time CDP.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 96%
+source-wordcount: '1960'
+ht-degree: 95%
 
 ---
 
@@ -207,7 +208,11 @@ Más información sobre [audiencias de clientes potenciales](/help/segmentation/
 
 ### Activar perfiles de clientes potenciales en destinos {#activate-to-destinations}
 
-Utilice los públicos de clientes potenciales exportándolos a destinos. Actualmente, solo determinados destinos como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o [!BADGE Alfa]{type=Informative}Activación de compatibilidad de destino de [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) de perfiles de clientes potenciales.
+Utilice los públicos de clientes potenciales exportándolos a destinos. Actualmente, solo ciertos destinos de almacenamiento en la nube admiten la activación de perfiles potenciales.
+
+![Destinos que admiten audiencias de clientes potenciales.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Más información](/help/destinations/ui/activate-prospect-audiences.md) acerca de la activación de clientes potenciales en destinos de almacenamiento en la nube.
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 

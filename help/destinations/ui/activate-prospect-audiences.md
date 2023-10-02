@@ -2,13 +2,13 @@
 title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 12%
 
 ---
-
 
 # Activar audiencias de clientes potenciales
 
@@ -22,7 +22,7 @@ Este artículo explica el flujo de trabajo necesario para exportar [audiencias d
 
 Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña. Utilice el **[!UICONTROL Tipos de datos]** filtrar y seleccionar **[!UICONTROL Posibles clientes]** para ver los destinos que admiten la activación de audiencias de clientes potenciales. Actualmente, la exportación de audiencias potenciales solo está disponible para destinos de almacenamiento en la nube.
 
-![Destinos que admiten exportaciones de conjuntos de datos](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinos que admiten audiencias de clientes potenciales.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Requisitos previos {#prerequisites}
 
