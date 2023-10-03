@@ -2,7 +2,7 @@
 title: Flujo SQL fluido para atributos derivados
 description: SQL de servicio de consulta se ha ampliado para proporcionar compatibilidad perfecta con atributos derivados. Obtenga información sobre cómo utilizar esta extensión SQL para crear un atributo derivado habilitado para el perfil y cómo utilizar el atributo para el perfil del cliente en tiempo real y el servicio de segmentación.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -35,7 +35,7 @@ El servicio de consultas le permite realizar todas las acciones enumeradas anter
 >
 >La consulta SQL proporcionada a continuación supone el uso de un área de nombres preexistente.
 
-Utilice una consulta Crear tabla como selección (CTAS) para crear un conjunto de datos, asignar tipos de datos, establecer una identidad principal, crear un esquema y marcarlo como habilitado para perfiles. La sentencia SQL de ejemplo siguiente crea atributos y los pone a disposición del Perfil de datos del cliente en tiempo real (Real-Time CDP). La consulta SQL seguirá el formato mostrado en el ejemplo siguiente:
+Utilice una consulta Crear tabla como selección (CTAS) para crear un conjunto de datos, asignar tipos de datos, establecer una identidad principal, crear un esquema y marcarlo como habilitado para perfiles. La instrucción SQL de ejemplo siguiente crea atributos y los hace disponibles para Real-time Customer Data Platform (Real-Time CDP). La consulta SQL seguirá el formato mostrado en el ejemplo siguiente:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -79,7 +79,7 @@ Consulte la documentación sobre la sintaxis SQL para obtener más información 
 
 ## Construcciones para ayudar a administrar atributos derivados a través de SQL
 
-Las funciones que se describen a continuación son de bueno beneficio al administrar atributos derivados mediante SQL.
+Las funciones que se describen a continuación son muy útiles para administrar atributos derivados mediante SQL.
 
 ### Cambie los conjuntos de datos existentes para que estén habilitados para el perfil {#enable-existing-dataset-for-profile}
 

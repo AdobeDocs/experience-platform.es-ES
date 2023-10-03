@@ -3,7 +3,8 @@ keywords: Experience Platform;interfaz de usuario;IU;personalización;tablero de
 title: Guía del tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 Puede ver información importante sobre el uso de licencias de su organización en Adobe Experience Platform [!UICONTROL Uso de licencias] panel. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 
-Los informes de uso de licencias proporcionan un alto grado de granularidad sobre las métricas de uso de licencias. El panel proporciona métricas de uso para cada producto comprado, el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y la métrica de uso de una zona protegida específica. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Perfil de datos del cliente en tiempo real, Adobe Journey Optimizer y Customer Journey Analytics.
+Los informes de uso de licencias proporcionan un alto grado de granularidad sobre las métricas de uso de licencias. El panel proporciona métricas de uso para cada producto comprado, el uso consolidado de métricas en todas las zonas protegidas de producción o desarrollo y la métrica de uso de una zona protegida específica. Las siguientes aplicaciones de Experience Platform se pueden rastrear con métricas de uso: Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
 
 Esta guía describe cómo acceder y trabajar con el tablero de uso de licencias en la interfaz de usuario y proporciona más información sobre las visualizaciones que se muestran en el tablero.
 
@@ -59,7 +60,7 @@ Este tablero muestra todos sus productos de Adobe Experience Platform con licenc
 
 >[!NOTE]
 >
->Adiciones a la [!UICONTROL Importe de licencia] como resultado de los complementos, se añaden encima de las [!UICONTROL Importe de licencia] para los productos base, como Real-Time Customer Data Profile, Adobe Journey Optimizer y Customer Journey Analytics. El uso de esa cantidad con licencia (después de los complementos) se rastrea a través de los productos base. Por ejemplo, si compra un paquete de cinco zonas protegidas, la cantidad de cinco se agrega a la del producto base. En este caso, el complemento muestra un [!UICONTROL Importe de licencia] de uno, y el uso para ese complemento es &quot;en blanco&quot;, ya que el uso se rastrea a través del producto base.
+>Adiciones a la [!UICONTROL Importe de licencia] como resultado de los complementos, se añaden encima de las [!UICONTROL Importe de licencia] para los productos base, como Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics. El uso de esa cantidad con licencia (después de los complementos) se rastrea a través de los productos base. Por ejemplo, si compra un paquete de cinco zonas protegidas, la cantidad de cinco se agrega a la del producto base. En este caso, el complemento muestra un [!UICONTROL Importe de licencia] de uno, y el uso para ese complemento es &quot;en blanco&quot;, ya que el uso se rastrea a través del producto base.
 
 La tabla indica la métrica principal de cada producto, ya que cada producto puede realizar el seguimiento de numerosas métricas.
 
