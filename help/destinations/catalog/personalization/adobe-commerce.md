@@ -2,7 +2,7 @@
 title: Conector de destino de Adobe Commerce
 description: Descubra cómo los comerciantes de Adobe Commerce y Real-Time CDP pueden personalizar la experiencia de compra ofreciendo promociones y contenido del sitio muy relevantes, personalizados para las audiencias de los clientes creadas y administradas dentro de Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -75,7 +75,7 @@ Ahora que ha configurado la variable [!DNL Commerce] destino dentro de Experienc
 
 ## Validar la activación de audiencias en Commerce {#exported-data}
 
-Después de activar las audiencias de Real-Time CDP en su [!DNL Adobe Commerce] cuenta de, verá esas audiencias disponibles cuando vaya a la _Administrador_ barra lateral y vaya a **[!UICONTROL Clientes]** > **[!UICONTROL Audiencia de Real-time CDP]**.
+Después de activar las audiencias de Real-Time CDP en su [!DNL Adobe Commerce] cuenta de, verá esas audiencias disponibles cuando vaya a la _Administrador_ barra lateral y vaya a **[!UICONTROL Clientes]** > **[!UICONTROL Audiencia de Real-Time CDP]**.
 
 ![Panel de audiencias de Real-Time CDP](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

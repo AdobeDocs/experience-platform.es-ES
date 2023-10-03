@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Información general de manuales de tácticas de casos de uso
 description: Aprenda a utilizar la función Manuales de tácticas de casos de uso en Experience Platform para empezar a usar varios casos de uso de marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Beta) Información general de manuales de tácticas de casos de uso
 
@@ -41,11 +41,11 @@ Si selecciona un manual de tácticas de Real-Time CDP, su objetivo podría ser g
 
 Si selecciona un manual de tácticas de Adobe Journey Optimizer, su objetivo podría ser crear un recorrido del cliente dentro de su producto y enviar mensajería relevante a sus clientes.
 
-Cree una instancia de un manual de tácticas para generar recursos específicos como esquemas, segmentos o recorridos que se adapten al caso de uso y se puedan reutilizar en Experience Platform. El propósito de estos objetos es ayudarle a comprender todos los recursos necesarios para implementar su caso de uso específico. No contienen datos y se crean en zonas protegidas de desarrollo. Empiece a utilizar estos recursos o edítelos antes y compártalos con su equipo en Real-time CDP o Journey Optimizer.
+Cree una instancia de un manual de tácticas para generar recursos específicos como esquemas, segmentos o recorridos que se adapten al caso de uso y se puedan reutilizar en Experience Platform. El propósito de estos objetos es ayudarle a comprender todos los recursos necesarios para implementar su caso de uso específico. No contienen datos y se crean en zonas protegidas de desarrollo. Empiece a utilizar estos recursos o realice modificaciones en ellos antes de utilizarlos y compartirlos con su equipo en Real-Time CDP o Journey Optimizer.
 
 ## Disponibilidad
 
-Algunos [!UICONTROL Manuales de tácticas de casos de uso] se adaptan a los casos de uso de Real-Time CDP, mientras que otros son más adecuados para los clientes de Journey Optimizer. Examine el catálogo para encontrar los manuales de tácticas idóneos para su producto y caso de uso.
+Algunos [!UICONTROL Manuales de casos de uso] se adaptan a los casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los manuales de tácticas idóneos para su producto y caso de uso.
 
 ## Guías de IU
 

@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Conexión de Google Display & Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager es una herramienta utilizada para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 Tenga en cuenta los siguientes detalles específicos de [!DNL Google Display & Video 360] destinos:
 
 * Las audiencias activadas se crean mediante programación en la plataforma de Google.
-* La activación de los rellenos de audiencia en [!DNL Google Display & Video 360] está programado que el destino se produzca de 24 a 48 horas después de que una audiencia se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la política de Google de esperar 24 horas hasta la ingesta de datos y está pensada para mejorar las tasas de coincidencia entre Real-time CDP y [!DNL Google Display & Video 360]. Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
+* La activación de los rellenos de audiencia en [!DNL Google Display & Video 360] está programado que el destino se produzca de 24 a 48 horas después de que una audiencia se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la política de Google de esperar 24 horas hasta la ingesta de datos y está pensada para mejorar las tasas de coincidencia entre Real-Time CDP y [!DNL Google Display & Video 360]. Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
 
 >[!IMPORTANT]
 >

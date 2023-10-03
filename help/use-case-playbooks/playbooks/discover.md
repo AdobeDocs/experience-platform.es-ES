@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Descubra el manual de tácticas adecuado
 description: Aprenda a identificar el manual de tácticas adecuado para su caso de uso y actívelo.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Beta) Descubra el manual de tácticas correcto
 
@@ -23,7 +23,7 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 
 Utilice la ventana de búsqueda y los filtros disponibles en la página para encontrar el manual de tácticas adecuado para su caso de uso.
 
-Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los manuales mostrados según su sector o la asignación de derechos de producto a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
+Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los libros de reproducción mostrados según el sector en el que se encuentre o la asignación de productos a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
 
 ![Filtrado de manuales de tácticas por canal, sector o producto de marketing](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
@@ -58,7 +58,7 @@ Inspeccione la sección de resumen para comprender qué recursos se generan una 
 ---------|----------|
 | **[!UICONTROL Audiencia objetivo]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
 | **[!UICONTROL Canales de marketing]** | Describe los canales utilizados para llegar a las personas objetivo en el manual de tácticas. |
-| **[!UICONTROL Recursos técnicos]** | Una lista de los recursos técnicos que se generan después de crear instancias del libro de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
+| **[!UICONTROL Recursos técnicos]** | Una lista de los recursos técnicos que se generan después de crear instancias del manual de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos manuales de tácticas pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Baje hasta la sección de instancias para leer la información general de las in
 
 {style="table-layout:auto"}
 
-![Instancia del libro de tácticas resaltada.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+![Instancia del manual de tácticas resaltada.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
 
 ## Pasos siguientes: creación de una instancia del manual de tácticas {#next-steps-create-instance}
 

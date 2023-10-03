@@ -2,10 +2,10 @@
 title: Atraer y adquirir nuevos clientes a través de casos de uso de prospección
 description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, habilitados por la compatibilidad con datos de socios en Real-Time CDP.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* La funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su base de perfiles con perfiles potenciales de socios de datos y comprometerse con ellos para adquirir o llegar a nuevos clientes.
 

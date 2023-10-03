@@ -1,10 +1,11 @@
 ---
 title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 95%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* La funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicaciones), Activación de Adobe Experience Platform, Real-Time CDP, Real-Time CDP Prime y Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes con licencia de Real-Time CDP (servicio de aplicación), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Obtenga más información acerca de estos paquetes en las [descripciones de productos](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) y póngase en contacto con el representante de Adobe para obtener más información.
 
 Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.
 
@@ -24,7 +25,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 * Piense en la ubicación donde se exportará la lista de audiencias desde Real-Time CDP para compartirla con el proveedor de datos. Esta ubicación debe admitir la exportación de archivos.
 * ¿Cuáles son los identificadores que espera el proveedor de datos para que puedan clasificarse en atributos adicionales?
-* ¿Cómo se volverá a ingerir en Real-Time CDP el archivo que contiene los atributos proporcionados por socios? Por ejemplo, los archivos se pueden ingerir a través de conectores de origen de almacenamiento en la nube como [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) o [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
+* ¿Cómo se volverá a ingerir en Real-Time CDP el archivo que contiene los atributos proporcionados por el socio? Por ejemplo, los archivos se pueden ingerir a través de conectores de origen de almacenamiento en la nube como [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) o [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * ¿Cuál es la cadencia con la que espera que los atributos proporcionados por el socio se devuelvan a Real-Time CDP y se actualicen?
 
 >[!WARNING]

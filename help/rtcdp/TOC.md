@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 88%
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 88%
       * [Caso de uso de ejemplo](./b2b-use-case.md)
       * [Tutorial de extremo a extremo](./b2b-tutorial.md)
       * [Protección de seguridad de Real-time CDP edición B2B](b2b-guardrails.md)
-* Audience Manager y Real-time CDP {#evolution}
+* AUDIENCE MANAGER y REAL-TIME CDP {#evolution}
    * [Evolución desde Audience Manager](aam-to-rtcdp.md)
 * Perfiles de cuenta {#account}
    * [Información general del perfil de cuenta](accounts/account-profile-overview.md)
@@ -69,7 +69,7 @@ ht-degree: 88%
       * [Vuelva a atraer a sus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Casos de uso de datos de socios {#partner-data}
       * [Capte y adquiera nuevos clientes a través de soporte de prospección](/help/rtcdp/partner-data/prospecting.md)
-      * [Complementar perfiles de origen con atributos proporcionados por el socio](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Complemento de perfiles de origen con atributos proporcionados por socios](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
       * [Utilice el reconocimiento de visitantes asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
 * [Glosario de Experience Platform](https://www.adobe.com/go/platform-glossary-es)
