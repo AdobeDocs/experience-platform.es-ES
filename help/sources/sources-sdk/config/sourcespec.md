@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conector
 title: Configuración de las especificaciones de origen para orígenes de autoservicio (SDK por lotes)
 description: Este documento proporciona información general sobre las configuraciones que debe preparar para utilizar fuentes de autoservicio (SDK por lotes).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -381,7 +381,53 @@ A continuación se muestra una especificación de origen completada utilizando [
 
 A continuación se muestran ejemplos de otros tipos de paginación admitidos por las fuentes de autoservicio (SDK por lotes):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Desplazamiento]
+
+Este tipo de paginación le permite analizar los resultados especificando un índice desde el que iniciar la matriz resultante y un límite en la cantidad de resultados devueltos. Por ejemplo:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `type` | El tipo de paginación utilizado para devolver datos. |
+| `limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. |
+| `limitValue` | El número de registros que se recuperarán en una página. |
+| `offSetName` | Nombre del atributo de desplazamiento. Esto es necesario si el tipo de paginación está establecido en `offset`. |
+| `endConditionName` | Un valor definido por el usuario que indica la condición que pondrá fin al bucle de paginación en la siguiente solicitud HTTP. Debe proporcionar el nombre del atributo en el que desea colocar la condición final. |
+| `endConditionValue` | El valor del atributo en el que desea colocar la condición final. |
+
+>[!TAB Puntero]
+
+Este tipo de paginación le permite utilizar un `pointer` para que apunte a un elemento concreto que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente. Por ejemplo:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `type` | El tipo de paginación utilizado para devolver datos. |
+| `limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. |
+| `limitValue` | El número de registros que se recuperarán en una página. |
+| `pointerPath` | Nombre del atributo de puntero. Esto requiere una ruta json al atributo que señalará a la página siguiente. |
+
+>[!TAB Token de continuación]
 
 Un tipo de token de continuación de paginación devuelve un token de cadena que indica la existencia de más elementos que no se pudieron devolver, debido a un número máximo predeterminado de elementos que se pueden devolver en una sola respuesta.
 
@@ -432,7 +478,7 @@ El siguiente es un ejemplo de una respuesta devuelta mediante el tipo de token d
 }
 ```
 
-#### `PAGE`
+>[!TAB Activity Map]
 
 El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en función del número de páginas a partir de cero. Al utilizar `PAGE` Para la paginación de tipo, debe proporcionar el número de registros dados en una sola página.
 
@@ -461,7 +507,7 @@ El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en func
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB Ninguna]
 
 El `NONE` el tipo de paginación se puede utilizar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Orígenes que utilizan el tipo de paginación de `NONE` simplemente devuelva todos los registros recuperables cuando se realice una solicitud de GET.
 
@@ -470,6 +516,8 @@ El `NONE` el tipo de paginación se puede utilizar para orígenes que no admiten
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Programación avanzada de orígenes de autoservicio (SDK por lotes)
 
