@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aplicaciones de Privacy Service y Experience Cloud
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: ed3089a86d6ef25f23e4d69eee7da800d7242545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 12%
+source-wordcount: '927'
+ht-degree: 13%
 
 ---
 
@@ -38,7 +38,7 @@ La siguiente es una lista de [!DNL Experience Cloud] aplicaciones integradas con
 | Adobe Campaign Standard | ✓ | ✓ | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=es)</li><li>[Documentación de exclusión](../segmentation/consents.md)</li></ul> |
 | Atributos del cliente de Adobe (CRS) | ✓ | N/A | Los atributos del interesado se eliminan del sistema. | <ul><li>[Documentación de acceso o eliminación para el RGPD](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=es)</li><li>[Documentación de acceso o eliminación para la CCPA](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=es)</li><li>Los atributos del cliente no tienen la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Cuando el Experience Platform recibe una solicitud de eliminación del Privacy Service, Platform envía una confirmación al Privacy Service de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. A continuación, los registros se eliminan del repositorio de datos o del almacén de perfiles una vez que se ha completado el trabajo de privacidad. Antes de que se complete el trabajo, los datos se eliminan de forma suave y, por lo tanto, ningún servicio de Platform puede acceder a ellos. | <ul><li>[Documentación de acceso o eliminación para el lago de datos](../catalog/privacy.md)</li><li>[Documentación de acceso o eliminación para el servicio de identidad](../identity-service/privacy.md)</li><li>[Acceder/eliminar documentación de Perfil del cliente en tiempo real](../profile/privacy.md)</li><li>[!DNL Experience Platform] honores [solicitudes de exclusión para segmentos de audiencia](../segmentation/consents.md).</li></ul> |
-| Autenticación de Adobe Primetime | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Documentación de acceso/eliminación](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
+| Adobe Pass Authentication | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Documentación de acceso/eliminación](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass no tiene la capacidad de transferir datos, por lo tanto las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Adobe Target | ✓ | N/A | Todos los datos asociados con el ID del interesado se eliminan de su perfil del visitante. Los datos agregados o anonimizados que no identifican a la persona o que no están relacionados (como los datos de contenido) no se aplican a las solicitudes de eliminación. | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=es)</li><li>[!DNL Target] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 | Marketo Engage | ✓ | N/A | Los datos almacenados del interesado se eliminan del sistema. | <ul><li>[Documentación de acceso/eliminación](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] no tiene la capacidad de transferir datos, por lo que las solicitudes de exclusión de la venta no son aplicables.</li></ul> |
 
