@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 **Etiquetas de contrato (&quot;C&quot;)**: Las etiquetas de uso de datos del contrato (&quot;C&quot;) se utilizan para categorizar los datos que tienen obligaciones contractuales o están relacionados con las políticas de gobernanza de datos de su organización.
 
-**CPRA**: La [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) amplía y corrige partes del [!DNL California Consumer Privacy Act (CCPA)]. El [!DNL CPRA] establece una nueva línea de base para la privacidad de datos de consumo en California al aumentar los derechos de los consumidores y ampliar el tipo de datos cubiertos a través de una definición más amplia de información personal confidencial. Además, la variable [!DNL CPRA] estableció la Agencia de Protección de Privacidad de California, una nueva agencia dedicada a implementar y aplicar reglas de privacidad de datos.
+**CPRA**: La [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) amplía y corrige partes del [!DNL California Consumer Privacy Act (CCPA)]. El [!DNL CPRA] establece una nueva línea de base para la privacidad de datos de consumo en California al aumentar los derechos de los consumidores y ampliar el tipo de datos cubiertos a través de una definición más amplia de información personal confidencial. Además, la variable [!DNL CPRA] estableció la Agencia de Protección de Privacidad de California, una nueva agencia dedicada a implementar y hacer cumplir las reglas de privacidad de datos.
 
 **Etiqueta de contrato C1**: A `C1` la etiqueta de uso de datos del contrato especifica que los datos solo se pueden exportar desde Adobe Experience Cloud de forma acumulada sin incluir identificadores individuales o de dispositivo. Por ejemplo, los datos que se originaron en las redes sociales.
 
@@ -538,6 +538,8 @@ ht-degree: 0%
 **Token**: un token es un tipo de seguridad de autenticación de doble factor que se puede utilizar para autorizar el uso de servicios de equipo con [!DNL Query Service].
 
 ## U
+
+**UCPA**: La [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) crea el derecho de un consumidor a saber qué datos personales recopila una empresa, cómo utiliza la empresa sus datos personales y si la empresa vende sus datos personales. Los consumidores pueden exigir a la empresa que elimine o deje de vender sus datos personales.
 
 **Esquema de unión**: un esquema de unión es una consolidación de esquemas que comparten la misma clase y que se han habilitado para [!DNL Real-Time Customer Profile]. Puede haber varios esquemas de unión para una organización, pero solo puede haber un esquema de unión por clase.
 

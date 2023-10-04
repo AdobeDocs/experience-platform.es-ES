@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de normas de privacidad
 description: Este documento proporciona información general sobre las diferentes regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 30cab0138ffc7d4f443c7a298139d3ad859b5772
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Mediante el uso de [Adobe Experience Platform Privacy Service](../home.md), Expe
 | LGPD (Brasil) | El [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) tiene por objeto regular el tratamiento de los datos personales de todas las personas físicas o físicas en Brasil. La LGPD otorga a los ciudadanos de Brasil el derecho de acceder y eliminar sus datos personales, de saber si sus datos personales se venden o revelan (y a quién) y el derecho de optar por que sus datos sean vendidos a terceros. |
 | Nueva Zelanda [!DNL Privacy Act] | El [Nueva Zelanda [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controla cómo las agencias pueden recopilar, utilizar, revelar, almacenar y dar acceso a la información personal de los ciudadanos y organizaciones de Nueva Zelanda. En 2020, la última versión de la ley introdujo actualizaciones significativas a estas leyes de privacidad. Las actualizaciones incluyen nuevos delitos, el aumento de las multas, notificaciones obligatorias por violaciones de datos y el aumento de los poderes del Comisionado de Privacidad. |
 | PDPA (Tailandia) | El [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) fue introducido para proteger a los propietarios de datos tailandeses de la recopilación, uso o divulgación ilegales de sus datos personales. Inspirada en el RGPD de la Unión Europea, la normativa concede a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos. |
+| UCPA (Utah) | El [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) crea el derecho de un consumidor a saber qué datos personales recopila una empresa, cómo utiliza la empresa sus datos personales y si la empresa vende sus datos personales. Los consumidores pueden exigir a la empresa que elimine o deje de vender sus datos personales. |
 | VCDPA (Virginia) | El [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) proporciona nuevos derechos de privacidad de datos a los residentes de Virginia (&quot;Consumidores&quot;), incluido el derecho a acceder, eliminar y corregir datos personales. Los consumidores también tienen derecho a excluirse de la venta de datos personales, de la creación de perfiles basados en datos personales y del procesamiento de fines publicitarios personales. |
 
 {style="table-layout:auto"}

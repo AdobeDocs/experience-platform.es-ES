@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1796'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## C
 
-**CCPA**: La [!DNL California Consumer Privacy Act] (CCPA) proporciona a los residentes de California más control sobre la información personal que las empresas recopilan de entonces. La ley establece varios derechos nuevos para los consumidores, incluyendo el derecho de acceso y la información personal recopilada de ellos, y el derecho a optar por la venta de su información personal a terceros.
+**CCPA**: La [!DNL California Consumer Privacy Act] (CCPA) proporciona a los residentes de California más control sobre la información personal que las empresas recopilan de entonces. La ley establece varios derechos nuevos para los consumidores, incluido el derecho de acceso y la información personal recopilada de ellos, y el derecho a optar por la venta de su información personal a terceros.
 
 **CPA**: La [!DNL Colorado Privacy Act] (CPA) proporciona a los consumidores de Colorado una perspectiva adicional de lo que los responsables del tratamiento de datos personales recopilan, comparten y venden, y de cómo se utilizan esos datos. La CPA protege los datos personales de los residentes de Colorado cuando actúan en un contexto individual o familiar. Estas reglas detallan las especificaciones técnicas de uno o más mecanismos universales de exclusión. Estos mecanismos comunican claramente la opción afirmativa, libre e inequívoca del consumidor de excluirse del procesamiento de datos personales con fines de publicidad dirigida o de venta de datos personales.
 
@@ -151,6 +151,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 acordar la adopción de un texto de compromiso más rápidamente.
 
 ## U
+
+**UCPA**: La [!DNL Utah Consumer Privacy Act] crea el derecho de un consumidor a saber qué datos personales recopila una empresa, cómo utiliza la empresa sus datos personales y si la empresa vende sus datos personales. Los consumidores pueden exigir a la empresa que elimine o deje de vender sus datos personales.
 
 **Consentimiento claro**: El consentimiento inequívoco también se conoce como consentimiento implícito. El consentimiento inequívoco se refiere al consentimiento que no fue otorgado explícitamente por el interesado, pero que, sin embargo, es de naturaleza inequívoca. Por ejemplo, durante el proceso de registro en el sitio web de una empresa, se envía un aviso de que, al proporcionar una dirección de correo electrónico, el interesado consiente en recibir correos electrónicos en ofertas especiales. Si el interesado lee el aviso, la acción afirmativa de introducir su correo electrónico es suficiente para considerarse un consentimiento inequívoco.
 
