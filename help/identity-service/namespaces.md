@@ -2,7 +2,7 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
+source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
 ht-degree: 7%
