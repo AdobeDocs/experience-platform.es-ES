@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extremo de API de roles
 description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar los roles mediante programación en Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1666'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ Las funciones definen el acceso que un administrador, un especialista o un usuar
 
 El `/roles` Este extremo de la API de control de acceso basado en atributos le permite administrar mediante programación las funciones de su organización.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
@@ -179,7 +179,7 @@ Una respuesta correcta devuelve detalles del ID de rol consultado, incluida info
 
 ## Búsqueda de asuntos por ID de función
 
-También puede recuperar asuntos realizando una solicitud de GET al `/roles` extremo al proporcionar un {ROLE_ID}.
+También puede recuperar asuntos realizando una solicitud de GET al `/roles` al proporcionar un punto final {ROLE_ID}.
 
 **Formato de API**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 La siguiente solicitud actualiza los temas asociados con `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Operaciones | Descripción |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los asuntos actualizados asociados con el ID de rol consultado.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `subjectId` | El ID de un asunto. |
-| `subjectType` | El tipo de asunto. |
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
 ## Eliminar un rol {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
 Para confirmar la eliminación, intente realizar una solicitud de búsqueda (GET) al rol. Recibirá el estado HTTP 404 (no encontrado) porque la función se ha eliminado de la administración.
+
+## Añadir una credencial de API {#apicredential}
+
+Para añadir una credencial de API, realice una solicitud de PATCH a `/roles` al proporcionar el ID de rol de los sujetos.
+
+**Formato de API**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Operaciones | Descripción |
+| --- | --- |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
+| `path` | Ruta del parámetro que se va a agregar. |
+| `value` | El valor con el que desea agregar el parámetro. |
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
