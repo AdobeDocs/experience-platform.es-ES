@@ -3,9 +3,10 @@ title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
+source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1533'
 ht-degree: 8%
 
 ---
@@ -134,13 +135,13 @@ Para añadir más identidades, seleccione el icono de signo más (![Un icono de 
 
 ![Flujo de trabajo de creación de la solicitud con el icono más y el icono de añadir identidad resaltados.](../images/ui/record-delete/more-identities.png)
 
-## Enviar la solicitud (#submit)
+## Enviar la solicitud {#submit}
 
 Una vez que haya terminado de agregar identidades a la solicitud, en **[!UICONTROL Solicitar configuración]**, proporcione un nombre y una descripción opcional para la solicitud antes de seleccionar **[!UICONTROL Enviar]**.
 
 >[!IMPORTANT]
 > 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10 000 ID al mismo tiempo. El [Método de API para eliminar registros](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) permite enviar 100 000 ID al mismo tiempo.
 
 ![La configuración de la solicitud es [!UICONTROL Nombre] y [!UICONTROL Descripción] campos con [!UICONTROL Enviar] resaltado.](../images/ui/record-delete/submit.png)
 
