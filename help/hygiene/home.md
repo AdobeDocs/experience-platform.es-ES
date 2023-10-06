@@ -2,18 +2,14 @@
 title: Resumen de higiene de datos
 description: La higiene de los datos de Adobe Experience Platform le permite administrar el ciclo vital de sus datos actualizando o purgando registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: ba23fb65fcc27a304e1075ec18b0bee3f240aa27
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '585'
 ht-degree: 1%
 
 ---
 
 # Higiene de datos en Adobe Experience Platform
-
->[!IMPORTANT]
->
->Actualmente, la higiene de los datos solo está disponible para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**. Estas funciones se lanzarán próximamente de forma general. Para obtener más información sobre su próxima disponibilidad, póngase en contacto con su representante de servicios de Adobe. Sin embargo, puede hacerlo inmediatamente [eliminar conjuntos de datos mediante [!UICONTROL Conjuntos de datos] IU](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform proporciona un conjunto sólido de herramientas para administrar operaciones de datos grandes y complicadas a fin de organizar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, es cada vez más importante administrar los almacenes de datos para que se utilicen según lo esperado, se actualicen cuando sea necesario corregir datos incorrectos y se eliminen cuando las políticas de la organización lo consideren necesario.
 
