@@ -2,7 +2,7 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Lo siguiente ocurre cuando una [solicitud de caducidad del conjunto de datos](./
 | Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles pueden eliminarse del sistema si todos sus atributos de componentes están vinculados a ese conjunto de datos. 30 horas después de eliminar el conjunto de datos, cualquier cambio resultante en los recuentos de perfiles generales se refleja en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
 | Audiencias actualizadas | 48 horas | Una vez actualizados todos los perfiles afectados, todos los [audiencias](../segmentation/home.md) se actualizan para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir como resultado de la eliminación. |
 | Recorridos y destinos actualizados | 50 horas | [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
-| Eliminación completa del hardware | 14 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo vital de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se actualiza para reflejarlo. |
+| Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo vital de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se actualiza para reflejarlo. |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Caducidad automatizada de conjuntos de datos
 description: Obtenga información sobre cómo programar la caducidad de un conjunto de datos en la IU de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 16%
@@ -26,7 +26,7 @@ Este documento explica cómo programar y automatizar las caducidades de los conj
 
 >[!NOTE]
 >
->La caducidad del conjunto de datos no elimina datos de Adobe Experience Platform Edge Network en este momento. Sin embargo, no hay posibilidad de que los datos permanezcan dentro de la red perimetral después de que el conjunto de datos esté configurado para caducar. Esto se debe a que el contrato de licencia de servicio de 14 días para la caducidad del conjunto de datos coincide con el periodo de 14 días en el que los datos existen dentro de la red perimetral antes de descartarse.
+>La caducidad del conjunto de datos no elimina datos de Adobe Experience Platform Edge Network en este momento. Sin embargo, no hay posibilidad de que los datos permanezcan dentro de la red perimetral después de que el conjunto de datos esté configurado para caducar. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro de la red perimetral antes de descartarse.
 
 ## Programar una caducidad del conjunto de datos {#schedule-dataset-expiration}
 
