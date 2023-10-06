@@ -1,13 +1,11 @@
 ---
 title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -69,12 +67,12 @@ Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identidad principal"
->abstract="Una identidad principal es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para la identidad principal del registro, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="Una identidad principal es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para la identidad principal del registro, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la Guía de la IU del ciclo vital de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidad"
->abstract="En esta columna, debe proporcionar el valor de la identidad principal del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de identidad principal es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la interfaz de usuario sobre higiene de datos."
+>abstract="En esta columna, debe proporcionar el valor de la identidad principal del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de identidad principal es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
 
 Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Platform, los registros se eliminan en función de la variable **identidad principal** campo definido por el esquema del conjunto de datos.
 

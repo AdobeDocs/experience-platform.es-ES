@@ -4,9 +4,9 @@ description: El extremo /workorder de la API de higiene de datos le permite admi
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '997'
 ht-degree: 4%
 
 ---
@@ -17,12 +17,9 @@ El `/workorder` Este extremo de la API de higiene de datos le permite administra
 
 >[!IMPORTANT]
 >
->Las solicitudes de eliminación de registros solo están disponibles para organizaciones que han realizado compras **Adobe Healthcare Shield**.
->
->
 >Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
-## Primeros pasos
+## Introducción
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 

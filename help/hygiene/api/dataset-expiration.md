@@ -2,18 +2,14 @@
 title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos le permite programar la caducidad de los conjuntos de datos en Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1402'
 ht-degree: 3%
 
 ---
 
 # Extremo de caducidad del conjunto de datos
-
->[!IMPORTANT]
->
->Actualmente, las funciones de higiene de los datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
 
 El `/ttl` Este extremo de la API de higiene de datos le permite programar fechas de caducidad para conjuntos de datos en Adobe Experience Platform.
 
@@ -31,7 +27,7 @@ Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad 
 >
 >Si un conjunto de datos está configurado para caducar, debe cambiar manualmente los flujos de datos que puedan estar introduciendo datos en ese conjunto de datos para que los flujos de trabajo descendentes no se vean afectados negativamente.
 
-## Primeros pasos
+## Introducción
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 

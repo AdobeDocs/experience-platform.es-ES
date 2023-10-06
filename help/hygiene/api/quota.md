@@ -1,28 +1,24 @@
 ---
 title: Punto final de API de cuota
-description: El punto final /quota en la API de higiene de datos le permite supervisar el uso de higiene de datos con respecto a los límites de cuota mensuales de su organización para cada tipo de trabajo.
+description: El punto final /quota en la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo vital de datos con respecto a los límites de cuotas mensuales de su organización para cada tipo de trabajo.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 2%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
 # Punto final de cuota
 
->[!IMPORTANT]
->
->Actualmente, las funciones de higiene de los datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
+El `/quota` El punto final de la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo vital de datos con respecto a los límites de cuotas de su organización para cada tipo de trabajo.
 
-El `/quota` El punto final de la API de higiene de datos le permite supervisar el uso de higiene de datos con respecto a los límites de cuota de su organización para cada tipo de trabajo.
-
-Las cuotas se aplican a cada tipo de trabajo de higiene de datos de las siguientes maneras:
+Las cuotas se aplican a cada tipo de trabajo del ciclo vital de datos de las siguientes maneras:
 
 * Las eliminaciones y actualizaciones de registros se limitan a un determinado número de solicitudes cada mes.
 * La caducidad de los conjuntos de datos tiene un límite plano para el número de trabajos activos simultáneamente, independientemente de cuándo se ejecutará la caducidad.
 
-## Primeros pasos
+## Introducción
 
 El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener la siguiente información:
 
@@ -58,7 +54,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de las cuotas de higiene de los datos.
+Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de datos.
 
 ```json
 {
@@ -81,6 +77,6 @@ Una respuesta correcta devuelve los detalles de las cuotas de higiene de los dat
 
 | Propiedad | Descripción |
 | --- | --- |
-| `quotas` | Muestra la información de cuota de cada tipo de trabajo de higiene de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo de higiene de datos:<ul><li>`expirationDatasetQuota`: Caducidad del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo de higiene de datos.</li><li>`consumed`: el número de trabajos de este tipo ejecutados en el periodo mensual actual.</li><li>`quota`: límite de cuota para este tipo de trabajo. Para las eliminaciones y actualizaciones de registros, esto representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
+| `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo del ciclo vital de datos:<ul><li>`expirationDatasetQuota`: Caducidad del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo del ciclo vital de datos.</li><li>`consumed`: el número de trabajos de este tipo ejecutados en el periodo mensual actual.</li><li>`quota`: límite de cuota para este tipo de trabajo. Para las eliminaciones y actualizaciones de registros, esto representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
 
 {style="table-layout:auto"}

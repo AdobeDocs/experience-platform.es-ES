@@ -1,15 +1,15 @@
 ---
-title: Administrar caducidades de conjuntos de datos
+title: Caducidad automatizada de conjuntos de datos
 description: Obtenga información sobre cómo programar la caducidad de un conjunto de datos en la IU de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '828'
 ht-degree: 16%
 
 ---
 
-# Administrar caducidades del conjunto de datos {#dataset-expiration}
+# Caducidad automatizada de conjuntos de datos {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ El [[!UICONTROL Ciclo de datos] workspace](./overview.md) en la IU de Adobe Expe
 >
 >Si un conjunto de datos está configurado para caducar, debe cambiar manualmente los flujos de datos que puedan estar introduciendo datos en ese conjunto de datos para que los flujos de trabajo descendentes no se vean afectados negativamente.
 
-Este documento explica cómo programar y administrar las caducidades de los conjuntos de datos en la IU de Platform.
+Este documento explica cómo programar y automatizar las caducidades de los conjuntos de datos en la IU de Platform.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Para crear una solicitud, seleccione **[!UICONTROL Crear solicitud]** en la pág
 
 >[!IMPORTANT]
 >
-Puede tener hasta 20 caducidades de conjuntos de datos programadas simultáneamente. Esto significa que puede tener 20 conjuntos de datos programados para eliminarse a la vez. No hay restricciones sobre la hora o el año en que se establecen estas caducidades. Por ejemplo, si tiene 20 caducidades programadas de conjuntos de datos y un conjunto de datos se va a eliminar mañana, no puede establecer más caducidades hasta que se haya eliminado ese conjunto de datos.
+Los usuarios de Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics tienen 20 órdenes de trabajo de caducidad de conjuntos de datos programados pendientes. Los usuarios de Healthcare Shield y Privacy and Security Shield tienen 50 órdenes de trabajo pendientes de vencimiento del conjunto de datos programado. Esto significa que puede tener 20 o 50 conjuntos de datos programados para eliminarse a la vez.<br>Por ejemplo, si tiene 20 caducidades programadas de conjuntos de datos y un conjunto de datos se va a eliminar mañana, no puede establecer más caducidades hasta que se haya eliminado ese conjunto de datos.
 
 ![El [!UICONTROL Ciclo de datos] workspace con [!UICONTROL Crear solicitud] resaltado.](../images/ui/ttl/create-request-button.png)
 

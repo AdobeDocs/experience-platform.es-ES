@@ -2,22 +2,18 @@
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # Guía de API de higiene de datos
 
->[!IMPORTANT]
->
->Actualmente, las funciones de higiene de los datos de Adobe Experience Platform solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
-
 La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. Esta guía describe los pasos previos para utilizar la API y proporciona vínculos a documentación más específica del extremo.
 
-## Primeros pasos
+## Introducción
 
 Puede acceder a la API de higiene de datos a través de la siguiente ruta raíz: `https://platform.adobe.io/data/core/hygiene/`
 
@@ -52,12 +48,12 @@ Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de
 >
 >Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
-La API de higiene de datos permite eliminar todos los registros asociados con una identidad en uno o todos los conjuntos de datos. Todas las tareas de higiene de datos que eliminan identidades están representadas por una construcción denominada orden de trabajo. Consulte la [guía de extremo de pedido de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con las eliminaciones de registros en la API.
+La API de higiene de datos permite eliminar todos los registros asociados con una identidad en uno o todos los conjuntos de datos. Todas las tareas del ciclo de vida de datos que eliminan identidades están representadas por una construcción denominada orden de trabajo. Consulte la [guía de extremo de pedido de trabajo](./workorder.md) para obtener más información sobre cómo trabajar con las eliminaciones de registros en la API.
 
 ## Cuota
 
-Su organización se limita a una cuota de trabajo mensual predeterminada para cada tipo de operación de higiene de datos, que puede variar según la licencia. Consulte la [guía de extremo de cuota](./quota.md) para obtener más información sobre la visualización del estado de cuota actual de los procesos de higiene de datos.
+Su organización se limita a una cuota de trabajo mensual predeterminada para cada tipo de operación del ciclo vital de datos, que puede variar según la licencia. Consulte la [guía de extremo de cuota](./quota.md) para obtener más información sobre cómo ver el estado de cuota actual de los procesos del ciclo vital de datos.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo administrar las solicitudes de higiene de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Platform, consulte [guía de IU de higiene de datos](../ui/overview.md).
+En esta guía se explica cómo administrar las solicitudes del ciclo vital de datos mediante llamadas a la API. Para obtener información sobre cómo realizar estas acciones en la interfaz de usuario de Platform, consulte [guía de IU del ciclo vital de datos](../ui/overview.md).
