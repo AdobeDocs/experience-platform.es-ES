@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Resumen de normas de privacidad
 description: Este documento proporciona información general sobre las diferentes regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ Mediante el uso de [Adobe Experience Platform Privacy Service](../home.md), Expe
 | VCDPA (Virginia) | El [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) proporciona nuevos derechos de privacidad de datos a los residentes de Virginia (&quot;Consumidores&quot;), incluido el derecho a acceder, eliminar y corregir datos personales. Los consumidores también tienen derecho a excluirse de la venta de datos personales, de la creación de perfiles basados en datos personales y del procesamiento de fines publicitarios personales. |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## Pasos siguientes
 

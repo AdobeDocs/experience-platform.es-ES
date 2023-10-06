@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administración de trabajos de privacidad en la IU de Privacy Service
 description: Aprenda a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
 ht-degree: 14%
@@ -52,6 +52,10 @@ El tablero de [!DNL Privacy Service] La interfaz de usuario proporciona dos widg
 | [!UICONTROL VCDPA_USA] | Las [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!--Not released yet:
+| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
+ -->
 
 >[!NOTE]
 >

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Punto final de API de trabajos de privacidad
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 2%
@@ -36,11 +36,15 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte la información general sobre [regulaciones compatibles](../regulations/overview.md) para obtener más información sobre las normas de privacidad que representan los valores anteriores. |
+| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte la información general sobre [regulaciones compatibles](../regulations/overview.md) para obtener más información sobre las normas de privacidad que representan los valores anteriores. |
 | `{PAGE}` | Página de datos que se va a mostrar, con numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | El número de resultados que se mostrarán en cada página. El valor predeterminado es `1` y el máximo es `100`. Si se supera el máximo, la API devolverá un error de 400 códigos. |
 
 {style="table-layout:auto"}
+
+<!-- Not released yet:
+<li>`pdpd_vnm`</li>
+ -->
 
 **Solicitud**
 

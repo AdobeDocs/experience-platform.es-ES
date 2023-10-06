@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 ## P
 
 **PDPA**: La [!DNL Personal Data Protection Act] de Tailandia (PDPA) se introdujo para proteger a los propietarios de datos tailandeses de la recopilación, el uso o la divulgación ilegales de sus datos personales. Inspirada en el RGPD de la Unión Europea, la normativa concede a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Datos personales**: Cualquier información relacionada con una persona física o un &quot;sujeto de datos&quot; que pueda utilizarse para identificar a la persona de forma directa o indirecta.
 
