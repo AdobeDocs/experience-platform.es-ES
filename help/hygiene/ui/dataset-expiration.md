@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Eliminación de registros de cliente y conjuntos de datos no deseados o caducados"
->abstract="<h2>Descripción</h2><p>Para administrar el ciclo de vida de los datos de Experience Platform que no están relacionados con el cumplimiento normativo, puede eliminar los registros del consumidor y programar las fechas de caducidad para los conjuntos de datos. Para crear o administrar solicitudes de titulares de los datos, consulte el bloque de caso de uso &quot;Respetar solicitudes de privacidad del titular de los datos&quot;.</p>"
+>abstract="<h2>Descripción</h2><p>Para administrar el ciclo de vida de los datos de Experience Platform que no están relacionados con el cumplimiento normativo, puede eliminar los registros del consumidor y programar las fechas de caducidad para los conjuntos de datos. Para crear o administrar solicitudes de interesados, consulte el bloque de casos de uso “Cumplimiento de las solicitudes de privacidad de los interesados”.</p>"
 
 El [[!UICONTROL Ciclo de datos] workspace](./overview.md) en la IU de Adobe Experience Platform le permite programar caducidades para conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez que los datos se eliminan de los tres servicios, la caducidad se marca como completada.
 
@@ -33,7 +33,7 @@ Este documento explica cómo programar y automatizar las caducidades de los conj
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instrucciones"
->abstract="<ul><li>Seleccionar <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=es">Ciclo de datos</a> en el panel de navegación izquierdo, seleccione <b>Crear solicitud</b>.</li><li>Si desea eliminar registros, haga lo siguiente:</li>   <li>Seleccione <b>Registro</b>.</li>   <li>Seleccione un conjunto de datos específico del que eliminar registros o elija la opción para eliminarlos de todos.</li>   <li>Proporcione las identidades de los consumidores cuyos registros deban eliminarse. Seleccione <b>Agregar identidad</b> para introducir las identidades de una en una o <b>Elegir archivos</b> para cargar un archivo JSON de identidades, en su lugar.</li>   <li>Si es necesario, seleccione <b>Plantilla</b> para ver el formato esperado del archivo JSON.</li><li>Consulte la documentación para obtener instrucciones si desea <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=es#schedule-dataset-expiration">programar fechas de caducidad para conjuntos de datos</a>.</li></ul>"
+>abstract="<ul><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=es">Ciclo de vida de datos</a> en la navegación izquierda y, a continuación, seleccione <b>Crear solicitud</b>.</li><li>Si desea eliminar registros, haga lo siguiente:</li>   <li>Seleccione <b>Registro</b>.</li>   <li>Seleccione un conjunto de datos específico del que eliminar registros o elija la opción para eliminarlos de todos.</li>   <li>Proporcione las identidades de los consumidores cuyos registros deban eliminarse. Seleccione <b>Agregar identidad</b> para introducir las identidades de una en una o <b>Elegir archivos</b> para cargar un archivo JSON de identidades, en su lugar.</li>   <li>Si es necesario, seleccione <b>Plantilla</b> para ver el formato esperado del archivo JSON.</li><li>Consulte la documentación para obtener instrucciones si desea <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=es#schedule-dataset-expiration">programar fechas de caducidad para conjuntos de datos</a>.</li></ul>"
 
 Para crear una solicitud, seleccione **[!UICONTROL Crear solicitud]** en la página principal del espacio de trabajo.
 

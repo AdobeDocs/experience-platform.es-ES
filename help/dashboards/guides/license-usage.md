@@ -7,16 +7,16 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# Tablero de uso de licencias {#license-usage-dashboard}
+# Panel de uso de licencias {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
->title="Tablero de uso de licencias"
->abstract="El tablero Uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
+>title="Panel de uso de licencias"
+>abstract="El panel de uso de licencias ofrece datos de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas."
 
 Puede ver información importante sobre el uso de licencias de su organización en Adobe Experience Platform [!UICONTROL Uso de licencias] panel. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 

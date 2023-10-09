@@ -15,7 +15,7 @@ ht-degree: 8%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
->title="Filtro de grupo de campos estándar o personalizado"
+>title="Filtro de grupo de campo estándar o personalizado"
 >abstract="La lista de grupos de campos disponibles se filtra previamente en función de cómo se crearon. Seleccione el botón de opción para elegir entre las opciones Estándar y Personalizado. La opción Estándar muestra las entidades creadas por Adobe y la opción Personalizada muestra las entidades creadas dentro de su organización. Consulte la documentación para obtener más información sobre la creación y edición de grupos de campos."
 
 En el modelo de datos de experiencia (XDM), los grupos de campos de esquema son componentes reutilizables que definen uno o varios campos que implementan determinadas funciones, como detalles personales, preferencias de hotel o dirección. Los grupos de campos están pensados para incluirse como parte de un esquema que implementa una clase compatible.

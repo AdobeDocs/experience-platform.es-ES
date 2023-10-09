@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - Conexión de distribución
 description: Aprenda a utilizar el conector LiveRamp - Distribution para orquestar y activar audiencias previamente integradas en LiveRamp, para destinos de publicidad descendentes.
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 23%
+ht-degree: 38%
 
 ---
-
 
 # [!DNL LiveRamp - Distribution] conexión
 
@@ -110,13 +110,13 @@ Consulte las secciones siguientes para obtener instrucciones detalladas sobre c�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="ID del perfil de marca de 4C"
->abstract="Introduzca el ID numérico asociado con su perfil de marca de 4C. Si no tiene este ID, póngase en contacto con su representante de servicios al cliente de 4C."
+>abstract="Introduzca el ID numérico asociado con su perfil de marca de 4C. Si no tiene este ID, póngase en contacto con su representante de servicios del cliente de 4C."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
 ![Imagen de la IU de Platform que muestra los campos de datos del cliente para el destino de 4C Insights.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL ID de perfil de marca de 4C]**: introduzca el ID numérico asociado con su perfil de marca 4C. Si no tiene este ID, póngase en contacto con su representante de servicios al cliente de 4C.
+* **[!UICONTROL ID de perfil de marca de 4C]**: introduzca el ID numérico asociado con su perfil de marca 4C. Si no tiene este ID, póngase en contacto con su representante de servicios del cliente de 4C.
 
 ### [!DNL Acast] {#acast}
 
@@ -135,8 +135,8 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
->title="Nombre de su empresa"
->abstract="El nombre de su empresa, tal como desea que se muestre al socio de destino. No utilice espacios ni caracteres especiales."
+>title="Nombre de su compañía"
+>abstract="El nombre de su compañía, tal como desea que se muestre al socio de destino. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -175,7 +175,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Acuerdo de términos sobre el destino de los datos del anunciante"
->abstract="Escribir en `I AGREE` para confirmar el reconocimiento y el acuerdo de los términos de datos del anunciante de Disney."
+>abstract="Escriba `I AGREE` para confirmar el reconocimiento y la aceptación de los términos de datos del anunciante de Disney."
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Su dirección de correo electrónico"
->abstract="Introduzca una dirección de correo electrónico vinculada a un individuo. Esta dirección de correo electrónico sirve como firma del acuerdo de términos de datos del anunciante. Esta dirección de correo electrónico también se utiliza para ponerse en contacto con usted si es necesario."
+>abstract="Introduzca una dirección de correo electrónico vinculada a un individuo. Esta dirección de correo electrónico sirve como firma del acuerdo de términos de datos del anunciante. También se utilizará esta dirección de correo electrónico para ponernos en contacto con usted si fuera necesario."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -214,8 +214,8 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
->title="Nombre de cuenta"
->abstract="Nombre de su cuenta de cliente de Index Exchange. No utilice espacios ni caracteres especiales."
+>title="Nombre de la cuenta"
+>abstract="Nombre de la cuenta de cliente de Index Exchange. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -228,7 +228,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="Cliente"
->abstract="Nombre de cliente, tal como desea que se muestre al socio de destino. Utilice el nombre de su empresa. No utilice espacios ni caracteres especiales."
+>abstract="El nombre de su cliente, tal como desea que se muestre al socio de destino. Utilice el nombre de su empresa. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -245,8 +245,8 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="ID de puesto"
->abstract="ID de asiento Magnite DV+ proporcionado por el administrador de cuentas de Magnite"
+>title="ID de licencia"
+>abstract="ID de licencia Magnite DV+ proporcionado por el administrador de cuentas de Magnite"
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -265,11 +265,11 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
 >title="ID de mercado"
->abstract="Introduzca el ID de mercado numérico en el que se debe crear el contrato de datos de Next. Si está realizando una distribución &quot;AlwaysOn&quot; en todos los mercados de la plataforma Nexxen, introduzca -1."
+>abstract="Introduzca el ID de mercado numérico en el que se debe crear el contrato de datos de Nexxen. Si está realizando una distribución &quot;AlwaysOn&quot; en todos los mercados de la plataforma Nexxen, introduzca -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
->title="ID del anunciante"
+>title="ID de anunciante"
 >abstract="Si va a enviar datos a un solo anunciante en la plataforma Nexxen, introduzca el ID numérico del anunciante de Adobe. Si desea que los datos estén disponibles para todos los anunciantes de un mercado o si estos segmentos son &quot;AlwaysOn&quot;, introduzca -1."
 
 >[!CONTEXTUALHELP]
@@ -291,7 +291,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="Cliente"
->abstract="El nombre de su cuenta de empresa/distribución tal como desea que aparezca al socio. Póngase en contacto con el representante de su cuenta de socio si no está seguro de qué nombre utilizar. No utilice espacios ni caracteres especiales."
+>abstract="El nombre de su cuenta de compañía/distribución tal como desea que le aparezca al socio. Póngase en contacto con el representante de su cuenta de socio si no está seguro de qué nombre utilizar. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
@@ -373,14 +373,14 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="Tipo de segmento"
->abstract="El tipo de segmento. Actualmente solo se admiten segmentos de origen."
+>abstract="El tipo de segmento. Actualmente, solo se admiten segmentos de origen."
 
 Para configurar los detalles del destino, rellene los campos siguientes.
 
 ![Imagen de la interfaz de usuario de Platform que muestra los identificadores admitidos para el destino Tabola.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Dirección de correo electrónico del administrador de cuentas]**: La dirección de correo electrónico del administrador de cuentas de Taboola.
-* **[!UICONTROL Tipo de segmento]**: el tipo de segmento. Actualmente solo se admiten segmentos de origen.
+* **[!UICONTROL Tipo de segmento]**: el tipo de segmento. Actualmente, solo se admiten segmentos de origen.
 
 ### [!DNL TargetSpot] {#targetspot}
 

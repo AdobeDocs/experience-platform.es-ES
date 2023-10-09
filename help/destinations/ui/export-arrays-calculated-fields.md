@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Compatibilidad con matrices de exportación (Beta)"
->abstract="Utilice el **Añadir campo calculado** para exportar matrices simples de valores int, string o boolean desde Experience Platform al destino de almacenamiento en la nube deseado. Se aplican algunas limitaciones. Consulte la documentación para ver ejemplos exhaustivos y funciones compatibles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Ejemplos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitaciones conocidas"
+>abstract="Utilice el control **Añadir campo calculado** para exportar matrices simples de valores int, cadena o booleanos desde Experience Platform al destino de almacenamiento en la nube deseado. Se aplican algunas limitaciones. Consulte la documentación para ver ejemplos exhaustivos y funciones compatibles."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#examples" text="Ejemplos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=es#known-limitations" text="Limitaciones conocidas"
 
 >[!AVAILABILITY]
 >
