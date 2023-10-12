@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Extremo de API de consultas
 description: Las siguientes secciones describen las llamadas que puede realizar mediante el extremo /queries en la API del servicio de consultas.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '943'
 ht-degree: 3%
 
 ---
@@ -38,8 +38,8 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 | --------- | ----------- |
 | `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por creados en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos por creados en orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuestas mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta enumerada. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`, y `id`. La lista de operadores admitidos es `>` (bueno que), `<` (menor que), `>=` (bueno o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a), y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
+| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero la consulta creada más antigua y, a continuación, seguirá enumerando los resultados más recientes.<br> Las marcas de tiempo ISO permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, 8:15:30 a. m., hora estándar del este de EE. UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se denota con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
+| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`, y `id`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que), `>=` (mayor o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a), y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
 | `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` testamento **include** consultas eliminadas suaves. (*Booleano, valor predeterminado: true*) |
 | `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en false, **include** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Booleano, valor predeterminado: true*) |
 | `isPrevLink` | El `isPrevLink` El parámetro de consulta se utiliza para la paginación. Los resultados de la llamada de API se ordenan mediante su `created` marca de tiempo y el `orderby` propiedad. Al navegar por las páginas de resultados, `isPrevLink` se establece en true cuando se pagina hacia atrás. Invierte el orden de la consulta. Consulte los vínculos &quot;siguiente&quot; y &quot;anterior&quot; como ejemplos. |

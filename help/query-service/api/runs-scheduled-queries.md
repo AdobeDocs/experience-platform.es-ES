@@ -4,9 +4,9 @@ solution: Experience Platform
 title: La consulta programada ejecuta el extremo de API
 description: En las siguientes secciones se describen las distintas llamadas a la API que puede realizar para ejecutar consultas programadas con la API del servicio de consultas.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '774'
 ht-degree: 3%
 
 ---
@@ -41,8 +41,8 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 | --------- | ----------- |
 | `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por creados en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos por creados en orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Desplaza la lista de respuestas mediante la numeración basada en cero. Por ejemplo, `start=2` devolverá una lista a partir de la tercera consulta enumerada. (*Valor predeterminado: 0*) |
-| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state`, y `externalTrigger`. La lista de operadores admitidos es `>` (bueno que), `<` (menor que), y  `==` (igual a), y `!=` (distinto de). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones que se hayan creado, ejecutado correctamente y creado manualmente después del 20 de abril de 2019. |
+| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero las ejecuciones más antiguas y, a continuación, seguirá enumerando los resultados más recientes<br> Las marcas de tiempo ISO permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, 8:15:30 a. m., hora estándar del este de EE. UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se denota con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
+| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `state`, y `externalTrigger`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que), y  `==` (igual a), y `!=` (distinto de). Por ejemplo, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` devolverá todas las ejecuciones que se hayan creado, ejecutado correctamente y creado manualmente después del 20 de abril de 2019. |
 
 **Solicitud**
 
