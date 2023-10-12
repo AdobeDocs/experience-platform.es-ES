@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 3%
+source-wordcount: '3822'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ El trabajo con audiencias y definiciones de segmentos requiere comprender las di
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] le permite segmentar datos almacenados en [!DNL Experience Platform] que se relaciona con individuos (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite la creación de perfiles de clientes mediante el puente de identidades de fuentes de datos dispares que se están ingiriendo en [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 También debe comprender dos términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
 
@@ -350,6 +350,10 @@ El **[!UICONTROL Revisar]** se muestra la página. Puede revisar los detalles de
 ![El [!UICONTROL Revisar] se muestra la página, con los detalles de la audiencia recién importada y generada externamente.](../images/ui/overview/import-audience-review-details.png)
 
 Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL Finalizar]** para importar la audiencia generada externamente en Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>Si su audiencia generada externamente contiene información confidencial o relacionada con la atención médica, usted **debe** aplique las etiquetas de uso de datos necesarias antes de activarlo en cualquier destino. Para obtener más información sobre la aplicación de etiquetas de uso de datos, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md).
 
 ## Segmentación programada {#scheduled-segmentation}
 
