@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
+source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 55%
+source-wordcount: '729'
+ht-degree: 52%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 55%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## v0.20.0 (9 de octubre de 2023)
+
+- Actualización para admitir at.js 2.11.0.
+- Se ha agregado compatibilidad con la configuración de sandboxId y sandboxName personalizados de Adobe Experience Platform en targetGlobalSettings, que se pasarán a la API de entrega en las llamadas getOffer/getOffers.
+- Corrección DOM de sombreado para encadenar :eq() en el selector.
 
 ## v0.19.3 (18 de septiembre de 2023)
 
