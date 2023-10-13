@@ -1,9 +1,10 @@
 ---
 title: Configurar un Azure Key Vault
 description: Obtenga información sobre cómo crear una nueva cuenta empresarial con Azure o utilizar una cuenta empresarial existente y crear el almacén de claves.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -41,6 +42,12 @@ A partir de aquí, siga con el flujo de trabajo de creación de Key Vault y conf
 Una vez que llegue al **[!DNL Review + create]** paso, puede revisar los detalles de Key Vault mientras pasa por la validación. Una vez validada, seleccione **[!DNL Create]** para completar el proceso.
 
 ![La página de revisión y creación de Microsoft Azure Key Vaults tiene resaltada la opción Crear.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Configuración del acceso {#configure-access}
+
+A continuación, habilite el control de acceso basado en funciones de Azure para su almacén de claves. Seleccionar **[!DNL Access configuration]** en el [!DNL Settings] de la navegación izquierda y, a continuación, seleccione **[!DNL Azure role-based access control]** para habilitar la configuración. Este paso es esencial, ya que la aplicación CMK debe asociarse posteriormente a un rol de Azure. La asignación de una función está documentada tanto en [API](./api-set-up.md#assign-to-role) y [IU](./ui-set-up.md#assign-to-role) flujos de trabajo.
+
+![El [!DNL Microsoft Azure] panel con [!DNL Access configuration] y [!DNL Azure role-based access control] resaltado.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Configurar opciones de red {#configure-network-options}
 
