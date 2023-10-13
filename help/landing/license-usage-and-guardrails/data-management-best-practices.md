@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ El [!DNL Profile Richness] La métrica varía según la licencia que haya adquir
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización.
 
-## Tablero de uso de licencias
+## Panel de uso de licencias
 
 La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver una instantánea de los datos relacionados con las licencias de su organización para Platform. Los datos del tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. La instantánea no es una aproximación ni una muestra de datos y el panel no se actualiza en tiempo real.
 
@@ -94,6 +94,12 @@ Hay varias herramientas que puede aprovechar para no salirse de sus derechos de 
 * [Filtros de ingesta](#ingestion-filters)
 * [Almacén de perfiles](#profile-service)
 
+### Servicio de identidad y audiencia accesible {#identity-service}
+
+Los gráficos de identidad no se contabilizan en el derecho total de audiencia a la que se puede dirigir porque audiencia a la que se puede dirigir hace referencia al recuento total de perfiles de clientes.
+
+Sin embargo, los límites del gráfico de identidades pueden afectar a su audiencia direccionable debido a la división de identidades. Por ejemplo, si se elimina el ECID más antiguo del gráfico, ECID seguirá existiendo en el Perfil del cliente en tiempo real como un perfil seudónimo. Puede establecer [Caducidad de datos de perfil seudónimos](../../profile/pseudonymous-profiles.md) para evitar este comportamiento. Para obtener más información, lea la [protecciones para los datos del servicio de identidad](../../identity-service/guardrails.md).
+
 ### Filtros de ingesta {#ingestion-filters}
 
 Los filtros de ingesta le permiten introducir únicamente los datos necesarios para sus casos de uso y filtrar todos los eventos que no son necesarios.
@@ -104,7 +110,7 @@ Los filtros de ingesta le permiten introducir únicamente los datos necesarios p
 | Preparación de datos de Adobe Analytics | Puede utilizar [!DNL Data Prep] Funcionalidades al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. Pasante [!DNL Data Prep], puede definir qué atributos/columnas deben publicarse en el perfil. También puede proporcionar afirmaciones condicionales para informar a Platform de si se espera que los datos se publiquen en el perfil de o solo en el [!DNL data lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
 | Compatibilidad con habilitar/deshabilitar conjuntos de datos para el perfil | Para introducir datos en el Perfil del cliente en tiempo real, debe habilitar un conjunto de datos para su uso en el almacén de perfiles. Al hacerlo, agrega a su [!DNL Addressable Audience] y [!DNL Profile Richness] derechos. Una vez que un conjunto de datos ya no es necesario para casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos a Perfil para garantizar que los datos sigan siendo compatibles con la licencia. Consulte la guía de [habilitar y deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
 | Exclusión de datos de SDK web y SDK móvil | El SDK web y móvil recopilan dos tipos de datos: datos que se recopilan automáticamente y datos que el desarrollador recopila explícitamente. Para administrar mejor el cumplimiento de la licencia, puede deshabilitar la recopilación automática de datos en la configuración del SDK a través de la configuración de contexto. El desarrollador también puede eliminar o no definir datos personalizados. Consulte la guía de [configurar aspectos básicos del SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) para obtener más información. |
-| Exclusión de datos del reenvío del lado del servidor | Si está enviando datos a Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirlos en todos los eventos o añadiendo condiciones a la regla para que los datos solo se activen para determinados eventos. Consulte la documentación sobre [eventos y condiciones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) para obtener más información. |
+| Exclusión de datos del reenvío del lado del servidor | Si está enviando datos a Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirlos en todos los eventos o añadiendo condiciones a la regla para que los datos solo se activen para determinados eventos. Consulte la documentación sobre [eventos y condiciones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) para obtener más información. |
 | Filtrado de datos en el nivel de origen | Puede utilizar operadores lógicos y de comparación para filtrar los datos de nivel de fila a partir de los orígenes antes de crear una conexión e introducir datos en Experience Platform. Para obtener más información, lea la guía de [filtrado de datos de nivel de fila para un origen utilizando [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
