@@ -2,9 +2,9 @@
 title: Información general sobre la extensión API Meta Conversions
 description: Obtenga información acerca de la extensión de la API de metaconversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Para instalar el [!DNL Meta Conversions API] extensión, vaya a la IU de recopil
 
 Una vez seleccionada o creada la propiedad deseada, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seleccione la opción **[!UICONTROL Catálogo]** pestaña. Busque la variable [!UICONTROL API de metaconversiones] y, a continuación, seleccione **[!UICONTROL Instalar]**.
 
-![El [!UICONTROL Instalar] botón seleccionado para la [!UICONTROL API de metaconversiones] en la IU de recopilación de datos.](../../../images/extensions/server/meta/install.png)
+![El [!UICONTROL Instalar] opción que se está seleccionando para [!UICONTROL API de metaconversiones] en la IU de recopilación de datos.](../../../images/extensions/server/meta/install.png)
 
 En la vista de configuración que aparece, debe proporcionar el [!DNL Pixel] ID que copió anteriormente para vincular la extensión a su cuenta. Puede pegar el ID directamente en la entrada o utilizar un elemento de datos en su lugar.
 
@@ -46,6 +46,30 @@ Cuando termine, seleccione **[!UICONTROL Guardar]**
 ![El [!DNL Pixel] El ID proporcionado como elemento de datos en la vista de configuración de la extensión.](../../../images/extensions/server/meta/configure.png)
 
 La extensión está instalada y ahora puede utilizar sus funcionalidades en las reglas de reenvío de eventos.
+
+## Integración con la extensión Meta Business (MBE) {#mbe}
+
+La integración con la mejora de Meta Business Extensions (MBE) le permite autenticarse rápidamente en su cuenta de Meta Business. A continuación, rellena automáticamente su [!UICONTROL ID de píxel] y la API de metaconversiones [!UICONTROL Token de acceso], lo que facilita la instalación y configuración de la API de conversiones de metadatos.
+
+Aparecerá un mensaje de diálogo para autenticarse en MBE al instalar el [!UICONTROL API de metaconversiones] extensión.
+
+![El [!UICONTROL Extensión de API de metaconversiones] resaltado de página de instalación [!UICONTROL Conectar con Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+También aparece un mensaje de diálogo para autenticarse en MBE en la interfaz de usuario del flujo de trabajo de inicio rápido dentro del reenvío de eventos.
+
+![Resaltado de la IU del flujo de trabajo de inicio rápido [!UICONTROL Conectar con Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integración con la puntuación de coincidencia de calidad de evento (EMQ) {#emq}
+
+La integración con la puntuación de coincidencia de calidad de evento (EMQ) le permite ver fácilmente la eficacia de su implementación mostrando puntuaciones EMQ. Esta integración minimiza el cambio de contexto y le ayuda a mejorar el éxito de las implementaciones de la API de conversiones de metadatos. Estas puntuaciones de eventos aparecen en la variable [!UICONTROL Extensión de API de metaconversiones] pantalla de configuración.
+
+![El [!UICONTROL Extensión de API de metaconversiones] resaltado de página de configuración [!UICONTROL Ver puntuación EMQ].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integración con LiveRamp (Alpha) {#alpha}
+
+La integración con LiveRamp añade nuevos campos a la configuración de reglas de API de metaconversiones, lo que facilita la integración de los clientes con la API de conversiones de LiveRamp. Esta integración elimina la necesidad de compartir PII directamente con su socio o con Meta. Debido al gráfico de identidad robusto de LiveRamp, la inclusión de [!UICONTROL ID de socio (alpha)] puede mejorar la calidad de la integración al aumentar la tasa de coincidencia del usuario.
+
+![Reenvío de eventos Meta [!UICONTROL Regla] resaltado de página de configuración [!UICONTROL Nombre del socio (alpha)] y [!UICONTROL ID de socio (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configuración de una regla de reenvío de eventos {#rule}
 

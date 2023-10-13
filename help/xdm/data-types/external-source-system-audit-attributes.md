@@ -2,18 +2,14 @@
 title: Tipo de datos de atributos de auditoría del sistema de origen externo
 description: Este documento proporciona información general sobre el tipo de datos XDM (Experience Data Model) de los atributos de auditoría del sistema de origen externo.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '192'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Atributos de auditoría del sistema de origen externo] tipo de datos
-
->[!NOTE]
->
->Este tipo de datos solo está disponible para organizaciones que tienen acceso a la edición B2B de Adobe Real-time Customer Data Platform.
 
 [!UICONTROL Atributos de auditoría del sistema de origen externo] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura detalles de auditoría sobre un sistema de origen externo.
 
