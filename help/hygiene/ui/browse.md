@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 14%
+ht-degree: 26%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="ID de orden de trabajo"
->abstract="Cuando se envía una solicitud del ciclo de vida de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. En otras palabras, una orden de trabajo representa un proceso del ciclo vital de datos específico, que incluye su estado actual y otros detalles relacionados. A cada orden de trabajo se le asigna automáticamente su propio ID exclusivo tras la creación."
+>abstract="Cuando se envía una solicitud de ciclo de vida de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. En otras palabras, una orden de trabajo representa un proceso de ciclo de vida de datos específico, que incluye su estado actual y otros detalles relacionados. A cada orden de trabajo se le asigna automáticamente su propio ID exclusivo tras la creación."
 >text="See the data lifecycle UI guide to learn more."
 
-Cuando se envía una solicitud del ciclo de vida de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso específico del ciclo vital de los datos, como una caducidad programada del conjunto de datos, que incluye su estado actual y otros detalles relacionados.
+Cuando se envía una solicitud de ciclo de vida de datos al sistema, se crea una orden de trabajo para ejecutar la tarea solicitada. Una orden de trabajo representa un proceso específico del ciclo vital de los datos, como una caducidad programada del conjunto de datos, que incluye su estado actual y otros detalles relacionados.
 
 Esta guía explica cómo ver y administrar las órdenes de trabajo existentes en la interfaz de usuario de Adobe Experience Platform.
 
@@ -65,17 +65,17 @@ Los siguientes filtros se aplican a las solicitudes de caducidad del conjunto de
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Estado por servicio"
->abstract="Varios servicios de Experience Platform procesan de forma independiente las solicitudes del ciclo vital de datos. Esta sección describe el estado de procesamiento actual de la solicitud para cada servicio respectivo. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
+>abstract="Las solicitudes sobre el ciclo de vida de datos se procesan de forma independiente mediante varios servicios de Experience Platform. Esta sección describe el estado de procesamiento actual de la solicitud para cada servicio respectivo. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Número de identidades"
->abstract="Número de identidades cuyos registros se solicitó actualizar o eliminar como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
+>abstract="Número de identidades cuyos registros se solicitó actualizar o eliminar como parte de esta orden de trabajo. Las identidades incluidas en el recuento pueden no existir necesariamente en los conjuntos de datos afectados. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Respuesta de eliminación de registros"
->abstract="Cuando un proceso de eliminación de registros recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Resultado]** para obtener más información. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
+>abstract="Cuando un proceso de eliminación de registros recibe una respuesta del sistema, estos mensajes se muestran en la sección **[!UICONTROL Resultado]** para obtener más información. Si se produce un problema mientras se procesa una orden de trabajo, en esta sección aparecerán mensajes de error relevantes para ayudarle a solucionar el problema. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 Seleccione el ID de una orden de trabajo de la lista para ver sus detalles.
 

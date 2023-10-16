@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Estado de solicitudes del ciclo de datos"
->abstract="Este widget muestra el recuento total de trabajos de eliminación de registros de ciclo de vida de datos creados, con errores y completados. Para obtener más información sobre los procesos del ciclo vital de los datos, seleccione **Ciclo de datos** en el panel de navegación izquierdo."
+>title="Estado de las solicitudes sobre el ciclo de vida de datos"
+>abstract="Este widget muestra los recuentos totales de trabajos de eliminación de registros de ciclo de datos creados, con errores y completados. Para obtener más información sobre los procesos de ciclo de vida de datos, seleccione **Ciclo de vida de datos** en el panel de navegación situado a la izquierda."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Órdenes de trabajo recientes del ciclo vital de datos"
->abstract="Este widget muestra las cinco solicitudes de trabajo del ciclo vital de datos creadas o actualizadas más recientemente, según la opción que seleccione en la parte superior derecha. Para obtener más información sobre los procesos del ciclo vital de los datos, seleccione **Ciclo de datos** en el panel de navegación izquierdo."
+>title="Órdenes de trabajo recientes sobre el ciclo de datos"
+>abstract="Este widget muestra las cinco órdenes de trabajo sobre ciclo de datos creadas o actualizadas más recientemente, según la opción seleccionada en la parte superior derecha. Para obtener más información sobre los procesos de ciclo de vida de datos, seleccione **Ciclo de vida de datos** en el panel de navegación situado a la izquierda."
 
 El **[!UICONTROL Ciclo de datos]** El espacio de trabajo de la IU de Adobe Experience Platform le permite crear y supervisar varias tareas de administración del ciclo vital de datos, incluida la eliminación de registros y la programación de la caducidad de conjuntos de datos.
 
