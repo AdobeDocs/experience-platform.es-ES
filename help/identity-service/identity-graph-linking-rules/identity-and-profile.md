@@ -3,7 +3,7 @@ title: Servicio de identidad y perfil del cliente en tiempo real
 description: Obtenga información acerca de la relación entre el servicio de identidad y el perfil del cliente en tiempo real
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->En esta página se da por hecho que la política de combinación utiliza el gráfico de identidad. Para obtener más información sobre las políticas de combinación en el Perfil del cliente en tiempo real, lea la documentación sobre [políticas de combinación y vinculación de identidad].
+>En esta página se da por hecho que la política de combinación utiliza el gráfico de identidad. Para obtener más información sobre las políticas de combinación en el Perfil del cliente en tiempo real, lea la documentación sobre [políticas de combinación y vinculación de identidad](../../profile/merge-policies/overview.md#identity-stitching).
 
 Aunque puede utilizar el servicio de identidad y el perfil del cliente en tiempo real juntos, las dos funciones de Adobe Experience Platform no son inherentemente iguales.
 
