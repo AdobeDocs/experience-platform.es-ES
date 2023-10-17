@@ -5,9 +5,9 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para fines de demostración, los pasos de este tutorial implican la creación de
 
 Este tutorial requiere una comprensión práctica de los distintos aspectos de Adobe Experience Platform implicados en la creación de esquemas. Antes de comenzar este tutorial, revise la documentación para los siguientes conceptos:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de composición de esquemas](../schema/composition.md): Información general sobre los esquemas XDM y sus componentes básicos, incluidas clases, grupos de campos de esquema, tipos de datos y campos individuales.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
@@ -201,7 +201,7 @@ Cada campo requiere la siguiente información:
 * **[!UICONTROL Tipo]:** El tipo de datos del campo. Esto incluye tipos escalares básicos y cualquier tipo de datos definido en la variable [!DNL Schema Registry]. Ejemplos: [!UICONTROL Cadena], [!UICONTROL Entero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Dirección], [!UICONTROL Número de teléfono], etc.
 * **[!UICONTROL Descripción]:** Se debe incluir una descripción opcional del campo con un máximo de 200 caracteres.
 
-El primer campo de la variable `loyaltyTier` el objeto será una cadena llamada `id`, que representa el ID del nivel actual del miembro socio. El ID de nivel será único para cada miembro socio, ya que esta empresa establece diferentes umbrales de punto de nivel de fidelidad para cada cliente en función de diferentes factores. Establezca el tipo del nuevo campo en &quot;[!UICONTROL Cadena]&quot;, y el **[!UICONTROL Propiedades del campo]** La sección se rellena con varias opciones para aplicar restricciones, incluidos el valor predeterminado, el formato y la longitud máxima.
+El primer campo de la variable `loyaltyTier` el objeto será una cadena llamada `id`, que representa el ID del nivel actual del miembro socio. El ID de nivel será único para cada miembro socio, ya que esta empresa establece diferentes umbrales de punto de nivel de fidelidad para cada cliente en función de diferentes factores. Establezca el tipo del nuevo campo en &quot;[!UICONTROL Cadena]&quot;, y el **[!UICONTROL Propiedades del campo]** La sección se rellena con varias opciones para aplicar restricciones, incluidos el valor predeterminado, el formato y la longitud máxima. Consulte la documentación sobre [prácticas recomendadas para los campos de validación de datos](../schema/best-practices.md#data-validation-fields) para obtener más información.
 
 ![Editor de esquemas con los valores de propiedad de campo del nuevo campo de ID resaltado.](../images/tutorials/create-schema/string-constraints.png)
 
