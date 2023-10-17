@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 30%
+source-wordcount: '174'
+ht-degree: 29%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 30%
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Información general](personalization/ajo/overview.md)
+      * [Implementación de aplicación de una sola página](personalization/ajo/web-spa-implementation.md)
 * Consentimiento {#consent}
    * [Consentimiento de apoyo](consent/supporting-consent.md)
    * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}

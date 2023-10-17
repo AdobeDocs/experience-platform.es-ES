@@ -1,13 +1,13 @@
 ---
 title: Resumen de atributos calculados
 description: Los atributos calculados son funciones para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 1%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # Resumen de atributos calculados
 
@@ -56,7 +56,7 @@ Los atributos calculados permiten definir acumulados de evento de forma automát
 
 ### Períodos retroactivos
 
-Los atributos calculados se calculan por lotes, lo que permite mantener los agregados actualizados y utilizando los eventos más recientes. Para admitir estos escenarios casi en tiempo real, la frecuencia de actualización varía según el período retrospectivo de evento.
+Los atributos calculados se calculan por lotes, lo que permite mantener los agregados actualizados y utilizando los eventos más recientes. Para admitir estos escenarios con un retraso mínimo, la frecuencia de actualización varía según el período retrospectivo de evento.
 
 El período de retrospectiva hace referencia a la cantidad de tiempo que se revisa al agregar Eventos de experiencia para el atributo calculado. Este período de tiempo se puede definir en horas, días, semanas o meses.
 
@@ -73,7 +73,9 @@ Por ejemplo, si el atributo calculado tiene un período retroactivo de los últi
 
 >[!NOTE]
 >
->Tanto las semanas como los meses se consideran **semanas calendario** y **meses naturales** cuando se utiliza en retrospectivas de eventos. La semana natural comienza el **Domingo** y termina en **Sábado** de la semana.
+>Tanto las semanas como los meses se consideran **semanas calendario** y **meses naturales** cuando se utiliza en retrospectivas de eventos. La semana natural comienza el **Domingo** y termina en **Sábado** de la semana. El mes natural comienza el **primero** del mes y finaliza el **último día** del mes.
+
+El período retroactivo para los atributos calculados es un **laminado** periodo retroactivo. Por ejemplo, si se produce una primera evaluación el 15 de octubre a las 12:00 UTC, el periodo retrospectivo de dos semanas recuperaría todos los eventos del 1 al 15 de octubre, se actualizaría en una semana del 22 de octubre y, a continuación, recuperaría todos los eventos del 8 al 22 de octubre.
 
 **Actualización rápida** {#fast-refresh}
 

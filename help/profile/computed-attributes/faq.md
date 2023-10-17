@@ -1,13 +1,13 @@
 ---
 title: Preguntas más frecuentes sobre los atributos calculados
 description: Encuentre respuestas a las preguntas más frecuentes acerca del uso de atributos calculados.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
-
 
 # Preguntas frecuentes
 
@@ -25,9 +25,9 @@ Los atributos calculados tienen en cuenta los conjuntos de datos de evento de ex
 
 Todos los campos XDM del esquema de unión de Experience Event se pueden utilizar para crear atributos calculados.
 
-## ¿Qué representa la &quot;última hora de evaluación&quot;?
+## ¿Qué representan la &quot;última evaluación&quot; y el &quot;último estado de evaluación&quot;?
 
-La última hora de evaluación significa que los eventos **previo** a esa marca de tiempo se tuvieron en cuenta en la última actualización correcta del atributo calculado.
+Última evaluación hace referencia a la marca de tiempo hasta la cual los eventos se consideran en la última ejecución correcta. El último estado de evaluación hace referencia a si la última ejecución de evaluación se realizó correctamente o no.
 
 ## ¿Puedo elegir la frecuencia de actualización? ¿Cómo se decide esto?
 
@@ -65,9 +65,25 @@ Los atributos calculados impulsan el enriquecimiento de perfiles al añadir los 
 
 ## ¿Con qué frecuencia se evalúan los atributos calculados? ¿Está relacionado con el programa de evaluación de audiencias?
 
-Los atributos calculados se evalúan por lotes independientemente de la programación de segmentación. Esto significa que, independientemente del tipo de segmentación (segmentación por lotes o segmentación por flujo continuo), el atributo calculado se evalúa según su propia programación (por hora, diariamente, semanalmente o mensualmente).
+Los atributos calculados se evalúan en una **lote** frecuencia que es **independiente** Consulte la programación de la evaluación de audiencia, destino y recorrido. Esto significa que, independientemente del tipo de segmentación (segmentación por lotes o segmentación por flujo continuo), el atributo calculado se evalúa según su propia programación (por hora, diariamente, semanalmente o mensualmente).
 
-Cuando se evalúa la audiencia, se utiliza el **última versión** valor del atributo calculado disponible.
+La primera evaluación del atributo calculado se produce dentro de las 24 horas siguientes a su **creación**. Las evaluaciones por lotes subsiguientes se producen cada hora, cada día, cada semana o cada mes, según el periodo retrospectivo definido.
+
+Por ejemplo, si se realiza una primera evaluación a las 12:00 UTC del 9 de octubre, las evaluaciones posteriores se producirían en los momentos siguientes:
+
+- Próxima actualización diaria: 12:00 UTC el 10 de octubre
+- Próxima actualización semanal: 12:00 UTC el 15 de octubre
+- Próxima actualización mensual: 12:00 UTC el 1 de noviembre
+
+>[!IMPORTANT]
+>
+>Este solo es el caso si la actualización rápida es **no** activado. Para obtener información sobre cómo cambia el período retroactivo cuando la actualización rápida está habilitada, lea la [sección de actualización rápida](./overview.md#fast-refresh).
+
+Tanto la **semanalmente** y **mensualmente** las actualizaciones se realizan al principio del **semana natural** (el domingo de la nueva semana) o el comienzo de la **mes natural** (el primero del nuevo mes), a diferencia de exactamente una semana o un mes después de la primera fecha de evaluación.
+
+>[!NOTE]
+>
+>El valor de atributo calculado es **no** se actualiza inmediatamente en el perfil después de cada ejecución de evaluación. Para asegurarse de que el valor actualizado esté en los perfiles, debe considerar un búfer de unas pocas horas entre el tiempo de evaluación y el uso de atributos calculados. La programación de actualización de atributos calculada es **determinado por el sistema** y **no puede** no se puede modificar. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ## ¿Cómo interactúan los atributos calculados con las audiencias evaluadas mediante la segmentación de flujo continuo?
 
