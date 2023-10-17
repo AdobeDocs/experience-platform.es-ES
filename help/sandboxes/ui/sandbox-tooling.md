@@ -1,13 +1,13 @@
 ---
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
-source-git-commit: 900cb35f6cb758f145904666c709c60dc760eff2
+exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
+source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 8%
+source-wordcount: '1821'
+ht-degree: 7%
 
 ---
-
 
 # [!BADGE Beta] Herramientas de espacio aislado
 
@@ -21,21 +21,23 @@ ht-degree: 8%
 
 Mejore la precisión de la configuración en todos los entornos limitados y exporte e importe sin problemas las configuraciones de los entornos limitados con la función de herramientas para entornos limitados. Utilice las herramientas de zona protegida para reducir el tiempo de respuesta al valor del proceso de implementación y mover las configuraciones correctas a través de las zonas protegidas.
 
-Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Un paquete puede constar de un solo objeto, varios objetos o una zona protegida completa. Los objetos incluidos en un paquete deben pertenecer a la misma zona protegida.
+Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Un paquete puede constar de un único objeto o de varios objetos. <!--or an entire sandbox.-->Los objetos incluidos en un paquete deben pertenecer a la misma zona protegida.
 
 ## Objetos admitidos para las herramientas de zona protegida {#supported-objects}
 
-En la tabla siguiente se enumeran los objetos actualmente compatibles con las herramientas de zona protegida:
+La función de herramientas de zona protegida permite exportar [!DNL Adobe Real-Time Customer Data Platform] y [!DNL Adobe Journey Optimizer] en un paquete.
 
-| Plataforma | Objeto |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer] | Recorridos |
-| Plataforma de datos del cliente | Fuentes |
-| Plataforma de datos del cliente | Segmentos |
-| Plataforma de datos del cliente | Identidades |
-| Plataforma de datos del cliente | Políticas |
-| Plataforma de datos del cliente | Esquemas |
-| Plataforma de datos del cliente | Conjuntos de datos |
+### Objetos Real-time Customer Data Platform {#real-time-cdp-objects}
+
+La tabla siguiente enumera [!DNL Adobe Real-Time Customer Data Platform] objetos que son compatibles actualmente con las herramientas de zona protegida:
+
+| Plataforma | Objeto | Detalles |
+| --- | --- | --- |
+| Plataforma de datos del cliente | Fuentes | Las credenciales de la cuenta de origen no se replican en la zona protegida de destino por motivos de seguridad y deberán actualizarse manualmente. El flujo de datos de origen se copia en estado de borrador de forma predeterminada. |
+| Plataforma de datos del cliente | Audiencias | Solo el **[!UICONTROL Audiencia del cliente]** type **[!UICONTROL Servicio de segmentación]** es compatible. Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. |
+| Plataforma de datos del cliente | Identidades | El sistema deduplicará automáticamente las áreas de nombres de identidad estándar de Adobe al crear en la zona protegida de destino. Las audiencias solo se pueden copiar cuando todos los atributos de las reglas de audiencia están habilitados en el esquema de unión. Los esquemas necesarios deben moverse y habilitarse primero para el perfil unificado. |
+| Plataforma de datos del cliente | Esquemas | Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. El estado del perfil unificado del esquema se copiará tal cual desde la zona protegida de origen. Si el esquema está habilitado para el perfil unificado en la zona protegida de origen, todos los atributos se mueven al esquema de unión. Las mayúsculas y minúsculas perimetrales de las relaciones de esquema no se incluyen en el paquete. |
+| Plataforma de datos del cliente | Conjuntos de datos | Los conjuntos de datos se copian con la configuración del perfil unificado deshabilitada de forma predeterminada. |
 
 Los objetos siguientes se importan, pero están en estado de borrador o desactivado:
 
@@ -43,16 +45,31 @@ Los objetos siguientes se importan, pero están en estado de borrador o desactiv
 | --- | --- | --- |
 | Estado de importación | Flujo de datos de origen | Borrador |
 | Estado de importación |  Recorrido  | Borrador |
-| Perfil unificado | Esquema | Desactivado |
-| Perfil unificado | Conjunto de datos | Desactivado |
-| Políticas | Políticas de consentimiento | Desactivado |
+| Perfil unificado | Conjunto de datos | Perfil unificado desactivado |
 | Políticas | Políticas de gobernanza de datos | Desactivado |
 
-Los casos extremos que se enumeran a continuación no están incluidos en el paquete:
+### Objetos Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-* Relaciones de esquemas
+La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualmente son compatibles con las herramientas y limitaciones de la zona protegida:
+
+| Plataforma | Objeto | Detalles |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Audiencia  | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Esquema | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Mensaje | Los mensajes utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian. |
+| [!DNL Adobe Journey Optimizer] | Recorrido - detalles del lienzo | La representación del recorrido en el lienzo incluye los objetos del recorrido, como condiciones, acciones, eventos, audiencias de lectura, etc., que se copian. La actividad de salto se excluye de la copia. |
+| [!DNL Adobe Journey Optimizer] | Evento | Se copian los eventos y los detalles del evento utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Acción | Se copian las acciones y los detalles de acción utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
+
+Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
+
+Los tipos de identidad personalizados no se admiten como objetos dependientes al exportar un recorrido.
 
 ## Exportación de objetos a un paquete {#export-objects}
+
+>[!NOTE]
+>
+>Todas las acciones de exportación se registran en los registros de auditoría.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
@@ -120,6 +137,10 @@ Se le devolverá a la **[!UICONTROL Paquetes]** en la pestaña [!UICONTROL Zonas
 
 ## Importación de un paquete en una zona protegida de destino {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>Todas las acciones de importación se registran en los registros de auditoría.
+
 Para importar el paquete en una zona protegida de Target, vaya a las zonas protegidas **[!UICONTROL Examinar]** y seleccione la opción más (+) junto al nombre de la zona protegida.
 
 ![Las zonas protegidas **[!UICONTROL Examinar]** pestaña que resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-sandboxes.png)
@@ -148,41 +169,47 @@ Se le devolverá a la [!UICONTROL Objeto de paquete y dependencias] página. Des
 
 ![El [!UICONTROL Objeto de paquete y dependencias] Esta página muestra una lista de los recursos incluidos en el paquete, resaltando [!UICONTROL Finalizar].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
-## Exportar e importar una zona protegida completa
-
-### Exportar toda una zona protegida {#export-entire-sandbox}
-
-Para exportar una zona protegida completa, vaya a [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** y seleccione **[!UICONTROL Crear paquete]**.
-
-![El [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** resaltado de tabulaciones [!UICONTROL Crear paquete].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Seleccionar **[!UICONTROL Toda la zona protegida]** para el Tipo de paquete en el [!UICONTROL Crear paquete] diálogo. Proporcione un [!UICONTROL Nombre del paquete] para el paquete y seleccione la **[!UICONTROL Sandbox]** en el menú desplegable. Finalmente, seleccione **[!UICONTROL Crear]** para confirmar las entradas.
-
-![El [!UICONTROL Crear paquete] diálogo que muestra los campos completados y el resaltado [!UICONTROL Crear].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-El paquete se ha creado correctamente, seleccione **[!UICONTROL Publish]** para publicar el paquete.
-
-![Lista de paquetes de zona protegida que resaltan el nuevo paquete publicado.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-Se le devolverá a la **[!UICONTROL Paquetes]** en la pestaña [!UICONTROL Zonas protegidas] entorno, donde puede ver el nuevo paquete publicado.
-
-### Importar todo el paquete de zona protegida {#import-entire-sandbox-package}
-
-Para importar el paquete en una zona protegida de Target, vaya a [!UICONTROL Zonas protegidas] **[!UICONTROL Examinar]** y seleccione la opción más (+) junto al nombre de la zona protegida.
-
-![Las zonas protegidas **[!UICONTROL Examinar]** pestaña que resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-En el menú desplegable, seleccione la zona protegida completa con la variable **[!UICONTROL Nombre del paquete]** desplegable. Añada un opcional **[!UICONTROL Nombre de trabajo]**, que se utilizará para una monitorización futura, y seleccione **[!UICONTROL Siguiente]**.
-
-![La página de detalles de importación que muestra [!UICONTROL Nombre del paquete] selección desplegable](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+<!--
+## Export and import an entire sandbox 
 
 >[!NOTE]
 >
->Todos los objetos se crean como nuevos desde el paquete al importar una zona protegida completa. Los objetos no aparecen en la lista [!UICONTROL Objeto de paquete y dependencias] , ya que puede haber varios. Se muestra un mensaje en línea que informa de los tipos de objeto no compatibles.
+>All export and import actions are recorded in the audit logs.
 
-Se le redirige a la [!UICONTROL Objeto de paquete y dependencias] página en la que puede ver el número de objetos y dependencias que se importan y excluyen. Desde aquí, seleccione **[!UICONTROL Importar]** para completar la importación del paquete.
+### Export an entire sandbox {#export-entire-sandbox}
 
-![El [!UICONTROL Objeto de paquete y dependencias] página muestra el mensaje en línea de los tipos de objeto no admitidos, resaltando [!UICONTROL Importar].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
+
+![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+
+![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
+
+![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
+
+### Import the entire sandbox package {#import-entire-sandbox-package}
+
+To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
+
+![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+
+![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
+
+You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
+
+ ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+-->
 
 ## Supervisión de trabajos de importación y visualización de detalles de objetos de importación
 
