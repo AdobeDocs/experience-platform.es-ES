@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 20%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -29,10 +29,17 @@ ht-degree: 20%
       - [Información general](data-distiller/derived-attributes/overview.md)
       - [Flujo SQL fluido](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Crear atributos derivados basados en deciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - Canalizaciones de funciones AI/ML {#ml-feature-pipelines}
+      - [Canalizaciones de funciones AI/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Conectar con Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Análisis exploratorio de datos](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Funciones de ingeniero para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Exportación de datos a entornos XML](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Flujo de trabajo completo de enriquecimiento de la canalización de datos AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Casos de uso {#use-cases}
    - [Exploración abandonada](use-cases/abandoned-browse.md)
    - [Análisis de atribución](use-cases/attribution-analysis.md)
-   - [Filtrado de bots](use-cases/bot-filtering.md)
+   - [Filtros de bots](use-cases/bot-filtering.md)
    - [Creación de un informe de tendencias de eventos](use-cases/trended-report-of-events.md)
    - [Análisis de consentimiento](use-cases/consent-analysis.md)
    - [Valor de duración del cliente](use-cases/customer-lifetime-value.md)
