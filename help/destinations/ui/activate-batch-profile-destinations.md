@@ -4,9 +4,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3720'
 ht-degree: 11%
 
 ---
@@ -413,8 +413,10 @@ Debido a una limitación conocida, actualmente no puede utilizar la variable **[
 ![Grabación de pantalla que muestra la solución para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 Las exportaciones de archivos variarán de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
-* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
+* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y nuevos **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
 * Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+
+Más información sobre [comportamiento de exportación de perfiles para destinos basados en archivos](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Actualmente no se pueden seleccionar áreas de nombres de identidad para las exportaciones
 
