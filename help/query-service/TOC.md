@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 18%
+source-wordcount: '308'
+ht-degree: 19%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 18%
       - [Flujo SQL fluido](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Crear atributos derivados basados en deciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Canalizaciones de funciones AI/ML {#ml-feature-pipelines}
-      - [Canalizaciones de funciones AI/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Información general](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar con Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Análisis exploratorio de datos](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [Funciones de ingeniero para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
