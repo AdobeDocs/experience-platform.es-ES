@@ -4,14 +4,34 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.5.0: 19 de octubre de 2023
+
+### Nuevas funciones
+
+* Mostrar vínculos a propiedades, entorno y reglas en Resumen de etiquetas y registros.
+
+### Correcciones y mejoras
+
+* Se ha corregido un problema por el cual los datos de resumen de etiquetas no se enviaban.
+* Se ha corregido un problema en el cual las sesiones de Assurance generaban un error CORS
+* Se ha corregido un problema que impedía que apareciera Target Trace.
+* Se ha corregido el botón Enviar comentarios.
+* Se ha corregido el &quot;ID de flujo de datos&quot; que faltaba en el Resumen del SDK web para la versión ≥2.18.0.
+* Se ha corregido un problema en el cual no se podían buscar registros de Edge.
+* Se ha añadido una nota sobre perfiles adicionales para determinados tipos de cuenta.
+
+## Versión 1.4.1: 1 de noviembre de 2022
+
+* Rendimiento mejorado en páginas con muchos eventos de Adobe Experience Platform Assurance.
 
 ## Versión 1.4.0: 3 de octubre de 2022
 
