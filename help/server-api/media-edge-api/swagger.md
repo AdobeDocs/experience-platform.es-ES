@@ -1,18 +1,17 @@
 ---
 solution: Experience Platform
-title: Introducción a las API de Media Edge
-description: Las API de Media Edge permiten a los desarrolladores recopilar datos para Media Edge Analytics y Customer Journey Analytics.
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+title: Especificación de API abierta de Media Edge
+description: Este documento incluye una especificación de API abierta de YAML (OAS) o una referencia de "Swagger". Puede copiar y pegar esta especificación en una herramienta de renderización, como editor.swagger.io para ver información de la API de Media Edge. Esta especificación incluye parámetros, ejemplos y esquemas para cada extremo.
+source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
-
 # Uso del archivo de especificación de API abierta para las API de Media Edge
 
-Este documento incluye una especificación de API abierta JSON (OAS) o referencia de &quot;Swagger&quot;. Puede copiar y pegar esta especificación en una herramienta de renderización, como editor.swagger.io para ver información de la API de Media Edge. Esta especificación incluye parámetros, ejemplos y esquemas para cada extremo.
+Este documento incluye una especificación de API abierta de YAML (OAS) o una referencia de &quot;Swagger&quot;. Puede copiar y pegar esta especificación en una herramienta de renderización, como editor.swagger.io para ver información de la API de Media Edge. Esta especificación incluye parámetros, ejemplos y esquemas para cada extremo.
 
 +++ Seleccione esta opción para ver y copiar la especificación de API abierta
 
@@ -2660,7 +2659,7 @@ Este documento incluye una especificación de API abierta JSON (OAS) o referenci
     },
     "/play": {
       "post": {
-        "description": "Sent when the player changes state to "playing" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to "playing" include "buffering", when the user resumes from "paused", when the player recovers from an error, and during autoplay."
+        "description": "Sent when the player changes state to \"playing\" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to \"playing\" include \"buffering\", when the user resumes from \"paused\", when the player recovers from an error, and during autoplay.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3332,11 +3331,11 @@ Este documento incluye una especificación de API abierta JSON (OAS) o referenci
                                     },
                                     "contentType": {
                                       "type": "string",
-                                      "description": "Available values per Stream Type: Audio - "song", "podcast", "audiobook", "radio"; Video: "VoD", "Live", "Linear", "UGC", "DVoD" Customers can provide custom values for this parameter"
+                                      "description": "Available values per Stream Type: Audio - \"song\", \"podcast\", \"audiobook\", \"radio\"; Video: \"VoD\", \"Live\", \"Linear\", \"UGC\", \"DVoD\" Customers can provide custom values for this parameter",
                                     },
                                     "friendlyName": {
                                       "type": "string",
-                                      "description": "This is the "friendly" (human-readable) name of the content"
+                                      "description": "This is the \"friendly\" (human-readable) name of the content"
                                     },
                                     "playerName": {
                                       "type": "string",
