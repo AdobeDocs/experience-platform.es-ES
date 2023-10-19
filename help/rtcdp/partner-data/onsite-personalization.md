@@ -2,10 +2,10 @@
 title: Utilice el reconocimiento de visitantes asistido por socios para personalizar las experiencias en el sitio
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ Introduzca `interact` en el cuadro de búsqueda, actualice la página y debería
 
 Ya está listo para crear y activar audiencias para su personalización.
 
-#### Configuración de la segmentación de perímetro
+#### Creación de audiencias y configuración de la segmentación de Edge
 
-Configuración de [segmentación de perímetro](/help/segmentation/ui/edge-segmentation.md) para que el abono del público visitante se evalúe en tiempo real a medida que visitan la propiedad web.
+En la IU de Platform, navegue hasta **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
+
+![Vista de cómo navegar a audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+Debe configurar la audiencia con [segmentación de borde](/help/segmentation/ui/edge-segmentation.md) por lo tanto, la pertenencia a audiencias de los visitantes se evalúa en tiempo real a medida que visitan el dominio web.
 
 Asegúrese de configurar también [políticas de combinación activas en el perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para las audiencias de perímetro.
 
