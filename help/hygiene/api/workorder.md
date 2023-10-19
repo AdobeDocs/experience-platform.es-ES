@@ -2,10 +2,10 @@
 title: Punto final de API de orden de trabajo
 description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 4%
+source-wordcount: '1181'
+ht-degree: 3%
 
 ---
 
@@ -26,6 +26,10 @@ El extremo utilizado en esta guía forma parte de la API de higiene de datos. An
 ## Crear una solicitud de eliminación de registro {#create}
 
 Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una solicitud del POST a `/workorder` punto final.
+
+>[!IMPORTANT]
+> 
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Un solo [registrar la solicitud de eliminación a través de la IU](../ui/record-delete.md) le permite enviar 10 000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
 
 **Formato de API**
 

@@ -2,9 +2,9 @@
 title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1564'
 ht-degree: 8%
 
 ---
@@ -42,13 +42,13 @@ Aparecerá el flujo de trabajo de creación de solicitudes. De forma predetermin
 
 >[!IMPORTANT]
 > 
->Como parte de los cambios en curso para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se denomina migración delta. Los usuarios de organizaciones que se han migrado de forma delta pueden elegir eliminar registros de uno o de todos los conjuntos de datos. Los usuarios de organizaciones que no se han migrado de forma delta no pueden elegir eliminar registros de un único conjunto de datos o de todos ellos, tal como se ve en la siguiente imagen. En este caso, continúe a la [proporcionar identidades](#provide-identities) de la guía.
+>Como parte de los cambios en curso para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se denomina migración delta. Los usuarios de organizaciones que se han migrado de forma delta pueden elegir eliminar registros de uno o de todos los conjuntos de datos. Los usuarios de organizaciones que no se han migrado de forma delta no pueden elegir eliminar registros de un único conjunto de datos o de todos ellos, tal como se ve en la siguiente imagen. En este caso, continúe con el [proporcionar identidades](#provide-identities) de la guía.
 
 ![El flujo de trabajo de creación de solicitudes con [!UICONTROL Eliminar registro] opción seleccionada y resaltada.](../images/ui/record-delete/delete-record.png)
 
 ## Seleccionar conjuntos de datos {#select-dataset}
 
-El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Si esta opción no está disponible para usted, continúe a la [proporcionar identidades](#provide-identities) de la guía.
+El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Si esta opción no está disponible para usted, continúe con el [proporcionar identidades](#provide-identities) de la guía.
 
 En el **[!UICONTROL Detalles de registro]** , utilice el botón de opción para seleccionar entre un conjunto de datos específico y todos los conjuntos de datos. Si elige **[!UICONTROL Seleccionar conjunto de datos]**, proceda a seleccionar el icono de base de datos (![El icono de base de datos](../images/ui/record-delete/database-icon.png)) para abrir un cuadro de diálogo que proporcione una lista de conjuntos de datos disponibles. Seleccione el conjunto de datos deseado de la lista seguido de **[!UICONTROL Listo]**.
 
@@ -139,7 +139,7 @@ Una vez que haya terminado de agregar identidades a la solicitud, en **[!UICONTR
 
 >[!IMPORTANT]
 > 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10 000 ID al mismo tiempo. El [Método de API para eliminar registros](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) permite enviar 100 000 ID al mismo tiempo.
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro a través de la interfaz de usuario le permite enviar 10 000 ID al mismo tiempo. El [Método de API para eliminar registros](../api/workorder.md#create) permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
 
 ![La configuración de la solicitud es [!UICONTROL Nombre] y [!UICONTROL Descripción] campos con [!UICONTROL Enviar] resaltado.](../images/ui/record-delete/submit.png)
 
