@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Al seleccionar la variable **[!UICONTROL Audiencia]** , el carril derecho muestr
 Para añadir audiencias al bloque Audiencia. select **[!UICONTROL Añadir audiencia]**.
 
 ![Se resalta el botón Añadir audiencia.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Tenga en cuenta que **solamente** aparecerán las audiencias definidas con la política de combinación predeterminada.
 
 Aparecerá una lista de audiencias. Seleccione las audiencias que desee incluir, seguidas de **[!UICONTROL Añadir]** para anexarlas al bloque de audiencia.
 
