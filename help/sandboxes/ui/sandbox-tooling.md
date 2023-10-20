@@ -2,9 +2,9 @@
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
+source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1834'
 ht-degree: 7%
 
 ---
@@ -56,10 +56,9 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audiencia  | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
-| [!DNL Adobe Journey Optimizer] | Mensaje | Los mensajes utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian. |
 | [!DNL Adobe Journey Optimizer] | Recorrido - detalles del lienzo | La representación del recorrido en el lienzo incluye los objetos del recorrido, como condiciones, acciones, eventos, audiencias de lectura, etc., que se copian. La actividad de salto se excluye de la copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Se copian los eventos y los detalles del evento utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
-| [!DNL Adobe Journey Optimizer] | Acción | Se copian las acciones y los detalles de acción utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Acción | Los mensajes push y de correo electrónico utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian.<br><br>Se puede copiar la acción de actualización de perfil utilizada en el recorrido. Las acciones personalizadas y los detalles de acción utilizados en el recorrido también se copian. Siempre se crea una nueva versión en la zona protegida de destino. |
 
 Las superficies (por ejemplo, los ajustes preestablecidos) no se copian. El sistema selecciona automáticamente la coincidencia más cercana posible en la zona protegida de destino en función del tipo de mensaje y el nombre de la superficie. Si no se encuentran superficies en la zona protegida de destino, la copia de superficie fallará, lo que provocará que la copia del mensaje falle porque un mensaje requiere que haya una superficie disponible para la configuración. En este caso, es necesario crear al menos una superficie para el canal derecho del mensaje para que funcione la copia.
 
