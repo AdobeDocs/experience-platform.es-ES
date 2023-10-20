@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1182'
 ht-degree: 9%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 9%
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
+   * [Ordenar y filtrar respuestas de API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
