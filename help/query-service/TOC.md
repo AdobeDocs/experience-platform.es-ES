@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
+source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 19%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -108,5 +108,6 @@ ht-degree: 19%
    - [Comandos de metadatos](sql/metadata.md)
    - [Instrucciones preparadas](sql/prepared-statements.md)
 - [Preguntas frecuentes](troubleshooting-guide.md)
+- [LISTA DE PERMITIDOS de direcciones IP](ip-address-allowlist.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
