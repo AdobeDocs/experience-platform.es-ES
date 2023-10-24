@@ -5,10 +5,10 @@ title: Conexión de la zona de aterrizaje de datos a Adobe Experience Platform m
 type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a la zona de aterrizaje de datos mediante la API de Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 5%
+source-wordcount: '1304'
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 Este tutorial le guiará por los pasos para crear un [!DNL Data Landing Zone] conexión de origen mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Este tutorial también proporciona instrucciones sobre cómo recuperar los [!DNL Data Landing Zone], así como ver y actualizar sus credenciales.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -103,14 +103,15 @@ curl -X GET \
 
 **Respuesta**
 
-La siguiente respuesta devuelve la información de credenciales de la zona de aterrizaje, incluida la actual `SASToken` y `SASUri`, así como el `storageAccountName` que corresponde al contenedor de la zona de aterrizaje.
+La siguiente respuesta devuelve la información de credenciales de la zona de aterrizaje de datos, incluida la actual `SASToken`, `SASUri`, `storageAccountName`y fecha de caducidad.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,6 +120,7 @@ La siguiente respuesta devuelve la información de credenciales de la zona de at
 | `containerName` | El nombre de su zona de aterrizaje. |
 | `SASToken` | El token de firma de acceso compartido para su zona de aterrizaje. Esta cadena contiene toda la información necesaria para autorizar una solicitud. |
 | `SASUri` | El URI de firma de acceso compartido para su zona de aterrizaje. Esta cadena es una combinación del URI de la zona de aterrizaje para la que se está autenticando y su token SAS correspondiente, |
+| `expiryDate` | La fecha en la que caducará su token SAS. Debe actualizar el token antes de la fecha de caducidad para poder seguir utilizándolo en la aplicación para cargar datos en la zona de aterrizaje de datos. Si no actualiza manualmente el token antes de la fecha de caducidad indicada, se actualizará automáticamente y proporcionará un nuevo token cuando se realice la llamada de credenciales de GET. |
 
 
 ## Actualizar [!DNL Data Landing Zone] credenciales
@@ -159,7 +161,8 @@ La siguiente respuesta devuelve valores actualizados para su `SASToken` y `SASUr
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 

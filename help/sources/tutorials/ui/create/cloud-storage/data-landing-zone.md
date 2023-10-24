@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;Data Landing Zone;zona de a
 title: Conexión de la zona de aterrizaje de datos a Platform mediante la IU
 description: Obtenga información sobre cómo crear un conector de origen de zona de aterrizaje de datos mediante la interfaz de usuario de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Este tutorial proporciona los pasos para crear una [!DNL Data Landing Zone] conexión de origen mediante la interfaz de usuario de Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -35,16 +35,16 @@ Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de 
 
 En el [!UICONTROL almacenamiento en la nube] categoría, seleccionar [!DNL Data Landing Zone] y luego seleccione **[!UICONTROL Añadir datos]**.
 
-![catalogar](../../../../images/tutorials/create/dlz/catalog.png)
+![El catálogo de fuentes con la zona de aterrizaje de datos seleccionada.](../../../../images/tutorials/create/dlz/catalog.png)
 
 El [!UICONTROL Añadir datos] Este paso aparece y le proporciona una interfaz para seleccionar y previsualizar los datos que desea llevar a Platform.
 
 * La parte izquierda de la interfaz es un explorador de carpetas, que le proporciona una lista de archivos del contenedor que puede llevar a Platform.
 * La parte derecha de la interfaz de permite obtener una vista previa de hasta 100 filas de datos de un archivo compatible.
 
-Seleccione el archivo que desea llevar a Platform y espere unos momentos para que la interfaz correcta se actualice en una pantalla de previsualización.
+Seleccione el archivo que desea llevar al Experience Platform y espere unos momentos para que la interfaz correcta se actualice en una pantalla de previsualización.
 
-![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+![Interfaz de adición de datos del espacio de trabajo de orígenes.](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ Para obtener una vista previa de un archivo diferente, seleccione el icono de vi
 
 Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
-![detección de archivos](../../../../images/tutorials/create/dlz/file-detection.png)
+![Página de vista previa de datos del espacio de trabajo de orígenes.](../../../../images/tutorials/create/dlz/file-detection.png)
 
 Para obtener una guía detallada paso a paso sobre cómo crear un flujo de datos para una fuente de almacenamiento en la nube, consulte el tutorial sobre [creación de un flujo de datos de almacenamiento en la nube para llevar datos a Platform](../../dataflow/batch/cloud-storage.md).
 
@@ -66,9 +66,9 @@ Para obtener una guía detallada paso a paso sobre cómo crear un flujo de datos
 
 En el [!UICONTROL Catálogo de fuentes], en [!UICONTROL Almacenamiento en la nube] categoría, seleccione los puntos suspensivos (**...**) desde el **[!UICONTROL Zona de aterrizaje de datos]** Tarjeta de. En el menú desplegable que aparece, seleccione **[!UICONTROL Ver credenciales]**.
 
-![opciones](../../../../images/tutorials/create/dlz/options.png)
+![Una lista de opciones de vista para la zona de aterrizaje de datos.](../../../../images/tutorials/create/dlz/options.png)
 
-Aparece una ventana emergente que muestra el nombre del contenedor, el token SAS, el nombre de la cuenta de almacenamiento y el URI SAS.
+Aparece una ventana emergente que muestra el nombre del contenedor, el token SAS, el nombre de la cuenta de almacenamiento, el URI SAS y la fecha de caducidad.
 
 Seleccionar **[!UICONTROL Actualizar credenciales]** y espere unos segundos para que se procesen las credenciales actualizadas.
 
@@ -76,7 +76,7 @@ Seleccionar **[!UICONTROL Actualizar credenciales]** y espere unos segundos para
 >
 >Su [!DNL Data Landing Zone] las credenciales de se establecen para que caduquen automáticamente pasados 90 días y debe utilizar las nuevas credenciales de para volver a conectarse a [!DNL Data Landing Zone] después del vencimiento. Los flujos de datos de Platform no se ven afectados por las credenciales que caducan y aún puede seguir trabajando con los flujos de datos nuevos y existentes con las credenciales nuevas.
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![Las credenciales asociadas a una cuenta de zona de aterrizaje de datos determinada.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## Pasos siguientes
 
