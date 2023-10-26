@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de octubre de 2023 para Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 35%
+source-wordcount: '766'
+ht-degree: 36%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 35%
 Actualizaciones de las funciones existentes en Experience Platform:
 
 - [Recopilación de datos](#data-collection)
+- [Destinos](#destinations)
 - [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
@@ -31,6 +32,31 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Extensión | [!DNL Meta] Mejora de API de conversiones | Se han realizado tres mejoras en [API de metaconversiones](/help/tags/extensions/server/meta/overview.md) extensión: <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Permite pasar el RampID de LiveRamp en el campo CIP, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
 
 Para obtener más información sobre la recopilación de datos, lea la [Información general sobre recopilación de datos](../../tags/home.md).
+
+## Destinos {#destinations}
+
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+
+**Destinos nuevos o actualizados** {#new-updated-destinations}
+
+| Destino | Nuevo o actualizado | Descripción |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nuevo | Utilice el destino Moengage para conectar y asignar los datos de Adobe (atributos de usuario, segmentos y eventos) a MoEngage en tiempo real. A continuación, los clientes pueden actuar sobre estos datos y ofrecer experiencias personalizadas y específicas. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nuevo | Utilice la agregación de varias fuentes de datos operativos en Adobe Experience Platform como entrada en el ID de experiencia de Qualtrics para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia. |
+
+{style="table-layout:auto"}
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
+| Funcionalidad | Descripción |
+| ----------- | ----------- |
+| Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportación de matrices](../../destinations/ui/export-arrays-calculated-fields.md) Para los elementos de una matriz, ahora puede utilizar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) para crear atributos hash en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Correcciones y mejoras** {#destinations-fixes-and-enhancements}
+
+Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
 ## Zonas protegidas {#sandboxes}
 
