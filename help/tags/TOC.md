@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1033'
 ht-degree: 37%
 
 ---
@@ -228,11 +228,13 @@ ht-degree: 37%
          * [Información general](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Información general](./extensions/server/google-cloud-platform/overview.md)
+      * [!DNL LinkedIn Conversions API] {#linkedin}
+         * [Información general](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Información general](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Información general](./extensions/server/meta/overview.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
+      * [!DNL Microsoft Azure] {#azure}
          * [Información general](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Información general](./extensions/server/mixpanel/overview.md)

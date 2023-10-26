@@ -2,9 +2,9 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación sobre las extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '193'
 ht-degree: 20%
 
 ---
@@ -37,6 +37,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversiones mejoradas de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
+* [[!DNL LinkedIn] API de conversión](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API de conversiones](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)

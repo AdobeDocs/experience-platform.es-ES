@@ -2,10 +2,10 @@
 title: Configuración de secretos en el reenvío de eventos
 description: Obtenga información sobre cómo configurar secretos en la interfaz de usuario para autenticarse en los extremos utilizados en las propiedades del reenvío de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 4%
+source-wordcount: '2458'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,7 @@ Actualmente se admiten los siguientes tipos de secretos:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contiene varios atributos para admitir el [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificación de autenticación para su uso en [API de Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) y [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL HTTP] | Contiene dos atributos de cadena para un nombre de usuario y una contraseña, respectivamente. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL OAuth 2] | Contiene varios atributos para admitir el [tipo de concesión de credenciales de cliente](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) para el [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) especificación de autenticación. El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL OAuth 2 JWT] | Contiene varios atributos para admitir el perfil de token web JSON (JWT) para [Autorización de OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subvenciones. El sistema solicita la información necesaria y, a continuación, gestiona la renovación de estos tokens en un intervalo especificado. |
 | [!UICONTROL Token] | Una única cadena de caracteres que representa un valor de token de autenticación conocido y entendido por ambos sistemas. |
@@ -76,6 +77,7 @@ A partir de aquí, los pasos para crear el secreto difieren según el tipo de se
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -175,6 +177,38 @@ Aparece un cuadro de diálogo que le permite introducir las credenciales de su c
 >Si su organización tiene una directiva de reautenticación establecida para aplicaciones de Google Cloud, los secretos creados no se actualizarán correctamente después de que caduque la autenticación (entre 1 y 24 horas, según la configuración de la directiva).
 >
 >Para resolver este problema, inicie sesión en la Admin Console de Google y vaya a **[!DNL App access control]** para que pueda marcar la aplicación de reenvío de eventos (reenvío de eventos de Adobe Real-Time CDP) como [!DNL Trusted]. Consulte la documentación de Google sobre [configuración de las longitudes de sesión para los servicios de Google Cloud](https://support.google.com/a/answer/9368756) para obtener más información.
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+Para crear un [!DNL LinkedIn] Secreto de OAuth 2, seleccione **[!UICONTROL [!DNL LinkedIn]OAuth 2]** desde el **[!UICONTROL Tipo]** desplegable. A continuación, seleccione **[!UICONTROL Crear secreto]**.
+
+![El [!UICONTROL Crear secreto] pestaña con el [!UICONTROL Tipo] campo resaltado.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+Aparece una ventana emergente que le informa de que el secreto debe autorizarse manualmente mediante [!DNL LinkedIn]. Seleccionar **[!UICONTROL Crear y autorizar secretos con[!DNL LinkedIn]]** para continuar.
+
+![[!DNL LinkedIn] resaltado de ventana emergente de autorización [!UICONTROL Crear y autorizar secretos con [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+Aparecerá un cuadro de diálogo solicitándole que introduzca su [!DNL LinkedIn] credenciales. Siga las indicaciones para conceder acceso al reenvío de eventos a sus datos.
+
+Una vez completado el proceso de autorización, vuelva a la página de **[!UICONTROL Secretos]** pestaña, donde puede ver el secreto recién creado. Aquí puede ver el estado del secreto y la fecha de caducidad.
+
+![El [!UICONTROL Secreto] que resalta el secreto recién creado.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### Volver a autorizar un [!UICONTROL [!DNL LinkedIn] OAuth 2] secreto
+
+>IMPORTANTE
+>
+>Debe volver a autorizar el uso de su [!DNL LinkedIn] credenciales cada 365 días. Si no vuelve a autorizar a su debido tiempo, su secreto no se actualizará y el [!DNL LinkedIn] las solicitudes de conversión fallarán.
+
+Tres meses antes del secreto que requiere reautorización, una ventana emergente comenzará a mostrarse cuando navegue por cualquier página de la propiedad. Seleccionar **[!UICONTROL Haga clic aquí para ir a sus secretos]**.
+
+![El [!UICONTROL Información general de propiedad] pestaña que resalta la ventana emergente de reautorización secreta.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+Se le redirigirá a [!UICONTROL Secretos] pestaña. Los secretos enumerados en esta página se filtran para mostrar solo los secretos que deben volver a autorizarse. Seleccionar **[!UICONTROL Se necesita autenticación]** para el secreto necesita volver a autorizar.
+
+![El [!UICONTROL Secreto] resaltado de tabulaciones [!UICONTROL Se necesita autenticación]para el [!DNL LinkedIn] secreto.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+Aparecerá un cuadro de diálogo que le pedirá que introduzca su [!DNL LinkedIn] credenciales. Siga las indicaciones para volver a autorizar su secreto.
 
 ## Editar un secreto
 
