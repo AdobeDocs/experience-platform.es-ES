@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2283'
 ht-degree: 26%
 
 ---
@@ -222,8 +222,6 @@ Para obtener más información sobre los servicios de consulta, vea la [Informac
 | ------- | ----------- |
 | Columnas personalizables | Ahora puede personalizar el diseño de Audience Portal con columnas cuyo tamaño se puede cambiar. Para obtener más información acerca de esta funcionalidad, lea la [Guía de IU de segmentación](../../segmentation/ui/overview.md#customize). |
 | Desglose de frecuencia de actualización | Ahora puede ver un desglose de las frecuencias de actualización de las audiencias de su organización. Para obtener más información acerca de esta funcionalidad, lea la [Guía de IU de segmentación](../../segmentation/ui/overview.md#browse). |
-
-Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
 
 Para obtener más información sobre el servicio de segmentación, lea la [Resumen del servicio de segmentación](../../segmentation/home.md).
 
