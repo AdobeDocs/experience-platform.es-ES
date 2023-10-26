@@ -1,16 +1,16 @@
 ---
-title: Configuración de una secuencia de datos
+title: Creación y configuración de flujos de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# Configuración de una secuencia de datos
+# Creación y configuración de flujos de datos
 
 Este documento describe los pasos para configurar una [secuencia de datos](./overview.md) en la interfaz de usuario.
 
