@@ -2,7 +2,7 @@
 title: Extensión de reenvío de eventos de API de conversiones de LinkedIn
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite medir el rendimiento de su campaña de marketing de LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Debe crear una regla de conversión en su [!DNL LinkedIn] cuenta de anuncios de 
 
 ### Creación de un secreto y un elemento de datos
 
-Crear un nuevo `LinkedIn` [secreto de reenvío de eventos](../../../ui/event-forwarding/secrets.md) y asígnele un nombre único que signifique el miembro autenticador. Se utilizará para autenticar la conexión con su cuenta y mantener el valor seguro.
+Crear un nuevo [!DNL LinkedIn] [secreto de reenvío de eventos](../../../ui/event-forwarding/secrets.md) y asígnele un nombre único que signifique el miembro autenticador. Se utilizará para autenticar la conexión con su cuenta y mantener el valor seguro.
 
 Siguiente, [creación de un elemento de datos](../../../ui/managing-resources/data-elements.md#create-a-data-element) uso del [!UICONTROL Núcleo] extensión y a [!UICONTROL Secreto] tipo de elemento de datos para hacer referencia a `LinkedIn` secreto que acaba de crear.
 
