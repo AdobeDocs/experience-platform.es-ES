@@ -5,10 +5,10 @@ title: Crear una conexión de origen de Microsoft Dynamics en la interfaz de usu
 type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Microsoft Dynamics mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 1%
+source-wordcount: '620'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Microsoft Dynamics] (en lo sucesivo, &quot;[!DNL Dynamics]&quot;) mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -29,58 +29,78 @@ Si ya tiene un válido [!DNL Dynamics] cuenta de, puede omitir el resto de este 
 
 ### Recopilar credenciales necesarias
 
+Para autenticar su [!DNL Dynamics] origen, debe proporcionar valores para las siguientes propiedades de conexión:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
+
 | Credencial | Descripción |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | La URL de servicio de su [!DNL Dynamics] ejemplo. |
 | `username` | El nombre de usuario de su [!DNL Dynamics] cuenta de usuario. |
 | `password` | La contraseña de su [!DNL Dynamics] cuenta. |
+
+>[!TAB Autenticación de clave y principal de servicio]
+
+| Credencial | Descripción |
+| --- | --- |
 | `servicePrincipalId` | El ID de cliente de su [!DNL Dynamics] cuenta. Este ID es necesario cuando se utiliza la autenticación principal del servicio y basada en claves. |
 | `servicePrincipalKey` | La clave secreta principal de servicio. Esta credencial es necesaria cuando se utiliza la autenticación principal del servicio y basada en claves. |
+
+>[!ENDTABS]
 
 Para obtener más información sobre cómo empezar, consulte [esta [!DNL Dynamics] documento](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Conecte su [!DNL Dynamics] account
 
-Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL Dynamics] a Platform.
-
-Iniciar sesión en [Adobe Experience Platform](https://platform.adobe.com) y luego seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El **[!UICONTROL Catálogo]** La pantalla muestra una variedad de fuentes para las que puede crear una cuenta con.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla de muestra una variedad de fuentes con las que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el **[!UICONTROL CRM]** categoría, seleccionar **[!UICONTROL Microsoft Dynamics]**. Si es la primera vez que utiliza este conector, seleccione **[!UICONTROL Configurar]**. De lo contrario, seleccione **[!UICONTROL Añadir datos]** para crear una nueva [!DNL Dynamics] conector.
+En el [!UICONTROL CRM] categoría, seleccionar **[!UICONTROL Microsoft Dynamics]**, y luego seleccione **[!UICONTROL Añadir datos]**.
 
-![catalogar](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![El catálogo de fuentes con Microsoft Dynamics seleccionado.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-El **[!UICONTROL Conectar con Dynamics]** página. En esta página, puede usar credenciales nuevas o existentes.
-
-### Nueva cuenta
-
-Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre y una descripción opcional para la nueva [!DNL Dynamics] cuenta.
-
-El [!DNL Dynamics] connector proporciona diferentes tipos de autenticación para el acceso. En [!UICONTROL Autenticación de cuenta] select **[!UICONTROL Autenticación básica]** para utilizar credenciales basadas en contraseña.
-
-Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y luego dejar algo de tiempo para que la nueva cuenta se establezca.
-
-![basic-authentication](../../../../images/tutorials/create/ms-dynamics/basic-auth.png)
-
-Como alternativa, puede seleccionar **[!UICONTROL Autenticación de clave y principal de servicio]** y conecte su [!DNL Dynamics] cuenta con una combinación de [!UICONTROL ID principal de servicio] y [!UICONTROL Clave principal de servicio].
-
->[!IMPORTANT]
->
-> Autenticación básica en [!DNL Dynamics] pueden bloquearse mediante la autenticación de doble factor, que actualmente no es compatible con Platform. En este caso, se recomienda utilizar la autenticación basada en claves para crear un conector de origen utilizando [!DNL Dynamics].
-
-![autenticación basada en claves](../../../../images/tutorials/create/ms-dynamics/key-based-auth.png)
-
-| Credencial | Descripción |
-| ---------- | ----------- |
-| [!UICONTROL ID principal de servicio] | El ID de cliente de su [!DNL Dynamics] cuenta. Este ID es necesario cuando se utiliza la autenticación principal del servicio y basada en claves. |
-| [!UICONTROL Clave principal de servicio] | La clave secreta principal de servicio. Esta credencial es necesaria cuando se utiliza la autenticación principal del servicio y basada en claves. |
+El **[!UICONTROL Conectar la cuenta de Microsoft Dynamics]** página. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para conectar una cuenta existente, seleccione la [!DNL Dynamics] cuenta con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
+Para utilizar una cuenta existente, seleccione la [!DNL Dynamics] cuenta que desee utilizar y, a continuación, seleccione **[!UICONTROL Siguiente]** en la esquina superior derecha para continuar.
 
-![existente](../../../../images/tutorials/create/ms-dynamics/existing.png)
+![Interfaz de cuenta existente.](../../../../images/tutorials/create/ms-dynamics/existing.png)
+
+### Nueva cuenta
+
+>[!TIP]
+>
+>Una vez creado, no se puede cambiar el tipo de autenticación de una [!DNL Dynamics] conexión base. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
+
+Para crear una nueva cuenta, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción opcional para la nueva [!DNL Dynamics] cuenta.
+
+![La nueva interfaz de creación de cuentas.](../../../../images/tutorials/create/ms-dynamics/new.png)
+
+Puede utilizar la autenticación básica o la autenticación de clave y principal de servicio al crear una [!DNL Dynamics] cuenta.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
+
+Para crear un [!DNL Dynamics] cuenta con autenticación básica, seleccione [!UICONTROL Autenticación básica] y, a continuación, proporcione valores para su [!UICONTROL URI de servicio], [!UICONTROL Nombre de usuario], y [!UICONTROL Contraseña]. **Nota**: Autenticación básica en [!DNL Dynamics] pueden bloquearse mediante la autenticación de doble factor, que actualmente no es compatible con Platform. En este caso, se recomienda utilizar la autenticación basada en claves para crear un conector de origen utilizando [!DNL Dynamics].
+
+Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y luego dejar algo de tiempo para que la nueva cuenta se establezca.
+
+![Interfaz de autenticación básica.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+
+>[!TAB Autenticación de clave y principal de servicio]
+
+Para crear un [!DNL Dynamics] cuenta con autenticación de clave y principal de servicio, seleccione **[!UICONTROL Autenticación de clave y principal de servicio]** y, a continuación, proporcione valores para su [!UICONTROL ID principal de servicio] y [!UICONTROL Clave principal de servicio].
+
+Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y luego dejar algo de tiempo para que la nueva cuenta se establezca.
+
+![Interfaz de autenticación de clave principal de servicio.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+
+>[!ENDTABS]
 
 ## Pasos siguientes
 

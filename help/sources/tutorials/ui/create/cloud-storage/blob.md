@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Azure Blob en la interfaz de usuario
 description: Obtenga información sobre cómo crear un conector de origen de Azure Blob mediante la interfaz de usuario de Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Azure Blob] (en lo sucesivo, &quot;[!DNL Blob]&quot;) mediante la interfaz de usuario de Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -34,16 +34,27 @@ Experience Platform admite la ingesta de los siguientes formatos de archivo desd
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su [!DNL Blob] en Platform, debe proporcionar un valor válido para las siguientes credenciales:
+Para acceder a su [!DNL Blob] almacenamiento en el Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación de cadena de conexión]
 
 | Credencial | Descripción |
-| ---------- | ----------- |
+| --- | --- |
 | Cadena de conexión | Cadena que contiene la información de autorización necesaria para la autenticación [!DNL Blob] al Experience Platform. El [!DNL Blob] el patrón de cadena de conexión es: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obtener más información acerca de las cadenas de conexión, consulte esto [!DNL Blob] documento en [configurar cadenas de conexión](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+
+>[!TAB Autenticación de URI SAS]
+
+| Credencial | Descripción |
+| --- | --- |
 | URI de SAS | El URI de firma de acceso compartido que puede utilizar como tipo de autenticación alternativo para conectar su [!DNL Blob] cuenta. El [!DNL Blob] El patrón de URI de SAS es: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Para obtener más información, consulte [!DNL Blob] documento en [URI de firma de acceso compartido](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | Contenedor | El nombre del contenedor al que desea designar el acceso. Al crear una cuenta nueva con [!DNL Blob] origen, puede proporcionar un nombre de contenedor para especificar el acceso del usuario a la subcarpeta que elija. |
 | Ruta de carpeta | La ruta a la carpeta a la que desea proporcionar acceso. |
 
-Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para vincular su [!DNL Blob] a Platform.
+>[!ENDTABS]
+
+Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos a continuación para conectar su [!DNL Blob] almacenamiento en Experience Platform
 
 ## Conecte su [!DNL Blob] account
 
@@ -64,6 +75,10 @@ Para utilizar una cuenta existente, seleccione la [!DNL Blob] cuenta con la que 
 ![existente](../../../../images/tutorials/create/blob/existing.png)
 
 ### Nueva cuenta
+
+>[!TIP]
+>
+>Una vez creado, no se puede cambiar el tipo de autenticación de una [!DNL Blob] conexión base. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
 
 Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción opcional para la nueva [!DNL Blob] cuenta.
 

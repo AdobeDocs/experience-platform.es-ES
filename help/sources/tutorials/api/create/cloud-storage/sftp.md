@@ -2,10 +2,10 @@
 title: Creación de una conexión base SFTP mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a un servidor SFTP (Protocolo seguro de transferencia de archivos) mediante la API de Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '938'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL SFTP] (Protocolo seguro de transferencia de archivos) utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -48,7 +48,11 @@ Para que [!DNL Flow Service] para conectarse a [!DNL SFTP], debe proporcionar va
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base
+## Cree una conexión base
+
+>[!TIP]
+>
+>Una vez creado, no se puede cambiar el tipo de autenticación de una [!DNL Dynamics] conexión base. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
@@ -66,13 +70,11 @@ Para crear un ID de conexión base, realice una solicitud de POST al `/connectio
 POST /connections
 ```
 
-**Solicitud**
-
-La siguiente solicitud crea una conexión base para [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB Autenticación básica]
+
++++Solicitud
 
 ```shell
 curl -X POST \
@@ -113,7 +115,24 @@ curl -X POST \
 | `auth.params.folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
 | `connectionSpec.id` | ID de especificación de conexión del servidor SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Respuesta
+
+Una respuesta correcta devuelve el identificador único (`id`) de la conexión recién creada. Este ID es necesario para explorar el servidor SFTP en el siguiente tutorial.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB Autenticación de clave pública SSH]
+
++++Solicitud
 
 ```shell
 curl -X POST \
@@ -156,9 +175,9 @@ curl -X POST \
 | `auth.params.folderPath` | La ruta a la carpeta a la que desea proporcionar acceso. |
 | `connectionSpec.id` | El [!DNL SFTP] Id. de especificación de conexión de servidor: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Respuesta**
++++Respuesta
 
 Una respuesta correcta devuelve el identificador único (`id`) de la conexión recién creada. Este ID es necesario para explorar el servidor SFTP en el siguiente tutorial.
 
@@ -168,6 +187,10 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión r
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Pasos siguientes
 

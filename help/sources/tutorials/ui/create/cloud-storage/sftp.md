@@ -2,9 +2,9 @@
 title: Creación de una conexión de origen SFTP en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen SFTP mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Este tutorial proporciona los pasos para crear una [!DNL SFTP] conexión de origen mediante la IU de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
@@ -65,9 +65,11 @@ Para conectar una cuenta existente, seleccione la cuenta FTP o SFTP con la que d
 
 ### Nueva cuenta
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo de claves comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termina por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir de formato PPK a formato OpenSSH.
+>* Una vez creado, no se puede cambiar el tipo de autenticación de una [!DNL SFTP] conexión base. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
+>
+>* SFTP admite una clave OpenSSH de tipo RSA o DSA. Asegúrese de que el contenido del archivo de claves comience por `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` y termina por `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si el archivo de clave privada es un archivo en formato PPK, utilice la herramienta PuTTY para convertir de formato PPK a formato OpenSSH.
 
 Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción opcional para la nueva [!DNL SFTP] cuenta.
 
