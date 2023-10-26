@@ -1,11 +1,11 @@
 ---
-title: Configuración de la detección de bots
-description: Obtenga información sobre cómo configurar la detección de bots para flujos de datos.
+title: Configuración de la detección de bots para flujos de datos
+description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
