@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de octubre de 2023 para Adobe Experience Platform.
-source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '954'
 ht-degree: 34%
 
 ---
@@ -14,11 +14,26 @@ ht-degree: 34%
 
 Actualizaciones de las funciones existentes en Experience Platform:
 
+- [Paneles](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
 - [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+
+## Paneles {#dashboards}
+
+Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. El **[!UICONTROL Tamaño del Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** Las métricas de ofrecen una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Platform en relación con los derechos de uso de licencias. Consulte la [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) documentación para obtener descripciones de estas y otras métricas de uso de licencias. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
@@ -51,7 +66,8 @@ Para obtener más información sobre la recopilación de datos, lea la [Informac
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportación de matrices](../../destinations/ui/export-arrays-calculated-fields.md) Para los elementos de una matriz, ahora puede utilizar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) para crear atributos hash en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportación de matrices](../../destinations/ui/export-arrays-calculated-fields.md) Para los elementos de una matriz, ahora puede utilizar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) para crear atributos hash en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/ui/account-audiences.md) a determinados destinos. Para obtener más información acerca de esta funcionalidad, lea la [tutorial activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 

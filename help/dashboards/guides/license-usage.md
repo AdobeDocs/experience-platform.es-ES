@@ -4,9 +4,9 @@ title: Guía del tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '1987'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -119,27 +119,29 @@ También puede seleccionar **[!UICONTROL Fecha personalizada]** para elegir el p
 
 ![La pestaña Información general del tablero de uso de licencias con las opciones de intervalo de fechas personalizadas resaltadas.](../images/license-usage/custom-date-range.png)
 
-## Métricas disponibles
+## Métricas disponibles {#available-metrics}
 
 El panel de uso de licencias informa sobre varias métricas únicas que se aplican a varios productos de la organización. Las métricas disponibles son:
 
 | Métrica | Descripción |
 |---|---|
-| [!UICONTROL Exportaciones de datos] | El tamaño total de los conjuntos de datos que se pueden exportar a cualquier solución que no sea de Adobe (directa o indirectamente) en un año. |
-| [!UICONTROL Número de modelos de AMM] | Recuento del modelo de aprendizaje automático (Adobe Mix Modeler integrado) que se utiliza para medir o predecir un resultado especificado en función de sus inversiones. |
-| [!UICONTROL Almacenamiento del lago de datos] | Cantidad utilizada del almacén de datos analíticos en Adobe Experience Platform. |
-| [!UICONTROL Atributos calculados] | Recuento total de datos de comportamiento del perfil agregados. Los datos de comportamiento del perfil agregados se basan en eventos de experiencia que se convierten en un atributo de perfil y que pueden incluirse en un perfil de persona o un perfil de persona de negocios. |
-| [!UICONTROL Audiencias de similitud] | Recuento de audiencias que se generan al modelar una audiencia de consumidor existente para identificar perfiles de persona similares a la audiencia de consumidor existente. |
+| [!UICONTROL Tamaño del Audience Activation] | El tamaño total de los perfiles activados en cualquier destino basado en archivos en un año. Nota: Esto no incluye perfiles enviados a través de destinos de flujo continuo. |
 | [!UICONTROL Audiencia a la que dirigirse] | La suma de los derechos de audiencia empresarial y de audiencia de consumidor. Una audiencia de consumidor se define como el número de perfiles de persona identificados como una &quot;Audiencia de consumidor&quot; en el pedido de ventas. Una audiencia empresarial se define como el número de perfiles de personas de negocios identificados como la &quot;Audiencia empresarial&quot; en el pedido de ventas. |
-| [!UICONTROL Número de zonas protegidas] | Recuento de separaciones lógicas dentro de la instancia de cualquier servicio bajo demanda de Adobe que acceda a los datos y operaciones de aislamiento de Adobe Experience Platform. |
-| [!UICONTROL Promedio de riqueza de perfiles] | La suma de todos los datos de producción almacenados en el servicio de perfil de concentrador en cualquier momento, dividida por cinco veces el número de perfiles autorizados de personas de negocios. [!UICONTROL Promedio de riqueza de perfiles] es una función compartida. |
-| [!UICONTROL Nº de paquetes de segmentación de streaming] | Los paquetes actualizan el abono de segmentos de un perfil de persona a medida que los nuevos datos entran en el servicio de segmentación a través de un flujo de streaming. La pertenencia a segmentos se evalúa en función de los atributos de perfil de la persona actual y el valor del evento actual, sin tener en cuenta el comportamiento histórico. La segmentación por secuencias es una función compartida. |
-| [!UICONTROL Audiencia de consumidores] | El número de perfiles de persona identificados como &quot;Audiencia del consumidor&quot; en el pedido de ventas. |
-| [!UICONTROL Filas de CJA disponibles] | Las filas medias diarias de datos disponibles para su análisis dentro de Customer Journey Analytics. |
-| [!UICONTROL Riqueza de perfiles: número de paquetes] | Un aumento en su riqueza de perfiles promedio autorizada de 25 KB por perfil para cada paquete de riqueza de perfiles adicional. |
 | [!UICONTROL Paquetes de usuarios de servicio de consultas ad hoc] | Un complemento para aumentar el derecho de los usuarios autorizados del servicio de consulta simultánea en cinco usuarios adicionales del servicio de consulta simultánea y una consulta ad hoc adicional que se ejecuta simultáneamente por paquete. Se pueden adquirir licencias para varios paquetes de usuarios de Ad Hoc Query adicionales. |
+| [!UICONTROL Promedio de riqueza de perfiles] | La suma de todos los datos de producción almacenados en el servicio de perfil de concentrador en cualquier momento, dividida por cinco veces el número de perfiles autorizados de personas de negocios. [!UICONTROL Promedio de riqueza de perfiles] es una función compartida. |
+| [!UICONTROL Filas de CJA disponibles] | Las filas medias diarias de datos disponibles para su análisis dentro de Customer Journey Analytics. |
+| [!UICONTROL Atributos calculados] | Recuento total de datos de comportamiento del perfil agregados. Los datos de comportamiento del perfil agregados se basan en eventos de experiencia que se convierten en un atributo de perfil y que pueden incluirse en un perfil de persona o un perfil de persona de negocios. |
+| [!UICONTROL Audiencia de consumidores] | El número de perfiles de persona identificados como &quot;Audiencia del consumidor&quot; en el pedido de ventas. |
+| [!UICONTROL Tamaño de exportación de datos] | Cantidad de datos enviados a través de activaciones de conjuntos de datos en un año. |
+| [!UICONTROL Exportaciones de datos] | El tamaño total de los conjuntos de datos que se pueden exportar a cualquier solución que no sea de Adobe (directa o indirectamente) en un año. |
+| [!UICONTROL Almacenamiento de Data Lake] | Cantidad utilizada del almacén de datos analíticos en Adobe Experience Platform. |
 | [!UICONTROL Audiencia atractiva] | Esta métrica hace referencia a la audiencia de perfiles atractivos. Un perfil atractivo es un registro de información que representa a un individuo y se representa en el servicio de perfil. Estos registros son perfiles con los que ha intentado interactuar mediante las capacidades de creación, toma de decisiones, envío, experimentación u orquestación de Journey Optimizer durante los últimos 12 meses. |
+| [!UICONTROL Audiencias de similitud] | Recuento de audiencias que se generan al modelar una audiencia de consumidor existente para identificar perfiles de persona similares a la audiencia de consumidor existente. |
+| [!UICONTROL Número de modelos de AMM] | Recuento del modelo de aprendizaje automático (Adobe Mix Modeler integrado) que se utiliza para medir o predecir un resultado especificado en función de sus inversiones. |
+| [!UICONTROL Número de zonas protegidas] | Recuento de separaciones lógicas dentro de la instancia de cualquier servicio bajo demanda de Adobe que acceda a los datos y operaciones de aislamiento de Adobe Experience Platform. |
+| [!UICONTROL Riqueza de perfiles: número de paquetes] | Un aumento en su riqueza de perfiles promedio autorizada de 25 KB por perfil para cada paquete de riqueza de perfiles adicional. |
 | [!UICONTROL Horario de cómputo del servicio de consultas] | Una medida de la cantidad de tiempo que los motores de servicios de consulta tardan en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes. |
+| [!UICONTROL Nº de paquetes de segmentación de streaming] | Los paquetes actualizan el abono de segmentos de un perfil de persona a medida que los nuevos datos entran en el servicio de segmentación a través de un flujo de streaming. La pertenencia a segmentos se evalúa en función de los atributos de perfil de la persona actual y el valor del evento actual, sin tener en cuenta el comportamiento histórico. La segmentación por secuencias es una función compartida. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
