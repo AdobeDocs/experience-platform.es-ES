@@ -2,20 +2,20 @@
 title: Audiencias de cuenta
 description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perfiles de cuenta en destinos de flujo descendente.
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Caution"
-badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 1%
+source-wordcount: '603'
+ht-degree: 0%
 
 ---
 
 
 # Audiencias de cuenta
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Tenga en cuenta que las audiencias de cuenta solo están disponibles en la [Edición B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Además, la funcionalidad de audiencia de cuenta se encuentra actualmente en **disponibilidad limitada**.
+>Las audiencias de cuenta solo están disponibles en la [Edición B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Además, la funcionalidad de audiencia de cuenta se encuentra actualmente en **disponibilidad limitada**. Póngase en contacto con el Servicio de atención al cliente de Adobe o con su representante de Adobe para solicitar acceso a esta funcionalidad.
 
 Con la segmentación de cuentas, Adobe Experience Platform le permite ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas.
 
@@ -69,7 +69,7 @@ Seleccione la audiencia que desee activar, seguida de **[!UICONTROL Activar en d
 
 ![El [!UICONTROL Activar en destino] El botón se resalta en el menú de acciones rápidas de la audiencia seleccionada.](../images/ui/account-audiences/activate.png)
 
-El [!UICONTROL Activar destino] página. Para obtener más información sobre el proceso de activación, incluidos detalles sobre las asignaciones de campos, lea la [información general de activación](../../destinations/ui/activation-overview.md).
+El [!UICONTROL Activar destino] página. Para obtener más información sobre el proceso de activación, incluidos los destinos admitidos y los detalles sobre las asignaciones de campo, lea la [activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md) tutorial.
 
 ## Pasos siguientes {#next-steps}
 
