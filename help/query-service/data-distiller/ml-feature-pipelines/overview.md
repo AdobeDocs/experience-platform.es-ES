@@ -1,22 +1,22 @@
 ---
 title: Canalizaciones de funciones AI/ML
-description: Descubra cómo puede utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
-source-git-commit: f8bba17df9673973cb2792658282c8db972d30d6
+description: Aprenda a utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
 
 # Canalizaciones de funciones AI/ML
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-Data Distiller permite a los científicos e ingenieros de datos enriquecer sus canalizaciones de aprendizaje automático con datos de experiencia del cliente de alto valor que se han recopilado y depurado en Adobe Experience Platform. Desde un portátil Python en cualquier entorno, puede explorar de forma interactiva los datos de los clientes en el Experience Platform, definir y calcular funciones a partir de los datos, y leer las funciones calculadas en su entorno de aprendizaje automático para modelar.
+Data Distiller permite a los científicos e ingenieros de datos enriquecer sus canalizaciones de aprendizaje automático con datos de experiencia del cliente de alto valor que se han recopilado y depurado en Adobe Experience Platform. Desde una [!DNL Python] portátil en cualquier entorno, puede explorar de forma interactiva los datos de los clientes en el Experience Platform, definir y calcular las funciones a partir de los datos, y leer las funciones calculadas en su entorno de aprendizaje automático para el modelado.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Data Distiller permite a los científicos e ingenieros de datos enriquecer sus c
 
 Este flujo de trabajo requiere una comprensión práctica de los distintos aspectos de Adobe Experience Platform. Antes de comenzar este tutorial, revise la documentación para los siguientes conceptos:
 
-- Cómo: [Autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md)
+- Cómo: [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
 - Zonas protegidas: [Permisos de control de acceso basados en atributos](../../../access-control/abac/overview.md) y cómo crear y administrar funciones, así como asignar los permisos de recursos deseados para estas.
 - Gobernanza de datos: Cómo [aplicar etiquetas de uso de datos a conjuntos de datos y campos, clasificando cada uno](../../../data-governance/labels/overview.md) según las políticas de gobernanza de datos y las políticas de control de acceso relacionadas.
 
@@ -40,16 +40,16 @@ Este flujo de trabajo requiere una comprensión práctica de los distintos aspec
 
 Al leer este documento, se le han introducido los conceptos importantes subyacentes al uso de las herramientas de aprendizaje automático que prefiere para crear modelos personalizados que sean compatibles con los casos prácticos de marketing.
 
-En los documentos incluidos en esta serie de guías se describen los pasos básicos para crear canalizaciones de funciones desde Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático. Ya está listo para establecer una conexión entre Data Distiller y su portátil Jupyter.
+En los documentos incluidos en esta serie de guías se describen los pasos básicos para crear canalizaciones de funciones desde Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático. Ya está listo para establecer una conexión entre Data Distiller y su [!DNL Jupyter Notebook].
 
-- [Conectarse a Data Distiller desde un portátil Python](./establish-connection.md)
+- [Conectarse a Data Distiller desde un [!DNL Python] cuaderno](./establish-connection.md)
 - [Exploración y análisis de conjuntos de datos](./exploratory-analysis.md)
 - [Funciones de ingeniero para el aprendizaje automático](./feature-engineering.md)
 - [Exportar conjuntos de datos de características](./export-data.md)
 
 ## Recursos adicionales
 
-- [aepp](https://github.com/adobe/aepp): una biblioteca de Python de código abierto administrada por Adobe para realizar solicitudes a Data Distiller y otros servicios de Experience Platform desde código de Python.
+- [aepp](https://github.com/adobe/aepp): un código abierto administrado por Adobe [!DNL Python] para realizar solicitudes a Data Distiller y otros servicios de Experience Platform desde [!DNL Python] código.
 
 <!-- Old content below -->
 

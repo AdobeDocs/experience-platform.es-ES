@@ -1,9 +1,9 @@
 ---
 title: Funciones de ingeniero para el aprendizaje automático
 description: Aprenda a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas con su entorno de aprendizaje automático.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 14%
 
 ---
@@ -67,7 +67,7 @@ Número de clases: 50000
 
 ### Agregar eventos para definir las características de ML {#define-features}
 
-La siguiente consulta agrega los eventos del conjunto de datos en funciones numéricas significativas que se pueden utilizar para entrenar un modelo de tendencia:
+Con una consulta adecuada, puede reunir los eventos del conjunto de datos en funciones numéricas significativas que se pueden utilizar para entrenar un modelo de tendencia. A continuación se muestran ejemplos de eventos:
 
 - **Número de correos electrónicos** que se enviaron con fines de marketing y que recibió el usuario.
 - Parte de estos correos electrónicos que se **abierto**.
@@ -83,6 +83,8 @@ La siguiente consulta agrega los eventos del conjunto de datos en funciones num�
 - Número de minutos entre dos propuestas con las que se interactuó.
 - Número de minutos entre dos propuestas que se descartaron.
 - Número de minutos entre dos vínculos seleccionados.
+
+La siguiente consulta agrega estos eventos:
 
 +++Seleccionar para ver consulta de ejemplo
 
