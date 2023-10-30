@@ -3,13 +3,13 @@ title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # Configuración de la detección de bots para flujos de datos
 
@@ -176,4 +176,3 @@ La regla que se muestra en la siguiente imagen identifica una solicitud de orige
 La solicitud se origina desde una de las dos direcciones IP, la `referer` el encabezado empieza por `www.adobe.com`, y el `sec-ch-ua-mobile` identifica la solicitud como originada desde un navegador de escritorio.
 
 ![Imagen de la regla de detección de bots basada en varias condiciones.](assets/bot-detection/bot-detection-multiple.png)
-

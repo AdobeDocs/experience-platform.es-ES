@@ -4,7 +4,8 @@ type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de cuenta en destinos
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Caution"
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
+exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
+source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%

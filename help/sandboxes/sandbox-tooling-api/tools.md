@@ -1,7 +1,8 @@
 ---
 title: Punto final de API de herramientas de zona protegida
 description: El extremo /tools de la API de herramientas de zona protegida le permite recuperar datos JSON del trabajo en Adobe Experience Platform.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 3%

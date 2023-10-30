@@ -1,7 +1,8 @@
 ---
 title: Funciones de ingeniero para el aprendizaje automático
 description: Aprenda a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas con su entorno de aprendizaje automático.
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 14%

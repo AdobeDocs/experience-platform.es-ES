@@ -2,7 +2,8 @@
 keywords: Dirección IP, intervalo de IP, lista de permitidos, lista de permitidos
 title: LISTA DE PERMITIDOS de direcciones IP para el servicio de consultas
 description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos.
-source-git-commit: 89d04a98e983b5dc9f353a831cdbe21c7c7aaf36
+exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 2%
