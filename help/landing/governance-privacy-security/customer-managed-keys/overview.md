@@ -2,9 +2,9 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '763'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,10 @@ Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante 
 >Los datos del lago de datos de Adobe Experience Platform y del almacén de perfiles se cifran con CMK. Se consideran sus almacenes de datos principales.
 
 Este documento proporciona información general de alto nivel sobre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform y la información sobre los requisitos previos necesaria para completar estos pasos.
+
+>[!NOTE]
+>
+>Para clientes de Customer Journey Analytics, siga las instrucciones de la [Documentación del Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Requisitos previos
 
