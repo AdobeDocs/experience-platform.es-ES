@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de agosto de 2023 de Adobe Experience Platform.
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1750'
-ht-degree: 38%
+ht-degree: 40%
 
 ---
 
@@ -183,7 +184,7 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 | --- | --- |
 | Disponibilidad general de [!DNL SugarCRM] | [!DNL SugarCRM] ya están disponibles las fuentes de. Utilice las fuentes de [!DNL SugarCRM Accounts & Contacts] y [!DNL SugarCRM Events] para obtener datos de su cuenta de [!DNL SugarCRM] para Experience Platform. Para obtener más información, lea la [[!DNL SugarCRM] información general](../../sources/connectors/crm/sugarcrm.md). |
 | Compatibilidad con la ingesta bajo demanda para flujos de datos de origen en la IU | Ahora puede crear ejecuciones de flujo bajo demanda para un flujo de datos de fuentes existente en la interfaz de usuario. Para obtener más información, lea la guía de [creación de una ejecución de flujo bajo demanda para orígenes que utilicen la interfaz de usuario](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Compatibilidad con nuevos `correlationID` campo para Adobe Analytics | El `_experience.decisioning.propositions.scopeDetails.correlationID` El campo ahora está disponible en el esquema del conector de origen de Adobe Analytics. Este campo se utiliza para clasificaciones de A4T y se rellenará a partir de septiembre de 2023. |
+| Compatibilidad con nuevo campo `correlationID` para Adobe Analytics | El campo de `_experience.decisioning.propositions.scopeDetails.correlationID` ahora está disponible en el esquema del conector de origen de Adobe Analytics. Este campo se utiliza para clasificaciones de A4T y se rellenará a partir de septiembre de 2023. |
 
 {style="table-layout:auto"}
 

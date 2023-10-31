@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para recuperar una configuración de credenciales a través del Adobe Experience Platform Destination SDK.
 title: Recuperar una configuración de credenciales
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 2%
 
 ---
-
 
 # Recuperar una configuración de credenciales
 

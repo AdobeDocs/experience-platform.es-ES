@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una plantilla de audiencia existente a través del Adobe Experience Platform Destination SDK.
 title: Eliminación de una plantilla de audiencia
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 2%
 
 ---
-
 
 # Eliminación de una plantilla de audiencia
 

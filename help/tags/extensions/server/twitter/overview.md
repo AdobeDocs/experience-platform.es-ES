@@ -3,7 +3,8 @@ keywords: extensión de reenvío de eventos;twitter;extensión de reenvío de ev
 title: extensión de reenvío de eventos de twitter
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en el Twitter para sus necesidades comerciales.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 3%

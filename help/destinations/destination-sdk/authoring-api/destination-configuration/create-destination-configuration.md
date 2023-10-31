@@ -1,13 +1,13 @@
 ---
 description: Aprenda a estructurar una llamada de API para crear una configuración de destino a través del Adobe Experience Platform Destination SDK.
 title: Crear una configuración de destino
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
 
 ---
-
 
 # Crear una configuración de destino
 

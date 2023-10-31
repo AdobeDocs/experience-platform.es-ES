@@ -2,10 +2,11 @@
 title: Cree una conexión de origen y un flujo de datos para SAP Commerce mediante la API de Flow Service
 description: Aprenda a crear una conexión de origen y un flujo de datos para llevar los datos de SAP Commerce al Experience Platform mediante la API de Flow Service.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2358'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -43,7 +44,7 @@ Para obtener más información, consulte la [[!DNL SAP Commerce] documentación]
 
 A continuación se describen los pasos que debe seguir para autenticar su [!DNL SAP Commerce] origen, crear una conexión de origen y crear un flujo de datos para llevar los datos de cuentas y contactos a Experience Platform.
 
-### Crear una conexión base {#base-connection}
+### Cree una conexión base {#base-connection}
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

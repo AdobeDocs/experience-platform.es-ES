@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para crear una plantilla de audiencia a través del Adobe Experience Platform Destination SDK.
 title: Creación de una plantilla de audiencia
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+exl-id: 98d30002-d462-4008-9337-7de0cd608194
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
 
 ---
-
 
 # Creación de una plantilla de audiencia
 

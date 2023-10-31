@@ -2,7 +2,8 @@
 title: Extensión de reenvío de eventos de Google Cloud Platform
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de red perimetral a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%

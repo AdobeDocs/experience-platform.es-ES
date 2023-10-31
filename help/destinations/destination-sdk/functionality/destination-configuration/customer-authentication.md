@@ -1,17 +1,17 @@
 ---
 description: Obtenga información sobre cómo configurar un mecanismo de autenticación para su destino y obtener información sobre lo que los usuarios verán en la interfaz de usuario según el método de autenticación que seleccione.
 title: Configuración de autenticación del cliente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
 
 ---
 
-
 # Configuración de autenticación del cliente
 
-Experience Platform proporciona una buena flexibilidad en los protocolos de autenticación disponibles para socios y clientes. Puede configurar su destino para que admita cualquiera de los métodos de autenticación estándar del sector, como [!DNL OAuth2], autenticación de token de portador, autenticación de contraseña y mucho más.
+Experience Platform ofrece una gran flexibilidad en los protocolos de autenticación disponibles para socios y clientes. Puede configurar su destino para que admita cualquiera de los métodos de autenticación estándar del sector, como [!DNL OAuth2], autenticación de token de portador, autenticación de contraseña y mucho más.
 
 Esta página explica cómo configurar su destino utilizando el método de autenticación preferido. En función de la configuración de autenticación que utilice al crear el destino, los clientes verán diferentes tipos de páginas de autenticación al conectarse al destino en la interfaz de usuario de Experience Platform.
 
@@ -105,7 +105,7 @@ Para configurar la autenticación de tipo portador para el destino, configure el
 
 ## Autenticación OAuth 2 {#oauth2}
 
-Los usuarios seleccionan **[!UICONTROL Conectar con destino]** para almacenar en déclencheur el flujo de autenticación de OAuth 2 en su destino, como se muestra en el ejemplo siguiente para el destino de Audiencias personalizadas de Twitter. Para obtener información detallada sobre la configuración de la autenticación OAuth 2 en el extremo de destino, lea la [Página de autenticación de Destination SDK OAuth 2](oauth2-authentication.md).
+Los usuarios seleccionan **[!UICONTROL Conectar con destino]** para almacenar en déclencheur el flujo de autenticación de OAuth 2 en su destino, como se muestra en el ejemplo siguiente para el destino Twitter de audiencias personalizadas. Para obtener información detallada sobre la configuración de la autenticación OAuth 2 en el extremo de destino, lea la [Página de autenticación de Destination SDK OAuth 2](oauth2-authentication.md).
 
 ![Representación de la interfaz de usuario con autenticación OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 

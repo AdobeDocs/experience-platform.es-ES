@@ -1,13 +1,13 @@
 ---
 title: Recopilar información de comercio, productos y pedidos mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo agregar datos relacionados con productos o un carro de compras mediante el SDK web de Adobe Experience Platform.
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 2%
 
 ---
-
 
 # Recopilar información comercial, de productos y de pedidos
 

@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Solución de problemas con libros de reproducción
-description: Conozca los problemas comunes con los libros de reproducción y cómo solucionarlos
+title: Solución de problemas con los manuales de tácticas
+description: Conozca los problemas comunes con los manuales de tácticas y cómo solucionarlos
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
-workflow-type: ht
-source-wordcount: '121'
+exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '122'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) Solución de problemas y limitaciones conocidas
 
@@ -17,12 +17,8 @@ ht-degree: 100%
 >
 >Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
 
-Para la versión Beta de [!UICONTROL Manuales de casos de uso], tenga en cuenta las sugerencias de solución de problemas y las limitaciones conocidas.
+Para la versión Beta de [!UICONTROL Manuales de tácticas de casos de uso], tenga en cuenta las sugerencias de solución de problemas y las limitaciones conocidas.
 
 ## Limitaciones conocidas {#known-limitations}
 
 Al crear una nueva instancia de un manual de tácticas, se generan nuevos recursos. Sin embargo, para los esquemas generados, si se genera un esquema en una instancia de un manual de tácticas y lo edita, otro esquema *no* se generará si habilita otra instancia del manual de tácticas. En su lugar, también seguirá utilizando el esquema editado en la nueva instancia.
-
-
-
-

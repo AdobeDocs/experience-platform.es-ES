@@ -6,8 +6,8 @@ description: El siguiente documento proporciona pasos sobre cómo crear una espe
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
 

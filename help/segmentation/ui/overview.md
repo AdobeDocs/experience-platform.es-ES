@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3910'
 ht-degree: 4%
 
 ---
@@ -72,17 +72,17 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 
 | Acción | Orígenes | Descripción |
 | ------ | ------- | ----------- |
-| Editar | Servicio de segmentación | Le permite abrir el Generador de segmentos para editar su audiencia. Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md). |
-| Abrir composición | Composición de audiencia | Permite abrir Composición de audiencia para ver la audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
-| Activar en destino | Servicio de segmentación | Permite activar la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea la [información general de activación](../../destinations/ui/activation-overview.md). |
-| Compartir con socios | Composición de audiencias, carga personalizada, servicio de segmentación | Le permite compartir su audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
-| Administrar etiquetas | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
-| Mover a carpeta | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
-| Copiar | Composición de audiencias, carga personalizada, servicio de segmentación | Duplica la audiencia seleccionada. |
-| Aplicar etiquetas de acceso | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
-| Archivar | Carga personalizada | Archiva la audiencia seleccionada. |
-| Eliminar | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
-| Añadir a paquete | Composición de audiencias, carga personalizada, servicio de segmentación | Permite mover la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Editar] | Servicio de segmentación | Le permite abrir el Generador de segmentos para editar su audiencia. Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md). |
+| [!UICONTROL Abrir composición] | Composición de audiencia | Permite abrir Composición de audiencia para ver la audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
+| [!UICONTROL Activar en destino] | Servicio de segmentación | Permite activar la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea la [información general de activación](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Le permite compartir su audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Administrar etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
+| [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
+| [!UICONTROL Copiar] | Composición de audiencias, carga personalizada, servicio de segmentación | Duplica la audiencia seleccionada. |
+| [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archivar] | Carga personalizada | Archiva la audiencia seleccionada. |
+| [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
+| [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite mover la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ Después de seleccionar el archivo CSV para importar, se muestra una lista de da
 
 El **[!UICONTROL Detalles de audiencia]** página. Puede agregar información sobre la audiencia, incluido su nombre, descripción, identidad principal y valor de área de nombres de identidad.
 
+Al importar la audiencia generada externamente, debe seleccionar una de las columnas para que sea el campo de identidad principal y especificar el valor del área de nombres. Tenga en cuenta que se tendrán en cuenta todos los campos restantes **atributos de carga útil**. Estos atributos se tienen en cuenta **no duradero**, ya que solo se asocian a esta audiencia con fines de personalización, y son **no** conectado al perfil.
+
 ![El [!UICONTROL Detalles de audiencia] se muestra la página.](../images/ui/overview/import-audience-audience-details.png)
 
 Después de rellenar los detalles de la audiencia, seleccione **[!UICONTROL Siguiente]**.
@@ -353,7 +355,9 @@ Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL F
 
 >[!IMPORTANT]
 >
->Si su audiencia generada externamente contiene información confidencial o relacionada con la atención médica, usted **debe** aplique las etiquetas de uso de datos necesarias antes de activarlo en cualquier destino. Para obtener más información sobre la aplicación de etiquetas de uso de datos, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md).
+>De forma predeterminada, las audiencias generadas externamente tienen una caducidad de datos de 30 días. La caducidad de los datos se restablece si la audiencia se actualiza o modifica de alguna manera.
+>
+>Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención sanitaria, **debe** aplique las etiquetas de uso de datos necesarias antes de activarlo en cualquier destino. Para obtener más información sobre la aplicación de etiquetas de uso de datos, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md).
 
 ## Segmentación programada {#scheduled-segmentation}
 

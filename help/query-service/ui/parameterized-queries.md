@@ -1,10 +1,11 @@
 ---
 title: Consultas con parámetros
 description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuario de Adobe Experience Platform.
-source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
+exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -12,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
->title="Consultas paramétricas"
->abstract="Utilice consultas parametrizadas para añadir valores de parámetro en el momento de la ejecución. Esto le permite trabajar con datos dinámicos y reutilizar consultas para diferentes casos de uso. Utilice el `'$'` para introducir un parámetro de consulta en la consulta en el editor de texto. A continuación, añada un valor para la clave en la sección Query parameters debajo del editor."
+>title="Consultas parametrizadas"
+>abstract="Utilice consultas parametrizadas para añadir valores de parámetro en el momento de la ejecución. Esto le permite trabajar con datos dinámicos y reutilizar consultas para diferentes casos de uso. Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consulta del editor de texto. A continuación, añada un valor para la clave en la sección Parámetros de consulta debajo del editor."
 
 >[!IMPORTANT]
 >
@@ -50,7 +51,7 @@ SELECT
 
 Para crear la consulta parametrizada en la interfaz de usuario de, vaya al Editor de consultas. Consulte la sección sobre [acceso al Editor de consultas](./user-guide.md#accessing-query-editor) para obtener más instrucciones.
 
-Utilice el `'$'` para introducir un parámetro de consulta en la consulta en el editor de texto. A continuación, añada el valor que falta para la clave en la variable [!UICONTROL Parámetros de consulta] debajo del editor. La consulta no se puede ejecutar si no agrega un valor a ninguna de las claves requeridas. Un icono de alerta (![Un icono de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece en la sección Parámetros de consulta junto a cualquier campo vacío [!UICONTROL Valor] campos de entrada.
+Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consulta del editor de texto. A continuación, añada el valor que falta para la clave en la variable [!UICONTROL Parámetros de consulta] debajo del editor. La consulta no se puede ejecutar si no agrega un valor a ninguna de las claves requeridas. Un icono de alerta (![Un icono de alerta.](../images/ui/parameterized-queries/alert-icon.png)) aparece en la sección Parámetros de consulta junto a cualquier campo vacío [!UICONTROL Valor] campos de entrada.
 
 ![El Editor de consultas con una consulta parametrizada y la sección Parámetros de consulta resaltada.](../images/ui/parameterized-queries/parameterized-query.png)
 

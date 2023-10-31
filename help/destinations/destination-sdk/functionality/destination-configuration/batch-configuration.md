@@ -1,13 +1,13 @@
 ---
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 4%
 
 ---
-
 
 # Configuración por lotes {#batch-configuration}
 

@@ -1,13 +1,13 @@
 ---
 description: Obtenga información sobre cómo ajustar la configuración de entrega de destino para los destinos creados con Destination SDK, para indicar a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación a la que aterrizarán los datos.
 title: Envío de destino
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Envío de destino
 

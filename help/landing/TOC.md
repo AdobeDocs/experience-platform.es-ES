@@ -6,7 +6,7 @@ user-guide-description: Descubra cómo Experience Platform permite ofrecer exper
 source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 27%
       * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Uso de licencias y protecciones {#license}
    * [Prácticas recomendadas de asignación de licencias de administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Tablero de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)

@@ -1,7 +1,8 @@
 ---
 description: Descubra cómo Experience Platform gestiona los distintos tipos de errores devueltos por los destinos de flujo continuo y cómo reintenta enviar datos a la plataforma de destino.
 title: Política de limitación de velocidad y reintentos para destinos de streaming creados con Destination SDK
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -24,7 +25,7 @@ En el caso de las plataformas de destino configuradas con agregación configurab
 
 * Errores en los que el Experience Platform reintenta enviar los datos a su plataforma:
    * Códigos de respuesta HTTP 420 y 429
-   * Códigos de respuesta HTTP buenos a 500
+   * Códigos de respuesta HTTP superiores a 500
 * Errores donde el Experience Platform *no tiene* vuelva a intentar enviar los datos a su plataforma: todas las demás que devuelve su plataforma
 
 ### Método de reintento descrito {#retry-approach}

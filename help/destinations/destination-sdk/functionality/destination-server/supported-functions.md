@@ -1,13 +1,13 @@
 ---
 description: Experience Platform Destination SDK utiliza plantillas Pebble, lo que permite transformar los datos exportados desde Experience Platform al formato requerido por el destino.
 title: Funciones de transformación compatibles en Destination SDK
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 3%
 
 ---
-
 
 # Funciones de transformación compatibles en Destination SDK
 

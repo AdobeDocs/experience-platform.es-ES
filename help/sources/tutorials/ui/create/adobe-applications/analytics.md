@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2481'
 ht-degree: 6%
 
 ---
@@ -133,7 +133,7 @@ Según sus necesidades, puede seleccionar cualquiera de las siguientes opciones 
 
 La siguiente documentación proporciona más recursos para comprender la preparación de datos, los campos calculados y las funciones de asignación:
 
-* [Resumen de preparación de datos](../../../../../data-prep/home.md)
+* [Información general de preparación de datos](../../../../../data-prep/home.md)
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
 * [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
@@ -264,33 +264,53 @@ El [!UICONTROL Revisar] Este paso aparece, lo que le permite revisar el nuevo fl
 
 ![reseña](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitorización del flujo de datos
+## Monitorización del flujo de datos {#monitor-your-dataflow}
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él. Desde el [!UICONTROL Catálogo] pantalla, seleccione **[!UICONTROL Flujos de datos]** para ver una lista de los flujos establecidos asociados a su cuenta de Analytics.
+Una vez completado el flujo de datos, seleccione **[!UICONTROL Flujos de datos]** en el catálogo de fuentes para monitorizar la actividad y el estado de los datos.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![El catálogo de fuentes con la pestaña de flujos de datos seleccionada.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-El **Flujos de datos** aparece la pantalla. En esta página hay un par de flujos de conjuntos de datos que incluyen información sobre su nombre, los datos de origen, la hora de creación y el estado.
+Aparece una lista de los flujos de datos de Analytics existentes en su organización. Aquí, seleccione un conjunto de datos de destinatario para ver su actividad de ingesta correspondiente.
 
-El conector crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para el perfil, pero se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
+![Una lista de flujos de datos de Adobe Analytics existentes en su organización.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Para obtener más información sobre el relleno, los datos activos y sus respectivas latencias, consulte la [Información general sobre Analytics Data Connector](../../../../connectors/adobe-applications/analytics.md).
+El [!UICONTROL Actividad de conjunto de datos] Esta página proporciona información sobre el progreso de los datos que se envían de Analytics a Experience Platform. La interfaz muestra métricas como el número de registros ingeridos, el número de lotes ingeridos y el número de lotes fallidos.
 
-Seleccione el flujo del conjunto de datos que desee ver en la lista.
+El origen crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para su incorporación al Perfil del cliente en tiempo real, sino que se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Para obtener más información sobre el relleno, los datos activos y sus respectivas latencias, lea la [Resumen de origen de Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-El **[!UICONTROL Actividad de conjunto de datos]** página. Esta página muestra la velocidad de los mensajes que se consumen en forma de gráfico. Seleccionar **[!UICONTROL Gobernanza de datos]** desde el encabezado superior para acceder a los campos de etiquetado.
+![Página de actividad del conjunto de datos de un conjunto de datos de destinatario determinado para datos de Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Ver lotes individuales mediante la interfaz de monitorización heredada
 
-Puede ver las etiquetas heredadas de un flujo de conjuntos de datos desde el [!UICONTROL Gobernanza de datos] pantalla. Para obtener más información sobre cómo etiquetar datos procedentes de Analytics, visite la [guía de etiquetas de uso de datos](../../../../../data-governance/labels/user-guide.md).
+La página de actividad del conjunto de datos no muestra una lista de lotes individuales. Para ver una lista de lotes individuales, seleccione un gráfico en la interfaz de actividad del conjunto de datos.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![La página de actividad del conjunto de datos con un gráfico seleccionado.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Para eliminar un flujo de datos, vaya a [!UICONTROL Flujos de datos] y luego seleccione los puntos suspensivos (`...`) junto al nombre del flujo de datos y seleccione [!UICONTROL Eliminar].
+Se le redirigirá al panel de monitorización. A continuación, seleccione **[!UICONTROL SOLO ERRORES DE INGESTA: SÍ]** para borrar el filtro y ver una lista de lotes individuales.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![Panel de monitorización con el filtro de error seleccionado.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+La interfaz se actualiza a una lista de lotes individuales, que incluye información sobre sus métricas respectivas.
+
+![La página de monitorización heredada para datos por lotes.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Métricas | Descripción |
+| --- | --- |
+| ID de lote | El ID de un lote determinado. Este valor se genera internamente. |
+| Nombre del conjunto de datos | Nombre de un conjunto de datos determinado que se utiliza para los datos de Analytics. |
+| Fuente | Origen de los datos introducidos. |
+| Actualizado   | La fecha de la iteración de ejecución de flujo más reciente. |
+| Registros en conjunto de datos | Recuento total de registros en el conjunto de datos. **Nota**: este parámetro muestra ocasionalmente un estado de `in-progress`. Este estado indica que el proceso de ingesta de registros aún no ha finalizado. |
+| Nuevos fragmentos de perfil | Recuento total de nuevos fragmentos de perfil que se ingirieron. |
+| Fragmentos de perfil existentes | Recuento total de fragmentos de perfil existentes. |
+| Registros de identidad vinculados | El recuento total de registros de identidad que se vincularon después de la ingesta. |
+| Registros en el perfil | Recuento total de registros que se ingirieron en el perfil del cliente en tiempo real. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Pasos siguientes y recursos adicionales
 

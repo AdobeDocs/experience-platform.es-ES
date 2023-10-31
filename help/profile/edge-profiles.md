@@ -1,13 +1,13 @@
 ---
 title: Perfiles de Edge
 description: Obtenga información acerca de los perfiles de Edge, así como la terminología relacionada, las regiones disponibles para perfiles de Edge y los servicios disponibles para perfiles de Edge.
-source-git-commit: 3c6f885f3962caff5f10980b8811f42e02b64f85
+exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 1%
 
 ---
-
 
 # Perfiles de borde
 

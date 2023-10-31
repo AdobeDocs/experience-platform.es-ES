@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar definiciones de segmentos en Platform de forma instantánea en Edge de, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Una consulta se puede evaluar con la segmentación de extremos si cumple cualqui
 | Evento único que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un único evento entrante sin restricción horaria. | Personas que viven en los EE.UU. que visitaron la página principal. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
 | Evento único anulado con un atributo de perfil | Cualquier definición de segmento que haga referencia a un evento entrante único negado y a uno o más atributos de perfil | Personas que viven en los Estados Unidos y tienen **no** ha visitado la página principal. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Evento único dentro de una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante en un período de tiempo establecido. | Personas que visitaron la página principal en las últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
-| Evento único con un atributo de perfil dentro de una ventana de tiempo | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un único evento entrante en un período de tiempo establecido. | Personas que viven en Estados Unidos y que visitaron la página principal en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. | Personas que viven en Estados Unidos y que visitaron la página principal en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
 | Evento único anulado con un atributo de perfil en un período de tiempo | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un evento entrante único y negado en un período de tiempo. | Personas que viven en los Estados Unidos y tienen **no** visitó la página principal en las últimas 24 horas. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)]))` |
 | Evento de frecuencia en un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un evento que se produce un determinado número de veces en un intervalo de tiempo de 24 horas. | Personas que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | Evento de frecuencia con un atributo de perfil en un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un evento que se produce un determinado número de veces en un intervalo de tiempo de 24 horas. | Personas de EE. UU. que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |

@@ -1,7 +1,8 @@
 ---
 title: Borradores de flujos de datos en la IU
 description: Obtenga información sobre cómo guardar los flujos de datos como borrador y publicarlos más adelante, al utilizar el espacio de trabajo de fuentes.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -14,7 +15,7 @@ Guarde el progreso del flujo de trabajo de ingesta de datos sin finalizar establ
 
 Este documento proporciona pasos sobre cómo guardar los flujos de datos al utilizar el área de trabajo de fuentes en la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 

@@ -1,13 +1,13 @@
 ---
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo para destinos basados en archivos creados con Adobe Experience Platform Destination SDK a través del punto de conexión /destination-servers.
 title: Configuración de formato de archivo
-source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
+exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 4%
 
 ---
-
 
 # Configuración de formato de archivo
 

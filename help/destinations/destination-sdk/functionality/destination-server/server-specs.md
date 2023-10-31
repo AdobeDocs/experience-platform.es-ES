@@ -1,13 +1,13 @@
 ---
 description: Aprenda a configurar las especificaciones del servidor de destino en el Adobe Experience Platform Destination SDK a través del punto de conexión /authoring/destination-servers.
 title: Especificaciones del servidor para destinos creados con Destination SDK
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 62202edb-a954-42ff-9772-863cea37a889
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2750'
 ht-degree: 3%
 
 ---
-
 
 # Especificaciones del servidor para destinos creados con Destination SDK
 

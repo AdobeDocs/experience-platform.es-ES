@@ -4,7 +4,8 @@ description: Obtenga información sobre cómo crear una conexión de origen y un
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -82,4 +83,3 @@ Para obtener más información sobre la administración de roles y privilegios, 
 El siguiente tutorial proporciona pasos sobre cómo conectar su [!DNL Snowflake] fuente de streaming al Experience Platform mediante la API:
 
 * [Transmita datos desde un [!DNL Snowflake] base de datos a Experience Platform mediante la API de Flow Service](../../tutorials/api/create/databases/snowflake-streaming.md)
-

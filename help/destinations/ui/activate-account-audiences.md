@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo activar audiencias de cuenta en de
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Caution"
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ Al activar audiencias de cuenta en **[!UICONTROL (Compañías) Audiencias coinci
 | Campo de origen | Campo de destino |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (seleccione este campo en la **[!UICONTROL Seleccionar área de nombres de identidad]** view) |
+| `accountKey.sourceKey` | `primaryId` (seleccione este campo en la **[!UICONTROL Seleccionar área de nombres de identidad]** vista, al seleccionar la variable **[!UICONTROL Campo de destino]**). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar las audiencias de cuenta en los destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar las audiencias de cuenta en los destinos."){width="100" zoomable="yes"} |
 
 ### Aplicación de gobernanza de datos {#data-governance-enforcement}
 
-[Evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) actualmente no es compatible al activar audiencias de cuenta en destinos. En el paso de revisión del flujo de trabajo de activación, puede ver un control atenuado para **[!UICONTROL Ver directivas de consentimiento aplicables]**.
+El consentimiento se aplica en el nivel de persona o perfil para *audiencias de clientes y clientes potenciales*. Por lo tanto,  [evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) actualmente no es compatible al activar audiencias de cuenta en destinos. En el paso de revisión del flujo de trabajo de activación, puede ver un control atenuado para **[!UICONTROL Ver directivas de consentimiento aplicables]**.
 
 ![Paso Revisar del flujo de trabajo de activación de audiencias de cuenta con el control de aplicación de consentimiento atenuado.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

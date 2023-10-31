@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de servidor de destino existente a través del Adobe Experience Platform Destination SDK.
 title: Eliminar una configuración de servidor de destino
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 3%
 
 ---
-
 
 # Eliminar una configuración de servidor de destino
 
@@ -75,4 +75,3 @@ Para obtener más información acerca de lo que puede hacer con este extremo, co
 * [Crear una configuración de servidor de destino](create-destination-server.md)
 * [Recuperar una configuración de servidor de destino](retrieve-destination-server.md)
 * [Actualizar la configuración de un servidor de destino](update-destination-server.md)
-

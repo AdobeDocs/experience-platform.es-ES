@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de destino existente a través del Adobe Experience Platform Destination SDK.
 title: Eliminar una configuración de destino
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 2%
 
 ---
-
 
 # Eliminar una configuración de destino
 
@@ -69,4 +69,3 @@ Para obtener más información acerca de lo que puede hacer con este extremo, co
 * [Crear una configuración de destino](create-destination-configuration.md)
 * [Recuperación de una configuración de destino](retrieve-destination-configuration.md)
 * [Actualizar una configuración de destino](update-destination-configuration.md)
-

@@ -3,10 +3,11 @@ title: Conexión de la cuenta de flujo de Snowflake a Adobe Experience Platform
 description: Obtenga información sobre cómo conectar Adobe Experience Platform al flujo de Snowflake mediante la API de Flow Service.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -32,7 +33,7 @@ Para obtener información sobre la configuración de requisitos previos y la [!D
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base {#create-a-base-connection}
+## Cree una conexión base {#create-a-base-connection}
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
@@ -211,7 +212,7 @@ Una respuesta correcta devuelve el ID de conexión de origen y su etiqueta corre
 }
 ```
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 Para crear un flujo de datos para transmitir datos desde el recorrido [!DNL Snowflake] cuenta a Platform, debe realizar una solicitud de POST a `/flows` al tiempo que proporciona los siguientes valores:
 

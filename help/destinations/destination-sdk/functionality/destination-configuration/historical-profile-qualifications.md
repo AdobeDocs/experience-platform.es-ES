@@ -1,13 +1,13 @@
 ---
 description: Obtenga información acerca de las cualificaciones de perfil históricas admitidas por los destinos creados con Destination SDK.
 title: Cualificaciones históricas del perfil
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Cualificaciones históricas del perfil
 

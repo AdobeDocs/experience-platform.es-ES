@@ -1,13 +1,13 @@
 ---
 description: Obtenga información sobre cómo dar formato a las solicitudes HTTP enviadas al extremo. Utilice el extremo /authoring/destination-servers para configurar las especificaciones de creación de plantillas del servidor de destino en Adobe Experience Platform Destination SDK.
 title: Plantillas de especificaciones para destinos creados con Destination SDK
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 4%
 
 ---
-
 
 # Especificaciones de plantilla para destinos creados con Destination SDK
 

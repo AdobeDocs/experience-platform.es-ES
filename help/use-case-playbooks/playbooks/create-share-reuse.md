@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Creación, uso compartido y reutilización de instancias de manuales de tácticas
 description: Aprenda a crear, compartir y reutilizar instancias del manual de tácticas para lograr su caso de uso de marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) Creación, uso compartido y reutilización de instancias de manuales de tácticas
 
@@ -44,7 +44,7 @@ Después de crear una instancia basada en un manual de tácticas, puede personal
 Es importante comprender que los recursos generados difieren según el caso de uso que active:
 
 * Se generan diferentes recursos para diferentes tipos de manuales de tácticas. Estos recursos se crean específicamente para el caso de uso conseguido mediante el manual de tácticas. Por ejemplo, un manual de tácticas genera un esquema, un segmento, un recorrido y mensajes. Otro manual de tácticas genera un esquema, un segmento y un destino para activar los datos.
-* Los recursos en sí difieren entre los libros de reproducción. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, la audiencia que se crea tiene la regla `birthday=today AND year=any`.
+* Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, la audiencia que se crea tiene la regla `birthday=today AND year=any`.
 
 Para ilustrar un ejemplo, consulte el manual de tácticas **[!UICONTROL Carro de compras abandonado: mercancía]**, puede ver que se crea un recorrido específico que incluye los mensajes creados para este caso de uso.
 

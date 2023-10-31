@@ -1,10 +1,11 @@
 ---
 title: Reparticipación inteligente
-description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +27,7 @@ Construirá esquemas, conjuntos de datos y audiencias a medida que trabaje con e
 
 ## Requisitos previos y planificación {#prerequisites-and-planning}
 
-A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (enumerados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
+A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (indicados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas, o pídale al administrador del sistema que le conceda los permisos necesarios.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : integra datos en todas las fuentes de datos para impulsar la campaña. A continuación, estos datos se utilizan para crear las audiencias de campaña y los elementos de datos personalizados de superficie que se utilizan en los mosaicos de promo de correo electrónico y web (por ejemplo, nombre o información relacionada con la cuenta). El CDP también se utiliza para activar audiencias en el correo electrónico y la web (a través de [!DNL Adobe Target]).
    * [Esquemas](/help/xdm/home.md)
@@ -85,9 +86,9 @@ El recorrido de confirmación de pedido se centra en las compras de productos re
 
 Para completar cada uno de los pasos de la información general de alto nivel anterior, lea las secciones siguientes, que ofrecen vínculos a más información e instrucciones más detalladas.
 
-### Funcionalidad y elementos de la interfaz de usuario que utilizará {#ui-functionality-and-elements}
+### Funcionalidades y elementos de la interfaz de usuario que utilizará {#ui-functionality-and-elements}
 
-A medida que complete los pasos para implementar el caso de uso, utilizará la funcionalidad de Real-Time CDP y los elementos de la interfaz de usuario enumerados al principio de este documento. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o solicite al administrador del sistema que le conceda los permisos necesarios.
+A medida que complete los pasos para implementar el caso de uso, utilizará la funcionalidad de Real-Time CDP y los elementos de la interfaz de usuario enumerados al principio de este documento. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas, o pídale al administrador del sistema que le conceda los permisos necesarios.
 
 ### Crear un diseño de esquema y especificar grupos de campos {#schema-design}
 
@@ -349,7 +350,7 @@ Para obtener más información sobre cómo crear un [conjunto de datos](/help/ca
 
 >[!NOTE]
 >
->Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el Perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea la [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Similar al paso para crear un esquema, debe habilitar el conjunto de datos para que se incluya en el Perfil del cliente en tiempo real. Para obtener más información sobre la activación del conjunto de datos para su uso en el Perfil del cliente en tiempo real, lea el [tutorial de creación de esquemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
 ### Privacidad, consentimiento y control de datos {#privacy-consent}
 

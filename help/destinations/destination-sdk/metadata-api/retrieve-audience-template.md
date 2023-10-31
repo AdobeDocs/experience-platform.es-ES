@@ -1,13 +1,13 @@
 ---
 description: Esta página ejemplifica la llamada de API utilizada para recuperar una plantilla de audiencia a través del Adobe Experience Platform Destination SDK.
 title: Recuperación de una plantilla de audiencia
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 2%
 
 ---
-
 
 # Recuperación de una plantilla de audiencia
 

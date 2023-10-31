@@ -2,8 +2,8 @@
 title: Cree Una Conexión De Flujo De Datos Y Un Flujo De Datos De Shopify En La IU
 description: Aprenda a crear una conexión de origen y un flujo de datos de Shopify Streaming mediante la interfaz de usuario de Platform
 badge: Beta
-exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Shopify Streaming] conexión de origen y flujo de datos mediante la interfaz de usuario de Platform.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

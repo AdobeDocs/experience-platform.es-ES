@@ -2,11 +2,11 @@
 title: Creación de una conexión de origen de flujo continuo y un flujo de datos para los datos de Shopify mediante la API de Flow Service
 description: Aprenda a crear una conexión de origen de flujo continuo y un flujo de datos para los datos de Shopify mediante la API de Flow Service.
 badge: Beta
-exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 El siguiente tutorial proporciona pasos sobre cómo crear una conexión de origen de flujo continuo y un flujo de datos desde el que transmitir los datos [[!DNL Shopify]](https://www.shopify.com/) a Adobe Experience Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
