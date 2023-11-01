@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Clase XDM ExperienceEvent
 description: Este documento proporciona información general sobre la clase XDM ExperienceEvent y prácticas recomendadas para el modelado de datos de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: d648a2151060d1013a6bce7a8180378400337829
+source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '2667'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,12 @@ El [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con series 
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_id`<br>**(Requerido)** | La clase Experience Event `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Platform pueden gestionar la duplicación de forma diferente.  Por ejemplo, los eventos duplicados en el servicio de perfil se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://tools.ietf.org/html/rfc4122) o [Identificador único global (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una cierta combinación de campos que hacen que el evento sea único, como un ID principal, una marca de tiempo, un tipo de evento, etc. El valor concatenado debe ser un `uri-reference` formatted string, lo que significa que se debe eliminar cualquier carácter de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el propio registro de datos. Los datos de identidad relativos a una persona deben quedar relegados a [campos de identidad](../schema/composition.md#identity) proporcionadas por grupos de campos compatibles. |
+| `_id`<br>**(Requerido)** | La clase Experience Event `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Platform pueden gestionar la duplicación de forma diferente. Por ejemplo, los eventos duplicados en el servicio de perfil se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) o [Identificador único global (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una determinada combinación de campos que hagan que el evento sea único. Algunos ejemplos de eventos que se pueden concatenar son el ID principal, la marca de tiempo, el tipo de evento, etc. El valor concatenado debe ser un `uri-reference` formatted string, lo que significa que se debe eliminar cualquier carácter de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el propio registro de datos. Los datos de identidad relativos a una persona deben quedar relegados a [campos de identidad](../schema/composition.md#identity) proporcionadas por grupos de campos compatibles. |
 | `eventMergeId` | Si se usa la variable [SDK web de Adobe Experience Platform](../../edge/home.md) para introducir datos, representa el ID del lote introducido que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingesta de datos. No se admite el uso de este campo fuera del contexto de una implementación de SDK web. |
 | `eventType` | Cadena que indica el tipo o la categoría del evento. Este campo se puede utilizar si desea distinguir distintos tipos de eventos dentro del mismo esquema y conjunto de datos, como distinguir un evento de vista de producto de un evento de complemento al carro de compras para una compañía minorista.<br><br>Los valores estándar para esta propiedad se proporcionan en [sección del apéndice](#eventType), incluidas las descripciones de su caso de uso previsto. Este campo es una enumeración ampliable, lo que significa que también puede utilizar sus propias cadenas de tipo de evento para categorizar los eventos que está rastreando.<br><br>`eventType` limita el uso de un solo evento por visita en la aplicación y, por lo tanto, debe utilizar campos calculados para que el sistema sepa qué evento es el más importante. Para obtener más información, consulte la sección sobre [prácticas recomendadas para campos calculados](#calculated). |
 | `producedBy` | Valor de cadena que describe el productor o el origen del evento. Este campo se puede utilizar para filtrar ciertos productores de eventos si es necesario con fines de segmentación.<br><br>Algunos valores sugeridos para esta propiedad se proporcionan en la variable [sección del apéndice](#producedBy). Este campo es una enumeración extensible, lo que significa que también puede utilizar sus propias cadenas para representar a diferentes productores de eventos. |
 | `identityMap` | Campo de asignación que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en las operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en la [conceptos básicos de composición de esquemas](../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
-| `timestamp`<br>**(Requerido)** | Una marca de tiempo ISO 8601 de cuándo se produjo el evento, con el formato establecido por [RFC 3339, sección 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Esta marca de tiempo debe pertenecer al pasado. Consulte la sección siguiente sobre [marcas de tiempo](#timestamps) para conocer las prácticas recomendadas sobre el uso de este campo. |
+| `timestamp`<br>**(Requerido)** | Una marca de tiempo ISO 8601 de cuándo se produjo el evento, con el formato establecido por [RFC 3339, sección 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Esta marca de tiempo debe pertenecer al pasado. Consulte la sección siguiente sobre [marcas de tiempo](#timestamps) para conocer las prácticas recomendadas sobre el uso de este campo. |
 
 {style="table-layout:auto"}
 
@@ -92,57 +92,88 @@ En la tabla siguiente se describen los valores aceptados para `eventType`, junto
 
 | Valor | Definición |
 | --- | --- |
-| `advertising.clicks` | Acciones de clic de un anuncio. |
-| `advertising.completes` | Un recurso de medios cronometrados se ha visto hasta su finalización. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que podría haberse saltado algunas partes. |
-| `advertising.conversions` | Acciones predefinidas realizadas por un cliente que déclencheur un evento para la evaluación del rendimiento. |
-| `advertising.federated` | Indica si se creó un evento de experiencia mediante federación de datos (uso compartido de datos entre clientes). |
-| `advertising.firstQuartiles` | Se ha reproducido el 25 % de la duración de un anuncio de vídeo digital a velocidad normal. |
-| `advertising.impressions` | Impresiones de un anuncio para un cliente con el potencial de ser visto. |
-| `advertising.midpoints` | Se ha reproducido el 50 % de la duración de un anuncio de vídeo digital a velocidad normal. |
-| `advertising.starts` | Ha comenzado a reproducirse un anuncio de vídeo digital. |
-| `advertising.thirdQuartiles` | Se ha reproducido el 75 % de la duración de un anuncio de vídeo digital a velocidad normal. |
-| `advertising.timePlayed` | Describe la cantidad de tiempo que un usuario dedica a un recurso de medios cronometrados específico. |
-| `application.close` | Se cerró una solicitud o se envió en segundo plano. |
-| `application.launch` | Se inició o se puso en primer plano una aplicación. |
-| `commerce.checkouts` | Se ha producido un evento de cierre de compra para una lista de productos. Puede haber más de un evento de cierre de compra si hay varios pasos en el proceso. Si hay varios pasos, la marca de tiempo y la página/experiencia de referencia para cada evento se utilizan para identificar cada evento individual (paso), representado en orden. |
-| `commerce.productListAdds` | Se ha agregado un producto a la lista de productos o al carro de compras. |
-| `commerce.productListOpens` | Se ha inicializado o creado una nueva lista de productos (carro de compras). |
-| `commerce.productListRemovals` | Se han eliminado una o más entradas de producto de una lista de productos o un carro de compras. |
-| `commerce.productListReopens` | Un cliente ha reactivado una lista de productos (carro de compras) a la que ya no se podía acceder (abandonada), por ejemplo, mediante una actividad de remarketing. |
-| `commerce.productListViews` | Una lista de productos o un carro de compras han recibido una o más vistas. |
-| `commerce.productViews` | Un producto ha recibido una o más vistas. |
-| `commerce.purchases` | Se ha aceptado un pedido. Esta es la única acción necesaria en una conversión comercial. Un evento de compra debe tener una lista de productos a la que se haga referencia. |
-| `commerce.saveForLaters` | Se ha guardado una lista de productos para uso futuro, como una lista de deseos de productos. |
-| `decisioning.propositionDisplay` | Se ha mostrado una propuesta de toma de decisiones a una persona. |
-| `decisioning.propositionInteract` | Una persona interactuó con una propuesta de toma de decisiones. |
-| `delivery.feedback` | Eventos de comentarios de una entrega, como un envío por correo electrónico. |
-| `directMarketing.emailBounced` | Se ha devuelto un correo electrónico a una persona. |
-| `directMarketing.emailBouncedSoft` | Un correo electrónico a una persona se ha devuelto sin problemas. |
-| `directMarketing.emailClicked` | Una persona hizo clic en un vínculo de un correo electrónico de marketing. |
-| `directMarketing.emailDelivered` | Se ha entregado correctamente un correo electrónico al servicio de correo electrónico de la persona |
-| `directMarketing.emailOpened` | Una persona ha abierto un correo electrónico de marketing. |
-| `directMarketing.emailUnsubscribed` | Una persona ha cancelado la suscripción a un correo electrónico de marketing. |
-| `inappmessageTracking.dismiss` | Se ha descartado un mensaje en la aplicación. |
-| `inappmessageTracking.display` | Se ha mostrado un mensaje en la aplicación. |
-| `inappmessageTracking.interact` | Se ha interactuado con un mensaje en la aplicación. |
-| `leadOperation.callWebhook` | Se llamó a un webhook en respuesta a un posible cliente. |
-| `leadOperation.convertLead` | Se ha convertido un posible cliente. |
-| `leadOperation.interestingMoment` | Se grabó un momento interesante para una persona. |
-| `leadOperation.newLead` | Se ha creado un posible cliente. |
-| `leadOperation.scoreChanged` | Se ha cambiado el valor del atributo de puntuación del posible cliente. |
-| `leadOperation.statusInCampaignProgressionChanged` | El estado de un posible cliente en una campaña ha cambiado. |
-| `listOperation.addToList` | Se agregó una persona a una lista de marketing. |
-| `listOperation.removeFromList` | Se ha quitado una persona de una lista de marketing. |
-| `message.feedback` | Eventos de comentarios como sent/bounce/error para mensajes enviados a un cliente. |
-| `message.tracking` | Seguimiento de eventos como acciones de apertura/clic/personalizado en mensajes enviados a un cliente. |
-| `opportunityEvent.addToOpportunity` | Se ha agregado una persona a una oportunidad. |
-| `opportunityEvent.opportunityUpdated` | Se ha actualizado una oportunidad. |
-| `opportunityEvent.removeFromOpportunity` | Se ha eliminado a una persona de una oportunidad. |
-| `pushTracking.applicationOpened` | Una persona abrió una aplicación desde una notificación push. |
-| `pushTracking.customAction` | Una persona hizo clic en una acción personalizada en una notificación push. |
-| `web.formFilledOut` | Una persona rellenó un formulario en una página web. |
-| `web.webinteraction.linkClicks` | Se ha seleccionado un vínculo una o más veces. |
-| `web.webpagedetails.pageViews` | Una página web ha recibido una o más vistas. |
+| `advertising.clicks` | Este evento rastrea cuándo se produce una acción para seleccionar un anuncio. |
+| `advertising.completes` | Este evento rastrea cuándo se ha visto un recurso de medios cronometrados hasta su finalización. Esto no significa necesariamente que el usuario haya visto todo el vídeo, ya que podría haberse saltado algunas partes. |
+| `advertising.conversions` | Este evento rastrea una acción predefinida realizada por un cliente que almacena en déclencheur un evento para la evaluación del rendimiento. |
+| `advertising.federated` | Este evento rastrea si se creó un Evento de experiencia mediante federación de datos (uso compartido de datos entre clientes). |
+| `advertising.firstQuartiles` | Este evento rastrea cuándo se ha reproducido un anuncio de vídeo digital a velocidad normal durante el 25 % de su duración. |
+| `advertising.impressions` | Este evento rastrea las impresiones de un anuncio para un cliente con el potencial de ser visto. |
+| `advertising.midpoints` | Este evento rastrea cuándo se ha reproducido un anuncio de vídeo digital a lo largo del 50 % de su duración a velocidad normal. |
+| `advertising.starts` | Este evento rastrea cuándo ha comenzado a reproducirse un anuncio de vídeo digital. |
+| `advertising.thirdQuartiles` | Este evento rastrea cuándo se ha reproducido un anuncio de vídeo digital a velocidad normal durante el 75 % de su duración. |
+| `advertising.timePlayed` | Este evento rastrea la cantidad de tiempo que un usuario dedica a un recurso de medios cronometrados específico. |
+| `application.close` | Este evento rastrea cuándo se cerró una aplicación o se envió a segundo plano. |
+| `application.launch` | Este evento rastrea cuándo se inició o se puso en primer plano una aplicación. |
+| `commerce.backofficeCreditMemoIssued` | Este evento rastrea cuándo se ha emitido un aviso de crédito a un cliente. |
+| `commerce.backofficeOrderCancelled` | Este evento rastrea cuándo se ha finalizado un proceso de compra iniciado anteriormente antes de completarse. |
+| `commerce.backofficeOrderItemsShipped` | Este evento registra cuándo se han enviado físicamente los artículos comprados al cliente. |
+| `commerce.backofficeOrderPlaced` | Este evento rastrea la colocación de un pedido. |
+| `commerce.backofficeShipmentCompleted` | Este evento rastrea la finalización correcta de todo el proceso de envío. |
+| `commerce.checkouts` | Este evento rastrea cuándo se ha producido un evento de cierre de compra para una lista de productos. Puede haber más de un evento de cierre de compra si hay varios pasos en el proceso. Si hay varios pasos, la marca de tiempo y la página/experiencia de referencia para cada evento se utilizan para identificar cada evento individual (paso), representado en orden. |
+| `commerce.productListAdds` | Este evento rastrea cuándo se ha agregado un producto a la lista de productos o al carro de compras. |
+| `commerce.productListOpens` | Este evento rastrea cuándo se ha inicializado o creado una nueva lista de productos (carro de compras). |
+| `commerce.productListRemovals` | Este evento rastrea cuándo se ha eliminado una entrada de producto de una lista de productos o un carro de compras. |
+| `commerce.productListReopens` | Este evento rastrea cuándo un cliente ha reactivado una lista de productos (carro de compras) que ya no era accesible (abandonada), como, por ejemplo, mediante una actividad de remarketing. |
+| `commerce.productListViews` | Este evento rastrea cuándo una lista de productos o un carro de compras ha recibido una vista. |
+| `commerce.productViews` | Este evento rastrea cuándo un producto ha recibido una o más vistas. |
+| `commerce.purchases` | Este evento rastrea cuándo se ha aceptado un pedido. Esta es la única acción necesaria en una conversión comercial. Un evento de compra debe tener una lista de productos a la que se haga referencia. |
+| `commerce.saveForLaters` | Este evento rastrea cuándo se ha guardado una lista de productos para uso futuro, como una lista de deseos de productos. |
+| `decisioning.propositionDisplay` | Este evento rastrea cuándo se ha mostrado una propuesta de toma de decisiones a una persona. |
+| `decisioning.propositionDismiss` | Este evento registra cuándo se ha tomado la decisión de no interactuar con la oferta presentada. |
+| `decisioning.propositionInteract` | Este evento rastrea cuándo una persona interactuó con una propuesta de toma de decisiones. |
+| `decisioning.propositionSend` | Este evento registra cuándo se ha decidido enviar a un cliente potencial una recomendación u oferta para su consideración. |
+| `decisioning.propositionTrigger` | Este evento rastrea la activación de un proceso de propuesta. Se ha producido una condición o acción determinada para solicitar la presentación de una oferta. |
+| `delivery.feedback` | Este evento realiza un seguimiento de los eventos de comentarios de un envío, como un envío por correo electrónico. |
+| `directMarketing.emailBounced` | Este evento rastrea cuándo rebotó un correo electrónico a una persona. |
+| `directMarketing.emailBouncedSoft` | Este evento rastrea cuándo ha rebotado suavemente un correo electrónico a una persona. |
+| `directMarketing.emailClicked` | Este evento rastrea cuándo una persona hizo clic en un vínculo en un correo electrónico de marketing. |
+| `directMarketing.emailDelivered` | Este evento rastrea cuándo se entregó correctamente un correo electrónico al servicio de correo electrónico de una persona. |
+| `directMarketing.emailOpened` | Este evento rastrea cuándo una persona ha abierto un correo electrónico de marketing. |
+| `directMarketing.emailSent` | Este evento rastrea cuándo se ha enviado un correo electrónico de marketing a una persona. |
+| `directMarketing.emailUnsubscribed` | Este evento rastrea cuándo una persona canceló la suscripción a un correo electrónico de marketing. |
+| `inappmessageTracking.dismiss` | Este evento rastrea cuándo se descartó un mensaje en la aplicación. |
+| `inappmessageTracking.display` | Este evento rastrea cuándo se ha mostrado un mensaje en la aplicación. |
+| `inappmessageTracking.interact` | Este evento rastrea cuándo se ha interactuado con un mensaje en la aplicación. |
+| `leadOperation.callWebhook` | Este evento rastrea cuándo se llamó a un webhook en respuesta a un posible cliente. |
+| `leadOperation.changeCampaignStream` | Este evento significa un cambio en la estrategia de marketing o participación de un posible cliente empresarial en particular. |
+| `leadOperation.changeEngagementCampaignCadence` | Este evento rastrea cuándo se ha producido un cambio en la frecuencia con la que un posible cliente se involucra como parte de una campaña. |
+| `leadOperation.convertLead` | Este evento rastrea cuándo se convirtió un posible cliente. |
+| `leadOperation.interestingMoment` | Este evento rastrea cuándo se grabó un momento interesante para una persona. |
+| `leadOperation.mergeLeads` | Este evento rastrea cuándo se consolidó la información de varios posibles clientes, que hacen referencia a la misma entidad. |
+| `leadOperation.newLead` | Este evento rastrea cuándo se creó un posible cliente. |
+| `leadOperation.scoreChanged` | Este evento rastrea cuándo se cambió el valor del atributo de puntuación del posible cliente. |
+| `leadOperation.statusInCampaignProgressionChanged` | Este evento rastrea cuándo ha cambiado el estado de un posible cliente en una campaña. |
+| `listOperation.addToList` | Este evento rastrea cuándo se añadió una persona a una lista de marketing. |
+| `listOperation.removeFromList` | Este evento rastrea cuándo se eliminó una persona de una lista de marketing. |
+| `media.adBreakComplete` | Este evento rastrea cuándo una `adBreakComplete` se ha producido un evento. Este evento se activa al principio de una pausa publicitaria. |
+| `media.adBreakStart` | Este evento rastrea cuándo una `adBreakStart` se ha producido un evento. Este evento se activa al final de una pausa publicitaria. |
+| `media.adComplete` | Este evento rastrea cuándo una `adComplete` se ha producido un evento. Este evento se activa cuando se completa un anuncio. |
+| `media.adSkip` | Este evento rastrea cuándo una `adSkip` se ha producido un evento. Este evento se activa cuando se omite un anuncio. |
+| `media.adStart` | Este evento rastrea cuándo una `adStart` se ha producido un evento. Este evento se activa cuando se inicia un anuncio. |
+| `media.bitrateChange` | Este evento rastrea cuándo se produce una `bitrateChange` se ha producido un evento. Este evento se activa cuando hay un cambio en la velocidad de bits. |
+| `media.bufferStart` | Este evento rastrea cuándo se produce una `bufferStart` se ha producido un evento. Este evento se activa cuando el medio ha comenzado a almacenarse en el búfer. |
+| `media.chapterComplete` | Este evento rastrea cuándo se produce una `chapterComplete` se ha producido un evento. Este evento se activa al finalizar un capítulo en el contenido. |
+| `media.chapterSkip` | Este evento rastrea cuándo se produce una `chapterSkip` se ha producido un evento. Este evento se activa cuando un usuario salta hacia delante o hacia atrás a otra sección o capítulo dentro del contenido multimedia. |
+| `media.chapterStart` | Este evento rastrea cuándo se produce una `chapterStart` se ha producido un evento. Este evento se activa al principio de una sección o capítulo específico dentro del contenido multimedia. |
+| `media.downloaded` | Este evento rastrea cuándo se ha producido el contenido descargado del medio. |
+| `media.error` | Este evento rastrea cuándo una `error` se ha producido un evento. Este evento se activa cuando se produce un error o un problema durante la reproducción del contenido. |
+| `media.pauseStart` | Este evento rastrea cuándo se produce una `pauseStart` se ha producido un evento. Este evento se activa cuando un usuario inicia una pausa en la reproducción de contenido. |
+| `media.ping` | Este evento rastrea cuándo una `ping` se ha producido un evento. Esto verifica la disponibilidad de un recurso de medios. |
+| `media.play` | Este evento rastrea cuándo se produce una `play` se ha producido un evento. Este evento se activa cuando se reproduce el contenido del contenido multimedia, lo que indica el consumo activo por parte del usuario. |
+| `media.sessionComplete` | Este evento rastrea cuándo se produce una `sessionComplete` se ha producido un evento. Este evento marca el final de una sesión de reproducción de contenido. |
+| `media.sessionEnd` | Este evento rastrea cuándo se produce una `sessionEnd` se ha producido un evento. Este evento indica la finalización de una sesión de medios. Esta conclusión podría implicar el cierre del reproductor de contenidos o la detención de la reproducción. |
+| `media.sessionStart` | Este evento rastrea cuándo se produce una `sessionStart` se ha producido un evento. Este evento marca el comienzo de una sesión de reproducción de contenido. Se activa cuando un usuario comienza a reproducir un archivo multimedia. |
+| `media.statesUpdate` | Este evento rastrea cuándo se produce una `statesUpdate` se ha producido un evento. La funcionalidad de seguimiento de estado del reproductor se puede adjuntar a un flujo de audio o vídeo. Los estados estándar son fullscreen, mute, closedCaptioning, pictureInPicture e inFocus. |
+| `opportunityEvent.addToOpportunity` | Este evento registra cuándo se añadió una persona a una oportunidad. |
+| `opportunityEvent.opportunityUpdated` | Este evento rastrea cuándo se actualizó una oportunidad. |
+| `opportunityEvent.removeFromOpportunity` | Este evento rastrea cuándo se eliminó una persona de una oportunidad. |
+| `pushTracking.applicationOpened` | Este evento rastrea cuándo una persona abrió una aplicación desde una notificación push. |
+| `pushTracking.customAction` | Este evento rastrea cuándo una persona seleccionó una acción personalizada en una notificación push. |
+| `web.formFilledOut` | Este evento rastrea cuándo una persona ha rellenado un formulario en una página web. |
+| `web.webinteraction.linkClicks` | Este evento rastrea cuándo se ha seleccionado un vínculo una o más veces. |
+| `web.webpagedetails.pageViews` | Este evento rastrea cuándo una página web ha recibido una o más vistas. |
+| `location.entry` | Este evento rastrea la entrada de una persona o dispositivo en una ubicación específica. |
+| `location.exit` | Este evento rastrea la salida de una persona o dispositivo desde una ubicación específica. |
 
 {style="table-layout:auto"}
 
