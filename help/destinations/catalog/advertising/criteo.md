@@ -3,9 +3,9 @@ keywords: publicidad; criterios;
 title: Conexión de Criteo
 description: Criteo potencia la publicidad de confianza e impactante para llevar experiencias más ricas a todos los consumidores a través de la internet abierta. Con el conjunto de datos de comercio más grande del mundo y la mejor IA de su clase, Criteo garantiza que cada punto de contacto a través del recorrido de compras esté personalizado para llegar a los clientes con el anuncio adecuado, en el momento adecuado.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Criteo potencia la publicidad de confianza e impactante para llevar experiencias
 
 ## Identidades admitidas {#supported-identities}
 
-Criteo admite la activación de identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Criteo admite la activación de identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidad de destino | Descripción | Consideraciones |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Después de autenticarse en el destino, complete los siguientes parámetros de c
 | --- | --- | --- |
 | Nombre | Un nombre que le ayudará a reconocer este destino en el futuro. El nombre que elija aquí será el [!DNL Audience] nombre en el Centro de administración de Criteo y no se puede modificar en una fase posterior. | Sí |
 | Descripción | Una descripción para ayudarle a identificar este destino en el futuro. | No |
-| ID del anunciante | ID de anunciante de Criteo de su organización. Póngase en contacto con el administrador de cuentas de Criteo para obtener esta información. | Sí |
+| ID de anunciante | ID de anunciante de Criteo de su organización. Póngase en contacto con el administrador de cuentas de Criteo para obtener esta información. | Sí |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de su organización. Póngase en contacto con el equipo de su cuenta de Criteo para obtener la información adecuada [!DNL GUM Caller ID] o para obtener más información al respecto [!DNL GUM] sincronizar, si es necesario. | Sí, siempre [!DNL GUM ID] se proporciona como identificador |
 
 ### Habilitar alertas {#enable-alerts}

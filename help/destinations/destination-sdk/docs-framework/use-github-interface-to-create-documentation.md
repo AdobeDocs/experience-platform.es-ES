@@ -2,9 +2,9 @@
 title: Utilice la interfaz web de GitHub para crear una página de documentación de destino
 description: Las instrucciones de esta página muestran cómo utilizar la interfaz web de GitHub para crear una página de documentación para el destino del Experience Platform y enviarla para su revisión.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -16,15 +16,14 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 >[!TIP]
 >
 >Consulte también la documentación de soporte en la Guía del colaborador de Adobe:
->* [Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
-
+>* [Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configuración del entorno de creación de GitHub {#set-up-environment}
 
 1. En el explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`.
-2. Hasta [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) En el repositorio, haga clic en **Tenedor** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su propia cuenta de GitHub.
+2. Hasta [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) En el repositorio, haga clic en **Tenedor** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su propia cuenta de GitHub.
 
    ![Repositorio de documentación de Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +46,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
    >
    >Puede cerrar la ventana del explorador en cualquier momento y volver a abrirla más tarde. Su trabajo se guarda automáticamente y le estará esperando cuando vuelva a abrir el explorador.
 3. Copie el contenido del editor de markdown en el nuevo archivo en GitHub.
-4. Para cualquier captura de pantalla o imagen que planee utilizar, utilice la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si va a añadir un destino de personalización al Experience Platform, seleccione la opción `personalization` categoría. Debe vincular a las imágenes de la página que está creando. Consulte [instrucciones cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. Para cualquier captura de pantalla o imagen que planee utilizar, utilice la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si va a añadir un destino de personalización al Experience Platform, seleccione la opción `personalization` categoría. Debe vincular a las imágenes de la página que está creando. Consulte [instrucciones cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Cargar imagen en GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -83,4 +82,4 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 >[!TIP]
 >
->Para añadir imágenes y vínculos a su documentación y para cualquier otra pregunta sobre Markdown, lea [Uso de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) en la guía de escritura colaborativa de Adobe.
+>Para añadir imágenes y vínculos a su documentación y para cualquier otra pregunta sobre Markdown, lea [Uso de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) en la guía de escritura colaborativa de Adobe.

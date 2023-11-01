@@ -2,9 +2,9 @@
 title: Conexión de lista de clientes de pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '727'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Cree audiencias a partir de las listas de clientes, personas que hayan visitado 
 
 ## Identidades admitidas {#supported-identities}
 
-El [!DNL Pinterest Customer List] El destino de admite la activación de las identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+El [!DNL Pinterest Customer List] El destino de admite la activación de las identidades descritas en la siguiente tabla. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 En el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino, asigne las identidades deseadas al campo de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest.
 
@@ -34,7 +34,7 @@ En el [paso de asignación](/help/destinations/ui/activate-segment-streaming-des
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Asignar el *GAID* área de nombres de identidad de origen al campo de identidad de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest. |
 | IDFA | [!DNL Apple ID for Advertisers] | Asignar el *IDFA* área de nombres de identidad de origen al campo de identidad de destino *pinterest_audience*. Las identidades se distinguen y resuelven tras la ingesta de datos en Pinterest. |
-| CORREO ELECTRÓNICO | Direcciones de correo electrónico (texto no cifrado o con hash con el algoritmo SHA256) | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. <br> Asignar el *Correo electrónico* o *Email_LC_SHA256* área de nombres de identidad de origen al campo de identidad de destino *pinterest_audience*. |
+| EMAIL | Direcciones de correo electrónico (texto no cifrado o con hash con el algoritmo SHA256) | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. <br> Asignar el *Correo electrónico* o *Email_LC_SHA256* área de nombres de identidad de origen al campo de identidad de destino *pinterest_audience*. |
 
 {style="table-layout:auto"}
 

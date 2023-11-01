@@ -3,10 +3,10 @@ title: User agent client hints
 description: Descubra cómo funcionan las sugerencias del cliente del agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
 keywords: user-agent;sugerencias del cliente; cadena; cadena de user-agent; baja entropía; alta entropía
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 6%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
@@ -120,9 +120,9 @@ El [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Características de Audience Manager que dependen de sugerencias de cliente de alta entropía {#aam}
 
-[!DNL Google] ha actualizado el [!DNL Chrome] funcionalidad del explorador para minimizar la información recopilada mediante el `User-Agent` encabezado. Como resultado, los clientes de Audience Manager que utilizan [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) ya no recibirá información fiable sobre los rasgos según [claves a nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=es).
+[!DNL Google] ha actualizado el [!DNL Chrome] funcionalidad del explorador para minimizar la información recopilada mediante el `User-Agent` encabezado. Como resultado, los clientes de Audience Manager que utilizan [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es) ya no recibirá información fiable sobre los rasgos según [claves a nivel de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-Los clientes de Audience Manager que utilicen claves de nivel de plataforma para la segmentación deben cambiar a [SDK web de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)y habilite [Sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos fiables de rasgos.
+Los clientes de Audience Manager que utilicen claves de nivel de plataforma para la segmentación deben cambiar a [SDK web de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) en lugar de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=es)y habilite [Sugerencias de cliente de alta entropía](#enabling-high-entropy-client-hints) para seguir recibiendo datos fiables de rasgos.
 
 ## Habilitar sugerencias de cliente de alta entropía {#enabling-high-entropy-client-hints}
 

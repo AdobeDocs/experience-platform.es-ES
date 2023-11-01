@@ -2,7 +2,7 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 83%
@@ -160,7 +160,7 @@ Se activa el evento si el usuario permanece en la página durante una determinad
 
 Se activa el evento cuando el DOM está listo y el usuario puede interactuar con la página. No hay configuraciones para este tipo de evento.
 
-#### Library Loaded (Page Top) {#library-loaded-page-top}
+#### Biblioteca cargada (Principio de la página) {#library-loaded-page-top}
 
 El evento se activa en cuanto se carga la biblioteca de etiquetas. No hay configuraciones para este tipo de evento.
 
@@ -191,15 +191,15 @@ Si selecciona esta opción, aparecerán disponibles los siguientes parámetros:
 
 * `property=value`
 
-   Especifique el valor de la propiedad
+  Especifique el valor de la propiedad
 
 * Regex
 
-   Habilitar si `property=value` es una expresión regular.
+  Habilitar si `property=value` es una expresión regular.
 
 * Add
 
-   Añadir otro par de `property=value`.
+  Añadir otro par de `property=value`.
 
 #### Advanced options (Bubbling)
 
@@ -572,11 +572,11 @@ Ejecute la regla en un explorador e inspeccione el objeto de evento registrado e
 
 La extensión principal, disponible para todos los usuarios de Adobe Experience Platform, contiene una acción de código personalizado para ejecutar JavaScript o HTML proporcionados por el usuario. A menudo, es útil que los usuarios comprendan cómo se procesan las reglas con acciones de Custom Code.
 
-#### Reglas que utilizan los eventos Page Top o Page Bottom
+#### Reglas que utilizan los eventos Principio de la página o Final de la página
 
 El código de las acciones personalizadas está incrustado en la biblioteca principal de etiquetas. El código se escribe en el documento usando document.write. Si una regla tiene varias acciones Custom Code, el código se escribe en el orden configurado en la regla.
 
-#### Reglas que utilizan cualquier evento distinto a Page Top o Page Bottom
+#### Reglas que utilizan cualquier evento distinto a Principio de la página o Final de la página
 
 El código de las acciones personalizadas se carga desde el servidor y se escribe en el documento mediante [Postscribe](https://github.com/krux/postscribe). Si una regla tiene varias acciones Custom Code, el código se carga en paralelo desde el servidor, pero se escribe en el orden configurado en la regla.
 
@@ -636,7 +636,7 @@ Esta acción almacena en déclencheur todas las reglas que utilizan un específi
 
 ![Captura de pantalla de una acción Llamada directa de Déclencheur en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
 
-La acción se asigna directamente a [`track` método](../../../ui/client-side/satellite-object.md?lang=en#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
+La acción se asigna directamente a [`track` método](../../../ui/client-side/satellite-object.md#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
 
 ## Tipos de Data Elements de Extensión principal
 

@@ -5,9 +5,9 @@ title: Creación de los esquemas y conjuntos de datos web de Luma
 type: Tutorial
 description: Este tutorial proporciona los requisitos previos y los recursos necesarios para el modelo de tendencia de demostración de Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Este tutorial le proporciona los requisitos previos y los recursos necesarios pa
 
 ## Descargar los recursos {#assets}
 
-El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personalizado. Antes de continuar, [descargar los recursos necesarios](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) carpeta zip. Esta carpeta contiene:
+El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personalizado. Antes de continuar, [descargar los recursos necesarios](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) carpeta zip. Esta carpeta contiene:
 
 - El portátil modelo de tendencia a la compra
 - Un bloc de notas utilizado para introducir datos en un conjunto de datos de formación y puntuación (un subconjunto de los datos web de Luma)

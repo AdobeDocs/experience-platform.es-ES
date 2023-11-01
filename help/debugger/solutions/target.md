@@ -1,17 +1,17 @@
 ---
 title: Prueba de una implementación de Adobe Target con Adobe Experience Platform Debugger
-description: Aprenda a utilizar Adobe Experience Platform Debugger para probar y depurar un sitio web habilitado con Adobe Target.
+description: Aprenda a utilizar el Adobe Experience Platform Debugger para probar y depurar un sitio web habilitado con Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 4%
+source-wordcount: '1209'
+ht-degree: 5%
 
 ---
 
 # Prueba de una implementación de Adobe Target con Adobe Experience Platform Debugger
 
-Adobe Experience Platform Debugger proporciona un conjunto de herramientas útiles para probar y depurar un sitio web que se ha equipado con una implementación de Adobe Target. Esta guía cubre algunos flujos de trabajo comunes y prácticas recomendadas para utilizar Platform Debugger en un sitio web habilitado para Target.
+El Adobe Experience Platform Debugger de trabajo proporciona un conjunto de herramientas útiles para probar y depurar un sitio web que se ha equipado con una implementación de Adobe Target. Esta guía cubre algunos flujos de trabajo comunes y prácticas recomendadas para utilizar Platform Debugger en un sitio web habilitado para Target.
 
 ## Requisitos previos
 
@@ -69,7 +69,7 @@ Se capturan los siguientes valores:
 | [!DNL clientCode] | El identificador de la cuenta de su organización según Target lo reconoce. |
 | [!DNL requestType] | La API que se utilizó para la solicitud. Si se utiliza at.js 1.x, el valor es `/json`. Si utiliza at.js 2.x, el valor es `delivery`. |
 | [!DNL Audience Manager Blob] | Proporciona información sobre metadatos de Audience Manager cifrados denominados &quot;blob&quot;. |
-| [!DNL Audience Location Hint] | ID de región de recopilación de datos. Es un identificador numérico para la ubicación geográfica de un centro de datos de servicio de ID en particular. Para obtener más información, consulte la documentación del Audience Manager sobre [ID de región de DCS, ubicaciones y nombres de host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=es) y la guía del servicio de ID de Experience Cloud sobre [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | ID de región de recopilación de datos. Es un identificador numérico para la ubicación geográfica de un centro de datos de servicio de ID en particular. Para obtener más información, consulte la documentación del Audience Manager sobre [ID de región de DCS, ubicaciones y nombres de host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=es) y la guía del servicio de ID de Experience Cloud sobre [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | La altura del explorador en píxeles. |
 | [!DNL Browser Time Offset] | Diferencia horaria del explorador asociada a su zona horaria. |
 | [!DNL Browser Width] | Ancho de la ventana del explorador, en píxeles. |
@@ -80,7 +80,7 @@ Se capturan los siguientes valores:
 | [!DNL Experience Cloud Visitor ID] | Si se detecta una, proporciona información sobre la [ID DEL Experience Cloud (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es) que se asigna al visitante del sitio actual. |
 | [!DNL experienceCloud] | Contiene los ID de Experience Cloud de esta sesión de usuario específica: un A4T [ID de datos suplementario](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), y a [ID de visitante (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es). |
 | [!DNL id] | El [ID de destino](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) para el visitante. |
-| [!DNL Mbox Host] | El [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) que se realizó la solicitud de Target a. |
+| [!DNL Mbox Host] | El [host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es) que se realizó la solicitud de Target a. |
 | [!DNL Mbox PC] | Una cadena que encapsula el [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) ID de sesión y [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) sugerencia de ubicación. at.js utiliza este valor para garantizar que la sesión y la ubicación de Edge se mantengan fijas. |
 | [!DNL Mbox Referrer] | El referente URL del específico [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) solicitud. |
 | [!DNL Mbox URL] | La dirección URL del [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) servidor. |
@@ -92,7 +92,7 @@ Se capturan los siguientes valores:
 | [!DNL Screen Width] | Ancho de la pantalla en píxeles. |
 | [!DNL Supplemental Data ID] | ID generado por el sistema que se utiliza para hacer coincidir a los visitantes con las llamadas correspondientes de Adobe Target y Adobe Analytics. Consulte la [Guía de solución de problemas de A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D) para obtener más información. |
 | [!DNL vst] | El [Configuración de API del servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
-| [!DNL webGLRenderer] | Proporciona información sobre el procesador WebGL utilizado en la página, si procede. |
+| [!DNL webGLRenderer] | Proporciona información sobre el procesador WebGL utilizado en la página, si corresponde. |
 
 {style="table-layout:auto"}
 

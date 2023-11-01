@@ -2,10 +2,10 @@
 title: Creación de una conexión de origen de Mixpanel en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Mixpanel mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 11%
+source-wordcount: '841'
+ht-degree: 9%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 11%
 
 Este tutorial proporciona los pasos para crear una [!DNL Mixpanel] conexión de origen mediante la interfaz de usuario de Adobe Experience Platform Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -65,7 +65,7 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a
 >id="platform_sources_mixpanel_timezone"
 >title="Establecer una zona horaria para la ingesta de Mixpanel"
 >abstract="La zona horaria debe ser la misma que la configuración de la zona horaria del perfil de Mixpanel, ya que Platform utiliza la zona horaria del proyecto designada para ingerir datos relevantes de Mixpanel. Mixpanel ajustará su zona horaria para coordinarse con la zona horaria del proyecto antes de registrar el evento en un almacén de datos de Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=es#project-id-and-timezone" text="Obtenga más información en la documentación"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="Obtenga más información en la documentación"
 
 Una vez autenticado el origen, proporcione el ID de proyecto y la zona horaria y, a continuación, seleccione **[!UICONTROL Seleccionar]**.
 

@@ -3,10 +3,10 @@ title: Datos de identidad en el SDK web de Platform
 description: Obtenga información sobre cómo recuperar y administrar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
 keywords: Identidad;Identidad de origen;Servicio de identidad;Identidad de terceros;Migración de ID;ID de visitante;identidad de terceros;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Sincronizando identidades;syncIdentity;sendEvent;identityMap;primary;ecid;Área de nombres de identidad;id de área de nombres;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 0%
+source-wordcount: '1414'
+ht-degree: 1%
 
 ---
 
@@ -47,7 +47,7 @@ Aunque los exploradores han tratado durante mucho tiempo las cookies configurada
 
 ### Efectos de la duración de las cookies en las aplicaciones de Adobe Experience Cloud {#lifespans}
 
-Independientemente de si elige la recopilación de datos de origen o de terceros, el tiempo que una cookie puede persistir tiene un impacto directo en el recuento de visitantes en Adobe Analytics y Customer Journey Analytics. Además, es posible que los usuarios finales experimenten experiencias de personalización incoherentes cuando se utiliza Adobe Target o Offer decisioning en el sitio.
+Independientemente de si elige la recopilación de datos de origen o de terceros, el tiempo que una cookie puede persistir tiene un impacto directo en el recuento de visitantes en Adobe Analytics y Customer Journey Analytics. Además, es posible que los usuarios finales experimenten experiencias de personalización incoherentes cuando se utiliza Adobe Target o Offer Decisioning en el sitio.
 
 Por ejemplo, considere una situación en la que ha creado una experiencia de personalización que promocionará cualquier elemento a la página principal si un usuario lo ha visto tres veces en los últimos siete días.
 
@@ -119,7 +119,7 @@ Cada objeto de identidad de la matriz de identidades contiene las siguientes pro
 | `authenticationState` | Cadena | **(Obligatorio)** El estado de autenticación del ID. Los valores posibles son `ambiguous`, `authenticated`, y `loggedOut`. |
 | `primary` | Booleano | Determina si esta identidad debe utilizarse como fragmento principal en el perfil. De forma predeterminada, el ECID se establece como identificador principal del usuario. Si se omite, el valor predeterminado es `false`. |
 
-Uso del `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que usar el campo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) método desde el [!DNL ID Service API]. Consulte la [Documentación de API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) para obtener más información.
+Uso del `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que usar el campo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=es) método desde el [!DNL ID Service API]. Consulte la [Documentación de API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obtener más información.
 
 ## Migración de la API de visitante a ECID
 

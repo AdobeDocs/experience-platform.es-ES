@@ -4,10 +4,10 @@ title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 badgeLimitedAvailability: label="Disponibilidad limitada" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2123'
-ht-degree: 10%
+source-wordcount: '2121'
+ht-degree: 9%
 
 ---
 
@@ -110,7 +110,7 @@ La sección Audiencias de similitud muestra una lista de todas las audiencias de
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Factores influyentes"
 >abstract="Los factores influyentes son atributos, eventos y pertenencias a públicos que son importantes para explicar la similitud de un perfil de los miembros del público base. Las etiquetas y políticas de uso de datos se pueden utilizar para que ciertos datos no se consideren factores influyentes en modelos de similitud."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=es#exclude" text="Excluir datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="Excluir datos"
 
 La sección de factores influyentes muestra los 100 factores que más influyen en el modelo de similitud para la audiencia base seleccionada. Estos factores influyentes son los atributos de perfil, los eventos de experiencia y las suscripciones a audiencias, que son los más importantes para explicar las similitudes en la audiencia base. Comprender los principales factores influyentes le permite personalizar mejor el contenido de marketing para esta audiencia y para cualquier audiencia de similitud que cree a partir de ella. Tenga en cuenta que no se mostrarán todos los factores influyentes que afectan al modelo de similitud.
 

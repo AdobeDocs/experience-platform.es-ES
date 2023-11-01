@@ -2,16 +2,16 @@
 title: Resumen de personalización
 description: Aprenda a utilizar la API del servidor de red perimetral de Adobe Experience Platform para recuperar contenido personalizado de las soluciones de personalización de Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 10%
+source-wordcount: '739'
+ht-degree: 11%
 
 ---
 
 # Resumen de personalización
 
-Con el [!DNL Server API], puede recuperar contenido personalizado de las soluciones de personalización de Adobe, incluyendo [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html) y [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+Con el [!DNL Server API], puede recuperar contenido personalizado de las soluciones de personalización de Adobe, incluyendo [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html) y [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es).
 
 Además, la variable [!DNL Server API] potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) y el [conexión de personalización personalizada](../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../destinations/ui/activate-edge-personalization-destinations.md).
 

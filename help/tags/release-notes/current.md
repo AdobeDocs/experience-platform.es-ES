@@ -2,10 +2,10 @@
 title: Notas de la versión para etiquetas y reenvío de eventos
 description: Las notas de la versión más recientes para etiquetas y reenvío de eventos de Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '835'
+ht-degree: 12%
 
 ---
 
@@ -13,33 +13,33 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Al avanzar, las etiquetas y las notas de la versión del reenvío de eventos ya no se proporcionarán en esta página. Consulte la última versión [Notas de la versión de Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) para obtener etiquetas detalladas y actualizaciones del reenvío de eventos.
+>Al avanzar, las etiquetas y las notas de la versión del reenvío de eventos ya no se proporcionarán en esta página. Consulte la última versión [Notas de la versión de Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) para obtener etiquetas detalladas y actualizaciones del reenvío de eventos.
 
 ## 26 de abril de 2023
 
-* **Secreto JWT de OAuth**: La [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) permite a los clientes utilizar tokens de Adobe y servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos.
+* **Secreto JWT de OAuth**: La [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) permite a los clientes utilizar tokens de Adobe y servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos.
 
 Se ha lanzado la siguiente extensión nueva:
 
-* **[!DNL Pinterest Conversions API]extensión**: La [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) La extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor que utilizan el [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]extensión**: La [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=es) La extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor que utilizan el [!DNL Pinterest Conversions API].
 
 ## 29 de marzo de 2023
 
 **Flujos de trabajo de inicio rápido (beta)**
 
-Acceda a los nuevos flujos de trabajo de inicio rápido en &quot;Introducción&quot; desde la pantalla de inicio de la recopilación de datos. Los siguientes flujos de trabajo ya están disponibles para los clientes como una versión beta pública.
-* **[API de metaconversiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: los clientes del reenvío de eventos pueden recopilar y reenviar rápidamente datos de eventos del lado del servidor a Meta para las conversiones de anuncios en solo unos pasos sencillos.
+Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. Los siguientes flujos de trabajo ya están disponibles para los clientes como una versión beta pública.
+* **[API de metaconversiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: los clientes del reenvío de eventos pueden recopilar y reenviar rápidamente datos de eventos del lado del servidor a Meta para las conversiones de anuncios en solo unos pasos sencillos.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Los clientes pueden implementar rápidamente el SDK móvil y validar eventos móviles básicos en solo unos sencillos pasos.
 
 Se han lanzado nuevas extensiones:
 
-* **[!DNL Braze]extensión de reenvío de eventos**: La [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) La extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor que utilizan el [!DNL Braze] API de seguimiento de usuario.
-* **[API de eventos de Epsilon] extensión de reenvío de eventos**: La [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) La extensión de le permite aprovechar el reenvío de eventos para capturar información de eventos en Adobe Experience Platform Edge Network y enviarla a [!DNL Epsilon] uso del [!DNL Epsilon] API de evento.
-* **[!DNL Mixpanel]extensión de reenvío de eventos**: La [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) La extensión de le permite aprovechar el reenvío de eventos para capturar información de eventos en Adobe Experience Platform Edge Network y enviarla a [!DNL Mixpanel] uso de la API de seguimiento de eventos.
+* **[!DNL Braze]extensión de reenvío de eventos**: La [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=es) La extensión de reenvío de eventos permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor que utilizan el [!DNL Braze] API de seguimiento de usuario.
+* **[API de eventos de Epsilon] extensión de reenvío de eventos**: La [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=es) La extensión de le permite aprovechar el reenvío de eventos para capturar información de eventos en Adobe Experience Platform Edge Network y enviarla a [!DNL Epsilon] uso del [!DNL Epsilon] API de evento.
+* **[!DNL Mixpanel]extensión de reenvío de eventos**: La [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=es) La extensión de le permite aprovechar el reenvío de eventos para capturar información de eventos en Adobe Experience Platform Edge Network y enviarla a [!DNL Mixpanel] uso de la API de seguimiento de eventos.
 
 ## 25 de enero de 2023
 
-* **Nueva pantalla de inicio**: La página de inicio de la IU de recopilación de datos se ha actualizado para incluir información útil de incorporación y vínculos para optimizar la productividad. Esto incluye:
+* **Nueva pantalla de inicio**: La página de inicio de la IU de recopilación de datos se ha actualizado para incluir información útil de incorporación y vínculos para optimizar la productividad. Esto incluye lo siguiente:
    1. Documentación y flujos de trabajo recomendados para empezar
    1. Propiedades, reglas y elementos de datos recientes
    1. Extensiones populares

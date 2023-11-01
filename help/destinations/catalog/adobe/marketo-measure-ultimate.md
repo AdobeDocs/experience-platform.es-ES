@@ -3,9 +3,9 @@ title: Destino de Marketo Measure Ultimate
 description: Obtenga información sobre cómo conectar y activar datos en el destino de Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Lea el [(Beta) Exportar conjuntos de datos](/help/destinations/ui/export-dataset
 
 ## Validar exportación de datos {#exported-data}
 
-Para validar una exportación correcta de conjuntos de datos, puede comprobar que el conjunto de datos ha llegado correctamente a su [data warehouse de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
+Para validar una exportación correcta de conjuntos de datos, puede comprobar que el conjunto de datos ha llegado correctamente a su [data warehouse de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

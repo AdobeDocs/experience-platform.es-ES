@@ -3,9 +3,9 @@ keywords: correo electrónico;Correo electrónico;correo electrónico;destinos d
 title: Conexión de SendGrid
 description: El destino SendGrid le permite exportar los datos de origen y activarlos dentro de SendGrid para sus necesidades comerciales.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Se requieren los siguientes elementos antes de comenzar a configurar el destino.
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creado en [!DNL Experience Platform]. Consulte también la [límites](#limits) más abajo en esta página.
+Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es), y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creado en [!DNL Experience Platform]. Consulte también la [límites](#limits) más abajo en esta página.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 ### Rellenar detalles de destino {#destination-details}
 
-While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) Para este destino, debe proporcionar la siguiente información:
+While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) Para este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Nombre]**: Nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: una descripción opcional que le ayudará a identificar este destino en el futuro.

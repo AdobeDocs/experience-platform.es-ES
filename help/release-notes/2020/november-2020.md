@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 10%
+source-wordcount: '2179'
+ht-degree: 11%
 
 ---
 
@@ -75,7 +75,7 @@ Para obtener más información, consulte la [[!DNL Offer Decisioning]](https://e
 | Zona protegida de producción | [!DNL Experience Platform] proporciona una sola zona protegida de producción que no se puede eliminar ni restablecer. El número total de zonas protegidas disponibles, producción y no producción, viene determinado por la licencia adquirida. |
 | Zonas protegidas de no producción | Se pueden crear varias zonas protegidas que no sean de producción para una sola [!DNL Platform] , lo que le permite probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar a la zona protegida de producción. |
 | Conmutador de zona protegida | En el [!DNL Experience Platform] En la interfaz de usuario de, el conmutador de simulador de pruebas situado en la esquina superior izquierda de la pantalla le permite alternar entre los simuladores de pruebas disponibles mediante un menú desplegable. El conmutador de zonas protegidas también proporciona una función de búsqueda que le permite filtrar las zonas protegidas disponibles. |
-| `x-sandbox-name` header | Todas las llamadas a [!DNL Experience Platform] Las API ahora deben incluir el nuevo `x-sandbox-name` encabezado, cuyo valor hace referencia a `name` del entorno limitado en el que se realizará la operación. |
+| `x-sandbox-name` encabezado | Todas las llamadas a [!DNL Experience Platform] Las API ahora deben incluir el nuevo `x-sandbox-name` encabezado, cuyo valor hace referencia a `name` del entorno limitado en el que se realizará la operación. |
 
 Para obtener más información, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md).
 
@@ -129,7 +129,7 @@ Para obtener más información, consulte la [Resumen de destinos](../../destinat
 
 ## Servicios inteligentes {#intelligent-services}
 
-Los servicios inteligentes permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones específicas de las necesidades de una empresa mediante configuraciones empresariales sin necesidad de tener experiencia en la ciencia de datos.
+Los servicios inteligentes permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a analistas de marketing formular predicciones concretas de las necesidades de una compañía mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos.
 
 **Funciones principales**
 

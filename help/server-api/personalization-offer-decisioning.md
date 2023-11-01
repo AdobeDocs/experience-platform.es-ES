@@ -1,11 +1,11 @@
 ---
 title: Personalización mediante Offer decisioning
-description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas mediante el Offer decisioning.
+description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas a través de Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-La API del servidor de red perimetral puede ofrecer experiencias personalizadas administradas en [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) al canal web.
+La API del servidor de red perimetral puede ofrecer experiencias personalizadas administradas en [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=es) al canal web.
 
 [!DNL Offer Decisioning] admite una interfaz no visual para crear, activar y ofrecer sus actividades y experiencias de personalización.
 
@@ -23,9 +23,9 @@ Personalización mediante [!DNL Offer Decisioning] requiere que tenga acceso a [
 
 ## Configuración de la secuencia de datos {#configure-your-datastream}
 
-Antes de poder usar la API de servidor junto con el Offer decisioning, debe habilitar la personalización de Adobe Experience Platform en la configuración del conjunto de datos y habilitar la variable **[!UICONTROL Offer decisioning]** opción.
+Antes de poder usar la API de servidor junto con Offer Decisioning, debe habilitar la personalización de Adobe Experience Platform en la configuración del conjunto de datos y habilitar la **[!UICONTROL Offer decisioning]** opción.
 
-Consulte la [guía sobre cómo agregar servicios a un conjunto de datos](../datastreams/overview.md#adobe-experience-platform-settings), para obtener información detallada sobre cómo habilitar el Offer decisioning.
+Consulte la [guía sobre cómo agregar servicios a un conjunto de datos](../datastreams/overview.md#adobe-experience-platform-settings), para obtener información detallada sobre cómo habilitar Offer Decisioning.
 
 ![Imagen de la interfaz de usuario que muestra la pantalla de configuración del servicio de flujo de datos, con el Offer decisioning seleccionado](assets/aep-od-datastream.png)
 
@@ -41,7 +41,7 @@ Para obtener más información sobre [!DNL Offer Decisioning Engine], consulte l
 
 Después [configuración de la secuencia de datos](#configure-your-datastream)Además, debe definir los ámbitos de decisión que se utilizarán en la campaña de personalización.
 
-[Ámbitos de decisión](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) son las cadenas JSON codificadas en Base64 que contienen los ID de actividad y ubicación que desea que tengan. [!DNL Offer Decisioning Service] para usar al proponer ofertas.
+[Ámbitos de decisión](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) son las cadenas JSON codificadas en Base64 que contienen los ID de actividad y ubicación que desea que tengan. [!DNL Offer Decisioning Service] para usar al proponer ofertas.
 
 **Ámbito de decisión JSON**
 
@@ -58,7 +58,7 @@ Después [configuración de la secuencia de datos](#configure-your-datastream)Ad
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Después de crear las ofertas y colecciones, debe definir un [ámbito de decisión](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Después de crear las ofertas y colecciones, debe definir un [ámbito de decisión](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Copie el ámbito de decisión codificado en Base64. Lo utilizará en la `query` objeto de la solicitud de API del servidor.
 
@@ -84,11 +84,11 @@ POST /ee/v2/interact
 
 ### Solicitud {#request}
 
-A continuación, se describe una solicitud completa que incluye un objeto XDM completo, un objeto de datos y una consulta de Offer decisioning.
+A continuación, se describe una solicitud completa que incluye un objeto XDM completo, un objeto de datos y una consulta del Offer decisioning.
 
 >[!NOTE]
 >
->El `xdm` y `data` Los objetos de son opcionales y solo son necesarios para el Offer decisioning si ha creado segmentos con condiciones que utilizan campos de en cualquiera de esos objetos.
+>El `xdm` y `data` Los objetos de son opcionales y solo son necesarios para Offer Decisioning si ha creado segmentos con condiciones que utilizan campos de en cualquiera de esos objetos.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \

@@ -2,9 +2,9 @@
 title: Personalización mediante Adobe Target
 description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas creadas en Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-La API del servidor de red perimetral puede ofrecer y procesar experiencias personalizadas creadas en Adobe Target con la ayuda del [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+La API del servidor de red perimetral puede ofrecer y procesar experiencias personalizadas creadas en Adobe Target con la ayuda del [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Experiencias de personalización creadas mediante [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) no son totalmente compatibles con la API de servidor. La API de servidor puede **recuperar** actividades creadas por VEC, pero la API de servidor no puede **render** actividades creadas por VEC. Si desea procesar actividades creadas por VEC, implemente [personalización híbrida](../edge/personalization/hybrid-personalization.md) mediante el SDK web y la API del servidor de red perimetral.
+>Experiencias de personalización creadas mediante [Compositor de experiencias visuales (VEC) de Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) no son totalmente compatibles con la API de servidor. La API de servidor puede **recuperar** actividades creadas por VEC, pero la API de servidor no puede **render** actividades creadas por VEC. Si desea procesar actividades creadas por VEC, implemente [personalización híbrida](../edge/personalization/hybrid-personalization.md) mediante el SDK web y la API del servidor de red perimetral.
 
 ## Configuración de la secuencia de datos {#configure-your-datastream}
 

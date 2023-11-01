@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para probar si el destino de flujo continuo está configurado correctamente y verificar la integridad de los flujos de datos a su destino configurado.
 title: Prueba del destino de flujo continuo con perfiles de muestra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,8 @@ Puede usar el complemento [API de generación de perfiles de muestra](sample-pro
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Leer [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) y [activación de perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) para obtener más información.
-> * Después de establecer la conexión con su destino, obtenga el ID de instancia de destino que debe utilizar en las llamadas API a este extremo cuando [exploración de una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Leer [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activación de perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+> * Después de establecer la conexión con su destino, obtenga el ID de instancia de destino que debe utilizar en las llamadas API a este extremo cuando [exploración de una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![Imagen de interfaz de usuario cómo obtener el ID de instancia de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introducción a las operaciones de API de prueba de destino {#get-started}

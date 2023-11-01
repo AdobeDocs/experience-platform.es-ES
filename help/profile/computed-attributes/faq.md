@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre los atributos calculados
 description: Encuentre respuestas a las preguntas más frecuentes acerca del uso de atributos calculados.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ Los atributos calculados derivan automáticamente las etiquetas de uso de datos 
 
 ## ¿Cómo se utilizan los atributos calculados con Adobe Journey Optimizer?
 
-Para utilizar atributos calculados en recorridos, debe añadir el `SystemComputedAttributes` grupo de campos al origen de datos del Experience Platform. Para obtener más información sobre la configuración de la fuente de datos de Experience Platform, lea la [Guía de fuente de datos de Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Para utilizar atributos calculados en recorridos, debe añadir el `SystemComputedAttributes` grupo de campos al origen de datos del Experience Platform. Para obtener más información sobre la configuración de la fuente de datos de Experience Platform, lea la [Guía de fuente de datos de Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

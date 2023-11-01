@@ -3,9 +3,9 @@ title: (Beta) La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ### Rellene los detalles del destino {#fill-in-details}
 
-Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) Para este destino, debe proporcionar la siguiente información:
+Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. While [configuración](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) Para este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Tipo de cuenta]**: Elija la **[!UICONTROL Cuenta existente]** opción.
 * **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.

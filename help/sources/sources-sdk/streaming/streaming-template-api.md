@@ -4,9 +4,9 @@ description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe 
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU FUENTE* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse *SU ORIGEN* para acceder a Experience Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN*
 
 ## Connect *SU ORIGEN* a Platform mediante el [!DNL Flow Service] API
 
-El siguiente tutorial le guiará para crear una *SU FUENTE* conexión de origen y cree un flujo de datos para *SU ORIGEN* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+El siguiente tutorial le guiará para crear una *SU ORIGEN* conexión de origen y cree un flujo de datos para *SU ORIGEN* a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Crear una conexión de origen {#source-connection}
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato del *SU FUENTE* datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | El formato del *SU ORIGEN* datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
 
 **Respuesta**
 
@@ -114,13 +114,13 @@ Para que los datos de origen se utilicen en Platform, se debe crear un esquema d
 
 Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
 Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Creación de una conexión de destino {#target-connection}
 

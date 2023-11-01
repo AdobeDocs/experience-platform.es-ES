@@ -2,9 +2,9 @@
 title: Notas de la versión de la extensión de Adobe Analytics
 description: Últimas notas de la versión de la extensión de etiquetas de Adobe Analytics en Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 87%
 
 ---
@@ -193,7 +193,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Funcionalidades**:
 
-* Actualización de la extensión de Adobe Analytics a [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es#version-2.14.0), que incluye una corrección de un problema conocido de clearVars
+* Actualización de la extensión de Adobe Analytics a [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), que incluye una corrección de un problema conocido de clearVars
 * Se ha añadido un vínculo Exchange a la extensión. Se puede acceder a la lista de Exchange haciendo clic en el menú desplegable y seleccionando “Información de extensión”
 
 **Corrección de errores**:

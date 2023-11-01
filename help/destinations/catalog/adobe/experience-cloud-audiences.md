@@ -3,10 +3,10 @@ title: Audiencias de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 7cd8c257f723e2e60058610bf845ee1fe8785de7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 2%
+source-wordcount: '1683'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Para enviar audiencias a otras soluciones de Adobe, utilice las conexiones direc
 
 >[!IMPORTANT]
 >
->Este destino reemplaza al [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) desde Real-time Customer Data Platform hasta varias soluciones de Experience Cloud.
+>Este destino reemplaza al [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) desde Real-time Customer Data Platform hasta varias soluciones de Experience Cloud.
 > 
 >Si ya está compartiendo audiencias de Real-Time CDP con Audience Manager y otras soluciones de Experience Cloud a través de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)No obstante, debe ponerse en contacto con el Servicio de atención al cliente para deshabilitar la integración heredada antes de utilizar este destino.
 
@@ -37,8 +37,8 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!UICONTROL Au
 
 En Audience Manager, puede utilizar las audiencias de Real-Time CDP para casos de uso de la plataforma de gestión de datos, como:
 
-* Agregando [datos de terceros](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) a sus segmentos;
-* [Modelado algorítmico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
+* Agregando [datos de terceros](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) a sus segmentos;
+* [Modelado algorítmico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
 * Activar las audiencias en destinos basados en cookies que aún no son compatibles con el catálogo de destinos de Real-Time CDP.
 
 ### Control granular de audiencias exportadas {#segments-control}
@@ -168,7 +168,7 @@ Para validar que la exportación de datos se haya realizado correctamente, puede
 
 ### Validar datos en el Audience Manager
 
-Las audiencias de Real-Time CDP aparecen en Audience Manager como [señales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [rasgos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), y [segmentos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Puede comprobar en Audience Manager si los datos han aparecido tal como se describe en los vínculos de la documentación anteriores.
+Las audiencias de Real-Time CDP aparecen en Audience Manager como [señales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [rasgos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), y [segmentos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). Puede comprobar en Audience Manager si los datos han aparecido tal como se describe en los vínculos de la documentación anteriores.
 
 Los nombres de los segmentos comienzan a rellenarse en Audience Manager 15 minutos después de que las audiencias se hayan enviado desde Real-Time CDP.
 
@@ -181,13 +181,13 @@ La población completa será visible en Audience Manager después de 72 horas y 
 Todo [!DNL Real-Time CDP] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
 
 La gobernanza de datos en Real-Time CDP la aplican ambos [etiquetas de uso de datos](/help/data-governance/labels/reference.md) y acciones de marketing.
-Las etiquetas de uso de datos se transferirán a las aplicaciones, pero las acciones de marketing no. Esto significa que, una vez que llegan a Audience Manager, las audiencias de Real-Time CDP se pueden exportar a cualquier destino disponible. En Audience Manager, puede utilizar [controles de exportación de datos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) para impedir que las audiencias se exporten a determinados destinos.
+Las etiquetas de uso de datos se transferirán a las aplicaciones, pero las acciones de marketing no. Esto significa que, una vez que llegan a Audience Manager, las audiencias de Real-Time CDP se pueden exportar a cualquier destino disponible. En Audience Manager, puede utilizar [controles de exportación de datos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) para impedir que las audiencias se exporten a determinados destinos.
 
 Audiencias marcadas con el [!DNL HIPAA] la acción de marketing no se envía de Real-Time CDP al Audience Manager.
 
 ### Administración de permisos en Audience Manager
 
-Las audiencias y características de Audience Manager están sujetas a [Controles de acceso basados en roles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=es) (RBAC).
+Las audiencias y características de Audience Manager están sujetas a [Controles de acceso basados en roles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC).
 
 Las audiencias exportadas desde Real-Time CDP se asignan a una fuente de datos específica en el Audience Manager llamada **[!UICONTROL Segmentos de Experience Platform]**.
 

@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2023'
 description: Las notas de la versión de marzo de 2023 de Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 99%
+source-wordcount: '2204'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| Nuevo flujo de trabajo de inicio rápido para la API de Conversiones de Meta (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [Flujo de trabajo de inicio rápido para la API de Conversiones de Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=es#quick-start) permite a los clientes recopilar y reenviar rápidamente datos de evento del lado del servidor a Meta para las conversiones de anuncios en solo unos sencillos pasos. |
+| Nuevo flujo de trabajo de inicio rápido para la API de Conversiones de Meta (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [Flujo de trabajo de inicio rápido para la API de Conversiones de Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) permite a los clientes recopilar y reenviar rápidamente datos de evento del lado del servidor a Meta para las conversiones de anuncios en solo unos sencillos pasos. |
 | Nuevo flujo de trabajo de inicio rápido para el SDK móvil (Beta) | Acceda a los nuevos flujos de trabajo de inicio rápido en “Introducción” desde la pantalla de inicio de la recopilación de datos. El [flujo de trabajo de inicio rápido para el SDK móvil](https://developer.adobe.com/client-sdks/documentation/) le permite implementar rápidamente el SDK móvil y validar eventos móviles básicos en solo unos sencillos pasos. |
 | Extensión de reenvío de eventos de [!DNL Braze] | La extensión de reenvío de eventos [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=es) permite aprovechar los datos capturados en la red perimetral de Adobe Experience Platform y enviarlos a [!DNL Braze] en forma de eventos del lado del servidor que utilizan las API de seguimiento de usuarios de [!DNL Braze]. |
 | Extensión de reenvío de eventos de [!DNL Epsilon] | La extensión [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=es) le permite aprovechar el reenvío de eventos para capturar información de eventos en la red perimetral de Adobe Experience Platform y enviarla a [!DNL Epsilon] usando la API de evento de [!DNL Epsilon]. |

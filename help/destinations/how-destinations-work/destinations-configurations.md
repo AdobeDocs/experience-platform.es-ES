@@ -2,9 +2,9 @@
 title: Configuración de exportación configurable y común en destinos
 description: Descubra qué configuración de exportación de destinos se puede configurar en un nivel de destino y cuáles son fijos y no se pueden editar.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Esta página describe o vincula todos los ajustes de exportación comunes y conf
 
 ## Configuración común de exportación entre tipos de destino {#common-settings-across-destination-types}
 
-El comportamiento de exportación de destino es coherente entre los destinos que pertenecen a un tipo de destino con respecto a *qué déclencheur exporta un destino* y *elementos incluidos en las exportaciones de destino*. Las exportaciones de destino se activan mediante notificaciones que el servicio de destinos recibe del [servicio upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+El comportamiento de exportación de destino es coherente entre los destinos que pertenecen a un tipo de destino con respecto a *qué déclencheur exporta un destino* y *elementos incluidos en las exportaciones de destino*. Las exportaciones de destino se activan mediante notificaciones que el servicio de destinos recibe del [servicio upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Lo que se incluye en las exportaciones de destino varía ligeramente entre los tipos de destino. Más información sobre la [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Los desarrolladores de destino o los usuarios de Real-Time CDP no pueden editar esta configuración.
 

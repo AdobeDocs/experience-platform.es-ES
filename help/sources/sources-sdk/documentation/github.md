@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Uso de la interfaz web de GitHub para crear una página de documentación de orígenes
 description: Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub para crear documentación y enviar una solicitud de extracción (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '618'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,11 @@ Este documento proporciona pasos sobre cómo utilizar la interfaz web de GitHub 
 
 >[!TIP]
 >
->Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configuración del entorno de GitHub
 
-El primer paso para configurar el entorno de GitHub es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+El primer paso para configurar el entorno de GitHub es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.es).
 
 ![platform-repo](../assets/platform-repo.png)
 

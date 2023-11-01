@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;fuentes;conectores;conectores de origen;sdk de fuentes;sdk;SDK
 solution: Experience Platform
-title: Utilizar un editor de texto en el entorno local para crear una página de documentación de orígenes
+title: Uso de un editor de texto en el entorno local para crear una página de documentación de orígenes
 description: Este documento proporciona pasos sobre cómo utilizar el entorno local para crear documentación para el origen y enviar una solicitud de extracción (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '640'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Este documento proporciona pasos sobre cómo utilizar el entorno local para crea
 
 >[!TIP]
 >
->Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Requisitos previos
 
@@ -25,7 +25,7 @@ El siguiente tutorial requiere que tenga GitHub Desktop instalado en el equipo l
 
 ## Conéctese a GitHub y configure su entorno de creación local
 
-El primer paso para configurar el entorno de creación local es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+El primer paso para configurar el entorno de creación local es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.es).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -37,7 +37,7 @@ Para clonar el repositorio en el equipo local, seleccione **Código**. En el men
 
 >[!TIP]
 >
->Para obtener más información, consulte el tutorial sobre [configuración del repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+>Para obtener más información, consulte el tutorial sobre [configuración del repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ A continuación, seleccione **Publicar rama**.
 
 ## Crear la página de documentación para el origen
 
-Con el repositorio clonado en el equipo local y una nueva rama creada, ahora puede empezar a crear la página de documentación para el nuevo origen a través de la [editor de texto de su elección](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+Con el repositorio clonado en el equipo local y una nueva rama creada, ahora puede empezar a crear la página de documentación para el nuevo origen a través de la [editor de texto de su elección](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
 El Adobe recomienda que utilice [Código de Visual Studio](https://code.visualstudio.com/) y que instale la extensión de creación de Adobe Markdown. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione **Extensiones** de la barra de navegación izquierda.
 

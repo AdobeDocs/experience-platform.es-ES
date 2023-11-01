@@ -2,9 +2,9 @@
 title: Análisis de consentimiento y seguimiento
 description: Obtenga información sobre cómo crear un panel de análisis de consentimiento para rastrear las tendencias del consentimiento del usuario a lo largo del tiempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ El [!UICONTROL Suscripciones] carpeta aparece. De las opciones disponibles, sele
 
 >[!NOTE]
 >
->Hay un límite flexible en el número de audiencias que se recomienda crear. Encontrará más información en la [documentación sobre protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>Hay un límite flexible en el número de audiencias que se recomienda crear. Encontrará más información en la [documentación sobre protecciones de segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![El [!UICONTROL Valor de opción] con el atributo [!UICONTROL Sí (adhesión)] valor resaltado en el generador de segmentos. También se resaltan el nombre y la descripción de la audiencia.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

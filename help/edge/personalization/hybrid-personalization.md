@@ -3,9 +3,9 @@ title: Personalización híbrida mediante SDK web y API de servidor de red perim
 description: Este artículo muestra cómo se puede utilizar el SDK web junto con la API de servidor para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '828'
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ El diagrama de flujo siguiente describe el orden de los pasos realizados para of
 1. La API del servidor devuelve el contenido de personalización al servidor de aplicaciones.
 1. El servidor de aplicaciones devuelve una respuesta del HTML al explorador del cliente, que contiene la variable [cookies de identidad y de clúster](#cookies).
 1. En la página de cliente, la variable [!DNL Web SDK] `applyResponse` se llama al comando, pasando los encabezados y el cuerpo del [!UICONTROL API de servidor] respuesta del paso anterior.
-1. El [!DNL Web SDK] procesa la carga de página [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) ofertas automáticamente, ya que la variable `renderDecisions` el indicador se establece en `true`.
+1. El [!DNL Web SDK] procesa la carga de página [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) ofertas automáticamente, ya que la variable `renderDecisions` el indicador se establece en `true`.
 1. Basado en formularios [!DNL JSON] Las ofertas de se aplican manualmente a través de `applyPersonalization` método, para actualizar el [!DNL DOM] en función de la oferta de personalización.
 1. Para las actividades basadas en formularios, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado la oferta. Esto se realiza mediante la variable `sendEvent` comando.
 

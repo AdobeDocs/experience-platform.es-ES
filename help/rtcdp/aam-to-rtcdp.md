@@ -2,10 +2,10 @@
 title: Evolución de Audience Manager a Real-Time CDP
 description: Comprenda las consideraciones antes de planificar la migración de Audience Manager a Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ A medida que su organización evoluciona para utilizar Adobe Real-Time CDP, expl
 
 ## 1. Considere la arquitectura de datos dentro de Audience Manager
 
-Teniendo en cuenta la evolución de Audience Manager a Real-Time CDP, ahora es un momento crítico para analizar sus [segmentos de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=es) y determinar qué [señales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=es), [rasgos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=es) y [reglas](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=es#segment-builder-section) son los que los componen.
+Teniendo en cuenta la evolución de Audience Manager a Real-Time CDP, ahora es un momento crítico para analizar sus [segmentos de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) y determinar qué [señales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [rasgos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) y [reglas](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) son los que los componen.
 
 Además, piense en las fuentes de datos que emplea actualmente en Audience Manager.
 

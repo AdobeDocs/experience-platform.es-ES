@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de febrero de 2022
-description: Notas de la versión de febrero de 2022 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Platform: febrero de 2022'
+description: Las notas de la versión de febrero de 2022 de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 23%
+source-wordcount: '1017'
+ht-degree: 27%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 23%
 >
 >Esta versión se cambió de la fecha original del 23 de febrero al 7 de marzo.
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data collection]](#data-collection)
@@ -33,7 +33,7 @@ Adobe Experience Platform proporciona varios [!DNL dashboards] a través del cua
 
 | Función | Descripción |
 | --- | --- |
-| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos principales sin asignar clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la [documentación del panel destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos principales sin asignar clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la [documentación del panel destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] descripción general](../../dashboards/home.md).
 

@@ -1,8 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-source-wordcount: '508'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 98%
 
 ---
 # Contenido de contribución
@@ -15,7 +15,7 @@ Este proyecto ha adoptado el [Código de conducta de Adobe Open Source](code-of-
 
 ## Formas de contribuir al contenido de Adobe
 
-Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es?lang=es).
+Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es).
 
 La manera en que contribuye depende de quién es usted y del tipo de cambios con los que desee contribuir:
 
@@ -37,7 +37,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Cambios importantes o artículos nuevos de los empleados de Adobe
 
-Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de Adobe Experience Cloud, y es su trabajo contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado en `https://git.corp.adobe.com/AdobeDocs`. Si desea obtener más información, consulte la [Guía de colaboración interna](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=es).
+Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de Adobe Experience Cloud, y es su trabajo contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado en `https://git.corp.adobe.com/AdobeDocs`. Si desea obtener más información, consulte la [Guía de colaboración interna](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 

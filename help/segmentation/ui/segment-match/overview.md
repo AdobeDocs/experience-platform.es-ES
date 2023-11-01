@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de coincidencia de segmentos
 description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1994'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ La lista de áreas de nombres admitidas es la siguiente:
 
 | Área de nombres | Descripción |
 | --------- | ----------- |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Platform ofrece dos métodos para admitir el hashing en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) y mediante [preparación de datos](../../../data-prep/functions.md#hashing). |
+| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Platform ofrece dos métodos para admitir el hashing en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y mediante [preparación de datos](../../../data-prep/functions.md#hashing). |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
 | ECID | Un área de nombres que representa un valor de ID de Experience Cloud (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [Información general de ECID](../../../identity-service/ecid.md) para obtener más información. |
 | Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
@@ -183,7 +183,7 @@ Para añadir o quitar segmentos, seleccione **[!UICONTROL Crear fuente]** desde 
 
 Aparecerá la lista de segmentos. Desde aquí, puede añadir nuevos segmentos a la fuente y puede utilizar el carril derecho para eliminar los segmentos que ya no necesite. Cuando haya terminado de administrar los segmentos en la fuente, seleccione **[!UICONTROL Siguiente]** y luego siga los pasos descritos anteriormente para completar la fuente actualizada.
 
-![update](./images/update.png)
+![actualización del estado](./images/update.png)
 
 >[!NOTE]
 >

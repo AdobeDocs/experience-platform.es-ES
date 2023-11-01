@@ -2,10 +2,10 @@
 title: Crear una conexión de origen y un flujo de datos de Marketo Engage en la IU
 description: Este tutorial proporciona pasos para crear una conexión de origen y un flujo de datos de Marketo Engage en la IU para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 0%
+source-wordcount: '1691'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Antes de crear un [!DNL Marketo Engage] conexión de origen y un flujo de datos, primero debe asegurarse de que tiene [asignado su ID de organización de Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Además, también debe asegurarse de que ha completado [rellenar automáticamente su [!DNL Marketo] Espacios de nombres y esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de crear una conexión de origen y un flujo de datos.
+>Antes de crear un [!DNL Marketo Engage] conexión de origen y un flujo de datos, primero debe asegurarse de que tiene [asignado su ID de organización de Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. Además, también debe asegurarse de que ha completado [rellenar automáticamente su [!DNL Marketo] Espacios de nombres y esquemas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) antes de crear una conexión de origen y un flujo de datos.
 
 Este tutorial proporciona los pasos para crear una [!DNL Marketo Engage] (en lo sucesivo, &quot;[!DNL Marketo]&quot;) en la interfaz de usuario para introducir datos B2B en Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -57,7 +57,7 @@ El **[!UICONTROL Conectar cuenta de Marketo Engage]** página. En esta página, 
 
 ### Cuenta existente
 
-Para crear un flujo de datos con una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la [!DNL Marketo] cuenta que desea utilizar. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+Para crear un flujo de datos con una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la [!DNL Marketo] cuenta que desea utilizar. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/marketo/existing.png)
 

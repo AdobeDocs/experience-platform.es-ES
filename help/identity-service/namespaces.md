@@ -2,9 +2,9 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1691'
 ht-degree: 8%
 
 ---
@@ -76,13 +76,13 @@ Se proporcionan las siguientes áreas de nombres estándar para su uso por todas
 | Nombre para mostrar | Descripción |
 | ------------ | ----------- |
 | Adcloud | Un área de nombres que representa el Adobe de AdCloud. |
-| Adobe Analytics (ID heredado) | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) para obtener más información. |
+| Adobe Analytics (ID heredado) | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obtener más información. |
 | Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
 | Servicio de notificaciones push de Apple | Un área de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento sobre [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
-| CORE | Un área de nombres que representa Adobe Audience Manager. Este área de nombres también se puede mencionar por su nombre heredado: &quot;Adobe AudienceManager&quot;. Consulte el siguiente documento sobre [ID de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) para obtener más información. |
+| CORE | Un área de nombres que representa Adobe Audience Manager. Este área de nombres también se puede mencionar por su nombre heredado: &quot;Adobe AudienceManager&quot;. Consulte el siguiente documento sobre [ID de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obtener más información. |
 | ECID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](./ecid.md) para obtener más información. |
 | Correo electrónico | Un área de nombres que representa una dirección de correo electrónico. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Consulte el siguiente documento sobre [Soporte hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) para obtener más información. |
+| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Consulte el siguiente documento sobre [Soporte hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obtener más información. |
 | Firebase Cloud Messaging | Un área de nombres que representa las identidades recopiladas mediante Google Firebase Cloud Messaging para las notificaciones push. Consulte el siguiente documento sobre [Mensajería de Google Firebase Cloud](https://firebase.google.com/docs/cloud-messaging) para obtener más información. |
 | ID de anuncio de Google (GAID) | Un área de nombres que representa un ID de publicidad de Google. Consulte el siguiente documento sobre [ID de publicidad de Google](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
 | ID de clic Google | Área de nombres que representa un ID de clic de Google. Consulte el siguiente documento sobre [Rastreo de clics en Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) para obtener más información. |
@@ -90,7 +90,7 @@ Se proporcionan las siguientes áreas de nombres estándar para su uso por todas
 | Teléfono (E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código internacional de llamada de país, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
 | Teléfono (SHA256) | Un área de nombres que representa los números de teléfono que deben tener un cifrado hash con SHA256. Debe quitar los símbolos, las letras y los ceros a la izquierda. También debe agregar el código de llamada de país como prefijo. |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
-| TNTID | Un área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=es) para obtener más información. |
+| TNTID | Un área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para obtener más información. |
 | Windows AID | Un espacio de nombres que representa un ID de publicidad de Windows. Consulte el siguiente documento sobre [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
 
 ### Ver áreas de nombres de identidad {#view-identity-namespaces}

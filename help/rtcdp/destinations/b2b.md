@@ -2,9 +2,9 @@
 title: Destinos en Real-time Customer Data Platform edición B2B
 description: Información general sobre la función de los destinos en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -25,4 +25,4 @@ Los siguientes documentos proporcionan más información sobre cómo utilizar el
 
 - Para obtener información sobre cualquiera de los destinos disponibles para Real-time Customer Data Platform B2B Edition, consulte la [catálogo de destinos](../../destinations/catalog/overview.md).
 - Para obtener información sobre las identidades que se pueden exportar a Marketo Engage, lea la [Documentación de destino del Marketo Engage](../../destinations/catalog/adobe/marketo-engage.md).
-- Para obtener información sobre cómo conectarse al destino de Marketo Engage en la interfaz de usuario de Experience Platform y exportar datos, lea [&quot;Insertar un segmento de Adobe Experience Platform en una lista estática de Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en).
+- Para obtener información sobre cómo conectarse al destino de Marketo Engage en la interfaz de usuario de Experience Platform y exportar datos, lea [&quot;Insertar un segmento de Adobe Experience Platform en una lista estática de Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

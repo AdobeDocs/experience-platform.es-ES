@@ -1,11 +1,11 @@
 ---
-title: Configuración del SDK web extensión de etiqueta
+title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 11%
+source-wordcount: '1456'
+ht-degree: 10%
 
 ---
 

@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2477'
 ht-degree: 6%
 
 ---
@@ -26,9 +26,9 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 Es importante comprender los siguientes términos clave utilizados en este documento:
 
 * **Atributo estándar**: los atributos estándar son cualquier atributo predefinido por el Adobe. Contienen el mismo significado para todos los clientes y están disponibles en el [!DNL Analytics] datos de origen y [!DNL Analytics] grupos de campos de esquema.
-* **Atributo personalizado**: Los atributos personalizados son cualquier atributo en la jerarquía de variables personalizada en [!DNL Analytics]. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre las eVars.
+* **Atributo personalizado**: Los atributos personalizados son cualquier atributo en la jerarquía de variables personalizada en [!DNL Analytics]. Los atributos personalizados se utilizan dentro de una implementación de Adobe Analytics para capturar información específica en un grupo de informes y pueden diferir en su uso de un grupo de informes a otro. Los atributos personalizados incluyen eVars, props y listas. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre las eVars.
 * **Cualquier atributo de los grupos de campos personalizados**: todos los atributos que se originan en grupos de campos creados por clientes están definidos por el usuario y se consideran no atributos estándar ni personalizados.
-* **Nombres descriptivos**: los nombres descriptivos son etiquetas proporcionadas por humanos para variables personalizadas en un [!DNL Analytics] implementación. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) para obtener más información sobre nombres descriptivos.
+* **Nombres descriptivos**: los nombres descriptivos son etiquetas proporcionadas por humanos para variables personalizadas en un [!DNL Analytics] implementación. Consulte lo siguiente [[!DNL Analytics] documentación sobre variables de conversión](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obtener más información sobre nombres descriptivos.
 
 ## Crear una conexión de origen con Adobe Analytics
 

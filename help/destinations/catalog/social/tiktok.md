@@ -3,10 +3,10 @@ title: Conexión de TikTok
 description: Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 4%
+source-wordcount: '1040'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads. Visita [Centro de ayuda empresarial de TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obtener más información.
+Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. Estas audiencias pueden ser de personas que visitaron el sitio web o interactuaron con el contenido. Publique de forma rápida y segura la audiencia deseada de Adobe Experience Platform a TikTok mediante la integración en tiempo real de Adobe con el Administrador de TikTok Ads. Visita [Centro de ayuda empresarial de TikTok](https://ads.tiktok.com/help/article/audiences) para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Una marca de ropa deportiva quiere llegar a los clientes existentes a través de
 
 ## Requisitos previos {#prerequisites}
 
-Tiene que tener [!DNL Admin] o [!DNL Operator] Acceda a la cuenta de TikTok Ads Manager a la que desee enviar audiencias. Encontrará más instrucciones en la [Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+Tiene que tener [!DNL Admin] o [!DNL Operator] Acceda a la cuenta de TikTok Ads Manager a la que desee enviar audiencias. Encontrará más instrucciones en la [Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Antes de enviar datos a su cuenta de TikTok Ads Manager, deberá conceder permiso a Adobe Experience Platform para acceder a su cuenta de publicidad de `Audience Management`. Este permiso lo puede proporcionar [introducción de su ID de Ads Manager](#authenticate) en la interfaz de usuario de Experience Platform y conceder el permiso después de ser redirigido a su cuenta de TikTok Ads Manager.
 
@@ -123,4 +123,4 @@ Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas
 
 ## Recursos adicionales {#additional-resources}
 
-Consulte la [Página del Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) para obtener más información.
+Consulte la [Página del Centro de ayuda de TikTok](https://ads.tiktok.com/help/article/audiences) para obtener más información.

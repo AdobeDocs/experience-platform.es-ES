@@ -2,10 +2,10 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 2%
+source-wordcount: '1180'
+ht-degree: 3%
 
 ---
 
@@ -88,7 +88,7 @@ Al configurar una secuencia de datos como se describe en la documentación vincu
 
 >[!NOTE]
 >
->La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Consulte un [lista de todos los destinos basados en dispositivos admitidos en Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre el Experience Platform y el Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
+>La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Consulte un [lista de todos los destinos basados en dispositivos admitidos en Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre el Experience Platform y el Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
 
 ## Destinos empresariales {#enterprise-destinations}
 

@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 37%
 
 ---
@@ -192,7 +192,7 @@ Contiene la versión 2.5.0 de la biblioteca del SDK web de Adobe Experience Plat
 
 Contiene la versión 2.4.0 de la biblioteca del SDK web de Adobe Experience Platform.
 
-* Añadido [&quot;descarga de documentos&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) casilla de verificación para Enviar IU de acción de evento.
+* Añadido [&quot;descarga de documentos&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) casilla de verificación para Enviar IU de acción de evento.
 * Se ha añadido la compatibilidad con `out` opción cuando [configuración del consentimiento predeterminado](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) que descarta todos los eventos hasta que se reciba el consentimiento (el existente `pending` la opción pone en cola eventos y los envía una vez recibido el consentimiento).
 * Se ha añadido información de objeto al campo de consentimiento predeterminado.
 * Se ha añadido la compatibilidad con [Estándar de consentimiento de Adobe 2.0](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

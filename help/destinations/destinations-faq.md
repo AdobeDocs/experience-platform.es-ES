@@ -3,9 +3,9 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1634'
 ht-degree: 3%
 
 ---
@@ -204,7 +204,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### ¿Dónde puedo ver los atributos activados en Adobe Target?
 
-+++Los atributos de respuesta estarán disponibles para usarlos en Target en [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=es) ofertas.
++++Los atributos de respuesta estarán disponibles para usarlos en Target en [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) ofertas.
 +++
 
 ### ¿Puedo crear un destino sin una secuencia de datos y luego agregar una secuencia de datos al mismo destino en un momento posterior?
