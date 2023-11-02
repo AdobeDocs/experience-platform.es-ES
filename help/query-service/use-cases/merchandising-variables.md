@@ -2,16 +2,16 @@
 title: Devolver y usar variables de comercialización desde datos de análisis
 description: Obtenga información sobre cómo proporcionar campos XDM y consultas de muestra para acceder a las variables de comercialización en los conjuntos de datos de Analytics.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 3%
 
 ---
 
 # Devolver y usar variables de comercialización de datos de Analytics
 
-Utilice el servicio de consultas para administrar los datos introducidos desde Adobe Analytics en Adobe Experience Platform como conjuntos de datos. Las secciones siguientes proporcionan consultas de muestra que puede utilizar para acceder a las variables de comercialización en sus conjuntos de datos de Analytics. Consulte la documentación para obtener más información sobre [ingesta y asignación de datos de Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=es) a través de la fuente de Analytics
+Utilice el servicio de consultas para administrar los datos introducidos desde Adobe Analytics en Adobe Experience Platform como conjuntos de datos. Las secciones siguientes proporcionan consultas de muestra que puede utilizar para acceder a las variables de comercialización en sus conjuntos de datos de Analytics. Consulte la documentación para obtener más información sobre [ingesta y asignación de datos de Adobe Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) a través de la fuente de Analytics
 
 ## Variables de comercialización {#merchandising-variables}
 
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > Si intenta recuperar un campo que no existe en el conjunto de datos actual, se produce el error &quot;No existe ese campo struct&quot;. Evalúe el motivo devuelto en el mensaje de error para identificar un campo disponible y, a continuación, actualice la consulta y vuelva a ejecutarla.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ Para Adobe Analytics, ECID es la identidad principal predeterminada. Si un clien
 
 ## Campos de validación de datos {#data-validation-fields}
 
-Para evitar que se ingieran datos incorrectos en Platform, se recomienda definir los criterios de validación de nivel de campo al crear los esquemas. Para definir restricciones en un campo concreto, seleccione el campo en el Editor de esquemas para abrir [!UICONTROL Propiedades del campo] barra lateral. Consulte la documentación sobre [propiedades de campo específicas del tipo](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) para obtener descripciones exactas de los campos disponibles.
+Para evitar que se ingieran datos incorrectos en Platform, se recomienda definir los criterios de validación de nivel de campo al crear los esquemas. Para definir restricciones en un campo concreto, seleccione el campo en el Editor de esquemas para abrir [!UICONTROL Propiedades del campo] barra lateral. Consulte la documentación sobre [propiedades de campo específicas del tipo](../ui/fields/overview.md#type-specific-properties) para obtener descripciones exactas de los campos disponibles.
 
 ![El Editor de esquemas con los campos de restricción resaltados en la variable [!UICONTROL Propiedades del campo] barra lateral.](../images/best-practices/data-validation-fields.png)
 

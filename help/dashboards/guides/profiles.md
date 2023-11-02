@@ -4,9 +4,9 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '4329'
+source-wordcount: '4313'
 ht-degree: 10%
 
 ---
@@ -213,7 +213,7 @@ Consulte la [sección sobre políticas de combinación anteriormente en este doc
 >
 >El [!UICONTROL Recuento de perfiles] widget puede mostrar un número diferente al recuento de perfiles que se muestra en la [!UICONTROL Examinar] en la pestaña [!UICONTROL Perfiles] de la interfaz de usuario de por varios motivos. La razón más común de esta diferencia es que la variable [!UICONTROL Examinar] hace referencia al número total de perfiles combinados en función de la política de combinación predeterminada de su organización, mientras que la pestaña [!UICONTROL Recuento de perfiles] widget hace referencia al número total de perfiles combinados en función de la política de combinación que ha seleccionado para ver en el tablero.
 >
->Otro motivo común se debe a las diferencias entre el momento en que se toma la instantánea del panel y el momento en que se ejecuta el trabajo de muestra para [!UICONTROL Examinar] pestaña. Se puede ver cuando la variable [!UICONTROL Recuento de perfiles] La última actualización del widget se realizó mirando la marca de tiempo del widget. Para obtener más información sobre cómo se activa el trabajo de muestra en la [!UICONTROL Examinar] , consulte la [sección recuento de perfiles en la guía de la IU del perfil del cliente en tiempo real](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
+>Otro motivo común se debe a las diferencias entre el momento en que se toma la instantánea del panel y el momento en que se ejecuta el trabajo de muestra para [!UICONTROL Examinar] pestaña. Se puede ver cuando la variable [!UICONTROL Recuento de perfiles] La última actualización del widget se realizó mirando la marca de tiempo del widget. Para obtener más información sobre cómo se activa el trabajo de muestra en la [!UICONTROL Examinar] , consulte la [sección recuento de perfiles en la guía de la IU del perfil del cliente en tiempo real](../../profile/ui/user-guide.md#profile-count).
 
 ![El tablero Perfiles del Experience Platform con el widget Recuento de perfiles resaltado.](../images/profiles/profile-count.png)
 
@@ -428,7 +428,7 @@ Para ver información completa sobre una audiencia, seleccione un nombre de audi
 
 ![El widget Tamaño de audiencia con un nombre y el texto Ver todas las audiencias resaltados.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulte la documentación para obtener más información sobre [[!UICONTROL Audiencias] [!UICONTROL  Examinar] pestaña](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulte la documentación para obtener más información sobre [[!UICONTROL Audiencias] [!UICONTROL  Examinar] pestaña](../../segmentation/ui/overview.md#browse).
 
 ### [!UICONTROL Superposición de audiencias por política de combinación] {#audience-overlap-by-merge-policy}
 

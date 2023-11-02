@@ -2,16 +2,16 @@
 title: Exportar datos a entornos XML externos
 description: Aprenda a compartir un conjunto de datos de formación preparado, creado con Data Distiller, en una ubicación de almacenamiento en la nube que su entorno de ML pueda leer para entrenar y puntuar su modelo.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
 
 # Exportación de datos a entornos XML externos
 
-Este documento muestra cómo compartir un conjunto de datos de formación preparado creado con Data Distiller en una ubicación de almacenamiento en la nube que su entorno de ML puede leer para entrenar y puntuar el modelo. El ejemplo aquí exporta el conjunto de datos de formación a [Zona de aterrizaje de datos (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). Puede cambiar el destino de almacenamiento según sea necesario para trabajar con su entorno de aprendizaje automático.
+Este documento muestra cómo compartir un conjunto de datos de formación preparado creado con Data Distiller en una ubicación de almacenamiento en la nube que su entorno de ML puede leer para entrenar y puntuar el modelo. El ejemplo aquí exporta el conjunto de datos de formación a [Zona de aterrizaje de datos (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Puede cambiar el destino de almacenamiento según sea necesario para trabajar con su entorno de aprendizaje automático.
 
 El [Servicio de flujo para destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) se utiliza para completar la canalización de funciones aterrizando un conjunto de datos de funciones calculadas en una ubicación de almacenamiento en la nube adecuada.
 

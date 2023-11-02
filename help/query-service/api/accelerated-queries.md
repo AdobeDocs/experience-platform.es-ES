@@ -2,9 +2,9 @@
 title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Como parte del SKU de Data Distiller, la variable [API del servicio de consultas
 
 Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [Guía de API del servicio de consultas](./getting-started.md) para utilizar correctamente la API del servicio de consultas.
 
-## Primeros pasos
+## Introducción
 
 El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la [empaquetado](../packages.md) y [barandas](../guardrails.md#query-accelerated-store) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
 
@@ -212,6 +212,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con el esquema ad hoc creado 
 | `resultsMeta` | Este objeto contiene los metadatos de cada columna devuelta en los resultados para que los usuarios conozcan el nombre y el tipo de cada columna. |
 | `resultsMeta._adhoc` | Esquema de modelo de datos de experiencia (XDM) ad hoc con campos de espacio de nombres para su uso exclusivo en un único conjunto de datos. |
 | `resultsMeta._adhoc.type` | El tipo de datos del esquema ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Es un valor generado por el sistema para el tipo de campo XDM. Para obtener más información sobre los tipos disponibles, consulte la documentación de [tipos XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | Es un valor generado por el sistema para el tipo de campo XDM. Para obtener más información sobre los tipos disponibles, consulte la documentación de [tipos XDM disponibles](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Estos son los nombres de columna del conjunto de datos consultado. |
 | `resultsMeta._adhoc.results` | Estos son los nombres de fila del conjunto de datos consultado. Reflejan cada una de las columnas devueltas. |
