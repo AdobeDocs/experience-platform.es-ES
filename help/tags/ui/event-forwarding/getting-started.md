@@ -3,10 +3,10 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 78%
+source-wordcount: '868'
+ht-degree: 76%
 
 ---
 
@@ -20,7 +20,7 @@ Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deb
 
 * [SDK web de Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [SDK móvil de Adobe Experience Platform](https://sdkdocs.com)
-* [API de servidor a servidor](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
+* [API de servidor a servidor](/help/server-api/overview.md)
 
 >[!NOTE]
 >El SDK web de Platform y el SDK móvil de Platform no requieren implementación a través de etiquetas en Adobe Experience Platform. Sin embargo, el método recomendado es utilizar etiquetas para implementar estos SDK.
@@ -31,7 +31,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
-* SDK web o móvil de Adobe Experience Platform, configurados para enviar datos a Edge Network
+* SDK web de Adobe Experience Platform, SDK móvil o API del servidor de red perimetral configurada para enviar datos a la red perimetral
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
 
 ## Creación de un esquema XDM
