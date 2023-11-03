@@ -2,10 +2,10 @@
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 93%
+ht-degree: 91%
 
 ---
 
@@ -78,7 +78,7 @@ Los Data Elements constituyen los bloques generadores de las reglas. Los Data El
       * El valor se mantiene en una variable JavaScript hasta que se actualiza la página o se carga una nueva.
       * Puede crearse y configurarse en scripts mediante la sintaxis de objeto `_satellite`.
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * Los valores persisten en el almacenamiento de sesiones del explorador hasta que se cierra la pestaña.
       * Disponible durante toda la visita al sitio.
@@ -174,7 +174,7 @@ Por ejemplo, supongamos que el marcado contiene una variable de JavaScript llama
 
 Debe proporcionar la ruta a esa variable cuando cree el elemento de datos.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como, por ejemplo, `_myData.pageName` o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`, o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 
