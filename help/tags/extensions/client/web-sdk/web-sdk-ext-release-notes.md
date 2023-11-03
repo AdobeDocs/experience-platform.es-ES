@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 37%
+source-wordcount: '1806'
+ht-degree: 36%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 37%
 # Notas de la versión de la extensión Adobe Experience Platform Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión del propio SDK, consulte la [Notas de la versión de Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=es).
+
+## Versión 2.21.0: 1 de noviembre de 2023
+
+**Nuevas funciones**
+
+* Añadido `Request default personalization` opción para enviar la acción de evento.
+* Se añadió compatibilidad con los eventos superior e inferior de página en la acción de evento de envío.
+* Añadido `Apply propositions` acción.
+* Añadido `Evaluate rulesets` acción y `Subscribe ruleset items` evento para mensajes en la aplicación.
+* Añadido `Decision context` para enviar la acción de evento.
+
+**Correcciones y mejoras**
+
+* Contiene la versión 2.19.0 del SDK web de Adobe Experience Platform.
 
 ## Versión 2.20.3: 8 de agosto de 2023
 

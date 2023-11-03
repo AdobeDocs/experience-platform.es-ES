@@ -2,9 +2,9 @@
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1849'
 ht-degree: 7%
 
 ---
@@ -237,6 +237,12 @@ El **[!UICONTROL Importar detalles]** El cuadro de diálogo muestra un desglose 
 >[!NOTE]
 >
 >Cuando se complete una importación, recibirá notificaciones en la interfaz de usuario de Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
+
+## Tutorial de vídeo
+
+El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Pasos siguientes
 
