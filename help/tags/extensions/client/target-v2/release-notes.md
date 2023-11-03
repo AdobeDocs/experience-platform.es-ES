@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 51%
+source-wordcount: '776'
+ht-degree: 49%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 51%
 
 ## v0.20.1 (3 de noviembre de 2023)
 
-- Actualización para admitir at.js 2.11.2.
+- Actualizado para admitir `at.js` 2.11.2.
 - Se ha corregido un error que provocaba incoherencias en los tokens de respuesta enviados en eventos personalizados.
 
 ## v0.20.0 (9 de octubre de 2023)
 
-- Actualización para admitir at.js 2.11.0.
+- Actualizado para admitir `at.js` 2.11.0.
 - Se ha agregado compatibilidad con la configuración de sandboxId y sandboxName personalizados de Adobe Experience Platform en targetGlobalSettings, que se pasarán a la API de entrega en las llamadas getOffer/getOffers.
 - Corrección DOM de sombreado para encadenar :eq() en el selector.
 
 ## v0.19.3 (18 de septiembre de 2023)
 
-- Se ha actualizado para admitir at.js v2.10.3.
+- Actualizado para admitir `at.js` Versión 2.10.3.
 - Se ha corregido un problema que activaba incorrectamente el evento personalizado at-content-rendering-succeeded cuando no se procesaban ofertas. Ahora se activa el evento correcto, at-content-rendering-no-offers.
 - Se han agregado eventToken y responseTokens al objeto de error para el evento personalizado at-content-rendering-failed.
 
@@ -66,6 +66,12 @@ ht-degree: 51%
 ## v0.16.0 (28 de octubre de 2021)
 
 - Actualizado para admitir `at.js` La versión 2.7.0 ya está disponible para su descarga en Adobe Target.
+
+## v0.15.2 (16 de agosto de 2021)
+
+- Actualizado para admitir `at.js` 2.6.1.
+- Inicialice la toma de decisiones en el dispositivo al iniciar, independientemente del evento de carga de página.
+- Ahora, la toma de decisiones en el dispositivo se puede utilizar en la primera visita después de descargar el artefacto.
 
 ## v0.15.1 (20 de julio de 2021)
 
