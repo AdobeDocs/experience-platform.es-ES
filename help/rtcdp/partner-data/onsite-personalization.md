@@ -1,15 +1,15 @@
 ---
-title: Utilice el reconocimiento de visitantes asistido por socios para personalizar las experiencias en el sitio
+title: Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 95%
+source-wordcount: '2696'
+ht-degree: 91%
 
 ---
 
-# Utilice el reconocimiento de visitantes asistido por socios para personalizar las experiencias en el sitio
+# Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 95%
 
 Aprenda a utilizar el reconocimiento asistido por socios para ofrecer experiencias personalizadas a los visitantes de su propiedad web. Utilice este tutorial para comprender la secuencia de implementación de varios elementos en Experience Platform y otras soluciones de Experience Cloud para mostrar una experiencia personalizada a los visitantes autenticados y no autenticados.
 
-![Una infografía que describe cómo utilizar atributos proporcionados por el socio para ofrecer experiencias personalizadas a los visitantes.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![Una infografía que describe cómo utilizar atributos proporcionados por el socio para ofrecer experiencias personalizadas a los visitantes.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Por qué considerar este caso de uso {#why-this-use-case}
+
+La fragmentación de experiencias digitales a medida que los consumidores interactúan con las marcas de innumerables maneras es muy real y cada vez es más difícil de resolver. Las mejores estrategias de participación del cliente para experiencias coherentes, recomendaciones segmentadas e interacciones personalizadas se ven limitadas por el reconocimiento del usuario.
+
+Aquí es donde el reconocimiento en tiempo real asistido por socios puede marcar una diferencia significativa. El Adobe de permite a los socios de identidad conectarse a nuestra sofisticada recopilación de datos del lado del cliente y a nuestras ofertas de optimización de experiencias líderes en el mercado, para aumentar de forma eficaz el listón en la entrega de experiencias desde la primera visita en adelante, sin historial previo ni autenticación.
+
+Esto resulta especialmente útil en verticales con tasas de autenticación bajas, como Bienes de Consumo Empaquetados, venta minorista en línea y mucho más.
 
 ## Ejemplo del sector {#industry-example}
 

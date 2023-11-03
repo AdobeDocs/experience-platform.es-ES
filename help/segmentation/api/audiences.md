@@ -2,10 +2,10 @@
 title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
-ht-degree: 4%
+source-wordcount: '1879'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 Una audiencia es un conjunto de personas que comparten comportamientos o características similares. Estas colecciones de personas se pueden generar mediante Adobe Experience Platform o desde fuentes externas. Puede usar el complemento `/audiences` en la API de segmentación, lo que le permite recuperar, crear, actualizar y eliminar audiencias mediante programación.
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
@@ -933,145 +933,6 @@ Una respuesta correcta devuelve el estado HTTP 207 con información sobre las au
 
 +++
 
-## Actualizar varias audiencias {#bulk-patch}
-
-Puede actualizar el perfil y registrar el recuento de varias audiencias realizando una solicitud al POST de `/audiences/bulk-patch-metric` y proporciona los ID de las audiencias que desea actualizar.
-
-**Formato de API**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**Solicitud**
-
-+++ Una solicitud de ejemplo para actualizar varias audiencias.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>Parámetro</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>El ID del trabajo que ejecutará la actualización.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>El tipo de trabajo que ejecutará la actualización. Este valor puede ser <code>export</code> o <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>El ID de las audiencias que desea actualizar. Tenga en cuenta que esta es la <code>audienceId</code> valor, y <strong>no</strong> el <code>id</code> valor de las audiencias.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>El área de nombres de la audiencia que desea actualizar.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>Objeto que contiene la información utilizada para actualizar la audiencia.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>La operación utilizada para el parche. Cuando se actualizan varias audiencias, este valor es <strong>siempre</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>Ruta del campo que se va a actualizar. Actualmente, solo se admiten dos rutas: <code>/metrics/data</code> al actualizar el <strong>perfil</strong> count y <code>/recordMetrics/data</code> al actualizar el <strong>registro</strong> count.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-El valor del campo que se va a actualizar. Al actualizar el recuento de perfiles, este valor tendrá el siguiente aspecto: 
-<pre>
-{ "totalProfiles": 123456 }
-</pre>
-Al actualizar el recuento de registros, este valor tendrá el siguiente aspecto: 
-<pre>
-{ "recordCount": 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 207 con detalles sobre las audiencias actualizadas.
-
-+++ Una respuesta de ejemplo para actualizar varias audiencias.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `status` | El estado de la audiencia actualizada. Si el estado devuelto es 200, la audiencia se actualizó correctamente. Si no se ha podido actualizar la audiencia, se devolverá un error que explica por qué no se ha actualizado. |
-
-+++
 
 ## Pasos siguientes
 

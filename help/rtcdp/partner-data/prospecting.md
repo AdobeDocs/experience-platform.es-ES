@@ -1,15 +1,15 @@
 ---
-title: Atraer y adquirir nuevos clientes a través de casos de uso de prospección
-description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, habilitados por la compatibilidad con datos de socios en Real-Time CDP.
+title: Interactúe y adquiera nuevos clientes sin depender de cookies de terceros
+description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# Atraer y adquirir nuevos clientes a través de casos de uso de prospección
+# Interactúe y adquiera nuevos clientes sin depender de cookies de terceros
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Utilice la compatibilidad con datos de terceros en Real-Time CDP para ampliar su
 
 ![Información general visual de alto nivel sobre los casos de uso de prospección de clientes.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Por qué considerar este caso de uso {#why-this-use-case}
+
+Las marcas se enfrentan simultáneamente a enormes desafíos al ejecutar de forma responsable los casos de uso de adquisición de clientes principales sin depender de cookies de terceros, presupuestos limitados y una mayor demanda de transparencia y retorno de la inversión publicitaria.
+
+Adobe Real-time Customer Data Platform puede ayudar a las marcas a realizar una transición segura de los casos de uso admitidos de Data Management Platform (DMP) a alternativas sin cookies y hacerlo de una manera que afirme la sofisticación y la potencia completas de la segmentación de autoservicio, la depuración de audiencias y la activación en un solo sistema. Todo sin comprometer el enfoque inquebrantable de Adobe en el uso responsable de los datos a través de un marco patentado de gobernanza de datos y consentimiento.
+
+Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite ejecutar una campaña para atraer clientes potenciales para que se conviertan en usuarios o clientes conocidos.
+
 ## Requisitos previos y planificación {#prerequisites-and-planning}
 
-Cuando considere la posibilidad de ponerse en contacto con los clientes nuevos y adquirirlos mediante la compatibilidad con datos de socios en Real-Time CDP, tenga en cuenta los siguientes requisitos previos en el proceso de planificación:
+Cuando considere la posibilidad de ponerse en contacto con clientes nuevos y adquirirlos, tenga en cuenta los siguientes requisitos previos en el proceso de planificación:
 
 * ¿Cuál es la cadencia con la que espera que los atributos proporcionados por el socio se incorporen a Real-Time CDP y se actualicen?
 * ¿Qué identidades requieren sus destinos descendentes?
@@ -219,5 +227,5 @@ Utilice los públicos de clientes potenciales exportándolos a destinos. Actualm
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
 * [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
+* [Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
 * [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.

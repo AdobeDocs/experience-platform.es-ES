@@ -2,10 +2,10 @@
 title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 90%
+source-wordcount: '1263'
+ht-degree: 79%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 90%
 Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.
 
 ![Enriquezca los perfiles con atributos proporcionados por los socios para obtener información general visual de alto nivel sobre los casos de uso.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Por qué considerar este caso de uso {#why-this-use-case}
+
+La mayoría de las marcas, incluso las que son ricas en datos de origen, pueden beneficiarse de la racionalización de sus datos y de obtener una comprensión más matizada de los clientes, sus comportamientos, patrones y preferencias.
+
+Adobe Real-time Customer Data Platform puede ayudar a las marcas a complementar de forma responsable sus datos de origen con información, identificadores y atributos valiosos de uno o más socios de confianza.
+
+El Adobe entiende que no existe un enfoque único que se adapte a todos los casos y permite una interoperabilidad perfecta con los socios de datos e identidades para fomentar una participación individualizada y reflexiva en todas las etapas del ciclo de vida del cliente. Estas capacidades están respaldadas por un marco de trabajo de gobernanza de datos de confianza, que permite un control matizado sobre dónde y cómo se utilizan los datos de los socios. Por ejemplo, es posible que desee utilizar las perspectivas proporcionadas por el socio para la segmentación, pero no para la personalización.
+
+Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite enriquecer los registros de cliente con señales demográficas e intencionales.
 
 ## Requisitos previos y planificación {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
 * Utilice la compatibilidad con datos de terceros en Real-Time CDP para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
-* [Aproveche el reconocimiento asistido por socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
+* [Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
 * [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.

@@ -2,10 +2,10 @@
 title: Guía de IU de Atributos calculados
 description: Obtenga información sobre cómo crear, ver y actualizar atributos calculados mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 9%
+source-wordcount: '1567'
+ht-degree: 8%
 
 ---
 
@@ -147,6 +147,12 @@ Al seleccionar un atributo calculado de borrador, la variable **[!UICONTROL Edit
 ![El [!UICONTROL Editar atributos calculados] se muestra la página.](./images/ui/edit.png)
 
 ## Uso de atributos calculados {#usage}
+
+>[!IMPORTANT]
+>
+>Si utiliza un atributo calculado con la variable **Más reciente** función en una definición de segmento, **debe** include **ambos** el valor y el valor timestamp en el objeto de atributo calculado.
+>
+>Por ejemplo, si está creando una definición de segmento que busca &quot;Todos los perfiles que tienen una dirección de correo electrónico válida&quot; donde el campo de dirección de correo electrónico se rellena mediante un atributo calculado con la función más reciente, debe **debe** incluir el valor existe de la dirección de correo electrónico **y** la marca de tiempo de la dirección de correo electrónico existe.
 
 Después de crear un atributo calculado, puede utilizar **publicado** atributos calculados en otros servicios descendentes. Dado que los atributos calculados son campos de atributos de perfil creados en el esquema de unión de perfiles, puede buscar valores de atributos calculados para un perfil del cliente en tiempo real, utilizarlos en una audiencia, activarlos en un destino o utilizarlos para la personalización en recorridos en Adobe Journey Optimizer.
 
