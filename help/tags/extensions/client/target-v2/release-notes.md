@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
+source-git-commit: f235d210682feba7617b720e514361c2862512f9
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 52%
+source-wordcount: '749'
+ht-degree: 51%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 52%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## v0.20.1 (3 de noviembre de 2023)
+
+- Actualización para admitir at.js 2.11.2.
+- Se ha corregido un error que provocaba incoherencias en los tokens de respuesta enviados en eventos personalizados.
 
 ## v0.20.0 (9 de octubre de 2023)
 
