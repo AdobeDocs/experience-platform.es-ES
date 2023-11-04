@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -74,7 +74,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar la pr
 1. Siga los pasos descritos en la sección [Documentación de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) para agregar Adobe como plataforma de administración de datos (DMP) vinculada.
 2. En el [!DNL Google Ad Manager] interfaz, vaya a **[!UICONTROL Administrador]** > **[!UICONTROL Configuración global]** > **[!UICONTROL Configuración de red]** y habilite la opción **[!UICONTROL Acceso a API]** deslizador.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -109,7 +109,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

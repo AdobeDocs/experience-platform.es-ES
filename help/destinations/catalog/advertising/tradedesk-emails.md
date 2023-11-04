@@ -6,7 +6,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -78,7 +78,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 ### Autenticar en Destino {#authenticate}
 
@@ -97,7 +97,7 @@ Para poder enviar o activar datos de audiencia a un destino, debe configurar una
 
 Al conectarse al destino, la configuración de una directiva de control de datos es completamente opcional. Consulte al Experience Platform [información general sobre gobernanza de datos](/help/data-governance/policies/overview.md) para obtener más información.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

@@ -6,7 +6,7 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1683'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -131,7 +131,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -139,7 +139,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Configuración de]** en la vista tarjeta de destino del catálogo, y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -154,7 +154,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

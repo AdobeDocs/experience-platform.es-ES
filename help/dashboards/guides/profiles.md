@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '4313'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -119,10 +119,10 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 
 La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. La inteligencia artificial aplicada al cliente lo hace analizando los datos de evento de experiencia del consumidor existentes para predecir **puntuaciones de tendencia de pérdida o conversión**. Estos modelos de tendencia de los clientes de alta precisión permiten una segmentación y una segmentación más exactas. El [distribución de puntuaciones](#customer-ai-distribution-of-scores) y [resumen de puntuación](#customer-ai-scoring-summary) las perspectivas demuestran la división en su audiencia. Resaltan qué perfiles son los de tendencia alta/baja/media y cómo se distribuyen en los recuentos de perfiles.
 
-* [[!UICONTROL Resumen de puntuación de Customer AI]](#customer-ai-scoring-summary)
-* [[!UICONTROL Distribución de puntuaciones de Customer AI]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Distribución de puntuaciones de Customer AI] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
@@ -151,7 +151,7 @@ Aparecerá la página de información detallada del modelo.
 
 Puede encontrar más información sobre la inteligencia artificial aplicada al cliente en la [guía de IU de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Resumen de puntuación de Customer AI] {#customer-ai-scoring-summary}
+### [!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
@@ -190,7 +190,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles de identidad únicos]](#single-identity-profiles)
 * [[!UICONTROL Perfiles de identidad únicos por identidad]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Perfiles no segmentados]](#unsegmented-profiles)
-* [[!UICONTROL Los perfiles no segmentados cambian de tendencia]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL Tendencia de cambio de los perfiles no segmentados]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Perfiles no segmentados por identidad]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
@@ -335,7 +335,7 @@ El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de p
 
 ![El widget Perfiles no segmentados.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Los perfiles no segmentados cambian de tendencia] {#unsegmented-profiles-change-trend}
+### [!UICONTROL Tendencia de cambio de los perfiles no segmentados] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"

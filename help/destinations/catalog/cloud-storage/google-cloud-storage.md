@@ -6,7 +6,7 @@ exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '1108'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -59,7 +59,7 @@ El **[!UICONTROL Interoperación]** contiene información sobre la autenticació
 
 Puede utilizar el ID de clave de acceso y la clave de acceso secreta generados recientemente para conectar su [!DNL Google Cloud Storage] a Platform.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -67,7 +67,7 @@ Puede utilizar el ID de clave de acceso y la clave de acceso secreta generados r
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](/help/destinations/ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -102,7 +102,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

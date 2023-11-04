@@ -174,7 +174,7 @@ Para añadir atributos de destino, seleccione **[!UICONTROL Añadir nuevo campo]
 
 ![Grabación de pantalla que muestra cómo seleccionar un atributo XDM en el paso de asignación](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-## Programar exportación de audiencias {#scheduling}
+## Programar exportación de público {#scheduling}
 
 De forma predeterminada, la variable [!UICONTROL Programación de audiencia] Esta página muestra únicamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
 

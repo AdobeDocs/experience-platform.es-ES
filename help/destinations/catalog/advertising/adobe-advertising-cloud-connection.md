@@ -5,7 +5,7 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ Consulte la siguiente tabla para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -68,7 +68,7 @@ Consulte la siguiente tabla para obtener información sobre el tipo y la frecuen
 
 Para conectarse al destino, siga las instrucciones a [crear una conexión de destino](/help/destinations/ui/connect-destination.md) uso de la interfaz de usuario del Experience Platform. En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para conectarse al destino, proporcione el siguiente parámetro en la variable [!UICONTROL Tipo de conexión] , y luego seleccione **[!UICONTROL Conectar con destino]**.:
 
@@ -91,7 +91,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

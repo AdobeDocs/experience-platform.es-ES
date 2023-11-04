@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 3%
 # Guía de credenciales
 
 El servicio de consultas de Adobe Experience Platform le permite conectarse con clientes externos. Puede conectarse a estos clientes externos utilizando credenciales que caducan o que no caducan.
+
+>[!NOTE]
+>
+>El panel Credenciales no está disponible automáticamente para todos los usuarios. Póngase en contacto con el equipo de su cuenta de Adobe para solicitar la [!UICONTROL Credenciales] para que se incluya en el espacio de trabajo del servicio de consultas en caso de que lo necesite. Si se solicita, este cambio es para toda la organización y está a cargo del equipo de ingeniería de Adobe. No es una configuración controlada por los usuarios.
 
 ## Credenciales que caducan {#expiring-credentials}
 

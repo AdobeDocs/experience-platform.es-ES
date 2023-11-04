@@ -61,7 +61,7 @@ Una vez que tenga privilegios de administrador, vaya a [Adobe Experience Cloud](
 
 Aparece el área de trabajo Permisos para la IU de Platform, que se abre en la **[!UICONTROL Funciones]** página.
 
-## Aplicar etiquetas a un rol {#label-roles}
+## Aplicar etiquetas a una función {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
@@ -153,7 +153,7 @@ El **[!UICONTROL Editar etiquetas]** aparece un cuadro de diálogo que le permit
 
 Repita los pasos anteriores con **[!UICONTROL Insulina &lt;50]**.
 
-## Activar la directiva de control de acceso {#policy}
+## Activación de la directiva de control de acceso {#policy}
 
 La directiva de control de acceso predeterminada aprovecha las etiquetas para definir qué funciones de usuario tienen acceso a recursos de Platform específicos. En este ejemplo, el acceso a los campos y segmentos de esquema se denegará en todas las zonas protegidas para los usuarios que no estén en una función que tenga las etiquetas correspondientes en el campo de esquema.
 

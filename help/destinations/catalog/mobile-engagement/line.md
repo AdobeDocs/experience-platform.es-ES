@@ -7,7 +7,7 @@ exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -72,7 +72,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 >
@@ -82,7 +82,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** buscar [!DNL LINE]. También puede encontrarlo en la sección **[!UICONTROL Participación móvil]** categoría.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectar con destino]**.
 ![Captura de pantalla de la IU de Platform que muestra cómo autenticarse.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
@@ -107,7 +107,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

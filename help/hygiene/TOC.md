@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 47%
+ht-degree: 60%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 47%
 * [Información general sobre administración avanzada del ciclo vital de datos](./home.md)
 * IU del ciclo vital de datos {#ui}
    * [Información general](./ui/overview.md)
-   * [Caducidad automatizada de conjuntos de datos](./ui/dataset-expiration.md)
+   * [Caducidades automatizadas de conjuntos de datos](./ui/dataset-expiration.md)
    * [(Beta) Eliminar registros](./ui/record-delete.md)
-   * [Examinar pedidos de trabajo del ciclo vital de datos](./ui/browse.md)
+   * [Examinar órdenes de trabajo sobre el ciclo de datos](./ui/browse.md)
 * API de higiene de datos {#api}
    * [Información general](./api/overview.md)
    * [Caducidad de conjuntos de datos](./api/dataset-expiration.md)

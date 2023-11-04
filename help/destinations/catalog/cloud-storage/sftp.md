@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ![Tipo de exportación basado en perfiles SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -120,7 +120,7 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
    * `exportResults.name`: nombre del archivo exportado.
    * `size`: tamaño del archivo exportado, en bytes.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

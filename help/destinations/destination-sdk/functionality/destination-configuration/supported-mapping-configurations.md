@@ -5,7 +5,7 @@ exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,7 @@ Los destinos en tiempo real (streaming) creados con Destination SDK admiten las 
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo personalizado |
-| Área de nombres de identidad | Área de nombres de identidad |
+| Espacio de nombre de identidad | Espacio de nombre de identidad |
 
 El ejemplo de configuración siguiente permite a los clientes utilizar ambas asignaciones en la tabla anterior.
 
@@ -85,8 +85,8 @@ Los destinos basados en archivos creados con Destination SDK admiten las configu
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo / Atributo personalizado |
-| Área de nombres de identidad | Atributo / Atributo personalizado |
-| Área de nombres de identidad | Área de nombres de identidad |
+| Espacio de nombre de identidad | Atributo / Atributo personalizado |
+| Espacio de nombre de identidad | Espacio de nombre de identidad |
 
 El ejemplo de configuración siguiente permite a los clientes utilizar todas las asignaciones de la tabla anterior.
 

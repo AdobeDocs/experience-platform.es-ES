@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
 source-wordcount: '3670'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -275,7 +275,7 @@ Después de aplicar los cambios, el nuevo campo aparece en el área de nombres d
 
 ![Campo añadido al objeto estándar](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Habilitar un esquema para el perfil del cliente en tiempo real {#profile}
+## Habilitación de un esquema para el perfil del cliente en tiempo real {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

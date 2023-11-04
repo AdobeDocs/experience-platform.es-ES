@@ -6,7 +6,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -94,7 +94,7 @@ Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios e
 
 Por ejemplo, un minorista configura una audiencia específica de marca de jeans en Platform. Ese minorista ahora puede almacenar en déclencheur un mensaje móvil en cuanto alguien establece su preferencia de pantalones vaqueros para una marca específica.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -102,7 +102,7 @@ Por ejemplo, un minorista configura una audiencia específica de marca de jeans 
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -122,7 +122,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

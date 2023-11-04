@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -52,7 +52,7 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >
 >Además, si un valor de caducidad de Evento de experiencia está habilitado en el conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía de [Caducidad de Experience Event](../profile/event-expirations.md) para obtener más información sobre cómo esta función puede afectar a la segmentación.
 
-## Evaluar audiencias {#evaluate-segments}
+## Evaluar públicos {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
@@ -89,7 +89,7 @@ Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea ev
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Evaluación de Edge"
->abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea en la red perimetral, lo que permite casos de uso de personalización de la misma página y de la siguiente."
+>abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en la red de Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=es" text="Guía de la interfaz de usuario de segmentación de Edge"
 
 La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en la red perimetral](../edge/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.

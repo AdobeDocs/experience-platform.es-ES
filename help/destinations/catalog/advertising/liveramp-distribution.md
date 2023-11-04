@@ -56,7 +56,7 @@ Antes de activar audiencias a través de [!DNL LiveRamp - Distribution] conexió
 
 Una vez incorporadas las audiencias a LiveRamp, continúe con el flujo de trabajo de activación desde el [conectar con el destino](#connect) paso para seleccionar y configurar las plataformas de destino de target para la activación de datos.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_identifier_settings"
@@ -427,7 +427,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

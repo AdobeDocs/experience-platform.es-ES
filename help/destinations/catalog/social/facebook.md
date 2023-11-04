@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -129,7 +129,7 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 
 Antes de usar el `Extern_ID` área de nombres a la que enviar datos [!DNL Facebook], asegúrese de sincronizar sus propios identificadores mediante [!DNL Facebook Pixel]. Consulte la [Documentación oficial de facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) para obtener información detallada.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -145,7 +145,7 @@ El siguiente vídeo también muestra los pasos para configurar una [!DNL Faceboo
 >
 >La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 1. Busque el destino de Facebook en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
 2. Seleccionar **[!UICONTROL Conectar con destino]**.
@@ -171,11 +171,11 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origen de la audiencia"
+>title="Origen del público"
 >abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se mostrarán en Facebook cuando un usuario sea el objetivo del segmento"
 
 >[!CONTEXTUALHELP]

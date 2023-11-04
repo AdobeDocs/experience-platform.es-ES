@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 Las etiquetas permiten categorizar conjuntos de datos y campos según las políticas de uso y acceso que se aplican a esos datos. Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Las prácticas recomendadas alientan el etiquetado de datos en cuanto se incorporan a Platform o en cuanto los datos están disponibles para su uso en Platform.
 
-## Crear una etiqueta nueva {#create-new-label}
+## Creación de una nueva etiqueta {#create-new-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"

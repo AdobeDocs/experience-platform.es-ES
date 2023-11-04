@@ -50,7 +50,7 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
    ![Captura de pantalla de la interfaz de usuario del Experience Platform, que muestra una lista de destinos disponibles y el control de configuración de nuevo destino resaltado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
-## Autenticar en el destino {#authenticate}
+## Autenticarse en el destino {#authenticate}
 
 El primer paso para conectarse a un destino es autenticarse en la plataforma de destino.
 

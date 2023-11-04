@@ -121,7 +121,7 @@ Utilice las casillas de verificación de la izquierda de los nombres de los conj
 
 ![Flujo de trabajo de exportación de conjuntos de datos que muestra el paso Seleccionar conjuntos de datos, donde puede seleccionar qué conjuntos de datos exportar.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
-## Programar exportación del conjunto de datos {#scheduling}
+## Programación de exportación del conjunto de datos {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"

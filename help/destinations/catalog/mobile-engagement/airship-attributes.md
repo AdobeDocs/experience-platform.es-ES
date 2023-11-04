@@ -6,7 +6,7 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '1048'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,7 @@ Aproveche los datos de perfil recopilados en Adobe Experience Platform para pers
 
 Aproveche los atributos de Adobe Experience Platform para enriquecer aún más [!DNL Airship] y combinarlo con SDK o [!DNL Airship] datos predictivos. Por ejemplo, un minorista puede crear una audiencia con datos de estado de fidelidad y ubicación (atributos de Platform) y [!DNL Airship] Se predice que perderá datos para enviar mensajes de alto nivel de segmentación a usuarios con el estado de fidelidad de oro que viven en Las Vegas, NV y que tienen una alta probabilidad de pérdida.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -93,7 +93,7 @@ Aproveche los atributos de Adobe Experience Platform para enriquecer aún más [
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -113,7 +113,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

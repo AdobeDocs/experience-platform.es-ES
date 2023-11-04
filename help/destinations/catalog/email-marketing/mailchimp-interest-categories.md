@@ -6,7 +6,7 @@ exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2388'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -97,7 +97,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, buscar [!DNL Mailchimp Interest Categories]. También puede encontrarlo en la sección **[!UICONTROL Marketing por email]** categoría.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios a continuación y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -148,7 +148,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

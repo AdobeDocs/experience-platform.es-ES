@@ -11,7 +11,7 @@ ht-degree: 5%
 
 ---
 
-# Crear y editar clases en la interfaz de usuario {#ui-create-and-edit}
+# Creación y edición de esquemas en la IU {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"

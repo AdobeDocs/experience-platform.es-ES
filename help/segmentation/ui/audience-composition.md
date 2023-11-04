@@ -66,7 +66,7 @@ Las audiencias seleccionadas aparecerán ahora en el carril derecho cuando el **
 
 | Tipo de combinación | Descripción |
 | ---------- | ----------- |
-| [!UICONTROL Union] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
+| [!UICONTROL Unión] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
 | [!UICONTROL Intersección] | Las audiencias se combinan, y solo se comparten las audiencias en **todo** de ellos que se van a añadir. Esto sería el equivalente de una operación AND. |
 | [!UICONTROL Excluir superposición] | Las audiencias se combinan, y solo se comparten las audiencias en **uno, pero no todos** de ellos que se van a añadir. Esto sería el equivalente de una operación XOR. |
 
@@ -220,7 +220,7 @@ Además, puede limitar el número de audiencias que devuelve habilitando la vari
 
 ![Se resalta la opción Add profile limit, que permite limitar el número de audiencias devueltas.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Split] {#split-block}
+## [!UICONTROL División] {#split-block}
 
 El **[!UICONTROL Split]** el tipo de bloque le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo.
 

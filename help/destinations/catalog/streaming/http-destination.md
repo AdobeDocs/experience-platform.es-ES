@@ -93,7 +93,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [Concesión de contraseña de OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## Conectar con el destino {#connect-destination}
+## Conexión al destino {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -194,7 +194,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

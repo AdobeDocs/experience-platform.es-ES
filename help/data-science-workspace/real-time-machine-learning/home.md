@@ -59,7 +59,7 @@ El aprendizaje automático en tiempo real se encuentra actualmente en fase alfa.
 
 >[!NOTE]
 >
-> Limitaciones alfa:
+> Limitaciones del Alpha:
 > - Actualmente, solo se admiten modelos basados en ONNX.
 > - Las funciones utilizadas en los nodos no se pueden serializar. Por ejemplo, una función lambda utilizada en un nodo Pandas.
 > - Hay un sueño de 20 segundos después [!DNL Edge] la implementación se realiza manualmente.
@@ -68,7 +68,7 @@ El aprendizaje automático en tiempo real se encuentra actualmente en fase alfa.
 
 ### Funcionalidades:
 
-| | Alfa (mayo) |
+| | Alpha (mayo) |
 | --- | --- |
 | **Funcionalidades** | : con la plantilla del bloc de notas RTML, cree, pruebe e implemente un modelo de aprendizaje automático personalizado. <br> - Soporte para importar modelos de aprendizaje automático formados previamente. <br> - SDK de aprendizaje automático en tiempo real. <br> : conjunto inicial de nodos de creación. <br> : implementado en Adobe Experience Platform Hub. |
 | **Disponibilidad** | América del Norte |

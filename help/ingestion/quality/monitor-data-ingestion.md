@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ Esta guía del usuario proporciona pasos sobre cómo monitorizar los datos en la
 >title="Tasa de ingesta"
 >abstract="Número de eventos que se procesan correctamente por segundo."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Monitorización de flujos de datos para orígenes en la interfaz de usuario"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=es" text="Monitorización de flujos de datos para orígenes en la interfaz de usuario"
 
 >[!TIP]
 >

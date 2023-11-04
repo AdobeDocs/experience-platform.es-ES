@@ -113,7 +113,7 @@ Para conectar un socio con su [!UICONTROL identificador de conexión], introduzc
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Crear fuente {#create-feed}
+### Crear fuente   {#create-feed}
 
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"

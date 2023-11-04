@@ -271,7 +271,7 @@ El diagrama siguiente muestra estos esquemas y los campos aportados por cada gru
 
 ![](../images/schema-composition/composition.png)
 
-### Union {#union}
+### Unión {#union}
 
 While [!DNL Experience Platform] le permite componer esquemas para casos de uso particulares, también le permite ver una &quot;unión&quot; de esquemas para un tipo de clase específico. El diagrama anterior muestra dos esquemas basados en la clase XDM ExperienceEvent y dos esquemas basados en [!DNL XDM Individual Profile] clase. La unión, que se muestra a continuación, agrega los campos de todos los esquemas que comparten la misma clase ([!DNL XDM ExperienceEvent] y [!DNL XDM Individual Profile], respectivamente).
 

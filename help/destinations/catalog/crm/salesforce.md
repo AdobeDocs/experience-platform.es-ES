@@ -6,7 +6,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3117'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -140,7 +140,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 >
@@ -150,7 +150,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** buscar [!DNL Salesforce CRM]. También puede encontrarlo en la sección **[!UICONTROL CRM]** categoría.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios a continuación y seleccione **[!UICONTROL Conectar con destino]**. Consulte la [Reunir [!DNL Salesforce CRM] credenciales](#gather-credentials) para obtener cualquier guía.
 | Credencial | Descripción | | — | — | | **[!UICONTROL Nombre de usuario]** | Su [!DNL Salesforce] nombre de usuario de cuenta. | | **[!UICONTROL Contraseña]** | Una cadena concatenada compuesta por su [!DNL Salesforce] contraseña de la cuenta adjunta a su [!DNL Salesforce] Token de seguridad.<br>El valor concatenado adopta la forma de `{PASSWORD}{TOKEN}`.<br> Tenga en cuenta que no utilice llaves ni espacios.<br>Por ejemplo, si su [!DNL Salesforce] La contraseña es `MyPa$$w0rd123` y [!DNL Salesforce] El token de seguridad es `TOKEN12345....0000`, el valor concatenado que utilizará en el **[!UICONTROL Contraseña]** el campo es `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Dominio personalizado]** | Su [!DNL Salesforce] prefijo de dominio. <br>Por ejemplo, si el dominio es *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, debe proporcionar lo siguiente `d5i000000isb4eak-dev-ed` como el valor. | | **[!UICONTROL ID de cliente]** | Su [!DNL Salesforce] aplicación conectada `Consumer Key`. | | **[!UICONTROL Secreto del cliente]** | Su [!DNL Salesforce] aplicación conectada `Consumer Secret`. |
@@ -176,7 +176,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

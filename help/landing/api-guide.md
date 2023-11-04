@@ -49,7 +49,7 @@ Postman es una plataforma de colaboración para el desarrollo de API que le perm
 
 Para obtener más información sobre Postman, incluido cómo configurar un entorno, una lista de colecciones disponibles y cómo importar colecciones, visite la [Documentación de Platform Postman](postman.md).
 
-## Leer llamadas de API de muestra {#sample-api}
+## Lectura de llamadas de API de muestra {#sample-api}
 
 Los formatos de solicitud varían según la API de plataforma que se utilice. La mejor manera de aprender a estructurar las llamadas de API es siguiendo los ejemplos proporcionados en la documentación del servicio de Platform concreto que está utilizando.
 

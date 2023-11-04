@@ -5,7 +5,7 @@ exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 Para comprender el formato de mensaje y el proceso de configuración y transformación de perfiles en el lado del Adobe, familiarícese con los siguientes conceptos de Experience Platform:
 
 * **Modelo de datos de experiencia (XDM)**. [Información general de XDM](../../../../xdm/home.md) y  [Cómo crear un esquema XDM en Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
-* **Clase**. [Crear y editar clases en la interfaz de usuario](../../../../xdm/ui/resources/classes.md).
+* **Clase**. [Creación y edición de esquemas en la IU](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [Diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué audiencias pertenece un perfil. Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md).
 

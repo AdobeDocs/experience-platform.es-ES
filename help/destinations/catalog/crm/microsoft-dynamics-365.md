@@ -7,7 +7,7 @@ exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2154'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -107,7 +107,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 >
@@ -117,7 +117,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** buscar [!DNL Dynamics 365]. También puede encontrarlo en la sección **[!UICONTROL CRM]** categoría.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, seleccione **[!UICONTROL Conectar con destino]**.
 ![Captura de pantalla de la IU de Platform que muestra cómo autenticarse.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
@@ -146,7 +146,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

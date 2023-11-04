@@ -478,7 +478,7 @@ El siguiente es un ejemplo de una respuesta devuelta mediante el tipo de token d
 }
 ```
 
->[!TAB Activity Map]
+>[!TAB Página]
 
 El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en función del número de páginas a partir de cero. Al utilizar `PAGE` Para la paginación de tipo, debe proporcionar el número de registros dados en una sola página.
 
