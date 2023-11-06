@@ -2,23 +2,19 @@
 title: Consultas con parámetros
 description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '734'
 ht-degree: 10%
 
 ---
 
-# Consultas parametrizadas (versión limitada) {#parameterized-queries}
+# Consultas parametrizadas {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Consultas parametrizadas"
 >abstract="Utilice consultas parametrizadas para añadir valores de parámetro en el momento de la ejecución. Esto le permite trabajar con datos dinámicos y reutilizar consultas para diferentes casos de uso. Utilice el comienzo `'$'` para introducir un parámetro de consulta en su consulta del editor de texto. A continuación, añada un valor para la clave en la sección Parámetros de consulta debajo del editor."
-
->[!IMPORTANT]
->
->La función de IU de consulta parametrizada está disponible en un **solo versión limitada** y no está disponible para todos los clientes.
 
 El servicio de consultas admite el uso de consultas parametrizadas en el Editor de consultas. Con las consultas con parámetros, ahora puede utilizar marcadores de posición para parámetros y agregar los valores de parámetro en el momento de la ejecución. Los marcadores de posición permiten trabajar con datos dinámicos en los que no sabe cuáles serán los valores hasta que se ejecute la instrucción. También puede preparar sus consultas con antelación y reutilizarlas para fines similares. La reutilización de consultas ahorra un esfuerzo considerable ya que evita la creación de consultas SQL distintas para cada caso de uso.
 

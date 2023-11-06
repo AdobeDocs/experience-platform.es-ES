@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2304'
 ht-degree: 3%
 
 ---
@@ -46,6 +46,10 @@ La edición mejorada del Editor de consultas le permite escribir más de una con
 ## Creación de consultas mediante [!DNL Query Editor] {#query-authoring}
 
 Uso de [!DNL Query Editor], puede escribir, ejecutar y guardar consultas para datos de experiencia del cliente. Todas las consultas ejecutadas o guardadas en [!DNL Query Editor] están disponibles para todos los usuarios de su organización con acceso a [!DNL Query Service].
+
+>[!IMPORTANT]
+>
+>El editor anterior se eliminará el 1 de abril de 2024 y ya no estará disponible para su uso.
 
 ## Alternancia del editor de consultas mejorado {#enhanced-editor-toggle}
 
