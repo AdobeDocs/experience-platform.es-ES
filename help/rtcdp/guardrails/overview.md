@@ -1,9 +1,9 @@
 ---
 title: Protecciones de Real-Time CDP
 description: Obtenga información acerca de las protecciones de datos en los distintos servicios y áreas de Real-Time CDP.
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '391'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ Además, consulte los vínculos de la descripción del producto a continuación 
 
 * [Todas las descripciones de productos de Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=es)
 * [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P: paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (Paquetes B2B Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (edición B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (edición B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Pasos siguientes
 
