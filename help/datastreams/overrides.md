@@ -2,10 +2,10 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de secuencias de datos en la interfaz de usuario de secuencias de datos y activarlas mediante el SDK web.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 78%
+source-wordcount: '1466'
+ht-degree: 77%
 
 ---
 
@@ -153,9 +153,6 @@ alloy("sendEvent", {
       datasets: {
         event: {
           datasetId: "SampleEventDatasetIdOverride"
-        },
-        profile: {
-          datasetId: "www"
         }
       }
     },
@@ -180,7 +177,7 @@ alloy("sendEvent", {
 |---|---|
 | `edgeConfigOverrides.datastreamId` | Utilice este parámetro para permitir que una sola solicitud vaya a una secuencia de datos diferente a la definida por el comando `configure`. |
 
-### Envío de anulaciones de configuración mediante el comando `configure` {#send-configure}
+### Envío de anulaciones de configuración mediante el SDK web `configure` mando {#send-configure}
 
 El ejemplo siguiente muestra el aspecto que podría tener una anulación de la configuración en un comando `configure`.
 
@@ -195,11 +192,8 @@ alloy("configure", {
   edgeConfigOverrides: {
     "com_adobe_experience_platform": {
       "datasets": {
-        "event": { 
+        "event": {
           datasetId: "SampleProfileDatasetIdOverride"
-        },
-        "profile": { 
-          datasetId: "www"
         }
       }
     },
@@ -296,10 +290,7 @@ let configOverrides: [String: Any] = [
     "datasets": [
       "event": [
         "datasetId": "SampleEventDatasetIdOverride"
-      ],
-      "profile": [
-        "datasetId": "SampleProfileDatasetIdOverride"
-      ],
+      ]
     ]
   ],
   "com_adobe_analytics": [
@@ -308,7 +299,7 @@ let configOverrides: [String: Any] = [
           "MySecondOverrideReportSuite",
           "MyThirdOverrideReportSuite"
       ]
-  ],  
+  ],
   "com_adobe_identity": [
     "idSyncContainerId": "1234567"
   ],
@@ -341,10 +332,7 @@ val configOverrides = mapOf(
         to mapOf(
             "event"
             to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride"),
-            "profile"
-            to mapOf("datasetId"
-                to "SampleProfileDatasetIdOverride")
+                to "SampleEventDatasetIdOverride")
         )
     ),
     "com_adobe_analytics"
@@ -392,9 +380,6 @@ Los ejemplos anteriores generan un [!DNL Edge Network] carga útil similar a la 
         "datasets": {
           "event": {
             "datasetId": "SampleProfileDatasetIdOverride"
-          },
-          "profile": {
-            "datasetId": "www"
           }
         }
       },
