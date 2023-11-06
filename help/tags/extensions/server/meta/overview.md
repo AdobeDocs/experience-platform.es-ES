@@ -2,9 +2,9 @@
 title: Información general sobre la extensión API Meta Conversions
 description: Obtenga información acerca de la extensión de la API de metaconversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ La integración con la puntuación de coincidencia de calidad de evento (EMQ) le
 
 ## Integración con LiveRamp (Alpha) {#alpha}
 
-La integración con LiveRamp añade nuevos campos a la configuración de reglas de API de metaconversiones, lo que facilita la integración de los clientes con la API de conversiones de LiveRamp. Esta integración elimina la necesidad de compartir PII directamente con su socio o con Meta. Debido al gráfico de identidad robusto de LiveRamp, la inclusión de [!UICONTROL ID de socio (alpha)] puede mejorar la calidad de la integración al aumentar la tasa de coincidencia del usuario.
+[!DNL LiveRamp] clientes que tienen [!DNL LiveRamp]La solución de tráfico autenticado (ATS) de implementada en sus sitios puede optar por compartir RampID como parámetro de información del cliente. Trabaje con su [!DNL Meta] equipo de cuenta para unirse al programa de Alpha de esta función.
 
-![Reenvío de eventos Meta [!UICONTROL Regla] resaltado de página de configuración [!UICONTROL Nombre del socio (alpha)] y [!UICONTROL ID de socio (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![El reenvío de eventos Meta [!UICONTROL Regla] resaltado de página de configuración [!UICONTROL Nombre del socio (alpha)] y [!UICONTROL ID de socio (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configuración de una regla de reenvío de eventos {#rule}
 
