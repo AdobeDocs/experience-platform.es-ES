@@ -3,10 +3,10 @@ title: Introducción al reenvío de eventos
 description: Siga este tutorial paso a paso para empezar a utilizar el reenvío de eventos en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 76%
+source-wordcount: '870'
+ht-degree: 77%
 
 ---
 
@@ -20,7 +20,7 @@ Para utilizar el reenvío de eventos en Adobe Experience Platform, los datos deb
 
 * [SDK web de Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [SDK móvil de Adobe Experience Platform](https://sdkdocs.com)
-* [API de servidor a servidor](/help/server-api/overview.md)
+* [API del servidor de red perimetral](/help/server-api/overview.md)
 
 >[!NOTE]
 >El SDK web de Platform y el SDK móvil de Platform no requieren implementación a través de etiquetas en Adobe Experience Platform. Sin embargo, el método recomendado es utilizar etiquetas para implementar estos SDK.
