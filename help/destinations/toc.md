@@ -4,7 +4,7 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 9%
@@ -214,7 +214,7 @@ ht-degree: 9%
          * [Configuración de formato de archivo](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componentes de configuración de destino {#destination-configuration}
          * [Configuración de autenticación del cliente](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [Autenticación OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [Autorización de OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Campos de datos del cliente](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [Atributos de IU](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [Configuración del esquema de socio](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar el esquema de socio para destinos creados con Destination SDK.
 title: Configuración del esquema de socio
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
@@ -246,7 +246,7 @@ Después de leer este artículo, debería comprender mejor qué tipos de esquema
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Autenticación del cliente](customer-authentication.md)
-* [Autenticación OAuth2](oauth2-authentication.md)
+* [Autenticación OAuth2](oauth2-authorization.md)
 * [Atributos de IU](ui-attributes.md)
 * [Campos de datos del cliente](customer-data-fields.md)
 * [Configuración del área de nombres de identidad](identity-namespace-configuration.md)

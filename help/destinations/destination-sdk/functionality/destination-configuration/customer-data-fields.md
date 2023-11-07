@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 5%
@@ -568,7 +568,7 @@ Después de leer este artículo, debería comprender mejor cómo puede permitir 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Autenticación del cliente](customer-authentication.md)
-* [Autenticación OAuth2](oauth2-authentication.md)
+* [Autenticación OAuth2](oauth2-authorization.md)
 * [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)
 * [Configuración del área de nombres de identidad](identity-namespace-configuration.md)

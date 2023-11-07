@@ -2,7 +2,7 @@
 description: Aprenda a configurar los metadatos de audiencia para los destinos creados con Destination SDK.
 title: Configuración de metadatos de audiencia
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Después de leer este artículo, debería comprender mejor cómo puede configura
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Configuración de autenticación del cliente](customer-authentication.md)
-* [Autenticación OAuth2](oauth2-authentication.md)
+* [Autenticación OAuth2](oauth2-authorization.md)
 * [Campos de datos del cliente](customer-data-fields.md)
 * [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)

@@ -2,7 +2,7 @@
 title: Canalizaciones de funciones AI/ML
 description: Aprenda a utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -97,7 +97,7 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->
