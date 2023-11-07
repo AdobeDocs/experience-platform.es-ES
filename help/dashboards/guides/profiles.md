@@ -192,7 +192,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles no segmentados]](#unsegmented-profiles)
 * [[!UICONTROL Tendencia de cambio de los perfiles no segmentados]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Perfiles no segmentados por identidad]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audiences]](#audiences)
+* [[!UICONTROL Públicos]](#audiences)
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Tamaño de audiencia]](#audiences-size)
 * [[!UICONTROL Superposición de audiencias por política de combinación]](#audience-overlap-by-merge-policy)
@@ -363,7 +363,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL Audiences] {#audiences}
+### [!UICONTROL Públicos] {#audiences}
 
 Este widget proporciona el número total de audiencias que están listas para activarse, según la política de combinación elegida aplicada a los datos del perfil.
 

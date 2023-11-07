@@ -5,11 +5,11 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
 source-wordcount: '1849'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
-# Herramientas de espacio aislado
+# Herramientas de zona protegida
 
 >[!NOTE]
 >

@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 56%
+ht-degree: 59%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 56%
 * IU de zona protegida {#ui}
    * [Información general de IU de Sandbox](ui/overview.md)
    * [Guía del usuario de Sandbox](ui/user-guide.md)
-   * [Herramientas de espacio aislado](ui/sandbox-tooling.md)
+   * [Herramientas de zona protegida](ui/sandbox-tooling.md)
 * API de zona protegida {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)

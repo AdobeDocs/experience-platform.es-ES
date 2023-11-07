@@ -126,7 +126,7 @@ Después de activar las audiencias en *Snap Inc* destino, podrá ver las audienc
 1. Inicie sesión en [Administrador de anuncios de Snap](https://ads.snapchat.com/)
 2. Seleccionar **Audiencias** en el menú desplegable situado en la esquina superior izquierda de la pantalla. Verá las audiencias que activó en Adobe Experience Platform en la Biblioteca de audiencias:
 
-![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+![Públicos](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
 Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [Resumen del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 

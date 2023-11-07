@@ -86,7 +86,7 @@ Adobe Experience Platform está diseñado para enriquecer las aplicaciones de ex
 
 | Función | Descripción |
 | --- | --- |
-| Herramientas de espacio aislado | La función de herramientas de zona protegida le permite mejorar la precisión de la configuración en todas las zonas protegidas, así como exportar e importar sin problemas configuraciones de zonas protegidas entre zonas protegidas. Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Para obtener más información, consulte la [guía de IU de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
+| Herramientas de zona protegida | La función de herramientas de zona protegida le permite mejorar la precisión de la configuración en todas las zonas protegidas, así como exportar e importar sin problemas configuraciones de zonas protegidas entre zonas protegidas. Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Para obtener más información, consulte la [guía de IU de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
 Para obtener más información sobre los entornos limitados, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md).
 
