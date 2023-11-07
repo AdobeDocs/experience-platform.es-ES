@@ -2,7 +2,7 @@
 description: El servicio de destinos de Adobe Experience Platform utiliza puntos finales de configuración para varios componentes que crean la funcionalidad de destinos. Descubra cómo estos componentes combinados permiten a Experience Platform conectarse a socios de destino, enviar mensajes personalizados y activar datos de perfil en todo el ecosistema digital.
 title: Opciones de configuración en Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Este punto de conexión de configuración contiene información básica y avanza
 Consulte la documentación siguiente para obtener detalles sobre cada uno de los componentes de configuración de destino. Puede configurar las funcionalidades que se describen a continuación a través de la [extremo de destinos](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [Configuración de autenticación del cliente](destination-configuration/customer-authentication.md): seleccione el mecanismo de autenticación que el Experience Platform debe utilizar para conectarse al destino. Esta configuración genera el [Configurar nuevo destino](../../ui/connect-destination.md) página de la interfaz de usuario de Experience Platform, donde los usuarios se conectan con Experience Platform a las cuentas que tienen con el .
-* [Autenticación OAuth2](destination-configuration/oauth2-authorization.md): Obtenga información acerca de todos los [!DNL OAuth2] flujos de autenticación admitidos por el Destination SDK y obtenga instrucciones para configurarlos [!DNL OAuth2] para su destino..
+* [Autorización de OAuth2](destination-configuration/oauth2-authorization.md): Obtenga información acerca de todos los [!DNL OAuth2] flujos de autenticación admitidos por el Destination SDK y obtenga instrucciones para configurarlos [!DNL OAuth2] para su destino..
 * [Campos de datos del cliente](destination-configuration/customer-data-fields.md): Aprenda a crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para cómo conectar y exportar datos a su destino.
 * [Atributos de IU](destination-configuration/ui-attributes.md): Obtenga información sobre cómo configurar los atributos de la interfaz de usuario, como el vínculo de documentación, la categoría de la tarjeta de destino, el tipo de conexión de destino y la frecuencia, para los destinos creados con Destination SDK.
 * [Configuración del esquema](destination-configuration/schema-configuration.md): Aprenda a definir el esquema de destino al que los usuarios pueden asignar atributos e identidades de perfil.

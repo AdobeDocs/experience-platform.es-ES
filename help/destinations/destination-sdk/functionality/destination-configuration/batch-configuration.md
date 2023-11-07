@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 4%
@@ -155,7 +155,7 @@ Después de leer este artículo, debería tener una mejor comprensión de cómo 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Configuración de autenticación del cliente](customer-authentication.md)
-* [Autenticación OAuth2](oauth2-authorization.md)
+* [Autorización de OAuth2](oauth2-authorization.md)
 * [Campos de datos del cliente](customer-data-fields.md)
 * [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)

@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar un mecanismo de autenticación para su destino y obtener información sobre lo que los usuarios verán en la interfaz de usuario según el método de autenticación que seleccione.
 title: Configuración de autenticación del cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Cuándo [creación de un destino](../../authoring-api/destination-configuration/
 
 * Para destinos que utilizan [autenticación básica](#basic), los usuarios deben proporcionar un nombre de usuario y una contraseña directamente en la página de autenticación de la IU de Experience Platform.
 * Para destinos que utilizan [autenticación de portador](#bearer), los usuarios deben proporcionar un token de portador.
-* Para destinos que utilizan [Autenticación OAuth2](#oauth2), los usuarios se redirigen a la página de inicio de sesión de destino, donde pueden iniciar sesión con sus credenciales.
+* Para destinos que utilizan [Autorización de OAuth2](#oauth2), los usuarios se redirigen a la página de inicio de sesión de destino, donde pueden iniciar sesión con sus credenciales.
 * Para [Amazon S3](#s3) destinos, los usuarios deben proporcionar su [!DNL Amazon S3] clave de acceso y clave secreta.
 * Para [Azure Blob](#blob) destinos, los usuarios deben proporcionar su [!DNL Azure Blob] cadena de conexión.
 
@@ -233,7 +233,7 @@ Después de leer este artículo, debería comprender mejor cómo puede configura
 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
-* [Autenticación OAuth2](oauth2-authorization.md)
+* [Autorización de OAuth2](oauth2-authorization.md)
 * [Campos de datos del cliente](customer-data-fields.md)
 * [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)

@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 4%
@@ -145,7 +145,7 @@ Después de leer este artículo, debería comprender mejor cómo configurar las 
 Para obtener más información acerca de los demás componentes de destino, consulte los siguientes artículos:
 
 * [Autenticación del cliente](customer-authentication.md)
-* [Autenticación OAuth2](oauth2-authorization.md)
+* [Autorización de OAuth2](oauth2-authorization.md)
 * [Campos de datos del cliente](customer-data-fields.md)
 * [Atributos de IU](ui-attributes.md)
 * [Configuración del esquema](schema-configuration.md)
