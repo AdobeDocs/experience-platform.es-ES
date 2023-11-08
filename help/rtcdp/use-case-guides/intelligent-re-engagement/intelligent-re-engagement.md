@@ -2,7 +2,7 @@
 title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 5%
@@ -150,6 +150,8 @@ El esquema de transacciones digitales del cliente se representa mediante una [[!
 
 +++ExperienceEvent de XDM (clase)
 
+El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
+
 | Campos | Requisito | Descripción |
 | --- | --- | --- |
 | `_id` | Requerido | Identifica de forma exclusiva los eventos individuales que se incorporan en [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ El esquema de transacciones digitales del cliente se representa mediante una [[!
 | `eventType` | Requerido | Cadena que indica el tipo de categoría del evento. |
 
 +++
-
-El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
 
 +++Detalles del ID del usuario final (grupo de campos)
 
@@ -189,6 +189,8 @@ El esquema de transacciones sin conexión del cliente se representa mediante una
 
 +++ExperienceEvent de XDM (clase)
 
+El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
+
 | Campos | Requisito | Descripción |
 | --- | --- | --- |
 | `_id` | Requerido | Identifica de forma exclusiva los eventos individuales que se incorporan en [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ El esquema de transacciones sin conexión del cliente se representa mediante una
 | `eventType` | Requerido | Cadena que indica el tipo de categoría del evento. |
 
 +++
-
-El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
 
 +++Detalles de comercio (grupo de campos)
 
@@ -247,6 +247,8 @@ El [!DNL Adobe] el esquema del conector web se representa mediante una variable 
 
 +++ExperienceEvent de XDM (clase)
 
+El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
+
 | Campos | Requisito | Descripción |
 | --- | --- | --- |
 | `_id` | Requerido | Identifica de forma exclusiva los eventos individuales que se incorporan en [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ El [!DNL Adobe] el esquema del conector web se representa mediante una variable 
 | `eventType` | Requerido | Cadena que indica el tipo de categoría del evento. |
 
 +++
-
-El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) La clase incluye los siguientes grupos de campos:
 
 Plantilla de ExperienceEvent de +++Adobe Analytics (grupo de campos)
 
