@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3352'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -253,7 +253,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
 >abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
