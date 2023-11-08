@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Ayuda sobre las zonas protegidas en Adobe Experience Platform
 breadcrumb-title: Guía de Sandboxes
-user-guide-description: Dividir una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
+user-guide-description: Descubra cómo funcionan los entornos limitados y partición de una instancia de Platform en entornos virtuales para desarrollo, pruebas e implementación de aplicaciones.
 feature: Sandboxes
-source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 59%
+source-wordcount: '77'
+ht-degree: 37%
 
 ---
 

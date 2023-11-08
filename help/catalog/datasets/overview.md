@@ -3,11 +3,12 @@ keywords: Experience Platform;inicio;temas populares;ubicación de datos;Ubicaci
 solution: Experience Platform
 title: Resumen de conjuntos de datos
 description: Este documento proporciona información general de alto nivel sobre los conjuntos de datos en Experience Platform.
+user-guide-description: Obtenga información general de alto nivel sobre los conjuntos de datos en Experience Platform con esta guía. Obtenga información sobre cómo crearlos, aplicar restricciones en los datos e ingerirlos en conjuntos de datos aquí.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 9%
+source-wordcount: '870'
+ht-degree: 8%
 
 ---
 
