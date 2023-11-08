@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de audiencia a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+source-git-commit: 98171126ea09ec9e81daeeb9122da8a44ab8c16b
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 73%
+source-wordcount: '325'
+ht-degree: 72%
 
 ---
 
@@ -73,11 +73,12 @@ ht-degree: 73%
    * [Información general de fuentes](sources/sources-overview.md)
    * [Fuentes en Real-Time CDP edición B2B](sources/b2b.md)
 * Casos de uso {#use-cases}
-   * Casos de uso de renovación de participación inteligente {#intelligent-re-engagement}
+   * Casos de uso de personalización, perspectivas y participación {#personalization-insights-engagement}
       * [Vuelva a atraer a sus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Adquisición de cliente {#customer-acquisition}
       * [Interactúe y adquiera nuevos clientes sin depender de cookies de terceros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Retargeting fuera del sitio de usuarios no autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimiento de perfil {#profile-enrichment}
       * [Complemento de perfiles de origen con atributos proporcionados por socios](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
