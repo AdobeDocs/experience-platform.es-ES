@@ -4,9 +4,9 @@ title: Conexión de Microsoft Dynamics 365
 description: El destino de Microsoft Dynamics 365 le permite exportar los datos de su cuenta y activarlos en Microsoft Dynamics 365 para sus necesidades comerciales.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ El [Límites de solicitudes y asignaciones](https://docs.microsoft.com/en-us/pow
 
 | Identidad de destino | Ejemplo | Descripción | Consideraciones |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identificador único de un contacto. | **Obligatorio**. Consulte la [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) para obtener más información. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identificador único de un contacto. | **Obligatorio**. Consulte la [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -162,23 +162,24 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform a 
 1. En el **[!UICONTROL Asignación]** paso, seleccione **[!UICONTROL Añadir nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
    ![Ejemplo de captura de pantalla de la IU de Platform para Añadir nueva asignación.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione la **[!UICONTROL Seleccionar área de nombres de identidad]** categoría y seleccione `contactId`.
+1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione la **[!UICONTROL Seleccionar área de nombres de identidad]** categoría y seleccione `contactid`.
    ![Ejemplo de captura de pantalla de la IU de Platform para asignación de origen.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione el tipo de campo de destino al que desea asignar el campo de origen.
    * **[!UICONTROL Seleccionar área de nombres de identidad]**: seleccione esta opción para asignar el campo de origen a un área de nombres de identidad de la lista.
-     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Añada la siguiente asignación entre su esquema de perfil XDM y su [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| Obligatoria| |—|—|—| |`contactId`|`contactId`| Sí |
+   * Añada la siguiente asignación entre su esquema de perfil XDM y su [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| Obligatoria| |—|—|—| |`contactid`|`contactid`| Sí |
 
    * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en la **[!UICONTROL Nombre de atributo]** field. Consulte [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obtener una lista completa de los atributos admitidos.
-     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Captura de pantalla de la IU de Platform que muestra la asignación de Target para correo electrónico.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >Si tiene un campo de origen de fecha u hora asignado a una [!DNL Dynamics 365] [fecha o marca de tiempo](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) campo de destino, asegúrese de que el valor asignado que se está mostrando no esté vacío. Si el valor pasado está vacío, se encontrará con un *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensaje de error y los datos no se actualizarán. Este es un [!DNL Dynamics 365] limitación.
+     > * Los nombres de los campos de destino deben estar en `lowercase`.
+     > * Además, si tiene un campo de origen de fecha u hora asignado a una [!DNL Dynamics 365] [fecha o marca de tiempo](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) campo de destino, asegúrese de que el valor asignado no esté vacío. Si el valor del campo exportado está vacío, se mostrará un *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* mensaje de error y los datos no se actualizarán. Este es un [!DNL Dynamics 365] limitación.
 
-   * Por ejemplo, según los valores que desee actualizar, añada la siguiente asignación entre el esquema de perfil XDM y la variable [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
+   * Por ejemplo, según los valores que desee actualizar, añada la siguiente asignación entre el esquema de perfil XDM y la variable [!DNL Dynamics 365] instancia: Esquema de perfil XDM[!DNL Dynamics 365] Instancia| |—|—| |`person.name.firstName`|`firstname`| |`person.name.lastName`|`lastname`| |`personalEmail.address`|`emailaddress1`|
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Captura de pantalla de la IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -243,6 +244,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
+| Octubre de 2023 | Actualización de documentación | La guía actualizada para indicar todos los nombres de atributos de destino deben estar en minúsculas, en el [Consideraciones sobre asignación y ejemplo](#mapping-considerations-example) paso. |
 | Agosto de 2023 | Actualización de funcionalidad y documentación | Se ha añadido la compatibilidad con [!DNL Dynamics 365] prefijos de campo personalizados para campos personalizados que no se crearon dentro de la solución predeterminada en [!DNL Dynamics 365]. Un nuevo campo de entrada, **[!UICONTROL Prefijo de personalización]**, se ha añadido en la [Rellenar detalles de destino](#destination-details) paso. (PLATIR-31602). |
 | Noviembre de 2022 | Versión inicial | Versión de destino inicial y publicación de documentación. |
 
