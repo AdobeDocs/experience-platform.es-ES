@@ -2,9 +2,9 @@
 description: Esta página aborda el formato de mensaje y la transformación de perfil en datos exportados de Adobe Experience Platform a destinos.
 title: Formato del mensaje
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2502'
 ht-degree: 2%
 
 ---
@@ -1203,13 +1203,18 @@ El contexto proporcionado a la plantilla contiene `input`  (los perfiles/datos q
 
 En la tabla siguiente se proporcionan descripciones de las funciones de los ejemplos anteriores.
 
-| Función | Descripción |
-|---------|----------|
+| Función | Descripción | Ejemplo |
+|---------|----------|----------|
 | `input.profile` | El perfil, representado como [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
-| `destination.segmentAliases` | Mapa de ID de audiencia en el área de nombres de Adobe Experience Platform a alias de audiencia en el sistema del socio. |
-| `destination.segmentNames` | Mapa de nombres de audiencia en el área de nombres de Adobe Experience Platform a nombres de audiencia en el sistema del socio. |
-| `addedSegments(listOfSegments)` | Devuelve solo las audiencias que tienen estado `realized`. |
-| `removedSegments(listOfSegments)` | Devuelve solo las audiencias que tienen estado `exited`. |
+| `hasSegments` | Esta función toma un mapa de ID de audiencia de área de nombres como parámetro. La función devuelve `true` si hay al menos una audiencia en el mapa (independientemente de su estado), y `false` de lo contrario. Puede utilizar esta función para decidir si desea iterar en un mapa de audiencias o no. | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | Mapa de ID de audiencia en un área de nombres de Adobe Experience Platform específica a alias de audiencia en el sistema del socio. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Mapa de nombres de audiencia en áreas de nombres de Adobe Experience Platform específicas a nombres de audiencia en el sistema del socio. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | Devuelve la hora en la que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: devuelve el tiempo en el que el segmento con el ID `seg-id-1`, desde el `ups` , se ha creado en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1`, desde el `ups` se ha actualizado el área de nombres en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1`, desde el `ups` , se activó en el destino, en formato UNIX timestamp.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: devuelve la hora en la que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen estado `realized`, en todas las áreas de nombres. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen estado `exited`, en todas las áreas de nombres. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Obsoleto. Reemplazado por`destination.namespaceSegmentAliases`** <br><br> Mapa de ID de audiencia en el área de nombres de Adobe Experience Platform a alias de audiencia en el sistema del socio. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Reemplazado por`destination.namespaceSegmentNames`** <br><br>  Mapa de nombres de audiencia en el área de nombres de Adobe Experience Platform a nombres de audiencia en el sistema del socio. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Obsoleto. Reemplazado por`destination.namespaceSegmentTimestamps`** <br><br> Devuelve la hora en la que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se ha creado, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se ha actualizado, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se activó en el destino, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: devuelve la hora en la que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
 
 {style="table-layout:auto"}
 
