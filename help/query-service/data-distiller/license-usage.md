@@ -2,8 +2,7 @@
 title: Monitorizar uso de licencia de consulta por lotes
 description: La interfaz de usuario de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante sobre el uso de la licencia de Data Distiller de su organización.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-recommendations: noCatalog, display
-source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
+source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
