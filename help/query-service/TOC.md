@@ -4,7 +4,7 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: 533de54a0e4a48f1f95e732d8ea9b4fbe46dd241
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 20%
@@ -15,7 +15,7 @@ ht-degree: 20%
 # Adobe Experience Platform Query Service {#query}
 
 - [Introducción al servicio de consultas](home.md)
-- [Paquetes del servicio de consultas](packages.md)
+- [Empaquetado del servicio de consultas](packaging.md)
 - [Protecciones del servicio de consultas](guardrails.md)
 - Introducción {#get-started}
    - [Requisitos previos](get-started/prerequisites.md)

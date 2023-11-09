@@ -2,9 +2,9 @@
 title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,7 @@ Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [
 
 ## Introducción
 
-El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la [empaquetado](../packages.md) y [barandas](../guardrails.md#query-accelerated-store) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la [empaquetado](../packaging.md) y [barandas](../guardrails.md#query-accelerated-store), y [licenciamiento](../data-distiller/license-usage.md) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
 
 Las siguientes secciones detallan las llamadas de API necesarias para acceder al almacén acelerado de consultas de forma independiente a través de la API del servicio de consultas. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 

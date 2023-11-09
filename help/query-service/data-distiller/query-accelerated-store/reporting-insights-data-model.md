@@ -2,9 +2,9 @@
 title: Guía de información de Query Accelerated Store Reporting
 description: Obtenga información sobre cómo crear un modelo de datos de perspectivas de creación de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,9 @@ El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona per
 
 Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definidos por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener más información sobre esta función.
 
-## Primeros pasos
+## Introducción
 
-El SKU de Data Distiller es necesario para crear un modelo de datos personalizado para las perspectivas de creación de informes y ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [empaquetado](../../packages.md) y [barandas](../../guardrails.md#query-accelerated-store) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+El SKU de Data Distiller es necesario para crear un modelo de datos personalizado para las perspectivas de creación de informes y ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [empaquetado](../../packaging.md), [barandas](../../guardrails.md#query-accelerated-store), y  [licenciamiento](../../data-distiller/license-usage.md) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
 
 ## Creación de un modelo de datos de perspectivas de informes
 
