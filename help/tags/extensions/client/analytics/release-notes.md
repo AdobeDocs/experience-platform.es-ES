@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión de Adobe Analytics
 description: Últimas notas de la versión de la extensión de etiquetas de Adobe Analytics en Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 87%
+source-wordcount: '1416'
+ht-degree: 86%
 
 ---
 
@@ -17,13 +17,22 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 >
 >La extensión de etiquetas de Analytics si se actualiza con frecuencia en respuesta a las actualizaciones del [Biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte la [Notas de la versión de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
 
+## 15 de septiembre de 2023
+
+**Extensión de Adobe Analytics 1.9.3**
+
+**Funcionalidades**:
+
+* Actualizado a [AppMeasurement a la versión 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 19 de julio de 2023
 
 **Extensión de Adobe Analytics 1.9.2**
 
 **Funcionalidades**:
 
-* Se ha actualizado a la versión 2.24.0 del AppMeasurement.
+* Actualizado a [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Se ha añadido una configuración opcional (`decodeLinkParameters` predeterminado `false`) que descodifica las direcciones URL de los vínculos que incluyen caracteres codificados de doble byte.
 
 **Corrección de errores**:
