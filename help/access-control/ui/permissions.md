@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administración De Permisos Para Un Perfil De Producto
 description: El control de acceso en Adobe Experience Platform le permite administrar funciones y permisos para varias funcionalidades de Platform mediante Adobe Admin Console. Este documento sirve como guía para administrar permisos para un perfil de producto para Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Justo después de [creación de un nuevo perfil de producto](#create-a-new-produ
 
 ![permissions](../images/permissions.png)
 
-Los permisos se dividen en categorías y se enumeran en esta página. La lista muestra el nombre de la categoría, el número de permisos que contiene (y cuántos están activos) y su descripción.
+Los permisos se dividen en categorías y se enumeran en esta página. La lista muestra el nombre de la categoría, el número de permisos que contiene (y cuántos están activos) y su descripción. Consulte la tabla en [Permisos de recursos](/help/access-control/home.md#permissions) para obtener un desglose de los permisos disponibles para cada función.
 
 Seleccione cualquier categoría de la lista para abrir **[!UICONTROL Editar permisos]** página.
 
