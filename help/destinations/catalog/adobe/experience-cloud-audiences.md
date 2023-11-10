@@ -3,10 +3,10 @@ title: Audiencias de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
 workflow-type: tm+mt
-source-wordcount: '1683'
-ht-degree: 2%
+source-wordcount: '1780'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 2%
 >
 > Este destino está disponible para [Adobe Real-time Customer Data Platform Prime y Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) clientes.
 
-Utilice este destino para activar audiencias de Real-Time CDP a Audience Manager y Adobe Analytics. Necesita una licencia de Audience Manager para enviar audiencias a Adobe Analytics.
+Utilice este destino para activar audiencias de Real-Time CDP a Audience Manager y Adobe Analytics.
+
+Para enviar audiencias a Adobe Analytics, necesita una licencia de Audience Manager. Para obtener más información, consulte la [Introducción al Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=es).
 
 Para enviar audiencias a otras soluciones de Adobe, utilice las conexiones directas de Real-Time CDP a [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) y [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -43,42 +45,48 @@ En Audience Manager, puede utilizar las audiencias de Real-Time CDP para casos d
 
 ### Control granular de audiencias exportadas {#segments-control}
 
-Utilice la nueva integración de uso compartido de audiencias de autoservicio mediante el destino de Audiencias de Experience Cloud para seleccionar qué audiencias exportar a Audience Manager y más allá. Esto le permite determinar qué audiencias desea compartir con otras soluciones de Experience Cloud y qué audiencias desea mantener exclusivamente en Real-Time CDP.
+Para seleccionar qué audiencias exportar a Audience Manager y posteriores, utilice la nueva integración de uso compartido de audiencias de autoservicio a través del destino de Audiencias de Experience Cloud.  Esto le permite determinar qué audiencias desea compartir con otras soluciones de Experience Cloud y qué audiencias desea mantener exclusivamente en Real-Time CDP.
 
 La integración heredada de uso compartido de audiencias no permitía un control granular sobre qué audiencias debían exportarse a Audience Manager y más allá.
 
+### Uso compartido de audiencias de Real-Time CDP con Adobe Analytics {#share-audiences-with-analytics}
+
+Las audiencias que envía al destino de Audiencias de Experience Cloud no aparecen automáticamente en Adobe Analytics.
+
+Para poder enviar audiencias a Adobe Analytics, debe [implementación del servicio de ID de Experience Cloud para Analytics y Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
+
+>[!IMPORTANT]
+>
+>Para enviar audiencias de Real-Time CDP a Adobe Analytics a través del destino de Audiencias de Experience Cloud, debe tener una licencia de Audience Manager.
+
 ### Uso compartido de audiencias de Real-Time CDP con otras soluciones de Experience Cloud {#share-segments-with-other-solutions}
 
-Además de compartir audiencias con Audience Manager, la tarjeta de destino Audiencias de Real-Time CDP le permite compartir audiencias con cualquier otra solución de Experience Cloud que haya seleccionado, como:
+Puede utilizar la tarjeta de destino Audiencias de Real-Time CDP para compartir audiencias con otras soluciones de Experience Cloud.
 
-* Adobe Campaign
-* Adobe Target
-* Advertising Cloud
-* Analytics
-* Marketo
+Sin embargo, Adobe recomienda encarecidamente utilizar las siguientes tarjetas de destino específicas si desea compartir audiencias con estas soluciones:
 
-<!--
-
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
-
--->
+* [Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Adobe Target](../personalization/adobe-target-connection.md)
+* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Marketo](../adobe/marketo-engage.md)
 
 ## Requisitos previos {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * Necesita una licencia de Audience Manager para habilitar el [Casos de uso de Data Management Platform](#dmp-use-cases) mencionado anteriormente.
+> * Usted *hacer* necesita una licencia de Audience Manager para compartir audiencias de Real-Time CDP con Adobe Analytics.
 > * Usted *no necesita* una licencia de Audience Manager para compartir audiencias de Real-Time CDP con Adobe Advertising Cloud, Adobe Target, Marketo y otras soluciones de Experience Cloud, mencionadas en la [sección anterior](#share-segments-with-other-solutions).
 
 ### Para clientes que utilizan la solución heredada de uso compartido de audiencias
 
 Si ya está compartiendo audiencias de Real-Time CDP con Audience Manager y otras soluciones de Experience Cloud a través de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), debe ponerse en contacto con el Servicio de atención al cliente para deshabilitar la integración heredada.
 
-El tiempo de respuesta para resolver el ticket de desabastecimiento es de seis días hábiles o menos. Una vez deshabilitada la integración heredada existente, puede continuar con [creación de una conexión](#connect) a través de la tarjeta de destino de autoservicio.
+El tiempo de respuesta para resolver el ticket de desabastecimiento es de seis días hábiles o menos. Una vez deshabilitada la integración heredada existente, puede continuar con [crear una conexión](#connect) a través de la tarjeta de destino de autoservicio.
 
 >[!IMPORTANT]
 >
->La exportación de audiencias de Real-Time CDP a sus otras soluciones se detendrá en el tiempo entre la resolución del ticket y el momento en que se establece una nueva conexión a través de la tarjeta de destino. Puede minimizar este tiempo de inactividad creando la conexión a través de la tarjeta de destino tan pronto como se cierre el ticket.
+>La exportación de audiencias de Real-Time CDP a sus otras soluciones se detiene en el tiempo entre la resolución del ticket y el momento en que se establece una nueva conexión a través de la tarjeta de destino. Puede minimizar este tiempo de inactividad creando la conexión a través de la tarjeta de destino después de cerrar el ticket.
 
 ## Limitaciones y llamadas conocidas {#known-limitations}
 
@@ -86,13 +94,13 @@ Tenga en cuenta las siguientes limitaciones conocidas y llamadas importantes al 
 
 * Actualmente, solo se admite un destino de Audiencias de Experience Cloud. Si se intenta configurar una segunda conexión de destino, se producirá un error.
 * Al conectarse al destino, puede ver una opción para lo siguiente [habilitar alertas de flujo de datos](../../ui/alerts.md). Aunque esté visible en la interfaz de usuario de, la variable **actualmente no se admite la opción habilitar alertas**.
-* **Compatibilidad con relleno de audiencia**: la primera exportación a soluciones de Audience Manager u otros Experience Cloud incluye una población histórica de las audiencias. Usuarios de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Los usuarios que configuran este destino deben esperar una diferencia de relleno de aproximadamente 6 horas.
+* **Compatibilidad con relleno de audiencia**: la primera exportación a soluciones de Audience Manager u otros Experience Cloud incluye una población histórica de las audiencias. Usuarios de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Los usuarios que configuran este destino deben esperar una diferencia de relleno de aproximadamente seis horas.
 
 ### Latencia al activar audiencias {#audience-activation-latency}
 
-Hay una latencia de cuatro horas entre el momento en que las audiencias se activan por primera vez en Real-Time CDP y el momento en que están listas para utilizarse en soluciones de Audience Manager y otras soluciones de Experience Cloud para determinados casos de uso.
+Hay una latencia de cuatro horas entre el momento en que las audiencias se activan por primera vez en Real-Time CDP y el momento en que están listas para utilizarse en Audience Manager y otras soluciones de Experience Cloud.
 
-Las audiencias pueden tardar hasta 24 horas en estar totalmente disponibles en Audience Manager Experience Cloud para todos los casos de uso y hasta 48 horas en aparecer en los informes de Audience Manager.
+Las audiencias pueden tardar hasta 24 horas en estar totalmente disponibles en Audience Manager para todos los casos de uso. Las audiencias de Audiencias de Experience Cloud pueden tardar hasta 48 horas en aparecer en los informes de Audience Manager.
 
 Los metadatos, como los nombres de audiencias, están disponibles en Audience Manager pocos minutos después de configurar la exportación al destino de Audiencias del Experience Cloud.
 
@@ -111,7 +119,7 @@ Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los d
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipo de audiencia puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -127,7 +135,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 | Elemento | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Está exportando todos los miembros de una audiencia con claves de las identidades enumeradas en la sección anterior. |
-| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Real-Time CDP basado en la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Real-Time CDP en función de la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -160,7 +168,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 > 
 >Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino. Tenga en cuenta que [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) es obligatorio y no [paso de programación](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) está disponible para este destino.
+Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino. No [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) es obligatorio y no [paso de programación](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) está disponible para este destino.
 
 ## Validar exportación de datos {#exported-data}
 
@@ -172,7 +180,7 @@ Las audiencias de Real-Time CDP aparecen en Audience Manager como [señales](htt
 
 Los nombres de los segmentos comienzan a rellenarse en Audience Manager 15 minutos después de que las audiencias se hayan enviado desde Real-Time CDP.
 
-La población de segmentos comienza a fluir al Audience Manager en un plazo de 6 horas desde que se envía desde Real-Time CDP y se actualizará cada 24 horas en Audience Manager.
+La población de segmentos comienza a fluir al Audience Manager en un plazo de 6 horas desde que se envía desde Real-Time CDP y se actualiza cada 24 horas en Audience Manager.
 
 La población completa será visible en Audience Manager después de 72 horas y las poblaciones seguirán fluyendo a Audience Manager a menos que la audiencia se elimine del destino en Real-Time CDP.
 
@@ -181,9 +189,9 @@ La población completa será visible en Audience Manager después de 72 horas y 
 Todo [!DNL Real-Time CDP] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
 
 La gobernanza de datos en Real-Time CDP la aplican ambos [etiquetas de uso de datos](/help/data-governance/labels/reference.md) y acciones de marketing.
-Las etiquetas de uso de datos se transferirán a las aplicaciones, pero las acciones de marketing no. Esto significa que, una vez que llegan a Audience Manager, las audiencias de Real-Time CDP se pueden exportar a cualquier destino disponible. En Audience Manager, puede utilizar [controles de exportación de datos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) para impedir que las audiencias se exporten a determinados destinos.
+Las etiquetas de uso de datos se transfieren a las aplicaciones, pero las acciones de marketing no. Esto significa que, una vez que llegan a Audience Manager, las audiencias de Real-Time CDP se pueden exportar a cualquier destino disponible. En Audience Manager, puede utilizar [controles de exportación de datos](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) para impedir que las audiencias se exporten a determinados destinos.
 
-Audiencias marcadas con el [!DNL HIPAA] la acción de marketing no se envía de Real-Time CDP al Audience Manager.
+Audiencias marcadas con el [!DNL HIPAA] las acciones de marketing no se envían de Real-Time CDP al Audience Manager.
 
 ### Administración de permisos en Audience Manager
 
@@ -191,4 +199,4 @@ Las audiencias y características de Audience Manager están sujetas a [Controle
 
 Las audiencias exportadas desde Real-Time CDP se asignan a una fuente de datos específica en el Audience Manager llamada **[!UICONTROL Segmentos de Experience Platform]**.
 
-Para permitir que solo determinados usuarios tengan acceso a las audiencias, puede aplicar controles de acceso a las audiencias que pertenezcan a la fuente de datos. Debe establecer nuevos permisos de control de acceso en Audience Manager para estas audiencias y características creadas a partir de segmentos de Real-Time CDP.
+Para permitir que solo determinados usuarios tengan acceso a las audiencias, puede aplicar controles de acceso a las audiencias que pertenezcan a la fuente de datos. Establezca nuevos permisos de control de acceso en Audience Manager para estas audiencias y características creadas a partir de segmentos de Real-Time CDP.
