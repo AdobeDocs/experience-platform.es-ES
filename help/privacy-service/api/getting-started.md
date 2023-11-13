@@ -5,7 +5,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,7 @@ Esta guía requiere una comprensión práctica de [Privacy Service](../home.md) 
 
 Para crear credenciales de acceso para la API, un administrador de su organización debe haber configurado previamente perfiles de producto para un Privacy Service en Adobe Admin Console. El perfil de producto que asigna a una integración de API determina qué permisos tiene la integración al acceder a las funciones de Privacy Service. Consulte la guía de [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
 
-## Recopilar valores para los encabezados obligatorios {#gather-values-required-headers}
+## Recopilación de valores para los encabezados obligatorios {#gather-values-required-headers}
 
 Para realizar llamadas a la API de Privacy Service, primero debe recopilar las credenciales de acceso para utilizarlas en los encabezados obligatorios:
 
@@ -97,9 +97,9 @@ Se genera un nuevo token de acceso y se proporciona un botón para copiar el tok
 
 También puede utilizar un entorno y una colección de Postman para generar tokens de acceso. Para obtener más información, lea la sección sobre [uso de Postman para autenticar y probar llamadas a la API](/help/landing/api-authentication.md#use-postman) en la guía de autenticación de API de Experience Platform.
 
-## Leer llamadas de API de muestra {#read-sample-api-calls}
+## Lectura de llamadas de API de muestra {#read-sample-api-calls}
 
-Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Platform.
+Cada guía de extremo proporciona llamadas de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Platform.
 
 ## Pasos siguientes {#next-steps}
 

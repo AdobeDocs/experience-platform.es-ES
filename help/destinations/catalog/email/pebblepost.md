@@ -6,11 +6,11 @@ exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# [!DNL PebblePost] Extensión {#pebblepost-extension}
+# Extensión [!DNL PebblePost] {#pebblepost-extension}
 
 ## Información general {#overview}
 

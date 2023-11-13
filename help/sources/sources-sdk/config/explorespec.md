@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Configuración y exploración de especificaciones para orígenes de autoservicio (SDK por lotes)
 
-Explorar especificaciones define los parámetros necesarios para explorar e inspeccionar los objetos contenidos en el origen. Explorar especificaciones también define el formato de respuesta devuelto cuando se exploran e inspeccionan los objetos.
+Explorar especificaciones define los parámetros necesarios para explorar e inspeccionar los objetos contenidos en su origen. Explorar especificaciones también define el formato de respuesta devuelto cuando se exploran e inspeccionan los objetos.
 
 >[!TIP]
 >

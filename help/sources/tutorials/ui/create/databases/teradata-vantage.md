@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Teradata Vantage
 title: Creación de una conexión de origen de Teradata Vantage en la interfaz de usuario
-description: Aprenda a crear una conexión de origen de Teradata Vantage mediante la interfaz de usuario de Adobe Experience Platform.
+description: Obtenga información sobre cómo crear una conexión de origen de Teradata Vantage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Teradata Vantage] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 

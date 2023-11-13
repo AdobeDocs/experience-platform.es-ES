@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Este tutorial proporciona los pasos para crear una [!DNL Snowflake] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
@@ -33,7 +33,7 @@ Para acceder a su cuenta de Snowflake en [!DNL Platform], debe proporcionar el s
 | Credencial | Descripción |
 | ---------- | ----------- |
 | Cuenta | El nombre completo de la cuenta asociado con su [!DNL Snowflake] cuenta. Un completo [!DNL Snowflake] nombre de cuenta incluye su nombre de cuenta, región y cloud platform. Por ejemplo, `cj12345.east-us-2.azure`. Para obtener más información sobre los nombres de cuenta, consulte esta sección [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| Almacén | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén de datos es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
+| Almacén | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
 | Base de datos | El [!DNL Snowflake] La base de datos de contiene los datos que desea traer a Platform. |
 | Nombre de usuario | El nombre de usuario de [!DNL Snowflake] cuenta. |
 | Una contraseña | La contraseña para el [!DNL Snowflake] cuenta de usuario. |

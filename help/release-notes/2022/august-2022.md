@@ -5,7 +5,7 @@ exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
 workflow-type: tm+mt
 source-wordcount: '2082'
-ht-degree: 6%
+ht-degree: 27%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 **Fecha de lanzamiento: 24 de agosto de 2022**
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -30,7 +30,7 @@ Los servicios de IA/ML permiten a los analistas y profesionales de marketing apr
 
 ### Inteligencia artificial aplicada a la atribución
 
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
+Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
 
 **Funciones actualizadas**
 
@@ -88,7 +88,7 @@ Para obtener más información acerca de [!DNL Data Prep], consulte la [[!DNL Da
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 **Funciones nuevas o actualizadas**
 
@@ -110,14 +110,14 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
-XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir las audiencias de los clientes mediante segmentos y utilizar los atributos del cliente para fines de personalización.
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
 **Nuevos componentes de XDM**
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
 | Clase | [[!UICONTROL Clase de entidad AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
-| Grupo de campos | [[!UICONTROL Objetos de trabajo de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos envolvente que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
+| Grupo de campo | [[!UICONTROL Objetos de trabajo de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos envolvente que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
 
 {style="table-layout:auto"}
 
@@ -126,11 +126,11 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
 | Grupo de campos | [[!UICONTROL Campos comunes de eventos de pasos de Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Se han añadido dos nuevas propiedades: `origTimeStamp` y `experienceID`. |
-| Grupo de campos | [[!UICONTROL Detalles de abono de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Además de [!UICONTROL Perfil individual de XDM]Sin embargo, este grupo de campos ahora también se puede utilizar en esquemas basados en la clase de cuenta empresarial de XDM. |
-| Grupo de campos | (Múltiple) | Se han actualizado varios grupos de campo relacionados con actividades B2B de Marketo a un estado estable. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1593/files) para obtener más información. |
-| Grupo de campos | (Múltiple) | Se han actualizado varios grupos de campos relacionados con el tiempo para corregir los errores que se estaban produciendo para `uvIndex` y `sunsetTime`. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1602/files) para obtener más información. |
+| Grupo de campo | [[!UICONTROL Detalles de abono de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Además de [!UICONTROL Perfil individual de XDM]Sin embargo, este grupo de campos ahora también se puede utilizar en esquemas basados en la clase de cuenta empresarial de XDM. |
+| Grupo de campo | (Múltiple) | Se han actualizado varios grupos de campo relacionados con actividades B2B de Marketo a un estado estable. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1593/files) para obtener más información. |
+| Grupo de campo | (Múltiple) | Se han actualizado varios grupos de campos relacionados con el tiempo para corregir los errores que se estaban produciendo para `uvIndex` y `sunsetTime`. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1602/files) para obtener más información. |
 | Tipo de datos | [[!UICONTROL Elemento de lista de productos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Una nueva propiedad `productImageUrl` se ha añadido. |
-| Tipo de datos | [[!UICONTROL Información de detalles de datos Qoe]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nueva propiedad `framesPerSecond` se ha añadido. |
+| Tipo de datos | [[!UICONTROL Información de detalles de datos de calidad de la experiencia (QoE)]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nueva propiedad `framesPerSecond` se ha añadido. |
 | Tipo de datos | [[!UICONTROL Información de detalles de sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` se ha cambiado a `appVersion`. `meta:enum` y `description` Los campos de también se han actualizado. |
 | Tipos de datos y grupos de campos | (Múltiple) | Varios tipos de datos de medios y grupos de campos tienen campos nuevos y descripciones actualizadas. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1582/files) para obtener más información. |
 | (Todas) | (Múltiple) | Todos los objetos de esquema que contienen un `enum` ahora también contienen un campo correspondiente `meta:enum` para denotar los valores de visualización de cada restricción. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1601/files) para obtener más información. |
@@ -141,7 +141,7 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 ## Perfil del cliente en tiempo real {#profile}
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de los clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos los canales en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada que ofrece una cuenta procesable con marca de tiempo de cada interacción del cliente.
 
 | Función | Descripción |
 | ------- | ----------- |
@@ -150,7 +150,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, comience por leer el [Resumen del perfil del cliente en tiempo real](../../profile/home.md).
+Para obtener más información sobre el perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, comience por leer la [Información general sobre el perfil del cliente en tiempo real](../../profile/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
@@ -162,13 +162,13 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 | ------- | ----------- |
 | Compatibilidad con 4000 segmentos | Todas las organizaciones con Platform ahora admiten hasta 4000 definiciones de segmentos. Para obtener más información sobre cómo afecta este cambio a las API del trabajo de segmentación, lea la [guía de extremo de trabajo de segmentación](../../segmentation/api/segment-jobs.md) |
 
-Para obtener más información sobre [!DNL Segmentation Service], consulte la [Resumen de segmentación](../../segmentation/home.md).
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 
 Adobe Experience Platform puede introducir datos de fuentes externas, al tiempo que le permite estructurar, etiquetar y mejorar esos datos mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros y su sistema CRM.
 
-Experience Platform proporciona una API RESTful y una interfaz de usuario interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 **Nuevas funciones**
 

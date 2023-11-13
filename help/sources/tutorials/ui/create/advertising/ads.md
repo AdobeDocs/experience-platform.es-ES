@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una conexión de origen de Google Ads mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

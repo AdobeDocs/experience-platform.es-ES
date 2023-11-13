@@ -55,7 +55,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Extensión gtag de Google](gtag-advertising.md)
 * [Extensión de etiqueta de linkedIn Insight](linkedin.md)
 * [Extensión de seguimiento de conversión de pinterest](pinterest-extension.md)
-* [Extensión de etiqueta de sitio web universal de twitter](twitter-uwt.md)
+* [Twitter Extensión de etiquetas de sitios web universales](twitter-uwt.md)
 
 ## Conectar con un nuevo destino de publicidad {#connect-destination}
 

@@ -8,7 +8,7 @@ exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
 source-wordcount: '1311'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -561,7 +561,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debería tener preparados los siguientes valores requeridos:
 
@@ -572,7 +572,7 @@ El último paso para recopilar datos es crear un flujo de datos. En este punto, 
 
 Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil de la solicitud.
 
-Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para las demás frecuencias, el valor del intervalo debe ser igual o bueno que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
 
 **Formato de API**
 
@@ -627,7 +627,7 @@ curl -X POST \
 | `transformations.params.mappingId` | ID de asignación asociado a su origen de comercio electrónico. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | El `frequency` en el que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere un intervalo cuando `frequency` se ha establecido como `once` y debe ser bueno o igual a `15` para otros `frequency` valores. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. No se requiere un intervalo cuando `frequency` se ha establecido como `once` y debe ser mayor o igual que `15` para otros `frequency` valores. |
 
 **Respuesta**
 

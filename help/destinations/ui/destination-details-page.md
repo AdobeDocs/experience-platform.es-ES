@@ -105,7 +105,7 @@ Para obtener más información, consulte [el flujo de datos se ejecuta en destin
 
 ## [!UICONTROL Datos de activación] {#activation-data}
 
-El [!UICONTROL Datos de activación] La pestaña muestra una lista de audiencias que se han asignado al destino, incluida su fecha de inicio y finalización (si corresponde) y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia en particular, seleccione su nombre en la lista.
+El [!UICONTROL Datos de activación] La pestaña muestra una lista de audiencias que se han asignado al destino, incluida su fecha de inicio y finalización (si corresponde) y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia determinada, seleccione su nombre en la lista.
 
 >[!TIP]
 >

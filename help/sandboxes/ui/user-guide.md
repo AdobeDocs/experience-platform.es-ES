@@ -35,7 +35,7 @@ Una vez seleccionada una zona protegida, la pantalla se actualiza y se actualiza
 
 ![conmutado por zona protegida](../images/ui/sandbox-switched.png)
 
-## Crear una nueva zona protegida {#create}
+## Creación de una zona protegida {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"

@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de 
 
 Este documento proporciona pasos sobre cómo suscribirse y recibir mensajes de alertas para los flujos de datos de destino.
 
-## Primeros pasos
+## Introducción
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
 

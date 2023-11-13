@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen y un flujo de datos para transmitir *SU FUENTE* datos mediante la interfaz de usuario
+# Crear una conexión de origen y un flujo de datos para transmitir *SU ORIGEN* datos mediante la interfaz de usuario
 
 *A medida que avanza por esta plantilla, reemplace o elimine todos los párrafos en cursiva (empezando por esta).*
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas que admitimos. Agregaremos etiquetas a su documentación después de que la envíe.*
 
-Este tutorial proporciona los pasos para crear una *SU FUENTE* conector de origen mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear una *SU ORIGEN* conector de origen mediante la interfaz de usuario de Platform.
 
 ## Información general
 
@@ -25,7 +25,7 @@ Este tutorial proporciona los pasos para crear una *SU FUENTE* conector de orige
 
 >[!IMPORTANT]
 >
->Este conector de origen y esta página de documentación los crea y mantiene el *SU FUENTE* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
+>Este conector de origen y esta página de documentación los crea y mantiene el *SU ORIGEN* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
 
 ## Requisitos previos
 
@@ -46,7 +46,7 @@ Para poder conectarse *SU ORIGEN* En Platform, debe proporcionar valores para la
 | *credencial dos* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 | *credencial tres* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
 
-Para obtener más información sobre estas credenciales, consulte la *SU FUENTE* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
+Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
 ### Integrar *SU ORIGEN* con su webhook
 

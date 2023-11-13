@@ -117,7 +117,7 @@ Consulte la documentación para obtener instrucciones completas sobre [cómo tra
 
 +++Respuesta Si la consulta ha tardado mucho tiempo en un conjunto de datos muy pequeño, póngase en contacto con el servicio de atención al cliente.
 
-Puede haber varias razones para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Contactar con Atención al cliente de Adobe](#customer-support) por ser este proceso.
+Puede haber varias razones para que una consulta se bloquee durante el procesamiento. Para determinar la causa exacta se requiere un análisis en profundidad caso por caso. [Atención al cliente de Adobe](#customer-support) por ser este proceso.
 +++
 
 ### ¿Cómo puedo contactar con Atención al cliente de Adobe? {#customer-support}

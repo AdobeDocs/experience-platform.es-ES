@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ Las fuentes de almacenamiento en la nube pueden incorporar sus propios datos en 
 
 ## Requisitos previos
 
-La siguiente sección proporciona más información sobre la configuración de requisitos previos necesaria para crear una [!DNL Kinesis] conexión de origen.
+En la siguiente sección se proporciona más información sobre la configuración de requisitos previos necesaria para crear un [!DNL Kinesis] conexión de origen.
 
 ### Configurar la directiva de acceso
 

@@ -16,7 +16,7 @@ ht-degree: 2%
 
 En este tutorial se proporcionan los pasos para crear una conexión de origen de datos de clasificaciones de Adobe Analytics en la interfaz de usuario para introducir datos de clasificaciones en Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 

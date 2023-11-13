@@ -5,7 +5,7 @@ description: Adobe Experience Platform Privacy Service procesa las solicitudes d
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1016'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 >
 >Esta guía solo explica cómo realizar solicitudes de privacidad para el almacén de datos de ID en Experience Platform. Si también planea realizar solicitudes de privacidad para el lago de datos de Platform o [!DNL Real-Time Customer Profile], consulte la guía de [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md) y a la guía de [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md) además de este tutorial.
 >
->Para ver los pasos sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Para ver los pasos necesarios para realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
 
-## Primeros pasos
+## Introducción
 
 Se recomienda tener una comprensión práctica de lo siguiente [!DNL Experience Platform] servicios antes de leer esta guía:
 
@@ -119,4 +119,4 @@ Consulte la [[!DNL Privacy Service] documentación](../privacy-service/home.md#m
 
 ## Pasos siguientes
 
-Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Identity Service]. Para obtener información sobre el procesamiento de solicitudes de privacidad para otros [!DNL Experience Cloud] aplicaciones, consulte el documento sobre [[!DNL Privacy Service] and [!DNL Experience Cloud] aplicaciones](../privacy-service/experience-cloud-apps.md).
+Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Identity Service]. Para obtener información sobre el procesamiento de solicitudes de privacidad para otros [!DNL Experience Cloud] aplicaciones, consulte el documento sobre [[!DNL Privacy Service] y [!DNL Experience Cloud] aplicaciones](../privacy-service/experience-cloud-apps.md).

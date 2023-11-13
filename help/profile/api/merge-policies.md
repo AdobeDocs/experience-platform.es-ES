@@ -21,7 +21,7 @@ Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas pol�
 
 Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de IU de políticas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función dentro de Experience Platform, comience por leer la [resumen de políticas de combinación](../merge-policies/overview.md).
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

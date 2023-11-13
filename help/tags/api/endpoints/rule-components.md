@@ -21,7 +21,7 @@ Los componentes de regla tienen tres tipos básicos:
 
 | Tipo de componente de regla | Descripción |
 | --- | --- |
-| Eventos | Un evento es el activador de una regla. La regla se inicia cuando el evento se produce durante la ejecución en el dispositivo cliente. [!UICONTROL Library Load], [!UICONTROL Page Top] y [!UICONTROL Click] son ejemplos de eventos. |
+| Eventos | Un evento es el activador de una regla. La regla se inicia cuando el evento se produce durante la ejecución en el dispositivo cliente. [!UICONTROL Biblioteca cargada], [!UICONTROL Principio de la página] y [!UICONTROL Clic] son ejemplos de eventos. |
 | Condiciones | Una condición es una evaluación de si se cumplen ciertos criterios antes de ejecutar cualquier acción. Una vez que se produce un evento, se evalúan las condiciones. Las acciones de la regla solo se ejecutan si se cumplen todas las condiciones. |
 | Acciones | Estas son las acciones que desea que realice la regla, como enviar una señalización de Adobe Analytics, recuperar un ID de visitante personalizado o activar un mbox concreto. |
 

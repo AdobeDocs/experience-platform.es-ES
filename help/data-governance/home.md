@@ -7,11 +7,11 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
 workflow-type: tm+mt
 source-wordcount: '1518'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# Resumen de gobernanza de datos
+# Información general de gobernanza de datos
 
 Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las políticas de uso de datos.
 

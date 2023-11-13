@@ -10,7 +10,7 @@ ht-degree: 1%
 
 ---
 
-# Crear un *SU FUENTE* conexión de origen en la interfaz de usuario
+# Crear un *SU ORIGEN* conexión de origen en la interfaz de usuario
 
 *A medida que avanza por esta plantilla, reemplace o elimine todos los párrafos en cursiva (empezando por esta).*
 
@@ -37,7 +37,7 @@ Este tutorial proporciona los pasos para crear una *SU ORIGEN* conector de orige
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU FUENTE* En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para poder conectarse *SU ORIGEN* En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ Para poder conectarse *SU FUENTE* En Platform, debe proporcionar valores para la
 
 Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
-## Conecte su *SU FUENTE* account
+## Conecte su *SU ORIGEN* account
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
 

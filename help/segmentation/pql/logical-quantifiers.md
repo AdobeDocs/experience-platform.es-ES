@@ -33,7 +33,7 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Ejemplo**
 
-La siguiente consulta PQL obtiene todos los eventos que tienen un precio bueno a 50 $ o que tienen un SKU de &quot;PS&quot;.
+La siguiente consulta PQL obtiene todos los eventos que tienen un precio mayor que 50 $ o que tienen un SKU de &quot;PS&quot;.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -58,7 +58,7 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Ejemplo**
 
-La siguiente consulta PQL obtiene todos los eventos que tienen un precio bueno a 50 $ y que tienen un SKU de &quot;PS&quot;.
+La siguiente consulta PQL obtiene todos los eventos que tienen un precio mayor que 50 $ y tienen un SKU de &quot;PS&quot;.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"

@@ -5,7 +5,7 @@ exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 En este tutorial se proporcionan los pasos para crear una conexión de origen de flujo continuo utilizando [!UICONTROL Fuentes] workspace.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -60,7 +60,7 @@ Seleccionar **[!UICONTROL Cargar archivos]** para cargar los datos. También pue
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Con los datos cargados, puede utilizar el lado derecho de la interfaz para obtener una vista previa de la jerarquía de archivos. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+Con los datos cargados, puede utilizar el lado derecho de la interfaz para obtener una vista previa de la jerarquía de archivos. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 

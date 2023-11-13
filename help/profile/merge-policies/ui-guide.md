@@ -20,7 +20,7 @@ Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas pol�
 
 Para obtener más información sobre las políticas de combinación y su función dentro de Experience Platform, comience por leer la [resumen de políticas de combinación](overview.md).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de varios aspectos importantes [!DNL Experience Platform] funciones. Antes de seguir esta guía, revise la documentación de los siguientes servicios:
 
@@ -79,7 +79,7 @@ Para obtener información detallada sobre los esquemas de unión, incluido cómo
 
 ## [!UICONTROL Seleccionar conjuntos de datos de perfil] {#select-profile-datasets}
 
-En el **[!UICONTROL Seleccionar conjuntos de datos de perfil]** , debe seleccionar la opción **[!UICONTROL Método de combinación]** que desee utilizar para la política de combinación. También se muestra en la pantalla el número total de [!UICONTROL Conjuntos de datos de perfil] en su organización relacionadas con la clase de esquema seleccionada en la pantalla anterior.
+En el **[!UICONTROL Seleccionar conjuntos de datos de perfil]** , debe seleccionar la opción **[!UICONTROL Método de combinación]** que desee utilizar en la política de combinación. También se muestra en la pantalla el número total de [!UICONTROL Conjuntos de datos de perfil] en su organización relacionadas con la clase de esquema seleccionada en la pantalla anterior.
 
 Según el método de combinación que elija, todos los conjuntos de datos de perfil se combinarán en el orden en que se actualizaron por última vez (con la marca de tiempo ordenada) o tendrá que seleccionar qué conjuntos de datos de perfil incluir en la política de combinación y el orden en que combinarlos (prioridad de conjuntos de datos).
 

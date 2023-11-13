@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Este tutorial proporciona los pasos para crear una [!DNL Generic REST API] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 

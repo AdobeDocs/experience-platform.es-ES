@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un HP [!DNL Vertica] conector de origen mediante [!DNL Platform] interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 

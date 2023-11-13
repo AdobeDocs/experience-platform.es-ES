@@ -23,7 +23,7 @@ Este documento proporciona instrucciones paso a paso para crear y administrar tr
 
 Además de crear un trabajo de exportación, también puede acceder a [!DNL Profile] datos con el `/entities` extremo, también conocido como &quot;[!DNL Profile Access]&quot;. Consulte la [guía de extremo de entidades](./entities.md) para obtener más información. Para ver los pasos de cómo acceder a [!DNL Profile] datos mediante la interfaz de usuario, consulte la [guía del usuario](../ui/user-guide.md).
 
-## Primeros pasos
+## Introducción
 
 Los extremos de API utilizados en esta guía forman parte de la variable [!DNL Real-Time Customer Profile] API. Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

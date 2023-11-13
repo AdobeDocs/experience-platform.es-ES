@@ -3,7 +3,7 @@ title: Acceso de usuario a Adobe Experience Platform Assurance
 description: En esta guía se explica cómo mantener el acceso de los usuarios a Adobe Experience Platform Assurance administrándolo a través de Admin Console.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 

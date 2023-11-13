@@ -5,7 +5,7 @@ exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -27,7 +27,7 @@ Esta guía explica cómo instalar y configurar la extensión de privacidad de Ad
 
 Seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catálogo]** pestaña. Utilice la barra de búsqueda para reducir la lista de extensiones disponibles hasta que encuentre Privacidad de Adobe. Seleccionar **[!UICONTROL Instalar]** para continuar.
 
-![Instalación de la extensión](../../../images/extensions/client/privacy/install.png)
+![Instalar la extensión](../../../images/extensions/client/privacy/install.png)
 
 La siguiente pantalla le permite configurar de qué fuentes y soluciones desea que la extensión recopile ID. Se admiten las siguientes soluciones para la extensión:
 

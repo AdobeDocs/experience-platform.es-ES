@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear un conector de origen de IBM DB2 (en adelante, &quot;DB2&quot;) utilizando [!DNL Platform] interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 

@@ -29,7 +29,7 @@ El esquema de unión es `identityMap` es una representación de las identidades 
 
 El `timeSeriesEvents` matriz es una lista de eventos de series temporales relacionados con los esquemas de registros asociados a la unión. Cuando los datos de perfil se exportan a conjuntos de datos, esta matriz se incluye para cada registro. Esto resulta útil para varios casos de uso, como el aprendizaje automático, en el que los modelos necesitan todo el historial de comportamiento de un perfil, además de sus atributos de registro.
 
-### Asignación de abono de segmento
+### Mapa de abono de segmento
 
 El `segmentMembership` map almacena los resultados de la evaluación de una definición de segmento. Cuando los trabajos de segmentos se ejecutan correctamente utilizando [API de segmentación](https://www.adobe.io/experience-platform-apis/references/segmentation/), el mapa se actualiza. `segmentMembership` también almacena cualquier audiencia preevaluada que se incorpora en Platform, lo que permite la integración con otras soluciones como Adobe Audience Manager. Consulte el tutorial sobre [creación de audiencias mediante API](../../segmentation/tutorials/create-a-segment.md) para obtener más información.
 
@@ -59,7 +59,7 @@ curl -X GET \
 
 El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar uniones:
 
-| `Accept` header | Descripción |
+| `Accept` encabezado | Descripción |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve la clase JSON completa para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
@@ -214,7 +214,7 @@ curl -X GET \
 
 El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar esquemas:
 
-| `Accept` header | Descripción |
+| `Accept` encabezado | Descripción |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el esquema JSON completo para cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |

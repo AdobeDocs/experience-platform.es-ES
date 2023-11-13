@@ -20,7 +20,7 @@ Los resultados de este trabajo de muestra se pueden ver mediante el `/previewsam
 >
 >Hay puntos finales de estimación y previsualización disponibles como parte de la API del servicio de segmentación de Adobe Experience Platform que le permiten ver información de resumen con respecto a las definiciones de segmentos para asegurarse de aislar la audiencia esperada. Para encontrar los pasos detallados para trabajar con los extremos de vista previa y estimación, visite la [guía de extremos de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de [!DNL Segmentation] Guía para desarrolladores de API.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

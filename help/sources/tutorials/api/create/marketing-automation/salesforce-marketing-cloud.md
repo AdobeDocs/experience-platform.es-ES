@@ -5,7 +5,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
 source-wordcount: '507'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Salesforce Marketing Cloud] uso del [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -45,7 +45,7 @@ Para que [!DNL Flow Service] para conectar con [!DNL Salesforce Marketing Cloud]
 
 Para obtener más información sobre cómo empezar, consulte esta [[!DNL Salesforce Marketing Cloud] documento](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
-## Crear una conexión base
+## Cree una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

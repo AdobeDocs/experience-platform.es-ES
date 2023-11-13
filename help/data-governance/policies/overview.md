@@ -7,11 +7,11 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# Información general sobre políticas de uso de datos {#policies-overview}
+# Información general sobre las políticas de uso de datos {#policies-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"

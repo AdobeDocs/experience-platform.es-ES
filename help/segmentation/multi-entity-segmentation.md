@@ -14,7 +14,7 @@ ht-degree: 0%
 
 La segmentación de varias entidades es una función avanzada disponible como parte de Adobe Experience Platform [!DNL Segmentation Service]. Esta función le permite ampliar [!DNL Real-Time Customer Profile] datos con datos adicionales de &quot;no personas&quot; (también conocidos como &quot;entidades de dimensión&quot;) que su organización puede definir, como datos relacionados con productos o tiendas. La segmentación de varias entidades proporciona flexibilidad al definir definiciones de segmentos basadas en datos relevantes para sus necesidades comerciales únicas y se puede realizar sin tener experiencia en la consulta de bases de datos. Con la segmentación de varias entidades, puede añadir datos clave a las definiciones de segmentos sin tener que realizar cambios costosos en las secuencias de datos o esperar a una combinación de datos back-end.
 
-## Primeros pasos
+## Introducción
 
 La segmentación de varias entidades requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform que intervienen en la segmentación. Antes de continuar con esta guía, revise la siguiente documentación:
 

@@ -15,7 +15,7 @@ Este documento proporciona instrucciones sobre las prácticas recomendadas para 
 
 Es importante organizar lógicamente los recursos de datos dentro de la plataforma [!DNL Data Lake] a medida que crecen. El servicio de consultas amplía las construcciones SQL que permiten agrupar lógicamente los recursos de datos en una zona protegida. Este método de organización permite compartir recursos de datos entre esquemas sin necesidad de moverlos físicamente.
 
-## Primeros pasos
+## Introducción
 
 Antes de continuar con este documento, debe comprender bien [Servicio de consultas](../home.md) y han leído el [guía de interfaz de usuario](../ui/user-guide.md).
 

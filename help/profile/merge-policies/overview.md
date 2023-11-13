@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# Resumen de políticas de combinación
+# Información general de las políticas de combinación
 
 Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 
 Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Este documento proporciona información general sobre las políticas de combinación y la función que desempeñan en Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de varios aspectos importantes [!DNL Experience Platform] funciones. Antes de seguir esta guía y trabajar con las políticas de combinación, revise la documentación de los siguientes servicios:
 

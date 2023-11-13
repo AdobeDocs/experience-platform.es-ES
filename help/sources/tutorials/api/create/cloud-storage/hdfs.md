@@ -8,7 +8,7 @@ exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Apache Hadoop Distributed File System] (en lo sucesivo, &quot;[!DNL HDFS]&quot;) utilizando el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -42,7 +42,7 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base
+## Cree una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

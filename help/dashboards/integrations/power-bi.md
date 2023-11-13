@@ -15,7 +15,7 @@ La función de Power BI de informes permite crear informes atractivos rellenados
 
 Este documento proporciona instrucciones sobre cómo conectar Adobe Experience Platform con la aplicación de Power BI y utilizar plantillas de informes para compartir perspectivas de datos clave de Platform con usuarios externos.
 
-## Primeros pasos
+## Introducción
 
 Antes de continuar con este tutorial, se recomienda comprender bien [composición de esquemas](../../xdm/schema/composition.md) en Experience Platform y cómo se incluyen los atributos en el Perfil del cliente en tiempo real a través de [esquema de unión](../../xdm/schema/composition.md#union).
 

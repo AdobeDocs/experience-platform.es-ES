@@ -6,7 +6,7 @@ description: Este documento proporciona un tutorial paso a paso para obtener acc
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 9%
 
 ---
@@ -220,7 +220,7 @@ Puede utilizar la misma clave de API, secreto de cliente y JWT para generar un n
 
 | Propiedad | Descripción |
 | --- | --- |
-| `token_type` | El tipo de token que se devuelve. Para tokens de acceso, este valor siempre es `bearer`. |
+| `token_type` | El tipo of token devuelto. Para tokens de acceso, este valor siempre es `bearer`. |
 | `access_token` | El generado `{ACCESS_TOKEN}`. Este valor, con el prefijo `Bearer`, es obligatorio, ya que `Authentication` para todas las llamadas a la API de Platform. |
 | `expires_in` | Número de milisegundos que restan hasta que caduque el token de acceso. Una vez que este valor alcanza 0, se debe generar un nuevo token de acceso para seguir utilizando las API de Platform. |
 

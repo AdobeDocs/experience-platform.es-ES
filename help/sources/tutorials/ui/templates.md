@@ -5,8 +5,8 @@ badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 10%
+source-wordcount: '2259'
+ht-degree: 11%
 
 ---
 
@@ -234,7 +234,7 @@ Puede utilizar la vista del editor de esquemas para realizar actualizaciones en 
 
 ### Publicación del flujo de datos
 
-Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Actualizar flujo de datos], se le redirigirá al *[!UICONTROL Añadir datos]* del flujo de trabajo. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+Inicie el proceso de publicación a través del flujo de trabajo de fuentes. Después de seleccionar [!UICONTROL Actualizar flujo de datos], se le redirigirá al *[!UICONTROL Añadir datos]* del flujo de trabajo. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![Paso para agregar datos de un flujo de datos de borrador](../../images/tutorials/templates/continue-draft.png)
 

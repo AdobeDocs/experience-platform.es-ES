@@ -5,7 +5,7 @@ exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1274'
-ht-degree: 6%
+ht-degree: 29%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 6%
 
 Esta guía muestra cómo administrar permisos para funciones de recopilación de datos.
 
-## Primeros pasos
+## Introducción
 
-Para configurar el control de acceso para la recopilación de datos, debe tener privilegios de administrador para una organización que tenga una integración de productos con la recopilación de datos de Adobe Experience Platform. La función mínima que puede conceder o retirar permisos es una **administrador de perfil de producto**. Otras funciones de administrador que pueden administrar permisos son **administradores de productos** (puede administrar todos los perfiles de un producto) y **administradores del sistema** (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la Guía de administración de Adobe Enterprise para obtener más información.
+Para configurar el control de acceso para la recopilación de datos, debe tener privilegios de administrador para una organización que tenga una integración de productos con la recopilación de datos de Adobe Experience Platform. La función mínima que puede conceder o retirar permisos es la de **administrador de perfil de producto**. Otras funciones de administrador que pueden administrar permisos son **administradores de productos** (puede administrar todos los perfiles de un producto) y **administradores del sistema** (sin restricciones). Consulte el artículo sobre [funciones administrativas](https://helpx.adobe.com/enterprise/using/admin-roles.html) en la Guía de administración de Adobe Enterprise para obtener más información.
 
-En esta guía se da por hecho que está familiarizado con conceptos básicos de Admin Console, como los perfiles de producto y cómo conceden permisos de producto a usuarios y grupos individuales. Para obtener más información, consulte la [Guía del usuario del Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
+En esta guía se asume que está familiarizado con los conceptos básicos de Admin Console, como los perfiles de producto y la forma en que se conceden los permisos de producto a los usuarios y grupos individuales. Para obtener más información, consulte la [Guía del usuario de Admin Console](https://helpx.adobe.com/es/enterprise/using/admin-console.html).
 
 ## Permisos disponibles
 
@@ -107,11 +107,11 @@ Después de seleccionar o crear un perfil de producto, puede utilizar el **[!UIC
 
 #### Edición de permisos para el perfil del producto {#edit-permissions}
 
-Al editar permisos para un perfil, los permisos disponibles se enumeran en la columna izquierda, mientras que los que se incluyen en el perfil se enumeran en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
+Al editar permisos para un perfil, los permisos disponibles se incluyen en la columna izquierda, mientras que los que se incluyen en el perfil se incluyen en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
 
 ![Imagen que muestra los permisos añadidos en la columna incluida](./images/permissions/added-permissions.png)
 
-Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la categoría que desee en el panel de navegación izquierdo.
+Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la que desee en el panel de navegación izquierdo.
 
 ![Imagen que muestra la sección de derechos de compañía en permisos](./images/permissions/switch-category.png)
 
@@ -125,11 +125,11 @@ La vista de perfil de producto vuelve a aparecer con los permisos añadidos refl
 
 #### Asignación de usuarios al perfil de producto {#assign-users}
 
-Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione **[!UICONTROL Usuarios]** pestaña, seguido de **[!UICONTROL Agregar usuario]**.
+Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione la pestaña **[!UICONTROL Usuarios]**, y a continuación **[!UICONTROL Agregar usuario]**.
 
 ![Imagen que muestra la pestaña de usuarios de un perfil de producto en Admin Console](./images/permissions/manage-users.png)
 
-Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación del Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
+Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación de Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
 
 ## Pasos siguientes
 

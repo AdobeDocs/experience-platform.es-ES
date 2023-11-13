@@ -8,7 +8,7 @@ exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -48,7 +48,7 @@ Para obtener más información sobre las credenciales de autenticación de [!DNL
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base
+## Cree una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

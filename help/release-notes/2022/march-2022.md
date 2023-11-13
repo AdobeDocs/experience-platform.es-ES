@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de marzo de 2022
-description: Notas de la versión de marzo de 2022 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Platform: marzo de 2022'
+description: Las notas de la versión de marzo de 2022 de Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ Nuevas funciones de Adobe Experience Platform:
 - [Registros de auditoría](#audit-logs)
 - [Cuentas relacionadas en Real-Time CDP B2B Edition](#related-accounts)
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [Alertas](#alerts)
 - [[!DNL Dashboards]](#dashboards)
@@ -71,7 +71,7 @@ Experience Platform permite suscribirse a alertas basadas en eventos para divers
 
 Para obtener más información sobre las alertas en Platform, consulte la [información general sobre alertas](../../observability/alerts/overview.md).
 
-## Tableros {#dashboards}
+## Paneles {#dashboards}
 
 Adobe Experience Platform proporciona varios [!DNL dashboards] a través del cual puede ver información importante acerca de los datos de su organización, tal y como se capturan durante las instantáneas diarias.
 

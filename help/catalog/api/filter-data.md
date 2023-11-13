@@ -560,8 +560,8 @@ El valor del `property` El parámetro admite varios tipos diferentes de expresio
 | != | Devuelve solo objetos cuyos valores de propiedad sí lo hagan **no** cadena de coincidencia proporcionada después del símbolo not-equals (`!=`). | `property=name!=exampleName` |
 | &lt; | Devuelve solo los objetos cuyos valores de propiedad sean menores (pero no iguales) que una cantidad establecida. | `property=version<1.0.0` |
 | &lt;= | Devuelve solo objetos cuyos valores de propiedad sean menores (o iguales) que una cantidad establecida. | `property=version<=1.0.0` |
-| > | Devuelve solo objetos cuyos valores de propiedad sean buenos (pero no iguales) a una cantidad establecida. | `property=version>1.0.0` |
-| >= | Devuelve solo objetos cuyos valores de propiedad sean buenos (o iguales) a una cantidad establecida. | `property=version>=1.0.0` |
+| > | Devuelve solo objetos cuyos valores de propiedad sean mayores (pero no iguales) que una cantidad establecida. | `property=version>1.0.0` |
+| >= | Devuelve solo objetos cuyos valores de propiedad sean mayores (o iguales) que una cantidad establecida. | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
@@ -569,7 +569,7 @@ El valor del `property` El parámetro admite varios tipos diferentes de expresio
 
 **Solicitud**
 
-La siguiente solicitud devolverá cualquier conjunto de datos con un número de versión bueno a 1.0.3.
+La siguiente solicitud devolverá cualquier conjunto de datos con un número de versión mayor que 1.0.3.
 
 ```shell
 curl -X GET \
@@ -582,7 +582,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta contiene una lista de conjuntos de datos cuyos números de versión son buenos a 1.0.3. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
+Una respuesta correcta contiene una lista de conjuntos de datos cuyos números de versión son superiores a 1.0.3. A menos que también se especifique un límite, la respuesta contiene un máximo de 20 objetos.
 
 ```json
 {

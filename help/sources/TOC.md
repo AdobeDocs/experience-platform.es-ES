@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 14%
    - Transmisión {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
-   - Crear una conexión base {#create}
+   - Cree una conexión base {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)

@@ -16,7 +16,7 @@ Un trabajo de segmentación es un proceso asincrónico que crea un segmento de a
 
 Esta guía proporciona información para ayudarle a comprender mejor los trabajos de los segmentos e incluye llamadas de API de muestra para realizar acciones básicas mediante la API.
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 
@@ -277,7 +277,7 @@ Si tiene más de 1500 definiciones de segmentos en ejecución en su trabajo de s
 
 ## Creación de un nuevo trabajo de segmentación {#create}
 
-Puede crear un nuevo trabajo de segmentación realizando una solicitud de POST a `/segment/jobs` e incluir en el cuerpo el ID de la definición del segmento a partir de la cual desea crear una audiencia nueva.
+Puede crear un nuevo trabajo de segmento realizando una solicitud de POST a `/segment/jobs` e incluir en el cuerpo el ID de la definición del segmento a partir de la cual desea crear una audiencia nueva.
 
 **Formato de API**
 

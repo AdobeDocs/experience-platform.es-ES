@@ -26,7 +26,7 @@ let {VARIABLE} = {EXPRESSION}
 
 **Ejemplo**
 
-La siguiente consulta PQL obtiene todas las sumas de totales de productos con la transacción en USD cuando la suma es buena a 100 $ y menor a 1000 $.
+La siguiente consulta PQL obtiene todas las sumas de totales de productos con la transacción en USD donde la suma es mayor que 100 dólares y menor que 1000 dólares.
 
 ```sql
 let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.order.currencyCode = "USD") in (S > 100 and S < 1000)

@@ -7,7 +7,7 @@ exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ Este tutorial recorre los pasos necesarios para crear un conjunto de datos que s
 
 Este tutorial está directamente relacionado con los pasos descritos en el tutorial sobre [evaluación y acceso a los resultados de segmentación](./evaluate-a-segment.md). El tutorial de evaluación de definición de segmento proporciona los pasos para crear un conjunto de datos con la variable [!DNL Catalog Service] API, mientras que este tutorial describe los pasos para crear un conjunto de datos utilizando la variable [!DNL Experience Platform] IU.
 
-## Primeros pasos
+## Introducción
 
 Para exportar una audiencia, el conjunto de datos debe basarse en la variable [!DNL XDM Individual Profile Union Schema]. Un esquema de unión es un esquema de solo lectura generado por el sistema que agrega los campos de todos los esquemas que comparten la misma clase. Para obtener más información sobre los esquemas de unión, consulte la guía de [los conceptos básicos de composición de esquemas](../../xdm/schema/composition.md#union).
 

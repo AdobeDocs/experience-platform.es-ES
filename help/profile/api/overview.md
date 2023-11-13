@@ -24,7 +24,7 @@ Para obtener una guía sobre cómo trabajar con [!DNL Real-Time Customer Profile
 
 >[!IMPORTANT]
 >
->La funcionalidad de atributos calculados está en versión beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
+La funcionalidad de atributos calculados está en versión beta y no está disponible para todos los usuarios. La documentación y la funcionalidad están sujetas a cambios.
 
 Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 

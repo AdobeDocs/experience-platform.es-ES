@@ -23,7 +23,7 @@ ht-degree: 3%
 
 Este tutorial proporciona pasos sobre cómo filtrar datos de nivel de fila para un origen mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -118,9 +118,9 @@ Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Goo
 | `==` | Filtra por si la propiedad es igual al valor proporcionado. |
 | `!=` | Filtra por si la propiedad no es igual al valor proporcionado. |
 | `<` | Filtra por si la propiedad es menor que el valor proporcionado. |
-| `>` | Filtra por si la propiedad es buena que el valor proporcionado. |
+| `>` | Filtra por si la propiedad es mayor que el valor proporcionado. |
 | `<=` | Filtra por si la propiedad es menor o igual que el valor proporcionado. |
-| `>=` | Filtra por si la propiedad es buena o igual que el valor proporcionado. |
+| `>=` | Filtra por si la propiedad es mayor o igual que el valor proporcionado. |
 | `like` | Filtros al utilizarse en una `WHERE` para buscar un patrón especificado. |
 | `in` | Filtra por si la propiedad se encuentra dentro de un intervalo especificado. |
 

@@ -204,7 +204,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ## Creación de una conexión de destino {#target-connection}
 
-Las conexiones de Target crean y administran una conexión de destino a Platform o a cualquier ubicación donde aterrizarán los datos transferidos. Las conexiones de destino contienen información sobre el destino de datos, el formato de datos y el ID de conexión de destino necesarios para crear un flujo de datos. Las instancias de conexión de destino son específicas de un inquilino y de una organización.
+Las conexiones de Target crean y administran una conexión de destino a Platform o a cualquier ubicación donde aterrizarán los datos transferidos. Las conexiones de destino contienen información sobre el destino de datos, el formato de datos y el ID de conexión de destino necesarios para crear un flujo de datos. Las instancias de conexión de destino son específicas de un inquilino y una organización.
 
 Para crear una conexión de destino, realice una solicitud de POST al `/targetConnections` punto final del [!DNL Flow Service] API. Como parte de la solicitud, debe proporcionar el formato de datos, el `dataSetId` recuperado en el paso anterior y el ID de especificación de conexión fija vinculado a [!DNL Data Lake]. Este ID es `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -413,7 +413,7 @@ Una respuesta correcta devuelve una lista de especificaciones de flujo de datos.
 }
 ```
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 El último paso para recopilar datos de flujo continuo es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 

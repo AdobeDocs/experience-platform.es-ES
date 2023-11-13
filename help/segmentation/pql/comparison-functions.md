@@ -52,7 +52,7 @@ homeAddress.countryISO != "CA"
 
 ## Greater than
 
-El `>` (bueno que) se utiliza para comprobar si el primer valor es bueno que el segundo valor.
+El `>` (mayor que) se utiliza para comprobar si el primer valor es mayor que el segundo valor.
 
 **Formato**
 
@@ -70,7 +70,7 @@ person.birthMonth > 2
 
 ## Mayor o igual que
 
-El `>=` (bueno o igual que) se utiliza para comprobar si el primer valor es bueno o igual que el segundo valor.
+El `>=` (mayor o igual que) se utiliza para comprobar si el primer valor es mayor o igual que el segundo valor.
 
 **Formato**
 

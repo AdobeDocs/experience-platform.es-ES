@@ -87,7 +87,7 @@ El último paso para preparar el esquema es añadir campos individuales dentro d
 
 ![Un grupo de subcampos agregados a un campo dentro del esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 Una vez completada la configuración del esquema, ahora puede continuar con la creación de un flujo de datos para los datos de actividad personalizados.
 

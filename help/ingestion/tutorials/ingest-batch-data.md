@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform permite importar fácilmente datos en [!DNL Platform] como archivos por lotes. Algunos ejemplos de datos que se van a introducir pueden ser los datos de perfil de un archivo plano en un sistema CRM (como un archivo de Parquet) o los datos que se ajustan a un [!DNL Experience Data Model] Esquema (XDM) en el Registro de esquemas.
 
-## Primeros pasos
+## Introducción
 
 Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 

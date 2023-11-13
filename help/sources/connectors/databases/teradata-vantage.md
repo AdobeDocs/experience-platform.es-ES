@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;inicio;temas populares;teradata;teradata
-title: Información general sobre el conector de origen del Teradata Vantage
-description: Obtenga información sobre cómo conectar Teradata Vantage a Adobe Experience Platform mediante API o la interfaz de usuario.
+keywords: Experience Platform;inicio;temas populares;teradata;ventaja de teradata
+title: Descripción general del conector de origen del Vantage de teradata
+description: Aprenda a conectar Teradata Vantage a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -28,11 +28,11 @@ La siguiente documentación proporciona información sobre cómo conectarse [!DN
 
 ## Connect [!DNL Teradata Vantage] a Platform mediante API
 
-- [Creación de una conexión base de Teradata Vantage mediante la API de Flow Service](../../tutorials/api/create/databases/teradata-vantage.md)
+- [Creación de una conexión base del Vantage de Teradata mediante la API de Flow Service](../../tutorials/api/create/databases/teradata-vantage.md)
 - [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 - [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Teradata Vantage] a Platform mediante la IU
 
-- [Crear una conexión de origen de Teradata Vantage en la interfaz de usuario](../../tutorials/ui/create/databases/teradata-vantage.md)
+- [Creación de una conexión de origen de Teradata Vantage en la interfaz de usuario](../../tutorials/ui/create/databases/teradata-vantage.md)
 - [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)

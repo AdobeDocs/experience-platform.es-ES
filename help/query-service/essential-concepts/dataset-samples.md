@@ -24,7 +24,7 @@ Para ayudarle a administrar los ejemplos para un procesamiento de consultas apro
 - [Eliminar una muestra.](#delete-a-sample)
 - Elimine las muestras asociadas al soltar la tabla ADLS original.
 
-## Primeros pasos {#get-started}
+## Introducción {#get-started}
 
 Para utilizar las funcionalidades de procesamiento de consultas de creación y eliminación detalladas en este documento, debe establecer el indicador de sesión en `true`. Desde la línea de comandos del Editor de consultas o del cliente PSQL, introduzca el `SET aqp=true;` comando.
 

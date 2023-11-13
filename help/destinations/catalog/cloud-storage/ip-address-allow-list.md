@@ -17,7 +17,6 @@ ht-degree: 0%
 > * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
 > * Aunque el Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
 
-
 ## Información general {#overview}
 
 Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su [Servidor SFTP](./sftp.md).

@@ -8,7 +8,7 @@ exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Para obtener información sobre la edición de flujos de datos de destino mediante la IU de Experience Platform, lea [Editar flujos de activación](/help/destinations/ui/edit-activation.md).
 
-## Primeros pasos {#get-started}
+## Introducción {#get-started}
 
 Este tutorial requiere que tenga un ID de flujo válido. Si no tiene un ID de flujo válido, seleccione el destino que desee en la [catálogo de destinos](../catalog/overview.md) y siga los pasos descritos para [conectar con el destino](../ui/connect-destination.md) y [activar datos](../ui/activation-overview.md) antes de intentar realizar este tutorial.
 
@@ -31,11 +31,11 @@ Este tutorial también requiere tener una comprensión práctica de los siguient
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para actualizar correctamente el flujo de datos mediante [!DNL Flow Service] API.
 
-### Leer llamadas de API de muestra {#reading-sample-api-calls}
+### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-### Recopilar valores para los encabezados obligatorios {#gather-values-for-required-headers}
+### Recopilación de valores para los encabezados obligatorios {#gather-values-for-required-headers}
 
 Para realizar llamadas a las API de Platform, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 

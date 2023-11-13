@@ -35,7 +35,7 @@ ht-degree: 5%
 | `primaryEmailDomain` | Cadena | El dominio de correo electrónico principal que utiliza la organización para su personal. |
 | `rating` | Doble | La puntuación calculada o la clasificación por estrellas de esta organización. `1` indica la clasificación máxima posible, y `0` es la calificación mínima posible. |
 | `tickerSymbol` | Cadena | El símbolo del mercado de valores de esta cuenta. Máximo de 20 caracteres. |
-| `twitterHandleUrl` | Cadena | Un vínculo al sitio web del identificador de twitter de la organización. |
+| `twitterHandleUrl` | Cadena | Un vínculo del sitio web al identificador de twitter de la organización. |
 | `website` | Cadena | Dirección URL del sitio web de la organización. |
 
 {style="table-layout:auto"}

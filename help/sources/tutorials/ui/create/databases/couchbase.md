@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Conectores de origen en [!DNL Adobe Experience Platform] permite introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear una [!DNL Couchbase] conector de origen mediante [!DNL Platform] interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Platform]:
 

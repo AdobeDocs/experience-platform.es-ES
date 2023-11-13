@@ -23,7 +23,7 @@ Esta guía se ha diseñado para ayudarle a comprender mejor la experiencia del c
 
 ![Una infografía de los pasos generales necesarios para utilizar el valor de duración del cliente.](../images/use-cases/implementation-steps.png)
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 

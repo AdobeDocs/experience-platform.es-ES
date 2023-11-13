@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -24,7 +24,7 @@ Esta guía del usuario describe los pasos para trabajar con etiquetas de uso de 
 
 Para aplicar etiquetas a los datos, necesita el **[!UICONTROL Administrar etiquetas de uso]** permiso de uso en la zona protegida de producción predeterminada llamada &quot;prod&quot;. Para crear una etiqueta personalizada, también debe tener derechos administrativos en el perfil del producto. Cada organización solo tiene una lista de etiquetas aplicables y, actualmente, no se admite la eliminación de etiquetas.
 
-Consulte la guía sobre cómo [configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o el [información general de control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso al Admin Console de su organización, póngase en contacto con el administrador de la organización.
+Consulte la guía sobre cómo [configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es) o el [información general de control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar un permiso. Si no tiene acceso al Admin Console de su organización, póngase en contacto con el administrador de la organización.
 
 ## Administrar etiquetas en el nivel de esquema
 
@@ -59,7 +59,7 @@ Aparece un cuadro de diálogo que le permite aplicar y administrar etiquetas de 
 >
 >Las etiquetas ya no se pueden aplicar a campos de nivel de conjunto de datos. Este flujo de trabajo ha quedado obsoleto y favorece la aplicación de etiquetas en el nivel de esquema. Cualquier etiqueta aplicada anteriormente en el nivel de objeto del conjunto de datos seguirá siendo compatible mediante la IU de Platform hasta el 31 de mayo de 2024. Para garantizar que las etiquetas sean coherentes en todos los esquemas, cualquier etiqueta adjunta anteriormente a campos de nivel de conjunto de datos debe migrarse al nivel de esquema durante el próximo año. Consulte la documentación para obtener instrucciones sobre [cómo migrar etiquetas aplicadas anteriormente del conjunto de datos al nivel de esquema](../e2e.md#migrate-labels).
 
-Las etiquetas se pueden aplicar a todo el conjunto de datos desde el **[!UICONTROL Gobernanza de datos]** de la pestaña **[!UICONTROL Conjuntos de datos]** workspace. El espacio de trabajo le permite administrar etiquetas de uso de datos en el nivel de conjunto de datos.
+Las etiquetas se pueden aplicar a todo el conjunto de datos desde el **[!UICONTROL Gobernanza de datos]** de la pestaña **[!UICONTROL Conjuntos de datos]** workspace. El espacio de trabajo de le permite administrar etiquetas de uso de datos en el nivel de conjunto de datos.
 
 ![El [!UICONTROL Gobernanza de datos] de la pestaña [!UICONTROL Conjuntos de datos] espacio de trabajo con Gobernanza de datos resaltado.](../images/labels/dataset-governance.png)
 
@@ -77,7 +77,7 @@ El **[!UICONTROL Gobernanza de datos]** workspace vuelve a aparecer y muestra la
 
 ### Eliminación de etiquetas de un conjunto de datos {#remove-labels-from-a-dataset}
 
-Las etiquetas agregadas en el nivel del conjunto de datos tienen una &quot;x&quot; junto a su tarjeta. Esto le permite eliminar las etiquetas de todo el conjunto de datos. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot;. Estos **las etiquetas heredadas son de solo lectura**, lo que significa que no se pueden eliminar ni editar en el nivel de campo.
+Las etiquetas agregadas en el nivel de conjunto de datos tienen una &quot;x&quot; junto a su tarjeta. Esto le permite eliminar las etiquetas de todo el conjunto de datos. Las etiquetas heredadas junto a cada campo no tienen una &quot;x&quot; junto a ellas y aparecen &quot;atenuadas&quot;. Estos **las etiquetas heredadas son de solo lectura**, lo que significa que no se pueden eliminar ni editar en el nivel de campo.
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 

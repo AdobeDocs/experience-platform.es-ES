@@ -89,7 +89,7 @@ curl -X POST \
 | `description` | Descripción de la solicitud de eliminación de registro. |
 | `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:auto"}
+{style="table-layout:automático"}
 
 **Respuesta**
 

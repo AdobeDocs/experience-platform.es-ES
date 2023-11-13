@@ -587,7 +587,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 El último paso para recopilar datos de almacenamiento en la nube es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
@@ -602,7 +602,7 @@ Un flujo de datos es responsable de programar y recopilar datos de una fuente. P
 >
 >Para la ingesta por lotes, cada flujo de datos posterior selecciona los archivos que se van a ingerir desde el origen en función de su **última modificación** marca de tiempo. Esto significa que los flujos de datos por lotes seleccionan archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo de datos.
 
-Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para las demás frecuencias, el valor del intervalo debe ser igual o bueno que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
 
 >[!IMPORTANT]
 >
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | El [ID de asignación](#mapping) recuperado en un paso anterior. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser bueno o igual a `15` para otros valores de frecuencia. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
 **Respuesta**
 

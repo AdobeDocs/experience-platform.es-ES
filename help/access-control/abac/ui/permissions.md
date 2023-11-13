@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -153,7 +153,7 @@ Se le devolverá a la **[!UICONTROL Grupos de usuarios]** pestaña.
 
 ## Adición de usuarios a Experience Platform mediante un perfil de producto
 
-Para añadir un usuario a un perfil de producto, inicie sesión en el Admin Console y seleccione **[!UICONTROL Adición de usuarios]**
+Para añadir un usuario a un perfil de producto, inicie sesión en Admin Console y seleccione **[!UICONTROL Agregar usuarios]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

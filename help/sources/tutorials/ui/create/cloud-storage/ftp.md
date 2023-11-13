@@ -20,7 +20,7 @@ ht-degree: 1%
 
 En este tutorial se proporcionan los pasos para crear una conexión de origen FTP mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 

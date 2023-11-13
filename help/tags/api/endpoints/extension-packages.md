@@ -44,7 +44,7 @@ Hay niveles de disponibilidad para un paquete de extensión: `development`, `pri
 | Disponibilidad | Descripción |
 | --- | --- |
 | `development` | Un paquete de extensiones en `development` solo está visible para la compañía que lo posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
-| `private` | A `private` El paquete de extensión solo es visible para la compañía que lo posee y solo se puede instalar en propiedades que posee la compañía. |
+| `private` | A `private` El paquete de extensiones solo es visible para la compañía que lo posee y solo se puede instalar en propiedades de la compañía. |
 | `public` | A `public` el paquete de extensiones es visible y está disponible para todas las empresas y propiedades. |
 
 >[!NOTE]

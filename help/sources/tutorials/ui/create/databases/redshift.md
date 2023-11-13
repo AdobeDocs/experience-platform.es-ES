@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Este tutorial proporciona pasos sobre cómo conectar su [!DNL Amazon Redshift] (en lo sucesivo, &quot;[!DNL Redshift]&quot;) a Adobe Experience Platform mediante la interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -36,7 +36,7 @@ Para acceder a su [!DNL Redshift] cuenta en el Experience Platform, debe proporc
 | **Credencial** | **Descripción** |
 | -------------- | --------------- |
 | Servidor | El servidor asociado con su [!DNL Redshift] cuenta. |
-| Puerto  | El puerto TCP que un [!DNL Redshift] El servidor de utiliza para detectar conexiones de cliente. |
+| Puerto | El puerto TCP que un [!DNL Redshift] El servidor de utiliza para detectar conexiones de cliente. |
 | Nombre de usuario | El nombre de usuario asociado con su [!DNL Redshift] cuenta. |
 | Una contraseña | La contraseña asociada a su [!DNL Redshift] cuenta. |
 | Base de datos | El [!DNL Redshift] base de datos a la que accede. |

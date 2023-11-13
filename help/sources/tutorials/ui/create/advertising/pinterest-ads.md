@@ -21,7 +21,7 @@ ht-degree: 2%
 
 Este tutorial proporciona los pasos para crear una [!DNL Pinterest Ads] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

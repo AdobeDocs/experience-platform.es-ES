@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Este documento sirve como guía para descargar puntuaciones para la inteligencia artificial aplicada al cliente.
 
-## Primeros pasos
+## Introducción
 
 La inteligencia artificial aplicada al cliente le permite descargar puntuaciones en el formato de archivo Parquet. Este tutorial requiere que haya leído y terminado la sección de descarga de puntuaciones de inteligencia artificial aplicada al cliente en la [introducción](../getting-started.md) guía.
 
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Asegúrese de que se encuentra en el directorio o la carpeta correctos en los que desea guardar el archivo antes de realizar la solicitud de GET.
+>Asegúrese de que está en el directorio o carpeta correctos en los que desea guardar el archivo antes de realizar la solicitud de GET.
 
 **Respuesta**
 

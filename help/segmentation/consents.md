@@ -20,7 +20,7 @@ Regulaciones legales de privacidad, como la [!DNL California Consumer Privacy Ac
 
 Si un cliente ha retirado o retenido el consentimiento para que se compartan sus datos personales, es importante que su organización respete esa preferencia al generar audiencias para actividades de marketing. En este documento se describe cómo integrar los valores de consentimiento del cliente en las definiciones de segmentos mediante la interfaz de usuario de Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 El cumplimiento de los valores de consentimiento del cliente requiere una comprensión de los distintos [!DNL Adobe Experience Platform] servicios implicados. Antes de iniciar este tutorial, asegúrese de estar familiarizado con los siguientes servicios:
 

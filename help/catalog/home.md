@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;servicio de catálogo;catálogo;servicio de catálogo;ubicación de datos;ubicación de datos;administración de datos;administración de datos;linaje;linaje;catálogo;habilitar conjunto de datos
 solution: Experience Platform
 title: Resumen del servicio de catálogo
-description: El servicio de catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Adobe Experience Platform. Mientras que todos los datos que se incorporan al Experience Platform se almacenan en el lago de datos como archivos y directorios, el catálogo contiene los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y monitorización.
+description: El servicio de catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Adobe Experience Platform. Mientras que todos los datos que se incorporan a Experience Platform se almacenan en el lago de datos como archivos y directorios, el catálogo contiene los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y monitorización.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
 source-wordcount: '694'
-ht-degree: 6%
+ht-degree: 13%
 
 ---
 
@@ -59,4 +59,4 @@ En la tabla siguiente se describen los distintos tipos de objetos admitidos por 
 
 ## Pasos siguientes
 
-Este documento proporciona una introducción a [!DNL Catalog Service] y cómo funciona dentro del bueno ámbito de [!DNL Experience Platform]. Consulte la [[!DNL Catalog] guía para desarrolladores](api/getting-started.md) para ver los pasos necesarios para interactuar con los diferentes extremos de [!DNL Catalog] API. Se recomienda consultar también la guía sobre [filtrado de datos de catálogo](api/filter-data.md) para seguir las prácticas recomendadas y limitar los datos devueltos en las respuestas de API.
+Este documento proporciona una introducción a [!DNL Catalog Service] y cómo funciona dentro del ámbito más amplio de [!DNL Experience Platform]. Consulte la [[!DNL Catalog] guía para desarrolladores](api/getting-started.md) para ver los pasos necesarios para interactuar con los diferentes extremos de [!DNL Catalog] API. Se recomienda consultar también la guía sobre [filtrado de datos de catálogo](api/filter-data.md) para seguir las prácticas recomendadas y limitar los datos devueltos en las respuestas de API.

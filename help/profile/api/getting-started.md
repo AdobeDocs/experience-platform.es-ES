@@ -7,7 +7,7 @@ exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '410'
-ht-degree: 0%
+ht-degree: 12%
 
 ---
 
@@ -25,9 +25,9 @@ El uso de la guía para desarrolladores requiere una comprensión práctica de l
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Profile] Extremos de API.
 
-## Leer llamadas de API de muestra
+## Lectura de llamadas de API de muestra
 
-El [!DNL Real-Time Customer Profile] La documentación de la API proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+El [!DNL Real-Time Customer Profile] La documentación de la API proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ## Encabezados obligatorios
 

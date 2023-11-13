@@ -9,7 +9,7 @@ exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 En el siguiente documento se describen los diferentes eventos, entradas y resultados necesarios que se utilizan en la inteligencia artificial aplicada al cliente.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
 Estos son los pasos para crear modelos de tendencia e identificar audiencias objetivo para el marketing personalizado en la inteligencia artificial aplicada al cliente:
 
@@ -93,7 +93,7 @@ La inteligencia artificial aplicada al cliente utiliza los eventos de estos cuat
 
 Para ver un grupo de campos en la IU de Platform, seleccione **[!UICONTROL Esquemas]** en el carril izquierdo, seguido de la selección de la **[!UICONTROL Grupos de campos]** pestaña.
 
-| Grupo de campos | Tipo de evento | Ruta de campo XDM |
+| Grupo de campo | Tipo de evento | Ruta de campo XDM |
 | --- | --- | --- |
 | [!UICONTROL Detalles de comercio] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
@@ -165,7 +165,7 @@ Para decidir la duración mínima requerida de los datos existentes en el sistem
 
 - El mínimo de datos necesario para crear funciones es de 30 días. Comparar la ventana retrospectiva de idoneidad con 30 días:
 
-   - Si la ventana retrospectiva de selección es buena en más de 30 días, la necesidad de datos = ventana retrospectiva de selección + ventana de resultado.
+   - Si la ventana retrospectiva de idoneidad es mayor de 30 días, la necesidad de datos = ventana retrospectiva de idoneidad + ventana de resultado.
 
    - De lo contrario, el requisito de datos = 30 días + ventana de resultado.
 

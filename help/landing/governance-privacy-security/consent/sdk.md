@@ -5,7 +5,7 @@ exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Este tutorial supone que ya ha determinado cómo generar datos de consentimiento
 
 Esta guía sigue el flujo de trabajo para configurar el SDK mediante la extensión de etiqueta en la interfaz de usuario de. Si no desea utilizar la extensión de y prefiere incrustar directamente la versión independiente del SDK en su sitio, consulte los siguientes documentos en lugar de esta guía:
 
-* [Configurar una secuencia de datos](../../../datastreams/overview.md)
+* [Configuración de una secuencia de datos](../../../datastreams/overview.md)
 * [Instalación del SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configuración del SDK para comandos de consentimiento](../../../edge/consent/supporting-consent.md)
 
@@ -45,8 +45,8 @@ Después de crear una nueva secuencia de datos o seleccionar una existente para 
 | Campo de secuencia de datos | Valor |
 | --- | --- |
 | [!UICONTROL Zona protegida] | El nombre de la plataforma [espacio aislado](../../../sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
-| [!UICONTROL Conjunto de datos de evento] | Un [!DNL XDM ExperienceEvent] conjunto de datos que planea enviar datos de evento a mediante el SDK. Aunque se le requiere que proporcione un conjunto de datos de evento para crear un flujo de datos de Platform, tenga en cuenta que los datos de consentimiento enviados a través de eventos no se respetan en los flujos de trabajo de aplicación descendentes. |
-| [!UICONTROL Conjunto de datos de perfil] | El [!DNL Profile]Conjunto de datos habilitado para con campos de consentimiento del cliente que ha creado [anterior](#prerequisites). |
+| [!UICONTROL Conjunto de datos del evento] | Un [!DNL XDM ExperienceEvent] conjunto de datos que planea enviar datos de evento a mediante el SDK. Aunque se le requiere que proporcione un conjunto de datos de evento para crear un flujo de datos de Platform, tenga en cuenta que los datos de consentimiento enviados a través de eventos no se respetan en los flujos de trabajo de aplicación descendentes. |
+| [!UICONTROL Conjunto de datos del perfil] | El [!DNL Profile]Conjunto de datos habilitado para con campos de consentimiento del cliente que ha creado [anterior](#prerequisites). |
 
 Cuando termine, seleccione **[!UICONTROL Guardar]** en la parte inferior de la pantalla y siga las indicaciones adicionales para completar la configuración.
 

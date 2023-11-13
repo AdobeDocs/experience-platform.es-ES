@@ -5,7 +5,7 @@ exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
 source-wordcount: '1192'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Los borradores se pueden actualizar más adelante con información nueva y, a co
 
 Este tutorial proporciona pasos sobre cómo configurar las [!DNL Flow Service] entidades de a un estado de borrador y permiten pausar y guardar los flujos de trabajo para completarlos más adelante.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -951,4 +951,4 @@ Una respuesta correcta devuelve el ID y el correspondiente `etag` del flujo de d
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha aprendido a crear borradores de su [!DNL Flow Service] y publicar estos borradores. Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../home.md).
+Al seguir este tutorial, ha aprendido a crear borradores de su [!DNL Flow Service] y publicar estos borradores. Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../home.md).

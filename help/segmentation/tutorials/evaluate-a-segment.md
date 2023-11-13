@@ -7,7 +7,7 @@ exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1599'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Este documento proporciona un tutorial para evaluar definiciones de segmentos y acceder a estos resultados mediante la variable [[!DNL Segmentation API]](../api/getting-started.md).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de audiencias. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
@@ -26,7 +26,7 @@ Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe E
 
 ### Encabezados obligatorios
 
-Este tutorial también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Platform] API. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+Este tutorial también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Platform] API. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -86,7 +86,7 @@ La evaluación bajo demanda le permite crear un trabajo de segmentación para ge
 
 Un trabajo de segmentación es un proceso asincrónico que crea un segmento de audiencia bajo demanda. Hace referencia a una definición de segmento, así como a cualquier política de combinación que controle el modo en que [!DNL Real-Time Customer Profile] combina atributos superpuestos en los fragmentos de perfil. Cuando un trabajo de segmentación se completa correctamente, puede recopilar información diversa acerca de la definición del segmento, como los errores que se hayan podido producir durante el procesamiento y el tamaño final de la audiencia. Se debe ejecutar un trabajo de segmento cada vez que desee actualizar la audiencia a la que se clasifica actualmente la definición del segmento.
 
-Puede crear un nuevo trabajo de segmentación realizando una solicitud de POST a `/segment/jobs` punto final en la [!DNL Real-Time Customer Profile] API.
+Puede crear un nuevo trabajo de segmento realizando una solicitud de POST a `/segment/jobs` punto final en la [!DNL Real-Time Customer Profile] API.
 
 Encontrará información más detallada sobre el uso de este punto de conexión en la [guía de extremo de trabajos de segmento](../api/segment-jobs.md#create)
 

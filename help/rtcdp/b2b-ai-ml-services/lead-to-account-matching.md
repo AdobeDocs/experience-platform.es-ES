@@ -94,6 +94,6 @@ El conjunto de datos incluye la información de la cuenta coincidente, así como
 
 ## La monitorización lleva a trabajos de coincidencia de cuentas {#monitoring-jobs}
 
-A través del panel de control, puede monitorizar el estado del trabajo y las métricas asociadas para cualquier posible cliente que coincida con los trabajos de la cuenta.
+A través del panel de control, puede monitorizar el estado del trabajo y las métricas asociadas de cualquier posible cliente que coincida con los trabajos de la cuenta.
 
 Consulte la documentación para obtener más información sobre [supervisar trabajos para la coincidencia de cliente potencial con cuenta](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

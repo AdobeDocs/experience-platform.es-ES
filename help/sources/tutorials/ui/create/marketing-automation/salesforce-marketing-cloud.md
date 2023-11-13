@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial proporciona pasos sobre cómo conectar su [!DNL Salesforce Marketing Cloud] a Adobe Experience Platform a través de la interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 

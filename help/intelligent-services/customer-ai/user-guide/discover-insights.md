@@ -18,7 +18,7 @@ La inteligencia artificial aplicada al cliente, como parte de los servicios inte
 
 Este documento sirve como guía para interactuar con las perspectivas de la instancia de servicio en la interfaz de usuario de la inteligencia artificial aplicada al cliente de servicios inteligentes.
 
-## Primeros pasos
+## Introducción
 
 Para utilizar las perspectivas para la inteligencia artificial aplicada al cliente, necesita tener disponible una instancia de servicio con un estado de ejecución correcto. Para crear una nueva instancia de servicio, visite [Configuración de una instancia de Customer AI](./configure.md). Si ha creado recientemente una instancia de servicio que aún se está entrenando y puntuando, espere 24 horas para que finalice la ejecución.
 
@@ -106,7 +106,7 @@ El **[!UICONTROL Más acciones]** situado en la barra de navegación superior de
 
 ![más acciones](../images/insights/more-actions.png)
 
-## Resumen de puntuación {#scoring-summary}
+## Resumen de las puntuaciones {#scoring-summary}
 
 Resumen de puntuación muestra el número total de perfiles marcados y los clasifica en bloques que contienen alta, media y baja tendencia. Los bloques de tendencia se determinan en función del intervalo de puntuación, el bajo es menor que 24, el medio es de 25 a 74 y el alto es mayor que 74. Cada cubo tiene un color correspondiente a la leyenda.
 

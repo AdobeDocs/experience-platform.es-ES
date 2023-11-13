@@ -23,7 +23,7 @@ Adobe Experience Platform forma parte del grupo registrado [Lista de proveedores
 
 >[!IMPORTANT]
 >
->Platform solo puede cumplir con la versión 2.0 del TCF (o la buena). Las versiones anteriores de TCF no son compatibles.
+>Platform solo puede cumplir con la versión 2.0 del TCF (o posterior). Las versiones anteriores de TCF no son compatibles.
 
 Este documento proporciona información general sobre cómo configurar las operaciones de datos y los esquemas de perfil para aceptar los datos de consentimiento del cliente generados por la CMP y cómo Platform transmite las opciones de consentimiento del usuario al exportar segmentos.
 
@@ -116,7 +116,7 @@ Una vez configurada la CMP para generar cadenas de consentimiento, debe integrar
 
 **El SDK no interactúa con ninguna CMP predeterminada**. Depende de usted determinar cómo integrar el SDK en su sitio web, escuchar los cambios de consentimiento en la CMP y llamar al comando correspondiente.
 
-### Crear una nueva secuencia de datos
+### Creación de una nueva secuencia de datos
 
 Para que el SDK envíe datos a Experience Platform, primero debe crear un nuevo conjunto de datos para Platform. Los pasos específicos para crear un nuevo conjunto de datos se proporcionan en la [Documentación del SDK](../../../../datastreams/overview.md).
 
@@ -126,8 +126,8 @@ Después de proporcionar un nombre único para el conjunto de datos, seleccione 
 | --- | --- |
 | [!UICONTROL Zona protegida] | El nombre de la plataforma [espacio aislado](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
 | [!UICONTROL Entrada de flujo] | Una conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
-| [!UICONTROL Conjunto de datos de evento] | Seleccione el [!DNL XDM ExperienceEvent] conjunto de datos creado en [paso anterior](#datasets). Si ha incluido la variable [[!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos](../../../../xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede realizar un seguimiento de los eventos de cambio de consentimiento a lo largo del tiempo mediante [`sendEvent`](#sendEvent) , almacenando esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** se utiliza en flujos de trabajo de aplicación automáticos. |
-| [!UICONTROL Conjunto de datos de perfil] | Seleccione el [!DNL XDM Individual Profile] conjunto de datos creado en [paso anterior](#datasets). Al responder a los vínculos de cambio de consentimiento de CMP mediante [`setConsent`](#setConsent) , los datos recopilados se almacenarán en este conjunto de datos. Dado que este conjunto de datos tiene un perfil habilitado, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automáticos. |
+| [!UICONTROL Conjunto de datos del evento] | Seleccione el [!DNL XDM ExperienceEvent] conjunto de datos creado en [paso anterior](#datasets). Si ha incluido la variable [[!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos](../../../../xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede realizar un seguimiento de los eventos de cambio de consentimiento a lo largo del tiempo mediante [`sendEvent`](#sendEvent) , almacenando esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** se utiliza en flujos de trabajo de aplicación automáticos. |
+| [!UICONTROL Conjunto de datos del perfil] | Seleccione el [!DNL XDM Individual Profile] conjunto de datos creado en [paso anterior](#datasets). Al responder a los vínculos de cambio de consentimiento de CMP mediante [`setConsent`](#setConsent) , los datos recopilados se almacenarán en este conjunto de datos. Dado que este conjunto de datos tiene un perfil habilitado, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automáticos. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 

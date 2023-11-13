@@ -8,11 +8,11 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
 source-wordcount: '1161'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
-# Defina una relación uno a uno entre dos esquemas utilizando [!DNL Schema Editor] {#relationship-ui}
+# Defina una relación de uno a uno entre dos esquemas utilizando [!DNL Schema Editor] {#relationship-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -103,7 +103,7 @@ El actualizado `preferredHotel` El campo aparece en el lienzo, ubicado bajo una 
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## Definir un campo de relación para el esquema de origen {#relationship-field}
+## Definición de un campo de relación para el esquema de origen {#relationship-field}
 
 Una vez que el esquema de origen tenga definido un campo de referencia dedicado, puede designarlo como campo de relación.
 

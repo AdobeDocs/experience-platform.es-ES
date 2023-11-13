@@ -3,12 +3,12 @@ keywords: Experience Platform;introducción;inteligencia artificial aplicada al 
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Introducción a Customer AI
-description: Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto.
+description: Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -43,9 +43,9 @@ Todos los recursos de Experience Platform están aislados para zonas protegidas 
 >
 >Para obtener más información sobre los entornos limitados de Platform, consulte la [documentación general de zona protegida](../../sandboxes/home.md).
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md) en la guía de solución de problemas del Experience Platform.
 
 ## Pasos siguientes
 

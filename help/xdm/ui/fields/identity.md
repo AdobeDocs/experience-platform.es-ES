@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -23,7 +23,7 @@ Los campos de identidad son un componente crucial en la forma en que se construy
    * [Áreas de nombres de identidad](../../../identity-service/namespaces.md): las áreas de nombres de identidad definen los diferentes tipos de información de identidad que pueden relacionarse con una sola persona y son un componente requerido para cada campo de identidad.
 * [Perfil del cliente en tiempo real](../../../profile/home.md): aprovecha los gráficos de identidad de los clientes para proporcionar un perfil de consumidor unificado en función de los datos agregados de varias fuentes, actualizados en tiempo casi real.
 
-## Definir un campo de identidad {#define-a-identity-field}
+## Definición de un campo de identidad {#define-a-identity-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"

@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 2%
+source-wordcount: '737'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Este tutorial lo acompañará durante los pasos para conectarse [!DNL Amazon Kinesis] (en lo sucesivo, &quot;[!DNL Kinesis]&quot;) al Experience Platform, utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -44,7 +44,7 @@ Para obtener más información sobre [!DNL Kinesis] las claves de acceso y cómo
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base
+## Cree una conexión base
 
 El primer paso para crear una conexión de origen es autenticar su [!DNL Kinesis] y generar un ID de conexión base. Un ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar elementos específicos que desee introducir, incluida información sobre sus tipos de datos y formatos.
 

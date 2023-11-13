@@ -22,7 +22,7 @@ A medida que desarrolla una definición de segmento, puede utilizar las herramie
 >
 >Para acceder a métricas similares relacionadas con los datos del perfil del cliente en tiempo real, como el número total de fragmentos de perfil y perfiles combinados en áreas de nombres específicas o el almacén de datos de perfil en su conjunto, consulte la [guía de extremo de vista previa de perfil (estado de muestra de vista previa)](../../profile/api/preview-sample-status.md), parte de la guía para desarrolladores de API de perfil.
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 

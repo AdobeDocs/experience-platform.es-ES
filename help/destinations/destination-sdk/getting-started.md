@@ -5,11 +5,11 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# Primeros pasos
+# Introducción
 
 ## Información general {#overview}
 
@@ -23,7 +23,7 @@ Esta guía utiliza conceptos específicos de la plataforma, como la organizació
 
 El Destination SDK utiliza el [Adobe I/O](https://www.adobe.io/) puerta de enlace para autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de intercambio de Adobe para configurar la autenticación en el [Consola de Adobe Developer](https://developer.adobe.com/console).
 
-Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga las [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Inicie el tutorial desde el &quot;[Generar una clave de API, un ID de organización y un secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; paso. El equipo de intercambio de Adobe se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas de API de Destination SDK, como se muestra a continuación:
+Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga las [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Inicie el tutorial desde el &quot;[Generar una clave de API, un ID de organización y un secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; paso. El equipo de intercambio de Adobe se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas de API de Destination SDK, como se muestra a continuación:
 
 * `x-api-key: {API_KEY}`, también denominado ID de cliente
 * `x-gw-ims-org-id: {ORG_ID}`, también denominado ID de organización

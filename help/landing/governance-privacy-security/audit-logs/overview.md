@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
-ht-degree: 45%
+ht-degree: 46%
 
 ---
 
@@ -49,9 +49,9 @@ La siguiente tabla indica qué acciones sobre qué recursos de se registran en l
 | [Datastream](../../../datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
-| [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Grupo de campo](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Gráfico de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ver</li></ul> |
-| [Área de nombres de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
+| [Espacio de nombre de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
 | [Política de combinación](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
@@ -70,7 +70,7 @@ Cuando la función está habilitada para su organización, los registros de audi
 
 Para ver y exportar los registros de auditoría, debe tener **[!UICONTROL Ver registro de actividades de usuario]** permiso de control de acceso concedido (se encuentra en la sección [!UICONTROL Gobernanza de datos] categoría). Para obtener información sobre cómo administrar permisos individuales para funciones de Platform, consulte la [documentación de control de acceso](../../../access-control/home.md).
 
-## Administración de registros de auditoría en la IU {#managing-audit-logs-in-the-ui}
+## Administración de registros de auditoría en la interfaz de usuario {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"

@@ -8,7 +8,7 @@ exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Este tutorial le proporciona los pasos para crear una [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) conexión de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Platform:
 

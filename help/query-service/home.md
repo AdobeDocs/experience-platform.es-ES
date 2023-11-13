@@ -51,7 +51,7 @@ Con Adobe Experience Platform, puede ingerir, almacenar, estructurar y extraer t
 
 ## Pasos siguientes y recursos adicionales
 
-Al leer este documento, se le ha presentado a [!DNL Query Service] y cómo funciona dentro del bueno ámbito de [!DNL Experience Platform]. Para obtener más información sobre cómo interactuar con varios extremos dentro de la variable [!DNL Query Service] API, lea la [Guía para desarrolladores de Query Service](api/getting-started.md). Para obtener más información sobre el uso del servicio interactivo en [!DNL Platform], lea la [Guía de la interfaz de usuario del servicio de consultas](ui/overview.md). Para obtener una lista completa de cómo conectar clientes externos con [!DNL Query Service], lea la [Información general sobre clientes de Query Service](clients/overview.md).
+Al leer este documento, se le ha presentado a [!DNL Query Service] y cómo funciona dentro del ámbito más amplio de [!DNL Experience Platform]. Para obtener más información sobre cómo interactuar con varios extremos dentro de la variable [!DNL Query Service] API, lea la [Guía para desarrolladores de Query Service](api/getting-started.md). Para obtener más información sobre el uso del servicio interactivo en [!DNL Platform], lea la [Guía de la interfaz de usuario del servicio de consultas](ui/overview.md). Para obtener una lista completa de cómo conectar clientes externos con [!DNL Query Service], lea la [Información general sobre clientes de Query Service](clients/overview.md).
 
 Para prepararse mejor para ejecutar consultas, vea el siguiente vídeo. Este vídeo comparte sugerencias y prácticas recomendadas para ejecutar consultas en la interfaz del editor de consultas, los clientes SQL, las soluciones de inteligencia empresarial (BI) y la API HTTP.
 

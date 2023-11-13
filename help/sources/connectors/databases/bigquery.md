@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Se debe agregar una lista de direcciones IP a una lista de permitidos antes de t
 
 ## Requisitos previos
 
-La siguiente sección proporciona más información sobre la configuración de requisitos previos necesaria para crear una [!DNL Google BigQuery] conexión de origen.
+En la siguiente sección se proporciona más información sobre la configuración de requisitos previos necesaria para crear un [!DNL Google BigQuery] conexión de origen.
 
 ### Genere su [!DNL Google BigQuery] credenciales
 

@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: '590'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ Una conexión base representa la conexión autenticada entre un origen y Adobe E
 
 Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Snowflake] uso del [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -40,7 +40,7 @@ Para que [!DNL Flow Service] para conectar con [!DNL Snowflake], debe proporcion
 | Credencial | Descripción |
 | --- | --- |
 | `account` | El nombre completo de la cuenta asociado con su [!DNL Snowflake] cuenta. Un completo [!DNL Snowflake] nombre de cuenta incluye su nombre de cuenta, región y cloud platform. Por ejemplo, `cj12345.east-us-2.azure`. Para obtener más información sobre los nombres de cuenta, consulte esta sección [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| `warehouse` | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén de datos es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
+| `warehouse` | El [!DNL Snowflake] data warehouse administra el proceso de ejecución de consultas de la aplicación. Cada [!DNL Snowflake] El almacén es independiente entre sí y debe accederse a él de forma individual al llevar los datos a Platform. |
 | `database` | El [!DNL Snowflake] La base de datos de contiene los datos que desea traer a Platform. |
 | `username` | El nombre de usuario de [!DNL Snowflake] cuenta. |
 | `password` | La contraseña para el [!DNL Snowflake] cuenta de usuario. |
@@ -54,7 +54,7 @@ Para obtener más información sobre cómo empezar, consulte esta [[!DNL Snowfla
 >
 >Debe configurar la variable `PREVENT_UNLOAD_TO_INLINE_URL` marcar como `FALSE` para permitir la descarga de datos desde [!DNL Snowflake] base de datos a Experience Platform.
 
-## Crear una conexión base
+## Cree una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 

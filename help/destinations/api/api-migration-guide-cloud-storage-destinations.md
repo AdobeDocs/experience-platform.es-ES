@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Inicio [Octubre de 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), puede utilizar las nuevas funciones de exportación de archivos para acceder a la funcionalidad de personalización mejorada al exportar archivos fuera del Experience Platform:
 
-* Adicional [opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionales.
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través de [nuevo paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Capacidad para seleccionar [tipo de archivo](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del archivo exportado.
 * Capacidad para [personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).

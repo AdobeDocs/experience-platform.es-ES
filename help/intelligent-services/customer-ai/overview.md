@@ -40,7 +40,7 @@ El cliente no está diseñado para:
 - La inteligencia artificial aplicada al cliente no puede determinar si al realizar una oferta es más probable que el cliente compre un artículo. Aunque puede que decida enviar ofertas de descuento basadas en puntuaciones de tendencia, no es necesariamente la mejor manera de convertir a esos clientes.
 - La inteligencia artificial aplicada al cliente no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no utilice la inteligencia artificial aplicada al cliente como proxy para una solución de recomendaciones de productos real como [!DNL Adobe Target].
 - La inteligencia artificial aplicada al cliente no puede predecir en qué fase del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en las fases de &quot;conocimiento&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
-- No utilice la inteligencia artificial aplicada al cliente para determinar qué clientes tienen probabilidades de comprar un producto para su lanzamiento en el futuro. Esto requiere que ciertos eventos de éxito estén presentes en el pasado para que la inteligencia artificial aplicada al cliente entrene correctamente el algoritmo de aprendizaje automático en los datos.
+- No utilice la inteligencia artificial aplicada al cliente para determinar qué clientes pueden comprar un producto para su lanzamiento en el futuro. Esto requiere que ciertos eventos de éxito estén presentes en el pasado para que la inteligencia artificial aplicada al cliente entrene correctamente el algoritmo de aprendizaje automático en los datos.
 
 El siguiente vídeo está diseñado para ayudarle a comprender la inteligencia artificial aplicada al cliente.
 

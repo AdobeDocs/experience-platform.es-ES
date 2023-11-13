@@ -20,7 +20,7 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Conjuntos de datos](overview.md): la construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de composición de esquemas](../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): Aprenda a crear sus propios esquemas XDM personalizados con el [!DNL Schema Editor] dentro de [!DNL Platform] interfaz de usuario.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.

@@ -7,7 +7,7 @@ exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ Este documento proporciona información sobre los pasos necesarios para configur
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de composición de esquemas](../../../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM.
+   * [Conceptos básicos de composición de esquemas](../../../../xdm/schema/composition.md): obtenga información acerca de los componentes básicos de los esquemas XDM.
 * [Perfil del cliente en tiempo real](../../../../profile/home.md): consolida los datos de clientes de diferentes fuentes en una vista completa y unificada, a la vez que ofrece una cuenta procesable con marca de tiempo de cada interacción de clientes.
 
 >[!IMPORTANT]
@@ -193,7 +193,7 @@ Aparece un nuevo campo dentro de `consents` objeto. Dado que está agregando un 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
 
-En el carril derecho debajo de **[!UICONTROL Propiedades del campo]**, proporcione un nombre y una descripción para el campo. Al seleccionar el campo **[!UICONTROL Tipo]**, debe utilizar el tipo de datos estándar adecuado para un campo de consentimiento o preferencia personalizado:
+En el carril derecho debajo de **[!UICONTROL Propiedades del campo]**, proporcione un nombre y una descripción para el campo. Al seleccionar el campo **[!UICONTROL Tipo]**, debe utilizar el tipo de datos estándar adecuado para un campo de preferencia o consentimiento personalizado:
 
 * [[!UICONTROL Campo de consentimiento genérico]](../../../../xdm/data-types/consent-field.md)
 * [[!UICONTROL Campo de preferencias de marketing genéricas]](../../../../xdm/data-types/marketing-field.md)

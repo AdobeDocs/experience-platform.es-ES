@@ -16,7 +16,7 @@ Adobe Experience Platform le permite crear definiciones de segmentos que definen
 
 Esta guía proporciona información para ayudarle a comprender mejor las definiciones de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte del [!DNL Adobe Experience Platform Segmentation Service] API. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 

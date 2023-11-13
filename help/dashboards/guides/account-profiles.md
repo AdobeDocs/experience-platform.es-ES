@@ -15,7 +15,7 @@ La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero 
 
 Para obtener una descripción general de todas las funciones de la interfaz de usuario del perfil de la cuenta, visite la [guía de IU del perfil de cuenta](../../rtcdp/accounts/account-profile-ui-guide.md).
 
-## Primeros pasos
+## Introducción
 
 Debe tener derecho a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) para acceder al B2B [!UICONTROL Perfiles de cuenta] panel.
 

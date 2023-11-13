@@ -1,11 +1,11 @@
 ---
-title: Notas de la versión de Adobe Experience Platform, abril de 2022
-description: Notas de la versión de abril de 2022 de Adobe Experience Platform.
+title: 'Notas de la versión de Adobe Experience Cloud: abril de 2022'
+description: Las notas de la versión de abril de 2022 de Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 9%
+ht-degree: 18%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 **Fecha de publicación: 27 de abril de 2022**
 
-Actualizaciones de funciones existentes en Adobe Experience Platform:
+Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -21,7 +21,7 @@ Actualizaciones de funciones existentes en Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
-- [Real-Time Customer Data Platform edición B2B](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Fuentes](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -45,7 +45,7 @@ Los siguientes widgets están disponibles a través de la biblioteca Widget en s
 | [!UICONTROL Destinos activos por plataforma de destino] | Destinos | Este widget utiliza una tabla de dos columnas para mostrar una lista de las plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. |
 | [!UICONTROL Audiencias activadas en todos los destinos] | Destinos | Este widget proporciona el número total de audiencias activadas en todos los destinos en una sola métrica. |
 | [!UICONTROL Orden de activación de audiencia] | Segmentos | Este widget proporciona una tabla de tres columnas que enumera el nombre de destino, la plataforma y la fecha de activación de la audiencia. |
-| [!UICONTROL Tendencia de tamaño de audiencia] | Segmentos | Este widget proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento en períodos de 30 días, 90 días y 12 meses. |
+| [!UICONTROL Tendencia de tamaño de público] | Segmentos | Este widget proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento en períodos de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia de cambio de tamaño de audiencia] | Segmentos | Este widget proporciona un gráfico de líneas que ilustra la diferencia en el número total de perfiles aptos para un segmento determinado entre las instantáneas diarias más recientes. El periodo de análisis de tendencias se puede visualizar en periodos de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Este widget ilustra la tendencia del tamaño de la audiencia de un segmento en particular en función de un tipo de identidad seleccionado. El periodo de análisis de tendencias se puede visualizar en periodos de 30 días, 90 días y 12 meses. |
 
@@ -118,7 +118,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
-XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir las audiencias de los clientes mediante segmentos y utilizar los atributos del cliente para fines de personalización.
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
 
 **Nuevas funciones**
 
@@ -135,14 +135,14 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Esquema global | [[!UICONTROL Solicitud de operación de higiene de datos]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Registra los detalles de una solicitud de limpieza de datos para eliminar o modificar registros en un conjunto de datos o zona protegida especificados. |
 | Descriptor | [[!UICONTROL Descriptor de granularidad de series de tiempo]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indica la granularidad de los datos de series temporales y resumen. Cuando se aplica a un esquema, el `timestamp` es la primera marca de tiempo del periodo de esta granularidad. |
 | Clase | [[!UICONTROL Métricas de resumen de XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Proporciona métricas resumidas previamente con dimensiones de agrupación, como los resultados de una SQL SELECT con un GROUP BY. |
-| Grupo de campos | [[!UICONTROL Asignación de resultados de evaluación de políticas de consentimiento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Registra el resultado de la evaluación de la política de consentimiento de un individuo. |
-| Grupo de campos | [[!UICONTROL Búsqueda del sitio]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Registra información relacionada con la búsqueda del sitio, como la consulta de búsqueda, el filtrado y el orden. |
-| Grupo de campos | [[!UICONTROL Combinar posibles clientes]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Registra los detalles de un evento en el que se combinan dos o más posibles clientes. |
-| Grupo de campos | [[!UICONTROL Correo electrónico enviado]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Registra los detalles de un evento en el que se envía un correo electrónico a un destinatario. |
-| Grupo de campos | [[!UICONTROL Vinculación de campos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Registra valores calculados a través del proceso de vinculación de identidad para un evento. |
-| Grupo de campos | [[!UICONTROL Detalles Del Destinatario Secundario Para La Auditoría]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Grupo de campos de Adobe Journey Optimizer que captura un detalle de destinatario secundario para una auditoría. |
-| Grupo de campos | [[!UICONTROL Detalles de relación de persona de la cuenta XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalles relacionados con una relación cuenta-persona. |
-| Grupo de campos | [[!UICONTROL Detalles de persona de cuenta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalles relacionados con una relación cuenta-persona. |
+| Grupo de campo | [[!UICONTROL Asignación de resultados de evaluación de políticas de consentimiento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Registra el resultado de la evaluación de la política de consentimiento de un individuo. |
+| Grupo de campo | [[!UICONTROL Búsqueda del sitio]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Registra información relacionada con la búsqueda del sitio, como la consulta de búsqueda, el filtrado y el orden. |
+| Grupo de campo | [[!UICONTROL Combinar posibles clientes]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Registra los detalles de un evento en el que se combinan dos o más posibles clientes. |
+| Grupo de campo | [[!UICONTROL Correo electrónico enviado]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Registra los detalles de un evento en el que se envía un correo electrónico a un destinatario. |
+| Grupo de campo | [[!UICONTROL Vinculación de campos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Registra valores calculados a través del proceso de vinculación de identidad para un evento. |
+| Grupo de campo | [[!UICONTROL Detalles Del Destinatario Secundario Para La Auditoría]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Grupo de campos de Adobe Journey Optimizer que captura un detalle de destinatario secundario para una auditoría. |
+| Grupo de campo | [[!UICONTROL Detalles de relación de persona de la cuenta XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalles relacionados con una relación cuenta-persona. |
+| Grupo de campo | [[!UICONTROL Detalles de persona de cuenta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalles relacionados con una relación cuenta-persona. |
 | Tipo de datos | [[!UICONTROL Carrito]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Registra información sobre un carro de compras de comercio electrónico. |
 | Tipo de datos | [[!UICONTROL Envío]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Registra la información de envío de uno o más productos. |
 | Tipo de datos | [[!UICONTROL Búsqueda del sitio]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Registra información sobre la actividad de búsqueda del sitio. |
@@ -157,10 +157,10 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Actualizar descripción |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Destinos ]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nuevos valores de enumeración para `destinationCategory`. |
+| Esquema global | [[!UICONTROL Destinos]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nuevos valores de enumeración para `destinationCategory`. |
 | Descriptor | [[!UICONTROL Descriptor con nombre descriptivo]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Se ha agregado compatibilidad para eliminar valores sugeridos (`meta:enum`) que no son necesarios en los campos estándar. |
-| Grupo de campos | [[!UICONTROL Proceso de inicio de sesión del usuario]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo añadido. |
-| Tipo de datos | [[!UICONTROL Comercio]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Se han añadido varios campos relacionados con el carro de compras. |
+| Grupo de campo | [[!UICONTROL Proceso de inicio de sesión del usuario]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo añadido. |
+| Tipo de datos | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Se han añadido varios campos relacionados con el carro de compras. |
 | Tipo de datos | [[!UICONTROL Elemento de lista de productos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Se han añadido nuevos campos para las opciones seleccionadas y el importe de descuento. |
 | Extensión (servicios inteligentes) | [[!UICONTROL Optimización del tiempo de envío de JourneyAI de servicios inteligentes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimizar el formato de almacenamiento para las puntuaciones de tiempo de envío. |
 | Extensión (Workfront) | [[!UICONTROL Evento de cambio de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Varios campos reemplazados por una `workfront:customData` para campos de formulario personalizados. |
@@ -173,11 +173,11 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Los servicios de IA/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones específicas de las necesidades de una empresa mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos.
+Los servicios de IA/ML permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a analistas de marketing formular predicciones concretas de las necesidades de una compañía mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos.
 
 ### Inteligencia artificial aplicada a la atribución
 
-Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para ayudar a cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
+Attribution AI se utiliza para atribuir créditos a puntos de contacto que llevan a eventos de conversión. Los especialistas en marketing pueden utilizarla para cuantificar el impacto de cada punto de contacto de marketing individual en los recorridos del cliente.
 
 **Funciones actualizadas**
 
@@ -200,9 +200,9 @@ La inteligencia artificial aplicada al cliente disponible en Real-time Customer 
 
 Para obtener más información sobre [!DNL Intelligent Services], consulte la [[!DNL Intelligent Services] descripción general](../../intelligent-services/home.md).
 
-## Real-Time Customer Data Platform edición B2B {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
-Real-Time CDP B2B Edition, que se creó en Real-time Customer Data Platform (Real-Time CDP), está diseñado específicamente para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse a audiencias específicas con precisión y captar esas audiencias en todos los canales disponibles.
+Real-Time CDP edición B2B, que se creó en Real-time Customer Data Platform (Real-Time CDP), está diseñado específicamente para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse a públicos específicos con precisión y captarlos en todos los canales disponibles.
 
 **Funciones actualizadas**
 

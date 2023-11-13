@@ -5,7 +5,7 @@ exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Este tutorial proporciona los pasos para crear una [!DNL Zendesk] conexión de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -69,7 +69,7 @@ Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a
 
 ### Seleccionar datos
 
-Una vez autenticado el origen, la página se actualiza a un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+Una vez autenticado el origen, la página se actualiza a un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
