@@ -2,9 +2,9 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1016'
 ht-degree: 11%
 
 ---
@@ -129,7 +129,7 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-## (Beta) Exportar conjuntos de datos {#export-datasets}
+## Exportar conjuntos de datos {#export-datasets}
 
 Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
 

@@ -4,10 +4,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 12%
+source-wordcount: '3781'
+ht-degree: 11%
 
 ---
 
@@ -29,6 +29,18 @@ En este artículo se explica el flujo de trabajo necesario para activar audienci
 ## Requisitos previos {#prerequisites}
 
 Para activar audiencias en destinos, debe tener [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar.
+
+### Formatos de archivo compatibles para la exportación {#supported-file-formats-export}
+
+Se admiten los siguientes formatos de archivo al exportar audiencias:
+
+* CSV
+* JSON
+* Parquet
+
+Tenga en cuenta que la exportación de archivos CSV ofrece una mayor flexibilidad en cuanto a la estructura que desea aplicar a los archivos exportados. Más información sobre [configuración de formato de archivo para archivos CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Seleccione el formato de archivo que desee exportar cuando [creación de una conexión con el destino basado en archivos](/help/destinations/ui/connect-destination.md).
 
 ## Seleccione su destino {#select-destination}
 
@@ -532,7 +544,7 @@ Si está satisfecho con la selección y no se han detectado infracciones de dire
 
 ## Verificar activación de audiencia {#verify}
 
-Para destinos de marketing por correo electrónico y destinos de almacenamiento en la nube, Adobe Experience Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. A continuación se muestra el formato de archivo predeterminado, pero puede [editar los componentes del nombre de archivo](#file-names):
+Al exportar audiencias a destinos de almacenamiento en la nube, Adobe Experience Platform crea un `.csv`, `.json`, o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. A continuación se muestra el formato de archivo predeterminado, pero puede [editar los componentes del nombre de archivo](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por ejemplo, si seleccionara una frecuencia de exportación diaria, los archivos que recibiría en tres días consecutivos podrían tener este aspecto:

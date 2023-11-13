@@ -2,9 +2,9 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1051'
 ht-degree: 17%
 
 ---
@@ -139,7 +139,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-## (Beta) Exportar conjuntos de datos {#export-datasets}
+## Exportar conjuntos de datos {#export-datasets}
 
 Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
 

@@ -2,9 +2,9 @@
 title: Conexión de Azure Blob
 description: Cree una conexión saliente activa al almacenamiento del blob de Azure para exportar periódicamente archivos de datos CSV de Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1049'
 ht-degree: 8%
 
 ---
@@ -123,7 +123,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-## (Beta) Exportar conjuntos de datos {#export-datasets}
+## Exportar conjuntos de datos {#export-datasets}
 
 Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
 
