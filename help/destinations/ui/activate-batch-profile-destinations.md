@@ -4,7 +4,7 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3781'
 ht-degree: 11%
@@ -30,7 +30,7 @@ En este artículo se explica el flujo de trabajo necesario para activar audienci
 
 Para activar audiencias en destinos, debe tener [conectado a un destino](./connect-destination.md). Si aún no lo ha hecho, vaya al [catálogo de destinos](../catalog/overview.md), examine los destinos admitidos y configure el destino que desee utilizar.
 
-### Formatos de archivo compatibles para la exportación {#supported-file-formats-export}
+## Formatos de archivo compatibles para la exportación {#supported-file-formats-export}
 
 Se admiten los siguientes formatos de archivo al exportar audiencias:
 
