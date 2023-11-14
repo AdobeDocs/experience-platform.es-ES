@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicaciones de Privacy Service y Experience Cloud
 description: Este documento proporciona una referencia sobre cómo configurar distintas aplicaciones de Experience Cloud para operaciones relacionadas con la privacidad.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '912'
 ht-degree: 13%
 
 ---
@@ -54,7 +54,6 @@ La siguiente es una lista de [!DNL Experience Cloud] aplicaciones que no están 
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | AEM Una visión general de cómo un administrador de privacidad del cliente o un administrador de puede gestionar las solicitudes de RGPD. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Pasos para realizar solicitudes de acceso y eliminación de RGPD utilizando Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Asegúrese de que las instalaciones de su Magento Commerce cumplen con los requisitos de las legislaciones de privacidad específicas. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Descubra cómo se aplican las normas de privacidad a Marketo. |
 | [Etiquetas en Adobe Experience Platform](../tags/ui/client-side/consent.md) | Cómo los desarrolladores pueden usar las extensiones y el creador de reglas para definir las soluciones de inclusión y de exclusión. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Descubra cómo Workfront recopila datos personales y cómo un interesado puede enviar una solicitud de privacidad mediante un formulario. |
 
