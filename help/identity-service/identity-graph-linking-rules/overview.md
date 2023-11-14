@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
 ## Índice 
 
 * [Información general](./overview.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo](./example-scenarios.md)
 * [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
 * [Lógica de vinculación de identidad](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Para obtener más información sobre casos de uso de reglas de vinculación de g
 
 Con las reglas de vinculación de gráficos de identidad puede:
 
-* Configure límites para evitar que dos identificadores de persona dispares se combinen en un gráfico de identidad, de modo que un solo gráfico de identidad represente a una sola persona.
-   * Los límites que configure se aplican mediante el algoritmo de optimización de identidad.
-* Configure prioridades para asociar eventos en línea realizados por el individuo autenticado a un usuario determinado.
+* Cree un único gráfico de identidad o perfil combinado para cada usuario configurando áreas de nombres únicas (límites), lo que evitará que dos identificadores de persona diferentes se combinen en un gráfico de identidad.
+* Asociar eventos autenticados en línea a la persona configurando prioridades
 
 ### Límites
 
-Puede utilizar límites de área de nombres para definir el número máximo de identidades que pueden existir en un gráfico basado en un área de nombres determinada. Por ejemplo, puede configurar el gráfico para que tenga un máximo de una identidad con un área de nombres de ID de CRM, lo que evita la combinación de dos identificadores de persona dispares dentro del mismo gráfico.
+Un área de nombres única es un identificador que representa a un individuo, como un ID de CRM, un ID de inicio de sesión y un correo electrónico con hash. Si un área de nombres se designa como única, un gráfico solo puede tener una identidad con ese área de nombres (`limit=1`). Esto evitará la combinación de dos identificadores de persona dispares dentro del mismo gráfico.
 
 * Si no se configura un límite, esto podría dar como resultado combinaciones de gráficos no deseadas, como dos identidades con un área de nombres de ID de CRM en un gráfico.
 * Si no se configura un límite, el gráfico puede agregar tantas áreas de nombres como sea necesario siempre y cuando el gráfico esté dentro de las barreras (50 identidades/gráfico).
@@ -60,6 +60,8 @@ A continuación se muestra una lista de implicaciones del algoritmo en la asocia
 * El ECID se asociará al último usuario autenticado si se cumplen las siguientes condiciones:
    * Si ECID (dispositivo compartido) combina los ID de CRM.
    * Si los límites están configurados para un solo ID de CRM.
+
+Para obtener más información, lea el documento sobre [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
 
 ### Prioridad
 
@@ -106,6 +108,7 @@ Si se incorporan los siguientes eventos de experiencia en Experience Platform, l
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md)
 * [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
 * [Lógica de vinculación de identidad](./identity-linking-logic.md)

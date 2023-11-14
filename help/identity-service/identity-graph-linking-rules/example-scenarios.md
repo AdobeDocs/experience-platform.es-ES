@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -69,5 +69,6 @@ Con las reglas de vinculación de gráficos de identidad puede configurar el CRM
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
 * [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
 * [Lógica de vinculación de identidad](./identity-linking-logic.md)

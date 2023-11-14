@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
@@ -74,5 +74,6 @@ El servicio de identidad solo ingiere campos designados como identidad. El servi
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
 * [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md)
 * [Lógica de vinculación de identidad](./identity-linking-logic.md)
