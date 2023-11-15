@@ -60,7 +60,7 @@ ht-degree: 9%
    * [Resumen del catálogo de destinos](./catalog/overview.md)
    * destinos de Adobe{#adobe}
       * [información general sobre destinos de Adobe](./catalog/adobe/overview.md)
-      * [Audiencias de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Públicos de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
