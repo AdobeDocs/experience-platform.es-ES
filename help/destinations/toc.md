@@ -4,9 +4,9 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1204'
 ht-degree: 9%
 
 ---
@@ -90,6 +90,7 @@ ht-degree: 9%
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
+      * [Actualización de conexión de pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Conexión de anuncios de Snapchat](./catalog/advertising/snap-inc.md)
       * [La conexión con la Oficina de Comercio](./catalog/advertising/tradedesk.md)
       * [(Beta) La conexión CRM de Trade Desk](./catalog/advertising/tradedesk-emails.md)
