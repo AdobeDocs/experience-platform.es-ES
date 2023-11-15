@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API de Flow Service
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando el origen de API HTTP para los datos sin procesar y XDM mediante la API de Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 3%
+source-wordcount: '1552'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Flow Service se utiliza para recopilar y centralizar datos de clientes de difere
 
 Este tutorial utiliza el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) para guiarle por los pasos para crear una conexión de flujo continuo utilizando [!DNL Flow Service] API.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -30,7 +30,7 @@ Además, la creación de una conexión de flujo continuo requiere que tenga un e
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Crear una conexión base
+## Cree una conexión base
 
 Una conexión base especifica el origen y contiene la información necesaria para que el flujo sea compatible con las API de ingesta de flujo continuo. Al crear una conexión base, tiene la opción de crear una conexión no autenticada y autenticada.
 
@@ -459,7 +459,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 | Propiedad | Descripción |
 | --- | --- |
 
-## Creación de un flujo de datos
+## Cree un flujo de datos
 
 Con las conexiones de origen y destino creadas, ahora puede crear un flujo de datos. El flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST a `/flows` punto final.
 
@@ -562,7 +562,6 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del flujo de dat
 }
 ```
 
-
 ## Publicar datos para ingerirlos en Platform {#ingest-data}
 
 Ahora que ha creado el flujo, puede enviar el mensaje JSON al extremo de flujo continuo creado anteriormente.
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{INLET_URL}` | Su URL de extremo de flujo continuo. Puede recuperar esta dirección URL realizando una solicitud de GET a `/connections` al proporcionar su ID de conexión base. |
+| `{FLOW_ID}` | El ID del flujo de datos de streaming de la API HTTP. |
 
 **Solicitud**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Datos sin procesar]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
