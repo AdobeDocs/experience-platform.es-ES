@@ -5,9 +5,9 @@ badge: Alfa
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -63,19 +63,19 @@ Seleccione el **[!UICONTROL Icono de asistente]** del encabezado al panel del Ay
 
 ![Página de inicio de la interfaz de usuario del Experience Platform con el icono Asistente seleccionado.](./images/ai-assistant/ai-assistant.png)
 
-+++Usar modo inmersivo
+<!-- +++Use immersive mode
 
-Para usar [!DNL Immersive mode] seleccione el icono de enfoque en la navegación de encabezado del Ayudante.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
-![selecto-inmersivo](./images/ai-assistant/select-immersive.png)
+![select-immersive](./images/ai-assistant/select-immersive.png)
 
-En el centro de la pantalla aparece una interfaz emergente dedicada para el Ayudante.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
-![inmersive-mode](./images/ai-assistant/immersive-mode.png)
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-Desde aquí, puede introducir su pregunta en el cuadro de texto y consultar al Ayudante conceptos relacionados con los datos o las audiencias. También puede hacer preguntas sobre los objetos de datos para comprender mejor cómo puede utilizarlos para su caso de uso respectivo.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Ejemplo de caso de uso: Utilice el Ayudante para acelerar el proceso de creación de esquemas
 
@@ -97,25 +97,45 @@ Una respuesta determinada proporciona hipervínculos a cualquier entidad a la qu
 
 El Ayudante permite validar la respuesta viendo su origen. Se proporcionan vínculos a la documentación para preguntas de concepto, mientras que las preguntas de uso de datos se pueden comprobar con una consulta SQL que muestra cómo se calculó la respuesta.
 
-![Opciones proporcionadas por el Ayudante después de devolver una respuesta.](./images/ai-assistant/options-post-answer.png)
-
-#### Sugerencias relacionadas
-
-También puede profundizar en el tema de la consulta seleccionando una de las sugerencias relacionadas que proporciona el Asistente.
-
-![Sugerencias relacionadas.](./images/ai-assistant/related-suggestions.png)
+![Opciones proporcionadas por el Ayudante después de devolver una respuesta.](./images/ai-assistant/options.png)
 
 #### Pregunta de seguimiento
 
++++Seleccione para ver un ejemplo de una pregunta de seguimiento
+
 Puede obtener más información sobre un tema en particular haciendo una pregunta de seguimiento. En el siguiente ejemplo, se pregunta al Ayudante cómo se puede utilizar eventType en la segmentación.
 
-![Se muestra una pregunta y una respuesta de seguimiento en el asistente de Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![Se muestra una pregunta y una respuesta de seguimiento en el asistente de Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Pregunta de uso de datos
 
++++Seleccione esta opción para ver un ejemplo de una pregunta sobre el uso de datos
+
 También puede hacer preguntas al Ayudante sobre el uso de los datos. Al consultar sobre el uso de datos, debe estar en un simulador para pruebas activo a fin de que el asistente pueda responder a su consulta.
 
+Para las respuestas que incluyen información sobre el uso de los datos, el Ayudante proporciona vínculos a las entidades en cuestión. Además, el Ayudante le explica cómo ha calculado su respuesta.
+
 ![Una pregunta sobre el uso de datos, que pregunta cuántos segmentos tiene un usuario.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Usar autocompletar
+
++++Seleccione esta opción para ver un ejemplo de autocompletar
+
+Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: segmentos, esquemas, conjuntos de datos, fuentes y destinos.
+
+Para utilizar el completado automático, escriba un símbolo más (**`+`**) como parte de su pregunta. Como alternativa, también puede seleccionar el símbolo más (**`+`**) en el cuadro de entrada de texto. A continuación, aparecerá una ventana con una lista de objetos de datos recomendados que existen en la zona protegida.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+A continuación, seleccione el objeto de datos que desea consultar para completar la pregunta y, a continuación, envíe la pregunta.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Ámbito
 
@@ -168,13 +188,9 @@ Puede comprobar la respuesta que devuelve el Ayudante de varias formas diferente
 
 Con cada respuesta, el Ayudante le proporciona citas a las que puede hacer referencia para verificar o obtener más información.
 
-Seleccionar **[!UICONTROL Mostrar origen]** para obtener una lista de vínculos a la documentación a la que el Ayudante hace referencia para calcular su respuesta.
+Seleccionar **[!UICONTROL Mostrar origen]** para obtener una lista de vínculos a la documentación a la que el Ayudante hace referencia para calcular su respuesta. Al seleccionar un vínculo a la documentación a la que se hace referencia, se le redirige a la sección correspondiente de esa página en particular, con la información específica resaltada.
 
-![Los vínculos al origen se muestran en el Ayudante.](./images/ai-assistant/sources.png)
-
-Para las respuestas que incluyen información sobre el uso de los datos, el Ayudante proporciona vínculos a las entidades en cuestión. Además, el Ayudante le explica cómo ha calculado su respuesta.
-
-![explicación](./images/ai-assistant/explanation.png)
+![Los vínculos al origen se muestran en el Ayudante.](./images/ai-assistant/show-sources.png)
 
 ## Proporcionar comentarios
 
@@ -208,7 +224,7 @@ Seleccione el icono de pulgares hacia abajo para proporcionar comentarios sobre 
 
 Seleccione el icono de indicador para proporcionar más informes sobre su experiencia con el asistente.
 
-![La ventana de resultados del informe.](./images/ai-assistant/report-results.png)
+![La ventana de resultados del informe.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 

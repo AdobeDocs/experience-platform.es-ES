@@ -1,5 +1,5 @@
 ---
-title: Audiencias de Experience Cloud
+title: Públicos de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
