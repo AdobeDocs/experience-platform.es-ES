@@ -2,20 +2,14 @@
 title: Administración de permisos para Privacy Service
 description: Obtenga información sobre cómo administrar permisos de usuario para Adobe Experience Platform Privacy Service mediante Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
-source-wordcount: '1634'
-ht-degree: 100%
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
 # Administración de permisos para Privacy Service
-
->[!IMPORTANT]
->
->Se han mejorado los permisos de Adobe Experience Platform Privacy Service para aumentar su nivel de granularidad. Estos cambios permiten a los administradores de la organización otorgar accesos a más usuarios con la función y el nivel de permiso deseados. Los usuarios de cuentas técnicas deben actualizar sus permisos de Privacy Service, ya que esta actualización inminente constituye un cambio radical para ellos. La aplicación de este cambio de permisos se realizará el **13 de abril de 2023**. Consulte la documentación sobre [migración de credenciales de API heredadas](#migrate-tech-accounts) para obtener instrucciones sobre cómo resolver este problema.
->
->Las cuentas técnicas están disponibles para los clientes empresariales y se crean mediante la consola de desarrolladores de Adobe. El Adobe ID del titular de una cuenta técnica termina en `@techacct.adobe.com`. Si no está seguro de ser el titular de una cuenta técnica, póngase en contacto con el administrador de su organización.
 
 El acceso a [Adobe Experience Platform Privacy Service](./home.md) se controla mediante permisos granulares basados en funciones en Adobe Admin Console. Al crear perfiles de producto que asignan permisos a grupos de usuarios, puede determinar quién tiene acceso a qué funciones de la [IU](./ui/overview.md) y [API](./api/overview.md) de Privacy Service.
 
@@ -53,17 +47,17 @@ En la tabla siguiente se detallan los permisos disponibles para Privacy Service 
 
 Para administrar permisos de Privacy Service, inicie sesión en [Admin Console](https://adminconsole.adobe.com/) y seleccione **[!UICONTROL Productos]** desde la barra de navegación superior. Desde aquí, seleccione **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Imagen que muestra la tarjeta de producto de Privacy Service en Admin Console](./images/permissions/privacy-service-card.png)
+![El Admin Console con la tarjeta de producto de Privacy Service resaltada.](./images/permissions/privacy-service-card.png)
 
 ### Seleccione o cree un perfil de producto
 
 La siguiente pantalla muestra una lista de perfiles de producto disponibles para los Privacy Service de su organización. Si no existen perfiles de producto, seleccione **[!UICONTROL Nuevo perfil]** para crear uno. Si tiene varias funciones o grupos de usuarios en su organización que requieren diferentes niveles de acceso, debe crear un perfil de producto independiente para cada uno de ellos.
 
-![Imagen que muestra los perfiles de producto del Privacy Service en Admin Console](./images/permissions/select-or-create-profile.png)
+![El Admin Console con el perfil de producto del Privacy Service resaltado.](./images/permissions/select-or-create-profile.png)
 
 Después de seleccionar un perfil de producto, puede usar la pestaña **[!UICONTROL Permisos]** para iniciar [editar permisos](#edit-permissions) para el perfil o seleccionar la pestaña **[!UICONTROL Usuarios]** para iniciar la [asignación de usuarios](#assign-users) al perfil.
 
-![Imagen que muestra la pestaña de permisos de un Admin Console de perfil de producto](./images/permissions/users-permissions-tabs.png)
+![La pestaña Permisos de un Admin Console de perfil de producto.](./images/permissions/users-permissions-tabs.png)
 
 ### Edición de permisos para el perfil {#edit-permissions}
 
@@ -71,25 +65,25 @@ En la pestaña **[!UICONTROL Permisos]**, seleccione cualquiera de las categorí
 
 Al editar permisos para un perfil, los permisos disponibles se incluyen en la columna izquierda, mientras que los que se incluyen en el perfil se incluyen en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
 
-![Imagen que muestra las columnas de permisos disponibles incluidas](./images/permissions/edit-permissions.png)
+![Las columnas de permisos disponibles e incluidas.](./images/permissions/edit-permissions.png)
 
 Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la que desee en el panel de navegación izquierdo.
 
-![Imagen que muestra la sección [!UICONTROL Exclusión de venta] en permisos](./images/permissions/switch-category.png)
+![El [!UICONTROL Desactivar la venta] sección en permisos.](./images/permissions/switch-category.png)
 
 Seleccionar **[!UICONTROL Guardar]** una vez que haya terminado de configurar los permisos.
 
-![Imagen que muestra la configuración de permisos que se está guardando para el perfil del producto](./images/permissions/save-permissions.png)
+![La configuración de permisos para el perfil de producto con Guardar resaltado.](./images/permissions/save-permissions.png)
 
 La vista de perfil de producto vuelve a aparecer con los permisos añadidos reflejados.
 
-![Imagen que muestra los permisos añadidos para el perfil del producto](./images/permissions/permissions-added.png)
+![Los permisos añadidos para el perfil del producto.](./images/permissions/permissions-added.png)
 
 ### Asignación de usuarios al perfil {#assign-users}
 
 Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione la pestaña **[!UICONTROL Usuarios]**, y a continuación **[!UICONTROL Agregar usuario]**.
 
-![Imagen que muestra la pestaña de usuarios de un perfil de producto en Admin Console](./images/permissions/manage-users.png)
+![La pestaña Usuarios de un perfil de producto en Admin Console.](./images/permissions/manage-users.png)
 
 Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación de Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
 
