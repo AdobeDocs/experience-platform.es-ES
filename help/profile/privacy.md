@@ -5,9 +5,9 @@ title: Procesamiento de solicitudes de privacidad en el perfil del cliente en ti
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ Para obtener más información sobre áreas de nombres de identidad en [!DNL Exp
 
 ## Envío de solicitudes {#submit}
 
-Las secciones siguientes describen cómo realizar solicitudes de privacidad para [!DNL Real-Time Customer Profile] uso del [!DNL Privacy Service] API o IU. Antes de leer estas secciones, se recomienda encarecidamente que revise las [API de Privacy Service](../privacy-service/api/getting-started.md) o [IU de Privacy Service](../privacy-service/ui/overview.md) documentación para ver los pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar formato correctamente a los datos de identidad de usuario enviados en las cargas útiles de solicitud.
+Las secciones siguientes describen cómo realizar solicitudes de privacidad para [!DNL Real-Time Customer Profile] uso del [!DNL Privacy Service] API o IU. Antes de leer estas secciones, debe revisar o tener en cuenta las [API de Privacy Service](../privacy-service/api/getting-started.md) o [IU de Privacy Service](../privacy-service/ui/overview.md) documentación. Estos documentos proporcionan pasos completos sobre cómo enviar un trabajo de privacidad, incluido cómo dar formato adecuado a los datos de identidad de usuario enviados en las cargas útiles de solicitud.
 
 >[!IMPORTANT]
 >
 >El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una política de combinación que no realiza la vinculación de identidad. Consulte la sección sobre [limitaciones de políticas de combinación](#merge-policy-limitations) para obtener más información.
 >
->Tenga en cuenta que la cantidad de tiempo que puede tardar una solicitud de privacidad en completarse. **no puede** estar garantizado. Si se producen cambios en su [!DNL Profile] no se puede garantizar que se procesen o no los datos mientras se sigue procesando una solicitud.
+>Tenga en cuenta que las solicitudes de privacidad se procesan de forma asíncrona dentro de los requisitos regulatorios y que la cantidad de tiempo que tardan en completarse puede variar. Si se producen cambios en su [!DNL Profile] datos mientras una solicitud sigue procesándose, no se garantiza que esos registros entrantes también se procesen en esa solicitud. Solo se garantiza la eliminación de los perfiles que se mantienen en el lago de datos o el Almacenamiento de perfiles en el momento en que se solicita el trabajo de privacidad. Si ingiere datos de perfil relacionados con el asunto de una solicitud de eliminación durante el trabajo de eliminación, no se garantiza que se eliminen todos los fragmentos de perfil.
+>Es responsabilidad del cliente tener en cuenta los datos entrantes en Platform o el servicio de perfil en el momento de una solicitud de eliminación, ya que esos datos se insertarán en los almacenes de registros. Debe ser prudente con la ingesta de datos que se han eliminado o que se están eliminando.
 
 ### Uso de la API
 
@@ -222,6 +223,6 @@ El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una pol
 
 ## Pasos siguientes
 
-Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Experience Platform]. Para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad, siga leyendo la documentación proporcionada a través de esta guía.
+Al leer este documento, se le han introducido los conceptos importantes relacionados con el procesamiento de solicitudes de privacidad en [!DNL Experience Platform]. Para comprender mejor cómo administrar los datos de identidad y crear trabajos de privacidad, siga leyendo la documentación proporcionada en esta guía.
 
 Para obtener información sobre el procesamiento de solicitudes de privacidad para [!DNL Platform] recursos no utilizados por [!DNL Profile], consulte el documento sobre [procesamiento de solicitudes de privacidad en el lago de datos](../catalog/privacy.md).
