@@ -37,7 +37,7 @@ A medida que complete los pasos para implementar el caso de uso, utilizará las 
    * [Esquemas](/help/xdm/home.md)
    * [Perfiles](/help/profile/home.md)
    * [Conjuntos de datos](/help/catalog/datasets/overview.md)
-   * [Audiencias](/help/segmentation/home.md)
+   * [Públicos](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinos](/help/destinations/home.md)
 
@@ -320,7 +320,7 @@ No hay ninguna [políticas de uso de datos](/help/data-governance/policies/overv
 * Restringir la segmentación entre sitios
 * Restringir la combinación de datos directamente identificables con datos anónimos
 
-### Crear audiencias {#create-audience}
+### Crear públicos {#create-audience}
 
 Los escenarios de renovación de participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de varias formas en [!DNL Adobe Experience Platform].
 

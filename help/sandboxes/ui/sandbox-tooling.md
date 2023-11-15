@@ -30,7 +30,7 @@ La tabla siguiente enumera [!DNL Adobe Real-Time Customer Data Platform] objetos
 | Plataforma | Objeto | Detalles |
 | --- | --- | --- |
 | Plataforma de datos del cliente | Fuentes | Las credenciales de la cuenta de origen no se replican en la zona protegida de destino por motivos de seguridad y deberán actualizarse manualmente. El flujo de datos de origen se copia en estado de borrador de forma predeterminada. |
-| Plataforma de datos del cliente | Audiencias | Solo el **[!UICONTROL Audiencia del cliente]** type **[!UICONTROL Servicio de segmentación]** es compatible. Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. |
+| Plataforma de datos del cliente | Públicos | Solo el **[!UICONTROL Audiencia del cliente]** type **[!UICONTROL Servicio de segmentación]** es compatible. Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. |
 | Plataforma de datos del cliente | Identidades | El sistema deduplicará automáticamente las áreas de nombres de identidad estándar de Adobe al crear en la zona protegida de destino. Las audiencias solo se pueden copiar cuando todos los atributos de las reglas de audiencia están habilitados en el esquema de unión. Los esquemas necesarios deben moverse y habilitarse primero para el perfil unificado. |
 | Plataforma de datos del cliente | Esquemas | Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. El estado del perfil unificado del esquema se copiará tal cual desde la zona protegida de origen. Si el esquema está habilitado para el perfil unificado en la zona protegida de origen, todos los atributos se mueven al esquema de unión. Las mayúsculas y minúsculas perimetrales de las relaciones de esquema no se incluyen en el paquete. |
 | Plataforma de datos del cliente | Conjuntos de datos | Los conjuntos de datos se copian con la configuración del perfil unificado deshabilitada de forma predeterminada. |
@@ -50,7 +50,7 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 
 | Plataforma | Objeto | Detalles |
 | --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Audiencia  | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Público | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Recorrido - detalles del lienzo | La representación del recorrido en el lienzo incluye los objetos del recorrido, como condiciones, acciones, eventos, audiencias de lectura, etc., que se copian. La actividad de salto se excluye de la copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Se copian los eventos y los detalles del evento utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |

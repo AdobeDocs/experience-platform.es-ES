@@ -19,7 +19,7 @@ ht-degree: 37%
 - API de segmentación {#api}
    - [Información general](api/overview.md)
    - [Primeros pasos](api/getting-started.md)
-   - [Audiencias](api/audiences.md)
+   - [Públicos](api/audiences.md)
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)

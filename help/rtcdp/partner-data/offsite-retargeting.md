@@ -35,7 +35,7 @@ Cuando planee volver a dirigirse a visitantes no autenticados, tenga en cuenta l
 
 Además, para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP. Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pídale al administrador del sistema que le conceda los permisos necesarios.
 
-- [Audiencias](../../segmentation/home.md)
+- [Públicos](../../segmentation/home.md)
 - [Atributos calculados](../../profile/computed-attributes/overview.md)
 - [Destinos](../../destinations/home.md)
 - [SDK web](../../edge/home.md)

@@ -82,7 +82,7 @@ Lea las secciones siguientes, que incluyen vínculos a documentación adicional,
 
 ### Administración de datos: cree un área de nombres de identidad, un esquema y un conjunto de datos para administrar atributos de datos {#data-management}
 
-Como preparación para conseguir que el caso de uso personalice la experiencia de los visitantes no autenticados, primero debe configurar la estructura de administración de datos en Real-Time CDP para recibir los datos entrantes de cualificación de audiencia y evento en tiempo real.
+Como preparación para conseguir que el caso de uso personalice la experiencia de los visitantes no autenticados, primero debe configurar la estructura de administración de datos en Real-Time CDP para recibir los datos entrantes de cualificación de público y evento en tiempo real.
 
 #### Crear área de nombres de identidad de ID de socio
 
@@ -254,7 +254,7 @@ Introduzca `interact` en el cuadro de búsqueda, actualice la página y debería
 
 ### Personalización {#personalization}
 
-Ya está listo para crear y activar audiencias para su personalización.
+Ya está listo para crear y activar públicos para su personalización.
 
 #### Creación de audiencias y configuración de la segmentación de Edge
 
@@ -264,7 +264,7 @@ En la IU de Platform, navegue hasta **[!UICONTROL Cliente]** > **[!UICONTROL Aud
 
 Debe configurar la audiencia con [segmentación de borde](/help/segmentation/ui/edge-segmentation.md) por lo tanto, la pertenencia a audiencias de los visitantes se evalúa en tiempo real a medida que visitan el dominio web.
 
-Asegúrese de configurar también [políticas de combinación activas en el perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para las audiencias de perímetro.
+Asegúrese de configurar también [políticas de combinación activas en el perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para los públicos de perímetro.
 
 #### Integración con Adobe Target u otro destino de personalización personalizado
 
@@ -272,7 +272,7 @@ Ya está listo para integrarse con un motor de personalización para mostrar con
 
 >[!IMPORTANT]
 >
->Lea el tutorial sobre [activación de audiencias en destinos de personalización de perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md) para obtener una vista completa de los pasos necesarios para activar las audiencias.
+>Lea el tutorial sobre [activación de públicos en destinos de personalización de perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md) para obtener una vista completa de los pasos necesarios para activar los públicos.
 
 ## Limitaciones y solución de problemas {#limitations-and-troubleshooting}
 

@@ -195,7 +195,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 
 +++
 
-## Crear una audiencia nueva {#create}
+## Crear un público nuevo {#create}
 
 Puede crear una audiencia nueva realizando una solicitud de POST a `/audiences` punto final.
 

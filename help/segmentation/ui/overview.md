@@ -73,7 +73,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | Acción | Orígenes | Descripción |
 | ------ | ------- | ----------- |
 | [!UICONTROL Editar] | Servicio de segmentación | Le permite abrir el Generador de segmentos para editar su audiencia. Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md). |
-| [!UICONTROL Abrir composición] | Composición de audiencia | Permite abrir Composición de audiencia para ver la audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
+| [!UICONTROL Abrir composición] | Composición del público | Permite abrir Composición de audiencia para ver la audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
 | [!UICONTROL Activar en destino] | Servicio de segmentación | Permite activar la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea la [información general de activación](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Le permite compartir su audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Administrar etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
@@ -237,7 +237,7 @@ Seleccionar **[!UICONTROL Aplicar etiquetas de acceso]** permite administrar las
 
 >[!BEGINTABS]
 
->[!TAB Composición de audiencia]
+>[!TAB Composición del público]
 
 ![Se muestra la página de detalles de la audiencia con la variable [!UICONTROL Abrir composición] botón resaltado.](../images/ui/overview/audience-details-open-composition.png)
 

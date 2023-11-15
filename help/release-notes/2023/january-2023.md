@@ -92,7 +92,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [(Beta) Conexión de audiencias de Adobe Experience Cloud](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Utilice la conexión [!UICONTROL Audiencias de Adobe Experience Cloud (Beta)] para compartir segmentos desde Experience Platform a varias soluciones de Experience Platform, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target o Marketo. |
+| [(Beta) Conexión de públicos de Adobe Experience Cloud](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Utilice la conexión [!UICONTROL Audiencias de Adobe Experience Cloud (Beta)] para compartir segmentos desde Experience Platform a varias soluciones de Experience Platform, como Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target o Marketo. |
 | [Conexión del perfil Pega](../../destinations/catalog/personalization/pega-profile.md) | Utilice el [!DNL Pega Profile Connector] en Adobe Experience Platform para crear una conexión saliente activa con su Almacenamiento de S3 de [!DNL Amazon] para exportar periódicamente datos de perfil a archivos CSV desde Adobe Experience Platform en sus propios contenedores de S3. En [!DNL Pega Customer Decision Hub], puede programar trabajos de datos para importar estos datos de perfil desde el almacenamiento de S3 y actualizar el perfil [!DNL Pega Customer Decision Hub]. |
 | [(Beta) La conexión de la UE de CRM de la Oficina de Comercio](../../destinations/catalog/advertising/tradedesk-emails.md) | Con el lanzamiento de EUID (European Unified ID), ahora ve dos destinos [!DNL The Trade Desk - CRM] en el [catálogo de destinos](/help/destinations/catalog/overview.md). <ul><li> Si obtiene datos en la UE, utilice el destino **[!DNL The Trade Desk - CRM (EU)]**.</li><li> Si obtiene datos en las regiones APAC o NAMER, utilice el destino **[!DNL The Trade Desk - CRM (NAMER & APAC)]**. </li></ul> |
 
@@ -188,7 +188,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 | Función | Descripción |
 | ------- | ----------- |
 | Importación por lotes de los valores en el Generador de segmentos | El generador de segmentos ahora admite la importación de varios valores, ya sea cargando un archivo CSV o TSV o insertando manualmente valores separados por comas. Encontrará más información en la [Guía del generador de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
-| Caducidad del abono a audiencia externa | De forma predeterminada, los abonos a audiencias externas se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el campo `validUntil` durante la ingesta de datos de audiencia. |
+| Caducidad del abono a público externo | De forma predeterminada, los abonos a públicos externos se conservan durante 30 días. Para conservarlos durante más tiempo, utilice el campo `validUntil` durante la ingesta de datos de público. |
 | Caducidad del abono al segmento generado por Platform | Cualquier abono a segmento que esté en el estado `Exited` durante más de 30 días, según el campo `lastQualificationTime` estará sujeto a eliminación. |
 
 {style="table-layout:auto"}

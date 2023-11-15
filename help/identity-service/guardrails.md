@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 | Barrera | Límite | Notas |
 | --- | --- | --- |
 | Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
+| Número de vínculos a una identidad para una sola ingesta por lotes | 50 | Un solo lote podría contener identidades anómalas que causan combinaciones de gráficos no deseadas. Para evitarlo, el servicio de identidad no ingerirá identidades que ya estén vinculadas a 50 o más identidades. |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de caracteres de un nombre para mostrar o un símbolo de identidad | Ninguna | No hay límites en el número de caracteres de un nombre para mostrar o un símbolo de identidad. |
@@ -42,7 +43,7 @@ En la tabla siguiente se describen las reglas existentes que debe seguir para ga
 
 | Área de nombres | Regla de validación | Comportamiento del sistema cuando se infringe la regla |
 | --- | --- | --- |
-| ECID | <ul><li>El valor de identidad de un ECID debe ser exactamente de 38 caracteres.</li><li>El valor de identidad de un ECID debe constar solo de números.</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li></ul> |
+| ECID | <ul><li>El valor de identidad de un ECID debe ser exactamente de 38 caracteres.</li><li>El valor de identidad de un ECID debe constar solo de números.</li><li>Los valores de identidad no pueden ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ni ser una cadena vacía (por ejemplo: &quot;&quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li><li>Se bloqueará la ingesta de la identidad.</li></ul> |
 | No ECID | El valor de identidad no puede superar los 1024 caracteres. | Si el valor de identidad supera los 1024 caracteres, se omite el registro. |
 
 ### Ingesta del área de identidad
@@ -114,6 +115,8 @@ Si desea conservar los eventos autenticados con el ID de CRM, se recomienda camb
 
 * [Configuración del mapa de identidad para las etiquetas de Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Datos de identidad en el SDK web de Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## Pasos siguientes
 

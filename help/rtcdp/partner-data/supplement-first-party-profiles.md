@@ -33,7 +33,7 @@ Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite enriqu
 
 A medida que considere la posibilidad de complementar sus propios perfiles de origen con atributos de socios de datos, debe analizar y abordar los siguientes detalles sobre el bucle de enriquecimiento de datos con el socio de datos:
 
-* Piense en la ubicación donde se exportará la lista de audiencias desde Real-Time CDP para compartirla con el proveedor de datos. Esta ubicación debe admitir la exportación de archivos.
+* Piense en la ubicación donde se exportará la lista de públicos desde Real-Time CDP para compartirla con el proveedor de datos. Esta ubicación debe admitir la exportación de archivos.
 * ¿Cuáles son los identificadores que espera el proveedor de datos para que puedan clasificarse en atributos adicionales?
 * ¿Cómo se volverá a ingerir en Real-Time CDP el archivo que contiene los atributos proporcionados por el socio? Por ejemplo, los archivos se pueden ingerir a través de conectores de origen de almacenamiento en la nube como [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) o [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * ¿Cuál es la cadencia con la que espera que los atributos proporcionados por el socio se devuelvan a Real-Time CDP y se actualicen?
@@ -54,7 +54,7 @@ Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo compl
 
 1. Como **cliente**, adquiere licencias de atributos del **socio de datos**.
 2. Como **cliente**, puede ampliar los datos de perfil y el modelo de gobernanza para dar cabida a atributos proporcionados por **socios**.
-3. Como **cliente**, incorpora las audiencias que desea enriquecer con el socio de datos. Por lo general, estas audiencias están marcadas por identificadores de entrada, como elementos de información de identificación personal (PII), como correo electrónico, nombre, dirección u otros.
+3. Como **cliente**, incorpora los públicos que desea enriquecer con el socio de datos. Por lo general, estos públicos están marcados por identificadores de entrada, como elementos de información de identificación personal (PII), como correo electrónico, nombre, dirección u otros.
 4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, un [ID de socio](/help/identity-service/namespaces.md) se puede incluir e ingerir en el área de nombres de ID con ámbito de socio.
 5. Como **cliente**, carga atributos del socio de datos en perfiles de clientes en Real-Time CDP.
 
@@ -103,9 +103,9 @@ También en este paso, piense en cómo cambia el modelo de gobernanza de datos a
 >Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/namespaces.md).
 >Lea acerca de [cómo definir campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario de Experience Platform.
 
-### Exporte audiencias que desee enriquecer cuando se introduzca información de identificación personal (PII) o PII con hash {#export-audiences}
+### Exporte públicos que desee enriquecer cuando se introduzca información de identificación personal (PII) o PII con hash {#export-audiences}
 
-Exporte las audiencias que desea que el socio enriquezca. Utilice los destinos de almacenamiento en la nube proporcionados por Real-Time CDP, como Amazon S3 o SFTP. Lea las siguientes páginas de documentación para completar este paso:
+Exporte los públicos que desea que el socio enriquezca. Utilice los destinos de almacenamiento en la nube proporcionados por Real-Time CDP, como Amazon S3 o SFTP. Lea las siguientes páginas de documentación para completar este paso:
 
 * Página de documentación de [destino de Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Página de documentación de [Destino SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
@@ -114,7 +114,7 @@ Exporte las audiencias que desea que el socio enriquezca. Utilice los destinos d
 
 ### Su socio de datos adjunta atributos con licencia para los perfiles con los que pueden coincidir {#partner-appends-attributes}
 
-En este paso, el socio de datos anexa atributos con licencia para la audiencia exportada. La salida suele estar disponible como archivo plano que se puede volver a introducir en Real-Time CDP. Más información acerca de la [ingesta de archivos en Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
+En este paso, el socio de datos anexa atributos con licencia para el público exportado. La salida suele estar disponible como archivo plano que se puede volver a introducir en Real-Time CDP. Más información acerca de la [ingesta de archivos en Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP anexa atributos enriquecidos al perfil del cliente {#ingest-data}
 
