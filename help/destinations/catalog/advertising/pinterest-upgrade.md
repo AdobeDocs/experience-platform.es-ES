@@ -3,9 +3,9 @@ title: Migración de destino de pinterest a una nueva API. Acción del cliente r
 description: Pinterest está desaprobando la API de anunciante v4 que actualmente utiliza el destino de Pinterest en Real-Time CDP. Comprenda sus elementos de acción para una transición sin problemas a la nueva API sin interrupciones para sus campañas de Pinterest.
 hide: true
 hidefromtoc: true
-source-git-commit: 10bf63677c66366c226d647b1174093c1704a8b9
+source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe está lanzando una nueva tarjeta de destino de Pinterest que aprovecha la 
 
 ## ¿Debo hacer algo para mantener mis audiencias activadas en funcionamiento?
 
-Sí, una vez que Adobe complete la actualización (segmentada para el 16 de noviembre), deberá volver a autenticarse en Pinterest con su cuenta de anunciante de Pinterest en Adobe Experience Platform. Consulte las instrucciones detalladas a continuación.
+Sí, una vez que Adobe haya completado la actualización y haya publicado el nuevo destino de Pinterest, deberá volver a autenticarse en Pinterest con su cuenta de anunciante de Pinterest en Real-Time CDP. Consulte las instrucciones detalladas a continuación.
 
 ### Volver a autenticar en Pinterest {#reauthenticate}
 
@@ -36,21 +36,19 @@ Sí, una vez que Adobe complete la actualización (segmentada para el 16 de novi
    ![Seleccione Editar detalles](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. Seleccionar **[!UICONTROL Volver a conectar OAuth]** e inicie sesión en su cuenta de Pinterest.
    ![Seleccione Volver a conectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
-4. Informe al Adobe de que ha vuelto a autenticarse en **[!UICONTROL (Nuevo) Pinterest]** destino.
+4. Continúe con el elemento de acción en la sección siguiente
 
 ### Desactivar los flujos existentes al destino antiguo y activar los flujos al nuevo destino {#disable-old-enable-new-flows}
 
-A continuación, debe deshabilitar manualmente los flujos existentes en la tarjeta antigua y habilitar los flujos en la nueva tarjeta.
-
->[!IMPORTANT]
->
->Después de volver a autenticarse, puede ponerse en contacto con el Adobe y realizaremos este segundo paso para usted. Si prefiere realizar este paso manualmente, siga los pasos a continuación:
+A continuación, debe deshabilitar manualmente los flujos existentes en la tarjeta de destino antigua **[!UICONTROL (En desuso) Pinterest]** y habilitar flujos en la nueva tarjeta **[!UICONTROL (Nuevo) Pinterest]**.
 
 1. Ir a **[!UICONTROL Destinos > Examinar]** y utilice el filtro de la pantalla para filtrar el **[!UICONTROL (Nuevo) Pinterest]** y **[!UICONTROL (En desuso) Pinterest]** solo destinos.
    ![Filtre los flujos de datos de Pinterest solo en la pestaña Examinar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Seleccione el nombre de la conexión hipervinculada (campaña de fidelización en el ejemplo de captura de pantalla anterior) y cambie el **[!UICONTROL Activar]** cambiar a **desactivado** para la conexión anterior y a **el** para la nueva conexión.
-   ![Activar para conexiones nuevas y desactivar para conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
-3. Compare la lista de audiencias activadas en el flujo de datos antiguo y en el nuevo, y asegúrese de que no hay nuevas audiencias en los flujos antiguos que falten en los nuevos flujos.
+2. Seleccione el nombre de la conexión hipervinculada (campaña de fidelización en el ejemplo de captura de pantalla anterior) a la **[!UICONTROL (En desuso) Pinterest]** y cambie el **[!UICONTROL Activar]** cambiar a **desactivado**.
+   ![Activar para conexiones nuevas y desactivar para conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-old-destination.png)
+3. Seleccione el nombre de la conexión hipervinculada (campaña de fidelización en el ejemplo de captura de pantalla anterior) a la **[!UICONTROL (Nuevo) Pinterest]** y cambie el **[!UICONTROL Activar]** cambiar a **el**.
+   ![Activar para conexiones nuevas y desactivar para conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+4. Compare la lista de audiencias activadas en el flujo de datos antiguo y en el nuevo, y asegúrese de que no hay nuevas audiencias en los flujos antiguos que falten en los nuevos flujos.
 
 Aunque no se esperan interrupciones en sus campañas, recuerde proteger la interfaz de usuario de Pinterest de que todo funciona según lo esperado.
 
@@ -58,18 +56,22 @@ Aunque no se esperan interrupciones en sus campañas, recuerde proteger la inter
 
 Sí, consulte lo siguiente:
 
-**Para el 16 de noviembre**: el nuevo destino está listo, y debe ver dos tarjetas de Pinterest en paralelo en el catálogo, y todos los flujos de datos existentes a la tarjeta de Pinterest actual se copian al nuevo destino.
+**Para el 16 de noviembre de 2023**: el nuevo destino está listo, y debe ver dos tarjetas de Pinterest en paralelo en el catálogo, y todos los flujos de datos existentes a la tarjeta de Pinterest actual se copian al nuevo destino.
 
 ![Destino de Pinterest antiguo y nuevo en paralelo](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 >[!IMPORTANT]
 >
->A partir del 16 de noviembre, se marcará el destino heredado de Pinterest **[!UICONTROL Obsoleto]**. <span class="preview">Cualquier cambio que realice en los flujos de datos al destino de Pinterest (en desuso) después del 16 de noviembre se *no* transferirse automáticamente al nuevo destino de Pinterest. </span>
+>A partir del 16 de noviembre de 2023, el destino heredado de Pinterest se marcará **[!UICONTROL Obsoleto]**. <span class="preview">Cualquier cambio que realice en los flujos de datos al destino de Pinterest (en desuso) después del 16 de noviembre se *no* transferirse automáticamente al nuevo destino de Pinterest. </span>
 >Por ejemplo, *no recomendar* que activa nuevas audiencias en el antiguo destino después del 16 de noviembre. Si lo hace, tendrá que seguir el [pasos de activación regulares](/help/destinations/ui/activate-segment-streaming-destinations.md) para añadir la audiencia al nuevo destino una vez que se realicen las acciones del cliente.
 
-**Para el 15 de diciembre**: <span class="preview">Acción del cliente</span>. Debe volver a autenticarse en Pinterest para que la nueva tarjeta esté conectada a Pinterest (instrucciones más arriba). Una vez que haya hecho esto, póngase en contacto con nosotros.
+**Para el 15 de diciembre de 2023**: <span class="preview">Acción del cliente 1</span>. Debe volver a autenticarse en Pinterest para que la nueva tarjeta esté conectada a Pinterest. Ver instrucciones completas en [esta sección](#reauthenticate).
 
-Los flujos de datos a Pinterest en la tarjeta antigua deben deshabilitarse y los de la nueva deben habilitarse. Puede hacerlo manualmente en la interfaz de usuario o puede ponerse en contacto con el Adobe y lo haremos por usted.
+<span class="preview">Acción del cliente 2</span>A continuación, debe deshabilitar los flujos de datos a Pinterest en la tarjeta antigua y habilitar los flujos de datos en la nueva tarjeta. Ver instrucciones completas en [esta sección](#disable-old-enable-new-flows).
+
+>[!IMPORTANT]
+>
+>A partir del 15 de diciembre de 2023, el Adobe no garantizará la integridad de los flujos de datos al antiguo **[!UICONTROL (En desuso) Pinterest]** destino.
 
 ## Otros elementos que tener en cuenta
 

@@ -2,7 +2,7 @@
 title: Conector de destino de Adobe Commerce
 description: Descubra cómo los comerciantes de Adobe Commerce y Real-Time CDP pueden personalizar la experiencia de compra ofreciendo promociones y contenido del sitio muy relevantes, personalizados para las audiencias de los clientes creadas y administradas dentro de Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: ddc4e877b3ae2f8b235faec1c29e71d389195e02
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 4%
@@ -27,7 +27,7 @@ Para utilizar esta conexión de destino, asegúrese de que tiene acceso a:
 
 En Experience Platform, cree lo siguiente:
 
-- [Esquema](../../../xdm/schema/composition.md). El esquema que cree representa los datos que planea introducir desde Adobe Commerce. [Más información](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) Obtenga información sobre cómo crear un esquema que contenga grupos de campos específicos de Commerce.
+- [Esquema](../../../xdm/schema/composition.md). El esquema que cree representa los datos que planea introducir desde Adobe Commerce. [Más información](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) Obtenga información sobre cómo crear un esquema que contenga grupos de campos específicos de Commerce.
 - [Conjunto de datos](../../../catalog/datasets/user-guide.md#create). Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos. Puede crear este conjunto de datos a partir del esquema que ha creado anteriormente.
 - [Datastream](../../../datastreams/overview.md#create). ID que permite que los datos fluyan desde Adobe Experience Platform a otros productos DX de Adobe. Este ID debe estar asociado a un sitio web específico dentro de la instancia de Adobe Commerce específica. Cuando cree este flujo de datos, especifique el esquema XDM que ha creado anteriormente.
 
