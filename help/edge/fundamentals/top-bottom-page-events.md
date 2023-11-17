@@ -1,7 +1,7 @@
 ---
 title: Uso de los eventos superior e inferior de la página
 description: Este artículo explica cómo utilizar la parte superior e inferior de los eventos de página en el SDK web.
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Mediante los eventos superior e inferior de página del SDK web, el equipo de ma
 
 ## Ejemplo del evento de la parte superior de la página {#top-of-page}
 
-El siguiente ejemplo de código ejemplifica una parte superior de la configuración de evento de página que solicita personalización, pero no envía notificaciones de visualización para propuestas procesadas automáticamente. Las notificaciones de visualización se envían como parte del evento de final de página.
+El siguiente ejemplo de código ejemplifica una parte superior de la configuración de evento de página que solicita personalización, pero no lo hace [enviar eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) para propuestas procesadas automáticamente. El [mostrar eventos](../personalization/display-events.md#send-sendEvent-calls) se enviarán como parte del evento de final de página.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | Requerido | Establezca este parámetro en `decisioning.propositionFetch`. Este tipo de evento especial indica a Adobe Analytics que elimine este evento. Al utilizar Customer Journey Analytics, también puede configurar un  para soltar estos eventos. |
 | `renderDecisions` | Requerido | Establezca este parámetro en `true`. Este parámetro indica al SDK web que procese las decisiones devueltas por la red perimetral. |
-| `personalization.sendDisplayEvent` | Requerido | Establezca este parámetro en `false`. Esto evita que se envíen notificaciones de visualización. |
+| `personalization.sendDisplayEvent` | Requerido | Establezca este parámetro en `false`. Esto detiene el envío de eventos de visualización. |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB Proposiciones procesadas automáticamente]
 
-El siguiente ejemplo de código ejemplifica una parte inferior de la configuración de evento de página que envía notificaciones de visualización para propuestas que se procesaron automáticamente en la página, pero para las que se suprimieron las notificaciones de visualización en [principio de página](#top-of-page) evento.
+El siguiente ejemplo de código ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron automáticamente en la página, pero para las que se suprimieron eventos de visualización en [principio de página](#top-of-page) evento.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | Parámetro | Obligatorio/Opcional | Descripción |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Requerido | Establezca este parámetro en `true`. Esto permite enviar notificaciones de visualización que se suprimieron en la parte superior del evento de página. |
+| `personalization.includeRenderedPropositions` | Requerido | Establezca este parámetro en `true`. Esto permite enviar eventos de visualización que se suprimieron en la parte superior del evento de página. |
 | `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
 
 >[!TAB Proposiciones procesadas manualmente]
 
-El ejemplo de código siguiente ejemplifica una parte inferior de la configuración de eventos de página que envía notificaciones de visualización para propuestas que se procesaron manualmente en la página (es decir, para ámbitos o superficies de decisión personalizados).
+El ejemplo de código siguiente ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron manualmente en la página (es decir, para ámbitos o superficies de decisión personalizados).
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | Parámetro | Obligatorio/Opcional | Descripción |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir la propuesta `ID`, `scope`, y `scopeDetails`. Consulte la documentación sobre cómo [personalización del procesamiento manual](../personalization/rendering-personalization-content.md#manually) para obtener más información sobre cómo registrar las notificaciones de visualización para el contenido procesado manualmente. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
+| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir la propuesta `ID`, `scope`, y `scopeDetails`. Consulte la documentación sobre cómo [personalización del procesamiento manual](../personalization/rendering-personalization-content.md#manually) para obtener más información sobre cómo registrar eventos de visualización para contenido procesado manualmente. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
 | `xdm._experience.decisioning.propositionEventType` | Requerido | Establezca este parámetro en `display: 1`. |
 | `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
