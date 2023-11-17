@@ -38,7 +38,7 @@ Las audiencias se refieren al grupo de perfiles por el que intenta filtrar. Al u
 
 Las definiciones de segmentos incluyen información como el nombre, la descripción, la expresión (si corresponde), la fecha de creación, la última fecha de modificación y un ID. El ID vincula los metadatos del segmento con los perfiles individuales que cumplen con la calificación del segmento y forman parte de la audiencia resultante.
 
-| Audiencias | Definición del segmento |
+| Públicos | Definición del segmento |
 | --------- | ---------------- |
 | El grupo de perfiles que está intentando encontrar. Al utilizar definiciones de segmentos, esto significa que será el grupo de perfiles que cumplan con la calificación de segmentos. | El grupo de reglas utilizadas para segmentar la audiencia que está buscando. |
 

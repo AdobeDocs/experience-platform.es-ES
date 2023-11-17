@@ -30,11 +30,11 @@ La segmentación es el proceso de definir atributos o comportamientos específic
 
 Una vez que una audiencia se ha definido conceptualmente, se integra [!DNL Experience Platform]. Normalmente, las audiencias las crea el especialista en marketing o audiencia, aunque algunas organizaciones prefieren que las cree su departamento de marketing en colaboración con los analistas de datos. Al revisar los datos que se envían a [!DNL Platform]Sin embargo, el analista de datos puede crear la audiencia de dos formas: creando una definición de segmento seleccionando qué campos y valores se utilizarán para crear las reglas o condiciones de la audiencia o componiendo una audiencia con la Composición de audiencia.
 
-## Crear audiencias
+## Crear públicos
 
 Las audiencias se pueden crear de dos formas diferentes en Adobe Experience Platform: directamente compuestas como audiencias o a través de definiciones de segmentos derivadas de Platform.
 
-### Composición de audiencia
+### Composición del público
 
 Al componer directamente una audiencia en Platform, puede utilizar Composición de audiencia. Para aprender a utilizar la Composición de audiencia para crear una audiencia, lea la [Guía de composición de audiencias](./ui/audience-composition.md) para obtener más información.
 
@@ -62,14 +62,14 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Evaluación de streaming"
->abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios."
+>abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza los públicos en respuesta a la actividad de los usuarios."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
 
 Actualmente, Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
 
 ### Segmentación de streaming {#streaming}
 
-La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios. Una vez que se ha creado y guardado una audiencia, la definición del segmento se aplica a los datos entrantes a [!DNL Real-Time Customer Profile]. Las adiciones y eliminaciones a la audiencia se procesan regularmente, lo que garantiza que la audiencia de destino siga siendo relevante.
+La segmentación de streaming es un proceso continuo de selección de datos que actualiza los públicos en respuesta a la actividad de los usuarios. Una vez que se ha creado y guardado una audiencia, la definición del segmento se aplica a los datos entrantes a [!DNL Real-Time Customer Profile]. Las adiciones y eliminaciones a la audiencia se procesan regularmente, lo que garantiza que la audiencia de destino siga siendo relevante.
 
 Para obtener más información acerca de la segmentación de flujo continuo, lea la [documentación de segmentación de streaming](./api/streaming-segmentation.md).
 

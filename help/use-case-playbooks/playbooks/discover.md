@@ -56,7 +56,7 @@ Inspeccione la sección de resumen para comprender qué recursos se generan una 
 
 | Elemento | Descripción |
 ---------|----------|
-| **[!UICONTROL Audiencia objetivo]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
+| **[!UICONTROL Público objetivo]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
 | **[!UICONTROL Canales de marketing]** | Describe los canales utilizados para llegar a las personas objetivo en el manual de tácticas. |
 | **[!UICONTROL Recursos técnicos]** | Una lista de los recursos técnicos que se generan después de crear instancias del manual de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos manuales de tácticas pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
 

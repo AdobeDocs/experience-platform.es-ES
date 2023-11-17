@@ -34,7 +34,7 @@ Después de actualizar los detalles de la composición, seleccione **[!UICONTROL
 
 El lienzo de composición de audiencia se compone de cuatro tipos diferentes de bloques: **[[!UICONTROL Audiencia]](#audience-block)**, **[[!UICONTROL Excluir]](#exclude-block)**, **[[!UICONTROL Rango]](#rank-block)**, y **[[!UICONTROL Split]](#split-block)**.
 
-## [!UICONTROL Audiencia ] {#audience-block}
+## [!UICONTROL Público] {#audience-block}
 
 El **[!UICONTROL Audiencia]** el tipo de bloque le permite añadir las subaudiencias que desea para componer su nueva audiencia más grande. De forma predeterminada, una **[!UICONTROL Audiencia]** El bloque de se incluye en la parte superior del lienzo de composición.
 

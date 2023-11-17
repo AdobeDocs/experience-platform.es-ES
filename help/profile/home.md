@@ -97,7 +97,7 @@ Para obtener más información sobre los esquemas de unión, incluido cómo acce
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Perfiles y audiencias
+## Perfiles y públicos
 
 Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias necesarias para potenciar las experiencias para sus clientes individuales. Cuando se crea una audiencia, su ID se añade a la lista de suscripciones a audiencias de todos los perfiles aptos. Las reglas de segmentos se crean y aplican a [!DNL Real-Time Customer Profile] datos mediante las API de RESTful y la interfaz de usuario del Generador de segmentos. Para obtener más información acerca de la segmentación, comience leyendo el [Resumen del servicio de segmentación](../segmentation/home.md).
 

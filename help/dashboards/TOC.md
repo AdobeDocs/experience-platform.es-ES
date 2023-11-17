@@ -22,7 +22,7 @@ ht-degree: 36%
 * Paneles disponibles {#guides}
    * [Perfiles](guides/profiles.md)
    * [Perfiles de cuenta](guides/account-profiles.md)
-   * [Audiencias](guides/audiences.md)
+   * [Públicos](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso de licencias](guides/license-usage.md)
 * Personalizar paneles {#customize}

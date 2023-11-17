@@ -44,7 +44,7 @@ Después de crear una instancia basada en un manual de tácticas, puede personal
 Es importante comprender que los recursos generados difieren según el caso de uso que active:
 
 * Se generan diferentes recursos para diferentes tipos de manuales de tácticas. Estos recursos se crean específicamente para el caso de uso conseguido mediante el manual de tácticas. Por ejemplo, un manual de tácticas genera un esquema, un segmento, un recorrido y mensajes. Otro manual de tácticas genera un esquema, un segmento y un destino para activar los datos.
-* Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, la audiencia que se crea tiene la regla `birthday=today AND year=any`.
+* Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, el público que se crea tiene la regla `birthday=today AND year=any`.
 
 Para ilustrar un ejemplo, consulte el manual de tácticas **[!UICONTROL Carro de compras abandonado: mercancía]**, puede ver que se crea un recorrido específico que incluye los mensajes creados para este caso de uso.
 
