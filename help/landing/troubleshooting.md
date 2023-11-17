@@ -2,15 +2,15 @@
 keywords: Experience Platform;inicio;temas populares;códigos de error de API;código de error de API;código de error API;códigos de error API;códigos de error API;error de solicitud de API;solución de problemas de API;error de API
 solution: Experience Platform
 title: Guía de preguntas frecuentes y resolución de problemas de Adobe Experience Platform
-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Adobe Experience Platform.
-landing-page-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Adobe Experience Platform.
+description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
+landing-page-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 short-description: Encuentre respuestas a las preguntas más frecuentes y una guía para solucionar errores comunes en Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
