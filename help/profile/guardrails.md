@@ -1,18 +1,18 @@
 ---
-title: Protecciones predeterminadas para datos de perfil del cliente en tiempo real
+title: Protecciones predeterminadas para datos y segmentación del perfil del cliente en tiempo real
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional. Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema.
+description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2202'
+ht-degree: 2%
 
 ---
 
-# Protecciones predeterminadas para [!DNL Real-Time Customer Profile] datos
+# Protecciones predeterminadas para [!DNL Real-Time Customer Profile] datos y segmentación
 
 Adobe Experience Platform le permite ofrecer experiencias multicanal personalizadas en función de perspectivas de comportamiento y atributos del cliente en forma de perfiles del cliente en tiempo real. Para admitir este nuevo enfoque para los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
 
@@ -108,16 +108,17 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 {style="table-layout:auto"}
 
-## Protecciones de segmentación
+## Protecciones de segmentación {#segmentation-guardrails}
 
 Las protecciones descritas en esta sección se refieren al número y la naturaleza de las audiencias que una organización puede crear dentro de Experience Platform, así como a la asignación y activación de audiencias a destinos.
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Audiencias por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias en total, siempre y cuando haya menos de 4000 audiencias en cada zona protegida individual. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. |
-| Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Una organización puede tener más de 150 audiencias de Edge en total, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida individual. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. |
-| Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Una organización puede tener más de 500 audiencias de streaming en total, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida individual. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. |
+| Audiencias por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias en total, siempre y cuando haya menos de 4000 audiencias en cada zona protegida individual. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
+| Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Una organización puede tener más de 150 audiencias de Edge en total, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida individual. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
+| Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Una organización puede tener más de 500 audiencias de streaming en total, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida individual. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [streaming de audiencias](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias de lote en total, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida individual. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
+| Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | No se pueden crear más de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, la variable **[!UICONTROL Crear audiencia]** El control de está desactivado al intentar crear una audiencia de cuenta nueva. Más información sobre [audiencias de cuenta](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
