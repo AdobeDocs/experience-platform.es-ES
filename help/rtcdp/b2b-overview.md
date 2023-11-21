@@ -2,17 +2,19 @@
 keywords: RTCDP;CDP;edición B2B;Real-time Customer Data Platform;plataforma de datos del cliente en tiempo real;cdp en tiempo real;b2b;cdp;inteligencia artificial aplicada al cliente
 title: Información general sobre Real-Time CDP B2B Edition
 description: Descripción general de la cuenta de Real-time Customer Data Platform B2B Edition
+feature: Get Started, B2B
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 1%
+source-wordcount: '1093'
+ht-degree: 4%
 
 ---
 
 # Información general sobre Real-time Customer Data Platform B2B Edition
 
-Real-Time CDP B2B Edition, que se creó en Adobe Real-time Customer Data Platform (Real-Time CDP), está diseñado específicamente para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse a audiencias específicas con precisión y captar esas audiencias en todos los canales disponibles.
+Real-Time CDP B2B Edition, que se creó en Adobe Real-time Customer Data Platform (Real-Time CDP), está diseñado específicamente para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse a públicos específicos con precisión y captarlos en todos los canales disponibles.
 
 Se han realizado mejoras en una variedad de funciones de Adobe Experience Platform que distinguen a Real-Time CDP B2B Edition de su homólogo B2C. Incluyen mejoras en el Experience Data Model (XDM) para casos de uso B2B, actualizaciones en la resolución de identidades y segmentación de perfiles, así como un conector creado a medida y un destino para [!DNL Marketo Engage]. El [!DNL Marketo] connector permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir a los posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
 
@@ -53,7 +55,7 @@ Los identificadores coincidentes se utilizan para vincular y combinar registros 
 
 Una vez que Real-Time CDP B2B Edition ha introducido datos y resuelto identidades relacionadas con personas, empresas, atributos y comportamientos, esos datos se utilizan para construir perfiles. Estos perfiles se pueden segmentar en audiencias explorables que luego se pueden activar en varios destinos.
 
-Cuando se implementa correctamente, el sistema rastrea a las personas mediante identificadores principales únicos en lugar de atributos que pueden cambiar, como las direcciones de correo electrónico. Esto significa que cuando alguien cambia de trabajo, el sistema los sigue. La persona sigue siendo la misma entidad, pero en su lugar está vinculada a una nueva cuenta. Esta funcionalidad nativa ofrece un bueno vector para la expansión en nuevas cuentas a medida que el sistema sigue a estas personas como individuos, incluidos todos sus atributos y comportamientos.
+Cuando se implementa correctamente, el sistema rastrea a las personas mediante identificadores principales únicos en lugar de atributos que pueden cambiar, como las direcciones de correo electrónico. Esto significa que cuando alguien cambia de trabajo, el sistema los sigue. La persona sigue siendo la misma entidad, pero en su lugar está vinculada a una nueva cuenta. Esta funcionalidad nativa ofrece un gran vector para la expansión en nuevas cuentas a medida que el sistema sigue a estas personas como individuos incluyendo todos sus atributos y comportamientos.
 
 ## Fuentes B2B
 

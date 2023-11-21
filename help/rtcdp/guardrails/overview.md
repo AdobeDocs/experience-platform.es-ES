@@ -1,7 +1,8 @@
 ---
 title: Protecciones de Real-Time CDP
 description: Obtenga información acerca de las protecciones de datos en los distintos servicios y áreas de Real-Time CDP.
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+feature: Guardrails, Data Management, Data Ingestion, Data Export
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 3%

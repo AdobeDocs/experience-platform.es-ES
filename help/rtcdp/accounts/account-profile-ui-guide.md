@@ -2,15 +2,17 @@
 keywords: perfil rtcdp;perfiles rtcdp;identidades rtcdp;políticas de combinación rtcdp;perfil de cliente en tiempo real
 title: Guía de IU del perfil de cuenta
 description: Mediante el uso de perfiles de cuenta, Adobe Real-time Customer Data Platform B2B Edition le permite unificar la información de la cuenta de varias fuentes. Esta guía proporciona detalles para interactuar con perfiles de cuenta en la interfaz de usuario de Adobe Experience Platform.
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
 
-# Guía de IU de perfil de cuenta
+# Guía de IU del perfil de cuenta
 
 >[!NOTE]
 >
@@ -150,7 +152,6 @@ El **[!UICONTROL Cuentas relacionadas]** proporciona información sobre otras cu
 >
 >* Un grupo de cuentas relacionadas puede tener un máximo de 30 perfiles de cuenta. Si se encuentran relacionados más de 30 perfiles de cuenta, se dividen arbitrariamente en varios grupos, cada uno de los cuales no tiene más de 30 miembros. El grupo Cuentas relacionadas de un perfil de cuenta siempre se incluye a sí mismo.
 >* El [!UICONTROL Cuentas relacionadas] Esta pestaña muestra actualmente una lista de hasta 25 cuentas relacionadas asociadas con la cuenta que está explorando. Esta es una limitación que se abordará en una actualización futura. A pesar de esta limitación de la interfaz de usuario, cuando se utilizan cuentas relacionadas en las definiciones de segmentos, para grupos de 30 perfiles de cuenta relacionados, todos los perfiles se utilizan para la segmentación.
-
 
 Cada cuenta relacionada incluye información como el ID y el nombre del perfil de la cuenta, su clave de origen de la cuenta y más información relacionada con la página principal, la dirección, la cuenta principal, el teléfono, el sector y los ingresos anuales.
 

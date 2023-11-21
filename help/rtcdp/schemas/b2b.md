@@ -1,10 +1,12 @@
 ---
 title: Esquemas en Real-time Customer Data Platform B2B Edition
 description: Descripción general de la función de los esquemas XDM (Experience Data Model) en Adobe Real-time Customer Data Platform B2B Edition.
+feature: Get Started, Data Management, Schemas
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---

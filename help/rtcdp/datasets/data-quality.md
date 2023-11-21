@@ -2,8 +2,9 @@
 keywords: calidad de datos;calidad de datos rtcdp
 title: Calidad de los datos en Real-time Customer Data Platform
 description: Documento sobre la calidad de los datos en Adobe Real-time Customer Data Platform
+feature: Get Started, Data Ingestion, Best Practices
 exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%

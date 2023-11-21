@@ -1,7 +1,8 @@
 ---
 title: Redireccionamiento fuera del sitio de visitantes no autenticados
 description: Obtenga información sobre cómo volver a dirigirse a usuarios no autenticados mediante los ID de cliente potencial para crear un atributo calculado que se pueda utilizar para crear una audiencia de usuarios no autenticados.
-source-git-commit: 99516d0923e61c8c81f1933076f2d3e73b55544c
+feature: Use Cases, Customer Acquisition
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 2%

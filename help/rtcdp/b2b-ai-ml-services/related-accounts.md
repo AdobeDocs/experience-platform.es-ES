@@ -2,10 +2,12 @@
 title: Cuentas relacionadas en Real-Time CDP B2B Edition
 type: Documentation
 description: Información general y más información sobre las funciones de cuentas relacionadas en Experience Platform Real-Time CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '441'
 ht-degree: 6%
 
 ---
@@ -18,11 +20,11 @@ Las empresas B2B a menudo almacenan la información de sus clientes en varios si
 
 | ID | Nombre | Sitio web | de la industria | Estado | Phone | Tiene una oportunidad abierta con un importe > `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
-| 3 | Acme Inc |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc |   |   | CA | (408)5366000 |   |
 | 4 | Servicio de consultoría de Acme | `http://www.acme.com/consulting` | Asesoría tecnológica | NY | (212)471-0904 | x |
-| 5 | Acme IT |  |  | CA |  |  |
+| 5 | Acme IT |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 

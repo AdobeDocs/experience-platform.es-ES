@@ -2,8 +2,9 @@
 keywords: control de datos rtcdp;control de datos rtcdp;control de datos del perfil de datos del cliente en tiempo real;privacidad rtcdp;privacidad rtcdp
 title: Privacidad en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform le permite agilizar el proceso de cumplimiento de las normas de privacidad en sus operaciones de datos.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%

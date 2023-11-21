@@ -2,10 +2,12 @@
 title: Coincidencia de clientes potenciales con cuentas en Real-Time CDP B2B
 type: Documentation
 description: Información general y más detalles sobre la función de coincidencia de clientes potenciales con cuentas de Experience Platform CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '626'
 ht-degree: 3%
 
 ---

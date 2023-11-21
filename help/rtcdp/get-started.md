@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Introducción a Real-time Customer Data Platform
 description: Utilice este escenario de muestra como ejemplo al configurar la implementación de Adobe Real-Time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 2%
@@ -24,7 +25,7 @@ Este ejemplo muestra la potencia de Real-time Customer Data Platform, con tecnol
 
 Luma, una empresa de ropa deportiva, siempre está intentando mejorar su experiencia como cliente. Tienen una nueva iniciativa para aumentar las ventas relacionadas con regalos. También quieren reducir la sobreexposición, como los anuncios molestos que siguen a los clientes.
 
-En la actualidad, invierten demasiado en medios que cambian el destino de artículos que el visitante no va a comprar a partir de ahora. Por ejemplo, Luma no quiere redireccionar a alguien con un elemento que se haya diseñado como compra única para otra persona.
+En la actualidad, invierten demasiado en medios que cambian el destino de elementos que el visitante no va a comprar a partir de ahora. Por ejemplo, Luma no quiere redireccionar a alguien con un elemento que se haya diseñado como compra única para otra persona.
 
 En este momento, los datos de Luma están dispersos en múltiples fuentes. Como resultado, se enfrentan a desafíos significativos:
 
@@ -108,7 +109,7 @@ Navega a la página principal para buscar más.
 
 Sarah recibe una experiencia de página de inicio personalizada que se entrega de forma dinámica en función de ella [!DNL Real-Time Customer Profile] en Adobe Experience Platform.
 
-Ve contenido relevante, gracias a la personalización basada en Adobe Sensei en Adobe Target, que tiene en cuenta sus compras anteriores y su afinidad por la ropa y el equipo que lleva. Luma también adapta el contenido del catálogo para hombres a los equipos de running para hombre en función de su navegador más reciente.
+Ve contenido relevante, gracias a la personalización basada en Adobe Sensei en Adobe Target, que tiene en cuenta sus compras anteriores y su afinidad por la ropa y el equipo que lleva. Luma también adapta el contenido del catálogo masculino a los equipos de running para hombre en función de su navegador más reciente.
 
 Más adelante en la página, se muestran los productos destacados de Sarah, así como una nueva bandeja de recomendaciones basada en los artículos vistos más recientemente.
 
@@ -205,7 +206,7 @@ Las potentes funciones de segmentación de Adobe Experience Platform permiten a 
 
 En este escenario, las recientes interacciones de Sarah en el sitio muestran un comportamiento diferente al de sus acciones pasadas. Ella suele comprar ropa de mujer. Sin embargo, el artículo en su carro es una sudadera grande para hombre.
 
-El equipo de ciencia de datos de Luma ha creado modelos en torno a la tendencia a comprar. Un modelo identifica un cambio repentino en la categoría de la ropa (como hombres/mujeres) o el tamaño para el consumidor existente. El cambio de Sarah en el comportamiento de compra sugiere que no está comprando por sí misma.
+El equipo de ciencia de datos de Luma ha creado modelos en torno a la tendencia a comprar. Un modelo identifica un cambio repentino en la categoría de la ropa (como hombres/mujeres) o el tamaño para el consumidor existente. El cambio de Sarah en el comportamiento de compra sugiere que no está comprando para sí misma.
 
 <!-- ![image](assets/luma-gift.png) -->
 
@@ -244,8 +245,7 @@ Aquí vemos todos los destinos disponibles para que Luma los envíe, tanto a sol
 En esta situación, Luma quiere volver a dirigirse a esta audiencia con personalización en estos destinos:
 
 * Google, para visualización
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, para correo electrónico
 
 <!-- ![image](assets/luma-sched-dest.png) -->
@@ -260,7 +260,7 @@ También puede programar el inicio o la finalización del segmento en un momento
 
 Seleccionar **[!UICONTROL Guardar]** para ir a la página siguiente.
 
-Cuando un cliente de esta audiencia realiza una compra, su pertenencia a esta audiencia se suprime en tiempo real. Ya no cumplen los requisitos porque su estado ha cambiado.
+Cuando un cliente de esta audiencia realiza una compra, su pertenencia a esta audiencia se suprime en tiempo real. Ya no cumplen los requisitos porque su estatus ha cambiado.
 
 Esto ahorra al director del equipo de medios de Luma cientos de miles de dólares al no usar el inventario para una audiencia que no está calificada.
 
@@ -270,7 +270,7 @@ Adobe Experience Platform incluye controles de privacidad y seguridad para deter
 
 Si su actividad infringe una directiva, aparece una advertencia. Esta advertencia contiene información de linaje de datos que puede ayudarle a identificar por qué se violó la directiva y qué puede hacer para resolver la infracción.
 
-Con estos controles, [!DNL Experience Platform] ayuda a Luma a cumplir con las regulaciones y comercializar de forma responsable. Estos controles son flexibles y se pueden modificar para satisfacer los requisitos de los equipos de seguridad y gobernanza de Luma, lo que les permite abordar con confianza los requisitos regionales y organizativos para administrar datos de clientes conocidos y desconocidos.
+Con estos controles, [!DNL Experience Platform] ayuda a Luma a cumplir con las regulaciones y comercializar de forma responsable. Estos controles son flexibles y se pueden modificar para satisfacer los requisitos de los equipos de seguridad y control de Luma, lo que les permite abordar con confianza los requisitos regionales y organizativos para administrar datos de clientes conocidos y desconocidos.
 
 ### Lienzo de flujo de datos
 

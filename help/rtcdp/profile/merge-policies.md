@@ -2,15 +2,16 @@
 keywords: políticas de combinación rtcdp;políticas de combinación rtcdp
 title: Políticas de combinación en Real-time Customer Data Platform
 description: Uso de políticas de combinación en Adobe Real-time Customer Data Platform
+feature: Get Started, Identities, Profiles
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Resumen de políticas de combinación
+# Información general de las políticas de combinación
 
 Adobe Experience Platform le permite reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear esa vista unificada del perfil.
 

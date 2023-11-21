@@ -2,11 +2,13 @@
 title: Administre la puntuación predictiva de clientes potenciales y cuentas en Real-Time CDP B2B
 type: Documentation
 description: Este documento proporciona información sobre la administración de la función de puntuación de cuenta y posible cliente predictivo en Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 2%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -131,13 +133,13 @@ Se le devolverá a la **[!UICONTROL Servicios]** donde ya no puede ver la puntua
 | Código de error | Mensaje de error |
 | --- | --- |
 | 401 | ERROR 401. Canalización de IA de posibles clientes detenida: no hay suficientes cuentas válidas para la puntuación de cuentas. Recuento de cuentas: {}. |
-| 402 | ERROR 402. Canalización de IA de posibles clientes detenida: no hay suficientes contactos válidos para la puntuación de contactos. Cantidad de contactos: {}. |
+| 402 | ERROR 402. Canalización de IA de posibles clientes detenida: no hay suficientes contactos válidos para la puntuación de contactos. Recuento de contactos: {}. |
 | 403 | ERROR 403. Canalización de IA de posibles clientes detenida: no hay suficiente volumen de actividad para la formación de modelos. Recuento de eventos: {}. |
 | 404 | ERROR 404. Canalización de IA de posibles clientes detenida: no hay suficientes conversiones para la formación de modelos. Recuento de conversiones: {}. |
-| 405 | ERROR 405. Canalización de IA de posibles clientes detenida: actividad demasiado dispersa para una formación de modelo válida. Solo el {} por ciento de las cuentas tiene actividad. |
-| 406 | ERROR 406. Canalización de IA de posibles clientes detenida: actividad demasiado dispersa para una formación de modelo válida. Solo el {} % de los contactos tiene actividad. |
+| 405 | ERROR 405. Canalización de IA de posibles clientes detenida: actividad demasiado dispersa para una formación de modelo válida. Solo {} el porcentaje de cuentas tiene actividad. |
+| 406 | ERROR 406. Canalización de IA de posibles clientes detenida: actividad demasiado dispersa para una formación de modelo válida. Solo {} el porcentaje de contactos tiene actividad. |
 | 407 | ERROR 407. Canalización de IA de posibles clientes detenida: los tipos de actividad de datos de puntuación no coinciden con los datos de formación. |
-| 408 | ERROR 408. Canalización de IA de posibles clientes detenida: la tasa de falta es demasiado alta para las funciones de actividad. Falta la tarifa: {}. |
+| 408 | ERROR 408. Canalización de IA de posibles clientes detenida: la tasa de falta es demasiado alta para las funciones de actividad. Tasa faltante: {}. |
 | 409 | ERROR 409. Canalización de IA de posibles clientes detenida: el auc de prueba es demasiado bajo. Probar auc: {}. |
 | 410 | ERROR 410. Canalización de IA de posibles clientes detenida: el auc de prueba es demasiado bajo después de ajustar los parámetros. Probar auc: {}. |
 | 411 | ERROR 411. Canalización de IA de posibles clientes detenida: los datos de formación no tienen suficientes conversiones para producir un modelo fiable. Conversiones: {}. |
@@ -145,12 +147,12 @@ Se le devolverá a la **[!UICONTROL Servicios]** donde ya no puede ver la puntua
 
 | Código de información/advertencia | Mensaje |
 | --- | --- |
-| 100 | INFORMACIÓN 100. Comprobación de calidad de IA de posibles clientes: el recuento de cuentas es: {}. |
-| 101 | INFORMACIÓN 101. Comprobación de calidad de IA de posibles clientes: el recuento de contactos es: {}. |
+| 100 | INFORMACIÓN 100. Comprobación de calidad de AI de posibles clientes: el recuento de cuentas es: {}. |
+| 101 | INFORMACIÓN 101. Comprobación de calidad de AI de posibles clientes: el recuento de contactos es: {}. |
 | 102 | INFORMACIÓN 102. Comprobación de calidad de IA de posibles clientes: el recuento de oportunidades es: {}. |
 | 103 | INFORMACIÓN 103. Comprobación de calidad de IA de posibles clientes: el auc de prueba es bajo. Iniciar ajuste de parámetros. Probando auc: {}. |
-| 200 | AVISO 200. Comprobación de calidad de IA de posibles clientes: la tasa de falta de características firmográficas es: {}. |
-| 201 | AVISO 201. Comprobación de calidad de IA de posibles clientes: la tasa de falta de funciones de actividad es: {}. |
+| 200 | AVISO 200. Comprobación de calidad de la IA de posibles clientes: la tasa de ausencia de funciones firmográficas es: {}. |
+| 201 | AVISO 201. Comprobación de calidad de IA de posibles clientes: la tasa de ausencia de funciones de actividad es: {}. |
 
 ## Pasos siguientes
 
