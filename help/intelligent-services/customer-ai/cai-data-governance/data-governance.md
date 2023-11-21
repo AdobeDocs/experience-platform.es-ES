@@ -5,14 +5,14 @@ feature: Customer AI
 title: Administración de datos en Customer AI
 description: Adobe Experience Platform proporciona varios servicios y herramientas que le permiten controlar con seguridad los datos de experiencia recopilados para cumplir con las prácticas comerciales, las obligaciones legales y el proceso de desarrollo.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 11%
 
 ---
 
-# Inteligencia artificial aplicada al cliente y gobernanza de datos
+# Inteligencia artificial aplicada al cliente y administración de datos en Customer AI
 
 Cualquier configuración relacionada con la gobernanza de datos en la inteligencia artificial aplicada al cliente se hereda de Adobe Experience Platform.
 

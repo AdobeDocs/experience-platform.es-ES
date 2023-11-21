@@ -5,14 +5,14 @@ feature: Customer AI
 title: Control de acceso para la inteligencia artificial aplicada al cliente
 description: Este documento proporciona información sobre el control de acceso basado en atributos para la inteligencia artificial aplicada al cliente.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
-# Control de acceso basado en atributos
+# Control de acceso basado en atributos en Customer AI
 
 >[!IMPORTANT]
 >

@@ -3,14 +3,14 @@ keywords: perspectivas;inteligencia artificial aplicada a la atribución;perspec
 title: Registros de auditoría en Información general de Attribution AI
 description: Obtenga información sobre cómo ver y administrar registros de auditoría en Attribution AI.
 exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 38%
+source-wordcount: '271'
+ht-degree: 36%
 
 ---
 
-# Registros de auditoría
+# Registros de auditoría en la Attribution AI
 
 Para aumentar la transparencia y la visibilidad de las actividades realizadas en el sistema, la actividad del usuario dentro del flujo de trabajo de Attribution AI ahora se captura en los registros de auditoría para comprender cualquier cambio impulsado por el usuario en los modelos de Attribution AI. Estos registros forman una pista de auditoría que puede ayudar a solucionar problemas y ayudar a su empresa a cumplir de forma eficaz con las políticas de administración de datos corporativos y los requisitos regulatorios.  Si está sujeto a la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, Health Insurance Portability and Accountability Act) y está creando, recibiendo, manteniendo o transmitiendo datos personales confidenciales permitidos a través de la inteligencia artificial aplicada al cliente o al Attribution AI, usted es responsable de ejecutar una BAA con Adobe y licencia de Healthcare Shield.
 
