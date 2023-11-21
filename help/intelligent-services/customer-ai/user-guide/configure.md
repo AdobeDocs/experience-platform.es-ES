@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configuración de una instancia de Customer AI
 description: Los servicios de inteligencia artificial aplicada al cliente proporcionan inteligencia artificial aplicada al cliente como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. En las secciones siguientes se proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2824'
 ht-degree: 0%
 
 ---
@@ -197,15 +197,11 @@ Puede definir campos importantes del conjunto de datos de perfil (con marcas de 
 
 #### Seleccione atributos de perfil en la exportación Instantánea de perfil
 
-También puede incluir atributos de perfil desde la exportación diaria de instantáneas de perfil. Estos atributos se sincronizan con la exportación Instantánea de perfil y muestran el valor disponible más recientemente.
+También puede incluir atributos de perfil desde la exportación diaria de instantáneas de perfil. Estos atributos se sincronizan con la exportación Instantánea de perfil y muestran el valor disponible más recientemente. Se muestran automáticamente y no requieren que se seleccione un conjunto de datos en el paso de configuración.
 
 >[!WARNING]
 >
-> Tenga cuidado de no seleccionar un atributo de perfil que se actualice como resultado del objetivo de predicción o que esté muy correlacionado con el objetivo de predicción. Esto provoca fugas de datos y un ajuste excesivo del modelo. Un ejemplo de este atributo es `total_purchases_in_the_last_3_months` que predice la conversión de compra.
-
->[!NOTE]
->
->La compatibilidad con el uso de atributos de perfil de la exportación de instantáneas de UPS está disponible en la interfaz de usuario bajo solicitud.
+> No seleccione ningún atributo de perfil que se haya actualizado como resultado del objetivo de predicción o que tenga una alta correlación con el objetivo de predicción. Esto provoca una fuga de datos y un ajuste excesivo del modelo. Por ejemplo, `total_purchases_in_the_last_3_months` es un atributo que predice la conversión de compra.
 
 ### Adición de un ejemplo de evento personalizado {#custom-event}
 
@@ -264,3 +260,5 @@ El siguiente vídeo está diseñado para ayudarle a comprender el flujo de traba
 > El siguiente vídeo no está actualizado. Para obtener la información más actualizada, consulte la documentación.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->
