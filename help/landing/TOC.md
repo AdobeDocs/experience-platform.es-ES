@@ -6,7 +6,7 @@ user-guide-description: Descubra cómo Experience Platform permite ofrecer exper
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '289'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
