@@ -3,9 +3,9 @@ title: Personalización híbrida mediante SDK web y API de servidor de red perim
 description: Este artículo muestra cómo se puede utilizar el SDK web junto con la API de servidor para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Cuando usted [configuración de una secuencia de datos](../../datastreams/overvi
 El ejemplo de esta implementación utiliza dos flujos de datos diferentes:
 
 * Un conjunto de datos configurado para Analytics. Este conjunto de datos se utiliza para interacciones del SDK web.
-* Un segundo flujo de datos sin una configuración de Analytics. Este conjunto de datos se utiliza para solicitudes de API de servidor.
+* Un segundo flujo de datos sin una configuración de Analytics. Este conjunto de datos se utiliza para solicitudes de API de servidor. Debe configurar este conjunto de datos con la misma configuración de destino que el conjunto de datos configurado para Analytics.
 
 De este modo, la solicitud del lado del servidor no registra ningún evento de Analytics, pero las solicitudes del lado del cliente sí. Esto hace que las solicitudes de Analytics se cuenten con precisión.
 
