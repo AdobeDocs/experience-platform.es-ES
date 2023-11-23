@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Este documento proporciona información sobre los límites de uso y tasa para [!DNL Identity Service] datos para ayudarle a optimizar el uso del gráfico de identidad. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
-## Introducción
+## Introducción 
 
 Los siguientes servicios de Experience Platform participan en el modelado de datos de identidad:
 
@@ -72,23 +72,6 @@ Cuando se actualiza un gráfico completo con una nueva identidad, estas dos regl
 >
 >Si la identidad designada para eliminarse está vinculada a varias otras identidades en el gráfico, los vínculos que conectan esa identidad también se eliminarán.
 
->[!BEGINSHADEBOX]
-
-**Una representación visual de la lógica de eliminación**
-
-![Ejemplo de la identidad más antigua que se elimina para dar cabida a la identidad más reciente](./images/graph-limits-v3.png)
-
-*Notas del diagrama:*
-
-* `t` = timestamp.
-* El valor de una marca de tiempo corresponde a la actualización de una identidad determinada. Por ejemplo, `t1` representa la primera identidad vinculada (la más antigua) y `t51` representaría la identidad vinculada más reciente.
-
-En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que está más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
-
-* En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los ID en función de [XID](./api/list-native-id.md) y realice la eliminación.
-
->[!ENDSHADEBOX]
-
 ### Implicaciones en la implementación
 
 En las siguientes secciones se describen las implicaciones que la lógica de eliminación tiene para el servicio de identidad, el perfil del cliente en tiempo real y el SDK web.
@@ -116,7 +99,83 @@ Si desea conservar los eventos autenticados con el ID de CRM, se recomienda camb
 * [Configuración del mapa de identidad para las etiquetas de Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Datos de identidad en el SDK web de Experience Platform](../edge/identity/overview.md#using-identitymap)
 
+### Casos de ejemplo
 
+#### Ejemplo 1: gráfico grande típico
+
+*Notas del diagrama:*
+
+* `t` = timestamp.
+* El valor de una marca de tiempo corresponde a la actualización de una identidad determinada. Por ejemplo, `t1` representa la primera identidad vinculada (la más antigua) y `t51` representaría la identidad vinculada más reciente.
+
+En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que está más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
+
+* En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los ID en función de [XID](./api/list-native-id.md) y realice la eliminación.
+
+![Ejemplo de la identidad más antigua que se elimina para dar cabida a la identidad más reciente](./images/graph-limits-v3.png)
+
+#### Ejemplo 2: &quot;división de gráficos&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento entrante]
+
+*Notas del diagrama:*
+
+* El diagrama siguiente supone que en `timestamp=50`, 50 identidades existen en el gráfico de identidades.
+* `(...)` significa las otras identidades que ya están vinculadas dentro del gráfico.
+
+En este ejemplo, ECID:32110 se ingiere y se vincula a un gráfico grande en `timestamp=51`, superando así el límite de 50 identidades.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Proceso de eliminación]
+
+Como resultado, el servicio de identidad elimina la identidad más antigua en función de la marca de tiempo y el tipo de identidad. En este caso, ECID:35577 se elimina.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Salida de gráfico]
+
+Como resultado de la eliminación de ECID:35577, también se eliminan los extremos que vinculaban CRM ID:60013 y CRM ID:25212 con el ahora eliminado ECID:35577. Este proceso de eliminación hace que el gráfico se divida en dos gráficos más pequeños.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Ejemplo 3: &quot;radial&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento entrante]
+
+*Notas del diagrama:*
+
+* El diagrama siguiente supone que en `timestamp=50`, 50 identidades existen en el gráfico de identidades.
+* `(...)` significa las otras identidades que ya están vinculadas dentro del gráfico.
+
+En virtud de la lógica de eliminación, algunas identidades &quot;hub&quot; también se pueden eliminar. Estas identidades de concentrador hacen referencia a nodos que están vinculados a varias identidades individuales que, de lo contrario, se desvincularían.
+
+En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `timestamp=51`, superando así el límite de 50 identidades.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Proceso de eliminación]
+
+Como resultado, el servicio de identidad elimina la identidad más antigua, que en este caso es ECID:35577. La eliminación de ECID:35577 también provoca la eliminación de lo siguiente:
+
+* El vínculo entre CRM ID: 60013 y el ahora eliminado ECID:35577, lo que da como resultado un escenario de división de gráficos.
+* IDFA: 32110, IDFA: 02383 y las identidades restantes representadas por `(...)`. Estas identidades se eliminan porque, individualmente, no están vinculadas a ninguna otra identidad y, por lo tanto, no se pueden representar en un gráfico.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Salida de gráfico]
+
+Por último, el proceso de eliminación genera dos gráficos más pequeños.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Pasos siguientes
 

@@ -1,13 +1,13 @@
 ---
 title: Administrar eventos de visualización en el SDK web
 description: Este artículo explica qué son los eventos de visualización y cómo puede utilizarlos en el SDK web.
-source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
+exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
 
 ---
-
 
 # Administrar eventos de visualización en el SDK web
 
