@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 4%
 
 ---
@@ -85,8 +85,8 @@ En la tabla siguiente se describen los permisos disponibles para los Experience 
 | [!DNL Alerts] | [!UICONTROL Administrar alertas] | Acceso para leer, crear, editar y eliminar el historial de alertas. |
 | [!DNL Computed Attributes] | [!UICONTROL Ver atributos calculados] | Acceso de solo lectura para la pestaña de atributos calculados, inventario y detalles. |
 | [!DNL Computed Attributes] | [!UICONTROL Administrar atributos calculados] | Acceso para leer, crear, eliminar borradores y desactivar atributos calculados. |
-| [!DNL Data Hygiene] | [!UICONTROL Ver higiene de datos] | Acceso de solo lectura para la higiene de los datos. |
-| [!DNL Data Hygiene] | [!UICONTROL Administrar higiene de datos] | Acceso para leer, crear, editar y eliminar la higiene de los datos. |
+| [!DNL Data Lifecycle] | [!UICONTROL Ver ciclo vital de datos] | Acceso de solo lectura para el ciclo vital de datos. |
+| [!DNL Data Lifecycle] | [!UICONTROL Administrar ciclo de vida de datos] | Acceso para leer, crear, editar y eliminar datos durante el ciclo vital. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar esquemas] | Acceso para leer, crear, editar y eliminar esquemas y recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Esquemas de vistas] | Acceso de solo lectura a esquemas y recursos relacionados. |
 | [!DNL Data Modeling] | [!UICONTROL Administrar relaciones] | Acceso para leer, crear, editar y eliminar relaciones de esquema. |
@@ -123,7 +123,7 @@ En la tabla siguiente se describen los permisos disponibles para los Experience 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Acceso para crear, aceptar y rechazar protocolos de enlace de socios para conectar dos organizaciones y habilitar [!DNL Segment Match] flujos. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Acceso para leer, crear, editar y publicar [!DNL Segment Match] se alimenta con socios activos. |
 | [!DNL Data Science Workspace] | [!UICONTROL Administrar Data Science Workspace] | Acceso para leer, crear, editar y eliminar en [!DNL Data Science Workspace]. |
-| Control de datos | [!UICONTROL Aplicar etiquetas de uso de datos] | Acceso para leer, crear y eliminar etiquetas de uso. |
+| Control de datos | [!UICONTROL Administrar etiquetas de uso] | Acceso para leer, crear y eliminar etiquetas de uso. |
 | Control de datos | [!UICONTROL Administrar políticas de uso de datos] | Acceso para leer, crear, editar y eliminar políticas de uso de datos. |
 | Control de datos | [!UICONTROL Ver directivas de uso de datos] | Acceso de solo lectura para directivas de uso de datos pertenecientes a su organización. |
 | Control de datos | [!UICONTROL Ver registro de actividades de usuario] | Acceso de solo lectura a la vista grabada [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) de actividades de Platform. |
