@@ -4,10 +4,10 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 11%
+source-wordcount: '4900'
+ht-degree: 10%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 El [!UICONTROL Examinar] le permite buscar y ver los perfiles de solo lectura introducidos en su organización. Desde aquí puede ver información importante que pertenece al perfil de con respecto a sus preferencias, eventos anteriores, interacciones y audiencias.
 
-Para obtener más información sobre las funcionalidades de visualización de perfiles proporcionadas en la IU de Platform, consulte la documentación sobre [exploración de perfiles en Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+## Detalles del perfil {#profile-details}
+
+Para abrir [!UICONTROL Perfiles] [!UICONTROL Detalle] workspace, seleccione un [!UICONTROL ID de perfil] de la lista.
+
+![La pestaña Exploración de perfiles con un ID de perfil resaltado.](../images/profiles/profile-id.png)
+
+El [!UICONTROL Perfiles] [!UICONTROL Detalle] workspace muestra varios widgets preconfigurados que transmiten información específica de ese perfil. Esta información le permite comprender los atributos clave del perfil de un vistazo. También puede personalizar su [!UICONTROL Perfiles] [!UICONTROL Detalle] workspace creando sus propios widgets. Consulte la sección sobre [cómo añadir widgets](#add-widgets) para obtener más información.
+
+![El [!UICONTROL Perfiles] [!UICONTROL Detalle] Workspace con [!UICONTROL Detalle] pestaña resaltada.](../images/profiles/profile-details-workspace.png)
+
+### Widgets de detalles de perfil {#widgets}
+
+Los widgets de detalles de perfil preconfigurados son los siguientes:
+
+#### Perfil del cliente {#customer-profile}
+
+El [!UICONTROL Perfil del cliente] widget muestra el nombre y los apellidos del usuario asociado al perfil, así como su [!UICONTROL ID de perfil]. Un ID de perfil es un identificador generado automáticamente y asociado a un tipo de identidad que representa un perfil. Para obtener más información sobre identidades y áreas de nombres de identidad, consulte la [información general sobre identidades](../../rtcdp/profile/identities-overview.md).
+
+![El widget de perfil del cliente.](../images/profiles/customer-profile.png)
+
+#### Atributos básicos {#basic-attributes}
+
+El [!UICONTROL Atributos básicos] widget muestra los atributos más utilizados que se utilizan para definir un perfil individual.
+
+![El widget de atributos básicos.](../images/profiles/basic-attributes.png)
+
+#### Identidades vinculadas {#linked-identities}
+
+El [!UICONTROL Identidades vinculadas] El widget muestra cualquier otra identidad asociada con el perfil.
+
+Para ver los detalles de identidad del perfil en mayor profundidad y navegar hasta la [!UICONTROL Identidades] workspace, seleccione **[!UICONTROL Ver gráfico de identidad]**.
+
+![El widget Identidades vinculadas.](../images/profiles/linked-identities.png)
+
+#### Preferencias de canal {#channel-preferences}
+
+El [!UICONTROL Preferencias de canal] Este widget muestra los canales de comunicación desde los que el usuario ha aceptado recibir comunicaciones. Una marca de verificación indica cada canal del que el usuario ha aceptado recibir comunicaciones.
+
+<!-- image needs a blue tick added below -->
+
+![El widget de preferencias de canal.](../images/profiles/channel-preferences.png)
+
+El consentimiento del cliente y las preferencias de contacto son temas complejos. Para conocer cómo se pueden recopilar, procesar y filtrar las preferencias de consentimiento y contexto en Experience Platform, se recomienda leer los siguientes documentos:
+
+* Para obtener más información sobre los grupos de campos de esquema necesarios para [recopilar datos de consentimiento según el estándar de Adobe.](../../landing/governance-privacy-security/consent/adobe/overview.md), consulte la documentación sobre estos grupos de campos de esquema habilitados para perfiles.
+   * [[!UICONTROL Detalles de consentimiento y preferencia]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (necesario si se utiliza el SDK web o móvil de Platform para enviar señales de consentimiento)
+* Para obtener información sobre cómo procesar los datos de preferencias y consentimiento del cliente mediante el estándar de Adobe, consulte la información general sobre [procesamiento de consentimiento en Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* Se puede utilizar una política de consentimiento y gobernanza de datos combinada para filtrar perfiles de segmentación en función de sus preferencias de consentimiento y las reglas organizativas establecidas. Para aprender a crear y utilizar estas políticas combinadas, consulte la guía del usuario sobre [administrar políticas de uso de datos](../../data-governance/policies/user-guide.md#combine-policies).
+
+### Añadir widgets {#add-widgets}
+
+Para agregar widgets personalizados a [!UICONTROL Perfiles] [!UICONTROL Detalle] workspace, seleccione **[!UICONTROL Personalizar detalles del perfil]**.
+
+![El espacio de trabajo Detalles de perfiles con [!UICONTROL Personalizar detalles del perfil] resaltado.](../images/profiles/customize-profile-details.png)
+
+Ahora puede editar el espacio de trabajo mediante el cambio de tamaño o la reubicación de los widgets. Seleccionar **[!UICONTROL Añadir widget]** para crear un widget con atributos personalizados.
+
+![Los perfiles [!UICONTROL Detalle] workspace con [!UICONTROL Añadir widget] resaltado.](../images/profiles/add-widget.png)
+
+Aparecerá el creador del widget. Introduzca un nombre descriptivo para el widget en la [!UICONTROL Título de tarjeta] Campo de texto y seleccione **[!UICONTROL Añadir atributos]**.
+
+![El lienzo del creador del widget con la variable [!UICONTROL Título de tarjeta] field y [!UICONTROL Añadir atributos] resaltado.](../images/profiles/widget-creator.png)
+
+Aparece un cuadro de diálogo que contiene una visualización del esquema de unión del perfil. Utilice el campo de búsqueda o desplácese para buscar los atributos sobre los que desea informar con el widget. Seleccione la casilla de verificación de los atributos que desee incluir. Seleccionar **[!UICONTROL Seleccionar]** para continuar con el flujo de trabajo de creación.
+
+>[!TIP]
+>
+>Una selección de la casilla de verificación de nivel superior incluye cualquier elemento secundario.
+
+![El diagrama de esquema de unión con la casilla de verificación de atributo de fidelidad y [!UICONTROL Seleccionar] resaltado.](../images/profiles/union-schema-attributes.png)
+
+En el lienzo se muestra una vista previa del widget completado. Una vez que esté satisfecho con los atributos elegidos, seleccione **[!UICONTROL Guardar]** para confirmar sus opciones y volver a la [!UICONTROL Perfiles] [!UICONTROL Detalle] workspace. El widget recién creado ahora es visible en el espacio de trabajo.
+
+![El lienzo del creador del widget con Guardar resaltado y mostrando la previsualización del widget.](../images/profiles/widget-preview.png)
 
 ## Políticas de combinación {#merge-policies}
 

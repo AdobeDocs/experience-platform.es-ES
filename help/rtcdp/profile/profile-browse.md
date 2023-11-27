@@ -4,9 +4,9 @@ title: Examen de perfiles en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform permite examinar los datos del perfil del cliente en tiempo real mediante la interfaz de usuario de Adobe Experience Platform.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Para explorar estas mejoras, comience siguiendo los pasos descritos en la secci�
 Los detalles del perfil incluyen el acceso a [!UICONTROL Cuentas], [!UICONTROL Oportunidades], y [!UICONTROL Registros de origen] además de la información estándar proporcionada en el perfil del cliente, que también se ha mejorado con eventos y atributos B2B.
 
 ![](images/b2b-profile-detail.png)
+
+Para obtener más información sobre los detalles del perfil proporcionados en la IU de Platform, consulte la [sección de detalles de la documentación del panel Perfiles](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Pestaña Cuentas
 

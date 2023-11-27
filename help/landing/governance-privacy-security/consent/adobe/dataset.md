@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurar un conjunto de datos para capturar datos de consentimiento y preferencia
 description: Obtenga información sobre cómo configurar un esquema y un conjunto de datos del Modelo de datos de experiencia (XDM) para capturar datos de consentimiento y preferencia en Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 1%
@@ -96,8 +96,8 @@ El grupo de campos proporciona un único campo de tipo de objeto, `consents`, cu
 
 Para recopilar datos de consentimiento mediante el estándar de Adobe, debe tener un esquema habilitado para el perfil que contenga los dos grupos de campos siguientes:
 
-* [!UICONTROL Detalles de consentimiento y preferencia]
-* [!UICONTROL IdentityMap] (necesario si se utiliza el SDK web o móvil de Platform para enviar señales de consentimiento)
+* [[!UICONTROL Detalles de consentimiento y preferencia]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (necesario si se utiliza el SDK web o móvil de Platform para enviar señales de consentimiento)
 
 En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo, seleccione la opción **[!UICONTROL Examinar]** para mostrar una lista de esquemas existentes. Aquí, seleccione el nombre del [!DNL Profile]Esquema habilitado para que desee agregar campos de consentimiento a. Las capturas de pantalla de esta sección utilizan el esquema &quot;Miembros socio&quot; creado en la [tutorial de creación de esquemas](../../../../xdm/tutorials/create-schema-ui.md) como ejemplo.
 
