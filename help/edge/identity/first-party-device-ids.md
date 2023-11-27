@@ -2,9 +2,9 @@
 title: ID de dispositivos de origen en el SDK web de Platform
 description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) para el SDK web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1779'
 ht-degree: 2%
 
 ---
@@ -210,6 +210,10 @@ Si está migrando a mediante FPID desde una implementación anterior, puede resu
 Para ilustrar este proceso, considere un escenario que implique a un cliente que haya visitado anteriormente su sitio y el impacto que una migración FPID tendría en la forma en que se identifica a ese cliente en las soluciones de Adobe.
 
 ![Diagrama que muestra cómo se actualizan los valores de ID de un cliente entre visitas después de migrar a FPID](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>El `ECID` La cookie siempre tiene prioridad sobre `FPID`.
 
 | Visita | Descripción |
 | --- | --- |
