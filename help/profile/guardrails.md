@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2228'
 ht-degree: 2%
 
 ---
@@ -119,6 +119,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Una organización puede tener más de 500 audiencias de streaming en total, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida individual. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [streaming de audiencias](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias de lote en total, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida individual. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
 | Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | No se pueden crear más de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, la variable **[!UICONTROL Crear audiencia]** El control de está desactivado al intentar crear una audiencia de cuenta nueva. Más información sobre [audiencias de cuenta](/help/segmentation/ui/account-audiences.md). |
+| Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | No se pueden publicar más de 10 composiciones en una zona protegida. Más información sobre [composición de audiencias en la guía de IU](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
