@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Modificación de los paneles de Platform en la IU
 description: Esta guía proporciona instrucciones paso a paso para personalizar cómo se muestran los datos de Adobe Experience Platform de su organización en los paneles.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 En la interfaz de usuario (IU) de Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. Los widgets y las métricas predeterminados que se muestran en los paneles se pueden ajustar a nivel de usuario individual para mostrar los datos preferidos, y los widgets se pueden crear y compartir entre los usuarios de la misma organización.
 
-Esta guía proporciona instrucciones paso a paso para personalizar cómo se muestran los datos del panel en el [!UICONTROL Perfiles], [!UICONTROL Segmentos], y [!UICONTROL Destinos] paneles en la IU de Platform.
-
 >[!NOTE]
 >
->Los widgets que se muestran en el panel de uso de licencias no se pueden personalizar. Consulte la [documentación del tablero de uso de licencias](../guides/license-usage.md) para obtener más información sobre este tablero único.
+>Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
 
-## Primeros pasos
+Esta guía proporciona instrucciones paso a paso para personalizar cómo se muestran los datos del panel en el [!UICONTROL Perfiles], [!UICONTROL Segmentos], y [!UICONTROL Destinos] paneles en la IU de Platform.
+
+## Introducción
 
 Desde cualquier tablero (por ejemplo, el [!UICONTROL Perfiles] panel), puede seleccionar **[!UICONTROL Modificar tablero]** para cambiar el tamaño y reordenar los widgets existentes.
 

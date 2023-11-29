@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
+source-wordcount: '4384'
 ht-degree: 1%
 
 ---
@@ -535,6 +535,16 @@ WHERE T2.ID IS NULL
 ### ¿Query Service admite el comando &quot;INSERT OVERWRITE INTO&quot;?
 
 +++Respuesta no, el servicio de consultas no admite el comando &quot;INSERTAR SOBRESCRITURA EN&quot;.
++++
+
+### ¿Con qué frecuencia se actualizan los datos de uso en el tablero de uso de licencias para las horas calculadas de Data Distiller?
+
++++Respuesta El panel de uso de licencias del horario laboral del equipo de Data Distiller se actualiza cuatro veces al día, cada seis horas.
++++
+
+### ¿Puedo utilizar el comando CREATE VIEW sin acceso a Data Distiller?
+
++++Responda Sí, puede usar `CREATE VIEW` sin acceso a Data Distiller. Este comando proporciona una vista lógica de los datos, pero no los vuelve a escribir en el lago de datos.
 +++
 
 ## Exportación de datos {#exporting-data}

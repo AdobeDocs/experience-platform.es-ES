@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Creación de widgets personalizados para paneles
 description: Esta guía proporciona instrucciones paso a paso para crear widgets personalizados y utilizarlos en paneles de Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ En Adobe Experience Platform, puede ver los datos de su organización e interact
 
 Esta guía proporciona instrucciones paso a paso para crear y agregar widgets personalizados al [!UICONTROL Perfiles], [!UICONTROL Segmentos], y [!UICONTROL Destinos] paneles en la IU de Platform.
 
-Para obtener más información sobre los widgets estándar, consulte la guía de [adición de widgets estándar a los paneles](standard-widgets.md).
-
 >[!NOTE]
 >
->Los widgets que se muestran en la [!UICONTROL Uso de licencias] el tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del tablero de uso de licencias](../guides/license-usage.md).
+>Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
+
+Para obtener más información sobre los widgets estándar, consulte la guía de [adición de widgets estándar a los paneles](standard-widgets.md).
 
 ## Biblioteca de widgets {#widget-library}
 
@@ -82,7 +82,7 @@ Para guardar el widget nuevo y volver al [!UICONTROL Personalizado] pestaña, se
 
 ![El cuadro de diálogo Crear widget con las opciones de visualización y Crear resaltadas.](../images/customization/create-widget-select-attribute.png)
 
-El nuevo widget ya está disponible para añadirse a un panel seleccionando el widget de la biblioteca y haciendo clic en **[!UICONTROL Agregar widget]**.
+El nuevo widget ya está disponible para añadirse a un panel seleccionando el widget de la biblioteca y haciendo clic en **[!UICONTROL Añadir widget]**.
 
 ![La pestaña Personalizado del espacio de trabajo de la biblioteca de widgets con el nuevo widget y Agregar widget resaltados.](../images/customization/custom-widgets-new.png)
 

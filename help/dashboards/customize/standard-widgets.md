@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Widgets del panel estándar
 description: Esta guía proporciona instrucciones paso a paso para agregar widgets estándar a los paneles de Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,13 @@ ht-degree: 0%
 
 En Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos tableros agregando nuevos widgets a la vista de tablero. El Adobe proporciona una selección de widgets estándar que puede elegir añadir a sus paneles.
 
-El [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] cada uno de los paneles tiene una carga de widget predeterminada cuando se crea una nueva instancia de Platform. Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar el [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] paneles en la IU de Platform.
+El [[!UICONTROL Perfiles]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiencias]](../guides/audiences.md#default-widgets), y [[!UICONTROL Destinos]](../guides/destinations.md#default-widgets) cada uno de los paneles tiene una carga de widget predeterminada cuando se crea una nueva instancia de Platform. Esta guía proporciona instrucciones paso a paso para agregar widgets estándar para personalizar el [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] paneles en la IU de Platform.
 
 >[!NOTE]
 >
->A partir del 26 de julio de 2023, [!UICONTROL Perfiles], [!UICONTROL Audiencias], y [!UICONTROL Destinos] Los paneles de información general se han restablecido a una nueva carga de widget predeterminada para todos los usuarios que no modificaron sus vistas en los seis meses anteriores.
->Consulte la documentación en la [Perfiles](../guides/profiles.md#default-widgets), [Audiencias](../guides/audiences.md#default-widgets), y [Destinos](../guides/destinations.md#default-widgets) secciones de widgets predeterminadas para obtener detalles sobre los widgets que se incluyen como parte de las cargas de widgets predeterminadas.
+>Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
 
 Para obtener más información sobre los widgets personalizados, consulte la guía de [crear widgets personalizados](custom-widgets.md).
-
->[!NOTE]
->
->Los widgets que se muestran en la [!UICONTROL Uso de licencias] el tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del tablero de uso de licencias](../guides/license-usage.md).
 
 ## Biblioteca de widgets {#widget-library}
 

@@ -2,10 +2,10 @@
 title: Asignar un archivo CSV a un esquema XDM mediante Recommendations generado por IA
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante recomendaciones generadas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 1%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 Para introducir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a una [!DNL Experience Data Model] Esquema (XDM). Puede elegir asignar a [un esquema existente](./existing-schema.md), pero si no sabe exactamente qué esquema utilizar o cómo debe estructurarse, puede utilizar recomendaciones dinámicas basadas en modelos de aprendizaje automático (ML) dentro de la interfaz de usuario de Platform.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
    * Como mínimo, debe comprender el concepto de [comportamientos en XDM](../../../xdm/home.md#data-behaviors), para que pueda decidir si desea asignar los datos a una [!UICONTROL Perfil] (comportamiento de registro) o [!UICONTROL ExperienceEvent] (comportamiento de la serie temporal).
 * [Ingesta por lotes](../../batch-ingestion/overview.md): método mediante el cual [!DNL Platform] incorpora datos de archivos de datos proporcionados por el usuario.
 * [Preparación de datos de Adobe Experience Platform](../../batch-ingestion/overview.md): conjunto de funciones que le permiten asignar y transformar datos ingeridos para que se ajusten a esquemas XDM. La documentación sobre [Funciones de preparación de datos](../../../data-prep/functions.md) es específicamente relevante para la asignación de esquemas.
@@ -71,6 +71,10 @@ Después de cargar el archivo, aparece una sección de datos de ejemplo que mues
 Los modelos XML se ejecutan para generar un nuevo esquema basado en la configuración del flujo de datos y en el archivo CSV cargado. Una vez completado el proceso, la variable [!UICONTROL Asignación] Este paso se rellena para mostrar las asignaciones de cada campo individual junto con la vista totalmente navegable de la estructura de esquema generada.
 
 ![El [!UICONTROL Asignación] paso en la interfaz de usuario, que muestra todos los campos CSV asignados y la estructura de esquema resultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+
+>[!NOTE]
+>
+>Puede filtrar todos los campos del esquema en función de diversos criterios durante el flujo de trabajo de asignación de campos de origen a destino. El comportamiento predeterminado es mostrar todos los campos asignados. Para cambiar los campos mostrados, seleccione el icono de filtro junto al campo de entrada de búsqueda y elija entre las opciones desplegables.<br> ![Fase de asignación del CSV al flujo de trabajo de creación de esquemas XDM con el icono de filtro y el menú desplegable resaltados.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "Fase de asignación del CSV al flujo de trabajo de creación de esquemas XDM con el icono de filtro y el menú desplegable resaltados."){width="100" zoomable="yes"}
 
 Desde aquí, puede hacer lo siguiente [editar las asignaciones de campos](#edit-mappings) o [modificar los grupos de campo a los que están asociados](#edit-schema) según sus necesidades. Cuando esté satisfecho, seleccione **[!UICONTROL Finalizar]** para completar la asignación e iniciar el flujo de datos configurado anteriormente. Los datos CSV se incorporan al sistema y rellenan un conjunto de datos basado en la estructura de esquema generada, listo para ser consumido por los servicios de Platform secundarios.
 

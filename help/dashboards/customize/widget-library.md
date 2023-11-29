@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Resumen de biblioteca de widgets del panel
 description: Esta guía proporciona instrucciones paso a paso para acceder a la biblioteca de widgets en Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ En la interfaz de usuario de Adobe Experience Platform, puede ver los datos de s
 
 Esta guía proporciona instrucciones paso a paso para acceder a [!UICONTROL Biblioteca de widgets] en Experience Platform, donde puede seleccionar widgets estándar y crear widgets personalizados para personalizar la información que se muestra en los paneles.
 
-Para obtener información sobre cómo modificar la ubicación y el tamaño de los widgets que ya se muestran en los paneles, consulte la [guía de modificación de paneles](modify.md).
-
 >[!NOTE]
 >
->Los widgets que se muestran en la [!UICONTROL Uso de licencias] el tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del tablero de uso de licencias](../guides/license-usage.md).
+>Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
+
+Para obtener información sobre cómo modificar la ubicación y el tamaño de los widgets que ya se muestran en los paneles, consulte la [guía de modificación de paneles](modify.md).
 
 ## Acceso a la biblioteca de widgets {#access}
 
-En cualquier panel (por ejemplo, el panel Perfiles ), seleccione **[!UICONTROL Agregar widget]** para navegar directamente a la biblioteca de widgets donde puede [añadir widgets](#add-widgets) a su tablero.
+En cualquier panel (por ejemplo, el panel Perfiles ), seleccione **[!UICONTROL Añadir widget]** para navegar directamente a la biblioteca de widgets donde puede [añadir widgets](#add-widgets) a su tablero.
 
 ![La pestaña Información general del panel Perfiles con el botón Añadir widget resaltado.](../images/customization/profiles-overview-add-widget.png)
 

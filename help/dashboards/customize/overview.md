@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;tableros;tablero;perfiles;s
 title: Información general de personalización de paneles
 description: Obtenga más información acerca de las formas en que puede personalizar los datos mostrados en los paneles de Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Los paneles de perfiles, segmentos y destinos disponibles en Adobe Experience Pl
 
 >[!NOTE]
 >
->Los widgets que se muestran en la [!UICONTROL Uso de licencias] el tablero no se puede personalizar. Para obtener más información sobre este tablero único, lea la [documentación del tablero de uso de licencias](../guides/license-usage.md).
+>Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
 
 ## Modificar tablero
 

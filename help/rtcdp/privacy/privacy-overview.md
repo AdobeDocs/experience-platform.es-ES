@@ -4,7 +4,7 @@ title: Privacidad en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform le permite agilizar el proceso de cumplimiento de las normas de privacidad en sus operaciones de datos.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Consulte el documento sobre [cumplimiento de solicitudes de exclusión](../../se
 
 ## Compatibilidad con IAB TCF 2.0
 
-[!DNL Real-Time CDP] se basa en Adobe Experience Platform, que forma parte del [lista de proveedores](https://iabeurope.eu/vendor-list-tcf-v2-0/) para el [!DNL Transparency & Consent Framework (TCF)], tal como se indica en la [!DNL Interactive Advertising Bureau (IAB)]. En cumplimiento con los requisitos de TCF 2.0, Platform le permite recopilar datos detallados del consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta en si determinados perfiles se incluyen en segmentos de audiencia exportados, según su caso de uso.
+[!DNL Real-Time CDP] se basa en Adobe Experience Platform, que forma parte del [lista de proveedores](https://iabeurope.eu/vendor-list-tcf/) para el [!DNL Transparency & Consent Framework (TCF)], tal como se indica en la [!DNL Interactive Advertising Bureau (IAB)]. En cumplimiento con los requisitos de TCF 2.0, Platform le permite recopilar datos detallados del consentimiento del cliente e integrarlos en sus perfiles de cliente almacenados. Estos datos de consentimiento se pueden tener en cuenta en si determinados perfiles se incluyen en segmentos de audiencia exportados, según su caso de uso.
 
 Consulte la información general sobre [Compatibilidad con IAB TCF 2.0 en Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información.
 
