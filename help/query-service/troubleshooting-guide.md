@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![El esquema XDM y la vista tabular de los datos aplanados. El nombre de columna de un conjunto de datos anidado se resalta en la interfaz de usuario.](./images/troubleshooting/column-name.png)
 
-Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras de datos anidadas](./essential-concepts/nested-data-structures.md) mediante el Editor de consultas o un cliente de terceros.
+Consulte la documentación para obtener instrucciones completas sobre [cómo trabajar con estructuras de datos anidadas](./key-concepts/nested-data-structures.md) mediante el Editor de consultas o un cliente de terceros.
 +++
 
 ### ¿Cómo acelero una consulta en un conjunto de datos que contiene matrices?
@@ -142,7 +142,7 @@ Aparece un banner desplegable que contiene una [!UICONTROL Ayuda y asistencia] s
 
 +++Respuesta La función de bloque anónimo permite encadenar una o más sentencias SQL que se ejecutan en secuencia. También permiten la opción de la gestión de excepciones.
 
-Consulte la [documentación de bloque anónimo](./essential-concepts/anonymous-block.md) para obtener más información.
+Consulte la [documentación de bloque anónimo](./key-concepts/anonymous-block.md) para obtener más información.
 +++
 
 ### ¿Cómo implemento la atribución personalizada en el servicio de consultas?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### ¿Cómo proceso rápidamente los nuevos datos que entran en el sistema todos los días?
 
-+++Responda Al [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) La cláusula se puede utilizar para leer de forma incremental los datos de una tabla en función de un ID de instantánea. Esto es ideal para su uso con el [carga incremental](./essential-concepts/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de datos por lotes como con el streaming.
++++Responda Al [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) La cláusula se puede utilizar para leer de forma incremental los datos de una tabla en función de un ID de instantánea. Esto es ideal para su uso con el [carga incremental](./key-concepts/incremental-load.md) patrón de diseño que solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga. Como resultado, aumenta la eficacia del procesamiento y se puede utilizar tanto con el procesamiento de datos por lotes como con el streaming.
 +++
 
 ### ¿Por qué hay una diferencia entre los números que se muestran en la interfaz de usuario del perfil y los números calculados a partir del conjunto de datos de exportación de perfiles?

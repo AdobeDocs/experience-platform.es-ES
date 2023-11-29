@@ -2,7 +2,7 @@
 title: Consultas con parámetros
 description: Aprenda a utilizar consultas parametrizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 10%
@@ -24,7 +24,7 @@ Antes de continuar con esta guía, lea la [Guía de IU del Editor de consultas](
 
 >[!NOTE]
 >
->En la interfaz de usuario de Adobe Experience Platform, las consultas parametrizadas solo se admiten en el nivel principal de las plantillas en línea. Esto significa que las consultas parametrizadas solo funcionan cuando se utilizan en la plantilla original. Las plantillas secundarias deben ser una plantilla estática y no pueden tener parámetros dinámicos. Consulte la [documentación de plantillas en línea](../essential-concepts/inline-templates.md) para obtener más información.
+>En la interfaz de usuario de Adobe Experience Platform, las consultas parametrizadas solo se admiten en el nivel principal de las plantillas en línea. Esto significa que las consultas parametrizadas solo funcionan cuando se utilizan en la plantilla original. Las plantillas secundarias deben ser una plantilla estática y no pueden tener parámetros dinámicos. Consulte la [documentación de plantillas en línea](../key-concepts/inline-templates.md) para obtener más información.
 
 ## Sintaxis de consulta parametrizada {#syntax}
 

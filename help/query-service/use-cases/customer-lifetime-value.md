@@ -2,7 +2,7 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Compruebe la [resumen de destinos de marketing por correo electrónico](../../de
 
 ## Ver los datos de análisis devueltos de la campaña {#post-campaign-data-analysis}
 
-Los datos de las fuentes ahora se pueden [procesado gradualmente](../essential-concepts/incremental-load.md) como parte de una actualización programada del modelo de datos en el almacén de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que se produce o por lotes. El modelo de datos se puede actualizar una o varias veces al día, según la configuración o los conectores de origen. Consulte la [información general de API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md) o el [información general sobre ingesta de streaming](../../ingestion/streaming-ingestion/overview.md) para obtener más información.
+Los datos de las fuentes ahora se pueden [procesado gradualmente](../key-concepts/incremental-load.md) como parte de una actualización programada del modelo de datos en el almacén de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que se produce o por lotes. El modelo de datos se puede actualizar una o varias veces al día, según la configuración o los conectores de origen. Consulte la [información general de API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md) o el [información general sobre ingesta de streaming](../../ingestion/streaming-ingestion/overview.md) para obtener más información.
 
 Una vez actualizado el modelo de datos, los widgets de panel personalizados proporcionan señales significativas que le permiten medir y visualizar el valor de duración del cliente.
 

@@ -5,7 +5,7 @@ title: Directrices generales para la ejecución de consultas en el servicio de c
 type: Tutorial
 description: Este documento describe los detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 3%
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Anulación de duplicación
 
-El servicio de consulta admite la anulación de duplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de anulación de duplicación del servicio de consultas](../essential-concepts/deduplication.md).
+El servicio de consulta admite la anulación de duplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de anulación de duplicación del servicio de consultas](../key-concepts/deduplication.md).
 
 ## Cálculos de zona horaria en el servicio de consultas
 

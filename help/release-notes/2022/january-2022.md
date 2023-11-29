@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2022
 description: Las notas de la versión de enero de 2022 de Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 20%
@@ -91,7 +91,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 | Función | Descripción |
 | --- | --- |
-| Bloque anónimo | La construcción SQL de bloque anónimo le permite desglosar trabajos de preparación de datos a gran escala en Query Service en tareas más pequeñas y luego reutilizarlos y ejecutarlos en secuencia para la carga de datos incrementales. Para obtener más información, consulte la [consultas de muestra para documentación de bloques anónimos](../../query-service/essential-concepts/anonymous-block.md). |
+| Bloque anónimo | La construcción SQL de bloque anónimo le permite desglosar trabajos de preparación de datos a gran escala en Query Service en tareas más pequeñas y luego reutilizarlos y ejecutarlos en secuencia para la carga de datos incrementales. Para obtener más información, consulte la [consultas de muestra para documentación de bloques anónimos](../../query-service/key-concepts/anonymous-block.md). |
 | Organización del conjunto de datos | Proporciona una estructura de datos lógica y coherente para organizar los recursos de datos y utilizarlos con el servicio de consultas a medida que aumenta la cantidad de recursos de datos dentro de la zona protegida. Para obtener más información, consulte la [documentación de organización de recursos de datos](../../query-service/best-practices/organize-data-assets.md). |
 
 Para obtener más información sobre [!DNL Query Service], consulte la [[!DNL Query Service] descripción general](../../query-service/home.md).

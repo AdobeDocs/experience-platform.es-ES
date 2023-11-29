@@ -2,7 +2,7 @@
 title: Análisis de datos exploratorio
 description: Aprenda a utilizar Data Distiller para explorar y analizar datos de un portátil Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 16%
@@ -42,7 +42,7 @@ df
 
 ## Creación de una versión de muestra de conjuntos de datos grandes {#create-dataset-sample}
 
-Si el conjunto de datos que desea consultar es muy grande o si no son necesarios los resultados exactos de consultas exploratorias, utilice el [funcionalidad de muestreo](../../essential-concepts/dataset-samples.md) disponible para consultas de Data Distiller. Este es un proceso de dos pasos:
+Si el conjunto de datos que desea consultar es muy grande o si no son necesarios los resultados exactos de consultas exploratorias, utilice el [funcionalidad de muestreo](../../key-concepts/dataset-samples.md) disponible para consultas de Data Distiller. Este es un proceso de dos pasos:
 
 - Primero, **analizar** el conjunto de datos para crear una versión de muestra con una proporción de muestra especificada
 - A continuación, consulte la versión muestreada del conjunto de datos. Según las funciones que aplique al conjunto de datos muestreado, es posible que desee escalar la salida a los números del conjunto de datos completo

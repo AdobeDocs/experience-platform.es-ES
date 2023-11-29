@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento muestra la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 95d1aec09477480532d4df1bdc7488d3f5a39394
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '4134'
 ht-degree: 2%
@@ -765,7 +765,7 @@ La salida de la consola aparece como se ve a continuación.
 (1 row)
 ```
 
-A continuación, puede consultar las estadísticas calculadas directamente haciendo referencia al `Statistics ID`. La instrucción de ejemplo siguiente le permite ver el resultado en su totalidad cuando se utiliza con el `Statistics ID` o el nombre del alias. Para obtener más información acerca de esta función, consulte lo siguiente [documentación del nombre del alias](../essential-concepts/dataset-statistics.md#alias-name).
+A continuación, puede consultar las estadísticas calculadas directamente haciendo referencia al `Statistics ID`. La instrucción de ejemplo siguiente le permite ver el resultado en su totalidad cuando se utiliza con el `Statistics ID` o el nombre del alias. Para obtener más información acerca de esta función, consulte lo siguiente [documentación del nombre del alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -788,7 +788,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Consulte la [documentación de estadísticas de conjuntos de datos](../essential-concepts/dataset-statistics.md) para obtener más información.
+Consulte la [documentación de estadísticas de conjuntos de datos](../key-concepts/dataset-statistics.md) para obtener más información.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -806,7 +806,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Consulte la [documentación de muestras de conjuntos de datos](../essential-concepts/dataset-samples.md) para obtener más información.
+Consulte la [documentación de muestras de conjuntos de datos](../key-concepts/dataset-samples.md) para obtener más información.
 
 ### COMENZAR
 

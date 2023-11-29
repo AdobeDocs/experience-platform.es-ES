@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Conectar la Power BI al servicio de consultas
 description: Este documento explica los pasos para conectar Power BI con el servicio de consultas de Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Este documento describe los pasos para la conexión [!DNL Power BI] Escritorio con servicio de consultas de Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere que ya tenga acceso a [!DNL Power BI] y están familiarizados con cómo navegar por su interfaz. Para descargar [!DNL Power BI] Escritorio o para obtener más información, consulte la [funcionario [!DNL Power BI] documentación](https://docs.microsoft.com/es-ES/power-bi/).
 
@@ -51,7 +51,7 @@ El **[!DNL Database]** el campo puede ser &quot;todo&quot; o un nombre de tabla 
 
 >[!IMPORTANT]
 >
->Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su facilidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de la[`FLATTEN` característica](../essential-concepts/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
+>Las estructuras de datos anidadas en herramientas de BI de terceros se pueden aplanar para mejorar su facilidad de uso y reducir la carga de trabajo necesaria para recuperar, analizar, transformar y crear informes de datos. Consulte la documentación de la[`FLATTEN` característica](../key-concepts/flatten-nested-data.md) para obtener instrucciones sobre cómo activar esta configuración al conectarse a una base de datos.
 
 ### Modo de conectividad de datos {#data-connectivity-mode}
 
@@ -63,7 +63,7 @@ Seleccionar **[!DNL OK]** después de confirmar los detalles de la base de datos
 
 ### Autenticación {#authentication}
 
-Después de confirmar el modo de conectividad de datos, aparece un mensaje en el que se solicita la configuración de su nombre de usuario, contraseña y aplicación. En este caso, el nombre de usuario es su ID de organización y la contraseña es su token de autenticación. Ambos se encuentran en la página de credenciales del servicio de consulta.
+Después de confirmar el modo de conectividad de datos, aparece un mensaje en el que se solicita la configuración del nombre de usuario, la contraseña y la aplicación. En este caso, el nombre de usuario es su ID de organización y la contraseña es su token de autenticación. Ambos se encuentran en la página de credenciales del servicio de consulta.
 
 Rellene estos detalles y seleccione **[!DNL Connect]** para continuar con el paso siguiente.
 

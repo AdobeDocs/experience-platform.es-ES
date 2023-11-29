@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2022
 description: Notas de la versión de septiembre de 2022 de Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 19%
@@ -215,7 +215,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 | Función | Descripción |
 | --- | --- |
 | API de suscripción de alerta | El servicio de consultas de Adobe Experience Platform le permite suscribirse a alertas para consultas ad hoc y programadas. Las alertas se pueden recibir por correo electrónico, en la interfaz de usuario de Platform o en ambas. Actualmente, las alertas de consulta solo se pueden suscribir a mediante el [API del servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consultas permiten realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de las consultas. Consulte la [guía de ejemplos de conjuntos de datos](../../query-service/essential-concepts/dataset-samples.md) para obtener más información. |
+| Ejemplos de conjuntos de datos | Los ejemplos de conjuntos de datos del servicio de consultas permiten realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de las consultas. Consulte la [guía de ejemplos de conjuntos de datos](../../query-service/key-concepts/dataset-samples.md) para obtener más información. |
 
 Para obtener más información sobre [!DNL Query Service], consulte la [[!DNL Query Service] descripción general](../../query-service/home.md).
 
