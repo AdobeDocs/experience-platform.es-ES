@@ -5,9 +5,9 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
+source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1030'
 ht-degree: 37%
 
 ---
@@ -248,7 +248,8 @@ ht-degree: 37%
          * [Información general](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Información general](./extensions/server/twitter/overview.md)
-      * [[!DNL Tiktok] API de eventos web](https://exchange.adobe.com/apps/ec/109834)
+      * [!DNL Tiktok] API de eventos web {#tiktok}
+         * [Información general](./extensions/server/tiktok/overview.md)
       * [!DNL Zendesk] API de eventos {#zendesk}
          * [Información general](./extensions/server/zendesk/overview.md)
 * Desarrollo de extensiones {#extension-dev}
