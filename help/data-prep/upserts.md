@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 1%
 Actualizaciones de streaming en [!DNL Data Prep] le permite enviar actualizaciones parciales de fila a [!DNL Real-Time Customer Profile] datos, al tiempo que se crean y establecen nuevos vínculos de identidad con una única solicitud de API.
 
 Al transmitir las actualizaciones, puede conservar el formato de los datos mientras los traduce a [!DNL Real-Time Customer Profile] solicitudes del PATCH durante la ingesta. En función de las entradas que proporcione, [!DNL Data Prep] le permite enviar una sola carga útil de API y traducir los datos a ambos [!DNL Real-Time Customer Profile] PATCH y [!DNL Identity Service] CREAR solicitudes.
+
+>[!WARNING]
+>
+>La ingesta en mensajes de actualización de entidad del modelo de datos de experiencia (XDM) (con operaciones de PATCH de JSON) para actualizaciones de perfil a través de la entrada DCS ha quedado obsoleta. Como alternativa, puede hacer lo siguiente [ingesta de datos sin procesar en la entrada del DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) y especifique las asignaciones de datos necesarias para transformar los datos en mensajes compatibles con XDM para actualizaciones de perfil.
 
 Este documento proporciona información sobre cómo transmitir actualizaciones en [!DNL Data Prep].
 
