@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Información general sobre la concienciación en materia de datos en los manuales de casos de uso
 description: Aprenda a acelerar el tiempo de respuesta al valor copiando los recursos generados en la zona protegida inspiradora final en otras zonas protegidas.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Información general sobre la concienciación en materia de datos en los manuales de casos de uso
 
-Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. En Adobe Experience Platform, estas plantillas hacen referencia a varios campos y grupos de campos estándar. Sin embargo, en determinados casos, es posible que ya haya configurado sus propios esquemas, campos y grupos de campos. Esto podría hacer que algunos de los recursos generados por las plantillas de casos de uso, como los recorridos, sean incompatibles con los datos. Lea este tutorial para comprender cómo utilizar la funcionalidad de reconocimiento de datos para alinear y complementar mejor los recursos generados con los recursos existentes.
+Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. En Adobe Experience Platform, estas plantillas hacen referencia a varios campos y grupos de campos estándar. Sin embargo, en determinados casos, es posible que ya haya configurado sus propios esquemas, campos y grupos de campos. Esto podría hacer que algunos de los recursos generados por las plantillas de casos de uso, como los recorridos, sean incompatibles con los datos. Para comprender cómo utilizar la funcionalidad de reconocimiento de datos para alinear y complementar mejor los recursos generados con los recursos existentes, lea este tutorial.
 
 ## Requisitos previos {#prerequisites}
 
@@ -45,7 +45,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
    >
    > El paquete no se puede importar mientras esté en modo de borrador, por lo que debe abrir la página de detalles del paquete y publicarlo.
 
-5. Seleccione el **+** para iniciar el flujo de trabajo e importar los recursos generados por el manual de casos de uso en **[!UICONTROL Zona protegida de Target]**. Seleccione una zona protegida de destino y confirme el nombre del paquete que desea importar mediante la lista desplegable. Añada los detalles del trabajo, como el nombre y la descripción del trabajo, antes de continuar con el siguiente paso.
+5. Seleccione el **+** controle e inicie el flujo de trabajo para importar los recursos generados por el manual de casos de uso en **[!UICONTROL Zona protegida de Target]**. Seleccione una zona protegida de destino y confirme el nombre del paquete que desea importar mediante la lista desplegable. Añada los detalles del trabajo, como el nombre y la descripción del trabajo, antes de continuar con el siguiente paso.
 
    ![Inicie el flujo de trabajo de importación, seleccione un destino, confirme el paquete y añada detalles del trabajo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 
 ### Asignación de esquemas {#map-schemas}
 
-1. Asigne el primer esquema. El cuadro de diálogo de asignación de esquemas muestra una lista desplegable para seleccionar el esquema de destino. Si el esquema de origen es un esquema de perfil, no hay otras opciones de esquema de destino aparte de la variable [esquema de perfil de unión individual](/help/xdm/classes/individual-profile.md). Puede ver las recomendaciones de asignación generadas automáticamente entre los datos de origen y los campos de destino cuando se muestra la página por primera vez. Puede editar las asignaciones seleccionando el campo de destino y, a continuación, un nuevo campo. Si realiza cambios en las asignaciones sugeridas, utilice el **Validate** para validar las nuevas asignaciones y mostrar cualquier error que pueda estar vinculado a las nuevas asignaciones. Seleccionar **Guardar** una vez finalizada la asignación.
+1. Asigne el primer esquema. El cuadro de diálogo de asignación de esquemas muestra una lista desplegable para seleccionar el esquema de destino. Si el esquema de origen es un esquema de perfil, no hay otras opciones de esquema de destino aparte de la variable [esquema de perfil de unión individual](/help/xdm/classes/individual-profile.md). Puede ver las recomendaciones de asignación generadas automáticamente entre los datos de origen y los campos de destino cuando se muestra la página por primera vez. Puede editar las asignaciones seleccionando el campo de destino y, a continuación, un nuevo campo. Si modifica las asignaciones sugeridas, utilice el **Validate** para validar las nuevas asignaciones y mostrar cualquier error que pueda estar vinculado a las nuevas asignaciones. Seleccionar **Guardar** una vez finalizada la asignación.
 
    ![Cuadro de diálogo Asignación de esquemas con un menú desplegable para seleccionar un esquema de destino.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 
    >[!NOTE]
    >
-   > No puede realizar acciones en ningún recurso excepto en los esquemas, ya que es una zona protegida inspiradora, pero aparece como dependencias del paquete.
+   > No puede modificar ningún recurso excepto para los esquemas, ya que es una zona protegida inspiradora, pero se muestran como dependencias del paquete.
 
 ### Estado de importación {#import-status}
 
@@ -89,7 +89,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 
    ![Página que muestra el progreso de importación](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Mientras se importa el paquete, los recursos del paquete se crean en la zona protegida de destino. Una vez finalizados, harán referencia a los campos a los que acaba de asignar en el proceso de importación. El proceso se ha completado y los recursos de la zona protegida inspiracional ahora también están presentes en la zona protegida de Target para que los pruebe.
+2. Mientras se importa el paquete, los recursos del paquete se crean en la zona protegida de destino. Una vez finalizados, hacen referencia a los campos asignados durante el proceso de importación. El proceso se ha completado y los recursos de la zona protegida inspiracional ahora también están presentes en la zona protegida de Target para que los pruebe.
 
    ![Recursos generados en la zona protegida de destinatario](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
