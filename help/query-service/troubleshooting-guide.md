@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4384'
+source-wordcount: '4450'
 ht-degree: 1%
 
 ---
@@ -545,6 +545,11 @@ WHERE T2.ID IS NULL
 ### ¿Puedo utilizar el comando CREATE VIEW sin acceso a Data Distiller?
 
 +++Responda Sí, puede usar `CREATE VIEW` sin acceso a Data Distiller. Este comando proporciona una vista lógica de los datos, pero no los vuelve a escribir en el lago de datos.
++++
+
+### ¿Puedo utilizar bloques anónimos en DbVisualizer?
+
++++Conteste Sí. Sin embargo, algunos clientes de terceros, como DbVisualizer, pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de un script debe gestionarse como una sola instrucción. Puede encontrar más información en la [documentación de bloque anónimo](./key-concepts/anonymous-block.md) o en [la documentación oficial de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## Exportación de datos {#exporting-data}

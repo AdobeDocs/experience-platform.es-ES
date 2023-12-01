@@ -2,9 +2,9 @@
 title: Bloque anónimo en el servicio de consultas
 description: El bloque anónimo es una sintaxis SQL admitida por Adobe Experience Platform Query Service, que le permite ejecutar de forma eficaz una secuencia de consultas
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## Bloque anónimo con clientes de terceros {#third-party-clients}
+
+Algunos clientes de terceros pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de la secuencia de comandos debe gestionarse como una sola instrucción. Si recibe un mensaje de error al utilizar el servicio de consulta con un cliente de terceros, debe consultar la documentación del cliente de terceros sobre el uso de un bloque SQL.
+
+Por ejemplo, **DbVisualizer** requiere que el delimitador sea el único texto de la línea. En DbVisualizer, el valor predeterminado para el Identificador inicial es `--/` y para el Identificador final, es `/`. A continuación se muestra un ejemplo de bloque anónimo en DbVisualizer:
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+Para DbVisualizer en particular, también hay una opción en la IU para &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Consulte la [Documentación de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) para obtener más información.
+
 ## Pasos siguientes
 
-Al leer este documento, ahora tiene una comprensión clara de los bloques anónimos y de cómo están estructurados. [Para obtener más información sobre la ejecución de consultas](../best-practices/writing-queries.md), lea la guía sobre la ejecución de consultas en el servicio de consultas.
+Al leer este documento, ahora tiene una comprensión clara de los bloques anónimos y de cómo están estructurados. Lea el [guía de ejecución de consultas](../best-practices/writing-queries.md) para obtener más información sobre cómo escribir consultas.
 
-También debería leer acerca de [cómo se utiliza el bloque anónimo con el patrón de diseño de carga incremental](./incremental-load.md) para aumentar la eficacia de las consultas.
+También debería leer acerca de [cómo se utilizan los bloques anónimos con el patrón de diseño de carga incremental](./incremental-load.md) para aumentar la eficacia de las consultas.
