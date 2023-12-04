@@ -2,10 +2,10 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 10%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -65,7 +65,7 @@ El nivel de consentimiento predeterminado no se guarda en el perfil de usuario.
 
 | [!UICONTROL Nivel de consentimiento predeterminado] | Descripción |
 | --- | --- |
-| [!UICONTROL En] | Recopilar eventos que se producen antes de que el usuario proporcione preferencias de consentimiento. |
+| [!UICONTROL Entrada] | Recopilar eventos que se producen antes de que el usuario proporcione preferencias de consentimiento. |
 | [!UICONTROL Fuera] | Descartar los eventos que se producen antes de que el usuario proporcione preferencias de consentimiento. |
 | [!UICONTROL Pendiente] | Eventos de cola que se producen antes de que el usuario proporcione preferencias de consentimiento. Cuando se proporcionan las preferencias de consentimiento, los eventos se recopilan o descartan según las preferencias proporcionadas. |
 | [!UICONTROL Proporcionado por el elemento de datos] | El nivel de consentimiento predeterminado está determinado por un elemento de datos independiente que usted defina. Al utilizar esta opción, debe especificar el elemento de datos mediante el menú desplegable proporcionado. |
@@ -85,13 +85,25 @@ Esta sección le permite definir el comportamiento del SDK web en lo que respect
 
 ## Configuración de la personalización {#personalization}
 
-Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado.
-
-Puede especificar los elementos que desea ocultar en el editor de estilos de preocultación. A continuación, puede copiar el fragmento de ocultamiento previo predeterminado que se le ha proporcionado y pegarlo dentro de la variable `<head>` del sitio... [!DNL HTML] código.
+Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
 
 ![Imagen que muestra la configuración de personalización de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migración de Target de at.js al SDK web]**: utilice esta opción para habilitar [!DNL Web SDK] para leer y escribir el legado `mbox` y `mboxEdgeCluster` cookies que utiliza at.js `1.x` o `2.x` bibliotecas. Esto le ayuda a mantener el perfil del visitante mientras se desplaza de una página que utiliza el SDK web a una página que utiliza at.js `1.x` o `2.x` bibliotecas y viceversa.
+
+### Estilo preocultado {#prehiding-style}
+
+El editor de estilos preocultado permite definir reglas CSS personalizadas para ocultar secciones específicas de una página. Cuando se carga la página, el SDK web utiliza este estilo para ocultar las secciones que deben personalizarse, recupera la personalización y, a continuación, muestra las secciones de página personalizadas. De este modo, los visitantes ven las páginas ya personalizadas, sin ver el proceso de recuperación de la personalización.
+
+### Preocultando fragmento {#prehiding-snippet}
+
+El fragmento de preocultación resulta útil cuando la biblioteca del SDK web se carga asincrónicamente. En este caso, para evitar parpadeos, se recomienda ocultar el contenido antes de cargar la biblioteca del SDK web.
+
+Para utilizar el fragmento preocultado, cópielo y péguelo dentro de `<head>` de la página.
+
+>[!IMPORTANT]
+>
+>Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL CSS] regla como la que usa el [estilo preocultado](#prehiding-style).
 
 ## Configuración de la recopilación de datos {#data-collection}
 
@@ -110,7 +122,7 @@ Esto le ayuda a activar comportamientos de secuencias de datos diferentes de los
 La anulación de la configuración de la secuencia de datos es un proceso de dos pasos:
 
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../../../datastreams/configure.md).
-2. A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la extensión de etiqueta del SDK web.
+2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante la extensión de etiqueta del SDK web.
 
 Consulte la secuencia de datos [la configuración anula la documentación](../../../../datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
 
