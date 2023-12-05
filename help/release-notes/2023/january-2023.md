@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Las notas de la versión de enero de 2023 de Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2408'
-ht-degree: 98%
+source-wordcount: '2224'
+ht-degree: 99%
 
 ---
 
@@ -139,7 +139,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | --- | --- | --- |
 | Clase | [[!UICONTROL Conversión]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Una clase para seguir los datos de conversión como las conversiones de divisa. |
 | Grupo de campos | [[!UICONTROL Detalles de la tasa de conversión de divisa]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Un grupo de campos para la clase de [!UICONTROL Conversión], capturando detalles adicionales relacionados con la conversión de divisa. |
-| Grupo de campos | [[!UICONTROL Asignación de resultados de evaluación de directivas de consentimiento con metadatos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Registra detalles del resultado de la evaluación de varias políticas de consentimiento, incluida la información de metadatos sobre entradas y salidas de políticas de consentimiento. |
+| Grupo de campos | [[!UICONTROL Asignación de resultados de evaluación de directivas de consentimiento con metadatos]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Registra detalles del resultado de la evaluación de varias políticas de consentimiento, incluida la información de metadatos sobre entradas y salidas de políticas de consentimiento. |
 
 **Componentes XDM actualizados**
 
@@ -149,7 +149,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Tipo de datos | [[!UICONTROL Detalles de la propuesta de decisión]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Se ha añadido el campo `selectionStrategy` que captura los detalles de la estrategia de selección. |
 | Grupo de campos | [[!UICONTROL Evento de experiencia: interacciones de propuesta]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | El grupo de campos ahora es compatible con la clase [!UICONTROL Evento de paso de recorrido]. |
 | Tipo de datos | [[!UICONTROL Información de detalles del error]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | El campo `ID` se ha cambiado de nombre a `name`. |
-| Tipo de datos | [[!UICONTROL Información de medios]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Se ha revertido un cambio en el patrón a la propiedad del segmento de vídeo. |
+| Tipo de datos | [[!UICONTROL Información de medios]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Se ha revertido un cambio en el patrón a la propiedad del segmento de vídeo. |
 | Tipo de datos | [[!UICONTROL Información de detalles de datos de calidad de la experiencia (QoE)]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Se ha eliminado el campo `droppedFrameCount`. |
 | Tipo de datos | [[!UICONTROL Información de detalles de sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Se ha cambiado el nombre del campo `isAuthorized` a `authorized` y se ha actualizado su `type` a una cadena cuando anteriormente era un booleano. |
 | Tipo de datos | [[!UICONTROL Envío]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Se han añadido varios campos nuevos: `shipDate`, `trackingNumber` y `trackingURL`. |

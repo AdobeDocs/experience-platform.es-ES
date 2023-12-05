@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Procesamiento de consentimiento en Adobe Experience Platform
 description: Obtenga información sobre cómo procesar las señales de consentimiento del cliente en Adobe Experience Platform mediante el uso del estándar Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Una vez configurada la CMP para detectar eventos de cambio de consentimiento en 
 
 Si se requieren las preferencias de consentimiento del cliente en la aplicación móvil, puede integrar el SDK de Experience Platform Mobile para recuperar y actualizar la configuración de consentimiento y enviarlas a Platform cada vez que se invoque la API de consentimiento.
 
-Consulte la documentación del SDK móvil para [configuración de la extensión móvil Consentimiento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) y [uso de la API de consentimiento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obtener más información sobre cómo gestionar los problemas de privacidad mediante el SDK móvil, consulte la sección [Privacidad y RGPD](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+Consulte la documentación del SDK móvil para [configuración de la extensión móvil Consentimiento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) y [uso de la API de consentimiento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obtener más información sobre cómo gestionar los problemas de privacidad mediante el SDK móvil, consulte la sección [Privacidad y RGPD](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Ingesta directa de datos de consentimiento compatibles con XDM {#batch}
 
