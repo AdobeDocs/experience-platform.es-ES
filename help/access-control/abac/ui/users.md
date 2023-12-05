@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar usuarios
 description: Este documento proporciona información sobre la administración de usuarios y grupos de usuarios a través de la interfaz de permisos en Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 1%
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ Seleccione el **[!UICONTROL Funciones]** para ver las funciones que se asignan a
 >
 >Solo los administradores del sistema tienen la capacidad de ver y administrar credenciales de API en Permisos.
 
-La transición a los permisos de Adobe Experience Platform tiene pasos adicionales que deben completarse para el flujo de trabajo de la API de desarrollador que anteriormente dependía de perfiles de producto. Consulte la guía de [Autenticación de API](../../../landing/api-authentication.md) para obtener más información.
+La transición a los permisos de Adobe Experience Platform tiene pasos adicionales que deben completarse para el flujo de trabajo de la API de desarrollador que anteriormente dependía de las funciones. Consulte la guía de [Autenticación de API](../../../landing/api-authentication.md) para obtener más información.
 
 ## Pasos siguientes
 

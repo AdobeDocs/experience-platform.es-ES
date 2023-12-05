@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 17%
+source-wordcount: '1840'
+ht-degree: 13%
 
 ---
 
@@ -46,11 +46,11 @@ El control de acceso basado en atributos implica los siguientes componentes:
 
 >[!IMPORTANT]
 >
->Una vez que la organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Perfiles de producto en Adobe Admin Console, para administrar permisos para usuarios, funcionalidades, etiquetas y otros recursos de la organización.
+>Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
 
 Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
-Mediante Permisos de , , puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
+Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de permisos](ui/browse.md).
 
 ## API de control de acceso basado en atributos
 
@@ -62,7 +62,7 @@ Las secciones siguientes proporcionan información sobre cómo el control de acc
 
 ### Control de acceso
 
-Platform aprovecha [Adobe Admin Console](https://adminconsole.adobe.com) perfiles de producto para vincular usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que la organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Perfiles de producto en Adobe Admin Console, para administrar permisos para usuarios, funcionalidades, etiquetas y otros recursos de la organización.
+Platform aprovecha [Adobe Admin Console](https://adminconsole.adobe.com) funciones para vincular usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
 
 Hay disponibilidad limitada para el control de acceso basado en atributos para clientes que compran Escudos de atención médica o de privacidad. Entre las características de esta funcionalidad se incluyen:
 
@@ -74,13 +74,13 @@ Se están cambiando los flujos de trabajo de administración de todas las aplica
 
 >[!IMPORTANT]
 >
->Los perfiles de producto se migran automáticamente a la interfaz Permisos cuando su organización está habilitada. Los perfiles de producto en Admin Console permanecerán tal cual por el momento. Por favor **no** modifique los perfiles de producto una vez habilitada la organización.
+>Sus funciones se migran automáticamente a la interfaz Permisos cuando su organización está habilitada. Las funciones en Admin Console se mantendrán sin cambios por el momento. Por favor **no** modifique sus funciones una vez habilitada su organización.
 
 Para obtener más información sobre el control de acceso, consulte [información general de control de acceso](../home.md).
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones creadas previamente con plataformas de destino que permiten la activación perfecta de los datos de Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
