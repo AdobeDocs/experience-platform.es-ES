@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 9%
+source-wordcount: '1787'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,24 @@ Lea el siguiente documento para obtener más información sobre lo que puede hac
 
 ## Explicación de áreas de nombres de identidad
 
+![Ejemplo del flujo de trabajo de datos con el servicio de identidad.](images/identity-service-stitching.png)
+
 Una identidad completa incluye dos componentes: una **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como ID de CRM. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registros en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] Combina datos de perfil; tanto el valor de identidad como el área de nombres deben coincidir.
 
 Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo que Experience Platform puede ver que estos fragmentos son realmente la misma persona y reúne los datos en el gráfico de identidades para la persona.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Área de nombres de identidad explicada**
+
+Otra manera de entender mejor el concepto de área de nombres es considerar ejemplos del mundo real como las ciudades y sus estados correspondientes. Por ejemplo, Portland, Maine y Portland, Oregón, son dos lugares diferentes en Estados Unidos. Aunque las ciudades comparten el mismo nombre, el estado funciona como un área de nombres y proporciona el contexto necesario que distingue a las dos ciudades entre sí.
+
+Aplicación de la misma lógica al servicio de identidad:
+
+* De un vistazo, el valor de identidad de: `1-234-567-8900` puede parecer un número de teléfono. Sin embargo, desde la perspectiva del sistema, este valor podría haberse configurado como un ID de CRM. El servicio de identidad no tendría forma de aplicar el contexto necesario a este valor de identidad sin un área de nombres correspondiente.
+* Otro ejemplo es el valor de identidad de: `john@gmail.com`. Aunque este valor de identidad puede asumirse fácilmente como un correo electrónico, es totalmente posible que esté configurado como un ID de CRM de área de nombres personalizado. Con el área de nombres, puede distinguir `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Componentes de un área de nombres
 
@@ -60,7 +73,7 @@ Los siguientes tipos de identidad están disponibles en Experience Platform:
 | ID de cookie | Los ID de cookie identifican los navegadores web. Estas identidades son críticas para la expansión y constituyen la mayoría del gráfico de identidades. Sin embargo, por naturaleza se descomponen rápidamente y pierden su valor con el tiempo. |
 | ID entre dispositivos | Los ID entre dispositivos identifican a un individuo y, por lo general, vinculan otros ID. Algunos ejemplos son un ID de inicio de sesión, un ID de CRM y un ID de fidelidad. Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
-| Correo electrónico Dirección | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
+| Correo electrónico | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para [!DNL Identity Service] para gestionar el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren áreas de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |
 | ID de socio | <ul><li>Los ID de socio son identificadores utilizados por los socios de datos para representar a personas. Los ID de socio suelen ser seudónimos para no revelar la verdadera identidad de una persona y pueden ser probabilísticos. En Real-time Customer Data Platform, los ID de socio se utilizan principalmente para ampliar la activación de audiencias y el enriquecimiento de datos, y no para crear vínculos de gráficos de identidad.</li><li>Los gráficos de identidad no se generan al ingerir una identidad que incluye un área de nombres de identidad especificada como tipo de ID de socio.</li><li>Si no se incorporan datos del socio mediante el tipo de identidad del ID de socio, podrían alcanzarse las limitaciones del gráfico del sistema en el servicio de identidad, así como la combinación no deseada de perfiles.</li><ul> |
 | Número de teléfono | Los números de teléfono suelen estar asociados a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen PII. Esto indica que [!DNL Identity Service] para gestionar el valor de forma confidencial. |
@@ -77,16 +90,16 @@ Se proporcionan las siguientes áreas de nombres estándar para su uso por todas
 | ------------ | ----------- |
 | Adcloud | Un área de nombres que representa el Adobe de AdCloud. |
 | Adobe Analytics (ID heredado) | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
+| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
 | Servicio de notificaciones push de Apple | Un área de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento sobre [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
-| CORE | Un área de nombres que representa Adobe Audience Manager. Este área de nombres también se puede mencionar por su nombre heredado: &quot;Adobe AudienceManager&quot;. Consulte el siguiente documento sobre [ID de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obtener más información. |
+| NÚCLEO | Un área de nombres que representa Adobe Audience Manager. Este área de nombres también se puede mencionar por su nombre heredado: &quot;Adobe AudienceManager&quot;. Consulte el siguiente documento sobre [ID de Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) para obtener más información. |
 | ECID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](./ecid.md) para obtener más información. |
 | Correo electrónico | Un área de nombres que representa una dirección de correo electrónico. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
 | Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Consulte el siguiente documento sobre [Soporte hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obtener más información. |
 | Firebase Cloud Messaging | Un área de nombres que representa las identidades recopiladas mediante Google Firebase Cloud Messaging para las notificaciones push. Consulte el siguiente documento sobre [Mensajería de Google Firebase Cloud](https://firebase.google.com/docs/cloud-messaging) para obtener más información. |
 | ID de anuncio de Google (GAID) | Un área de nombres que representa un ID de publicidad de Google. Consulte el siguiente documento sobre [ID de publicidad de Google](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
 | ID de clic Google | Área de nombres que representa un ID de clic de Google. Consulte el siguiente documento sobre [Rastreo de clics en Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) para obtener más información. |
-| Phone | Área de nombres que representa un número de teléfono. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
+| Teléfono | Área de nombres que representa un número de teléfono. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
 | Teléfono (E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código internacional de llamada de país, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
 | Teléfono (SHA256) | Un área de nombres que representa los números de teléfono que deben tener un cifrado hash con SHA256. Debe quitar los símbolos, las letras y los ceros a la izquierda. También debe agregar el código de llamada de país como prefijo. |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
