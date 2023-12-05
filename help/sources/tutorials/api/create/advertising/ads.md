@@ -2,9 +2,9 @@
 title: Creación de una conexión base de Google Ads mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Google Ads mediante la API de Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '727'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ Para que [!DNL Flow Service] para conectarse con Google Ads, debe proporcionar v
 | Credencial | Descripción |
 | ---------- | ----------- |
 | `clientCustomerId` | El ID de cliente es el número de cuenta que corresponde a la cuenta de cliente de Google Ads que desea administrar con la API de Google Ads. Este ID sigue la plantilla de `123-456-7890`. |
-| `loginCustomerId` | El ID de cliente de inicio de sesión es el número de cuenta que corresponde a su cuenta de administrador de Google Ads y se utiliza para recuperar datos de informe de un cliente operativo específico. Para obtener más información sobre el ID de cliente de inicio de sesión, lea la [Documentación de la API de Google Ads](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| `loginCustomerId` | El ID de cliente de inicio de sesión es el número de cuenta que corresponde a su cuenta de administrador de Google Ads y se utiliza para recuperar datos de informe de un cliente operativo específico. Para obtener más información sobre el ID de cliente de inicio de sesión, lea la [Documentación de la API de Google Ads](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | `developerToken` | El token de desarrollador le permite acceder a la API de Google Ads. Puede utilizar el mismo token de desarrollador para realizar solicitudes en todas las cuentas de Google Ads. Recuperar el token de desarrollador de [inicio de sesión en su cuenta de manager](https://ads.google.com/home/tools/manager-accounts/) y, a continuación, vaya al [!DNL API Center] página. |
 | `refreshToken` | El token de actualización forma parte de [!DNL OAuth2] autenticación. Este token le permite volver a generar los tokens de acceso una vez caducados. |
 | `clientId` | El ID de cliente se utiliza junto con el secreto de cliente como parte de [!DNL OAuth2] autenticación. En conjunto, el ID de cliente y el secreto de cliente permiten que la aplicación funcione en nombre de la cuenta al identificar la aplicación en Google. |
@@ -48,7 +48,7 @@ Lea el documento de información general de API para [más información sobre c�
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Cree una conexión base
+## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
