@@ -1,9 +1,9 @@
 ---
 title: Seguimiento de eventos mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear eventos de SDK web de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,9 @@ En este ejemplo, la capa de datos se clona serializándola en JSON y luego deser
 
 ## Envío de datos que no son XDM
 
-Los datos que no coinciden con un esquema XDM deben enviarse con el `data` de la opción `sendEvent` comando. Esta función se admite en las versiones 2.5.0 y posteriores del SDK web.
+Los datos que no coinciden con un esquema XDM deben enviarse con el `data` de la opción `sendEvent` comando. Esta función se admite en las versiones 2.5.0 y posteriores del SDK web. Al utilizar esta opción, los datos deberán asignarse a un esquema XDM compatible del lado del servidor mediante [Preparación de datos para la recopilación de datos](../../datastreams/data-prep.md#create-mapping).
 
-Esto resulta útil si debe actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. [Obtenga más información sobre estas funciones de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-En el futuro, podrá enviar toda la capa de datos en `data` y asignarla al lado del servidor XDM.
+Esta función también es útil si necesita actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. Más información sobre [Personalización de Target](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Envío de atributos de perfil y Recommendations a Adobe Target:**
 

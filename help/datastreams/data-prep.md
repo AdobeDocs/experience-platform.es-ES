@@ -1,16 +1,40 @@
 ---
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 85%
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # Preparación de datos para la recopilación de datos
 
 La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una [secuencia de datos](./overview.md) habilitada para Platform, puede utilizar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Platform Edge Network.
+
+Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por el Experience Platform:
+
+1. Vuelva a dar formato a la capa de datos en XDM en la propia página web.
+2. Utilice la funcionalidad Etiquetas de elementos de datos nativos para reformatear el formato de capa de datos existente de una página web en XDM.
+3. Reformatee el formato de capa de datos existente de una página web en XDM a través de la red perimetral mediante la preparación de datos para la recopilación de datos.
+
+Esta guía se centra en la tercera opción.
+
+## Cuándo utilizar la preparación de datos para la recopilación de datos {#when-to-use-data-prep}
+
+Existen dos casos de uso en los que la preparación de datos para la recopilación de datos es útil:
+
+1. El sitio web tiene una capa de datos bien formada, controlada y mantenida, y hay una preferencia por enviarla directamente a la red de Edge en lugar de utilizar la manipulación de JavaScript para convertirla a XDM en la página (ya sea mediante elementos de datos de etiquetas o mediante la manipulación manual de JavaScript).
+2. En el sitio se implementa un sistema de etiquetado que no sea Etiquetas.
+
+## Enviar una capa de datos existente a la red perimetral mediante WebSDK {#send-datalayer-via-websdk}
+
+La capa de datos existente debe enviarse utilizando `data` de la opción `sendEvent` como se describe en la [Documentación del SDK web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+Si utiliza etiquetas, debe utilizar el complemento **[!UICONTROL Datos]** del campo **[!UICONTROL Enviar evento]** tipo de acción, tal como se describe en la sección [Documentación de la extensión de etiquetas SDK web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+El resto de esta guía se centrará en cómo asignar la capa de datos a los estándares XDM después de que el SDK web la haya enviado.
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las 
 Puede seleccionar la opción para cargar el objeto como un archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
 ![Muestra JSON de datos entrantes esperados](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, los elementos de la capa de datos del carro de compras deben incluirse en este objeto JSON de muestra.
 
 ## [!UICONTROL Asignación]
 
