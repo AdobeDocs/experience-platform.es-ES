@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1735'
 ht-degree: 4%
 
 ---
@@ -136,11 +136,11 @@ Utilice las casillas de verificación de la izquierda de los nombres de los conj
 
 En el **[!UICONTROL Programación]** paso, puede establecer una fecha de inicio y una cadencia de exportación para las exportaciones de conjuntos de datos.
 
-El **[!UICONTROL Exportar archivos incrementales]** se selecciona automáticamente. Esto déclencheur una exportación en la que el primer archivo es una instantánea completa del conjunto de datos y los archivos posteriores son adiciones incrementales al conjunto de datos desde la exportación anterior.
+El **[!UICONTROL Exportar archivos incrementales]** se selecciona automáticamente. Esto déclencheur la exportación de uno o varios archivos que representan una instantánea completa del conjunto de datos. Los archivos posteriores son adiciones incrementales al conjunto de datos desde la exportación anterior.
 
 >[!IMPORTANT]
 >
->El primer archivo incremental exportado incluye todos los datos existentes en el conjunto de datos, y funciona como relleno.
+>La primera exportación de archivo incremental incluye todos los datos existentes en el conjunto de datos, y funciona como relleno. La exportación puede contener uno o varios archivos.
 
 ![Flujo de trabajo de exportación de conjuntos de datos que muestra el paso de programación.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -159,7 +159,7 @@ El **[!UICONTROL Exportar archivos incrementales]** se selecciona automáticamen
 > 
 >Para las exportaciones de conjuntos de datos, los nombres de archivo tienen un formato preestablecido predeterminado que no se puede modificar. Consulte la sección [Verificar exportación correcta del conjunto de datos](#verify) para obtener más información y ejemplos de archivos exportados.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a exportar conjuntos de datos al destino.
 
@@ -167,7 +167,7 @@ En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccio
 
 ## Verificar exportación correcta del conjunto de datos {#verify}
 
-Al exportar conjuntos de datos, el Experience Platform crea un `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Se espera que se deposite un nuevo archivo en su ubicación de almacenamiento según el programa de exportación proporcionado.
+Al exportar conjuntos de datos, Experience Platform crea uno o varios `.json` o `.parquet` archivos en la ubicación de almacenamiento proporcionada. Espere que los nuevos archivos se depositen en su ubicación de almacenamiento según la programación de exportación proporcionada.
 
 Experience Platform crea una estructura de carpetas en la ubicación de almacenamiento especificada, donde deposita los archivos del conjunto de datos exportados. Se crea una nueva carpeta para cada tiempo de exportación, siguiendo el patrón siguiente:
 
