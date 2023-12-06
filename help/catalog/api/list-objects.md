@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enumerar objetos de catálogo
 description: Puede recuperar una lista de todos los objetos disponibles de un tipo específico mediante una sola llamada de API, siendo la práctica recomendada incluir filtros que limiten el tamaño de la respuesta.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 409d052c119814a1cf6b79ff4448d1100b18e199
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 2%
@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se enumerará. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se enumerará. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con el símbolo et (`&`). Consulte la guía de [filtrado de datos de catálogo](filter-data.md) para obtener más información. |
 
 **Solicitud**
@@ -53,24 +53,24 @@ Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de 
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
     },
     "5bda3a4228babc0000126377": {
         "name": "Sample Dataset 4",
-        "files": "@/dataSets/5bda3a4228babc0000126377/views/5bda3a4228babc0000126378/files"
+        "files": "@/dataSetFiles?dataSetId=5bda3a4228babc0000126377"
     },
     "5bde21511dd27b0000d24e95": {
         "name": "Sample Dataset 5",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bde21511dd27b0000d24e95/views/5bde21511dd27b0000d24e96/files"
+        "files": "@/dataSetFiles?dataSetId=5bde21511dd27b0000d24e95"
     }
 }
 ```

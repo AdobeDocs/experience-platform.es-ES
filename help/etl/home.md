@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Desarrollo de integraciones de ETL para Adobe Experience Platform
 description: La guía de integración de ETL describe los pasos generales para crear conectores seguros de alto rendimiento para Experience Platform e ingerir datos en Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
-ht-degree: 1%
+source-wordcount: '3978'
+ht-degree: 3%
 
 ---
 
@@ -50,13 +50,13 @@ Hay varios componentes de Experience Platform involucrados en las integraciones 
 
 Las secciones siguientes proporcionan información adicional que deberá conocer o tener disponible para poder realizar llamadas correctamente a [!DNL Experience Platform] API.
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -196,7 +196,7 @@ curl -X GET \
 
 El formato de respuesta depende del tipo de encabezado Aceptar enviado en la solicitud. Las solicitudes de búsqueda también requieren un `version` se incluirá en el encabezado Aceptar. En la tabla siguiente se describen los encabezados Aceptar disponibles para las búsquedas:
 
-| Accept | Descripción |
+| Aceptar | Descripción |
 | ------ | ----------- |
 | `application/vnd.adobe.xed-id+json` | Enumeración de solicitudes, títulos, ID y versiones (GET) |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs y allOf resueltos, tiene títulos y descripciones |
@@ -319,7 +319,7 @@ La respuesta incluirá un conjunto de datos (`limit=1`) mostrando la propiedad &
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
@@ -787,7 +787,7 @@ Adobe Experience Platform no identifica datos diferidos actualmente, por lo que 
 
 | Fecha | Acción | Descripción |
 | ---- | ------ | ----------- |
-| 2019-01-19 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe utilizarse. Si se encuentra la propiedad &quot;fields&quot;, debe ignorarse y se debe utilizar &quot;observedSchema&quot; o &quot;schemaRef&quot; en su lugar. |
-| 2019-03-15 | Propiedad &quot;schemaRef&quot; agregada a conjuntos de datos | La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene un URI que hace referencia al esquema XDM en el que se basa el conjunto de datos y representa todos los campos potenciales que el conjunto de datos podría utilizar. |
-| 2019-03-15 | Todos los identificadores de usuario final se asignan a la propiedad identityMap | El &quot;identityMap&quot; es una encapsulación de todos los identificadores únicos de un asunto, como ID de CRM, ECID o ID del programa de fidelidad. Este mapa lo utiliza [[!DNL Identity Service]](../identity-service/home.md) para resolver todas las identidades conocidas y anónimas de un sujeto, formando un único gráfico de identidades para cada usuario final. |
-| 2019-05-30 | EOL y Quitar la propiedad &quot;schema&quot; de los conjuntos de datos | La propiedad &quot;schema&quot; del conjunto de datos proporcionó un vínculo de referencia al esquema con el obsoleto `/xdms` punto final en la [!DNL Catalog] API. Esto se ha sustituido por un &quot;schemaRef&quot; que proporciona el &quot;id&quot;, la &quot;versión&quot; y el &quot;contentType&quot; del esquema como se hace referencia en el nuevo [!DNL Schema Registry] API. |
+| 19-01-2019 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe utilizarse. Si se encuentra la propiedad &quot;fields&quot;, debe ignorarse y se debe utilizar &quot;observedSchema&quot; o &quot;schemaRef&quot; en su lugar. |
+| 15-03-2019 | Propiedad &quot;schemaRef&quot; agregada a conjuntos de datos | La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene un URI que hace referencia al esquema XDM en el que se basa el conjunto de datos y representa todos los campos potenciales que el conjunto de datos podría utilizar. |
+| 15-03-2019 | Todos los identificadores de usuario final se asignan a la propiedad identityMap | El &quot;identityMap&quot; es una encapsulación de todos los identificadores únicos de un asunto, como ID de CRM, ECID o ID del programa de fidelidad. Este mapa lo utiliza [[!DNL Identity Service]](../identity-service/home.md) para resolver todas las identidades conocidas y anónimas de un sujeto, formando un único gráfico de identidades para cada usuario final. |
+| 30-05-2019 | EOL y Quitar la propiedad &quot;schema&quot; de los conjuntos de datos | La propiedad &quot;schema&quot; del conjunto de datos proporcionó un vínculo de referencia al esquema con el obsoleto `/xdms` punto final en la [!DNL Catalog] API. Esto se ha sustituido por un &quot;schemaRef&quot; que proporciona el &quot;id&quot;, la &quot;versión&quot; y el &quot;contentType&quot; del esquema como se hace referencia en el nuevo [!DNL Schema Registry] API. |

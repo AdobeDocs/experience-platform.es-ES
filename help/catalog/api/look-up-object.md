@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Búsqueda de un objeto de catálogo
 description: Si conoce el identificador único de un objeto Catalog específico, puede realizar una solicitud de GET para ver los detalles de ese objeto.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | El identificador del objeto específico que desea recuperar. |
 
 **Solicitud**
@@ -58,7 +58,7 @@ Una respuesta correcta devuelve el conjunto de datos especificado con solo el so
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }
 }
 ```
