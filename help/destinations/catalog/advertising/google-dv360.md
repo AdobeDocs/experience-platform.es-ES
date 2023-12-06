@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Conexión de Google Display & Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager es una herramienta utilizada para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 5%
+source-wordcount: '1000'
+ht-degree: 4%
 
 ---
 
@@ -29,12 +29,12 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Display & V
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Google Display & Video 360] admite la activación de identidades descritas en la tabla siguiente.
+[!DNL Google Display & Video 360] admite la activación de audiencias en función de las identidades mostradas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
 
-| Identidad de destino | Descripción | Consideraciones |
+| Identidad | Descripción | Consideraciones |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Seleccione esta identidad de destino cuando su identidad de origen sea un área de nombres GAID. |
-| IDFA | [!DNL Apple ID for Advertisers] | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres IDFA. |
+| GAID | [!DNL Google Advertising ID] |  |
+| IDFA | [!DNL Apple ID for Advertisers] |  |
 | AAM UUID DE USUARIO | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), también conocido como [!DNL Device ID]. Un ID de dispositivo numérico de 38 dígitos que el Audience Manager asocia a cada dispositivo con el que interactúa. | Google utiliza [AAM UUID DE USUARIO](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) para dirigirse a los usuarios de California y el ID de cookie de Google para todos los demás usuarios. |
 | [!DNL Google] ID de cookie | [!DNL Google] ID de cookie | [!DNL Google] utiliza este ID para dirigirse a usuarios fuera de California. |
 | RIDA | ID de Roku para publicidad. Este ID identifica de forma exclusiva los dispositivos Roku. |  |
