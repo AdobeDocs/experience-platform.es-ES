@@ -1,11 +1,10 @@
 ---
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de secuencias de datos en la interfaz de usuario de secuencias de datos y activarlas mediante el SDK web.
-exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 77%
+source-wordcount: '1450'
+ht-degree: 60%
 
 ---
 
@@ -13,23 +12,23 @@ ht-degree: 77%
 
 Las anulaciones de las secuencias de datos permiten definir configuraciones adicionales para las secuencias de datos, que pasan a la red perimetral mediante el SDK web.
 
-Esto le ayuda a activar comportamientos de secuencias de datos diferentes de los predeterminados, sin crear una nueva secuencia de datos ni modificar la configuración existente.
+Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos diferentes a los predeterminados, sin crear un flujo de datos ni modificar la configuración existente.
 
-La anulación de la configuración de la secuencia de datos es un proceso de dos pasos:
+La anulación de la configuración del flujo de datos es un proceso de dos pasos:
 
-1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](configure.md).
+1. En primer lugar, debe definir la anulación de la configuración de la secuencia de datos en [página configuración de secuencia de datos](configure.md).
 2. A continuación, debe enviar las invalidaciones a la red perimetral de una de las siguientes maneras:
    * A través de `sendEvent` o `configure` [SDK web](#send-overrides-web-sdk) comandos.
    * A través del SDK web [extensión de etiqueta](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * A través del SDK móvil [API sendEvent](#send-overrides-mobile-sdk) llamada.
+   * A través del SDK móvil [sendEvent](#send-overrides-mobile-sdk) comando.
 
 Este artículo explica el proceso de anulación de la configuración de la secuencia de datos de extremo a extremo para cada tipo de anulación admitida.
 
 >[!IMPORTANT]
 >
->Las anulaciones de flujos de datos solo se admiten para [SDK web](../edge/home.md) y [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) integraciones. [API de servidor](../server-api/overview.md) en este momento, las integraciones no admiten invalidaciones de conjuntos de datos.
+>Las anulaciones de flujos de datos solo se admiten para [SDK web](../edge/home.md) y [Mobile SDK](https://developer.adobe.com/client-sdks/home/) integraciones. [API de servidor](../server-api/overview.md) en este momento, las integraciones no admiten invalidaciones de conjuntos de datos.
 ><br>
->Las anulaciones de secuencias de datos deben utilizarse cuando necesite enviar datos diferentes a secuencias de datos diferentes. No debe utilizar las anulaciones de secuencias de datos para casos de uso de personalización o datos de consentimiento.
+>Las anulaciones de secuencias de datos deben utilizarse cuando necesite enviar datos diferentes a secuencias de datos diferentes. No utilice anulaciones de flujos de datos para casos de uso de personalización o datos de consentimiento.
 
 ## Casos de uso {#use-cases}
 
@@ -41,11 +40,11 @@ Una compañía tiene diferentes sitios web o subdominios para diferentes países
 
 Al utilizar las anulaciones de secuencias de datos, la empresa puede cambiar dinámicamente el flujo de datos a diferentes secuencias de datos, en lugar del comportamiento predeterminado de enviar datos a una secuencia de datos.
 
-Un caso de uso común podría ser enviar datos a una secuencia de datos específica de un país y también enviar datos a una secuencia de datos global en la que los clientes realicen una acción importante, como realizar un pedido o actualizar su perfil de usuario.
+Un caso de uso común podría ser el envío de datos a un conjunto de datos específico de un país y también a un conjunto de datos globales en el que los clientes realizan una acción importante, como realizar un pedido o actualizar su perfil de usuario.
 
 **Diferenciación de perfiles e identidades para diferentes unidades de negocio**
 
-Una compañía con varias unidades de negocio desea utilizar varias zonas protegidas de Experience Platform para almacenar datos específicos de cada unidad de negocio.
+Una empresa con varias unidades de negocio desea utilizar varios entornos limitados de Experience Platform para almacenar datos específicos de cada unidad de negocio.
 
 En lugar de enviar datos a una secuencia de datos predeterminada, la compañía puede usar las anulaciones de secuencias de datos para asegurarse de que cada unidad comercial tenga su propia secuencia de datos para recibir datos.
 
@@ -62,7 +61,7 @@ Las anulaciones de configuración de secuencia de datos permiten modificar las s
 
 Para configurar las anulaciones de secuencia de datos para una secuencia de datos de Adobe Target, primero debe tener creada una secuencia de datos de Adobe Target. Siga las instrucciones para [configurar una secuencia de datos](configure.md) con el servicio [Adobe Target](configure.md#target).
 
-Una vez creada la secuencia de datos, edite el servicio [Adobe Target](configure.md#target) que ha añadido y utilice la sección **[!UICONTROL Anulaciones de token de propiedad]** para añadir las anulaciones de secuencia de datos deseadas, como se muestra en la siguiente imagen. Agregue un token de propiedad por línea.
+Una vez creado el conjunto de datos, edite el [Adobe Target](configure.md#target) que ha añadido y utilice el **[!UICONTROL Invalidaciones de token de propiedad]** para añadir las anulaciones de flujo de datos deseadas, como se muestra en la siguiente imagen. Agregue un token de propiedad por línea.
 
 ![Captura de pantalla de la IU de secuencias de datos que muestra la configuración del servicio Adobe Target, con las anulaciones del token de propiedad resaltadas.](assets/overrides/override-target.png)
 
@@ -74,7 +73,7 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para una secuencia de datos de Adobe Analytics, primero debe tener una secuencia de datos de [Adobe Analytics](configure.md#analytics) creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el servicio [Adobe Analytics](configure.md#analytics).
 
-Una vez creada la secuencia de datos, edite el servicio de [Adobe Analytics](configure.md#target) que ha añadido y utilice la sección **[!UICONTROL Anulaciones de grupo de informes]** para añadir las anulaciones de secuencia de datos deseadas, como se muestra en la siguiente imagen.
+Una vez creado el conjunto de datos, edite el [Adobe Analytics](configure.md#target) que ha añadido y utilice el **[!UICONTROL Anulaciones de grupos de informes]** para añadir las anulaciones de flujo de datos deseadas, como se muestra en la siguiente imagen.
 
 Seleccione **[!UICONTROL Mostrar modo por lotes]** para habilitar la edición por lotes de las anulaciones del grupo de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes introduciendo un grupo de informes por línea.
 
@@ -88,7 +87,7 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para conjuntos de datos de evento de Experience Platform, primero debe tener una secuencia de datos de [Adobe Experience Platform](configure.md#aep) creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el servicio [Adobe Experience Platform](configure.md#aep).
 
-Una vez creada la secuencia de datos, edite el servicio [Adobe Experience Platform](configure.md#aep) que ha añadido y seleccione la opción **[!UICONTROL Agregar conjunto de datos de evento]** para añadir uno o más conjuntos de datos de evento de anulación, como se muestra en la siguiente imagen.
+Una vez creado el conjunto de datos, edite el [Adobe Experience Platform](configure.md#aep) que ha añadido y seleccione la opción **[!UICONTROL Agregar conjunto de datos de evento]** para añadir uno o más conjuntos de datos de evento de anulación, como se muestra en la siguiente imagen.
 
 ![Captura de pantalla de la IU de secuencias de datos que muestra la configuración del servicio Adobe Experience Platform, con las anulaciones del conjunto de datos de evento resaltadas.](assets/overrides/override-aep.png)
 
@@ -124,9 +123,9 @@ Después de [configurar las anulaciones de secuencias de datos](#configure-overr
 
 Si utiliza el SDK web, el envío de las invalidaciones a la red perimetral mediante la variable `edgeConfigOverrides` El comando es el segundo y último paso de activar las anulaciones de configuración de secuencia de datos.
 
-Las anulaciones de configuración de la secuencia de datos se envían a Edge Network a través del comando `edgeConfigOverrides` del SDK web. Este comando crea anulaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando, o, en el caso del comando `configure`, para cada solicitud.
+Las anulaciones de configuración de la secuencia de datos se envían a Edge Network a través del comando `edgeConfigOverrides` del SDK web. Este comando crea invalidaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando. Si utiliza el complemento `configure` , las anulaciones se pasan para cada solicitud.
 
-El comando `edgeConfigOverrides` crea anulaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando, o, en el caso de `configure`, para cada solicitud.
+El `edgeConfigOverrides` El comando crea anulaciones de secuencia de datos que se pasan al [!DNL Edge Network] en el siguiente comando.
 
 Cuando se envía una anulación de la configuración con el comando `configure`, se incluye en los siguientes comandos del SDK web.
 
@@ -246,7 +245,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 Este ejemplo muestra el aspecto de la anulación de ID de un conjunto de datos en un SDK móvil [!DNL Android] integración.
 

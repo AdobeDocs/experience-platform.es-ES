@@ -3,10 +3,10 @@ solution: Experience Platform
 title: API de Media Edge
 description: Información general sobre las API de Media Edge
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 8%
+source-wordcount: '331'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Las API de Media Edge se basan en Adobe Experience Platform para proporcionar da
 
 ## Optimización de flujos de datos de seguimiento de medios
 
-Ambos [API de Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) y las API de Media Edge proporcionan datos de seguimiento de medios como servicios RESTful. Sin embargo, el uso del servicio Media Edge tiene las siguientes ventajas:
+Ambos [API de Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) y las API de Media Edge proporcionan datos de seguimiento de medios como servicios RESTful. Sin embargo, el uso del servicio Media Edge tiene las siguientes ventajas:
 
 * Es la forma más sencilla de incorporar esquemas XDM al flujo de datos.
 

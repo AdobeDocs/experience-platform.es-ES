@@ -1,17 +1,15 @@
 ---
 title: Configuración del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo configurar el SDK web de Adobe Experience Platform.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configurar;configuración;SDK;edge;SDK web;configurar;edgeConfigId;contexto;web;dispositivo;entorno;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;preocultandoStyle;opacidad;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 9%
+source-wordcount: '1088'
+ht-degree: 8%
 
 ---
 
-# Configuración del SDK web de Platform
+
+# Configuración del SDK web
 
 La configuración del SDK se realiza con `configure` comando.
 
@@ -83,7 +81,7 @@ Indica si la depuración está habilitada. Estableciendo esta configuración en 
 
 ### `edgeDomain` {#edge-domain}
 
-Rellene este campo con el dominio de origen. Para obtener más información, consulte la [documentación](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
+Rellene este campo con el dominio de origen. Para obtener más información, consulte la [documentación](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=es).
 
 El dominio es similar a `data.{customerdomain.com}` para un sitio web en www.{customerdomain.com}.
 
@@ -143,7 +141,7 @@ Al filtrar el seguimiento de vínculos mediante la estructura de elementos DOM, 
 
 Para cambiar los datos que se envían, modifique la `xdm` y/o `data` objetos. Dentro de la llamada de retorno, la variable `xdm` ya tiene los datos pasados en el comando de evento y la información recopilada automáticamente.
 
-* Cualquier valor distinto de `false` permitirá que se procese el evento y se envíe la llamada de retorno.
+* Cualquier valor distinto de `false` permite procesar el evento y enviar la llamada de retorno.
 * Si la llamada de retorno devuelve el `false` , el procesamiento de eventos se detiene sin error y el evento no se envía. Este mecanismo permite filtrar ciertos eventos examinando los datos de evento y devolviendo `false` si el evento no se debe enviar.
 * Si la llamada de retorno genera una excepción, el procesamiento del evento se detiene y el evento no se envía.
 

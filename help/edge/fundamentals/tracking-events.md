@@ -1,14 +1,13 @@
 ---
 title: Seguimiento de eventos mediante el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo rastrear eventos de SDK web de Adobe Experience Platform.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 1%
+source-wordcount: '1163'
+ht-degree: 0%
 
 ---
+
 
 # Seguimiento de eventos
 
@@ -79,7 +78,7 @@ En este ejemplo, la capa de datos se clona serializándola en JSON y luego deser
 
 Los datos que no coinciden con un esquema XDM deben enviarse con el `data` de la opción `sendEvent` comando. Esta función se admite en las versiones 2.5.0 y posteriores del SDK web.
 
-Esto resulta útil si necesita actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. [Obtenga más información sobre estas funciones de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
+Esto resulta útil si debe actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. [Obtenga más información sobre estas funciones de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
 En el futuro, podrá enviar toda la capa de datos en `data` y asignarla al lado del servidor XDM.
 
@@ -103,9 +102,9 @@ alloy("sendEvent", {
 
 ### Configuración `eventType` {#event-types}
 
-En los esquemas XDM ExperienceEvent, hay un `eventType` field. Contiene el tipo de evento principal del registro. La configuración de un tipo de evento puede ayudarle a diferenciar entre los diferentes eventos que va a enviar. XDM proporciona varios tipos de eventos predefinidos que puede utilizar o que siempre puede crear sus propios tipos de eventos personalizados para sus casos de uso. Consulte la documentación de XDM para ver un [lista de todos los tipos de eventos predefinidos](../../xdm/classes/experienceevent.md#eventType).
+En los esquemas XDM ExperienceEvent, hay un `eventType` field. Contiene el tipo de evento principal del registro. La configuración de un tipo de evento puede ayudarle a diferenciar entre los diferentes eventos que envía. XDM proporciona varios tipos de eventos predefinidos que puede utilizar o que siempre puede crear sus propios tipos de eventos personalizados para sus casos de uso. Consulte la documentación de XDM para ver un [lista de todos los tipos de eventos predefinidos](../../xdm/classes/experienceevent.md#eventType).
 
-Estos tipos de eventos se mostrarán en un menú desplegable si utiliza la extensión de etiqueta o siempre puede pasarlos sin etiquetas. Se pueden pasar como parte de la variable `xdm` opción.
+Estos tipos de eventos se muestran en un menú desplegable si utiliza la extensión de etiqueta o siempre puede pasarlos sin etiquetas. Se pueden pasar como parte de la variable `xdm` opción.
 
 
 ```javascript
@@ -142,7 +141,7 @@ alloy("sendEvent", {
 >
 >El `datasetId` opción admitida por el `sendEvent` El comando estaba obsoleto. Para anular un ID de conjunto de datos, utilice [invalidaciones de configuración](../../datastreams/overrides.md) en su lugar.
 
-En algunos casos de uso, es posible que desee enviar un evento a un conjunto de datos que no sea el configurado en la interfaz de usuario de configuración. Para ello, debe configurar la variable `datasetId` opción en la `sendEvent` comando:
+En algunos casos de uso, es posible que desee enviar un evento a un conjunto de datos que no sea el configurado en la interfaz de usuario de configuración. Para ello, debe establecer la variable `datasetId` opción en la `sendEvent` comando:
 
 
 
@@ -162,8 +161,9 @@ También se puede añadir información de identidad personalizada al evento. Con
 
 ## Uso de la API sendBeacon
 
-Puede ser complicado enviar datos de evento justo antes de que el usuario de la página web haya salido. Si la solicitud tarda demasiado, el explorador puede cancelarla. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Al utilizar `sendBeacon`, el explorador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no detiene la navegación de la página. Para informar a Adobe Experience Platform [!DNL Web SDK] para utilizar `sendBeacon`, agregue la opción `"documentUnloading": true` al comando de evento.  Vea el siguiente ejemplo:
+Puede ser complicado enviar datos de evento justo antes de que el usuario de la página web haya salido. Si la solicitud tarda demasiado, el explorador puede cancelarla. Algunos exploradores han implementado una API estándar web llamada `sendBeacon` para permitir que los datos se recopilen más fácilmente durante este tiempo. Al utilizar `sendBeacon`, el explorador realiza la solicitud web en el contexto de navegación global. Esto significa que el explorador realiza la solicitud de señalización en segundo plano y no retrasa la navegación de la página. Para informar a Adobe Experience Platform [!DNL Web SDK] para utilizar `sendBeacon`, agregue la opción `"documentUnloading": true` al comando de evento.
 
+**Ejemplo**
 
 ```javascript
 alloy("sendEvent", {
@@ -181,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-Los navegadores han impuesto límites a la cantidad de datos que se pueden enviar con `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 000. Si el explorador rechaza el evento porque la carga útil es demasiado grande, Adobe Experience Platform [!DNL Web SDK] vuelve a utilizar su método de transporte normal (por ejemplo, fetch).
+Los navegadores han impuesto límites a la cantidad de datos que se pueden enviar con `sendBeacon` al mismo tiempo. En muchos exploradores, el límite es de 64 KB. Si el explorador rechaza el evento porque la carga útil es demasiado grande, Adobe Experience Platform [!DNL Web SDK] vuelve a utilizar su método de transporte normal (por ejemplo, fetch).
 
 ## Gestión de respuestas de eventos
 
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 El `sendEvent` El comando devuelve una promesa que se resuelve con una `result` objeto. El `result` contiene las propiedades siguientes:
 
-**proposiciones**: Las ofertas de personalización para las que el visitante cumple los requisitos. [Más información sobre las propuestas.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**decisiones**: esta propiedad está obsoleta. Utilice `propositions` en su lugar.
-
-**destinos**: Segmentos de Adobe Experience Platform que se pueden compartir con plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en los sitios web de los clientes. [Más información sobre los destinos.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| Propiedad | Descripción |
+|---------|----------|
+| `propositions` | Las ofertas de personalización para las que el visitante cumple los requisitos. [Más información sobre las propuestas.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | Esta propiedad está obsoleta. Utilice `propositions` en su lugar. |
+| `destinations` | Audiencias de Adobe Experience Platform que se pueden compartir con plataformas de personalización externas, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en sitios web de clientes. [Más información sobre los destinos.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` se encuentra actualmente en Beta. La documentación y la funcionalidad están sujetas a cambios.
+>El `destinations` La propiedad está en versión beta. La documentación y la funcionalidad están sujetas a cambios.
 
 ## Modificación de eventos globalmente {#modifying-events-globally}
 
-Si desea agregar, quitar o modificar campos del evento globalmente, puede configurar un `onBeforeEventSend` devolución de llamada.  Se llama a esta devolución de llamada cada vez que se envía un evento.  Esta llamada de retorno se pasa en un objeto de evento con un `xdm` field.  Modificar `content.xdm` para cambiar los datos enviados con el evento.
+Si desea agregar, quitar o modificar campos del evento globalmente, puede configurar un `onBeforeEventSend` devolución de llamada. Se llama a esta devolución de llamada cada vez que se envía un evento. Esta llamada de retorno se pasa en un objeto de evento con un `xdm` field. Para cambiar los datos que se envían con el evento, modifique `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 `xdm` los campos se establecen en este orden:
 
-1. Valores pasados como opciones al comando de evento `alloy("sendEvent", { xdm: ... });`
-2. Valores recopilados automáticamente.  (Consulte [Información automática](../data-collection/automatic-information.md).)
+1. Valores pasados como opciones al comando de evento `alloy("sendEvent", { xdm: ... });`.
+2. Valores recopilados automáticamente. Consulte [Información automática](../data-collection/automatic-information.md).
 3. Los cambios realizados en la `onBeforeEventSend` devolución de llamada.
 
 Algunas notas sobre la `onBeforeEventSend` callback:

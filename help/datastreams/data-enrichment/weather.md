@@ -1,34 +1,34 @@
 ---
-title: Usar datos meteorológicos de DNL The Weather Channel
-description: Utilice los datos meteorológicos de DNL The Weather Channel para mejorar los datos que recopila a través de las secuencias de datos.
-exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '672'
-ht-degree: 100%
+title: Mejore la recopilación de datos con datos meteorológicos de DNL The Weather Channel
+description: Mejore los datos que recopila a través de flujos de datos con datos meteorológicos de DNL The Weather Channel.
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 68%
 
 ---
 
-# Usar datos meteorológicos de [!DNL The Weather Channel]
 
-Adobe se ha asociado con [!DNL [The Weather Company]](https://www.ibm.com/weather) para añadir el contexto adicional de la meteorología de los Estados Unidos a los datos recopilados a través de secuencias de datos. Puede utilizar estos datos para creación de análisis, segmentación y segmentos en Experience Platform.
+# Mejore la recopilación de datos con datos meteorológicos de [!DNL The Weather Channel]
+
+Adobe se ha asociado con [!DNL [The Weather Company]](https://www.ibm.com/weather) para añadir el contexto adicional de la meteorología de los Estados Unidos a los datos recopilados a través de secuencias de datos. Puede utilizar estos datos para realizar análisis, segmentar objetivos y crear audiencias en Experience Platform.
 
 Existen tres tipos de datos disponibles en [!DNL The Weather Channel]:
 
-* **[!UICONTROL Tiempo actual]**: las condiciones meteorológicas actuales del usuario, según su ubicación. Esto incluye la temperatura actual, la precipitación, la nubosidad y más.
-* **[!UICONTROL Pronóstico del tiempo]**: la previsión incluye la previsión a 1, 2, 3, 5, 7 y 10 días para la ubicación del usuario.
+* **[!UICONTROL Tiempo actual]**: las condiciones meteorológicas actuales del usuario, según su ubicación. Esto incluye la temperatura actual, la precipitación, la cobertura de nubes y más.
+* **[!UICONTROL Pronóstico del tiempo]**: La previsión incluye la previsión a 1, 2, 3, 5, 7 y 10 días para la ubicación del usuario.
 * **[!UICONTROL Activadores]**: los activadores son combinaciones específicas que se asignan a diferentes condiciones meteorológicas semánticas. Existen tres tipos diferentes de activadores meteorológicos:
 
    * **[!UICONTROL Activadores meteorológicos]**: condiciones semánticamente significativas, como clima frío o lluvioso. Pueden diferir en sus definiciones entre diversos climas.
-   * **[!UICONTROL Activadores de productos]**: condiciones que llevarían a la compra de diferentes tipos de productos. Por ejemplo: los pronósticos de clima frío podrían significar que las compras de gabardinas son más probables.
+   * **[!UICONTROL Activadores de productos]**: condiciones que llevarían a la compra de diferentes tipos de productos. Por ejemplo: los pronósticos de clima frío podrían significar que las compras de abrigos de lluvia son más probables.
    * **[!UICONTROL Activadores meteorológicos adversos]**: avisos de condiciones meteorológicas muy adversas, como tormentas de invierno o huracanes.
 
 ## Requisitos previos {#prerequisites}
 
 Antes de usar los datos meteorológicos, asegúrese de cumplir los siguientes requisitos:
 
-* Debe autorizar los datos meteorológicos que va a utilizar, de [!DNL The Weather Channel]. A continuación los habilitarán en su cuenta.
-* Los datos meteorológicos solo están disponibles a través de secuencias de datos. Para utilizar datos meteorológicos, debe utilizar [!DNL Web SDK], [!DNL Mobile Edge Extension] o la [API de servidor](../../server-api/overview.md) para aprovechar estos datos.
+* Debe obtener una licencia de los datos meteorológicos que utilizará [!DNL The Weather Channel]. A continuación los habilitarán en su cuenta.
+* Los datos meteorológicos solo están disponibles a través de secuencias de datos. Para utilizar datos meteorológicos, debe utilizar [!DNL Web SDK], [!DNL Mobile Edge Extension] o el [API de servidor](../../server-api/overview.md) para incluir estos datos.
 * La secuencia de datos debe tener la [[!UICONTROL Ubicación geográfica]](../configure.md#advanced-options) activada.
 * Añada el [grupo de campo meteorológico](#schema-configuration) al esquema que está utilizando.
 
@@ -62,15 +62,15 @@ Puede encontrar la lista de campos que puede asignar en la página [referencia m
 
 ### Adobe Customer Journey Analytics {#cja}
 
-En [!DNL Adobe Customer Journey Analytics], los datos meteorológicos están disponibles en el conjunto de datos especificado en la secuencia de datos. Siempre y cuando los atributos del tiempo se [añadan a su esquema](#prerequisites-prerequisites), estarán disponibles para [añadir a una vista de datos](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=es) en [!DNL Customer Journey Analytics].
+En [!DNL Adobe Customer Journey Analytics], los datos meteorológicos están disponibles en el conjunto de datos especificado en la secuencia de datos. Siempre y cuando los atributos del tiempo sean [añadido a su esquema](#prerequisites-prerequisites), están disponibles para [agregar a una vista de datos](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=es) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Los datos meteorológicos están disponibles en [Real-time Customer Data Platform](../../rtcdp/overview.md), para su uso en segmentos. Los datos meteorológicos se adjuntan a los eventos.
+Los datos meteorológicos están disponibles en el [Real-time Customer Data Platform](../../rtcdp/overview.md), para su uso en audiencias. Los datos meteorológicos se adjuntan a los eventos.
 
 ![Generador de segmentos que muestra eventos meteorológicos](../assets/data-enrichment/weather/schema-builder.png)
 
-Dado que las condiciones meteorológicas cambian a menudo, Adobe recomienda establecer restricciones temporales en los segmentos, tal como se muestra en el ejemplo anterior. Tener un día frío en el último día o dos es mucho más impactante que tener un día frío hace 6 meses.
+Dado que las condiciones meteorológicas cambian con frecuencia, Adobe recomienda establecer restricciones temporales en las audiencias, como se muestra en el ejemplo anterior. Tener un día frío en el último día o dos es mucho más impactante que tener un día frío hace 6 meses.
 
 Consulte la [referencia meteorológica](weather-reference.md) para los campos disponibles.
 

@@ -1,18 +1,17 @@
 ---
 title: Instalación del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo instalar el SDK web de Experience Platform.
-keywords: instalación del sdk web;instalar el sdk web;internet explorer;promise;npm package
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
-# Instalación del SDK {#installing-the-sdk}
 
-Hay tres formas de utilizar el SDK web de Adobe Experience Platform:
+# Instalación del SDK web {#installing-the-sdk}
+
+Existen tres formas compatibles de instalar el SDK web de Adobe Experience Platform:
 
 1. La forma preferida de utilizar el SDK web de Adobe Experience Platform es mediante la IU de recopilación de datos o la IU del Experience Platform.
 1. El SDK web de Adobe Experience Platform también está disponible en una red de distribución de contenido (CDN) que puede utilizar.
@@ -30,9 +29,8 @@ Estructura de la URL: https://cdn1.adoberesources.net/alloy/[VERSIÓN]/alloy.min
 
 Por ejemplo:
 
-
 * Minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
-* No minificado: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
+* Sin reducir: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 
 ### Adición del código {#adding-the-code}
@@ -77,7 +75,7 @@ Para determinar si ya tiene `window.Promise` polillenado:
 
 1. Abra el sitio web en [!DNL Internet Explorer].
 1. Abra la consola de depuración del explorador.
-1. Tipo `window.Promise` en la consola y, a continuación, pulse Entrar.
+1. Tipo `window.Promise` en la consola y pulse Intro.
 
 Si algo distinto de `undefined` aparece, probablemente ya haya rellenado correctamente `window.Promise`. Otra forma de determinar si `window.Promise` es polyfill es cargando su sitio web después de haber completado las instrucciones de instalación anteriores. Si el SDK genera un error al mencionar algo sobre una promesa, es probable que no haya rellenado correctamente `window.Promise`.
 
@@ -97,7 +95,7 @@ Esta etiqueta carga una secuencia de comandos que garantiza que `window.Promise`
 
 Como se explica en la sección [Adición del código](#adding-the-code), el código base que ha copiado y pegado en el HTML del sitio web carga un archivo externo. El archivo externo contiene la funcionalidad principal del SDK. Cualquier comando que intente ejecutar mientras se carga este archivo se pone en cola y se procesa después de cargar el archivo. La carga asíncrona del archivo es el método de instalación más eficaz.
 
-En determinadas circunstancias, sin embargo, es posible que desee cargar el archivo sincrónicamente \(más detalles sobre estas circunstancias se documentarán más adelante\). Al hacerlo, el explorador impide que analice y procese el resto del documento del HTML hasta que se haya cargado y ejecutado el archivo externo. Normalmente no se recomienda este retraso adicional antes de mostrar el contenido principal a los usuarios, pero puede tener sentido según las circunstancias.
+En determinadas circunstancias, sin embargo, es posible que desee cargar el archivo sincrónicamente. Al hacerlo, el explorador impide que analice y procese el resto del documento del HTML hasta que se haya cargado y ejecutado el archivo externo. Normalmente no se recomienda este retraso adicional antes de mostrar el contenido principal a los usuarios, pero puede tener sentido según las circunstancias.
 
 Para cargar el archivo sincrónicamente en lugar de asincrónicamente, quite el `async` atributo del segundo `script` como se muestra a continuación:
 
@@ -132,7 +130,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->El paquete NPM se basa en módulos CommonJS; por lo tanto, cuando utilice un paquete, asegúrese de que este admita módulos CommonJS. Algunos paquetes, como [Resumen](https://rollupjs.org), requiere un [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) que proporciona compatibilidad con CommonJS.
+>El paquete NPM se basa en módulos CommonJS; por lo tanto, cuando utilice un paquete, asegúrese de que el paquete admita módulos CommonJS. Algunos paquetes, como [Resumen](https://rollupjs.org), requiere un [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) que proporciona compatibilidad con CommonJS.
 
 ### Uso del paquete como módulo ECMAScript 5
 

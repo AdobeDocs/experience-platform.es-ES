@@ -1,28 +1,28 @@
 ---
 title: Información general sobre Adobe Experience Platform Web Software Development Kit (SDK)
 description: Aprenda a utilizar el SDK web de Adobe Experience Platform para integrar las funcionalidades de Platform en su sitio web.
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 3%
+source-wordcount: '750'
+ht-degree: 1%
 
 ---
 
-# Información general del SDK web de Adobe Experience Platform {#overview}
 
-Adobe Experience Platform Web Software Development Kit (SDK) es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con sus servicios a través de Adobe Experience Platform Edge Network. Adobe ofrece dos métodos para implementar el SDK web:
+# SDK web de Adobe Experience Platform {#overview}
 
-* Implementación manual mediante `alloy.js`. Esta guía del usuario proporciona documentación para este método de implementación.
+El Kit de desarrollo de software web (SDK) de Adobe Experience Platform es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con sus servicios a través de Adobe Experience Platform Edge Network. Adobe ofrece dos métodos para implementar el SDK web:
+
+* Implementación manual mediante `alloy.js` Biblioteca de JavaScript. Esta guía del usuario proporciona documentación para este método de implementación.
 * El [Extensión de etiqueta de SDK web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Consulte [Tutorial de implementación de Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es) para obtener más información.
 
-## Red perimetral de Experience Platform
+## Red perimetral de Experience Platform {#edge-network}
 
 El SDK web de Experience Platform forma parte de una colección de herramientas que conforman Adobe Experience Platform Edge Network. La red perimetral consta de los siguientes componentes:
 
 * **[SDK web de Experience Platform](#overview):** Un SDK de JavaScript y una extensión de etiquetas para simplificar en gran medida la implementación de tecnologías de Adobe.
-* **[SDK de Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/):** Extensión del SDK móvil v5 para permitir a los clientes utilizar la nueva metodología de implementación
-* **[API del servidor de red perimetral de Experience Platform](../server-api/overview.md):** Una API que se puede utilizar para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y muchos otros dispositivos.
+* **[SDK de Experience Platform Mobile](https://developer.adobe.com/client-sdks/home/):** Extensión del SDK móvil v5 para permitir a los clientes utilizar la nueva metodología de implementación
+* **[API del servidor de red perimetral de Experience Platform](../server-api/overview.md):** Una API que se puede utilizar para varios casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y otros dispositivos.
 
 La red perimetral es un marco de trabajo para la recopilación de datos de baja latencia, la computación conectable y la activación rápida de datos en todos los canales direccionables. Proporciona un único SDK consolidado para cada canal (JavaScript, móvil, del lado del servidor), que envía datos a un dominio de Adobe común (`adobedc.net`) y recibe una sola carga útil de vuelta para la entrega de datos y experiencia.
 
@@ -76,7 +76,7 @@ Antes de migrar páginas que utilizan `AT.js` Para configurar el SDK web, asegú
 >
 >Las siguientes funciones de Target no son compatibles al migrar de at.js a SDK web:
 >
->* [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=es)
+>* [Ofertas de redirección](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=es)
 >* [Compatibilidad con CNAME y entre dominios](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
 
 Después de migrar desde `AT.js` al SDK web, elimine la `targetMigrationEnabled` en la configuración.
