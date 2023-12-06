@@ -4,14 +4,27 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '660'
 ht-degree: 3%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.5.3: 6 de diciembre de 2023
+
+### Nuevas funciones
+
+* Se ha añadido la opción &quot;Bloquear en la pestaña activa al abrir Debugger&quot;.
+
+### Correcciones y mejoras
+
+* Se ha corregido un problema por el que faltaban solicitudes de Analytics en dominios privados.
+* Se ha corregido un problema en el cual faltaban datos del Activity Map en la tabla de solicitudes de Analytics.
+* Se ha corregido un problema en el cual la visualización de Seguimiento de destino provocaba un bloqueo.
+* Se ha añadido una advertencia cuando Debugger no puede configurar una infraestructura en la página en Firefox.
 
 ## Versión 1.5.1: 2 de noviembre de 2023
 
