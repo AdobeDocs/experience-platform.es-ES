@@ -3,22 +3,23 @@ title: Implementación de aplicaciones de una sola página para el SDK web de Ad
 description: SPA Obtenga información sobre cómo crear una implementación de aplicación de una sola página () del SDK web de Adobe Experience Platform mediante Adobe Target.
 keywords: SPA SPA target;adobe target;vistas de xdm; vistas;aplicaciones de una sola página;ciclo de vida de la;prueba AB;prueba AB;segmentación de experiencias;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 13%
+source-wordcount: '1817'
+ht-degree: 7%
 
 ---
+
 
 # Implementación de aplicación de una sola página
 
 El SDK web de Adobe Experience Platform SPA proporciona funciones enriquecidas que permiten a su empresa ejecutar personalizaciones en tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página ().
 
-Los sitios web tradicionales funcionaban en modelos de navegación “página a página”, conocidos como aplicaciones de varias páginas, en las que los diseños de sitios web estaban perfectamente asociados a las direcciones URL y las transiciones de una página web a otra requerían la carga de páginas.
+Los sitios web tradicionales funcionaban en modelos de navegación &quot;página a página&quot;, conocidos como aplicaciones de varias páginas, en las que los diseños de sitios web se asociaban perfectamente a direcciones URL y transiciones de una página web a otra requerida para la carga de páginas.
 
 Las aplicaciones web modernas, como las aplicaciones de una sola página, han adoptado un modelo que impulsa el uso rápido de la representación de la interfaz de usuario del explorador, que a menudo es independiente de las recargas de página. Estas experiencias se pueden activar mediante interacciones de clientes, como desplazamientos, clics y movimientos del cursor. A medida que los paradigmas de la web moderna evolucionan, la importancia de los eventos genéricos tradicionales, como la carga de páginas, para implementar la personalización y la experimentación, ya no es tanta.
 
-![](assets/spa-vs-traditional-lifecycle.png)
+![SPA Diagrama que muestra el ciclo de vida de la página en comparación con el ciclo vital tradicional.](assets/spa-vs-traditional-lifecycle.png)
 
 ## SPA Ventajas del SDK web de Platform para la creación de informes de
 
@@ -36,23 +37,23 @@ Para explicar más en detalle cuáles son las vistas, el siguiente ejemplo utili
 
 Después de navegar al sitio principal, una imagen promociona una venta de Pascua, así como los productos más recientes disponibles en el sitio. En este caso, se podría definir una Vista para toda la pantalla de inicio. Esta vista podría llamarse simplemente &quot;home&quot;.
 
-![](assets/example-views.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador.](assets/example-views.png)
 
 A medida que el cliente se interesa más por los productos que vende la empresa, decide hacer clic en el **Productos** vínculo. De manera similar a la página de inicio, se puede definir todo el sitio del producto como una vista. Esta vista podría denominarse &quot;products-all&quot;.
 
-![](assets/example-products-all.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con todos los productos mostrados.](assets/example-products-all.png)
 
 Dado que una vista puede definirse como un sitio completo o un grupo de elementos visuales en un sitio, los cuatro productos mostrados en el sitio de productos pueden agruparse y considerarse como una vista. Esta vista podría llamarse &quot;productos&quot;.
 
-![](assets/example-products.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con productos de ejemplo mostrados.](assets/example-products.png)
 
 Cuando el cliente decida hacer clic en **Cargar más** para explorar más productos en el sitio, la dirección URL del sitio web no cambia en este caso, pero se puede crear una vista aquí para representar solo la segunda fila de productos que se muestran. El nombre de la vista puede ser &quot;products-page-2&quot;.
 
-![](assets/example-load-more.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con productos de ejemplo mostrados en una página adicional.](assets/example-load-more.png)
 
 El cliente decide adquirir algunos productos en el sitio y pasa a la pantalla de pago. En el sitio de cierre de compra, el cliente tiene la opción de elegir entre envío normal o exprés. Una vista puede ser cualquier grupo de elementos visuales en un sitio, por lo que se puede crear una vista para las preferencias de envío y llamarse &quot;Preferencias de envío&quot;.
 
-![](assets/example-check-out.png)
+![Imagen de muestra de una página de cierre de compra de una aplicación de una sola página en una ventana del explorador.](assets/example-check-out.png)
 
 El concepto de Vistas puede ampliarse mucho más. Estos son solo algunos ejemplos de vistas que se pueden definir en un sitio.
 
@@ -89,7 +90,7 @@ Esta sección describe tres ejemplos que muestran cómo invocar el `sendEvent()`
 
 El equipo de marketing desea ejecutar pruebas A/B en toda la página de inicio.
 
-![](assets/use-case-1.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador.](assets/use-case-1.png)
 
 Para ejecutar pruebas A/B en todo el sitio principal, `sendEvent()` se debe invocar con el XDM `viewName` establezca en `home`:
 
@@ -133,7 +134,7 @@ history.listen(onViewChange);
 
 El equipo de marketing desea personalizar la segunda fila de productos cambiando el color de la etiqueta de precio a rojo después de que un usuario haga clic en **Cargar más**.
 
-![](assets/use-case-2.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, que muestra ofertas personalizadas.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -159,7 +160,7 @@ class Products extends Component {
   } 
 
   handleLoadMoreClicked() { 
-    var page = this.state.page + 1; // assuming page number is derived from component’s state 
+    var page = this.state.page + 1; // assuming page number is derived from component's state 
     this.setState({page: page}); 
     onViewChange('PRODUCTS-PAGE-' + page); 
   } 
@@ -171,7 +172,7 @@ class Products extends Component {
 
 El equipo de marketing desea ejecutar una prueba A/B para ver si el cambio del color del botón de azul a rojo al **Envío exprés** está seleccionado para mejorar las conversiones (en lugar de mantener el botón de color azul en ambas opciones de envío).
 
-![](assets/use-case-3.png)
+![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con pruebas A/B.](assets/use-case-3.png)
 
 Para personalizar el contenido del sitio según las preferencias de envío que esté seleccionada, se puede crear una vista para cada preferencia de entrega. Cuándo **Envío normal** está seleccionado, la Vista puede llamarse &quot;checkout-normal&quot;. If **Envío exprés** está seleccionado, la Vista puede llamarse &quot;checkout-express&quot;.
 
@@ -226,13 +227,13 @@ Cuando haya terminado de definir las vistas XDM e implementado `sendEvent()` Una
 
 El panel Modificaciones captura las acciones creadas para una vista en particular. Todas las acciones de una vista se agrupan debajo de esa vista.
 
-![](assets/modifications-panel.png)
+![El panel Modificaciones con las opciones de carga de página que se muestran en la barra lateral de la ventana del explorador.](assets/modifications-panel.png)
 
 ### Acciones
 
 Al hacer clic en una acción se resalta el elemento del sitio donde se aplicará esta acción. Cada acción del VEC creada en una Vista tiene los iconos siguientes: **Información**, **Editar**, **Clonar**, **Mover**, y **Eliminar**. Estos iconos se explican con más detalle en la tabla siguiente.
 
-![](assets/action-icons.png)
+![Iconos de acción](assets/action-icons.png)
 
 | Icono | Descripción |
 |---|---|
@@ -255,7 +256,7 @@ Anteriormente en este documento, se definía una vista denominada &quot;inicio&q
 
 Para realizar estas actualizaciones en el VEC, seleccione **Escribir** y aplique esos cambios a la vista &quot;principal&quot;.
 
-![](assets/vec-home.png)
+![Página de muestra del Compositor de experiencias visuales.](assets/vec-home.png)
 
 ### Ejemplo 2: Cambiar etiquetas de producto
 
@@ -269,7 +270,7 @@ Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos
 4. Seleccionar **Escribir** en el VEC.
 5. Aplicar acciones para cambiar la etiqueta de texto a **Precio de venta** y el color al rojo.
 
-![](assets/vec-products-page-2.png)
+![Página de muestra del Compositor de experiencias visuales con etiquetas de producto.](assets/vec-products-page-2.png)
 
 ### Ejemplo 3: Personalizar el estilo de preferencias de entrega
 
@@ -289,4 +290,4 @@ Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos
 >
 >La vista &quot;Pago y envío exprés&quot; no aparece en el panel Modificaciones hasta que aparece el mensaje **Envío exprés** botón de opción seleccionado. Esto se debe a que `sendEvent()` se ejecuta cuando la función **Envío exprés** El botón de opción está seleccionado, por lo tanto el VEC no tiene conocimiento de la vista &quot;checkout-express&quot; hasta que se selecciona el botón de opción.
 
-![](assets/vec-delivery-preference.png)
+![Compositor de experiencias visuales que muestra el selector de preferencias de envío.](assets/vec-delivery-preference.png)

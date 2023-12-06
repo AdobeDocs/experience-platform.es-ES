@@ -2,9 +2,9 @@
 title: Control de errores
 description: Obtenga información acerca de los posibles errores que puede encontrar al realizar solicitudes de API a la API del servidor de red perimetral de Adobe Experience Platform.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '766'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Los errores de API en la API del servidor de red perimetral de Adobe Experience 
 
 | Error | Tipo | Descripción | Código de estado |
 | --- | --- | --- | --- |
-| `RequestProcessingError` | Internas | Error de uso general emitido por Adobe Experience Platform Edge Network debido a circunstancias inesperadas. | `500` |
+| `RequestProcessingError` | Interno | Error de uso general emitido por Adobe Experience Platform Edge Network debido a circunstancias inesperadas. | `500` |
 | `InputError` | Externo | Incluye errores causados por entradas mal formadas, así como errores de validación de entidades. | `4xx` |
 | `ConfigurationError` | Externo | Errores de configuración del lado del servidor. | `422` |
 | `UpstreamError` | Externo | Errores de comunicación con servicios ascendentes. | `207 Multi-Status` |
@@ -117,7 +117,6 @@ Los errores no fatales se representan en la variable _Detalles del problema_ , p
 ```
 
 ## Gestión `4xx` y `5xx` Respuestas
-
 
 | Código de error | Descripción |
 |---|---|

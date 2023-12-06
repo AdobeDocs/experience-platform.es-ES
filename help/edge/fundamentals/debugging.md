@@ -3,10 +3,10 @@ title: Depuración en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo alternar las funcionalidades de depuración en el SDK web de Experience Platform.
 keywords: depurar sdk web;depuración;configurar;comando configure;depurar comando;edgeConfigId;setDebug;debugEnabled;depurar;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 2%
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +19,9 @@ La depuración está deshabilitada de forma predeterminada, pero se puede activa
 * `configure` mando
 * `setDebug` mando
 * parámetro de cadena de consulta
-* Activar o desactivar la depuración en Adobe Experience Platform Debugger. Adobe Experience Platform es una potente herramienta que examina sus páginas web y le ayuda a depurar los problemas de implementación con los productos de Experience Cloud. Adobe Experience Platform Debugger está disponible como [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) y [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/) extensión. La depuración se puede habilitar desde la pestaña de configuración de la sección SDK web de AEP.
+* Activación o desactivación de Habilitar depuración en el Adobe Experience Platform Debugger. Adobe Experience Platform es una potente herramienta que examina sus páginas web y le ayuda a depurar los problemas de implementación con los productos de Experience Cloud. El Adobe Experience Platform Debugger está disponible como [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) y [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/) extensión. La depuración se puede habilitar desde la pestaña de configuración de la sección SDK web de AEP.
 
-![](../assets/enable-debugging.png)
+![Imagen de la interfaz de usuario de Experience Platform Debugger que muestra la pantalla de configuración.](../assets/enable-debugging.png)
 
 ## Alternar la depuración con el comando Configurar
 

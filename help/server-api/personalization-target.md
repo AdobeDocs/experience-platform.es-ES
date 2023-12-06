@@ -2,9 +2,9 @@
 title: Personalización mediante Adobe Target
 description: Aprenda a utilizar la API de servidor para ofrecer y procesar experiencias personalizadas creadas en Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,6 @@ Consulte la [guía sobre cómo agregar servicios a un conjunto de datos](../data
 Al configurar la secuencia de datos, puede (opcionalmente) proporcionar valores para [!DNL Property Token], [!DNL Target Environment ID], y [!DNL Target Third Party ID Namespace].
 
 ![Imagen de la interfaz de usuario que muestra la pantalla de configuración del servicio de flujo de datos, con Adobe Target seleccionado](assets/target-datastream.png)
-
 
 ## Parámetros personalizados {#custom-parameters}
 

@@ -3,10 +3,10 @@ title: Uso del Offer decisioning con el SDK web de Platform
 description: El SDK web de Adobe Experience Platform puede entregar y procesar ofertas personalizadas administradas en Offer Decisioning. Puede crear sus ofertas y otros objetos relacionados mediante la interfaz de usuario o la API de Offer decisioning.
 keywords: offer decisioning;toma de decisiones;SDK web;SDK web de Platform;ofertas personalizadas;entregar ofertas;entrega de ofertas;personalización de ofertas;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 5%
+source-wordcount: '849'
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ Es importante comprender la siguiente terminología al trabajar con Offer Decisi
   >
   >Puede copiar el valor del ámbito de decisión desde el **Resumen de actividad** en la interfaz de usuario.
 
-  ![](assets/decision-scope-copy.png)
+  ![Configuración de copia de decisión.](assets/decision-scope-copy.png)
 
 * **Flujos de datos:** Para obtener más información, lea la [flujos de datos](../../../datastreams/overview.md) documentación.
 
@@ -85,7 +85,7 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
    * Instalación del SDK mediante etiquetas
 
       1. [Creación de una propiedad de etiqueta](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Añadir el código de incrustación de ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Añadir el código de incrustación](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Instale y configure la extensión del SDK web de Platform con la secuencia de datos que ha creado seleccionando la configuración en la lista desplegable &quot;Secuencia de datos&quot;. Consulte la documentación sobre [extensiones](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)

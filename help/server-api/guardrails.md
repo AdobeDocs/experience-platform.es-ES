@@ -1,14 +1,14 @@
 ---
 title: Protecciones de rendimiento para la API del servidor de red perimetral
 description: Aprenda a utilizar la API de servidor dentro de protecciones de rendimiento óptimas.
-keywords: recopilación de datos;recopilación;red perimetral;api;sla;slt;niveles de servicio
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
+
 
 # Protecciones de rendimiento para la API del servidor de red perimetral
 

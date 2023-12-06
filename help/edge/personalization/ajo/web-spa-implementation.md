@@ -2,9 +2,9 @@
 title: Implementación de aplicación de una sola página
 description: SPA Obtenga información sobre cómo implementar vistas de en Adobe Journey Optimizer
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '866'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Esta sección describe dos ejemplos que muestran cómo invocar el `sendEvent()` 
 
 El equipo de marketing desea ejecutar pruebas A/B en toda la página de inicio.
 
-![](assets/web-spa-home.png)
+![Página de muestra de la aplicación de una sola página.](assets/web-spa-home.png)
 
 Para ejecutar pruebas A/B en todo el sitio principal, `sendEvent()` se debe invocar con el XDM `viewName` establezca en `home`:
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 El equipo de marketing desea personalizar la segunda fila de productos cambiando el color de la etiqueta de precio a rojo después de que un usuario haga clic para ver todos los productos para hombre.
 
-![](assets/web-spa-men-products.png)
+![Página de muestra de una aplicación de una sola página con productos personalizados.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

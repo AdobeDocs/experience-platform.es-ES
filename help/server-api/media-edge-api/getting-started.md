@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Introducción a las API de Media Edge
 description: Introducción a las API de Media Edge
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 5%
+source-wordcount: '806'
+ht-degree: 2%
 
 ---
+
 
 # Introducción a la API de Media Edge
 
@@ -46,7 +47,7 @@ Aparte de pequeñas diferencias en el modelo y las rutas denominadas, la API de 
 
 * [Configuración del tipo de solicitud HTTP en el reproductor](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
 * [Envío de eventos ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
-* [Condiciones de tiempo de espera](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [Condiciones de tiempo](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
 * [Control del orden de los eventos](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Autorización {#authorization}

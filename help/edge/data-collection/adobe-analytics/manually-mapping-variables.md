@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo asignar manualmente variables a Ad
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;variables de asignación;variables de asignación;contextData;datos de contexto;reglas de procesamiento;reglas;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 25%
+source-wordcount: '333'
+ht-degree: 12%
 
 ---
 
@@ -52,8 +52,7 @@ Se puede acceder a todos los datos recopilados por la red perimetral mediante [r
 
 Por ejemplo, en la regla siguiente, Adobe Analytics está configurado para rellenar **Términos de búsqueda interna (eVar 2)** con los datos asociados con **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![Imagen de la interfaz de usuario de Analytics que muestra un ejemplo de regla.](assets/examplerule.png)
 
 ## Esquema XDM
 
