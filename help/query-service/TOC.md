@@ -4,10 +4,10 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 21%
+source-wordcount: '309'
+ht-degree: 19%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 21%
    - [Enumeración de las vistas de página de un usuario](use-cases/list-visitor-sessions.md)
    - [Enumerar visitantes por sus vistas de página](use-cases/visitors-by-number-of-page-views.md)
    - [Puntuación de tendencia](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Ejemplo de la función Lambda: Recuperar registros similares](use-cases/retrieve-similar-records.md)
    - [Devolver y usar variables de comercialización de datos de Analytics](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Ver el informe de resumen de un visitante](use-cases/roll-up-report-of-a-visitor.md)
    - [Perspectivas de análisis web y móvil](use-cases/analytics-insights.md)
 - Conceptos clave {#key-concepts}
@@ -92,7 +93,7 @@ ht-degree: 21%
    - [Plantillas de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)
    - [Suscripciones de alerta](api/alert-subscriptions.md)
-- Control de datos {#data-governance}
+- Administración de datos {#data-governance}
    - [Información general](data-governance/overview.md)
    - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
    - [Identidades en conjuntos de datos de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)
