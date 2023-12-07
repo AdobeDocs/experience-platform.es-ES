@@ -3,10 +3,10 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 1%
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
@@ -37,14 +37,18 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
 | Número de caracteres de un nombre para mostrar o un símbolo de identidad | Ninguna | No hay límites en el número de caracteres de un nombre para mostrar o un símbolo de identidad. |
 
+{style="table-layout:auto"}
+
 ### Validación del valor de identidad
 
 En la tabla siguiente se describen las reglas existentes que debe seguir para garantizar una validación correcta del valor de identidad.
 
 | Área de nombres | Regla de validación | Comportamiento del sistema cuando se infringe la regla |
 | --- | --- | --- |
-| ECID | <ul><li>El valor de identidad de un ECID debe ser exactamente de 38 caracteres.</li><li>El valor de identidad de un ECID debe constar solo de números.</li><li>Los valores de identidad no pueden ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ni ser una cadena vacía (por ejemplo: &quot;&quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li><li>Se bloqueará la ingesta de la identidad.</li></ul> |
-| No ECID | El valor de identidad no puede superar los 1024 caracteres. | Si el valor de identidad supera los 1024 caracteres, se omite el registro. |
+| ECID | <ul><li>El valor de identidad de un ECID debe ser exactamente de 38 caracteres.</li><li>El valor de identidad de un ECID debe constar solo de números.</li></ul> | <ul><li>Si el valor de identidad de ECID no es exactamente de 38 caracteres, se omite el registro.</li><li>Si el valor de identidad de ECID contiene caracteres no numéricos, se omite el registro.</li></ul> |
+| No ECID | <ul><li>El valor de identidad no puede superar los 1024 caracteres.</li><li>Los valores de identidad no pueden ser &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ni ser una cadena vacía (por ejemplo: &quot;&quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Si el valor de identidad supera los 1024 caracteres, se omite el registro.</li><li>Se bloqueará la ingesta de la identidad.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Ingesta del área de identidad
 
@@ -105,7 +109,7 @@ Si desea conservar los eventos autenticados con el ID de CRM, se recomienda camb
 
 *Notas del diagrama:*
 
-* `t` = timestamp.
+* `t` = marca de tiempo.
 * El valor de una marca de tiempo corresponde a la actualización de una identidad determinada. Por ejemplo, `t1` representa la primera identidad vinculada (la más antigua) y `t51` representaría la identidad vinculada más reciente.
 
 En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que está más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
