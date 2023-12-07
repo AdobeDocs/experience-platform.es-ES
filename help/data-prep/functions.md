@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 3%
+source-wordcount: '5080'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | substr | Devuelve una subcadena de una longitud determinada. | <ul><li>ENTRADA: **Requerido** La cadena de entrada.</li><li>START_INDEX: **Requerido** Índice de la cadena de entrada donde comienza la subcadena.</li><li>LONGITUD: **Requerido** Longitud de la subcadena.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot;un subconjunto&quot; |
 | lower /<br>lcase | Convierte una cadena a minúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá a minúsculas.</li></ul> | lower(INPUT) | lower(&quot;HeLo&quot;)<br>lcase(&quot;HeLo&quot;) | &quot;hola&quot; |
 | upper /<br>ucase | Convierte una cadena a mayúsculas. | <ul><li>ENTRADA: **Requerido** La cadena que se convertirá a mayúsculas.</li></ul> | upper(ENTRADA) | upper(&quot;HeLo&quot;)<br>ucase(&quot;HeLo&quot;) | &quot;HOLA&quot; |
-| split | Divide una cadena de entrada en un separador. El siguiente separador **necesidades** para escapar con `\`: `\`. Si incluye varios delimitadores, la cadena se dividirá en **cualquiera** de los delimitadores presentes en la cadena. | <ul><li>ENTRADA: **Requerido** La cadena de entrada que se va a dividir.</li><li>SEPARADOR: **Requerido** Cadena que se utiliza para dividir la entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | Divide una cadena de entrada en un separador. El siguiente separador **necesidades** para escapar con `\`: `\`. Si incluye varios delimitadores, la cadena se dividirá en **cualquiera** de los delimitadores presentes en la cadena. **Nota:** Esta función solo devuelve índices no nulos de la cadena, independientemente de la presencia del separador. Si se requieren todos los índices, incluidos los valores nulos, en la matriz resultante, utilice la función &quot;explode&quot; en su lugar. | <ul><li>ENTRADA: **Requerido** La cadena de entrada que se va a dividir.</li><li>SEPARADOR: **Requerido** Cadena que se utiliza para dividir la entrada.</li></ul> | split(ENTRADA, SEPARADOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | unirse | Une una lista de objetos mediante el separador. | <ul><li>SEPARADOR: **Requerido** Cadena que se utilizará para unir los objetos.</li><li>OBJETOS: **Requerido** Matriz de cadenas que se unirán.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hola mundo&quot; |
 | lpad | Rellena el lado izquierdo de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a rellenar.</li><li>RELLENO: **Requerido** Cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | lpad(ENTRADA, RECUENTO, RELLENO) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | Rellena el lado derecho de una cadena con la otra cadena dada. | <ul><li>ENTRADA: **Requerido** La cadena que se va a rellenar. Esta cadena puede ser nula.</li><li>RECUENTO: **Requerido** El tamaño de la cadena que se va a rellenar.</li><li>RELLENO: **Requerido** Cadena con la que se rellena la entrada. Si es nulo o está vacío, se tratará como un solo espacio.</li></ul> | rpad(ENTRADA, RECUENTO, RELLENO) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -171,8 +171,8 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 | join_array | Combina las matrices entre sí. | <ul><li>MATRIZ: **Requerido** La matriz a la que está agregando elementos.</li><li>VALUES: Las matrices que desea anexar a la matriz principal.</li></ul> | join_array&#x200B;(ARRAY, VALUES) | join_array&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Toma una lista de entradas y la convierte en una matriz. | <ul><li>INCLUDE_NULLS: **Requerido** Un valor booleano para indicar si se deben incluir o no valores nulos en la matriz de respuesta.</li><li>VALORES: **Requerido** Elementos que se van a convertir en una matriz.</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Devuelve el tamaño de la entrada. | <ul><li>ENTRADA: **Requerido** El objeto del que intenta encontrar el tamaño.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | Esta función se utiliza para anexar todos los elementos de toda la matriz de entrada al final de la matriz en Profile. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que se anexará a la matriz en el perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | Esta función se utiliza para reemplazar elementos en una matriz. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que reemplaza la matriz en el perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_append | Esta función se utiliza para anexar todos los elementos de toda la matriz de entrada al final de la matriz en Profile. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que se anexará a la matriz en el perfil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [124, 456] |
+| upsert_array_replace | Esta función se utiliza para reemplazar elementos en una matriz. Esta función es **solamente** aplicable durante las actualizaciones. Si se utiliza en el contexto de las inserciones, esta función devuelve la entrada tal cual. | <ul><li>MATRIZ: **Requerido** Matriz que reemplaza la matriz en el perfil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [124, 456] |
 
 {style="table-layout:auto"}
 
@@ -210,9 +210,9 @@ Para obtener información sobre la función de copia de objetos, consulte la sec
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| to_bigint | Convierte una cadena en un BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
-| to_decimal | Convierte una cadena en un valor Double. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un valor de tipo Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
-| to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_bigint | Convierte una cadena en un BigInteger. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
+| to_decimal | Convierte una cadena en un valor Double. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un valor de tipo Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
+| to_float | Convierte una cadena en flotante. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en flotante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Convierte una cadena en un número entero. | <ul><li>CADENA: **Requerido** La cadena que se va a convertir en un número entero.</li></ul> | to_integer(CADENA) | to_integer(&quot;12&quot;) | 12 |
 
 {style="table-layout:auto"}
@@ -258,13 +258,13 @@ Para obtener más información sobre los valores de los campos de dispositivo, l
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Extrae el nombre del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Extrae la versión principal del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS5 |
+| ua_os_version_major | Extrae la versión principal del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | Extrae la versión del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
-| ua_os_name_version | Extrae el nombre y la versión del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS5.1.1 |
-| ua_agent_version | Extrae la versión del agente de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_os_name_version | Extrae el nombre y la versión del sistema operativo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
+| ua_agent_version | Extrae la versión del agente de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
 | ua_agent_version_major | Extrae el nombre del agente y la versión principal de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrae el nombre del agente de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | Extrae la clase de dispositivo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
+| ua_device_class | Extrae la clase de dispositivo de la cadena del agente de usuario. | <ul><li>USER_AGENT: **Requerido** Cadena del agente de usuario.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 como Mac OS X) AppleWebKit/534.46 (KHTML, como Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Teléfono |
 
 {style="table-layout:auto"}
 
@@ -362,7 +362,7 @@ La tabla siguiente describe una lista de valores de campos de dispositivo y sus 
 | Desconocido | Un dispositivo desconocido. Estos suelen ser `useragents` que no contienen información sobre el dispositivo. |
 | Dispositivo móvil | Dispositivo móvil que aún no se ha identificado. Este dispositivo móvil puede ser un eReader, una tableta, un teléfono, un reloj, etc. |
 | Tableta | Un dispositivo móvil con una pantalla grande (normalmente > 7&quot;). |
-| Phone | Un dispositivo móvil con una pantalla pequeña (normalmente &lt; 7&quot;). |
+| Teléfono | Un dispositivo móvil con una pantalla pequeña (normalmente &lt; 7&quot;). |
 | Ver | Un dispositivo móvil con una pantalla pequeña (normalmente &lt; 2&quot;). Estos dispositivos funcionan normalmente como una pantalla adicional para un dispositivo de tipo teléfono/tableta. |
 | Realidad aumentada | Un dispositivo móvil con capacidades de AR. |
 | Realidad virtual | Un dispositivo móvil con capacidades de RV. |
@@ -377,7 +377,7 @@ La tabla siguiente describe una lista de valores de campos de dispositivo y sus 
 | Robot | Robots que visitan un sitio web. |
 | Robot móvil | Robots que visitan un sitio web pero que indican que desean que se les considere visitantes móviles. |
 | Robot Imitator | Robots que visitan un sitio web, fingiendo que son robots como [!DNL Google], pero no lo son. **Nota**: En la mayoría de los casos, los imitadores de robots son robots. |
-| Cloud | Una aplicación basada en la nube. Estos no son ni robots ni hackers, sino aplicaciones que necesitan conectarse. Esto incluye [!DNL Mastodon] servidores. |
+| Nube | Una aplicación basada en la nube. Estos no son ni robots ni hackers, sino aplicaciones que necesitan conectarse. Esto incluye [!DNL Mastodon] servidores. |
 | Pirata Informático | Este valor de dispositivo se utiliza en caso de que se detecten scripts en la `useragent` cadena. |
 
 {style="table-layout:auto"}
