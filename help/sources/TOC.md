@@ -4,10 +4,10 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 15%
+source-wordcount: '993'
+ht-degree: 11%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 15%
          - [conector del Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [guía de autenticación del Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espacios de nombres y esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising {#advertising}
+   - Publicidad {#advertising}
       - [Conector de Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -91,6 +91,8 @@ ht-degree: 15%
       - [Conector de flujo del Snowflake](connectors/databases/snowflake-streaming.md)
       - [conector del Snowflake](connectors/databases/snowflake.md)
       - [Conector Vantage de teradata](connectors/databases/teradata-vantage.md)
+   - Socio de datos {#data-partner}
+      - [Resolución de identidad empresarial de Mercury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -114,8 +116,8 @@ ht-degree: 15%
    - Transmisión {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
-   - Cree una conexión base {#create}
-      - Advertising {#advertising}
+   - Crear una conexión base {#create}
+      - Publicidad {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -154,7 +156,7 @@ ht-degree: 15%
          - [Apache Hive en Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark en Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -169,7 +171,7 @@ ht-degree: 15%
          - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
-         - [SQL Server](tutorials/api/create/databases/sql-server.md)
+         - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -233,7 +235,7 @@ ht-degree: 15%
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Actividades personalizadas de Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - Publicidad {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -274,7 +276,7 @@ ht-degree: 15%
          - [Apache Hive en Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark en Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -282,13 +284,15 @@ ht-degree: 15%
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/ui/create/databases/mariadb.md)
-         - [Servidor Microsoft SQL](tutorials/ui/create/databases/sql-server.md)
+         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+      - Socio de datos {#data-partner}
+         - [Resolución de identidad empresarial de Mercury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -337,7 +341,7 @@ ht-degree: 15%
 - Fuentes de autoservicio (SDK por lotes) {#sdk}
    - [Información general](sources-sdk/overview.md)
    - Configurar la especificación de conexión {#config}
-      - [Opciones de Configuration](sources-sdk/config/config.md)
+      - [Opciones de configuración](sources-sdk/config/config.md)
       - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
       - [Configurar especificación de origen](sources-sdk/config/sourcespec.md)
       - [Configurar la especificación de exploración](sources-sdk/config/explorespec.md)
