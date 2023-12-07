@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Lea esta página para comprender los diferentes tipos y categorías de destinos 
 
 ## Tipos de destino {#destination-types}
 
-En Adobe Experience Platform, distinguimos entre diferentes tipos de destino: conexiones, exportaciones de conjuntos de datos y extensiones. Existen varios tipos de destinos de conexión, que le permiten exportar datos a destinos basados en API, .
+En Adobe Experience Platform, distinguimos entre diferentes tipos de destino: conexiones, exportaciones de conjuntos de datos y extensiones. Existen varios tipos de destinos de conexión, que le permiten exportar datos a destinos basados en API, destinos sociales, plataformas CRM y muchos más.
 
 Por último, las conexiones también se pueden distinguir entre destinos públicos disponibles en todas las organizaciones del catálogo de destinos y destinos privados que los clientes de Real-Time CDP Ultimate pueden crear para satisfacer sus casos de uso de exportación específicos.
 
@@ -68,6 +68,21 @@ Obtenga más información sobre cómo [configuración de destinos de personaliza
 El siguiente vídeo le muestra las particularidades de los dos tipos de destinos:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Tipos de audiencias exportadas {#exported-audiences-types}
+
+Puede exportar tres tipos de audiencias desde Experience Platform a varios destinos:
+
+* Audiencias de personas
+* Audiencias de cuenta
+* Audiencias potenciales
+
+Obtenga más información acerca de [varios tipos de audiencia](/help/segmentation/ui/account-audiences.md#terminology).
+
+Un símbolo en la tarjeta de destino muestra qué tipos de audiencias puede exportar a cada destino.
+
+![Tarjeta de destino de ejemplo con símbolos que muestran qué tipos de audiencia se pueden exportar.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Destinos de exportación de conjuntos de datos {#dataset-export-destinations}
 

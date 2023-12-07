@@ -3,10 +3,10 @@ keywords: correo electrónico;correo electrónico;correo electrónico;destinos d
 title: Conexión de Adobe Campaign
 description: Adobe Campaign es un conjunto de soluciones que le ayudan a personalizar y entregar campañas en todos sus canales en línea y sin conexión.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 3%
+source-wordcount: '906'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Para enviar datos de audiencia a Adobe Campaign, primero debe [conectar el desti
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -101,7 +101,7 @@ Al activar audiencias en este destino, Adobe recomienda seleccionar un identific
 
 ## Datos exportados {#exported-data}
 
-Para [!DNL Adobe Campaign] destinos, [!DNL Platform] crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [verificar activación de audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
+Para [!DNL Adobe Campaign] destinos, [!DNL Platform] crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la [verificar activación de audiencia](../../ui/activate-batch-profile-destinations.md#verify) en el tutorial de activación de audiencia.
 
 ## Configuración de la importación de datos en Adobe Campaign {#import-data-into-campaign}
 

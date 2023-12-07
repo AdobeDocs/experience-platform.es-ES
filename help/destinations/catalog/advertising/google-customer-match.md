@@ -3,9 +3,9 @@ keywords: coincidencia de cliente de google;coincidencia de cliente de Google;co
 title: Conexión de Google Customer Match
 description: Customer Match de Google le permite utilizar sus datos con y sin conexión para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Algunos destinos de Experience Platform tienen ciertas reglas y obligaciones par
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -82,7 +82,7 @@ A continuación, asegúrese de que su [!DNL Google] La cuenta de está configura
 
 Antes de crear el [!DNL Google Customer Match] destino en Experience Platform, asegúrese de que su [!DNL Google Ads] La cuenta cumple con la [[!DNL Google Customer Match] directiva](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Google permite automáticamente a los clientes con cuentas compatibles.
+Google incluida en la lista de permitidos automáticamente a los clientes con cuentas compatibles.
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## Información general del vídeo {#video-overview}
+
+Vea el siguiente vídeo para obtener una explicación de las ventajas y cómo activar los datos en Customer Match de Google.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## Conexión al destino {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 En el **[!UICONTROL Programación de segmentos]** paso, debe proporcionar el [!UICONTROL ID de aplicación] al enviar [!DNL IDFA] o [!DNL GAID] audiencias a [!DNL Google Customer Match].
 
-![ID de aplicación de Customer Match de Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![El campo ID de aplicación de Google Customer Match resaltado en el paso Programación de segmentos del flujo de trabajo de activación.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Para obtener más información sobre cómo encontrar [!DNL App ID], consulte la [Documentación oficial de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Para obtener más información sobre cómo encontrar [!DNL App ID], consulte la [Documentación oficial de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) o pregunte a su representante de Google.
 
 ### Ejemplo de asignación: activación de datos de audiencia en [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Selección de campos de destino:
 * Seleccione el `IDFA` o `GAID` áreas de nombres como identidad de destino cuando las áreas de nombres de origen `IDFA` o `GAID`.
 * Seleccione el `User_ID` área de nombres como identidad de destino cuando el área de nombres de origen es personalizada.
 
-![Asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![La asignación de identidad entre los campos de origen y destino se muestra en el paso Asignación del flujo de trabajo de activación.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Los datos de áreas de nombres sin hash se cifran automáticamente en hash mediante [!DNL Platform] tras la activación.
 
 Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación.
 
-![Transformación de asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Aplique el control de transformación resaltado en el paso Asignación del flujo de trabajo de activación.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 
-Después de completar el flujo de activación, cambie a **[!UICONTROL Google Ads]** cuenta. Las audiencias activadas se muestran en su cuenta de Google como listas de clientes. Tenga en cuenta que, según el tamaño de la audiencia, algunas audiencias no se rellenan a menos que haya más de 100 usuarios activos para ofrecer.
+Después de completar el flujo de activación, cambie a **[!UICONTROL Google Ads]** cuenta. Las audiencias activadas se muestran en su cuenta de Google como listas de clientes. Según el tamaño de la audiencia, algunas audiencias no se rellenan a menos que haya más de 100 usuarios activos para ofrecer.
 
 Al asignar una audiencia a ambos [!DNL IDFA] y [!DNL GAID] ID de móviles, [!DNL Google Customer Match] crea una audiencia independiente para cada asignación de ID. Su [!DNL Google Ads] La cuenta de muestra dos segmentos diferentes, uno para [!DNL IDFA]y uno para el [!DNL GAID] asignación.
 
@@ -217,8 +223,3 @@ Al configurar este destino, puede recibir el siguiente error:
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 Este error se produce cuando las cuentas de cliente no cumplen con la [requisitos previos](#google-account-prerequisites). Para solucionar este problema, póngase en contacto con Google y asegúrese de que su cuenta está incluida en la lista de permitidos y configurada para [!DNL Standard] o un nivel de permiso superior. Consulte la [Documentación de Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obtener más información.
-
-## Recursos adicionales {#additional-resources}
-
-* [Integrar [!DNL Google Customer Match] - Tutorial de vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html?lang=es)
-

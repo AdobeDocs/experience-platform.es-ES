@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2480'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Los extremos HTTP pueden ser sistemas propios de los clientes o soluciones de te
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -73,7 +73,7 @@ El destino de la API HTTP admite varios tipos de autenticación en el extremo HT
 
 * Punto final HTTP sin autenticación;
 * Autenticación de token de portador;
-* [Credenciales del cliente de OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticación con el formulario de cuerpo, con [!DNL client ID], [!DNL client secret] y [!DNL grant type] en el cuerpo de la solicitud HTTP, como se muestra en el ejemplo siguiente.
+* [Credenciales del cliente de OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) autenticación con el formulario de cuerpo, con [!DNL client ID], [!DNL client secret], y [!DNL grant type] en el cuerpo de la solicitud HTTP, como se muestra en el ejemplo siguiente.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 Si selecciona la opción **[!UICONTROL Token de portador]** tipo de autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**:
 
-![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante la autenticación de token de portador](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante la autenticación de token de portador.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Token de portador]**: inserte el token de portador para autenticarse en la ubicación HTTP.
 
@@ -121,7 +121,7 @@ Si selecciona la opción **[!UICONTROL Token de portador]** tipo de autenticaci�
 
 Si selecciona la opción **[!UICONTROL Ninguno]** tipo de autenticación para conectarse al extremo HTTP:
 
-![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP sin utilizar autenticación](../../assets/catalog/http/http-api-authentication-none.png)
+![Imagen de la pantalla de la interfaz de usuario de, donde puede conectarse al destino de la API HTTP sin utilizar autenticación.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Al seleccionar esta autenticación abierta, solo necesita seleccionar **[!UICONTROL Conectar con destino]** y se establece la conexión con el extremo.
 
@@ -129,7 +129,7 @@ Al seleccionar esta autenticación abierta, solo necesita seleccionar **[!UICONT
 
 Si selecciona la opción **[!UICONTROL Contraseña de OAuth 2]** tipo de autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**:
 
-![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante OAuth 2 con autenticación de contraseña](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante OAuth 2 con autenticación de contraseña.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL URL de token de acceso]**: URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
 * **[!UICONTROL ID de cliente]**: La [!DNL client ID] que el sistema asigna a Adobe Experience Platform.
@@ -141,7 +141,7 @@ Si selecciona la opción **[!UICONTROL Contraseña de OAuth 2]** tipo de autenti
 
 Si selecciona la opción **[!UICONTROL Credenciales del cliente de OAuth 2]** tipo de autenticación para conectarse al extremo HTTP, introduzca los campos siguientes y seleccione **[!UICONTROL Conectar con destino]**:
 
-![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales del cliente](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Imagen de la pantalla de la interfaz de usuario donde se puede conectar al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales del cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL URL de token de acceso]**: URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
 * **[!UICONTROL ID de cliente]**: La [!DNL client ID] que el sistema asigna a Adobe Experience Platform.
@@ -179,7 +179,7 @@ Si selecciona la opción **[!UICONTROL Credenciales del cliente de OAuth 2]** ti
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![Imagen de la pantalla de la IU que muestra los campos completados para los detalles de destino HTTP](../../assets/catalog/http/http-api-destination-details.png)
+![Imagen de la pantalla de la interfaz de usuario que muestra los campos completados para los detalles de destino HTTP.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Nombre]**: introduzca un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: introduzca una descripción que le ayudará a identificar este destino en el futuro.
@@ -232,7 +232,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 Por ejemplo, considere este flujo de datos para un destino HTTP en el que se seleccionen tres audiencias en el flujo de datos y se asignen cuatro atributos al destino.
 
-![Flujo de datos de destino de API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Ejemplo de flujo de datos de destino de la API HTTP.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 Una exportación de perfil al destino puede determinarse mediante un perfil que cumpla los requisitos de uno de los siguientes criterios o que salga de él *tres segmentos asignados*. Sin embargo, en la exportación de datos, en la variable `segmentMembership` objeto (consulte [Datos exportados](#exported-data) , podrían aparecer otras audiencias no asignadas, si ese perfil en particular es miembro de ellas y si comparten la misma política de combinación que la audiencia que activó la exportación. Si un perfil cumple los requisitos para la **Cliente con coches DeLorean** segmento, pero también es miembro del **Visto &quot;Volver al futuro&quot;** película y **Aficionados a la ciencia ficción** segmentos, estas otras dos audiencias también estarán presentes en el `segmentMembership` objeto de la exportación de datos, aunque no estén asignados en el flujo de datos, si comparten la misma política de combinación con el **Cliente con coches DeLorean** segmento.
 

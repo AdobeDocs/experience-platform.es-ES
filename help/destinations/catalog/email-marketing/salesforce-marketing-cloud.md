@@ -1,12 +1,11 @@
 ---
-keywords: correo electrónico;correo electrónico;correo electrónico;destinos de correo electrónico;salesforce;destino de salesforce
 title: Conexión de Marketing Cloud de Salesforce
 description: El Marketing Cloud de Salesforce es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 4%
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -16,11 +15,11 @@ ht-degree: 4%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) es un grupo de marketing digital anteriormente conocido como ExactTarget que le permite crear y personalizar recorridos para que los visitantes y clientes personalicen su experiencia.
 
-Para enviar datos de audiencia a [!DNL Salesforce Marketing Cloud], primero debe [conectar el destino](#connect-destination) en Platform y luego [configuración de una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento a [!DNL Salesforce Marketing Cloud].
+Para enviar datos de audiencia a [!DNL Salesforce Marketing Cloud], primero debe [conectar con el destino](#connect-destination) en Platform y luego [configuración de una importación de datos](#import-data-into-salesforce) desde su ubicación de almacenamiento a [!DNL Salesforce Marketing Cloud].
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -72,7 +71,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
    * **[!UICONTROL Dominio]**: la dirección IP o el nombre de dominio de la cuenta SFTP;
    * **[!UICONTROL Puerto]**: el puerto utilizado por la ubicación de almacenamiento SFTP;
    * **[!UICONTROL Nombre de usuario]**: el nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP;
-   * **[!UICONTROL Clave SSH]**: clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña.
+   * **[!UICONTROL Clave SSH]**: clave SSH privada que se utiliza para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de una cadena codificada en Base64 y no debe estar protegida con contraseña.
 
 * De forma opcional, puede adjuntar la clave pública con formato RSA para agregar cifrado con PGP/GPG a los archivos exportados en **[!UICONTROL Clave]** sección. La clave pública debe escribirse como [!DNL Base64] cadena codificada.
 * **[!UICONTROL Nombre]**: Elija un nombre relevante para el destino.

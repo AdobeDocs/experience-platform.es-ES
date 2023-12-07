@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que Experience Platform envíe datos de audiencia y perfil a su punto final o ubicación de almacenamiento, en función de los datos y los formatos de autenticación de su elección. Las configuraciones se almacenan en el Experience Platform y se pueden recuperar mediante API para actualizaciones adicionales.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 4%
+source-wordcount: '808'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform Destination SDK es un conjunto de API de configuració
 
 En la documentación del Destination SDK se proporcionan instrucciones para utilizar el Adobe Experience Platform Destination SDK con el fin de configurar, probar y publicar una integración de destino producida con Adobe Experience Platform, y para que su destino forme parte del creciente catálogo de destinos. Con Destination SDK, también puede crear su propio destino privado personalizado para exportar datos adaptados a sus necesidades.
 
-![Captura de pantalla de la IU de Experience Platform que muestra el catálogo de destinos](assets/destinations-catalog-overview.png)
+![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra el catálogo de destinos.](assets/destinations-catalog-overview.png)
 
 ## Integraciones personalizadas y producidas {#productized-custom-integrations}
 
@@ -61,7 +61,7 @@ El acceso de Destination SDK varía en función de su estado como socio o Experi
 | Tipo de socio o cliente | Cómo acceder al Destination SDK |
 ---------|----------|
 | Proveedor de software independiente (ISV) | Únase a [Programa de socios de tecnología de Adobe](https://partners.adobe.com/technologyprogram/experiencecloud.html) y solicite disponer de una zona protegida de Experience Platform para acceder al Destination SDK. |
-| Integrador de sistemas (SI) | Debe tener nivel Gold o Platinum en el [Programa de socios de soluciones de Adobe](https://solutionpartners.adobe.com/home.html), y obtendrá una zona protegida de Experience Platform aprovisionada y acceso a Destination SDK. |
+| Integrador de sistemas (SI) | Debe tener nivel Gold o Platinum en el [Programa de socios de soluciones de Adobe](https://solutionpartners.adobe.com/home.html) para obtener una zona protegida de Experience Platform aprovisionada y acceso a Destination SDK. |
 | Cliente Experience Platform en [Paquete de Real-Time CDP Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) | De forma predeterminada, se obtiene acceso a los entornos limitados y a Destination SDK de Experience Platform, lo que le permite crear destinos privados para su organización. |
 
 {style="table-layout:auto"}

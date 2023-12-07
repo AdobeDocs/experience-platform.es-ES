@@ -3,9 +3,9 @@ title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1509'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ Platform aplica un estricto tiempo de vida de siete días (TTL) a todos los arch
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -62,11 +62,11 @@ Puede utilizar [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us
 
 En el [!DNL Azure Storage Explorer] IU, seleccione el icono de conexión en la barra de navegación izquierda. El **Seleccionar medio** aparece una ventana de, que le proporciona opciones para conectarse a. Seleccionar **[!DNL Blob container]** para conectarse a su [!DNL Data Landing Zone] almacenamiento.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Seleccione el recurso resaltado en la interfaz de usuario de Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 A continuación, seleccione **URL de firma de acceso compartido (SAS)** como método de conexión y, a continuación, seleccione **Siguiente**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Seleccione el método de conexión resaltado en la interfaz de usuario de Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Después de seleccionar el método de conexión, debe proporcionar un **nombre para mostrar** y el **[!DNL Blob]URL de SAS de contenedor** que se corresponde con su [!DNL Data Landing Zone] contenedor.
 
@@ -171,15 +171,15 @@ La siguiente respuesta devuelve valores actualizados para su `SASToken` y `SASUr
 
 Proporcione su nombre para mostrar (`containerName`) y [!DNL Data Landing Zone] URL de SAS, tal como se devuelve en la llamada de API descrita anteriormente, y luego seleccione **Siguiente**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Escriba la información de conexión resaltada en la interfaz de usuario de Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 El **Resumen** aparece una ventana que le proporciona información general sobre su configuración, incluida la información sobre su [!DNL Blob] punto de conexión y permisos. Cuando esté listo, seleccione **Connect**.
 
-![summary](/help/sources/images/tutorials/create/dlz/summary.png)
+![Resumen de la configuración que se muestra en la IU de Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Una conexión correcta actualiza su [!DNL Azure Storage Explorer] Interfaz de usuario con su [!DNL Data Landing Zone] contenedor.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Resumen del contenedor de usuario de DLZ resaltado en la interfaz de usuario de Azure.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Con su [!DNL Data Landing Zone] contenedor conectado a [!DNL Azure Storage Explorer], ahora puede empezar a exportar archivos de Experience Platform a su [!DNL Data Landing Zone] contenedor. Para exportar archivos, debe establecer una conexión con el [!DNL Data Landing Zone] en la interfaz de usuario de Experience Platform, tal como se describe en la sección siguiente.
 

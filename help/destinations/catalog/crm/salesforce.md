@@ -3,9 +3,9 @@ keywords: crm;CRM;destinos de crm;salesforce crm;destino de crm de salesforce
 title: Conexión de Salesforce CRM
 description: El destino de CRM de Salesforce le permite exportar los datos de su cuenta y activarlos dentro de CRM de Salesforce para sus necesidades comerciales.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) es una popular plataforma de administración de la relación con los clientes (CRM) y admite lo siguiente:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) es una popular plataforma de administración de la relación con los clientes (CRM) y admite los tipos de perfiles que se describen a continuación:
 
 * [Posibles clientes](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Un posible cliente es el nombre de una persona o empresa que puede (o no) estar interesada en los productos o servicios que vende.
 * [Contactos](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Un contacto es una persona con la que uno de sus representantes ha establecido una relación y ha sido calificado como cliente potencial.
@@ -27,7 +27,7 @@ Cuándo [activar segmentos](#activate), puede seleccionar entre posibles cliente
 
 ## Casos de uso {#use-cases}
 
-Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede crear audiencias a partir de los datos sin conexión y enviarlas a Salesforce CRM para que se muestren en las fuentes de los usuarios en cuanto las audiencias y los perfiles se actualicen en Adobe Experience Platform.
+Como experto en marketing, puede ofrecer experiencias personalizadas a los usuarios en función de los atributos de sus perfiles de Adobe Experience Platform. Puede crear audiencias a partir de los datos sin conexión y enviarlas a Salesforce CRM para actualizar la pertenencia a CRM en cuanto se actualicen las audiencias y los perfiles en Adobe Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 

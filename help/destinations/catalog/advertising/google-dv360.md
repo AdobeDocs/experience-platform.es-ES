@@ -1,12 +1,11 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;video 360;Display 360;display and video
 title: Conexión de Google Display & Video 360
 description: Display & Video 360, anteriormente conocido como DoubleClick Bid Manager es una herramienta utilizada para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 4%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -14,14 +13,14 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-[!DNL Display & Video 360], anteriormente conocido como [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeo y móviles.
+[!DNL Display & Video 360], anteriormente conocido como [!DNL DoubleClick Bid Manager], es una herramienta que se utiliza para ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 
 ## Detalles del destino {#specifics}
 
 Tenga en cuenta los siguientes detalles específicos de [!DNL Google Display & Video 360] destinos:
 
 * Las audiencias activadas se crean mediante programación en la plataforma de Google.
-* La activación de los rellenos de audiencia en [!DNL Google Display & Video 360] está programado que el destino se produzca de 24 a 48 horas después de que una audiencia se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la política de Google de esperar 24 horas hasta la ingesta de datos y está pensada para mejorar las tasas de coincidencia entre Real-Time CDP y [!DNL Google Display & Video 360]. Tenga en cuenta que esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
+* La activación de los rellenos de audiencia en [!DNL Google Display & Video 360] está programado que el destino se produzca de 24 a 48 horas después de que una audiencia se asigne por primera vez a una conexión de destino. Esta actualización es en respuesta a la política de Google de esperar 24 horas hasta la ingesta de datos y está pensada para mejorar las tasas de coincidencia entre Real-Time CDP y [!DNL Google Display & Video 360]. Esta es una configuración back-end aplicable solo a este destino y que no está relacionada con ninguna opción de programación configurable por el cliente en la interfaz de usuario.
 
 >[!IMPORTANT]
 >
@@ -43,7 +42,7 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Display & V
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|

@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1922'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Adobe Experience Platform utiliza [segmentación de borde](../../segmentation/ui/edge-segmentation.md) junto con destinos Edge para permitir a los clientes crear y segmentar audiencias a gran escala y en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
+Adobe Experience Platform utiliza [segmentación de borde](../../segmentation/ui/edge-segmentation.md) junto con [destinos de Edge](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir a los clientes crear y segmentar audiencias a gran escala y en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
 
 Algunos ejemplos de destinos de Edge son [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y el [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md) conexiones.
 
 >[!NOTE]
 >
->Cuándo [configuración de la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) sin usar un ID de flujo de datos, no se admiten los casos de uso descritos en este artículo. En ausencia de un conjunto de datos, solo se admiten los casos de uso de personalización de la sesión siguiente.
+>Cuándo [configuración de la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) *sin* Al usar un ID de flujo de datos, no se admiten los casos de uso descritos en este artículo. En ausencia de un conjunto de datos, solo se admiten los casos de uso de personalización de la sesión siguiente.
 
 >[!IMPORTANT]
 > 
@@ -47,7 +47,7 @@ Vea el siguiente vídeo para obtener una breve descripción general de cómo com
 
 ## Casos de uso {#use-cases}
 
-Los destinos de personalización de Edge le permiten utilizar soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante [Personalización personalizada](../catalog/personalization/custom-personalization.md) destino. Todo esto, al tiempo que aprovecha las funciones de segmentación y recopilación de datos de Experience Platform Edge Network.
+Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante [Personalización personalizada](../catalog/personalization/custom-personalization.md) destino. Todo esto, al tiempo que aprovecha las funciones de segmentación y recopilación de datos de Experience Platform Edge Network.
 
 Los casos de uso que se describen a continuación incluyen personalización del sitio y publicidad en el sitio segmentada.
 
@@ -55,11 +55,11 @@ Para habilitar estos casos de uso, los clientes necesitan una forma rápida y se
 
 ### Personalización de la misma página {#same-page}
 
-Un usuario visita una página del sitio web. El cliente puede utilizar la información de visita de la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador, la información de producto incrustada) para seleccionar la siguiente acción/decisión (por ejemplo, personalización), utilizando [Personalización personalizada](../catalog/personalization/custom-personalization.md) conexión para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely], etc.).
+Un usuario visita una página del sitio web. Puede utilizar la información de visita de la página actual (por ejemplo, la URL de referencia, el idioma del explorador, la información de producto incrustada) para seleccionar la siguiente acción o decisión (por ejemplo, la personalización), utilizando [Personalización personalizada](../catalog/personalization/custom-personalization.md) conexión para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely] u otros.).
 
 ### Personalización de la página siguiente {#next-page}
 
-Un usuario visita la página A del sitio web. En función de esta interacción, el usuario cumple los requisitos para un conjunto de audiencias. A continuación, el usuario hace clic en un vínculo que le lleva de la página A a la B. Las audiencias para las que el usuario estuvo cualificado durante la interacción anterior en la página A, junto con las actualizaciones de perfil determinadas por la visita actual al sitio web, se utilizan para activar la siguiente acción/decisión (por ejemplo, qué titular de publicidad se mostrará al visitante o, en el caso de las pruebas A/B, qué versión de la página se mostrará).
+Un usuario visita la página A del sitio web. En función de esta interacción, el usuario cumple los requisitos para un conjunto de audiencias. A continuación, el usuario hace clic en un vínculo que le lleva de la página A a la B. Las audiencias para las que el usuario estuvo cualificado durante la interacción anterior en la página A, junto con las actualizaciones de perfil determinadas por la visita actual al sitio web, se utilizan para activar la siguiente acción o decisión (por ejemplo, qué titular de publicidad se mostrará al visitante o, en el caso de las pruebas A/B, qué versión de la página se mostrará).
 
 ### Personalización de próxima sesión {#next-session}
 
@@ -67,7 +67,7 @@ Un usuario visita varias páginas del sitio web. En función de estas interaccio
 
 Al día siguiente, el usuario vuelve al mismo sitio web del cliente. Las audiencias para las que se habían clasificado durante la interacción anterior con todas las páginas del sitio web visitado, junto con las actualizaciones de perfil determinadas por la visita del sitio web actual, se utilizan para seleccionar la siguiente acción/decisión (por ejemplo, qué banner publicitario mostrar al visitante o, en el caso de las pruebas A/B, qué versión de la página mostrar).
 
-### Personalización de un titular de página de inicio {#home-page-banner}
+### Personalizar un titular de página de inicio {#home-page-banner}
 
 Una empresa de venta y alquiler de viviendas quiere personalizar su página de inicio con un banner, según las cualificaciones de audiencia en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviarlas a Adobe Target como criterios de segmentación para su oferta de Target.
 
@@ -79,7 +79,7 @@ El primer paso para configurar el destino de personalización es configurar una 
 
 Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]** asegúrese de que ambas **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** están seleccionados.
 
-![Configuración de flujo de datos](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Configuración del flujo de datos con destinos de segmentación de Edge y personalización resaltados.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Para obtener más información sobre cómo configurar un conjunto de datos, siga las instrucciones que se describen en la [Documentación del SDK web de Platform](../../datastreams/configure.md#aep).
 
@@ -97,7 +97,7 @@ Siga las instrucciones de [creación de una política de combinación](../../pro
 
 Después de crear el [!DNL Active-On-Edge] política de combinación, debe crear una nueva audiencia en Platform.
 
-Siga las [generador de audiencias](../../segmentation/ui/segment-builder.md) guía para crear su nueva audiencia y asegúrese de lo siguiente [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación creada en el paso 3.
+Siga las [generador de audiencias](../../segmentation/ui/segment-builder.md) guía para crear su nueva audiencia y asegúrese de lo siguiente [asignarlo](../../segmentation/ui/segment-builder.md#merge-policies) el [!DNL Active-On-Edge] política de combinación que creó en el paso anterior.
 
 ### Creación de una conexión de destino {#connect-destination}
 
@@ -116,15 +116,15 @@ Después de completar los requisitos previos, ahora puede seleccionar el destino
 
 1. Ir a **[!UICONTROL Conexiones > Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña.
 
-   ![Pestaña Catálogo de destino](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Pestaña Catálogo de destino resaltada en la interfaz de usuario del Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Seleccionar **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino de personalización en el que desee activar las audiencias, como se muestra en la siguiente imagen.
 
-   ![Activar botones](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![Activar el control de audiencia resaltado en una tarjeta de destino del catálogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. Seleccione la conexión de destino que desee utilizar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-   ![Seleccionar destino](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![Seleccione el paso de destino en el flujo de trabajo de activación.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Mover a la sección siguiente para [seleccionar las audiencias](#select-audiences).
 
@@ -140,7 +140,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 * **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
 * Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
 
-![Seleccionar audiencias](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![Paso Seleccionar audiencias del flujo de trabajo de activación con varias audiencias resaltadas.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Asignar atributos {#mapping}
 
@@ -156,13 +156,13 @@ Seleccione los atributos en función de los cuales desea habilitar casos de uso 
 
 Añadir atributos es opcional y aún puede continuar con el siguiente paso y habilitar la personalización de la misma página y de la página siguiente sin seleccionar atributos. Si no agrega ningún atributo en este paso, la personalización se seguirá produciendo en función de la pertenencia a la audiencia y de las cualificaciones del mapa de identidad de los perfiles.
 
-![Imagen que muestra el paso de asignación con un atributo seleccionado](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
+![Imagen que muestra el paso de asignación con un atributo seleccionado.](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### Seleccionar atributos de origen {#select-source-attributes}
 
 Para añadir atributos de origen, seleccione **[!UICONTROL Añadir nuevo campo]** control en el **[!UICONTROL Campo de origen]** y busque o navegue hasta el campo de atributo XDM deseado, como se muestra a continuación.
 
-![Grabación de pantalla que muestra cómo seleccionar un atributo de destino en el paso de asignación](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![Grabación de pantalla que muestra cómo seleccionar un atributo de destino en el paso de asignación.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Seleccionar atributos de destino {#select-target-attributes}
 
@@ -180,15 +180,15 @@ De forma predeterminada, la variable [!UICONTROL Programación de audiencia] Est
 
 Para ver todas las audiencias que se están activando en su destino, utilice la opción de filtrado y deshabilite la **[!UICONTROL Mostrar solo las nuevas audiencias]** filtro.
 
-![Todas las audiencias](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![Todas las audiencias filtran resaltadas.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
 En el **[!UICONTROL Programación de audiencia]** página, seleccione cada audiencia y utilice el **[!UICONTROL Fecha de inicio]** y **[!UICONTROL Fecha de finalización]** para configurar el intervalo de tiempo para enviar datos al destino.
 
-![Programación de audiencia](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+![Paso Programación de audiencia del flujo de trabajo de activación con las fechas de inicio y finalización resaltadas.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 Seleccionar **[!UICONTROL Siguiente]** para ir a [!UICONTROL Revisar] página.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
@@ -202,7 +202,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
 
-![infracción de política de datos](../assets/common/data-policy-violation.png)
+![Ejemplo de infracción de una directiva de datos.](../assets/common/data-policy-violation.png)
 
 ### Filtrado de audiencias {#filter-audiences}
 

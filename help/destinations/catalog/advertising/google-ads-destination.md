@@ -2,9 +2,9 @@
 title: Conexión de Google Ads
 description: Google Ads, anteriormente conocido como Google AdWords, es un servicio de publicidad en línea que permite a las empresas publicar anuncios de pago por clic en búsquedas basadas en texto, visualizaciones gráficas, vídeos de YouTube y visualizaciones móviles en la aplicación.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Ads] destin
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -70,7 +70,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
-> [!DNL Google] ha obsoleto nuevo [!DNL Google Ads] integraciones de cookies con proveedores externos. Para realizar los pasos de lista de permitidos de la siguiente sección, debe tener una integración existente con [!DNL Google Ads]. Como resultado, el enfoque recomendado para utilizar [!DNL Google Ads] está configurando un [!DNL Google Customer Match] integración. Para obtener más información sobre la creación de un [!DNL Google Customer Match] integración, lea el tutorial sobre la creación de un [[!DNL Google Customer Match]](./google-customer-match.md) conexión.
+> [!DNL Google] ha obsoleto nuevo [!DNL Google Ads] integraciones de cookies con proveedores externos. Para realizar los pasos de lista de permitidos de la siguiente sección, debe tener una integración existente con [!DNL Google Ads]. Como resultado, el enfoque recomendado para utilizar [!DNL Google Ads] está configurando un [!DNL Google Customer Match] integración. Para obtener más información sobre la creación de un [!DNL Google Customer Match] integración, lea el tutorial sobre creación de una [[!DNL Google Customer Match]](./google-customer-match.md) conexión.
 
 ### Lista de permitidos {#allow-listing}
 

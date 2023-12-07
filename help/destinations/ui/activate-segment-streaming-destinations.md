@@ -1,13 +1,12 @@
 ---
-keywords: activar destinos de flujo de audiencia;activar destinos de flujo de audiencia;activar datos
 title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1121'
+ht-degree: 7%
 
 ---
 
@@ -34,15 +33,15 @@ Para activar audiencias en destinos, debe tener [conectado a un destino](./conne
 
 1. Ir a **[!UICONTROL Conexiones > Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña.
 
-   ![Pestaña Catálogo de destino](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Pestaña Catálogo de destino que muestra varios destinos de flujo continuo.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. Seleccionar **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
-   ![Activar botones](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Activar el control resaltado en el catálogo de destinos.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Seleccione la conexión de destino que desee utilizar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-   ![Seleccionar destino](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Una conexión de destino resaltada en el paso Seleccionar destino.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Mover a la sección siguiente para [seleccionar las audiencias](#select-audiences).
 
@@ -56,7 +55,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 * **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
 * Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
 
-![Seleccionar audiencias](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Varias audiencias resaltadas en el paso Seleccionar audiencias.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Asignar atributos e identidades {#mapping}
 
@@ -68,23 +67,23 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 
 1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nueva asignación]**.
 
-   ![Añadir nueva asignación](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![Agregar nuevo control de asignación resaltado.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de origen]** entrada.
 
-   ![Seleccionar campo de origen](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Seleccione el control de campo de origen resaltado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. En el **[!UICONTROL Seleccionar campo de origen]** página, utilice el **[!UICONTROL Seleccionar atributos]** o el **[!UICONTROL Seleccionar área de nombres de identidad]** opciones para cambiar entre las dos categorías de campos de origen disponibles. De los disponibles [!DNL XDM] atributos de perfil y áreas de nombres de identidad, seleccione los que desee asignar al destino y, a continuación, elija **[!UICONTROL Seleccionar]**.
 
-   ![Seleccionar página de campo de origen](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![Seleccionar página de campo de origen que muestra varios campos de origen disponibles.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. Seleccione el botón a la derecha del **[!UICONTROL Campo de destino]** entrada.
 
-   ![Seleccionar campo de destino](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Seleccione el campo de destino resaltado.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione el área de nombres de identidad de destino al que desea asignar el campo de origen y elija **[!UICONTROL Seleccionar]**.
 
-   ![Seleccionar página de campo de destino](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![La página Seleccionar campo de destino muestra las opciones disponibles para las asignaciones de campo de destino.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Para agregar más asignaciones, repita los pasos del 1 al 5.
 
@@ -97,7 +96,7 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 
 Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la **Aplicar transformación** para que Adobe Experience Platform agregue automáticamente los atributos de origen al activarlos.
 
-![Asignación de identidad](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Aplique el control de transformación resaltado en el paso Asignación de identidad.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Programar exportación de público {#scheduling}
 
@@ -114,23 +113,23 @@ Para ver todas las audiencias que se están activando en su destino, utilice la 
 
 1. En el **[!UICONTROL Programación de audiencia]** página, seleccione cada audiencia y utilice el **[!UICONTROL Fecha de inicio]** y **[!UICONTROL Fecha de finalización]** para configurar el intervalo de tiempo para enviar datos al destino.
 
-   ![Programación de audiencia](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Filtro de programación de audiencia resaltado.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * Algunos destinos requieren que seleccione **[!UICONTROL Origen de la audiencia]** para cada audiencia, utilice el menú desplegable situado debajo de los selectores de calendario. Si el destino no incluye este selector, omita este paso.
 
-     ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Menú desplegable ID de asignación resaltado.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Algunos destinos requieren que los asigne manualmente [!DNL Platform] a su homólogo en el destino de destino. Para ello, seleccione cada audiencia e introduzca el ID de audiencia correspondiente en la plataforma de destino en **[!UICONTROL ID de asignación]** field. Si el destino no incluye este campo, omita este paso.
 
-     ![ID de asignación](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Se ha resaltado el origen de la lista desplegable de audiencias.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Algunos destinos requieren que escriba un **[!UICONTROL ID de aplicación]** al activar [!DNL IDFA] o [!DNL GAID] audiencias. Si el destino no incluye este campo, omita este paso.
 
-     ![ID de aplicación](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![Lista desplegable de ID de aplicación resaltada.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Seleccionar **[!UICONTROL Siguiente]** para ir a [!UICONTROL Revisar] página.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
@@ -144,7 +143,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
 
-![infracción de política de datos](../assets/common/data-policy-violation.png)
+![Ejemplo de una infracción de la política de datos que se muestra en el flujo de trabajo de activación.](../assets/common/data-policy-violation.png)
 
 ### Filtrado de audiencias {#filter-audiences}
 

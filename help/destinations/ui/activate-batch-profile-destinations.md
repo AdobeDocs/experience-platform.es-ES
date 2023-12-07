@@ -1,12 +1,11 @@
 ---
-keywords: activar destinos de perfil;activar destinos;activar datos; activar destinos de marketing por correo electrónico; activar destinos de almacenamiento en la nube
 title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3765'
 ht-degree: 11%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 11%
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias en destinos basados en perfiles por lotes de Adobe Experience Platform, como destinos de marketing por correo electrónico y almacenamiento en la nube.
+En este artículo se explica el flujo de trabajo necesario para activar audiencias en Adobe Experience Platform en destinos basados en archivos de perfil por lotes, como el almacenamiento en la nube y los destinos de marketing por correo electrónico.
 
 ## Requisitos previos {#prerequisites}
 
@@ -46,15 +45,15 @@ Seleccione el formato de archivo que desee exportar cuando [creación de una con
 
 1. Ir a **[!UICONTROL Conexiones > Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña.
 
-   ![Imagen que resalta cómo llegar a la pestaña de catálogo de destinos](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Imagen que resalta cómo llegar a la pestaña de catálogo de destinos.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Seleccionar **[!UICONTROL Activar audiencias]** en la tarjeta correspondiente al destino donde desea activar sus audiencias, como se muestra en la siguiente imagen.
 
-   ![Imagen que resalta el botón Activar audiencias](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Active el control de audiencias resaltado en la página del catálogo.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Seleccione la conexión de destino que desee utilizar para activar las audiencias y, a continuación, seleccione **[!UICONTROL Siguiente]**.
 
-   ![Imagen que resalta cómo seleccionar uno o varios destinos para activar audiencias](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Casillas resaltadas para seleccionar uno o varios destinos para activar las audiencias.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Mover a la sección siguiente para [seleccionar las audiencias](#select-audiences).
 
@@ -68,7 +67,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 * **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
 * Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
 
-![Imagen que resalta cómo seleccionar una o varias audiencias para activarlas.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Casillas de verificación que se muestran al seleccionar una o varias audiencias para activarlas.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >title="Programación"
 >abstract="Utilice el icono de lápiz para establecer el tipo de exportación de archivos (archivos completos o archivos incrementales) y la frecuencia de exportación."
 
-[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube en forma de [!DNL CSV] archivos. En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
+[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube como [diferentes tipos de archivo](#supported-file-formats-export). En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >
 >Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Seleccione el **[!UICONTROL Crear programación]** correspondiente a la audiencia que desea enviar a su destino.
+Seleccione el **[!UICONTROL Crear programación]** control correspondiente a la audiencia que desea enviar a su destino.
 
-![Imagen que resalta el botón Crear programación](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Cree el control de programación resaltado en el paso Programación.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportación de archivos completos {#export-full-files}
 
@@ -113,14 +112,14 @@ Seleccione el **[!UICONTROL Crear programación]** correspondiente a la audienci
 
 Seleccionar **[!UICONTROL Exportar archivos completos]** para almacenar en déclencheur la exportación de un archivo que contenga una instantánea completa de todas las cualificaciones de perfil de la audiencia seleccionada.
 
-![Imagen de la interfaz de usuario con la opción Exportar archivos completos seleccionada.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Opción Exportar archivos completos seleccionada.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Utilice el **[!UICONTROL Frecuencia]** selector para seleccionar la frecuencia de exportación:
 
    * **[!UICONTROL Una]**: programe una exportación de archivos completa bajo demanda de una sola vez.
    * **[!UICONTROL Diario]**: programe las exportaciones de archivos completas una vez al día, todos los días y a la hora especificada.
 
-1. Utilice el **[!UICONTROL Hora]** cambie para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la variable **[!UICONTROL Programado]** , puede utilizar el selector para elegir la hora del día, en [!DNL UTC] formato, momento en el que se debe realizar la exportación.
+2. Utilice el **[!UICONTROL Hora]** cambie para seleccionar si la exportación debe realizarse inmediatamente después de la evaluación de la audiencia o de forma programada a una hora especificada. Al seleccionar la variable **[!UICONTROL Programado]** , puede utilizar el selector para elegir la hora del día, en [!DNL UTC] formato, momento en el que se debe realizar la exportación.
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ Utilice el **[!UICONTROL Programado]** para que el trabajo de activación se eje
 
    ![Imagen que resalta la opción Programado en el flujo de activación para destinos por lotes y muestra el selector de tiempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Utilice el **[!UICONTROL Fecha]** selector para elegir el día o el intervalo en el que debe realizarse la exportación. Para las exportaciones diarias, la práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
+3. Utilice el **[!UICONTROL Fecha]** selector para elegir el día o el intervalo en el que debe realizarse la exportación. Para las exportaciones diarias, la práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
 
    >[!IMPORTANT]
    >
    > Al seleccionar un intervalo de exportación, el último día del intervalo no se incluye en las exportaciones. Por ejemplo, si selecciona un intervalo del 4 al 11 de enero, la última exportación de archivos se realizará el 10 de enero.
 
-1. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
+4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
 ### Exportar archivos incrementales {#export-incremental-files}
 
@@ -151,22 +150,22 @@ Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en d
 >
 >El primer archivo incremental exportado incluye todos los perfiles aptos para una audiencia que funciona como relleno.
 
-![Imagen de la interfaz de usuario con la opción Exportar archivos incrementales seleccionada.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Opción Exportar archivos incrementales seleccionada.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Utilice el **[!UICONTROL Frecuencia]** selector para seleccionar la frecuencia de exportación:
 
    * **[!UICONTROL Diario]**: programe las exportaciones de archivos incrementales una vez al día, todos los días y a la hora especificada.
    * **[!UICONTROL Por hora]**: programe las exportaciones de archivos incrementales cada 3, 6, 8 o 12 horas.
 
-1. Utilice el **[!UICONTROL Hora]** selector para elegir la hora del día, en [!DNL UTC] formato, momento en el que se debe realizar la exportación.
+2. Utilice el **[!UICONTROL Hora]** selector para elegir la hora del día, en [!DNL UTC] formato, momento en el que se debe realizar la exportación.
 
-1. Utilice el **[!UICONTROL Fecha]** selector para elegir el intervalo en el que debe realizarse la exportación. La práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
+3. Utilice el **[!UICONTROL Fecha]** selector para elegir el intervalo en el que debe realizarse la exportación. La práctica recomendada es establecer las fechas de inicio y finalización para que se alineen con la duración de las campañas en las plataformas de flujo descendente.
 
    >[!IMPORTANT]
    >
    >El último día del intervalo no se incluye en las exportaciones. Por ejemplo, si selecciona un intervalo del 4 al 11 de enero, la última exportación de archivos se realizará el 10 de enero.
 
-1. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
+4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
 ### Configuración de nombres de archivo {#file-names}
 
@@ -199,7 +198,7 @@ El nombre de destino y el ID de audiencia no se pueden eliminar de los nombres d
 | **[!UICONTROL ID de destino]** | El ID del flujo de datos de destino que se utiliza para exportar la audiencia. |
 | **[!UICONTROL Nombre del destino]** | Nombre del flujo de datos de destino que se utiliza para exportar la audiencia. |
 | **[!UICONTROL Nombre de organización]** | Nombre de su organización en Experience Platform. |
-| **[!UICONTROL Nombre de la zona protegida]** | El ID de la zona protegida que utiliza para exportar la audiencia. |
+| **[!UICONTROL Nombre de zona protegida]** | El ID de la zona protegida que utiliza para exportar la audiencia. |
 
 {style="table-layout:auto"}
 
@@ -215,7 +214,7 @@ Cuando haya terminado de configurar todas las audiencias, seleccione **[!UICONTR
 
 En este paso, debe seleccionar los atributos de perfil que desea añadir a los archivos exportados al destino de destino. Para seleccionar atributos e identidades de perfil para la exportación:
 
-1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nuevo campo]**.
+1. En el **[!UICONTROL Asignación]** página, seleccione **[!UICONTROL Añadir nueva asignación]**.
 
    ![Agregue el nuevo control de campo resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ Más información sobre [comportamiento de exportación de perfiles para destino
 
 Actualmente no se admite la selección de áreas de nombres de identidad para exportar, como se muestra en la imagen siguiente. Si se seleccionan áreas de nombres de identidad para la exportación, se producirá un error en la variable **[!UICONTROL Revisar]** paso.
 
-![Asignación no compatible que muestra exportaciones de identidad](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Asignación no compatible que muestra exportaciones de identidad.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Como solución temporal si necesita agregar áreas de nombres de identidad a los archivos exportados durante la versión beta, puede:
 * Utilice los destinos de almacenamiento en la nube heredados para los flujos de datos donde desee incluir áreas de nombres de identidad en las exportaciones
@@ -513,11 +512,11 @@ Si desea activar audiencias externas en sus destinos sin exportar ningún atribu
 
 Seleccionar **[!UICONTROL Siguiente]** para desplazarse a [Revisar](#review) paso.
 
-## Consulte {#review}
+## Revisión {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
-![Resumen de la selección en el paso de revisión.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Resumen de la selección mostrado en el paso de revisión.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &
 
 En el **[!UICONTROL Revisar]** paso, el Experience Platform también comprueba si hay alguna infracción de la política de uso de datos. A continuación se muestra un ejemplo de infracción de una directiva. No puede completar el flujo de trabajo de activación de audiencia hasta que haya resuelto la infracción. Para obtener información sobre cómo resolver infracciones de directivas, consulte [infracciones de políticas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) en la sección documentación de control de datos.
 
-![infracción de política de datos](../assets/common/data-policy-violation.png)
+![Ejemplo de infracción de la política de datos que se muestra en el flujo de trabajo de activación.](../assets/common/data-policy-violation.png)
 
 ### Filtrado de audiencias {#filter-audiences}
 

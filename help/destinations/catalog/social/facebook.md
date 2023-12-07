@@ -3,10 +3,10 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 7%
+source-wordcount: '1949'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ Activar perfiles para su [!DNL Facebook] campañas de segmentación, personaliza
 
 Puede utilizar este destino para la segmentación de audiencias en [!DNL Facebook's] familia de aplicaciones compatibles con [!DNL Custom Audiences], incluido [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], y [!DNL Messenger]. La selección de la aplicación con la que quiere ejecutar la campaña se indica en el nivel de colocación de [!DNL Facebook Ads Manager].
 
-![Destino facebook en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destino facebook en la interfaz de usuario de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casos de uso
 
@@ -50,7 +50,7 @@ A continuación, puede utilizar sus datos sin conexión, incluidos los ID de per
 
 ## Audiencias compatibles {#supported-audiences}
 
-Esta sección describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 ---------|----------|----------|
@@ -74,9 +74,9 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
-* Su [!DNL Facebook] La cuenta de usuario de debe tener acceso completo a [!DNL Facebook Business Account] que posee la cuenta publicitaria que va a utilizar.
+* Su [!DNL Facebook] La cuenta de usuario de debe tener acceso completo a [!DNL Facebook Business Account] que posee la cuenta publicitaria que está utilizando.
 * Su [!DNL Facebook] la cuenta de usuario debe tener el **[!DNL Manage campaigns]** permiso habilitado para la cuenta de Ad que planea usar.
-* El **Adobe Experience Cloud** La cuenta comercial de debe añadirse como socio de publicidad en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+* El **Adobe Experience Cloud** La cuenta comercial de debe añadirse como socio de publicidad en su [!DNL Facebook Ad Account]. Utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
   >[!IMPORTANT]
   >
   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar la variable **Administración de campañas** permiso. Se requiere el permiso para el [!DNL Adobe Experience Platform] integración.
@@ -123,7 +123,7 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 > Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación.
 > El **[!UICONTROL Aplicar transformación]** Esta opción solo se muestra al seleccionar atributos como campos de origen. No se muestra al elegir áreas de nombres.
 
-![Transformación de asignación de identidad](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Aplique el control de transformación resaltado en el paso de asignación.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Uso de áreas de nombres personalizadas {#custom-namespaces}
 
@@ -149,7 +149,7 @@ El siguiente vídeo también muestra los pasos para configurar una [!DNL Faceboo
 
 1. Busque el destino de Facebook en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
 2. Seleccionar **[!UICONTROL Conectar con destino]**.
-   ![Autenticar en Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![Paso Autenticar en Facebook mostrado en el flujo de trabajo de activación.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Introduzca sus credenciales de Facebook y seleccione **Iniciar sesión**.
 
 ### Rellenar detalles de destino {#destination-details}
@@ -176,7 +176,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origen del público"
->abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se mostrarán en Facebook cuando un usuario sea el objetivo del segmento"
+>abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se muestran en Facebook cuando el segmento se dirige a un usuario"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 En el **[!UICONTROL Programación de segmentos]** paso, debe proporcionar el [!UICONTROL Origen de la audiencia] al enviar audiencias a [!DNL Facebook Custom Audiences].
 
-![Origen de audiencia de facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![El origen del menú desplegable de Audiencia se muestra en el paso de activación de Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Ejemplo de asignación: activación de datos de audiencia en [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Selección de campos de destino:
 > 
 >Los datos de origen de los atributos no se cifran automáticamente. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación.
 
-![Asignación de identidad](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Aplique el control de transformación resaltado en el paso de asignación.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Datos exportados {#exported-data}
 
