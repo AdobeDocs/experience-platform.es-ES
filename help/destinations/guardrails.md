@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;activación;solución de problemas;protecciones;directrices;límite
-title: Protecciones predeterminadas para los datos de activación
+title: Protecciones predeterminadas para la activación de datos
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 1%
 
 ---
 
-# Protecciones para los datos de activación
+# Protecciones para la activación de datos
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se da por hecho que ha [conectado a destinos](/help/destinations/ui/connect-destination.md).
 

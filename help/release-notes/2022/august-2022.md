@@ -2,16 +2,16 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Notas de la versión de agosto de 2022 de Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '1999'
 ht-degree: 27%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de lanzamiento: 24 de agosto de 2022**
+**Fecha de lanzamiento: jueves, 24 de agosto de 2022**
 
 Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
@@ -116,7 +116,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Clase | [[!UICONTROL Clase de entidad AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
+| Clase | [[!UICONTROL Clase de entidad AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
 | Grupo de campo | [[!UICONTROL Objetos de trabajo de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos envolvente que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Tipo de datos | [[!UICONTROL Información de detalles de datos de calidad de la experiencia (QoE)]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nueva propiedad `framesPerSecond` se ha añadido. |
 | Tipo de datos | [[!UICONTROL Información de detalles de sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` se ha cambiado a `appVersion`. `meta:enum` y `description` Los campos de también se han actualizado. |
 | Tipos de datos y grupos de campos | (Múltiple) | Varios tipos de datos de medios y grupos de campos tienen campos nuevos y descripciones actualizadas. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1582/files) para obtener más información. |
-| (Todas) | (Múltiple) | Todos los objetos de esquema que contienen un `enum` ahora también contienen un campo correspondiente `meta:enum` para denotar los valores de visualización de cada restricción. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1601/files) para obtener más información. |
+| (Todos) | (Múltiple) | Todos los objetos de esquema que contienen un `enum` ahora también contienen un campo correspondiente `meta:enum` para denotar los valores de visualización de cada restricción. Consulte lo siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1601/files) para obtener más información. |
 
 {style="table-layout:auto"}
 
