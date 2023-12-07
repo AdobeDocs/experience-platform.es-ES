@@ -3,9 +3,9 @@ title: Depuración en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo alternar las funcionalidades de depuración en el SDK web de Experience Platform.
 keywords: depurar sdk web;depuración;configurar;comando configure;depurar comando;edgeConfigId;setDebug;debugEnabled;depurar;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ La depuración está deshabilitada de forma predeterminada, pero se puede activa
 * `configure` mando
 * `setDebug` mando
 * parámetro de cadena de consulta
-* Activación o desactivación de Habilitar depuración en el Adobe Experience Platform Debugger. Adobe Experience Platform es una potente herramienta que examina sus páginas web y le ayuda a depurar los problemas de implementación con los productos de Experience Cloud. El Adobe Experience Platform Debugger está disponible como [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) y [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/) extensión. La depuración se puede habilitar desde la pestaña de configuración de la sección SDK web de AEP.
+* Activación o desactivación de Habilitar depuración en el Adobe Experience Platform Debugger. Adobe Experience Platform es una potente herramienta que examina sus páginas web y le ayuda a depurar los problemas de implementación con los productos de Experience Cloud. El Adobe Experience Platform Debugger está disponible como [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) extensión. La depuración se puede habilitar desde la pestaña de configuración de la sección SDK web de AEP.
 
 ![Imagen de la interfaz de usuario de Experience Platform Debugger que muestra la pantalla de configuración.](../assets/enable-debugging.png)
 

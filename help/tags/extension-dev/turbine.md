@@ -2,9 +2,9 @@
 title: Variable gratuita turbine
 description: Obtenga información acerca del objeto turbine, una variable gratuita que proporciona información y utilidades específicas del tiempo de ejecución de la etiqueta de Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '606'
 ht-degree: 86%
 
 ---
@@ -112,7 +112,7 @@ Recupera un módulo que se ha compartido desde otra extensión. Si no se encuent
 turbine.logger.error('Error!');
 ```
 
-Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La forma recomendada de activar la depuración es utilizar [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
+Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La forma recomendada de activar la depuración es utilizar [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
 
 * `logger.log(message: string)`: Registra un mensaje en la consola.
 * `logger.info(message: string)`: Registra un mensaje informativo en la consola.
@@ -137,8 +137,8 @@ Objeto que contiene la siguiente configuración definida por el usuario para la 
 
 * `propertySettings.domains: Array<String>`
 
-   Matriz de dominios que cubre la propiedad.
+  Matriz de dominios que cubre la propiedad.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Los desarrolladores de extensiones no deben preocuparse por esta configuración.
+  Los desarrolladores de extensiones no deben preocuparse por esta configuración.

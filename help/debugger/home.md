@@ -1,21 +1,21 @@
 ---
 description: Experience Platform Debugger examina las páginas web y le ayuda a encontrar problemas con la implementación de las soluciones de Experience Cloud.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión
-seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome and Firefox Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
-seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
+seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
+seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Extensión de Adobe Experience Platform Debugger
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 18%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
-# Información general de Adobe Experience Platform Debugger
+# información general de Adobe Experience Platform Debugger
 
-Extensión de Adobe Experience Platform Debugger para [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) y [Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/) examina sus páginas web y le ayuda a encontrar problemas con la implementación de las soluciones de Adobe Experience Cloud.
+La extensión de Adobe Experience Platform Debugger para [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) examina sus páginas web y le ayuda a encontrar problemas con la implementación de las soluciones de Adobe Experience Cloud.
 
 Puede utilizar Platform Debugger con otras soluciones de activación de Adobe para realizar lo siguiente:
 

@@ -2,10 +2,10 @@
 title: Prueba de códigos incrustados con Adobe Experience Platform Debugger
 description: Aprenda a utilizar Platform Debugger para probar localmente los distintos códigos incrustados para Adobe Experience Platform en el sitio web.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 93%
+source-wordcount: '488'
+ht-degree: 88%
 
 ---
 
@@ -21,10 +21,9 @@ Según vaya realizando cambios en las compilaciones de su biblioteca de etiqueta
 
 Este tutorial requiere una comprensión práctica del uso de entornos y códigos incrustados para etiquetas. Consulte la [información general de los entornos](./environments.md) para obtener más detalles.
 
-Este tutorial también requiere que tenga instalada la extensión del explorador de Platform Debugger. Platform Debugger solo está disponible para los navegadores Chrome y Firefox. Utilice uno de los siguientes enlaces para instalar la extensión antes de iniciar el tutorial:
+Este tutorial también requiere que tenga instalada la extensión del explorador de Platform Debugger. Platform Debugger está disponible para el navegador Chrome. Utilice el siguiente vínculo para instalar la extensión antes de iniciar el tutorial:
 
 * [Platform Debugger para Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Platform Debugger para Firefox](https://addons.mozilla.org/es/firefox/addon/adobe-experience-platform-dbg/)
 
 ## Abrir Platform Debugger en el sitio web
 

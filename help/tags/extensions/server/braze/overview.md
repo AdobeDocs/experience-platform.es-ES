@@ -4,10 +4,10 @@ title: Extensión de reenvío de eventos de Braze
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de red perimetral a Brazo.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 5%
+source-wordcount: '1692'
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ La extensión de utiliza dos de [!DNL Braze]Las API de y sus límites se describ
 
 ### Puntos de datos facturables
 
-Envío de atributos personalizados adicionales a [!DNL Braze] puede aumentar sus [!DNL Braze] consumo de puntos de datos. Consulte con su [!DNL Braze] administrador de cuentas antes de enviar atributos personalizados adicionales. Consulte la [!DNL Braze] documentación sobre [puntos de datos facturables](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) para obtener más información.
+Envío de atributos personalizados adicionales a [!DNL Braze] puede aumentar sus [!DNL Braze] consumo de puntos de datos. Consulte con su [!DNL Braze] administrador de cuentas antes de enviar atributos personalizados adicionales. Consulte la [!DNL Braze] documentación sobre [puntos de datos facturables](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) para obtener más información.
 
 ### Recopilar detalles de configuración necesarios {#configuration-details}
 
@@ -72,7 +72,7 @@ Para instalar la extensión de, [crear una propiedad de reenvío de eventos](../
 
 Seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo. En el **[!UICONTROL Catálogo]** pestaña, seleccione **[!UICONTROL Instalar]** en la tarjeta de [!DNL Braze] extensión.
 
-![[!DNL Braze]Instalar la extensión.](../../../images/extensions/server/braze/install-extension.png)
+![Instale el [!DNL Braze] extensión.](../../../images/extensions/server/braze/install-extension.png)
 
 En la pantalla siguiente, introduzca lo siguiente [valores de configuración](#configuration-details) que recopiló anteriormente de [!DNL Braze]:
 
@@ -107,7 +107,7 @@ Después de instalar la extensión, cree un nuevo reenvío de eventos [regla](..
 
 | Entrada | Descripción | Requerido |
 | --- | --- | --- |
-| [!UICONTROL Nombre del evento &#x200B;] | Nombre del evento. | Sí |
+| [!UICONTROL Nombre del evento] | Nombre del evento. | Sí |
 | [!UICONTROL Hora del evento] | Fecha-hora como cadena en ISO 8601 o en `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sí |
 | [!UICONTROL Identificador de aplicación] | El identificador de la aplicación o <strong>app_id</strong> es un parámetro que asocia la actividad con una aplicación específica de su grupo de aplicaciones. Designa con qué aplicación del grupo de aplicaciones está interactuando. Obtenga más información acerca de [Tipos de identificadores API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propiedades del evento] | Objeto JSON que contiene propiedades personalizadas del evento. |  |
@@ -126,7 +126,7 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que creen
 | --- | --- |
 | [!UICONTROL Nombre] | |
 | [!UICONTROL Apellidos] | |
-| [!UICONTROL Phone] | |
+| [!UICONTROL Teléfono] | |
 | [!UICONTROL Correo electrónico] | |
 | [!UICONTROL Sexo] | Una de las siguientes cadenas: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (otro), &quot;N&quot; (no aplicable), &quot;P&quot; (prefiero no decir). |
 | [!UICONTROL Ciudad] | |
@@ -163,11 +163,11 @@ Después de instalar la extensión, cree un nuevo reenvío de eventos [regla](..
 
 | Entrada | Descripción | Requerido |
 | --- | --- | --- |
-| [!UICONTROL ID del producto &#x200B;] | Identificador de la compra. (por ejemplo, Nombre de producto o Categoría de producto) | Sí |
+| [!UICONTROL ID del producto] | Identificador de la compra. (por ejemplo, Nombre de producto o Categoría de producto) | Sí |
 | [!UICONTROL Hora de compra] | Fecha-hora como cadena en ISO 8601 o en `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sí |
-| [!UICONTROL Moneda &#x200B;] | Moneda como cadena en [ISO 4217](https://es.wikipedia.org/wiki/ISO_4217) Formato de código de moneda alfabético. | Sí |
-| [!UICONTROL Precio &#x200B;] | Precio. | Sí |
-| [!UICONTROL Cantidad &#x200B;] | Si no se proporciona, el valor predeterminado será 1. El valor máximo debe ser inferior a 100. | |
+| [!UICONTROL Moneda] | Moneda como cadena en [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Formato de código de moneda alfabético. | Sí |
+| [!UICONTROL Precio] | Precio. | Sí |
+| [!UICONTROL Cantidad constante] | Si no se proporciona, el valor predeterminado será 1. El valor máximo debe ser inferior a 100. | |
 | [!UICONTROL Identificador de aplicación] | El identificador de la aplicación o <strong>app_id</strong> es un parámetro que asocia la actividad con una aplicación específica de su grupo de aplicaciones. Designa con qué aplicación del grupo de aplicaciones está interactuando. Obtenga más información acerca de [Tipos de identificadores API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propiedades de compra] | Un objeto JSON que contiene propiedades personalizadas de la compra. |  |
 
@@ -185,7 +185,7 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que creen
 | --- | --- |
 | [!UICONTROL Nombre] | |
 | [!UICONTROL Apellidos] | |
-| [!UICONTROL Phone] | |
+| [!UICONTROL Teléfono] | |
 | [!UICONTROL Correo electrónico] | |
 | [!UICONTROL Sexo] | Una de las siguientes cadenas: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (otro), &quot;N&quot; (no aplicable), &quot;P&quot; (prefiero no decir). |
 | [!UICONTROL Ciudad] | |
