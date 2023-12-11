@@ -2,9 +2,9 @@
 title: Conecte su cuenta de Salesforce Marketing Cloud con Experience Platform a través de la interfaz de usuario de
 description: Aprenda a conectar su cuenta de Salesforce Marketing Cloud a Experience Platform a través de la interfaz de usuario.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >La ingesta de objetos personalizados no es compatible actualmente con [!DNL Salesforce Marketing Cloud] integración de origen.
-
 
 Este tutorial proporciona pasos sobre cómo conectar su [!DNL Salesforce Marketing Cloud] a Adobe Experience Platform a través de la interfaz de usuario.
 
@@ -35,8 +34,8 @@ Para acceder a su [!DNL Salesforce Marketing Cloud] en Platform, debe proporcion
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| Host | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , solo necesita especificar el subdominio y no la dirección URL completa. Por ejemplo, si la dirección URL del host es `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, entonces solo necesita introducir `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` como valor de host. |
-| ID del cliente | El ID de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
+| Host | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , debe especificar el valor de `{subdomain}.rest.marketingcloudapis.com`. Por ejemplo, si la dirección URL del host es `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, entonces solo necesita introducir `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` como valor de host. |
+| ID de cliente | El ID de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 | Secreto de cliente | El secreto de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 
 Para obtener más información sobre la autenticación para [!DNL Salesforce Marketing Cloud], visite la [[!DNL Salesforce] documentación de autenticación](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).

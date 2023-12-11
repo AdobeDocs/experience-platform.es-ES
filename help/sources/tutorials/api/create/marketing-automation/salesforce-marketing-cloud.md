@@ -2,9 +2,9 @@
 title: Creación de una conexión base de Marketing Cloud de Salesforce mediante la API de Flow Service
 description: Obtenga información sobre cómo autenticar su cuenta de Salesforce Marketing Cloud con Experience Platform mediante la API de Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '491'
 ht-degree: 5%
 
 ---
@@ -38,14 +38,14 @@ Para que [!DNL Flow Service] para conectar con [!DNL Salesforce Marketing Cloud]
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , solo necesita especificar el subdominio y no la dirección URL completa. Por ejemplo, si la dirección URL del host es `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, entonces solo necesita introducir `acme-ab12c3d4e5fg6hijk7lmnop8qrst` como valor de host. |
+| `host` | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , debe especificar el valor de `{subdomain}.rest.marketingcloudapis.com`. Por ejemplo, si la dirección URL del host es `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, entonces solo necesita introducir `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` como valor de host. |
 | `clientId` | El ID de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 | `clientSecret` | El secreto de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce Marketing Cloud] es: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 Para obtener más información sobre cómo empezar, consulte esta [[!DNL Salesforce Marketing Cloud] documento](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
-## Cree una conexión base
+## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
