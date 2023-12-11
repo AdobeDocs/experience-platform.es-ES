@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2282'
 ht-degree: 2%
 
 ---
@@ -89,10 +89,10 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Tamaño máximo de ExperienceEvent | 10 KB | Protección impuesta por el sistema | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, aunque se perderán todos los eventos de más de 10 KB. |
-| Tamaño máximo de registro de perfil | 100 KB | Protección impuesta por el sistema | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil que superen los 100 KB. |
-| Tamaño máximo del fragmento de perfil | 50MB | Protección impuesta por el sistema | **El tamaño máximo de un solo fragmento de perfil es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier [fragmento de perfil](#profile-fragments) que supera los 50 MB. |
-| Tamaño máximo de almacenamiento de perfil | 50MB | Protección de rendimiento | **El tamaño máximo de un perfil almacenado es de 50 MB.** Agregando nuevo [fragmentos de perfil](#profile-fragments) en un perfil que supere los 50 MB afectará al rendimiento del sistema. Por ejemplo, un perfil puede contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB o con varios fragmentos de más de 50 MB de tamaño combinado, el rendimiento del sistema se verá afectado. |
+| Tamaño máximo de ExperienceEvent | 10KB | Protección impuesta por el sistema | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, aunque se perderán todos los eventos de más de 10 KB. |
+| Tamaño máximo de registro de perfil | 100KB | Protección impuesta por el sistema | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil que superen los 100 KB. |
+| Tamaño máximo del fragmento de perfil | 50 MB | Protección impuesta por el sistema | **El tamaño máximo de un solo fragmento de perfil es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier [fragmento de perfil](#profile-fragments) que supera los 50 MB. |
+| Tamaño máximo de almacenamiento de perfil | 50 MB | Protección de rendimiento | **El tamaño máximo de un perfil almacenado es de 50 MB.** Agregando nuevo [fragmentos de perfil](#profile-fragments) en un perfil que supere los 50 MB afectará al rendimiento del sistema. Por ejemplo, un perfil puede contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB o con varios fragmentos de más de 50 MB de tamaño combinado, el rendimiento del sistema se verá afectado. |
 | Número de lotes de Perfil o ExperienceEvent introducidos por día | 90 | Protección de rendimiento | **El número máximo de lotes de Perfil o ExperienceEvent ingeridos por día es de 90.** Esto significa que el total combinado de lotes Profile y ExperienceEvent introducidos cada día no puede superar los 90. La ingesta de lotes adicionales afectará al rendimiento del sistema. |
 | Número de ExperienceEvents por registro de perfil | 5000 | Protección de rendimiento | **El número máximo de ExperienceEvents por registro de perfil es de 5000.** Los perfiles con más de 5000 ExperienceEvents **no** debe tenerse en cuenta para la segmentación. |
 
@@ -102,7 +102,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Tamaño total para todas las entidades dimensionales | 5 GB | Protección de rendimiento | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
+| Tamaño total para todas las entidades dimensionales | 5GB | Protección de rendimiento | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Protección de rendimiento | Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional. Por ejemplo, si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos colaboradores, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
 | Lotes de entidades Dimension introducidos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
 
@@ -120,6 +120,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias de lote en total, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida individual. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |
 | Audiencias de cuenta por zona protegida | 50 | Protección impuesta por el sistema | Puede crear un máximo de 50 audiencias de cuenta en una zona protegida. Después de llegar a 50 audiencias en una zona protegida, la variable **[!UICONTROL Crear audiencia]** El control de está desactivado al intentar crear una audiencia de cuenta nueva. Más información sobre [audiencias de cuenta](/help/segmentation/ui/account-audiences.md). |
 | Composiciones publicadas por zona protegida | 10 | Protección de rendimiento | Puede tener un máximo de 10 composiciones publicadas en una zona protegida. Más información sobre [composición de audiencias en la guía de IU](/help/segmentation/ui/audience-composition.md). |
+| Tamaño máximo de audiencia | 30 por ciento | Protección de rendimiento | La pertenencia máxima recomendada de una audiencia es del 30 % del número total de perfiles en el sistema. Es posible crear audiencias con más del 30 % de los perfiles como miembros o varias audiencias grandes, pero esto afectará al rendimiento del sistema. |
 
 {style="table-layout:auto"}
 
