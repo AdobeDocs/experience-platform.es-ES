@@ -2,9 +2,7 @@
 title: Crear una conexión de origen y un flujo de datos de resolución de identidad empresarial de Mercury en la IU de
 description: Obtenga información sobre cómo crear una conexión de origen de resolución de identidad empresarial de Mercury mediante la IU de Adobe Experience Platform.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: cc87bff5ea19e2ffc9958bd645b4736d05773e3c
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 1%
