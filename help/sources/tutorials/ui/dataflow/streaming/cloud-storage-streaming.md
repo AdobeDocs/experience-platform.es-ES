@@ -5,10 +5,10 @@ title: Cree un flujo de datos de flujo continuo para una fuente de almacenamient
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos para configurar un nuevo flujo de datos mediante el conector de base de almacenamiento en la nube.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 1%
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Antes de intentar realizar este tutorial, primero debe establecer una conexión 
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../../../ui/create/cloud-storage/google-pubsub.md)
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -34,6 +34,10 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
 ## Adición de datos
+
+>[!NOTE]
+>
+>Solo puede crear un flujo de datos de origen por grupo de consumidores para un centro de eventos determinado.
 
 Después de crear la autenticación de su cuenta de almacenamiento de nube de streaming, la variable **[!UICONTROL Seleccionar datos]** Este paso aparece, y proporciona una interfaz para que seleccione el flujo de datos que llevará a Platform.
 
@@ -110,7 +114,7 @@ Una vez asignados los datos de origen, seleccione **[!UICONTROL Siguiente]**.
 
 ![asignación](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
-## Detalles de flujo de datos
+## Detalles del flujo de datos
 
 El **[!UICONTROL Detalles del flujo de datos]** Este paso aparece, lo que le permite asignar un nombre al nuevo flujo de datos y proporcionar una breve descripción sobre él.
 
@@ -118,7 +122,7 @@ Proporcione valores para el flujo de datos y seleccione **[!UICONTROL Siguiente]
 
 ![data-flow-detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### Consulte
+### Revisión
 
 El **[!UICONTROL Revisar]** Este paso aparece, lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 
@@ -137,5 +141,5 @@ Una vez creado el flujo de datos del almacenamiento en la nube de streaming, pue
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para transmitir datos desde una fuente de almacenamiento en la nube. Ahora, los servicios de Platform posteriores pueden utilizar los datos entrantes, como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-- [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
-- [Información general del [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+- [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+- [Información general de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
