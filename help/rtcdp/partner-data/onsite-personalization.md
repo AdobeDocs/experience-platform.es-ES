@@ -3,10 +3,10 @@ title: Personalice experiencias en el sitio para visitantes desconocidos mediant
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 91%
+source-wordcount: '2673'
+ht-degree: 89%
 
 ---
 
@@ -39,7 +39,7 @@ Esta marca elige aprovechar la tecnología de reconocimiento de socios para reco
 Cuando planee utilizar atributos proporcionados por el socio para ofrecer experiencias personalizadas a sus visitantes autenticados y no autenticados, tenga en cuenta los siguientes requisitos previos en el proceso de planificación:
 
 * ¿Qué entradas espera la tecnología de reconocimiento de su socio para que puedan aprovechar atributos adicionales?
-* ¿Hasta qué punto se siente cómodo al ofrecer personalización en diferentes canales y para diferentes casos de uso basados en atributos derivados probabilísticamente, en comparación con atributos confirmados determinísticamente?
+* ¿Hasta qué punto se siente cómodo al ofrecer personalización en diferentes canales y para diferentes casos de uso basados en conjuntos de datos derivados probabilísticamente, en comparación con atributos confirmados determinísticamente?
 * ¿Cómo debería cambiar la experiencia de un visitante previamente autenticado pero reconocido al autenticarse?
 
 ### Funcionalidad de la IU, componentes de Platform y productos de Experience Cloud que utilizará {#ui-functionality-and-elements}

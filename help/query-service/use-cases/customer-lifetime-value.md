@@ -2,9 +2,9 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ La siguiente infografía muestra el ciclo de recopilación, manipulación, anál
 
 ![La infografía de ida y vuelta de los datos de la observación al análisis a la acción.](../images/use-cases/infographic-use-case-cycle.png)
 
-Este caso de uso de extremo a extremo muestra cómo se pueden capturar y modificar las señales de datos para calcular el atributo derivado del valor de duración del cliente. Estos atributos derivados se pueden aplicar a los datos de perfil de Real-Time CDP y están disponibles para usarlos con paneles definidos por el usuario para crear un panel para el análisis de perspectivas. A través de Data Distiller, puede ampliar el modelo de datos de perspectivas de Real-Time CDP y utilizar las perspectivas de atributos y tableros derivadas de CLV para crear una nueva audiencia y activarla en el destino deseado. Estas audiencias de alto rendimiento se pueden usar para impulsar la próxima campaña de marketing.
+Este caso de uso de extremo a extremo muestra cómo se pueden capturar y modificar las señales de datos para calcular el atributo derivado del valor de duración del cliente. Estos conjuntos de datos derivados se pueden aplicar a los datos de perfil de Real-Time CDP y están disponibles para su uso con paneles definidos por el usuario para crear un panel para el análisis de perspectivas. A través de Data Distiller, puede ampliar el modelo de datos de perspectivas de Real-Time CDP y utilizar los conjuntos de datos derivados de CLV y las perspectivas de panel para crear una nueva audiencia y activarla en un destino deseado. Estas audiencias de alto rendimiento se pueden usar para impulsar la próxima campaña de marketing.
 
 Esta guía se ha diseñado para ayudarle a comprender mejor la experiencia del cliente mediante la medición de señales de datos en puntos de contacto clave que controlan el CLV y la implementación de un caso de uso similar en su entorno. Todo el proceso se resume en la siguiente imagen.
 
@@ -34,9 +34,9 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 Esta guía requiere que tenga el [Data Distiller](../data-distiller/overview.md) SKU como parte de la oferta de paquetes. Si no está seguro de si lo tiene, póngase en contacto con su representante de servicios de Adobe.
 
-## Crear un atributo derivado {#create-derived-attribute}
+## Crear un conjunto de datos derivado {#create-derived-dataset}
 
-El primer paso para establecer el CLV es crear un atributo derivado a partir de las señales de datos capturadas de las acciones del usuario. Este caso de uso concreto se recoge en un documento independiente sobre un plan de fidelización de aerolínea. Consulte la guía para obtener información sobre cómo [utilice el servicio de consulta para crear atributos derivados basados en deciles para utilizarlos con los datos de perfil](./deciles-use-case.md). En el documento se proporcionan ejemplos completos y explicaciones que explican los siguientes pasos:
+El primer paso para establecer el CLV es crear un conjunto de datos derivado a partir de las señales de datos capturadas de las acciones del usuario. Este caso de uso concreto se recoge en un documento independiente sobre un plan de fidelización de aerolínea. Consulte la guía para obtener información sobre cómo [utilice el servicio de consulta para crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos de perfil](./deciles-use-case.md). En el documento se proporcionan ejemplos completos y explicaciones que explican los siguientes pasos:
 
 * Cree un esquema para permitir el agrupamiento de deciles.
 * Utilice el servicio de consulta para crear deciles.

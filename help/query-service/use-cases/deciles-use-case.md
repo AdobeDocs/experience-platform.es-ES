@@ -1,29 +1,29 @@
 ---
-title: Caso de uso de atributos derivados basados en deciles
-description: En esta guía se muestran los pasos necesarios para utilizar el servicio de consulta con el fin de crear atributos derivados basados en deciles para utilizarlos con los datos del perfil.
+title: Caso de uso de conjuntos de datos derivados basados en deciles
+description: En esta guía se muestran los pasos necesarios para utilizar el servicio de consulta con el fin de crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos del perfil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 2%
+source-wordcount: '1511'
+ht-degree: 0%
 
 ---
 
-# Caso de uso de atributos derivados basados en deciles
+# Caso de uso de conjuntos de datos derivados basados en deciles
 
-Los atributos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden utilizar con otros servicios de Platform secundarios o publicar en los datos del perfil del cliente en tiempo real.
+Los conjuntos de datos derivados facilitan casos de uso complicados para analizar datos del lago de datos que se pueden utilizar con otros servicios de Platform secundarios o publicar en los datos del perfil del cliente en tiempo real.
 
-Este ejemplo de caso de uso muestra cómo crear atributos derivados basados en deciles para utilizarlos con los datos del perfil del cliente en tiempo real. Con un escenario de lealtad de las aerolíneas como ejemplo, esta guía le informa cómo crear un conjunto de datos que utilice deciles categóricos para segmentar y crear audiencias en función de atributos de clasificación.
+Este ejemplo de caso de uso muestra cómo crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos del perfil del cliente en tiempo real. Con un escenario de lealtad de las aerolíneas como ejemplo, esta guía le informa cómo crear un conjunto de datos que utilice deciles categóricos para segmentar y crear audiencias en función de atributos de clasificación.
 
 Se ilustran los siguientes conceptos clave:
 
 * Creación de esquemas para la agrupación de deciles.
 * Creación categórica de decilos.
-* Creación de atributos derivados complejos.
+* Creación de conjuntos de datos derivados complejos.
 * Cálculo de deciles durante un periodo retroactivo.
 * Una consulta de ejemplo para demostrar la agregación, la clasificación y la adición de identidades únicas que permiten que las audiencias se generen en función de estos bloques de deciles.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de [ejecución de consultas en el servicio de consultas](../best-practices/writing-queries.md) y los siguientes componentes de Adobe Experience Platform:
 
@@ -34,9 +34,9 @@ Esta guía requiere una comprensión práctica de [ejecución de consultas en el
 
 ## Objetivos
 
-El ejemplo que se muestra en este documento utiliza deciles para crear atributos derivados para clasificar los datos de un esquema de lealtad de aerolínea. Los atributos derivados le permiten maximizar la utilidad de los datos al identificar una audiencia en función del porcentaje &quot;n&quot; superior de una categoría elegida.
+El ejemplo que se muestra en este documento utiliza deciles para crear conjuntos de datos derivados para clasificar los datos de un esquema de lealtad de aerolínea. Los conjuntos de datos derivados le permiten maximizar la utilidad de los datos al identificar una audiencia en función del porcentaje &quot;n&quot; superior de una categoría elegida.
 
-## Generar atributos derivados basados en deciles
+## Generar conjuntos de datos derivados basados en deciles
 
 Para definir la clasificación de los deciles en función de una dimensión en particular y una métrica correspondiente, se debe diseñar un esquema para permitir la agrupación de deciles.
 
@@ -56,7 +56,7 @@ El conjunto de datos de lealtad de la aerolínea inicial para este ejemplo es &q
 
 **Datos de muestra**
 
-La siguiente tabla muestra los datos de ejemplo contenidos en la variable `_profilefoundationreportingstg` objeto utilizado para este ejemplo. Proporciona contexto para el uso de bloques de deciles para crear atributos derivados complejos.
+La siguiente tabla muestra los datos de ejemplo contenidos en la variable `_profilefoundationreportingstg` objeto utilizado para este ejemplo. Proporciona contexto para el uso de bloques de deciles para crear conjuntos de datos derivados complejos.
 
 >[!NOTE]
 >
@@ -64,11 +64,11 @@ La siguiente tabla muestra los datos de ejemplo contenidos en la variable `_prof
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nuevo miembro | 5000 | VOLANTE |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | PLATA |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | PLATA |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | PLATA |
-| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nueva tarjeta de crédito | 10 000 | VOLANTE |
+| C435678623 | sfeldmark1vr@studiopress.com | 01-01-2022 | STATUS_MILES | Nuevo miembro | 5000 | VOLANTE |
+| B789279247 | pgalton32n@barnesandnoble.com | 01-02-2022 | AWARD_MILES | JFK-FRA | 7500 | PLATA |
+| B789279247 | pgalton32n@barnesandnoble.com | 01-02-2022 | STATUS_MILES | JFK-FRA | 7500 | PLATA |
+| B789279247 | pgalton32n@barnesandnoble.com | 10-02-2022 | AWARD_MILES | FRA-JFK | 5000 | PLATA |
+| A123487284 | rritson1zn@sciencedaily.com | 07-01-2022 | STATUS_MILES | Nueva tarjeta de crédito | 10 000 | VOLANTE |
 
 {style="table-layout:auto"}
 
@@ -185,7 +185,7 @@ CREATE TABLE AS airline_loyality_decile
 
 ### Revisión de consulta
 
-Las secciones de la consulta de ejemplo se examinan en los buenos detalles a continuación.
+Las secciones de la consulta de ejemplo se examinan con mayor detalle a continuación.
 
 #### Períodos retroactivos
 
@@ -216,7 +216,7 @@ Es importante tener en cuenta las columnas de identidad, dimensión y métrica p
 
 #### Clasificación
 
-Los deciles permiten realizar bloques categóricos. Para crear el número de clasificación, la variable `NTILE` se utiliza con un parámetro de `10` dentro de una VENTANA agrupada por `loyaltyStatus` field. Esto da como resultado una clasificación del 1 al 10. Configure las variables `ORDER BY` de la cláusula `WINDOW` hasta `DESC` para garantizar que un valor de clasificación de `1` se da al **bueno** métrica dentro de la dimensión.
+Los deciles permiten realizar bloques categóricos. Para crear el número de clasificación, la variable `NTILE` se utiliza con un parámetro de `10` dentro de una VENTANA agrupada por `loyaltyStatus` field. Esto da como resultado una clasificación del 1 al 10. Configure las variables `ORDER BY` de la cláusula `WINDOW` hasta `DESC` para garantizar que un valor de clasificación de `1` se da al **mayor** métrica dentro de la dimensión.
 
 ```sql
 rankings_1 AS (
@@ -299,4 +299,4 @@ Ejecute la consulta para rellenar el conjunto de datos de deciles. También pued
 
 ## Pasos siguientes
 
-El caso de uso de ejemplo proporcionado anteriormente resalta los pasos para que los atributos de decil estén disponibles en el Perfil del cliente en tiempo real. Esto permite que el servicio de segmentación, ya sea a través de una interfaz de usuario o de la API RESTful, pueda generar audiencias basadas en estos contenedores de deciles. Consulte la [Resumen del servicio de segmentación](../../segmentation/home.md) para obtener información sobre cómo crear, evaluar y acceder a segmentos.
+El caso de uso de ejemplo proporcionado anteriormente resalta los pasos para que los conjuntos de datos derivados basados en deciles estén disponibles en el Perfil del cliente en tiempo real. Esto permite que el servicio de segmentación, ya sea a través de una interfaz de usuario o de la API RESTful, pueda generar audiencias basadas en estos contenedores de deciles. Consulte la [Resumen del servicio de segmentación](../../segmentation/home.md) para obtener información sobre cómo crear, evaluar y acceder a segmentos.

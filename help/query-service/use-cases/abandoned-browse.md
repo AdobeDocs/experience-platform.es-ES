@@ -3,10 +3,10 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;consul
 title: Ejemplo de caso de uso para el servicio de consultas de Adobe Experience Platform
 description: Un ejemplo completo para demostrar la versatilidad y las ventajas del servicio de consultas de Adobe Experience Platform.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento y el vídeo que lo acompaña proporcionan un flujo de trabajo com
 * Formas de generar la consulta en función de la arquitectura de datos existente.
 * Garantice una calidad de datos que satisfaga sus necesidades y métodos para mitigar cualquier déficit.
 * Proceso para programar una consulta de modo que se ejecute con una frecuencia determinada para su uso descendente en la segmentación y en los destinos de personalización.
-* La facilidad con la que los especialistas en marketing pueden incluir atributos derivados en sus audiencias gracias al poder de [!DNL Query Service].
+* La facilidad con la que los especialistas en marketing pueden incluir conjuntos de datos derivados en sus audiencias gracias al poder de [!DNL Query Service].
 
 ## Objetivos {#objectives}
 
