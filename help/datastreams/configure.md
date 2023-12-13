@@ -2,10 +2,10 @@
 title: Creación y configuración de flujos de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 55%
 
 ---
 
@@ -44,7 +44,7 @@ La configuración de geolocalización y búsqueda de red le ayuda a definir el n
 
 Expanda el **[!UICONTROL Geolocalización y búsqueda de red]** para configurar las opciones que se describen a continuación.
 
-![Captura de pantalla de la IU de Platform que muestra la pantalla de configuración de la secuencia de datos con los ajustes de geolocalización y búsqueda de red resaltados.](assets/configure/geolookup.png)
+![Pantalla de configuración de flujo de datos con los ajustes de geolocalización y búsqueda de red resaltados.](assets/configure/geolookup.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -63,7 +63,7 @@ El **[!UICONTROL Búsqueda de dispositivos]** La configuración de le permite se
 
 Expanda el **[!UICONTROL Búsqueda de dispositivos]** para configurar las opciones que se describen a continuación.
 
-![Captura de pantalla de la IU de Platform que muestra la pantalla de configuración de la secuencia de datos con los ajustes de búsqueda del dispositivo resaltados.](assets/configure/device-lookup.png)
+![Pantalla de configuración de flujo de datos con los ajustes de búsqueda del dispositivo resaltados.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ A partir de aquí, si está configurando la secuencia de datos para Experience P
 
 Después de configurar una secuencia de datos nueva o seleccionar una existente para verla, aparecerá la página de detalles de dicha secuencia de datos. Aquí puede encontrar más información sobre la secuencia de datos, incluido su ID.
 
-![Página de detalles de una secuencia de datos creada](assets/configure/view-details.png)
+![Página Detalles del flujo de datos.](assets/configure/view-details.png)
 
 En la pantalla de detalles de la secuencia de datos, puede [añadir servicios](#add-services) para habilitar las funciones de los productos de Adobe Experience Cloud a los que tiene acceso. También puede editar la [configuración básica](#create) de la secuencia de datos, actualizar su [reglas de asignación](./data-prep.md), [copiar la secuencia de datos](#copy) o eliminarla por completo.
 
@@ -117,11 +117,11 @@ En la pantalla de detalles de la secuencia de datos, puede [añadir servicios](#
 
 En la página de detalles de una secuencia de datos, seleccione **[!UICONTROL Añadir servicio]** para empezar a añadir los servicios disponibles para ese conjunto de datos.
 
-![Seleccione Añadir servicio para continuar](assets/configure/add-service.png)
+![Seleccione Agregar servicio para continuar.](assets/configure/add-service.png)
 
 En la pantalla siguiente, utilice el menú desplegable para seleccionar un servicio para configurar para esta secuencia de datos. En esta lista solo se muestran los servicios a los que tiene acceso.
 
-![Seleccione un servicio de la lista](assets/configure/service-selection.png)
+![Seleccione un servicio de la lista.](assets/configure/service-selection.png)
 
 Seleccione el servicio deseado, rellene las opciones de configuración que aparecen y, a continuación, seleccione **[!UICONTROL Guardar]** para añadir el servicio a la secuencia de datos. Todos los servicios añadidos aparecen en la vista de detalles de la secuencia de datos.
 
@@ -137,7 +137,7 @@ Las subsecciones siguientes describen las opciones de configuración de cada ser
 
 Ese servicio controla si los datos se envían a Adobe Audience Manager y cómo. Puede encontrar más información en la guía sobre el [envío de datos a Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloque de configuración de Adobe Analytics](assets/configure/analytics-config.png)
+![Configuración del flujo de datos de Adobe Analytics.](assets/configure/analytics-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -148,7 +148,7 @@ Ese servicio controla si los datos se envían a Adobe Audience Manager y cómo. 
 
 Ese servicio controla si los datos se envían a Adobe Audience Manager y cómo. Todo lo que se necesita para enviar datos a Audience Manager es habilitar esta sección. El resto de la configuración es opcional, pero se recomienda usarla.
 
-![Bloque de configuración de Adobe Audience Manager](assets/configure/audience-manager-config.png)
+![Configuración del flujo de datos de Adobe Audience Manager.](assets/configure/audience-manager-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -167,7 +167,7 @@ Ese servicio controla si los datos se envían a Adobe Audience Manager y cómo. 
 
 Ese servicio controla si los datos se envían a Adobe Experience Platform y cómo.
 
-![Bloque de configuración de Adobe Experience Platform](assets/configure/platform-config.png)
+![Configuración del flujo de datos de Adobe Experience Platform.](assets/configure/platform-config.png)
 
 | Configuración | Descripción |
 |---| --- |
@@ -182,7 +182,7 @@ Ese servicio controla si los datos se envían a Adobe Experience Platform y cóm
 
 Ese servicio controla si los datos se envían a Adobe Target y cómo.
 
-![Bloque de configuración de Adobe Target](assets/configure/target-config.png)
+![Configuración del flujo de datos de Adobe Target.](assets/configure/target-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -195,7 +195,7 @@ Ese servicio controla si los datos se envían a Adobe Target y cómo.
 
 Este servicio controla si los datos se envían al [reenvío de eventos](../tags/ui/event-forwarding/overview.md) y cómo.
 
-![Sección Reenvío de eventos de la IU de configuración](assets/configure/event-forwarding-config.png)
+![Sección Reenvío de eventos de la pantalla de configuración del flujo de datos.](assets/configure/event-forwarding-config.png)
 
 | Configuración | Descripción |
 | --- | --- |
@@ -216,15 +216,15 @@ Puede crear una copia de una secuencia de datos existente y modificar sus detall
 
 Desde la página principal, en el espacio de trabajo [!UICONTROL Secuencia de datos], seleccione los puntos suspensivos (**...**) para la secuencia de datos en cuestión y, a continuación, seleccione **[!UICONTROL Copiar]**.
 
-![Imagen que muestra la opción [!UICONTROL Copiar] seleccionada en la vista de lista de secuencia de datos](assets/configure/copy-datastream-list.png)
+![Imagen que muestra la opción Copiar seleccionada en la vista de lista de la secuencia de datos.](assets/configure/copy-datastream-list.png)
 
 Como alternativa, puede seleccionar **[!UICONTROL Copiar secuencia de datos]** desde la vista de detalles de una secuencia de datos determinada.
 
-![Imagen que muestra la opción [!UICONTROL Copiar] seleccionada en la vista de detalles de la secuencia de datos](assets/configure/copy-datastream-details.png)
+![Opción Copiar seleccionada en la vista de detalles del conjunto de datos.](assets/configure/copy-datastream-details.png)
 
 Aparecerá un cuadro de diálogo de confirmación en el que se le solicitará que proporcione un nombre único para la nueva secuencia de datos que se va a crear, junto con detalles sobre las opciones de configuración que se copiarán. Cuando esté listo, seleccione **[!UICONTROL Copiar]**.
 
-![Imagen del cuadro de diálogo de confirmación para copiar una secuencia de datos](assets/configure/copy-datastream-confirm.png)
+![Cuadro de diálogo de confirmación para copiar una secuencia de datos.](assets/configure/copy-datastream-confirm.png)
 
 La página principal del espacio de trabajo [!UICONTROL Secuencias de datos] vuelve a aparecer con la nueva secuencia de datos en la lista.
 

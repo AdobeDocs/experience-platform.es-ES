@@ -4,9 +4,9 @@ description: Aprenda a configurar la detección de bots para flujos de datos a f
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -47,24 +47,22 @@ Para que la detección de bots funcione en el conjunto de datos, debe añadir la
 
 Puede configurar la detección de bots después de crear una configuración de secuencia de datos. Consulte la documentación sobre cómo [creación y configuración de una secuencia de datos](configure.md), luego siga las instrucciones a continuación para agregar capacidades de detección de bots a su flujo de datos.
 
-
 Vaya a la lista de flujos de datos y seleccione el flujo de datos al que desea añadir la detección de bots.
 
-![Imagen de la IU de Datastreams](assets/bot-detection/datastream-list.png)
+![Interfaz de usuario de flujos de datos que muestra la lista de flujos de datos.](assets/bot-detection/datastream-list.png)
 
 En la página de detalles de la secuencia de datos, seleccione **[!UICONTROL Detección de bots]** en el carril derecho.
 
-![Imagen de la interfaz de usuario de flujos de datos con la opción Detección de bots resaltada](assets/bot-detection/bot-detection.png)
+![Opción de detección de bots resaltada en la interfaz de usuario de flujos de datos.](assets/bot-detection/bot-detection.png)
 
 El **[!UICONTROL Reglas de detección de bots]** se muestra la página.
 
-![Imagen de la interfaz de usuario de flujos de datos con la opción Detección de bots resaltada](assets/bot-detection/bot-detection-page.png)
+![Configuración de detección de bots en la página de configuración de secuencia de datos.](assets/bot-detection/bot-detection-page.png)
 
 Desde la página Reglas de detección de bots, puede configurar la detección de bots mediante las siguientes funcionalidades:
 
 * Uso del [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creación de sus propias reglas de detección de bots.
-
 
 ### Utilice la Lista internacional de arañas web y bots de la IAB/ABC {#iab-list}
 
@@ -72,8 +70,7 @@ El [Lista internacional de arañas web y bots de la IAB/ABC](https://www.iab.com
 
 Para configurar la secuencia de datos para que utilice el [!DNL IAB/ABC International Spiders and Bots List], cambie el **[!UICONTROL Utilice la Lista internacional de arañas web y bots de la IAB/ABC para la detección de bots en este conjunto de datos]** y, a continuación, seleccione Guardar para aplicar la configuración de detección de bots a su secuencia de datos.
 
-![Imagen de la pantalla de configuración de detección de bots con las arañas de IAB y la lista de bots habilitadas.](assets/bot-detection/bot-detection-list.png)
-
+![Arañas IAB y lista de bots habilitada.](assets/bot-detection/bot-detection-list.png)
 
 ### Creación de reglas de detección de bots {#rules}
 
@@ -97,25 +94,21 @@ Si necesita reglas de detección de bots más granulares, puede combinar las con
 | `sec-ch-ua-bitness` | Proporciona el &quot;bit&quot; de la arquitectura de CPU subyacente del agente de usuario. Es el tamaño en bits de un número entero o dirección de memoria, normalmente 64 o 32 bits. |
 | `sec-ch-ua-wow64` | Indica si un binario de agente de usuario se está ejecutando en modo de 32 bits en Windows de 64 bits. |
 
-
-
-
-
 Para crear una regla de detección de bots, siga los pasos a continuación:
 
 1. Seleccionar **[!UICONTROL Añadir nueva regla]**.
 
-   ![Imagen de la pantalla de configuración de detección de bots con el botón Añadir nueva regla resaltado.](assets/bot-detection/bot-detection-new-rule.png)
+   ![Pantalla de configuración de detección de bots con el botón Añadir nueva regla resaltado.](assets/bot-detection/bot-detection-new-rule.png)
 
 2. Escriba un nombre para la regla en la **[!UICONTROL Nombre de regla]** field.
 
-   ![Imagen de la pantalla de la regla de detección de bots con el nombre de la regla resaltado.](assets/bot-detection/rule-name.png)
+   ![Pantalla de regla de detección de bots con el nombre de regla resaltado.](assets/bot-detection/rule-name.png)
 
 3. Seleccionar **[!UICONTROL Añadir nueva condición IP]** para agregar una nueva regla basada en IP. Puede definir la regla por dirección IP o por intervalo de direcciones IP.
 
-   ![Imagen de la pantalla de la regla de detección de bots con el campo de dirección IP resaltado.](assets/bot-detection/ip-address-rule.png)
+   ![Pantalla de regla de detección de bots con el campo de dirección IP resaltado.](assets/bot-detection/ip-address-rule.png)
 
-   ![Imagen de la pantalla de la regla de detección de bots con el campo Rango de IP resaltado.](assets/bot-detection/ip-range-rule.png)
+   ![Pantalla de regla de detección de bots con el campo de rango de IP resaltado.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +116,15 @@ Para crear una regla de detección de bots, siga los pasos a continuación:
 
 4. Si desea agregar condiciones de encabezado a la regla, seleccione **[!UICONTROL Agregar grupo de condiciones de encabezado]** y, a continuación, seleccione los encabezados que desea que utilice la regla.
 
-   ![Imagen de la pantalla de la regla de detección de bots con las condiciones del encabezado resaltadas.](assets/bot-detection/header-conditions.png)
+   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-conditions.png)
 
    A continuación, añada las condiciones que desea utilizar para el encabezado seleccionado.
 
-   ![Imagen de la pantalla de la regla de detección de bots con las condiciones del encabezado resaltadas.](assets/bot-detection/header-condition-rule.png)
+   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-condition-rule.png)
 
 5. Después de configurar las reglas de detección de bots deseadas, seleccione **[!UICONTROL Guardar]** para que se apliquen las reglas al conjunto de datos.
 
-   ![Imagen de la pantalla de la regla de detección de bots con las condiciones del encabezado resaltadas.](assets/bot-detection/bot-detection-save.png)
+   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Ejemplos de reglas de detección de bots {#examples}
@@ -142,19 +135,19 @@ Para empezar a utilizar la detección de bots, puede utilizar los ejemplos detal
 
 Para marcar todas las solicitudes procedentes de una dirección IP específica como tráfico de bots, cree una nueva regla de detección de bots que evalúe una sola dirección IP, como se muestra en la imagen siguiente.
 
-![Imagen de la regla de detección de bots basada en una dirección IP.](assets/bot-detection/bot-detection-one-ip.png)
+![Regla de detección de bots basada en una dirección IP.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Detección de bots basada en dos direcciones IP {#two-ip}
 
 Para marcar todas las solicitudes procedentes de cualquiera de las dos direcciones IP específicas como tráfico de bots, cree una nueva regla de detección de bots que evalúe dos direcciones IP, como se muestra en la siguiente imagen.
 
-![Imagen de la regla de detección de bots basada en dos direcciones IP.](assets/bot-detection/bot-detection-two-ips.png)
+![Regla de detección de bots basada en dos direcciones IP.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Detección de bots basada en un intervalo de direcciones IP {#range}
 
 Para marcar todas las solicitudes procedentes de cualquier dirección IP de un intervalo específico como tráfico de bots, cree una nueva regla de detección de bots que evalúe un intervalo de direcciones IP completo, como se muestra en la siguiente imagen.
 
-![Imagen de la regla de detección de bots basada en el intervalo de IP.](assets/bot-detection/bot-detection-range.png)
+![Regla de detección de bots basada en el intervalo de IP.](assets/bot-detection/bot-detection-range.png)
 
 ### Detección de bots basada en una dirección IP y un encabezado de solicitud {#ip-header}
 
@@ -162,7 +155,7 @@ Para marcar todas las solicitudes procedentes de una dirección IP específica y
 
 Esta regla comprueba si la solicitud se origina desde una dirección IP específica y si la variable `referer` el encabezado de solicitud empieza por `www.adobe.com`.
 
-![Imagen de la regla de detección de bots basada en la dirección IP y el encabezado de solicitud.](assets/bot-detection/bot-detection-header-ip.png)
+![Regla de detección de bots basada en la dirección IP y el encabezado de solicitud.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Detección de bots basada en varias condiciones {#multiple-conditions}
 
@@ -175,4 +168,4 @@ La regla que se muestra en la siguiente imagen identifica una solicitud de orige
 
 La solicitud se origina desde una de las dos direcciones IP, la `referer` el encabezado empieza por `www.adobe.com`, y el `sec-ch-ua-mobile` identifica la solicitud como originada desde un navegador de escritorio.
 
-![Imagen de la regla de detección de bots basada en varias condiciones.](assets/bot-detection/bot-detection-multiple.png)
+![Regla de detección de bots basada en varias condiciones.](assets/bot-detection/bot-detection-multiple.png)

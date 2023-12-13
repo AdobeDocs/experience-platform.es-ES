@@ -1,13 +1,13 @@
 ---
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 64%
+source-wordcount: '1192'
+ht-degree: 59%
 
 ---
-
 
 # Preparación de datos para la recopilación de datos
 
@@ -154,7 +154,7 @@ Para capturar propiedades de un elemento de datos de objeto XDM, se aplican las 
 
 Puede seleccionar la opción para cargar el objeto como un archivo o pegar el objeto sin procesar en el cuadro de texto proporcionado. Si el JSON es válido, se muestra un esquema de vista previa en el panel derecho. Haga clic en **[!UICONTROL Siguiente]** para continuar.
 
-![Muestra JSON de datos entrantes esperados](assets/data-prep/select-data.png)
+![Muestra JSON de datos entrantes esperados.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ Aparece el paso **[!UICONTROL Asignación]**, lo que le permite asignar los camp
 
 Para crear una regla de asignación, seleccione **[!UICONTROL Añadir nueva asignación]**.
 
-![Adición de una nueva asignación](assets/data-prep/add-new-mapping.png)
+![Añadir una nueva asignación.](assets/data-prep/add-new-mapping.png)
 
 Seleccione el icono de origen (![Icono de origen](assets/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Seleccionar]** para continuar.
 
-![Selección del campo que desea asignar en el esquema de origen](assets/data-prep/source-mapping.png)
+![Selección del campo que se va a asignar en el esquema de origen.](assets/data-prep/source-mapping.png)
 
 A continuación, seleccione el icono de esquema (![Icono de esquema](assets/data-prep/schema-icon.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Seleccionar]**.
 
-![Selección del campo que se va a asignar en el esquema de destino](assets/data-prep/target-mapping.png)
+![Selección del campo que se va a asignar en el esquema de destino.](assets/data-prep/target-mapping.png)
 
 La página de asignación vuelve a aparecer y se muestra la asignación de campos completada. La sección **[!UICONTROL Asignación en curso]** se actualiza para reflejar el número total de campos que se han asignado correctamente.
 
-![Campo asignado correctamente con el progreso](assets/data-prep/field-mapped.png)
+![Campo asignado correctamente con progreso reflejado.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Si desea asignar una matriz de objetos (en el campo de origen) a una diferente (en el campo de destino), añada `[*]` después del nombre de la matriz en las rutas de campo de origen y destino, tal como se muestra a continuación.
 >
->![Asignación de objeto de matriz](assets/data-prep/array-object-mapping.png)
+>![Asignación de objeto de matriz.](assets/data-prep/array-object-mapping.png)
 
 ### Importación de reglas de asignación existentes {#import-mapping}
 
@@ -201,11 +201,11 @@ Si ha creado anteriormente una secuencia de datos, puede reutilizar sus reglas d
 
 Para empezar, seleccione **[!UICONTROL Importar asignación]**.
 
-![Imagen que muestra el botón [!UICONTROL Importar asignación] que se está seleccionando](assets/data-prep/import-mapping-button.png)
+![Botón Importar asignación seleccionado.](assets/data-prep/import-mapping-button.png)
 
 En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reglas de asignación desea importar. Una vez elegida la secuencia de datos, seleccione **[!UICONTROL Vista previa]**.
 
-![Imagen que muestra la secuencia de datos existente que se está seleccionando](assets/data-prep/select-mapping-rules.png)
+![Selección de una secuencia de datos existente.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reg
 
 La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para la secuencia de datos seleccionada. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Importar]** para confirmar y agregar las asignaciones a la nueva secuencia de datos.
 
-![Imagen que muestra las reglas de asignación que se van a importar](assets/data-prep/import-mapping-rules.png)
+![Reglas de asignación que se van a importar.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
