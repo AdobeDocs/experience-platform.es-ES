@@ -5,9 +5,9 @@ title: Creación de un flujo de datos de streaming para datos sin procesar media
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar los datos de flujo continuo y llevarlos a Platform mediante conectores de origen y API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
@@ -486,13 +486,15 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 Consulte la carga útil de ejemplo a continuación para ver ejemplos de json sin procesar o compatible con XDM que puede enviar para su ingesta.
 
->[!TIP]
+>[!NOTE]
 >
->Los siguientes ejemplos se aplican a los tres:
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>Debe añadir un retraso de al menos ~5 minutos entre la creación del flujo de datos y la ingesta de cualquier dato de flujo continuo. Esto permite que el flujo de datos esté completamente habilitado antes de que se incorpore cualquier dato.
+
+Los siguientes ejemplos se aplican a todos:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 

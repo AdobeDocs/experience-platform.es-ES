@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;conexión de flujo continuo
 title: Creación de una conexión de flujo continuo de API HTTP mediante la API de Flow Service
 description: Este tutorial proporciona pasos sobre cómo crear una conexión de flujo continuo utilizando el origen de API HTTP para los datos sin procesar y XDM mediante la API de Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 5%
+source-wordcount: '1568'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Además, la creación de una conexión de flujo continuo requiere que tenga un e
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Cree una conexión base
+## Crear una conexión base
 
 Una conexión base especifica el origen y contiene la información necesaria para que el flujo sea compatible con las API de ingesta de flujo continuo. Al crear una conexión base, tiene la opción de crear una conexión no autenticada y autenticada.
 
@@ -459,7 +459,7 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 | Propiedad | Descripción |
 | --- | --- |
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 Con las conexiones de origen y destino creadas, ahora puede crear un flujo de datos. El flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST a `/flows` punto final.
 
@@ -563,6 +563,10 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles del flujo de dat
 ```
 
 ## Publicar datos para ingerirlos en Platform {#ingest-data}
+
+>[!NOTE]
+>
+>Debe añadir un retraso de al menos ~5 minutos entre la creación del flujo de datos y la ingesta de cualquier dato de flujo continuo. Esto permite que el flujo de datos esté completamente habilitado antes de que se incorpore cualquier dato.
 
 Ahora que ha creado el flujo, puede enviar el mensaje JSON al extremo de flujo continuo creado anteriormente.
 
