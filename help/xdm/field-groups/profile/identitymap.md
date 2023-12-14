@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil 
 title: Grupo de campos de esquema IdentityMap
 description: Este documento proporciona información general sobre la clase de perfil individual de XDM.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,24 @@ ht-degree: 0%
 
 [!UICONTROL IdentityMap] es un grupo de campos de esquema estándar para [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona un único campo de asignación, que contiene un conjunto de identidades de usuario marcadas por el área de nombres.
 
-<img src="../../images/field-groups/identitymap.png" width="600" /><br />
+![Un diagrama de la [!UICONTROL IdentityMap] grupo de campos de esquema](../../images/field-groups/identitymap.png)
 
 Consulte la sección sobre mapas de identidad en la [conceptos básicos de composición de esquemas](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso, incluidas sus ventajas e inconvenientes.
+
+**ejemplo**
+
+```JSON
+{
+    "identityMap":{
+        "ECID":[
+            {
+                "id":"83238819066235616291057085344313877718",
+                "authenticatedState":"ambiguous",
+                "primary":true
+            }
+        ]
+    }
+}
+```
+
+Para obtener más información sobre el grupo de campos, consulte la [esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) en el repositorio XDM público.
