@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Punto final de API de tipos de datos
 description: El extremo /datatypes de la API de Registro de esquemas le permite administrar mediante programación tipos de datos XDM dentro de la aplicación de experiencia.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 4%
+source-wordcount: '1247'
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,13 @@ ht-degree: 4%
 
 Los tipos de datos se utilizan como campos de tipo de referencia en clases o grupos de campos de esquema de la misma manera que los campos literales básicos, con la diferencia clave de que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden añadir en el nivel raíz. El `/datatypes` punto final en la [!DNL Schema Registry] La API permite administrar mediante programación los tipos de datos dentro de la aplicación de experiencia.
 
-## Primeros pasos
+>[!NOTE]
+>
+>Si un campo está definido como un tipo de datos específico, no se puede crear el mismo campo con un tipo de datos diferente en otro esquema. Esta restricción se aplica a todo el inquilino de la organización.
 
-El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API de ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+## Introducción
+
+El extremo utilizado en esta guía forma parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de tipos de datos {#list}
 
@@ -56,7 +60,7 @@ curl -X GET \
 
 El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Lo siguiente `Accept` Los encabezados de están disponibles para enumerar tipos de datos:
 
-| `Accept` header | Descripción |
+| `Accept` encabezado | Descripción |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Devuelve un breve resumen de cada recurso. Este es el encabezado recomendado para enumerar recursos. (Límite: 300) |
 | `application/vnd.adobe.xed+json` | Devuelve el tipo de datos JSON completo de cada recurso, con el original `$ref` y `allOf` incluido. (Límite: 300) |
@@ -130,7 +134,7 @@ curl -X GET \
 
 El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Todas las solicitudes de búsqueda requieren un `version` se incluirá en la `Accept` encabezado. Lo siguiente `Accept` Los encabezados de están disponibles:
 
-| `Accept` header | Descripción |
+| `Accept` encabezado | Descripción |
 | ------- | ------------ |
 | `application/vnd.adobe.xed+json; version=1` | Sin procesar con `$ref` y `allOf`, tiene títulos y descripciones. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` y `allOf` resuelto, tiene títulos y descripciones. |

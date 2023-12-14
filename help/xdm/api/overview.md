@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de API de Registro de esquemas
 description: La API de Registro de esquemas permite a los desarrolladores administrar mediante programación todos los esquemas y los recursos del Modelo de datos de experiencia (XDM) relacionados dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1141'
 ht-degree: 5%
 
 ---
@@ -48,6 +48,10 @@ Los grupos de campos son componentes reutilizables que definen uno o varios camp
 ## Tipos de datos
 
 Los tipos de datos se utilizan como campos de tipo de referencia en clases o grupos de campos de la misma manera que los campos literales básicos, con la diferencia clave de que los tipos de datos pueden definir varios subcampos. Aunque son similares a los grupos de campos en el sentido de que permiten el uso coherente de una estructura de varios campos, los tipos de datos son más flexibles porque se pueden incluir en cualquier parte de la estructura del esquema, mientras que los grupos de campos solo se pueden añadir en el nivel raíz. Consulte la [guía de extremo de tipos de datos](./data-types.md) para obtener más información sobre cómo trabajar con tipos de datos en la API.
+
+>[!NOTE]
+>
+>Si un campo está definido como un tipo de datos específico, no se puede crear el mismo campo con un tipo de datos diferente en otro esquema. Esta restricción se aplica a todo el inquilino de la organización.
 
 ## Descriptores
 

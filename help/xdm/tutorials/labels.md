@@ -2,10 +2,10 @@
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 9%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Este tutorial trata los pasos para agregar etiquetas a un esquema mediante el Ed
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Editor de esquemas](../ui/overview.md): Aprenda a crear y administrar esquemas y otros recursos en la IU de Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Proporciona la infraestructura para aplicar restricciones de uso de datos en operaciones de Platform, mediante directivas que definen qué acciones de marketing se pueden (o no) realizar en datos etiquetados.
 
@@ -43,6 +43,10 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 Para empezar a añadir etiquetas, primero debe [seleccione un esquema existente para editarlo](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
 
 Para editar las etiquetas de un campo individual, puede seleccionar el campo en el lienzo y luego seleccionar **[!UICONTROL Administrar acceso]** en el carril derecho.
+
+>[!IMPORTANT]
+>
+>Se puede aplicar un máximo de 300 etiquetas a cualquier esquema.
 
 ![Seleccione un campo del lienzo del Editor de esquemas](../images/tutorials/labels/manage-access.png)
 
