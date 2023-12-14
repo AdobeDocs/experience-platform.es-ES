@@ -4,10 +4,10 @@ user-guide-title: Guía de destinos
 user-guide-description: Active los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y mucho más.
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 9%
+source-wordcount: '1188'
+ht-degree: 5%
 
 ---
 
@@ -91,6 +91,7 @@ ht-degree: 9%
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
       * [Actualización de conexión de pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * [Conexión de PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Conexión de anuncios de Snapchat](./catalog/advertising/snap-inc.md)
       * [La conexión con la Oficina de Comercio](./catalog/advertising/tradedesk.md)
       * [(Beta) La conexión CRM de Trade Desk](./catalog/advertising/tradedesk-emails.md)
@@ -100,7 +101,7 @@ ht-degree: 9%
       * [Resumen de destinos de Analytics](./catalog/analytics/overview.md)
       * [Extensión de seguimiento de sitio web de Adobe](./catalog/analytics/adform.md)
       * [Extensión de Adobe Analytics](./catalog/analytics/adobe-analytics.md)
-      * [Extensión de Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
+      * [Extensión de Adobe Medium Analytics para audio y vídeo](./catalog/analytics/adobe-video-analytics.md)
       * [Extensión Clicktale](./catalog/analytics/clicktale.md)
       * [Extensión de Contentsquare](./catalog/analytics/contentsquare.md)
       * [Extensión Decibel](./catalog/analytics/decibel.md)
@@ -201,12 +202,12 @@ ht-degree: 9%
       * [Conexión de Medallia](./catalog/voice/medallia-connector.md)
       * [Extensión de Medallia](./catalog/voice/medallia.md)
       * [Extensión de bandeja de entrada de URL Talk](./catalog/voice/talkurl.md)
-* SDK de destino {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [Información general](./destination-sdk/overview.md)
    * [Requisitos previos de integración](./destination-sdk/integration-prerequisites.md)
    * [Introducción a Destination SDK](./destination-sdk/getting-started.md)
    * Funcionalidad {#functionality}
-      * [Opciones de Configuration](./destination-sdk/functionality/configuration-options.md)
+      * [Opciones de configuración](./destination-sdk/functionality/configuration-options.md)
       * Componentes del servidor de destino {#destination-server}
          * [Especificaciones del servidor](./destination-sdk/functionality/destination-server/server-specs.md)
          * [Especificaciones de plantilla](./destination-sdk/functionality/destination-server/templating-specs.md)

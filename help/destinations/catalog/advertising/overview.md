@@ -3,10 +3,10 @@ keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre destinos publicitarios
 description: Conecte Adobe Experience Platform DSP a una plataforma de publicidad de terceros (por ejemplo, una red de publicidad, un SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -36,6 +36,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Conexión de Google Customer Match](google-customer-match.md)
 * [Conexión de Microsoft Bing](bing.md)
 * [Conexión de lista de clientes de pinterest](pinterest.md)
+* [Destino de PubMatic Connect](pubmatic.md)
 * [(Beta) Conexión de anuncios de Snapchat](snap-inc.md)
 * [La conexión con la Oficina de Comercio](tradedesk.md)
 * [(Beta) La conexión CRM de Trade Desk](tradedesk-emails.md)
