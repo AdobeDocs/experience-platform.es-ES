@@ -3,10 +3,10 @@ keywords: perspectivas;inteligencia artificial aplicada a la atribución;perspec
 title: Claves gestionadas por el cliente
 description: Obtenga información sobre cómo configurar claves administradas por el cliente para Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: a59c86d1f1d426d4954071032ddaff1bbc9f2781
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 22%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 
@@ -18,6 +18,6 @@ Puede leer la documentación de [Claves gestionadas por el cliente en Adobe Expe
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] actualmente solo están disponibles para organizaciones que han adquirido el [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=es) oferta de complementos.
+>[!DNL Customer Managed Keys] actualmente solo están disponibles para organizaciones que han adquirido el [!DNL Healthcare Shield or Privacy & Security Shield] oferta de complementos.
 
 Todos los datos que utiliza Platform se cifran en tránsito y en reposo para mantener sus datos seguros, con o sin CMK. Para obtener información sobre el cifrado de Adobe Experience Platform, lea la documentación sobre [Cifrado de datos](../../../landing/governance-privacy-security/encryption.md).
