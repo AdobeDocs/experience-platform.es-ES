@@ -4,10 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Explore una descripción general del sistema Experience Data Model (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 23%
+source-wordcount: '561'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 23%
 * [Información general del sistema XDM](home.md)
 * Esquemas {#schema}
    * [Conceptos básicos de composición de esquemas](schema/composition.md)
-   * [Prácticas recomendadas para el modelo de datos](schema/best-practices.md)
+   * [Prácticas recomendadas para el modelado de datos](schema/best-practices.md)
    * [Datos confidenciales y personales](./schema/sensitive-and-personal-data.md)
    * [Restricciones de tipo de campo XDM](schema/field-constraints.md)
    * [Espaciado de nombres en XDM](./schema/namespaces.md)
@@ -34,7 +34,7 @@ ht-degree: 23%
    * [ExperienceEvent de XDM](./classes/experienceevent.md)
    * [Medicación](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Plan](./classes/plan.md)
+   * [Planificar ](./classes/plan.md)
    * [Directiva](./classes/policy.md)
    * [Producto](./classes/product.md)
    * [Perspectiva](./classes/prospect.md)
@@ -49,7 +49,7 @@ ht-degree: 23%
       * [Relación de persona de oportunidad empresarial de XDM](./classes/b2b/business-opportunity-person-relation.md)
       * [Lista de marketing empresarial de XDM](./classes/b2b/business-marketing-list.md)
       * [Miembros de lista de marketing empresarial de XDM](./classes/b2b/business-marketing-list-members.md)
-* Grupos de campo {#field-groups}
+* Grupos de campos {#field-groups}
    * Perfil individual de XDM {#profile}
       * [Consentimientos y preferencias](./field-groups/profile/consents.md)
       * [Datos demográficos](./field-groups/profile/demographic-details.md)
@@ -80,6 +80,7 @@ ht-degree: 23%
       * [Reserva de vuelo](./field-groups/event/flight-reservation.md)
       * [Consentimiento de IAB TCF 2.0](./field-groups/event/iab.md)
       * [Reserva de alojamiento](./field-groups/event/lodging-reservation.md)
+      * [Detalles de interacción de Media Analytics](./field-groups/event/mediaanalytics-interaction.md)
       * [Detalles de solicitud de presupuesto](./field-groups/event/quote-request-details.md)
       * [Detalles de reserva](./field-groups/event/reservation-details.md)
       * [Detalles de Sitetool](./field-groups/event/sitetool-details.md)
@@ -95,7 +96,7 @@ ht-degree: 23%
       * [Medicación sanitaria](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
       * [Detalles del plan de atención médica](./field-groups/plan/healthcare-plan-details.md)
-   * Producto {#product}
+   * Product {#product}
       * [Catálogo de productos](./field-groups/product/product-catalog.md)
       * [Categoría de productos](./field-groups/product/product-category.md)
    * Proveedor {#provider}
@@ -104,17 +105,22 @@ ht-degree: 23%
 * Tipos de datos {#data-types}
    * [Detalles de cuenta](./data-types/account-details.md)
    * [Pausa para anuncios](./data-types/ad-break.md)
+   * [Información de detalles publicitarios](./data-types/advertising-details-information.md)
+   * [Información detallada de Advertising pod](./data-types/advertising-pod-details-information.md)
    * [Aplicación](./data-types/application.md)
    * [Baliza](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Origen B2B](./data-types/b2b-source.md)
+   * [Información de detalles del capítulo](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
    * [Moneda](./data-types/currency.md)
+   * [Información de detalles de metadatos personalizados](./data-types/custom-metadata-details-information.md)
    * [Device](./data-types/device.md)
-   * [Correo electrónico Dirección](./data-types/email-address.md)
+   * [Correo electrónico](./data-types/email-address.md)
    * [Entorno](./data-types/environment.md)
+   * [Información de detalles del error](./data-types/error-details-information.md)
    * [Canal de experiencia](./data-types/experience-channel.md)
    * [Atributos de auditoría del sistema de origen externo](./data-types/external-source-system-audit-attributes.md)
    * [Cuenta financiera](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 23%
    * [Par de valor clave](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Medida](./data-types/measure.md)
+   * [Información de detalles de medios](./data-types/media-details-information.md)
+   * [Información de evento de medios](./data-types/media-event-information.md)
    * [Pedido](./data-types/order.md)
    * [Elemento de pago](./data-types/payment-item.md)
    * [Persona](./data-types/person.md)
    * [Nombre de persona](./data-types/person-name.md)
    * [Número de teléfono](./data-types/phone-number.md)
    * [Contexto del lugar](./data-types/place-context.md)
+   * [Información de datos de estado del reproductor](./data-types/player-state-data-information.md)
    * [Detalles del PDI](./data-types/poi-details.md)
    * [Interacción del PDI](./data-types/poi-interaction.md)
    * [Dirección postal](./data-types/postal-address.md)
    * [Elemento de lista de productos](./data-types/product-list-item.md)
+   * [Información de detalles de datos de QoE](./data-types/qoe-data-details-information.md)
    * [Buscar](./data-types/search.md)
+   * [Información de detalles de sesión](./data-types/session-details-information.md)
    * [Suscripción](./data-types/subscription.md)
    * [Suscripción de telecomunicaciones](./data-types/telecom-subscription.md)
    * [Transacción](./data-types/transaction.md)
