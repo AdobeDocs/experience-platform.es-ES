@@ -2,10 +2,10 @@
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1110'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Este documento proporciona información general sobre [!DNL Analytics] y describ
 
 ![Gráfico que ilustra el recorrido de datos de diferentes aplicaciones de Adobe, incluido Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-En un nivel alto, [!DNL Analytics] recopila datos de varios canales digitales y centros de datos de todo el mundo. Una vez recopilados los datos, se aplican las reglas de Identificación del visitante, Segmentación y Arquitectura de transformación (VISTA) y reglas de procesamiento para dar forma a los datos entrantes. Una vez que los datos en bruto han pasado por este procesamiento ligero, se consideran listos para el consumo por [!DNL Real-Time Customer Profile]. En un proceso paralelo al mencionado, los mismos datos procesados se procesan por microlotes y se incorporan a conjuntos de datos de Platform para su consumo por parte de [!DNL Data Science Workspace], [!DNL Query Service]y otras aplicaciones de descubrimiento de datos.
+En un nivel alto, [!DNL Analytics] recopila datos de varios canales digitales y centros de datos de todo el mundo. Una vez recopilados los datos, se aplican las reglas de Identificación del visitante, Segmentación y Arquitectura de transformación (VISTA) y reglas de procesamiento para dar forma a los datos entrantes. Una vez que los datos en bruto han pasado por este procesamiento ligero, se consideran listos para el consumo por [!DNL Real-Time Customer Profile]. En un proceso paralelo al mencionado, los mismos datos procesados se procesan por microlotes y se incorporan a conjuntos de datos de Platform para su consumo por parte de [!DNL Query Service]y otras aplicaciones de descubrimiento de datos.
 
 Consulte la [información general sobre reglas de procesamiento](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=es) para obtener más información sobre las reglas de procesamiento.
 
