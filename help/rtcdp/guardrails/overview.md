@@ -3,10 +3,10 @@ title: Protecciones de Real-Time CDP
 description: Obtenga información acerca de las protecciones de datos en los distintos servicios y áreas de Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '369'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,12 @@ Comience aquí y siga los vínculos a continuación para comprender todas las pr
 * [Protecciones para [!DNL Identity Service] datos](/help/identity-service/guardrails.md)
 * [Protecciones para [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Protecciones para la activación de datos mediante destinos](/help/destinations/guardrails.md)
+* [Protecciones para Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Además, consulte [esta página](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obtener información sobre las protecciones para otras aplicaciones de Experience Platform, como [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=es) y [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=es), y [diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+>Además, visite [los modelos de experiencia digital](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obtener más información, como [diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+
 
 ## Tipos de protección {#guardrail-types}
 
@@ -46,6 +48,13 @@ Además, consulte los vínculos de la descripción del producto a continuación 
 * [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (edición B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (edición B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Protecciones para otras aplicaciones de Experience Platform  {#guardrails-other-aep-apps}
+
+Existen protecciones similares para otras aplicaciones de Experience Platform. Visite los siguientes enlaces para obtener más información:
+
+* [protecciones de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [protecciones de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Pasos siguientes
 
