@@ -2,7 +2,7 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ El primer paso para establecer el CLV es crear un conjunto de datos derivado a p
 
 ## Ampliación del modelo de datos de perspectivas y programación de actualizaciones {#extend-data-model-and-set-refresh-schedule}
 
-Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para obtener información sobre cómo [cree un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerado y paneles definidos por el usuario](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
+Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para obtener información sobre cómo [cree un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerado y paneles definidos por el usuario](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
 
 * Cree un modelo para informar sobre perspectivas con Data Distiller.
 * Crear tablas, relaciones y rellenar datos.

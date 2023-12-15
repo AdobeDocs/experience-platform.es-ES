@@ -2,16 +2,16 @@
 title: Modelo de datos de Real-time Customer Data Platform Insights
 description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights para personalizar sus propios informes de Real-Time CDP para los casos de uso de marketing y KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Modelo de datos de Real-time Customer Data Platform Insights
 
-La función Modelo de datos de perspectivas de Real-time Customer Data Platform expone los modelos de datos y SQL que alimentan las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Consulte la documentación de perspectivas de informes de almacén acelerado de consultas para obtener más información [Obtenga información sobre cómo crear un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+La función Modelo de datos de perspectivas de Real-time Customer Data Platform expone los modelos de datos y SQL que alimentan las perspectivas para varios widgets de perfil, destino y segmentación. Puede personalizar estas plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de indicadores clave de rendimiento (KPI) y marketing. Estas perspectivas pueden utilizarse como widgets personalizados para los paneles definidos por el usuario. Consulte la documentación de perspectivas de informes de almacén acelerado de consultas para obtener más información [Obtenga información sobre cómo crear un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 ## Requisitos previos
 
@@ -239,7 +239,7 @@ FROM
 
 #### Caso de uso de audiencias activadas recientemente
 
-La lógica del [!UICONTROL Audiencias activadas recientemente] widget proporciona una lista de las audiencias asignadas más recientemente a un destino. Esta lista proporciona una instantánea de los públicos y destinos que se utilizan activamente en el sistema y puede ayudar a solucionar cualquier asignación errónea. Consulte la [[!UICONTROL Audiencias activadas recientemente] documentación del widget](./guides/destinations.md#recently-activated-audiences) para obtener más información.
+La lógica del [!UICONTROL Audiencias activadas recientemente] widget proporciona una lista de las audiencias asignadas más recientemente a un destino. Esta lista proporciona una instantánea de las audiencias y los destinos que se utilizan de forma activa en el sistema y puede ayudar a solucionar cualquier asignación errónea. Consulte la [[!UICONTROL Audiencias activadas recientemente] documentación del widget](./guides/destinations.md#recently-activated-audiences) para obtener más información.
 
 El SQL que genera el [!UICONTROL Audiencias activadas recientemente] El widget se ve en la sección contraíble a continuación.
 

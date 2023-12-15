@@ -2,9 +2,9 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3129'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Las siguientes categorías son fundamentales para cumplir con las regulaciones d
 1. Auditoría
 1. Uso de datos
 1. Privacidad
-1. Higiene de los datos
+1. Higiene de datos
 
 Este documento examina cada una de las diferentes áreas de gobernanza y muestra cómo facilitar el cumplimiento de los datos al utilizar el servicio de consulta. Consulte la [información general sobre administración, privacidad y seguridad](../../landing/governance-privacy-security/overview.md) para obtener información más amplia sobre cómo Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normas.
 
@@ -93,7 +93,7 @@ El `CREATE VIEW` keyword define una vista de una consulta, pero la vista no se m
 
 #### Crear restricciones de acceso basadas en el campo en conjuntos de datos acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Con el [capacidad de control de acceso basado en atributos](../../access-control/abac/overview.md) puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en la variable [almacén acelerado](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
+Con el [capacidad de control de acceso basado en atributos](../../access-control/abac/overview.md) puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en la variable [almacén acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
 
 Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [añadir y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a los esquemas desde el [!UICONTROL Etiquetas] workspace en [!UICONTROL Esquemas] IU.
 
@@ -202,7 +202,7 @@ Las funciones del servicio de consulta para el control de datos simplifican y op
 
 Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la IU de Platform y el servicio de consulta también le permite [marcar las identidades principales utilizando el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Configuración de una identidad mediante `ALTER TABLE` es especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. Consulte la documentación para obtener instrucciones sobre cómo [definición de campos de identidad en la IU](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
 
-## Higiene de los datos {#data-hygiene}
+## Higiene de datos {#data-hygiene}
 
 La &quot;higiene de los datos&quot; se refiere al proceso de reparación o eliminación de datos que pueden estar obsoletos, ser inexactos, tener un formato incorrecto, estar duplicados o ser incompletos. Estos procesos garantizan que los conjuntos de datos sean precisos y coherentes en todos los sistemas. Es importante garantizar una higiene de los datos adecuada en cada paso del recorrido de los datos e incluso desde la ubicación inicial de almacenamiento de datos. En el servicio de consultas de Experience Platform, se trata del lago de datos o del almacén acelerado.
 
