@@ -2,10 +2,10 @@
 title: Ingesta bajo demanda de flujos de datos de origen en la interfaz de usuario
 description: Obtenga información sobre cómo crear flujos de datos bajo demanda para las conexiones de origen mediante la interfaz de usuario del Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,10 @@ Las ejecuciones de flujo representan una instancia de ejecución de flujo de dat
 >[!ENDSHADEBOX]
 
 ## Introducción
+
+>[!NOTE]
+>
+>Para crear una ejecución de flujo, primero debe tener el ID de flujo de un flujo de datos programado para una ingesta única.
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Experience Platform:
 
