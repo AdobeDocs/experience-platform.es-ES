@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles web
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles web.
+description: Obtenga información sobre el grupo de campos de esquema Detalles web.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 1%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `web` | [Información web](../../data-types/web-information.md) | Describe los clics en vínculos, los detalles de página web, la información del referente y los detalles del explorador. |
+| `web` | [Información web](../../data-types/web-information.md) | Describe los clics en vínculos, los detalles de página web, la información de referencia y los detalles del explorador. |
 
 {style="table-layout:auto"}
 

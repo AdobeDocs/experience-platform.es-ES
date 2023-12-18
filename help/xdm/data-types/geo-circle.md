@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;geografía;círculo;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos del círculo geográfico
-description: Este documento proporciona información general sobre el tipo de datos XDM de círculo geográfico.
+description: Obtenga información sobre el tipo de datos XDM de círculo geográfico.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '124'
+ht-degree: 5%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;reservación;comedor;
 title: Grupo de campos de esquema de reserva de restaurante
-description: Este documento proporciona información general del grupo de campos de esquema Reserva de restaurante.
+description: Obtenga información acerca del grupo de campos Esquema de reserva de restaurante.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 5%
 
 ---

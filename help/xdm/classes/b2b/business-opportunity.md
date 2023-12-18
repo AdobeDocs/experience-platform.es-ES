@@ -1,10 +1,10 @@
 ---
 title: Clase de oportunidad empresarial de XDM
-description: Este documento proporciona información general sobre la clase de oportunidad empresarial XDM en el modelo de datos de experiencia (XDM).
+description: Obtenga información acerca de la clase de oportunidad empresarial XDM en Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '309'
 ht-degree: 3%
 
 ---

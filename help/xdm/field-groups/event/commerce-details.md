@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles comerciales
-description: Este documento proporciona una descripción general del grupo de campos de esquema Detalles comerciales.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de comercio.
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 1%
+source-wordcount: '158'
+ht-degree: 3%
 
 ---
 

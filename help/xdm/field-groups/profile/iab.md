@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;iab;tcf;consentimiento;
 solution: Experience Platform
 title: Grupo de campos de consentimiento de IAB TCF 2.0 para esquemas de perfil
-description: Este documento proporciona información general sobre el grupo de campos de esquema de consentimiento TCF 2.0 de IAB para la clase de perfil individual de XDM.
+description: Obtenga información acerca del grupo de campos Esquema de consentimiento TCF 2.0 de IAB para la clase Perfil individual de XDM.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 0%
+source-wordcount: '321'
+ht-degree: 1%
 
 ---
 

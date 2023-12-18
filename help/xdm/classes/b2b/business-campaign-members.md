@@ -1,11 +1,11 @@
 ---
 title: Clase de miembros de XDM Business Campaign
-description: Este documento proporciona información general sobre la clase de miembros de XDM Business Campaign en el modelo de datos de experiencia (XDM).
+description: Obtenga información acerca de la clase de miembros de XDM Business Campaign en el modelo de datos de experiencia (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 1%
+source-wordcount: '235'
+ht-degree: 2%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Clase de cuenta empresarial de XDM
-description: Este documento proporciona información general sobre la clase de cuenta empresarial XDM en Experience Data Model (XDM).
+description: Obtenga información acerca de la clase de cuenta empresarial XDM en Experience Data Model (XDM).
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 1%
+source-wordcount: '252'
+ht-degree: 2%
 
 ---
 

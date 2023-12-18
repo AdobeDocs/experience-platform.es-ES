@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Tipo de datos del campo de preferencias de marketing genéricas
-description: Este documento proporciona información general sobre el tipo de datos XDM del campo de preferencias de marketing genéricas.
+description: Obtenga información acerca del tipo de datos XDM del campo de preferencias de marketing genéricas.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '645'
 ht-degree: 1%
 
 ---

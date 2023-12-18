@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;esquemas;detalles personales;Diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de datos de contacto personal
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de contacto personal.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de contacto personal.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 4%
+source-wordcount: '143'
+ht-degree: 2%
 
 ---
 

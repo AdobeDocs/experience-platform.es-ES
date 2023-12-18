@@ -4,10 +4,10 @@ user-guide-title: Ayuda del sistema del Modelo de datos de experiencia (XDM)
 breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Explore una descripción general del sistema Experience Data Model (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 16%
+source-wordcount: '589'
+ht-degree: 15%
 
 ---
 
@@ -58,16 +58,20 @@ ht-degree: 16%
       * [Detalles del miembro de atención médica](./field-groups/profile/healthcare-member-details.md)
       * [Detalles de fidelización](./field-groups/profile/loyalty-details.md)
       * [Datos personales de contacto](./field-groups/profile/personal-contact-details.md)
+      * [Enriquecimiento de socio de perfil (ejemplo)](./field-groups/profile/profile-partner-enrichment.md)
       * [Detalles de abono de segmento](./field-groups/profile/segmentation.md)
       * [Suscripción de telecomunicaciones](./field-groups/profile/telecom-subscription.md)
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
       * [Componentes de persona empresarial de XDM](./field-groups/profile/business-person-components.md)
       * [Detalles de persona de negocios de XDM](./field-groups/profile/business-person-details.md)
+   * Perfil de cliente potencial individual XDM {#prospect-profile}
+      * [Detalles del cliente potencial del socio (ejemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * ExperienceEvent de XDM {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
       * [Detalles de publicidad](./field-groups/event/advertising-details.md)
       * [Detalles de aplicación](./field-groups/event/application-details.md)
       * [Transferencias de saldo](./field-groups/event/balance-transfers.md)
+      * [Detección de bots](./field-groups/event/bot-detection-information.md)
       * [Detalles de marketing de campaña](./field-groups/event/campaign-marketing-details.md)
       * [Acciones de tarjeta](./field-groups/event/card-actions.md)
       * [Detalles del canal](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 16%
 * Tipos de datos {#data-types}
    * [Detalles de cuenta](./data-types/account-details.md)
    * [Pausa para anuncios](./data-types/ad-break.md)
+   * [Dirección](./data-types/address.md)
    * [Información de detalles publicitarios](./data-types/advertising-details-information.md)
    * [Información detallada de Advertising pod](./data-types/advertising-pod-details-information.md)
    * [Aplicación](./data-types/application.md)
    * [Baliza](./data-types/beacon.md)
    * [Detalles del explorador](./data-types/browser-details.md)
    * [Origen B2B](./data-types/b2b-source.md)
+   * [Carro de compras](./data-types/cart.md)
+   * [Datos de categoría](./data-types/category-data.md)
    * [Información de detalles del capítulo](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
+   * [Ámbito comercial](./data-types/commerce-scope.md)
    * [Cadena de consentimiento](./data-types/consent-string.md)
    * [Consentimientos y preferencias](./data-types/consents.md)
    * [Moneda](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 16%
    * [Interacción del PDI](./data-types/poi-interaction.md)
    * [Dirección postal](./data-types/postal-address.md)
    * [Elemento de lista de productos](./data-types/product-list-item.md)
+   * [Elemento de reembolso](./data-types/refund-item.md)
+   * [Lista de solicitudes](./data-types/requisition-list.md)
+   * [Devolver](./data-types/return.md)
+   * [Devolver elemento](./data-types/return-item.md)
    * [Información de detalles de datos de QoE](./data-types/qoe-data-details-information.md)
    * [Buscar](./data-types/search.md)
    * [Información de detalles de sesión](./data-types/session-details-information.md)
+   * [Envío](./data-types/shipping.md)
    * [Suscripción](./data-types/subscription.md)
    * [Suscripción de telecomunicaciones](./data-types/telecom-subscription.md)
    * [Transacción](./data-types/transaction.md)

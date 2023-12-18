@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de extensión completa de Adobe Analytics ExperienceEvent
-description: Este documento proporciona información general sobre el grupo de campos de esquema de extensión completa de Adobe Analytics ExperienceEvent.
+description: Obtenga información acerca del grupo de campos de esquema Extensión completa de Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 11%
+source-wordcount: '811'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ El grupo de campos proporciona un solo `_experience` objeto a un esquema, que co
 | `eVars` | Objeto | Un objeto que captura hasta 250 variables de conversión ([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=es)). Las propiedades de este objeto tienen una clave `eVar1` hasta `eVar250` y solo aceptan cadenas para su tipo de datos. |
 | `hierarchies` | Objeto | Un objeto que captura hasta cinco variables de jerarquía personalizadas ([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=es)). Las propiedades de este objeto tienen una clave `hier1` hasta `hier5`, que son objetos con las siguientes subpropiedades:<ul><li>`delimiter`: El delimitador original utilizado para generar la lista proporcionada en `values`.</li><li>`values`: Una lista delimitada de nombres de nivel de jerarquía, representados como una cadena.</li></ul> |
 | `listProps` | Objeto | Un objeto que captura hasta 75 [props de lista](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). Las propiedades de este objeto tienen una clave `prop1` hasta `prop75`, que son objetos con las siguientes subpropiedades:<ul><li>`delimiter`: El delimitador original utilizado para generar la lista proporcionada en `values`.</li><li>`values`: Una lista delimitada de valores para la prop, representada como una cadena.</li></ul> |
-| `lists` | Objeto | Un objeto que captura hasta tres [listas](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=es). Las propiedades de este objeto tienen una clave `list1` hasta `list3`. Cada una de estas propiedades contiene un solo `list` matriz de [[!UICONTROL Par de valor clave]](../../data-types/key-value-pair.md) tipos de datos. |
+| `lists` | Objeto | Un objeto que captura hasta tres [listas](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). Las propiedades de este objeto tienen una clave `list1` hasta `list3`. Cada una de estas propiedades contiene un solo `list` matriz de [[!UICONTROL Par de valor clave]](../../data-types/key-value-pair.md) tipos de datos. |
 | `props` | Objeto | Un objeto que captura hasta 75 [props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=es). Las propiedades de este objeto tienen una clave `prop1` hasta `prop75` y solo aceptan cadenas para su tipo de datos. |
 | `postalCode` | Cadena | Un código postal proporcionado por el cliente. |
 | `stateProvince` | Cadena | Una ubicación de estado o provincia proporcionada por el cliente. |

@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;campos;esquemas;esquemas;señalización;detalles de interacción;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles de interacción geográfica
-description: Este documento proporciona información general sobre el tipo de datos XDM de detalles de interacción geográfica.
+description: Obtenga información sobre el tipo de datos XDM de detalles de interacción geográfica.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 2%
+source-wordcount: '135'
+ht-degree: 4%
 
 ---
 

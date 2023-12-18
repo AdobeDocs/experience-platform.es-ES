@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;identity;tipo de datos;tipo de datos;data-type;
 solution: Experience Platform
 title: Tipo de datos de identidad
-description: Este documento proporciona información general sobre el tipo de datos XDM de identidad.
+description: Obtenga información sobre el tipo de datos XDM de identidad.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 4%
 
 ---

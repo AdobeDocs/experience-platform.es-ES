@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;dispositivo;intercambio;intercambio;intercambio;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de intercambio de dispositivos
-description: Este documento proporciona información general del grupo de campos de esquema Detalles de intercambio de dispositivos.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de intercambio de dispositivos.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 4%
 
 ---
 

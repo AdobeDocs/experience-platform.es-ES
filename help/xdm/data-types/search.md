@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;búsqueda;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Buscar tipo de datos
-description: Este documento proporciona información general sobre el tipo de datos del modelo de datos de experiencia de búsqueda (XDM).
+description: Obtenga información acerca del tipo de datos Modelo de datos de experiencia de búsqueda (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 4%
+source-wordcount: '160'
+ht-degree: 6%
 
 ---
 

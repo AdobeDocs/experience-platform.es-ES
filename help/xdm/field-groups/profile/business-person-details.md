@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de persona de negocio XDM
-description: Este documento proporciona una visión general del grupo de campos de esquema Detalles de persona de negocio de XDM.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de persona de negocio de XDM.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 5%
+source-wordcount: '567'
+ht-degree: 4%
 
 ---
 

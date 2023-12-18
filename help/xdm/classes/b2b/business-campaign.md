@@ -1,11 +1,11 @@
 ---
 title: Clase de campaña empresarial de XDM
-description: Este documento proporciona información general sobre la clase de campaña empresarial de XDM en el modelo de datos de experiencia (XDM).
+description: Obtenga información acerca de la clase de campaña empresarial XDM en Experience Data Model (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 2%
+source-wordcount: '228'
+ht-degree: 3%
 
 ---
 

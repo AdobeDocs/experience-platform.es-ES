@@ -1,11 +1,11 @@
 ---
 title: Tipo de datos de atributos de auditoría del sistema de origen externo
-description: Este documento proporciona información general sobre el tipo de datos XDM (Experience Data Model) de los atributos de auditoría del sistema de origen externo.
+description: Obtenga información sobre el tipo de datos XDM (Experience Data Model) de atributos de auditoría del sistema de origen externo.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 4%
 
 ---
 

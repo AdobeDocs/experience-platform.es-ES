@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de aplicación
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de la aplicación.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de la aplicación.
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 2%
+source-wordcount: '123'
+ht-degree: 4%
 
 ---
 

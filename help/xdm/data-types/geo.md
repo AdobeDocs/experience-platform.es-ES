@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;geografía;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos geográficos
-description: Este documento proporciona información general sobre el tipo de datos XDM geográfico.
+description: Obtenga información sobre el tipo de datos XDM geográfico.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 4%
+source-wordcount: '174'
+ht-degree: 6%
 
 ---
 

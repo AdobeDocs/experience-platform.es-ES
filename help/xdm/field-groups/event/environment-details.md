@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;entorno;detalles de entorno;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles del entorno
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles del entorno de ExperienceEvent.
+description: Obtenga información sobre el grupo de campos de esquema Detalles del entorno de ExperienceEvent.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 1%
+source-wordcount: '189'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `device` | [Device](../../data-types/device.md) | Describe un dispositivo, aplicación o instancia de explorador de dispositivo identificado que se puede rastrear a través de sesiones (normalmente, mediante cookies). |
+| `device` | [Dispositivo](../../data-types/device.md) | Describe un dispositivo, aplicación o instancia de explorador de dispositivo identificado que se puede rastrear a través de sesiones (normalmente, mediante cookies). |
 | `environment` | [Entorno](../../data-types/environment.md) | Describe información acerca del contexto situacional de la observación de eventos, detallando específicamente información transitoria como la red o las versiones de software. |
 | `placeContext` | [Contexto del lugar](../../data-types/place-context.md) | Describe las circunstancias transitorias relacionadas con la observación de eventos. Algunos ejemplos son información específica de la configuración regional, como el tiempo, la hora local, el tráfico, el día de la semana, los días laborales frente a los festivos y el horario laboral. |
 

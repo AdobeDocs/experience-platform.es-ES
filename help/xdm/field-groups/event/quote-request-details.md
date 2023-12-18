@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de solicitud de oferta
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de la solicitud de oferta.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de solicitud de oferta.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 4%
+source-wordcount: '133'
+ht-degree: 6%
 
 ---
 

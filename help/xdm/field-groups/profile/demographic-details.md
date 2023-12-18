@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;persona;detalles de persona;detalles de persona del perfil;persona;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles demográficos
-description: Este documento proporciona una descripción general del grupo de campos del esquema Detalles demográficos.
+description: Obtenga información acerca del grupo de campos del esquema Detalles demográficos.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 | `person.gender` | Cadena | La identidad de género de la persona. |
 | `person.martialStatus` | Cadena | Describe la relación de una persona con su pareja. |
 | `person.nationality` | Cadena | La relación jurídica entre una persona y su estado representada mediante el código ISO 3166-1 Alpha-2. |
-| `person.taxId` | Cadena | El ID fiscal de la persona, como el TIN en EE. UU. o el CIF/NIF en España. |
+| `person.taxId` | Cadena | CIF El ID fiscal de la persona, como el TIN en EE. UU. o el NIF/en España. |
 
 {style="table-layout:auto"}
 

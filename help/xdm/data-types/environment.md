@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;entorno;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos del entorno
-description: Este documento proporciona información general sobre el tipo de datos XDM de entorno.
+description: Obtenga información sobre el tipo de datos XDM de entorno.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 4%
+source-wordcount: '440'
+ht-degree: 5%
 
 ---
 

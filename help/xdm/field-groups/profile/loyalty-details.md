@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;esquemas;detalles de lealtad;Diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de fidelización
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de fidelización.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de fidelización.
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 2%
+source-wordcount: '281'
+ht-degree: 3%
 
 ---
 

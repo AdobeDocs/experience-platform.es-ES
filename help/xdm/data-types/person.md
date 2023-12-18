@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;campos;esquemas;esquemas;persona;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de persona
-description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia de persona (XDM).
+description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia de persona (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 4%
+source-wordcount: '318'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 | `gender` | Cadena | La identidad de género de la persona. El valor de esta propiedad debe ser igual a uno de los siguientes valores de enumeración conocidos. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> El valor predeterminado es `not_specified`. |
 | `maritalStatus` | Cadena | Describe la relación de una persona con su pareja. El valor de esta propiedad debe ser igual a uno de los siguientes valores de enumeración. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> El valor predeterminado es `not_specified`. |
 | `nationality` | Cadena | La relación jurídica entre una persona y su estado representada mediante el código ISO 3166-1 Alpha-2. El formato de esta propiedad debe ajustarse a esta expresión regular `^[A-Z]{2}$`. |
-| `taxId` | Cadena | El ID fiscal de la persona, como el Número de Identificación Fiscal (TIN) en EE. UU. o el Certificado de Identificación Fiscal (CIF/NIF) en España. |
+| `taxId` | Cadena | CIF El ID fiscal de la persona, como el Número de Identificación Fiscal (TIN) en EE. UU. o el Certificado de Identificación Fiscal (/NIF) en España. |
 
 {style="table-layout:auto"}
 

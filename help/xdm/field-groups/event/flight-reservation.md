@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;ExperienceEvent;campos;esquemas;esquemas;Diseño de esquema;grupo de campos;grupo de campos;reservación;vuelo;
 title: Grupo de campos de esquema de reserva de vuelo
-description: Este documento proporciona información general del grupo de campos Esquema de reserva de vuelo.
+description: Obtenga información acerca del grupo de campos Esquema de reserva de vuelo.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '625'
 ht-degree: 4%
 
 ---

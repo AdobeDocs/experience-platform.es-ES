@@ -1,10 +1,10 @@
 ---
 title: Grupo de campos de esquema de búsqueda del sitio de soporte
-description: Este documento proporciona información general sobre el grupo de campos de esquema Búsqueda del sitio de soporte.
+description: Obtenga información acerca del grupo de campos de esquema Búsqueda del sitio de soporte.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '77'
 ht-degree: 5%
 
 ---

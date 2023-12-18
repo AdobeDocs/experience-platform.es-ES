@@ -1,11 +1,11 @@
 ---
 title: Clase de relación de persona de la cuenta XDM
-description: Este documento proporciona información general sobre la clase de relación de persona de cuenta empresarial de XDM en Experience Data Model (XDM).
+description: Obtenga información acerca de la clase de relación de persona de la cuenta XDM en el modelo de datos de experiencia (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 2%
+source-wordcount: '432'
+ht-degree: 3%
 
 ---
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;esquemas;telecomunicaciones;suscripción;telecomunicaciones;diseño de esquema;grupo de campos;grupo de campos;
 solution: Experience Platform
 title: Grupo de campos de esquema de suscripción de telecomunicaciones
-description: Este documento proporciona información general del grupo de campos Esquema de suscripción de telecomunicaciones.
+description: Obtenga información acerca del grupo de campos Esquema de suscripción de telecomunicaciones.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 5%
+source-wordcount: '692'
+ht-degree: 6%
 
 ---
 
@@ -65,7 +65,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL N.º de teléfono]](../../data-types/telecom-subscription.md) | Número de teléfono asignado a esta suscripción. |
+| `phoneNumber` | [[!UICONTROL Número de teléfono]](../../data-types/telecom-subscription.md) | Número de teléfono asignado a esta suscripción. |
 | `subscriptionDetails` | [[!UICONTROL Suscripción de telecomunicaciones]](../../data-types/telecom-subscription.md) | Describe los detalles generales de la suscripción, incluida la duración, las tarifas, el estado y mucho más. |
 | `callBlocking` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen bloqueo de llamadas. |
 | `callForwarding` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen desvío de llamadas. |
@@ -102,7 +102,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL N.º de teléfono]](../../data-types/telecom-subscription.md) | Número de teléfono asignado a esta suscripción. |
+| `phoneNumber` | [[!UICONTROL Número de teléfono]](../../data-types/telecom-subscription.md) | Número de teléfono asignado a esta suscripción. |
 | `subscriptionDetails` | [[!UICONTROL Suscripción de telecomunicaciones]](../../data-types/telecom-subscription.md) | Describe los detalles generales de la suscripción, incluida la duración, las tarifas, el estado y mucho más. |
 | `earlyUpgradeEnrollment` | Booleano | Indica si el cliente acepta actualizaciones tempranas. |
 | `planLevel` | Cadena | El nombre del plan móvil asignado a esta suscripción. |

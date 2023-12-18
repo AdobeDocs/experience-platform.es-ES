@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de pertenencia a segmento
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de pertenencia a segmentos.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de pertenencia a segmentos.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 2%
+source-wordcount: '398'
+ht-degree: 3%
 
 ---
 

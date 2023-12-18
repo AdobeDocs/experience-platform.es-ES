@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;ExperienceEvent;campos;esquemas;Esquemas;Diseño de esquema;grupo de campos;grupo de campos;reservación;detalles de reservación;
 title: Grupo de campos de esquema de detalles de reserva
-description: Este documento proporciona información general del grupo de campos de esquema Detalles de la reserva.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de la reserva.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 5%
 
 ---
 

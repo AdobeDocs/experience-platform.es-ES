@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de ventas adicionales
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles de ampliación de venta.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de ampliación de venta.
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '126'
+ht-degree: 3%
 
 ---
 

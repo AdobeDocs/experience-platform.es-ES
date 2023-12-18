@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles publicitarios
-description: Este documento proporciona información general sobre el grupo de campos de esquema Detalles publicitarios.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de publicidad.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 11%
+source-wordcount: '992'
+ht-degree: 4%
 
 ---
 
@@ -45,12 +45,12 @@ El `adAssetReference` El objeto de captura información de recursos sobre el anu
 | `_dc.title` | Cadena | El nombre descriptivo y en lenguaje natural del recurso publicitario. |
 | `_xmpDM.duration` | Número entero | La duración del recurso en segundos. |
 | `_id` | Cadena | Un identificador único del recurso publicitario, a continuación del [Estándar de Ad-ID](https://datatracker.ietf.org/doc/html/rfc8107). |
-| `advertiser` | Cadena | Empresa o marca cuyo producto aparece en el anuncio. |
-| `campaign` | Cadena | ID de la campaña de publicidad. |
+| `advertiser` | Cadena | La compañía o marca cuyo producto aparece en el anuncio. |
+| `campaign` | Cadena | El ID de la campaña de publicidad. |
 | `creativeID` | Cadena | El ID del creador de la publicidad. |
-| `creativeURL` | Cadena | La dirección URL del creador de la publicidad. |
+| `creativeURL` | Cadena | La URL del creador de la publicidad. |
 | `placementID` | Cadena | ID de colocación de la publicidad. |
-| `siteID` | Cadena | ID del sitio de publicidad. |
+| `siteID` | Cadena | El ID del sitio de publicidad. |
 
 {style="table-layout:auto"}
 

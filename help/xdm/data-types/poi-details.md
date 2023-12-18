@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;esquemas;poi;detalles de poi;punto de interés;detalles de punto de interés;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles del punto de interés
-description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del punto de interés.
+description: Obtenga información sobre el tipo de datos XDM de detalles del punto de interés.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '180'
+ht-degree: 5%
 
 ---
 

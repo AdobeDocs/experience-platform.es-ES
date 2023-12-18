@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;suscripción;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de suscripción
-description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia de suscripción (XDM).
+description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia de suscripción (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 9%
+source-wordcount: '388'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `device` | [[!UICONTROL Device]](./device.md) | Describe los detalles del dispositivo vinculado a la suscripción. |
+| `device` | [[!UICONTROL Dispositivo]](./device.md) | Describe los detalles del dispositivo vinculado a la suscripción. |
 | `environment` | [[!UICONTROL Entorno]](./environment.md) | Contiene información sobre el contexto en el que ocurrió la observación del evento, con información transitoria específica como la red o las versiones de software. |
 | `subscriber` | [[!UICONTROL Persona]](./person.md) | Describe a una persona individual. Esto también puede representar a una persona que tiene varias funciones, como cliente, contacto o propietario. |
 | `SKU` | Cadena | El SKU (código de referencia), un identificador único de un producto. |

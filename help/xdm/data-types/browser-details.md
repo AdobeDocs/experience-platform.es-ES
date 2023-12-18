@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;explorador;detalles del explorador;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de detalles del explorador
-description: Este documento proporciona información general sobre el tipo de datos XDM Detalles del explorador.
+description: Obtenga información sobre el tipo de datos XDM Detalles del explorador.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 11%
+source-wordcount: '240'
+ht-degree: 7%
 
 ---
 

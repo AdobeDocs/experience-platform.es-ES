@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;emailAddress;xdm:emailAddress;correo electrónico;dirección de correo electrónico;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de dirección de correo electrónico
-description: Este documento proporciona información general sobre el tipo de datos XDM Dirección de correo electrónico.
+description: Obtenga información sobre el tipo de datos XDM de dirección de correo electrónico.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---

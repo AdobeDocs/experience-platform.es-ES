@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;aplicación;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de aplicación
-description: Este documento proporciona información general sobre el tipo de datos del Modelo de datos de experiencia de aplicación (XDM).
+description: Obtenga información sobre el tipo de datos del Modelo de datos de experiencia de aplicación (XDM).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 4%
+source-wordcount: '416'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 | `launches` | [[!UICONTROL Medida]](./measure.md) | Describe un valor asociado con el inicio de una aplicación. Se activa en cada ejecución, incluidos los bloqueos, las instalaciones y la reanudación desde segundo plano cuando se ha superado el tiempo de espera de sesión. |
 | `upgrades` | [[!UICONTROL Medida]](./measure.md) | Contiene datos sobre la actualización de una aplicación previamente instalada. Se activa en el primer inicio después de una actualización. |
 | `id` | Cadena | Un identificador único de la aplicación. |
-| `name` | Cadena | Nombre de la aplicación  |
+| `name` | Cadena | Nombre de la aplicación. |
 | `userPerspective` | Cadena | La perspectiva o relación física entre el usuario y la aplicación o marca en el momento en que se produjo un evento. Comprender la perspectiva del usuario en relación con la aplicación ayuda a generar sesiones con precisión, ya que la mayoría de las veces no se desea incluir `background` y `detached` eventos como parte de una sesión &quot;activa&quot;. El valor de esta propiedad debe ser igual a uno de los valores de enumeración enumerados a continuación. <li> `foreground`: el usuario y la aplicación interactúan directamente entre sí. </li> <li> `background`: la aplicación y el usuario interactúan indirectamente entre sí. Por ejemplo, la aplicación podría medir un valor y actualizarse mientras la pantalla está bloqueada o se está utilizando otra aplicación en primer plano.  </li> <li> `detached`: desconectado significa que el evento estaba relacionado con la aplicación, pero no provenía directamente de la aplicación, como el envío de un correo electrónico o una notificación push desde un sistema externo. |
 | `version` | Cadena | La versión de la aplicación. |
 

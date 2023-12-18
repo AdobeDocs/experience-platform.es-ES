@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de miembros de campaña empresarial de XDM
-description: Este documento proporciona información general del grupo de campos de esquema Detalles de miembros de campaña empresarial de XDM.
+description: Obtenga información acerca del grupo de campos de esquema Detalles de miembros de XDM Business Campaign.
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 3%
+source-wordcount: '335'
+ht-degree: 4%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Clase de proveedor
-description: Este documento proporciona información general sobre la clase Provider en el modelo de datos de Experience (XDM).
+description: Obtenga información acerca de la clase Provider en el modelo de datos de experiencia (XDM).
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '146'
+ht-degree: 4%
 
 ---
 

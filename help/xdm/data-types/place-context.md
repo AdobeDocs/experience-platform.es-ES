@@ -2,12 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;esquemas;esquemas;contexto de lugar;contexto de lugar;tipo de datos;tipo de datos;tipo de datos;
 solution: Experience Platform
 title: Tipo de datos de contexto del lugar
-description: Este documento proporciona información general sobre el tipo de datos XDM de contexto de ubicación.
+description: Obtenga información sobre el tipo de datos XDM de contexto de ubicación.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 4%
+source-wordcount: '160'
+ht-degree: 3%
 
 ---
 

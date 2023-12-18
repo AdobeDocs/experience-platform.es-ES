@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema del catálogo de productos
-description: Este documento proporciona información general sobre el grupo de campos de esquema Catálogo de productos.
+description: Obtenga información acerca del grupo de campos de esquema Catálogo de productos.
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 4%
+source-wordcount: '70'
+ht-degree: 8%
 
 ---
 

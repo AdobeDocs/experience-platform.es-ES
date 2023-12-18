@@ -2,11 +2,11 @@
 keywords: Experience Platform;inicio;temas populares;esquema;XDM;perfil individual;campos;esquemas;Esquema;Diseño de esquema;mixin;mixins;detalles de trabajo;trabajo de perfil;
 solution: Experience Platform
 title: Grupo de campos de esquema de detalles de contacto de trabajo
-description: Este documento proporciona información general del grupo de campos de esquema Detalles del contacto de trabajo.
+description: Obtenga información acerca del grupo de campos de esquema Detalles del contacto de trabajo.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '167'
 ht-degree: 2%
 
 ---

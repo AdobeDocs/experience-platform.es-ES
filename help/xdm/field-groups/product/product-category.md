@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de categoría de producto
-description: Este documento proporciona información general del grupo de campos de esquema Categoría de producto.
+description: Obtenga información acerca del grupo de campos de esquema Categoría de producto.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 6%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 

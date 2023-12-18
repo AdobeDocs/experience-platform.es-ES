@@ -1,10 +1,10 @@
 ---
 title: Tipo de datos de detalles de cuenta
-description: Este documento proporciona información general sobre el tipo de datos del modelo de datos de experiencia (XDM) de detalles de cuenta.
+description: Obtenga información acerca del tipo de datos del modelo de datos de experiencia (XDM) de detalles de la cuenta.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '409'
 ht-degree: 5%
 
 ---

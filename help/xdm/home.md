@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general del sistema XDM
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2087'
-ht-degree: 5%
+source-wordcount: '2083'
+ht-degree: 4%
 
 ---
 
@@ -19,11 +19,11 @@ XDM es una especificación documentada públicamente y diseñada para mejorar la
 
 XDM es el marco de trabajo básico que permite a Adobe Experience Cloud, con tecnología de Experience Platform, enviar el mensaje correcto a la persona adecuada, en el canal correcto, en el momento exacto. La metodología en la que se crea Experience Platform, el sistema XDM, pone en funcionamiento [!DNL Experience Data Model] esquemas para su uso en los servicios de Platform.
 
-Este documento proporciona información general sobre la función del sistema XDM en Experience Platform.
+Obtenga información acerca de la función que desempeña el sistema XDM en Experience Platform.
 
 ## Esquemas XDM
 
-Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de manera uniforme en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos.
+Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de forma coherente en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos.
 
 Antes de poder introducir datos en Platform, se debe crear un esquema para describir la estructura de los datos y proporcionar restricciones al tipo de datos que se pueden contener en cada campo. Los esquemas constan de una clase base y cero o más grupos de campos de esquema.
 

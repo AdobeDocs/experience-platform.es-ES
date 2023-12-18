@@ -1,11 +1,11 @@
 ---
 title: Grupo de campos de esquema de proveedor de atención médica
-description: Este documento proporciona información general sobre el grupo de campos Esquema del proveedor de atención médica.
+description: Obtenga información sobre el grupo de campos Esquema del proveedor de atención médica.
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 4%
+source-wordcount: '254'
+ht-degree: 3%
 
 ---
 

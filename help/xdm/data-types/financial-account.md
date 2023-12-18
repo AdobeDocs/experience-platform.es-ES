@@ -1,11 +1,11 @@
 ---
 title: Tipo de datos de la cuenta financiera
-description: Este documento proporciona información general sobre el tipo de datos XDM de cuenta financiera.
+description: Obtenga información sobre el tipo de datos XDM de cuenta financiera.
 exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 5%
+source-wordcount: '90'
+ht-degree: 8%
 
 ---
 
