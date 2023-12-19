@@ -2,9 +2,9 @@
 title: Información general sobre la extensión API Meta Conversions
 description: Obtenga información acerca de la extensión de la API de metaconversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,12 @@ Al enviar eventos compartidos, asegúrese de incluir un ID y un nombre de evento
 >* La función de inicio rápido está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Póngase en contacto con el representante del Adobe para obtener más información.
 >* Esta función es para nuevas implementaciones de red y, actualmente, no admite la instalación automática de extensiones y configuraciones en propiedades de etiquetas y reenvío de eventos existentes.
 
+>[!NOTE]
+>
+>Cualquier cliente existente puede utilizar los flujos de trabajo de inicio rápido para crear una implementación de referencia que se pueda utilizar para lo siguiente:
+>* Utilícelo como el inicio de una implementación completamente nueva.
+>* Aproveche esta implementación como referencia que puede examinar para ver cómo se ha configurado y luego duplicarla en las implementaciones de producción actuales.
+
 La función de inicio rápido le ayuda a configurarse con facilidad y eficacia con la API de conversiones de metadatos y las extensiones de píxeles. Esta herramienta automatiza varios pasos que se realizan en las etiquetas de Adobe y en el reenvío de eventos, lo que reduce significativamente el tiempo de configuración.
 
 Esta función instala y configura automáticamente la API de conversiones de metadatos y las extensiones de píxeles en una propiedad de etiquetas y reenvío de eventos generada automáticamente con las reglas y los elementos de datos necesarios. Además, también instala y configura automáticamente el SDK web de Experience Platform y el conjunto de datos. Por último, la función de inicio rápido publica automáticamente la biblioteca en la dirección URL designada en un entorno de desarrollo, lo que permite la recopilación de datos del lado del cliente y el reenvío de eventos del lado del servidor en tiempo real mediante el reenvío de eventos y la red perimetral del Experience Platform.
@@ -152,7 +158,7 @@ Desde el **[!UICONTROL Añadir código en el sitio]** diálogo copie el código 
 
 ![Agregar código en el cuadro de diálogo del sitio](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-El [!UICONTROL Resultados de validación] muestra los resultados de la implementación de la extensión Meta. Seleccione **[!UICONTROL Siguiente]**. También puede ver resultados de validación adicionales seleccionando la variable **[!UICONTROL Assurance]** vínculo.
+El [!UICONTROL Resultados de validación] muestra los resultados de la implementación de la extensión Meta. Seleccionar **[!UICONTROL Siguiente]**. También puede ver resultados de validación adicionales seleccionando la variable **[!UICONTROL Assurance]** vínculo.
 
 ![Cuadro de diálogo de resultados de prueba que muestra resultados de implementación](../../../images/extensions/server/meta/test-results.png)
 
