@@ -2,10 +2,10 @@
 description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por el Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para el destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 4%
+source-wordcount: '2181'
+ht-degree: 3%
 
 ---
 
@@ -33,11 +33,16 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 ### Requisitos previos en el sistema {#prerequisites}
 
-Como primer paso, debe crear una aplicación en el sistema para Adobe Experience Platform o, de lo contrario, registrar un Experience Platform en el sistema. El objetivo es generar un ID de cliente y un secreto de cliente, que son necesarios para autenticar al Experience Platform en el destino. Como parte de esta configuración en su sistema, necesita las URL de redireccionamiento/llamada de retorno de OAuth 2 de Adobe Experience Platform, que puede obtener de la lista siguiente.
+Como primer paso, debe crear una aplicación en el sistema para Adobe Experience Platform o, de lo contrario, registrar un Experience Platform en el sistema. El objetivo es generar un ID de cliente y un secreto de cliente, que son necesarios para autenticar al Experience Platform en el destino.
+
+Como parte de esta configuración en su sistema, necesita las URL de redireccionamiento/llamada de retorno de OAuth 2 de Adobe Experience Platform, que puede obtener de la lista siguiente.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
@@ -445,7 +450,7 @@ Puede utilizar los siguientes parámetros en `accessTokenRequest` para personali
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `accessTokenRequest.destinationServerType` | Cadena | En su lugar, utilice `URL_BASED`. |
+| `accessTokenRequest.destinationServerType` | Cadena | Uso `URL_BASED`. |
 | `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Cadena | <ul><li>Uso `PEBBLE_V1` si utiliza plantillas para el valor en `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Uso `NONE` si el valor del campo `accessTokenRequest.urlBasedDestination.url.value` es una constante. </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | Cadena | Dirección URL donde el Experience Platform solicita el token de acceso. |
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Cadena | <ul><li>Uso `PEBBLE_V1` si utiliza plantillas para los valores de `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Uso `NONE` si el valor del campo `accessTokenRequest.httpTemplate.requestBody.value` es una constante. </li></li> |
