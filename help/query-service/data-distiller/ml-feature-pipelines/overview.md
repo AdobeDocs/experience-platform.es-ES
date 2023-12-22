@@ -2,9 +2,9 @@
 title: Canalizaciones de funciones AI/ML
 description: Aprenda a utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ Data Distiller permite a los científicos e ingenieros de datos enriquecer sus c
 
 ![Una infografía que detalla la canalización de funciones AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Con las potentes funciones de consulta de Data Distiller, puede extraer funciones significativas de los abundantes datos de comportamiento disponibles en el Experience Platform e incorporar los datos de funciones destiladas en su entorno de aprendizaje automático sin necesidad de copiar grandes volúmenes de datos de evento fuera del Experience Platform.
-2. Lea el conjunto de datos de funciones preparado en sus herramientas de aprendizaje automático preferidas y combínelo con otras funciones derivadas de los datos empresariales para entrenar, experimentar, ajustar e implementar modelos personalizados adaptados a su negocio.
-3. Genere puntuaciones, predicciones o recomendaciones a partir de los modelos y devuelva el resultado al Experience Platform para optimizar las experiencias de los clientes mediante Real-time Customer Data Platform y Adobe Journey Optimizer.
+- Con las potentes funciones de consulta de Data Distiller, puede extraer funciones significativas de los abundantes datos de comportamiento disponibles en el Experience Platform. A continuación, puede incorporar los datos de funciones destiladas al entorno de aprendizaje automático sin necesidad de copiar grandes volúmenes de datos de evento fuera del Experience Platform.
+- Lea el conjunto de datos de funciones preparado en sus herramientas de aprendizaje automático preferidas y combínelo con otras funciones derivadas de los datos empresariales para entrenar, experimentar, ajustar e implementar modelos personalizados adaptados a su negocio.
+- Genere puntuaciones, predicciones o recomendaciones a partir de los modelos y devuelva el resultado al Experience Platform para optimizar las experiencias de los clientes mediante Real-time Customer Data Platform y Adobe Journey Optimizer.
 
 ## Requisitos previos {#prerequisites}
 
@@ -43,10 +43,13 @@ Al leer este documento, se le han introducido los conceptos importantes subyacen
 
 En los documentos incluidos en esta serie de guías se describen los pasos básicos para crear canalizaciones de funciones desde Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático. Ya está listo para establecer una conexión entre Data Distiller y su [!DNL Jupyter Notebook].
 
-- [Conectarse a Data Distiller desde un [!DNL Python] cuaderno](./establish-connection.md)
-- [Exploración y análisis de conjuntos de datos](./exploratory-analysis.md)
-- [Funciones de ingeniero para el aprendizaje automático](./feature-engineering.md)
-- [Exportar conjuntos de datos de características](./export-data.md)
+- **Configuración de**: [Conectarse a Data Distiller desde un [!DNL Python] cuaderno](./establish-connection.md)
+
+La documentación enlazada a continuación corresponde a los pasos indicados en la infografía anterior.
+
+- **Paso 1**: [Exploración y análisis de conjuntos de datos](./exploratory-analysis.md)
+- **Paso 2**: [Funciones de ingeniero para el aprendizaje automático](./feature-engineering.md)
+- **Paso 3**: [Exportar conjuntos de datos de características](./export-data.md)
 
 ## Recursos adicionales
 
