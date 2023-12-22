@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Clase XDM ExperienceEvent
 description: Obtenga información acerca de la clase XDM ExperienceEvent y las prácticas recomendadas para el modelado de datos de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2656'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] clase
 
-[!DNL XDM ExperienceEvent] es una clase estándar de modelo de datos de experiencia (XDM) que le permite crear una instantánea con marca de tiempo del sistema cuando se produce un evento específico o se ha alcanzado un conjunto determinado de condiciones.
+[!DNL XDM ExperienceEvent] es una clase estándar de modelo de datos de experiencia (XDM). Utilice esta clase para crear una instantánea con marca de tiempo del sistema cuando se produzca un evento específico o cuando se haya alcanzado un conjunto determinado de condiciones.
 
 Un Evento de experiencia es un registro de hechos de lo que ocurrió, incluido el momento y la identidad de la persona involucrada. Los eventos pueden ser explícitos (acciones humanas directamente observables) o implícitos (planteados sin una acción humana directa) y se registran sin agregación ni interpretación. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de Platform, consulte la [Información general de XDM](../home.md#data-behaviors).
 
-El [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con series temporales a un esquema. Dos de estos campos (`_id` y `timestamp`) son **obligatorio** para todos los esquemas basados en la clase, mientras que el resto son opcionales. Los valores de algunos de los campos se rellenan automáticamente cuando se incorporan datos.
+El [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con series temporales a un esquema. Dos de estos campos (`_id` y `timestamp`) son **obligatorio** para todos los esquemas basados en esta clase, mientras que el resto son opcionales. Los valores de algunos de los campos se rellenan automáticamente cuando se incorporan datos.
 
-![La estructura de ExperienceEvent de XDM tal como aparece en la IU de Platform](../images/classes/experienceevent/structure.png)
+![La estructura de ExperienceEvent de XDM tal como aparece en la IU de Platform.](../images/classes/experienceevent/structure.png)
 
 | Propiedad | Descripción |
 | --- | --- |
@@ -50,7 +50,7 @@ Al mantener la marca de tiempo en el nivel de clase separada de otros valores de
 
 Ciertas interacciones en las aplicaciones de experiencia pueden dar como resultado varios eventos relacionados que técnicamente comparten la misma marca de tiempo de evento y, por lo tanto, se pueden representar como un único registro de evento. Por ejemplo, si un cliente ve un producto en su sitio web, esto puede dar como resultado un registro de evento que tenga dos posibilidades `eventType` values: un evento de &quot;vista de producto&quot; (`commerce.productViews`) o un evento genérico de &quot;vista de página&quot; (`web.webpagedetails.pageViews`). En estos casos, puede utilizar campos calculados para capturar los atributos más importantes cuando se capturan varios eventos en una sola visita.
 
-[Preparación de datos de Adobe Experience Platform](../../data-prep/home.md) permite asignar, transformar y validar datos desde y hacia XDM. Uso de los disponibles [funciones de asignación](../../data-prep/functions.md) proporcionado por el servicio puede invocar operadores lógicos para priorizar, transformar o consolidar datos de registros de varios eventos cuando se incorporan en Experience Platform. En el ejemplo anterior, puede designar `eventType` como un campo calculado que priorizaría una &quot;vista de producto&quot; sobre una &quot;vista de página&quot; siempre que se produzcan ambos.
+Uso [Preparación de datos de Adobe Experience Platform](../../data-prep/home.md) para asignar, transformar y validar datos desde y hacia XDM. Uso de los disponibles [funciones de asignación](../../data-prep/functions.md) proporcionado por el servicio puede invocar operadores lógicos para priorizar, transformar o consolidar datos de registros de varios eventos cuando se incorporan en Experience Platform. En el ejemplo anterior, puede designar `eventType` como un campo calculado que priorizaría una &quot;vista de producto&quot; sobre una &quot;vista de página&quot; siempre que se produzcan ambos.
 
 Si está introduciendo manualmente datos en Platform a través de la interfaz de usuario de, consulte la guía sobre [campos calculados](../../data-prep/ui/mapping.md#calculated-fields) para ver los pasos específicos sobre cómo crear campos calculados.
 
@@ -140,7 +140,7 @@ En la tabla siguiente se describen los valores aceptados para `eventType`, junto
 | `leadOperation.changeEngagementCampaignCadence` | Este evento rastrea cuándo se ha producido un cambio en la frecuencia con la que un posible cliente se involucra como parte de una campaña. |
 | `leadOperation.convertLead` | Este evento rastrea cuándo se convirtió un posible cliente. |
 | `leadOperation.interestingMoment` | Este evento rastrea cuándo se grabó un momento interesante para una persona. |
-| `leadOperation.mergeLeads` | Este evento rastrea cuándo se consolidó la información de varios posibles clientes, que hacen referencia a la misma entidad. |
+| `leadOperation.mergeLeads` | Este evento rastrea cuándo se consolidó la información de varios posibles clientes que hacen referencia a la misma entidad. |
 | `leadOperation.newLead` | Este evento rastrea cuándo se creó un posible cliente. |
 | `leadOperation.scoreChanged` | Este evento rastrea cuándo se cambió el valor del atributo de puntuación del posible cliente. |
 | `leadOperation.statusInCampaignProgressionChanged` | Este evento rastrea cuándo ha cambiado el estado de un posible cliente en una campaña. |

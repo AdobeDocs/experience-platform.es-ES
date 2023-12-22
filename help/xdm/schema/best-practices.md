@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3096'
 ht-degree: 1%
 
 ---
 
-# Prácticas recomendadas para el modelo de datos
+# Prácticas recomendadas para el modelado de datos
 
-[!DNL Experience Data Model] (XDM) es el marco de trabajo principal que estandariza los datos de experiencia del cliente al proporcionar estructuras y definiciones comunes para su uso en servicios de Adobe Experience Platform descendentes. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común que le permite obtener información valiosa de las acciones del cliente, definir audiencias del cliente y expresar atributos del cliente con fines de personalización.
+[!DNL Experience Data Model] (XDM) es el marco de trabajo principal que estandariza los datos de experiencia del cliente al proporcionar estructuras y definiciones comunes para su uso en servicios de Adobe Experience Platform descendentes. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común y utilizar para obtener información valiosa de las acciones del cliente, definir audiencias del cliente y expresar atributos del cliente con fines de personalización.
 
 Dado que XDM es extremadamente versátil y personalizable por diseño, es importante seguir las prácticas recomendadas para el modelado de datos al diseñar los esquemas. Este documento cubre las decisiones y consideraciones clave que debe tomar al asignar los datos de experiencia del cliente a XDM.
 
 ## Introducción
 
-Antes de leer esta guía, consulte la [Información general del sistema XDM](../home.md) para obtener una introducción general a XDM y su función dentro de Experience Platform.
+Antes de leer esta guía, revise la [Información general del sistema XDM](../home.md) para obtener una introducción general a XDM y su función dentro de Experience Platform.
 
-Además, esta guía se centra exclusivamente en consideraciones clave relacionadas con el diseño del esquema. Por lo tanto, se recomienda encarecidamente que consulte la [conceptos básicos de composición de esquemas](./composition.md) para obtener explicaciones detalladas de los elementos de esquema individuales mencionados en esta guía.
+Como esta guía se centra exclusivamente en consideraciones clave relacionadas con el diseño de esquemas, se recomienda encarecidamente que lea la [conceptos básicos de composición de esquemas](./composition.md) para obtener explicaciones detalladas de los elementos de esquema individuales mencionados en esta guía.
 
-## Resumen de prácticas recomendadas
+## Resumen de prácticas recomendadas {#summary}
 
 El método recomendado para diseñar el modelo de datos para utilizarlo en Experience Platform se puede resumir de la siguiente manera:
 
@@ -33,17 +33,17 @@ El método recomendado para diseñar el modelo de datos para utilizarlo en Exper
 1. Cree un diagrama de relación de entidades de alto nivel (ERD) para las fuentes de datos que se han identificado.
 1. Convertir el ERD de alto nivel en un [!DNL Platform]ERD centrado en (incluidos perfiles, eventos de experiencia y entidades de búsqueda).
 
-Los pasos relacionados con la identificación de las fuentes de datos aplicables necesarias para llevar a cabo los casos de uso empresariales variarán de una organización a otra. Mientras que el resto de las secciones de este documento se centran en los últimos pasos de la organización y construcción de una ERD después de que se hayan identificado las fuentes de datos, las explicaciones de los distintos componentes del diagrama pueden informar sus decisiones sobre a cuál de sus fuentes de datos debe migrarse [!DNL Platform].
+Los pasos relacionados con la identificación de las fuentes de datos aplicables necesarias para llevar a cabo los casos de uso empresarial varían de una organización a otra. Mientras que el resto de las secciones de este documento se centran en los últimos pasos de la organización y construcción de una ERD después de que se hayan identificado las fuentes de datos, las explicaciones de los distintos componentes del diagrama pueden informar sus decisiones sobre a cuál de sus fuentes de datos debe migrarse [!DNL Platform].
 
-## Crear un ERD de alto nivel
+## Crear un ERD de alto nivel {#create-an-erd}
 
 Una vez que haya determinado las fuentes de datos que desea incorporar a [!DNL Platform], cree un ERD de alto nivel para guiar el proceso de asignación de los datos a esquemas XDM.
 
 El ejemplo siguiente representa un ERD simplificado para una empresa que desea introducir datos en [!DNL Platform]. El diagrama destaca las entidades esenciales que deben ordenarse en clases XDM, incluidas las cuentas de clientes, hoteles, direcciones y varios eventos de comercio electrónico comunes.
 
-![](../images/best-practices/erd.png)
+![Diagrama relacional de entidades que resalta las entidades esenciales que deben ordenarse en clases XDM para la ingesta de datos.](../images/best-practices/erd.png)
 
-## Ordenar entidades en categorías de perfil, búsqueda y evento
+## Ordenar entidades en categorías de perfil, búsqueda y evento {#sort-entities}
 
 Una vez creado un ERD para identificar las entidades esenciales que desea introducir en [!DNL Platform]Sin embargo, estas entidades deben ordenarse en las categorías de perfil, búsqueda y evento:
 
@@ -51,15 +51,15 @@ Una vez creado un ERD para identificar las entidades esenciales que desea introd
 | --- | --- |
 | Entidades de perfil | Las entidades de perfil representan atributos relacionados con una persona individual, normalmente un cliente. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable **[!DNL XDM Individual Profile]clase**. |
 | Entidades de búsqueda | Las entidades de búsqueda representan conceptos que pueden relacionarse con una persona individual, pero no se pueden utilizar directamente para identificarla. Las entidades incluidas en esta categoría deben representarse mediante esquemas basados en **clases personalizadas** y están vinculados a perfiles y eventos mediante [relaciones de esquema](../tutorials/relationship-ui.md). |
-| Entidades de evento | Las entidades de evento representan conceptos relacionados con las acciones que un cliente puede realizar, los eventos del sistema o cualquier otro concepto en el que desee realizar un seguimiento de los cambios a lo largo del tiempo. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable **[!DNL XDM ExperienceEvent]clase**. |
+| Entidades de evento | Las entidades de eventos representan conceptos relacionados con las acciones que un cliente puede realizar, eventos del sistema o cualquier otro concepto en el que desee realizar un seguimiento de los cambios a lo largo del tiempo. Las entidades incluidas en esta categoría deben estar representadas por esquemas basados en la variable **[!DNL XDM ExperienceEvent]clase**. |
 
 {style="table-layout:auto"}
 
-### Consideraciones para la ordenación de entidades
+### Consideraciones para la ordenación de entidades {#considerations}
 
 Las secciones siguientes proporcionan más instrucciones para ordenar las entidades en las categorías anteriores.
 
-#### Datos mutables e inmutables
+#### Datos mutables e inmutables {#mutable-and-immutable-data}
 
 Una forma principal de ordenar entre categorías de entidades es si los datos capturados son mutables o no.
 
@@ -69,7 +69,7 @@ Por el contrario, los datos de evento suelen ser inmutables. Dado que los evento
 
 En resumen, los perfiles y las entidades de búsqueda contienen atributos mutables y representan la información más actual sobre los temas que capturan, mientras que los eventos son registros inmutables del sistema en un momento específico.
 
-#### Atributos del cliente
+#### Atributos del cliente {#customer-attributes}
 
 Si una entidad contiene atributos relacionados con un cliente individual, lo más probable es que sea una entidad de perfil. Algunos ejemplos de atributos del cliente son:
 
@@ -77,7 +77,7 @@ Si una entidad contiene atributos relacionados con un cliente individual, lo má
 * Información de ubicación, como direcciones e información de GPS.
 * Información de contacto, como números de teléfono y direcciones de correo electrónico.
 
-#### Seguimiento de datos con el tiempo
+#### Seguimiento de datos con el tiempo {#track-data}
 
 Si desea analizar cómo cambian ciertos atributos dentro de una entidad con el paso del tiempo, lo más probable es que sea una entidad de evento. Por ejemplo, agregar elementos de producto a un carro de compras se puede rastrear como eventos de complemento al carro de compras en [!DNL Platform]:
 
@@ -90,7 +90,7 @@ Si desea analizar cómo cambian ciertos atributos dentro de una entidad con el p
 
 {style="table-layout:auto"}
 
-#### Casos de uso de segmentación
+#### Casos de uso de segmentación {#segmentation-use-cases}
 
 Al categorizar las entidades, es importante tener en cuenta las audiencias que puede interesarle crear para abordar los casos de uso empresariales específicos.
 
@@ -99,25 +99,25 @@ Por ejemplo, una empresa quiere conocer todos los miembros &quot;Gold&quot; o &q
 * &quot;Gold&quot; y &quot;Platinum&quot; representan estados de lealtad aplicables a un cliente individual. Dado que la lógica de segmentación solo afecta al estado de lealtad actual de los clientes, estos datos se pueden modelar como parte de un esquema de perfil. Si desea rastrear los cambios en el estado de lealtad a lo largo del tiempo, también puede crear un esquema de evento adicional para los cambios de estado de lealtad.
 * Las compras son eventos que se producen en un momento determinado y la lógica de segmentación se refiere a los eventos de compra dentro de un intervalo de tiempo especificado. Por lo tanto, estos datos deben modelarse como un esquema de evento.
 
-#### Casos de uso de activación
+#### Casos de uso de activación {#activation-use-cases}
 
-Además de las consideraciones relativas a los casos de uso de segmentación, también debe revisar los casos de uso de activación para esas audiencias a fin de identificar atributos relevantes adicionales.
+Además de las consideraciones relativas a los casos de uso de segmentación, también debe revisar los casos de uso de activación de dichas audiencias para identificar atributos relevantes adicionales.
 
 Por ejemplo, una empresa ha creado una audiencia basada en la regla de que `country = US`. A continuación, al activar esa audiencia en ciertos objetivos descendentes, la empresa desea filtrar todos los perfiles exportados en función del estado de inicio. Por lo tanto, una `state` El atributo también debe capturarse en la entidad de perfil aplicable.
 
-#### Valores agregados
+#### Valores agregados {#aggregated-values}
 
 En función del caso de uso y la granularidad de los datos, debe decidir si es necesario acumular previamente ciertos valores antes de incluirlos en un perfil o entidad de evento.
 
-Por ejemplo: una empresa desea crear una audiencia basada en el número de compras al carro de compras. Puede incorporar estos datos con la granularidad más baja incluyendo cada evento de compra con marca de tiempo como su propia entidad. Sin embargo, a veces esto puede aumentar exponencialmente el número de eventos registrados. Para reducir el número de eventos introducidos, puede elegir crear un valor acumulado `numberOfPurchases` durante un periodo de una semana o un mes. Otras funciones agregadas como MIN y MAX también se pueden aplicar a estas situaciones.
+Por ejemplo: una empresa desea crear una audiencia basada en el número de compras al carro de compras. Puede incorporar estos datos con la granularidad más baja incluyendo cada evento de compra con marca de tiempo como su propia entidad. Sin embargo, a veces esto puede aumentar exponencialmente el número de eventos registrados. Para reducir el número de eventos introducidos, puede elegir crear un valor acumulado `numberOfPurchases` más de una semana o un mes. Otras funciones agregadas como MIN y MAX también se pueden aplicar a estas situaciones.
 
 >[!CAUTION]
 >
 >Experience Platform no realiza actualmente la agregación automática de valores, aunque esto está planificado para futuras versiones. Si decide utilizar valores agregados, debe realizar los cálculos externamente antes de enviar los datos a [!DNL Platform].
 
-#### Cardinalidad
+#### Cardinalidad {#cardinality}
 
-Las cardinalidades establecidas en su ERD también pueden proporcionar algunas pistas sobre cómo categorizar sus entidades. Si existe una relación &quot;uno a varios&quot; entre dos entidades, la entidad que representa a &quot;varios&quot; probablemente sea una entidad de evento. Sin embargo, también hay casos en los que &quot;varios&quot; es un conjunto de entidades de búsqueda que se proporcionan como una matriz dentro de una entidad de perfil.
+Las cardinalidades establecidas en su ERD también pueden proporcionar algunas pistas sobre cómo categorizar sus entidades. Si existe una relación &quot;uno a varios&quot; entre dos entidades, es probable que la entidad que representa a &quot;varios&quot; sea una entidad de evento. Sin embargo, también hay casos en los que &quot;varios&quot; es un conjunto de entidades de búsqueda que se proporcionan como una matriz dentro de una entidad de perfil.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ En la tabla siguiente se describen algunas relaciones de entidad comunes y las c
 | Relación | Cardinalidad | Categorías de entidad |
 | --- | --- | --- |
 | Clientes y cierres de compra del carro | Uno a varios | Un solo cliente puede tener muchas cierres de compra del carro de compras, que son eventos que se pueden rastrear a lo largo del tiempo. Por lo tanto, los clientes serían una entidad de perfil, mientras que los cierres de compra del carro de compras serían una entidad de evento. |
-| Clientes y cuentas de fidelización | Uno a uno | Un solo cliente solo puede tener una cuenta de fidelización, y viceversa. Dado que la relación es uno a uno, tanto los clientes como las cuentas de fidelización representan entidades de perfil. |
+| Clientes y cuentas de fidelización | Uno a uno | Un solo cliente solo puede tener una cuenta de fidelización y una cuenta de fidelización solo puede pertenecer a un cliente. Dado que la relación es uno a uno, tanto los clientes como las cuentas de fidelización representan entidades de perfil. |
 | Clientes y suscripciones | Uno a varios | Un solo cliente puede tener muchas suscripciones. Dado que a la compañía solo le interesan las suscripciones actuales de un cliente, Clientes es una entidad de perfil, mientras que Suscripciones es una entidad de búsqueda. |
 
 {style="table-layout:auto"}
@@ -148,23 +148,23 @@ En esta situación, la compañía tiene dos opciones potenciales para representa
 
 El primer método sería incluir una matriz de suscripciones como atributos dentro de la entidad de perfil para clientes. Los objetos de esta matriz contendrían campos para `category`, `status`, `planName`, `startDate`, y `endDate`.
 
-<img src="../images/best-practices/profile-schema.png" width="800"><br>
+![El esquema Customers en el Editor de esquemas con la clase y la estructura resaltadas](../images/best-practices/profile-schema.png)
 
 **Pros**
 
 * La segmentación es factible para el caso de uso previsto.
-* El esquema solo conservará los registros de suscripción más recientes para un cliente.
+* El esquema solo conserva los registros de suscripción más recientes para un cliente.
 
 **Contras**
 
 * Se debe restaurar toda la matriz cada vez que se produzcan cambios en cualquier campo de la matriz.
-* Si hay diferentes fuentes de datos o unidades comerciales que introducen datos en la matriz, será difícil mantener sincronizada la matriz actualizada más reciente en todos los canales.
+* Si hay diferentes fuentes de datos o unidades comerciales que introducen datos en la matriz, es difícil mantener la matriz actualizada sincronizada en todos los canales.
 
 #### Enfoque 2: Uso de entidades de evento {#event-approach}
 
 El segundo método sería utilizar esquemas de eventos para representar las suscripciones. Esto implica la ingesta de los mismos campos de suscripción que el primer método, con la adición de un ID de suscripción, un ID de cliente y una marca de tiempo de cuándo se produjo el evento de suscripción.
 
-<img src="../images/best-practices/event-schema.png" width="800"><br>
+![Diagrama del esquema de eventos de suscripción con la clase de evento de experiencia XDM y la estructura de suscripciones resaltadas.](../images/best-practices/event-schema.png)
 
 **Pros**
 
@@ -173,14 +173,14 @@ El segundo método sería utilizar esquemas de eventos para representar las susc
 
 **Contras**
 
-* La segmentación se vuelve más compleja para el caso de uso previsto original (identificando el estado de las suscripciones más recientes de los clientes). La audiencia ahora necesita una lógica adicional para marcar el último evento de suscripción de un cliente para comprobar su estado.
+* La segmentación se vuelve más compleja para el caso de uso previsto original (identificando el estado de las suscripciones más recientes de los clientes). La audiencia ahora necesita una lógica adicional para marcar el último evento de suscripción para que un cliente compruebe su estado.
 * Los eventos tienen un mayor riesgo de caducar automáticamente y de purgarse del almacén de perfiles. Consulte la guía de [Caducidad de Experience Event](../../profile/event-expirations.md) para obtener más información.
 
-## Cree esquemas basados en las entidades clasificadas
+## Cree esquemas basados en las entidades clasificadas {#schemas-for-categorized-entities}
 
 Una vez que haya ordenado las entidades en categorías de perfil, búsqueda y evento, puede empezar a convertir el modelo de datos en esquemas XDM. A efectos de demostración, el modelo de datos de ejemplo mostrado anteriormente se ha ordenado en las categorías adecuadas en el diagrama siguiente:
 
-<img src="../images/best-practices/erd-sorted.png" width="800"><br>
+![Diagrama de los esquemas contenidos en las entidades de perfil, búsqueda y evento](../images/best-practices/erd-sorted.png)
 
 La categoría en la que se ha ordenado una entidad debe determinar la clase XDM en la que se basa su esquema. Para reiterar:
 
@@ -190,25 +190,25 @@ La categoría en la que se ha ordenado una entidad debe determinar la clase XDM 
 
 >[!NOTE]
 >
->Aunque las entidades de evento casi siempre se representarán mediante esquemas independientes, las entidades del perfil o las categorías de búsqueda pueden combinarse en un único esquema XDM, según su cardinalidad.
+>Aunque las entidades de evento casi siempre se representan mediante esquemas independientes, las entidades de las categorías de perfil o búsqueda pueden combinarse en un único esquema XDM, según su cardinalidad.
 >
 >Por ejemplo, dado que la entidad Customers tiene una relación uno a uno con la entidad LoyaltyAccounts, el esquema para la entidad Customers también podría incluir una `LoyaltyAccount` para contener los campos de fidelidad adecuados para cada cliente. Sin embargo, si la relación es de uno a varios, la entidad que representa a &quot;varios&quot; puede representarse mediante un esquema independiente o una matriz de atributos de perfil, según su complejidad.
 
 Las secciones a continuación proporcionan una guía general sobre la construcción de esquemas basados en su ERD.
 
-### Adoptar un enfoque de modelado iterativo
+### Adoptar un enfoque de modelado iterativo {#iterative-modeling}
 
 El [reglas de evolución de esquema](./composition.md#evolution) dicte que solo se pueden realizar cambios no destructivos en los esquemas una vez que se hayan implementado. En otras palabras, una vez que se agrega un campo a un esquema y se han introducido datos en ese campo, el campo ya no se puede eliminar. Por lo tanto, es esencial adoptar un enfoque de modelado iterativo cuando cree sus esquemas por primera vez, empezando con una implementación simplificada que aumente progresivamente la complejidad con el tiempo.
 
 Si no está seguro de si es necesario incluir un campo en particular en un esquema, la práctica recomendada es dejarlo fuera. Si posteriormente se determina que el campo es necesario, siempre se puede añadir en la siguiente iteración del esquema.
 
-### Campos de identidad
+### Campos de identidad {#identity-fields}
 
-En Experience Platform, los campos XDM marcados como identidades se utilizan para unir información sobre clientes individuales procedentes de varias fuentes de datos. Aunque un esquema puede tener varios campos marcados como identidades, se debe definir una sola identidad principal para que el esquema se habilite para su uso en [!DNL Real-Time Customer Profile]. Consulte la sección sobre [campos de identidad](./composition.md#identity) en los conceptos básicos de la composición de esquemas para obtener información más detallada sobre el caso de uso de estos campos.
+En Experience Platform, los campos XDM marcados como identidades se utilizan para unir información sobre clientes individuales procedentes de varias fuentes de datos. Aunque un esquema puede tener varios campos marcados como identidades, se debe definir una sola identidad principal para habilitar el uso del esquema en [!DNL Real-Time Customer Profile]. Consulte la sección sobre [campos de identidad](./composition.md#identity) en los conceptos básicos de la composición de esquemas para obtener información más detallada sobre el caso de uso de estos campos.
 
-Al diseñar los esquemas, cualquier clave principal de las tablas de bases de datos relacionales será probablemente candidata para identidades principales. Otros ejemplos de campos de identidad aplicables son las direcciones de correo electrónico de los clientes, los números de teléfono, los ID de cuenta y [ECID](../../identity-service/ecid.md).
+Al diseñar los esquemas, cualquier clave principal de las tablas de bases de datos relacionales es probablemente candidata para identidades principales. Otros ejemplos de campos de identidad aplicables son las direcciones de correo electrónico de los clientes, los números de teléfono, los ID de cuenta y [ECID](../../identity-service/ecid.md).
 
-### grupos de campos de esquema de aplicación de Adobe
+### grupos de campos de esquema de aplicación de Adobe {#adobe-application-schema-field-groups}
 
 Experience Platform proporciona varios grupos de campos de esquema XDM predeterminados para capturar datos relacionados con las siguientes aplicaciones de Adobe:
 
@@ -217,13 +217,13 @@ Experience Platform proporciona varios grupos de campos de esquema XDM predeterm
 * Adobe Campaign
 * Adobe Target
 
-Por ejemplo, la variable [[!UICONTROL Plantilla de Adobe Analytics ExperienceEvent] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) le permite asignar [!DNL Analytics]Campos específicos de para los esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por el Adobe en los esquemas.
+Por ejemplo, puede utilizar la variable [[!UICONTROL Plantilla de Adobe Analytics ExperienceEvent] grupo de campos](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) para asignar [!DNL Analytics]Campos específicos de para los esquemas XDM. Según las aplicaciones de Adobe con las que trabaje, debe utilizar estos grupos de campos proporcionados por el Adobe en los esquemas.
 
-<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
+![Un diagrama de esquema del [!UICONTROL Plantilla de Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
 Los grupos de campos de aplicación de Adobe asignan automáticamente una identidad principal predeterminada mediante el uso del `identityMap` field, que es un objeto de solo lectura generado por el sistema que asigna valores de identidad estándar para un cliente individual.
 
-Para Adobe Analytics, ECID es la identidad principal predeterminada. Si un cliente no proporciona un valor ECID, la identidad principal se establece de forma predeterminada en AAID.
+Para Adobe Analytics, ECID es la identidad principal predeterminada. Si un cliente no proporciona un valor ECID, la identidad principal toma el valor predeterminado AAID.
 
 >[!IMPORTANT]
 >
