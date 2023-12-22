@@ -4,7 +4,7 @@ title: Guía del tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
+source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Panel de uso de licencias"
->abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas.<br>Las predicciones de uso se actualizan mensualmente a fin de mes y prevén su uso para el próximo período de seis meses. Para reducir el uso, configure las caducidades de los datos de los conjuntos de datos o perfiles seudónimos para los entornos limitados y los conjuntos de datos."
+>abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas.<br><br>Las predicciones de uso se actualizan mensualmente a fin de mes y prevén su uso para el próximo período de seis meses. Para reducir el uso, configure las caducidades de los datos de los conjuntos de datos o perfiles seudónimos para los entornos limitados y los conjuntos de datos."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Caducidad de conjuntos de datos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de datos de perfiles seudónimos"
 
