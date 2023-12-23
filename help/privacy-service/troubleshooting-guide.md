@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas del Privacy Service
 description: Este documento proporciona respuestas a las preguntas frecuentes sobre Privacy Service, así como información sobre los errores más comunes encontrados en la API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ Para obtener más información, consulte la sección sobre [búsqueda de un trab
 
 En el [!DNL Privacy Service] En el panel de la interfaz de usuario, busque el trabajo que desea descargar desde **Solicitudes de trabajo** widget. Seleccione el ID del trabajo para abrir la página Detalles del trabajo. Desde aquí, seleccione **Descargar** en la esquina superior derecha para descargar el archivo ZIP. Consulte la [Guía del usuario del Privacy Service](ui/user-guide.md) para ver los pasos más detallados.
 
-## Mensajes de error frecuentes
+## Mensajes de error frecuentes {#common-error-messages}
 
 En la tabla siguiente se describen algunos errores comunes de [!DNL Privacy Service], con descripciones para ayudar a resolver sus respectivos problemas.
 
@@ -111,3 +111,4 @@ En la tabla siguiente se describen algunos errores comunes de [!DNL Privacy Serv
 | El acceso y los permisos son obligatorios. | El acceso y los permisos son necesarios para utilizar [!DNL Privacy Service]. Póngase en contacto con el administrador para obtener acceso. |
 | Se ha producido un error al cargar y archivar los datos de acceso. | Cuando se produzca este error, vuelva a cargar los datos de acceso e inténtelo de nuevo. |
 | Se ha superado la carga de trabajo para el límite actual de tasa de documentos. | Cuando se produzca este error, reduzca la tasa de envío e inténtelo de nuevo. |
+| Demasiadas solicitudes<br>(Errores HTTP 429) | Si los patrones de envío superan el límite monitorizado de trabajos de sujetos de datos permitidos, recibirá un error HTTP 429 en respuesta al tráfico continuo de su organización. Privacy Service está diseñado para el procesamiento de las solicitudes de privacidad de los sujetos de datos. No debe utilizarse para la limpieza de datos. Si recibe errores HTTP 429, se implementan límites de restricción y solicitud para proteger el Adobe de abusos que podrían poner en riesgo el trabajo de conformidad legítimo.<br>Los métodos alternativos para minimizar sus datos son proporcionados por [establecer programaciones de caducidad de conjuntos de datos](../hygiene/ui/dataset-expiration.md) y el uso de [función de eliminación de registros](../hygiene/ui/record-delete.md). Consulte su documentación correspondiente para obtener más información sobre cómo aplicar estas funcionalidades. |
