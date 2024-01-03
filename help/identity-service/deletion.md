@@ -2,9 +2,9 @@
 title: Eliminaciones en el servicio de identidad
 description: Este documento proporciona información general sobre los distintos mecanismos que puede utilizar para eliminar los datos de identidad en Experience Platform y para aclarar cómo pueden verse afectados los gráficos de identidad.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Los gráficos de identidad los aprovecha el Perfil del cliente en tiempo real pa
 
 Este documento proporciona información general sobre los distintos mecanismos que puede utilizar para eliminar los datos de identidad en Experience Platform y para aclarar cómo pueden verse afectados los gráficos de identidad.
 
-## Primeros pasos
+## Introducción
 
 El siguiente documento hace referencia a las siguientes funciones de Experience Platform:
 

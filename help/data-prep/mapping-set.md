@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre conjuntos de asignaciones
 description: Aprenda a utilizar conjuntos de asignaciones con la preparación de datos de Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Un conjunto de asignaciones es un conjunto de asignaciones que transforma los datos de un esquema a otro. Este documento proporciona información sobre cómo se comprenden los conjuntos de asignaciones, incluidos el esquema de entrada, el esquema de salida y las asignaciones.
 
-## Primeros pasos
+## Introducción
 
 Esta descripción general requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -74,8 +74,8 @@ El siguiente JSON es un ejemplo de un conjunto de asignaciones típico:
 | `outputSchema` | El esquema XDM al que se han transformado los datos de entrada para ajustarse. |
 | `mappings` | Matriz de asignaciones de campo a campo desde el esquema de origen al esquema de destino. |
 | `sourceType` | Para cada asignación enumerada, sus `sourceType` attribute indica el tipo de origen que se va a asignar. Puede ser uno de `ATTRIBUTE`, `STATIC`, o `EXPRESSION`: <ul><li> `ATTRIBUTE` se utiliza para cualquier valor encontrado en la ruta de origen. </li><li>`STATIC` se utiliza para los valores insertados en la ruta de destino. Este valor permanece constante y no se ve afectado por el esquema de origen.</li><li> `EXPRESSION` se utiliza para una expresión, que se resolverá durante el tiempo de ejecución. Puede encontrar una lista de expresiones disponibles en la variable [guía de funciones de asignación](./functions.md).</li> </ul> |
-| `source` | Para cada asignación enumerada, la variable `source` attribute indica el campo que desea asignar. Encontrará más información sobre cómo configurar el origen en la [sección de fuentes](#sources). |
-| `destination` | Para cada asignación enumerada, la variable `destination` El atributo indica el campo o la ruta al campo donde el valor se extrae del `source` se colocará el campo. Encontrará más información sobre cómo configurar sus destinos en la [sección de destino](#destination). |
+| `source` | Para cada asignación enumerada, la variable `source` attribute indica el campo que desea asignar. Encontrará más información sobre cómo configurar el origen en la [información general de orígenes](../sources/home.md). |
+| `destination` | Para cada asignación enumerada, la variable `destination` El atributo indica el campo o la ruta al campo donde el valor se extrae del `source` se colocará el campo. Encontrará más información sobre cómo configurar sus destinos en la [información general de destino](../destinations/home.md). |
 | `mappings.name` | (*Opcional*) Un nombre para la asignación. |
 | `mappings.description` | (*Opcional*) Una descripción de la asignación. |
 
