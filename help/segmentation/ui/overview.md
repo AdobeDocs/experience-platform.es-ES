@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3910'
-ht-degree: 4%
+source-wordcount: '3933'
+ht-degree: 3%
 
 ---
 
@@ -21,13 +21,13 @@ El trabajo con audiencias y definiciones de segmentos requiere comprender las di
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] le permite segmentar datos almacenados en [!DNL Experience Platform] que se relaciona con individuos (como clientes, clientes potenciales, usuarios u organizaciones) en grupos más pequeños.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite la creación de perfiles de clientes mediante el puente de identidades de fuentes de datos dispares que se están ingiriendo en [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 También debe comprender dos términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
 
 - **Audiencia**: conjunto de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante las definiciones de segmentos o la composición de audiencias (audiencia generada por Platform), o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente).
 - **Definición del segmento**: Las reglas que utiliza Adobe Experience Platform para describir las características clave o el comportamiento de una audiencia objetivo.
-- **Segmentar**: acto de separar Perfiles en públicos.
+- **Segmento**: Acto de separar Perfiles en audiencias.
 
 ## Información general
 
@@ -72,17 +72,17 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 
 | Acción | Orígenes | Descripción |
 | ------ | ------- | ----------- |
-| [!UICONTROL Editar] | Servicio de segmentación | Le permite abrir el Generador de segmentos para editar su audiencia. Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md). |
-| [!UICONTROL Abrir composición] | Composición del público | Permite abrir Composición de audiencia para ver la audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
-| [!UICONTROL Activar en destino] | Servicio de segmentación | Permite activar la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea la [información general de activación](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Le permite compartir su audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
-| [!UICONTROL Administrar etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
-| [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
+| [!UICONTROL Editar] | Servicio de segmentación | Abre el Generador de segmentos para editar la audiencia. Tenga en cuenta que si la audiencia se creó mediante la API, **no** poder editarlo con el Generador de segmentos. Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md). |
+| [!UICONTROL Abrir composición] | Composición del público | Abre la composición Audiencia para ver su audiencia. Para obtener más información sobre la composición de audiencias, lea la [guía de IU de composición de audiencia](./audience-composition.md). |
+| [!UICONTROL Activar en destino] | Servicio de segmentación | Activa la audiencia en un destino. Para obtener información más detallada sobre cómo activar una audiencia en un destino, lea la [información general de activación](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Administración de etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
+| [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Copiar] | Composición de audiencias, carga personalizada, servicio de segmentación | Duplica la audiencia seleccionada. |
-| [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite administrar las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archivar] | Carga personalizada | Archiva la audiencia seleccionada. |
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
-| [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Permite mover la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -191,7 +191,7 @@ Una vez que la audiencia está en una carpeta, puede elegir mostrar únicamente 
 
 ![Se muestran las audiencias que pertenecen a una carpeta específica.](../images/ui/overview/browse-folders.png)
 
-**Filtro** {#filter}
+**Filtrar** {#filter}
 
 También puede filtrar las audiencias en función de diversos ajustes.
 
@@ -237,7 +237,7 @@ Seleccionar **[!UICONTROL Aplicar etiquetas de acceso]** permite administrar las
 
 >[!BEGINTABS]
 
->[!TAB Composición del público]
+>[!TAB Composición de audiencia]
 
 ![Se muestra la página de detalles de la audiencia con la variable [!UICONTROL Abrir composición] botón resaltado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -307,7 +307,7 @@ Aparece una ventana emergente que le permite elegir entre componer una audiencia
 
 ![Una ventana emergente que muestra los dos tipos de audiencias que puede crear.](../images/ui/overview/create-audience-type.png)
 
-**Composición de público** {#audience-composition}
+**Composición de audiencia** {#audience-composition}
 
 Seleccionar **[!UICONTROL Componer audiencias]** le lleva a Composición de audiencias. Este espacio de trabajo proporciona controles intuitivos para crear y editar audiencias, como mosaicos de arrastrar y soltar utilizados para representar diferentes acciones. Para obtener más información sobre la creación de audiencias, lea la [Guía de composición de audiencias](./audience-composition.md).
 
@@ -399,7 +399,7 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 | [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
 | [!UICONTROL Creado] | La hora y la fecha de creación de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
-| [!UICONTROL Actualizado  ] | Fecha y hora en la que se actualizó la audiencia por última vez. |
+| [!UICONTROL Actualizado] | Fecha y hora en la que se actualizó la audiencia por última vez. |
 | [!UICONTROL Actualizado por] | El nombre de la persona que actualizó la audiencia por última vez. |
 
 Para ver la composición de la audiencia, seleccione el nombre de una audiencia dentro de la [!UICONTROL Audiencias] pestaña.

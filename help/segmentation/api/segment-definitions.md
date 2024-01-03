@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 4%
 
 ---
@@ -152,6 +152,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
 ## Crear una nueva definición de segmento {#create}
 
 Puede crear una nueva definición de segmento realizando una solicitud de POST a `/segment/definitions` punto final.
+
+>[!IMPORTANT]
+>
+>Definiciones de segmentos creadas mediante la API **no puede** se puede editar con el Generador de segmentos.
 
 **Formato de API**
 
