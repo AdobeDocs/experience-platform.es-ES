@@ -4,10 +4,10 @@ title: Suscribirse a notificaciones de eventos de Adobe I/O
 description: Este documento proporciona pasos sobre cómo suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de evento disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de evento devueltos para cada evento aplicable [!DNL Platform] servicio.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 3%
+source-wordcount: '769'
+ht-degree: 2%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 [!DNL Observability Insights] permite suscribirse a las notificaciones de eventos de Adobe I/O relacionadas con las actividades de Adobe Experience Platform. Estos eventos se envían a un webhook configurado para facilitar la automatización eficaz de la monitorización de la actividad.
 
-Este documento proporciona pasos sobre cómo suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de evento disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de evento devueltos para cada evento aplicable [!DNL Platform] servicio.
+Este documento proporciona pasos sobre cómo puede suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de evento disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de evento devueltos para cada evento aplicable [!DNL Platform] servicio.
 
-## Primeros pasos
+## Introducción
 
 Este documento requiere una comprensión práctica de los webhooks y cómo conectar un webhook de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para ver una introducción a los webhooks.
 
@@ -38,6 +38,10 @@ Durante el proceso de validación inicial, [!DNL I/O Events] envía un `challeng
 Vaya a la [consola de desarrollador de Adobe](https://www.adobe.com/go/devs_console_ui) e inicie sesión con su Adobe ID. A continuación, siga los pasos descritos en el tutorial sobre [creación de un proyecto vacío](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) en la documentación de la consola de Adobe Developer.
 
 ## Suscribirse a eventos
+
+>[¡NOTA!]
+>
+>La notificación de ingesta de datos quedará obsoleta de la suscripción de E/S de Adobe. En su lugar, debe utilizar la variable **Información de ejecución de flujo de fuentes** Evento de E/S.
 
 Una vez creado un nuevo proyecto, vaya a la pantalla de información general de ese proyecto. Desde aquí, seleccione **[!UICONTROL Añadir evento]**.
 
@@ -60,7 +64,6 @@ La siguiente pantalla muestra una lista de tipos de eventos a los que suscribirs
 >
 >* [Notificaciones de Platform](./rules.md)
 >* [Notificaciones al Privacy Service](../../privacy-service/privacy-events.md)
-
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
