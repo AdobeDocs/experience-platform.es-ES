@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alfa
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -69,12 +69,16 @@ Para obtener más información, lea el documento sobre [algoritmo de optimizaci�
 >
 >Actualmente, las prioridades de área de nombres no están disponibles para alfa.
 
-Puede utilizar la prioridad del área de nombres para definir qué áreas de nombres son más importantes que otras. La jerarquía que establezca para sus áreas de nombres se utilizará para definir identidades principales y almacenar fragmentos de perfil. Si se establece la configuración de prioridad, ya no se utilizará la configuración de identidad principal del SDK web para determinar qué fragmentos de perfil se almacenan.
+Puede utilizar la prioridad del área de nombres para definir qué áreas de nombres son más importantes que otras. La prioridad que establezca para sus áreas de nombres se utiliza a continuación para definir las identidades principales, que es la identidad que almacena fragmentos de perfil (datos de atributo y evento) en el Perfil del cliente en tiempo real. Si se establece la configuración de prioridad, ya no se utilizará la configuración de identidad principal del SDK web para determinar qué fragmentos de perfil se almacenan.
 
 * Los límites y la prioridad son configuraciones independientes y lo hacen **no** se afectan mutuamente:
    * Límites es una configuración de gráfico de identidad en el servicio de identidad.
    * La prioridad es una configuración de fragmento de perfil en el Perfil del cliente en tiempo real.
    * La prioridad sí **no** afectan a las protecciones del sistema de gráficos de identidad.
+* **La prioridad del área de nombres es un valor numérico** asignado a un área de nombres que indica su importancia relativa. Es una propiedad de un área de nombres.
+* **La identidad principal es la identidad con la que se almacena un fragmento de perfil**. Un fragmento de perfil es un registro de datos que almacena información sobre un usuario determinado: atributos (normalmente incorporados mediante registros CRM) o eventos (normalmente incorporados a partir de eventos de experiencia o datos en línea).
+* La prioridad del área de nombres determina la identidad principal para los eventos de experiencia.
+   * Para los registros de perfil, puede utilizar el espacio de trabajo de esquemas de la interfaz de usuario de Experience Platform para definir campos de identidad, incluida la identidad principal. Lea la guía de [definición de campos de identidad en la IU](../../xdm/ui/fields/identity.md) para obtener más información.
 
 >[!BEGINSHADEBOX]
 
