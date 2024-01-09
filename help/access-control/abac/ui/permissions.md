@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 6%
+source-wordcount: '986'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto.
 
-Mediante Permisos de , , puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica.
+Mediante Permisos, puede crear y administrar funciones, así como asignar los permisos de recursos deseados para estas. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica.
 
 Justo después de [creación de una función nueva](#create-a-new-role), volverá a la **[!UICONTROL Funciones]** pestaña. Si está editando permisos para una función existente, seleccione la función en el **[!UICONTROL Funciones]** pestaña. También puede utilizar la opción de filtro para filtrar los resultados y encontrar un rol.
 
@@ -101,6 +101,10 @@ Para quitar un usuario de un rol, seleccione la opción **X** junto al nombre de
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
+El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Administrar credenciales de API para la función {#manage-api-credentials-for-role}
 
 Seleccione el **[!UICONTROL Credenciales de API]** para abrir la página credenciales de la API de funciones y, a continuación, seleccione **[!UICONTROL Añadir credenciales de API]** para asignar credenciales de API a la función.
@@ -153,7 +157,7 @@ Se le devolverá a la **[!UICONTROL Grupos de usuarios]** pestaña.
 
 ## Adición de usuarios a Experience Platform mediante un perfil de producto
 
-Para añadir un usuario a un perfil de producto, inicie sesión en Admin Console y seleccione **[!UICONTROL Agregar usuarios]**
+Para añadir un usuario a un perfil de producto, inicie sesión en el Admin Console y seleccione **[!UICONTROL Adición de usuarios]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Crear una función
 description: Este documento proporciona información sobre la administración de funciones a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '531'
 ht-degree: 7%
 
 ---
@@ -47,6 +47,10 @@ La nueva función se ha creado correctamente y se le redirigirá a **[!UICONTROL
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
 Consulte las secciones sobre [administración de permisos para una función](#manage-permissions-for-a-role) para obtener más información sobre cómo administrar los permisos de funciones una vez creados.
+
+El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Duplicación de un rol
 
