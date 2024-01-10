@@ -2,9 +2,9 @@
 description: En esta página se muestran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -264,6 +264,10 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
 ## Paso 5: Configuración de la autenticación {#set-up-authentication}
 
 En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para su destino mediante el `/destination` o el `/credentials` punto final.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` es la más común de las dos reglas de autenticación y es la que se debe utilizar si se requiere que los usuarios proporcionen algún tipo de autenticación a su destino antes de que puedan configurar una conexión y exportar datos.
 
 Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino y el destino admite el método de autenticación OAuth 2, lea lo siguiente [Autenticación OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 

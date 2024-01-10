@@ -2,9 +2,9 @@
 description: En esta página se muestran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducci
 
 Comenzar por [creación de una configuración de servidor y archivo](../authoring-api/destination-server/create-destination-server.md) uso del `/destinations-server` punto final.
 
-A continuación se muestra un ejemplo de configuración para una [!DNL Amazon S3] destino. Para configurar otros tipos de destinos basados en archivos, consulte sus correspondientes [configuraciones del servidor](../functionality/destination-server/server-specs.md).
+A continuación se muestra un ejemplo de configuración para una [!DNL Amazon S3] destino. Para obtener más información sobre los campos utilizados en la configuración y para configurar otros tipos de destinos basados en archivos, consulte sus correspondientes [configuraciones del servidor](../functionality/destination-server/server-specs.md).
 
 **Formato de API**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 A continuación se muestra un ejemplo de una configuración de destino creada con la variable `/destinations` Extremo de API.
 
-Para conectar el servidor y la configuración de archivo del paso 1 a esta configuración de destino, agregue el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
+Para conectar el servidor y la configuración de archivos del paso 1 a esta configuración de destino, agregue la variable `instance ID` del servidor y la configuración de archivo como `destinationServerId` aquí.
 
 **Formato de API**
 
@@ -124,7 +124,7 @@ Para conectar el servidor y la configuración de archivo del paso 1 a esta confi
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ Para algunos destinos, Destination SDK requiere que configure los metadatos de a
 
 Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino creada en el paso 2. Añada el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
 ## Paso 4: Configurar la autenticación {#set-up-authentication}
 
 En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para su destino mediante el `/destination` o el `/credentials` punto final.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` es la más común de las dos reglas de autenticación y es la que se debe utilizar si se requiere que los usuarios proporcionen algún tipo de autenticación a su destino antes de que puedan configurar una conexión y exportar datos.
 
 * Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino, consulte las siguientes secciones sobre los tipos de autenticación admitidos por Destination SDK para destinos basados en archivos:
 
@@ -384,10 +418,10 @@ En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o
 
 Después de configurar el destino mediante los extremos de configuración de los pasos anteriores, puede utilizar el [herramienta de prueba de destino](../testing-api/batch-destinations/file-based-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
 
-Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
+Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear audiencias que activar en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
-* [Creación de una página de documentación de audiencia](/help/segmentation/ui/overview.md#create-segment)
-* [Tutorial de Creación de un vídeo de audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Creación de una audiencia: página de documentación](/help/segmentation/ui/overview.md#create-segment)
+* [Creación de una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Paso 6: Publicación del destino {#publish-destination}
 

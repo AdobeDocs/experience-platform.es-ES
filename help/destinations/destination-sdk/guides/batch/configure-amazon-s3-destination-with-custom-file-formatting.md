@@ -2,9 +2,9 @@
 description: Aprenda a utilizar Destination SDK para configurar un destino de Amazon S3 con opciones personalizadas de nombre de archivo y formato.
 title: Configure un destino de Amazon S3 con opciones personalizadas de nombre de archivo y formato.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '707'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "bucketName":{
+      "bucket":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.bucketName}}"
       },
