@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ El **[!UICONTROL Propiedades de composición]** aparece la ventana emergente. Pu
 
 >[!NOTE]
 >
->Si lo hace **no** Si le asigna un título a la composición, tendrá un título de &quot;Composición&quot; seguido de la fecha y hora de creación de forma predeterminada.
+>Si lo hace **no** Si le asigna un título a la composición, tendrá un título de &quot;Composición&quot; seguido de la fecha y hora de creación de forma predeterminada. Además, cada composición **debe** tienen su propio nombre único.
 
 Después de actualizar los detalles de la composición, seleccione **[!UICONTROL Guardar]** para confirmar estas actualizaciones. El lienzo de composición de audiencia vuelve a aparecer.
 
 El lienzo de composición de audiencia se compone de cuatro tipos diferentes de bloques: **[[!UICONTROL Audiencia]](#audience-block)**, **[[!UICONTROL Excluir]](#exclude-block)**, **[[!UICONTROL Rango]](#rank-block)**, y **[[!UICONTROL Split]](#split-block)**.
 
-## [!UICONTROL Público] {#audience-block}
+## [!UICONTROL Audiencia] {#audience-block}
 
 El **[!UICONTROL Audiencia]** el tipo de bloque le permite añadir las subaudiencias que desea para componer su nueva audiencia más grande. De forma predeterminada, una **[!UICONTROL Audiencia]** El bloque de se incluye en la parte superior del lienzo de composición.
 
@@ -66,7 +66,7 @@ Las audiencias seleccionadas aparecerán ahora en el carril derecho cuando el **
 
 | Tipo de combinación | Descripción |
 | ---------- | ----------- |
-| [!UICONTROL Unión] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
+| [!UICONTROL Union] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
 | [!UICONTROL Intersección] | Las audiencias se combinan, y solo se comparten las audiencias en **todo** de ellos que se van a añadir. Esto sería el equivalente de una operación AND. |
 | [!UICONTROL Excluir superposición] | Las audiencias se combinan, y solo se comparten las audiencias en **uno, pero no todos** de ellos que se van a añadir. Esto sería el equivalente de una operación XOR. |
 
@@ -220,7 +220,7 @@ Además, puede limitar el número de audiencias que devuelve habilitando la vari
 
 ![Se resalta la opción Add profile limit, que permite limitar el número de audiencias devueltas.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL División] {#split-block}
+## [!UICONTROL Split] {#split-block}
 
 El **[!UICONTROL Split]** el tipo de bloque le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo.
 
