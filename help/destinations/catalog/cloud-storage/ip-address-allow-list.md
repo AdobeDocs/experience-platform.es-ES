@@ -3,9 +3,9 @@ title: Destinos SFTP de lista de permitidos de direcciones IP
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su servidor SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,17 @@ El Adobe recomienda agregar los siguientes rangos de IP a una lista de permitido
 
 * `52.252.71.64/29`
 
+## Clientes de Canadá
+
+* `20.220.135.16/29`
+
 ## Clientes de EMEA
 
 * `51.137.8.208/29`
+
+## clientes del Reino Unido
+
+* `20.26.133.96/29`
 
 ## Clientes de APAC
 
