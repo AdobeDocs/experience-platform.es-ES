@@ -2,12 +2,11 @@
 solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
-badgeLimitedAvailability: label="Disponibilidad limitada" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2121'
-ht-degree: 10%
+source-wordcount: '2212'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que las perspectivas de similitud y las audiencias de similitud se encuentran en **disponibilidad limitada**.
+>Información sobre similitudes y audiencias de similitud solo están disponibles en la variable **Edición B2C**.
 
 En Adobe Experience Platform, las audiencias de similitud proporcionan una perspectiva inteligente de cada una de sus audiencias, aprovechando las perspectivas basadas en el aprendizaje automático para identificar y dirigirse a clientes de alto valor con sus campañas de marketing.
 
@@ -29,6 +28,15 @@ Antes de empezar a usar las audiencias de similitud, asegúrese de comprender lo
 - **Modelo de similitud**: un modelo de similitud es un modelo de aprendizaje automático que se forma en cada audiencia base apta sin necesidad de recibir información del cliente. Cada modelo de similitud crea los factores influyentes y los gráficos de similitud. Un modelo de similitud sí lo hace **no** que te marquen.
 - **Audiencia de similitudes**: una audiencia de similitud es la audiencia que se crea cuando se aplica a la audiencia base un modelo de similitud con un umbral de similitud seleccionado. Puede crear varias audiencias de similitud utilizando el mismo modelo de similitud. La audiencia de similitud es lo que se puntúa.
 - **Tamaño total de la audiencia a la que se puede dirigir**: el tamaño total de audiencia a la que se puede dirigir es el número total de perfiles en los últimos 30 días menos la población de audiencia base en los últimos 30 días. Por ejemplo, si un cliente tiene 10 millones de perfiles en los últimos 30 días y la audiencia base tiene 1 millón de perfiles en los últimos 30 días, el tamaño total de audiencia direccionable es de 9 millones de perfiles.
+
+## Idoneidad {#eligibility}
+
+Para utilizar perspectivas de similitud, la audiencia base **debe** cumplir los siguientes criterios de idoneidad:
+
+- La audiencia base **debe** se crearán en Platform.
+   - Las audiencias generadas externamente son **no** apto para perspectivas de similitud.
+- La audiencia base **debe** estar en la política de combinación predeterminada.
+- La audiencia base **debe** no utilice campos restringidos por el control de datos.
 
 ## Detalles del modelo de similitud {#details}
 
@@ -177,13 +185,19 @@ Aparecerá la página de detalles de la audiencia. Para obtener más informació
 
 ## Excluir campos de datos del modelado de similitud {#exclude}
 
+>[!IMPORTANT]
+>
+> **Usted** son responsables de garantizar que los datos, incluidos los datos confidenciales, estén etiquetados correctamente y que las políticas de uso de datos se hayan definido y habilitado para cumplir con las obligaciones legales y regulatorias bajo las que opera. También debe tener en cuenta que los campos de datos o las suscripciones a segmentos que son **no** la correlación directa con los campos de datos asociados normalmente con tipos de datos confidenciales o protegidos puede ser una fuente de sesgo potencial. **Usted** son responsables de analizar los datos para identificar, etiquetar y aplicar las políticas de uso de datos adecuadas a los datos, incluidos los campos de datos que puedan representar tipos de datos confidenciales o protegidos y que deban excluirse del modelado.
+
 Las audiencias similares se pueden configurar para excluir campos de datos restringidos para la acción de marketing &quot;Ciencia de datos&quot; mediante la aplicación de las etiquetas y políticas de uso de datos relevantes. Los datos etiquetados como restringidos del uso para la ciencia de datos se eliminarán de consideración al entrenar un modelo de audiencia de similitud y al generar una audiencia de similitud a partir del modelo entrenado. 
+
+>[!NOTE]
+>
+>Los cambios en las etiquetas de uso de datos en la audiencia base pueden tardar hasta 48 horas en surtir efecto.
 
 La etiqueta estándar &quot;C9&quot; se puede utilizar para etiquetar datos que no deben utilizarse para la ciencia de datos y se puede aplicar habilitando la directiva estándar &quot;Restringir la ciencia de datos&quot;. También puede crear políticas adicionales para restringir el uso de datos con otras etiquetas, incluidas las etiquetas confidenciales, para la ciencia de datos. Para obtener más información sobre la administración de las políticas de uso de datos, lea la [Guía de IU de políticas de uso de datos](../../data-governance/policies/user-guide.md). Para obtener más información sobre la administración de etiquetas de uso de datos, lea la [guía de IU de etiquetas de uso de datos](../../data-governance/labels/user-guide.md).
 
 De forma predeterminada, el proceso de modelado para audiencias de similitud excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización. Si la audiencia base no tiene etiquetas de contrato, el proceso de modelado excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización.
-
-Tenga en cuenta que **usted** son responsables de garantizar que los datos, incluidos los datos confidenciales, estén etiquetados correctamente y que las políticas de uso de datos se hayan definido y habilitado para cumplir con las obligaciones legales y regulatorias en las que opera. También debe tener en cuenta que los campos de datos o las suscripciones a segmentos que son **no** la correlación directa con los campos de datos asociados normalmente con tipos de datos confidenciales o protegidos puede ser una fuente de sesgo potencial. **Usted** son responsables de analizar los datos para identificar, etiquetar y aplicar las políticas de uso de datos adecuadas a los datos, incluidos los campos de datos que puedan representar tipos de datos confidenciales o protegidos y que deban excluirse del modelado.
 
 ## Pasos siguientes
 
