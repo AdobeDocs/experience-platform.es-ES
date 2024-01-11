@@ -1,14 +1,15 @@
 ---
 title: 'Ejemplo de función Lambda: recuperar registros similares'
 description: Aprenda a identificar y recuperar registros similares o relacionados de uno o más conjuntos de datos en función de una métrica de similitud y un umbral de similitud. Este flujo de trabajo puede resaltar relaciones significativas o superposiciones entre conjuntos de datos dispares.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%
 
 ---
 
-# Ejemplo de función Lambda: recuperar registros similares
+# Ejemplo de la función Lambda: Recuperar registros similares
 
 Resuelva varios casos de uso comunes utilizando las funciones lambda de Data Distiller para identificar y recuperar registros similares o relacionados de uno o más conjuntos de datos. Puede utilizar esta guía para identificar productos de diferentes conjuntos de datos que tienen una similitud significativa en sus características o atributos. La metodología de este documento proporciona soluciones para: deduplicación de datos, vinculación de registros, sistemas de recomendación, recuperación de información y análisis de texto, entre otros.
 
