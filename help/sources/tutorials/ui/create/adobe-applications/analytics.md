@@ -2,10 +2,10 @@
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 6%
+source-wordcount: '2695'
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ El [!UICONTROL Asignar campos estándar] La sección muestra paneles para [!UICO
 
 Para obtener una vista previa [!DNL Analytics] grupo de campos de esquema de plantilla ExperienceEvent, seleccione **[!UICONTROL Ver]** en el [!UICONTROL Asignaciones estándar aplicadas] panel.
 
-![view](../../../../images/tutorials/create/analytics/view.png)
+![vista](../../../../images/tutorials/create/analytics/view.png)
 
 El [!UICONTROL Grupo de campos de esquema de plantilla de Adobe Analytics ExperienceEvent] proporciona una interfaz para utilizar para inspeccionar la estructura del esquema. Cuando termine, seleccione **[!UICONTROL Cerrar]**.
 
@@ -133,7 +133,7 @@ Según sus necesidades, puede seleccionar cualquiera de las siguientes opciones 
 
 La siguiente documentación proporciona más recursos para comprender la preparación de datos, los campos calculados y las funciones de asignación:
 
-* [Información general de preparación de datos](../../../../../data-prep/home.md)
+* [Resumen de preparación de datos](../../../../../data-prep/home.md)
 * [Funciones de asignación de preparación de datos](../../../../../data-prep/functions.md)
 * [Añadir campos calculados](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Una vez que haya completado las asignaciones para su [!DNL Analytics] datos del grupo de informes, puede aplicar reglas y condiciones de filtrado para incluir o excluir selectivamente datos de la ingesta en el Perfil del cliente en tiempo real. La compatibilidad con el filtrado solo está disponible para [!DNL Analytics] Los datos de y solo se filtran antes de introducir [!DNL Profile.] Todos los datos se incorporan al lago de datos.
 
+>[!BEGINSHADEBOX]
+
+**Información adicional sobre preparación de datos y filtrado de datos de Analytics para el perfil del cliente en tiempo real**
+
+* Puede utilizar la funcionalidad de filtrado para los datos que se dirigen a Perfil, pero no para los que se dirigen al lago de datos.
+* Puede utilizar el filtrado para los datos activos, pero no puede filtrar los datos de relleno.
+   * El [!DNL Analytics] El origen no rellena los datos en el perfil.
+* Si utiliza las configuraciones de preparación de datos durante la configuración inicial de una [!DNL Analytics] flujo, esos cambios se aplican también al relleno automático de 13 meses.
+   * Sin embargo, este no es el caso del filtrado, ya que solo se reserva para datos activos.
+* La preparación de datos se aplica a las rutas de ingesta por flujo continuo y por lotes. Si modifica una configuración de preparación de datos existente, esos cambios se aplican a los nuevos datos entrantes en las rutas de ingesta por flujo continuo y por lotes.
+   * Sin embargo, cualquier configuración de la preparación de datos no se aplica a los datos que ya se han introducido en Experience Platform, independientemente de si son datos de flujo continuo o por lotes.
+* Los atributos estándar de Analytics siempre se asignan automáticamente. Por lo tanto, no se pueden aplicar transformaciones a atributos estándar.
+   * Sin embargo, puede filtrar los atributos estándar siempre que no sean necesarios en el servicio de identidad o en el perfil.
+* No se puede utilizar el filtrado a nivel de columna para filtrar los campos obligatorios y los campos de identidad.
+* Aunque puede filtrar las identidades secundarias, específicamente AAID y AACustomID, no puede filtrar los ECID.
+* Cuando se produce un error de transformación, la columna correspondiente resulta en NULL.
+
+>[!ENDSHADEBOX]
+
 #### Filtrado de nivel de fila
 
 >[!IMPORTANT]
 >
->Utilice el filtrado de nivel de fila para aplicar condiciones y dictar qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado de nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**.
+>Utilice el filtrado de nivel de fila para aplicar condiciones y dictar qué datos **incluir para la ingesta de perfiles**. Utilice el filtrado a nivel de columna para seleccionar las columnas de datos que desea **excluir para la ingesta de perfiles**.
 
 Puede filtrar los datos de [!DNL Profile] la ingesta a nivel de fila y a nivel de columna. El filtrado de nivel de fila permite definir criterios como que la cadena contiene, es igual a, comienza o termina con. También puede utilizar el filtrado de nivel de fila para unir condiciones mediante `AND` así como `OR`, y niegue condiciones utilizando `NOT`.
 
@@ -201,12 +220,12 @@ Para configurar diferentes condiciones, seleccione **[!UICONTROL igual a]** y, a
 
 La lista de condiciones configurables incluye:
 
-* [!UICONTROL es igual que]
-* [!UICONTROL no es igual]
-* [!UICONTROL comienza con]
-* [!UICONTROL finaliza con]
+* [!UICONTROL igual a]
+* [!UICONTROL no es igual a]
+* [!UICONTROL empieza por]
+* [!UICONTROL termina por]
 * [!UICONTROL no termina con]
-* [!UICONTROL contiene]
+* [!UICONTROL contains]
 * [!UICONTROL no contiene]
 * [!UICONTROL existe]
 * [!UICONTROL no existe]
@@ -255,7 +274,7 @@ El **[!UICONTROL Detalles del flujo de datos]** , donde debe proporcionar un nom
 
 ![data-flow-detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Consulte
+### Revisión
 
 El [!UICONTROL Revisar] Este paso aparece, lo que le permite revisar el nuevo flujo de datos de Analytics antes de crearlo. Los detalles de la conexión se agrupan por categorías, incluidas:
 
@@ -316,10 +335,10 @@ La interfaz se actualiza a una lista de lotes individuales, que incluye informac
 
 Una vez creada la conexión, el flujo de datos se crea automáticamente para contener los datos entrantes y rellenar un conjunto de datos con el esquema seleccionado. Además, se rellenan los datos de forma retroactiva y se introducen hasta 13 meses de datos históricos. Cuando finaliza la ingesta inicial, [!DNL Analytics] y puedan ser utilizados por servicios de Platform secundarios como [!DNL Real-Time Customer Profile] y el servicio de segmentación. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
-* [Información general del [!DNL Segmentation Service]](../../../../../segmentation/home.md)
-* [Información general del [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
-* [Información general del [!DNL Query Service]](../../../../../query-service/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Información general de [!DNL Segmentation Service]](../../../../../segmentation/home.md)
+* [Información general de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+* [Información general de [!DNL Query Service]](../../../../../query-service/home.md)
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender la ingesta de datos mediante el conector de origen de Adobe Analytics:
 
