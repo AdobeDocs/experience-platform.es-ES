@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -176,7 +176,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origen del público"
->abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se muestran en Facebook cuando el segmento se dirige a un usuario"
+>abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se muestran en Facebook cuando un usuario sea el objetivo del segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

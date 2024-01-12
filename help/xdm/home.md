@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
 source-wordcount: '2117'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -48,12 +48,12 @@ Para obtener más información sobre cómo administrar e interactuar con esquema
 * [Guía de IU de XDM](./ui/overview.md)
 * [Guía de API de Registro de esquemas](./api/overview.md)
 
-## Comportamientos de datos en el sistema XDM {#data-behaviors}
+## Comportamientos de los datos en el sistema XDM {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamientos de datos"
->abstract="Los datos que se van a usar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos con espacio de nombres para su uso exclusivo en un único conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de los datos en Platform."
+>abstract="Los datos que se van a usar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos que son áreas de nombres para uso exclusivo de un conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de los datos en Platform."
 
 Los datos que se van a utilizar en Experience Platform se agrupan en tres tipos de comportamiento:
 
