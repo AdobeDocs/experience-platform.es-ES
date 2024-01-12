@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de público a partir de esos perfiles y activar estos segmentos en destinos de terceros.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 72%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
 
 # Ayuda de Real-time Customer Data Platform {#rtcdp}
 
-* [Información general sobre Real-Time CDP](overview.md)
-* [Información general de Real-time CDP edición B2B](b2b-overview.md)
+* [Documentación de Real-Time CDP](home.md)
 * Introducción {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Información general sobre Real-Time CDP](overview.md)
       * [Introducción a Real-Time CDP](get-started.md)
       * [Página de inicio](home-page-dashboards.md)
    * Real-time CDP edición B2B {#rtcdpb2b-intro}
+      * [Información general de Real-time CDP edición B2B](b2b-overview.md)
       * [Caso de uso de ejemplo](./b2b-use-case.md)
       * [Tutorial de extremo a extremo](./b2b-tutorial.md)
       * [Protección de seguridad de Real-time CDP edición B2B](b2b-guardrails.md)
@@ -37,7 +38,7 @@ ht-degree: 72%
 * Destinos {#destinations}
    * [Información general sobre los destinos](destinations/overview.md)
    * [Destinos en Real-Time CDP edición B2B](destinations/b2b.md)
-* Mecanismos de protección {#guardrails}
+* Protecciones {#guardrails}
    * [Introducción a las protecciones Real-Time CDP](guardrails/overview.md)
    * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Protecciones para el [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
@@ -73,6 +74,7 @@ ht-degree: 72%
    * [Información general de fuentes](sources/sources-overview.md)
    * [Fuentes en Real-Time CDP edición B2B](sources/b2b.md)
 * Casos de uso {#use-cases}
+   * [Información general sobre casos de uso admitidos](/help/rtcdp/use-case-guides/overview.md)
    * Personalización, perspectivas y participación {#personalization-insights-engagement}
       * [Vuelva a atraer a sus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Adquisición de cliente {#customer-acquisition}
