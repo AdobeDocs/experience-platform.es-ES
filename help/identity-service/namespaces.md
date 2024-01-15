@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 7%
+source-wordcount: '1869'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,19 @@ Lea el siguiente documento para obtener más información sobre lo que puede hac
 * [[!DNL Identity Service]](./home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
 * [[!DNL Privacy Service]](../privacy-service/home.md): las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de consumidores deben verse afectados.
 
-## Explicación de áreas de nombres de identidad
+## Explicación de áreas de nombres de identidad {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Áreas de nombres de identidad"
+>abstract="Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con **name<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valores de identidad"
+>abstract="Un valor de identidad es un identificador que representa a un particular, organización o recurso únicos. El contexto o tipo de identidad que representa el valor se define mediante un área de nombres de identidad correspondiente. Al hacer coincidir los datos de los registros en los fragmentos del perfil, el área de nombres y el valor de identidad deben coincidir. Al hacer coincidir los datos de los registros en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir."
+>text="Learn more in documentation"
 
 Una identidad completa incluye dos componentes: una **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como ID de CRM. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registros en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] Combina datos de perfil; tanto el valor de identidad como el área de nombres deben coincidir.
 
