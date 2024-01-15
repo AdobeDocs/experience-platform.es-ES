@@ -2,10 +2,10 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 29%
+source-wordcount: '1285'
+ht-degree: 28%
 
 ---
 
@@ -31,7 +31,7 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| Zonas protegidas | (N/A) | Según la variable [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
+| Zonas protegidas | (N/D) | Según la variable [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
 | Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [Esquemas del modelo de datos de experiencia (XDM)](../xdm/home.md). |
 | Modelado de datos | Esquemas de vistas | Otorga acceso de solo lectura a los esquemas. |
 | Administración de identidades | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/namespaces.md). |
@@ -50,15 +50,16 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 | Plataformas | Web | Concede acceso a [propiedades web](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
 | Plataformas | Dispositivo móvil | Concede acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
 | Plataformas | Edge | Concede acceso a [Propiedades de Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
-| Propiedades | (N/A) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario solo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
+| Propiedades | (N/D) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario solo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
 | Derechos de propiedad | Aprobar | Concede la capacidad de aprobar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de propiedad | Desarrollo | Concede la capacidad de desarrollar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de propiedad | Editar propiedad | Concede la capacidad de editar la configuración básica de las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administrar entornos | Concede la capacidad de administrar el [entornos](../tags/ui/publishing/environments.md) para las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administración de extensiones | Concede la capacidad de administrar el [extensiones](../tags/ui/managing-resources/extensions/overview.md) para las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Publicar | Concede la capacidad de publicar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Derechos de propiedad | Publicación | Concede la capacidad de publicar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de compañía | Desarrollo de extensiones | Concede la capacidad de crear y modificar paquetes de extensión que sean propiedad de su organización, incluidas versiones privadas y solicitudes de lanzamiento público. |
-| Derechos de compañía | Administración de extensiones | Este permiso solo es aplicable si tiene una licencia para Adobe Journey Optimizer u otra solución que conceda acceso a la mensajería móvil en la aplicación y a la mensajería push. Esto le permite administrar las aplicaciones que Adobe Experience Cloud conoce, así como las credenciales push necesarias para comunicarse con el servicio Firebase Cloud Messaging y el servicio de notificaciones push de Apple. |
+| Derechos de compañía | Administrar configuraciones de aplicación | Este permiso solo es aplicable si tiene una licencia para Adobe Journey Optimizer u otra solución que conceda acceso a la mensajería móvil en la aplicación y a la mensajería push. Esto le permite administrar las aplicaciones que Adobe Experience Cloud conoce, así como las credenciales push necesarias para comunicarse con el servicio Firebase Cloud Messaging y el servicio de notificaciones push de Apple. |
+| Derechos de compañía | Administrar propiedades | Concede la capacidad de crear y administrar etiquetas (propiedad web), reenvío de eventos (propiedad edge) y propiedades móviles. |
 
 {style="table-layout:auto"}
 
