@@ -2,10 +2,10 @@
 title: Referencia de objeto satélite
 description: Obtenga información acerca del objeto _satellite del lado del cliente y las diversas funciones que puede realizar con él en las etiquetas.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
@@ -61,6 +61,10 @@ var rule = _satellite.getVar('return event rule', event);
 ```
 
 ## `setVar`
+
+>[!NOTE]
+>
+>El `setVar` El código es completamente independiente de un elemento de datos especificado en Etiquetas.
 
 **Código**
 
