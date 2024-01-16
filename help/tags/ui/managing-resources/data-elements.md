@@ -2,10 +2,10 @@
 title: Elementos de datos
 description: Los Data Elements son los componentes básicos del diccionario de datos (o mapa de datos). Utilice Data Elements para recopilar, organizar y entregar datos a través de la tecnología de marketing y publicidad.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 91%
+source-wordcount: '1614'
+ht-degree: 89%
 
 ---
 
@@ -91,13 +91,15 @@ Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activ
 
 ## Tipos de Data Elements {#types-of-data-elements}
 
-Los tipos de Data Elements están determinados por la extensión. No hay límite para los tipos que se pueden crear.
+>[!NOTE]
+>
+>Los tipos de Data Elements están determinados por la extensión. No hay límite para los tipos que se pueden crear.
 
-Las secciones siguientes describen los tipos de Data Elements disponibles en la Extensión principal. Otras extensiones utilizan tipos de Data Elements diferentes.
+Las secciones siguientes describen los tipos de elementos de datos disponibles en la variable **Extensión principal**. Otras extensiones utilizan tipos de Data Elements diferentes.
 
 ### Cookie
 
-Es posible hacer referencia a cualquier cookie de dominio disponible en el campo de nombre de cookie.
+Se puede hacer referencia a cualquier cookie de dominio disponible en el campo del nombre de la cookie.
 
 #### Ejemplo:
 
