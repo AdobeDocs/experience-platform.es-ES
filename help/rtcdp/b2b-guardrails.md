@@ -6,9 +6,9 @@ description: Adobe Experience Platform utiliza un modelo de datos híbrido altam
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ Las siguientes protecciones proporcionan límites recomendados al modelar datos 
 | No hay relaciones heredadas anidadas | 0 | Leve | No debe crear una relación entre dos variables que no sean[!DNL XDM Individual Profile] esquemas. No se recomienda la capacidad de crear relaciones para ningún esquema que no forme parte de [!DNL Profile] esquema de unión. |
 | Solo los objetos B2B pueden participar en relaciones varios a uno | 0 | Grave | El sistema solo admite relaciones varios a uno entre objetos B2B. Para obtener más información sobre las relaciones varios a uno, consulte el tutorial sobre [definición de relaciones de esquema B2B](../xdm/tutorials/relationship-b2b.md). |
 | Profundidad máxima de relaciones anidadas entre objetos B2B | 3 | Grave | La profundidad máxima de las relaciones anidadas entre objetos B2B es 3. Esto significa que, en un esquema muy anidado, no debe tener una relación entre objetos B2B anidados con más de 3 niveles de profundidad. |
+| Esquema único para cada entidad de dimensión | 1 | Grave | Cada entidad de dimensión debe tener un solo esquema. El intento de utilizar entidades de dimensión creadas a partir de más de un esquema puede afectar a los resultados de la segmentación. Se espera que las distintas entidades de dimensión tengan esquemas independientes. |
 
 ## Límites de tamaño de datos
 
@@ -93,7 +94,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
-| Tamaño total para todas las entidades dimensionales | 5 GB | Leve | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
+| Tamaño total para todas las entidades dimensionales | 5GB | Leve | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Leve | Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional. Por ejemplo, si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos colaboradores, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
 | Lotes de entidades Dimension introducidos por día | 4 por entidad | Leve | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
 
