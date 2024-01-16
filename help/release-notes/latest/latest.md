@@ -4,8 +4,8 @@ description: Las notas de la versión de octubre de 2023 para Adobe Experience P
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 32%
+source-wordcount: '1052'
+ht-degree: 31%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 **Fecha de la versión: 25 de octubre de 2023**
 
-Actualizaciones de las funciones existentes en Experience Platform:
+Actualizaciones de funciones existentes en Experience Platform:
 
 - [Paneles](#dashboards)
 - [Recopilación de datos](#data-collection)
@@ -48,7 +48,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Extensiones | [!DNL LinkedIn] API de conversiones | El [[!DNL LinkedIn] API de conversiones](../../tags/extensions/server/linkedin/overview.md) Esta extensión le permite evaluar la eficacia de sus campañas de marketing de LinkedIn reenviando datos de evento del Experience Platform a LinkedIn. |
 | Secreto | [!DNL LinkedIn] Secreto de OAuth 2 | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
 | Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) rendimiento en Platform, solo se conservarán las compilaciones de desarrollo y de fase más recientes, tanto las que tengan éxito como las que no. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
-| Extensiones | Elementos, reglas y extensiones | [Elementos, reglas y extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=es) ahora se ordenan en la salida de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
+| Extensiones | Elementos, reglas y extensiones | [Elementos, reglas y extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) ahora se ordenan en la salida de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
 
 Para obtener más información sobre la recopilación de datos, lea la [Información general sobre recopilación de datos](../../tags/home.md).
 
