@@ -2,9 +2,9 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ Esta sección le permite definir el comportamiento del SDK web en lo que respect
 * **[!UICONTROL Migrar ECID desde VisitorAPI]**: Esta opción está habilitada de forma predeterminada. Cuando esta función está habilitada, el SDK puede leer el `AMCV` y `s_ecid` y configure las `AMCV` cookie utilizada por [!DNL Visitor.js]. Esta función es importante al migrar al SDK web, ya que algunas páginas pueden seguir utilizando [!DNL Visitor.js]. Esta opción permite que el SDK siga utilizando el mismo [!DNL ECID] para que los usuarios no se identifiquen como dos usuarios independientes.
 * **[!UICONTROL Uso de cookies de terceros]**: cuando esta opción está habilitada, el SDK web intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que el SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, el SDK solo almacena el identificador en el dominio de origen.
 
+  >[!IMPORTANT]
+  >>Las cookies de terceros no son compatibles con [ID de dispositivo de origen](../../../../edge/identity/first-party-device-ids.md) en el SDK web.
+Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
+  >
 ## Configuración de la personalización {#personalization}
 
 Esta sección le permite configurar cómo desea ocultar determinadas partes de una página mientras se carga contenido personalizado. Esto garantiza que los visitantes solo vean la página personalizada.
@@ -103,7 +107,7 @@ Para utilizar el fragmento preocultado, cópielo y péguelo dentro de `<head>` d
 
 >[!IMPORTANT]
 >
->Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL CSS] regla como la que usa el [estilo preocultado](#prehiding-style).
+Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL CSS] regla como la que usa el [estilo preocultado](#prehiding-style).
 
 ## Configuración de la recopilación de datos {#data-collection}
 
@@ -130,7 +134,7 @@ Como alternativa a pasar las invalidaciones a través de un comando del SDK web,
 
 >[!IMPORTANT]
 >
-> Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
+Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
 ![Imagen que muestra las anulaciones de configuración de la secuencia de datos en la página de extensión de etiquetas del SDK web.](assets/datastream-overrides.png)
 

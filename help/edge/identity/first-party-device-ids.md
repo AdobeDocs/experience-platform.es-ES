@@ -1,13 +1,13 @@
 ---
 title: ID de dispositivos de origen en el SDK web
 description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) para el SDK web de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
-
 
 # ID de dispositivos de origen en el SDK web
 
@@ -16,6 +16,11 @@ El SDK web de Adobe Experience Platform asigna [Adobe Experience Cloud ID (ECID)
 >[!NOTE]
 >
 >La compatibilidad con ID de dispositivos de origen solo está disponible al enviar datos a la red perimetral de Platform a través del SDK web de Platform.
+
+>[!IMPORTANT]
+>
+>Los ID de dispositivos de origen no son compatibles con el [cookies de terceros](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) en el SDK web.
+>Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
 
 Este documento explica cómo configurar los ID de dispositivos de origen para la implementación del SDK web de Platform.
 
