@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 37%
+source-wordcount: '770'
+ht-degree: 44%
 
 ---
 
@@ -294,7 +294,7 @@ ht-degree: 37%
       * [Propiedades](./api/endpoints/properties.md)
       * [Elementos de datos](./api/endpoints/data-elements.md)
       * [Reglas](./api/endpoints/rules.md)
-      * [Regla componentes](./api/endpoints/rule-components.md)
+      * [Componentes de regla](./api/endpoints/rule-components.md)
       * [Paquetes de extensiones](./api/endpoints/extension-packages.md)
       * [Extensiones](./api/endpoints/extensions.md)
       * [Bibliotecas](./api/endpoints/libraries.md)
@@ -321,10 +321,5 @@ ht-degree: 37%
 * [Preguntas frecuentes](./faq.md)
 * [Actualizaciones terminológicas](./term-updates.md)
 * [Compatibilidad en desuso con Internet Explorer 10 y 11](./ie-deprecation.md)
-* Notas de la versión {#release-notes}
-   * [Notas de la versión más recientes](./release-notes/current.md)
-   * [Notas de la versión de 2021](./release-notes/2021.md)
-   * [Notas de la versión de 2020](./release-notes/2020.md)
-   * [Notas de la versión de 2019](./release-notes/2019.md)
-   * [Notas de la versión de 2018](./release-notes/2018.md)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
 
