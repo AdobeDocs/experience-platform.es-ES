@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen del servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Antes de sumergirse en los detalles del servicio de identidad, lea la siguiente 
 | --- | --- |
 | Identidad | Una identidad son datos que son únicos para una entidad. Normalmente, se trata de un objeto del mundo real, como una persona individual, un dispositivo de hardware o un explorador web (representado por una cookie). Una identidad completa consta de dos elementos: un **área de nombres de identidad** y un **valor de identidad**. |
 | Espacio de nombre de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con **julien<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con `555-555-1234`. Para obtener más información, lea la [información general del área de nombres de identidad](./namespaces.md) |
-| Valor de identidad | Un valor de identidad es una cadena que representa una entidad del mundo real y que se clasifica dentro del servicio de identidad a través de un área de nombres. Por ejemplo, el correo electrónico **julien<span>@acme.com** podría clasificarse como un `Email` namespace. |
+| Valor de identidad | Un valor de identidad es una cadena que representa una entidad del mundo real y que se clasifica dentro del servicio de identidad a través de un área de nombres. Por ejemplo, el valor de identidad (cadena) **julien<span>@acme.com** podría clasificarse como un `Email` namespace. |
 | Tipo de identidad | Un tipo de identidad es un componente de un área de nombres de identidad. El tipo de identidad designa si los datos de identidad están vinculados en un gráfico de identidad o no. |
 | Vínculo | Un vínculo o una vinculación es un método para establecer que dos identidades diferentes representan la misma entidad. Por ejemplo, un vínculo entre &quot;`Email` = julien<span>@acme.com&quot; y &quot;`Phone` = 555-555-1234&quot; significa que ambas identidades representan la misma entidad. Esto sugiere que el cliente que ha interactuado con su marca con la dirección de correo electrónico de Julien<span>@acme.com y el número de teléfono de 555-555-1234 es el mismo. |
 | Servicio de identidad | El servicio de identidad es un servicio dentro de Experience Platform que vincula (o desvincula) identidades para mantener gráficos de identidad. |
@@ -91,7 +91,7 @@ Consideremos el siguiente ejemplo:
 * A continuación, si inicia sesión con las mismas credenciales en el mismo sitio web de comercio electrónico, pero utiliza el explorador web del teléfono en lugar del explorador web del portátil, se registra un nuevo ECID en el servicio de identidad.
 * El servicio de identidad procesa este nuevo evento en segundo plano como `{CRM_ID:ABC, ECID:456}`, donde CRM_ID: ABC representa su ID de cliente autenticado y ECID:456 representa el explorador web de su dispositivo móvil.
 
-Teniendo en cuenta los escenarios anteriores, el servicio de identidad establece un vínculo entre `CRM_ID:ABC, ECID:123`, así como `{CRM_ID:ABC, ECID:456}`. Esto da como resultado un gráfico de identidades en el que &quot;posee&quot; tres identidades: una para el identificador de persona (CRM ID) y dos para los identificadores de cookie (ECID).
+Teniendo en cuenta los escenarios anteriores, el servicio de identidad establece un vínculo entre `{CRM_ID:ABC, ECID:123}`, así como `{CRM_ID:ABC, ECID:456}`. Esto da como resultado un gráfico de identidades en el que &quot;posee&quot; tres identidades: una para el identificador de persona (CRM ID) y dos para los identificadores de cookie (ECID).
 
 ## Gráficos de identidad
 
