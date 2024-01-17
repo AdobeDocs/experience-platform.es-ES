@@ -2,10 +2,10 @@
 title: Visor de gráficos de identidad
 description: Un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 6%
+source-wordcount: '1402'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender el visualizador de
 
 >[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
-## Primeros pasos
+## Introducción
 
 Trabajar con el visualizador de gráficos de identidad requiere comprender los distintos servicios de Adobe Experience Platform implicados. Antes de empezar a trabajar con el visualizador de gráficos de identidad, revise la documentación de los siguientes servicios:
 
@@ -60,7 +60,7 @@ El gráfico de identidad muestra todas las identidades vinculadas a la combinaci
 
 >[!IMPORTANT]
 >
->Un gráfico de identidad requiere que se genere un mínimo de dos identidades vinculadas y una combinación de área de nombres de identidad y valor válida. El número máximo de identidades que puede mostrar el visor de gráficos es de 150. Consulte la [apéndice](#appendix) para obtener más información.
+>Un gráfico de identidad requiere que se genere un mínimo de dos identidades vinculadas y una combinación de área de nombres de identidad y valor válida. El número máximo de identidades que puede mostrar el visor de gráficos es 50. Consulte la [apéndice](#appendix) para obtener más información.
 
 ![El visor de gráficos de identidad con cinco identidades vinculadas.](../images/graph-viewer/graph.png)
 
@@ -115,7 +115,7 @@ Pueden producirse errores al acceder al visor del gráfico de identidades. A con
 
 - Debe existir un valor de identidad en el área de nombres seleccionada.
 - El visor de gráficos de identidad requiere un mínimo de dos identidades vinculadas para su generación. Es posible que solo haya un valor de identidad y ninguna identidad vinculada, y en este caso, el valor solo existiría en [!DNL Profile] visor.
-- El visualizador del gráfico de identidades no puede superar el máximo de 150 identidades.
+- El visor de gráficos de identidad no puede superar el máximo de 50 identidades.
 
 ![pantalla-error](../images/graph-viewer/error-screen.png)
 
@@ -141,6 +141,6 @@ Al leer este documento, ha aprendido a explorar los gráficos de identidad de su
 
 | Fecha | Acción |
 | ---- | ------ |
-| 2021-01 | <ul><li>Se ha agregado compatibilidad con la transmisión de datos ingeridos y zonas protegidas sin producción.</li><li>Se han corregido errores menores.</li></ul> |
-| 2021-02 | <ul><li>Se puede acceder al visualizador de gráficos de identidad mediante la previsualización de conjuntos de datos.</li><li>Se han corregido errores menores.</li><li>El visualizador de gráficos de identidad pasa a estar disponible de forma general.</li></ul> |
-| 2023-01 | <ul><li>Actualizaciones de IU.</li></ul> |
+| 01-2021 | <ul><li>Se ha agregado compatibilidad con la transmisión de datos ingeridos y zonas protegidas sin producción.</li><li>Se han corregido errores menores.</li></ul> |
+| 02-2021 | <ul><li>Se puede acceder al visualizador de gráficos de identidad mediante la previsualización de conjuntos de datos.</li><li>Se han corregido errores menores.</li><li>El visualizador de gráficos de identidad pasa a estar disponible de forma general.</li></ul> |
+| 01-2023 | <ul><li>Actualizaciones de IU.</li></ul> |
