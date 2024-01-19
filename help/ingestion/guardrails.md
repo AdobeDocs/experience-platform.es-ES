@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Este documento proporciona instrucciones sobre las protecciones para la ingesta de datos en Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4debc301b930643565b25218f4822a67e88063bb
+source-git-commit: d0ee51340e1175e2820fea69269a8cb6e9d85c1c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ La siguiente tabla describe las protecciones que se deben tener en cuenta al uti
 
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
-| Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al crear una nueva conexión de origen. **Nota**: Puede tardar hasta 30 minutos en que los datos de flujo se procesen completamente en el lago de datos.</li><li>Puede procesar entre 4000 y 5000 solicitudes por segundo al lago de datos. **Nota**: Puede tardar hasta 30 minutos en que los datos de flujo se procesen completamente en el lago de datos.</li></ul> | Fuentes de streaming como [!DNL Kafka], [!DNL Azure Event Hubs], y [!DNL Amazon Kinesis] no utilice el [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [información general de orígenes](../sources/home.md) para un catálogo de fuentes que puede utilizar para la ingesta de datos. |
+| Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al ingerir en el lago de datos. Esto se aplica tanto a las conexiones de origen recién creadas como a las conexiones de origen existentes. **Nota**: Puede tardar hasta 30 minutos en que los datos de flujo se procesen completamente en el lago de datos.</li><li>Las fuentes de streaming admiten un máximo de 1500 solicitudes por segundo al ingerir datos en un perfil o una segmentación de streaming.</li></ul> | Fuentes de streaming como [!DNL Kafka], [!DNL Azure Event Hubs], y [!DNL Amazon Kinesis] no utilice el [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [información general de orígenes](../sources/home.md) para un catálogo de fuentes que puede utilizar para la ingesta de datos. |
 
 ## Pasos siguientes
 
