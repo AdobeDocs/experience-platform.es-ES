@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2434'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Los siguientes servicios de Experience Platform están implicados en el modelado
 Existen dos tipos de límites predeterminados en este documento:
 
 | Tipo de protección | Descripción |
-|----------|---------|
+| -------------- | ----------- |
 | **Protección de rendimiento (límite suave)** | Las protecciones de rendimiento son límites de uso relacionados con el ámbito de los casos de uso. Al superar las barreras de rendimiento, puede experimentar una degradación y latencia del rendimiento. El Adobe no es responsable de esta degradación del rendimiento. Los clientes que exceden de manera consistente una protección de rendimiento pueden optar por licenciar capacidad adicional para evitar la degradación del rendimiento. |
 | **Protecciones reforzadas por el sistema (límite estricto)** | La interfaz de usuario o la API de Real-Time CDP aplican las protecciones impuestas por el sistema. Estos son límites que no se pueden superar, ya que la IU y la API le bloquearán el acceso o devolverán un error. |
 
@@ -55,7 +55,7 @@ Las siguientes protecciones proporcionan límites recomendados al modelar datos 
 ### Protecciones de la entidad principal
 
 | Barrera | Límite | Tipo de límite | Descripción |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Conjuntos de datos de clase de perfil individual XDM | 20 | Protección de rendimiento | Se recomienda un máximo de 20 conjuntos de datos que aprovechen la clase de perfil individual XDM. |
 | Conjuntos de datos de clase XDM ExperienceEvent | 20 | Protección de rendimiento | Se recomienda un máximo de 20 conjuntos de datos que aprovechen la clase XDM ExperienceEvent. |
 | Conjuntos de datos de grupos de informes de Adobe Analytics habilitados para Perfil | 1 | Protección de rendimiento | Se debe habilitar un máximo de un (1) conjunto de datos de grupo de informes de Analytics para el perfil. El intento de habilitar varios conjuntos de datos de grupos de informes de Analytics para el perfil puede tener consecuencias no deseadas para la calidad de los datos. Para obtener más información, consulte la sección sobre [Conjuntos de datos Adobe Analytics](#aa-datasets) en el apéndice. |
@@ -70,7 +70,7 @@ Las siguientes protecciones proporcionan límites recomendados al modelar datos 
 ### protecciones de entidad Dimension
 
 | Barrera | Límite | Tipo de límite | Descripción |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | No se permiten datos de series temporales para los[!DNL XDM Individual Profile] entidades | 0 | Protección impuesta por el sistema | **No se permiten datos de series temporales para los[!DNL XDM Individual Profile] entidades en el servicio de perfil.** Si un conjunto de datos de series temporales está asociado con un[!DNL XDM Individual Profile] ID, el conjunto de datos no debe estar habilitado para [!DNL Profile]. |
 | No hay relaciones anidadas | 0 | Protección de rendimiento | No debe crear una relación entre dos variables que no sean[!DNL XDM Individual Profile] esquemas. No se recomienda la capacidad de crear relaciones para ningún esquema que no forme parte de [!DNL Profile] esquema de unión. |
 | Profundidad de JSON para el campo de ID principal | 4 | Protección de rendimiento | La profundidad máxima de JSON recomendada para el campo de ID principal es 4. Esto significa que, en un esquema muy anidado, no debe seleccionar un campo como ID principal si está anidado a más de 4 niveles de profundidad. Un campo que se encuentra en el cuarto nivel anidado se puede utilizar como ID principal. |
@@ -88,7 +88,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 ### Protecciones de la entidad principal
 
 | Barrera | Límite | Tipo de límite | Descripción |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Tamaño máximo de ExperienceEvent | 10KB | Protección impuesta por el sistema | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, aunque se perderán todos los eventos de más de 10 KB. |
 | Tamaño máximo de registro de perfil | 100KB | Protección impuesta por el sistema | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil que superen los 100 KB. |
 | Tamaño máximo del fragmento de perfil | 50 MB | Protección impuesta por el sistema | **El tamaño máximo de un solo fragmento de perfil es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier [fragmento de perfil](#profile-fragments) que supera los 50 MB. |
@@ -101,7 +101,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 ### protecciones de entidad Dimension
 
 | Barrera | Límite | Tipo de límite | Descripción |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Tamaño total para todas las entidades dimensionales | 5GB | Protección de rendimiento | El tamaño total recomendado para todas las entidades dimensionales es de 5 GB. La ingesta de entidades de gran dimensión puede afectar al rendimiento del sistema. Por ejemplo, no se recomienda intentar cargar un catálogo de productos de 10 GB como entidad de dimensión. |
 | Conjuntos de datos por esquema de entidad dimensional | 5 | Protección de rendimiento | Se recomienda un máximo de 5 conjuntos de datos asociados con cada esquema de entidad dimensional. Por ejemplo, si crea un esquema para &quot;productos&quot; y agrega cinco conjuntos de datos colaboradores, no debe crear un sexto conjunto de datos vinculado al esquema de productos. |
 | Lotes de entidades Dimension introducidos por día | 4 por entidad | Protección de rendimiento | El número máximo recomendado de lotes de entidades de dimensión introducidos por día es de 4 por entidad. Por ejemplo, puede introducir actualizaciones en un catálogo de productos hasta cuatro veces al día. La ingesta de lotes de entidades de dimensión adicionales para la misma entidad puede afectar al rendimiento del sistema. |
@@ -113,7 +113,7 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 Las protecciones descritas en esta sección se refieren al número y la naturaleza de las audiencias que una organización puede crear dentro de Experience Platform, así como a la asignación y activación de audiencias a destinos.
 
 | Barrera | Límite | Tipo de límite | Descripción |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Audiencias por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias en total, siempre y cuando haya menos de 4000 audiencias en cada zona protegida individual. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
 | Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Una organización puede tener más de 150 audiencias de Edge en total, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida individual. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
 | Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en Adobe Experience Platform Edge Network. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
