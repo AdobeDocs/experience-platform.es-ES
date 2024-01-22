@@ -4,9 +4,9 @@ title: Identidades en Real-time Customer Data Platform
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Las áreas de nombres de identidad son un componente de [!DNL Identity Service] 
 
 ## Gráficos de identidad
 
-Un gráfico de identidad es un mapa de relaciones entre diferentes áreas de nombres de identidad, que le proporciona una representación visual de cómo su cliente interactúa con su marca en diferentes canales. Todos los gráficos de identidad de los clientes los administra y actualiza colectivamente [!DNL Identity Service] en tiempo casi real, en respuesta a la actividad de los clientes.
+Un gráfico de identidad es un mapa de relaciones entre identidades diferentes, que le proporciona una representación visual de cómo su cliente interactúa con su marca en diferentes canales. El servicio de identidad administra y actualiza colectivamente todos los gráficos de identidad de los clientes en respuesta a la actividad de los clientes.
 
-[!DNL Identity Service] administra un gráfico de identidad visible solo para su organización y creado en función de sus datos, denominado gráfico privado. [!DNL Identity Service] aumenta el gráfico privado cuando un registro de datos ingerido contiene más de una identidad, lo que agrega una relación entre las identidades encontradas.
+[!DNL Identity Service] administra un gráfico de identidades visible solo para su organización y creado en función de sus datos. [!DNL Identity Service] aumenta el gráfico cuando un registro de datos ingerido contiene más de una identidad, lo que agrega una relación entre las identidades encontradas.
 
 ## Pasos siguientes
 
