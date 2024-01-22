@@ -3,9 +3,9 @@ title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opc
 
 ### Permisos necesarios {#permissions}
 
-Para activar audiencias de clientes potenciales, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar audiencias de clientes potenciales, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Activar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que dispone de los permisos necesarios para activar las audiencias de clientes potenciales, consulte el catálogo de destinos. Si un destino tiene un **[!UICONTROL Activar]** control y, a continuación, dispone de los permisos adecuados.
 

@@ -4,10 +4,10 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '4401'
-ht-degree: 6%
+source-wordcount: '4335'
+ht-degree: 4%
 
 ---
 
@@ -49,7 +49,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite crear audiencias y generarlas en [!DNL Adobe Experience Platform] de su [!DNL Real-Time Customer Profile] datos.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
@@ -57,13 +57,13 @@ Las secciones siguientes proporcionan información adicional que necesita conoce
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Ver destinos]**, y **[!UICONTROL Activar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilar valores para encabezados obligatorios y opcionales {#gather-values-headers}
 
@@ -83,7 +83,7 @@ Recursos en [!DNL Experience Platform] se puede aislar a zonas protegidas virtua
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
-* Content-Type: `application/json`
+* Tipo de contenido: `application/json`
 
 ### Documentación de referencia del API {#api-reference-documentation}
 
@@ -372,7 +372,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Una respuesta correcta devuelve el ID (`id`) de la conexión de origen recién creada y una `etag`. Tenga en cuenta el ID de conexión de origen, ya que lo necesitará más adelante al crear el flujo de datos.
 
-## Cree una conexión base {#create-base-connection}
+## Crear una conexión base {#create-base-connection}
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
@@ -970,7 +970,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `specName` | En su lugar, utilice `SFTP with Password`. |
+| `specName` | Uso `SFTP with Password`. |
 | `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
 | `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
 | `password` | Contraseña para iniciar sesión en la ubicación de almacenamiento SFTP. |
@@ -1016,10 +1016,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `specName` | En su lugar, utilice `SFTP with Password`. |
+| `specName` | Uso `SFTP with Password`. |
 | `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
 | `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
-| `sshKey` | La clave SSH privada utilizada para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de cadena codificada Base64 y no debe estar protegida por contraseña. |
+| `sshKey` | La clave SSH privada utilizada para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de una cadena codificada en Base64 y no debe estar protegida con contraseña. |
 | `port` | El puerto que utiliza su ubicación de almacenamiento SFTP. |
 
 {style="table-layout:auto"}
@@ -2896,7 +2896,7 @@ Tenga en cuenta `target connection ID` de la respuesta. Este ID será necesario 
 
 Una respuesta correcta devuelve el ID (`id`) de la nueva conexión de origen de destino y un `etag`. Tenga en cuenta el ID de conexión de destino, ya que lo necesitará más adelante al crear el flujo de datos.
 
-## Cree un flujo de datos {#create-dataflow}
+## Creación de un flujo de datos {#create-dataflow}
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step5.png)
 

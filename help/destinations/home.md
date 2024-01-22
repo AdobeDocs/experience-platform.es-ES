@@ -2,14 +2,14 @@
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
+source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1088'
 ht-degree: 4%
 
 ---
 
-# Información general del [!DNL Destinations] {#overview}
+# Información general de [!DNL Destinations] {#overview}
 
 ![Titular de información general de destinos.](./assets/overview/destinations-overview-banner.png)
 
@@ -57,16 +57,22 @@ En el caso de los conectores creados y mantenidos por el socio, esto significa q
 
 La funcionalidad de destinos de Platform funciona con permisos de control de acceso de Adobe Experience Platform. Según el nivel de permisos del usuario, puede ver, administrar y activar destinos. Para obtener información sobre los permisos individuales, vaya a [control de acceso en Adobe Experience Platform](../access-control/home.md) y desplácese hacia abajo hasta la tabla situada en la parte inferior de la página.
 
-En la tabla siguiente se describen los permisos y las combinaciones de permisos necesarias para realizar determinadas acciones en los destinos:
+En la tabla siguiente se describen los permisos y las combinaciones de permisos necesarias para realizar determinadas acciones en los destinos.
 
 | Nivel de permisos | Descripción |
 | ---- | ---- |
-| **[!UICONTROL Administrar destinos]** | Para conectarse a destinos, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar audiencias en destinos y habilitar la variable [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar audiencias en destinos y ocultar [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ver destinos]** | Para acceder a la pestaña de destinos de la interfaz de usuario de Experience Platform, necesita el **[!UICONTROL Ver destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ver destinos]**, **[!UICONTROL Administrar destinos]** | Para conectarse a destinos, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para activar audiencias en destinos y habilitar la variable [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** | Para añadir o eliminar audiencias de flujos de datos existentes sin tener acceso a [paso de asignación](ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar segmentos sin asignación]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ver destinos]**, **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** | Para exportar conjuntos de datos a destinos, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Ver gráfico de identidad]** | Para exportar *identidades* a los destinos, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
+
+El diagrama siguiente muestra visualmente qué permisos necesita según las operaciones que desee realizar en los destinos.
+
+![Diagrama que muestra los permisos necesarios para realizar determinadas acciones en los destinos.](/help/destinations/assets/overview/permissions-diagram.png)
 
 Para obtener más información sobre los controles de acceso, consulte la [Guía del usuario de control de acceso](../access-control/ui/overview.md).
 

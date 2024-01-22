@@ -2,9 +2,9 @@
 title: Conexión de Medallia
 description: Active perfiles para encuestas de Medallia y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1135'
 ht-degree: 2%
 
 ---
@@ -35,8 +35,8 @@ Un minorista busca comprender mejor las preferencias de los clientes para la rea
 
 Se requiere la siguiente información para establecer la conexión con Medallia:
 * **URL de extremo de token de OAuth**
-* **ID del cliente**
-* **Secreto de cliente**
+* **ID de cliente**
+* **Secreto del cliente**
 * **URL de puerta API**
 * **Importar nombre de API**
 
@@ -48,7 +48,7 @@ Medallia apoya la activación de las identidades descritas en la tabla siguiente
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| email | Correo electrónico Dirección | Seleccione la identidad del destinatario del correo electrónico cuando desee enviar encuestas de invitación por correo electrónico. Cuando un perfil está asociado con varias direcciones de correo electrónico, Medallia enviará en déclencheur la invitación solo al primer correo electrónico. |
+| email | Correo electrónico | Seleccione la identidad del destinatario del correo electrónico cuando desee enviar encuestas de invitación por correo electrónico. Cuando un perfil está asociado con varias direcciones de correo electrónico, Medallia enviará en déclencheur la invitación solo al primer correo electrónico. |
 | phone | Números de teléfono con hash en formato E.164 | Seleccione la identidad del destinatario del teléfono cuando desee enviar encuestas basadas en SMS. El número de teléfono debe tener el formato E.164, que incluye un signo más (+), un código de llamada de país internacional, un código de área local y un número de teléfono. Por ejemplo: (+)(código de país)(código de área)(número de teléfono). Cuando un perfil está asociado con varios números de teléfono, Medallia enviará la invitación al primer número de teléfono únicamente en déclencheur. |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -103,7 +103,7 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

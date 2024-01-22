@@ -5,9 +5,9 @@ description: Obtenga información sobre cómo activar audiencias de cuenta en de
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Caution"
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opc
 
 ### Permisos necesarios {#permissions}
 
-Para activar audiencias de cuenta, necesita el **[!UICONTROL Administrar destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para activar audiencias de cuenta, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Activar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para asegurarse de que tiene los permisos necesarios para activar audiencias de cuenta, examine el catálogo de destinos. Si un destino tiene un **[!UICONTROL Activar]** control y, a continuación, dispone de los permisos adecuados.
 
