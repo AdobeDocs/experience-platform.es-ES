@@ -2,19 +2,14 @@
 title: Conexión de lista de clientes de pinterest
 description: Cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
 
 # [!DNL Pinterest Customer List] conexión
-
->[!IMPORTANT]
->
->* A partir del 16 de noviembre de 2023, podrá ver dos tarjetas de Pinterest en paralelo en el catálogo de destinos. Esto se debe a una actualización de la API del anunciante de Pinterest utilizada para exportar datos a Pinterest. Se ha cambiado el nombre del conector de destino de Pinterest existente a **[!UICONTROL (En desuso) Pinterest]** y una tarjeta nueva **[!UICONTROL (Nuevo) Pinterest]** ya está disponible para usted.
->* Utilice el **[!UICONTROL (Nuevo) Pinterest]** en el catálogo para cualquier campaña a Pinterest. Si tiene flujos de datos activos en **[!UICONTROL (En desuso) Pinterest]** destino, lea la [documentación de actualización](/help/destinations/catalog/advertising/pinterest-upgrade.md) para comprender los elementos de acción y garantizar que no se interrumpan las campañas.
 
 ## Información general {#overview}
 
