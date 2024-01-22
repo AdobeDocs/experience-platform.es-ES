@@ -5,9 +5,9 @@ title: Actualización de flujos de datos de destino mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '2404'
 ht-degree: 4%
 
 ---
@@ -499,8 +499,8 @@ curl -X PATCH \
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 | `id` | Especifique el ID de la audiencia que está agregando al flujo de datos de destino. |
 | `name` | **(Opcional)**. Especifique el nombre de la audiencia que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede añadir correctamente una audiencia al flujo de datos de destino sin proporcionar su nombre. |
-| `filenameTemplate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las opciones disponibles son las siguientes: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: Obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
-| `exportMode` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
+| `filenameTemplate` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Estas son las opciones disponibles: <br> <ul><li>`%DESTINATION_NAME%`: obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: **(Opcional)**. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Opcional)**. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que los genera el Experience Platform.</li><li>`custom-text`: **(Opcional)**. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre la configuración de nombres de archivo, consulte la [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) en el tutorial de activación de destinos por lotes. |
+| `exportMode` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. Seleccionar `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
 | `startDate` | Seleccione la fecha en la que la audiencia debe comenzar a exportar perfiles a su destino. |
 | `frequency` | Para *destinos por lotes* solo. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> Obligatorio. <br> <ul><li>Para el `"DAILY_FULL_EXPORT"` modo de exportación, puede seleccionar `ONCE` o `DAILY`.</li><li>Para el `"FIRST_FULL_THEN_INCREMENTAL"` modo de exportación, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Para *destinos por lotes* solo. Este campo solo es necesario al seleccionar la variable `"DAILY_FULL_EXPORT"` en el `frequency` selector. <br> Obligatorio. <br> <ul><li>Seleccionar `"AFTER_SEGMENT_EVAL"` para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esto garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.</li><li>Seleccionar `"SCHEDULED"` para que el trabajo de activación se ejecute a una hora fija. Esto garantiza que los datos de perfil del Experience Platform se exporten a la misma hora cada día, pero es posible que los perfiles exportados no estén los más actualizados, en función de si el trabajo de segmentación por lotes se ha completado antes de que se inicie el trabajo de activación. Al seleccionar esta opción, también debe añadir una `startTime` para indicar a qué hora en UTC deben producirse las exportaciones diarias.</li></ul> |
@@ -543,7 +543,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/0",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -552,7 +552,7 @@ curl -X PATCH \
 },
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/1",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -565,7 +565,7 @@ curl -X PATCH \
 | Propiedad | Descripción |
 | --------- | ----------- |
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace`, y `remove`. Para eliminar una audiencia de un flujo de datos, utilice el `remove` operación. |
-| `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar la primera audiencia en el flujo de datos, utilice `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada de GET a `/flows` e inspeccione el `transformations.segmentSelectors` propiedad. Para eliminar la primera audiencia en el flujo de datos, utilice `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Respuesta**
