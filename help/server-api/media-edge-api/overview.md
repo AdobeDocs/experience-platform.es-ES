@@ -3,7 +3,7 @@ solution: Experience Platform
 title: API de Media Edge
 description: Información general sobre las API de Media Edge
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 3%
