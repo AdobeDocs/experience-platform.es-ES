@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2382'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,13 @@ Para obtener más información acerca de los conceptos y características de [!D
 [!DNL Query Editor] proporciona una ejecución flexible de consultas conectándose a [!DNL Query Service]Las consultas y solo se ejecutan mientras esta conexión está activa.
 
 ## Acceso a [!DNL Query Editor] {#accessing-query-editor}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_create_datagovernance"
+>title="Obligación de gobernanza de datos"
+>abstract="Recuerde, es su única responsabilidad adherirse a las políticas de gobernanza de datos de su organización y cumplir con sus requisitos regulatorios. Experience Platform proporciona herramientas de control de datos para que administre sus obligaciones de uso de datos. Aplique las etiquetas de uso de datos adecuadas antes de consultar o procesar datos. Consulte la documentación para obtener más información sobre las herramientas y las prácticas recomendadas de control de datos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es" text="Información general de gobernanza de datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es" text="Resumen de etiquetas de gobernanza de datos"
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Consultas]** en el menú de navegación de la izquierda para abrir [!DNL Query Service] workspace. A continuación, para empezar a escribir consultas, seleccione **[!UICONTROL Crear consulta]** en la parte superior derecha de la pantalla. Este vínculo está disponible en cualquiera de las páginas del [!DNL Query Service] workspace.
 

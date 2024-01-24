@@ -2,10 +2,10 @@
 title: Administración de etiquetas de uso de datos para un esquema
 description: Aprenda a añadir etiquetas de uso de datos a los campos de esquema del modelo de datos de experiencia (XDM) en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 8%
+source-wordcount: '913'
+ht-degree: 7%
 
 ---
 
@@ -39,6 +39,12 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 >id="platform_schemas_editgovernancelabels"
 >title="Editar etiquetas de gobernanza"
 >abstract="Añada una etiqueta a un campo de esquema para indicar las directivas de uso que se aplican a los datos contenidos en ese campo específico."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Uso de etiquetas"
+>abstract="Antes de editar las etiquetas de este objeto, tome nota de los siguientes efectos descendentes:<br>Políticas de gobernanza: utilice etiquetas para determinar si los datos se pueden activar en destinos descendentes. Un uso incorrecto de las etiquetas podría impedir que se pueda acceder a los datos de forma descendente.<br>Políticas de consentimiento: Utilice etiquetas para aplicar los consentimientos y preferencias del cliente al incluir perfiles en segmentos. Un uso incorrecto de las etiquetas podría impedir que se pueda acceder a los datos de forma descendente.<br>Directiva de acceso: el control de acceso basado en atributos utiliza etiquetas para determinar qué funciones de usuario pueden acceder a recursos específicos. El uso no intencionado de etiquetas puede impedir que algunas personas de su organización utilicen recursos a los que anteriormente tenían acceso."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=es" text="Resumen del control de acceso basado en atributos"
 
 Para empezar a añadir etiquetas, primero debe [seleccione un esquema existente para editarlo](../ui/resources/schemas.md#edit) o [crear un nuevo esquema](../ui/resources/schemas.md#create) para ver su estructura en el Editor de esquemas.
 
