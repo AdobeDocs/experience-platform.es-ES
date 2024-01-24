@@ -2,10 +2,10 @@
 title: Guía de IU de Atributos calculados
 description: Obtenga información sobre cómo crear, ver y actualizar atributos calculados mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 8%
+source-wordcount: '1576'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Este documento proporciona una guía sobre cómo crear y actualizar atributos ca
 Esta guía de la interfaz de usuario requiere una comprensión de las distintas [!DNL Experience Platform] servicios relacionados con la gestión de [!DNL Real-Time Customer Profiles]. Antes de leer esta guía o de trabajar en la interfaz de usuario de, consulte la documentación de los siguientes servicios:
 
 - [[!DNL Real-Time Customer Profile]](../home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 
 ## Ver atributos calculados {#view}
 
@@ -68,7 +68,7 @@ El **[!UICONTROL Crear atributo calculado]** página. En esta página, puede agr
 | Campo | Descripción |
 | ----- | ----------- |
 | [!UICONTROL Nombre para mostrar] | Nombre por el que se conocerá el atributo calculado. Debe mantener este nombre para mostrar único para cada atributo calculado. Como práctica recomendada, este nombre para mostrar debe contener identificadores relacionados con el atributo calculado. Por ejemplo, &quot;Suma de compras de zapatos en los últimos 7 días&quot;. |
-| [!UICONTROL Nombre del campo] | Un nombre que se utiliza para hacer referencia al atributo calculado en otros servicios descendentes. Este nombre se deriva automáticamente del nombre para mostrar y se escribe en camelCase. |
+| [!UICONTROL Nombre de campo] | Un nombre que se utiliza para hacer referencia al atributo calculado en otros servicios descendentes. Este nombre se deriva automáticamente del nombre para mostrar y se escribe en camelCase. |
 | [!UICONTROL Descripción] | Descripción del atributo calculado que está intentando crear. |
 
 ![El [!UICONTROL Información básica] de la sección [!UICONTROL Crear atributo calculado] página está resaltada.](./images/ui/basic-information.png)
@@ -155,6 +155,10 @@ Al seleccionar un atributo calculado de borrador, la variable **[!UICONTROL Edit
 >Por ejemplo, si está creando una definición de segmento que busca &quot;Todos los perfiles que tienen una dirección de correo electrónico válida&quot; donde el campo de dirección de correo electrónico se rellena mediante un atributo calculado con la función más reciente, debe **debe** incluir el valor existe de la dirección de correo electrónico **y** la marca de tiempo de la dirección de correo electrónico existe.
 
 Después de crear un atributo calculado, puede utilizar **publicado** atributos calculados en otros servicios descendentes. Dado que los atributos calculados son campos de atributos de perfil creados en el esquema de unión de perfiles, puede buscar valores de atributos calculados para un perfil del cliente en tiempo real, utilizarlos en una audiencia, activarlos en un destino o utilizarlos para la personalización en recorridos en Adobe Journey Optimizer.
+
+>[!NOTE]
+>
+>Atributos calculados **no puede** se utilizará en la audiencia **composiciones**.
 
 ![Se muestra el Generador de segmentos, con un atributo calculado como parte de la composición de la definición del segmento.](./images/ui/use-ca.png)
 

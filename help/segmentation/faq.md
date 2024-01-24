@@ -2,10 +2,10 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2714'
-ht-degree: 0%
+source-wordcount: '2739'
+ht-degree: 1%
 
 ---
 
@@ -108,6 +108,7 @@ El siguiente gráfico explica los diferentes estados del ciclo vital, qué repre
 | Publicadas | Una audiencia en **Publicado** El estado es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí |
 | Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | Sí |
 | Eliminado | Una audiencia en **Eliminado** El estado es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No |
+| Activo | Este estado se ha **obsoleto** y se sustituye por el **Publicado** estado. | N/A | N/A | N/A | N/A | N/A | N/A |
 
 ### ¿Cómo interactúan Audience Portal y Composición de audiencias con la versión de los datos de socios de Real-Time CDP?
 

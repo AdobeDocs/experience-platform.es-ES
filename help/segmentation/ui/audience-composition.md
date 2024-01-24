@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ Si excluye por atributo, puede seleccionar qué atributos desea excluir seleccio
 Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que desea excluir, seguido de **[!UICONTROL Seleccionar]** para añadirlos al bloque de exclusión.
 
 ![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Al excluir por atributo, solo puede especificar **uno** valor que se excluirá. El uso de cualquier tipo de separador, como una coma o un punto y coma, solo hará que se excluya ese valor exacto. Por ejemplo, configurar el valor como `red, blue` resultará en la exclusión del término `red, blue` del atributo, pero lo hará **no** resulten en la exclusión del término `red` o `blue`.
 
 ## [!UICONTROL Enriquecer] {#enrich-block}
 
