@@ -4,7 +4,7 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 4%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Ver las identidades disponibles para usar en el esquema de entrada
 
-La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve ambas [standard](/help/identity-service/namespaces.md#standard) y [personalizado](/help/identity-service/namespaces.md#manage-namespaces) identifique las áreas de nombres que configuró en Experience Platform.
+La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve ambas [standard](/help/identity-service/features/namespaces.md#standard) y [personalizado](/help/identity-service/features/namespaces.md#manage-namespaces) identifique las áreas de nombres que configuró en Experience Platform.
 
 ```json
 [

@@ -5,10 +5,10 @@ title: Definición de una relación entre dos esquemas con el Editor de esquemas
 description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en la interfaz de usuario del Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 11%
+source-wordcount: '1158'
+ht-degree: 10%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 11%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="Referencia al Área de nombres de identidad"
+>title="Área de nombres de identidad de referencia"
 >abstract="El área de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las relaciones de esquemas."
 
 La capacidad de comprender las relaciones entre sus clientes y sus interacciones con su marca en varios canales es una parte importante de Adobe Experience Platform. Definición de estas relaciones dentro de la estructura de su [!DNL Experience Data Model] Los esquemas (XDM) le permiten obtener perspectivas complejas sobre los datos de los clientes.
@@ -73,11 +73,11 @@ El esquema de origen &quot;[!DNL Loyalty Members]&quot; se basa en [!DNL XDM Ind
 
 El esquema de referencia &quot;[!DNL Hotels]&quot; se basa en un &quot; personalizado[!DNL Hotels]&quot; y contiene campos que describen un hotel. Para participar en una relación, el esquema de referencia también debe tener una identidad principal definida y habilitada para [!UICONTROL Perfil]. En este caso, `_tenantId.hotelId`actúa como la identidad principal para el esquema, utilizando un personalizado &quot;[!DNL Hotel ID]&quot; área de nombres de identidad.
 
-![Habilitar para Perfil](../images/tutorials/relationship/hotels.png)
+![Habilitar para el perfil](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Para aprender a crear áreas de nombres de identidad personalizadas, consulte la [Documentación del servicio de identidad](../../identity-service/namespaces.md#manage-namespaces).
+>Para aprender a crear áreas de nombres de identidad personalizadas, consulte la [Documentación del servicio de identidad](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Crear un grupo de campos de relación
 

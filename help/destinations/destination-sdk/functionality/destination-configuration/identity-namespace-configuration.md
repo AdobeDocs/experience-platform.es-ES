@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ Al crear un destino mediante Destination SDK, además de lo siguiente [configura
 
 Al hacerlo, los usuarios tienen la opción añadida de seleccionar identidades de destino, además de atributos de perfil de destino.
 
-Para obtener más información sobre Áreas de nombres de identidad en Experience Platform, consulte la [documentación de áreas de nombres de identidad](../../../../identity-service/namespaces.md).
+Para obtener más información sobre Áreas de nombres de identidad en Experience Platform, consulte la [documentación de áreas de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
 Al configurar áreas de nombres de identidad para su destino, puede ajustar la asignación de identidad de destino admitida por su destino, como:
 
 * Permite a los usuarios asignar atributos XDM a áreas de nombres de identidad.
-* Permitir que los usuarios asignen [áreas de nombres de identidad estándar](../../../../identity-service/namespaces.md#standard) a sus propias áreas de nombres de identidad.
-* Permitir que los usuarios asignen [áreas de nombres de identidad personalizadas](../../../../identity-service/namespaces.md#manage-namespaces) a sus propias áreas de nombres de identidad.
+* Permitir que los usuarios asignen [áreas de nombres de identidad estándar](../../../../identity-service/features/namespaces.md#standard) a sus propias áreas de nombres de identidad.
+* Permitir que los usuarios asignen [áreas de nombres de identidad personalizadas](../../../../identity-service/features/namespaces.md#manage-namespaces) a sus propias áreas de nombres de identidad.
 
 Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Al definir las identidades de destino que admite su destino, puede utilizar los 
 |---------|----------|---|------|
 | `acceptsAttributes` | Booleano | Opcional | Indica si los clientes pueden asignar atributos de perfil estándar a la identidad que está configurando. |
 | `acceptsCustomNamespaces` | Booleano | Opcional | Indica si los clientes pueden asignar áreas de nombres de identidad personalizadas al área de nombres de identidad que está configurando. |
-| `acceptedGlobalNamespaces` | - | Opcional | Indica cuál [áreas de nombres de identidad estándar](../../../../identity-service/namespaces.md#standard) (por ejemplo, [!UICONTROL IDFA]) los clientes pueden asignar a la identidad que está configurando. |
+| `acceptedGlobalNamespaces` | - | Opcional | Indica cuál [áreas de nombres de identidad estándar](../../../../identity-service/features/namespaces.md#standard) (por ejemplo, [!UICONTROL IDFA]) los clientes pueden asignar a la identidad que está configurando. |
 | `transformation` | Cadena | Opcional | Muestra el [[!UICONTROL Aplicar transformación]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) de la IU de Platform, cuando el campo de origen es un atributo XDM o un área de nombres de identidad personalizada. Utilice esta opción para dar a los usuarios la capacidad de hash los atributos de origen en la exportación. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
 | `requiredTransformation` | Cadena | Opcional | Cuando los clientes seleccionan este área de nombres de identidad de origen, la variable [[!UICONTROL Aplicar transformación]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) La casilla de verificación de se aplica automáticamente a la asignación y los clientes no pueden deshabilitarla. Para habilitar esta opción, establezca el valor en `sha256(lower($))`. |
 
@@ -84,7 +84,7 @@ Debe indicar qué [!DNL Platform] identidades que los clientes pueden exportar a
 Las áreas de nombres de identidad no requieren una correspondencia de 1 a 1 entre [!DNL Platform] y su destino.
 Por ejemplo, los clientes podrían asignar un [!DNL Platform] [!DNL IDFA] área de nombres a [!DNL IDFA] Área de nombres de su destino o pueden asignar lo mismo [!DNL Platform] [!DNL IDFA] área de nombres a [!DNL Customer ID] área de nombres en su destino.
 
-Obtenga más información sobre las identidades en [información general del área de nombres de identidad](../../../../identity-service/namespaces.md).
+Obtenga más información sobre las identidades en [información general del área de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
 ## Consideraciones de asignación
 

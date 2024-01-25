@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prácticas Recomendadas Para El Modelado De Datos
 description: Este documento proporciona una introducción a los esquemas XDM (Experience Data Model) y a los componentes básicos, los principios y las prácticas recomendadas para componer esquemas que se utilizarán en Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -206,7 +206,7 @@ Si no está seguro de si es necesario incluir un campo en particular en un esque
 
 En Experience Platform, los campos XDM marcados como identidades se utilizan para unir información sobre clientes individuales procedentes de varias fuentes de datos. Aunque un esquema puede tener varios campos marcados como identidades, se debe definir una sola identidad principal para habilitar el uso del esquema en [!DNL Real-Time Customer Profile]. Consulte la sección sobre [campos de identidad](./composition.md#identity) en los conceptos básicos de la composición de esquemas para obtener información más detallada sobre el caso de uso de estos campos.
 
-Al diseñar los esquemas, cualquier clave principal de las tablas de bases de datos relacionales es probablemente candidata para identidades principales. Otros ejemplos de campos de identidad aplicables son las direcciones de correo electrónico de los clientes, los números de teléfono, los ID de cuenta y [ECID](../../identity-service/ecid.md).
+Al diseñar los esquemas, cualquier clave principal de las tablas de bases de datos relacionales es probablemente candidata para identidades principales. Otros ejemplos de campos de identidad aplicables son las direcciones de correo electrónico de los clientes, los números de teléfono, los ID de cuenta y [ECID](../../identity-service/features/ecid.md).
 
 ### grupos de campos de esquema de aplicación de Adobe {#adobe-application-schema-field-groups}
 

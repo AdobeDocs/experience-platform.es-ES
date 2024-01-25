@@ -3,7 +3,7 @@ title: Personalice experiencias en el sitio para visitantes desconocidos mediant
 description: Aprenda a utilizar el reconocimiento de visitantes asistido por socios para ofrecer experiencias personalizadas en el sitio a sus visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ Para implementar correctamente este caso de uso, debe utilizar varias áreas de 
    * [Etiquetas](/help/tags/home.md)
    * [Secuencias de datos](/help/datastreams/overview.md)
 * Administración de datos en Real-Time CDP
-   * [Identidades](/help/identity-service/namespaces.md)
+   * [Identidades](/help/identity-service/features/namespaces.md)
    * [Esquemas](/help/xdm/home.md)
    * [Etiquetas de uso de datos](/help/data-governance/labels/overview.md)
    * [Conjuntos de datos](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Ya está listo para integrarse con un motor de personalización para mostrar con
 
 Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso descrito en esta página:
 
-* Si decide utilizar ID de socios, tenga en cuenta que estos no se utilizan para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
+* Si decide utilizar ID de socios, tenga en cuenta que estos no se utilizan para crear su [gráfico de identidad](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 

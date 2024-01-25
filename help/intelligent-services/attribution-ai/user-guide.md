@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Guía de Attribution AI UI
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 1%
+source-wordcount: '2450'
+ht-degree: 0%
 
 ---
 
 # Guía de Attribution AI UI
 
-Attribution AI, como parte de Intelligent Services, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción del cliente individual en cada fase de los recorridos de los clientes.
+Attribution AI, como parte de Intelligent Services, es un servicio de atribución algorítmica de varios canales que calcula la influencia y el impacto incremental de las interacciones de los clientes con los resultados especificados. Con Attribution AI, los especialistas en marketing pueden medir y optimizar el gasto en marketing y publicidad al comprender el impacto de cada interacción individual con los clientes en cada fase de los recorridos de los clientes.
 
 Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de servicios inteligentes.
 
@@ -103,7 +103,7 @@ En caso de que haya más de una identidad disponible dentro de un área de nombr
 
 >[!NOTE]
 >
-> Si no existe ningún tipo de identidad (área de nombres) válido para un conjunto de datos, debe establecer una identidad principal y asignarla a un área de nombres de identidad mediante [editor de esquemas](../../xdm/schema/composition.md#identity). Para obtener más información sobre áreas de nombres e identidades, visite la [Áreas de nombres del servicio de identidad](../../identity-service/namespaces.md) documentación.
+> Si no existe ningún tipo de identidad (área de nombres) válido para un conjunto de datos, debe establecer una identidad principal y asignarla a un área de nombres de identidad mediante [editor de esquemas](../../xdm/schema/composition.md#identity). Para obtener más información sobre áreas de nombres e identidades, visite la [Áreas de nombres del servicio de identidad](../../identity-service/features/namespaces.md) documentación.
 
 ## Asignación de campos de campaña y canal de medios {#aai-mapping}
 

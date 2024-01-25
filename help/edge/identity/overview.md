@@ -1,17 +1,17 @@
 ---
 title: Datos de identidad en el SDK web
 description: Obtenga información sobre cómo recuperar y administrar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 0%
 
 ---
 
-
 # Datos de identidad en el SDK web
 
-El SDK web de Adobe Experience Platform utiliza [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) para realizar un seguimiento del comportamiento de los visitantes. Con los ECID, se puede garantizar que cada dispositivo tenga un identificador único que pueda persistir en varias sesiones y que vincule todas las visitas que se producen durante las sesiones web y entre ellas a un dispositivo específico.
+El SDK web de Adobe Experience Platform utiliza [Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md) para realizar un seguimiento del comportamiento de los visitantes. Con los ECID, se puede garantizar que cada dispositivo tenga un identificador único que pueda persistir en varias sesiones y que vincule todas las visitas que se producen durante las sesiones web y entre ellas a un dispositivo específico.
 
 Este documento proporciona información general sobre cómo administrar los ECID mediante el SDK web de Platform.
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe recomienda enviar áreas de nombres que representen a una persona, como `CRMID`, como identidad principal.
 
 
-Cada propiedad dentro de `identityMap` representa identidades que pertenecen a un [área de nombres de identidad](../../identity-service/namespaces.md). El nombre de la propiedad debe ser el símbolo del área de nombres de identidad, que se puede encontrar en la interfaz de usuario de Adobe Experience Platform, en &quot;[!UICONTROL Identidades]&quot;. El valor de la propiedad debe ser una matriz de identidades pertenecientes a ese área de nombres de identidad.
+Cada propiedad dentro de `identityMap` representa identidades que pertenecen a un [área de nombres de identidad](../../identity-service/features/namespaces.md). El nombre de la propiedad debe ser el símbolo del área de nombres de identidad, que se puede encontrar en la interfaz de usuario de Adobe Experience Platform, en &quot;[!UICONTROL Identidades]&quot;. El valor de la propiedad debe ser una matriz de identidades pertenecientes a ese área de nombres de identidad.
 
 >[!IMPORTANT]
 >

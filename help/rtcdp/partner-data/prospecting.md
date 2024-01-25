@@ -3,9 +3,9 @@ title: Interactúe y adquiera nuevos clientes sin depender de cookies de tercero
 description: Descubra cómo captar y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Lea las secciones siguientes, que incluyen vínculos a documentación adicional,
 
 A medida que complete los pasos para implementar el caso de uso, utilizará las siguientes funciones y elementos de la interfaz de usuario de Real-Time CDP (indicados en el orden en que los usará). Asegúrese de que dispone de los permisos de control de acceso basados en atributos necesarios para todas estas áreas o pídale al administrador del sistema que le otorgue los permisos necesarios.
 
-* [Identidades](/help/identity-service/namespaces.md)
+* [Identidades](/help/identity-service/features/namespaces.md)
 * [Esquemas](/help/xdm/home.md)
 * [Etiquetas de uso de datos](/help/data-governance/labels/overview.md)
 * [Conjuntos de datos](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Comience creando un nuevo tipo de identidad para los perfiles que recibirá del 
 
 ![Cree una nueva área de nombres de identidad de ID de socio.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/namespaces.md).
+* Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/features/namespaces.md).
 * Lea acerca de [cómo definir campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario de Experience Platform.
 
 #### Cree un nuevo esquema con la clase **[!UICONTROL Perfil de cliente potencial individual de XDM]**

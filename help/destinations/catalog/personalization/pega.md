@@ -2,7 +2,7 @@
 title: Conexión de Pega Customer Decision Hub
 description: Utilice el destino del centro de decisiones del cliente de Pega en Adobe Experience Platform para enviar atributos de perfil y datos de pertenencia a audiencias al centro de decisiones del cliente de Pega para la toma de decisiones de la mejor acción siguiente.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 2%
@@ -43,7 +43,7 @@ Antes de utilizar este destino para exportar datos desde Adobe Experience Platfo
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] admite la activación de los ID de usuario personalizados que se describen en la tabla siguiente. Para obtener más información, consulte [identidades](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] admite la activación de los ID de usuario personalizados que se describen en la tabla siguiente. Para obtener más información, consulte [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción |
 |---|---|

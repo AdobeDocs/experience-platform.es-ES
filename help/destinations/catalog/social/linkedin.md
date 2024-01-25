@@ -3,7 +3,7 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL LinkedIn Matched Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

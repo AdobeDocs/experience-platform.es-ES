@@ -3,12 +3,12 @@ title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -134,5 +134,5 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 
 * [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
 * [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md)
-* [Lógica de vinculación de identidad](./identity-linking-logic.md)
-* [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
+* [Lógica de vinculación de identidad](../features/identity-linking-logic.md)
+* [Servicio de identidad y perfil del cliente en tiempo real](../identity-and-profile.md)

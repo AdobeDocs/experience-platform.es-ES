@@ -2,10 +2,10 @@
 title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 46%
+source-wordcount: '1291'
+ht-degree: 43%
 
 ---
 
@@ -34,34 +34,34 @@ Este documento cubre los registros de auditoría en Platform, incluido cómo ver
 
 ## Tipos de eventos capturados por los registros de auditoría {#category}
 
-La siguiente tabla indica qué acciones sobre qué recursos de se registran en los registros de auditoría:
+La siguiente tabla indica qué acciones sobre qué recursos se registran en los registros de auditoría:
 
 | Recurso | Acciones |
 | --- | --- |
 | [Política de control de acceso (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Cuenta (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [instancia de Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
+| [instancia de Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Disable</li></ul> |
 | [Registros de auditoría](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Clase](../../../xdm/schema/composition.md#class) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | Atributo calculado | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li></ul> |
+| [Instancia de Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Disable</li></ul> |
 | [Conjunto de datos](../../../catalog/datasets/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para [Perfil del cliente en tiempo real](../../../profile/home.md)</li><li>Deshabilitar para el perfil</li><li>Adición de datos</li><li>Eliminar lote</li></ul> |
-| [Datastream](../../../datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>[Editar asignación](../../../datastreams/data-prep.md)</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Disable</li><li>[Editar asignación](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipos de datos](../../../xdm/schema/composition.md#data-type) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
-| [Grupo de campo](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Gráfico de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ver</li></ul> |
-| [Espacio de nombre de identidad](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
+| [Destino](../../../destinations/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Disable</li><li>Activar conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminación de perfil</li></ul> |
+| [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
+| [Gráfico de identidad](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Ver</li></ul> |
+| [Área de nombres de identidad](../../../identity-service/features/namespaces.md) | <ul><li>Crear</li><li>Actualización</li></ul> |
 | [Política de combinación](../../../profile/merge-policies/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Perfil del producto](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
 | [Consulta](../../../query-service/ui/overview.md) | <ul><li>Ejecutar</li></ul> |
 | [Plantilla de consulta](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Rol (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Adición del usuario</li><li>Quitar usuario</li></ul> |
+| [Rol (control de acceso basado en atributos)](../../../access-control/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Agregar usuario</li><li>Quitar usuario</li></ul> |
 | [Zona protegida](../../../sandboxes/home.md) | <ul><li>Crear</li><li>Actualización</li><li>Restablecer</li><li>Eliminar</li></ul> |
 | [Consulta programada](../../../query-service/ui/overview.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li></ul> |
-| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para Perfil</li></ul> |
+| [Esquema](../../../xdm/schema/composition.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar para el perfil</li></ul> |
 | [Segmento](../../../segmentation/home.md) | <ul><li>Crear</li><li>Eliminar</li><li>Activar segmento</li><li>Eliminar segmento</li></ul> |
-| [Flujo de datos de origen](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Activar</li><li>Disable</li><li>Activación de conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminar perfil</li></ul> |
+| [Flujo de datos de origen](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crear</li><li>Actualización</li><li>Eliminar</li><li>Habilitar</li><li>Disable</li><li>Activación de conjunto de datos</li><li>Eliminar conjunto de datos</li><li>Activar perfil</li><li>Eliminar perfil</li></ul> |
 | [Orden de trabajo](../../../hygiene/home.md) | <ul><li>Crear</li></ul> |
 
 ## Acceso a los registros de auditoría
@@ -136,7 +136,7 @@ En el cuadro de diálogo que aparece, seleccione el formato preferido (o bien **
 
 ## Administración de registros de auditoría en la API
 
-Todas las acciones que puede realizar en la interfaz de usuario también se pueden realizar mediante llamadas a la API. Para obtener más información, consulte el [documento de la API de ](https://www.adobe.io/experience-platform-apis/references/audit-query/).
+Todas las acciones que puede realizar en la interfaz de usuario también se pueden realizar mediante llamadas a la API. Consulte la [Documento de referencia de API](https://www.adobe.io/experience-platform-apis/references/audit-query/) para obtener más información.
 
 ## Administración de registros de auditoría para Adobe Admin Console
 

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Resumen de coincidencia de segmentos
 description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
 
-# Información general del [!DNL Segment Match]
+# Información general de [!DNL Segment Match]
 
 La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] utiliza estándares de privacidad de Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID.
 
@@ -46,8 +46,8 @@ La lista de áreas de nombres admitidas es la siguiente:
 | --------- | ----------- |
 | Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Platform ofrece dos métodos para admitir el hashing en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y mediante [preparación de datos](../../../data-prep/functions.md#hashing). |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash con los formatos SHA256 y E.164. |
-| ECID | Un área de nombres que representa un valor de ID de Experience Cloud (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [Información general de ECID](../../../identity-service/ecid.md) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/es-es/HT202074) para obtener más información. |
+| ECID | Un área de nombres que representa un valor de ID de Experience Cloud (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [Información general de ECID](../../../identity-service/features/ecid.md) para obtener más información. |
+| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
 | ID de anuncio de Google | Un área de nombres que representa un ID de publicidad de Google. Consulte el siguiente documento sobre [ID de publicidad de Google](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
 
 ### Configuración del consentimiento
@@ -203,4 +203,4 @@ Al leer este documento, ha adquirido una comprensión de [!DNL Segment Match], s
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [Información general del [!DNL Real-Time Customer Profile]](../../../profile/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../profile/home.md)

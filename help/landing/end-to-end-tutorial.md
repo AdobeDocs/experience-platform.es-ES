@@ -3,22 +3,22 @@ keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;
 title: Flujo de trabajo de ejemplo completo de Adobe Experience Platform
 description: Conozca el flujo de trabajo completo básico para Adobe Experience Platform de alto nivel.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 3%
+source-wordcount: '1832'
+ht-degree: 1%
 
 ---
 
 # Flujo de trabajo de ejemplo completo de Adobe Experience Platform
 
-Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 
 Platform, que se basa en las API de RESTful, expone toda la funcionalidad del sistema a los desarrolladores, lo que permite integrar fácilmente las soluciones empresariales con herramientas familiares. Platform le permite obtener una vista integral de sus clientes mediante la ingesta de datos de clientes, la segmentación de datos a las audiencias a las que desea dirigirse y la activación de estas audiencias en un destino externo. El siguiente tutorial muestra un flujo de trabajo completo con todos los pasos desde la ingesta a través de fuentes hasta la activación de audiencia a través de destinos.
 
 ![Flujo de trabajo de extremo a extremo del Experience Platform](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
-## Primeros pasos
+## Introducción
 
 Este flujo de trabajo completo utiliza varios servicios de Adobe Experience Platform. A continuación se muestra una lista de los servicios que se utilizan en este flujo de trabajo con vínculos a sus descripciones generales:
 
@@ -34,7 +34,7 @@ Este flujo de trabajo completo utiliza varios servicios de Adobe Experience Plat
 
 Antes de introducir datos en Platform, primero debe crear un esquema XDM para describir la estructura de esos datos. Cuando introduzca los datos en el siguiente paso, asignará los datos entrantes a este esquema. Para aprender a crear un esquema XDM de ejemplo, lea el tutorial sobre [creación de un esquema con el Editor de esquemas](../xdm/tutorials/create-schema-ui.md).
 
-El tutorial anterior muestra cómo establecer campos de identidad para los esquemas. Un campo de identidad representa un campo que se puede utilizar para identificar a una persona individual relacionada con un registro o un evento de serie temporal. Los campos de identidad son un componente crucial en la forma en que se construyen los gráficos de identidad de los clientes en Platform, lo que en última instancia afecta a la forma en que el Perfil del cliente en tiempo real combina fragmentos de datos dispares para obtener una vista completa del cliente. Para obtener más información sobre cómo ver gráficos de identidad en Platform, consulte el tutorial sobre [cómo utilizar el visualizador de gráficos de identidad](../identity-service/ui/identity-graph-viewer.md).
+El tutorial anterior muestra cómo establecer campos de identidad para los esquemas. Un campo de identidad representa un campo que se puede utilizar para identificar a una persona individual relacionada con un registro o un evento de serie temporal. Los campos de identidad son un componente crucial en la forma en que se construyen los gráficos de identidad de los clientes en Platform, lo que en última instancia afecta a la forma en que el Perfil del cliente en tiempo real combina fragmentos de datos dispares para obtener una vista completa del cliente. Para obtener más información sobre cómo ver gráficos de identidad en Platform, consulte el tutorial sobre [cómo utilizar el visualizador de gráficos de identidad](../identity-service/features/identity-graph-viewer.md).
 
 Debe habilitar el esquema para utilizarlo en el perfil del cliente en tiempo real, de modo que los perfiles de los clientes se puedan crear a partir de los datos basados en el esquema. Consulte la sección sobre [habilitar un esquema para el perfil](../xdm/ui/resources/schemas.md#profile) en la guía de la interfaz de usuario de esquemas para obtener más información.
 

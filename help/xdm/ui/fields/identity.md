@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definición de campos de identidad en la IU
 description: Obtenga información sobre cómo definir un campo de identidad en la interfaz de usuario del Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -20,7 +20,7 @@ En el Modelo de datos de experiencia (XDM), un campo de identidad representa un 
 Los campos de identidad son un componente crucial en la forma en que se construyen los gráficos de identidad de los clientes en Platform, lo que en última instancia afecta a la forma en que el Perfil del cliente en tiempo real combina fragmentos de datos dispares para obtener una vista completa del cliente. Antes de definir los campos de identidad en los esquemas, consulte la siguiente documentación para obtener más información sobre los servicios y conceptos clave relacionados con los campos de identidad:
 
 * [Servicio de identidad de Adobe Experience Platform](../../../identity-service/home.md): vincula identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
-   * [Áreas de nombres de identidad](../../../identity-service/namespaces.md): las áreas de nombres de identidad definen los diferentes tipos de información de identidad que pueden relacionarse con una sola persona y son un componente requerido para cada campo de identidad.
+   * [Áreas de nombres de identidad](../../../identity-service/features/namespaces.md): las áreas de nombres de identidad definen los diferentes tipos de información de identidad que pueden relacionarse con una sola persona y son un componente requerido para cada campo de identidad.
 * [Perfil del cliente en tiempo real](../../../profile/home.md): aprovecha los gráficos de identidad de los clientes para proporcionar un perfil de consumidor unificado en función de los datos agregados de varias fuentes, actualizados en tiempo casi real.
 
 ## Definición de un campo de identidad {#define-a-identity-field}
@@ -56,6 +56,6 @@ Si ha definido una identidad principal para el esquema, ahora puede continuar co
 
 ## Pasos siguientes
 
-En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía en la [visor de gráficos de identidad](../../../identity-service/ui/identity-graph-viewer.md) para aprender a explorar el gráfico privado de su organización en la interfaz de usuario.
+En esta guía se explica cómo definir un campo de identidad en la interfaz de usuario. A medida que los datos se incorporan mediante este esquema, los gráficos de identidad de los clientes se actualizarán para reflejar los campos de identidad del esquema. Consulte la guía en la [visor de gráficos de identidad](../../../identity-service/features/identity-graph-viewer.md) para aprender a explorar el gráfico privado de su organización en la interfaz de usuario.
 
 Consulte la información general sobre [definición de campos en la IU](./overview.md#special) para aprender a definir otros tipos de campos XDM en la variable [!DNL Schema Editor].

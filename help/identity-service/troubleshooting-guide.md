@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas del servicio de identidad
 description: Este documento proporciona respuestas a las preguntas frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Para obtener instrucciones paso a paso sobre cómo definir un área de nombres a
 
 ## ¿Cuáles son las áreas de nombres de identidad estándar proporcionadas por Experience Platform? {#standard-namespaces}
 
-Las áreas de nombres de identidad estándar son áreas de nombres disponibles para todas las organizaciones. Consulte la [Información general sobre áreas de nombres de identidad](./namespaces.md) para obtener una lista completa de las áreas de nombres estándar disponibles.
+Las áreas de nombres de identidad estándar son áreas de nombres disponibles para todas las organizaciones. Consulte la [Información general sobre áreas de nombres de identidad](./features/namespaces.md) para obtener una lista completa de las áreas de nombres estándar disponibles.
 
 ## ¿Dónde puedo encontrar la lista de áreas de nombres de identidad disponibles para mi organización?
 

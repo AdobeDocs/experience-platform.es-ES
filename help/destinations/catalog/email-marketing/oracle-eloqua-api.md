@@ -3,7 +3,7 @@ title: (API) Conexión de Oracle Eloqua
 description: El Oracle (API) Eloqua permite exportar los datos de la cuenta y activarlos dentro de Oracle Eloqua para satisfacer sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 4%
@@ -65,7 +65,7 @@ Consulte la [Iniciando sesión en [!DNL Oracle Eloqua]](https://docs.oracle.com/
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Oracle Eloqua] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Oracle Eloqua] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Obligatorio |
 |---|---|---|

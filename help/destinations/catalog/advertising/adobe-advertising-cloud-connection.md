@@ -2,7 +2,7 @@
 title: Conexión de Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP es un destino integrado para Adobe Real-time Customer Data Platform que le permite compartir audiencias de origen autenticadas con anunciantes y usuarios aprobados para la activación de campañas.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 2%
@@ -41,7 +41,7 @@ DSP Una agencia de medios con una cuenta de está ejecutando una campaña de ret
 
 ## Identidades admitidas {#supported-identities}
 
-El destino de Adobe Advertising Cloud DSP admite la activación de las identidades que se describen en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+El destino de Adobe Advertising Cloud DSP admite la activación de las identidades que se describen en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

@@ -3,7 +3,7 @@ keywords: Google Ad Manager;Google Ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Conexión de Google Ad Manager
 description: Google Ad Manager, anteriormente conocido como DoubleClick for Publishers o DoubleClick AdX, es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -27,7 +27,7 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Ad Manager]
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Google Ad Manager] admite la activación de audiencias en función de las identidades mostradas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Google Ad Manager] admite la activación de audiencias en función de las identidades mostradas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad | Descripción | Consideraciones |
 |---|---|---|

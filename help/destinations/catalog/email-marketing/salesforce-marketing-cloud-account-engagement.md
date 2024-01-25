@@ -3,7 +3,7 @@ title: Compromiso de cuenta de Marketing Cloud de Salesforce
 description: Aprenda a utilizar el destino Compromiso de cuenta de Marketing Cloud de Salesforce (anteriormente conocido como Pardot) para exportar los datos de la cuenta y activarlos en Compromiso de cuenta de Marketing Cloud de Salesforce para sus necesidades comerciales.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -72,7 +72,7 @@ Consulte la [!DNL Marketing Cloud Account Engagement] [límites de velocidad](ht
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

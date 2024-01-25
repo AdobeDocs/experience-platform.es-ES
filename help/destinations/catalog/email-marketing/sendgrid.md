@@ -3,7 +3,7 @@ keywords: correo electrónico;Correo electrónico;correo electrónico;destinos d
 title: Conexión de SendGrid
 description: El destino SendGrid le permite exportar los datos de origen y activarlos dentro de SendGrid para sus necesidades comerciales.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://e
 
 ## Identidades admitidas {#supported-identities}
 
-SendGrid admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+SendGrid admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

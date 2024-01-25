@@ -3,7 +3,7 @@ title: Conexión HubSpot
 description: El destino de HubSpot le permite administrar los registros de contacto en su cuenta de HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1543'
 ht-degree: 2%
@@ -64,7 +64,7 @@ Si no tiene una aplicación privada, siga la documentación para [Creación de u
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL HubSpot] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL HubSpot] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Ejemplo | Descripción | Consideraciones |
 |---|---|---|---|

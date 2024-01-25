@@ -3,7 +3,7 @@ keywords: mobile; braze; mensajería;
 title: Conexión de Braze
 description: Braze es una plataforma completa de participación del cliente que potencia experiencias relevantes y memorables entre los clientes y las marcas que aman.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| external_id | Personalizado [!DNL Braze] identificador que admite la asignación de cualquier identidad. | Puede enviar cualquier [identidad](../../../identity-service/namespaces.md) a la [!DNL Braze] destino, siempre y cuando lo asigne a la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personalizado [!DNL Braze] identificador que admite la asignación de cualquier identidad. | Puede enviar cualquier [identidad](../../../identity-service/features/namespaces.md) a la [!DNL Braze] destino, siempre y cuando lo asigne a la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

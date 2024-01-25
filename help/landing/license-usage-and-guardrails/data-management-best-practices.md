@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2264'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ El almacén de perfiles está compuesto por los siguientes componentes:
 | Fragmentos de perfil | Cada perfil del cliente está compuesto por varios **fragmentos de perfil** que se han combinado para formar una sola vista de ese cliente. Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios canales **fragmentos de perfil** relacionado con ese único cliente que aparece en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se vinculan mediante el gráfico de identidad para crear un único perfil para ese cliente. **Fragmentos de perfil** constan de un área de nombres de identidad como identificador, con datos de registro o datos de series temporales asociados. |
 | Registro de datos (Atributos) | Un perfil es una representación de un sujeto, una organización o un individuo, compuesto por muchos **Atributos** (también conocido como **registrar datos**). Por ejemplo, el perfil de un producto puede incluir un SKU y una descripción, mientras que el perfil de una persona contiene información como nombre, apellidos y dirección de correo electrónico. **Registrar datos** suele ser de volumen bajo/moderado, pero es útil durante largos períodos de tiempo. |
 | Datos de series temporales (comportamiento) | **Datos de series temporales** proporciona información sobre el comportamiento de un usuario. Representado por la clase de esquema estándar Experience Data Model (XDM) [!DNL ExperienceEvent]Sin embargo, los datos de series temporales pueden describir eventos como elementos que se agregan a un carro de compras, vínculos en los que se hace clic y vídeos vistos. El valor del comportamiento puede disminuir con el tiempo. |
-| Área de nombres de identidad (identidades) | A medida que los datos del cliente se unen, se combinan en un único perfil mediante el uso de **áreas de nombres de identidad** y la capacidad de unir estas identidades a medida que se conoce más información sobre el usuario. Consulte la [información general sobre áreas de nombres de identidad](../../identity-service/namespaces.md) para obtener más información. |
+| Área de nombres de identidad (identidades) | A medida que los datos del cliente se unen, se combinan en un único perfil mediante el uso de **áreas de nombres de identidad** y la capacidad de unir estas identidades a medida que se conoce más información sobre el usuario. Consulte la [información general sobre áreas de nombres de identidad](../../identity-service/features/namespaces.md) para obtener más información. |
 
 {style="table-layout:auto"}
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -185,8 +185,8 @@ Por último, el proceso de eliminación genera dos gráficos más pequeños.
 
 Consulte la siguiente documentación para obtener más información sobre [!DNL Identity Service]:
 
-* [Información general del [!DNL Identity Service]](home.md)
-* [Visualizador de gráficos de identidad](ui/identity-graph-viewer.md)
+* [Información general de [!DNL Identity Service]](home.md)
+* [Visualizador de gráficos de identidad](features/identity-graph-viewer.md)
 
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, sobre la información de latencia de extremo a extremo y la información de licencias de los documentos de descripción del producto de Real-Time CDP:
 

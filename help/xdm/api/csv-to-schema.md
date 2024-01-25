@@ -2,10 +2,10 @@
 title: Punto final de API de conversión de esquema a plantilla CSV
 description: El extremo /rpc/csv2schema de la API de Registro de esquemas le permite utilizar plantillas CSV para crear automáticamente esquemas XDM (Experience Data Model).
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 6%
+source-wordcount: '849'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 El `/rpc/csv2schema` punto final en la [!DNL Schema Registry] API permite crear automáticamente un esquema del Modelo de datos de experiencia (XDM) utilizando un archivo CSV como plantilla. Con este punto de conexión, puede crear plantillas para importar campos de esquema por lotes y reducir el trabajo manual de la API o la IU.
 
-## Primeros pasos
+## Introducción
 
 El `/rpc/csv2schema` El punto final forma parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Adobe Experience Platform.
 
@@ -36,7 +36,7 @@ Para utilizar este punto de conexión, primero debe crear un archivo CSV con los
 | 9 | `isRequired` | Opcional | Indica si el campo es necesario para la ingesta de datos. |
 | 10 | `isArray` | Opcional | Indica si el campo es una matriz de los indicados `dataType`. |
 | 11 | `isIdentity` | Opcional | Indica si el campo es de identidad. |
-| 12 | `identityNamespace` | Obligatorio si `isIdentity` is true | El [área de nombres de identidad](../../identity-service/namespaces.md) para el campo de identidad. |
+| 12 | `identityNamespace` | Obligatorio si `isIdentity` is true | El [área de nombres de identidad](../../identity-service/features/namespaces.md) para el campo de identidad. |
 | 13 | `isPrimaryIdentity` | Opcional | Indica si el campo es la identidad principal del esquema. |
 | 14 | `minimum` | Opcional | (Solo para campos numéricos) El valor mínimo del campo. |
 | 15 | `maximum` | Opcional | (Solo para campos numéricos) El valor máximo del campo. |

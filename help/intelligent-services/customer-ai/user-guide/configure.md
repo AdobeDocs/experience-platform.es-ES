@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configuración de una instancia de Customer AI
 description: Los servicios de inteligencia artificial aplicada al cliente proporcionan inteligencia artificial aplicada al cliente como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. En las secciones siguientes se proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ En caso de que haya más de una identidad disponible dentro de un área de nombr
 
 >[!NOTE]
 >
-> Si no existe ningún tipo de identidad (área de nombres) válido para un conjunto de datos, debe establecer una identidad principal y asignarla a un área de nombres de identidad mediante [editor de esquemas](../../../xdm/schema/composition.md#identity). Para obtener más información sobre áreas de nombres e identidades, visite la [Áreas de nombres del servicio de identidad](../../../identity-service/namespaces.md) documentación.
+> Si no existe ningún tipo de identidad (área de nombres) válido para un conjunto de datos, debe establecer una identidad principal y asignarla a un área de nombres de identidad mediante [editor de esquemas](../../../xdm/schema/composition.md#identity). Para obtener más información sobre áreas de nombres e identidades, visite la [Áreas de nombres del servicio de identidad](../../../identity-service/features/namespaces.md) documentación.
 
 ## Definir meta {#define-a-goal}
 

@@ -2,7 +2,7 @@
 title: Conexión de Medallia
 description: Active perfiles para encuestas de Medallia y recopilación de comentarios para comprender mejor las necesidades y expectativas de los clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Trabaje con su equipo de entrega de Medallia para obtener estos detalles.
 
 ## Identidades admitidas {#supported-identities}
 
-Medallia apoya la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+Medallia apoya la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

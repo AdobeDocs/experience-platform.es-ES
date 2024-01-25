@@ -2,7 +2,7 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 28%
@@ -34,7 +34,7 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 | Zonas protegidas | (N/D) | Según la variable [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
 | Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [Esquemas del modelo de datos de experiencia (XDM)](../xdm/home.md). |
 | Modelado de datos | Esquemas de vistas | Otorga acceso de solo lectura a los esquemas. |
-| Administración de identidades | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/namespaces.md). |
+| Administración de identidades | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/features/namespaces.md). |
 | Administración de identidades | Ver espacios de nombres de identidad | Otorga acceso de solo lectura a las áreas de nombres de identidad. |
 | Recopilación de datos | Administrar flujos de datos | Concede la capacidad de ver, crear y editar [flujos de datos](../datastreams/overview.md). |
 | Recopilación de datos | Ver flujos de datos | Otorga acceso de solo lectura a las secuencias de datos. |

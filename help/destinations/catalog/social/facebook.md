@@ -3,7 +3,7 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de audiencias en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 7%
@@ -38,7 +38,7 @@ A continuación, puede utilizar sus datos sin conexión, incluidos los ID de per
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Facebook Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Facebook Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

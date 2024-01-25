@@ -3,7 +3,7 @@ title: Públicos de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -106,11 +106,11 @@ Los metadatos, como los nombres de audiencias, están disponibles en Audience Ma
 
 ## Identidades admitidas {#supported-identities}
 
-Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los destinos de se asignan a las identidades descritas en la siguiente tabla. Más información sobre [identidades](/help/identity-service/namespaces.md).
+Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los destinos de se asignan a las identidades descritas en la siguiente tabla. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/ecid.md) para obtener más información. |
+| ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
 | GAID | ID de publicidad de Google | Los perfiles introducidos en Real-Time CDP con una identidad principal de Google Advertising ID (GAID) se pueden exportar a este destino. |
 | IDFA | Apple ID para anunciantes | Los perfiles introducidos en Real-Time CDP con una identidad principal de Apple ID para anunciantes (IDFA) se pueden exportar a este destino. |
 | email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Los perfiles introducidos en Real-Time CDP con una identidad principal de dirección de correo electrónico con hash se pueden exportar a este destino. |

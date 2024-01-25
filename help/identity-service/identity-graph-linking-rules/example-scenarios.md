@@ -3,11 +3,11 @@ title: Ejemplo De Escenarios Para Configurar La Identidad
 description: Obtenga información sobre escenarios de ejemplo para configurar Ajustes de identidad.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -70,5 +70,5 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 
 * [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
-* [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
-* [Lógica de vinculación de identidad](./identity-linking-logic.md)
+* [Servicio de identidad y perfil del cliente en tiempo real](../identity-and-profile.md)
+* [Lógica de vinculación de identidad](../features/identity-linking-logic.md)

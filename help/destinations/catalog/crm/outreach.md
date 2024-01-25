@@ -3,7 +3,7 @@ keywords: crm;CRM;destinos de crm;Divulgación;Destino de crm de divulgación
 title: Conexión de divulgación
 description: El destino de Divulgación le permite exportar los datos de su cuenta y activarlos dentro de Divulgación para sus necesidades comerciales.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -71,7 +71,7 @@ Consulte la [[!DNL Outreach] documentación](https://api.outreach.io/api/v2/docs
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Outreach] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL Outreach] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

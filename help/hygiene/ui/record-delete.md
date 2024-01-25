@@ -2,9 +2,9 @@
 title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ La eliminación de registros requiere una comprensión práctica del funcionamie
 Consulte la siguiente documentación para obtener más información sobre las identidades en Platform:
 
 * [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md): vincula identidades entre dispositivos y sistemas, vinculando conjuntos de datos en función de los campos de identidad definidos por los esquemas XDM a los que se ajustan.
-* [Áreas de nombres de identidad](../../identity-service/namespaces.md): las áreas de nombres de identidad definen los diferentes tipos of información de identidad que puede estar relacionada con una sola persona y que es un componente requerido para cada campo de identidad.
+* [Áreas de nombres de identidad](../../identity-service/features/namespaces.md): las áreas de nombres de identidad definen los diferentes tipos of información de identidad que puede estar relacionada con una sola persona y que es un componente requerido para cada campo de identidad.
 * [Perfil del cliente en tiempo real](../../profile/home.md): Utiliza gráficos de identidad para proporcionar perfiles de consumidor unificados basados en datos agregados de varias fuentes, actualizados en tiempo casi real.
 * [Modelo de datos de experiencia (XDM)](../../xdm/home.md): Proporciona definiciones y estructuras estándar para datos de Platform mediante el uso de esquemas. Todos los conjuntos de datos de Platform se ajustan a un esquema XDM específico y el esquema define qué campos son identidades.
 * [Campos de identidad](../../xdm/ui/fields/identity.md): Descubra cómo se define un campo de identidad en un esquema XDM.

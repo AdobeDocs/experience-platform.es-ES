@@ -2,9 +2,9 @@
 title: Comportamiento de exportación de perfil
 description: Descubra cómo varía el comportamiento de exportación de perfiles entre los distintos patrones de integración admitidos en los destinos de Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Con respecto a los datos que se exportan para un perfil determinado, es importan
 
 | Qué determina una exportación de destino | Qué se incluye en la exportación de destino |
 |---------|----------|
-| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` hasta `realized` o de `realized` hasta `exiting`) o se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Un cambio en el mapa de identidad se define como una identidad que se añade o elimina para [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md) del perfil, para áreas de nombres de identidad asignadas para la exportación.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, para atributos asignados al destino.</li></ul> | <ul><li>Las audiencias asignadas al destino y que han cambiado se incluirán en la `segmentMembership` objeto. En algunos casos, se pueden exportar utilizando varias llamadas. Además, en algunos casos, es posible que algunas audiencias que no han cambiado también se incluyan en la llamada. En cualquier caso, solo se exportarán las audiencias asignadas.</li><li>Todas las identidades de las áreas de nombres asignadas al destino en la variable `identityMap` Los objetos de también se incluyen</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
+| <ul><li>Los atributos y audiencias asignados sirven de referencia para una exportación de destino. Esto significa que si alguna audiencia asignada cambia de estado (de `null` hasta `realized` o de `realized` hasta `exiting`) o se actualiza cualquier atributo asignado, se inicia una exportación de destino.</li><li>Un cambio en el mapa de identidad se define como una identidad que se añade o elimina para [gráfico de identidad](/help/identity-service/features/identity-graph-viewer.md) del perfil, para áreas de nombres de identidad asignadas para la exportación.</li><li>Un cambio para un atributo se define como cualquier actualización del atributo, para atributos asignados al destino.</li></ul> | <ul><li>Las audiencias asignadas al destino y que han cambiado se incluirán en la `segmentMembership` objeto. En algunos casos, se pueden exportar utilizando varias llamadas. Además, en algunos casos, es posible que algunas audiencias que no han cambiado también se incluyan en la llamada. En cualquier caso, solo se exportarán las audiencias asignadas.</li><li>Todas las identidades de las áreas de nombres asignadas al destino en la variable `identityMap` Los objetos de también se incluyen</li><li>En la exportación de destino solo se incluyen los atributos asignados.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ En cualquiera de las situaciones de exportación anteriores, los archivos export
 
 No todas las actualizaciones de un perfil cumplen los requisitos para que un perfil se incluya en las exportaciones de archivos incrementales. Por ejemplo, si un atributo se añadió o se eliminó de un perfil, eso no incluye el perfil en la exportación. Solo perfiles para los que la variable `segmentMembership` el atributo ha cambiado se incluirá en los archivos exportados. En otras palabras, solo se incluye en las exportaciones de archivos incrementales si el perfil pasa a formar parte de la audiencia o se elimina de la audiencia.
 
-Del mismo modo, si se agrega una nueva identidad (nueva dirección de correo electrónico, número de teléfono, ECID, etc.) a un perfil en la variable [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md), que no representa un motivo para incluir el perfil de en una nueva exportación de archivo incremental.
+Del mismo modo, si se agrega una nueva identidad (nueva dirección de correo electrónico, número de teléfono, ECID, etc.) a un perfil en la variable [gráfico de identidad](/help/identity-service/features/identity-graph-viewer.md), que no representa un motivo para incluir el perfil de en una nueva exportación de archivo incremental.
 
 Si se añade una nueva audiencia a una asignación de destino, eso no afecta a las cualificaciones y exportaciones de otro segmento. Las programaciones de exportación se configuran individualmente por audiencia y los archivos se exportan por separado para cada segmento, incluso si las audiencias se han agregado al mismo flujo de datos de destino.
 

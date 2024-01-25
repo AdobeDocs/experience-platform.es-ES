@@ -2,9 +2,9 @@
 title: Crear una conexión de origen y un flujo de datos de Marketo Engage para los datos de actividad personalizados en la IU de
 description: Este tutorial proporciona los pasos para crear una conexión de origen de Marketo Engage y un flujo de datos en la IU para llevar los datos de las actividades personalizadas a Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
 * [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Crear y editar esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md): Aprenda a crear y editar esquemas en la interfaz de usuario.
-* [Áreas de nombres de identidad](../../../../../identity-service/namespaces.md): las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
+* [Áreas de nombres de identidad](../../../../../identity-service/features/namespaces.md): las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 * [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
@@ -87,7 +87,7 @@ El último paso para preparar el esquema es añadir campos individuales dentro d
 
 ![Un grupo de subcampos agregados a un campo dentro del esquema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 Una vez completada la configuración del esquema, ahora puede continuar con la creación de un flujo de datos para los datos de actividad personalizados.
 
@@ -105,7 +105,7 @@ Seleccionar **[!UICONTROL Actividades]** de la lista de [!DNL Marketo] conjuntos
 
 ![El paso Seleccionar datos del flujo de trabajo de fuentes con el conjunto de datos de actividades seleccionado.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
-### Detalles de flujo de datos
+### Detalles del flujo de datos
 
 Siguiente, [proporcione información para el flujo de datos](./marketo.md#provide-dataflow-details), incluidos nombres y descripciones para el conjunto de datos y flujo de datos, el esquema que utilizará y las configuraciones para [!DNL Profile] ingesta, diagnósticos de error e ingesta parcial.
 
@@ -135,7 +135,7 @@ Repita los pasos para agregar el resto de los campos personalizados de asignaci�
 
 ![Todas las asignaciones para los datos de origen y destino.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
-### Consulte
+### Revisión
 
 El *[!UICONTROL Revisar]* Este paso aparece, lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 

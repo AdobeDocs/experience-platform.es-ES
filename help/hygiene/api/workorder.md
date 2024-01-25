@@ -2,10 +2,10 @@
 title: Punto final de API de orden de trabajo
 description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 3%
+source-wordcount: '1281'
+ht-degree: 2%
 
 ---
 
@@ -87,9 +87,9 @@ curl -X POST \
 | `datasetId` | Si está eliminando de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si está eliminando de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si especifica un único conjunto de datos, el esquema del modelo de datos de experiencia (XDM) asociado al conjunto de datos debe tener definida una identidad principal. Si el conjunto de datos no tiene una identidad principal, debe tener un mapa de identidad para que lo modifique una solicitud del ciclo vital de datos.<br>Si existe un mapa de identidad, estará presente como un campo de nivel superior denominado `identityMap`.<br>Tenga en cuenta que una fila del conjunto de datos puede tener muchas identidades en su mapa de identidad, pero solo una se puede marcar como principal. `"primary": true` se debe incluir para forzar la `id` para que coincida con una identidad principal. |
 | `displayName` | El nombre para mostrar de la solicitud de eliminación de registro. |
 | `description` | Descripción de la solicitud de eliminación de registro. |
-| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/features/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:auto"}
+{style="table-layout:automático"}
 
 **Respuesta**
 

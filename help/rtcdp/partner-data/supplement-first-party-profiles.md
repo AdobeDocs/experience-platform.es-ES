@@ -3,9 +3,9 @@ title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Vea el tutorial de vídeo a continuación para ver un tutorial sobre cómo compl
 1. Como **cliente**, adquiere licencias de atributos del **socio de datos**.
 2. Como **cliente**, puede ampliar los datos de perfil y el modelo de gobernanza para dar cabida a atributos proporcionados por **socios**.
 3. Como **cliente**, incorpora los públicos que desea enriquecer con el socio de datos. Por lo general, estos públicos están marcados por identificadores de entrada, como elementos de información de identificación personal (PII), como correo electrónico, nombre, dirección u otros.
-4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, un [ID de socio](/help/identity-service/namespaces.md) se puede incluir e ingerir en el área de nombres de ID con ámbito de socio.
+4. El **socio** anexa atributos con licencia para los perfiles con los que pueden coincidir. Opcionalmente, un [ID de socio](/help/identity-service/features/namespaces.md) se puede incluir e ingerir en el área de nombres de ID con ámbito de socio.
 5. Como **cliente**, carga atributos del socio de datos en perfiles de clientes en Real-Time CDP.
 
 ## Cómo lograr el caso de uso: Instrucciones paso a paso {#step-by-step-instructions}
@@ -99,9 +99,9 @@ También en este paso, piense en cómo cambia el modelo de gobernanza de datos a
 
 >[!TIP]
 >
->Si decide complementar los perfiles del cliente con un identificador basado en personas del proveedor de datos, puede crear un nuevo tipo de identidad de **[[!UICONTROL ID de socio]](/help/identity-service/namespaces.md)**.
+>Si decide complementar los perfiles del cliente con un identificador basado en personas del proveedor de datos, puede crear un nuevo tipo de identidad de **[[!UICONTROL ID de socio]](/help/identity-service/features/namespaces.md)**.
 >
->Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/namespaces.md).
+>Obtenga más información acerca del ID de socio en la [sección tipos de identidad](/help/identity-service/features/namespaces.md).
 >Lea acerca de [cómo definir campos de identidad](/help/xdm/ui/fields/identity.md) en la interfaz de usuario de Experience Platform.
 
 ### Exporte públicos que desee enriquecer cuando se introduzca información de identificación personal (PII) o PII con hash {#export-audiences}
@@ -130,7 +130,7 @@ Algunos conectores de origen recomendados para este fin pueden ser los siguiente
 
 Tenga en cuenta las siguientes limitaciones a medida que explora el caso de uso descrito en esta página:
 
-* Si decide utilizar ID de socios, tenga en cuenta que estos no se utilizan para crear su [gráfico de identidad](/help/identity-service/ui/identity-graph-viewer.md).
+* Si decide utilizar ID de socios, tenga en cuenta que estos no se utilizan para crear su [gráfico de identidad](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 

@@ -2,22 +2,22 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 26%
+source-wordcount: '2257'
+ht-degree: 24%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 28 de septiembre de 2023**
+**Fecha de lanzamiento: viernes, 28 de septiembre de 2023**
 
 Nuevas funciones de Adobe Experience Platform:
 
 - [Atributos calculados](#computed-attributes)
 
-Actualizaciones de las funciones existentes en Experience Platform:
+Actualizaciones de funciones existentes en Experience Platform:
 
 - [Alertas](#alerts)
 - [Paneles](#dashboards)
@@ -90,7 +90,7 @@ La gobernanza de datos de Adobe Experience Platform es una serie de estrategias 
 
 Para obtener más información acerca de la gobernanza de datos, lea la [información general de gobernanza de datos](../../data-governance/home.md).
 
-## Higiene de los datos {#hygiene}
+## Higiene de datos {#hygiene}
 
 Experience Platform proporciona un conjunto de funciones de higiene de datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con cualquiera de las [!UICONTROL Ciclo de datos] en la IU o a través de llamadas a la API de higiene de los datos, puede administrar de forma eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas de la organización lo consideran necesario.
 
@@ -99,7 +99,7 @@ Experience Platform proporciona un conjunto de funciones de higiene de datos que
 | Función | Descripción |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} | Administre el ciclo de vida de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones avanzadas de administración del ciclo de vida de los datos de Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada de los conjuntos de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.<br>La eliminación de registros permite eliminar perfiles de consumidores individuales segmentando sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [Documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
-| Caducidad de conjuntos de datos | Minimice los datos y mantenga el control de los acuerdos de licencia con Caducidad automatizada del conjunto de datos. Reduzca los volúmenes de datos eliminando conjuntos de datos completos y establezca una fecha y una hora para eliminar el conjunto de datos. Consulte la [documentación sobre caducidades del conjunto de datos](../../hygiene/ui/dataset-expiration.md) para obtener más información. |
+| Caducidades de los conjuntos de datos | Minimice los datos y mantenga el control de los acuerdos de licencia con Caducidad automatizada del conjunto de datos. Reduzca los volúmenes de datos eliminando conjuntos de datos completos y establezca una fecha y una hora para eliminar el conjunto de datos. Consulte la [documentación sobre caducidades del conjunto de datos](../../hygiene/ui/dataset-expiration.md) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -190,7 +190,7 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Función | Descripción |
 | --- | --- |
-| Mejoras en la IU del servicio de identidad | Utilice la herramienta de creación de áreas de nombres personalizadas mejorada en la interfaz de usuario de Experience Platform para administrar mejor las áreas de nombres personalizadas y sus tipos de identidad correspondientes. La interfaz de usuario mejorada del servicio de identidad le proporciona lo siguiente: <ul><li>Experiencia contextual: Indicaciones visuales, claridad y contexto de lo que es un área de nombres de identidad y de los tipos de identidad.</li><li>Precisión: mejor gestión de errores, sin más nombres de identidad duplicados.</li><li>Capacidad de detección: acceso a la documentación desde un cuadro de diálogo dentro del producto.</li></ul> Para obtener más información, lea la guía de [crear áreas de nombres personalizadas](../../identity-service/namespaces.md#create-namespaces). |
+| Mejoras en la IU del servicio de identidad | Utilice la herramienta de creación de áreas de nombres personalizadas mejorada en la interfaz de usuario de Experience Platform para administrar mejor las áreas de nombres personalizadas y sus tipos de identidad correspondientes. La interfaz de usuario mejorada del servicio de identidad le proporciona lo siguiente: <ul><li>Experiencia contextual: Indicaciones visuales, claridad y contexto de lo que es un área de nombres de identidad y de los tipos de identidad.</li><li>Precisión: mejor gestión de errores, sin más nombres de identidad duplicados.</li><li>Capacidad de detección: acceso a la documentación desde un cuadro de diálogo dentro del producto.</li></ul> Para obtener más información, lea la guía de [crear áreas de nombres personalizadas](../../identity-service/features/namespaces.md#create-namespaces). |
 | Cambios en los límites del gráfico de identidad | El límite del gráfico de identidades ha cambiado de 150 a 50 identidades. Cuando se incorpora una nueva identidad en un gráfico completo, se elimina la identidad más antigua en función de la marca de tiempo de ingesta y el tipo de identidad. Los tipos de identidad de cookies tienen prioridad para su eliminación. Póngase en contacto con el equipo de cuenta de Adobe para solicitar un cambio en el tipo de identidad si la zona protegida de producción contiene lo siguiente: <ul><li>un área de nombres personalizada donde los identificadores de persona (como los ID de CRM) están configurados como tipo de identidad de cookie/dispositivo.</li><li>un área de nombres personalizada donde los identificadores de cookies/dispositivos están configurados como tipo de identidad entre dispositivos.</li></ul> El personal de ingeniería de Adobes procesará manualmente estas solicitudes. Para obtener más información, lea la [protecciones para los datos del servicio de identidad](../../identity-service/guardrails.md) y guía sobre [prácticas recomendadas para licencias de gestión de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

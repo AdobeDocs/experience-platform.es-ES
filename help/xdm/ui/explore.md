@@ -5,7 +5,7 @@ title: Exploración de los recursos de esquema en la IU
 description: Aprenda a explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Si el campo que está inspeccionando es un campo de enumeración, el carril dere
 
 Al inspeccionar esquemas que contienen campos de identidad, estos campos se enumeran en el carril izquierdo bajo la clase o el grupo de campos que los proporciona al esquema. Seleccione el nombre del campo de identidad en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con que esté anidado.
 
-Los campos de identidad se resaltan en el lienzo con un icono de huella digital (![Imagen del icono de huella digital](../images/ui/explore/identity-symbol.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como la [área de nombres de identidad](../../identity-service/namespaces.md) y si el campo es o no la identidad principal del esquema.
+Los campos de identidad se resaltan en el lienzo con un icono de huella digital (![Imagen del icono de huella digital](../images/ui/explore/identity-symbol.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como la [área de nombres de identidad](../../identity-service/features/namespaces.md) y si el campo es o no la identidad principal del esquema.
 
 ![](../images/ui/explore/identity-field.png)
 

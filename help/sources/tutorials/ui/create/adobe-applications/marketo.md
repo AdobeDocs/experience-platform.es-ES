@@ -2,9 +2,9 @@
 title: Crear una conexión de origen y un flujo de datos de Marketo Engage en la IU
 description: Este tutorial proporciona pasos para crear una conexión de origen y un flujo de datos de Marketo Engage en la IU para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1675'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
 * [Modelo de datos de experiencia (XDM)](../../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
    * [Crear y editar esquemas en la interfaz de usuario](../../../../../xdm/ui/resources/schemas.md): Aprenda a crear y editar esquemas en la interfaz de usuario.
-* [Áreas de nombres de identidad](../../../../../identity-service/namespaces.md): las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
+* [Áreas de nombres de identidad](../../../../../identity-service/features/namespaces.md): las áreas de nombres de identidad son un componente de [!DNL Identity Service] que sirven como indicadores del contexto al que se relaciona una identidad. Una identidad completa incluye un valor de ID y un área de nombres.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 * [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
@@ -181,8 +181,8 @@ Puede eliminar los flujos de datos que ya no son necesarios o que se crearon inc
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para incorporar [!DNL Marketo] datos. Ahora, los servicios de Platform posteriores pueden utilizar los datos entrantes, como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](/help/profile/home.md)
-* [Información general del [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](/help/profile/home.md)
+* [Información general de [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)
 
 ## Apéndice {#appendix}
 

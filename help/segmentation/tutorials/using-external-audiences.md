@@ -5,9 +5,9 @@ description: Siga este tutorial para aprender a utilizar audiencias externas con
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Las definiciones de segmentos incluyen información como el nombre, la descripci
 
 El primer paso para utilizar audiencias externas es crear un área de nombres de identidad. Las áreas de nombres de identidad permiten que Platform asocie el lugar desde el que se origina una audiencia.
 
-Para crear un área de nombres de identidad, siga las instrucciones de la [guía del área de nombres de identidad](../../identity-service/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] as a **[!UICONTROL Identificador de no personas]**.
+Para crear un área de nombres de identidad, siga las instrucciones de la [guía del área de nombres de identidad](../../identity-service/features/namespaces.md#manage-namespaces). Al crear el área de nombres de identidad, agregue los detalles de origen al área de nombres de identidad y marque su [!UICONTROL Tipo] as a **[!UICONTROL Identificador de no personas]**.
 
 ![El identificador de no persona aparece resaltado en el modal Crear área de nombres de identidad.](../images/tutorials/external-audiences/identity-namespace-info.png)
 

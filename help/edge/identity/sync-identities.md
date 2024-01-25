@@ -3,7 +3,7 @@ title: Sincronización de identidades entre Audience Manager y Adobe Experience 
 description: Obtenga información sobre cómo sincronizar identidades entre Audience Manager y Adobe Experience Platform mediante el SDK web de Platform
 seo-description: Learn how to sync identities with Adobe Audience Manager with Experience Platform Web SDK
 keywords: audience manager;aam;identidades;identidades de sincronización;área de nombres;
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 El SDK web de Adobe Experience Platform admite la capacidad de declarar ID de cliente y sus estados de autenticación mediante [sendEvent](./overview.md#syncing-identities) comando.
 
-Elija sus áreas de nombres de la [Áreas de nombres del servicio de identidad](../../identity/../identity-service/namespaces.md) para indicar el contexto al que se relaciona una identidad, utilizando los valores de la columna Símbolo de identidad:
+Elija sus áreas de nombres de la [Áreas de nombres del servicio de identidad](../../identity/../identity-service/features/namespaces.md) para indicar el contexto al que se relaciona una identidad, utilizando los valores de la columna Símbolo de identidad:
 
 ![Vista de la IU de áreas de nombres](../assets/identity/edge_namespaceUI_identity-symbol.png)
 

@@ -3,7 +3,7 @@ title: (Beta) La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 5%
@@ -38,11 +38,11 @@ Antes de activar audiencias en [!DNL The Trade Desk], debe ponerse en contacto c
 
 ## Requisitos de coincidencia de ID {#id-matching-requirements}
 
-Según el tipo de ID que introduzca en Adobe Experience Platform, debe cumplir con sus requisitos correspondientes. Lea el [Resumen de área de nombres de identidad](/help/identity-service/namespaces.md) para obtener más información.
+Según el tipo de ID que introduzca en Adobe Experience Platform, debe cumplir con sus requisitos correspondientes. Lea el [Resumen de área de nombres de identidad](/help/identity-service/features/namespaces.md) para obtener más información.
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección Requisitos de coincidencia de ID y utilice los espacios de nombres adecuados para las direcciones de correo electrónico de texto sin formato y con hash, respectivamente.
 

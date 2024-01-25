@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen del servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1554'
 ht-degree: 2%
 
 ---
@@ -32,12 +32,12 @@ Antes de sumergirse en los detalles del servicio de identidad, lea la siguiente 
 | Término | Definición |
 | --- | --- |
 | Identidad | Una identidad son datos que son únicos para una entidad. Normalmente, se trata de un objeto del mundo real, como una persona individual, un dispositivo de hardware o un explorador web (representado por una cookie). Una identidad completa consta de dos elementos: un **área de nombres de identidad** y un **valor de identidad**. |
-| Espacio de nombre de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con **julien<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con `555-555-1234`. Para obtener más información, lea la [información general del área de nombres de identidad](./namespaces.md) |
+| Espacio de nombre de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con **julien<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con `555-555-1234`. Para obtener más información, lea la [información general del área de nombres de identidad](./features/namespaces.md) |
 | Valor de identidad | Un valor de identidad es una cadena que representa una entidad del mundo real y que se clasifica dentro del servicio de identidad a través de un área de nombres. Por ejemplo, el valor de identidad (cadena) **julien<span>@acme.com** podría clasificarse como un `Email` namespace. |
 | Tipo de identidad | Un tipo de identidad es un componente de un área de nombres de identidad. El tipo de identidad designa si los datos de identidad están vinculados en un gráfico de identidad o no. |
 | Vínculo | Un vínculo o una vinculación es un método para establecer que dos identidades diferentes representan la misma entidad. Por ejemplo, un vínculo entre &quot;`Email` = julien<span>@acme.com&quot; y &quot;`Phone` = 555-555-1234&quot; significa que ambas identidades representan la misma entidad. Esto sugiere que el cliente que ha interactuado con su marca con la dirección de correo electrónico de Julien<span>@acme.com y el número de teléfono de 555-555-1234 es el mismo. |
 | Servicio de identidad | El servicio de identidad es un servicio dentro de Experience Platform que vincula (o desvincula) identidades para mantener gráficos de identidad. |
-| Gráfico de identidad | El gráfico de identidad es una colección de identidades que representan a un solo cliente. Para obtener más información, lea la guía de [uso del visualizador de gráficos de identidad](./ui/identity-graph-viewer.md). |
+| Gráfico de identidad | El gráfico de identidad es una colección de identidades que representan a un solo cliente. Para obtener más información, lea la guía de [uso del visualizador de gráficos de identidad](./features/identity-graph-viewer.md). |
 | Perfil del cliente en tiempo real | El perfil del cliente en tiempo real es un servicio de Adobe Experience Platform que: <ul><li>Combina fragmentos de perfiles para crear un perfil basado en un gráfico de identidad.</li><li>Segmenta los perfiles para que luego se puedan enviar al destino para que los active.</li></ul> |
 | Perfil | Un perfil es una representación de un sujeto, una organización o un individuo. Un perfil se compone de cuatro elementos: <ul><li>Atributos: los atributos proporcionan información como nombre, edad o sexo.</li><li>Comportamiento: los comportamientos proporcionan información sobre las actividades de un perfil determinado. Por ejemplo, un comportamiento de perfil puede saber si un perfil determinado estaba &quot;buscando sandalias&quot; o &quot;pidiendo camisetas&quot;.</li><li>Identidades: Para un perfil combinado, proporciona información de todas las identidades asociadas con la persona. Las identidades se pueden clasificar en tres categorías: persona (CRMID, correo electrónico, teléfono), dispositivo (IDFA, GAID) y cookie (ECID, AAID).</li><li>Pertenencia a audiencias: Los grupos a los que pertenece el perfil (usuarios fieles, usuarios que viven en California, etc.)</li></ul> |
 
@@ -93,9 +93,11 @@ Consideremos el siguiente ejemplo:
 
 Teniendo en cuenta los escenarios anteriores, el servicio de identidad establece un vínculo entre `{CRM_ID:ABC, ECID:123}`, así como `{CRM_ID:ABC, ECID:456}`. Esto da como resultado un gráfico de identidades en el que &quot;posee&quot; tres identidades: una para el identificador de persona (CRM ID) y dos para los identificadores de cookie (ECID).
 
+Para obtener más información, lea la guía de [cómo vincula el servicio de identidad las identidades](./features/identity-linking-logic.md).
+
 ## Gráficos de identidad
 
-Un gráfico de identidad es un mapa de relaciones entre diferentes áreas de nombres de identidad, que le permite visualizar y comprender mejor qué identidades de clientes se vinculan entre sí y cómo. Lea el tutorial sobre [uso del visualizador de gráficos de identidad](./ui/identity-graph-viewer.md) para obtener más información.
+Un gráfico de identidad es un mapa de relaciones entre diferentes áreas de nombres de identidad, que le permite visualizar y comprender mejor qué identidades de clientes se vinculan entre sí y cómo. Lea el tutorial sobre [uso del visualizador de gráficos de identidad](./features/identity-graph-viewer.md) para obtener más información.
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las identidades y los gráficos de identidad.
 
@@ -108,7 +110,7 @@ El servicio de identidad desempeña un papel vital dentro del Experience Platfor
 * [Esquemas](../xdm/home.md): Dentro de un esquema determinado, los campos de esquema marcados como identidad permiten crear gráficos de identidad.
 * [Conjuntos de datos](../catalog/datasets/overview.md): Cuando un conjunto de datos está habilitado para su ingesta en el Perfil del cliente en tiempo real, los gráficos de identidad se generan a partir del conjunto de datos, dado que el conjunto de datos tiene al menos dos campos marcados como identidad.
 * [SDK web](../edge/home.md): el SDK web envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
-* [Perfil del cliente en tiempo real](../profile/home.md): Antes de combinar atributos y eventos para un perfil determinado, el perfil del cliente en tiempo real podría hacer referencia al gráfico de identidades.
+* [Perfil del cliente en tiempo real](../profile/home.md): Antes de combinar atributos y eventos para un perfil determinado, el perfil del cliente en tiempo real podría hacer referencia al gráfico de identidades. Para obtener más información, lea la guía de [Explicación de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](./identity-and-profile.md).
 * [Destinos](../destinations/home.md): los destinos pueden enviar información de perfil a otros sistemas en función de un área de nombres de identidad, como correo electrónico con hash.
 * [Coincidencia de segmentos](../segmentation/ui/segment-match/overview.md): la coincidencia de segmentos coincide con dos perfiles en dos zonas protegidas diferentes que tienen el mismo área de nombres de identidad y valor de identidad.
 * [Privacy Service](../privacy-service/home.md): Si la solicitud de eliminación incluye `identity`, la combinación de área de nombres y valor de identidad especificada se puede eliminar del servicio de identidad mediante la función de procesamiento de solicitudes de privacidad de Privacy Service.

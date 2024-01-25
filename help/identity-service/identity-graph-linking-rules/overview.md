@@ -3,11 +3,11 @@ title: Resumen de reglas de vinculación de gráficos de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 hide: true
 hidefromtoc: true
-badge: Alfa
+badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 0%
 * [Información general](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo](./example-scenarios.md)
-* [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
-* [Lógica de vinculación de identidad](./identity-linking-logic.md)
 
 Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona individual a través de un identificador de persona, como un ID de CRM. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de perfil&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
@@ -114,5 +112,3 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md)
-* [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
-* [Lógica de vinculación de identidad](./identity-linking-logic.md)

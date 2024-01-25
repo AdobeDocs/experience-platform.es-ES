@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas de ingesta
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca de la ingesta de transmisión en Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,6 @@ El siguiente JSON es un objeto de respuesta de ejemplo para una solicitud de API
 
 If [!DNL Real-Time Customer Profile] rechaza un mensaje, probablemente se deba a una información de identidad incorrecta. Esto puede deberse a que se ha proporcionado un valor o un área de nombres no válidos para una identidad.
 
-Existen dos tipos de áreas de nombres de identidad: predeterminadas y personalizadas. Cuando utilice áreas de nombres personalizadas, asegúrese de que el área de nombres se ha registrado en [!DNL Identity Service]. Consulte la [información general del área de nombres de identidad](../../identity-service/namespaces.md) para obtener más información sobre el uso de áreas de nombres predeterminadas y personalizadas.
+Existen dos tipos de áreas de nombres de identidad: predeterminadas y personalizadas. Cuando utilice áreas de nombres personalizadas, asegúrese de que el área de nombres se ha registrado en [!DNL Identity Service]. Consulte la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md) para obtener más información sobre el uso de áreas de nombres predeterminadas y personalizadas.
 
 Puede usar el complemento [[!DNL Experience Platform UI]](https://platform.adobe.com) para ver más información sobre el motivo por el que un mensaje ha fallado en la ingesta. Clic **[!UICONTROL Monitorización]** en el panel de navegación izquierdo y, a continuación, vea la **[!UICONTROL Transmisión de extremo a extremo]** para ver los lotes de mensajes transmitidos durante un período de tiempo seleccionado.

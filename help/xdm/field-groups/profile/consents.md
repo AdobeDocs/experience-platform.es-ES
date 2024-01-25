@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Grupo de campos de esquema de consentimientos y preferencias
 description: Obtenga información acerca del grupo de campos Esquema de consentimientos y preferencias.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el [!UICONTROL Consen
 >* Si el cliente se ha excluido en el nivel de canal, cualquier consentimiento o preferencia equivalente en `idSpecific` se ignoran.
 >* Si no se establece el consentimiento o la preferencia de nivel de canal, o si el cliente ha elegido, el consentimiento o las preferencias equivalentes en `idSpecific` son honrados.
 
-Cada clave de la `idSpecific` representa un área de nombres de identidad específica reconocida por Adobe Experience Platform Identity Service. Aunque puede definir sus propias áreas de nombres personalizadas para categorizar distintos identificadores, se recomienda utilizar una de las áreas de nombres estándar proporcionadas por el servicio de identidad para reducir los tamaños de almacenamiento de Perfil del cliente en tiempo real. Para obtener más información sobre Áreas de nombres de identidad, consulte [información general del área de nombres de identidad](../../../identity-service/namespaces.md) en la documentación del servicio de ID.
+Cada clave de la `idSpecific` representa un área de nombres de identidad específica reconocida por Adobe Experience Platform Identity Service. Aunque puede definir sus propias áreas de nombres personalizadas para categorizar distintos identificadores, se recomienda utilizar una de las áreas de nombres estándar proporcionadas por el servicio de identidad para reducir los tamaños de almacenamiento de Perfil del cliente en tiempo real. Para obtener más información sobre Áreas de nombres de identidad, consulte [información general del área de nombres de identidad](../../../identity-service/features/namespaces.md) en la documentación del servicio de ID.
 
 Las claves de cada objeto de área de nombres representan los valores de identidad únicos para los que el cliente ha establecido preferencias. Cada valor de identidad puede contener un conjunto completo de consentimientos y preferencias, con el mismo formato que `consents`.
 

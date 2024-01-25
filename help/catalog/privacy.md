@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Procesamiento de solicitudes de privacidad en el lago de datos
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido por las regulaciones de privacidad legales y organizativas. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad de datos de clientes almacenados en el lago de datos.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ Este documento cubre conceptos esenciales relacionados con el procesamiento de s
 >
 >Esta guía solo explica cómo realizar solicitudes de privacidad para el lago de datos en Experience Platform. Si también planea realizar solicitudes de privacidad para el almacén de datos del perfil del cliente en tiempo real, consulte la guía de [procesamiento de solicitudes de privacidad para el perfil](../profile/privacy.md) además de este tutorial.
 >
->Para ver los pasos sobre cómo realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
+>Para ver los pasos necesarios para realizar solicitudes de privacidad para otras aplicaciones de Adobe Experience Cloud, consulte la [Documentación del Privacy Service](../privacy-service/experience-cloud-apps.md).
 
-## Primeros pasos
+## Introducción
 
 Se recomienda tener una comprensión práctica de lo siguiente [!DNL Experience Platform] servicios antes de leer esta guía:
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad
 
 [!DNL Identity Service] mantiene un almacén de áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;correo electrónico&quot; y &quot;ECID&quot;), mientras que su organización también puede crear áreas de nombres personalizadas para adaptarlas a sus necesidades particulares.
 
-Para obtener más información sobre áreas de nombres de identidad en [!DNL Experience Platform], consulte la [información general del área de nombres de identidad](../identity-service/namespaces.md).
+Para obtener más información sobre áreas de nombres de identidad en [!DNL Experience Platform], consulte la [información general del área de nombres de identidad](../identity-service/features/namespaces.md).
 
 ## Añadir datos de identidad a conjuntos de datos
 
@@ -61,7 +61,7 @@ Existen dos métodos para agregar un descriptor de identidad a un esquema de con
 
 ### Uso de la IU {#identity-ui}
 
-En el [!DNL Experience Platform ]interfaz de usuario, la **[!UICONTROL Esquemas]** El espacio de trabajo de permite editar los esquemas XDM existentes. Para añadir un descriptor de identidad a un esquema, seleccione el esquema de la lista y siga los pasos para [configuración de un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el [!DNL Schema Editor] tutorial.
+En el [!DNL Experience Platform]interfaz de usuario, la **[!UICONTROL Esquemas]** El espacio de trabajo de permite editar los esquemas XDM existentes. Para añadir un descriptor de identidad a un esquema, seleccione el esquema de la lista y siga los pasos para [configuración de un campo de esquema como campo de identidad](../xdm/tutorials/create-schema-ui.md#identity-field) en el [!DNL Schema Editor] tutorial.
 
 Una vez que haya establecido los campos adecuados dentro del esquema como campos de identidad, puede continuar con la siguiente sección sobre [envío de solicitudes de privacidad](#submit).
 

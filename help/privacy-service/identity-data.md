@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datos de identidad para solicitudes de privacidad
 description: Este documento proporciona orientación general sobre cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad de los clientes.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Por ejemplo, al administrar solicitudes de datos de clientes en [!DNL Privacy Se
 
 Por lo tanto, se requiere que cada identidad enviada a [!DNL Privacy Service] va acompañado de un área de nombres que proporciona contexto al relacionar el valor de identidad con su sistema de origen. Un área de nombres puede representar un concepto genérico como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o Adobe Target ID (&quot;TNTID&quot;).
 
-El servicio de identidad de Adobe Experience Platform mantiene un almacén de áreas de nombres de identidad definidas globalmente y por el usuario. Para obtener información más detallada sobre las áreas de nombres, consulte la [información general del área de nombres de identidad](../identity-service/namespaces.md). Para obtener una lista de áreas de nombres estándar y calificadores de área de nombres que se utilizan normalmente en [!DNL Privacy Service], consulte la [sección del apéndice](api/appendix.md) en la guía de API.
+El servicio de identidad de Adobe Experience Platform mantiene un almacén de áreas de nombres de identidad definidas globalmente y por el usuario. Para obtener información más detallada sobre las áreas de nombres, consulte la [información general del área de nombres de identidad](../identity-service/features/namespaces.md). Para obtener una lista de áreas de nombres estándar y calificadores de área de nombres que se utilizan normalmente en [!DNL Privacy Service], consulte la [sección del apéndice](api/appendix.md) en la guía de API.
 
 ## Servicio de inclusión y ECID
 

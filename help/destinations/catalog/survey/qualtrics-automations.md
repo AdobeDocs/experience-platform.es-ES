@@ -4,7 +4,7 @@ title: Automatizaciones de Qualtrics
 description: Sincronice la experiencia y los datos operativos del cliente para desbloquear la personalización a escala. Utilice la agregación de varias fuentes de datos operativos en Adobe Experience Platform como entrada en Qualtrics Experience ID para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 2%
@@ -57,7 +57,7 @@ A continuación se indican los pasos necesarios para obtener un token de API de 
 
 ## Identidades admitidas {#supported-identities}
 
-*Automatizaciones de Qualtrics* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/namespaces.md).
+*Automatizaciones de Qualtrics* admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|

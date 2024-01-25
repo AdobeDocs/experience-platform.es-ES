@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolució
 title: Punto final de API de previsualización de estado de muestra (previsualización de perfil)
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ La respuesta incluye una `data` matriz, que contiene una lista de objetos del co
 
 Puede realizar una solicitud de GET a `/previewsamplestatus/report/namespace` punto de conexión para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por Adobe como las identidades personalizadas definidas por su organización.
 
-Las áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service, y sirven de indicadores del contexto al que se relacionan los datos de los clientes. Para obtener más información, comience por leer el [información general del área de nombres de identidad](../../identity-service/namespaces.md).
+Las áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service, y sirven de indicadores del contexto al que se relacionan los datos de los clientes. Para obtener más información, comience por leer el [información general del área de nombres de identidad](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ La respuesta incluye una `data` , con objetos individuales que contienen los det
 | `fullIDsFragmentCount` | Número total de fragmentos de perfil en el área de nombres. |
 | `fullIDsCount` | Número total de perfiles combinados en el área de nombres. |
 | `fullIDsPercentage` | El `fullIDsCount` como porcentaje del total de perfiles combinados (la variable `totalRows` como se devuelve en la variable [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
-| `code` | El `code` para el área de nombres. Esto se puede encontrar al trabajar con áreas de nombres utilizando [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/namespaces.md). |
+| `code` | El `code` para el área de nombres. Esto se puede encontrar al trabajar con áreas de nombres utilizando [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
 | `value` | El `id` valor del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres utilizando [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
 
 ## Generar el informe de superposición de conjuntos de datos
@@ -444,7 +444,7 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de superpos
 | Propiedad | Descripción |
 |---|---|
 | `data` | El `data` contiene listas separadas por comas con combinaciones únicas de códigos de área de nombres de identidad y sus respectivos recuentos de perfiles. |
-| Códigos de área de nombres | El `code` es una forma abreviada para cada nombre de área de nombres de identidad. Una asignación de cada `code` a su `name` se puede encontrar utilizando la variable [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). El `code` también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/namespaces.md). |
+| Códigos de área de nombres | El `code` es una forma abreviada para cada nombre de área de nombres de identidad. Una asignación de cada `code` a su `name` se puede encontrar utilizando la variable [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). El `code` también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | La marca de tiempo del informe. Si un `date` se ha proporcionado durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no `date` Si se proporciona el parámetro, se devuelve el informe más reciente. |
 
 ### Interpretación del informe de superposición de área de nombres de identidad

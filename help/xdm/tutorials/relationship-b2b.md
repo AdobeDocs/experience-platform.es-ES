@@ -2,14 +2,14 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación varios a uno entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 14%
+source-wordcount: '1363'
+ht-degree: 15%
 
 ---
 
-# Defina una relación varios a uno entre dos esquemas en Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Defina una relación de varios a uno entre dos esquemas en Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -32,7 +32,7 @@ Este tutorial trata los pasos para definir una relación varios a uno entre dos 
 >
 >Este tutorial se centra en cómo establecer manualmente relaciones entre esquemas B2B en la IU de Platform. Si va a traer datos desde una conexión de origen B2B, puede utilizar una utilidad de generación automática para crear los esquemas, identidades y relaciones necesarios en su lugar. Consulte la documentación de fuentes sobre áreas de nombres y esquemas B2B para obtener más información sobre [uso de la utilidad de generación automática](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de [!DNL XDM System] y el Editor de esquemas en el [!DNL Experience Platform] IU. Antes de comenzar este tutorial, revise la siguiente documentación:
 
@@ -50,7 +50,7 @@ Las relaciones de esquema se representan mediante un campo dedicado dentro de un
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
->title="Referencia al Área de nombres de identidad"
+>title="Área de nombres de identidad de referencia"
 >abstract="El área de nombres (tipo) del campo de identidad principal del esquema de referencia. El esquema de referencia debe tener un campo de identidad principal establecido para participar en una relación. Consulte la documentación para obtener más información sobre las identidades en las relaciones B2B."
 
 Para establecer una relación, el esquema de referencia debe tener una identidad principal definida. Al establecer una identidad principal para una entidad B2B, tenga en cuenta que los ID de entidad basados en cadenas pueden superponerse si los recopila en diferentes sistemas o ubicaciones, lo que podría provocar conflictos de datos en Platform.
@@ -61,7 +61,7 @@ Para tener en cuenta esto, todas las clases B2B estándar contienen campos &quot
 
 >[!NOTE]
 >
->Cuándo [configuración de un campo XDM como identidad](../ui/fields/identity.md), debe proporcionar un área de nombres de identidad para definir la identidad en. Puede ser un área de nombres estándar proporcionada por Adobe o un área de nombres personalizada definida por su organización. En la práctica, el área de nombres es simplemente una cadena contextual y se puede establecer en cualquier valor que desee, siempre que tenga sentido para su organización categorizar el tipo de identidad. Consulte la información general sobre [áreas de nombres de identidad](../../identity-service/namespaces.md) para obtener más información.
+>Cuándo [configuración de un campo XDM como identidad](../ui/fields/identity.md), debe proporcionar un área de nombres de identidad para definir la identidad en. Puede ser un área de nombres estándar proporcionada por Adobe o un área de nombres personalizada definida por su organización. En la práctica, el área de nombres es simplemente una cadena contextual y se puede establecer en cualquier valor que desee, siempre que tenga sentido para su organización categorizar el tipo de identidad. Consulte la información general sobre [áreas de nombres de identidad](../../identity-service/features/namespaces.md) para obtener más información.
 
 Como referencia, las secciones siguientes describen la estructura de cada esquema utilizado en este tutorial antes de definir una relación. Tome nota de dónde se han definido las identidades principales en la estructura de esquema y las áreas de nombres personalizadas que utilizan.
 
@@ -79,7 +79,7 @@ El esquema de referencia &quot;[!DNL Accounts]&quot; se basa en [!UICONTROL Cuen
 
 ![Esquema de cuentas](../images/tutorials/relationship-b2b/accounts.png)
 
-## Definir un campo de relación para el esquema de origen {#relationship-field}
+## Definición de un campo de relación para el esquema de origen {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"

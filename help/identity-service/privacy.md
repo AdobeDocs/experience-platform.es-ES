@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares
 title: Procesamiento de solicitudes de privacidad en Identity Service
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para Identity Service.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad
 
 El servicio de identidad mantiene un almacén de áreas de nombres de identidad definidas globalmente (estándar) y definidas por el usuario (personalizadas). Las áreas de nombres estándar están disponibles para todas las organizaciones (por ejemplo, &quot;correo electrónico&quot; y &quot;ECID&quot;), mientras que su organización también puede crear áreas de nombres personalizadas para adaptarlas a sus necesidades particulares.
 
-Para obtener más información sobre áreas de nombres de identidad en [!DNL Experience Platform], consulte la [información general del área de nombres de identidad](../identity-service/namespaces.md).
+Para obtener más información sobre áreas de nombres de identidad en [!DNL Experience Platform], consulte la [información general del área de nombres de identidad](../identity-service/features/namespaces.md).
 
 ## Envío de solicitudes {#submit}
 

@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ La siguiente tabla recoge los controles y detalles proporcionados por el carril 
 | [!UICONTROL Categoría] | Indica el tipo de destino. Consulte la [catálogo de destinos](../catalog/overview.md) para obtener más información. |
 | [!UICONTROL Tipo de conexión] | Indica el formulario mediante el cual las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Cookie] y [!UICONTROL Basado en perfiles]. |
 | [!UICONTROL Frecuencia] | Indica la frecuencia con la que las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Transmisión] y [!UICONTROL Lote]. |
-| [!UICONTROL Identidad] | Representa el área de nombres de identidad aceptada por el destino, como `GAID`, `IDFA`, o `email`. Para obtener más información sobre áreas de nombres de identidad aceptadas, consulte la [información general del área de nombres de identidad](../../identity-service/namespaces.md). |
+| [!UICONTROL Identidad] | Representa el área de nombres de identidad aceptada por el destino, como `GAID`, `IDFA`, o `email`. Para obtener más información sobre áreas de nombres de identidad aceptadas, consulte la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Creado por] | Indica el usuario que creó este destino. |
 | [!UICONTROL Creado] | Indica la fecha y hora UTC en que se creó este destino. |
 

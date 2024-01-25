@@ -1,9 +1,9 @@
 ---
 title: Guía de implementación del servicio de ID
 description: Descubra cómo se procesan los datos proporcionados a Adobe Experience Platform antes de que el servicio de identidad los utilice para crear gráficos de identidad.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Según la estrategia de recopilación de datos empresariales, los campos de dato
 
 ## Crear áreas de nombres de identidad adicionales
 
-Aunque Experience Platform ofrece una variedad de áreas de nombres estándar, es posible que necesite crear áreas de nombres adicionales para categorizar correctamente sus identidades. Para obtener más información, lea la guía de [crear áreas de nombres personalizadas para su organización](./namespaces.md).
+Aunque Experience Platform ofrece una variedad de áreas de nombres estándar, es posible que necesite crear áreas de nombres adicionales para categorizar correctamente sus identidades. Para obtener más información, lea la guía de [crear áreas de nombres personalizadas para su organización](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Por ejemplo, al etiquetar los campos de número de teléfono como campos de iden
 >
 >* Los campos de tipo matriz y mapa no son compatibles y no se pueden marcar y etiquetar como campos de identidad.
 >* El área de nombres de las identidades resultantes se proporciona en el momento en que se etiqueta el campo.
+
+Para obtener más información, lea la guía en [definición de campos de identidad en la IU](../xdm/ui/fields/identity.md).
 
 ## Configuración de un conjunto de datos para el servicio de identidad
 

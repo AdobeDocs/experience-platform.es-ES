@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear conjuntos de datos para capturar datos de consentimiento de IAB TCF 2.0
 description: Este documento proporciona los pasos para configurar los dos conjuntos de datos necesarios para recopilar datos de consentimiento de IAB TCF 2.0.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de composición de esquemas](../../../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM.
 * [Servicio de identidad de Adobe Experience Platform](../../../../identity-service/home.md): le permite vincular las identidades de los clientes desde sus diferentes fuentes de datos entre dispositivos y sistemas.
-   * [Áreas de nombres de identidad](../../../../identity-service/namespaces.md): los datos de identidad del cliente deben proporcionarse en un área de nombres de identidad específica reconocida por el servicio de identidad.
+   * [Áreas de nombres de identidad](../../../../identity-service/features/namespaces.md): los datos de identidad del cliente deben proporcionarse en un área de nombres de identidad específica reconocida por el servicio de identidad.
 * [Perfil del cliente en tiempo real](../../../../profile/home.md): Aprovecha [!DNL Identity Service] para permitirle crear perfiles detallados de los clientes a partir de sus conjuntos de datos en tiempo real. [!DNL Real-Time Customer Profile] extrae datos del lago de datos y conserva los perfiles de los clientes en su propio almacén de datos independiente.
 
 ## Grupos de campo de TCF 2.0 {#field-groups}
@@ -187,7 +187,7 @@ Vuelva a seguir los pasos anteriores para crear un conjunto de datos basado en e
 
 Al seguir este tutorial, ha creado al menos un conjunto de datos que ahora se puede utilizar para recopilar datos de consentimiento del cliente:
 
-* Un conjunto de datos basado en registros que está habilitado para su uso en el Perfil del cliente en tiempo real. **(Requerido)**
+* Un conjunto de datos basado en registros que está habilitado para su uso en el Perfil del cliente en tiempo real. **(Obligatorio)**
 * Un conjunto de datos basado en series temporales que no está habilitado para [!DNL Profile]. (Opcional)
 
 Ahora puede volver a la [Información general de IAB TCF 2.0](./overview.md#merge-policies) para continuar con el proceso de configuración de Platform para la conformidad con TCF 2.0.

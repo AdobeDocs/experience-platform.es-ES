@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general de IU de Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 2%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
@@ -131,7 +131,7 @@ El **[!UICONTROL Perfiles]** Esta sección permite examinar los perfiles de los 
 
 El **[!UICONTROL Segmentos]** Esta sección le permite crear y gestionar definiciones de segmentos. Para obtener más información sobre el uso de [!UICONTROL Segmentos] , lea la sección [guía del usuario de segmentación](../segmentation/ui/overview.md). Encontrará más información sobre el servicio de segmentación en la [Resumen del servicio de segmentación](../segmentation/home.md).
 
-El **[!UICONTROL Identidades]** Esta sección permite crear y administrar áreas de nombres de identidad. Para obtener más información sobre [!UICONTROL Identidades] Esta sección, que incluye información sobre áreas de nombres de identidad y cómo utilizar identidades en la interfaz de usuario de Platform, consulte la [información general del área de nombres de identidad](../identity-service/namespaces.md).
+El **[!UICONTROL Identidades]** Esta sección permite crear y administrar áreas de nombres de identidad. Para obtener más información sobre [!UICONTROL Identidades] Esta sección, que incluye información sobre áreas de nombres de identidad y cómo utilizar identidades en la interfaz de usuario de Platform, consulte la [información general del área de nombres de identidad](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacidad]
 
@@ -167,7 +167,7 @@ La interfaz de usuario de Platform proporciona un panel a través del cual puede
 
 >[!IMPORTANT]
 >
->La funcionalidad del tablero de uso de licencias está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funciones están sujetas a cambios.
+>La funcionalidad del tablero de uso de licencias está actualmente en alfa y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
 
 ## Pasos siguientes
 

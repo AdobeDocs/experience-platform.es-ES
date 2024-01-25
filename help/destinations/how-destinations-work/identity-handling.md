@@ -2,10 +2,10 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 3%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Cada destino de la [catalogar](/help/destinations/catalog/overview.md) es ligera
 
 Para [destinos basados en archivos](/help/destinations/destination-types.md#file-based) (por ejemplo, [!DNL Amazon S3], SFTP, la mayoría de los destinos de marketing por correo electrónico, como [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), la configuración de identidad de la mayoría de estos destinos está abierta, lo que significa que no es necesario seleccionar ninguna identidad en [Seleccionar atributos](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) del flujo de trabajo de activación por lotes.
 
-Si decide añadir identidades a las exportaciones de archivos, tenga en cuenta que solo una identidad de la variable [área de nombres de identidad](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) se puede seleccionar en una exportación. Al seleccionar una identidad para exportar, se selecciona automáticamente como [atributo obligatorio](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) y [clave de deduplicación](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+Si decide añadir identidades a las exportaciones de archivos, tenga en cuenta que solo una identidad de la variable [área de nombres de identidad](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) se puede seleccionar en una exportación. Al seleccionar una identidad para exportar, se selecciona automáticamente como [atributo obligatorio](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) y [clave de deduplicación](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![Una identidad seleccionada como atributo obligatorio y clave de anulación de duplicación.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

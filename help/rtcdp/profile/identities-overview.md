@@ -4,7 +4,7 @@ title: Identidades en Real-time Customer Data Platform
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Ahora, en lugar de cinco clientes independientes que interactúan con su marca e
 
 ## Áreas de nombres de identidad
 
-Las áreas de nombres de identidad son un componente de [!DNL Identity Service] y sirven como indicadores que proporcionan un contexto adicional a las identidades de los clientes. Un ejemplo de área de nombres de ID que se utiliza con frecuencia sería &quot;Correo electrónico&quot;, donde el uso de la misma dirección de correo electrónico en varios sitios web le permite unir varias identidades diferentes, cada una con un ID de cliente único, como si realmente pertenecieran al mismo cliente. [!DNL Experience Platform] permite utilizar áreas de nombres de ID para buscar perfiles individuales dentro de la interfaz de usuario. Para obtener más información sobre la visualización de perfiles, consulte la [información general sobre exploración de perfiles](profile-browse.md). Para obtener más información sobre Áreas de nombres de identidad, consulte la [información general del área de nombres de identidad](../../identity-service/namespaces.md).
+Las áreas de nombres de identidad son un componente de [!DNL Identity Service] y sirven como indicadores que proporcionan un contexto adicional a las identidades de los clientes. Un ejemplo de área de nombres de ID que se utiliza con frecuencia sería &quot;Correo electrónico&quot;, donde el uso de la misma dirección de correo electrónico en varios sitios web le permite unir varias identidades diferentes, cada una con un ID de cliente único, como si realmente pertenecieran al mismo cliente. [!DNL Experience Platform] permite utilizar áreas de nombres de ID para buscar perfiles individuales dentro de la interfaz de usuario. Para obtener más información sobre la visualización de perfiles, consulte la [información general sobre exploración de perfiles](profile-browse.md). Para obtener más información sobre Áreas de nombres de identidad, consulte la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md).
 
 ## Gráficos de identidad
 
