@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
-ht-degree: 8%
+source-wordcount: '3426'
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ Por ejemplo, considere una situación en la que tenía dos grupos de informes co
 | eVar3 | URL | Nombre de página |
 | eVar4 | Términos de búsqueda | Nombre del producto |
 | evento 1 | Clics | Page Views |
-| evento 2 | Page Views | Adiciones al carro de compras |
+| event2 | Page Views | Adiciones al carro de compras |
 | event3 | Adiciones al carro de compras | Cierres de compra |
 | event4 | Compras | Compras |
 
@@ -265,7 +265,11 @@ A medida que vaya creando la definición del segmento, podrá ver una vista prev
 
 >[!NOTE]
 >
->Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en su almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Encontrará más información sobre la generación de estimaciones para las definiciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de definiciones de segmentos.
+>Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en su almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades.
+>
+>Además, esta estimación se basa en el momento en que se ejecutó el último trabajo de muestra de perfil. Esto significa que si está utilizando una función de fecha relativa como &quot;Hoy&quot; o &quot;Esta semana&quot;, la estimación basará sus cálculos en el último tiempo de ejecución de la muestra de perfil. Por ejemplo, si hoy es 24 de enero y el último trabajo de muestra de perfil se ejecutó el 22 de enero, la función de fecha relativa &quot;Ayer&quot; se basará en el 21 de enero y no en el 23 de enero.
+>
+>Encontrará más información sobre la generación de estimaciones para las definiciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de definiciones de segmentos.
 
 También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionarlo mediante la lista desplegable. Si desea saber para qué tipos de evaluación se adapta esta definición de segmento, puede seleccionar el icono Examinar ![icono de carpeta con lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver una lista de los métodos de evaluación de definición de segmento disponibles.
 
