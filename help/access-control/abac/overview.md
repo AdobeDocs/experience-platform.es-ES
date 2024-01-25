@@ -3,14 +3,19 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
+source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1844'
 ht-degree: 13%
 
 ---
 
-# Resumen del control de acceso basado en atributos
+# Resumen del control de acceso basado en atributos {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="Política de acceso al uso de etiquetas"
+>abstract=""
 
 El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 
