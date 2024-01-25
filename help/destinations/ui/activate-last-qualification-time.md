@@ -1,13 +1,12 @@
 ---
 title: Utilice el atributo XDM Última hora de calificación en los nuevos destinos de almacenamiento de la nube beta
 description: Aprenda a utilizar el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta
-hidefromtoc: y
-hide: y
+badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7130ac46a7768ea6e71bf73eb970bf2890323d0f
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 0%
+source-wordcount: '290'
+ht-degree: 1%
 
 ---
 
@@ -19,13 +18,18 @@ ht-degree: 0%
 
 ## Requisitos previos {#prerequisites}
 
-Para utilizar la última hora de calificación (`lastQualificationTime`) Atributo XDM, debe estar inscrito en el [programa beta](/help/release-notes/2022/october-2022.md#destinations) para utilizar la funcionalidad de exportación de archivos mejorada y exportar datos a uno de los seis [destinos de almacenamiento en la nube beta](/help/release-notes/2022/october-2022.md#destinations) ([[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md), [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)). Está inscrito si puede ver las nuevas tarjetas beta para los destinos de almacenamiento en la nube en el catálogo, como se muestra a continuación para [!DNL Amazon S3].
+Para utilizar la última hora de calificación (`lastQualificationTime`) Atributo XDM, debe exportar datos a uno de los seis destinos de almacenamiento en la nube que se enumeran a continuación:
 
-![Imagen que muestra la nueva tarjeta beta de Amazon S3](/help/destinations/assets/ui/activate-destinations/new-amazon-s3-beta-card.png)
+* [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
+* [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
+* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 
 ## Cómo utilizar el atributo XDM de la última hora de calificación {#how-to-use}
 
-Si utiliza uno de los seis nuevos conectores beta de almacenamiento en la nube, puede utilizar el atributo XDM de la última hora de calificación en la [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo de activación para crear una columna en el archivo exportado con la última marca de tiempo de cuando un perfil cumple los requisitos para un segmento. Esto puede ayudarle con determinados casos de uso de medición o análisis, así como darle una mejor idea de cuándo activar determinadas audiencias.
+Si utiliza uno de los seis conectores de almacenamiento en la nube enumerados arriba, puede utilizar el atributo XDM de la última hora de calificación en la [paso de asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) del flujo de trabajo de activación para crear una columna en el archivo exportado con la última marca de tiempo de cuando un perfil cumple los requisitos para un segmento. Esto puede ayudarle con determinados casos de uso de medición o análisis, así como darle una mejor idea de cuándo activar determinadas audiencias.
 
 Tenga en cuenta que para agregar `lastQualificationTime` para las exportaciones de archivos, actualmente necesita insertar manualmente el valor `xdm: segmentMembership.ups.seg_id.lastQualificationTime` en el campo de origen, como se muestra a continuación. También puede editar el campo de destino para `lastQualificationTime` o cualquier otro valor al que desee asignar un nombre a esta columna. Tenga en cuenta que, como se trata de una funcionalidad beta, la sintaxis del `xdm: segmentMembership.ups.seg_id.lastQualificationTime` El valor de puede cambiar en el futuro.
 
