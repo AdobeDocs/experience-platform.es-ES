@@ -2,9 +2,9 @@
 title: Cree una conexión de origen y un flujo de datos para cuentas y contactos de SugarCRM mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a cuentas y contactos de Sugar CRM mediante la API de Flow Service.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Para poder conectarse [!DNL SugarCRM Accounts & Contacts] En Platform, debe prop
 
 A continuación se describen los pasos que debe seguir para autenticar su [!DNL SugarCRM] origen, crear una conexión de origen y crear un flujo de datos para llevar los datos de cuentas y contactos a Experience Platform.
 
-### Cree una conexión base {#base-connection}
+### Crear una conexión base {#base-connection}
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
@@ -350,6 +350,8 @@ Una respuesta correcta devuelve una estructura como se muestra a continuación.
 ```
 
 >[!TAB Contactos]
+
+Una respuesta correcta devuelve una estructura como se muestra a continuación.
 
 ```json
 {
