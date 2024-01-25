@@ -6,8 +6,8 @@ type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '3053'
-ht-degree: 8%
+source-wordcount: '3072'
+ht-degree: 9%
 
 ---
 
@@ -77,7 +77,7 @@ La fecha y la hora de la instantánea más reciente se muestran en la parte supe
 
 Se proporciona una carga de widget predeterminada para todas las instancias nuevas de Adobe Experience Platform que resalta las perspectivas disponibles más recientes de sus datos. Los siguientes widgets están preconfigurados en la vista de segmentos desde el principio. Puede encontrar todos los detalles sobre el propósito y la función de los widgets en sus secciones respectivas.
 
-* [[!UICONTROL Tamaño de audiencia]](#audience-size)
+* [[!UICONTROL Tamaño de público]](#audience-size)
 * [[!UICONTROL Tendencia de cambio de tamaño de audiencia]](#audience-size-change-trend)
 * [[!UICONTROL Superposición de identidad]](#identity-overlap)
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
@@ -91,10 +91,10 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 
 La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. La inteligencia artificial aplicada al cliente lo hace analizando los datos de evento de experiencia del consumidor existentes para predecir **puntuaciones de tendencia de pérdida o conversión**. Estos modelos de tendencia de los clientes de alta precisión permiten una segmentación y una segmentación más exactas. El [distribución de puntuaciones](#customer-ai-distribution-of-scores) y [resumen de puntuación](#customer-ai-scoring-summary) las perspectivas demuestran la división en su audiencia. Resaltan qué perfiles son los de tendencia alta/baja/media y cómo se distribuyen en los recuentos de perfiles.
 
-* [[!UICONTROL Resumen de puntuación de Customer AI]](#customer-ai-scoring-summary)
-* [[!UICONTROL Distribución de puntuaciones de Customer AI]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Distribución de puntuaciones de Customer AI] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
@@ -123,7 +123,7 @@ Aparecerá la página de información detallada del modelo.
 
 Puede encontrar más información sobre la inteligencia artificial aplicada al cliente en la [guía de IU de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Resumen de puntuación de Customer AI] {#customer-ai-scoring-summary}
+### [!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"
@@ -152,9 +152,9 @@ Adobe proporciona varios widgets estándar que puede utilizar para visualizar di
 
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
-* [[!UICONTROL Tamaño de audiencia]](#audience-size)
+* [[!UICONTROL Tamaño de público]](#audience-size)
 * [[!UICONTROL Orden de activación de audiencia]](#audience-activation-order)
-* [[!UICONTROL Tendencia de tamaño de audiencia]](#audience-size-trend)
+* [[!UICONTROL Tendencia de tamaño de público]](#audience-size-trend)
 * [[!UICONTROL Tendencia de cambio de tamaño de audiencia]](#audience-size-change-trend)
 * [[!UICONTROL Tendencia del tamaño de la audiencia por identidad]](#audience-size-trend-by-identity)
 * [[!UICONTROL Superposición de audiencias]](#audience-overlap)
@@ -163,11 +163,11 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles por identidad]](#profiles-by-identity)
 * [[!UICONTROL Activaciones programadas]](#scheduled-activations)
 
-### [!UICONTROL Tamaño de audiencia] {#audience-size}
+### [!UICONTROL Tamaño de público] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="Tamaño de audiencia"
+>title="Tamaño de público"
 >abstract="Este widget muestra el número total de perfiles combinados dentro del público seleccionado. Este número depende de las políticas de combinación aplicadas a los datos y es correcto en el momento de la instantánea más reciente."
 
 El **[!UICONTROL Tamaño de audiencia]** widget muestra el número total de perfiles combinados dentro de la audiencia seleccionada en el momento en que se tomó la instantánea. Este número es el resultado de aplicar la política de combinación de audiencias a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo en la audiencia.
@@ -176,7 +176,7 @@ Para obtener más información sobre fragmentos y perfiles combinados, consulte 
 
 ![El [!UICONTROL Audiencias] información general del panel con [!UICONTROL Tamaño de audiencia] widget resaltado.](../images/audiences/audience-size.png)
 
-### [!UICONTROL Tendencia de tamaño de audiencia] {#audience-size-trend}
+### [!UICONTROL Tendencia de tamaño de público] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"

@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -21,7 +21,7 @@ Lea el siguiente documento para obtener más información sobre lo que puede hac
 * [[!DNL Identity Service]](../home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
 * [[!DNL Privacy Service]](../../privacy-service/home.md): las áreas de nombres de identidad se utilizan en solicitudes de cumplimiento de regulaciones legales de privacidad, como el Reglamento General de Protección de Datos (RGPD). Cada solicitud de privacidad se realiza en relación con un área de nombres para identificar qué datos de consumidores deben verse afectados.
 
-## Explicación de áreas de nombres de identidad {#understanding-identity-namespaces}
+## Explicación de los espacios de nombres de identidad {#understanding-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"

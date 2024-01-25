@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión de octubre de 2023 para Adobe Experience Platform.
+description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
