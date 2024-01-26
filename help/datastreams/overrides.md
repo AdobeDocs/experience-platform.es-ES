@@ -1,10 +1,11 @@
 ---
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de secuencias de datos en la interfaz de usuario de secuencias de datos y activarlas mediante el SDK web.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 11feeae0409822f0b1ccba2df263f0be466d54e3
 workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 60%
+source-wordcount: '1303'
+ht-degree: 67%
 
 ---
 
@@ -218,154 +219,7 @@ alloy("configure", {
 
 Después [configuración de las anulaciones de secuencia de datos](#configure-overrides) en la IU de recopilación de datos, ahora puede enviar las invalidaciones a la red perimetral mediante el SDK para móviles.
 
-Si utiliza el SDK móvil, el envío de las invalidaciones a la red perimetral mediante la variable `sendEvent` La API es el segundo y último paso de activar las anulaciones de configuración del flujo de datos.
-
-Para obtener más información sobre el SDK de Experience Platform Mobile, consulte la [Documentación del SDK móvil](https://developer.adobe.com/client-sdks/edge/edge-network/).
-
-### Anulación de ID de flujo de datos mediante SDK móvil {#id-override-mobile}
-
-Los ejemplos siguientes muestran el aspecto que podría tener la anulación de ID de un conjunto de datos en una integración de SDK móvil. Seleccione las pestañas a continuación para ver las [!DNL iOS] y [!DNL Android] ejemplos.
-
->[!BEGINTABS]
-
->[!TAB iOS (Swift)]
-
-Este ejemplo muestra el aspecto de la anulación de ID de un conjunto de datos en un SDK móvil [!DNL iOS] integración.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android™ (Kotlin)]
-
-Este ejemplo muestra el aspecto de la anulación de ID de un conjunto de datos en un SDK móvil [!DNL Android] integración.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamIdOverride("SampleDatastreamId")
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
-
-### Anulación de configuración de flujo de datos mediante SDK móvil {#config-override-mobile}
-
-Los ejemplos siguientes muestran el aspecto que podría tener una anulación de la configuración de un conjunto de datos en una integración de SDK móvil. Seleccione las pestañas a continuación para ver las [!DNL iOS] y [!DNL Android] ejemplos.
-
->[!BEGINTABS]
-
->[!TAB iOS (Swift)]
-
-Este ejemplo muestra el aspecto de la anulación de la configuración de una secuencia de datos en un SDK móvil [!DNL iOS] integración.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-
-let configOverrides: [String: Any] = [
-  "com_adobe_experience_platform": [
-    "datasets": [
-      "event": [
-        "datasetId": "SampleEventDatasetIdOverride"
-      ]
-    ]
-  ],
-  "com_adobe_analytics": [
-  "reportSuites": [
-        "MyFirstOverrideReportSuite",
-          "MySecondOverrideReportSuite",
-          "MyThirdOverrideReportSuite"
-      ]
-  ],
-  "com_adobe_identity": [
-    "idSyncContainerId": "1234567"
-  ],
-  "com_adobe_target": [
-    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
- ],
-]
-
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android (Kotlin)]
-
-Este ejemplo muestra el aspecto de la anulación de la configuración de una secuencia de datos en un SDK móvil [!DNL Android] integración.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val configOverrides = mapOf(
-    "com_adobe_experience_platform"
-    to mapOf(
-        "datasets"
-        to mapOf(
-            "event"
-            to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride")
-        )
-    ),
-    "com_adobe_analytics"
-    to mapOf(
-        "reportSuites"
-        to listOf(
-            "MyFirstOverrideReportSuite",
-            "MySecondOverrideReportSuite",
-            "MyThirdOverrideReportSuite"
-        )
-    ),
-    "com_adobe_identity"
-    to mapOf(
-        "idSyncContainerId"
-        to "1234567"
-    ),
-    "com_adobe_target"
-    to mapOf(
-        "propertyToken"
-        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    )
-)
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamConfigOverride(configOverrides)
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
+Para obtener información sobre cómo enviar las invalidaciones a la red perimetral, lea la [guía sobre el envío de invalidaciones mediante sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) o [guía sobre el envío de invalidaciones mediante reglas](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Ejemplo de carga útil {#payload-example}
 
