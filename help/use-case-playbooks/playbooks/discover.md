@@ -4,10 +4,10 @@ title: Descubra el manual de tácticas adecuado
 description: Aprenda a identificar el manual de tácticas adecuado para su caso de uso y actívelo.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ El diagrama de ideas comienza con una definición de a quién se llega en el rec
 
 
 ### Resumen {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Assets"
+>abstract="Estos son los recursos que genera este manual. Después de crear una instancia del manual, puede ver los recursos en la zona protegida inspiradora y promocionarlos a otras zonas protegidas, según desee."
 
 Inspeccione la sección de resumen para comprender qué recursos se generan una vez que crea instancias desde el manual de tácticas. Los recursos que se generan para cada manual de tácticas se adaptan al caso de uso que este habilita. A continuación, obtendrá más información acerca de todos los elementos de la sección de resumen.
 
