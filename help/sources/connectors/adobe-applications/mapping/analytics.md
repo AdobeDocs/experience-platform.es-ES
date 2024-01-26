@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Asignación de campos para el conector de origen de Adobe Analytics
 description: Asigne campos de Adobe Analytics a campos XDM mediante el conector de origen de Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2388'
 ht-degree: 14%
 
 ---
@@ -38,7 +38,7 @@ Los campos seleccionados se asignan directamente de Adobe Analytics al modelo de
 | `m_keywords` | `search.keywords` | string | La variable utilizada en la dimensión Palabra clave. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | entero | ID numérica que representa el sistema operativo del visitante. Se basa en la columna user_agent. |
 | `m_page_url` | `web.webPageDetails.URL` | string | La URL de la visita individual a la página. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | string | Variable utilizada para rellenar la dimensión Páginas. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | string | Es igual a 1 en visitas que tienen un nombre de página. Esto es similar a la métrica Vistas de página de Adobe Analytics. |
 | `m_referrer` | `web.webReferrer.URL` | string | Dirección URL de la página anterior. |
 | `m_search_page_num` | `search.pageDepth` | entero | Lo utiliza la dimensión Rango de todas las páginas de búsqueda. Indica en qué página de resultados de búsqueda apareció su sitio antes de que el usuario hiciera clic para acceder a su sitio. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | Variable de estado. |
@@ -152,7 +152,7 @@ Los campos seleccionados procedentes de ADC deben transformarse, lo que requiere
 | `m_page_event_var1` | `web.webInteraction.URL` | string | Variable que solo se utiliza en las solicitudes de imagen de seguimiento de vínculos. Esta variable contiene la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
 | `m_page_event_var2` | `web.webInteraction.name` | string | Variable que solo se utiliza en las solicitudes de imagen de seguimiento de vínculos. Muestra el nombre personalizado del vínculo, si se especifica. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | Booleano | Variable que se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o debe contener &quot;ErrorPage&quot;. |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | number | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
 | `m_paid_search` | `search.isPaid` | Booleano | Un indicador que se establece si la visita coincide con la detección de búsquedas de pago. |
 | `m_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se transmite mediante la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
 | `m_ref_type` | `web.webReferrer.type` | string | Una ID numérica que representa el tipo de referente de la visita.<br/>`1`: dentro del sitio<br/>`2`: Otros sitios web<br/>`3`: Motores de búsqueda<br/>`4`: Disco duro<br/>`5`: USENET<br/>`6`: Escrito o añadido como marcador (sin referente)<br/>`7`: correo electrónico<br/>`8`: no hay JavaScript<br/>`9`: Redes sociales |
@@ -203,7 +203,7 @@ Para obtener más información sobre cómo realizar estas transformaciones media
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | Variable utilizada en la dimensión Página de entrada original. El nombre de página de la página de entrada del visitante. |
 | `post_keywords` | `search.keywords` | string | Las palabras clave que se recopilaron para la visita. |
 | `post_page_url` | `web.webPageDetails.URL` | string | La URL de la visita individual a la página. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | string | Variable utilizada para rellenar la dimensión Páginas. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | string | Es igual a 1 en visitas que tienen un nombre de página. Esto es similar a la métrica Vistas de página de Adobe Analytics. |
 | `post_purchaseid` | `commerce.order.purchaseID` | string | Variable que se utiliza para identificar compras de forma exclusiva. |
 | `post_referrer` | `web.webReferrer.URL` | string | Dirección URL de la página anterior. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | Variable de estado. |
@@ -233,11 +233,11 @@ Para obtener más información sobre cómo realizar estas transformaciones media
 | `post_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | string | El tipo de visita que se envía en la solicitud de imagen (visita estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | El tipo de visita que se envía en la solicitud de imagen (visita estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Es igual a 1 si la visita es un clic en vínculo. Esto es similar a la métrica Eventos de página de Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Es la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Es el nombre personalizado del vínculo. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | Booleano | Se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o debe contener &quot;ErrorPage&quot; |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | number | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
 | `post_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se transmite mediante la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
 | `post_search_engine` | `search.searchEngine` | string | El ID numérico que representa el motor de búsqueda que refirió al visitante a su sitio. |
 | `mvvar1_instances` | `.list.items[]` | Objeto | Lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
