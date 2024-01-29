@@ -2,7 +2,7 @@
 title: Creación de una conexión base de Marketing Cloud de Salesforce mediante la API de Flow Service
 description: Obtenga información sobre cómo autenticar su cuenta de Salesforce Marketing Cloud con Experience Platform mediante la API de Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
+source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 5%
@@ -38,7 +38,7 @@ Para que [!DNL Flow Service] para conectar con [!DNL Salesforce Marketing Cloud]
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `host` | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , debe especificar el valor de `{subdomain}.rest.marketingcloudapis.com`. Por ejemplo, si la dirección URL del host es `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, entonces solo necesita introducir `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` como valor de host. |
+| `host` | Servidor host de la aplicación. Este suele ser su subdominio. **Nota:** Al introducir su `host` , debe especificar el valor de `{subdomain}.rest.marketingcloudapis.com`. Por ejemplo, si la dirección URL del host es `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`, entonces solo necesita introducir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` como valor de host. |
 | `clientId` | El ID de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 | `clientSecret` | El secreto de cliente asociado con su [!DNL Salesforce Marketing Cloud] aplicación. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce Marketing Cloud] es: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
