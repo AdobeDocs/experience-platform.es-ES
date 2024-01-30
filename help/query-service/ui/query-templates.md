@@ -2,9 +2,9 @@
 title: Plantillas de consulta
 description: Las plantillas de consulta son consultas SQL guardadas reutilizables que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos del Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 1a44be939a4678078b414658199472e07dee153b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Puede crear plantillas de consulta mediante dos métodos, ya sea realizando una 
 
 Consulte la documentación para obtener instrucciones sobre cómo utilizar el Editor de consultas para lo siguiente [escribir](./user-guide.md#query-authoring) y [guardar consultas](./user-guide.md#saving-queries). Una vez que haya asignado un nombre a la consulta y la haya guardado, estará disponible para volver a utilizarse como plantilla de consulta en [!UICONTROL Plantillas] pestaña.
 
+>[!TIP]
+>
+>Al guardar una consulta en el Editor de consultas, aparece un mensaje de confirmación para notificarle que la acción se ha realizado correctamente. Este mensaje emergente contiene un vínculo que proporciona una forma cómoda de desplazarse al espacio de trabajo de programación de consultas. Consulte la [documentación de consultas de programación](./query-schedules.md) para aprender a ejecutar consultas en una cadencia personalizada.
+
 ## Examinar plantillas de consulta {#browse}
 
 En el espacio de trabajo Consultas de la IU de Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
@@ -37,12 +41,13 @@ Para buscar información de plantilla relevante, seleccione cualquier plantilla 
 
 ![El panel de detalles del espacio de trabajo de consultas con el ID de consulta resaltado.](../images/ui/query-templates/details-panel.png)
 
-Desde el panel de detalles puede ejecutar cuatro acciones independientes:
+Desde el panel de detalles puede ejecutar las siguientes acciones:
 
-* Seleccionar **[!UICONTROL Conjunto de datos de salida]** para editar el conjunto de datos de salida de la plantilla seleccionada.
-* Seleccionar **[!UICONTROL Ver programación]** para ir al [!UICONTROL Horarios] pestaña. Esta vista contiene toda la información de programación asociada a la consulta.
+* Seleccionar **[!UICONTROL Ejecutar como CTAS]** para crear una nueva tabla seleccionando datos de una tabla o tablas existentes. Esta opción sólo está disponible si tiene una consulta SELECT.
+* Seleccionar **[!UICONTROL Agregar programación]** para empezar a editar la programación de la plantilla de consulta.
+* Seleccionar **[!UICONTROL Ver programación]** para ir al [!UICONTROL Horarios] del Editor de consultas. Esta vista contiene toda la información de programación asociada a la consulta.
 * Seleccionar **[!UICONTROL Eliminar consulta]** para eliminar la plantilla.
-* Seleccione el nombre de la plantilla para navegar hasta el Editor de consultas, donde el SQL ya se ha rellenado para su edición.
+* Seleccione el nombre de la plantilla para navegar hasta el Editor de consultas, donde el SQL se rellena previamente para su edición.
 
 ### Utilice la API del servicio de consultas para crear una plantilla
 

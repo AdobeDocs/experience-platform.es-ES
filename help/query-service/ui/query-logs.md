@@ -2,9 +2,9 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ Cada fila representa los datos de registro de una ejecución de consulta asociad
 
 ![El espacio de trabajo Registro de consultas con una fila seleccionada y los datos de registro resaltados en la barra lateral derecha.](../images/ui/query-log/log-details.png)
 
-En el panel de detalles del registro, puede seleccionar un nuevo conjunto de datos de salida y ver o copiar la consulta SQL completa que se utilizó en la ejecución.
+En el panel de detalles del registro, puede realizar diversas acciones. Puede ejecutar la consulta como CTAS, que crea un nuevo conjunto de datos de salida, ver o copiar la consulta SQL completa que se utilizó en la ejecución o eliminar la consulta.
 
-![El espacio de trabajo Registro de consultas con una fila seleccionada y el conjunto de datos de salida y la consulta SQL resaltados.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>La opción para [!UICONTROL Ejecutar como CTAS] solo está disponible para una consulta SELECT.
+
+![El espacio de trabajo Registro de consultas con una fila seleccionada, Ejecutar como CTAS, Eliminar consulta y el icono Copiar SQL resaltado.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >

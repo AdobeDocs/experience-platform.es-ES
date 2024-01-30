@@ -5,9 +5,9 @@ title: Generar conjuntos de datos de salida a partir de resultados de consulta
 type: Tutorial
 description: El servicio de consulta de Adobe Experience Platform permite crear conjuntos de datos desde la interfaz de usuario. Una vez creado un conjunto de datos, se puede acceder a él como cualquier otro conjunto de datos del lago de datos y utilizarlo en una variedad de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,15 @@ Para crear conjuntos de datos desde la interfaz de usuario (IU) de Adobe Experie
 
 2. En la IU de Platform, navegue hasta **[!UICONTROL Consultas]** seguido del **[!UICONTROL Plantillas]** y seleccione la consulta que ha creado. Para obtener más información sobre cómo ver las consultas creadas y guardadas para su organización en la interfaz de usuario de Platform, lea la [[!DNL Query Service] descripción general](./overview.md#browse).
 
-3. En el panel Detalles de la consulta, seleccione **[!UICONTROL Conjunto de datos de salida]**.
+3. En el panel Detalles de la consulta, seleccione **[!UICONTROL Ejecutar como CTAS]**.
 
-   ![La pestaña Consultas del espacio de trabajo Plantillas con Seleccionar conjunto de datos de salida resaltado.](../images/ui/create-datasets/output-dataset.png)
+   ![El espacio de trabajo Consultas [!UICONTROL Plantillas] pestaña con Seleccionar [!UICONTROL Ejecutar como CTAS] resaltado.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. En el cuadro de diálogo que aparece, introduzca un nombre de conjunto de datos precedido de su ID de LDAP. El nombre del conjunto de datos no tiene que ser único ni seguro para SQL. Tenga en cuenta que el nombre de tabla del conjunto de datos se generará en función del nombre del conjunto de datos que cree aquí.
 
-5. A continuación, introduzca una descripción para el conjunto de datos en la [!UICONTROL Descripción] y seleccione **[!UICONTROL Ejecutar consulta]**.
+5. A continuación, introduzca una descripción para el conjunto de datos en la [!UICONTROL Descripción] y seleccione **[!UICONTROL Ejecutar como CTAS]**.
 
-   ![El cuadro de diálogo Conjunto de datos de salida con los detalles del conjunto de datos y la consulta de ejecución resaltados](../images/ui/create-datasets/run-query.png)
+   ![El cuadro de diálogo Conjunto de datos de salida con los detalles y [!UICONTROL Ejecutar como CTAS] resaltado](../images/ui/create-datasets/run-query.png)
 
 6. Una vez finalizada la ejecución de la consulta, vaya a **[!UICONTROL Conjuntos de datos]** para ver el conjunto de datos que ha creado. Para obtener más información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Platform, consulte [Guía de IU de conjuntos de datos](../../catalog/datasets/user-guide.md).
 
