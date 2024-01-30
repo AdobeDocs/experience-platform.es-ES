@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: Información general sobre la concienciación en materia de datos en los manuales de casos de uso
 description: Aprenda a acelerar el tiempo de respuesta al valor copiando los recursos generados en la zona protegida inspiradora final en otras zonas protegidas.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Información general sobre la concienciación en materia de datos en los manuales de casos de uso
 
-Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. En Adobe Experience Platform, estas plantillas hacen referencia a varios campos y grupos de campos estándar. Sin embargo, en determinados casos, es posible que ya haya configurado sus propios esquemas, campos y grupos de campos. Esto podría hacer que algunos de los recursos generados por las plantillas de casos de uso, como los recorridos, sean incompatibles con los datos. Para comprender cómo utilizar la funcionalidad de reconocimiento de datos para alinear y complementar mejor los recursos generados con los recursos existentes, lea este tutorial.
+Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. Puede probar los recursos creados por los libros de reproducción en la zona protegida inspiradora y, cuando esté listo, puede importar los recursos en otras zonas protegidas de desarrollo para realizar más pruebas con los datos que tiene disponibles en esas zonas protegidas. Cuando esté satisfecho con las pruebas, puede mover los recursos de los entornos limitados de desarrollo a los de producción.
+
+Sin embargo, en algunos casos, es posible que ya haya configurado sus propios esquemas, campos y grupos de campos en otros entornos limitados de desarrollo. Esto podría hacer que algunos de los recursos generados por las plantillas de casos de uso, como los recorridos, sean incompatibles con los datos. Para comprender cómo utilizar la funcionalidad de reconocimiento de datos para alinear y complementar mejor los recursos generados con los recursos existentes, lea este tutorial.
 
 ## Requisitos previos {#prerequisites}
 
@@ -22,6 +23,10 @@ Antes de leer este tutorial, examine la [plantillas de manual de casos de uso di
 La creación de una instancia de genera un conjunto de recursos, como recorridos, segmentos, esquemas y mensajes, en la zona protegida inspiracional. Siga leyendo para aprender a copiar estos recursos en otros entornos limitados.
 
 ### Creación y publicación de un paquete {#create-publish-package}
+
+>[!NOTE]
+>
+> Solo puede importar paquetes en otros entornos limitados de desarrollo. Una vez que haya realizado todos los cambios o actualizaciones necesarios, podrá importar los recursos o paquetes de esos entornos limitados de desarrollo a producción. No puede importar directamente desde las zonas protegidas de los libros de reproducción de casos de uso a la producción.
 
 1. Para importar objetos de la zona protegida inspiracional a otra zona protegida, busque la instancia que desee en un manual de casos de uso y seleccione **[!UICONTROL Publicar en una zona protegida diferente]** para exportar los artefactos como un paquete.
 
@@ -48,10 +53,6 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 5. Seleccione el **+** controle e inicie el flujo de trabajo para importar los recursos generados por el manual de casos de uso en **[!UICONTROL Zona protegida de Target]**. Seleccione una zona protegida de destino y confirme el nombre del paquete que desea importar mediante la lista desplegable. Añada los detalles del trabajo, como el nombre y la descripción del trabajo, antes de continuar con el siguiente paso.
 
    ![Inicie el flujo de trabajo de importación, seleccione un destino, confirme el paquete y añada detalles del trabajo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > Solo puede importar paquetes en otros entornos limitados de desarrollo. La zona protegida de producción está deshabilitada para estas importaciones.
 
 6. En el **[!UICONTROL Ver dependencias]** paso a paso, puede asignar esquemas y copiar otros recursos de la zona protegida de inspiración en la de destino. El **[!UICONTROL Finalizar]** El botón está desactivado hasta que asigne cada esquema.
 
@@ -96,3 +97,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 ## Pasos siguientes
 
 Después de leer esta guía, ahora comprende mejor cómo aprovechar los libros de reproducción de casos de uso junto con [herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para crear recorridos ejecutables que hagan referencia a los esquemas. Obtenga más información sobre los [Casos de uso de Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### Más ayuda sobre este tema
+
+[Herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md)

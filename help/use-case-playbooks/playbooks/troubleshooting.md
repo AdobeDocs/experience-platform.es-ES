@@ -1,25 +1,49 @@
 ---
 solution: Experience Platform
-title: Solución de problemas con los manuales de tácticas
-description: Conozca los problemas comunes con los manuales de tácticas y cómo solucionarlos
-badgeBeta: label="Beta" type="Informative"
+title: Limitaciones conocidas y solución de problemas con los libros de reproducción
+description: Obtenga más información acerca de los problemas conocidos y los problemas comunes con los libros de reproducción y cómo solucionarlos
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: 5226a3f9a6da22c2c199f8efffd71360af034dcc
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 100%
+source-wordcount: '356'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Solución de problemas y limitaciones conocidas
+# Solución de problemas y limitaciones conocidas {#troubleshooting-known-limitations}
 
->[!AVAILABILITY]
->
->Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
+## Resolución de problemas {#troubleshooting}
 
-Para la versión Beta de [!UICONTROL Manuales de tácticas de casos de uso], tenga en cuenta las sugerencias de solución de problemas y las limitaciones conocidas.
+### Superficies Adobe Journey Optimizer no configuradas
 
-## Limitaciones conocidas {#known-limitations}
+Al crear una instancia de un manual de implementación, es posible que vea el mensaje siguiente.
 
-Al crear una nueva instancia de un manual de tácticas, se generan nuevos recursos. Sin embargo, para los esquemas generados, si se genera un esquema en una instancia de un manual de tácticas y lo edita, otro esquema *no* se generará si habilita otra instancia del manual de tácticas. En su lugar, también seguirá utilizando el esquema editado en la nueva instancia.
+![Resolución de problemas](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
+
+Esto se debe a que los libros de reproducción de Journey Optimizer crean mensajes para canales de correo electrónico, push y SMS. Lea el [introducción](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) guía para configurar las diferentes superficies.
+
+### Estado *error* al crear una nueva instancia
+
+Si ve un mensaje de error cuando intenta crear una instancia, puede deberse a que el administrador no le ha concedido los permisos de usuario necesarios. Un libro de reproducción contiene muchos recursos diferentes y el usuario necesita permisos para crear esos recursos para poder crear la instancia del libro de reproducción correctamente. Consulte la [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de esta guía sobre cómo configurar permisos.
+
+## Limitaciones conocidas
+
+Un par de limitaciones conocidas se muestran al crear una instancia de un manual y generar recursos.
+
+* Para los esquemas generados, si se genera un esquema en una instancia de un manual y se edita, otro esquema *no* se generan si habilita otra instancia del manual de implementación. En su lugar, siga utilizando el esquema editado también dentro de la instancia.
+
+* Al usar el [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md) para promocionar el esquema de la zona protegida de inspiración a la de desarrollo, podría ver algunos errores similares a los siguientes:
+
+![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+
+Esto se debe a que algunos de los campos generados a partir del esquema no están presentes en el esquema en el entorno limitado de desarrollo al que está copiando. Busca lo que son esos campos. A continuación, vuelva a la zona protegida de desarrollo, donde podrá hacer lo siguiente:
+
+* Cree un nuevo grupo de campos que incluya esos campos o
+* Incluya en el esquema un grupo de campos estándar predefinido que incluya los campos que faltan.
+
+Después de incluir esos campos en el esquema en la zona protegida de desarrollo, vuelva al flujo de trabajo para copiar los campos de esquema de la zona protegida inspiracional en la zona protegida de desarrollo. Los errores ya no existen.
+
+Para obtener más información, vea el siguiente vídeo para crear grupos de campos de esquema.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)

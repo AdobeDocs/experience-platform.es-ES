@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Creación, uso compartido y reutilización de instancias de manuales de tácticas
 description: Aprenda a crear, compartir y reutilizar instancias del manual de tácticas para lograr su caso de uso de marketing.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '740'
+ht-degree: 86%
 
 ---
 
-# (Beta) Creación, uso compartido y reutilización de instancias de manuales de tácticas
-
->[!AVAILABILITY]
->
->Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
+# Creación, uso compartido y reutilización de instancias de manuales de tácticas
 
 Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales de tácticas] > [!UICONTROL Manuales de tácticas]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
@@ -48,7 +43,7 @@ Después de crear una instancia basada en un manual de tácticas, puede personal
 
 Es importante comprender que los recursos generados difieren según el caso de uso que active:
 
-* Se generan diferentes recursos para diferentes tipos de manuales de tácticas. Estos recursos se crean específicamente para el caso de uso conseguido mediante el manual de tácticas. Por ejemplo, un manual de tácticas genera un esquema, un segmento, un recorrido y mensajes. Otro manual de tácticas genera un esquema, un segmento y un destino para activar los datos.
+* Se generan diferentes recursos para diferentes tipos de manuales de tácticas. Estos recursos se crean específicamente para el caso de uso conseguido mediante el manual de tácticas. Por ejemplo, un manual genera un esquema, una audiencia, un recorrido y mensajes. Otro manual genera un esquema, una audiencia y un destino para activar los datos.
 * Los recursos en sí difieren entre los manuales de tácticas. Por ejemplo, para el manual de tácticas **[!UICONTROL Enviar un mensaje de cumpleaños a los invitados]**, el público que se crea tiene la regla `birthday=today AND year=any`.
 
 Para ilustrar un ejemplo, consulte el manual de tácticas **[!UICONTROL Carro de compras abandonado: mercancía]**, puede ver que se crea un recorrido específico que incluye los mensajes creados para este caso de uso.
@@ -67,7 +62,7 @@ El comportamiento descrito anteriormente es verdadero para todos los recursos qu
 >
 >Realice pruebas en una zona protegida de desarrollo y pase a la producción cuando termine.
 >
->Una vez generados los objetos, puede seguir probando en las zonas protegidas de desarrollo añadiendo datos. Puede probar los recursos todo el tiempo que desee en la zona protegida de desarrollo y duplicar la lógica de recursos (definiciones de segmentos, recorridos, esquemas, etc.) en la zona protegida de producción cuando esté listo.
+>Una vez generados los objetos, puede seguir probando en las zonas protegidas de desarrollo añadiendo datos. Puede probar los recursos todo el tiempo que desee en el entorno limitado de desarrollo y duplicar la lógica de recursos (definiciones de audiencias, recorridos, esquemas, etc.) en el entorno limitado de producción cuando esté listo. Puede pasar a la zona protegida de desarrollo y, a continuación, a la de producción utilizando [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Reutilizar manuales de tácticas {#reuse-playbooks}
 

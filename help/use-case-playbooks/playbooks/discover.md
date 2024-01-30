@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Descubra el manual de tácticas adecuado
 description: Aprenda a identificar el manual de tácticas adecuado para su caso de uso y actívelo.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Beta) Descubra el manual de tácticas correcto
-
->[!AVAILABILITY]
->
->Actualmente, esta funcionalidad está en versión beta y no está disponible para todos los usuarios. La documentación y las funcionalidades están sujetas a cambios.
+# Descubra el manual de tácticas adecuado
 
 Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales de tácticas] > [!UICONTROL Manuales de tácticas]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
@@ -48,7 +43,6 @@ Utilice la sección de diagrama de ideas del manual de tácticas para comprender
 El diagrama de ideas comienza con una definición de a quién se llega en el recorrido del usuario y describe en cada paso si Adobe entrega algo, como un nuevo mensaje o un recordatorio, o si es algo que la persona objetivo hizo que activa el siguiente mensaje o evento.
 
 ![Diagrama de ideas del manual de tácticas resaltado.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Resumen {#summary}
 
