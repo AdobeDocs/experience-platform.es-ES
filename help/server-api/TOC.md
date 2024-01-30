@@ -5,10 +5,10 @@ user-guide-title: Documentación de la API del servidor de red perimetral
 breadcrumb-title: Documentación de la API del servidor de red perimetral
 user-guide-description: Utilice la API del servidor de red perimetral para la recopilación de datos, personalización, publicidad y casos de uso de marketing de datos con los servicios perimetrales de Experience Cloud o de Experience Platform.
 feature: Data Collection
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 48%
+source-wordcount: '76'
+ht-degree: 63%
 
 ---
 
@@ -30,8 +30,3 @@ ht-degree: 48%
 * [Sugerencias de ubicación](location-hints.md)
 * [Control de errores](error-handling.md)
 * [Resolución de problemas](troubleshooting.md)
-* API de Media Edge {#media-edge-apis}
-   * [Información general de API de Media Edge](media-edge-api/overview.md)
-   * [Introducción a la API de Media Edge](media-edge-api/getting-started.md)
-   * [Solución de problemas de API de Media Edge](media-edge-api/troubleshooting.md)
-   * [Recurso de especificación de API abierta de Media Edge](media-edge-api/swagger.md)
