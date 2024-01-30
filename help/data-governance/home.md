@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="Obligación de gobernanza de datos"
->abstract="Recuerde, es su única responsabilidad adherirse a las políticas de gobernanza de datos de su organización y cumplir con sus requisitos regulatorios. Experience Platform proporciona herramientas de control de datos para que administre sus obligaciones de uso de datos. Aplique las etiquetas de uso de datos adecuadas antes de consultar o procesar datos. Consulte la documentación para obtener más información sobre las herramientas y las prácticas recomendadas de control de datos."
+>abstract="Recuerde: la responsabilidad de adherirse a las políticas de gobernanza de datos de su organización y de cumplir con sus requisitos regulatorios es exclusivamente suya. Experience Platform proporciona herramientas de gobernanza de datos para que administre sus obligaciones con respecto al uso de los datos. Aplique las etiquetas de uso de datos adecuadas antes de consultar o procesar datos. Consulte la documentación para obtener más información sobre las herramientas y las prácticas recomendadas para la gobernanza de datos."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es" text="Información general de gobernanza de datos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es" text="Resumen de etiquetas de gobernanza de datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es" text="Información general sobre etiquetas de gobernanza de datos"
 
 Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las políticas de uso de datos.
 

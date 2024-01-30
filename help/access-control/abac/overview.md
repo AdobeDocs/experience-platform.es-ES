@@ -10,7 +10,7 @@ ht-degree: 13%
 
 ---
 
-# Resumen del control de acceso basado en atributos {#attribute-based-access-control-overview}
+# Información general de control de acceso basado en atributos {#attribute-based-access-control-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_accesscontrol_abac_labelusageaccesspolicy"

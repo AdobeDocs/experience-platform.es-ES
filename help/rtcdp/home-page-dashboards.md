@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -37,8 +37,8 @@ El [!UICONTROL Introducción a Real-Time Customer Profile] El widget se divide e
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
 >title="Recuento total de perfiles"
->abstract="El número total de perfiles que su organización tiene en Experience Platform. Este recuento se basa en la política de combinación de su organización y no incluye fragmentos de perfil. El número de perfiles se actualiza una vez cada 24 horas."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Obtenga más información en la documentación"
+>abstract="El número total de perfiles que su organización tiene en Experience Platform. Este recuento se basa en la política de combinación de su organización y no incluye fragmentos de perfiles. El número de perfiles se actualiza una vez cada 24 horas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=es#profile-count" text="Obtenga más información en la documentación"
 
 El panel de métricas muestra información actualizada sobre los datos del Experience Platform. El tablero se divide en dos secciones:
 
