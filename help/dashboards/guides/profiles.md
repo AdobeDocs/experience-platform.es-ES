@@ -4,10 +4,10 @@ title: Guía del panel Perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 10%
+source-wordcount: '4996'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ Los datos de atributos de la instantánea muestran los datos exactamente como ap
 >
 >Los cambios o actualizaciones realizados en los datos desde que se tomó la instantánea no se reflejarán en el tablero hasta que se tome la siguiente instantánea.
 
-## Exploración del panel Perfiles
+## Exploración del panel Perfiles {#explore-dashboard}
 
 Para navegar al panel Perfiles dentro de la IU de Platform, seleccione **[!UICONTROL Perfiles]** en el carril izquierdo, seleccione **[!UICONTROL Información general]** para mostrar el tablero.
 
@@ -37,7 +37,7 @@ Para navegar al panel Perfiles dentro de la IU de Platform, seleccione **[!UICON
 
 ![El panel Perfiles del Experience Platform con los perfiles e información general resaltados.](../images/profiles/dashboard-overview.png)
 
-### Modificación del panel Perfiles
+### Modificación del panel Perfiles {#modify-dashboard}
 
 Puede modificar el aspecto del tablero de mandos Perfiles seleccionando **[!UICONTROL Modificar tablero]**. Puede mover, añadir, cambiar el tamaño y eliminar widgets del tablero, así como acceder al **[!UICONTROL Biblioteca de widgets]** para explorar los widgets disponibles y crear widgets personalizados para su organización.
 
@@ -50,6 +50,10 @@ Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de 
 ![Información general del panel Perfiles con el widget de adición resaltado.](../images/profiles/profiles-overview-add-widget.png)
 
 Desde la biblioteca de widgets, puede examinar la selección de widgets de audiencia estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
+
+### Ver SQL {#view-sql}
+
+Puede ver el SQL que genera las perspectivas visualizadas en el panel con un conmutador en [!UICONTROL Información general] workspace. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta función, consulte la [Ver guía de IU de SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

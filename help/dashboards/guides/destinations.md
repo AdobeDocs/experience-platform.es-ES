@@ -4,10 +4,10 @@ title: Guía del panel Destinos
 description: Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 20%
+source-wordcount: '3244'
+ht-degree: 19%
 
 ---
 
@@ -51,6 +51,10 @@ Seleccionar **[!UICONTROL Añadir widget]** para desplazarse a la biblioteca de 
 
 Desde la biblioteca de widgets, puede examinar la selección de widgets de audiencia estándar y personalizados. Para obtener información sobre cómo añadir widgets, consulte la documentación de la biblioteca de widgets sobre cómo [añadir un widget](../customize/widget-library.md#add-widgets).
 
+### Ver SQL {#view-sql}
+
+Puede ver el SQL que genera las perspectivas visualizadas en el panel con un conmutador en [!UICONTROL Información general] workspace. Puede inspirarse en el SQL de sus perspectivas existentes para crear nuevas consultas que deriven perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información acerca de esta función, consulte la [Ver guía de IU de SQL](../view-sql.md).
+
 ## Widgets predeterminados {#default-widgets}
 
 Se proporciona una carga de widget predeterminada para todas las instancias nuevas de Adobe Experience Platform que resalta las perspectivas disponibles más recientes de sus datos. Los siguientes widgets están preconfigurados en la vista de segmentos desde el principio. A continuación, se encuentran todos los detalles sobre el propósito y la función de los widgets.
@@ -87,9 +91,9 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Tendencia de tamaño de público]](#audience-size-trend)
 * [[!UICONTROL Públicos no asignados por identidad]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Públicos asignados por identidad]](#mapped-audiences-by-identity)
-* [[!UICONTROL Públicos comunes]](#common-audiences)
+* [[!UICONTROL Audiencias comunes]](#common-audiences)
 * [[!UICONTROL Audiencias asignadas]](#mapped-audiences)
-* [[!UICONTROL Estado de público asignado]](#mapped-audience-health)
+* [[!UICONTROL Estado de audiencia asignado]](#mapped-audience-health)
 * [[!UICONTROL Recuento de destinos]](#destinations-count)
 * [[!UICONTROL Estado del destino]](#destination-status)
 * [[!UICONTROL Destinos activos por plataforma de destino]](#active-destinations-by-destination-platform)
@@ -192,7 +196,7 @@ El **[!UICONTROL Tendencia de tamaño de audiencia]** El widget proporciona un [
 
 El **[!UICONTROL Audiencias no asignadas por identidad]** widget enumera los cinco principales **sin asignar** las audiencias clasificadas por recuento de identidad descendente para un destino e identidad determinados. Resalta las audiencias que son más beneficiosas para asignar a la cuenta de destino elegida en función del ID elegido.
 
-El menú desplegable de ID de destino filtra las audiencias disponibles. Los ID de filtro enumerados en el menú desplegable del cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
+El menú desplegable de ID de destino filtra las audiencias disponibles. Los ID de filtro enumerados en la lista desplegable cambian según la cuenta de destino seleccionada en la parte superior de la página de información general.
 
 La columna de identidades cuenta el número de ID de origen dentro de la audiencia que podrían asignarse al ID elegido en la lista desplegable ID del widget.
 
