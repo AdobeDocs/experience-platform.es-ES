@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 3%
+source-wordcount: '984'
+ht-degree: 2%
 
 ---
 
@@ -155,9 +155,9 @@ El **[!UICONTROL Quitar grupo de usuarios]** aparece un cuadro de diálogo que l
 
 Se le devolverá a la **[!UICONTROL Grupos de usuarios]** pestaña.
 
-## Adición de usuarios a Experience Platform mediante un perfil de producto
+## Adición de usuarios al Experience Platform mediante una función
 
-Para añadir un usuario a un perfil de producto, inicie sesión en el Admin Console y seleccione **[!UICONTROL Adición de usuarios]**
+Para añadir un usuario a una función, inicie sesión en el Admin Console y seleccione **[!UICONTROL Adición de usuarios]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

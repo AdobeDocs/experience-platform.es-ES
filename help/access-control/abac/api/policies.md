@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de directivas de control de acceso
 description: El extremo /policies de la API de control de acceso basado en atributos le permite administrar directivas mediante programación en Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1433'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Las políticas de control de acceso son instrucciones que unen atributos para es
 >
 >Este extremo no debe confundirse con el `/policies` punto final en la [API del servicio de directivas](../../../data-governance/api/policies.md), que se utiliza para administrar las políticas de uso de datos.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
@@ -180,35 +180,49 @@ Una solicitud correcta devuelve información sobre el ID de directiva consultado
 
 ```json
 {
-    "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "imsOrgId": "{IMS_ORG}",
-    "createdBy": "{CREATED_BY}",
-    "createdAt": 1652859368555,
-    "modifiedBy": "{MODIFIED_BY}",
-    "modifiedAt": 1652890780206,
-    "name": "Documentation-Copy",
-    "description": "xyz",
-    "status": "active",
-    "subjectCondition": null,
-    "rules": [
+  "policies": [
+    {
+      "id": "7019068e-a3a0-48ce-b56b-008109470592",
+      "imsOrgId": "5555467B5D8013E50A494220@AdobeOrg",
+      "createdBy": "example@AdobeID",
+      "createdAt": 1652892767559,
+      "modifiedBy": "example@AdobeID",
+      "modifiedAt": 1652895736367,
+      "name": "schema-field",
+      "description": "schema-field",
+      "status": "inactive",
+      "subjectCondition": null,
+      "rules": [
         {
-            "effect": "Permit",
-            "resource": "orgs/{IMS_ORG}/sandboxes/ro-sand/schemas/*/schema-fields/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"and\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/xql/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.read",
+            "com.adobe.action.write",
+            "com.adobe.action.view"
+          ]
         },
         {
-            "effect": "Deny",
-            "resource": "orgs/{IMS_ORG}/sandboxes/*/segments/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Permit",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/*/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.delete"
+          ]
+        },
+        {
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/delete-sandbox-adfengine-test-8/segments/*",
+          "condition": "{\"!\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}",
+          "actions": [
+            "com.adobe.action.write"
+          ]
         }
-    ],
-    "_etag": "\"0300d43c-0000-0200-0000-62851c9c0000\""
+      ],
+      "etag": "\"0300593f-0000-0200-0000-62852ff80000\""
+    }
+  ]
 }
 ```
 
@@ -261,7 +275,7 @@ curl -X POST \
           "resource": "/orgs/{IMS_ORG}/sandboxes/*",
           "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
           "actions": [
-            "read"
+            "com.adobe.action.read"
           ]
         }
       ]
@@ -301,7 +315,7 @@ Una solicitud correcta devuelve la política recién creada, incluido su ID de p
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -352,7 +366,7 @@ curl -X PUT \
         "resource": "/orgs/{IMS_ORG}/sandboxes/*",
         "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
         "actions": [
-          "read"
+          "com.adobe.action.read"
         ]
       }
     ]
@@ -381,7 +395,7 @@ Una respuesta correcta devuelve la directiva actualizada.
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -452,7 +466,7 @@ Una respuesta correcta devuelve el ID de directiva consultado con la descripció
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
