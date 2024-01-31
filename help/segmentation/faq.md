@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Sí, las audiencias generadas previamente de forma externa son compatibles con A
 
 ### ¿Qué permisos necesito tener para poder cargar audiencias generadas externamente?
 
-Para cargar audiencias generadas externamente, debe tener los permisos &quot;Administrar audiencias/segmentos&quot; y &quot;Administrar conjuntos de datos&quot;. No se requieren controles específicos basados en funciones para cargar audiencias generadas externamente.
+Para cargar audiencias generadas externamente, necesita tener los permisos &quot;Ver audiencias/segmentos&quot;, &quot;Administrar audiencias/segmentos&quot;, &quot;Ver conjuntos de datos&quot;, &quot;Administrar conjuntos de datos&quot;, &quot;Ver fuentes&quot; y &quot;Administrar fuentes&quot;. No se requieren controles específicos basados en funciones para cargar audiencias generadas externamente.
 
 ### ¿Qué sucede cuando se carga una audiencia generada externamente?
 
