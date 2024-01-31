@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Información general de manuales de tácticas de casos de uso
 description: Aprenda a utilizar la función Manuales de tácticas de casos de uso en Experience Platform para empezar a usar varios casos de uso de marketing
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ Lo que encontrará en esta guía de documentación:
 * Creación de diferentes recursos para utilizarlos, probarlos y promocionarlos en producción cuando estén listos.
 
 ![Vista de todos los manuales de tácticas](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 Cada manual de tácticas incluye información acerca del caso de uso específico que resuelve.
 
