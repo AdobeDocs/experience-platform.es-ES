@@ -3,10 +3,10 @@ title: Documentación del producto de Real-Time CDP
 description: Aprenda a utilizar Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 3%
+source-wordcount: '1071'
+ht-degree: 4%
 
 ---
 
@@ -20,29 +20,29 @@ Eche un vistazo a las mejoras más recientes en el producto y la documentación 
 
 >[!BEGINTABS]
 
+>[!TAB Manuales de casos de uso]
+
+El [!UICONTROL Manuales de casos de uso] Ahora la funcionalidad está disponible de forma general para todos los clientes de Real-Time CDP y Adobe Journey Optimizer. [!UICONTROL Manuales de casos de uso] están diseñadas para ayudar a los usuarios a superar los desafíos al comenzar con Real-time Customer Data Platform o Adobe Journey Optimizer. Cuando no está seguro de por dónde empezar o cómo crear los recursos adecuados para los casos de uso deseados, los libros de reproducción de casos de uso proporcionan inspiración y crean diferentes recursos para probarlos e importarlos en entornos de producción cuando estén listos.
+
+[![Imagen](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Herramientas de la zona protegida]
 
 Utilice la función de herramientas de zona protegida para mejorar la precisión de la configuración en todas las zonas protegidas y exportar e importar sin problemas configuraciones entre zonas protegidas. Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (GA limitado) Activar audiencias de cuenta]
-
-Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](/help/segmentation/ui/account-audiences.md) a determinados destinos.
-
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
+[![Imagen](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
 >[!TAB Atributos calculados]
 
 Resuma fácilmente los datos de evento en atributos de perfil a través de una interfaz de usuario intuitiva para una segmentación, personalización y activación basadas en el comportamiento mejoradas. Con esta función, puede crear atributos calculados en forma de autoservicio, administrarlos y utilizarlos en la segmentación, destinos de Real-Time CDP o Adobe Journey Optimizer. Además, los atributos calculados simplifican la segmentación y los flujos de trabajo de recorrido para ayudarle a ofrecer sin problemas experiencias relevantes.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
+[![Imagen](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
 
 >[!TAB Exportaciones de datos]
 
 La funcionalidad de exportación del conjunto de datos ya está disponible de forma general. Consulte [qué conjuntos de datos puede exportar en función de la aplicación del Experience Platform](../destinations/ui/export-datasets.md#datasets-to-export) ha adquirido y consulte la [protecciones para exportar conjuntos de datos](/help/destinations/guardrails.md#dataset-exports).
 
-[![image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
+[![Imagen](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
 >[!TAB Asistencia de datos de socios]
 
