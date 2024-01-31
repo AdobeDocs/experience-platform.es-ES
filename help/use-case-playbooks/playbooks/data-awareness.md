@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Información general sobre la concienciación en materia de datos en los manuales de casos de uso
 description: Aprenda a acelerar el tiempo de respuesta al valor copiando los recursos generados en la zona protegida inspiradora final en otras zonas protegidas.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Información general sobre la concienciación en materia de datos en los manuales de casos de uso
+# Publicar recursos generados por el manual en otras zonas protegidas {#publish-to-other-sandboxes}
 
 Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. Puede probar los recursos creados por los libros de reproducción en la zona protegida inspiradora y, cuando esté listo, puede importar los recursos en otras zonas protegidas de desarrollo para realizar más pruebas con los datos que tiene disponibles en esas zonas protegidas. Cuando esté satisfecho con las pruebas, puede mover los recursos de los entornos limitados de desarrollo a los de producción.
 
@@ -97,7 +98,3 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 ## Pasos siguientes
 
 Después de leer esta guía, ahora comprende mejor cómo aprovechar los libros de reproducción de casos de uso junto con [herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para crear recorridos ejecutables que hagan referencia a los esquemas. Obtenga más información sobre los [Casos de uso de Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Más ayuda sobre este tema
-
-[Herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md)

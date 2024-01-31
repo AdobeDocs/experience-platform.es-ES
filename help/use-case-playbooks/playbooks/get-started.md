@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Introducción
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 14%
 
 ---
@@ -65,7 +66,7 @@ Para crear y administrar esquemas, utilice los permisos de modelado de datos; **
 
 **Permisos para destinos**
 
-Para crear y administrar destinos, utilice los permisos Destinos; **[!UICONTROL Administrar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Administrar y activar el destino del conjunto de datos]**, UICONTROL Destination Authoring*.
+Para crear y administrar destinos, utilice los permisos Destinos; **[!UICONTROL Administrar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Administrar y activar el destino del conjunto de datos]**, **[!UICONTROL Creación de destino]**.
 
 **Permisos para recorridos**
 

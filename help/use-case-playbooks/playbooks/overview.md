@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Información general de manuales de tácticas de casos de uso
 description: Aprenda a utilizar la función Manuales de tácticas de casos de uso en Experience Platform para empezar a usar varios casos de uso de marketing
+role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '528'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
-# Información general de manuales de tácticas de casos de uso
+# Resumen de casos de uso
 
 >[!BEGINSHADEBOX]
 

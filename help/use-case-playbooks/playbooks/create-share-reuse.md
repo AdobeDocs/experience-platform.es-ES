@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Creación, uso compartido y reutilización de instancias de manuales de tácticas
 description: Aprenda a crear, compartir y reutilizar instancias del manual de tácticas para lograr su caso de uso de marketing.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ Al crear varias instancias del mismo manual de tácticas, puede implementar el m
 Puede compartir la instancia y los recursos generados con otros integrantes del equipo. Para ello, copie el vínculo de la URL del explorador y compártalo con su equipo para darle una visión general de los recursos generados.
 
 ![URL resaltada en una vista del manual de tácticas del caso de uso.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## Recorrido en vídeo del proceso de guía de implementación de extremo a extremo
+
+Vea este vídeo para aprender a descubrir, crear, publicar y solucionar problemas de instancias de un manual de casos de uso de extremo a extremo, así como a copiar los recursos generados por el manual en otras zonas protegidas configuradas en su organización.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Pasos siguientes {#next-steps}
 

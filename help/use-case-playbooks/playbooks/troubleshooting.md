@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Limitaciones conocidas y solución de problemas con los libros de reproducción
 description: Obtenga más información acerca de los problemas conocidos y los problemas comunes con los libros de reproducción y cómo solucionarlos
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # Solución de problemas y limitaciones conocidas {#troubleshooting-known-limitations}
 
+Aprenda a solucionar errores al trabajar con libros de reproducción de casos de uso y comprenda las limitaciones conocidas de la versión de disponibilidad general.
+
 ## Resolución de problemas {#troubleshooting}
+
+Vea sugerencias para la resolución de problemas con errores comunes al trabajar con libros de reproducción de casos de uso
 
 ### Superficies Adobe Journey Optimizer no configuradas
 
@@ -35,7 +40,7 @@ Un par de limitaciones conocidas se muestran al crear una instancia de un manual
 
 * Al usar el [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md) para promocionar el esquema de la zona protegida de inspiración a la de desarrollo, podría ver algunos errores similares a los siguientes:
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Errores mostrados en el flujo de trabajo de asignación de esquemas.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Esto se debe a que algunos de los campos generados a partir del esquema no están presentes en el esquema en el entorno limitado de desarrollo al que está copiando. Busca lo que son esos campos. A continuación, vuelva a la zona protegida de desarrollo, donde podrá hacer lo siguiente:
 

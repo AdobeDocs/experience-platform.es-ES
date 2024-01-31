@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: Descubra el manual de tácticas adecuado
 description: Aprenda a identificar el manual de tácticas adecuado para su caso de uso y actívelo.
+role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 91%

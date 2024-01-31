@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Casos de uso y libros de reproducción disponibles para Real-time Customer Data Platform y Adobe Journey Optimizer.
 description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -54,17 +55,17 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 | Nombre del manual | Descripción |
 | ------------- | ----------- |
-| Carro abandonado: mercancía: para activación | Reasigne los seguidores a una acción después de que abandonen el sitio web o la aplicación después de agregar la mercancía al carro de compras. |
+| Carro abandonado: mercancía: para su activación | Reasigne los seguidores a una acción después de que abandonen el sitio web o la aplicación después de agregar la mercancía al carro de compras. |
 | Carro abandonado: producto: para activación | Reasigne a los compradores después de que abandonen el sitio web o la aplicación después de agregar productos al carro de compras. |
-| Carro abandonado: reserva: para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
+| Carro abandonado: reserva para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
 | Promoción de destino: para activación | Dirija a los huéspedes a hacer una reserva durante una promoción de destino de viaje en curso. |
 | Promoción de juegos: para activación | Segmenta a los fans para que compren entradas para un próximo juego. |
 | Aumentar la compra de mercancía durante el juego - Para la activación | Segmenta a los fans para que compren mercancía mientras están cerca del sitio del juego. |
 | Aumentar la compra de productos durante la visita a la tienda: para activación | Segmenta a los compradores para que compren bienes mientras están cerca de la tienda. |
-| Aumentar la compra de productos y servicios durante la estancia: para la activación | Dirija a sus huéspedes a comprar productos y servicios mientras estén en la propiedad. |
-| Promoción de productos: para activación en | Segmente a los compradores para comprar productos durante una campaña de promoción de productos en curso. |
-| Enviar Un Mensaje De Cumpleaños A Los Fans Para Su Activación | Segmenta a los fans en su cumpleaños con un mensaje de &quot;Feliz Cumpleaños&quot; y una oferta exclusiva. |
-| Enviar un mensaje de cumpleaños a los invitados - Para la activación | Dirija la visita a los invitados en su cumpleaños con un mensaje de &quot;Feliz cumpleaños&quot; y una oferta exclusiva. |
+| Aumentar la compra de productos y servicios durante la estancia para la activación | Dirija a sus huéspedes a comprar productos y servicios mientras estén en la propiedad. |
+| Promoción de productos: para activación | Segmente a los compradores para comprar productos durante una campaña de promoción de productos en curso. |
+| Envíe Un Mensaje De Cumpleaños A Los Fans Para Su Activación | Segmenta a los fans en su cumpleaños con un mensaje de &quot;Feliz Cumpleaños&quot; y una oferta exclusiva. |
+| Envíe un mensaje de cumpleaños a los invitados para su activación | Dirija la visita a los invitados en su cumpleaños con un mensaje de &quot;Feliz cumpleaños&quot; y una oferta exclusiva. |
 | Envíe un mensaje de cumpleaños a los compradores para su activación | Segmente a los compradores en su cumpleaños con un mensaje &quot;Feliz cumpleaños&quot; y una oferta exclusiva. |
 
 {style="table-layout:auto"}
