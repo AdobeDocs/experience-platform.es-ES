@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 | Barrera | Límite | Notas |
 | --- | --- | --- |
-| Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la más reciente. La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
+| Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la identidad más reciente para este gráfico (**Nota**: el perfil del cliente en tiempo real no se ve afectado). La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
 | Número de vínculos a una identidad para una sola ingesta por lotes | 50 | Un solo lote podría contener identidades anómalas que causan combinaciones de gráficos no deseadas. Para evitarlo, el servicio de identidad no ingerirá identidades que ya estén vinculadas a 50 o más identidades. |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
@@ -135,7 +135,7 @@ En este ejemplo, ECID:32110 se ingiere y se vincula a un gráfico grande en `tim
 
 >[!TAB Proceso de eliminación]
 
-Como resultado, el servicio de identidad elimina la identidad más antigua en función de la marca de tiempo y el tipo de identidad. En este caso, ECID:35577 se elimina.
+Como resultado, el servicio de identidad elimina la identidad más antigua en función de la marca de tiempo y el tipo de identidad. En este caso, ECID:35577 solo se elimina del gráfico de identidades.
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `time
 
 >[!TAB Proceso de eliminación]
 
-Como resultado, el servicio de identidad elimina la identidad más antigua, que en este caso es ECID:35577. La eliminación de ECID:35577 también provoca la eliminación de lo siguiente:
+Como resultado, el servicio de identidad elimina la identidad más antigua solo del gráfico de identidad, que en este caso es ECID:35577. La eliminación de ECID:35577 también provoca la eliminación de lo siguiente:
 
 * El vínculo entre CRM ID: 60013 y el ahora eliminado ECID:35577, lo que da como resultado un escenario de división de gráficos.
 * IDFA: 32110, IDFA: 02383 y las identidades restantes representadas por `(...)`. Estas identidades se eliminan porque, individualmente, no están vinculadas a ninguna otra identidad y, por lo tanto, no se pueden representar en un gráfico.
