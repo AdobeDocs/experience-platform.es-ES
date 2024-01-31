@@ -4,10 +4,10 @@ title: Página de inicio y paneles de Real-time Customer Data Platform
 description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 7%
+source-wordcount: '915'
+ht-degree: 6%
 
 ---
 
@@ -25,10 +25,10 @@ Este documento proporciona información general sobre la página de inicio de Re
 
 El [!UICONTROL Introducción a Real-Time Customer Profile] El widget se divide en cuatro secciones:
 
-* **Ingesta de datos en Platform**: este widget le dirige al catálogo de fuentes. Utilice el catálogo de fuentes para seleccionar un origen e introducir los datos en el Experience Platform. Para obtener más información, lea la [información general de orígenes](../sources/home.md)
-* **Estructuras de datos de modelo**: este widget le dirige a la descripción general de los esquemas. Utilice la descripción general de los esquemas para buscar esquemas existentes o crear bloques de creación que describan la estructura de los datos. Para obtener más información, lea la [información general sobre esquemas](../xdm/home.md).
-* **Audiencias de segmentos**: este widget le dirige a [!DNL Segment Builder] en la interfaz de usuario. Utilice el [!DNL Segment Builder] para interactuar con elementos de datos de perfil y definir reglas para los segmentos. Para obtener más información, lea la [Resumen del servicio de segmentación](../segmentation/home.md).
-* **Envío de datos a destinos**: este widget le dirige al catálogo de destinos. Utilice el catálogo de destinos para seleccionar un destino al que pueda conectarse y enviar segmentos. Para obtener más información, lea la [información general sobre destinos](../destinations/home.md)
+* **Ingesta de datos en Platform**: este widget le dirige al catálogo de fuentes. Utilice el catálogo de fuentes para seleccionar un origen e introducir los datos en el Experience Platform. Seleccionar **[Configuración de fuentes]** para desplazarse al catálogo de orígenes. Para obtener más información, lea la [información general de orígenes](../sources/home.md).
+* **Estructuras de datos de modelo**: este widget le dirige a la descripción general de los esquemas. Utilice la descripción general de los esquemas para buscar esquemas existentes o crear un modelo que describa la estructura de los datos. Seleccionar **[!UICONTROL Crear esquema]** para navegar a la interfaz de creación de esquemas. Para obtener más información, lea la [información general sobre esquemas](../xdm/home.md).
+* **Crear audiencias**: este widget le dirige al Generador de segmentos en la interfaz de usuario. Utilice el Generador de segmentos para interactuar con los elementos de datos de perfil y definir los criterios de la definición del segmento. Seleccionar **[!UICONTROL Crear audiencia]** para ir al Generador de segmentos. Para obtener más información, lea la [Resumen del servicio de segmentación](../segmentation/home.md).
+* **Envío de datos a destinos**: este widget le dirige al catálogo de destinos. Utilice el catálogo de destinos para seleccionar un destino al que pueda conectarse y enviar segmentos. Seleccionar **[!UICONTROL Configuración de destinos]** para ir al catálogo de destinos. Para obtener más información, lea la [información general sobre destinos](../destinations/home.md).
 
 ![La página de inicio de la IU de Platform muestra el widget de introducción](assets/platform-home/getting-started-widget.png)
 
@@ -49,9 +49,9 @@ La tabla de clasificación muestra el número total actual de esquemas, conjunto
 ![La sección de la tabla de clasificación de la página de inicio de la IU de Platform.](assets/platform-home/leaderboard.png)
 
 * **Esquemas totales**: La **Esquemas totales** counter muestra el número de esquemas del sistema. Este contador se actualiza cuando se crea un esquema. Para obtener más información, lea la [información general sobre esquemas](../xdm/home.md).
-* **Total de conjuntos de datos**: La **Conjuntos de datos totales** muestra el número de conjuntos de datos del sistema y la cantidad de datos en [!DNL Platform]. Este contador se actualiza cuando se crea un conjunto de datos. Para obtener más información sobre los conjuntos de datos, lea la [información general sobre conjuntos de datos](../catalog/datasets/overview.md).
-* **Perfiles totales**: La **Perfiles** El recuento muestra el número total de perfiles que su organización tiene en Experience Platform. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse. Este recuento utiliza el valor predeterminado [política de combinación](profile/merge-policies.md) tal como se establece en la configuración de la política de combinación en el Perfil del cliente en tiempo real. El número de perfiles se actualiza una vez cada 24 horas. Para obtener más información sobre los perfiles, lea la [Resumen del perfil del cliente en tiempo real](../profile/home.md).
-* **Total de segmentos**: **Segmentos** muestra el número total de segmentos creados para la organización. Este número se actualiza cuando se crean nuevos segmentos. Para obtener más información sobre los segmentos, lea la [Resumen del servicio de segmentación](../segmentation/home.md).
+* **Total de conjuntos de datos**: La **Total de conjuntos de datos** counter muestra el número de conjuntos de datos del sistema y la cantidad de datos en Experience Platform. Este contador se actualiza cuando se crea un conjunto de datos. Para obtener más información sobre los conjuntos de datos, lea la [información general sobre conjuntos de datos](../catalog/datasets/overview.md).
+* **Perfiles totales**: La **Perfiles** El recuento muestra el número total de perfiles que su organización tiene en Experience Platform. No incluye fragmentos de perfil. Esta es su audiencia total a la que puede dirigirse. Este recuento utiliza el valor predeterminado [política de combinación](profile/merge-policies.md) tal como se establece en la configuración de la política de combinación en el Perfil del cliente en tiempo real. El número de perfiles se actualiza una vez cada 24 horas. Seleccionar **[!UICONTROL Perfiles]** para navegar a la página de información general de Perfiles y ver todas las métricas de Perfil. Para obtener más información sobre los perfiles, lea la [Resumen del perfil del cliente en tiempo real](../profile/home.md).
+* **Audiencias totales**: La **Audiencias totales** counter muestra la cantidad total de audiencias creadas para su organización. Este número se actualiza cuando se crean nuevas audiencias. Para obtener más información sobre las audiencias, lea la [Resumen del servicio de segmentación](../segmentation/home.md).
 
 ### Elementos recientes
 
