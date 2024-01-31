@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2576'
 ht-degree: 2%
 
 ---
@@ -120,6 +120,10 @@ Para minimizar el tiempo de desarrollo, se recomienda desarrollar las consultas 
 ### Dar formato al texto {#format-text}
 
 El [!UICONTROL Dar formato al texto] Esta función hace que la consulta sea más legible al agregar un estilo de sintaxis estandarizado. Seleccionar **[!UICONTROL Dar formato al texto]** para estandarizar todo el texto dentro del Editor de consultas.
+
+>[!NOTE]
+>
+>El [!UICONTROL Dar formato al texto] La función no funciona con bloques anónimos. Para obtener información sobre cómo encadenar una o más sentencias SQL secuencialmente, consulte la [documentación de bloque anónimo](../key-concepts/anonymous-block.md).
 
 ![El editor de consultas con [!UICONTROL Dar formato al texto] y las sentencias SQL resaltadas.](../images/ui/query-editor/format-text.png)
 
