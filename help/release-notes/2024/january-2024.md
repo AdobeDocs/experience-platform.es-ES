@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2024
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
-source-git-commit: 88dc2fc84002ae4400e4a11370ac3354cd38cd0e
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 40%
@@ -45,7 +45,7 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 
 | Función | Descripción |
 | --- | --- |
-| Nuevas funciones de asignación | <ul><li>`object_to_map`: utilice el `object_to_map` para crear tipos de datos de mapa. Esta función admite varias sintaxis diferentes. Para obtener más información, lea la guía de [funciones para jerarquías: objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: utilice el `to_map` para crear un mapa con pares de nombre de campo y valor dados utilizando objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#objects). </li><li>`array_to_map`: utilice el `array_to_map` para crear un mapa con pares de nombre de campo y valor determinados utilizando matrices de objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#objects). |
+| Nuevas funciones de asignación | <ul><li>`object_to_map`: utilice el `object_to_map` para crear tipos de datos de mapa. Esta función admite varias sintaxis diferentes. Para obtener más información, lea la guía de [funciones para jerarquías: objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: utilice el `to_map` para crear un mapa con pares de nombre de campo y valor dados utilizando objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilice el `array_to_map` para crear un mapa con pares de nombre de campo y valor determinados utilizando matrices de objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
