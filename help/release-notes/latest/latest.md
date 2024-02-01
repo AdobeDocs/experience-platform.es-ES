@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 38%
+source-wordcount: '1476'
+ht-degree: 30%
 
 ---
 
@@ -19,9 +19,11 @@ Nuevas funciones de Adobe Experience Platform:
 
 Actualizaciones de funciones existentes en Experience Platform:
 
-- [Paneles](#dashboards)
+- [Control de acceso basado en atributos](#abac)
 - [Preparación de los datos](#data-prep)
+- [Paneles](#dashboards)
 - [Destinos](#destinations)
+- [Servicio de identidad](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil del cliente en tiempo real](#profile)
 - [Fuentes](#sources)
@@ -37,6 +39,22 @@ Para empezar con [!UICONTROL Manuales de casos de uso], lea las siguientes pági
 - Obtenga información acerca de todas las [permisos necesarios](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) para utilizar libros de reproducción y los recursos generados por los libros de reproducción.
 - Comprender el [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md) lo que le permite copiar recursos generados en otros entornos de zona protegida
 - Obtener [sugerencias de solución de problemas](/help/use-case-playbooks/playbooks/troubleshooting.md) si tiene errores o dificultades al utilizar los libros de reproducción de casos de uso.
+
+## Control de acceso basado en atributos {#abac}
+
+El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+
+**Documentación nueva o actualizada**
+
+| Actualización de documentación | Descripción |
+| --- | --- |
+| Nuevos extremos de API documentados para el control de acceso basado en atributos | El [Documentación de referencia de API de control de acceso](https://developer.adobe.com/experience-platform-apis/references/access-control/) ahora incluye funciones de API de control de acceso basadas en atributos, directivas y extremos de productos. Estos extremos se pueden utilizar para recuperar funciones, directivas y productos relevantes para un usuario en recursos determinados de una zona protegida especificada. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Preparación de los datos {#data-prep}
 
@@ -88,6 +106,20 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
 
+## Servicio de identidad {#identity-service}
+
+El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
+
+**Documentación nueva o actualizada**
+
+| Actualización de documentación | Descripción |
+| --- | --- |
+| Reestructuración de documentación | La documentación del servicio de identidad se ha reestructurado para mejorar la presentación y la claridad de los conceptos dentro del servicio de identidad:<ul><li>Visite la [Página de información general del servicio de identidad](../../identity-service/home.md) para obtener una guía terminológica expandida, un ejemplo de caso de uso que detalle un recorrido de cliente típico, un desglose de cómo el servicio de identidad vincula las identidades y un resumen de la función que el servicio de identidad coloca dentro del ecosistema de Experience Platform.</li><li>Lea la guía de [Explicación de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](../../identity-service/identity-and-profile.md) para obtener un resumen detallado de cómo funcionan juntos los dos servicios y las diferencias entre sus propósitos, procesos, entradas y salidas.</li><li>Consulte la [Guía lógica de vinculación del servicio de identidad](../../identity-service/features/identity-linking-logic.md) para obtener explicaciones y visualizaciones sobre cómo se comporta el gráfico de identidad, según diferentes escenarios y marcas de tiempo.</li></ul> |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) ayuda a las empresas a reunir datos conocidos y desconocidos para activar perfiles de clientes con decisiones inteligentes a través del recorrido del cliente. [!DNL Real-Time CDP] combina varias fuentes de datos empresariales para crear perfiles de clientes en tiempo real. Los segmentos creados a partir de estos perfiles se pueden enviar a destinos de flujo descendente para ofrecer experiencias de cliente personalizadas en todos los canales y dispositivos.
@@ -97,6 +129,17 @@ El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Rea
 | Función | Descripción |
 | --- | --- |
 | Actualizaciones de [Página de inicio de Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de perfiles**: Ahora puede utilizar el widget Perfiles para navegar a la página Información general de Perfiles y ver las métricas de Perfil de su organización.</li><li>**Tarjeta de métricas de perfil**: la tarjeta Métricas de perfil en el panel de página de inicio ahora muestra el recuento total de perfiles en su organización, según las políticas de combinación correspondientes.</li><li>**Widget de esquemas**: ahora puede utilizar el widget de esquemas para ir al flujo de trabajo de creación de esquemas en la interfaz de usuario.</li></ul> |
+
+{style="table-layout:auto"}
+
+**Documentación nueva o actualizada**
+
+| Actualización de documentación | Descripción |
+| --- | --- |
+| Nueva página de inicio de documentación de Real-Time CDP | Visite la [nueva página de inicio de documentación de Real-Time CDP](/help/rtcdp/home.md) para obtener información rápida sobre cómo empezar a utilizar el producto, las protecciones, los casos de uso de muestra y mucho más. |
+| Ejemplo de casos de uso de Real-Time CDP | Visite la [nueva página de información general de casos de uso de muestra](/help/rtcdp/use-case-guides/overview.md) para obtener una colección de casos de uso de muestra que su organización puede lograr con Real-Time CDP. |
+
+{style="table-layout:auto"}
 
 Para obtener más información sobre Real-Time CDP, lea la [Información general de Real-Time CDP](../../rtcdp/overview.md).
 
