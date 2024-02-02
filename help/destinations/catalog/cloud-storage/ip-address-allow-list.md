@@ -1,50 +1,62 @@
 ---
-title: Destinos SFTP de lista de permitidos de direcciones IP
+title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube basados en archivos
 type: Documentation
-description: Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su servidor SFTP.
+description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a destinos de almacenamiento en la nube.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
+source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 0%
+source-wordcount: '249'
+ht-degree: 1%
 
 ---
 
-# LISTA DE PERMITIDOS de direcciones IP para destinos SFTP {#ip-address-allow-list-sftp}
+# LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube basados en archivos {#ip-address-allow-list-cloud-storage}
 
 >[!IMPORTANT]
 >
 > * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
 > * Aunque el Adobe admite la exportación de datos a servidores SFTP, las ubicaciones de almacenamiento en la nube recomendadas para exportar datos son [!DNL Amazon S3] y [!DNL Azure Blob].
 
+## Aplicabilidad {#applicability}
+
+La información del rango de IP de esta página se aplica a los siguientes conectores de almacenamiento en la nube basados en archivos en el catálogo de destinos:
+
+* [[!UICONTROL Amazon S3]](./amazon-s3.md)
+* [[!UICONTROL Almacenamiento de Google Cloud]](google-cloud-storage.md)
+* [SFTP](./sftp.md)
+
+>[!IMPORTANT]
+>
+>Los intervalos de IP documentados en esta página son *no* compatible con los siguientes destinos de almacenamiento en la nube basado en archivos: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] y [!UICONTROL Zona de aterrizaje de datos].
+
 ## Información general {#overview}
 
-Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su [Servidor SFTP](./sftp.md).
+Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a varios destinos de almacenamiento en la nube.
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 
 El Adobe recomienda agregar los siguientes rangos de IP a una lista de permitidos antes de trabajar con conexiones de destino de almacenamiento en la nube. Si no agrega el intervalo de IP específico de su región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar las conexiones de destino de almacenamiento en la nube.
 
-## Necesario para todos los clientes
+## Necesario para todos los clientes {#all-customers}
 
 * `52.247.108.70`
 
-## clientes estadounidenses
+## clientes estadounidenses {#us-customers}
 
 * `52.252.71.64/29`
 
-## Clientes de Canadá
+## Clientes de Canadá {#canada-customers}
 
 * `20.220.135.16/29`
 
-## Clientes de EMEA
+## Clientes de EMEA {#emea-customers}
 
 * `51.137.8.208/29`
 
-## clientes del Reino Unido
+## clientes del Reino Unido {#uk-customers}
 
 * `20.26.133.96/29`
 
-## Clientes de APAC
+## Clientes de APAC {#apac-customers}
 
 * `20.53.201.168/29`
