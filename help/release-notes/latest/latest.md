@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 30%
+source-wordcount: '1551'
+ht-degree: 28%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Ver SQL | Ahora puede ver el SQL detrás de sus Perfiles, Audiencias, Destinos y perspectivas personalizadas y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. Inspírese con el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. Para obtener más información, lea la guía de [visualización de insight SQL](../../dashboards/view-sql.md). |
+| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese con el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. SQL también está disponible para su [Perfiles](../../dashboards/insights/profiles.md), [Audiencias](../../dashboards/insights/audiences.md), y [Destinos](../../dashboards/insights/destinations.md) datos en la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
