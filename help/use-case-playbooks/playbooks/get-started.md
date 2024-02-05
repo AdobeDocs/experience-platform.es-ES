@@ -4,9 +4,9 @@ title: Introducción
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,11 @@ Vea este vídeo para conocer los pasos necesarios para crear su zona protegida, 
 ## Creación de una zona protegida de desarrollo {#create-development-sandbox}
 
 Los libros de casos de uso utilizan un tipo especial de zona protegida de desarrollo. Para empezar y obtener acceso a la funcionalidad [[!UICONTROL Manuales de tácticas de casos de uso]](/help/use-case-playbooks/playbooks/overview.md), [cree una nueva zona protegida de desarrollo](/help/sandboxes/ui/user-guide.md#create) (asegúrese de no seleccionar una zona protegida de producción) con el nombre (no el título) que contiene `-ucp` o `-UCP` en el sufijo, como se muestra a continuación.
+
+>[!IMPORTANT]
+>
+>Cuando cree una nueva zona protegida de desarrollo, asegúrese de que el nombre contenga `-ucp` o `-UCP` en el sufijo.
+
 
 ![Creación de una zona protegida de desarrollo para manuales de tácticas de casos de uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
