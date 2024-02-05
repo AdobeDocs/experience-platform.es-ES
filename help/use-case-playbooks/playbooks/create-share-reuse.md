@@ -7,7 +7,7 @@ exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -19,8 +19,8 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="Crear instancia"
->abstract="Genere una lista de recursos como recorridos, audiencias, esquemas o destinos para utilizarlos en escenarios de recorrido o activación."
+>title="Creación de una instancia"
+>abstract="Genere una lista de recursos como recorridos, públicos, esquemas o destinos para utilizarlos en escenarios de recorrido o activación."
 
 Antes de crear una instancia de manual de tácticas, explore los disponibles y [descubra el adecuado para usted](/help/use-case-playbooks/playbooks/discover.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
 

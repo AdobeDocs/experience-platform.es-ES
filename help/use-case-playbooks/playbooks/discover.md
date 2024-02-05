@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ El diagrama de ideas comienza con una definición de a quién se llega en el rec
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="Assets"
->abstract="Estos son los recursos que genera este manual. Después de crear una instancia del manual, puede ver los recursos en la zona protegida inspiradora y promocionarlos a otras zonas protegidas, según desee."
+>abstract="Estos son los recursos que se generan con este manual de tácticas. Después de crear una instancia del manual de tácticas, puede ver los recursos en la zona protegida de inspiración y promoverlos a otras zonas protegidas, si lo desea."
 
 Inspeccione la sección de resumen para comprender qué recursos se generan una vez que crea instancias desde el manual de tácticas. Los recursos que se generan para cada manual de tácticas se adaptan al caso de uso que este habilita. A continuación, obtendrá más información acerca de todos los elementos de la sección de resumen.
 
