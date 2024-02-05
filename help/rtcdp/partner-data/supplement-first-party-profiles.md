@@ -3,7 +3,7 @@ title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ El Adobe entiende que no existe un enfoque único que se adapte a todos los caso
 
 Por ejemplo, siga los pasos descritos en este caso de uso cuando necesite enriquecer los registros de cliente con señales demográficas e intencionales.
 
-## Requisitos previos y planificación {#prerequisites-and-planning}
+## Requisitos previos y planificación
 
 A medida que considere la posibilidad de complementar sus propios perfiles de origen con atributos de socios de datos, debe analizar y abordar los siguientes detalles sobre el bucle de enriquecimiento de datos con el socio de datos:
 

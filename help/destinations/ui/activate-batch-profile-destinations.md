@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
-ht-degree: 11%
+source-wordcount: '3797'
+ht-degree: 12%
 
 ---
 
@@ -142,7 +142,12 @@ Utilice el **[!UICONTROL Programado]** para que el trabajo de activación se eje
 
 4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
-### Exportar archivos incrementales {#export-incremental-files}
+### Exportar archivos incrementales
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configurar nombre de archivo"
+>abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por público. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
 
 Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en déclencheur una exportación en la que el primer archivo es una instantánea completa de todas las cualificaciones de perfil para la audiencia seleccionada y los archivos siguientes son cualificaciones de perfil incrementales desde la exportación anterior.
 
@@ -167,7 +172,7 @@ Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en d
 
 4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
-### Configuración de nombres de archivo {#file-names}
+### Configuración de nombres de archivo
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
