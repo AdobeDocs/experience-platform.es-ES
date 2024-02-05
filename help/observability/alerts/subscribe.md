@@ -4,7 +4,7 @@ title: Suscribirse a notificaciones de eventos de Adobe I/O
 description: Este documento proporciona pasos sobre cómo suscribirse a las notificaciones de eventos de Adobe I/O para los servicios de Adobe Experience Platform. También se proporciona información de referencia sobre los tipos de evento disponibles, junto con vínculos a documentación adicional sobre cómo interpretar los datos de evento devueltos para cada evento aplicable [!DNL Platform] servicio.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Vaya a la [consola de desarrollador de Adobe](https://www.adobe.com/go/devs_cons
 
 >[!NOTE]
 >
->La notificación de ingesta de datos quedará obsoleta de la suscripción de E/S de Adobe. En su lugar, debe utilizar la variable **Información de ejecución de flujo de fuentes** Evento de E/S.
+>El evento de notificación de ingesta de datos se ha quedado obsoleto en el Adobe I/O. En su lugar, debe utilizar la variable **Información de ejecución de flujo de fuentes** Evento de E/S.
 
 Una vez creado un nuevo proyecto, vaya a la pantalla de información general de ese proyecto. Desde aquí, seleccione **[!UICONTROL Añadir evento]**.
 
