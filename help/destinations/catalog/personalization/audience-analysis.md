@@ -1,0 +1,109 @@
+---
+title: Destino de Audience Analysis
+description: Vea las audiencias para las que los clientes cumplen los requisitos en Customer Journey Analytics.
+badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
+source-git-commit: 83b3d40e17f444555769020526bb723265a09eb9
+workflow-type: tm+mt
+source-wordcount: '801'
+ht-degree: 2%
+
+---
+
+# Destino de Audience Analysis
+
+El [!UICONTROL Análisis de audiencias] El destino de permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) informes.
+
+>[!AVAILABILITY]
+>
+>Este destino se encuentra en una fase de prueba limitada. Si está interesado en utilizar este destino, póngase en contacto con el equipo de cuenta de Adobe.
+
+## Requisitos previos
+
+Se requiere lo siguiente antes de utilizar este destino:
+
+* Debe estar aprovisionado para utilizar el destino de Análisis de audiencia. Si aún no se le ha proporcionado este destino, póngase en contacto con el equipo de cuenta de Adobe.
+* Debe estar aprovisionado para utilizar Customer Journey Analytics.
+* Debe tener al menos una audiencia creada en Adobe Experience Platform.
+
+## Identidades admitidas
+
+El análisis de audiencia admite la activación de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md). El ID del Experience Cloud (ECID) se suele utilizar.
+
+| Identidad de destino | Descripción | Consideraciones |
+|---|---|---|
+| GAID | ID de publicidad de Google | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
+| IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
+| ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
+| phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
+| email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
+| extern_id | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
+
+{style="table-layout:auto"}
+
+## Audiencias compatibles
+
+Se admiten los siguientes tipos de audiencias al utilizar este destino:
+
+| Origen de audiencia | Admitido | Descripción |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+
+{style="table-layout:auto"}
+
+## Tipo y frecuencia de exportación
+
+Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
+
+| Elemento | Tipo | Notas |
+---------|----------|---------|
+| Tipo de exportación | **[!UICONTROL Exportación de audiencia]** | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino de Análisis de audiencia. |
+| Frecuencia de exportación | **[!UICONTROL Transmisión]** | Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Cuando se actualiza un perfil en Experience Platform en función de la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style="table-layout:auto"}
+
+## Configurar nuevo destino
+
+>[!IMPORTANT]
+> 
+>Para crear un destino, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+
+Para crear este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md).
+
+### Detalles del destino
+
+Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
+
+* **[!UICONTROL Nombre]**: el nombre del destino.
+* **[!UICONTROL Descripción]**: la descripción del destino.
+* **[!UICONTROL ID de flujo de datos]**: ID del conjunto de datos que desea enriquecer con audiencias aptas. Puede obtener este ID en la variable [Administrador de flujos de datos](/help/datastreams/overview.md).
+* **[!UICONTROL Alias de integración]**: alias de la integración.
+
+### Alertas
+
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+
+* **[!UICONTROL Tasa de activación omitida superada]**: Recibir una notificación cuando la tasa de activación omitida supere un umbral.
+
+Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+
+### Política de gobernanza y medidas coercitivas
+
+Esta sección opcional le permite definir las políticas de control de datos y asegurarse de que los datos utilizados sean compatibles cuando las audiencias se envíen y estén activas.
+
+Cuando haya terminado de seleccionar las acciones de marketing deseadas para el destino, seleccione **[!UICONTROL Crear]**.
+
+## Activar públicos en este destino {#activate}
+
+>[!IMPORTANT]
+> 
+>Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+
+Una vez creado el destino, puede activar las audiencias que desee para el destino.
+
+1. Si aún no está en el destino creado, puede localizarlo de nuevo navegando a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]**.
+1. Seleccionar **[!UICONTROL Activar audiencias]**.
+1. Seleccione las audiencias para las que desee analizar las cualificaciones. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
+1. Revise la configuración de destino y la configuración de audiencia y seleccione **[!UICONTROL Finalizar]**.
+
+Para añadir más audiencias que analizar en el futuro, vuelva a la sección **[!UICONTROL Activar audiencias]** página. Las audiencias no se pueden eliminar una vez activadas.
