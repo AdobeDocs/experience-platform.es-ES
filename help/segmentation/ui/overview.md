@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 3%
@@ -237,7 +237,7 @@ Seleccionar **[!UICONTROL Aplicar etiquetas de acceso]** permite administrar las
 
 >[!BEGINTABS]
 
->[!TAB Composición de audiencia]
+>[!TAB Composición de público]
 
 ![Se muestra la página de detalles de la audiencia con la variable [!UICONTROL Abrir composición] botón resaltado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -331,7 +331,7 @@ El **[!UICONTROL Importar CSV de audiencia]** flujo de trabajo aparece. Puede se
 
 >[!NOTE]
 >
->La audiencia generada de forma externa **debe** estar en formato CSV, tener un **maximum** de 11 columnas y debe ser inferior a 1 GB.
+>La audiencia generada de forma externa **debe** estar en formato CSV, tener un **maximum** de 25 columnas y debe ser inferior a 1 GB.
 
 Después de seleccionar el archivo CSV para importar, se muestra una lista de datos de ejemplo para esta audiencia generada externamente. Después de confirmar que los datos de ejemplo son correctos, seleccione **[!UICONTROL Siguiente]**.
 

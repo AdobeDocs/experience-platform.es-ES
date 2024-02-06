@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
-ht-degree: 7%
+source-wordcount: '3562'
+ht-degree: 6%
 
 ---
 
@@ -255,9 +255,17 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
-Al crear una definición de segmento, la variable **[!UICONTROL Propiedades del segmento]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
+Al crear una definición de segmento, la variable **[!UICONTROL Propiedades de audiencia]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
-El **[!UICONTROL Propiedades del segmento]** también es donde puede especificar información importante sobre la definición del segmento, incluido su nombre, descripción y tipo de evaluación. Los nombres de las definiciones de segmentos se utilizan para identificar la definición de segmentos entre las definidas por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
+**[!UICONTROL Perfiles calificados]** indica el **real** número de perfiles que coinciden con las reglas de la definición del segmento. Este número se actualiza cada 24 horas, después de que se haya ejecutado el trabajo de evaluación de segmentos.
+
+La marca de tiempo de los perfiles cualificados indica la más reciente **lote** trabajo de evaluación de segmentos y es **no** se muestra para las definiciones de segmentos evaluadas mediante streaming o segmentación de Edge. Si edita la definición del segmento, el número de perfiles cualificados seguirá siendo el mismo hasta que se ejecute el siguiente trabajo de evaluación de segmentos.
+
+**[!UICONTROL Perfiles estimados]** indica un **aproximado** número de perfiles basados en el **trabajo de muestra**. Puede ver una versión actualizada de este valor después de agregar las nuevas reglas o condiciones y seleccionar **[!UICONTROL Actualizar estimación]**. Al seleccionar la burbuja de información, se proporciona el umbral de error y el tiempo del trabajo de muestra más reciente.
+
+![Los perfiles cualificados y los perfiles estimados se resaltan en la sección de propiedades de Audiencia.](../images/ui/segment-builder/audience-estimates.png)
+
+El **[!UICONTROL Propiedades de audiencia]** también es donde puede especificar información importante sobre la definición del segmento, incluido su nombre, descripción y tipo de evaluación. Los nombres de las definiciones de segmentos se utilizan para identificar la definición de segmentos entre las definidas por su organización y, por lo tanto, deben ser descriptivos, concisos y únicos.
 
 A medida que vaya creando la definición del segmento, podrá ver una vista previa paginada de la audiencia seleccionando **[!UICONTROL Ver perfiles]**.
 

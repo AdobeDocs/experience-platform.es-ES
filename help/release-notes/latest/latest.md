@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1551'
-ht-degree: 28%
+source-wordcount: '1653'
+ht-degree: 30%
 
 ---
 
@@ -26,6 +26,7 @@ Actualizaciones de funciones existentes en Experience Platform:
 - [Servicio de identidad](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil del cliente en tiempo real](#profile)
+- [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
 ## Manuales de casos de uso {#use-case-playbooks}
@@ -156,6 +157,21 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 {style="table-layout:auto"}
 
 Para obtener más información sobre el Perfil del cliente en tiempo real, lea la [Resumen del perfil](../../profile/home.md)
+
+## Servicio de segmentación {#segmentation}
+
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Carga de audiencia generada externamente | El número máximo de columnas se ha aumentado a **25**. |
+| Estimaciones del Generador de segmentos | Las estimaciones y los perfiles cualificados ahora se muestran en la sección de propiedades de audiencia. Para obtener más información sobre este cambio, lea la [Guía de IU del Generador de segmentos](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 
