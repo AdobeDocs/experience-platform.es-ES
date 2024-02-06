@@ -3,10 +3,10 @@ title: Ejecutar comandos del SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo ejecutar comandos de SDK web de Experience Platform
 keywords: Ejecutar comandos;commandName;Promesas;getLibraryInfo;objetos de respuesta;consentimiento;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 2%
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ Cada vez que se ejecuta un comando, se devuelve una promesa. La promesa represen
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
