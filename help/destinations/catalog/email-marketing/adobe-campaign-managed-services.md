@@ -2,9 +2,9 @@
 title: Conexión de Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 1%
 Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Utilice Campaign para lo siguiente:
+
 * Impulso de la personalización y la participación mediante una única vista accesible del cliente,
 * Integración de canales de correo electrónico, móviles, en línea y sin conexión en el recorrido del cliente.
 * Automatice la entrega de mensajes y ofertas significativos y oportunos.
@@ -32,6 +33,7 @@ Utilice Campaign para lo siguiente:
 >* Para cada segmento, puede añadir hasta 20 campos a [asignar](#map) a Adobe Campaign,
 >* Retención de datos en la zona de aterrizaje de datos (DLZ) del almacenamiento del blob de Azure: 7 días,
 >* La frecuencia de activación es de 3 horas como mínimo.
+>* La longitud máxima del nombre de archivo que admite esta conexión es de 255 caracteres. Cuando usted [configurar el nombre de archivo exportado](../../ui/activate-batch-profile-destinations.md#configure-file-names), asegúrese de que el nombre del archivo no supere los 255 caracteres. Si se supera la longitud máxima del nombre de archivo, se producen errores de activación.
 
 ## Casos de uso {#use-cases}
 
