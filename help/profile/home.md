@@ -2,14 +2,14 @@
 title: Resumen del perfil del cliente en tiempo real
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
 
-# Información general del [!DNL Real-Time Customer Profile]
+# Información general de [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con [!DNL Real-Time Customer Profile], puede ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos en línea, sin conexión, CRM y de terceros. [!DNL Profile] le permite consolidar los datos de sus clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes. Esta descripción general le ayudará a comprender la función y el uso de [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
 
@@ -104,10 +104,6 @@ Adobe Experience Platform [!DNL Segmentation Service] produce las audiencias nec
 ### Ingesta de streaming y segmentación de streaming
 
 La entrada en tiempo real es posible mediante un proceso denominado ingesta de transmisión. A medida que se incorporan los datos de perfil y serie temporal, [!DNL Real-Time Customer Profile] decide automáticamente incluir o excluir esos datos de las audiencias a través de un proceso continuo llamado segmentación de streaming, antes de combinarlos con datos existentes y actualizar la vista de unión. Como resultado, puede realizar cálculos y tomar decisiones de forma instantánea para ofrecer experiencias mejoradas e individualizadas a los clientes mientras interactúan con su marca. Durante la ingesta, los datos también se someten a validación para garantizar que se ingieran correctamente y que se ajusten al esquema en el que se basa el conjunto de datos. Para obtener más información sobre la validación realizada durante la ingesta, comience por leer el [resumen de calidad de ingesta de datos](../ingestion/quality/overview.md).
-
-## Proyecciones de borde
-
-Para impulsar experiencias coordinadas, coherentes y personalizadas para sus clientes en varios canales en tiempo real, los datos adecuados deben estar disponibles y actualizarse continuamente a medida que se produzcan cambios. Adobe Experience Platform permite este acceso en tiempo real a los datos mediante el uso de lo que se conoce como perímetros. Un perímetro es un servidor ubicado geográficamente que almacena datos y hace que sea fácilmente accesible para las aplicaciones. Por ejemplo, las aplicaciones de Adobe como Adobe Target y Adobe Campaign utilizan Edge de para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos y una configuración de proyección que define la información específica que estará disponible en el borde. Para obtener más información y comenzar a trabajar con proyecciones utilizando [!DNL Real-Time Customer Profile] API, consulte la [guía de extremos de proyección de borde](api/edge-projections.md).
 
 ## Ingesta de datos en [!DNL Profile]
 

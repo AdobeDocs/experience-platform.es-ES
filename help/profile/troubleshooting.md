@@ -4,9 +4,9 @@ title: Guía de resolución de problemas del perfil del cliente en tiempo real
 type: Documentation
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca del Perfil del cliente en tiempo real, así como una guía de solución de problemas para errores comunes al trabajar con datos de perfil mediante Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -122,18 +122,6 @@ Este error se produce cuando se proporciona una carga útil no válida para un t
 ```
 
 Este error se produce cuando no se encuentra un lote válido al intentar crear una solicitud de eliminación de datos de perfil. Compruebe que ha introducido el ID correcto para un conjunto de datos con perfil habilitado antes de intentarlo de nuevo.
-
-### Aún no se ha creado el destino de la proyección
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-Este error se produce cuando la variable `destinationId` se proporciona en un `POST /config/projections` la solicitud no es válida. Compruebe que ha proporcionado un ID de destino válido antes de intentarlo de nuevo. Para crear un nuevo destino, siga los pasos descritos en la sección [Guía para desarrolladores de perfiles](./api/edge-projections.md#create-a-destination).
 
 ### Tipo de medio no compatible
 

@@ -2,10 +2,10 @@
 title: Perfiles de Edge
 description: Obtenga información acerca de los perfiles de Edge, así como la terminología relacionada, las regiones disponibles para perfiles de Edge y los servicios disponibles para perfiles de Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +30,7 @@ En otros términos, los datos se enrutan a un borde mediante una proyección, co
 Las siguientes regiones están disponibles para su uso con edge:
 
 - VA6
-- OR2
+- O2
 - IRL1
 - AUS3
 - SGP3
@@ -61,7 +61,7 @@ El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extre
 
 ## Pasos siguientes
 
-Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre las proyecciones de Edge, lea la [guía de extremo de proyecciones de Edge](./api/edge-projections.md). Para obtener más información sobre Adobe Experience Edge, lea la [Información general sobre Edge](../edge/home.md).
+Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Información general sobre Edge](../edge/home.md).
 
 ## Apéndice
 
@@ -77,6 +77,4 @@ Además, cada perfil perimetral tiene un atributo de esquema denominado Región 
 
 ### ¿Cómo funciona la caducidad de los datos con los perfiles de Edge?
 
-En el caso de los perfiles Edge, la caducidad de los datos determina cuánto tiempo permanecerá el perfil en Edge antes de eliminarlo. La caducidad de los datos es **laminado**, lo que significa que, cada vez que se accede al perfil en Edge, se restablece el tiempo de caducidad de los datos.
-
-Puede agregar la caducidad de los datos en los perfiles de Edge al agregarlo al [proyección de borde](./api/edge-projections.md). De forma predeterminada, la caducidad de los datos dura 14 días, pero se puede establecer en un mínimo de 1 hora y un máximo de 90 días.
+En el caso de los perfiles Edge, la caducidad de los datos determina cuánto tiempo permanecerá el perfil en Edge antes de eliminarlo. La caducidad de los datos es **laminado**, lo que significa que, cada vez que se accede al perfil en Edge, se restablece el tiempo de caducidad de los datos. De forma predeterminada, la caducidad de los datos dura 14 días.

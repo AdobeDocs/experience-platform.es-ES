@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 1%
+source-wordcount: '881'
+ht-degree: 2%
 
 ---
 
@@ -31,10 +31,6 @@ Los atributos calculados son funciones que se utilizan para agregar datos de niv
 Cada atributo calculado contiene una expresión, o &quot;regla&quot;, que evalúa los datos entrantes y almacena el valor resultante en un atributo de perfil. Estos cálculos le ayudan a responder fácilmente preguntas relacionadas con aspectos como el valor de compra de por vida, el tiempo entre compras o la cantidad de aperturas de aplicaciones, sin que sea necesario realizar manualmente cálculos complejos cada vez que se necesite la información. Estos valores de atributo calculados se pueden ver en un perfil, utilizarse para crear una audiencia o acceder a ellos a través de una serie de patrones de acceso diferentes.
 
 Puede crear, ver, editar y eliminar atributos calculados mediante la variable `ca/attributes/` punto final. Para aprender a utilizar atributos calculados, consulte la [información general sobre atributos calculados](../computed-attributes/overview.md). Para operaciones de API, visite la [guía de extremo de API de atributos calculados](../computed-attributes/api.md).
-
-## Proyecciones de borde {#edge-projections}
-
-Adobe Experience Platform permite la personalización en tiempo real de las experiencias de los clientes al hacer que los datos sean fácilmente accesibles en servidores ubicados estratégicamente llamados &quot;perímetros&quot;. El [!DNL Real-Time Customer Profile] API proporciona puntos finales para trabajar con extremos a través de componentes llamados &quot;proyecciones&quot;. Esto incluye las configuraciones de proyección para determinar qué datos deben proyectarse a cada borde, así como los destinos de proyección para definir dónde debe enrutarse una proyección. Para obtener información detallada sobre cómo trabajar con proyecciones de Edge, visite la [guía de extremos de destinos y configuraciones de proyección](edge-projections.md).
 
 ## Entidades ([!DNL Profile] access) {#entities}
 
