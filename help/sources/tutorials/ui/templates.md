@@ -5,8 +5,8 @@ badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2259'
-ht-degree: 11%
+source-wordcount: '2241'
+ht-degree: 10%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 >
 >La documentación y las funcionalidades están sujetas a cambios.
 
-Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de ingesta de datos. Las plantillas incluyen archivos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a una Experience Platform.
+Adobe Experience Platform proporciona plantillas preconfiguradas que puede utilizar para acelerar el proceso de ingesta de datos. Las plantillas incluyen recursos generados automáticamente, como esquemas, conjuntos de datos, identidades, reglas de asignación, áreas de nombres de identidad y flujos de datos que puede utilizar al traer datos de un origen a un Experience Platform.
 
 Con las plantillas, puede:
 

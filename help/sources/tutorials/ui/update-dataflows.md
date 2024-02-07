@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -58,7 +58,7 @@ El [!UICONTROL Añadir datos] aparece el paso. Seleccione el formato de datos ad
 
 ![add-data](../../images/tutorials/update-dataflows/add-data.png)
 
-### Detalles de flujo de datos
+### Detalles del flujo de datos
 
 En el [!UICONTROL Detalles del flujo de datos] , puede proporcionar un nombre y una descripción actualizados para su flujo de datos, así como reconfigurar el umbral de error del flujo de datos. Durante este paso, también puede configurar o modificar la configuración de la suscripción de alertas.
 
@@ -100,7 +100,7 @@ El **[!UICONTROL Editar programación]** Este cuadro de diálogo proporciona opc
 
 ![ventana emergente de programación](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### Consulte
+### Revisión
 
 El **[!UICONTROL Revisar]** Este paso aparece, lo que le permite revisar el flujo de datos antes de actualizarlo.
 

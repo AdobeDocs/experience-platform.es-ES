@@ -14,7 +14,7 @@ ht-degree: 6%
 
 Este tutorial proporciona pasos para crear una conexión de origen para llevar los datos de Adobe Campaign Managed Cloud Services a Adobe Experience Platform.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -139,5 +139,5 @@ Esta página también le proporciona una interfaz para actualizar la descripció
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de los registros de envío y de seguimiento de Campaign v8 a Platform. Ahora, los servicios de Platform posteriores pueden utilizar los datos entrantes, como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
-* [Información general del [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
+* [Información general de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

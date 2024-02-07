@@ -6,8 +6,8 @@ description: Aprenda a utilizar la interfaz de usuario de Privacy Service para c
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 15%
+source-wordcount: '1456'
+ht-degree: 14%
 
 ---
 
@@ -38,18 +38,18 @@ El tablero de [!DNL Privacy Service] La interfaz de usuario proporciona dos widg
 
 | Etiqueta de IU | Regulación |
 | --- | --- |
-| [!UICONTROL APA_AUS] | Las [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | Las [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | Las [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | Las [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | Las [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | El [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | El [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | El [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | El [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | El [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | La política de la Unión Europea [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | Las [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | El [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | El de Brasil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Nueva Zelanda [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | El de Tailandia [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | Las [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | Las [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | El [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | El [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 

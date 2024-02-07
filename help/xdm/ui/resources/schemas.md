@@ -6,7 +6,7 @@ description: Aprenda los conceptos básicos de cómo crear y editar esquemas en 
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3670'
+source-wordcount: '3671'
 ht-degree: 2%
 
 ---

@@ -5,7 +5,7 @@ title: Monitorización de flujos de datos para fuentes de flujo en la IU
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 Este tutorial trata los pasos para monitorizar los flujos de datos para las fuentes de flujo continuo mediante [!UICONTROL Fuentes] workspace.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -126,5 +126,5 @@ El [!UICONTROL Previsualización de diagnósticos de error] Esta ventana permite
 
 Al seguir este tutorial, ha utilizado correctamente la variable [!UICONTROL Fuentes] workspace para monitorizar los flujos de datos de streaming e identificar los errores que llevaron a errores en los flujos de datos. Consulte los siguientes documentos para obtener más información:
 
-* [Resumen de orígenes](../../home.md)
+* [Información general de fuentes](../../home.md)
 * [Resumen de flujos de datos](../../../dataflows/home.md)

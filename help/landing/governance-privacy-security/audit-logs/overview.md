@@ -91,7 +91,7 @@ Seleccione un evento de la lista para ver los detalles en el carril derecho.
 
 >[!NOTE]
 >
-Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
+>Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
 
 
 Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los distintos filtros seleccionados.

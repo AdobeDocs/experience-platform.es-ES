@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo crear una conexión de origen de M
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 11%
+source-wordcount: '797'
+ht-degree: 10%
 
 ---
 
@@ -30,8 +30,8 @@ Para poder conectarse [!DNL Mixpanel] En Platform, debe proporcionar valores par
 | --- | --- | --- |
 | Nombre de usuario | El nombre de usuario de la cuenta de servicio que corresponde con su [!DNL Mixpanel] cuenta. Consulte la [[!DNL Mixpanel] documentación de cuentas de servicio](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) para obtener más información. | `Test8.6d4ee7.mp-service-account` |
 | Una contraseña | La contraseña de la cuenta de servicio que corresponde con su [!DNL Mixpanel] cuenta. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| ID del proyecto | Su [!DNL Mixpanel] ID del proyecto. Este ID es necesario para crear una conexión de origen. Consulte la [[!DNL Mixpanel] documentación de configuración del proyecto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) y el [[!DNL Mixpanel] guía sobre creación y administración de proyectos](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) para obtener más información. | `2384945` |
-| Zona horaria | La zona horaria que corresponde a su [!DNL Mixpanel] proyecto. Se requiere zona horaria para crear una conexión de origen. Consulte la [Documentación de configuración del proyecto Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) para obtener más información. | `Pacific Standard Time` |
+| Identificador de proyecto | Su [!DNL Mixpanel] ID del proyecto. Este ID es necesario para crear una conexión de origen. Consulte la [[!DNL Mixpanel] documentación de configuración del proyecto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) y el [[!DNL Mixpanel] guía sobre creación y administración de proyectos](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) para obtener más información. | `2384945` |
+| Timezone | La zona horaria que corresponde a su [!DNL Mixpanel] proyecto. Se requiere zona horaria para crear una conexión de origen. Consulte la [Documentación de configuración del proyecto Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) para obtener más información. | `Pacific Standard Time` |
 
 Para obtener más información sobre la autenticación de [!DNL Mixpanel] fuente, consulte la [[!DNL Mixpanel] descripción general de origen](../../../../connectors/analytics/mixpanel.md).
 
