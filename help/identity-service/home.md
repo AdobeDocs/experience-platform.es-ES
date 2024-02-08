@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen del servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Antes de sumergirse en los detalles del servicio de identidad, lea la siguiente 
 | Término | Definición |
 | --- | --- |
 | Identidad | Una identidad son datos que son únicos para una entidad. Normalmente, se trata de un objeto del mundo real, como una persona individual, un dispositivo de hardware o un explorador web (representado por una cookie). Una identidad completa consta de dos elementos: un **área de nombres de identidad** y un **valor de identidad**. |
-| Espacio de nombre de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con **julien<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con `555-555-1234`. Para obtener más información, lea la [información general del área de nombres de identidad](./features/namespaces.md) |
+| Espacio de nombre de identidad | Un área de nombres de identidad es el contexto de una identidad determinada. Por ejemplo, un área de nombres de `Email` podría corresponder con el valor de identidad: **julien<span>@acme.com**. Del mismo modo, un área de nombres de `Phone` podría corresponder con el valor de identidad: `555-555-1234`. Para obtener más información, lea la [información general del área de nombres de identidad](./features/namespaces.md). |
 | Valor de identidad | Un valor de identidad es una cadena que representa una entidad del mundo real y que se clasifica dentro del servicio de identidad a través de un área de nombres. Por ejemplo, el valor de identidad (cadena) **julien<span>@acme.com** podría clasificarse como un `Email` namespace. |
 | Tipo de identidad | Un tipo de identidad es un componente de un área de nombres de identidad. El tipo de identidad designa si los datos de identidad están vinculados en un gráfico de identidad o no. |
 | Vínculo | Un vínculo o una vinculación es un método para establecer que dos identidades diferentes representan la misma entidad. Por ejemplo, un vínculo entre &quot;`Email` = julien<span>@acme.com&quot; y &quot;`Phone` = 555-555-1234&quot; significa que ambas identidades representan la misma entidad. Esto sugiere que el cliente que ha interactuado con su marca con la dirección de correo electrónico de Julien<span>@acme.com y el número de teléfono de 555-555-1234 es el mismo. |
