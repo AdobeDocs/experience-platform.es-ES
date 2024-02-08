@@ -2,10 +2,10 @@
 title: Extensión de capa de datos de Google
 description: Obtenga información acerca de la extensión de etiqueta de capa de datos del cliente de Google en Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 13%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +13,7 @@ ht-degree: 13%
 
 La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede utilizar de forma independiente o simultánea con las soluciones de Google y con el código abierto de Google [Biblioteca auxiliar de capa de datos](https://github.com/google/data-layer-helper).
 
-La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la del Adobe de datos del cliente (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las del [Extensión ACDL](../client-data-layer/overview.md).
-
-## Vencimiento
-
-La versión 1.2.x es una versión beta tardía que está en uso de producción.
+La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la capa de datos del cliente de Adobe (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las del [Extensión ACDL](../client-data-layer/overview.md).
 
 ## Instalación
 
@@ -44,13 +40,22 @@ El nombre predeterminado de la capa de datos es Google `dataLayer`.
 > - Eventos de JavaScript.
 > - Datos insertados en la capa de datos con el _evento_ palabra clave.
 
-
 La extensión le ofrece la posibilidad de escuchar cambios en la capa de datos.
 
 >[!NOTE]
 >
 >Es importante comprender el uso del complemento _evento_ palabra clave cuando los datos se insertan en una capa de datos de Google, de forma similar a la capa de datos del cliente de Adobe. El _evento_ La palabra clave cambia el comportamiento de la capa de datos de Google y, por lo tanto, de esta extensión.\
 > Lea la documentación de Google o investigue si no está seguro sobre este punto.
+
+### Tipos de eventos de Google
+
+Google admite dos formas de insertar eventos: Google Tag Manager, con el `push()` método, y Google Analytics 4, usando el `gtag()` método.
+
+Las versiones de la extensión de capa de datos de Google anteriores a 1.2.1 solo admitían eventos creados por `push()`, como se muestra en los ejemplos de código de esta página.
+
+Las versiones 1.2.1 y superiores admiten eventos creados con `gtag()`.  Esto es opcional y se puede habilitar en el cuadro de diálogo Configuración de la extensión.
+
+Para obtener más información acerca de `push()` y `gtag()` eventos, consulte la [Documentación de Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  También se proporciona información en los cuadros de diálogo de configuración y reglas de la extensión.
 
 ### Escuchar todas las inserciones en la capa de datos
 
@@ -121,11 +126,11 @@ La acción de texto libre permite utilizar elementos de datos directamente en el
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 

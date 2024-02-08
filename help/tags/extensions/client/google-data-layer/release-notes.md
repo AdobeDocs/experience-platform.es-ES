@@ -2,10 +2,10 @@
 title: Notas de la versión de Google Data Layer Extension
 description: Últimas notas de la versión de la extensión de capa de datos de Google en Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -37,3 +37,7 @@ Una mejora significativa y la corrección de errores resultantes de los comentar
 * Se ha corregido un error que provocaba un error al guardar un elemento de datos en algunas circunstancias.
 * Agrega documentación al cuadro de diálogo de evento que explica el uso del objeto de evento Etiquetas.
 * Agrega una advertencia sobre bucles infinitos al cuadro de diálogo del evento.
+
+## Versión 1.2.2
+
+* Añade compatibilidad con eventos gtag() de Google Analytics.
