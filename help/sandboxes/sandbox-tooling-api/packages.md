@@ -2,10 +2,10 @@
 title: Punto final de API de paquetes de herramientas de zona protegida
 description: El extremo /packages en la API de herramientas de espacio aislado le permite administrar paquetes mediante programación en Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 8%
+source-wordcount: '1531'
+ht-degree: 7%
 
 ---
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **Solicitud**
 
-La siguiente solicitud recupera el paquete utilizando {PACKAGE_ID} siempre. La carga útil es un mapa de sustituciones donde, si existe una entrada, la clave es `artifactId` proporcionado por el paquete y la alternativa es el valor. Si el mapa o la carga útil es **vaciar**, no se realizan sustituciones.
+La siguiente solicitud recupera los paquetes que se van a importar. La carga útil es un mapa de sustituciones donde, si existe una entrada, la clave es `artifactId` proporcionado por el paquete y la alternativa es el valor. Si el mapa o la carga útil es **vaciar**, no se realizan sustituciones.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,7 +775,6 @@ curl -X POST \
 
 | Propiedad | Descripción | Tipo | Obligatorio |
 | --- | --- | --- | --- |
-| `id` | El ID del paquete. | Cadena | Sí |
 | `alternatives` | `alternatives` representa la asignación de artefactos de zona protegida de origen a los artefactos de zona protegida de destino existentes. Como ya están allí, el trabajo de importación evita la creación de estos artefactos en la zona protegida de destino. | Cadena | No |
 
 **Respuesta**
