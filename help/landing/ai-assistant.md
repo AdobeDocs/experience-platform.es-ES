@@ -1,13 +1,13 @@
 ---
 title: Ayudante para Adobe Experience Platform
 description: Aprenda a utilizar el Ayudante para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender su uso, así como la información sobre sus objetos.
-badge: Alfa
+badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >El Asistente para Adobe Experience Platform está actualmente en Alpha. La funcionalidad y la documentación están sujetas a cambios.
 
-El Ayudante para Adobe Experience Platform es una función de la interfaz de usuario que puede utilizar para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, comprender sus conceptos y utilizar información sobre sus objetos.
+El Ayudante es una función de la interfaz de usuario que puede utilizar para desplazarse por los conceptos de Adobe Experience Platform y Real-time Customer Data Platform y comprender su uso, así como la información sobre sus objetos.
 
 Puede consultar el Ayudante para obtener información como:
 
@@ -26,7 +26,7 @@ Puede consultar el Ayudante para obtener información como:
 * Estados y métricas de los objetos de datos existentes en su organización.
 * Utilice ejemplos de casos y matices para comprender mejor los objetos de datos, incluidos atributos, conjuntos de datos, destinos, esquemas, segmentos y fuentes.
 
-Este documento proporciona información sobre cómo puede acceder al Ayudante y utilizarlo para hacer preguntas y recibir respuestas acerca de los conceptos de Experience Platform y Real-Time CDP.
+Lea la guía siguiente para conocer cómo puede utilizar Assistant para navegar y comprender los flujos de trabajo de Experience Platform y Real-Time CDP.
 
 >[!BEGINSHADEBOX]
 
@@ -55,101 +55,125 @@ Hay dos clases de preguntas que se deben tener en cuenta antes de consultar el A
 
 >[!ENDSHADEBOX]
 
-## Acceder al Asistente para Experience Platform en la IU
+## Acceder al Asistente en la IU de Experience Platform
 
-Puede acceder al Ayudante desde la navegación del encabezado en la interfaz de usuario de Experience Platform.
+Para iniciar el Asistente, seleccione **[!UICONTROL Icono de asistente]** desde el encabezado superior de la interfaz de usuario de Experience Platform.
 
-Seleccione el **[!UICONTROL Icono de asistente]** del encabezado al panel del Ayudante de lanzamiento.
+![Página de inicio del Experience Platform, con el icono Asistente seleccionado y la interfaz del asistente abierta.](./images/ai-assistant/ai-assistant.png)
 
-![Página de inicio de la interfaz de usuario del Experience Platform con el icono Asistente seleccionado.](./images/ai-assistant/ai-assistant.png)
+Aparecerá la interfaz del Ayudante, que le proporcionará inmediatamente información para comenzar. Puede utilizar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] para responder preguntas y comandos como:
 
-<!-- +++Use immersive mode
+* [!UICONTROL ¿Cuáles de mis segmentos están activados?]
+* [!UICONTROL ¿Qué es un esquema?]
+* [!UICONTROL Casos de uso comunes de Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![La sección &quot;ideas para empezar&quot; de Assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Para interactuar con el Ayudante, utilice el cuadro de entrada para escribir las consultas o comandos. También puede utilizar el operador (**`+`**) símbolo para utilizar la función de autocompletar y el icono de marcador para acceder a sus consultas y comandos marcados.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![Se resalta el cuadro de entrada del Ayudante.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Ejemplo de caso de uso: Utilice el Ayudante para acelerar el proceso de creación de esquemas {#example-use-case}
+## Ejemplo de caso de uso: Utilice el Asistente para acelerar el proceso de creación de esquemas
 
 >[!NOTE]
 >
->El siguiente flujo de trabajo de ejemplo utiliza el proceso de creación de esquemas de ExperienceEvent para ilustrar cómo puede utilizar el Ayudante al utilizar la interfaz de usuario de Experience Platform.
+>El siguiente flujo de trabajo es un ejemplo que utiliza el proceso de creación de esquemas de eventos de experiencia para ilustrar cómo puede utilizar el Ayudante al utilizar la interfaz de usuario de Experience Platform.
 
-Considere un caso de uso en el que esté creando una **Esquema de comercio de dispositivos en evento**. Durante el proceso de creación del esquema de ExperienceEvent, se encuentra con el `eventType` field. En este punto, puede dejar el flujo de trabajo y consultar la documentación en [conceptos básicos de una composición de esquema](../xdm/schema/composition.md)o puede utilizar el Asistente para recuperar respuestas inmediatas a sus preguntas.
+Considere un caso de uso en el que esté creando una **Esquema de comercio de dispositivos en evento**. Durante el proceso de creación del esquema del evento de experiencia, se encuentra con el `eventType` field. &quot;En este punto, tiene la opción de salir del flujo de trabajo y consultar [conceptos básicos de una composición de esquema](../xdm/schema/composition.md) o puede utilizar Assistant para recuperar respuestas a sus preguntas y encontrar recursos adicionales a través de los vínculos de documentación recomendados por Assistant&quot;.
 
 Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el siguiente ejemplo, se proporciona al asistente la pregunta: &quot;**¿Qué es el campo eventType en un esquema ExperienceEvent?**&quot;
 
-![El asistente para Experience Platform tiene la siguiente pregunta preparada para la consulta: &quot;¿Qué es el campo eventType en un esquema ExperienceEvent?](./images/ai-assistant/question.png)
+![Ayudante para Experience Platform con la siguiente pregunta preparada para la consulta: &quot;¿Qué es el campo eventType en un esquema ExperienceEvent?](./images/ai-assistant/question.png)
 
 A continuación, el asistente consulta su base de conocimientos y calcula una respuesta. Después de unos momentos, el Asistente devuelve una respuesta y sugerencias relacionadas que puede utilizar como preguntas de seguimiento.
 
-Una respuesta determinada proporciona hipervínculos a cualquier entidad a la que se haga referencia. En el ejemplo siguiente, seleccione **[!UICONTROL Esquemas]** para ver una lista de los esquemas a los que se hace referencia, o **[!UICONTROL Segmentos]** para ver una lista de los segmentos referenciados.
-
 ![Asistente para Experience Platform con una respuesta a la consulta anterior.](./images/ai-assistant/answer.png)
 
-El Ayudante permite validar la respuesta viendo su origen. Se proporcionan vínculos a la documentación para preguntas de concepto, mientras que las preguntas de uso de datos se pueden comprobar con una consulta SQL que muestra cómo se calculó la respuesta.
+Después de recibir una respuesta del Ayudante, puede seleccionar entre varias opciones para decidir cómo desea continuar.
 
-![Opciones proporcionadas por el Ayudante después de devolver una respuesta.](./images/ai-assistant/options.png)
+### Guarde la consulta {#save-your-query}
 
-### Pregunta de seguimiento {#follow-up-question}
++++Seleccione para ver un ejemplo de cómo guardar una consulta
 
-+++Seleccione para ver un ejemplo de una pregunta de seguimiento
+Para guardar la consulta, seleccione el icono de marcador junto a la pregunta.
 
-Puede obtener más información sobre un tema en particular haciendo una pregunta de seguimiento. En el siguiente ejemplo, se pregunta al Ayudante cómo se puede utilizar eventType en la segmentación.
+![Captura de pantalla de un marcador seleccionado.](./images/ai-assistant/save-your-query.png)
 
-![Se muestra una pregunta y una respuesta de seguimiento en el asistente de Experience Platform.](./images/ai-assistant/follow-up-question.png)
+Para acceder a las consultas guardadas, seleccione el icono de marcador debajo del cuadro de entrada y, a continuación, seleccione la consulta que desee ejecutar.
 
-+++
-
-### Pregunta de uso de datos {#data-usage-question}
-
-+++Seleccione esta opción para ver un ejemplo de una pregunta sobre el uso de datos
-
-También puede hacer preguntas al Ayudante sobre el uso de los datos. Al consultar sobre el uso de datos, debe estar en un simulador para pruebas activo a fin de que el asistente pueda responder a su consulta.
-
-Para las respuestas que incluyen información sobre el uso de los datos, el Ayudante proporciona vínculos a las entidades en cuestión. Además, el Ayudante le explica cómo ha calculado su respuesta.
-
-![Una pregunta sobre el uso de datos, que pregunta cuántos segmentos tiene un usuario.](./images/ai-assistant/data-usage-question.png)
+![Captura de pantalla del icono de marcador y una lista de consultas guardadas.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Giro múltiple {#multi-turn}
+### Vista de datos en su zona protegida {#view-data-in-your-sandbox}
 
-+++Seleccione esta opción para ver un ejemplo de varias vueltas
++++Seleccione para ver el ejemplo
 
-Puede utilizar las capacidades de varias vueltas del Ayudante para tener una conversación más natural durante la experiencia. El asistente puede responder a las preguntas de seguimiento, ya que el contexto se puede inferir de una interacción anterior.
+Según la consulta, el Ayudante proporciona información adicional perteneciente a los datos de la zona protegida. Para ver cómo se aplica la respuesta a la consulta a la zona protegida, seleccione **[!UICONTROL En su zona protegida].**
 
-En el siguiente ejemplo, se solicita al asistente que enumere los segmentos existentes en la organización, como seguimiento de una consulta anterior sobre el número total de segmentos.
+Durante este paso, el Ayudante puede proporcionar vínculos directos a las páginas de la interfaz de usuario de ciertos objetos en cuestión. En el siguiente ejemplo, el asistente proporciona vínculos directos a la [!UICONTROL Esquemas] y [!UICONTROL Segmentos] Páginas de IU.
 
-![](./images/ai-assistant/multi-turn-one.png)
-
-A continuación, el asistente recibe otra solicitud de seguimiento. Esta vez, el Ayudante responde enumerando los segmentos existentes ordenados por sus respectivos tamaños.
-
-![](./images/ai-assistant/multi-turn-two.png)
+![Captura de pantalla de la opción &quot;En su zona protegida&quot;.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Usar autocompletar {#use-auto-complete}
+### Verificar la respuesta {#verify-the-response}
 
-+++Seleccione esta opción para ver un ejemplo de autocompletar
++++Seleccione esta opción para ver un ejemplo de cómo mostrar orígenes
+
+Para ver las citas y validar la respuesta del asistente, seleccione **[!UICONTROL Mostrar orígenes]**. El Ayudante proporciona vínculos a documentación que corrobora su respuesta. También puede utilizar las consultas que proporciona el Ayudante en [!UICONTROL Sugerencias relacionadas] para explorar más en profundidad los temas relacionados con la consulta original.
+
+![Captura de pantalla de &quot;Mostrar fuentes&quot;.](./images/ai-assistant/show-sources.png)
+
++++
+
+### Uso y visualización de datos {#data-usage-and-visualization}
+
++++Seleccione esta opción para ver un ejemplo de las preguntas sobre el uso de los datos y la visualización de los datos
+
+Puede consultar con el Asistente su uso de datos. Debe estar en una zona protegida activa para que el asistente responda a una pregunta sobre el uso de datos relacionada con los datos de su organización.
+
+![Pregunta de seguimiento sobre el uso de datos.](./images/ai-assistant/data-usage-question.png)
+
+Cuando se le pregunta sobre el uso de los datos, el Ayudante también explica cómo ha calculado la respuesta. En el ejemplo siguiente, el asistente describe los pasos que realizó para mostrar los segmentos con más de 1000 perfiles y sus respectivos estados de activación.
+
+![Pregunta de seguimiento sobre segmentos que ilustran cómo el ayudante calculó la respuesta.](./images/ai-assistant/results-explained.png)
+
+Además, Assistant procesa gráficos para visualizar los datos. También puede proporcionar filtros y modificaciones a las consultas, y puede indicar al Asistente que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente que le muestre una tendencia de los segmentos de recuento en el orden de su fecha de creación, elimine segmentos con cero perfiles totales y utilice nombres de mes en lugar de enteros al mostrar los datos.
+
+![Pregunta de seguimiento que ilustra la visualización de datos.](./images/ai-assistant/data-visualization.png)
+
++++
+
+### Usar completado automático {#use-auto-complete}
+
++++Seleccione esta opción para ver un ejemplo de autocompletado
 
 Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: segmentos, esquemas, conjuntos de datos, fuentes y destinos.
 
-Para utilizar el completado automático, escriba un símbolo más (**`+`**) como parte de su pregunta. Como alternativa, también puede seleccionar el símbolo más (**`+`**) en el cuadro de entrada de texto. A continuación, aparecerá una ventana con una lista de objetos de datos recomendados que existen en la zona protegida.
+Se puede utilizar el completado automático incluyendo el símbolo más (**`+`**) en la consulta. Como alternativa, también puede seleccionar el signo más (**`+`**) situado en la parte inferior del cuadro de entrada de texto. Aparece una ventana con una lista de los objetos de datos recomendados de la zona protegida.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Ejemplo de autocompletar](./images/ai-assistant/auto-complete-one.png)
 
 A continuación, seleccione el objeto de datos que desea consultar para completar la pregunta y, a continuación, envíe la pregunta.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Ejemplo de autocompletar con pregunta y respuesta](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### Uso de giro múltiple {#use-multi-turn}
+
++++Seleccione esta opción para ver un ejemplo de varias vueltas
+
+Puede utilizar las capacidades de varias vueltas del Ayudante para tener una conversación más natural durante la experiencia. El asistente puede responder a las preguntas de seguimiento que se le formulen. ese contexto se puede inferir de una interacción anterior.
+
+En el siguiente ejemplo, se solicita al asistente para el número total de flujos de datos en la organización actual.
+
+![Ejemplo de giro múltiple](./images/ai-assistant/multi-turn-one.png)
+
+A continuación, el Ayudante recibe otra solicitud de seguimiento. Esta vez, el Ayudante responde enumerando los flujos de datos que existen actualmente en su organización.
+
+![Ejemplo de giro múltiple con pregunta y respuesta](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -195,18 +219,6 @@ Deberá iniciar sesión en una zona protegida para consultar sobre datos especí
 | Búsqueda de objetos | Recupere o acceda a un objeto Experience Platform o a sus propiedades. | <ul><li>Qué conjuntos de datos no tienen ningún esquema asociado</li><li>Enumeración de los atributos utilizados para {SEGMENT_NAME}?</li><li>Dame la lista de esquemas que tienen un perfil habilitado, pero que no se han modificado desde su creación.</li><li>¿Qué segmentos se han modificado en la última semana?</li><li>Enumere los segmentos que tienen las mismas definiciones de segmentos junto con su fecha de creación.</li><li>Qué conjuntos de datos tienen habilitado el perfil e incluyen también cuántos segmentos se han creado a partir de cada conjunto de datos.</li><li>¿Qué cuentas de origen están asociadas al conjunto de datos XYZ?</li><li>Mostrar la definición del segmento y la fecha de modificación de {SEGMENT_NAME}.</li></ul> |
 
 +++
-
-## Verificar la respuesta {#verify-the-response}
-
-Puede comprobar la respuesta que devuelve el Ayudante de varias formas diferentes.
-
-### Citas para documentación {#citations}
-
-Con cada respuesta, el Ayudante le proporciona citas a las que puede hacer referencia para verificar o obtener más información.
-
-Seleccionar **[!UICONTROL Mostrar origen]** para obtener una lista de vínculos a la documentación a la que el Ayudante hace referencia para calcular su respuesta. Al seleccionar un vínculo a la documentación a la que se hace referencia, se le redirige a la sección correspondiente de esa página en particular, con la información específica resaltada.
-
-![Los vínculos al origen se muestran en el Ayudante.](./images/ai-assistant/show-sources.png)
 
 ## Proporcionar comentarios {#feedback}
 
