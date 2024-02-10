@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción al servicio de consultas
 description: Obtenga información acerca de la función del servicio de consultas dentro del Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,16 @@ Puede utilizar el servicio de consultas para conectar el recorrido del cliente c
 
 ## Uso del servicio de consultas {#usage}
 
-Para analizar los datos, puede utilizar la interfaz de usuario del servicio de consultas y una API RESTful, desde la cual puede crear consultas SQL. Con la interfaz de usuario de, puede escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización. Puede utilizar el Editor de consultas como una zona protegida para probar las consultas antes de ejecutarlas en el conjunto de datos más amplio. Consulte la [Guía de la interfaz de usuario del servicio de consultas](ui/overview.md) para obtener más información sobre el uso de la interfaz de usuario. La API de RESTful proporciona una experiencia similar. Puede utilizar la API del servicio de consultas para escribir y ejecutar consultas mediante programación, programar consultas para uso y repetición futuros, así como crear plantillas para las consultas que desee escribir. Encontrará más información sobre el uso de la API del servicio de consultas en la [Guía para desarrolladores de Query Service](api/getting-started.md).
+Para analizar los datos, cree y ejecute consultas SQL con la interfaz de usuario del servicio de consultas o la API de RESTful.
+Con la interfaz de usuario del servicio de consultas puede escribir, ejecutar y programar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización. También puede probar las consultas antes de ejecutarlas en su conjunto de datos más amplio con el Editor de consultas. Consulte la [Guía de IU del servicio de consultas](ui/overview.md) para obtener información general sobre la funcionalidad de la interfaz de usuario.
+
+La API de RESTful proporciona una experiencia similar. Puede utilizar la API del servicio de consultas para escribir y ejecutar consultas mediante programación, crear y guardar plantillas para consultas que desee adaptar o programar consultas para ejecución automatizada. Consulte la [Guía para desarrolladores de Query Service](api/getting-started.md) para obtener más información sobre el uso de la API del servicio de consultas.
+
+Para empezar a utilizar rápidamente las funciones del servicio de consultas, se recomienda leer los siguientes documentos:
+
+- [Directrices generales para la ejecución de consultas](./best-practices/writing-queries.md)
+- [Sintaxis SQL en el servicio de consultas](./sql/syntax.md)
+- [Crear conjuntos de datos derivados con SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Servicio de consultas y servicios de Experience Platform {#experience-platform-services}
 

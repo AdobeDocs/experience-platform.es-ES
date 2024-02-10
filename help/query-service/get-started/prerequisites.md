@@ -3,10 +3,10 @@ keywords: Experience Platform;servicio de consultas;servicio de consultas;consul
 title: Introducción al servicio de consultas de Adobe Experience Platform
 description: Un desglose de los pasos necesarios para utilizar completamente Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 7%
+source-wordcount: '241'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,13 @@ Después de ingerir los datos en Adobe Experience Platform, puede empezar a trab
 
 ## Pasos siguientes
 
-Este documento cubría los requisitos previos necesarios para utilizar [!DNL Query Service] funciones de Experience Platform. Para obtener más información sobre cómo [!DNL Query Service] beneficia del procesamiento de datos en Platform, consulte las [ejemplo de presentación de casos de uso](../use-cases/abandoned-browse.md).
+Este documento cubría los requisitos previos necesarios para utilizar [!DNL Query Service] funciones de Experience Platform. Para empezar a utilizar rápidamente las funciones del servicio de consultas, se recomienda leer los siguientes documentos:
+
+- [Directrices generales para la ejecución de consultas](../best-practices/writing-queries.md)
+- [Sintaxis SQL en el servicio de consultas](../sql/syntax.md)
+- [Crear conjuntos de datos derivados con SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+
+Si lo prefiere, para obtener más información sobre las ventajas que aporta el servicio de consulta al procesamiento de datos en Platform, consulte la [presentación de caso de uso de exploración abandonada](../use-cases/abandoned-browse.md#video-example).
 
 Los siguientes recursos son útiles para mejorar su comprensión de [!DNL Query Service]:
 

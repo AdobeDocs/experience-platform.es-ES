@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 19%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 19%
    - [Uso de licencias](data-distiller/license-usage.md)
    - Conjuntos de datos derivados {#derived-datasets}
       - [Información general](data-distiller/derived-datasets/overview.md)
-      - [Flujo SQL fluido](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Crear conjuntos de datos derivados con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Crear conjuntos de datos derivados basados en deciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Perspectivas personalizables para informes de aplicaciones ampliados {#customizable-insights}
       - [Información general](data-distiller/customizable-insights/overview.md)

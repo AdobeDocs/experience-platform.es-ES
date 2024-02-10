@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2023'
 description: Las notas de la versión de febrero de 2023 de Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 97%
@@ -102,7 +102,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 
 | Función | Descripción |
 | --- | --- |
-| Habilitar conjuntos de datos para perfiles con SQL | [Utilice ETIQUETAS en consultas CTAS para hacer que un conjunto de datos tenga un &quot;perfil habilitado&quot;](../../query-service/sql/syntax.md#create-table-as-select), o utilice ALTER para actualizar los conjuntos de datos existentes y habilitarlos para el perfil. Puede utilizar esta construcción SQL extendida para proporcionar una compatibilidad perfecta con los conjuntos de datos derivados para los casos de uso empresariales del Perfil del cliente en tiempo real. Consulte la [Flujo SQL fluido para documento de conjuntos de datos derivados](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) para obtener más información. |
+| Habilitar conjuntos de datos para perfiles con SQL | [Utilice ETIQUETAS en consultas CTAS para hacer que un conjunto de datos tenga un &quot;perfil habilitado&quot;](../../query-service/sql/syntax.md#create-table-as-select), o utilice ALTER para actualizar los conjuntos de datos existentes y habilitarlos para el perfil. Puede utilizar esta construcción SQL extendida para proporcionar una compatibilidad perfecta con los conjuntos de datos derivados para los casos de uso empresariales del Perfil del cliente en tiempo real. Consulte la [Flujo SQL fluido para documento de conjuntos de datos derivados](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) para obtener más información. |
 | Monitorización de consultas programadas | Utilice la [pestaña Consultas programadas](../../query-service/ui/monitor-queries.md) para encontrar información importante sobre las ejecuciones de consultas y suscribirse a alertas. Supervise las consultas para obtener detalles de programación, estado y mensajes/códigos de error en caso de que fallen. |
 | Alternancia de la característica de autocompletar | Elimine ciertos comandos de metadatos y mejore los tiempos de procesamiento al [alternar la función de autocompletar del editor de consultas](../../query-service/ui/user-guide.md#auto-complete). Esta función sugiere automáticamente posibles palabras clave SQL y detalles de tabla para la consulta a medida que la escribe. |
 | Ejemplos de conjuntos de datos | Especifique una tasa de muestreo en la consulta y [utilice ejemplos de conjuntos de datos para crear una muestra aleatoria uniforme](../../query-service/key-concepts/dataset-samples.md), o cree muestras condicionales basadas en criterios específicos. |
