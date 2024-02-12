@@ -2,9 +2,9 @@
 title: Conector de origen de Adobe Analytics para datos de grupos de informes
 description: Este documento proporciona información general sobre Analytics y describe los casos de uso de los datos de Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,11 @@ La latencia esperada para los datos de Analytics en Platform se describe en la s
 | Nuevos datos en [!DNL Real-Time Customer Profile] (A4T) **no** enabled) | &lt; 2 minutos |
 | Nuevos datos en [!DNL Real-Time Customer Profile] (A4T) **es** enabled) | hasta 30 minutos |
 | Nuevos datos en Data Lake | &lt; 2,25 horas |
+| Nuevos datos para CJA sin [unión](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 horas |
+| Nuevos datos para CJA con vinculación | &lt; 7 horas |
 | Relleno de menos de 10 000 millones de eventos | &lt; 4 semanas |
+
+Para obtener más información sobre las latencias de CJA, consulte: [Protecciones del Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 El relleno de Analytics para zonas protegidas de producción tiene un valor predeterminado de 13 meses. Para los datos de Analytics en entornos limitados que no son de producción, el relleno se establece en tres meses. El límite de 10 000 millones de eventos mencionado en el cuadro anterior se aplica estrictamente a la latencia esperada.
 
