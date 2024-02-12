@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -72,7 +72,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**. El destino de Amazon S3 admite dos métodos de autenticación:
 
 * Autenticación de clave de acceso y clave secreta
-* Autenticación de función asumida
+* Autenticación de la función asumida
 
 #### Autenticación de clave de acceso y clave secreta
 
@@ -89,12 +89,12 @@ Utilice este método de autenticación cuando desee introducir la clave de acces
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="Autenticación de función asumida"
->abstract="Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con el Adobe. En su lugar, el Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones. Pegue el ARN de la función que ha creado en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="Autenticación de la función asumida"
+>abstract="Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones. Pegue el ARN de la función que ha creado en AWS para el usuario de Adobe. El patrón es similar a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![Imagen de los campos obligatorios al seleccionar la autenticación de función asumida.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con el Adobe. En su lugar, el Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones.
+Utilice este tipo de autenticación si prefiere no compartir claves de cuenta y claves secretas con Adobe. En su lugar, el Experience Platform se conecta a la ubicación de Amazon S3 mediante el acceso basado en funciones.
 
 Para ello, debe crear en la consola de AWS un usuario supuesto para el Adobe de [derecho permisos requeridos](#required-s3-permission) para escribir en los bloques de Amazon S3. Crear un **[!UICONTROL Entidad de confianza]** en AWS con la cuenta de Adobe **[!UICONTROL 670664943635]**. Para obtener más información, consulte la [Documentación de AWS sobre la creación de funciones](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
