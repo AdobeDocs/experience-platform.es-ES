@@ -4,9 +4,9 @@ title: Soluciones de accesibilidad personalizadas para Experience Platform
 type: Documentation
 description: Obtenga más información acerca de las soluciones de accesibilidad personalizadas en la interfaz de usuario de Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -142,6 +142,10 @@ Las siguientes funciones de accesibilidad están disponibles en el editor del se
 
 * El contraste de color en la interfaz de usuario del editor del servicio de consultas cumple los requisitos de accesibilidad.
 * La navegación mediante el teclado es compatible fuera de la interfaz de usuario del editor. La interfaz de usuario del editor es un reflejo de código incrustado.
+
+>[!NOTE]
+>
+>El editor de consultas no gestiona la variable **Ficha** de forma predeterminada. Para invocar **Ficha** mientras está en el editor, debe pulsar el botón **Escape** y, a continuación, pulse **Ficha** directamente después de él. Prensa **Ficha** de nuevo, para desplazar el enfoque más allá del editor.
 
 ## Pestaña Vista de sistema en Orígenes y destinos
 
