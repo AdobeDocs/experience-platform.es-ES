@@ -3,10 +3,10 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
+source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 4%
+source-wordcount: '1838'
+ht-degree: 5%
 
 ---
 
@@ -52,6 +52,11 @@ Comprenda, a partir de la tabla siguiente, qué tipos de conjuntos de datos pued
   <tr>
     <td>Ultimate</td>
     <td>Consulte la <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentación.</td>
+  </tr>
+  <tr>
+    <td>Customer Journey Analytics</td>
+    <td>Todas</td>
+    <td> Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de la ingesta o recopilación de datos mediante fuentes, SDK web, SDK móvil, conector de datos de Analytics y Audience Manager. Obtenga información sobre los permisos necesarios en la <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Documentación del Customer Journey Analytics</a>.  <br> <b>Nota sobre la disponibilidad:</b> La capacidad de exportar conjuntos de datos a la nube se encuentra en la fase de prueba limitada de la versión y es posible que aún no esté disponible en su entorno. Esta nota se eliminará cuando la funcionalidad esté disponible de forma general. Para obtener más información sobre el proceso de lanzamiento de Customer Journey Analytics, consulte <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Versiones de funcionalidades de Customer Journey Analytics</a>. </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
