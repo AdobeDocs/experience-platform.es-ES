@@ -3,10 +3,10 @@ keywords: destinos de análisis;destino de análisis
 title: Resumen de destinos de Analytics
 description: Los destinos de Analytics hacen un seguimiento de cómo los visitantes interactúan con el contenido del sitio y recopilan datos para comprender el comportamiento de la audiencia. Estas plataformas ofrecen perspectivas únicas sobre la participación y la conversión de los visitantes más valiosos.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 6%
+source-wordcount: '175'
+ht-degree: 2%
 
 ---
 
@@ -22,12 +22,13 @@ Actualmente, Adobe Experience Platform admite los destinos de análisis que se e
 
 * [Extensión de seguimiento de sitio web de Adobe](adform.md)
 * [Extensión de Adobe Analytics](adobe-analytics.md)
-* [Extensión de Adobe Media Analytics for Audio and Video](adobe-video-analytics.md)
+* [Extensión de Adobe Medium Analytics para audio y vídeo](adobe-video-analytics.md)
 * [Extensión Clicktale](clicktale.md)
 * [Extensión de Contentsquare](contentsquare.md)
 * [Extensión Decibel](decibel.md)
 * [Extensión de Demandbase](demandbase.md)
 * [Extensión Dialogtech](dialogtech.md)
+* [Gainsight PX](gainsight-px.md)
 * [Extensión de análisis de etiquetas de sitios globales de Google](gtag-analytics.md)
 * [Extensión de Google Universal Analytics](google-universal-analytics.md)
 * [Extensión JW Player Analytics (Beta)](jw-player-analytics.md)
