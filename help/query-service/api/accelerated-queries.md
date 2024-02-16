@@ -2,9 +2,9 @@
 title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 La siguiente solicitud envía una consulta SQL en el cuerpo de la solicitud al almacén acelerado.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 Esta solicitud alternativa envía un ID de plantilla en el cuerpo de la solicitud al almacén acelerado. El SQL de la plantilla correspondiente se utiliza para consultar el almacén acelerado.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
