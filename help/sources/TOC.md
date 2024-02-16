@@ -4,9 +4,9 @@ user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1012'
 ht-degree: 11%
 
 ---
@@ -296,6 +296,7 @@ ht-degree: 11%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Socio de datos {#data-partner}
          - [Resolución de identidad empresarial de Mercury](tutorials/ui/create/data-partners/merkury.md)
+         - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
