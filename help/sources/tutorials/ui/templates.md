@@ -3,7 +3,7 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -51,7 +51,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >id="platform_sources_templates_accounttype"
 >title="Seleccionar tipo de negocio"
 >abstract="Seleccione el tipo de negocio adecuado para su caso de uso. El acceso puede variar en función de la cuenta de suscripción a Real-time Customer Data Platform."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=es" text="Información general sobre Real-Time CDP"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Información general sobre Real-Time CDP"
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace y vea un catálogo de fuentes disponibles en Experience Platform.
 
