@@ -4,9 +4,9 @@ description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perf
 badgeLimitedAvailability: label="Disponibilidad limitada" type="Caution"
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -74,3 +74,101 @@ El [!UICONTROL Activar destino] página. Para obtener más información sobre el
 ## Pasos siguientes {#next-steps}
 
 Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear y utilizar las audiencias de la cuenta en Adobe Experience Platform. Para aprender a utilizar otros tipos de audiencias en Platform, lea la [Guía de IU del servicio de segmentación](./overview.md).
+
+## Apéndice {#appendix}
+
+En la siguiente sección se proporciona información adicional sobre las audiencias de cuenta.
+
+### Validación de segmentación de cuenta {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Error de ventana retrospectiva máxima"
+>abstract="La ventana retrospectiva máxima para eventos de experiencia es de 30 días."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Error de profundidad máxima del contenedor anidado"
+>abstract="La profundidad máxima de los contenedores anidados es **5**. Esto significa que usted **no puede** tener más de cinco contenedores anidados al crear la audiencia."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="Error de cantidad máxima de reglas"
+>abstract="El número máximo de reglas dentro de un solo contenedor es **5**. Esto significa que usted **no puede** tener más de cinco reglas dentro de un solo contenedor al crear la audiencia."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="Error de importe máximo entre entidades"
+>abstract="El número máximo de entidades cruzadas que se pueden utilizar dentro de una sola audiencia es **5**. Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro de la audiencia. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="Error de entidad personalizada"
+>abstract="Las entidades personalizadas son **no** permitido."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="Error de entidad B2B no válido"
+>abstract="Solo se permiten utilizar las siguientes entidades B2B: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, y `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="Error de valores máximos"
+>abstract="El número máximo de valores que se pueden comprobar para un solo campo es **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="Error de evento inSegment"
+>abstract="Los eventos de inSegment son **no** permitido."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="Error de evento inSegment"
+>abstract="Los eventos de inSegment son **no** permitido."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="Error de eventos secuenciales"
+>abstract="Los eventos secuenciales son **no** permitido."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="Error de propiedad de tipo de mapa"
+>abstract="Las propiedades de tipo mapa son **no** permitido."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="Error de profundidad máxima de entidad anidada"
+>abstract="La profundidad máxima de las matrices anidadas es **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="Error de cantidad máxima de objeto anidado"
+>abstract="El número máximo de objetos anidados permitido es **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Infracción de restricción"
+>abstract="La audiencia infringe una restricción. Lea el documento vinculado para obtener más información."
+
+Cuando se usan audiencias de cuenta, la audiencia **debe** cumplir con las siguientes restricciones:
+
+>[!NOTE]
+>
+>La siguiente lista muestra la **predeterminado** restricciones para audiencias de cuenta. Estos valores **mayo** cambiar, según la configuración implementada por el administrador de su organización.
+
+- La ventana retrospectiva máxima para eventos de experiencia es **30 días**.
+- La profundidad máxima de los contenedores anidados es **5**.
+   - Esto significa que usted **no puede** tener más de cinco contenedores anidados al crear la audiencia.
+- El número máximo de reglas dentro de un solo contenedor es **5**.
+   - Esto significa que su audiencia **no puede** tiene más de cinco reglas que componen su audiencia.
+- El número máximo de entidades cruzadas que se pueden utilizar es **5**.
+   - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro de la audiencia. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
+- Entidades personalizadas **no puede** se utilizará.
+- El número máximo de valores que se pueden comprobar para un solo campo es **50**.
+   - Por ejemplo, si tiene un campo de &quot;Nombre de ciudad&quot;, puede comprobar ese valor con 50 nombres de ciudades.
+- Audiencias de cuenta **no puede** use `inSegment` eventos.
+- Audiencias de cuenta **no puede** utilice eventos secuenciales.
+- Audiencias de cuenta **no puede** utilice mapas.
+- La profundidad máxima de las matrices anidadas es **5**.
+- El número máximo de objetos anidados es **10**.
