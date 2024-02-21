@@ -4,10 +4,10 @@ title: Resumen de destinos de marketing de correo electrónico
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como para enviar campañas de correo electrónico promocionales. Descubra qué ESP son compatibles como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
+source-wordcount: '376'
+ht-degree: 3%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform admite los siguientes destinos de marketing por correo
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Categorías de interés en Mailchimp](mailchimp-interest-categories.md)
+* [Etiquetas de Mailchimp](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Archivos) Oracle Eloqua](oracle-eloqua.md)
@@ -45,7 +46,7 @@ El Adobe recomienda seleccionar un identificador único de su [esquema de unión
 | Identificador único | Campo XDM en el esquema unificado |
 |----------------- | ---------------------------|
 | Dirección de correo electrónico | `personalEmail.address` |
-| Phone | `mobilePhone.number` |
+| Teléfono | `mobilePhone.number` |
 | ID del programa de fidelización | `Customer-defined XDM field` |
 
 {style="table-layout:auto"}
@@ -58,12 +59,12 @@ En el selector de Campos de esquema, elija qué otros campos desea exportar al d
 |------ | ---------|
 | Nombre | `person.name.firstName` |
 | Apellidos | `person.name.lastName` |
-| Phone | `mobilePhone.number` |
+| Teléfono | `mobilePhone.number` |
 | Ciudad de dirección | `homeAddress.city` |
 | Estado de dirección | `homeAddress.stateProvince` |
 | Código postal de la dirección | `homeAddress.postalCode` |
 | Cumpleaños | `person.birthDayAndMonth` |
-| Inscripción a segmento | `segmentMembership.status` |
+| Abono de segmentos | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 

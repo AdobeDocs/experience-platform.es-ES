@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
-description: Este documento proporciona instrucciones sobre las protecciones para la ingesta de datos en Adobe Experience Platform
+description: Obtenga información sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: d0ee51340e1175e2820fea69269a8cb6e9d85c1c
+source-git-commit: b217dd84d9be630a5097e7179af08619ebc135f8
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '588'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ En la tabla siguiente se describen las protecciones que deben tenerse en cuenta 
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
 | Ingesta del lago de datos mediante la API de ingesta por lotes | <ul><li>Puede ingerir hasta 20 GB de datos por hora en el lago de datos mediante la API de ingesta por lotes.</li><li>El número máximo de archivos por lote es de 1500.</li><li>El tamaño máximo de lote es de 100 GB.</li><li>Se 10000 el número máximo de propiedades o campos por fila.</li><li>El número máximo de lotes por minuto por usuario es de 138.</li></ul> |
-| Ingesta del lago de datos mediante fuentes por lotes | <ul><li>Puede ingerir hasta 200 GB de datos por hora en un lago de datos mediante fuentes de ingesta por lotes como [!DNL Azure Blob], [!DNL Amazon S3], y [!DNL SFTP].</li><li>Un tamaño de lote debe estar entre 256 MB y 100 GB. Esto se aplica a los datos sin comprimir y comprimidos. Cuando los datos comprimidos no están comprimidos en el lago de datos, se aplicarán estas limitaciones.</li><li>El número máximo de archivos por lote es de 1500.</li></ul> | Consulte la [información general de orígenes](../sources/home.md) para un catálogo de fuentes que puede utilizar para la ingesta de datos. |
+| Ingesta del lago de datos mediante fuentes por lotes | <ul><li>Puede ingerir hasta 200 GB de datos por hora en un lago de datos mediante fuentes de ingesta por lotes como [!DNL Azure Blob], [!DNL Amazon S3], y [!DNL SFTP].</li><li>Un tamaño de lote debe estar entre 256 MB y 100 GB. Esto se aplica a los datos sin comprimir y comprimidos. Cuando los datos comprimidos no están comprimidos en el lago de datos, se aplicarán estas limitaciones.</li><li>El número máximo de archivos por lote es de 1500.</li><li>El tamaño mínimo de un archivo o carpeta es de 1 byte. No se pueden introducir archivos o carpetas con un tamaño de 0 bytes.</li></ul> | Lea el [información general de orígenes](../sources/home.md) para un catálogo de fuentes que puede utilizar para la ingesta de datos. |
 | Ingesta por lotes en el perfil | <ul><li>El tamaño máximo de una clase de registro es 100 KB (en blanco).</li><li>El tamaño máximo de una clase ExperienceEvent es 10 KB (flexible).</li><li>El tamaño máximo de un único registro es 1 MB.</li></ul> |
 | Número de lotes de Perfil o ExperienceEvent introducidos por día | **El número máximo de lotes de Perfil o ExperienceEvent ingeridos por día es de 90.** Esto significa que el total combinado de lotes Profile y ExperienceEvent introducidos cada día no puede superar los 90. La ingesta de lotes adicionales afectará al rendimiento del sistema. | Este es un límite flexible. Es posible ir más allá de un límite flexible, sin embargo, los límites flexibles proporcionan una guía recomendada para el rendimiento del sistema. |
 

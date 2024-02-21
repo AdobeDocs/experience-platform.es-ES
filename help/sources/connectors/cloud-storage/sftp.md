@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Información general sobre el conector de origen SFTP
 description: Obtenga información sobre cómo conectar un servidor SFTP a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # Conector SFTP
+
+>[!IMPORTANT]
+>
+>El [!DNL SFTP] El servidor al que se conecta Adobe Experience Platform debe ser compatible con la fragmentación, lo que significa que hay varias conexiones a un solo archivo. Si su [!DNL SFTP] El servidor de no admite la fragmentación, por lo que puede recibir un error que impida la ingesta de archivos.
 
 Adobe Experience Platform proporciona conectividad nativa para proveedores de la nube como AWS, [!DNL Google Cloud Platform], y [!DNL Azure], lo que le permite obtener los datos de estos sistemas.
 

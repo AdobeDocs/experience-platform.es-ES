@@ -2,9 +2,9 @@
 title: Crear una conexión de origen de Adobe Analytics en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2755'
 ht-degree: 4%
 
 ---
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtrado para el perfil del cliente en tiempo real {#filtering-for-profile}
+## Filtrado para el perfil del cliente en tiempo real {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Una vez que haya completado las asignaciones para su [!DNL Analytics] datos del 
 
 >[!ENDSHADEBOX]
 
-#### Filtrado de nivel de fila
+### Filtrado de nivel de fila
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 ![exclude-samples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filtrado de nivel de columna
+### Filtrado de nivel de columna
 
 Seleccionar **[!UICONTROL Filtro de columna]** en el encabezado para aplicar el filtrado en el nivel de columna.
 
@@ -267,6 +267,14 @@ De forma predeterminada, todas las [!DNL Analytics] ir a [!DNL Profile] y este p
 Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 ![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filtrar identidades secundarias
+
+Utilice un filtro de columna para excluir las identidades secundarias de la ingesta de perfiles. Para filtrar identidades secundarias, seleccione **[!UICONTROL Filtro de columna]** y luego seleccione **[!UICONTROL _identidades]**.
+
+El filtro solo se aplica cuando una identidad se marca como secundaria. Si se seleccionan identidades, pero llega un evento con una de las identidades marcadas como principales, estas no se filtran.
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Proporcionar detalles del flujo de datos
 

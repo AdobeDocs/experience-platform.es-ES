@@ -4,9 +4,9 @@ user-guide-title: Ayuda del servicio de Consulta de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '317'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 19%
    - [Enumeración de las vistas de página de un usuario](use-cases/list-visitor-sessions.md)
    - [Enumerar visitantes por sus vistas de página](use-cases/visitors-by-number-of-page-views.md)
    - [Puntuación de tendencia](use-cases/propensity-score.md)
-   - [Ejemplo de la función Lambda: Recuperar registros similares](use-cases/retrieve-similar-records.md)
+   - [Recuperar registros similares con funciones de orden superior](use-cases/retrieve-similar-records.md)
    - [Devolver y usar variables de comercialización de datos de Analytics](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Ver el informe de resumen de un visitante](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 19%
    - [Resumen de SQL](sql/overview.md)
    - [Sintaxis SQL](sql/syntax.md)
    - [Funciones definidas por el Adobe](sql/adobe-defined-functions.md)
+   - [Funciones de orden superior](sql/higher-order-functions.md)
    - [Funciones SQL de Spark](sql/spark-sql-functions.md)
    - [Comandos de metadatos](sql/metadata.md)
    - [Instrucciones preparadas](sql/prepared-statements.md)
