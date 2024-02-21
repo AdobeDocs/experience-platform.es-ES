@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '3122'
 ht-degree: 1%
 
 ---
@@ -246,6 +246,26 @@ Para obtener más información sobre el bloque Split, lea la [Guía de IU de com
 
 Sí, todos los tipos de segmentación ([segmentación por lotes, segmentación de streaming y segmentación de edge](./home.md#evaluate-segments)) son compatibles con el flujo de trabajo de Composición de audiencia. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
 
-## ¿Cómo puedo confirmar la pertenencia de un perfil a una audiencia?
+## Abono a audiencia
+
+En la siguiente sección se enumeran las preguntas relacionadas con la pertenencia a audiencias.
+
+### ¿Cómo puedo confirmar la pertenencia de un perfil a una audiencia?
 
 Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccionar **[!UICONTROL Atributos]**, seguido de **[!UICONTROL Ver JSON]**, y puede confirmar que la variable `segmentMembership` contiene el ID de la audiencia.
+
+### ¿Cómo resuelve la segmentación por lotes la pertenencia a perfiles?
+
+Las audiencias evaluadas mediante la segmentación por lotes se resuelven a diario y los resultados de los miembros de la audiencia se registran en el `segmentMembership` atributo. Las búsquedas de perfiles generan una versión nueva del perfil en el momento de la búsqueda, pero no lo hace **no** actualice los resultados de segmentación por lotes.
+
+Como resultado, cuando se realizan cambios en el perfil, como la combinación de dos perfiles, estos cambios **testamento** aparecen en el perfil cuando se busca, pero **no** se reflejará en la `segmentMembership` hasta que el trabajo de evaluación de segmentos se haya ejecutado de nuevo.
+
+Por ejemplo, supongamos que ha creado dos audiencias mutuamente excluyentes: la audiencia A es para personas que viven en Washington y la audiencia B es para personas que viven en Washington **no** Vivo en Washington. Existen dos perfiles: el perfil 1 de una persona que vive en Washington y el perfil 2 de una persona que vive en Oregón.
+
+Cuando se ejecute el trabajo de evaluación de segmentación por lotes, el perfil 1 irá a la Audiencia A, mientras que el perfil 2 irá a la Audiencia B. Más adelante, pero antes de que se ejecute el trabajo de evaluación de segmentación por lotes del día siguiente, entrará en Platform un evento que reconcilie los dos perfiles. Como resultado, se crea un único perfil combinado que contiene los perfiles 1 y 2.
+
+Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes, el nuevo perfil combinado tendrá pertenencia a audiencia en **ambos** perfil 1 y perfil 2. Como resultado, esto significa que será un miembro de **ambos** Audiencia A y Audiencia B, a pesar de que estas audiencias tienen definiciones contradictorias. Para el usuario final, esta es la **exactamente la misma situación** como antes de que los perfiles estuvieran conectados, ya que siempre solo había una persona involucrada, y Platform lo hizo **no** Tener información suficiente para conectar los dos perfiles.
+
+Si utiliza la búsqueda de perfiles para recuperar el perfil recién creado y observar su pertenencia a audiencias, se mostrará que es miembro de **ambos** Audiencia A y Audiencia B, a pesar de que ambas audiencias tienen definiciones contradictorias. Una vez que se ejecute el trabajo diario de evaluación de segmentación por lotes, el abono a audiencia se actualizará para reflejar este estado actualizado de datos de perfil.
+
+Si necesita más resolución de audiencia en tiempo real, utilice streaming o segmentación de Edge.
