@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Introducción
+title: Introducción a los manuales de casos de uso
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
+source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 14%
+source-wordcount: '947'
+ht-degree: 15%
 
 ---
 
