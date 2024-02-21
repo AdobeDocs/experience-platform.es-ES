@@ -98,7 +98,7 @@ Seleccione el **[!UICONTROL Crear programación]** control correspondiente a la 
 >id="platform_destinations_activate_exportoptions"
 >title="Opciones de exportación de archivos"
 >abstract="Seleccione **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el público. Seleccione **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el público desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el público, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el público desde la primera exportación de archivos incrementales."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#export-incremental-files" text="Exportar archivos incrementales"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#export-incremental-files" text="Exportación de archivos incrementales"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -142,7 +142,7 @@ Utilice el **[!UICONTROL Programado]** para que el trabajo de activación se eje
 
 4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
-### Exportar archivos incrementales
+### Exportación de archivos incrementales
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"

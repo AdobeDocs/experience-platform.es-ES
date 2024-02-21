@@ -6,16 +6,16 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
-# Refactorización con restricciones temporales {#refactorization}
+# Refactorización de las restricciones temporales {#refactorization}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
->title="Refactorización con restricciones temporales"
->abstract="Se han eliminado las restricciones temporales a nivel de regla y de grupo para aclarar el uso de restricciones temporales. Vuelva a escribir la restricción como restricción temporal a nivel de lienzo o de tarjeta."
+>title="Refactorización de las restricciones temporales"
+>abstract="Se han eliminado las restricciones temporales a nivel de regla y de grupo para aclarar el uso de restricciones temporales. Vuelva a escribir la restricción como una restricción temporal a nivel de lienzo o de tarjeta."
 
 La versión de enero de 2024 para Adobe Experience Platform ha introducido cambios en el servicio de segmentación de Adobe Experience Platform que agregan nuevas restricciones en los casos en los que se pueden definir restricciones de tiempo. Estos cambios afectan a los segmentos recién creados o editados realizados con la IU del Generador de segmentos. Esta guía explica cómo mitigar estos cambios.
 
