@@ -2,10 +2,10 @@
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1859'
-ht-degree: 9%
+source-wordcount: '1961'
+ht-degree: 8%
 
 ---
 
@@ -30,10 +30,11 @@ La tabla siguiente enumera [!DNL Adobe Real-Time Customer Data Platform] objetos
 | Plataforma | Objeto | Detalles |
 | --- | --- | --- |
 | Plataforma de datos del cliente | Fuentes | Las credenciales de la cuenta de origen no se replican en la zona protegida de destino por motivos de seguridad y deberán actualizarse manualmente. El flujo de datos de origen se copia en estado de borrador de forma predeterminada. |
-| Plataforma de datos del cliente | Públicos | Solo el **[!UICONTROL Audiencia del cliente]** type **[!UICONTROL Servicio de segmentación]** es compatible. Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. |
+| Plataforma de datos del cliente | Públicos | Solo el **[!UICONTROL Audiencia del cliente]** type **[!UICONTROL Servicio de segmentación]** es compatible. Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. El sistema seleccionará automáticamente la política de combinación predeterminada en la zona protegida de destino con la misma clase XDM al comprobar las dependencias de la política de combinación. |
 | Plataforma de datos del cliente | Identidades | El sistema deduplicará automáticamente las áreas de nombres de identidad estándar de Adobe al crear en la zona protegida de destino. Las audiencias solo se pueden copiar cuando todos los atributos de las reglas de audiencia están habilitados en el esquema de unión. Los esquemas necesarios deben moverse y habilitarse primero para el perfil unificado. |
-| Plataforma de datos del cliente | Esquemas | Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. El estado del perfil unificado del esquema se copiará tal cual desde la zona protegida de origen. Si el esquema está habilitado para el perfil unificado en la zona protegida de origen, todos los atributos se mueven al esquema de unión. Las mayúsculas y minúsculas perimetrales de las relaciones de esquema no se incluyen en el paquete. |
+| Plataforma de datos del cliente | Esquemas | Las etiquetas existentes para consentimiento y control se copiarán en el mismo trabajo de importación. El usuario tiene la flexibilidad de importar esquemas sin la opción de perfil unificado habilitada. Las mayúsculas y minúsculas perimetrales de las relaciones de esquema no se incluyen en el paquete. |
 | Plataforma de datos del cliente | Conjuntos de datos | Los conjuntos de datos se copian con la configuración del perfil unificado deshabilitada de forma predeterminada. |
+| Plataforma de datos del cliente | Políticas de consentimiento y gobernanza | Añada directivas personalizadas creadas por un usuario a un paquete y muévalas a zonas protegidas. |
 
 Los objetos siguientes se importan, pero están en estado de borrador o desactivado:
 
@@ -52,6 +53,7 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Público | Una audiencia se puede copiar como un objeto dependiente del objeto de recorrido. Puede seleccionar crear una audiencia nueva o reutilizar una existente en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | Los esquemas utilizados en el recorrido se pueden copiar como objetos dependientes. Puede seleccionar crear un nuevo esquema o reutilizar uno existente en la zona protegida de destino. |
+| [!DNL Adobe Journey Optimizer] | Política de combinación | Las políticas de combinación utilizadas en el recorrido se pueden copiar como objetos dependientes. En la zona protegida de Target, puede hacer lo siguiente **no puede** Para crear una nueva política de combinación, solo puede utilizar una ya existente. |
 | [!DNL Adobe Journey Optimizer] | Recorrido - detalles del lienzo | La representación del recorrido en el lienzo incluye los objetos del recorrido, como condiciones, acciones, eventos, audiencias de lectura, etc., que se copian. La actividad de salto se excluye de la copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Se copian los eventos y los detalles del evento utilizados en el recorrido. Siempre se crea una nueva versión en la zona protegida de destino. |
 | [!DNL Adobe Journey Optimizer] | Acción | Los mensajes push y de correo electrónico utilizados en el recorrido se pueden copiar como objetos dependientes. No se comprueba la integridad de las actividades de acción de canal utilizadas en los campos de recorrido que se utilizan para la personalización en el mensaje. Los bloques de contenido no se copian.<br><br>Se puede copiar la acción de actualización de perfil utilizada en el recorrido. Las acciones personalizadas y los detalles de acción utilizados en el recorrido también se copian. Siempre se crea una nueva versión en la zona protegida de destino. |
@@ -135,19 +137,23 @@ Para importar el paquete en una zona protegida de Target, vaya a las zonas prote
 
 ![Las zonas protegidas **[!UICONTROL Examinar]** pestaña que resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-En el menú desplegable, seleccione la **[!UICONTROL Nombre del paquete]** desea importar a la zona protegida de destino. Añada un opcional **[!UICONTROL Nombre de trabajo]**, que se utilizará para una monitorización futura, y seleccione **[!UICONTROL Siguiente]**.
+En el menú desplegable, seleccione la **[!UICONTROL Nombre del paquete]** desea importar a la zona protegida de destino. Añada un opcional **[!UICONTROL Nombre de trabajo]**, que se utilizará para futuras monitorizaciones. De forma predeterminada, el perfil unificado se desactiva cuando se importan los esquemas del paquete. Alternar **Habilitar esquemas para el perfil** para habilitar esto, seleccione **[!UICONTROL Siguiente]**.
 
 ![La página de detalles de importación que muestra [!UICONTROL Nombre del paquete] selección desplegable](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-El [!UICONTROL Objeto de paquete y dependencias] proporciona una lista de todos los recursos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos padre seleccionados.
+El [!UICONTROL Objeto de paquete y dependencias] proporciona una lista de todos los recursos incluidos en este paquete. El sistema detecta automáticamente los objetos dependientes necesarios para importar correctamente los objetos padre seleccionados. Los atributos que faltan se muestran en la parte superior de la página. Seleccionar **[!UICONTROL Ver detalles]** para obtener un desglose más detallado.
 
-![El [!UICONTROL Objeto de paquete y dependencias] Esta página muestra una lista de los recursos incluidos en el paquete.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![El [!UICONTROL Objeto de paquete y dependencias] La página muestra los atributos que faltan.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Los objetos dependientes se pueden reemplazar por objetos existentes en la zona protegida de destino, lo que permite reutilizar objetos existentes en lugar de crear una nueva versión. Por ejemplo, al importar un paquete que incluye esquemas, puede reutilizar el grupo de campos personalizados existente y las áreas de nombres de identidad en la zona protegida de destino. Alternativamente, al importar un paquete que incluya Recorridos, puede reutilizar segmentos existentes en la zona protegida de Target.
 
-Para utilizar un objeto existente, seleccione el icono de lápiz situado junto al objeto dependiente. Se muestran las opciones para crear nuevos o utilizar los existentes. Seleccionar **[!UICONTROL Usar los existentes]**.
+Para utilizar un objeto existente, seleccione el icono de lápiz situado junto al objeto dependiente.
+
+![El [!UICONTROL Objeto de paquete y dependencias] Esta página muestra una lista de los recursos incluidos en el paquete.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+Se muestran las opciones para crear nuevos o utilizar los existentes. Seleccionar **[!UICONTROL Usar los existentes]**.
 
 ![El [!UICONTROL Objeto de paquete y dependencias] página que muestra las opciones de objeto dependientes [!UICONTROL Crear nuevo] y [!UICONTROL Usar los existentes].](../images/ui/sandbox-tooling/use-existing-object.png)
 
