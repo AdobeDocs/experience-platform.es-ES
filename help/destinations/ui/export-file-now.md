@@ -3,9 +3,9 @@ title: (Beta) Exportar archivos bajo demanda a destinos por lotes mediante la in
 type: Tutorial
 description: Obtenga información sobre cómo exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '722'
 ht-degree: 8%
 
 ---
@@ -48,13 +48,9 @@ Para exportar archivos bajo demanda a destinos por lotes, debe tener [conectado 
 
    ![Imagen que resalta un flujo de datos filtrado.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Seleccione el **[!UICONTROL Datos de activación]** y seleccione la audiencia para la que desea exportar un archivo bajo demanda y seleccione la **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo al destino del lote.
+3. Seleccione el **[!UICONTROL Datos de activación]** y seleccione las audiencias para las que desea exportar archivos bajo demanda y seleccione la pestaña **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo para cada audiencia seleccionada al destino del lote.
 
-   >[!IMPORTANT]
-   >
-   >Actualmente, la IU no admite la selección de varias audiencias para exportar archivos bajo demanda y por lotes. Utilice el [API de activación ad hoc](/help/destinations/api/ad-hoc-activation-api.md) con ese fin.
-
-   ![Imagen que resalta el botón Exportar archivo ahora.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Imagen que resalta el botón Exportar archivo ahora.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Seleccionar **[!UICONTROL Sí]** para confirmar y almacenar en déclencheur la exportación de archivos.
 

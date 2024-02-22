@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 12%
+source-wordcount: '3879'
+ht-degree: 11%
 
 ---
 
@@ -73,6 +73,10 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >
 >Selección de audiencias procedentes de **[!UICONTROL Cargas personalizadas]** activa automáticamente la [Seleccionar atributos de enriquecimiento](#select-enrichment-attributes) paso.
 
+>[!TIP]
+>
+>Puede eliminar audiencias de flujos de activación existentes de la **[!UICONTROL Datos de activación]** página. Consulte la [documentación dedicada](../ui/destination-details-page.md#bulk-remove) para obtener más información.
+
 ## Programar exportación de público {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >title="Programación"
 >abstract="Utilice el icono de lápiz para establecer el tipo de exportación de archivos (archivos completos o archivos incrementales) y la frecuencia de exportación."
 
-[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube como [diferentes tipos de archivo](#supported-file-formats-export). En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando. La configuración de la programación es obligatoria, pero la configuración del nombre del archivo es opcional.
+[!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube como [diferentes tipos de archivo](#supported-file-formats-export). En el **[!UICONTROL Programación]** , puede configurar la programación y los nombres de archivo para cada audiencia que esté exportando.
+
+Experience Platform establece automáticamente una programación predeterminada para cada exportación de archivo. Puede modificar la programación predeterminada según sus necesidades seleccionando el icono de lápiz situado junto a cada programación y definiendo una programación personalizada.
+
+![Edite el control de programación resaltado en el paso Programación.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>Puede editar las programaciones de activación de audiencia para los flujos de activación existentes desde el **[!UICONTROL Datos de activación]** página. Consulte la documentación sobre [edición masiva de programaciones de activación](../ui/destination-details-page.md#bulk-edit-schedule) para obtener más información.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] divide automáticamente los archivos de exportación en 5 millones de registros (filas) por archivo. Cada fila representa un perfil.
 >
 >Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Seleccione el **[!UICONTROL Crear programación]** control correspondiente a la audiencia que desea enviar a su destino.
-
-![Cree el control de programación resaltado en el paso Programación.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportación de archivos completos {#export-full-files}
 
@@ -247,6 +255,14 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 1. El campo seleccionado para la exportación aparece ahora en la vista de asignación y muestra el encabezado editado en el archivo exportado.
 
    ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
+
+   ![Grabación que muestra la reordenación de los campos de asignación arrastrando y soltando.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Opcional) Puede seleccionar el campo exportado para que sea un [clave obligatoria](#mandatory-keys) o una [clave de deduplicación](#deduplication-keys).
 
