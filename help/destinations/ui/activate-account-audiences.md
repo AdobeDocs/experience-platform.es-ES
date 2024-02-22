@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo activar audiencias de cuenta en de
 badgeB2B: label="Edición B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compran el [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2b) ediciones de Real-time Customer Data Platform.
+>La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compran el [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p) ediciones de Real-time Customer Data Platform.
 
 Este artículo explica el flujo de trabajo necesario para exportar [audiencias de cuenta](/help/segmentation/ui/account-audiences.md) de Adobe Experience Platform a su destino preferido.
 
