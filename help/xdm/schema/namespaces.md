@@ -4,18 +4,22 @@ solution: Experience Platform
 title: Espaciado de nombres en el modelo de datos de experiencia (XDM)
 description: Descubra cómo el espacio de nombres en el Modelo de datos de experiencia (XDM) le permite ampliar los esquemas y evitar conflictos de campos a medida que se reúnen distintos componentes de esquema.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
 # Espaciado de nombres en el modelo de datos de experiencia (XDM)
 
+>[!IMPORTANT]
+>
+>En XDM, el área de nombres (el tema de esta página) se utiliza para distinguir los campos de un esquema. Esto es diferente al concepto de área de nombres de identidad en el servicio de identidad, donde el área de nombres se utiliza para distinguir los valores de identidad. Lea la documentación sobre [área de nombres en Identity Service](../../identity-service/features/namespaces.md) para obtener más información.
+
 Todos los campos de los esquemas XDM (Experience Data Model) tienen un área de nombres asociada. Estas áreas de nombres le permiten ampliar los esquemas y evitar conflictos de campos a medida que se reúnen distintos componentes de esquema. Este documento proporciona información general sobre las áreas de nombres en XDM y cómo se representan en [API de Registro de esquemas](../api/overview.md).
 
-El espacio de nombres permite definir un campo en un área de nombres para que signifique algo diferente que el mismo campo en un área de nombres diferente. En la práctica, el área de nombres de un campo indica quién creó el campo (como un XDM estándar (Adobe), un proveedor o su organización).
+El espacio de nombres permite definir un campo en un área de nombres para que signifique algo diferente que el mismo campo en una área de nombres diferente. En la práctica, el área de nombres de un campo indica quién creó el campo (como un XDM estándar (Adobe), un proveedor o su organización).
 
 Por ejemplo, considere un esquema XDM que utilice el [[!UICONTROL Datos personales de contacto] grupo de campos](../field-groups/profile/demographic-details.md), que tiene un estándar `mobilePhone` campo que existe en el `xdm` namespace. En el mismo esquema, también es libre de crear un `mobilePhone` en un área de nombres diferente (su [ID de inquilino](../api/getting-started.md#know-your-tenant_id)). Ambos campos pueden coexistir juntos mientras tienen diferentes significados o restricciones subyacentes.
 
