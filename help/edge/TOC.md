@@ -5,10 +5,10 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 28%
+source-wordcount: '188'
+ht-degree: 23%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 28%
    * [Procesar contenido personalizado](personalization/rendering-personalization-content.md)
    * [Personalización mediante implementación híbrida](personalization/hybrid-personalization.md)
    * [Administrar parpadeo](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [Información general](personalization/adobe-target/target-overview.md)
       * [Implementación de aplicación de una sola página](personalization/adobe-target/spa-implementation.md)
@@ -53,14 +54,15 @@ ht-degree: 28%
       * [Uso del ID de terceros de mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Comparación de la biblioteca at.js con el SDK web](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Registro de Analytics for Target (A4T) {#a4t}
-         * [Información general ](personalization/adobe-target/analytics-logging/overview.md)
-         * [Lado del cliente registro](personalization/adobe-target/analytics-logging/client-side.md)
+         * [Información general](personalization/adobe-target/analytics-logging/overview.md)
+         * [Registro en el lado del cliente](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro en el lado del servidor](personalization/adobe-target/analytics-logging/server-side.md)
-   * Toma de decisiones sobre ofertas {#offer-decisioning}
+   * Offer decisioning {#offer-decisioning}
       * [Información general](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Información general](personalization/ajo/overview.md)
       * [Implementación de aplicación de una sola página](personalization/ajo/web-spa-implementation.md)
+      * [Configuración de la mensajería web en la aplicación](personalization/web-in-app-messaging.md)
 * Consentimiento {#consent}
    * [Consentimiento de apoyo](consent/supporting-consent.md)
    * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}
