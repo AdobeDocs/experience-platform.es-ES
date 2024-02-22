@@ -3,9 +3,9 @@ title: Extensión de reenvío de eventos de API de conversiones de LinkedIn
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite medir el rendimiento de su campaña de marketing de LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## Requisitos previos {#prerequisites}
 
-Debe crear una regla de conversión en su [!DNL LinkedIn] cuenta de anuncios de campaign. [!DNL Adobe] recomienda incluir &quot;CAPI&quot; al principio del nombre de la regla de conversación para diferenciarla de otros tipos de reglas de conversión que pueda haber configurado.
+Usted debe [crear una regla de conversión](https://www.linkedin.com/help/lms/answer/a1657171) en su [!DNL LinkedIn Campaign Manager] cuenta. [!DNL Adobe] recomienda incluir &quot;CAPI&quot; al principio del nombre de la regla de conversación para diferenciarla de otros tipos de reglas de conversión que pueda haber configurado.
 
 ### Creación de un secreto y un elemento de datos
 
@@ -40,7 +40,7 @@ En la siguiente pantalla, introduzca el secreto del elemento de datos creado ant
 
 Una vez configurados todos los elementos de datos, puede empezar a crear reglas de reenvío de eventos que determinen cuándo y cómo se enviarán los eventos a [!DNL LinkedIn].
 
-Crear un nuevo reenvío de eventos [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL LinkedIn]**. A continuación, seleccione **[!UICONTROL Enviar conversión web]** para el **[!UICONTROL Tipo de acción]**.
+Crear un nuevo reenvío de eventos [regla](../../../ui/managing-resources/rules.md) en la propiedad de reenvío de eventos. En **[!UICONTROL Acciones]**, añada una nueva acción y establezca la extensión en **[!UICONTROL LinkedIn]**. A continuación, seleccione **[!UICONTROL Enviar conversión]** para el **[!UICONTROL Tipo de acción]**.
 
 ![La vista Reglas de propiedad de reenvío de eventos, con los campos necesarios para agregar una configuración de acción de regla de reenvío de eventos resaltados.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Después de la selección, aparecen controles adicionales para configurar aún m
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Conversión] | El ID de la regla de conversión creada en [Administrador de linkedIn Campaign](https://www.linkedin.com/help/lms/answer/a1657171) o mediante [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversión] | El ID de la regla de conversión creada en [Administrador de linkedIn Campaign](https://www.linkedin.com/help/lms/answer/a1657171). Seleccione la regla de conversión para obtener el ID y copie el ID desde la dirección URL del explorador (por ejemplo, `/campaignmanager/accounts/508111232/conversions/15588877`) como `/conversions/<id>`. |
 | [!UICONTROL Tiempo de conversión] | Cada marca de tiempo en milisegundos a los que se produjo el evento de conversión. <br><br> Nota: Si la fuente registra la marca de tiempo de conversión en segundos, inserte 000 al final para transformarla a milisegundos. |
 | [!UICONTROL Moneda] | Código de divisa en formato ISO. |
 | [!UICONTROL Cantidad] | Valor de la conversión en una cadena decimal (por ejemplo, &quot;100.05&quot;). |
-| [!UICONTROL ID de evento] | ID único generado por los anunciantes para indicar cada evento. Este es un campo opcional y se utiliza para la deduplicación. |
+| [!UICONTROL ID de evento] | ID único generado por los anunciantes para indicar cada evento. Este es un campo opcional y se utiliza para lo siguiente [deduplicación](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ Después de la selección, aparecen controles adicionales para configurar aún m
 
 ## Pasos siguientes
 
-En esta guía se explica cómo enviar datos a [!DNL LinkedIn] uso del [!DNL LinkedIn Conversions API] extensión de reenvío de eventos. Para obtener más información sobre las funcionalidades de reenvío de eventos en [!DNL Adobe Experience Platform], consulte la [resumen del reenvío de eventos](../../../ui/event-forwarding/overview.md).
+En esta guía se explica cómo enviar datos a [!DNL LinkedIn] uso del [!DNL LinkedIn Conversions API] extensión de reenvío de eventos. Para obtener más información sobre las funcionalidades de reenvío de eventos en [!DNL Adobe Experience Platform], lea la [resumen del reenvío de eventos](../../../ui/event-forwarding/overview.md).
+
+Para obtener más información sobre cómo depurar la implementación con la herramienta Experience Platform Debugger y la herramienta de monitorización del reenvío de eventos, lea la [información general de Adobe Experience Platform Debugger](../../../../debugger/home.md) y [Monitorización de actividades en el reenvío de eventos](../../../ui/event-forwarding/monitoring.md).
