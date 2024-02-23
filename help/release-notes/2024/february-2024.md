@@ -27,7 +27,7 @@ Experience Platform permite suscribirse a alertas basadas en eventos para divers
 **Funciones nuevas o actualizadas**
 | Función | Descripción | | — | — | | Pestaña Historial de alertas | Como Experience Platform, puede utilizar la función Gestionar suscriptores de alertas para asignar una alerta a un ID de usuario de Adobe, a una dirección de correo electrónico externa o a una lista de grupos de correo electrónico. Para obtener más información, consulte la [documentación de IU de alertas](../../observability/alerts/ui.md) para obtener más información sobre la pestaña history. |
 
-{style="table-layout:auto"}
+
 
 Para obtener más información sobre las alertas, lea la [[!DNL Observability Insights] descripción general](../../observability/home.md).
 
