@@ -1,7 +1,7 @@
 ---
 title: Configuración de la compatibilidad con la mensajería web en la aplicación en el SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiqueta del SDK web para admitir la mensajería en la aplicación web.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -185,5 +185,5 @@ Puede elegir mostrar mensajes en la aplicación a los usuarios un número determ
 
 En el [Configuración del SDK web](../fundamentals/configuring-the-sdk.md) configure el `personalizationStorageEnabled` opción según sus necesidades:
 
-* `personalizationStorageEnabled: true` Almacena en déclencheur el mensaje en la aplicación con la frecuencia definida en la [Campaña de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` Almacena en déclencheur el mensaje en la aplicación con la frecuencia definida en la [campaña de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` Almacena en déclencheur el mensaje en la aplicación en cada carga de página.
