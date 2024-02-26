@@ -2,10 +2,10 @@
 title: Configurar las claves administradas por el cliente mediante la interfaz de usuario de Platform
 description: Obtenga información sobre cómo configurar la aplicación CMK con el inquilino de Azure y enviar el ID de clave de cifrado a Adobe Experience Platform.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 1%
+source-wordcount: '1090'
+ht-degree: 0%
 
 ---
 
@@ -61,6 +61,10 @@ Después de completar el proceso de autenticación, vuelva a su [!DNL Azure] Key
 ![El [!DNL Microsoft Azure] panel con [!DNL Add] y [!DNL Add role assignment] resaltado.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 La siguiente pantalla le pedirá que elija una función para esta asignación. Seleccionar **[!DNL Key Vault Crypto Service Encryption User]** antes de seleccionar **[!DNL Next]** para continuar.
+
+>[!NOTE]
+>
+>Si tiene el [!DNL Managed-HSM Key Vault] , debe seleccionar la variable **[!DNL Managed HSM Crypto Service Encryption User]** función de usuario.
 
 ![El [!DNL Microsoft Azure] panel con el [!DNL Key Vault Crypto Service Encryption User] resaltado.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

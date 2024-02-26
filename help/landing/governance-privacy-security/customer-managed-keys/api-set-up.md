@@ -2,10 +2,10 @@
 title: Configurar las claves administradas por el cliente mediante la API
 description: Obtenga información sobre cómo configurar la aplicación CMK con el inquilino de Azure y enviar el ID de clave de cifrado a Adobe Experience Platform.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 2%
+source-wordcount: '1002'
+ht-degree: 1%
 
 ---
 
@@ -78,6 +78,10 @@ Después de completar el proceso de autenticación, vuelva a su [!DNL Azure] Key
 
 La siguiente pantalla le pedirá que elija una función para esta asignación. Seleccionar **[!DNL Key Vault Crypto Service Encryption User]** antes de seleccionar **[!DNL Next]** para continuar.
 
+>[!NOTE]
+>
+>Si tiene el [!DNL Managed-HSM Key Vault] , debe seleccionar la variable **[!DNL Managed HSM Crypto Service Encryption User]** función de usuario.
+
 ![El panel de Microsoft Azure con la variable [!DNL Key Vault Crypto Service Encryption User] resaltado.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 En la pantalla siguiente, elija **[!DNL Select members]** para abrir un cuadro de diálogo en el carril derecho. Utilice la barra de búsqueda para localizar la entidad de seguridad de servicio de la aplicación CMK y seleccionarla en la lista. Cuando termine, seleccione **[!DNL Save]**.
@@ -134,7 +138,7 @@ curl -X POST \
 | `name` | Un nombre para la configuración. Asegúrese de recordar este valor porque es necesario para comprobar el estado de la configuración a las [etapa posterior](#check-status). El valor distingue entre mayúsculas y minúsculas. |
 | `type` | El tipo de configuración. Debe definirse en `BYOK_CONFIG`. |
 | `imsOrgId` | Su ID de organización. Este ID debe tener el mismo valor que se proporciona en la variable `x-gw-ims-org-id` encabezado. |
-| `configData` | Esta propiedad contiene los siguientes detalles sobre la configuración:<ul><li>`providerType`: Debe definirse en `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: URI de almacén de claves que ha copiado [anterior](#send-to-adobe).</li></ul> |
+| `configData` | Esta propiedad contiene los siguientes detalles sobre la configuración:<ul><li>`providerType`: debe configurarse como `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: URI de almacén de claves que ha copiado [anterior](#send-to-adobe).</li></ul> |
 
 +++
 

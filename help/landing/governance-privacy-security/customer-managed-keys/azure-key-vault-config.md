@@ -2,9 +2,9 @@
 title: Configurar un Azure Key Vault
 description: Obtenga información sobre cómo crear una nueva cuenta empresarial con Azure o utilizar una cuenta empresarial existente y crear el almacén de claves.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Las claves administradas por el cliente (CMK) solo admiten claves de un [!DNL Mi
 
 >[!IMPORTANT]
 >
->Solo los niveles de servicio Premium y Standard para [!DNL Azure] Se admiten los Key Vault. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] y [!DNL Azure Payments HSM] no son compatibles. Consulte la [[!DNL Azure] documentación](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) para obtener más información sobre los servicios de administración de claves ofrecidos.
+>Solo los niveles Standard, Premium y Managed HSM para [!DNL Azure] Se admiten los Key Vault. [!DNL Azure Dedicated HSM] y [!DNL Azure Payments HSM] no son compatibles. Consulte la [[!DNL Azure] documentación](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) para obtener más información sobre los servicios de administración de claves ofrecidos.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Una vez creado un almacén de claves, puede generar una clave nueva. Vaya a **[!
 
 ![El [!DNL Keys] pestaña de [!DNL Azure] con [!DNL Generate import] resaltado.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilice el formulario proporcionado para proporcionar un nombre para la clave y seleccione **RSA** para el tipo de clave. Como mínimo, la variable **[!DNL RSA key size]** debe ser al menos **3072** bits según lo requerido por [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] también es compatible con RSA 3027.
+Utilice el formulario proporcionado para proporcionar un nombre para la clave y seleccione **RSA** o **RSA-HSM** para el tipo de clave. Como mínimo, la variable **[!DNL RSA key size]** debe ser al menos **3072** bits según lo requerido por [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] también es compatible con RSA 3027.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Utilice el formulario proporcionado para proporcionar un nombre para la clave y 
 
 Utilice los controles restantes para configurar la clave que desee generar o importar. Cuando termine, seleccione **[!DNL Create]**.
 
-![El panel Crear una clave con [!DNL 3072] bits resaltados.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![El [!DNL Create a key] panel con [!DNL 3072] bits resaltados.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 La clave configurada aparece en la lista de claves del almacén.
 
