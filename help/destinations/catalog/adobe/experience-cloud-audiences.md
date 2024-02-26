@@ -3,9 +3,9 @@ title: Públicos de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 2%
 
 ---
@@ -95,6 +95,7 @@ Tenga en cuenta las siguientes limitaciones conocidas y llamadas importantes al 
 * Actualmente, solo se admite un destino de Audiencias de Experience Cloud. Si se intenta configurar una segunda conexión de destino, se producirá un error.
 * Al conectarse al destino, puede ver una opción para lo siguiente [habilitar alertas de flujo de datos](../../ui/alerts.md). Aunque esté visible en la interfaz de usuario de, la variable **actualmente no se admite la opción habilitar alertas**.
 * **Compatibilidad con relleno de audiencia**: la primera exportación a soluciones de Audience Manager u otros Experience Cloud incluye una población histórica de las audiencias. Usuarios de [integración heredada de uso compartido de audiencias](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Los usuarios que configuran este destino deben esperar una diferencia de relleno de aproximadamente seis horas.
+* Audiencias procedentes de [Composición de audiencia](../../../segmentation/ui/audience-composition.md) no son compatibles directamente. Para activar audiencias compuestas en este destino debe crear una definición de audiencia mediante [Generador de segmentos](../../../segmentation/ui/segment-builder.md) en función de la audiencia compuesta y active la audiencia recién creada.
 
 ### Latencia al activar audiencias {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Las audiencias y características de Audience Manager están sujetas a [Controle
 
 Las audiencias exportadas desde Real-Time CDP se asignan a una fuente de datos específica en el Audience Manager llamada **[!UICONTROL Segmentos de Experience Platform]**.
 
-Para permitir que solo determinados usuarios tengan acceso a las audiencias, puede aplicar controles de acceso a las audiencias que pertenezcan a la fuente de datos. Establezca nuevos permisos de control de acceso en Audience Manager para estas audiencias y características creadas a partir de segmentos de Real-Time CDP.
+Para permitir que solo ciertos usuarios accedan a las audiencias, utilice [Controles de acceso basados en roles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) para configurar el acceso de los usuarios a las audiencias y características creadas a partir de las audiencias de Real-Time CDP.
