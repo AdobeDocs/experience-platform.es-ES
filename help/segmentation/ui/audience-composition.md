@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Aparecerá una lista de atributos de perfil. En esta ventana emergente, puede se
 
 Después de seleccionar el atributo, puede seleccionar el orden por el que desea clasificarlo. Puede ser ascendente (de menor a mayor) o descendente (de mayor a menor).
 
-Además, puede limitar el número de audiencias que devuelve habilitando la variable **[!UICONTROL Añadir límite de perfil]** alternar. Cuando esta opción está habilitada, puede establecer el número máximo de audiencias devueltas dentro de la variable **[!UICONTROL Perfiles incluidos]** field.
+Además, puede limitar el número de perfiles devueltos habilitando la variable **[!UICONTROL Añadir límite de perfil]** alternar. Cuando esta opción está habilitada, puede establecer el número máximo de perfiles devueltos dentro de la variable **[!UICONTROL Perfiles incluidos]** field.
 
-![Se resalta la opción Add profile limit, que permite limitar el número de audiencias devueltas.](../images/ui/audience-composition/add-profile-limit.png)
+![Se resalta la opción Add profile limit, que permite limitar el número de perfiles devueltos.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
