@@ -1,8 +1,8 @@
 ---
-title: Ejemplo de Luma de renovación de participación inteligente
+title: Ejemplos de Luma de renovación de participación inteligente
 description: Vídeos de ejemplo para el caso de uso de renovación de participación inteligente.
 feature: Use Cases
-source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
+source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%
