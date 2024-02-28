@@ -2,11 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;control de acceso;control de acceso basado en atributos;
 title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 19%
+source-wordcount: '1714'
+ht-degree: 17%
 
 ---
 
@@ -51,7 +52,7 @@ Lo hará:
 
 [!UICONTROL Permisos] es el área de Experience Cloud donde los administradores pueden definir roles de usuario y directivas para administrar permisos para funciones y objetos dentro de una aplicación de producto.
 
-Pasante [!UICONTROL Permisos]Además, puede crear y administrar funciones y asignar los permisos de recursos deseados para estas funciones. [!UICONTROL Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica.]
+Pasante [!UICONTROL Permisos]Además, puede crear y administrar funciones y asignar los permisos de recursos deseados para estas funciones. [!UICONTROL Permisos] también le permite administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica.
 
 Póngase en contacto con el administrador del sistema para obtener acceso si no tiene privilegios de administrador.
 

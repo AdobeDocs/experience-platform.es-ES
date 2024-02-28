@@ -1,11 +1,12 @@
 ---
 title: Guía de API de Privacy Service
 description: Aprenda a utilizar la API de Privacy Service para administrar mediante programación los trabajos de privacidad para las aplicaciones de Adobe Experience Cloud admitidas.
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 

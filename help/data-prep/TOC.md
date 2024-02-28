@@ -3,17 +3,18 @@ audience: user
 user-guide-title: Guía de preparación de datos
 user-guide-description: Prepare sus datos para la ingesta en Adobe Experience Platform y descubra cómo la preparación de datos puede ayudarle a asignar, transformar y validar datos hoy mismo.
 feature: Data Prep
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 65%
+source-wordcount: '61'
+ht-degree: 59%
 
 ---
 
 
 # Preparación de los datos {#data-prep}
 
-- [Información general de preparación de datos](home.md)
+- [Resumen de preparación de datos](home.md)
 - [Funciones de preparación de datos](functions.md)
 - API del servicio de asignación {#api}
    - [Información general](./api/overview.md)

@@ -3,11 +3,12 @@ keywords: Experience Platform;inicio;temas populares;identidad;identidad
 solution: Experience Platform
 title: Enumerar asignaciones de identidad
 description: Una asignación es una colección de todas las identidades de un clúster para un área de nombres especificada.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 4%
+source-wordcount: '278'
+ht-degree: 3%
 
 ---
 
@@ -74,7 +75,7 @@ Utilice el `POST` como equivalente de lote del método `GET` método descrito an
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**Cuerpo de la solicitud**
+**Cuerpo de solicitud**
 
 Opción 1: Proporcione una lista de XID para los que recuperar asignaciones.
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;aplicación de políticas;a
 solution: Experience Platform
 title: Punto final de API de políticas de gobernanza de datos
 description: Las políticas de gobernanza de datos son reglas que adopta su organización y que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform. El extremo /policies se utiliza para todas las llamadas a la API relacionadas con la visualización, creación, actualización o eliminación de directivas de control de datos.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 3%
 
 ---
@@ -19,7 +20,7 @@ Las políticas de gobernanza de datos son reglas que describen los tipos de acci
 >
 >Las políticas de gobernanza no se deben confundir con las políticas de control de acceso, que determinan los atributos de datos específicos a los que pueden acceder determinados usuarios de Platform en su organización. Consulte la `/policies` guía de extremo para [API de control de acceso](../../access-control/abac/api/policies.md) para obtener más información sobre cómo administrar mediante programación las directivas de control de acceso.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

@@ -3,8 +3,9 @@ keywords: Experience Platform;inicio;temas populares;enumerar zonas protegidas d
 solution: Experience Platform
 title: Extremo de API de zonas protegidas disponibles
 description: Puede enumerar las zonas protegidas disponibles para el usuario actual realizando una solicitud de GET al extremo de las zonas protegidas disponibles.
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 3%

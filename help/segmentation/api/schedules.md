@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Programa el extremo de API
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 4%
+source-wordcount: '2040'
+ht-degree: 3%
 
 ---
 

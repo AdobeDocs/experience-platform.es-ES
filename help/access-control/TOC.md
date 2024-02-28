@@ -4,10 +4,11 @@ user-guide-title: Ayuda del control de acceso en Adobe Experience Platform
 breadcrumb-title: Guía de control de acceso
 user-guide-description: Use perfiles de producto en Adobe Admin Console para administrar permisos de usuario. Obtenga información sobre cómo asignar usuarios a productos y zonas protegidas.
 feature: Access Control
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+role: Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 50%
+source-wordcount: '117'
+ht-degree: 49%
 
 ---
 
@@ -40,7 +41,7 @@ ht-degree: 50%
    * [Crear un nuevo perfil de producto](ui/create-profile.md)
    * [Administración de usuarios para un perfil de producto](ui/users.md)
 * API de control de acceso {#api}
-   * [Primeros pasos](api/getting-started.md)
+   * [Introducción](api/getting-started.md)
    * [Nombres de lista de permisos y tipos de recursos](api/permissions-and-resource-types.md)
    * [Ver directivas efectivas](api/effective-policies.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)

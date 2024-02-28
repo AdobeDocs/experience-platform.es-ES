@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;api;API;zona protegida;zona
 solution: Experience Platform
 title: Apéndice de guía de API de zona protegida
 description: Este documento proporciona información complementaria relacionada con el trabajo con la API de zona protegida.
+role: Developer
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---

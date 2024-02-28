@@ -3,11 +3,12 @@ keywords: Experience Platform;guía para desarrolladores;punto final;Data Scienc
 solution: Experience Platform
 title: Guía de la API de aprendizaje automático de Sensei
 description: La API de aprendizaje automático de Sensei permite a los desarrolladores realizar operaciones de CRUD en varios recursos de espacio de trabajo de ciencia de datos. Siga esta guía para aprender a realizar operaciones clave con la API.
+role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 10%
+source-wordcount: '232'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +18,7 @@ El [!DNL Sensei Machine Learning] La API proporciona un mecanismo para que los c
 
 Esta guía para desarrolladores proporciona pasos para ayudarle a empezar a utilizar [API de aprendizaje automático de Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)y muestran llamadas de API para realizar operaciones de CRUD en varios recursos de Data Science Workspace.
 
-## Primeros pasos
+## Introducción
 
 Es necesario que haya completado la [authentication](https://www.adobe.com/go/platform-api-authentication-en) tutorial para tener acceso a los siguientes encabezados de solicitud y realizar llamadas a [!DNL Adobe Experience Platform] API:
 
@@ -41,7 +42,7 @@ Una vez que haya recopilado las credenciales de autenticación necesarias, puede
 
 * [Motores](./engines.md)
 * [Experimentos](./experiments.md)
-* [Insights](./insights.md)
+* [Perspectivas](./insights.md)
 * [Instancias MLL (fórmulas)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modelos](./models.md)

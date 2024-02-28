@@ -1,11 +1,12 @@
 ---
 title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -195,7 +196,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 
 +++
 
-## Crear un público nuevo {#create}
+## Creación de una nueva audiencia {#create}
 
 Puede crear una audiencia nueva realizando una solicitud de POST a `/audiences` punto final.
 
@@ -722,7 +723,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
-| `lifecycleState` | El estado de la audiencia. Entre los posibles valores se incluyen `draft`, `published` y `inactive`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, y `inactive` cuando la audiencia ya no está activa. |
+| `lifecycleState` | El estado de la audiencia. Los valores posibles incluyen `draft`, `published`, y `inactive`. `draft` representa cuándo se crea la audiencia, `published` cuando se publique la audiencia, y `inactive` cuando la audiencia ya no está activa. |
 | `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos de audiencia. |
 | `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
 

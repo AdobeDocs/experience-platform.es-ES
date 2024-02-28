@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;aplicación de políticas;a
 solution: Experience Platform
 title: Extremos de API de evaluación de directiva
 description: Una vez creadas las acciones de marketing y definidas las políticas, puede utilizar la API del servicio de políticas para evaluar si determinadas acciones infringen alguna política. Las restricciones devueltas toman la forma de un conjunto de políticas que se violarían al intentar la acción de marketing en los datos especificados que contienen etiquetas de uso de datos.
+role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1538'
 ht-degree: 2%
 
 ---
@@ -23,7 +24,7 @@ Las solicitudes de evaluación se pueden realizar de una de las tres maneras sig
 1. Dada una acción de marketing y uno o más conjuntos de datos, ¿la acción infringe alguna política?
 1. Dada una acción de marketing, uno o más conjuntos de datos y un subconjunto de uno o más campos dentro de cada uno de esos conjuntos de datos, ¿la acción infringe alguna política?
 
-## Primeros pasos
+## Introducción
 
 Los extremos de API utilizados en esta guía forman parte de la variable [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 
@@ -414,7 +415,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `entityType` | El tipo de entidad cuyo ID se indica en el elemento del mismo nivel `entityId` propiedad. Actualmente, el único valor aceptado es `dataSet`. |
-| `entityId` | El ID de un conjunto de datos cuyos campos se deben evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET a `/dataSets` punto final en la [!DNL Catalog Service] API. Consulte la guía de [listado [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
+| `entityId` | El ID de un conjunto de datos cuyos campos se van a evaluar con la acción de marketing. Se puede obtener una lista de conjuntos de datos y sus ID correspondientes realizando una solicitud de GET a `/dataSets` punto final en la [!DNL Catalog Service] API. Consulte la guía de [listado [!DNL Catalog] objetos](../../catalog/api/list-objects.md) para obtener más información. |
 | `entityMeta.fields` | Una matriz de rutas a campos específicos dentro del esquema del conjunto de datos, proporcionadas en forma de cadenas de puntero JSON. Consulte la sección sobre [Puntero JSON](../../landing/api-fundamentals.md#json-pointer) en la guía de aspectos básicos de la API para obtener más información sobre la sintaxis aceptada para estas cadenas. |
 
 **Respuesta**

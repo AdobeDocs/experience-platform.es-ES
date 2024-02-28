@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;aplicación de políticas;a
 solution: Experience Platform
 title: Extremo de API de acciones de marketing
 description: Una acción de marketing, en el contexto de la gobernanza de datos de Adobe Experience Platform, es una acción que realiza un consumidor de datos Experience Platform, para la cual es necesario comprobar si se han infringido las políticas de uso de datos.
+role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '734'
 ht-degree: 3%
 
 ---
@@ -17,7 +18,7 @@ Una acción de marketing, en el contexto de la gobernanza de datos de Adobe Expe
 
 Puede administrar las acciones de marketing de su organización mediante el `/marketingActions` en la API del servicio de directivas.
 
-## Primeros pasos
+## Introducción
 
 Los extremos de API utilizados en esta guía forman parte de la variable [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

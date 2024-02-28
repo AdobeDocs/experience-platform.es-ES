@@ -1,11 +1,12 @@
 ---
 title: Autenticación y acceso a la API de Privacy Service
 description: Obtenga información sobre cómo autenticarse en la API de Privacy Service y cómo interpretar las llamadas de API de ejemplo en la documentación.
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 17%
+source-wordcount: '851'
+ht-degree: 16%
 
 ---
 
@@ -71,7 +72,7 @@ Cuando termine, seleccione **[!UICONTROL Guardar API configurada]**.
 
 Una vez añadida la API al proyecto, la variable **[!UICONTROL API de Privacy Service]** Esta página del proyecto muestra las siguientes credenciales, necesarias en todas las llamadas a las API de Privacy Service:
 
-* `{API_KEY}` ([!UICONTROL ID del cliente])
+* `{API_KEY}` ([!UICONTROL ID de cliente])
 * `{ORG_ID}` ([!UICONTROL ID de organización])
 
 ![Información de integración después de agregar una API en Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)

@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;identidades;historial de cl
 solution: Experience Platform
 title: Obtener el historial de clúster de una identidad
 description: Las identidades pueden mover clústeres en el transcurso de varias ejecuciones de gráficos de dispositivos. El servicio de identidad proporciona visibilidad sobre las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
+role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '345'
 ht-degree: 2%
 
 ---
@@ -77,7 +78,7 @@ Utilice el `POST` como equivalente de lote del método `GET` método descrito an
 POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 ```
 
-**Cuerpo de la solicitud**
+**Cuerpo de solicitud**
 
 Opción 1: proporcione una lista de XID para los que recuperar miembros del clúster.
 

@@ -5,9 +5,10 @@ breadcrumb-title: Guía de Data Science Workspace
 user-guide-description: Utilice el aprendizaje automático para desarrollar, preparar y valorar modelos y fórmulas con Adobe Sensei y JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '225'
 ht-degree: 18%
 
 ---
@@ -27,13 +28,13 @@ ht-degree: 18%
    * [Creación de un modelo con el generador de fórmulas](jupyterlab/create-a-model.md)
    * [Colaborar en JupyterLab mediante Git](jupyterlab/using-git-for-collaboration.md)
 * API de aprendizaje automático de Sensei {#api}
-   * [Primeros pasos](api/getting-started.md)
+   * [Introducción](api/getting-started.md)
    * [Motores](api/engines.md)
    * [Instancias MLS (fórmulas)](api/mlinstances.md)
    * [Experimentos](api/experiments.md)
    * [Modelos](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Insights](api/insights.md)
+   * [Perspectivas](api/insights.md)
    * [Apéndice](api/appendix.md)
 * Fórmulas creadas previamente {#pre-built-recipes}
    * [Fórmula de recomendación de productos](pre-built-recipes/product-recommendations.md)

@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;guía para desarrolladores 
 solution: Experience Platform
 title: Punto final de API de administración de zona protegida
 description: El extremo /sandboxes de la API de espacio aislado le permite administrar mediante programación los espacios aislados en Adobe Experience Platform.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1474'
 ht-degree: 4%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 4%
 
 Los entornos limitados de Adobe Experience Platform proporcionan entornos de desarrollo aislados que le permiten probar funciones, ejecutar experimentos y realizar configuraciones personalizadas sin afectar al entorno de producción. El `/sandboxes` punto final en la [!DNL Sandbox] La API de le permite administrar los entornos limitados de Platform mediante programación.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 

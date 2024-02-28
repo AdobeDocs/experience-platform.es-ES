@@ -3,10 +3,11 @@ keywords: Experience Platform;guía para desarrolladores;punto final;Data Scienc
 solution: Experience Platform
 title: Punto final de API de Insights
 description: Las perspectivas contienen métricas que se utilizan para que un científico de datos pueda evaluar y elegir modelos XML óptimos mediante la visualización de métricas de evaluación relevantes.
+role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---

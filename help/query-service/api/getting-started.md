@@ -3,11 +3,12 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;servi
 solution: Experience Platform
 title: Guía de API del servicio de consultas
 description: La API del servicio de consultas permite a los desarrolladores consultar sus datos de Adobe Experience Platform mediante SQL estándar. Siga esta guía para aprender a realizar operaciones clave con la API.
+role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 6%
+source-wordcount: '396'
+ht-degree: 20%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 6%
 
 Esta guía para desarrolladores proporciona pasos para realizar varias operaciones en Adobe Experience Platform [!DNL Query Service] API.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform relacionados con el uso de [!DNL Query Service].
 
@@ -25,13 +26,13 @@ Esta guía requiere una comprensión práctica de los distintos servicios de Ado
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para utilizar correctamente [!DNL Query Service] uso de la API.
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en esta documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en esta documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Experience Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Platform] Llamadas de API, como se muestra a continuación:
+Para realizar llamadas a [!DNL Experience Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Platform], como se muestra a continuación:
 
 - Autorización: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

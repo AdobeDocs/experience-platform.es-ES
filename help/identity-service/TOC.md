@@ -1,10 +1,11 @@
 ---
 audience: user
-user-guide-title: Servicio de ID de Adobe Experience Platform
+user-guide-title: Servicio de identidad de Adobe Experience Platform
 breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
-source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
+role: Admin,Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 29%
@@ -12,7 +13,7 @@ ht-degree: 29%
 ---
 
 
-# Servicio de ID de Adobe Experience Platform {#identity}
+# Servicio de identidad de Adobe Experience Platform {#identity}
 
 - [Introducción al servicio de identidad](home.md)
 - [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)

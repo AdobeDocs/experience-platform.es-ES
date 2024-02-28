@@ -3,8 +3,9 @@ keywords: Experience Platform;guía para desarrolladores;extremo;Data Science Wo
 solution: Experience Platform
 title: Apéndice de la guía de API de aprendizaje automático de Sensei
 description: Las secciones siguientes proporcionan información de referencia sobre diversas funciones de la API de aprendizaje automático de Sensei.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 3%

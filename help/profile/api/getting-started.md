@@ -3,11 +3,12 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolució
 title: Introducción a la API del perfil del cliente en tiempo real
 type: Documentation
 description: La guía de introducción a la API de perfil describe los conceptos clave y la funcionalidad básica que necesita conocer para utilizar los puntos finales de la API de perfil del cliente en tiempo real para realizar operaciones básicas de CRUD con datos de perfil.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 12%
+source-wordcount: '407'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +28,7 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 ## Lectura de llamadas de API de muestra
 
-El [!DNL Real-Time Customer Profile] La documentación de la API proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+El [!DNL Real-Time Customer Profile] La documentación de la API proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ## Encabezados obligatorios
 

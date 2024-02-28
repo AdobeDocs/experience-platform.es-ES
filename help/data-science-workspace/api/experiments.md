@@ -3,8 +3,9 @@ keywords: Experience Platform;guía para desarrolladores;extremo;espacio de trab
 solution: Experience Platform
 title: Extremo de API de experimentos
 description: El desarrollo y el aprendizaje de modelos se producen en el nivel de Experimento, donde un Experimento consta de una instancia MIL, ejecuciones de formación y ejecuciones de puntuación.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

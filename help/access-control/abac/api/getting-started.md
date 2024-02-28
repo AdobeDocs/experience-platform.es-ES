@@ -2,11 +2,12 @@
 keywords: Experience Platform;inicio;temas populares;Control de acceso basado en atributos;control de acceso basado en atributos
 title: Introducción a la API de control de acceso basado en atributos
 description: La API de control de acceso basado en atributos le permite administrar mediante programación las funciones y las directivas de acceso dentro de Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 4%
+source-wordcount: '327'
+ht-degree: 17%
 
 ---
 
@@ -14,11 +15,11 @@ ht-degree: 4%
 
 Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la API de control de acceso basada en atributos para administrar funciones, productos, categorías de permisos y conjuntos de permisos en Adobe Experience Platform, e incluye llamadas de API de ejemplo para realizar diversas operaciones.
 
-## Leer llamadas de API de muestra
+## Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-## Recopilar valores para los encabezados obligatorios
+## Recopilación de valores para los encabezados obligatorios
 
 Esta guía requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de Platform. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 

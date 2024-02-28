@@ -3,8 +3,9 @@ keywords: Experience Platform;inicio;temas populares;api;Control de acceso basad
 solution: Experience Platform
 title: Extremo de API de roles
 description: El extremo /roles de la API de control de acceso basado en atributos le permite administrar los roles mediante programación en Adobe Experience Platform.
+role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 6%

@@ -1,11 +1,12 @@
 ---
 title: Guía de API de higiene de datos
 description: Aprenda a corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
+role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +36,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 Este documento proporciona una llamada de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Experience Platform.
 
-## Caducidad de conjuntos de datos
+## Caducidades de los conjuntos de datos
 
 Una caducidad del conjunto de datos es una acción &quot;eliminar un conjunto de datos&quot; con tiempo de espera. Al crear una caducidad del conjunto de datos, está especificando un momento futuro en el que se debe eliminar ese conjunto de datos. Consulte la [guía de extremo de caducidad del conjunto de datos](./dataset-expiration.md) para obtener más información sobre la programación de caducidades del conjunto de datos en la API.
 

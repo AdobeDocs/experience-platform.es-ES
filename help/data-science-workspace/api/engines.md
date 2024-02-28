@@ -3,11 +3,12 @@ keywords: Experience Platform;guía para desarrolladores;extremo;espacio de trab
 solution: Experience Platform
 title: Extremo de API de motores
 description: Los motores son la base de los modelos de aprendizaje automático de Data Science Workspace. Contienen algoritmos de aprendizaje automático que resuelven problemas específicos, canalizaciones de características para realizar ingeniería de características o ambos.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -95,7 +96,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
-| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
+| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker y puede ser &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
 | `algorithm` | Cadena que especifica el tipo de algoritmo de aprendizaje automático. Los tipos de algoritmo admitidos son &quot;Clasificación&quot;, &quot;Regresión&quot; o &quot;Personalizado&quot;. |
 | `artifacts.default.image.location` | La ubicación de la imagen de Docker a la que está vinculado una URL de Docker. |
@@ -134,7 +135,7 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
-| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
+| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. El valor puede establecerse en Spark o PySpark. |
 | `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe configurarse como `databricks-spark`. |
 | `artifacts.default.image.location` | Ubicación de la imagen de Docker. ACR Solo se admite Azure o Dockerhub público (no autenticado). |
@@ -215,7 +216,7 @@ curl -X POST \
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. El valor puede establecerse en Spark o PySpark. |
 | `algorithm` | Algoritmo que se está utilizando, establezca este valor en `fp` (canalización de funciones). |
 | `name` | El nombre que desee para el motor de canalización de funciones. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
-| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta es una propiedad obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
+| `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe configurarse como `databricks-spark`. |
 | `artifacts.default.image.location` | Ubicación de la imagen de Docker. ACR Solo se admite Azure o Dockerhub público (no autenticado). |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |

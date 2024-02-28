@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;plant
 solution: Experience Platform
 title: Punto final de API de plantillas de consulta
 description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consultas.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '977'
 ht-degree: 3%
 
 ---

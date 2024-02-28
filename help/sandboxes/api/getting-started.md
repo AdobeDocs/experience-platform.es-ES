@@ -3,11 +3,12 @@ keywords: Experience Platform;inicio;temas populares;guía para desarrolladores 
 solution: Experience Platform
 title: Introducción a la API de zona protegida
 description: La API de zona protegida permite a los desarrolladores administrar mediante programación las zonas protegidas en Adobe Experience Platform. Siga esta guía para aprender a realizar operaciones clave con la API.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 5%
+source-wordcount: '372'
+ht-degree: 15%
 
 ---
 
@@ -21,11 +22,11 @@ Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la AP
 
 Para administrar los entornos limitados de su organización, debe tener permisos de administración de entornos limitados. Los usuarios sin permisos de acceso solo pueden utilizar la variable [extremo de zonas protegidas disponibles](./available.md) para enumerar las zonas protegidas activas del usuario actual. Consulte la [información general de control de acceso](../../access-control/home.md) para obtener más información sobre cómo asignar permisos de zona protegida para Experience Platform.
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
 Esta guía requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de Platform. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 

@@ -3,8 +3,9 @@ keywords: Experience Platform;inicio;temas populares;área de nombres;áreas de 
 solution: Experience Platform
 title: Crear un área de nombres personalizada en la API del servicio de identidad
 description: Con la API de área de nombres de identidad, puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 5%

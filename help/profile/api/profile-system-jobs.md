@@ -2,11 +2,12 @@
 keywords: Experience Platform;perfil;perfil de cliente en tiempo real;resolución de problemas;API
 title: Punto final de API de trabajos del sistema de perfiles
 type: Documentation
-description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Esto requiere el uso de la API de perfil para crear un trabajo del sistema de perfil o eliminar una solicitud.
+description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Para ello, es necesario utilizar la API de perfil para crear un trabajo del sistema de perfiles o eliminar una solicitud.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1313'
 ht-degree: 3%
 
 ---
@@ -19,7 +20,7 @@ Adobe Experience Platform le permite introducir datos de varias fuentes y crear 
 >
 >Si está intentando eliminar conjuntos de datos o lotes del [!DNL Data Lake], visite la [Resumen del servicio de catálogo](../../catalog/home.md) para obtener más información.
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 

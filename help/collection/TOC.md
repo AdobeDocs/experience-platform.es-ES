@@ -5,7 +5,8 @@ user-guide-title: Recopilación de datos
 breadcrumb-title: Recopilación de datos
 user-guide-description: Obtenga información sobre cómo habilitar la recopilación de datos del lado del cliente para Adobe Experience Platform Edge Network y obtenga más información sobre las tecnologías de recopilación de datos utilizadas.
 feature: Data Collection
-source-git-commit: b6230760c1e25a3ef0901d80160fb0992578c41e
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 71%

@@ -3,10 +3,11 @@ audience: user
 user-guide-title: Guía de Adobe Experience Platform ETL
 breadcrumb-title: Guía de ETL
 user-guide-description: Descubra los pasos generales para crear conectores seguros y de alto rendimiento para la ingesta de datos en Platform.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 58%
+source-wordcount: '40'
+ht-degree: 55%
 
 ---
 

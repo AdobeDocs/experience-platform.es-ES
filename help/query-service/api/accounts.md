@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares;servicio de consultas;guía
 solution: Experience Platform
 title: Extremo de API de cuentas
 description: Puede crear una cuenta de servicio de consultas para persistentes
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 5%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 5%
 
 En Adobe Experience Platform Query Service, las cuentas se utilizan para crear credenciales que no caducan y las puede utilizar con clientes SQL externos. Puede usar el complemento `/accounts` en la API del servicio de consultas, lo que le permite crear, recuperar, editar y eliminar mediante programación sus cuentas de integración del servicio de consultas (también conocidas como cuentas técnicas).
 
-## Primeros pasos
+## Introducción
 
 Los extremos utilizados en esta guía forman parte de la API del servicio de consultas. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
 

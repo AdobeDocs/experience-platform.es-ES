@@ -3,10 +3,11 @@ keywords: Experience Platform;inicio;temas populares
 solution: Experience Platform
 title: Extremo de API de etiquetas
 description: Obtenga información sobre cómo administrar las etiquetas de uso de datos en Experience Platform mediante la API del servicio de directivas.
+role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 4%
 
 ---
@@ -19,7 +20,7 @@ Las etiquetas de uso de datos le permiten categorizar los datos según las polí
 >
 >El `/labels` el punto de conexión solo se utiliza para recuperar, crear y actualizar etiquetas de uso de datos. Para ver los pasos sobre cómo añadir etiquetas a conjuntos de datos y campos mediante llamadas a la API, consulte la guía de [administrar etiquetas de conjuntos de datos](../labels/dataset-api.md).
 
-## Primeros pasos
+## Introducción
 
 El extremo de API utilizado en esta guía forma parte del [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
 

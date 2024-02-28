@@ -4,9 +4,10 @@ audience: user
 user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
-source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '136'
 ht-degree: 32%
 
 ---
@@ -16,14 +17,14 @@ ht-degree: 32%
 
 - [Información general sobre servicios inteligentes](home.md)
 - [Preparación de datos para utilizarlos en servicios inteligentes](data-preparation.md)
-- Inteligencia artificial aplicada a la atribución {#attribution-ai}
+- Attribution AI {#attribution-ai}
    - [Información general](attribution-ai/overview.md)
    - [Introducción a Attribution AI](attribution-ai/getting-started.md)
    - [Entrada y salida](attribution-ai/input-output.md)
    - [Guía de interfaz de usuario](attribution-ai/user-guide.md)
    - [Descubra perspectivas](attribution-ai/discover-insights.md)
    - [Descargar puntuaciones](attribution-ai/download-scores.md)
-   - Control de datos {#aai-data-governance}
+   - Administración de datos {#aai-data-governance}
       - [Controles de acceso](attribution-ai/aai-data-governance/access-controls.md)
       - [Registros de auditoría](attribution-ai/aai-data-governance/audit-logs.md)
       - [Claves gestionadas por el cliente](attribution-ai/aai-data-governance/customer-managed-keys.md)
@@ -48,7 +49,7 @@ ht-degree: 32%
       - [Creación de segmentos con puntuaciones de Customer AI](customer-ai/user-guide/create-segment.md)
       - [Descargar puntuaciones](customer-ai/user-guide/download-scores.md)
    - [Error al solucionar problemas](customer-ai/troubleshooting.md)
-   - Control de datos {#cai-data-governance}
+   - Administración de datos {#cai-data-governance}
       - [Controles de acceso](customer-ai/cai-data-governance/access-controls.md)
       - [Registros de auditoría](customer-ai/cai-data-governance/audit-logs.md)
       - [Claves gestionadas por el cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
