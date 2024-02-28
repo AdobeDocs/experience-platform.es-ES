@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
+source-git-commit: aba148f4155ff5403e89039a9c59acd4d450539e
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2369'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Puede consultar el Ayudante para obtener información como:
 
 * Directrices sobre cómo realizar tareas relativas a datos y audiencias.
 * Estados y métricas de los objetos de datos existentes en su organización.
-* Utilice ejemplos de casos y matices para comprender mejor los objetos de datos, incluidos atributos, conjuntos de datos, destinos, esquemas, segmentos y fuentes.
+* Utilice ejemplos de casos y matices para comprender mejor los objetos de datos, incluidos atributos, flujos de datos, conjuntos de datos, destinos, esquemas, segmentos y fuentes.
 
 Lea la guía siguiente para conocer cómo puede utilizar Assistant para navegar y comprender los flujos de trabajo de Experience Platform y Real-Time CDP.
 
@@ -131,17 +131,25 @@ Para ver las citas y validar la respuesta del asistente, seleccione **[!UICONTRO
 
 +++Seleccione esta opción para ver un ejemplo de las preguntas sobre el uso de los datos y la visualización de los datos
 
-Puede consultar con el Asistente su uso de datos. Debe estar en una zona protegida activa para que el asistente responda a una pregunta sobre el uso de datos relacionada con los datos de su organización.
+Para que el asistente responda a una consulta sobre el uso de datos dentro de su organización, debe estar en una zona protegida activa.
+
+En el ejemplo siguiente, se proporciona al asistente la siguiente consulta: **&quot;Mostrarme definiciones de segmentos con más de 1000 perfiles e incluir el estado de activación&quot;.** A continuación, el asistente responde con un gráfico que visualiza los datos de segmentos y perfiles.
 
 ![Pregunta de seguimiento sobre el uso de datos.](./images/ai-assistant/data-usage-question.png)
 
-Cuando se le pregunta sobre el uso de los datos, el Ayudante también explica cómo ha calculado la respuesta. En el ejemplo siguiente, el asistente describe los pasos que realizó para mostrar los segmentos con más de 1000 perfiles y sus respectivos estados de activación.
+Puede situarse sobre una barra individual para ver datos específicos. También puede seleccionar el icono de expansión para obtener una vista más amplia del gráfico.
+
+![Pregunta de seguimiento que ilustra la visualización de datos.](./images/ai-assistant/data-visualization.png)
+
+Aparece una vista expandida de la visualización. Puede utilizar el modal expandido para inspeccionar más los datos y resulta especialmente útil cuando la visualización devuelve un gran número de columnas.
+
+![Gráfico ampliado.](./images/ai-assistant/chart-expanded.png)
+
+Cuando se le pregunta sobre el uso de los datos, el Ayudante le explica cómo ha calculado la respuesta. En el ejemplo siguiente, el asistente describe los pasos que ha seguido para mostrar las definiciones de segmentos con más de 1000 perfiles y sus respectivos estados de activación.
 
 ![Pregunta de seguimiento sobre segmentos que ilustran cómo el ayudante calculó la respuesta.](./images/ai-assistant/results-explained.png)
 
-Además, Assistant procesa gráficos para visualizar los datos. También puede proporcionar filtros y modificaciones a las consultas, y puede indicar al Asistente que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente que le muestre una tendencia de los segmentos de recuento en el orden de su fecha de creación, elimine segmentos con cero perfiles totales y utilice nombres de mes en lugar de enteros al mostrar los datos.
-
-![Pregunta de seguimiento que ilustra la visualización de datos.](./images/ai-assistant/data-visualization.png)
+También puede proporcionar filtros y modificaciones a las consultas, y puede indicar al Asistente que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente que le muestre una tendencia de las definiciones de segmentos de recuento en el orden de su fecha de creación, elimine definiciones de segmentos con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
 
 +++
 
@@ -177,27 +185,18 @@ A continuación, el Ayudante recibe otra solicitud de seguimiento. Esta vez, el 
 
 +++
 
-## Ámbito {#scope}
-
-El asistente puede responder preguntas relacionadas con los conceptos de Real-Time CDP y Experience Platform, así como con el uso de datos específicos de su cuenta de usuario. El asistente también puede deducir el contexto en función de la página de la interfaz de usuario en la que se encuentre. Puede identificar:
-
-* La cuenta de usuario que está utilizando.
-* La organización a la que pertenece.
-* La página que está viendo en la pantalla.
-* El recurso (incluidos el tipo y el ID) que está viendo en la pantalla.
-* Dado que se encuentra en el proceso de un Experience Platform en particular o de un flujo de trabajo de Real-Time CDP, el asistente puede deducir su intención.
-
-### Documentación {#documentation}
+## Documentación {#documentation}
 
 Actualmente, el índice de documentación cubre Adobe Experience Platform (Real-Time CDP y Audiencias). El índice se actualiza periódicamente.
 
 El modelo de recuperación de documentación está formado en Experience Platform (Real-Time CDP y Audiencias). Preguntas que no entran en el ámbito de Adobe Experience Platform, como las preguntas sobre otros productos de Adobe como Adobe Target y el grupo de Creative Cloud, no pueden responderse.
 
-### Uso de datos {#data-usage}
+## Uso de datos {#data-usage}
 
 También puede hacer preguntas al Ayudante sobre el uso de los datos en los siguientes dominios:
 
 * Atributos
+* Flujos de datos
 * Conjuntos de datos
 * Destinos _(Las preguntas relativas a las cuentas y algunas preguntas sobre el flujo de datos no se pueden responder en este momento)._
 * Esquemas _(Las preguntas relativas a los grupos de campos no se pueden responder en este momento)._
