@@ -5,10 +5,10 @@ breadcrumb-title: Etiquetas
 user-guide-description: Aprenda a implementar y administrar etiquetas de análisis, marketing y publicidad para mejorar las experiencias de los clientes.
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 44%
+source-wordcount: '773'
+ht-degree: 45%
 
 ---
 
@@ -53,6 +53,7 @@ ht-degree: 44%
    * [Implementar etiquetas de JavaScript para administrar el consentimiento del cliente](./ui/client-side/consent.md)
    * [Ayuda sobre Política de seguridad de contenido (CSP)](./ui/client-side/content-security-policy.md)
    * [Ayuda sobre Integridad de los subrecursos (SRI)](./ui/client-side/sri.md)
+   * [Seguridad de la capa de transporte](./ui/client-side/transport-layer-security.md)
 * Reenvío de eventos {#event-forwarding}
    * [Información general](./ui/event-forwarding/overview.md)
    * [Primeros pasos](./ui/event-forwarding/getting-started.md)
