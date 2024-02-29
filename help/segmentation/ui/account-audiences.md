@@ -4,9 +4,9 @@ description: Aprenda a crear y utilizar audiencias de cuenta para segmentar perf
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ El [!UICONTROL Examinar] , que muestra una lista de todas las audiencias de la c
 
 Esta vista muestra información sobre la audiencia, incluido el nombre, el recuento de perfiles, el origen, el estado del ciclo vital, la fecha de creación y la fecha de la última actualización.
 
+También puede utilizar la funcionalidad de búsqueda y filtrado para buscar y ordenar rápidamente audiencias de cuenta específicas. Encontrará más información sobre esta función en la [Guía de IU de segmentación](./overview.md#manage-audiences).
+
 ## Crear audiencias {#create}
+
+>[!NOTE]
+>
+>Las audiencias de cuenta se evalúan mediante **lote** segmentación, y se evaluarán cada 24 horas.
 
 Para crear una audiencia de cuenta, seleccione **[!UICONTROL Crear audiencia]** en el [!UICONTROL Examinar] página.
 
 ![El [!UICONTROL Crear audiencia] El botón se resalta en la página de exploración de audiencias de la cuenta.](../images/ui/account-audiences/select-create-audience.png)
 
-Aparecerá el Generador de segmentos. Los atributos de cuenta se muestran en la barra de navegación izquierda.
+Aparecerá el Generador de segmentos. Los atributos y audiencias de la cuenta se muestran en la barra de navegación izquierda. En el [!UICONTROL Atributos] pestaña, puede añadir atributos creados por Platform y atributos personalizados.
 
-![Se muestra el Generador de segmentos. Tenga en cuenta que solo se muestran los atributos.](../images/ui/account-audiences/segment-builder.png)
+![Se muestra el Generador de segmentos. Tenga en cuenta que solo se muestran los atributos y las audiencias.](../images/ui/account-audiences/segment-builder.png)
 
 Al crear audiencias de cuenta, tenga en cuenta que los eventos se enumeran en **[!UICONTROL People]**, en lugar de ser su propia pestaña, ya que estos atributos están asociados a personas.
 
 ![La ubicación para buscar eventos, que se encuentra dentro de [!UICONTROL People] carpeta, aparece resaltada.](../images/ui/account-audiences/attributes.png)
+
+En el [!UICONTROL Audiencias] pestaña, puede añadir audiencias basadas en personas creadas anteriormente a partir de al crear su propia audiencia de cuenta.
+
+![Se resalta la pestaña Audiencias dentro del Generador de segmentos.](../images/ui/account-audiences/audiences.png)
 
 Para obtener más información sobre el uso del Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md).
 
