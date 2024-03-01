@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform
 description: Un glosario de terminología importante en Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
+source-wordcount: '7996'
 ht-degree: 0%
 
 ---
@@ -344,6 +344,8 @@ ht-degree: 0%
 **Método de combinación**: Al definir una política de combinación mediante la interfaz de usuario de Platform, el método de combinación especifica cómo se debe priorizar los fragmentos de datos cuando se produce un conflicto. Al utilizar la API de Perfil del cliente en tiempo real para definir una política de combinación, el método de combinación se determina mediante la variable `attributeMerge` objeto.
 
 **Política de combinación**: Las políticas de combinación son reglas que utiliza Experience Platform para determinar cómo se combinarán los fragmentos de datos de clientes de varias fuentes para crear un perfil individual. Cuando se produce un conflicto de datos, la política de combinación determina qué datos deben tener prioridad para su inclusión en el perfil.
+
+**MHMDAa**: La [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) mejora los derechos de privacidad de los consumidores con respecto a sus datos de salud. Exige revelaciones, consentimiento del consumidor y derechos de eliminación para los datos de salud, y prohíbe la venta de datos de salud sin autorización. Además, la ley hace ilegal el uso de geoperimetraje alrededor de las instalaciones de salud.
 
 **Mixin**: Consulte &quot;Grupo de campos de esquema&quot;.
 

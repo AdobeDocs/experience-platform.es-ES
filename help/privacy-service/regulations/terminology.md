@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 2%
 
 ---
@@ -100,6 +100,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 ## M
 
 **Establecimiento principal**: el lugar dentro de la Unión en el que se toman las principales decisiones relativas al tratamiento de datos, en lo que respecta al encargado del tratamiento.
+
+**MHMDAa**: La [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) mejora los derechos de privacidad de los consumidores con respecto a sus datos de salud. Exige revelaciones, consentimiento del consumidor y derechos de eliminación para los datos de salud, y prohíbe la venta de datos de salud sin autorización. Además, la ley hace ilegal el uso de geoperimetraje alrededor de las instalaciones de salud.
 
 ## N
 
