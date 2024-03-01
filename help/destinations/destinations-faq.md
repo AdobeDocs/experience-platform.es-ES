@@ -3,10 +3,10 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 3%
+source-wordcount: '1673'
+ht-degree: 2%
 
 ---
 
@@ -48,6 +48,15 @@ La audiencia actualizada se vuelve a activar en el mismo destino, pero como no h
 Para asegurarse de que todos los perfiles se envían a su destino, debe crear una audiencia nueva con la nueva configuración y, a continuación, activarla en su destino.
 
 +++
+
+### Cuando se elimina una audiencia de un destino, ¿hay alguna señal que se envíe al destino que indique que se ha eliminado la audiencia?
+
++++Respuesta
+
+No, no hay dependencia entre el destino del Experience Platform y la instancia del cliente del sistema de destino. En el lado receptor, la única indicación de que el sistema de destino vería es que dejó de recibir esos datos de audiencia.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -82,7 +91,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++Responda Antes de enviar sus audiencias a [!DNL Facebook], asegúrese de cumplir los siguientes requisitos:
 
 * Su [!DNL Facebook] la cuenta de usuario debe tener el **[!DNL Manage campaigns]** permiso habilitado para la cuenta de Ad que planea usar.
-* El **Adobe Experience Cloud** La cuenta comercial de debe añadirse como socio de publicidad en su [!DNL Facebook Ad Account]. En su lugar, utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+* El **Adobe Experience Cloud** La cuenta comercial de debe añadirse como socio de publicidad en su [!DNL Facebook Ad Account]. Utilice `business ID=206617933627973`. Consulte [Añadir socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
 
   >[!IMPORTANT]
   >

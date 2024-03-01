@@ -5,10 +5,10 @@ description: Obtenga información sobre cómo activar audiencias de cuenta en de
 badgeB2B: label="Edición B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edición B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ Este artículo explica el flujo de trabajo necesario para exportar [audiencias d
 Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña. Utilice el **[!UICONTROL Tipos de datos]** filtrar y seleccionar **[!UICONTROL Cuentas]** para ver los destinos que admiten la activación de audiencias de cuenta. Actualmente, la exportación de audiencias de cuenta solo está disponible para determinados destinos de almacenamiento en la nube ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Almacenamiento de Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de aterrizaje de datos](/help/destinations/catalog/cloud-storage/data-landing-zone.md), y [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) y el [(Compañías) Audiencias coincidentes de LinkedIn](/help/destinations/catalog/social/linkedin.md) destino.
 
 ![Destinos compatibles con las audiencias de cuenta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Información general del vídeo
+
+Vea el siguiente vídeo para obtener información general sobre la creación y activación de audiencias de cuenta y los casos de uso admitidos al activar audiencias de cuenta.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Requisitos previos {#prerequisites}
 
