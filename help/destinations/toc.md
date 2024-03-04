@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1209'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,7 @@ ht-degree: 5%
          * [Configurar un destino de almacenamiento de Azure Data Lake con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Configure un destino de zona de aterrizaje de datos (DLZ) con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Configurar un destino basado en archivos para exportar audiencias de clientes potenciales](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referencia de API de creación de destino {#authoring-api}
       * [Referencia de la API de Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operaciones del servidor de destino {#server-operations}
