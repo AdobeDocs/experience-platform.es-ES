@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
+source-wordcount: '3629'
 ht-degree: 6%
 
 ---
@@ -282,6 +282,8 @@ A medida que vaya creando la definición del segmento, podrá ver una vista prev
 También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionarlo mediante la lista desplegable. Si desea saber para qué tipos de evaluación se adapta esta definición de segmento, puede seleccionar el icono Examinar ![icono de carpeta con lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver una lista de los métodos de evaluación de definición de segmento disponibles.
 
 El [!UICONTROL Idoneidad del método de evaluación] aparece la ventana emergente. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por streaming](./streaming-segmentation.md#query-types) o el [segmentación de borde](./edge-segmentation.md#query-types) información general.
+
+También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o Streaming a Batch, lo hará **no** poder volver a cambiarlo a Edge o Streaming. El cambio en el método de evaluación **solamente** surte efecto una vez que seleccione **[!UICONTROL Guardar]** en la ventana emergente. La cancelación del cuadro de diálogo **sostener** el método de evaluación original.
 
 ![Aparecerá la ventana emergente de idoneidad del método de evaluación. Esto muestra qué métodos de evaluación son aptos e no aptos para la definición del segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
