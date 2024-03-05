@@ -2,9 +2,9 @@
 title: Actualizaciones terminológicas
 description: Una lista completa de los términos y elementos de la IU que se ven afectados por el cambio de marca de Adobe Experience Platform Launch.
 exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '127'
 ht-degree: 100%
 
 ---
@@ -21,4 +21,4 @@ La siguiente tabla describe los términos que se han actualizado en la documenta
 |---|---|
 | Platform Launch (lado del cliente) | [Etiquetas](./home.md) |
 | Platform Launch Server Side | [Reenvío de eventos](./ui/event-forwarding/overview.md) |
-| Configuraciones de Edge | [Corrientes de datos](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=es) |
+| Configuraciones de Edge | [Corrientes de datos](/help/datastreams/overview.md) |

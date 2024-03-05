@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre la recopilación de datos
 description: Obtenga información acerca de las distintas tecnologías relacionadas con la recopilación de datos sobre experiencias de los clientes en Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 9%
+source-wordcount: '489'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +27,7 @@ La recopilación de datos se centra en la detección y accesibilidad de conjunto
 * [Etiquetas](../tags/home.md)
 * [Secuencias de datos](../datastreams/overview.md)
 * [Reenvío de eventos](../tags/ui/event-forwarding/overview.md)
-* [SDK web de Adobe Experience Platform](../edge/home.md)
+* [SDK web de Adobe Experience Platform](../web-sdk/home.md)
 * [SDK móvil de Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
 * [API del servidor de red perimetral](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=es)

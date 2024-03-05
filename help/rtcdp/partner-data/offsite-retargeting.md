@@ -3,7 +3,7 @@ title: Redireccionamiento fuera del sitio de visitantes no autenticados
 description: Obtenga información sobre cómo volver a dirigirse a usuarios no autenticados mediante los ID de cliente potencial para crear un atributo calculado que se pueda utilizar para crear una audiencia de usuarios no autenticados.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Además, para implementar el caso de uso, utilizará las siguientes funciones y 
 - [Públicos](../../segmentation/home.md)
 - [Atributos calculados](../../profile/computed-attributes/overview.md)
 - [Destinos](../../destinations/home.md)
-- [SDK web](../../edge/home.md)
+- [SDK web](../../web-sdk/home.md)
 
 ## Obtención de datos de socios en Real-Time CDP {#get-data-in}
 

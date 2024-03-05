@@ -2,10 +2,10 @@
 title: Interactuar con Adobe Analytics
 description: Aprenda a utilizar la API del servidor de red perimetral para interactuar con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 2%
+source-wordcount: '180'
+ht-degree: 1%
 
 ---
 
@@ -13,9 +13,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-La recopilación de datos de Adobe Analytics funciona traduciendo datos XDM a un formato que Adobe Analytics puede comprender. Varios campos XDM son [asignado automáticamente](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) a variables de Analytics.
-
-También puede [asignar valores XDM manualmente](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) a variables de Analytics heredadas.
+La recopilación de datos de Adobe Analytics funciona traduciendo datos XDM a un formato que Adobe Analytics puede comprender. Varios campos XDM son [asignado automáticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=es) a variables de Analytics. También puede asignar manualmente valores XDM a variables de Analytics heredadas.
 
 Para permitir que Adobe Analytics reciba datos de la API del servidor, debe [configuración de la secuencia de datos](../datastreams/overview.md#adobe-analytics-settings) para reenviar eventos a Adobe Analytics, introduzca el ID del grupo de informes en la página de configuración del conjunto de datos.
 

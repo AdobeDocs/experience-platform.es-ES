@@ -3,9 +3,9 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ A continuación se describe una lista de limitaciones conocidas a tener en cuent
 
 * El método de actualizaciones de flujo continuo solo debe usarse al enviar actualizaciones de fila parciales a [!DNL Real-Time Customer Profile]. Las actualizaciones parciales de filas son **no** consumido por el lago de datos.
 * El método de actualizaciones de streaming no admite la actualización, el reemplazo y la eliminación de identidades. Si no existen, se crean nuevas identidades. Por lo tanto, `identity` La operación siempre debe configurarse para crear. Si ya existe una identidad, la operación no es operativa.
-* Actualmente, el método de actualizaciones de streaming no es compatible [SDK web de Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es) y [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
+* Actualmente, el método de actualizaciones de streaming no es compatible [SDK web de Adobe Experience Platform](/help/web-sdk/home.md) y [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Pasos siguientes
 

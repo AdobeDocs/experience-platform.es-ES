@@ -3,7 +3,7 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 397a88caaf7762dfa9b64aaa472910c6a34e7778
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 15%
@@ -38,7 +38,7 @@ Vea el siguiente vídeo para obtener una breve descripción general sobre cómo 
 
 ### ID de flujo de datos {#datastream-id}
 
-Al configurar la conexión de Adobe Target a [usar un ID de secuencia de datos](#parameters), debe tener el [SDK web de Adobe Experience Platform](../../../edge/home.md) implementado.
+Al configurar la conexión de Adobe Target a [usar un ID de secuencia de datos](#parameters), debe tener el [SDK web de Adobe Experience Platform](/help/web-sdk/home.md) implementado.
 
 La configuración de la conexión de Adobe Target sin utilizar un ID de conjunto de datos no requiere la implementación del SDK web.
 
@@ -106,7 +106,7 @@ While [configuración](../../ui/connect-destination.md) Para este destino, debe 
 * **Nombre**: complete el nombre preferido para este destino.
 * **Descripción**: introduzca una descripción para el destino. Por ejemplo, puede mencionar para qué campaña está usando este destino. Este campo es opcional.
 * **ID de flujo de datos**: Determina en qué flujo de datos de recopilación de datos se incluirán las audiencias. El menú desplegable solo muestra las secuencias de datos que tienen habilitados los servicios de Target y Adobe Experience Platform. Consulte [configuración de una secuencia de datos](../../../datastreams/configure.md#aep) para obtener información detallada sobre cómo configurar un conjunto de datos para Adobe Experience Platform y Adobe Target.
-   * **[!UICONTROL Ninguno]**: Seleccione esta opción si necesita configurar la personalización de Adobe Target pero no puede implementar la variable [SDK web de Experience Platform](../../../edge/home.md). Con esta opción, las audiencias exportadas de Experience Platform a Target solo admiten la personalización de la sesión siguiente y la segmentación de Edge está desactivada. Consulte la tabla siguiente para obtener más información.
+   * **[!UICONTROL Ninguno]**: Seleccione esta opción si necesita configurar la personalización de Adobe Target pero no puede implementar la variable [SDK web de Experience Platform](/help/web-sdk/home.md). Con esta opción, las audiencias exportadas de Experience Platform a Target solo admiten la personalización de la sesión siguiente y la segmentación de Edge está desactivada. Consulte la tabla siguiente para obtener más información.
 
   | Implementación de Adobe Target (sin SDK web) | Implementación del SDK web |
   |---|---|

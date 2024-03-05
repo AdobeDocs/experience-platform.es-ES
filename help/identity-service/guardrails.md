@@ -3,7 +3,7 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -101,7 +101,7 @@ La eliminación solo se produce en los datos del servicio de identidad y no en e
 Si desea conservar los eventos autenticados con el ID de CRM, se recomienda cambiar los ID principales de ECID a ID de CRM. Lea los siguientes documentos para ver los pasos necesarios para implementar este cambio:
 
 * [Configuración del mapa de identidad para las etiquetas de Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Datos de identidad en el SDK web de Experience Platform](../edge/identity/overview.md#using-identitymap)
+* [Datos de identidad en el SDK web de Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Casos de ejemplo
 

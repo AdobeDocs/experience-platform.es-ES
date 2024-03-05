@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Resumen del servicio de segmentación
 description: Obtenga información acerca del servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 12%
@@ -92,7 +92,7 @@ Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea ev
 >abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en la red de Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente página."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=es" text="Guía de la interfaz de usuario de segmentación de Edge"
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en la red perimetral](../edge/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
+La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en la red perimetral](../web-sdk/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
 
 Para obtener más información acerca de la segmentación de Edge, lea cualquiera de las dos [Documentación de API](./api/edge-segmentation.md) o el [Documentación de IU](./ui/edge-segmentation.md).
 

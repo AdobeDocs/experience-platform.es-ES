@@ -2,9 +2,9 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2038'
 ht-degree: 98%
 
 ---
@@ -67,7 +67,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Función | Descripción |
 | --- | --- |
 | Ofuscación de direcciones IP para flujos de datos | Ahora puede definir opciones de ofuscación de IP parciales o completas en el nivel de flujo de datos en la variable [IU de configuración de secuencia de datos](../../datastreams/configure.md). <br><br>La configuración de ofuscación de IP en el nivel de flujo de datos tiene prioridad sobre cualquier ofuscación de IP configurada en Adobe Target y Audience Manager. <br><br>Los datos enviados a Adobe Analytics no se ven afectados por la configuración [!UICONTROL Ofuscación de IP] del nivel de conjunto de datos. Actualmente, Adobe Analytics recibe direcciones IP no ofuscadas. Para que Analytics reciba direcciones IP ofuscadas, debe configurar la ofuscación de IP por separado en Adobe Analytics. Este comportamiento se actualizará en futuras versiones.<br><br> Para obtener más información acerca de la ofuscación de IP e instrucciones sobre cómo configurarla, consulte la [documentación de configuración de secuencia de datos](../../datastreams/configure.md#advanced-options). |
-| [Anulaciones de configuración de secuencia de datos](../../datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para flujos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tókenes de propiedades de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones de secuencia de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) del SDK web.</li></ol> |
+| [Anulaciones de configuración de secuencia de datos](../../datastreams/overrides.md) | Ahora puede definir opciones de configuración adicionales para flujos de datos, que puede utilizar para anular configuraciones específicas, como conjuntos de datos de evento, tókenes de propiedades de Target, contenedores de sincronización de ID y grupos de informes de Analytics. <br><br>La anulación de las configuraciones de secuencia de datos es un proceso de dos pasos: <ol><li>En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../datastreams/configure.md).</li><li>A continuación, debe enviar las anulaciones a Edge Network mediante un comando del SDK web o la [extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) del SDK web.</li></ol> |
 | Secreto JWT de OAuth  | El [Secreto JWT de OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) les permite a los clientes utilizar tókenes de Adobe y de servicio de Google para admitir interacciones de servidor a servidor en el reenvío de eventos. |
 | Extensión [!DNL Pinterest Conversions API] | La extensión de reenvío de eventos [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=es) permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL Pinterest] en forma de eventos del lado del servidor que utilizan el [!DNL Pinterest Conversions API]. |
 

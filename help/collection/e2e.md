@@ -2,10 +2,10 @@
 title: Información general de extremo a extremo de recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
-ht-degree: 1%
+source-wordcount: '2616'
+ht-degree: 0%
 
 ---
 
@@ -113,8 +113,8 @@ Una vez que haya creado un esquema y una secuencia de datos, el siguiente paso e
 >
 >Esta sección utiliza la IU de recopilación de datos para configurar la extensión de etiqueta del SDK web, pero también puede instalarla y configurarla con código sin procesar en su lugar. Consulte las siguientes guías para obtener más información:
 >
->* [Instalación del SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configuración del SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Instalación del SDK](/help/web-sdk/install/overview.md)
+>* [Configuración del SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Tenga en cuenta también que, aunque solo desee utilizar el reenvío de eventos, debe instalar y configurar el SDK tal y como se describe antes de configurar el reenvío de eventos en una [etapa posterior](#event-forwarding).
 
@@ -141,7 +141,7 @@ Aparecerá la página de información general de la propiedad. Desde aquí, sele
 
 Aparecerá la página de configuración del SDK. La mayoría de los valores necesarios se rellenan automáticamente con valores predeterminados que puede elegir cambiar si lo desea.
 
-![Configurar el SDK web](./images/e2e/configure-sdk.png)
+![Configuración del SDK web](./images/e2e/configure-sdk.png)
 
 Sin embargo, antes de instalar el SDK, debe seleccionar un conjunto de datos para que sepa a dónde enviar los datos. En **[!UICONTROL Datastreams]**, utilice el menú desplegable para seleccionar el conjunto de datos que configuró en una [paso anterior](#datastream). Una vez definido el conjunto de datos, seleccione **[!UICONTROL Guardar]** para finalizar la instalación del SDK en la propiedad.
 

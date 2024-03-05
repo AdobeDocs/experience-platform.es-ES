@@ -4,9 +4,9 @@ description: Aprenda a configurar la detección de bots para flujos de datos a f
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 El tráfico proveniente de entidades no humanas, como programas automatizados, raspadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
 
-La detección de bots permite identificar eventos generados por [[!DNL Web SDK]](../edge/home.md), [[!DNL Mobile SDK]](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../server-api/overview.md) generadas por arañas web y bots conocidos.
+La detección de bots permite identificar eventos generados por el[SDK web](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../server-api/overview.md) generadas por arañas web y bots conocidos.
 
 Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots.
 

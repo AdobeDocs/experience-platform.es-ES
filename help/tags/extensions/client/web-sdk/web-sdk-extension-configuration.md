@@ -2,9 +2,9 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Esta sección le permite definir el comportamiento del SDK web en lo que respect
 * **[!UICONTROL Uso de cookies de terceros]**: cuando esta opción está habilitada, el SDK web intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que el SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, el SDK solo almacena el identificador en el dominio de origen.
 
   >[!IMPORTANT]
-  >>Las cookies de terceros no son compatibles con [ID de dispositivo de origen](../../../../edge/identity/first-party-device-ids.md) en el SDK web.
+  >>Las cookies de terceros no son compatibles con [ID de dispositivo de origen](../../../../web-sdk/identity/first-party-device-ids.md) en el SDK web.
 Puede usar ID de dispositivos de origen o cookies de terceros, pero no puede usar ambas funciones simultáneamente.
   >
 ## Configuración de la personalización {#personalization}
@@ -113,9 +113,9 @@ Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL C
 
 ![Imagen que muestra la configuración de recopilación de datos de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Función Callback]**: La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=es) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos a la red perimetral. Encontrará información más detallada sobre cómo utilizar esta función [aquí](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Función Callback]**: La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](/help/web-sdk/commands/configure/onbeforeeventsend.md) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos a la red perimetral.
 * **[!UICONTROL Habilitar la recopilación de datos de clics]**: el SDK web puede recopilar automáticamente la información sobre clics en vínculos. Esta función está habilitada de forma predeterminada, pero se puede deshabilitar con esta opción. Los vínculos también se etiquetan como vínculos de descarga si contienen una de las expresiones de descarga enumeradas en la variable [!UICONTROL Cualificador de vínculo de descarga] cuadro de texto. El Adobe le proporciona algunos calificadores de vínculo de descarga predeterminados. Puede editarlas según sus necesidades.
-* **[!UICONTROL Datos de contexto recopilados automáticamente]**: De forma predeterminada, el SDK web recopila determinados datos de contexto relacionados con el contexto del dispositivo, la web, el entorno y el lugar. Si desea ver una lista de los datos que recopila el Adobe de información, puede encontrarla [aquí](../../../../edge/data-collection/automatic-information.md). Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, seleccione **[!UICONTROL Información de contexto específica]** y seleccione los datos que desea recopilar.
+* **[!UICONTROL Datos de contexto recopilados automáticamente]**: De forma predeterminada, el SDK web recopila determinados datos de contexto relacionados con el contexto del dispositivo, la web, el entorno y el lugar. Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, seleccione **[!UICONTROL Información de contexto específica]** y seleccione los datos que desea recopilar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obtener más información.
 
 ## Configurar anulaciones de secuencia de datos {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Esto le ayuda a activar comportamientos de secuencias de datos diferentes de los
 
 La anulación de la configuración de la secuencia de datos es un proceso de dos pasos:
 
-1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](../../../../datastreams/configure.md).
+1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
 2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante la extensión de etiqueta del SDK web.
 
-Consulte la secuencia de datos [la configuración anula la documentación](../../../../datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
+Consulte la secuencia de datos [la configuración anula la documentación](/help/datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
 
 Como alternativa a pasar las invalidaciones a través de un comando del SDK web, puede configurarlas en la pantalla de extensión de etiquetas que se muestra a continuación.
 
@@ -136,10 +136,10 @@ Como alternativa a pasar las invalidaciones a través de un comando del SDK web,
 >
 Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos de desarrollo, ensayo y producción tienen invalidaciones independientes. Puede copiar los ajustes entre ellos utilizando las opciones dedicadas que se muestran en la pantalla siguiente.
 
-![Imagen que muestra las anulaciones de configuración de la secuencia de datos en la página de extensión de etiquetas del SDK web.](assets/datastream-overrides.png)
+![Imagen que muestra las anulaciones de configuración de la secuencia de datos mediante la página de extensión de etiquetas del SDK web.](assets/datastream-overrides.png)
 
 ## Configuración avanzada
 
 Utilice el **[!UICONTROL Ruta base del borde]** campo si necesita cambiar la ruta base que se utiliza para interactuar con la red perimetral. Esto no debería requerir ninguna actualización, pero en caso de que participe en una versión beta o alfa, Adobe podría pedirle que cambie este campo.
 
-![Imagen que muestra la configuración avanzada de la página de extensión de etiquetas del SDK web.](assets/advanced-settings.png)
+![Imagen que muestra la configuración avanzada de mediante la página de extensión de etiquetas del SDK web.](assets/advanced-settings.png)

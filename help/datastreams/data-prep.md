@@ -2,10 +2,10 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Existen dos casos de uso en los que la preparación de datos para la recopilaci�
 
 ## Enviar una capa de datos existente a la red perimetral mediante WebSDK {#send-datalayer-via-websdk}
 
-La capa de datos existente debe enviarse utilizando `data` de la opción `sendEvent` como se describe en la [Documentación del SDK web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+La capa de datos existente debe enviarse utilizando [`data`](/help/web-sdk/commands/sendevent/data.md) objeto dentro de `sendEvent` comando.
 
-Si utiliza etiquetas, debe utilizar el complemento **[!UICONTROL Datos]** del campo **[!UICONTROL Enviar evento]** tipo de acción, tal como se describe en la sección [Documentación de la extensión de etiquetas SDK web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Si utiliza etiquetas, debe utilizar el complemento **[!UICONTROL Datos]** del campo **[!UICONTROL Enviar evento]** tipo de acción, tal como se describe en la sección [Documentación de la extensión de etiquetas SDK web](/help/tags/extensions/client/web-sdk/action-types.md).
 
 El resto de esta guía se centrará en cómo asignar la capa de datos a los estándares XDM después de que el SDK web la haya enviado.
 

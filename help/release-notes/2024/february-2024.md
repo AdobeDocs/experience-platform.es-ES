@@ -1,7 +1,7 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 22%
@@ -27,7 +27,7 @@ Experience Platform permite suscribirse a alertas basadas en eventos para divers
 **Funciones nuevas o actualizadas**
 | Función | Descripción | | — | — | | Pestaña Historial de alertas | Como Experience Platform, puede utilizar la función Gestionar suscriptores de alertas para asignar una alerta a un ID de usuario de Adobe, a una dirección de correo electrónico externa o a una lista de grupos de correo electrónico. Para obtener más información, consulte la [documentación de IU de alertas](../../observability/alerts/ui.md) para obtener más información sobre la pestaña history. |
 
-
+{style="table-layout:auto"}
 
 Para obtener más información sobre las alertas, lea la [[!DNL Observability Insights] descripción general](../../observability/home.md).
 
@@ -39,7 +39,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Función | Descripción |
 | --- | --- |
-| [Compatibilidad con mensajería web en la aplicación en el SDK web](../../edge/personalization/web-in-app-messaging.md) | El SDK web de Adobe Experience Platform ahora admite la configuración de mensajería web en la aplicación para campañas de Adobe Journey Optimizer. |
+| [Compatibilidad con mensajería web en la aplicación en el SDK web](../../web-sdk/personalization/web-in-app-messaging.md) | El SDK web de Adobe Experience Platform ahora admite la configuración de mensajería web en la aplicación para campañas de Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 

@@ -2,16 +2,16 @@
 title: Notas de la versión de Adobe Experience Platform de septiembre de 2022
 description: Notas de la versión de septiembre de 2022 de Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 19%
+source-wordcount: '2762'
+ht-degree: 18%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 28 de septiembre de 2022**
+**Fecha de lanzamiento: jueves, 28 de septiembre de 2022**
 
 Nuevas funciones de Adobe Experience Platform:
 
@@ -42,7 +42,7 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 | Función | Descripción |
 | --- | --- |
 | Control de acceso basado en atributos | El control de acceso basado en atributos le permite etiquetar campos y segmentos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso que cubran los campos y segmentos de esquema XDM para administrar mejor el acceso dado a usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Para obtener más información, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). |
-| Permisos | Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear directivas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, las zonas protegidas y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de IU de permisos](../../access-control/abac/ui/browse.md). |
+| Permisos | Permisos es el área del Experience Cloud donde los administradores pueden definir funciones de usuario y directivas de acceso para administrar permisos de acceso para funciones y objetos dentro de una aplicación de producto. Mediante Permisos, puede crear y administrar funciones, asignar los permisos de recursos deseados para estas funciones y crear directivas para aprovechar las etiquetas y definir qué funciones de usuario tienen acceso a recursos de Platform específicos. Los permisos también le permiten administrar las etiquetas, los entornos limitados y los usuarios asociados a una función específica. Para obtener más información, consulte la [Guía de IU de permisos](../../access-control/abac/ui/browse.md). |
 
 Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
@@ -110,8 +110,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Integración de navegación izquierda en la IU de Platform | Todas las funcionalidades que anteriormente eran exclusivas de la IU de recopilación de datos (incluidas las etiquetas, el reenvío de eventos y las secuencias de datos) ahora también están disponibles a través de la navegación izquierda en Experience Platform, en la categoría **[!UICONTROL Recopilación de datos]**. Esto elimina la necesidad de cambiar entre interfaces al trabajar con las capacidades de recopilación de datos en Platform. |
 | Atribución de usuario en etiquetas y reenvío de eventos | Cuando el anuncio esté disponible [!UICONTROL Propiedades] en las etiquetas y el reenvío de eventos, cada propiedad de la lista ahora muestra cuándo se actualizó por última vez y qué usuario realizó la actualización. |
 | [[!DNL Snap Conversions API] extensión](https://exchange.adobe.com/apps/ec/108550) para el reenvío de eventos | Ahora puede enviar datos a [!DNL Snapchat Conversions API] uso de un [reenvío de eventos](../../tags/ui/event-forwarding/overview.md) extensión. Para obtener más información sobre cómo autenticar y utilizar la API, consulte la [[!DNL Snapchat Marketing API] documentación](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] en el SDK web](../../edge/fundamentals/user-agent-client-hints.md) | El SDK web ahora es compatible con [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las Client Hints permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en el [!DNL User-Agent] cadena, pero de una manera que preserva la privacidad. |
-| [Migración página a página del SDK web](../../edge/home.md#migrating-to-web-sdk) | Ahora puede migrar las propiedades web existentes desde otras bibliotecas de Experience Cloud, como [!DNL at.js], al SDK web, una página a la vez. Esto permite un enfoque gradual de la migración al SDK web, sin necesidad de migrar todas las páginas a la vez. |
+| [User-Agent Client Hints en el SDK web](/help/web-sdk/use-cases/client-hints.md) | El SDK web ahora es compatible con [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Las Client Hints permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en el [!DNL User-Agent] cadena, pero de una manera que preserva la privacidad. |
+| [Migración página a página del SDK web](../../web-sdk/home.md#migrating-to-web-sdk) | Ahora puede migrar las propiedades web existentes desde otras bibliotecas de Experience Cloud, como [!DNL at.js], al SDK web, una página a la vez. Esto permite un enfoque gradual de la migración al SDK web, sin necesidad de migrar todas las páginas a la vez. |
 | [[!DNL Adobe Journey Optimizer] compatibilidad con flujos de datos](../../datastreams/overview.md#aep) | El servicio Adobe Experience Platform para flujos de datos ahora admite [!DNL Adobe Journey Optimizer]. Esta opción le permite utilizar canales entrantes web y basados en aplicaciones en [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -126,7 +126,7 @@ Para obtener más información sobre la recopilación de datos en Platform, cons
 
 | Función | Descripción |
 | ----------- | ----------- |
-| SDK de destino | Destination SDK ahora proporciona soporte completo para socios y clientes que crean destinos privados o de producción por lotes (o basados en archivos). Lea las siguientes páginas de documentación para obtener más información: <ul><li>[Resumen del Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configuración de un destino basado en archivos](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar las opciones de formato de archivo para los destinos basados en archivos](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Prueba de los destinos basados en archivos](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK ahora proporciona soporte completo para socios y clientes que crean destinos privados o de producción por lotes (o basados en archivos). Lea las siguientes páginas de documentación para obtener más información: <ul><li>[Resumen del Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configuración de un destino basado en archivos](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurar las opciones de formato de archivo para los destinos basados en archivos](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Prueba de los destinos basados en archivos](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -204,7 +204,7 @@ El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mej
 | --- | --- |
 | Compatibilidad con la eliminación de conjuntos de datos | El servicio de identidad ahora admite la eliminación de conjuntos de datos al solicitar a través de [API del servicio de catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), IU o higiene de los datos. Lea la guía de [eliminación de conjuntos de datos en la IU](../../catalog/datasets/user-guide.md#delete-a-dataset) para obtener más información. |
 
-Para obtener más información acerca del servicio de identidad, lea la [Información general del servicio de identidad](../../identity-service/home.md).
+Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md).
 
 ## Servicio de consultas {#query-service}
 

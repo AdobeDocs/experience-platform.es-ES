@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Resumen del servicio de identidad
 description: El servicio de identidad de Adobe Experience Platform le ayuda a obtener una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
 
 ---
 
-# Servicio de ID de Adobe Experience Platform
+# Servicio de identidad de Adobe Experience Platform
 
 Para ofrecer experiencias digitales relevantes, necesita una representación completa y precisa de las entidades del mundo real que conforman su base de clientes.
 
@@ -109,7 +109,7 @@ El servicio de identidad desempeña un papel vital dentro del Experience Platfor
 
 * [Esquemas](../xdm/home.md): Dentro de un esquema determinado, los campos de esquema marcados como identidad permiten crear gráficos de identidad.
 * [Conjuntos de datos](../catalog/datasets/overview.md): Cuando un conjunto de datos está habilitado para su ingesta en el Perfil del cliente en tiempo real, los gráficos de identidad se generan a partir del conjunto de datos, dado que el conjunto de datos tiene al menos dos campos marcados como identidad.
-* [SDK web](../edge/home.md): el SDK web envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
+* [SDK web](../web-sdk/home.md): el SDK web envía eventos de experiencia a Adobe Experience Platform y el servicio de identidad genera un gráfico cuando existen dos o más identidades en el evento.
 * [Perfil del cliente en tiempo real](../profile/home.md): Antes de combinar atributos y eventos para un perfil determinado, el perfil del cliente en tiempo real podría hacer referencia al gráfico de identidades. Para obtener más información, lea la guía de [Explicación de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](./identity-and-profile.md).
 * [Destinos](../destinations/home.md): los destinos pueden enviar información de perfil a otros sistemas en función de un área de nombres de identidad, como correo electrónico con hash.
 * [Coincidencia de segmentos](../segmentation/ui/segment-match/overview.md): la coincidencia de segmentos coincide con dos perfiles en dos zonas protegidas diferentes que tienen el mismo área de nombres de identidad y valor de identidad.

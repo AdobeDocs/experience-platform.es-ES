@@ -1,17 +1,17 @@
 ---
 title: Información general de secuencias de datos
 description: Descubra cómo los flujos de datos le ayudan a conectar la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '727'
 ht-degree: 77%
 
 ---
 
-
 # Información general de secuencias de datos
 
-Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el [configurar](../edge/fundamentals/configuring-the-sdk.md) en el SDK controla los elementos que se deben gestionar en el cliente (como `edgeDomain`), los flujos de datos gestionan todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `edgeConfigId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
+Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el [`configure`](/help/web-sdk/commands/configure/overview.md) en el SDK controla los elementos que se deben gestionar en el cliente (como `edgeDomain`), los flujos de datos gestionan todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `edgeConfigId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
 
 Puede crear y administrar secuencias de datos seleccionando **[!UICONTROL Secuencias de datos]** en el panel de navegación izquierdo dentro de la IU de Adobe Experience Platform o de la IU de recopilación de datos.
 

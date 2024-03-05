@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Compatibilidad con IAB TCF 2.0 en Experience Platform
 description: Aprenda a configurar las operaciones y los esquemas de datos para transmitir las opciones de consentimiento del cliente al activar segmentos a destinos en Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2492'
 ht-degree: 0%
 
 ---
@@ -37,14 +37,14 @@ Para seguir esta guía, debe utilizar una CMP, ya sea comercial o propia, integr
 
 Esta guía también requiere una comprensión práctica de los siguientes servicios de Platform:
 
-* [Modelo de datos de experiencia (XDM)](../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-* [Servicio de identidad de Adobe Experience Platform](../../../../identity-service/home.md): resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
-* [Perfil del cliente en tiempo real](../../../../profile/home.md): Utiliza [!DNL Identity Service] para crear perfiles detallados de los clientes a partir de los conjuntos de datos en tiempo real. [!DNL Real-Time Customer Profile] extrae datos del lago de datos y conserva los perfiles de los clientes en su propio almacén de datos independiente.
-* [SDK web de Adobe Experience Platform](../../../../edge/home.md): Una biblioteca JavaScript del lado del cliente que le permite integrar varios servicios de Platform en su sitio web del lado del cliente.
-   * [Comandos de consentimiento de SDK](../../../../edge/consent/supporting-consent.md): Información general sobre un caso de uso de los comandos de SDK relacionados con el consentimiento que se muestran en esta guía.
-* [Servicio de segmentación de Adobe Experience Platform](../../../../segmentation/home.md): le permite dividir [!DNL Real-Time Customer Profile] datos en grupos de individuos que comparten características similares y responden de manera similar a las estrategias de marketing.
+* [Modelo de datos de experiencia (XDM)](/help/xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+* [Servicio de identidad de Adobe Experience Platform](/help/identity-service/home.md): resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
+* [Perfil del cliente en tiempo real](/help/profile/home.md): Utiliza [!DNL Identity Service] para crear perfiles detallados de los clientes a partir de los conjuntos de datos en tiempo real. [!DNL Real-Time Customer Profile] extrae datos del lago de datos y conserva los perfiles de los clientes en su propio almacén de datos independiente.
+* [SDK web de Adobe Experience Platform](/help/web-sdk/home.md): Una biblioteca JavaScript del lado del cliente que le permite integrar varios servicios de Platform en su sitio web del lado del cliente.
+   * [Comandos de consentimiento de SDK](/help/web-sdk/consent/supporting-consent.md): Información general sobre un caso de uso de los comandos de SDK relacionados con el consentimiento que se muestran en esta guía.
+* [Servicio de segmentación de Adobe Experience Platform](/help/segmentation/home.md): le permite dividir [!DNL Real-Time Customer Profile] datos en grupos de individuos que comparten características similares y responden de manera similar a las estrategias de marketing.
 
-Además de los servicios de Platform enumerados arriba, también debe estar familiarizado con [destinos](../../../../data-governance/home.md) y su papel en el ecosistema de Platform.
+Además de los servicios de Platform enumerados arriba, también debe estar familiarizado con [destinos](/help/data-governance/home.md) y su papel en el ecosistema de Platform.
 
 ## Resumen del flujo de consentimiento del cliente {#summary}
 
@@ -102,7 +102,7 @@ Los datos de consentimiento del cliente deben enviarse a conjuntos de datos cuyo
 
 Una vez que haya creado una [!DNL Profile]Conjunto de datos habilitado para para recopilar datos de consentimiento, debe asegurarse de que las políticas de combinación se hayan configurado para incluir siempre campos de consentimiento TCF en los perfiles de cliente. Esto implica establecer la prioridad del conjunto de datos de modo que el conjunto de datos de consentimiento tenga prioridad sobre otros conjuntos de datos que puedan entrar en conflicto.
 
-Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [resumen de políticas de combinación](../../../../profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyan todos los atributos de consentimiento requeridos proporcionados por el [Grupo de campos del esquema de privacidad XDM](./dataset.md#privacy-field-group), tal como se describe en la guía sobre preparación de conjuntos de datos.
+Para obtener más información sobre cómo trabajar con políticas de combinación, consulte la [resumen de políticas de combinación](/help/profile/merge-policies/overview.md). Al configurar las políticas de combinación, debe asegurarse de que los segmentos incluyan todos los atributos de consentimiento requeridos proporcionados por el [Grupo de campos del esquema de privacidad XDM](./dataset.md#privacy-field-group), tal como se describe en la guía sobre preparación de conjuntos de datos.
 
 ## Integración del SDK web de Experience Platform para recopilar datos de consentimiento del cliente {#sdk}
 
@@ -118,15 +118,15 @@ Una vez configurada la CMP para generar cadenas de consentimiento, debe integrar
 
 ### Crear un flujo de datos
 
-Para que el SDK envíe datos a Experience Platform, primero debe crear un flujo de datos para Platform. Los pasos específicos para crear un conjunto de datos se proporcionan en la [Documentación del SDK](../../../../datastreams/overview.md).
+Para que el SDK envíe datos a Experience Platform, primero debe crear un flujo de datos para Platform. Los pasos específicos para crear un conjunto de datos se proporcionan en la [Documentación del SDK](/help/datastreams/overview.md).
 
 Después de proporcionar un nombre único para el conjunto de datos, seleccione el botón de alternancia situado junto a **[!UICONTROL Adobe Experience Platform]**. A continuación, utilice los siguientes valores para completar el resto del formulario:
 
 | Campo de secuencia de datos | Valor |
 | --- | --- |
-| [!UICONTROL Zona protegida] | El nombre de la plataforma [espacio aislado](../../../../sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
-| [!UICONTROL Entrada de flujo] | Una conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre [creación de una conexión de flujo continuo](../../../../ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
-| [!UICONTROL Conjunto de datos del evento] | Seleccione el [!DNL XDM ExperienceEvent] conjunto de datos creado en [paso anterior](#datasets). Si ha incluido la variable [[!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos](../../../../xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede realizar un seguimiento de los eventos de cambio de consentimiento a lo largo del tiempo mediante [`sendEvent`](#sendEvent) , almacenando esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** se utiliza en flujos de trabajo de aplicación automáticos. |
+| [!UICONTROL Zona protegida] | El nombre de la plataforma [espacio aislado](/help/sandboxes/home.md) que contiene la conexión de flujo continuo y los conjuntos de datos necesarios para configurar el conjunto de datos. |
+| [!UICONTROL Entrada de flujo] | Una conexión de flujo continuo válida para el Experience Platform. Consulte el tutorial sobre [creación de una conexión de flujo continuo](/help/ingestion/tutorials/create-streaming-connection-ui.md) si no tiene una entrada de flujo continuo existente. |
+| [!UICONTROL Conjunto de datos del evento] | Seleccione el [!DNL XDM ExperienceEvent] conjunto de datos creado en [paso anterior](#datasets). Si ha incluido la variable [[!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos](/help/xdm/field-groups/event/iab.md) en el esquema de este conjunto de datos, puede realizar un seguimiento de los eventos de cambio de consentimiento a lo largo del tiempo mediante [`sendEvent`](#sendEvent) , almacenando esos datos en este conjunto de datos. Tenga en cuenta que los valores de consentimiento almacenados en este conjunto de datos son **no** se utiliza en flujos de trabajo de aplicación automáticos. |
 | [!UICONTROL Conjunto de datos del perfil] | Seleccione el [!DNL XDM Individual Profile] conjunto de datos creado en [paso anterior](#datasets). Al responder a los vínculos de cambio de consentimiento de CMP mediante [`setConsent`](#setConsent) , los datos recopilados se almacenan en este conjunto de datos. Dado que este conjunto de datos tiene un perfil habilitado, los valores de consentimiento almacenados en este conjunto de datos se respetan durante los flujos de trabajo de aplicación automáticos. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -137,13 +137,9 @@ Cuando termine, seleccione **[!UICONTROL Guardar]** en la parte inferior de la p
 
 Una vez creado el conjunto de datos descrito en la sección anterior, puede empezar a utilizar comandos del SDK para enviar datos de consentimiento a Platform. Las secciones siguientes proporcionan ejemplos de cómo se puede utilizar cada comando de SDK en diferentes situaciones.
 
->[!NOTE]
->
->Para obtener una introducción a la sintaxis común de todos los comandos del SDK de Platform, consulte el documento sobre [ejecutar comandos](../../../../edge/fundamentals/executing-commands.md).
-
 #### Uso de los vínculos de cambio de consentimiento de CMP {#setConsent}
 
-Muchas CMP proporcionan vínculos predeterminados que escuchan eventos de cambio de consentimiento. Cuando se producen estos eventos, puede utilizar la variable `setConsent` para actualizar los datos de consentimiento de ese cliente.
+Muchas CMP proporcionan vínculos predeterminados que escuchan eventos de cambio de consentimiento. Cuando se producen estos eventos, puede utilizar la variable [`setConsent`](/help/web-sdk/commands/setconsent.md) para actualizar los datos de consentimiento de ese cliente.
 
 El `setConsent` El comando espera dos argumentos:
 
@@ -226,7 +222,7 @@ alloy("sendEvent", {
 
 ### Gestión de respuestas del SDK
 
-Todo [!DNL Platform SDK] los comandos devuelven promesas que indican si la llamada se realizó correctamente o no. A continuación, puede utilizar estas respuestas para lógicas adicionales, como mostrar mensajes de confirmación al cliente. Consulte la sección sobre [éxito o fracaso de la gestión](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) en la guía sobre la ejecución de comandos del SDK para ejemplos específicos.
+Muchos comandos del SDK web devuelven promesas que indican si la llamada se realizó correctamente o no. A continuación, puede utilizar estas respuestas para lógicas adicionales, como mostrar mensajes de confirmación al cliente. Consulte [Respuestas de comando](/help/web-sdk/commands/command-responses.md) para obtener más información.
 
 ## Exportar segmentos {#export}
 

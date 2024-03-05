@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar definiciones de segmentos en Platform de forma instantánea en Edge de, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >La segmentación de Edge ahora está disponible de forma general para todos los usuarios de Platform. Si ha creado definiciones de segmentos perimetrales durante la versión beta, estas definiciones de segmentos seguirán funcionando.
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform de forma instantánea [en el borde](../../edge/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
+La segmentación de Edge es la capacidad de evaluar segmentos en Adobe Experience Platform de forma instantánea [en el borde](../../web-sdk/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
 
 >[!IMPORTANT]
 >

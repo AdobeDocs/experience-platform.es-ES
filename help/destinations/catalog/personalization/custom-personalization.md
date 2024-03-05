@@ -3,9 +3,9 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '906'
 ht-degree: 10%
 
 ---
@@ -35,7 +35,7 @@ Configure este destino para permitir que las plataformas de personalización ext
 
 ## Requisitos previos {#prerequisites}
 
-Esta integración funciona con el [SDK web de Adobe Experience Platform](../../../edge/home.md) o el [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/). Debe utilizar uno de estos SDK para utilizar este destino.
+Esta integración funciona con el [SDK web de Adobe Experience Platform](/help/web-sdk/home.md) o el [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/). Debe utilizar uno de estos SDK para utilizar este destino.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Este es un valor de muestra para `event.destinations` variable:
 ]
 ```
 
-Si no está utilizando [Etiquetas](../../../tags/home.md) para implementar el SDK web de Experience Platform, utilice el [gestión de respuestas de eventos](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) para ver los datos exportados.
+Si no está utilizando [Etiquetas](/help/tags/home.md) para implementar el SDK web de Experience Platform, utilice [respuestas de comandos](/help/web-sdk/commands/command-responses.md) para ver los datos exportados.
 
 La respuesta JSON de Adobe Experience Platform se puede analizar para encontrar el alias de integración correspondiente de la aplicación que está integrando con Adobe Experience Platform. Los ID de audiencia se pueden pasar al código de la aplicación como parámetros de segmentación. A continuación se muestra un ejemplo de cómo sería esto específico de la respuesta de destino.
 

@@ -2,16 +2,16 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2022'
 description: Las notas de la versión de febrero de 2022 de Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 27%
+source-wordcount: '1014'
+ht-degree: 17%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 7 de marzo de 2022**
+**Fecha de la versión: martes, 07 de marzo de 2022**
 
 >[!NOTE]
 >
@@ -33,13 +33,13 @@ Adobe Experience Platform proporciona varios [!DNL dashboards] a través del cua
 
 | Función | Descripción |
 | --- | --- |
-| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos principales sin asignar clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Públicos comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la [documentación del panel destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
+| Nuevos widgets de destinos estándar | Los siguientes widgets estándar le permiten visualizar diferentes métricas relacionadas con sus destinos.<ul><li>Segmentos activados recientemente por destino. Este widget muestra los cinco segmentos activados más recientemente en orden descendente según el destino elegido.</li><li>Tendencia de tamaño de audiencia. Este widget muestra la relación del recuento de perfiles durante un período de tiempo para un segmento que se ha asignado a esa cuenta de destino.</li><li>Segmentos no asignados por identidad. Este widget enumera los cinco segmentos no asignados principales clasificados por recuento de identidad descendente para un destino e identidad determinados.</li><li>Segmentos asignados por identidad. Este widget enumera los cinco segmentos asignados principales. Los segmentos se ordenan de alto a bajo según sus respectivos recuentos de ID de origen que coinciden con el ID de destino seleccionado en el menú desplegable del widget.</li><li>Audiencias comunes. Este widget proporciona una lista de los cinco segmentos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget.</li></ul> Para obtener más información sobre los widgets estándar disponibles, consulte la [documentación del panel destinos.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] descripción general](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a Adobe Experience Platform Edge Network, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Nuevas funciones**
 
@@ -47,7 +47,7 @@ Platform proporciona un conjunto de tecnologías que le permiten recopilar datos
 | --- | --- |
 | Flujo de trabajo de IU mejorado para la configuración del flujo de datos | Se ha actualizado el flujo de trabajo para crear un nuevo conjunto de datos en la IU de recopilación de datos. Al agregar servicios a un conjunto de datos, solo los servicios a los que tiene acceso se incluyen en la lista de opciones. Consulte la guía de [configuración de una secuencia de datos](../../datastreams/overview.md) para obtener más información. |
 | Preparación de datos para la recopilación de datos | Si utiliza el SDK web de Adobe Experience Platform, ahora puede aprovechar las funcionalidades de preparación de datos para asignar los datos al modelo de datos de experiencia (XDM) en el servidor. Consulte la sección sobre [Preparación de datos para la recopilación de datos](../../datastreams/data-prep.md) en la guía de flujos de datos para obtener más información. |
-| ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a Adobe Experience Platform Edge Network al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa para las recientes restricciones del explorador sobre la duración de las cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../edge/identity/first-party-device-ids.md) para obtener más información. |
+| ID de dispositivos de origen | Ahora puede enviar sus propios ID de dispositivo a Adobe Experience Platform Edge Network al recopilar datos de clientes mediante el SDK web de Platform, lo que proporciona una solución alternativa para las recientes restricciones del explorador sobre la duración de las cookies de terceros. Consulte la guía de [ID de dispositivos de origen](../../web-sdk/identity/first-party-device-ids.md) para obtener más información. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [resumen de recopilación de datos](../../collection/home.md).
 

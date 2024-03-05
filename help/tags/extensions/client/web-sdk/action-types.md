@@ -3,9 +3,9 @@ title: Tipos de acción en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de los diferentes tipos de acción que proporciona la extensión de etiqueta SDK web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---
@@ -23,15 +23,15 @@ Envía un evento al Adobe [!DNL Experience Platform] para que Adobe Experience P
 
 Hay otros campos en el tipo de acción Enviar evento que también pueden ser útiles según la implementación. Tenga en cuenta que estos campos son todos opcionales.
 
-- **Tipo:** Este campo permite especificar un tipo de evento que se registrará en el esquema XDM. Consulte la [documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) para obtener más información sobre los tipos de eventos predeterminados.
-- **Datos:** Los datos que no coinciden con un esquema XDM se pueden enviar mediante este campo. Este campo es útil si intenta actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. Para ver ejemplos, consulte nuestra [documentación](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=es).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **Tipo:** Este campo le permite especificar un tipo de evento que se registrará en el esquema XDM. Consulte [`type`](/help/web-sdk/commands/sendevent/type.md) en el `sendEvent` para obtener más información.
+- **Datos:** Los datos que no coinciden con un esquema XDM se pueden enviar mediante este campo. Este campo es útil si intenta actualizar un perfil de Adobe Target o enviar atributos de Recommendations de Target. Consulte [`data`](/help/web-sdk/commands/sendevent/data.md) en el `sendEvent` para obtener más información.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **ID de conjunto de datos:** Si necesita enviar datos a un conjunto de datos que no sea el especificado en su conjunto de datos, puede especificar ese ID del conjunto de datos aquí.
 - **Se descargará el documento:** Si desea asegurarse de que los eventos llegan al servidor incluso si el usuario sale de la página, consulte la **[!UICONTROL Se descargará el documento]** casilla de verificación Esto permite que los eventos lleguen al servidor, pero las respuestas se omiten.
-- **Procesar decisiones de personalización visuales:** Si desea procesar contenido personalizado en la página, consulte la **[!UICONTROL Procesar decisiones de personalización visuales]** casilla de verificación También puede especificar ámbitos de decisión o superficies si es necesario. Consulte la [documentación de personalización](../../../../edge/personalization/rendering-personalization-content.md#automatically-rendering-content) para obtener más información sobre la renderización de contenido personalizado.
+- **Procesar decisiones de personalización visuales:** Si desea procesar contenido personalizado en la página, consulte la **[!UICONTROL Procesar decisiones de personalización visuales]** casilla de verificación También puede especificar ámbitos de decisión o superficies si es necesario. Consulte la [documentación de personalización](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) para obtener más información sobre la renderización de contenido personalizado.
 
 ## Definir consentimiento {#set-consent}
 
-Una vez que haya recibido el consentimiento de su usuario, este se debe comunicar al SDK para web de Adobe Experience Platform mediante el tipo de acción Definir consentimiento. Actualmente se admiten dos tipos de estándares: Adobe y IAB TCF. Consulte [Preferencias de consentimiento del cliente de soporte](../../../../edge/consent/supporting-consent.md). Al utilizar la versión 2.0 del Adobe, solo se admite un valor de elemento de datos. Deberá crear un elemento de datos que se resuelva en el objeto de consentimiento.
+Una vez que haya recibido el consentimiento de su usuario, este se debe comunicar al SDK para web de Adobe Experience Platform mediante el tipo de acción Definir consentimiento. Actualmente se admiten dos tipos de estándares: Adobe y IAB TCF. Consulte [Preferencias de consentimiento del cliente de soporte](/help/web-sdk/consent/supporting-consent.md). Al utilizar la versión 2.0 del Adobe, solo se admite un valor de elemento de datos. Deberá crear un elemento de datos que se resuelva en el objeto de consentimiento.
 
 En esta acción, también se le proporciona un campo opcional para incluir un mapa de identidad, de modo que las identidades se puedan sincronizar una vez recibido el consentimiento. La sincronización es útil cuando el consentimiento está configurado como Pendiente o Fuera porque la llamada de consentimiento es probablemente la primera llamada a activación.
 

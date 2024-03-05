@@ -3,7 +3,7 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 2%
@@ -185,11 +185,11 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 
 ### ¿Debo utilizar el SDK web de Experience Platform para enviar audiencias y atributos a Adobe Target?
 
-+++No de respuesta, [SDK web](../edge/home.md) no es necesario para activar audiencias en [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++No de respuesta, [SDK web](../web-sdk/home.md) no es necesario para activar audiencias en [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 Sin embargo, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es) se utiliza en lugar del SDK web, solo se admite la personalización de la sesión siguiente.
 
-Para [personalización de la misma página y de la página siguiente](ui/activate-edge-personalization-destinations.md) Casos de uso de, debe utilizar cualquiera de los siguientes [SDK web](../edge/home.md) o el [API del servidor de red perimetral](../server-api/overview.md). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
+Para [personalización de la misma página y de la página siguiente](ui/activate-edge-personalization-destinations.md) Casos de uso de, debe utilizar cualquiera de los siguientes [SDK web](../web-sdk/home.md) o el [API del servidor de red perimetral](../server-api/overview.md). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
 +++
 
 ### ¿Hay un límite en el número de atributos que puedo enviar desde Real-time Customer Data Platform a Adobe Target o a un destino de personalización personalizado?
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Después de crear una audiencia en Experience Platform, ¿cuánto tiempo tardará esa audiencia en estar disponible para los casos de uso de segmentación de Edge?
 
-+++Las definiciones de audiencia de respuesta se propagan a [Red perimetral](../edge/home.md) hasta en una hora. Sin embargo, si se activa una audiencia en esta primera hora, se podrían perder algunos visitantes que habrían cumplido los requisitos para la audiencia.
++++Las definiciones de audiencia de respuesta se propagan a [Red perimetral](../web-sdk/home.md) hasta en una hora. Sin embargo, si se activa una audiencia en esta primera hora, se podrían perder algunos visitantes que habrían cumplido los requisitos para la audiencia.
 +++
 
 ### ¿Dónde puedo ver los atributos activados en Adobe Target?

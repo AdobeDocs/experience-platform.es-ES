@@ -1,21 +1,21 @@
 ---
 title: Pestaña Resumen
-description: Aprenda a utilizar la pestaña Resumen en Adobe Experience Platform Debugger.
+description: Aprenda a utilizar la pestaña Resumen en el Adobe Experience Platform Debugger.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;resumen;borrar;solicitudes;pantalla de resumen;solución;información;analytics;target;dtm;audience manager;launch;servicio de ID
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 74%
+source-wordcount: '711'
+ht-degree: 82%
 
 ---
 
 # Pestaña Resumen
 
-Para ejecutar Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, seleccione el icono (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abrirá en la **Resumen** pestaña.
+Para ejecutar el Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, seleccione el icono (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abrirá en la **Resumen** pestaña.
 
 ![](images/summary.jpg)
 
@@ -104,7 +104,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Versión de biblioteca </p> </td> 
-   <td colname="col2"> <p>Número de versión <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">de la biblioteca</a> del SDK web de Adobe Experience Platform. </p> </td> 
+   <td colname="col2"> <p>Número de versión <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">de la biblioteca</a> del SDK web de Adobe Experience Platform. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Área de nombres</p> </td> 
@@ -185,7 +185,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
    <td colname="col2"> <p>El ID de la experiencia de Target. Disponible sin autenticación solo si implementa el detector de eventos de depuración en el administrador de códigos o etiquetas y activa los <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de respuesta</a> necesarios en la interfaz de usuario de Target. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Oferta Nombre</p> </td> 
+   <td colname="col1"> <p>Nombre de oferta</p> </td> 
    <td colname="col2"> <p>Nombre de la <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> oferta</a> de Target. Disponible sin autenticación solo si implementa el detector de eventos de depuración en el administrador de códigos o etiquetas y activa los <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de respuesta</a> necesarios en la interfaz de usuario de Target. </p> </td> 
   </tr> 
   <tr> 
