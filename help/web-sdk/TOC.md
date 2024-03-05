@@ -5,9 +5,9 @@ user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
-source-git-commit: 567ba2c43c2dcea401911cf25ae7a6be259acb81
+source-git-commit: 6e78383b232a7b604514a4db85884372ef11d3a8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 23%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 23%
       * [Integración sin etiquetas](consent/iab-tcf/without-tags.md)
 
 * Casos de uso {#use-cases}
+   * [Información general](use-cases/overview.md)
    * [Envío de datos a Adobe Analytics mediante el SDK web](use-cases/adobe-analytics.md)
    * [User agent client hints](use-cases/client-hints.md)
    * [Recopilación de datos de comercio](use-cases/collect-commerce-data.md)
