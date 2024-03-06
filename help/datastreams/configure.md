@@ -2,10 +2,10 @@
 title: Creación y configuración de flujos de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
-ht-degree: 55%
+source-wordcount: '2737'
+ht-degree: 54%
 
 ---
 
@@ -142,6 +142,7 @@ Ese servicio controla si los datos se envían a Adobe Audience Manager y cómo. 
 | Configuración | Descripción |
 | --- | --- |
 | [!UICONTROL ID del grupo de informes] | **(Obligatorio)** El ID del grupo de informes de Analytics al que desea enviar los datos. Este ID se encuentra en la interfaz de usuario de Adobe Analytics, en [!UICONTROL Admin] > [!UICONTROL ReportSuites]. Si se especifican varios grupos de informes, los datos se copian en cada grupo de informes. |
+| [!UICONTROL Área de nombres de ID de visitante] | (Opcional) El área de nombres que desea utilizar para Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=es). Cuando envíe un evento con un valor especificado para esta área de nombres, se utilizará automáticamente como `visitorID` en Analytics. |
 | [!UICONTROL Anulaciones de grupos de informes] | En esta sección, puede añadir ID de grupos de informes adicionales que puede utilizar para anular el predeterminado. |
 
 ### Configuración de Adobe Audience Manager {#audience-manager}
