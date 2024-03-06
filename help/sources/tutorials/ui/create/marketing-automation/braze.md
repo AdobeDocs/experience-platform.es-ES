@@ -3,18 +3,18 @@ title: Crear un flujo de datos para datos de Braze en la interfaz de usuario
 description: Obtenga información sobre cómo crear un flujo de datos para su cuenta de Brazo mediante la interfaz de usuario de Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
 
-# Crear un [!DNL Braze] conexión de origen en la interfaz de usuario
+# Crear un [!DNL Braze Currents] conexión de origen en la interfaz de usuario
 
 >[!NOTE]
 >
->El [!DNL Braze] el origen está en versión beta. Lea el [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El [!DNL Braze Currents] el origen está en versión beta. Lea el [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 [!DNL Braze] potencia las interacciones centradas en el cliente entre consumidores y marcas en tiempo real. [!DNL Braze Currents] es un flujo de datos en tiempo real de eventos de participación de la plataforma Braze que es la exportación más sólida pero granular de [!DNL Braze] plataforma.
 
@@ -44,7 +44,7 @@ Si ya tiene un [!DNL Braze] conexión, puede omitir el resto de este documento y
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el *Automatización de marketing* categoría, seleccionar **[!UICONTROL Soldar]**, y luego seleccione **[!UICONTROL Añadir datos]**.
+En el *Automatización de marketing* categoría, seleccionar **[!UICONTROL Corrientes de soldadura]**, y luego seleccione **[!UICONTROL Añadir datos]**.
 
 ![El catálogo de fuentes de la interfaz de usuario de Experience Platform con la fuente de las corrientes de Bear seleccionada.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ A continuación, configure la asignación para los datos mediante la interfaz de
 
 ### Recopilar credenciales necesarias
 
-Una vez creada la conexión, debe recopilar los siguientes valores de credencial, que luego proporcionará en el panel de Braze para enviar datos a [!DNL Platform]. Para obtener más información, lea la [!DNL Braze] [guía sobre cómo navegar a Corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Una vez creada la conexión, debe recopilar los siguientes valores de credencial, que luego proporcionará en el panel de Braze para enviar datos al Experience Platform. Para obtener más información, lea la [!DNL Braze] [guía sobre cómo navegar a Corrientes](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descripción |
-| ---------- | ----------- |
-| `Client ID` | El ID de cliente asociado con su [!DNL Platform] origen. |
-| `Client Secret` | El secreto de cliente asociado con su [!DNL Platform] origen. |
-| `Tenant ID` | El ID de inquilino asociado con su [!DNL Platform] origen. |
-| `Sandbox Name` | La zona protegida asociada a su [!DNL Platform] origen. |
-| `Dataflow ID` | El ID de flujo de datos asociado con su [!DNL Platform] origen. |
-| `Streaming Endpoint` | El extremo de flujo continuo asociado con su [!DNL Platform] origen. Tenga en cuenta que Braze convertirá automáticamente esto en el punto final de flujo por lotes. |
+| --- | --- |
+| ID de cliente | El ID de cliente asociado con el origen del Experience Platform. |
+| Secreto de cliente | El secreto de cliente asociado con el origen del Experience Platform. |
+| ID de inquilino | El ID de inquilino asociado con el origen del Experience Platform. |
+| Nombre de la zona protegida | La zona protegida asociada a la fuente del Experience Platform. |
+| ID de flujo de datos | El ID de flujo de datos asociado con el origen del Experience Platform. |
+| Punto final de streaming | El extremo de flujo continuo asociado con el origen del Experience Platform. **Nota**: [!DNL Braze] convierte automáticamente esto en el punto final de flujo por lotes. |
 
 ### Configurar [!DNL Braze Currents] para transmitir datos a su fuente de datos
 

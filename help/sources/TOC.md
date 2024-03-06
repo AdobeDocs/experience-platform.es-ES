@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 11%
+source-wordcount: '1021'
+ht-degree: 10%
 
 ---
 
@@ -92,7 +92,8 @@ ht-degree: 11%
       - [Conector de flujo del Snowflake](connectors/databases/snowflake-streaming.md)
       - [conector del Snowflake](connectors/databases/snowflake.md)
       - [Conector Vantage de teradata](connectors/databases/teradata-vantage.md)
-   - Socio de datos {#data-partner}
+   - Socio de datos e identidad {#data-partner}
+      - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolución de identidad empresarial de Mercury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 11%
    - Sistema local {#local-system}
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Automatización de marketing {#marketing-automation}
+      - [Corrientes de soldadura](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Conector HubSpot](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 11%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Socio de datos {#data-partner}
+      - Socio de datos e identidad {#data-partner}
          - [Resolución de identidad empresarial de Mercury](tutorials/ui/create/data-partners/merkury.md)
          - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 11%
       - Sistema local {#local-system}
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatización de marketing {#marketing-automation}
-         - [Soldar](tutorials/ui/create/marketing-automation/braze.md)
+         - [Corrientes de soldadura](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
