@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo resolver un problema con la restri
 source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
 
-# Ignorar actualización de restricción de tiempo del año {#ignore-year}
+# Actualización de la restricción temporal de Ignorar año {#ignore-year}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
->title="Ignorar actualización de año"
->abstract="Se ha actualizado la restricción de tiempo de ignorar año. Vuelva a guardar la audiencia."
+>title="Actualización de Ignorar año"
+>abstract="Se ha actualizado la restricción temporal de Ignorar año. Vuelva a guardar el público."
 
 La versión de febrero de 2024 para Adobe Experience Platform ha introducido cambios en el servicio de segmentación de Adobe Experience Platform, que resuelve un problema con la opción &quot;ignorar año&quot; en la creación y evaluación de audiencias.
 

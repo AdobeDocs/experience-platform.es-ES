@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
@@ -89,32 +89,32 @@ Después de leer esta guía, ahora tiene una mejor comprensión de cómo crear y
 
 En la siguiente sección se proporciona información adicional sobre las audiencias de cuenta.
 
-### Validación de segmentación de cuenta {#validation}
+### Validación de la segmentación de cuentas {#validation}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
 >title="Error de ventana retrospectiva máxima"
->abstract="La ventana retrospectiva máxima para eventos de experiencia es de 30 días."
+>abstract="La ventana retrospectiva máxima para eventos de Experience es de 30 días."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
->title="Error de profundidad máxima del contenedor anidado"
->abstract="La profundidad máxima de los contenedores anidados es **5**. Esto significa que usted **no puede** tener más de cinco contenedores anidados al crear la audiencia."
+>title="Error de profundidad máxima de contenedores anidados"
+>abstract="La profundidad máxima de los contenedores anidados es **5**. Esto significa que **no puede** tener más de cinco contenedores anidados al crear el público."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
 >title="Error de cantidad máxima de reglas"
->abstract="El número máximo de reglas dentro de un solo contenedor es **5**. Esto significa que usted **no puede** tener más de cinco reglas dentro de un solo contenedor al crear la audiencia."
+>abstract="El número máximo de reglas dentro de un solo contenedor es **5**. Esto significa que **no puede** tener más de cinco reglas dentro de un solo contenedor al crear el público."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
 >title="Error de importe máximo entre entidades"
->abstract="El número máximo de entidades cruzadas que se pueden utilizar dentro de una sola audiencia es **5**. Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro de la audiencia. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing."
+>abstract="El número máximo de entidades cruzadas que se pueden utilizar dentro de una sola audiencia es **5**. Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro del público. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
 >title="Error de entidad personalizada"
->abstract="Las entidades personalizadas son **no** permitido."
+>abstract="**No** se permiten entidades personalizadas."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
@@ -129,37 +129,37 @@ En la siguiente sección se proporciona información adicional sobre las audienc
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="Error de evento inSegment"
->abstract="Los eventos de inSegment son **no** permitido."
+>abstract="**No** se permiten eventos inSegment."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="Error de evento inSegment"
->abstract="Los eventos de inSegment son **no** permitido."
+>abstract="**No** se permiten eventos inSegment."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="Error de eventos secuenciales"
->abstract="Los eventos secuenciales son **no** permitido."
+>abstract="**No** se permiten eventos secuenciales."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
 >title="Error de propiedad de tipo de mapa"
->abstract="Las propiedades de tipo mapa son **no** permitido."
+>abstract="**No** se permiten propiedades de tipo de mapa."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
->title="Error de profundidad máxima de entidad anidada"
+>title="Error de profundidad máxima de entidades anidadas"
 >abstract="La profundidad máxima de las matrices anidadas es **5**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
->title="Error de cantidad máxima de objeto anidado"
+>title="Error de cantidad máxima de objetos anidados"
 >abstract="El número máximo de objetos anidados permitido es **10**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="Infracción de restricción"
->abstract="La audiencia infringe una restricción. Lea el documento vinculado para obtener más información."
+>abstract="El público infringe una restricción. Lea el documento vinculado para obtener más información."
 
 Cuando se usan audiencias de cuenta, la audiencia **debe** cumplir con las siguientes restricciones:
 
@@ -169,11 +169,11 @@ Cuando se usan audiencias de cuenta, la audiencia **debe** cumplir con las sigui
 
 - La ventana retrospectiva máxima para eventos de experiencia es **30 días**.
 - La profundidad máxima de los contenedores anidados es **5**.
-   - Esto significa que usted **no puede** tener más de cinco contenedores anidados al crear la audiencia.
+   - Esto significa que **no puede** tener más de cinco contenedores anidados al crear el público.
 - El número máximo de reglas dentro de un solo contenedor es **5**.
    - Esto significa que su audiencia **no puede** tiene más de cinco reglas que componen su audiencia.
 - El número máximo de entidades cruzadas que se pueden utilizar es **5**.
-   - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro de la audiencia. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
+   - Una entidad cruzada se produce cuando se cambia entre distintas entidades dentro del público. Por ejemplo, pasar de una cuenta a una persona y a una lista de marketing.
 - Entidades personalizadas **no puede** se utilizará.
 - El número máximo de valores que se pueden comprobar para un solo campo es **50**.
    - Por ejemplo, si tiene un campo de &quot;Nombre de ciudad&quot;, puede comprobar ese valor con 50 nombres de ciudades.
