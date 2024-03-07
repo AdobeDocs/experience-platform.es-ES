@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administración de trabajos de privacidad en la IU de Privacy Service
 description: Aprenda a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 14%
+source-wordcount: '1511'
+ht-degree: 13%
 
 ---
 
@@ -143,6 +143,8 @@ El **[!UICONTROL Crear solicitud]** se abre el cuadro de diálogo, que muestra l
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 Seleccione el **[!UICONTROL Tipo de trabajo]** de la solicitud (&quot;Eliminar&quot; o &quot;Acceder&quot;) y uno o más productos disponibles de la lista.
+
+Privacy Service admite dos tipos de solicitudes de trabajo para datos personales: [!UICONTROL Acceso] (lectura) y/o [!UICONTROL Eliminar]. Puede enviar una solicitud para recibir toda la información contenida en el producto que se relaciona con el sujeto de la consulta, o solicitar que se elimine toda la información relacionada con el sujeto de la consulta.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

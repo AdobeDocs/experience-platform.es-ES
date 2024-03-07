@@ -5,7 +5,7 @@ title: Crear y editar tipos de datos mediante la interfaz de usuario
 type: Tutorial
 description: Obtenga información sobre cómo crear y editar tipos de datos en la interfaz de usuario de Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform proporciona muchos tipos de datos estándar que se pue
 
 Este tutorial trata los pasos para crear y editar tipos de datos personalizados en la interfaz de usuario de Platform.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para obtener una introducción a la función de XDM dentro del ecosistema de Experience Platform, y la [conceptos básicos de composición de esquemas](../../schema/composition.md) para saber cómo los tipos de datos contribuyen a los esquemas XDM.
 
@@ -105,7 +105,7 @@ Esto demuestra lo flexibles que pueden ser los tipos de datos a la hora de descr
 
 Cuando haya terminado de agregar campos al tipo de datos, seleccione **[!UICONTROL Guardar]** para guardar los cambios y agregar el tipo de datos a [!DNL Schema Library].
 
-## Añadir el tipo de datos a un esquema
+## Añadir el tipo de datos a un esquema {#add-data-type}
 
 Una vez creado un tipo de datos, puede empezar a utilizarlo en los esquemas. Dado que los esquemas XDM están compuestos por una clase y cero o más grupos de campos, los campos proporcionados por un tipo de datos no se pueden añadir directamente a un esquema. En su lugar, deben incluirse en una clase o un grupo de campos.
 
@@ -123,7 +123,7 @@ El lienzo actualiza el tipo de datos del campo de &quot;[!UICONTROL Objeto]&quot
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 En esta guía se explica cómo crear y editar tipos de datos mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades de [!UICONTROL Esquemas] Workspace, consulte la [[!UICONTROL Esquemas] información general de workspace](../overview.md).
 

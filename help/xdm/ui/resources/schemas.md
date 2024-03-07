@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Esta guía proporciona información general sobre cómo crear, editar y administ
 >
 >Para ver un recorrido completo por el proceso de creación de esquemas, siga junto con las [tutorial de creación de esquemas](../../tutorials/create-schema-ui.md) para crear un esquema de ejemplo completo y familiarizarse con las numerosas funcionalidades de [!DNL Schema Editor].
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para obtener una introducción a la función de XDM dentro del ecosistema de Experience Platform, y la [conceptos básicos de composición de esquemas](../../schema/composition.md) para obtener una descripción general de cómo se construyen los esquemas.
 
@@ -350,7 +350,7 @@ Se abre un nuevo cuadro de diálogo en el que se le pide que confirme que desea 
 
 Después de confirmar el cambio de clase, el lienzo se restablecerá y se perderá todo el progreso de la composición.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 Este documento abarcaba los conceptos básicos de la creación y edición de esquemas en la IU de Platform. Se recomienda encarecidamente que revise la [tutorial de creación de esquemas](../../tutorials/create-schema-ui.md) para obtener un flujo de trabajo completo para crear un esquema completo en la interfaz de usuario, incluida la creación de grupos de campos personalizados y tipos de datos para casos de uso únicos.
 

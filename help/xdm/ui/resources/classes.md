@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -24,13 +24,13 @@ Adobe proporciona varias clases de modelo de datos de experiencia (XDM) estánda
 
 Este documento proporciona información general sobre cómo crear, editar y administrar clases personalizadas en la interfaz de usuario de Experience Platform.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para obtener una introducción a la función de XDM dentro del ecosistema de Experience Platform, y la [conceptos básicos de composición de esquemas](../../schema/composition.md) para conocer cómo contribuyen las clases a los esquemas XDM.
 
 Aunque no es necesario para esta guía, se recomienda seguir el tutorial en [composición de un esquema en la IU](../../tutorials/create-schema-ui.md) para familiarizarse con las distintas funcionalidades del Editor de esquemas.
 
-## Introducción
+## Introducción {#getting-started}
 
 En la IU de Platform, seleccione **[!UICONTROL Esquemas]** en la navegación izquierda para abrir [!UICONTROL Esquemas] espacio de trabajo y seleccione **[!UICONTROL Clases]** pestaña. Se muestra una lista de las clases disponibles.
 
@@ -121,7 +121,7 @@ Si ha creado anteriormente esquemas que emplean esta clase, los campos recién a
 Puede cambiar la clase del esquema en cualquier momento durante el proceso de creación inicial antes de guardarlo. Sin embargo, esto debe hacerse con precaución, ya que los grupos de campos solo son compatibles con determinadas clases. Al cambiar la clase, se restablecen el lienzo y los campos que se hayan añadido.
 Consulte la guía de [creación y edición de esquemas](./schemas.md#change-class) para obtener más información.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 En este documento se explica cómo crear y editar clases mediante la interfaz de usuario de Platform. Para obtener más información sobre las capacidades de [!UICONTROL Esquemas] Workspace, consulte la [[!UICONTROL Esquemas] información general de workspace](../overview.md).
 

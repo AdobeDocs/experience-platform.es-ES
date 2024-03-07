@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y edición de grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario de Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
@@ -24,7 +24,7 @@ Un grupo de campos define con qué clase es compatible, según el comportamiento
 
 Adobe Experience Platform proporciona muchos grupos de campos estándar que abarcan una amplia gama de casos de uso de marketing. Sin embargo, también puede crear y editar sus propios grupos de campos personalizados para definir conceptos adicionales relacionados con su negocio dentro de los esquemas XDM. Esta guía proporciona información general sobre cómo crear, editar y administrar grupos de campos personalizados para su organización en la IU de Platform.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para obtener una introducción a la función de XDM dentro del ecosistema de Experience Platform, y la [conceptos básicos de composición de esquemas](../../schema/composition.md) para saber cómo contribuyen los grupos de campos a los esquemas XDM.
 
@@ -90,7 +90,7 @@ Una vez agregado el campo al esquema, se asigna al grupo de campos seleccionado.
 
 Si el mismo grupo de campos ya se emplea en otros esquemas, los campos recién añadidos aparecerán automáticamente en esos esquemas.
 
-## Pasos siguientes
+## Pasos siguientes {#next-steps}
 
 En esta guía se explica cómo crear y editar grupos de campos mediante la IU de Platform. Para obtener más información sobre las capacidades de [!UICONTROL Esquemas] Workspace, consulte la [[!UICONTROL Esquemas] información general de workspace](../overview.md).
 
