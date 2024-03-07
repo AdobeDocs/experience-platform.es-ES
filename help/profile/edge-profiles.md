@@ -2,9 +2,9 @@
 title: Perfiles de Edge
 description: Obtenga información acerca de los perfiles de Edge, así como la terminología relacionada, las regiones disponibles para perfiles de Edge y los servicios disponibles para perfiles de Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extre
 
 ## Pasos siguientes
 
-Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Información general de Edge Network](../web-sdk/home.md).
+Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Información general de Edge Network](../web-sdk/home.md#edge-network).
 
 ## Apéndice
 
@@ -78,3 +78,7 @@ Además, cada perfil perimetral tiene un atributo de esquema denominado Región 
 ### ¿Cómo funciona la caducidad de los datos con los perfiles de Edge?
 
 En el caso de los perfiles Edge, la caducidad de los datos determina cuánto tiempo permanecerá el perfil en Edge antes de eliminarlo. La caducidad de los datos es **laminado**, lo que significa que, cada vez que se accede al perfil en Edge, se restablece el tiempo de caducidad de los datos. De forma predeterminada, la caducidad de los datos dura 14 días.
+
+### ¿Qué datos se almacenan en el perfil de Edge?
+
+El perfil de Edge almacena los atributos de perfil, los ID de perfil y los ID de audiencia cualificados. De forma predeterminada, la caducidad de los datos dura 14 días.
