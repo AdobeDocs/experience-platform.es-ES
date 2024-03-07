@@ -3,10 +3,10 @@ title: Información general sobre la extensión del reenvío de eventos principa
 description: Obtenga información acerca de la extensión de reenvío de eventos principal en Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Esta sección describe los tipos de condición disponibles en la Extensión prin
 
 ### Código personalizado
 
-Especifique cualquier Custom Code que deba darse como condición del evento. Utilice el editor de código integrado para introducir el código personalizado. El reenvío de eventos en Adobe Experience Platform es compatible con ES6.
+Especifique cualquier Custom Code que deba darse como condición del evento. Utilice el editor de código integrado para introducir el código personalizado. El reenvío de eventos en Adobe Experience Platform es compatible con ES13.
 
 1. Seleccione **[!UICONTROL Abrir editor]**.
 1. Escriba el Custom Code.
@@ -155,7 +155,7 @@ En esta sección se describen los tipos de acción disponibles en la Extensión 
 
 ### Código personalizado
 
-Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones. El reenvío de eventos en Adobe Experience Platform es compatible con ES6.
+Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones. El reenvío de eventos en Adobe Experience Platform es compatible con ES13.
 
 1. Asigne un nombre al código de acción.
 1. Seleccione **[!UICONTROL Abrir editor]**.
