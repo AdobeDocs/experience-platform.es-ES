@@ -2,9 +2,9 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 12%
 
 ---
@@ -134,6 +134,10 @@ Aparece un directorio de áreas de nombres en su organización, que muestra info
 Según los datos de organización y los casos de uso, puede requerir áreas de nombres personalizadas. Se pueden crear áreas de nombres personalizadas con la variable [[!DNL Identity Service]](../api/create-custom-namespace.md) API o a través de la IU de.
 
 Para crear un área de nombres personalizada, seleccione **[!UICONTROL Crear área de nombres de identidad]**.
+
+>[!TIP]
+>
+>Las identidades de integración son áreas de nombres que se utilizan para conectarse con otros sistemas. No se utilizan para resolver identidades ni para vincular identidades. Seleccionar **[!UICONTROL Ver identidades de integración]** para actualizar la lista e incluir identidades de integración. Sin embargo, las identidades de integración están ocultas de forma predeterminada porque son de solo vista y no es necesario configurarlas.
 
 ![Botón Crear área de nombres de identidad en el área de trabajo de identidades.](../images/namespace/create-identity-namespace.png)
 
