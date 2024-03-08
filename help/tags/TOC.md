@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '761'
 ht-degree: 45%
 
 ---
@@ -196,7 +196,6 @@ ht-degree: 45%
       * [Encuesta SDI](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA Evento de cambio de vista](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Llave de almacenamiento](https://exchange.adobe.com/apps/ec/102990)
       * [ETIQUETAS por Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Recolección de Tealio](https://exchange.adobe.com/apps/ec/104217)
@@ -222,7 +221,6 @@ ht-degree: 45%
       * [!DNL Braze] {#braze}
          * [Información general](./extensions/server/braze/overview.md)
       * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Cloud Connector para Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Núcleo {#core}
          * [Información general](./extensions/server/core/overview.md)
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)

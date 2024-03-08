@@ -2,10 +2,10 @@
 title: Referencia de extensiones de reenvío de eventos
 description: Busque documentación sobre las extensiones de reenvío de eventos en Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 20%
+source-wordcount: '166'
+ht-degree: 19%
 
 ---
 
@@ -32,7 +32,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Cloud Connector para Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Núcleo](./core/overview.md)
 * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversiones mejoradas de Google Ads](./google-ads-enhanced-conversions/overview.md)

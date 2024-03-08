@@ -2,10 +2,10 @@
 title: Referencia de extensiones de etiquetas
 description: Busque documentación sobre las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 10%
+source-wordcount: '469'
+ht-degree: 9%
 
 ---
 
@@ -47,7 +47,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Privacidad de Adobe](./privacy/overview.md)
 * [Selector de grupos de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
-* [Adobe Target Versión 2](./target-v2/overview.md)
+* [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Perspectivas de recursos de](https://exchange.adobe.com/apps/ec/103406)*
@@ -106,7 +106,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Encuesta SDI](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [SPA Evento de cambio de vista](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [Llave de almacenamiento](https://exchange.adobe.com/apps/ec/102990)*
 * [ETIQUETAS por Loop Horizon](https://exchange.adobe.com/apps/ec/106092)*
 * [Recolección de Tealio](https://exchange.adobe.com/apps/ec/104217)*
