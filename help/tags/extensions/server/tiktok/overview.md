@@ -2,10 +2,11 @@
 title: Integración de la extensión de API de eventos web de Adobe TikTok
 description: Esta API de eventos web de Adobe Experience Platform le permite compartir interacciones de sitios web directamente con TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 4%
+source-wordcount: '1105'
+ht-degree: 3%
 
 ---
 
@@ -63,8 +64,8 @@ Los eventos y parámetros web contienen información general sobre el evento. Lo
 
 | Entrada | Descripción |
 | --- | --- |
-| Nombre del evento | El nombre del evento. Son acciones con nombres predefinidos creados por [!DNL TikTok] y es un campo obligatorio. Consulte la [[!DNL TikTok] API de marketing](https://business-api.tiktok.com/portal/docs?id=1741601162187777) para obtener más información sobre los eventos admitidos. |
-| Hora del evento | Fecha-hora como cadena en ISO 8601 o en aaaa-MM-dd&#39;T&#39;HH:mm:formato ss:SSSZ. Este campo es obligatorio. |
+| Nombre del evento | Nombre del evento. Son acciones con nombres predefinidos creados por [!DNL TikTok] y es un campo obligatorio. Consulte la [[!DNL TikTok] API de marketing](https://business-api.tiktok.com/portal/docs?id=1741601162187777) para obtener más información sobre los eventos admitidos. |
+| Hora del evento | Fecha-hora como cadena en ISO 8601 o en `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. Este campo es obligatorio. |
 | ID de evento | ID único generado por los anunciantes para indicar cada evento. Este es un campo opcional y se utiliza para la deduplicación. |
 
 {style="table-layout:auto"}
@@ -80,7 +81,7 @@ Los parámetros de contexto del usuario contienen información del cliente que s
 | Dirección IP | Dirección IP pública del explorador sin hash. Se admite direcciones IPv4 e IPv6. Se reconocen tanto las formas completas como las comprimidas de las direcciones IPv6. |
 | Agente de usuario | El agente de usuario sin hash del dispositivo del usuario. |
 | Correo electrónico | Dirección de correo electrónico del contacto asociado con el evento de conversión. |
-| Phone | El número de teléfono debe estar en formato E164 [+][código de país][código de área][local phone number] antes del hash. |
+| Teléfono | El número de teléfono debe estar en formato E164 [+][código de país][código de área][local phone number] antes del hash. |
 | ID de cookie | Si utiliza el SDK de píxeles, guardará automáticamente un identificador único en la `_ttp` si las cookies están habilitadas. El `_ttp` Este valor se puede extraer y utilizar para este campo. |
 | ID externo | Cualquier identificador único, como ID de usuario, ID de cookie externas, etc., debe tener un cifrado hash con SHA256. |
 | ID de clic TikTok | El `ttclid` que se añade a la dirección URL de la página de aterrizaje cada vez que se selecciona un anuncio en [!DNL TikTok]. |

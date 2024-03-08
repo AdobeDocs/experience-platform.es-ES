@@ -4,9 +4,9 @@ title: extensión de reenvío de eventos de twitter
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite introducir eventos en el Twitter para sus necesidades comerciales.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -91,17 +91,17 @@ Después de la selección, aparecen controles adicionales para configurar aún m
 | --- | --- | --- | --- |
 | [!UICONTROL [!DNL Twitter] ID de clic] | [!DNL Twitter] Haga clic en ID tal como se analiza desde la URL de pulsación. | 26l6412g5p4iyj65a2oic2ayg2 | Obligatorio si no se añade ningún otro identificador. |
 | [!UICONTROL Correo electrónico] | Una dirección de correo electrónico con hash SHA256. El texto debe escribirse en minúsculas y los espacios iniciales o finales deben eliminarse antes del hash. | eventforwarding@example.com | Obligatorio si no se añade ningún otro identificador. |
-| [!UICONTROL Phone] | El teléfono sirve como identificador para coincidir con el evento de conversión. El número de teléfono debe estar en formato E164 [+][código de país][código de área][local phone number] antes del hash. | +911234567875 | Obligatorio si no se añade ningún otro identificador. |
+| [!UICONTROL Teléfono] | El teléfono sirve como identificador para coincidir con el evento de conversión. El número de teléfono debe estar en formato E164 [+][código de país][código de área][local phone number] antes del hash. | +911234567875 | Obligatorio si no se añade ningún otro identificador. |
 
 **[!UICONTROL Datos de conversión]**
 
 | Nombre del campo | Descripción | Ejemplo | Requerido |
 | --- | --- | --- | --- |
-| [!UICONTROL Tiempo de conversión] | Fecha-hora como cadena en ISO 8601 o en aaaa-MM-dd&#39;T&#39;HH:mm:formato ss:SSSZ. | 18-02-2022:14:00,603Z | Sí |
+| [!UICONTROL Tiempo de conversión] | Fecha-hora como cadena en ISO 8601 o en `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | 18-02-2022:14:00,603Z | Sí |
 | [!UICONTROL ID de evento] | El ID en base 36 de un evento específico. Este ID debe coincidir con un evento preconfigurado contenido en su [!DNL Twitter] cuenta de publicidad. Esto se conoce como ID del evento correspondiente en el Administrador de eventos. | o87ne o tw-o8z6j-o87ne (tw-pixel_id-event-id) | Sí |
 | [!UICONTROL Número de elementos] | El número de artículos que se compran en el evento. Debe ser un número positivo mayor que 0. | 4 | No |
 | [!UICONTROL Moneda] | La moneda de los artículos que se compran en el evento. Esto se expresa en ISO-4217 y, si no se proporciona, el valor predeterminado es USD. | USD | No |
-| [!UICONTROL Valor] | El valor del precio de los artículos que se compran en el evento. | 100.00 | No |
+| [!UICONTROL Valor] | El valor del precio de los artículos que se compran en el evento. | 100,00 | No |
 | [!UICONTROL ID de conversión] | Identificador de un evento de conversión que se puede utilizar para la deduplicación entre conversiones de API de conversión y píxeles web en la misma etiqueta de evento. | 23294827 | No |
 | [!UICONTROL Descripción] | Una descripción con cualquier información adicional sobre las conversiones. | Probar conversión | No |
 

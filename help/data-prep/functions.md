@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '5794'
+source-wordcount: '5789'
 ht-degree: 2%
 
 ---
@@ -119,8 +119,8 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera la hora actual. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Recupera la hora Unix actual. | | timestamp() | timestamp() | 1571850624571 |
-| formato | Aplica formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonedDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | formato(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
-| dformat | Convierte una marca de tiempo en una cadena de fecha según un formato especificado. | <ul><li>MARCA DE TIEMPO: **Requerido** La marca de tiempo a la que desea dar formato. Esto se escribe en milisegundos.</li><li>FORMATO: **Requerido** El formato en el que desea que se convierta la marca de tiempo.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| formato | Aplica formato a la fecha de entrada según un formato especificado. | <ul><li>FECHA: **Requerido** La fecha de entrada, como objeto ZonedDateTime, a la que desea dar formato.</li><li>FORMATO: **Requerido** El formato al que desea cambiar la fecha.</li></ul> | format(DATE, FORMAT) | formato(2019-10-23T11:24:00+00:00, &quot;`yyyy-MM-dd HH:mm:ss`&quot;) | `2019-10-23 11:24:35` |
+| dformat | Convierte una marca de tiempo en una cadena de fecha según un formato especificado. | <ul><li>MARCA DE TIEMPO: **Requerido** La marca de tiempo a la que desea dar formato. Esto se escribe en milisegundos.</li><li>FORMATO: **Requerido** El formato en el que desea que se convierta la marca de tiempo.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Convierte una cadena de fecha en un objeto ZonedDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** Cadena que representa la fecha.</li><li>FORMATO: **Requerido** Cadena que representa el formato de la fecha de origen.**Nota:** Esto sí **no** representa el formato en el que desea convertir la cadena de fecha. </li><li>FECHA_PREDETERMINADA: **Requerido** Se devuelve la fecha predeterminada si la fecha proporcionada es nula.</li></ul> | date(FECHA, FORMATO, FECHA_PREDETERMINADA) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | date | Convierte una cadena de fecha en un objeto ZonedDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** Cadena que representa la fecha.</li><li>FORMATO: **Requerido** Cadena que representa el formato de la fecha de origen.**Nota:** Esto sí **no** representa el formato en el que desea convertir la cadena de fecha. </li></ul> | date(FECHA, FORMATO) | date(&quot;2019-10-23 11:24&quot;, &quot;aaaa-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | date | Convierte una cadena de fecha en un objeto ZonedDateTime (formato ISO 8601). | <ul><li>FECHA: **Requerido** Cadena que representa la fecha.</li></ul> | date(FECHA) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
