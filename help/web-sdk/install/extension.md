@@ -1,13 +1,13 @@
 ---
 title: Instalación del SDK web mediante la extensión de etiqueta
 description: Haga referencia a la biblioteca del SDK web mediante la recopilación de datos de Adobe Experience Cloud.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # Instalación del SDK web mediante la extensión de etiqueta
 
@@ -23,6 +23,8 @@ Una vez que conozca el [requisitos previos](overview.md)Además, puede implement
 1. Vaya a **[!UICONTROL Extensiones]**, luego seleccione la **[!UICONTROL Catálogo]** pestaña.
 1. Busque e instale el **[!UICONTROL SDK web de Adobe Experience Platform]** extensión.
 1. Seleccione la zona protegida y la secuencia de datos adecuadas para cada entorno y haga clic en **[!UICONTROL Guardar]**.
+
+Consulte la documentación sobre cómo [configuración de la extensión de etiqueta del SDK web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para obtener más información.
 
 ## Publicar el código de etiqueta en desarrollo
 

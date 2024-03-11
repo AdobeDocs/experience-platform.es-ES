@@ -2,9 +2,9 @@
 title: Información general sobre Adobe Experience Platform Web Software Development Kit (SDK)
 description: Aprenda a utilizar el SDK web de Adobe Experience Platform para integrar las funcionalidades de Platform en su sitio web.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '796'
 ht-degree: 1%
 
 ---
@@ -16,20 +16,26 @@ ht-degree: 1%
 >
 >A finales de abril de 2024, el SDK web de Adobe Experience Platform eliminará la compatibilidad con todas las versiones de Internet Explorer.
 
-El Kit de desarrollo de software web (SDK) de Adobe Experience Platform es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con sus servicios a través de Adobe Experience Platform Edge Network. Adobe ofrece dos métodos para implementar el SDK web:
+El Kit de desarrollo de software web (SDK) de Adobe Experience Platform es una biblioteca JavaScript del lado del cliente que permite a los clientes de Adobe Experience Cloud interactuar con sus servicios a través de Adobe Experience Platform Edge Network.
 
-* Implementación manual mediante `alloy.js` Biblioteca de JavaScript. Esta guía del usuario proporciona documentación para este método de implementación.
-* El [Extensión de etiqueta de SDK web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Consulte [Tutorial de implementación de Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es) para obtener más información.
+Adobe ofrece dos métodos para implementar el SDK web:
+
+* El [Extensión de etiqueta de SDK web](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Consulte el tutorial sobre cómo [implementación de Adobe Experience Cloud con SDK web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es) para obtener más información.
+* Implementación manual mediante la biblioteca JavaScript del SDK web.
+
+Esta guía del usuario incluye instrucciones sobre cómo interactuar con las soluciones de Experience Cloud a través de la biblioteca JavaScript del SDK web y la extensión de etiquetas, cuando corresponda.
 
 ## Red perimetral de Experience Platform {#edge-network}
 
-El SDK web de Experience Platform forma parte de una colección de herramientas que conforman Adobe Experience Platform Edge Network. La red perimetral consta de los siguientes componentes:
+El SDK web de Experience Platform forma parte de una colección de herramientas que conforman Adobe Experience Platform Edge Network.
 
-* **[SDK web de Experience Platform](#overview):** Un SDK de JavaScript y una extensión de etiquetas para simplificar en gran medida la implementación de tecnologías de Adobe.
-* **[SDK de Experience Platform Mobile](https://developer.adobe.com/client-sdks/home/):** Extensión del SDK móvil v5 para permitir a los clientes utilizar la nueva metodología de implementación
-* **[API del servidor de red perimetral de Experience Platform](../server-api/overview.md):** Una API que se puede utilizar para varios casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y otros dispositivos.
+La red perimetral consta de los siguientes componentes:
 
-La red perimetral es un marco de trabajo para la recopilación de datos de baja latencia, la computación conectable y la activación rápida de datos en todos los canales direccionables. Proporciona un único SDK consolidado para cada canal (JavaScript, móvil, del lado del servidor), que envía datos a un dominio de Adobe común (`adobedc.net`) y recibe una sola carga útil de vuelta para la entrega de datos y experiencia.
+* **[SDK web de Experience Platform](#overview):** Una biblioteca JavaScript y una extensión de etiquetas que ayudan a simplificar la implementación de las tecnologías de Adobe.
+* **[SDK de Experience Platform Mobile](https://developer.adobe.com/client-sdks/home/):** Extensión del SDK móvil v5 que permite utilizar la nueva metodología de implementación.
+* **[API del servidor de red perimetral](../server-api/overview.md):** Una API del lado del servidor que puede utilizar para varios casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y otros dispositivos.
+
+La red perimetral es un marco de trabajo para la recopilación de datos de baja latencia, la computación conectable y la activación rápida de datos en todos los canales direccionables. Proporciona un único SDK consolidado para cada canal (web, móvil, del lado del servidor), que envía datos a un dominio de Adobe común (`adobedc.net`) y recibe una sola carga útil de vuelta para la entrega de datos y experiencia.
 
 En el lado del servidor, una puerta de enlace perimetral unificada y un marco de servicio de plataforma común ayudan a facilitar la implementación de nuevas funciones en este entorno informático en tiempo real. Esta arquitectura:
 
@@ -40,11 +46,11 @@ En el lado del servidor, una puerta de enlace perimetral unificada y un marco de
 * Aumenta la velocidad de la innovación
 * Crea ventajas competitivas sostenidas para los clientes de Adobe
 
-Un único sistema Edge consolidado permite a los clientes administrar sus campañas de publicidad, marketing o personalización en todos los canales como una experiencia integrada. También permite al Adobe prestar servicios con un coste total de propiedad menor para los clientes. El sistema Edge está diseñado para dar cabida a la mayoría de los tipos de datos, lo que le permite asignar su propio modelo de datos para que lo incorporen varios productos de Experience Cloud.
+Un único sistema Edge consolidado le permite administrar sus campañas de publicidad, marketing o personalización en todos los canales como una experiencia integrada. También permite al Adobe prestar servicios con un coste total de propiedad menor para los clientes. El sistema Edge está diseñado para dar cabida a la mayoría de los tipos de datos, lo que le permite asignar su propio modelo de datos para que lo incorporen varios productos de Experience Cloud.
 
 ## Información general del vídeo {#video}
 
-El siguiente vídeo ofrece información general sobre Adobe Experience Platform [!DNL Web SDK] y ADOBE EXPERIENCE PLATFORM [!DNL Edge Network].
+Vea el siguiente vídeo para obtener una descripción general de Adobe Experience Platform [!DNL Web SDK] y el [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 

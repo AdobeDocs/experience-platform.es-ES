@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1725'
 ht-degree: 1%
 
 ---
@@ -213,8 +213,8 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas del
 
 ## Versión 2.2.0: octubre de 2020
 
-* Corrección de errores: El objeto Opt-in impedía que Alloy realizara llamadas al `idMigrationEnabled` es `true`.
-* Corrección de errores: Haga que Alloy tenga en cuenta las solicitudes que deberían devolver ofertas de personalización para evitar un problema de parpadeo.
+* Corrección de errores: El objeto Opt-in impedía que el SDK web realizara llamadas al `idMigrationEnabled` es `true`.
+* Corrección de errores: Haga que el SDK web tenga en cuenta las solicitudes que deberían devolver ofertas de personalización para evitar un problema de parpadeo.
 
 ## Versión 2.1.0: agosto de 2020
 
@@ -222,5 +222,5 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas del
 * Compatibilidad con el estándar de consentimiento IAB 2.0.
 * Compatibilidad para pasar ID adicionales en `setConsent` comando.
 * Compatibilidad con la anulación de `datasetId` en el `sendEvent` comando.
-* Monitores de aleación de soporte ([Más información](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Enlaces de supervisión de soporte ([Más información](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Aprobado `environment: browser` en la implementación detalla los datos de contexto.
