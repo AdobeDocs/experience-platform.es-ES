@@ -2,10 +2,10 @@
 title: Conexión de Amazon S3
 description: Cree una conexión saliente activa a su almacenamiento de Amazon Web Service (AWS) S3 para exportar periódicamente archivos de datos CSV de Adobe Experience Platform a sus propios contenedores de S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 18%
+source-wordcount: '1440'
+ht-degree: 17%
 
 ---
 
@@ -53,6 +53,19 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 {style="table-layout:auto"}
 
 ![El tipo de exportación basado en perfiles de Amazon S3 resaltado en EE. UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+
+## Exportar conjuntos de datos {#export-datasets}
+
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+
+* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
+
+## Formato de archivo de los datos exportados {#file-format}
+
+Al exportar *datos de audiencia*, Platform crea un `.csv`, `parquet`, o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la [formatos de archivo compatibles para la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
+
+Al exportar *conjuntos de datos*, Platform crea un `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la [verificar exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
 
 ## Conexión al destino {#connect}
 
@@ -169,13 +182,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-## Exportar conjuntos de datos {#export-datasets}
+## Validación de la exportación de datos correcta {#exported-data}
 
-Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+Para comprobar si los datos se han exportado correctamente, compruebe su [!DNL Amazon S3] y asegúrese de que los archivos exportados contienen las poblaciones de perfiles esperadas.
 
-* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
-* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
+## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allow-list}
 
-## Datos exportados {#exported-data}
-
-Para [!DNL Amazon S3] destinos, [!DNL Platform] crea un archivo de datos en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) en el tutorial de activación de audiencia.
+Consulte la [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md) artículo si necesita agregar direcciones IP de Adobe a una lista de permitidos.

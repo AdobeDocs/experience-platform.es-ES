@@ -2,9 +2,9 @@
 title: Conexión SFTP
 description: Cree una conexión saliente activa a su servidor SFTP para exportar periódicamente archivos de datos delimitados de Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1091'
 ht-degree: 8%
 
 ---
@@ -56,6 +56,19 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 {style="table-layout:auto"}
 
 ![Tipo de exportación basado en perfiles SFTP resaltado en el catálogo de destinos.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Exportar conjuntos de datos {#export-datasets}
+
+Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
+
+* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
+* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
+
+## Formato de archivo de los datos exportados {#file-format}
+
+Al exportar *datos de audiencia*, Platform crea un `.csv`, `parquet`, o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la [formatos de archivo compatibles para la exportación](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) en el tutorial de activación de audiencia.
+
+Al exportar *conjuntos de datos*, Platform crea un `.parquet` o `.json` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte la [verificar exportación correcta del conjunto de datos](../../ui/export-datasets.md#verify) en el tutorial exportar conjuntos de datos.
 
 ## Conexión al destino {#connect}
 
@@ -129,17 +142,10 @@ Después de establecer la conexión de autenticación con la ubicación SFTP, pr
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-## Exportar conjuntos de datos {#export-datasets}
+## Validación de la exportación de datos correcta {#exported-data}
 
-Este destino admite exportaciones de conjuntos de datos. Para obtener información completa sobre cómo configurar exportaciones de conjuntos de datos, lea los tutoriales:
-
-* Cómo: [exportación de conjuntos de datos mediante la interfaz de usuario de Platform](/help/destinations/ui/export-datasets.md).
-* Cómo: [exportar conjuntos de datos mediante programación utilizando la API de Flow Service](/help/destinations/api/export-datasets.md).
-
-## Datos exportados {#exported-data}
-
-Para [!DNL SFTP] destinos, Platform crea un `.csv` en la ubicación de almacenamiento proporcionada. Para obtener más información sobre los archivos, consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) en el tutorial de activación de audiencia.
+Para comprobar si los datos se han exportado correctamente, compruebe el almacenamiento SFTP y asegúrese de que los archivos exportados contienen las poblaciones de perfiles esperadas.
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allow-list}
 
-Consulte [LISTA DE PERMITIDOS de direcciones IP para destinos SFTP](ip-address-allow-list.md) si necesita agregar direcciones IP de Adobe a una lista de permitidos.
+Consulte la [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md) artículo si necesita agregar direcciones IP de Adobe a una lista de permitidos.
