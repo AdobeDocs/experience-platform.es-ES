@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de Sandbox
 description: Este documento proporciona pasos sobre cómo realizar varias operaciones relacionadas con los entornos limitados de la interfaz de usuario de Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
+source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '929'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Una vez seleccionada una zona protegida, la pantalla se actualiza y se actualiza
 
 >[!NOTE]
 >
->Cuando se crea una nueva zona protegida, primero debe agregarla al perfil del producto en [Adobe Admin Console](https://adminconsole.adobe.com/) antes de empezar a usar la nueva zona protegida. Consulte la documentación sobre [administración de permisos para un perfil de producto](../../access-control/ui/permissions.md) para obtener información sobre cómo aprovisionar una zona protegida en un perfil de producto.
+>La creación de una nueva zona protegida requiere que la añada a una función en [[!UICONTROL Permisos]](../../access-control/abac/ui/permissions.md) antes de empezar a usarlo. Para obtener información sobre cómo aprovisionar una zona protegida para una función, consulte la [administrar zonas protegidas para un rol](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentación.
 
 Utilice el siguiente vídeo para obtener una descripción general rápida sobre cómo utilizar entornos limitados en Experience Platform.
 
