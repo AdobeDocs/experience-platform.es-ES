@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
-ht-degree: 2%
+source-wordcount: '3732'
+ht-degree: 1%
 
 ---
 
@@ -126,6 +126,12 @@ Una vez seleccionados los grupos de campos, seleccione **[!UICONTROL Adición de
 El [!DNL Schema Editor] vuelve a aparecer con los campos proporcionados por el grupo de campos representados en el lienzo.
 
 ![El [!DNL Schema Editor] con un esquema de ejemplo mostrado.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>En el Editor de esquemas, las clases y los grupos de campos estándar (generados por Adobe) se indican con el icono de candado (![Un icono de candado.](../../images/ui/explore/padlock-icon.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+>
+>![Editor de esquemas con el icono de candado resaltado](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Después de agregar un grupo de campos a un esquema, puede [eliminar campos existentes](#remove-fields) o [añadir nuevos campos personalizados](#add-fields) a esos grupos, según sus necesidades.
 

@@ -2,9 +2,9 @@
 title: Análisis de consentimiento y seguimiento
 description: Obtenga información sobre cómo crear un panel de análisis de consentimiento para rastrear las tendencias del consentimiento del usuario a lo largo del tiempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ Los casos de uso cubiertos en esta guía son las tendencias de consentimiento y 
 - **Tendencia de consentimiento** registra las tendencias del consentimiento del usuario a lo largo del tiempo. El análisis de los cambios de preferencias de consentimiento ayuda a los especialistas en marketing a planificar y ejecutar campañas que se adapten a esos cambios de preferencias de usuario. Por ejemplo, es posible que desee ejecutar campañas educativas dirigidas, campañas de transparencia y confianza o campañas de incentivos para impulsar las opciones de consentimiento. También puede correlacionar campañas que puedan haber impactado negativamente en el consentimiento para reducir de forma proactiva la frecuencia de esas campañas.
 - **Superposición de consentimiento** utiliza la superposición entre canales de consentimiento para ofrecer mensajes personalizados y coherentes en varios canales para los clientes que han aceptado varios canales. Los especialistas en marketing pueden priorizar y asignar recursos a ciertos canales en los que un mayor grado de consentimiento y mensajería personalizada podría interesar a los clientes y generar tasas de respuesta más altas.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Creación de audiencias consentidas {#create-consent-audiences}
 
 Para crear un panel de consentimiento, primero debe crear una audiencia de todos los perfiles que han aceptado contactar. Para navegar al Generador de segmentos de Real-time Customer Data Platform, seleccione **[!UICONTROL Audiencias]** en la navegación izquierda de la interfaz de usuario de Platform. Desde el [!UICONTROL Cliente] de la pestaña [!UICONTROL Audiencias] panel, seleccione **[!UICONTROL Crear audiencia]** en la parte superior derecha de la vista, **[!UICONTROL Generar reglas]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![El [!UICONTROL Audiencias] panel con [!UICONTROL Cliente], [!UICONTROL Audiencias], y [!UICONTROL Crear segmento] resaltado.](../images/insights-use-cases/consent-analysis/create-audience.png)
 

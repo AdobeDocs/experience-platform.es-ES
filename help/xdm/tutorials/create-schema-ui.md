@@ -5,9 +5,9 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4695'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para fines de demostración, los pasos de este tutorial implican la creación de
 
 Este tutorial requiere una comprensión práctica de los distintos aspectos de Adobe Experience Platform implicados en la creación de esquemas. Antes de comenzar este tutorial, revise la documentación para los siguientes conceptos:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de composición de esquemas](../schema/composition.md): Información general sobre los esquemas XDM y sus componentes básicos, incluidas clases, grupos de campos de esquema, tipos de datos y campos individuales.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
@@ -117,6 +117,12 @@ El lienzo del esquema vuelve a aparecer. El **[!UICONTROL Grupos de campos]** La
 
 ![El editor de esquemas con los grupos de campo Detalles demográficos resaltados.](../images/tutorials/create-schema/demographic-details-structure.png)
 
+>[!NOTE]
+>
+>En el Editor de esquemas, las clases y los grupos de campos estándar (generados por Adobe) se indican con el icono de candado (![Un icono de candado.](../images/ui/explore/padlock-icon.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+>
+>![Editor de esquemas con el icono de candado resaltado](../images/ui/explore/padlock-icon-highlight.png)
+
 Este grupo de campos aporta varios campos bajo el nombre de nivel superior `person` con el tipo de datos &quot;[!UICONTROL Persona]&quot;. Este grupo de campos describe información sobre un individuo, incluido el nombre, la fecha de nacimiento y el sexo.
 
 >[!NOTE]
@@ -158,7 +164,7 @@ Para crear un nuevo grupo de campos, seleccione **[!UICONTROL Añadir]** en el *
 
 &quot;[!DNL Custom Loyalty Details]&quot; debería aparecer ahora en **[!UICONTROL Grupos de campos]** a la izquierda del lienzo, pero aún no hay campos asociados a él y, por lo tanto, no aparecen campos nuevos en **[!UICONTROL Estructura]**.
 
-## Agregue campos al grupo de campos {#field-group-fields}
+## Agregar campos al grupo de campos {#field-group-fields}
 
 Ahora que ha creado el &quot;[!DNL Custom Loyalty Details]&quot; grupo de campos, es hora de definir los campos que el grupo de campos contribuirá al esquema.
 
