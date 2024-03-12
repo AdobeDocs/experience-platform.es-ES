@@ -1,9 +1,10 @@
 ---
 title: contexto
 description: Recopilar automáticamente datos de dispositivos, entornos o ubicaciones.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '900'
 ht-degree: 5%
 
 ---
@@ -59,8 +60,34 @@ El `"placeContext"` keyword recopila información sobre la ubicación del usuari
 | --- | --- | --- | --- |
 | Hora local | Marca de tiempo local para el usuario final en [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) formato. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Desplazamiento de zona horaria local | El número de minutos que el usuario está desfasado de GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| Código de país | El código de país del usuario final. | `xdm.placeContext.geo.countryCode` | `US` |
+| Provincia del estado | El código de provincia de estado del usuario final. | `xdm.placeContext.geo.stateProvince` | `CA` |
+| Latitud | Latitud de la ubicación del usuario final. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| Longitud | Longitud de la ubicación del usuario final. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### Marca de tiempo
+
+El `timestamp` La palabra clave recopila información sobre la marca de tiempo del evento. Esta parte del contexto no se puede eliminar.
+
+| Dimensión | Descripción | Ruta de XDM | Valor de ejemplo |
+| --- | --- | --- | --- |
+| Marca de tiempo del evento | Marca de tiempo UTC para el usuario final en mensajes extendidos simplificados [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) formato. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### Detalles de implementación
+
+El `implementationDetails` recopila información sobre la versión del SDK utilizada para recopilar el evento.
+
+| Dimensión | Descripción | Ruta de XDM | Valor de ejemplo |
+| --- | --- | --- | --- |
+| Nombre | Identificador del kit de desarrollo de software (SDK). Este campo utiliza un URI para mejorar la exclusividad entre los identificadores proporcionados por diferentes bibliotecas de software. | `xdm.implementationDetails.name` | Cuando se utiliza la biblioteca independiente, el valor es `https://ns.adobe.com/experience/alloy`. Cuando la biblioteca se utiliza como parte de la extensión de etiqueta, el valor es `https://ns.adobe.com/experience/alloy+reactor`. |
+| Versión | La versión del kit de desarrollo de software (SDK). | `xdm.implementationDetails.version` | Cuando se utiliza la biblioteca independiente, el valor es la versión de la biblioteca. Cuando la biblioteca se utiliza como parte de la extensión de etiqueta, el valor es la versión de la biblioteca y la versión de la extensión de etiqueta unidas con un `+`. Por ejemplo, si la versión de la biblioteca es `2.1.0` y la versión de la extensión de etiqueta es `2.1.3`, el valor sería `2.1.0+2.1.3`. |
+| Entorno | Entorno donde se recopilaron los datos. Siempre se establece en `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### Sugerencias de cliente de alta entropía
 
