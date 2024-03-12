@@ -4,9 +4,9 @@ description: Aprenda a configurar la detección de bots para flujos de datos a f
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 >[!IMPORTANT]
 >
 >La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento a [servicio datastream](configure.md) que ha configurado.
+>
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics utiliza su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no utiliza la puntuación establecida por la red perimetral. Los dos servicios utilizan el mismo [Lista de bots de IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
 Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por la red de Edge después de crearse.
 
