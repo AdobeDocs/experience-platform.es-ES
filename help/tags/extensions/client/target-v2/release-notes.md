@@ -2,10 +2,10 @@
 title: Notas de la versión de la extensión Adobe Target v2
 description: Notas de la versión de la extensión de etiquetas de Adobe Target v2 en Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 48%
+source-wordcount: '834'
+ht-degree: 42%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 48%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
+
+## v0.20.3 (23 de enero de 2024)
+
+- Actualizado para admitir `at.js` 2.11.4
+- Se ha corregido un error para evitar que se enviaran datos geográficos no válidos a la API de entrega.
 
 ## v0.20.2 (29 de noviembre de 2023)
 
@@ -55,14 +60,14 @@ ht-degree: 48%
 ## v0.18.0 (1 de junio de 2022)
 
 - Actualizado para admitir `at.js` Versión 2.9.0
-- Se ha añadido la compatibilidad con User Agent Client Hints.
+- Se ha agregado compatibilidad con User Agent Client Hints.
 
 ## v0.17.1 (28 de enero de 2022)
 
 - Actualizado para admitir `at.js` Versión 2.8.1
 - Fijo `pageLoad` no asignado a `target-global-mbox` en modo de ejecución híbrida ODD
 - Se ha corregido un problema con los detalles de análisis para `mbox` solicitud
-- Se han actualizado las dependencias de desarrollo para corregir las vulnerabilidades de seguridad
+- Dependencias de desarrollo actualizadas para corregir vulnerabilidades de seguridad
 
 ## v0.17.0 (7 de enero de 2022)
 
@@ -102,7 +107,7 @@ ht-degree: 48%
 
 ## v0.14 (14 de mayo de 2021)
 
-- Se ha añadido una nueva acción Cargar destinatario con [Toma de decisiones en el dispositivo](./overview.md#load-target-with-on-device-decisioning), que carga 2.5 con capacidades de toma de decisiones en el dispositivo`at.js`
+- Se ha añadido una nueva acción Cargar destinatario con [Toma de decisiones en el dispositivo](./overview.md#load-target-with-on-device-decisioning), que carga `at.js` 2.5 con funciones de toma de decisiones en el dispositivo
 - Actualizado `at.js` a 2.5
 
 
