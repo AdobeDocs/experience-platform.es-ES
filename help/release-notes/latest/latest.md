@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -25,10 +25,11 @@ Actualizaciones de funciones existentes en Experience Platform:
 ## Alertas {#alerts}
 
 Experience Platform permite suscribirse a alertas basadas en eventos para diversas actividades de Platform. Puede suscribirse a diferentes reglas de alerta a través de la variable [!UICONTROL Alertas] en la interfaz de usuario de Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o a través de notificaciones por correo electrónico.
+
 **Funciones nuevas o actualizadas**
 
-| Función | Descripción | 
-| --- | --- | 
+| Función | Descripción |
+| --- | --- |
 | Pestaña Historial de alertas | Como Experience Platform, puede utilizar la función Gestionar suscriptores de alertas para asignar una alerta a un ID de usuario de Adobe, a una dirección de correo electrónico externa o a una lista de grupos de correo electrónico. Para obtener más información, consulte la [documentación de IU de alertas](../../observability/alerts/ui.md) para obtener más información sobre la pestaña history. |
 
 {style="table-layout:auto"}
