@@ -2,12 +2,13 @@
 title: ID de dispositivos de origen en el SDK web
 description: Obtenga información sobre cómo configurar los ID de dispositivos de origen (FPID) para el SDK web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # ID de dispositivos de origen en el SDK web
 
@@ -47,6 +48,28 @@ Para enviar un FPID para un visitante de un sitio web a Platform Edge Network, d
 Platform Edge Network solo acepta ID que cumplan con las [Formato UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Los ID de dispositivo que no estén en formato UUIDv4 se rechazarán.
 
 La generación de un UUID casi siempre resultará en un ID único y aleatorio, con una probabilidad insignificante de que se produzca una colisión. UUIDv4 no se puede inicializar mediante direcciones IP u otra información de identificación personal (PII). Los UUID son ubicuos y se pueden encontrar bibliotecas para prácticamente todos los lenguajes de programación para generarlos.
+
+## Configuración de una cookie de ID de origen en la interfaz de usuario de flujos de datos {#setting-cookie-datastreams}
+
+Puede especificar un nombre de cookie en la interfaz de usuario de flujos de datos, donde la variable [!DNL FPID] puede residir, en lugar de tener que leer el valor de la cookie e incluir el FPID en el mapa de identidad.
+
+>[!IMPORTANT]
+>
+>Esta función requiere que tenga lo siguiente [Recopilación de datos de origen](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) activado.
+
+Consulte la [documentación de flujos de datos](../../datastreams/configure.md) para obtener información detallada sobre cómo configurar un conjunto de datos.
+
+Al configurar la secuencia de datos, habilite la opción **[!UICONTROL Cookie de ID de origen]** opción. Esta configuración indica a la red perimetral que haga referencia a una cookie especificada al buscar un ID de dispositivo de origen, en lugar de buscar este valor en la [Mapa de identidad](#identityMap).
+
+Consulte la documentación sobre [cookies de origen](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=es) para obtener más información sobre cómo funcionan con Adobe Experience Cloud.
+
+![Imagen de la IU de Platform que muestra la configuración del flujo de datos resaltando la configuración de la cookie de ID de origen](../assets/first-party-id-datastreams.png)
+
+Al habilitar esta configuración, debe proporcionar el nombre de la cookie en la que se espera almacenar el ID.
+
+Cuando utiliza ID de origen, no puede realizar sincronizaciones de ID de terceros. Las sincronizaciones de ID de terceros se basan en [!DNL Visitor ID] y el `UUID` generado por ese servicio. Al utilizar la funcionalidad de ID de origen, el ECID se genera sin el uso del [!DNL Visitor ID] , que hace que las sincronizaciones de ID de terceros sean imposibles.
+
+Cuando se utilizan ID de origen, no se admiten las funciones de Audience Manager dirigidas a la activación en plataformas de socios, dado que las sincronizaciones de ID de socios de Audience Manager se basan principalmente en `UUIDs` o `DIDs`. El ECID derivado de un ID de origen no está vinculado a un `UUID`, haciéndolo no direccionable.
 
 ## Configuración de una cookie mediante su propio servidor
 
