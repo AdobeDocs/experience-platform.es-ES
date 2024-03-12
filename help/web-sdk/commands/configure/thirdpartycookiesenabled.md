@@ -1,14 +1,23 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Permitir el uso de cookies de terceros para identificar a los visitantes.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [ha anunciado](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) planea interrumpir la compatibilidad de Chrome con cookies de terceros en el segundo semestre de 2024. Por lo tanto, las cookies de terceros ya no serán compatibles con ninguno de los exploradores principales.
+>
+>Cuando se implemente este cambio, el Adobe dejará de admitir el `demdex` que se admite actualmente en el SDK web.
+
 
 El `thirdPartyCookiesEnabled` es un booleano que determina si el SDK web establece cookies en un contexto de terceros. Habilitar esta opción resulta útil si desea identificar visitantes entre subdominios o dominios que pertenecen a su organización. Sin embargo, muchos exploradores modernos limitan la configuración y la caducidad de las cookies de terceros.
 
