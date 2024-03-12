@@ -2,7 +2,7 @@
 title: Configuración de la parte superior e inferior de los eventos de página en el SDK web
 description: Este artículo explica cómo utilizar la parte superior e inferior de los eventos de página en el SDK web.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## Ejemplo de GitHub {#github-sample}
 
-La muestra se encuentra en [esta dirección](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) muestra cómo utilizar el Experience Platform y el SDK web para solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Puede descargar el ejemplo y ejecutarlo localmente para comprender cómo funcionan los eventos superior e inferior de la página.
+La muestra se encuentra en [esta dirección](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) muestra cómo utilizar el Experience Platform y el SDK web para solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Puede descargar el ejemplo y ejecutarlo localmente para comprender cómo funcionan los eventos superior e inferior de la página.
