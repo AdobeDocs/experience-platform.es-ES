@@ -5,10 +5,10 @@ title: Creación de una conexión base de Salesforce mediante la API de Flow Ser
 type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 5%
+source-wordcount: '511'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ Para que [!DNL Flow Service] para conectarse a [!DNL Salesforce], debe proporcio
 | `username` | El nombre de usuario de [!DNL Salesforce] cuenta de usuario. |
 | `password` | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
 | `securityToken` | El token de seguridad para [!DNL Salesforce] cuenta de usuario. |
-| `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0` Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Para obtener más información sobre cómo empezar, visite [este documento de Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -46,7 +46,7 @@ Para obtener más información sobre cómo empezar, visite [este documento de Sa
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Cree una conexión base
+## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
