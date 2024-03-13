@@ -3,7 +3,7 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ A continuación se ofrece una descripción general de alto nivel de los tres eje
 El escenario de exploración de productos abandonados se dirige a la exploración de productos abandonados tanto en el sitio web como en la aplicación móvil. Este escenario se activa cuando se ha visto un producto, pero no se ha comprado ni agregado al carro de compras. En este ejemplo, la participación de la marca se activa después de tres días si no hay adiciones de lista en las últimas 24 horas.<p>![Resumen visual de alto nivel del escenario de exploración de productos abandonados inteligente del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Resumen visual de alto nivel del escenario de exploración de productos abandonados inteligente del cliente."){width="1920" zoomable="yes"}</p>
 
 1. Puede crear esquemas y conjuntos de datos y, a continuación, habilitar para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de origen de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Las audiencias se generan centradas en la lista de perfiles para comprobar si **cliente** ha realizado un compromiso en los últimos tres días.
 5. Puede crear un recorrido de exploración de producto abandonado en [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ El escenario de exploración de productos abandonados se dirige a la exploració
 El escenario de carro de compras abandonado se aplica cuando los productos se han colocado en el carro de compras, pero aún no se han comprado tanto en el sitio web como en la aplicación móvil. Además, las campañas de medios de pago se inician y se detienen mediante este método.<p>![Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Resumen visual de alto nivel del escenario de carro de compras abandonado por el cliente."){width="1920" zoomable="yes"}</p>
 
 1. Puede crear esquemas y conjuntos de datos y, a continuación, habilitar para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de origen de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Las audiencias se generan centradas en la lista de perfiles para comprobar si **cliente** ha colocado un artículo en su carro de compras, pero no ha completado la compra. El **[!UICONTROL Añadir al carro de compras]** Este evento desencadena un temporizador que espera durante 30 minutos y, a continuación, comprueba la compra. Si no se ha realizado ninguna compra, la variable **cliente** se añade a **[!UICONTROL Abandonar carro]** audiencias.
 5. Puede crear un recorrido de carro de compras abandonado en [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ El escenario de carro de compras abandonado se aplica cuando los productos se ha
 El escenario de confirmación de pedido se centra en las compras de productos realizadas a través del sitio web y la aplicación móvil.<p>![Resumen visual de alto nivel del escenario de confirmación de pedido del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Resumen visual de alto nivel del escenario de confirmación de pedido del cliente."){width="1920" zoomable="yes"}</p>
 
 1. Puede crear esquemas y conjuntos de datos y, a continuación, habilitar para [!UICONTROL Perfil].
-2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
+2. Los datos de ingesta en Experience Platform se realizan mediante SDK web, SDK móvil o API. El conector de origen de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
 3. Los datos adicionales habilitados para perfiles se introducen y se pueden vincular al visitante de la aplicación móvil y web autenticado mediante gráficos de identidad.
 4. Puede crear un recorrido de confirmación en [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] envía un mensaje de confirmación de pedido utilizando el canal preferido.
