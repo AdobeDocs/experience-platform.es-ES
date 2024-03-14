@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 29%
    - [Casos de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
 - [Procesamiento de solicitud de privacidad](privacy.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

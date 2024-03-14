@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 34%
+ht-degree: 33%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 34%
 * [Conjuntos de datos del panel de consultas](query.md)
 * [Modelo de datos de Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Ver SQL de perspectiva](view-sql.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

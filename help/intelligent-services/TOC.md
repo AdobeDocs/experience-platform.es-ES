@@ -5,10 +5,10 @@ user-guide-title: Ayuda de Servicios inteligentes
 breadcrumb-title: Guía de servicios inteligentes
 user-guide-description: Utilice los servicios inteligentes de IA para generar puntuaciones, descubrir perspectivas y crear segmentos a partir de los datos de eventos de marketing.
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 32%
       - [Claves gestionadas por el cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gobernanza de datos](customer-ai/cai-data-governance/data-governance.md)
       - [Políticas de gobernanza](customer-ai/cai-data-governance/governance-policies.md)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

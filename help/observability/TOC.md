@@ -4,10 +4,10 @@ user-guide-title: Guía de Observability Insights
 user-guide-description: Descubra cómo puede monitorizar las actividades de la plataforma mediante métricas estadísticas y notificaciones de eventos de Adobe Experience Platform Observability Insights.
 feature: Observability
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 61%
+ht-degree: 60%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 61%
    * [Guía de IU](./alerts/ui.md)
    * [Suscripción a las notificaciones de eventos de I/O](./alerts/subscribe.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

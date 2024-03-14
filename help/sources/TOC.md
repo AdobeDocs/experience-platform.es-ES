@@ -5,7 +5,7 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 10%
@@ -386,4 +386,4 @@ ht-degree: 10%
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -6,7 +6,7 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 45%
@@ -321,5 +321,5 @@ ht-degree: 45%
 * [Preguntas frecuentes](./faq.md)
 * [Actualizaciones terminológicas](./term-updates.md)
 * [Compatibilidad en desuso con Internet Explorer 10 y 11](./ie-deprecation.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

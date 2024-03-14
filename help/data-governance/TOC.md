@@ -5,10 +5,10 @@ breadcrumb-title: Guía de administración de datos
 user-guide-description: Haga cumplir las restricciones del uso de datos mediante el uso de etiquetas, acciones de marketing y políticas de gobernanza.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 42%
    * [Acciones de marketing](api/marketing-actions.md)
    * [Evaluación](api/evaluation.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

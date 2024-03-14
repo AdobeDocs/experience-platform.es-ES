@@ -5,7 +5,7 @@ breadcrumb-title: Guía del modelo de datos (XDM) de Experience
 user-guide-description: Explore una descripción general del sistema Experience Data Model (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 15%
@@ -228,4 +228,4 @@ ht-degree: 15%
    * [Creación de un esquema ad hoc](tutorials/ad-hoc.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

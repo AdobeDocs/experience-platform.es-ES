@@ -5,7 +5,7 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 5%
@@ -296,4 +296,4 @@ ht-degree: 5%
       * [Plantilla de autoservicio de documentación](./destination-sdk/docs-framework/self-service-template.md)
       * [Prácticas recomendadas de creación](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Preguntas frecuentes](./destinations-faq.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

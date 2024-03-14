@@ -6,7 +6,7 @@ user-guide-description: Utilice el aprendizaje automático para desarrollar, pre
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 18%
@@ -65,4 +65,4 @@ ht-degree: 18%
    * [Programar formación y puntuación automatizadas en un servicio (IU)](models-recipes/schedule-models-ui.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=es)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
