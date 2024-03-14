@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
+source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1215'
 ht-degree: 5%
 
 ---
@@ -140,6 +140,8 @@ ht-degree: 5%
    * Destinos de Data Management Platform {#data-management}
       * [Información general sobre los destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extensión de DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
+   * Socio de datos e identidad {#data-partner}
+      * [Supresión de perspectiva de Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
    * Destinos de comercio electrónico {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * Destinos de correo electrónico {#email}
