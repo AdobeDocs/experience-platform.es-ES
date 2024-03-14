@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 10%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 10%
       - [conector del Snowflake](connectors/databases/snowflake.md)
       - [Conector Vantage de teradata](connectors/databases/teradata-vantage.md)
    - Socio de datos e identidad {#data-partner}
+      - [Ingesta de datos de Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolución de identidad empresarial de Mercury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 10%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Socio de datos e identidad {#data-partner}
-         - [Resolución de identidad empresarial de Mercury](tutorials/ui/create/data-partners/merkury.md)
+         - [Ingesta de datos de Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Resolución de identidad empresarial de Mercury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
