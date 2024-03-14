@@ -3,9 +3,9 @@ title: Reparticipación inteligente
 description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3894'
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ Este grupo de campos le permite probar el recorrido antes de publicarlo, mediant
 
 #### Esquema de transacciones digitales del cliente
 
-Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] mediante [SDK web](/help/web-sdk/home.md) y son necesarios para hacer referencia a los distintos eventos de exploración y conversión que se utilizan para activar recorridos, análisis de clientes en línea detallados y funciones de audiencia mejoradas.
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en el sitio web o en las plataformas digitales asociadas. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] mediante [SDK web](/help/web-sdk/home.md) y son necesarios para hacer referencia a los distintos eventos de exploración y conversión que se utilizan para activar recorridos, análisis detallado del cliente en línea, funcionalidades de audiencia mejoradas y mensajería personalizada.
 
 El esquema de transacciones digitales del cliente se representa mediante una [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) clase.
 
@@ -178,6 +178,25 @@ El [Detalles del ID del usuario final](/help/xdm/field-groups/event/enduserids.m
 
 +++
 
++++Detalles de comercio (grupo de campos)
+
+El [Detalles de comercio](/help/xdm/field-groups/event/commerce-details.md) El grupo de campos se utiliza para describir datos de comercio, como información del producto (SKU, nombre y cantidad) y operaciones estándar del carro de compras (pedidos, pagos y abandonos).
+
+| Campos | Descripción |
+| --- | --- |
+| `commerce.cart.cartID` | ID del carro de compras. |
+| `commerce.order.orderType` | Un objeto que describe el tipo de pedido del producto. |
+| `commerce.order.payments.paymentAmount` | Un objeto que describe el importe de pago del pedido del producto. |
+| `commerce.order.payments.paymentType` | Un objeto que describe el tipo de pago de pedido de producto. |
+| `commerce.order.payments.transactionID` | Un ID de transacción de pedido de producto de objeto. |
+| `commerce.order.purchaseID` | ID de compra de pedido de producto de objeto. |
+| `productListItems.name` | Una lista de nombres de artículos que representa los productos seleccionados por un cliente. |
+| `productListItems.priceTotal` | El precio total de la lista de artículos que representan los productos seleccionados por un cliente. |
+| `productListItems.product` | El producto o los productos seleccionados. |
+| `productListItems.quantity` | La cantidad de artículos que representan los productos seleccionados por un cliente. |
+
++++
+
 +++Detalles de auditoría del sistema de origen externo (grupo de campos)
 
 Los atributos de auditoría del sistema de origen externo son un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura detalles de auditoría sobre un sistema de origen externo.
@@ -186,7 +205,7 @@ Los atributos de auditoría del sistema de origen externo son un tipo de datos e
 
 #### Esquema de transacciones sin conexión del cliente
 
-Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en plataformas fuera del sitio web. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] desde un POS (o sistema similar) y, con mayor frecuencia, se transmite a Platform a través de una conexión API. Su propósito es hacer referencia a los distintos eventos de conversión sin conexión que se utilizan para activar recorridos, análisis de clientes en línea y sin conexión profundos y funciones de audiencia mejoradas.
+Este esquema se utiliza para estructurar y hacer referencia a los datos de evento que conforman la actividad de cliente que se produce en plataformas fuera del sitio web. Estos datos se suelen introducir en [!DNL Adobe Experience Platform] desde un POS (o sistema similar) y, con mayor frecuencia, se transmite a Platform a través de una conexión API. Su propósito es hacer referencia a los distintos eventos de conversión sin conexión que se utilizan para activar recorridos, análisis de clientes en línea y sin conexión profundos, funcionalidades de audiencia mejoradas y mensajería personalizada.
 
 El esquema de transacciones sin conexión del cliente se representa mediante una [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) clase.
 
@@ -346,7 +365,7 @@ El siguiente evento se utiliza para el escenario de exploración de productos ab
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
 * `eventType: commerce.productViews`
-* Y `THEN` (evento secuencial) excluir `eventType: commerce.productListAdds` o `application.launch` o `web.webpagedetails.pageViews` o `commerce.purchases` (esto incluye tanto en línea como sin conexión)
+* Y `THEN` (evento secuencial) excluir `eventType: commerce.productListAdds` Y `application.launch` Y `web.webpagedetails.pageViews` Y `commerce.purchases` (esto incluye tanto en línea como sin conexión)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -359,7 +378,7 @@ El siguiente evento se utiliza en el escenario de navegación de productos aband
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
 * `eventType: commerce.productViews`
-* Y `THEN` (evento secuencial) incluir `eventType: commerce.productListAdds` o `application.launch` o `web.webpagedetails.pageViews` o `commerce.purchases` (esto incluye tanto en línea como sin conexión)
+* Y `THEN` (evento secuencial) incluir `eventType: commerce.productListAdds` O `application.launch` O `web.webpagedetails.pageViews` O `commerce.purchases` (esto incluye tanto en línea como sin conexión)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -370,7 +389,7 @@ El siguiente evento se utiliza para el escenario de exploración de productos ab
 
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Transmisión)
 
 +++
@@ -381,7 +400,7 @@ El siguiente evento se utiliza para el escenario de exploración de productos ab
 
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (Lote)
 
 +++
@@ -395,7 +414,7 @@ Los siguientes eventos se utilizan en el escenario de carro de compras abandonad
 Se requieren los campos y las condiciones siguientes al configurar esta audiencia:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
