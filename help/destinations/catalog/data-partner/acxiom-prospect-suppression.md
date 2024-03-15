@@ -3,9 +3,9 @@ title: Acxiom Prospect-Suppression
 description: Exporte sus audiencias de origen al destino de Acxiom para permitir que Acxiom elimine clientes conocidos o convertidos. A continuación, utilice el conector de origen de Acxiom para introducir y activar listas de clientes potenciales de Acxiom, con sus clientes conocidos o convertidos eliminados.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Para definir una nueva ubicación de Acxiom Managed S3:
 
 ### Cuenta existente
 
-Las cuentas ya definidas mediante la tarjeta Acxiom Prospect-Suppression aparecerán en una lista emergente y, cuando se seleccione, proporcionará detalles sobre la cuenta.  Esto se muestra a continuación en el ejemplo de la interfaz de usuario de, cuando navega a **Destinos** > **Cuentas**;
+Cuentas ya definidas con el [!DNL Acxiom Prospect Suppression] Los destinos de aparecerán en una lista emergente. Cuando se selecciona, puede ver los detalles de la cuenta en el carril derecho. Vea el ejemplo desde la interfaz de usuario de, cuando navega a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**:
 
 ![Cuenta existente](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ El procesamiento requiere elementos de nombre y dirección, mientras que no todo
 
 | Campo de destino | Descripción de origen |
 |--------------|-------------------------------------------------------------|
-| name | El valor person.name.fullName en Experience Platform. |
-| firstName | El valor person.name.firstName en Experience Platform. |
-| lastName | El valor person.name.lastName en Experience Platform. |
-| dirección1 | El valor mailaddress.street1 en el Experience Platform. |
-| dirección2 | El valor mailaddress.street2 en el Experience Platform. |
-| city | El valor de mailAddress.city en Experience Platform. |
-| estado | El valor mailaddress.state en el Experience Platform. |
-| zip | El valor de mailAddress.postalCode en Experience Platform. |
+| name | El `person.name.fullName` valor en Experience Platform. |
+| firstName | El `person.name.firstName` valor en Experience Platform. |
+| lastName | El `person.name.lastName` valor en Experience Platform. |
+| dirección1 | El `mailingAddress.street1` valor en Experience Platform. |
+| dirección2 | El `mailingAddress.street2` valor en Experience Platform. |
+| city | El `mailingAddress.city` valor en Experience Platform. |
+| estado | El `mailingAddress.state` valor en Experience Platform. |
+| zip | El `mailingAddress.postalCode` valor en Experience Platform. |
 
 {style="table-layout:auto"}
 

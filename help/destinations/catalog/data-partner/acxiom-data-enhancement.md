@@ -1,12 +1,12 @@
 ---
 title: Mejora de datos de Acxiom
-description: Utilice este conector para activar perfiles de Adobe de origen en Real-Time CDP a Acxiom para su enriquecimiento y uso en todos los canales de marketing.
+description: Utilice este conector para activar perfiles de Adobe de origen en Real-Time CDP a Acxiom para el enriquecimiento de datos y su uso en todos los canales de marketing. A continuación, puede utilizar la fuente Acxiom para importar los perfiles con datos mejorados y trabajar con ellos en Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: 6f272ce0ad619f835920ab9d25d0946d7709d7cb
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 3%
+source-wordcount: '1346'
+ht-degree: 2%
 
 ---
 
@@ -18,30 +18,29 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-Utilice el conector de mejora de datos Acxiom para proporcionar datos descriptivos adicionales a los perfiles de Adobe para su uso en aplicaciones de análisis, segmentación y segmentación. Con cientos de elementos disponibles, esto permite a los usuarios segmentar y modelar mejor los datos, lo que da como resultado una segmentación y un modelado predictivo más precisos.
+Utilice el [!DNL Acxiom Data Enhancement] conector para proporcionar datos descriptivos adicionales a los perfiles de cliente, para su uso en aplicaciones de analytics, segmentación y segmentación. Con cientos de elementos disponibles, esto le permite segmentar y modelar mejor los datos, lo que da como resultado un direccionamiento y un modelado predictivo más precisos.
 
 ![Diagrama de marketing para exportar datos de origen a Acxiom y, a continuación, importar datos enriquecidos de nuevo en Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Este tutorial proporciona los pasos para crear una [!DNL Acxiom Data Enhancement] conexión de destino y flujo de datos mediante la interfaz de usuario de Adobe Experience Platform.  Este conector se utiliza para entregar datos al servicio de mejora Acxiom mediante Amazon S3 como punto de caída.
+Este tutorial proporciona los pasos para crear una [!DNL Acxiom Data Enhancement] conexión de destino y flujo de datos mediante la interfaz de usuario de Adobe Experience Platform. Este conector se utiliza para entregar datos al servicio de mejora Acxiom mediante Amazon S3 como punto de caída.
 
 ![El catálogo de destino con el destino Acxiom seleccionado.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de mejora de datos de Acxiom, aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL Acxiom Data Enhancement] Destino. Estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
 ### Mejore los datos de clientes {#enhance-customer-data}
 
-Este conector deben utilizarlo los profesionales de marketing con el objetivo de mejorar la eficacia de sus estrategias de divulgación añadiendo elementos descriptivos seleccionados a sus perfiles de Adobe y utilizándolos para dirigir mejor las campañas.
+Los profesionales de marketing deben utilizar este conector para mejorar la eficacia de sus estrategias de divulgación añadiendo elementos descriptivos seleccionados a sus perfiles de cliente y utilizándolos para dirigir mejor las campañas.
 
 Por ejemplo, como experto en marketing, es posible que desee profundizar en el conocimiento de las audiencias existentes enriqueciendo sus perfiles con datos adicionales. Al hacerlo, mejorará las estrategias de segmentación y segmentación, lo que dará lugar a un aumento en la personalización y conversión de campañas.
 
 El caso de uso se ejecuta mediante una combinación de conectores de origen y destino.
 
-
 Para empezar, debe exportar los registros de cliente existentes para enriquecerlos con este conector de destino. El servicio de Acxiom buscaría el archivo, lo recuperaría, lo enriquecería con los datos de Acxiom y generaría un archivo.
 
-A continuación, el cliente utilizaría la tarjeta de fuente de ingesta de datos de Acxiom correspondiente para volver a introducir los perfiles de cliente hidratados en Adobe Real-Time CDP.
+A continuación, el cliente utilizaría el correspondiente [Ingesta de datos de Acxiom](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) tarjeta de origen para volver a introducir los perfiles de cliente hidratados en Adobe Real-Time CDP.
 
 ## Requisitos previos {#prerequisites}
 
@@ -79,6 +78,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 >
 >Para conectarse al destino, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar y activar destinos de conjuntos de datos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
+Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+
 ### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
@@ -99,7 +100,7 @@ Para definir una nueva ubicación de Acxiom Managed S3:
 
 ### Cuenta existente
 
-Las cuentas ya definidas con la tarjeta de mejora de datos Acxiom aparecerán en una lista emergente y, cuando se seleccione, proporcionará detalles sobre la cuenta.  Esto se muestra a continuación en el ejemplo de la interfaz de usuario de, cuando navega a **Destinos** > **Cuentas**;
+Cuentas ya definidas con el [!DNL Acxiom Data Enhancement] Los destinos de aparecerán en una lista emergente. Cuando se selecciona, puede ver los detalles de la cuenta en el carril derecho. Vea el ejemplo desde la interfaz de usuario de, cuando navega a **[!UICONTROL Destinos]** > **[!UICONTROL Cuentas]**;
 
 ![Cuenta existente](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -144,14 +145,14 @@ En la tabla siguiente se proporcionan sugerencias de asignación. Se enumeran lo
 
 | Campo de destino | Descripción de origen |
 |--------------|-------------------------------------------------------------|
-| name | El valor person.name.fullName en Experience Platform. |
-| firstName | El valor person.name.firstName en Experience Platform. |
-| lastName | El valor person.name.lastName en Experience Platform. |
-| dirección1 | El valor mailaddress.street1 en el Experience Platform. |
-| dirección2 | El valor mailaddress.street2 en el Experience Platform. |
-| city | El valor de mailAddress.city en Experience Platform. |
-| estado | El valor mailaddress.state en el Experience Platform. |
-| zip | El valor de mailAddress.postalCode en Experience Platform. |
+| name | El `person.name.fullName` valor en Experience Platform. |
+| firstName | El `person.name.firstName` valor en Experience Platform. |
+| lastName | El `person.name.lastName` valor en Experience Platform. |
+| dirección1 | El `mailingAddress.street1` valor en Experience Platform. |
+| dirección2 | El `mailingAddress.street2` valor en Experience Platform. |
+| city | El `mailingAddress.city` valor en Experience Platform. |
+| estado | El `mailingAddress.state` valor en Experience Platform. |
+| zip | El `mailingAddress.postalCode` valor en Experience Platform. |
 
 >[!NOTE]
 >
