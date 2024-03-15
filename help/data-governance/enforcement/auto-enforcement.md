@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar audiencias en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
 # Aplicación automática de políticas
 
+Las etiquetas y políticas de uso de datos están disponibles para todos los usuarios de Adobe Experience Platform. Defina políticas de uso de datos y aplique etiquetas de uso de datos para garantizar que los datos confidenciales, identificables o contractuales se gestionen con precisión. Estas medidas ayudan a aplicar las reglas de control de datos de su organización sobre cómo se pueden acceder, procesar, almacenar y compartir los datos.
+
+Para ayudar a proteger su organización de posibles riesgos y responsabilidades, Platform aplica automáticamente las políticas de uso en caso de que se produzcan violaciones al activar audiencias en los destinos.
+
 >[!IMPORTANT]
 >
->La aplicación automática de directivas solo está disponible para organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
+>Las políticas de consentimiento y la aplicación automática de políticas de consentimiento solo están disponibles para las organizaciones que han adquirido **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**.
 
-Una vez etiquetados los datos y definidas las políticas de uso de datos, puede aplicar el cumplimiento de las políticas. Al activar audiencias en destinos, Adobe Experience Platform aplica automáticamente las políticas de uso en caso de que se produzca alguna infracción.
-
->[!NOTE]
->
->Este documento se centra en la aplicación de la gobernanza de datos y las políticas de consentimiento. Para obtener información sobre las políticas de control de acceso, consulte la documentación sobre [control de acceso basado en atributos](../../access-control/abac/overview.md).
+Este documento se centra en la aplicación de la gobernanza de datos y las políticas de consentimiento. Para obtener información sobre las políticas de control de acceso, consulte la documentación sobre [control de acceso basado en atributos](../../access-control/abac/overview.md).
 
 ## Requisitos previos
 
@@ -70,7 +70,7 @@ Cada etapa de la cronología anterior representa una entidad que puede contribui
 | --- | --- |
 | Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de campo de esquema o en todo el nivel de conjunto de datos) que definen para qué casos de uso se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directivas si se utiliza un conjunto de datos o un campo que contenga determinadas etiquetas para un fin restringido por una directiva.<br><br>Cualquier atributo de consentimiento recopilado de sus clientes también se almacena en conjuntos de datos. Si tiene acceso a las políticas de consentimiento, los perfiles que no cumplan los requisitos de atributo de consentimiento de las políticas se excluirán de las audiencias activadas en un destino. |
 | Política de combinación | Las políticas de combinación son las reglas que utiliza Platform para determinar la prioridad que se dará a los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directivas si las políticas de combinación se configuran de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [resumen de políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
-| Audiencia  | Las reglas de segmentación definen qué atributos se deben incluir desde los perfiles del cliente. Según los campos que incluya una definición de segmento, la audiencia heredará las etiquetas de uso aplicadas a esos campos. Se producirán violaciones de política si activa una audiencia cuyas etiquetas heredadas estén restringidas por las políticas aplicables del destino de destino, según su caso de uso de marketing. |
+| Público | Las reglas de segmentación definen qué atributos se deben incluir desde los perfiles del cliente. Según los campos que incluya una definición de segmento, la audiencia heredará las etiquetas de uso aplicadas a esos campos. Se producirán violaciones de política si activa una audiencia cuyas etiquetas heredadas estén restringidas por las políticas aplicables del destino de destino, según su caso de uso de marketing. |
 | Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Las infracciones de las políticas de uso de datos se producen si activa una audiencia cuyas etiquetas de uso están restringidas para la acción de marketing del destino de destino.<br><br>(Beta) Cuando se activa una audiencia, los perfiles que no contienen los atributos de consentimiento necesarios para la acción de marketing (según se definen en las políticas de consentimiento) se excluyen de la audiencia activada. |
 
 >[!IMPORTANT]
@@ -94,27 +94,31 @@ Si se produce una infracción de directiva al intentar activar una audiencia (o 
 
 Seleccione una infracción de directiva en la columna izquierda de la ventana emergente para mostrar los detalles de dicha infracción.
 
-![](../images/enforcement/violation-policy-select.png)
+![Cuadro de diálogo que indica que se ha producido una infracción de directiva con el nombre de directiva resaltado.](../images/enforcement/violation-policy-select.png)
 
 El mensaje de infracción proporciona un resumen de la directiva que se ha violado, incluidas las condiciones que la directiva está configurada para comprobar, la acción específica que activó la infracción y una lista de posibles soluciones para el problema.
 
-![](../images/enforcement/violation-summary.png)
+![Cuadro de diálogo de infracción de directiva con el resumen de infracción resaltado.](../images/enforcement/violation-summary.png)
 
 Debajo del resumen de la infracción se muestra un gráfico de linaje de datos, que le permite visualizar qué conjuntos de datos, políticas de combinación, audiencias y destinos participaron en la infracción de política. La entidad que está cambiando actualmente aparece resaltada en el gráfico, indicando en qué punto del flujo se produce la infracción. Puede seleccionar un nombre de entidad dentro del gráfico para abrir la página de detalles de la entidad en cuestión.
 
-![](../images/enforcement/data-lineage.png)
+![Cuadro de diálogo de infracción de directiva con el gráfico de linaje de datos resaltado.](../images/enforcement/data-lineage.png)
 
 También puede utilizar la variable **[!UICONTROL Filtrar]** icono (![](../images/enforcement/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
 
-![](../images/enforcement/lineage-filter.png)
+![Cuadro de diálogo de infracción de directiva con el filtro de linaje de datos y el menú desplegable resaltados.](../images/enforcement/lineage-filter.png)
 
 Seleccionar **[!UICONTROL Vista de lista]** para mostrar el linaje de datos como una lista. Para volver al gráfico visual, seleccione **[!UICONTROL Vista de ruta]**.
 
-![](../images/enforcement/list-view.png)
+![Cuadro de diálogo de infracción de directiva con la vista de ruta de linaje de datos resaltada.](../images/enforcement/list-view.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-Si tiene [directivas de consentimiento creadas](../policies/user-guide.md#consent-policy) y están activando una audiencia en un destino, puede ver cómo las políticas de consentimiento afectan al porcentaje de perfiles incluidos en la activación.
+Al activar una audiencia en un destino, puede ver cómo sus [directivas de consentimiento](../policies/user-guide.md#consent-policy) afectan a diferentes porcentajes de perfiles incluidos en la activación.
+
+>[!NOTE]
+>
+>Las políticas de consentimiento solo están disponibles para organizaciones que han adquirido Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
 
 #### Mejora de la política de consentimiento para medios de pago {#consent-policy-enhancement}
 

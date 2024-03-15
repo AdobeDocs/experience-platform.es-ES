@@ -3,7 +3,7 @@ title: Punto final de API de orden de trabajo
 description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 2%
@@ -126,9 +126,9 @@ Una respuesta correcta devuelve los detalles de la eliminación del registro.
 
 {style="table-layout:auto"}
 
-## Recuperar el estado de eliminación de un registro (#lookup)
+## Recuperar el estado de una eliminación de registro {#lookup}
 
-Después [creación de una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
+Después de usted [crear una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
 
 **Formato de API**
 

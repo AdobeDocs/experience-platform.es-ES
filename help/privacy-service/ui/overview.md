@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de IU de Privacy Service
 description: Empiece a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 >title="Solicitudes del sujeto de datos"
 >abstract="Este widget muestra el número de solicitudes de interesados enviadas y completadas procesadas por Privacy Service durante un día determinado. Para obtener más información sobre los procesos de Privacy Service, seleccione **Solicitudes** en el panel de navegación situado a la izquierda."
 
-La IU del Privacy Service [!DNL Privacy Service] permite coordinar las solicitudes de privacidad y conformidad normativa en varias aplicaciones de Adobe Experience Cloud.
+La IU de Privacy Service le permite coordinar las solicitudes de privacidad y conformidad normativa en varias aplicaciones de Adobe Experience Cloud.
 
 >[!NOTE]
 >
