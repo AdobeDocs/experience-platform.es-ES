@@ -1,12 +1,10 @@
 ---
 title: Plantilla de autoservicio de documentación para la interfaz de usuario del SDK de streaming
 description: Aprenda a llevar los datos de flujo continuo de una fuente a Adobe Experience Platform mediante la interfaz de usuario de.
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -83,7 +81,7 @@ Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
 ![Paso de vista previa del flujo de trabajo de orígenes.](../assets/streaming/preview.png)
 
-## Detalles de flujo de datos
+## Detalles del flujo de datos
 
 El **Detalles del flujo de datos** Este paso se muestra y le proporciona opciones para utilizar un conjunto de datos existente o establecer un nuevo conjunto de datos para su flujo de datos, así como la oportunidad de proporcionar un nombre y una descripción para su flujo de datos. Durante este paso, también puede configurar las opciones de Ingesta de perfiles, diagnósticos de error, ingesta parcial y alertas.
 
@@ -101,7 +99,7 @@ Una vez que los datos de origen se hayan asignado correctamente, seleccione **[!
 
 ![Paso de asignación del flujo de trabajo de orígenes.](../assets/streaming/mapping.png)
 
-## Consulte
+## Revisión
 
 El **[!UICONTROL Revisar]** Este paso aparece, lo que le permite revisar el nuevo flujo de datos antes de crearlo. Los detalles se agrupan en las siguientes categorías:
 

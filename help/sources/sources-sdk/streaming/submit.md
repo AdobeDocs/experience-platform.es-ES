@@ -1,12 +1,10 @@
 ---
 title: Prueba Y Envío Del Origen
 description: El siguiente documento proporciona pasos sobre cómo probar y verificar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (SDK de streaming).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -17,7 +15,7 @@ Los pasos finales para integrar su nueva fuente en Adobe Experience Platform med
 
 En el siguiente documento se proporcionan los pasos necesarios para probar y depurar el código fuente utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 * Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
 * Para obtener información sobre cómo generar sus credenciales para las API de Platform, consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md).
@@ -71,7 +69,7 @@ Ahora que la nueva fuente está disponible en la zona protegida, debe seguir el 
 
 ![El catálogo de fuentes que muestra el nuevo origen de flujo continuo.](../assets/testing/catalog-test.png)
 
-El [!UICONTROL Añadir datos] aparece el paso. Para probar que el origen puede transmitir datos, utilice la parte izquierda de la interfaz para cargar [una muestra de datos JSON](../assets/testing/raw.json.zip). Una vez cargados los datos, el lado derecho de la interfaz se actualiza a una vista previa de la jerarquía de archivos de los datos. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+El [!UICONTROL Añadir datos] aparece el paso. Para probar que el origen puede transmitir datos, utilice la parte izquierda de la interfaz para cargar [una muestra de datos JSON](../assets/testing/raw.json.zip). Una vez cargados los datos, el lado derecho de la interfaz se actualiza a una vista previa de la jerarquía de archivos de los datos. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![Paso para añadir datos en el flujo de trabajo de fuentes, donde puede cargar y previsualizar los datos antes de la ingesta.](../assets/testing/add-data-test.png)
 
