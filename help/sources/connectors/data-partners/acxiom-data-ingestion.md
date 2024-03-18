@@ -2,7 +2,7 @@
 title: Ingesta de datos de Acxiom
 description: Aprenda a ingerir [!DNL Acxiom] Acceda a los datos de Real-time Customer Data Platform, enriquezca los perfiles de origen, mejore las audiencias y actívelos en los canales de marketing.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -54,3 +54,4 @@ Las restricciones enumeradas a continuación deben tenerse en cuenta al nombrar 
 ## Pasos siguientes
 
 Al leer este documento, ha completado la configuración de requisitos previos necesaria para obtener datos de su [!DNL Acxiom] cuenta para el Experience Platform. Ahora puede continuar con la guía de [conectador [!DNL Acxiom Data Ingestion] al Experience Platform mediante la interfaz de usuario de](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
