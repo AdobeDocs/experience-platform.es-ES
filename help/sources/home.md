@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1530'
 ht-degree: 2%
 
 ---
@@ -181,6 +181,7 @@ Experience Platform proporciona asistencia para la ingesta de datos desde un sis
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lote]{type=Informative}
 
 ### Transmisión {#streaming}
 

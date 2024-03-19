@@ -1,10 +1,8 @@
 ---
 title: Ingesta de datos de pagos de su cuenta de Stripe a Experience Platform mediante la interfaz de usuario de.
 description: Aprenda a introducir datos de pagos de su cuenta de Stripe a Experience Platform mediante la interfaz de usuario.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 3%

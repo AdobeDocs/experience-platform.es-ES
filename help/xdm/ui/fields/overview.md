@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Definición de campos XDM en la IU
 description: Obtenga información sobre cómo definir campos XDM en la interfaz de usuario del Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
+source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 4%
+source-wordcount: '1734'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Para definir nuevos campos XDM en la interfaz de usuario de, primero debe abrir 
 
 Una vez que tenga el [!DNL Schema Editor] abierto, los controles para agregar campos aparecen en el lienzo. Estos controles aparecen junto al nombre del esquema, así como cualquier campo de tipo de objeto que se haya definido en la clase o grupo de campos seleccionado.
 
-![](../../images/ui/fields/overview/select-resource.png)
+![Editor de esquemas con los iconos de adición resaltados.](../../images/ui/fields/overview/select-resource.png)
 
 >[!WARNING]
 >
@@ -35,7 +35,7 @@ Una vez que tenga el [!DNL Schema Editor] abierto, los controles para agregar ca
 
 Para añadir un nuevo campo al recurso, seleccione la **más (+)** junto al nombre del esquema en el lienzo o junto al campo de tipo de objeto en el que desea definir el campo.
 
-![](../../images/ui/fields/overview/plus-icon.png)
+![Editor de esquemas con un icono de adición resaltado.](../../images/ui/fields/overview/plus-icon.png)
 
 Dependiendo de si agrega un campo directamente a un esquema o a su clase constituyente y a los grupos de campos, los pasos necesarios para agregar el campo variarán. El resto de este documento se centra en cómo configurar las propiedades de un campo independientemente de dónde aparezca en el esquema. Para obtener más información sobre las diferentes formas en que se pueden añadir campos a un esquema, consulte las siguientes secciones en la guía de la IU de esquemas:
 
@@ -46,19 +46,21 @@ Dependiendo de si agrega un campo directamente a un esquema o a su clase constit
 
 Después de seleccionar el **más (+)** icono, un **[!UICONTROL Campo sin título]** el marcador de posición aparece en el lienzo.
 
-![](../../images/ui/fields/overview/new-field.png)
+![Editor de esquemas con un nuevo campo sin título resaltado.](../../images/ui/fields/overview/new-field.png)
 
 En el carril derecho debajo de **[!UICONTROL Propiedades del campo]**, puede configurar los detalles del nuevo campo. Se requiere la siguiente información para cada campo:
 
 | Propiedad de campo | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se utiliza para identificar y hacer referencia al campo en el código y en otras aplicaciones posteriores<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **puede que no** empiece con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
+| [!UICONTROL Nombre de campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se utiliza para identificar y hacer referencia al campo en el código y en otras aplicaciones posteriores<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **puede que no** empiece con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
 | [!UICONTROL Nombre para mostrar] | Un nombre para mostrar para el campo. Este es el nombre que se utilizará para representar el campo en el lienzo del Editor de esquemas. El nombre del campo se puede cambiar por el nombre para mostrar mediante la variable [alternar nombre para mostrar](../resources/schemas.md#display-name-toggle). |
-| [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. En este menú desplegable, puede seleccionar una de las siguientes opciones [tipos escalares estándar](../../schema/field-constraints.md) compatible con XDM o uno de los campos múltiples [tipos de datos](../resources/data-types.md) que se han definido previamente en la [!DNL Schema Registry].<br><br>También puede seleccionar **[!UICONTROL Búsqueda de tipo avanzada]** para buscar y filtrar tipos de datos existentes y localizar el tipo deseado con mayor facilidad. |
+| [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. En este menú desplegable, puede seleccionar una de las siguientes opciones [tipos escalares estándar](../../schema/field-constraints.md) compatible con XDM o uno de los campos múltiples [tipos de datos](../resources/data-types.md) que se han definido previamente en la [!DNL Schema Registry].<br>Nota: Si selecciona el tipo de datos Asignar, [!UICONTROL Asignar tipo de valor] aparece la propiedad.<br><br>También puede seleccionar **[!UICONTROL Búsqueda de tipo avanzada]** para buscar y filtrar tipos de datos existentes y localizar el tipo deseado con mayor facilidad. |
+| [!UICONTROL Asignar tipo de valor] | Este valor es obligatorio si selecciona [!UICONTROL Mapa] como el tipo de datos del campo. Los valores disponibles para el mapa son [!UICONTROL Cadena] y [!UICONTROL Entero]. Seleccione un valor de la lista desplegable de opciones disponibles.<br>Para obtener más información acerca de [propiedades de campo específicas del tipo](#type-specific-properties), consulte la información general sobre la definición de campos. |
 
 {style="table-layout:auto"}
 
-También puede proporcionar un lector en lenguaje natural opcional **[!UICONTROL Descripción]** al campo para proporcionar más contexto en cuanto al caso de uso previsto del campo.
+También puede proporcionar una descripción y notas para cada campo. Utilice el **[!UICONTROL Descripción]** para añadir contexto y describir la funcionalidad del tipo de datos de asignación. Esto contribuye al mantenimiento y a la legibilidad de la implementación. También puede agregar notas para complementar la descripción inicial. Esto debería ofrecer información más granular y específica para ayudar a los desarrolladores a comprender, mantener y utilizar el mapa de forma eficaz en el contexto de la base de código. |
+
 
 >[!NOTE]
 >
@@ -68,11 +70,11 @@ También puede proporcionar un lector en lenguaje natural opcional **[!UICONTROL
 
 Cuando haya terminado de configurar el campo, seleccione **[!UICONTROL Aplicar]**.
 
-![](../../images/ui/fields/overview/field-details.png)
+![El [!UICONTROL Propiedades del campo] del Editor de esquemas aparece resaltada.](../../images/ui/fields/overview/field-details.png)
 
 El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un espacio de nombres con su ID de inquilino único (mostrado como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por el Adobe. El carril derecho ahora enumera la ruta del campo además de sus otras propiedades.
 
-![](../../images/ui/fields/overview/field-added.png)
+![Un nuevo campo en el diagrama de esquema y su ruta correspondiente en la variable [!UICONTROL Propiedades del campo] La sección está resaltada.](../../images/ui/fields/overview/field-added.png)
 
 Puede seguir siguiendo los pasos anteriores para agregar más campos al esquema. Una vez guardado el esquema, su clase base y los grupos de campos también se guardan si se han realizado cambios en ellos.
 
@@ -86,6 +88,7 @@ Al definir un nuevo campo, pueden aparecer opciones de configuración adicionale
 
 | Propiedad de campo | Tipos compatibles | Descripción |
 | --- | --- | --- |
+| [!UICONTROL Asignar tipo de valor] | [!UICONTROL Mapa] | El [!UICONTROL Asignar tipo de valor] La propiedad solo aparece en la interfaz de usuario si selecciona el valor Asignar de la [!UICONTROL Tipo] opciones desplegables. Puede seleccionar entre los tipos de valor Cadena y Entero para el Mapa.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../../images/ui/fields/overview/map-type.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br>Nota: Todos los tipos de datos de asignación creados a través de la API que no sean de tipo cadena ni entero se muestran como &#39;[!UICONTROL Complejo]&#39; tipo de datos. No puede crear &#39;[!UICONTROL Complejo]&#39; a través de la interfaz de usuario. |
 | [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asigna a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo.<br><br>Los valores predeterminados no se guardan en el conjunto de datos en el momento de la ingesta, ya que pueden cambiar con el tiempo. Los servicios y aplicaciones de Platform secundarios infieren los valores predeterminados establecidos en el esquema cuando leen los datos del conjunto de datos. Por ejemplo, al consultar los datos mediante el servicio de consulta, si el atributo tiene un valor NULL, pero el valor predeterminado está establecido en `5` en el nivel de esquema, se espera que el servicio de consultas devuelva lo siguiente `5` en lugar de NULL. Tenga en cuenta que este comportamiento no es uniforme actualmente en todos los servicios de AEP. |
 | [!UICONTROL Patrón] | [!UICONTROL Cadena] | A [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que el valor de este campo debe cumplir para que se acepte durante la ingesta. |
 | [!UICONTROL Formato] | [!UICONTROL Cadena] | Seleccione de una lista de formatos predefinidos para cadenas con los que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL fecha-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
@@ -104,6 +107,7 @@ El carril derecho proporciona varias casillas de verificación para designar fun
 
 Para obtener más información sobre estos tipos especiales, consulte la siguiente documentación:
 
+* [Mapa](./map.md)
 * [[!UICONTROL Requerido]](./required.md)
 * [[!UICONTROL Matriz]](./array.md)
 * [[!UICONTROL Enumeración]](./enum.md)

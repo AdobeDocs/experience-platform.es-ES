@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 4%
+source-wordcount: '2932'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Esta guía del usuario proporciona instrucciones sobre cómo realizar acciones c
 Esta guía del usuario requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [Conjuntos de datos](overview.md): la construcción de almacenamiento y administración para la persistencia de datos en [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
    * [Conceptos básicos de composición de esquemas](../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): Aprenda a crear sus propios esquemas XDM personalizados con el [!DNL Schema Editor] dentro de [!DNL Platform] interfaz de usuario.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
@@ -41,12 +41,36 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 
 En el [!DNL Experience Platform] IU, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir **[!UICONTROL Conjuntos de datos]** panel. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
 
-![Imagen que resalta el elemento Conjuntos de datos en la barra de navegación izquierda.](../images/datasets/user-guide/browse-datasets.png)
+![La interfaz de usuario de Platform con el elemento Conjuntos de datos resaltado en la barra de navegación izquierda.](../images/datasets/user-guide/browse-datasets.png)
 
 Seleccione el nombre de un conjunto de datos en la [!UICONTROL Examinar] para acceder a su **[!UICONTROL Actividad de conjunto de datos]** y ver los detalles del conjunto de datos seleccionado. La pestaña actividad incluye un gráfico que visualiza la tasa de consumo de los mensajes, así como una lista de lotes correctos y fallidos.
 
-![Se resaltan los detalles del conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-1.png)
-![Se resaltan los lotes de muestra que pertenecen al conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-2.png)
+![Se resaltan las métricas y visualizaciones del conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-1.png)
+![Se resaltan los lotes de muestra relacionados con el conjunto de datos seleccionado.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## Más acciones {#more-actions}
+
+Puede [!UICONTROL Eliminar] o [!UICONTROL Habilitar un conjunto de datos para el perfil] desde el [!UICONTROL Conjunto de datos] vista de detalles. Para ver las acciones disponibles, seleccione **[!UICONTROL ... Más]** en la parte superior derecha de la interfaz de usuario. Aparecerá el menú desplegable.
+
+![El espacio de trabajo Conjuntos de datos con [!UICONTROL ... Más] menú desplegable resaltado.](../images/datasets/user-guide/more-actions.png)
+
+Si selecciona **[!UICONTROL Habilitar un conjunto de datos para el perfil]**, aparece un cuadro de diálogo de confirmación. Seleccionar **[!UICONTROL Activar]** para confirmar su elección.
+
+>[!NOTE]
+>
+>Para habilitar un conjunto de datos para el perfil, el esquema al que se adhiere el conjunto de datos debe ser compatible para su uso en el perfil del cliente en tiempo real. Consulte la [Habilitar un conjunto de datos para el perfil](#enable-profile) para obtener más información.
+
+![Cuadro de diálogo de confirmación Habilitar conjunto de datos.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+Si selecciona **[!UICONTROL Eliminar]**, el [!UICONTROL Eliminar conjunto de datos] Aparecerá el cuadro de diálogo de confirmación. Seleccionar **[!UICONTROL Eliminar]** para confirmar su elección.
+
+>[!NOTE]
+>
+>No puede eliminar conjuntos de datos del sistema.
+
+También puede eliminar un conjunto de datos o agregar uno para utilizarlo con el perfil del cliente en tiempo real desde las acciones en línea que se encuentran en [!UICONTROL Examinar] pestaña. Consulte la [sección de acciones en línea](#inline-actions) para obtener más información.
+
+![Cuadro de diálogo de confirmación Eliminar conjunto de datos.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Acciones de conjuntos de datos en línea {#inline-actions}
 
@@ -135,7 +159,7 @@ Para obtener métodos más sólidos para acceder a los datos, [!DNL Experience P
 
 ## Crear un conjunto de datos {#create}
 
-Para crear un nuevo conjunto de datos, empiece seleccionando **[!UICONTROL Crear conjunto de datos]** en el tablero Conjuntos de datos.****
+Para crear un nuevo conjunto de datos, comience seleccionando **[!UICONTROL Crear conjunto de datos]** en el **[!UICONTROL Conjuntos de datos]** panel.
 
 ![El botón Crear conjunto de datos está resaltado.](../images/datasets/user-guide/select-create.png)
 

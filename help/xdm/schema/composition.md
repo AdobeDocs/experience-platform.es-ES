@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Obtenga información acerca de los esquemas XDM (Experience Data Model) y los componentes básicos, los principios y las prácticas recomendadas para componer esquemas en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 6%
 
 ---
@@ -261,7 +261,7 @@ Los intervalos válidos de estos tipos escalares se pueden restringir aún más 
 
 >[!NOTE]
 >
->El tipo de campo &quot;asignación&quot; permite datos de par clave-valor, incluidos varios valores para una sola clave. Las asignaciones se pueden encontrar en clases XDM estándar y grupos de campos, pero también puede definir asignaciones personalizadas mediante la API de Registro de esquemas. Consulte el tutorial sobre [definición de campos personalizados](../tutorials/custom-fields-api.md#custom-maps) para obtener más información.
+>El tipo de campo &quot;asignación&quot; permite datos de par clave-valor, incluidos varios valores para una sola clave. Los mapas se pueden encontrar en clases XDM estándar y grupos de campos, pero también puede definir mapas personalizados. Consulte el tutorial de API sobre [definición de campos de asignación personalizados](../tutorials/custom-fields-api.md#custom-maps) o la guía de [definición de campos de asignación en la IU](../ui/fields/map.md) para obtener más información.
 
 ## Ejemplo de composición {#composition-example}
 

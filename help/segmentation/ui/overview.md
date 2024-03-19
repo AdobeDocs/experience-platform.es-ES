@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4018'
 ht-degree: 3%
 
 ---
@@ -212,6 +212,18 @@ Se muestra la lista de filtros disponibles.
 | [!UICONTROL Fecha de modificación] | Le permite filtrar según la última fecha de modificación de la audiencia. Puede elegir un intervalo de fechas para filtrar cuándo se modificó la audiencia por última vez. |
 
 ![Los filtros disponibles se muestran y resaltan en la página Examinar audiencias.](../images/ui/overview/filter-audiences.png)
+
+**Acciones masivas** {#bulk-actions}
+
+Además, puede seleccionar hasta 25 audiencias diferentes y realizar diversas acciones en estas audiencias. Estas acciones incluyen [mover a una carpeta](#folders), [edición o aplicación de una etiqueta](#tags), [aplicación de etiquetas de acceso](../../access-control/abac/ui/labels.md), y [eliminar](#browse).
+
+![Se resaltan las opciones disponibles para las acciones masivas.](../images/ui/overview/bulk-actions.png)
+
+Cuando se aplican acciones masivas a estas audiencias, se aplican las siguientes condiciones:
+
+- Usted **lata** seleccione audiencias de diferentes páginas.
+- Usted **no puede** elimine una audiencia que se esté usando en una activación de destino.
+- Si selecciona un filtro, las audiencias seleccionadas **testamento** restablecer.
 
 ### Detalles de audiencia {#audience-details}
 
