@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
+description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
+source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 33%
+source-wordcount: '1061'
+ht-degree: 32%
 
 ---
 
@@ -29,6 +29,10 @@ Actualizaciones de funciones existentes en Experience Platform:
 ## Servicio de catálogo {#catalog-service}
 
 El servicio de catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Adobe Experience Platform. Mientras que todos los datos que se incorporan al Experience Platform se almacenan en el lago de datos como archivos y directorios, el catálogo contiene los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y monitorización.
+
+>[!NOTE]
+>
+>Somos conscientes de que se trata de un problema de visualización en el que se procesa una sintaxis innecesaria junto a las imágenes de las tablas, y estamos trabajando para solucionarlo.
 
 | Función | Descripción |
 | --- | --- |
