@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2024'
 description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 34%
+source-wordcount: '1211'
+ht-degree: 33%
 
 ---
 
@@ -81,6 +81,7 @@ Para obtener más información sobre la preparación de datos, lea la [Resumen d
 | [(Beta) Conexión de mejora de datos de Acxiom](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nuevo | Utilice este conector para activar perfiles de origen de Real-Time CDP a Acxiom para el enriquecimiento de datos y su uso en todos los canales de marketing. A continuación, puede utilizar la fuente Acxiom para importar los perfiles con datos mejorados y trabajar con ellos en Real-Time CDP. |
 | [(Beta) Conexión de Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nuevo | Exporte sus audiencias de origen al destino de Acxiom para permitir que Acxiom elimine clientes conocidos o convertidos. A continuación, utilice el [Importación de datos de prospección Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) conector de origen para introducir y activar listas de clientes potenciales de Acxiom, con sus clientes conocidos o convertidos eliminados. |
 | [Conexión de Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Actualización | Al exportar datos al destino de Amazon Ads, ahora puede enrutar los datos al destino de Amazon o al Marketing Cloud de DSP Amazon (nuevo). |
+| [Conexión de incorporación de LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Actualización | El destino de incorporación de LiveRamp ahora es compatible con las entregas a Europa y Australia [!DNL LiveRamp] [!DNL SFTP] instancias. El tamaño máximo de archivo exportado también se aumentó a 10 millones de filas (de 5 millones, anteriormente). |
 
 {style="table-layout:auto"}
 
