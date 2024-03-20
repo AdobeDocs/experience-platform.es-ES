@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2024'
 description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 33%
+source-wordcount: '1177'
+ht-degree: 34%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 33%
 Actualizaciones de funciones existentes en Experience Platform:
 
 - [Servicio de catálogo](#catalog-service)
+- [Recopilación de datos](#data-collection)
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
@@ -40,6 +41,20 @@ El servicio de catálogo es el sistema de registro para la ubicación y el linaj
 {style="table-layout:auto"}
 
 Para obtener más información sobre el servicio de consultas, consulte la [información general del servicio de catálogo](../../catalog/home.md).
+
+## Recopilación de datos {#data-collection}
+
+Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+
+**Nuevas funciones**
+
+| Tipo | Función | Descripción |
+| --- | --- | --- |
+| Extensiones | [!DNL Merkury] Extensión de etiqueta | El [[!DNL Merkury] extensión de etiqueta](https://exchange.adobe.com/apps/ec/600027/merkury-tag) proporciona tasas de coincidencia líderes en el sector para visitantes anónimos de sitios web a [!DNL Merkury] ID. Las marcas pueden aprovechar el poder del [!DNL Merkury] y Adobe para ofrecer experiencias de sitio web personalizadas en tiempo real. Además, la variable [!DNL Merkury] permite el crecimiento de datos digitales de origen junto con perfiles de clientes conectados en línea y sin conexión. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre la recopilación de datos, lea la [resumen de recopilación de datos](../../tags/home.md).
 
 ## Preparación de los datos {#data-prep}
 
