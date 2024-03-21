@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Esta guía de la interfaz de usuario requiere una comprensión de las distintas 
 
 * [[!DNL Real-Time Customer Profile] descripción general](../home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] uniendo identidades de fuentes de datos dispares a medida que se incorporan en [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
 ## Información general de 
 
@@ -144,6 +144,12 @@ Estos atributos también se pueden ver como un objeto JSON seleccionando **[!UIC
 
 ![La pestaña Atributos está resaltada. Se muestran los atributos del perfil.](../images/user-guide/attributes.png)
 
+Para ver los atributos disponibles en Edge, seleccione **[!UICONTROL Edge]** en el selector de ubicación de datos.
+
+![El selector de ubicación de datos dentro de la pestaña atributos aparece resaltado.](../images/user-guide/attributes-select.png)
+
+Para obtener más información sobre los perfiles de Edge, lea la [documentación de perfiles de Edge](../edge-profiles.md).
+
 ### Pestaña Eventos
 
 El **[!UICONTROL Eventos]** Esta pestaña contiene datos de los 100 ExperienceEvents más recientes asociados al cliente. Estos datos pueden incluir aperturas de correo electrónico, actividades del carro de compras y vistas de páginas. Seleccionar **[!UICONTROL Ver todo]** para cualquier evento individual proporciona campos y valores adicionales para las capturas como parte del evento.
@@ -158,7 +164,11 @@ El **[!UICONTROL Abono a audiencia]** Esta pestaña muestra una lista con el nom
 
 Para obtener más información sobre la segmentación en Experience Platform, consulte la [Documentación del servicio de segmentación del Experience Platform Adobe](../../segmentation/home.md).
 
-![La pestaña Pertenencia a audiencia aparece resaltada. Se muestran los detalles de pertenencia a audiencias del perfil.](../images/user-guide/segment-membership.png)
+![La pestaña Pertenencia a audiencia aparece resaltada. Se muestran los detalles de pertenencia a audiencias del perfil.](../images/user-guide/audience-membership.png)
+
+Para ver la pertenencia de los perfiles a la audiencia disponibles en Edge, seleccione **[!UICONTROL Edge]** en el selector de ubicación de datos. Puede encontrar más información acerca de la segmentación de Edge en la [guía de segmentación de edge](../../segmentation/ui/edge-segmentation.md).
+
+![El selector de ubicación de datos dentro de la pestaña pertenencia a audiencia aparece resaltado.](../images/user-guide/audience-membership-select.png)
 
 ## Políticas de combinación
 
