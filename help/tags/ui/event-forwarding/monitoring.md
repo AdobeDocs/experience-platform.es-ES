@@ -3,10 +3,10 @@ title: Supervisar actividades en el reenvío de eventos
 description: Obtenga información sobre cómo monitorizar el uso, los errores y calcular la hora en las propiedades de reenvío de eventos.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 1%
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
@@ -39,6 +39,10 @@ Para mostrar las métricas de una sola propiedad, seleccione el menú desplegabl
 ![Imagen que muestra los menús desplegables del entorno de propiedades en la interfaz de usuario](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Uso]
+
+>[!NOTE]
+>
+>Los datos de uso se actualizan cada mes después de que finalice el mes anterior.
 
 El **[!UICONTROL Uso]** Este informe muestra las llamadas entrantes y salientes durante un periodo determinado. Las llamadas entrantes representan datos enviados al reenvío de eventos. Las llamadas salientes representan datos enviados desde el reenvío de eventos. El **[!UICONTROL Eventos totales]** El número del panel izquierdo es la suma de las llamadas entrantes y salientes durante el periodo determinado.
 
