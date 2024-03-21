@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Amazon Ads] ofrece una amplia gama de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias.
 
-El [!DNL Amazon Ads] La integración de con Adobe Experience Platform proporciona una integración llave en mano de [!DNL Amazon Ads] productos de, incluidos Amazon DSP (ADSP) y Amazon Marketing Cloud (AMC).
+El [!DNL Amazon Ads] La integración de con Adobe Experience Platform proporciona una integración llave en mano de [!DNL Amazon Ads] productos de, incluidos el Amazon DSP (ADSP) y el Amazon Marketing Cloud (AMC).
 
 Uso del [!DNL Amazon Ads] destino en Adobe Experience Platform, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de AmazonDSP  Además, los usuarios pueden cargar sus datos en [!DNL Amazon Marketing Cloud] para comprender el rendimiento por audiencia, las dimensiones proporcionadas por el anunciante, la pertenencia a segmentos de Amazon u otras señales disponibles en AMC. Después de cargar las audiencias del anunciante en AMC, los usuarios pueden utilizar [!DNL Amazon Marketing Cloud] para modificar, mejorar o anexar a miembros de la audiencia utilizando señales de Amazon desde [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Febrero de 2024 | Actualización de funcionalidad y documentación | Se ha añadido la opción de exportar audiencias para usarlas en [!DNL Amazon Marketing Cloud] (AMC). |
+| Marzo de 2024 | Actualización de funcionalidad y documentación | Se ha añadido la opción de exportar audiencias para usarlas en [!DNL Amazon Marketing Cloud] (AMC). |
 | Mayo de 2023 | Actualización de funcionalidad y documentación | <ul><li>Se ha agregado compatibilidad para la selección de Región del anunciante en [flujo de trabajo de conexión de destino](#destination-details).</li><li>Se ha actualizado la documentación para reflejar la adición de la selección Región del anunciante. Para obtener más información sobre la selección de la región del anunciante correcta, consulte la [Documentación de Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Marzo de 2023 | Versión inicial | Versión de destino inicial y documentación publicada. |
 
