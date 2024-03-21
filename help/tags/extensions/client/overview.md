@@ -2,9 +2,9 @@
 title: Referencia de extensiones de etiquetas
 description: Busque documentación sobre las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '472'
 ht-degree: 9%
 
 ---
@@ -27,7 +27,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Seguimiento de sitios web de Adform](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [ADOBE ANALYTICS y ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [ADOBE ANALYTICS y ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics y Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics y Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Cadena de producto de Adobe Analytics](./product-string/overview.md)
@@ -68,7 +68,7 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Complementos comunes del SDK web](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [Núcleo](./core/overview.md)
 * [Registrador de depuración personalizado](https://exchange.adobe.com/apps/ec/104698)*
 * [Reconocimiento del cliente](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ A continuación se muestra una lista de la documentación de las extensiones de 
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Compromiso predictivo de Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Capa de datos de Google](./google-data-layer/overview.md)
-* [Etiqueta de sitio global de Google (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Etiqueta de sitio global de Google (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [Asistente de JSON](https://exchange.adobe.com/apps/ec/106449)*
-* [Análisis del reproductor JW](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [Análisis del reproductor JW](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Tabla de asignación](https://exchange.adobe.com/apps/ec/103136)*
+* [Etiqueta de mercurio](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Administrador de propiedades maestras](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*

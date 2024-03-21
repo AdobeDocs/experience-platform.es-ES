@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: ddf7eb620f36b6e18d7e3949e5339062edf9f9a6
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 45%
 
 ---
@@ -180,7 +180,7 @@ ht-degree: 45%
          * [Información general](./extensions/client/marketo/overview.md)
          * [Notas de la versión](./extensions/client/marketo/release-notes.md)
       * [Administrador de propiedades maestras](https://exchange.adobe.com/apps/ec/102992)
-      * [Extensiones de etiquetas de mercurio](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Etiqueta de mercurio](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [Información general](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
