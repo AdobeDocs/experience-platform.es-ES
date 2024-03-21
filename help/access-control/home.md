@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre el control de acceso
 description: El control de acceso para Adobe Experience Platform se proporciona a través de Adobe Admin Console. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Un flujo de trabajo superior para obtener y asignar permisos de acceso se puede 
 
 - Tras obtener la licencia de Adobe Experience Platform, o de una aplicación o servicio de aplicación que utilice Experience Platform, se enviará un correo electrónico al administrador especificado durante la licencia.
 - El administrador de inicia sesión en [Adobe Admin Console](#adobe-admin-console) y selecciona **Adobe Experience Platform** en la lista de productos de la página información general.
-- Para conceder acceso al Experience Platform, este deberá añadir usuarios al perfil de producto predeterminado: `AEP-Default-All-Users`.
+- Para conceder acceso al Experience Platform, se recomienda que este añada usuarios al perfil de producto predeterminado: `AEP-Default-All-Users`.
 - En Permisos de Experience Platform, el administrador puede crear nuevas funciones o editar los permisos y usuarios para cualquier función existente.
 - Al crear o editar una función, el administrador añade usuarios a la función con el **[!UICONTROL usuarios]** y concede permisos a estos usuarios (como &quot;[!UICONTROL Leer conjuntos de datos]&quot; o &quot;[!UICONTROL Administrar esquemas]&quot;) al editar los permisos de la función. Del mismo modo, el administrador puede asignar acceso a los entornos limitados utilizando la misma opción de edición.
 - Cuando los usuarios inician sesión en la interfaz de usuario de Experience Platform, su acceso a las funciones de Experience Platform depende de los permisos que se les han concedido desde el paso anterior. Por ejemplo, si un usuario no tiene la variable [!UICONTROL Ver conjuntos de datos] permiso, el **[!UICONTROL Conjuntos de datos]** pestaña en el menú lateral no será visible para ese usuario.
