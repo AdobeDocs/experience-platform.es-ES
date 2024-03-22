@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre zonas protegidas
 description: Los entornos limitados son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Por último, la zona protegida de producción predeterminada es la primera que s
 En resumen, los entornos limitados ofrecen las siguientes ventajas:
 
 * **Administración del ciclo vital de aplicación**: Cree entornos virtuales independientes para desarrollar y desarrollar aplicaciones de experiencia digital.
-* **Gestión de proyectos y marcas**: permite que varios proyectos se ejecuten en paralelo dentro de la misma organización, a la vez que proporciona aislamiento y control de acceso. Las futuras versiones serán compatibles con la implementación en varias regiones.
+* **Gestión de proyectos y marcas**: permite que varios proyectos se ejecuten en paralelo dentro de la misma organización, a la vez que proporciona aislamiento y control de acceso.
 * **Ecosistema de desarrollo flexible**: proporcione entornos limitados de una manera sencilla, escalable y rentable para fines de exploración, habilitación y demostración.
 
 ## Control de acceso para zonas protegidas
