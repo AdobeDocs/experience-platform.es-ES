@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido el Amazon DSP (ADSP). Con el destino de Amazon Ads en Adobe Experience Platform Amazon DSP, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en la interfaz de usuario de.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Esta integración con Amazon DSP permite lo siguiente [!DNL Amazon Ads] que pase
 
 Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite [!DNL Amazon Ads] que pasen segmentos CDP del formulario de Adobe Experience Platform a AMC. Los anunciantes pueden unirse a las entradas de CDP con [!DNL Amazon Ads] envía señales y realiza análisis personalizados sobre temas como el impacto de los medios, los segmentos de audiencia y los recorridos del cliente en un formato compatible con la privacidad. Por ejemplo: un anunciante puede cargar una lista de sus clientes existentes para comprender el rendimiento agregado de la campaña de publicidad, o estadísticas agregadas de eventos de conversión sin conexión a Amazon, como ver una página de detalles del producto, agregar un producto a un carro de compras o comprar un producto.
 
-### Optimización de publicidad:
+### Optimización de publicidad
 
 Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite a los anunciantes cargar sus propias listas de clientes y utilizar [!DNL Amazon Marketing Cloud] Ejecute SQL, realice análisis de superposición, supresiones, adiciones u optimizaciones a las audiencias de forma recurrente antes de crear una audiencia lista para la activación en Amazon DSP para la segmentación de audiencias
 
