@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 19%
+source-wordcount: '1538'
+ht-degree: 17%
 
 ---
 
@@ -29,6 +29,14 @@ Consulte la guía sobre cómo [configuración de permisos](https://experiencelea
 ## Administrar etiquetas en el nivel de esquema
 
 Puede agregar etiquetas directamente a un esquema o campos dentro de ese esquema. Cualquier campo aplicado en el nivel de esquema se propagará a todos los conjuntos de datos basados en ese esquema.
+
+>[!NOTE]
+>
+>Si las políticas de uso de datos se crearon antes de etiquetar el campo, puede encontrar un cuadro de diálogo de infracción de política de gobernanza al aplicar etiquetas al nuevo esquema. Este cuadro de diálogo indica que la aplicación de esta etiqueta infringirá una política de uso existente. Utilice el diagrama de linaje de datos para comprender qué otros cambios de configuración se deben realizar antes de agregar la etiqueta al campo de esquema.
+>
+>![La infracción de directiva de gobernanza de datos detectada abre un cuadro de diálogo con el resumen de la infracción y el diagrama de linaje de datos resaltados.](../images/labels/policy-violation-dialog.png)
+>
+>Consulte la [documentación de infracción de directiva de uso de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) para obtener más información sobre infracciones de directivas parciales.
 
 Para administrar etiquetas de uso de datos en el nivel de esquema, debe seleccionar un esquema existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir **[!UICONTROL Esquemas]** workspace. Esta página lista todos los esquemas creados que pertenecen a su organización, junto con detalles útiles relacionados con cada esquema.
 

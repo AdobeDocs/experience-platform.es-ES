@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar audiencias en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Las secciones siguientes describen los diferentes mensajes de aplicación de pol
 
 Si se produce una infracción de directiva al intentar activar una audiencia (o [realizar ediciones en una audiencia ya activada](#policy-enforcement-for-activated-audiences)) la acción se impide y aparece una ventana emergente que indica que se han violado una o más políticas. Una vez activada una infracción, la variable **[!UICONTROL Guardar]** El botón está desactivado para la entidad que está modificando hasta que se actualicen los componentes adecuados para cumplir con las políticas de uso de datos.
 
-Seleccione una infracción de directiva en la columna izquierda de la ventana emergente para mostrar los detalles de dicha infracción.
+Seleccione un nombre de directiva para mostrar los detalles de esa infracción.
 
 ![Cuadro de diálogo que indica que se ha producido una infracción de directiva con el nombre de directiva resaltado.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Debajo del resumen de la infracción se muestra un gráfico de linaje de datos, 
 
 ![Cuadro de diálogo de infracción de directiva con el gráfico de linaje de datos resaltado.](../images/enforcement/data-lineage.png)
 
-También puede utilizar la variable **[!UICONTROL Filtrar]** icono (![](../images/enforcement/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
+También puede utilizar la variable **[!UICONTROL Filtrar]** icono (![Un icono de filtro.](../images/enforcement/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
 
 ![Cuadro de diálogo de infracción de directiva con el filtro de linaje de datos y el menú desplegable resaltados.](../images/enforcement/lineage-filter.png)
 
 Seleccionar **[!UICONTROL Vista de lista]** para mostrar el linaje de datos como una lista. Para volver al gráfico visual, seleccione **[!UICONTROL Vista de ruta]**.
 
 ![Cuadro de diálogo de infracción de directiva con la vista de ruta de linaje de datos resaltada.](../images/enforcement/list-view.png)
+
+#### Etiquetas aplicadas correctamente {#labels-successfully-applied}
+
+Si crea políticas de uso de datos antes de etiquetar los campos de esquema, puede encontrar un cuadro de diálogo de infracción de política de gobernanza en cuanto aplique las etiquetas al esquema. En este caso, puede etiquetar correctamente parte del esquema. El [!UICONTROL Etiquetas aplicadas correctamente] indica qué etiquetas se aplicaron correctamente, ya que no hay restricciones de política en ese campo.
+
+Utilice el diagrama de linaje de datos para comprender qué otros cambios de configuración se deben realizar antes de agregar la etiqueta al campo de esquema.
+
+![Cuadro de diálogo de infracción de directiva con [!UICONTROL Etiquetas aplicadas correctamente] pestaña resaltada.](../images/enforcement/labels-successfully-applied.png)
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
