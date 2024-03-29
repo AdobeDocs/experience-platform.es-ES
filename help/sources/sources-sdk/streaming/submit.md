@@ -2,14 +2,19 @@
 title: Prueba Y Envío Del Origen
 description: El siguiente documento proporciona pasos sobre cómo probar y verificar una nueva fuente mediante la API de Flow Service e integrar una nueva fuente mediante fuentes de autoservicio (SDK de streaming).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
 
 # Probar y enviar el origen
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Los pasos finales para integrar su nueva fuente en Adobe Experience Platform mediante fuentes de autoservicio (SDK de streaming) son probar y enviar la nueva fuente. Una vez que haya completado la especificación de conexión y haya actualizado la especificación de flujo de flujo de flujo, puede comenzar a probar la funcionalidad del origen a través de la API o la IU. Si lo consigue, puede enviar la nueva fuente poniéndose en contacto con el representante de Adobe.
 

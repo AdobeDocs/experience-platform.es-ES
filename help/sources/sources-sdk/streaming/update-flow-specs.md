@@ -2,14 +2,19 @@
 title: Actualización de las especificaciones de flujo para el SDK de streaming mediante la API de Flow Service
 description: El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API de Flow Service para fuentes de autoservicio (SDK de streaming).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 2%
+source-wordcount: '423'
+ht-degree: 3%
 
 ---
 
 # Actualice las especificaciones de flujo utilizando [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Una vez que haya generado un nuevo ID de especificación de conexión, debe agregar este ID a una especificación de flujo para crear un flujo de datos.
 

@@ -2,14 +2,19 @@
 title: Introducción a las fuentes de autoservicio (Streaming SDK)
 description: Este documento proporciona una introducción a la información sobre los requisitos previos que debe conocer antes de intentar crear una nueva fuente mediante fuentes de autoservicio (SDK de streaming).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
 # Introducción a las fuentes de autoservicio (Streaming SDK)
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Las fuentes de autoservicio (SDK de streaming) le permiten integrar su propia fuente para llevar los datos de streaming a Adobe Experience Platform. Este documento proporciona una introducción a los conceptos principales que necesita conocer antes de intentar realizar llamadas a [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

@@ -2,14 +2,19 @@
 title: Cree una nueva especificación de conexión para el SDK de streaming mediante la API de Flow Service
 description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service e integrar una nueva fuente a través de fuentes de autoservicio.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
 
 # Cree una nueva especificación de conexión utilizando [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Una especificación de conexión representa la estructura de un origen. Contiene información sobre los requisitos de autenticación de una fuente, define cómo se pueden explorar e inspeccionar los datos de la fuente y proporciona información sobre los atributos de una fuente determinada. El `/connectionSpecs` punto final en la [!DNL Flow Service] La API de le permite administrar mediante programación las especificaciones de conexión de su organización.
 

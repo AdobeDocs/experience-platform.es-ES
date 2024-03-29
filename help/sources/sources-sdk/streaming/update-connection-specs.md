@@ -2,14 +2,19 @@
 title: Actualización de una especificación de conexión para el SDK de streaming mediante la API de Flow Service
 description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service para fuentes de autoservicio (SDK de streaming).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 4%
 
 ---
 
 # Actualización de una especificación de conexión mediante la API de Flow Service
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva especificación de conexión en una solicitud de POST.
 

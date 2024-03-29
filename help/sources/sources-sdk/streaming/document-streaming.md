@@ -2,14 +2,19 @@
 title: Documente su origen (Streaming SDK)
 description: El paso final antes de que la nueva fuente se pueda activar en Adobe Experience Platform es documentar la nueva fuente.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # Documente su origen (Streaming SDK)
+
+>[!NOTE]
+>
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
 
 El paso final antes de que el nuevo origen se pueda establecer en Adobe Experience Platform es documentar el nuevo origen.
 
