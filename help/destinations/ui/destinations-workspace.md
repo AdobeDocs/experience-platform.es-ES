@@ -3,10 +3,10 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1231'
+ht-degree: 1%
 
 ---
 
@@ -81,7 +81,7 @@ El **[!UICONTROL Cuentas]** La pestaña muestra detalles acerca de las conexione
 | [!UICONTROL Tipo de conexión] | Representa el tipo de conexión de cuenta al espacio de almacenamiento o destino. Según el destino, las opciones de autenticación son: <ul><li>Para destinos de marketing por correo electrónico: puede ser S3, FTP o Azure Blob.</li><li>Para destinos de publicidad en tiempo real: de servidor a servidor</li><li>Para destinos de almacenamiento en la nube de Amazon S3: clave de acceso </li><li>Para destinos de almacenamiento en la nube SFTP: autenticación básica para SFTP.</li><li>Autenticación OAuth 1 u OAuth 2</li><li>Autenticación de token de portador</li></ul> |
 | [!UICONTROL Nombre de usuario] | El nombre de usuario seleccionado en la [conectar asistente de destino](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinos] | Representa el número de flujos de datos de destino únicos correctos conectados con información básica creada para un destino. |
-| [!UICONTROL Con autorización] | La fecha en la que se autorizó la conexión con este destino. |
+| [!UICONTROL Autorizado] | La fecha en la que se autorizó la conexión con este destino. |
 
 {style="table-layout:auto"}
 
@@ -110,7 +110,7 @@ El **[!UICONTROL Examinar]** La pestaña muestra los destinos con los que se ha 
 | [!UICONTROL Creado] | La fecha y la hora en formato UTC en que se creó el flujo de activación al destino. Seleccione el símbolo de flecha arriba/abajo para ordenar los flujos de activación por el más reciente primero o el más antiguo primero. |
 | [!UICONTROL Estado] | `Enabled` o `Disabled`. Indica si los datos se están activando en este destino. |
 
-Haga clic en una fila de destino para que aparezca más información sobre el destino en el carril derecho.
+Haga clic en una fila de destino para que aparezca más información sobre el destino en el carril derecho, como el ID de destino, la descripción, el número de audiencias activadas, etc.
 
 ![Haga clic en fila de destino](../assets/ui/workspace/click-destination-row.png)
 
@@ -120,8 +120,8 @@ Seleccione el nombre del destino para ver información sobre las audiencias acti
 
 El **[!UICONTROL Vista del sistema]** La pestaña muestra una representación gráfica de los flujos de activación que ha configurado en Adobe Experience Platform.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![Flujos de datos1](../assets/ui/workspace/data-flows1.png)
 
 Seleccione cualquier destino mostrado en la página y haga clic en **[!UICONTROL Ver flujos de datos]** para ver información sobre todas las conexiones configuradas para cada destino.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![Flujos de datos2](../assets/ui/workspace/data-flows2.png)
