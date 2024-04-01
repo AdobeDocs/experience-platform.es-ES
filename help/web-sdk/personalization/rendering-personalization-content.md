@@ -3,9 +3,9 @@ title: Representar contenido personalizado mediante el SDK web de Adobe Experien
 description: Obtenga información sobre cómo procesar contenido personalizado con el SDK web de Adobe Experience Platform.
 keywords: personalización;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 6841a6f777d18845ce36e3503fbdb9698ece84bb
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ El SDK web de Adobe Experience Platform admite la recuperación de contenido per
 
 Además, el SDK web potencia las funcionalidades de personalización de la misma página y de la página siguiente a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y el [conexión de personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Contenido creado en el de Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y de Adobe Journey Optimizer [IU de Campaña web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) El SDK puede recuperarlo y procesarlo automáticamente. Contenido creado en el de Adobe Target [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) El SDK no puede procesar automáticamente el Offer decisioning o. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, procesar manualmente el contenido.
+Contenido creado en el de Adobe Target [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y de Adobe Journey Optimizer [IU de Campaña web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) El SDK puede recuperarlo y procesarlo automáticamente. Contenido creado en el de Adobe Target [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), de Adobe Journey Optimizer [Canal de experiencia basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) El SDK no puede procesar automáticamente el Offer decisioning o. En su lugar, debe solicitar este contenido mediante el SDK y, a continuación, procesar manualmente el contenido.
 
 ## Representación automática del contenido {#automatic}
 
@@ -299,7 +299,7 @@ El SDK proporciona funciones para lo siguiente [gestionar parpadeo](../personali
 
 ## Procesar propuestas en aplicaciones de una sola página sin incrementar las métricas {#applypropositions}
 
-El `applyPropositions` permite procesar o ejecutar una matriz de propuestas desde [!DNL Target] en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes.
+El `applyPropositions` permite procesar o ejecutar una matriz de propuestas desde [!DNL Target] o Adobe Journey Optimizer en aplicaciones de una sola página, sin incrementar el [!DNL Analytics] y [!DNL Target] métricas. Esto aumenta la precisión de los informes.
 
 >[!IMPORTANT]
 >
@@ -338,7 +338,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: Procesar propuestas que no tienen selector
 
-Este caso de uso se aplica a las ofertas de actividad creadas con [!DNL Target Form-based Experience Composer].
+Este caso de uso se aplica a las experiencias creadas con [!DNL Target Form-based Experience Composer] o de Adobe Journey Optimizer [Canal de experiencia basado en código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 Debe proporcionar el selector, la acción y el ámbito en la variable `applyPropositions` llamada.
 
@@ -372,16 +372,31 @@ alloy("sendEvent", {
         var renderedPropositions = applyPropositionsResult.propositions;
 
         // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-            "xdm": {
-                "eventType": "decisioning.propositionDisplay",
-                "_experience": {
-                    "decisioning": {
-                        "propositions": renderedPropositions
-                    }
-                }
-            }
-        });
+        function sendDisplayEvent(proposition) {
+            const {
+                id,
+                scope,
+                scopeDetails = {}
+            } = proposition;
+
+            alloy("sendEvent", {
+                xdm: {
+                    eventType: "decisioning.propositionDisplay",
+                    _experience: {
+                        decisioning: {
+                            propositions: [{
+                                id: id,
+                                scope: scope,
+                                scopeDetails: scopeDetails,
+                            }, ],
+                            propositionEventType: {
+                                display: 1
+                            },
+                        },
+                    },
+                },
+            });
+        }
     });
 });
 ```

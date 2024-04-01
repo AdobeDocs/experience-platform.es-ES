@@ -3,9 +3,9 @@ title: Personalización híbrida mediante SDK web y API de servidor de red perim
 description: Este artículo muestra cómo se puede utilizar el SDK web junto con la API de servidor para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '861'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Personalización híbrida describe el proceso de recuperación de contenido de personalización del lado del servidor, mediante [API del servidor de red perimetral](../../server-api/overview.md)y procesándolo en el lado del cliente, utilizando [SDK web](../home.md).
 
-Puede utilizar la personalización híbrida con soluciones de personalización como Adobe Target o Offer Decisioning, la diferencia es el contenido del [!UICONTROL API de servidor] carga útil.
+Puede utilizar la personalización híbrida con soluciones de personalización como Adobe Target, Adobe Journey Optimizer o Offer Decisioning, la diferencia es el contenido del [!UICONTROL API de servidor] carga útil.
 
 ## Requisitos previos {#prerequisites}
 
@@ -39,9 +39,9 @@ El diagrama de flujo siguiente describe el orden de los pasos realizados para of
 1. La API del servidor devuelve el contenido de personalización al servidor de aplicaciones.
 1. El servidor de aplicaciones devuelve una respuesta del HTML al explorador del cliente, que contiene la variable [cookies de identidad y de clúster](#cookies).
 1. En la página de cliente, la variable [!DNL Web SDK] `applyResponse` se llama al comando, pasando los encabezados y el cuerpo del [!UICONTROL API de servidor] respuesta del paso anterior.
-1. El [!DNL Web SDK] procesa la carga de página [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) ofertas automáticamente, ya que la variable `renderDecisions` el indicador se establece en `true`.
-1. Basado en formularios [!DNL JSON] Las ofertas de se aplican manualmente a través de `applyPersonalization` método, para actualizar el [!DNL DOM] en función de la oferta de personalización.
-1. Para las actividades basadas en formularios, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado la oferta. Esto se realiza mediante la variable `sendEvent` comando.
+1. El [!DNL Web SDK] procesa Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) ofertas y elementos del canal web de Journey Optimizer automáticamente, ya que la variable `renderDecisions` el indicador se establece en `true`.
+1. Basado en formularios de Target [!DNL HTML]/[!DNL JSON] Las ofertas de y las experiencias basadas en código de Journey Optimizer se aplican manualmente a través de `applyProposition` método, para actualizar el [!DNL DOM] se basa en el contenido de personalización de la propuesta.
+1. Para formularios de Target basados en [!DNL HTML]/[!DNL JSON] ofertas y experiencias basadas en código de Journey Optimizer, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado el contenido devuelto. Esto se realiza mediante la variable `sendEvent` comando.
 
 ## Cookies {#cookies}
 
