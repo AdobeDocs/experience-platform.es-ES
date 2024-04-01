@@ -1,9 +1,10 @@
 ---
 title: Definición de campos de mapa en la IU
 description: Obtenga información sobre cómo definir un campo de asignación en la interfaz de usuario del Experience Platform.
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL Asignar tipo de valor] aparece la propiedad. Este valor es necesar
 Una vez configurado el subcampo, debe asignarlo a un grupo de campos. Utilice el **[!UICONTROL Grupo de campos]** menú desplegable o campo de búsqueda y seleccione **[!UICONTROL Aplicar]**. Puede seguir añadiendo campos al objeto mediante el mismo proceso o seleccionar **[!UICONTROL Guardar]** para confirmar la configuración.
 
 ![Registro de la selección y configuración del grupo de campos que se está aplicando.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Restricciones de uso {#restrictions}
+
+XDM impone las siguientes restricciones al uso de este tipo de datos:
+
+* Los tipos de mapa DEBEN ser del tipo `object`.
+* Los tipos de mapa NO DEBEN tener propiedades definidas (es decir, definen objetos &quot;vacíos&quot;).
+* Los tipos de mapa DEBEN incluir un `additionalProperties.type` que describe los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
+
+Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente necesario, ya que presentan los siguientes inconvenientes de rendimiento:
+
+* Tiempo de respuesta de [Adobe Experience Platform Query Service](../../../query-service/home.md) se degrada de 3 a 10 segundos por 100 millones de registros.
+* Los mapas deben tener menos de 16 claves o se arriesgarán a una mayor degradación.
 
 >[!NOTE]
 >
