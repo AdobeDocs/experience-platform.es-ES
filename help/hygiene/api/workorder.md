@@ -1,24 +1,25 @@
 ---
 title: Punto final de API de orden de trabajo
 description: El extremo /workorder de la API de higiene de datos le permite administrar mediante programación las tareas de eliminación de identidades.
+badgeBeta: label="Beta" type="Informative"
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: 59585ce832b10dfc28474e498c9308453da86d0c
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1277'
 ht-degree: 2%
 
 ---
 
-# [!BADGE Beta]{type=Informative} Extremo de orden de trabajo {#work-order-endpoint}
+# Punto final de orden de trabajo {#work-order-endpoint}
 
 El `/workorder` Este extremo de la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de registros en Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
-La función de eliminación de registros está actualmente en versión beta y solo está disponible en un **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
+>La función de eliminación de registros está actualmente en versión beta y solo está disponible en un **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
 >
-Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Introducción
 
@@ -30,7 +31,7 @@ Puede eliminar una o más identidades de un único conjunto de datos o de todos 
 
 >[!IMPORTANT]
 > 
-Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Un solo [registrar la solicitud de eliminación a través de la IU](../ui/record-delete.md) le permite enviar 10 000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Un solo [registrar la solicitud de eliminación a través de la IU](../ui/record-delete.md) le permite enviar 10 000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
 
 **Formato de API**
 
@@ -40,7 +41,7 @@ POST /workorder
 
 >[!NOTE]
 >
-Las solicitudes del Ciclo de vida de datos solo pueden modificar conjuntos de datos basados en identidades principales o en un mapa de identidad. Una solicitud debe especificar la identidad principal o proporcionar un mapa de identidad.
+>Las solicitudes del Ciclo de vida de datos solo pueden modificar conjuntos de datos basados en identidades principales o en un mapa de identidad. Una solicitud debe especificar la identidad principal o proporcionar un mapa de identidad.
 
 **Solicitud**
 
@@ -90,7 +91,7 @@ curl -X POST \
 | `description` | Descripción de la solicitud de eliminación de registro. |
 | `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/features/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:automático"}
+{style="table-layout:auto"}
 
 **Respuesta**
 
