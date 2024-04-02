@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general de API de ingesta por lotes
 description: La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser los datos de perfil de un archivo plano de un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1388'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ El diagrama siguiente describe el proceso de ingesta por lotes:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## Primeros pasos
+## Introducción
 
 Los extremos de API utilizados en esta guía forman parte de la variable [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
@@ -44,7 +44,7 @@ La ingesta de datos por lotes tiene algunas restricciones:
 - Número máximo de archivos por lote: 1500
 - Tamaño máximo del lote: 100 GB
 - Número máximo de propiedades o campos por fila: 10000
-- Número máximo de lotes por minuto, por usuario: 138
+- Número máximo de lotes en el lago de datos por minuto, por usuario: 138
 
 >[!NOTE]
 >
@@ -62,16 +62,16 @@ La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 
 | Entrante (fila) frente a destino (col) | Cadena | Byte | corto | Número entero | Largo | Doble | Fecha | Fecha-hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Cadena | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| corto | X | X | X | X | X | X |  |  |  |  |
-| Número entero | X | X | X | X | X | X |  |  |  |  |
-| Largo | X | X | X | X | X | X | X | X |  |  |
-| Doble | X | X | X | X | X | X |  |  |  |  |
-| Fecha |  |  |  |  |  |  | X |  |  |  |
-| Fecha-hora |  |  |  |  |  |  |  | X |  |  |
-| Objeto |  |  |  |  |  |  |  |  | X | X |
-| Mapa |  |  |  |  |  |  |  |  | X | X |
+| Cadena | X | X | X | X | X | X | X | X |   |   |
+| Byte | X | X | X | X | X | X |   |   |   |   |
+| corto | X | X | X | X | X | X |   |   |   |   |
+| Número entero | X | X | X | X | X | X |   |   |   |   |
+| Largo | X | X | X | X | X | X | X | X |   |   |
+| Doble | X | X | X | X | X | X |   |   |   |   |
+| Fecha |   |   |   |   |   |   | X |   |   |   |
+| Fecha-hora |   |   |   |   |   |   |   | X |   |   |
+| Objeto |   |   |   |   |   |   |   |   | X | X |
+| Mapa |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | `id` | El ID del lote que acaba de crear (utilizado en solicitudes posteriores). |
 | `relatedObjects.id` | El ID del conjunto de datos en el que cargar los archivos. |
 
-## Carga de archivo
+## Carga de archivos
 
 Después de crear correctamente un nuevo lote para cargar, los archivos se pueden cargar en un conjunto de datos específico.
 
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Carga de archivo grande: cargar partes posteriores
 
-Una vez creado el archivo, se pueden cargar todos los fragmentos posteriores realizando repetidas solicitudes de PATCH, una para cada sección del archivo.
+Una vez creado el archivo, se pueden cargar todos los fragmentos posteriores realizando solicitudes repetidas al PATCH, una para cada sección del archivo.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -411,7 +411,7 @@ El `"status"` Este campo muestra el estado actual del lote solicitado. Los lotes
 | Anulado | Se ha anulado una operación **explícitamente** se ha llamado (a través de la API de ingesta por lotes) para el lote especificado. Una vez que el lote está en estado &quot;Cargado&quot;, no se puede cancelar. |
 | Activo | El lote se ha promocionado correctamente y está disponible para el consumo descendente. Este estado se puede utilizar de forma intercambiable con Éxito. |
 | Eliminado | Los datos del lote se han eliminado completamente. |
-| Fallido | Un estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido se **no** que aparezca. Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
+| Error | Un estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido se **no** que aparezca. Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
 | Inactivo | El lote se ha promocionado correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
 | Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
 | Cargando | Los datos de este lote se están cargando y el lote se está cargando **no** listo para ser promocionado. |

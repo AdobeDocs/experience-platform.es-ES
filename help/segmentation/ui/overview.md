@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
+source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
 workflow-type: tm+mt
-source-wordcount: '4018'
+source-wordcount: '4014'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Administración de etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
-| [!UICONTROL Copiar] | Composición de audiencias, carga personalizada, servicio de segmentación | Duplica la audiencia seleccionada. |
+| [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. |
 | [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archivar] | Carga personalizada | Archiva la audiencia seleccionada. |
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
