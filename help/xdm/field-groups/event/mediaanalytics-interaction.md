@@ -1,10 +1,11 @@
 ---
 title: Grupo de campos de esquema de detalles de interacción de Media Analytics
 description: Obtenga información acerca del grupo de campos de esquema Detalles de interacción de Media Analytics.
-source-git-commit: 65f3dcf1cacfbc4e8a598244810d238bd88f64bd
+exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
+source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
@@ -16,10 +17,18 @@ ht-degree: 2%
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Descripción |
 |---| --- | --- | --- |
-| [!UICONTROL Detalles de recopilación de medios] | `mediaCollection` | [[!UICONTROL Información de detalles de medios]](../../data-types/media-details-information.md) | Atributos relacionados con una colección de elementos de medios. |
-| [!UICONTROL Detalles de informes de medios] | `mediaReporting` | [[!UICONTROL Información de detalles de medios]](../../data-types/media-details-information.md) | Detalles de creación de informes y métricas asociadas con el contenido de medios. |
+| [!UICONTROL Detalles de recopilación de medios] | `mediaCollection` | [[!UICONTROL Detalles de recopilación de medios]](../../data-types/media-collection-details.md) | Atributos relacionados con una colección de elementos de medios. Utilice los campos de recopilación de medios para capturar datos y enviarlos a otros servicios de Adobe para un procesamiento posterior. |
+| [!UICONTROL Detalles de informes de medios] | `mediaReporting` | [[!UICONTROL Detalles de Media Reporting]](../../data-types/media-reporting-details.md) | Detalles de creación de informes y métricas asociadas con el contenido de medios. * Los servicios de Adobe utilizan los campos de Media Reporting para analizar los campos de Media Collection enviados por los usuarios. Estos datos, junto con otras métricas de usuario específicas, se calculan y se comunican. |
 | [!UICONTROL Lista De Eventos De Contenido Descargado De Colecciones De Medios] | `mediaDownloadedEvents` | [!UICONTROL Matriz] de [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | Eventos que rastrean la descarga de contenido dentro de la colección de medios. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json)
+>[!TIP]
+>
+>Puede ocultar campos que no utilice la API de Media Edge. Al ocultar estos campos, el esquema es más fácil de leer y comprender, pero no es obligatorio. Estos campos solo hacen referencia a los del [!UICONTROL Detalles de interacción de Media Analytics] grupo de campo. Para mejorar la legibilidad en la IU de Platform, siga las instrucciones de la [Documentación de Media Analytics sobre cómo ocultar campos no utilizados](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+
+<!-- 
+>[!NOTE]
+>
+>Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
+ -->
