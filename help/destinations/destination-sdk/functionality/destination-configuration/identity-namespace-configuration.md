@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 El Experience Platform utiliza áreas de nombres de identidad para describir el tipo de identidades específicas. Por ejemplo, un área de nombres de identidad llamada `Email` identifica un valor como `name@email.com` como dirección de correo electrónico.
 
-Al crear un destino mediante Destination SDK, además de lo siguiente [configuración de un esquema de socio](schema-configuration.md) Para que los usuarios puedan asignar atributos de perfil e identidades a, también puede definir áreas de nombres de identidad compatibles con la plataforma de destino.
+Al crear destinos en tiempo real (flujo continuo) a través de Destination SDK, además de [configuración de un esquema de socio](schema-configuration.md) Para que los usuarios puedan asignar atributos de perfil e identidades a, también debe definir áreas de nombres de identidad admitidas por la plataforma de destino. Por ejemplo, si su plataforma de destino acepta correos electrónicos con hash y [!DNL IDFA], debe definir estas dos identidades como [se describe más adelante en este documento](#supported-parameters).
 
-Al hacerlo, los usuarios tienen la opción añadida de seleccionar identidades de destino, además de atributos de perfil de destino.
+Al activar audiencias en destinos de flujo continuo, los usuarios también deben asignar identidades de destino, además de atributos de perfil de destino. De lo contrario, las audiencias no se activarán en la plataforma de destino.
+
+Al crear un destino basado en archivos mediante Destination SDK, la configuración de las áreas de nombres de identidad es opcional.
 
 Para obtener más información sobre Áreas de nombres de identidad en Experience Platform, consulte la [documentación de áreas de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 | Tipo de integración | Admite funcionalidad |
 |---|---|
-| Integraciones en tiempo real (streaming) | Sí |
-| Integraciones basadas en archivos (por lotes) | Sí |
+| Integraciones en tiempo real (streaming) | Sí (obligatorio) |
+| Integraciones basadas en archivos (por lotes) | Sí (opcional) |
 
 ## Parámetros admitidos {#supported-parameters}
 
