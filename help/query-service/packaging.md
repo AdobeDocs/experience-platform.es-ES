@@ -2,9 +2,9 @@
 title: Empaquetado de servicio de consultas
 description: En el siguiente documento se describe el empaquetado de las funciones y los productos disponibles para el servicio de consultas, y se destacan las diferencias entre las consultas ad hoc y por lotes.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ En la tabla siguiente se describen los derechos clave del servicio de consulta e
 | Tiempo máximo de ejecución | 10 minutos | 24 horas |
 | Métrica de licencia | **Consulta de concurrencia de usuarios**: <ul><li>1 usuario simultáneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuarios simultáneos (Customer Journey Analytics)&#x200B;</li></ul> **Concurrencia de consultas**: <ul><li>1 consulta en ejecución simultánea (todas las aplicaciones)&#x200B;</li></ul> **Un complemento adicional del paquete de usuarios de consultas ad hoc** puede adquirirse para aumentar sus derechos de consulta ad hoc autorizados. <ul><li>+5 usuarios simultáneos adicionales por paquete</li><li>+1 consulta en ejecución simultánea adicional por paquete</li></ul> | **Calcular horas**: <ul><li>Variable (con ámbito basado en sus derechos de aplicación)</li></ul> **Calcular horas** es una medida de la cantidad de tiempo que el motor del servicio de consultas tarda en leer, procesar y escribir datos en el lago de datos cuando se ejecuta una consulta por lotes. <br>Con el SKU de Data Distiller, también se obtiene una concurrencia de usuario y consulta adicional, que se puede utilizar para ejecutar consultas ad hoc.  El SKU de Data Distiller incluye:<br><ul><li>+5 usuarios simultáneos adicionales</li><li>+1 consulta adicional en ejecución simultánea</li></ul> |
 | Uso acelerado de consultas e informes | No | Sí: las consultas aceleradas simultáneas le permiten leer datos del almacén acelerado y mostrarlos dentro de los paneles. También se proporciona una asignación de derechos dedicada para almacenar modelos de informes y conjuntos de datos en el almacén acelerado. |
-| Capacidad de almacenamiento del lago de datos | El derecho total de almacenamiento depende de las licencias de las aplicaciones basadas en la plataforma. Por ejemplo, Real-Time CDP, AJO, CJA, etc. | Sí: se proporciona un derecho de almacenamiento adicional para mantener los conjuntos de datos sin procesar y derivados para casos de uso de Data Distiller más allá de una fecha de caducidad de datos de siete días.<br>La capacidad de almacenamiento del lago de datos se mide en terabytes (TB) y depende de la cantidad de horas de Compute que haya comprado. Consulte la descripción del producto para obtener más información. |
+| Capacidad de almacenamiento del lago de datos | El derecho total de almacenamiento depende de las licencias de las aplicaciones basadas en la plataforma. Por ejemplo, Real-Time CDP, AJO, CJA, etc. | Sí: se proporciona un derecho de almacenamiento adicional para mantener los conjuntos de datos sin procesar y derivados para casos de uso de Data Distiller más allá de una fecha de caducidad de datos de siete días.<br>La capacidad de almacenamiento del lago de datos se mide en terabytes (TB) y depende de la cantidad de horas de Compute que haya comprado. Consulte la descripción del producto para obtener más detalles. |
 | Asignación de exportación de datos | El derecho total a la exportación depende de las licencias de las aplicaciones basadas en la plataforma. Por ejemplo, Real-Time CDP, AJO, CJA, etc. | Sí: se proporciona un derecho de exportación adicional para permitir la exportación de conjuntos de datos derivados creados con Data Distiller.<br>Su asignación de exportación de datos anual se mide en terabytes (TB) y depende de la cantidad de horas de Compute que haya comprado. Consulte la descripción del producto para obtener más información. |
 | Interfaz de ejecución de consultas | <ul><li>IU del servicio de consultas</li><li>IU de cliente de terceros</li><li>[!DNL PostgresSQL] IU de cliente</li></ul> | <ul><li>IU del servicio de consultas </li><li>IU de cliente de terceros</li><li>[!DNL PostgresSQL] IU de cliente</li><li>API de REST</li></ul> |
 | Resultados de consulta devueltos mediante | IU de cliente | Conjunto de datos derivado almacenado en el lago de datos |
@@ -52,9 +52,11 @@ En la tabla siguiente se describen los derechos clave del servicio de consulta e
 
 El control de acceso del Experience Platform se administra mediante el [Adobe Admin Console](https://adminconsole.adobe.com/) donde los perfiles de producto vinculan a los usuarios con permisos y zonas protegidas. Consulte la [información general de control de acceso](../access-control/home.md) para obtener más información.
 
-Para utilizar el servicio de consulta, las API [!DNL Manage Queries] el permiso debe estar habilitado en Admin Console. Este permiso permite a los usuarios ejecutar consultas ad hoc y por lotes. Instrucciones detalladas para solicitar acceso al perfil del producto [!DNL Manage Queries] Los permisos de se han descrito en [administración de permisos para un perfil de producto](../access-control/ui/permissions.md) y [administración de usuarios para un perfil de producto](../access-control/ui/users.md) documentos.
+Consulte la [Administración de permisos para un perfil de producto](../access-control/ui/permissions.md) y [Administración de usuarios para un perfil de producto](../access-control/ui/users.md) documentos para obtener instrucciones detalladas sobre cómo solicitar acceso a los permisos de perfil de producto
 
-Después de comprar el [!DNL Data Distiller] complemento, el complemento [!DNL Write Dataset] se debe conceder el permiso. Este permiso permite [!DNL Data Distiller] para ejecutar consultas por lotes.
+### Permisos relevantes del servicio de consultas {#query-service-permissions}
+
+Para utilizar el servicio de consultas, **[!DNL Manage Queries]** el permiso debe estar habilitado en Admin Console. Este permiso permite a los usuarios ejecutar consultas ad hoc y por lotes.
 
 En la tabla siguiente se describen los efectos del [!DNL Manage Queries] permiso:
 
@@ -62,6 +64,17 @@ En la tabla siguiente se describen los efectos del [!DNL Manage Queries] permiso
 |---|---|
 | [!DNL Manage Queries] (sin permiso de escritura de datos) | Proporciona acceso para ejecutar consultas Ad hoc |
 | [!DNL Manage Queries] (con permiso de escritura de datos) | Proporciona acceso para ejecutar consultas por lotes |
+
+{style="table-layout:auto"}
+
+### Permisos relevantes de Perspectivas personalizables {#customizable-insights-permissions}
+
+Para crear Data Distiller [Perspectivas personalizables](./data-distiller/customizable-insights/overview.md) en los paneles, los siguientes permisos **debe** estar habilitado en el Admin Console.
+
+| Permiso | Función |
+|---|---|
+| [!DNL View Custom Dashboard] | Proporciona acceso de visualización a los paneles definidos por el usuario |
+| [!DNL Manage Custom Dashboard] | Proporciona acceso de administración para los paneles definidos por el usuario |
 
 {style="table-layout:auto"}
 
