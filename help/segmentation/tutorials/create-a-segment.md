@@ -4,10 +4,10 @@ title: Creación de una definición de segmento mediante la API del servicio de 
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 12%
+source-wordcount: '1066'
+ht-degree: 6%
 
 ---
 
@@ -23,17 +23,17 @@ Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe E
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite crear audiencias utilizando definiciones de segmentos u otras fuentes externas a partir de datos del perfil del cliente en tiempo real.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Platform] API.
 
 ### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -72,7 +72,12 @@ Existen dos pasos necesarios para obtener una vista previa o una estimación de 
 
 ### Cómo se generan las estimaciones
 
-Las muestras de datos se utilizan para evaluar las definiciones de segmentos y estimar el número de perfiles correspondiente. Los nuevos datos se cargan en la memoria cada mañana (entre las 00:00 y las 02:00 PT, que oscila entre las 07:00 y las 09:00 UTC), y todas las consultas de segmentación se calculan con los datos de muestra de ese día. En consecuencia, cualquier nuevo campo añadido o datos adicionales recopilados se reflejarán en las estimaciones al día siguiente.
+A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan a Platform, se almacenan en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. Si el recuento de perfiles no cambia en más del 5 %, el trabajo de muestreo se ejecutará automáticamente semanalmente.
+
+La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+
+- Para los flujos de trabajo de datos de flujo continuo, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si se ha alcanzado este umbral, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+- Para la ingesta por lotes, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
 
 El tamaño de la muestra depende del número total de entidades del almacén de perfiles. Estos tamaños de muestra se representan en la siguiente tabla:
 
