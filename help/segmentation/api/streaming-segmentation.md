@@ -4,9 +4,9 @@ title: Evaluar eventos en tiempo casi real con segmentación de streaming
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de flujo continuo con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
@@ -454,3 +454,7 @@ Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y
 ### ¿Cuánto tiempo tarda una definición de segmento en estar disponible?
 
 Una definición de segmento tarda hasta una hora en estar disponible.
+
+### ¿Existen limitaciones a los datos que se transmiten en?
+
+Para que los datos transmitidos se utilicen en la segmentación de flujo continuo, hay **debe** espaciado entre los eventos transmitidos en. Si se transmiten demasiados eventos en el mismo segundo, Platform los tratará como datos generados por bots y se descartarán. Como práctica recomendada, debería haber **al menos** cinco segundos entre los datos de evento para garantizar que los datos se utilizan correctamente.

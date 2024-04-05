@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -119,3 +119,7 @@ Como resultado, si ve que el número bajo &quot;Últimos X días&quot; es cero y
 ### ¿Cuánto tiempo tarda una definición de segmento en estar disponible?
 
 Una definición de segmento tarda hasta una hora en estar disponible.
+
+### ¿Existen limitaciones a los datos que se transmiten en?
+
+Para que los datos transmitidos se utilicen en la segmentación de flujo continuo, hay **debe** espaciado entre los eventos transmitidos en. Si se transmiten demasiados eventos en el mismo segundo, Platform los tratará como datos generados por bots y se descartarán. Como práctica recomendada, debería haber **al menos** cinco segundos entre los datos de evento para garantizar que los datos se utilizan correctamente.

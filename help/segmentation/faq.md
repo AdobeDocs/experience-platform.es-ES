@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3189'
 ht-degree: 1%
 
 ---
@@ -269,3 +269,10 @@ Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes,
 Si utiliza la búsqueda de perfiles para recuperar el perfil recién creado y observar su pertenencia a audiencias, se mostrará que es miembro de **ambos** Audiencia A y Audiencia B, a pesar de que ambas audiencias tienen definiciones contradictorias. Una vez que se ejecute el trabajo diario de evaluación de segmentación por lotes, el abono a audiencia se actualizará para reflejar este estado actualizado de datos de perfil.
 
 Si necesita más resolución de audiencia en tiempo real, utilice streaming o segmentación de Edge.
+
+### ¿Cuánto tiempo tardan los datos de streaming en estar disponibles en los flujos de trabajo de segmentación por lotes?
+
+Los datos de streaming pueden tardar hasta tres horas en estar disponibles en los flujos de trabajo de segmentación por lotes.
+
+Por ejemplo, si un trabajo de segmentación por lotes se ejecuta a las 21:00, se garantiza que contiene datos ingeridos de flujo continuo **hasta** 18H. Transmisión de datos introducidos después de las 18:00 pero antes de las 21:00 **mayo** ser incluido.
+
