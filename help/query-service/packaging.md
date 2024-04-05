@@ -2,7 +2,7 @@
 title: Empaquetado de servicio de consultas
 description: En el siguiente documento se describe el empaquetado de las funciones y los productos disponibles para el servicio de consultas, y se destacan las diferencias entre las consultas ad hoc y por lotes.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -85,3 +85,4 @@ Las zonas protegidas son particiones virtuales en una sola instancia de Experien
 ## Pasos siguientes
 
 Al leer este documento, debería comprender mejor los diferentes tipos de empaquetado y las capacidades de ejecución de consultas disponibles en el servicio de consultas. Para obtener más información sobre el servicio de consultas, como los casos de uso más conocidos del sector, lea la [documentación de casos de uso](./use-cases/abandoned-browse.md). Para obtener información más general, visite la [Introducción al servicio de consultas](./home.md).
+
