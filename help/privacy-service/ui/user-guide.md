@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administración de trabajos de privacidad en la IU de Privacy Service
 description: Aprenda a utilizar la interfaz de usuario de Privacy Service para coordinar y supervisar las solicitudes de privacidad en varias aplicaciones de Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 13%
+source-wordcount: '1722'
+ht-degree: 12%
 
 ---
 
@@ -90,17 +90,25 @@ Para ver más detalles sobre un punto de datos determinado, seleccione el punto 
 >
 >Cuando se ha aplicado un filtro al widget Solicitudes de trabajo, puede eliminar el filtro seleccionando la variable **X** en la píldora de filtro. Las solicitudes de trabajo vuelven a la lista de seguimiento predeterminada.
 
-### Solicitudes de trabajo
+### Solicitudes de trabajo {#job-requests}
 
-El widget Solicitudes de trabajo enumera todas las solicitudes de trabajo disponibles en su organización, incluidos detalles como el tipo de solicitud, el estado actual, la fecha de vencimiento y el correo electrónico del solicitante.
+El [!UICONTROL Solicitudes de trabajo] workspace muestra detalles sobre las solicitudes de trabajo recientes en su organización. Los detalles incluyen el tipo de solicitud, el estado actual, la fecha de vencimiento, el correo electrónico del solicitante, etc. Se cargan conjuntos de 100 registros a la vez. De forma predeterminada, los trabajos creados más recientemente se muestran en la parte superior con más conjuntos de registros cargados a medida que se desplaza hacia abajo para examinar.
 
 >[!NOTE]
 >
 >Los datos de los trabajos creados anteriormente solo son accesibles durante 30 días después de la fecha de finalización.
 
-Puede filtrar la lista escribiendo palabras clave en la barra de búsqueda debajo del título de las solicitudes de trabajo. La lista se filtra automáticamente a medida que escribe y muestra solicitudes que contienen valores que coinciden con los términos de búsqueda. También puede utilizar la variable **[!UICONTROL Solicitado el]** menú desplegable para seleccionar un intervalo de tiempo para los trabajos de la lista.
+Puede filtrar la lista escribiendo palabras clave en la barra de búsqueda debajo de [!UICONTROL Solicitudes de trabajo] título. La lista se filtra automáticamente a medida que escribe y muestra solicitudes que contienen valores que coinciden con los términos de búsqueda. El campo de búsqueda realiza una búsqueda &quot;rápida&quot; que hace coincidir los ID de trabajo de privacidad con los trabajos representados o cargados actualmente en la interfaz de usuario. No es una búsqueda completa de todos los trabajos enviados. En su lugar, es un filtro aplicado a los resultados cargados. Utilice la API de Privacy Service para lo siguiente [trabajos de retorno basados en una regulación específica, intervalos de fechas o un solo trabajo](../api/privacy-jobs.md#list).
 
-![Opciones de búsqueda de solicitud de trabajo](../images/user-guide/job-search.png)
+>[!TIP]
+>
+>Para cargar registros en la interfaz de usuario de los últimos 30 días, debe desplazarse hacia abajo en la tabla y cargar más lotes de registros.
+
+![La sección Solicitud de trabajo de la consola de privacidad con el campo de búsqueda resaltado.](../images/user-guide/job-search.png)
+
+También puede utilizar el botón de búsqueda para realizar una consulta de trabajo de privacidad que abarque un intervalo de fechas determinado. Esta acción devuelve todos los trabajos de privacidad enviados por su organización durante el lapso de tiempo determinado. Seleccione el **[!UICONTROL Solicitado el]** menú desplegable para elegir una fecha de inicio y de fin para la consulta. Las opciones disponibles incluyen [!UICONTROL Hoy], [!UICONTROL Últimos 7 días], [!UICONTROL Últimas 2 semanas], [!UICONTROL Últimos 30 días], o [!UICONTROL Personalizado]. Cuando se utiliza con [!UICONTROL Solicitado el] opción, la función de búsqueda solo muestra las solicitudes de trabajo que se enviaron entre los intervalos de fechas seleccionados.
+
+![La sección Solicitud de trabajo con el campo de búsqueda, el menú desplegable Solicitado en y el botón Buscar resaltados.](../images/user-guide/requested-on-dropdown-menu.png)
 
 Para ver los detalles de una solicitud de trabajo determinada, seleccione el ID de trabajo de la solicitud en la lista para abrir **[!UICONTROL Detalles del trabajo]** página.
 
