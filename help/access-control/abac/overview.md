@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
+source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
 workflow-type: tm+mt
-source-wordcount: '1844'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo o segmento de esquema. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 
-Esta funcionalidad le permite etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso alrededor de los campos de esquema XDM y administrar mejor el acceso dado a usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores gestionar el acceso a segmentos específicos.
+Utilice esta funcionalidad para etiquetar campos de esquema del Modelo de datos de experiencia (XDM) con etiquetas que definen ámbitos organizativos o de uso de datos. En paralelo, los administradores pueden utilizar la interfaz de administración de usuarios y funciones para definir políticas de acceso alrededor de los campos de esquema XDM y administrar mejor el acceso dado a usuarios o grupos de usuarios (usuarios internos, externos o de terceros). Además, el control de acceso basado en atributos permite a los administradores gestionar el acceso a segmentos específicos.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ Hay disponibilidad limitada para el control de acceso basado en atributos para c
 
 * Interfaz de permisos: proporciona una interfaz para definir funciones de usuario, permisos y directivas para el control de acceso basado en atributos.
 
-* Etiquetado: Añada, edite y elimine etiquetas a las funciones de usuario, los campos de esquema, los segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso.
+* Etiquetado: Añada, edite y elimine etiquetas a las funciones de usuario, los campos de esquema, los segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso. **Nota:** Cualquier segmento que utilice un atributo etiquetado debe etiquetarse también si desea que se le apliquen las mismas restricciones de acceso.
 
 Se están cambiando los flujos de trabajo de administración de todas las aplicaciones con tecnología de Experience Platform de Admin Console a la nueva interfaz de Permisos.
 

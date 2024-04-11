@@ -4,10 +4,10 @@ title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -132,6 +132,10 @@ El **[!UICONTROL Editar etiquetas]** aparece un cuadro de diálogo que le permit
 >Cuando se agrega una etiqueta a un campo, esa etiqueta se aplica al recurso principal de ese campo (una clase o un grupo de campos). Si la clase principal o el grupo de campos están empleados por otros esquemas, esos esquemas heredarán la misma etiqueta.
 
 ## Aplicación de etiquetas a segmentos
+
+>[!NOTE]
+>
+>Cualquier segmento que utilice un atributo etiquetado debe etiquetarse también si desea que se le apliquen las mismas restricciones de acceso.
 
 Una vez que haya completado el etiquetado de los campos de esquema, puede empezar a etiquetar los segmentos.
 
