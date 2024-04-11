@@ -2,10 +2,10 @@
 title: Información general sobre la extensión YouTube Video Tracking
 description: Obtenga información sobre la extensión de etiqueta de seguimiento de vídeo de YouTube en Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 97%
+source-wordcount: '895'
+ht-degree: 81%
 
 ---
 
@@ -23,7 +23,7 @@ Cada propiedad de etiqueta de Adobe Experience Platform requiere que se instalen
 * Servicio de ID de visitante de Experience Cloud
 * Extensión principal
 
-Utilice el fragmento de código [Incrustar un reproductor utilizando una etiqueta \&lt;iframe\>](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) de los documentos de desarrollador de Google en el HTML de cada página web en la que se va a procesar un reproductor de vídeo.
+Utilice el [&quot;Incrustar un reproductor con un \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) fragmento de código de los documentos de desarrollador de Google en el HTML de cada página web en la que se va a procesar un reproductor de vídeo.
 
 La versión 2.0.1 de esta extensión admite la incrustación de uno o más vídeos de YouTube en una sola página web mediante la inserción de un atributo `id` con un valor único en la etiqueta iframe, y anexando `enablejsapi=1` y `rel=0` al final del valor del atributo `src` si no se ha incluido ya, por ejemplo. Por ejemplo:
 
@@ -75,18 +75,18 @@ Se puede configurar una regla de etiqueta para cada evento de vídeo (los siete 
 Las reglas tienen tres acciones:
 
 * **Establecer variables:** Configure las variables de Adobe Analytics (asigne a todos los elementos de datos incluidos todos o algunos de ellos).
-* **Enviar baliza:** Envíe la baliza de Adobe Analytics como llamada de seguimiento de vínculo personalizado y proporcione un valor en el nombre del vínculo.
+* **Enviar señalización:** Envíe la señalización de Adobe Analytics como llamada de seguimiento de vínculo personalizado y proporcione un valor &quot;Nombre del vínculo&quot;.
 * **Borrar variables:** Borre las variables de Adobe Analytics.
 
 ## Ejemplo de regla de etiquetas para Inicio de vídeo
 
 Se deben incluir los siguientes objetos de extensión de vídeo.
 
-* **Eventos**: Inicio de vídeo (con este evento, la regla se activa cuando el visitante comienza a reproducir un vídeo de YouTube).
+* **Eventos**: &quot;Inicio de vídeo&quot; (con este evento, la regla se activa cuando el visitante comienza a reproducir un vídeo de YouTube).
 
 * **Condición**: ninguna
 
-* **Acciones**: Utilice la acción **Extensión de Analytics** para Definir variables, para asignar:
+* **Acciones**: utilice el **Extensión de Analytics** para la acción &quot;Set Variables&quot;, para asignar:
 
    * El evento de inicio de vídeo,
    * Un prop/eVar para el elemento de datos de la duración del vídeo
@@ -94,13 +94,13 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
    * Un prop/eVar para el elemento de datos del nombre del vídeo
    * Un prop/eVar para el elemento de datos de la URL de vídeo
 
-   A continuación, incluya la acción Enviar baliza (`s.tl`) con el nombre de vínculo inicio de vídeo, seguida de una acción Borrar variables.
+  A continuación, incluya la acción Enviar baliza (`s.tl`) con el nombre de vínculo &quot;inicio de vídeo&quot;, seguido de la acción &quot;Borrar variables&quot;.
 
 >[!TIP]
 > 
 >En el caso de las implementaciones en las que no se pueden usar varias eVars o props por elemento de vídeo, los valores de los elementos de datos se pueden concatenar en Platform, analizarse en informes de clasificación con la herramienta Generador de reglas de clasificación, como se explica en [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=es), y, luego, aplicarse como segmento en Analysis Workspace.
 
-Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado Metadatos de vídeo y prográmelo para que extraiga todos los elementos de datos de vídeo (mostrados arriba) y combinarlos. Por ejemplo:
+Para concatenar valores de información del vídeo, cree un nuevo elemento de datos denominado Metadatos de vídeo y prográmelo para extraer todos los elementos de datos de vídeo (antes mencionados) y combinarlos. Por ejemplo:
 
 ```javascript
 var r = [];
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Para obtener más información sobre cómo crear y aprovechar los elementos de datos de forma eficaz en Platform, lea la [elementos de datos](../../../ui/managing-resources/data-elements.md) documentación.
