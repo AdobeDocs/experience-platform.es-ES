@@ -3,9 +3,9 @@ title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos le permite programar la caducidad de los conjuntos de datos en Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ La caducidad de un conjunto de datos es solo una operación de eliminación con 
 
 En cualquier momento antes de que se inicie realmente la eliminación del conjunto de datos, puede cancelar la caducidad o modificar su hora de déclencheur. Después de cancelar la caducidad de un conjunto de datos, puede volver a abrirlo estableciendo una nueva caducidad.
 
-Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad se marcará como `executing`, y no puede modificarse más. El propio conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado a través de una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez eliminados los datos de los tres servicios, la caducidad se marca como `executed`.
+Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad se marcará como `executing`, y no puede modificarse más. El propio conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado a través de una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez eliminados los datos de los tres servicios, la caducidad se marca como `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Respuesta**
 
 Una respuesta correcta enumera las caducidades resultantes del conjunto de datos. El siguiente ejemplo se ha truncado para el espacio.
+
+>[!IMPORTANT]
+>
+>El `ttlId` en la respuesta también se denomina la `{DATASET_EXPIRATION_ID}`. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
 
 ```json
 {
@@ -90,26 +94,30 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 
 | Propiedad | Descripción |
 | --- | --- |
-| `totalRecords` | Recuento de caducidades del conjunto de datos que coincidieron con los parámetros de la llamada a la lista. |
-| `ttlDetails` | Contiene los detalles de las caducidades devueltas del conjunto de datos. Para obtener más información sobre las propiedades de la caducidad de un conjunto de datos, consulte la sección de respuesta para realizar una [llamada de búsqueda](#lookup). |
+| `total_count` | Recuento de caducidades del conjunto de datos que coincidieron con los parámetros de la llamada a la lista. |
+| `results` | Contiene los detalles de las caducidades devueltas del conjunto de datos. Para obtener más información sobre las propiedades de la caducidad de un conjunto de datos, consulte la sección de respuesta para realizar una [llamada de búsqueda](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Búsqueda de una caducidad del conjunto de datos {#lookup}
 
-Para buscar la caducidad de un conjunto de datos, realice una solicitud de GET con el `datasetId` o el `ttlId`.
+Para buscar la caducidad de un conjunto de datos, realice una solicitud de GET con el `{DATASET_ID}` o el `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>El `{DATASET_EXPIRATION_ID}` se denomina la variable `ttlId` en la respuesta. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
 
 **Formato de API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
 | `{DATASET_ID}` | El ID del conjunto de datos cuya caducidad desea buscar. |
-| `{TTL_ID}` | ID de caducidad del conjunto de datos. |
+| `{DATASET_EXPIRATION_ID}` | ID de caducidad del conjunto de datos. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el nuevo estado de caducidad del conjunto de datos, si no hubo caducidad preexistente del conjunto de datos.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el nuevo estado de caducidad del conjunto de datos.
 
 ```json
 {
@@ -254,7 +262,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el nuevo estado de
 | `displayName` | Un nombre para mostrar para la solicitud de caducidad. |
 | `description` | Descripción de la solicitud de caducidad. |
 
-Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no existe dicha caducidad del conjunto de datos (o si no tiene acceso a ella).
+Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no existe dicha caducidad del conjunto de datos (o si no tiene acceso al conjunto de datos).
 
 ## Actualizar la caducidad de un conjunto de datos {#update}
 
@@ -267,14 +275,12 @@ Para actualizar una fecha de caducidad para un conjunto de datos, utilice una so
 **Formato de API**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{TTL_ID}` | El ID de la caducidad del conjunto de datos que desea cambiar. |
+| `{DATASET_EXPIRATION_ID}` | El ID de la caducidad del conjunto de datos que desea cambiar. Nota: Esto se conoce como `ttlId` en la respuesta. |
 
 **Solicitud**
 
@@ -374,19 +380,19 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y el de la ca
 
 ## Recuperar el historial de estado de caducidad de un conjunto de datos {#retrieve-expiration-history}
 
-Puede buscar el historial de estado de caducidad de un conjunto de datos específico mediante el parámetro de consulta `include=history` en una solicitud de consulta. El resultado incluye información sobre la creación de la caducidad del conjunto de datos, cualquier actualización que se haya aplicado y su cancelación o ejecución (si corresponde). También puede utilizar la variable `ttlId` de la caducidad del conjunto de datos.
+Para buscar el historial de estado de caducidad de un conjunto de datos específico, utilice el `{DATASET_ID}` y `include=history` parámetro de consulta en una solicitud de búsqueda. El resultado incluye información sobre la creación de la caducidad del conjunto de datos, cualquier actualización que se haya aplicado y su cancelación o ejecución (si corresponde). También puede utilizar la variable `{DATASET_EXPIRATION_ID}` para recuperar el historial de estado de caducidad del conjunto de datos.
 
 **Formato de API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parámetro | Descripción |
 | --- | --- |
 | `{DATASET_ID}` | El ID del conjunto de datos cuyo historial de caducidad desea buscar. |
-| `{TTL_ID}` | ID de caducidad del conjunto de datos. |
+| `{DATASET_EXPIRATION_ID}` | ID de caducidad del conjunto de datos. Nota: Esto se conoce como `ttlId` en la respuesta. |
 
 {style="table-layout:auto"}
 
