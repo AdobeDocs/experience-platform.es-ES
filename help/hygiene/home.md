@@ -2,14 +2,14 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
-# Administración avanzada del ciclo vital de datos en Adobe Experience Platform
+# Administración avanzada del ciclo de vida de los datos en Adobe Experience Platform
 
 Adobe Experience Platform proporciona un conjunto sólido de herramientas para administrar operaciones de datos grandes y complicadas a fin de organizar las experiencias de los consumidores. A medida que los datos se incorporan al sistema a lo largo del tiempo, es cada vez más importante administrar los almacenes de datos para que se utilicen según lo esperado, se actualicen cuando sea necesario corregir datos incorrectos y se eliminen cuando las políticas de la organización lo consideren necesario.
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Pasos siguientes
 
-Este documento proporciona una descripción general de las funciones del ciclo vital de los datos de Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [Guía de IU](./ui/overview.md). Para aprender a crear trabajos del ciclo vital de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)
+Este documento proporciona una descripción general de las capacidades del ciclo vital de datos de Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [Guía de IU](./ui/overview.md). Para obtener información sobre cómo crear trabajos del ciclo de vida de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)

@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2263'
 ht-degree: 24%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Tipo | Función | Descripción |
 | --- | --- | --- |
 | Secuencias de datos | Compatibilidad con la búsqueda de dispositivos | Al configurar una secuencia de datos, ahora puede seleccionar el nivel de información de búsqueda de dispositivos que desea recopilar. La información de búsqueda de dispositivos incluye datos sobre el dispositivo, el hardware, el sistema operativo y el explorador utilizados para interactuar con la página. <br>  La información de búsqueda de dispositivos no se puede recopilar junto con el agente de usuario y las sugerencias del cliente. Si elige recopilar información del dispositivo, se deshabilita la recopilación de sugerencias del agente de usuario y del cliente, y viceversa. Toda la información de búsqueda del dispositivo se almacena en `xdm:device` grupo de campos. Obtenga más información en la documentación sobre [configuración de flujos de datos](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensiones | [!DNL TikTok] extensión de API de eventos web | El [[!DNL TikTok] API de eventos web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) La extensión de le permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL TikTok] en forma de eventos del lado del servidor que utilizan el [!DNL TikTok] API de eventos web. |
+| Extensiones | [!DNL TikTok] extensión de API de eventos web | El [[!DNL TikTok] API de eventos web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) La extensión de permite aprovechar los datos capturados en el Edge Network de Adobe Experience Platform y enviarlos a [!DNL TikTok] en forma de eventos del lado del servidor que utilizan el [!DNL TikTok] API de eventos web. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Experience Platform proporciona un conjunto de funciones de higiene de datos que
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} | Administre el ciclo de vida de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones avanzadas de administración del ciclo de vida de los datos de Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada de los conjuntos de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.<br>La eliminación de registros permite eliminar perfiles de consumidores individuales segmentando sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [Documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
+| [!BADGE Beta]{type=Informative} Eliminación de registros (versión limitada) | Administre el ciclo vital de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones de administración avanzada del ciclo vital de los datos en Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada de los conjuntos de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.<br>La eliminación de registros permite eliminar perfiles de consumidores individuales segmentando sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [Documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
 | Caducidades de los conjuntos de datos | Minimice los datos y mantenga el control de los acuerdos de licencia con Caducidad automatizada del conjunto de datos. Reduzca los volúmenes de datos eliminando conjuntos de datos completos y establezca una fecha y una hora para eliminar el conjunto de datos. Consulte la [documentación sobre caducidades del conjunto de datos](../../hygiene/ui/dataset-expiration.md) para obtener más información. |
 
 {style="table-layout:auto"}
