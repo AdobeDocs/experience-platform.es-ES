@@ -1,13 +1,13 @@
 ---
 keywords: resumen de métricas; resumen de métricas de rtcdp
 title: Página de inicio y paneles de Real-time Customer Data Platform
-description: Paneles, página de inicio y primera experiencia de usuario en Adobe Experience Platform
+description: Comprenda varios paneles, la página de inicio y la primera experiencia de usuario de Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 6%
+source-wordcount: '919'
+ht-degree: 5%
 
 ---
 
@@ -28,7 +28,7 @@ El [!UICONTROL Introducción a Real-Time Customer Profile] El widget se divide e
 * **Ingesta de datos en Platform**: este widget le dirige al catálogo de fuentes. Utilice el catálogo de fuentes para seleccionar un origen e introducir los datos en el Experience Platform. Seleccionar **[Configuración de fuentes]** para desplazarse al catálogo de orígenes. Para obtener más información, lea la [información general de orígenes](../sources/home.md).
 * **Estructuras de datos de modelo**: este widget le dirige a la descripción general de los esquemas. Utilice la descripción general de los esquemas para buscar esquemas existentes o crear un modelo que describa la estructura de los datos. Seleccionar **[!UICONTROL Crear esquema]** para navegar a la interfaz de creación de esquemas. Para obtener más información, lea la [información general sobre esquemas](../xdm/home.md).
 * **Crear audiencias**: este widget le dirige al Generador de segmentos en la interfaz de usuario. Utilice el Generador de segmentos para interactuar con los elementos de datos de perfil y definir los criterios de la definición del segmento. Seleccionar **[!UICONTROL Crear audiencia]** para ir al Generador de segmentos. Para obtener más información, lea la [Resumen del servicio de segmentación](../segmentation/home.md).
-* **Envío de datos a destinos**: este widget le dirige al catálogo de destinos. Utilice el catálogo de destinos para seleccionar un destino al que pueda conectarse y enviar segmentos. Seleccionar **[!UICONTROL Configuración de destinos]** para ir al catálogo de destinos. Para obtener más información, lea la [información general sobre destinos](../destinations/home.md).
+* **Envío de datos a destinos**: este widget le dirige al catálogo de destinos. Utilice el catálogo de destinos para seleccionar un destino al que pueda conectarse y enviar audiencias. Seleccionar **[!UICONTROL Configuración de destinos]** para ir al catálogo de destinos. Para obtener más información, lea la [información general sobre destinos](../destinations/home.md).
 
 ![La página de inicio de la IU de Platform muestra el widget de introducción](assets/platform-home/getting-started-widget.png)
 
@@ -44,7 +44,7 @@ El panel de métricas muestra información actualizada sobre los datos del Exper
 
 ### La tabla de clasificación
 
-La tabla de clasificación muestra el número total actual de esquemas, conjuntos de datos, perfiles y segmentos en su organización, así como su fecha de actualización más reciente.
+La tabla de clasificación muestra el número total actual de esquemas, conjuntos de datos, perfiles y audiencias en su organización, así como su fecha de actualización más reciente.
 
 ![La sección de la tabla de clasificación de la página de inicio de la IU de Platform.](assets/platform-home/leaderboard.png)
 
@@ -55,13 +55,13 @@ La tabla de clasificación muestra el número total actual de esquemas, conjunto
 
 ### Elementos recientes
 
-Elementos recientes enumera los cambios más recientes realizados en su organización. En el ejemplo siguiente, los cambios más recientes pertenecen a conjuntos de datos, fuentes, segmentos y destinos.
+Elementos recientes enumera los cambios más recientes realizados en su organización. En el ejemplo siguiente, los cambios más recientes pertenecen a conjuntos de datos, fuentes, audiencias y destinos.
 
 ![La sección Elementos recientes en la página de inicio de la IU de Platform.](assets/platform-home/recent-items.png)
 
 * **Conjuntos de datos recientes**: La **[!UICONTROL Conjuntos de datos recientes]** muestra los cinco conjuntos de datos creados más recientemente dentro de la organización. Esta lista se actualiza cuando se crea un nuevo conjunto de datos. Seleccione un conjunto de datos para ver los detalles de ese elemento o seleccione **[!UICONTROL Ver todo]** para obtener una lista de conjuntos de datos. Desde allí, puede seleccionar una fuente específica para obtener más información. Para obtener más información sobre los conjuntos de datos, consulte la [información general sobre conjuntos de datos](../catalog/datasets/overview.md).
 * **Fuentes recientes**: La **[!UICONTROL Fuentes recientes]** La tarjeta de métrica de muestra los cinco orígenes más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo origen. Seleccione un origen para ver los detalles de ese elemento o seleccione **[!UICONTROL Ver todo]** para obtener una lista de fuentes. Desde allí, puede seleccionar una fuente específica para obtener más información. Para obtener más información sobre las fuentes, consulte [Resumen de orígenes](../sources/home.md).
-* **Segmentos recientes**: La **[!UICONTROL Segmentos recientes]** La tarjeta de métrica de muestra los cinco segmentos creados más recientemente dentro de la organización. Esta lista se actualiza cuando se crea un nuevo segmento. Seleccione un segmento para ver los detalles de ese elemento o seleccione **[!UICONTROL Ver todo]** para obtener una lista de segmentos. Para obtener más información sobre los segmentos, consulte [Resumen del servicio de segmentación](../segmentation/home.md).
+* **Audiencias recientes**: La **[!UICONTROL Audiencias recientes]** La tarjeta de métrica de muestra las cinco audiencias más recientes creadas dentro de la organización. Esta lista se actualiza cuando se crea una audiencia nueva. Seleccione una audiencia para ver los detalles de ese elemento o seleccione **[!UICONTROL Ver todo]** para obtener una lista de audiencias. Para obtener más información sobre las audiencias, consulte [Resumen del servicio de segmentación](../segmentation/home.md).
 * **Destinos recientes**: La **[!UICONTROL Destinos recientes]** La tarjeta de métrica de muestra los cinco destinos más recientes creados dentro de la organización. Esta lista se actualiza cuando se crea un nuevo destino. Seleccione un destino para ver los detalles de ese elemento o seleccione **[!UICONTROL Ver todo]** para obtener una lista de destinos. Para obtener más información, lea la [información general sobre destinos](../destinations/home.md).
 
 ## Recursos

@@ -5,9 +5,9 @@ description: Descripción general de la cuenta de Real-time Customer Data Platfo
 feature: Get Started, B2B
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1050'
 ht-degree: 4%
 
 ---
@@ -86,6 +86,6 @@ Para comprender cómo Real-Time CDP B2B Edition puede beneficiar su modelo de se
 * [Ingesta de datos](./sources/b2b.md)
 * [Cómo acceder a los perfiles](./profile/profile-overview.md)
 * [Esquemas en Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
-* [Cómo generar segmentos](./segmentation/b2b.md)
-* [Activación de segmentos en destinos](./destinations/b2b.md)
+* [Cómo crear audiencias](./segmentation/b2b.md)
+* [Activación de audiencias en destinos](./destinations/b2b.md)
 * [Definición y aplicación de políticas de gobernanza de datos](./privacy/data-governance-overview.md)

@@ -5,9 +5,9 @@ description: Este escenario de muestra proporciona un ejemplo para la configurac
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 Real-time Customer Data Platform B2B Edition amplía las ofertas existentes de Real-Time CDP y Adobe Experience Platform para admitir flujos de trabajo y datos B2B. Este documento proporciona un ejemplo de uso que demuestra las ventajas adicionales que ofrece B2B Edition. Entre ellos se incluyen:
 
 - Combine datos de personas y cuentas de diferentes fuentes de datos en silo para producir una vista completa que permita una mejor comprensión de los clientes y una segmentación más precisa. Consulte la documentación sobre [creación de relaciones de esquema XDM](./schemas/b2b.md) para su uso con diversas fuentes B2B para obtener más información.
-- Segmente una audiencia en función de los atributos de entidades relacionadas. Esto incluye cuentas, oportunidades, campañas y listas de marketing. Los segmentos ya no se limitan únicamente a atributos de persona y eventos de experiencia. Consulte la [Documentación de segmentación B2B](./segmentation/b2b.md) para ver más ejemplos de creación de audiencias específicas de B2B.
+- Segmente una audiencia en función de los atributos de entidades relacionadas. Esto incluye cuentas, oportunidades, campañas y listas de marketing. Las audiencias ya no se limitan únicamente a atributos de persona y eventos de experiencia. Consulte la [Documentación de segmentación B2B](./segmentation/b2b.md) para ver más ejemplos de creación de audiencias específicas de B2B.
 - Admitir de forma nativa el caso de uso de una persona relacionada con varias cuentas.
 
 ## Caso de uso
@@ -50,9 +50,9 @@ Dado que la información relevante de Townsend se registra como Cuenta 1 en Mark
 
 Esto prohíbe al equipo de marketing de Bodea dirigir de manera eficiente los contactos comerciales específicos de estas empresas con esta nueva oportunidad.
 
-Hasta la fecha, Townsend ha gastado más de un millón de dólares acumulados en productos de Bodea en todas sus cuentas. Sin embargo, un segmento creado con su sistema antiguo no incluiría a nadie de Townsend a menos que el total gastado dentro de un único sistema de ventas ascendiera a más de 1 millón de dólares. Esto se debe a que los datos de ingresos están en silos en cuentas bajo diferentes sistemas de ventas.
+Hasta la fecha, Townsend ha gastado más de un millón de dólares acumulados en productos de Bodea en todas sus cuentas. Sin embargo, una audiencia creada con su antiguo sistema no incluiría a nadie de Townsend a menos que el total gastado dentro de un único sistema de ventas ascendiera a más de un millón de dólares. Esto se debe a que los datos de ingresos están en silos en cuentas bajo diferentes sistemas de ventas.
 
-Dado que el gasto de Townsend se divide en diferentes sistemas de ventas y no suma individualmente más de un millón, el segmento no encontraría a nadie cualificado ni en Marketo 1 ni en Marketo 2.
+Dado que el gasto de Townsend se divide en diferentes sistemas de ventas y no suma individualmente más de un millón, la definición del segmento no encontraría a nadie cualificado ni en Marketo 1 ni en Marketo 2.
 
 ### Solución del problema con Real-Time CDP B2B Edition
 
@@ -77,10 +77,10 @@ Por simplicidad y el propósito de este ejemplo, las personas están siendo iden
 | Oportunidad 1, 200.000 $ |
 | Oportunidad 2, 900.000 $ |
 
-- Cree segmentos únicos utilizando estos datos agregados para diversas iniciativas de marketing. En este ejemplo, el segmento encuentra todas las personas que:
+- Cree audiencias únicas con estos datos agregados para diversas iniciativas de marketing. En este ejemplo, la definición del segmento encuentra todas las personas que:
 
    - Tener oportunidades asociadas (en TODAS las cuentas) que superen el valor de 1 millón de dólares
-   - AND
+   - Y
    - Ha visitado la página de producto en el último mes
 
 - Cree una audiencia que sea el destinatario más eficiente de la nueva campaña de marketing de Bodea. En este ejemplo, RT-CDP, edición B2B ayudará al experto en marketing a identificar `p2@townsend.com` como el destinatario correcto para esta campaña de marketing.

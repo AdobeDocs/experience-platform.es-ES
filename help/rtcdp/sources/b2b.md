@@ -4,9 +4,9 @@ description: Información general sobre la función de las fuentes en Adobe Real
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,6 @@ Consulte la [descripción general de conectores de origen](../../sources/home.md
 Los siguientes documentos proporcionan más información sobre el uso de [!DNL Marketo] para llevar los datos B2B a Platform:
 
 * Para obtener información sobre cómo conectar su [!DNL Marketo] datos en Platform, consulte el tutorial sobre [creación de un conector de origen de Marketo en la IU](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* Para obtener información sobre la configuración subyacente de los espacios de nombres B2B y esquemas utilizados con [!DNL Marketo], consulte la documentación de [Espacios de nombres y esquemas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* Para obtener información sobre la configuración subyacente de los espacios de nombres y esquemas B2B, consulte la documentación de [Espacios de nombres y esquemas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 * Para obtener información sobre cómo encontrar su [!DNL Marketo] Munchkin ID y, para generar sus credenciales, consulte la [[!DNL Marketo] guía de autenticación](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * Para obtener información sobre las reglas de asignación específicas aplicables a [!DNL Marketo] conjuntos de datos, consulte la documentación sobre [[!DNL Marketo] asignaciones de campos](../../sources/connectors/adobe-applications//mapping/marketo.md).

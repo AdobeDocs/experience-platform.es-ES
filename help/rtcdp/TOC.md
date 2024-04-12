@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
-user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear segmentos de público a partir de esos perfiles y activar estos segmentos en destinos de terceros.
+user-guide-description: Reunir datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear audiencias a partir de esos perfiles y activar esas audiencias en destinos de terceros.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 58%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 69%
    * [Guía de IU del perfil de cuenta](accounts/account-profile-ui-guide.md)
 * Administración {#admin}
    * [Información general sobre administración](administration/admin-overview.md)
+* Audiencias y segmentación {#segmentation}
+   * [Información general de segmentación](segmentation/segmentation-overview.md)
+   * [Guía del Generador de segmentos](segmentation/segment-builder-guide.md)
+   * [Segmentación en Real-Time CDP edición B2B](segmentation/b2b.md)
+   * [Inteligencia artificial aplicada al cliente](segmentation/customer-ai.md)
 * Conjuntos de datos {#datasets}
    * [Conjuntos de datos](datasets/dataset.md)
    * [Calidad de los datos en Platform](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 69%
 * Esquemas {#schemas}
    * [Información general de esquemas](schemas/overview.md)
    * [Esquemas en Real-Time CDP edición B2B](schemas/b2b.md)
-* Segmentos {#segmentation}
-   * [Información general de segmentación](segmentation/segmentation-overview.md)
-   * [Guía del generador de segmentos](segmentation/segment-builder-guide.md)
-   * [Segmentación en Real-Time CDP edición B2B](segmentation/b2b.md)
-   * [Inteligencia artificial aplicada al cliente](segmentation/customer-ai.md)
 * Fuentes {#sources}
    * [Información general de fuentes](sources/sources-overview.md)
    * [Fuentes en Real-Time CDP edición B2B](sources/b2b.md)

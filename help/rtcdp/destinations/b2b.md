@@ -4,9 +4,9 @@ description: Información general sobre la función de los destinos en Adobe Rea
 feature: Destinations
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Los destinos de Experience Platform totalmente compatibles con Real-Time CDP B2B
 
 Para comprender cómo encajan los destinos en el flujo de trabajo B2B, consulte la [tutorial de extremo a extremo](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Adobe Real-time Customer Data Platform B2B Edition le permite exportar los datos B2B a través del conector de destino del Marketo Engage. Mediante el Marketo Engage de destino, puede insertar segmentos creados en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
+Adobe Real-time Customer Data Platform B2B Edition le permite exportar los datos B2B a través del conector de destino del Marketo Engage. Mediante el destino de Marketo Engage, puede insertar audiencias creadas en Adobe Experience Platform en Marketo, donde aparecerán como listas estáticas.
 
 Los siguientes documentos proporcionan más información sobre cómo utilizar el destino de Marketo Engage para exportar datos:
 

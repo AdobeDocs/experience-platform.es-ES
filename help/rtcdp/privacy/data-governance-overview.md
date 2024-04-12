@@ -4,9 +4,9 @@ title: Información general de gobernanza de datos
 description: La gobernanza de datos le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Puede establecer restricciones del uso de datos en un destino definiendo accione
 >
 >Para obtener más información sobre las acciones de marketing y su uso en las políticas de uso de datos, consulte la [información general sobre políticas de uso de datos](../../data-governance/policies/overview.md) en el [!DNL Experience Platform] documentación.
 
-La definición de acciones de marketing en destinos le permite asegurarse de que todos los perfiles o segmentos enviados a esos destinos sean compatibles con las políticas de uso de datos. Por lo tanto, debe agregar acciones de marketing adecuadas a los destinos en función de las necesidades de su organización para aplicar restricciones de política en la activación.
+La definición de acciones de marketing en destinos le permite asegurarse de que todos los perfiles o audiencias enviados a esos destinos cumplan con las políticas de uso de datos. Por lo tanto, debe agregar acciones de marketing adecuadas a los destinos en función de las necesidades de su organización para aplicar restricciones de política en la activación.
 
 Las acciones de marketing solo se pueden seleccionar al configurar un destino por primera vez. Según el tipo de destino con el que trabaje, la oportunidad de configurar acciones de marketing se mostrará en diferentes puntos del flujo de trabajo de configuración. Consulte la [documentación de destinos](../destinations/overview.md) para ver los pasos sobre cómo configurar un destino concreto.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform proporciona varias políticas principales para casos d
 
 ## Aplicar cumplimiento de uso de datos {#enforce}
 
-Una vez etiquetados los datos y definidas las políticas de uso, puede aplicar el cumplimiento de las políticas por el uso de datos. Al activar segmentos de audiencia en destinos en Real-Time CDP, la gobernanza de datos aplica automáticamente políticas de uso en caso de que se produzca alguna infracción.
+Una vez etiquetados los datos y definidas las políticas de uso, puede aplicar el cumplimiento de las políticas por el uso de datos. Al activar audiencias en destinos en Real-Time CDP, la gobernanza de datos aplica automáticamente las políticas de uso en caso de que se produzca alguna infracción.
 
 Consulte el documento sobre [aplicación automática de políticas](../../data-governance/enforcement/auto-enforcement.md) para obtener más información.
 

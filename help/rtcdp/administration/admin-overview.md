@@ -4,10 +4,10 @@ title: Información general sobre administración de Real-time Customer Data Pla
 description: Este documento proporciona información general sobre las funciones de administración de Adobe Real-time Customer Data Platform, con tecnología Adobe Experience Platform.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +21,9 @@ En las siguientes secciones se proporcionan introducciones a los componentes cen
 
 ## Control de acceso
 
-El control de acceso se administra mediante el [Adobe Admin Console](https://adminconsole.adobe.com). Esta funcionalidad aprovecha los perfiles de producto en [!DNL Admin Console], lo que le permite vincular usuarios con permisos y entornos limitados. Con esta función, los administradores pueden conceder o restringir acceso a funciones específicas de Real-Time CDP para conjuntos definidos de usuarios.
+El control de acceso basado en atributos se administra mediante la interfaz de usuario de permisos. Esta funcionalidad aprovecha las funciones de la interfaz de usuario de Permisos, lo que le permite vincular usuarios con permisos y zonas protegidas. Con esta función, los administradores pueden conceder o restringir acceso a funciones específicas de Real-Time CDP para conjuntos definidos de usuarios.
 
-Para obtener más información sobre el control de acceso, consulte la [información general de control de acceso](../../access-control/home.md) en el [!DNL Experience Platform] documentación.
+Para obtener más información sobre el control de acceso, consulte la [información general sobre el control de acceso basado en atributos](/help/access-control/abac/overview.md) en el [!DNL Experience Platform] documentación.
 
 >[!IMPORTANT]
 >
@@ -33,6 +33,6 @@ Para obtener más información sobre el control de acceso, consulte la [informac
 
 Adobe Experience Platform (y Real-Time CDP por extensión) está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo.
 
-Para satisfacer esta necesidad, Adobe Experience Platform proporciona &quot;zonas protegidas&quot;, que le permiten particionar una sola [!DNL Platform] en entornos virtuales independientes que se pueden utilizar para desarrollar y evolucionar aplicaciones de experiencia digital.
+Para satisfacer esta necesidad, Adobe Experience Platform proporciona lo siguiente *zonas protegidas*, lo que le permite particionar un solo [!DNL Platform] en entornos virtuales independientes que se pueden utilizar para desarrollar y evolucionar aplicaciones de experiencia digital. Puede utilizar la función de herramientas de zona protegida para mejorar la precisión de la configuración en todas las zonas protegidas y exportar e importar sin problemas configuraciones de zonas protegidas entre zonas protegidas. Siga los pasos proporcionados en la [guía de IU de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md).
 
 Para obtener más información sobre los entornos limitados, consulte [información general sobre zonas protegidas](../../sandboxes/home.md) en el [!DNL Experience Platform] documentación.

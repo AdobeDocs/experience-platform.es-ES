@@ -6,9 +6,9 @@ description: Utilice este escenario como ejemplo al configurar la implementació
 feature: Get Started, B2B
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -76,33 +76,33 @@ El conector de origen del Marketo Engage proporciona una función de asignación
 
 El experto en marketing de Bodea comprueba que todos los grupos de campos están asignados correctamente y continúa con el proceso de configuración de fuentes inicializando un flujo de datos. Al crear un flujo de datos para introducir datos de Marketo, los servicios de Platform secundarios pueden utilizar los datos entrantes. Durante el proceso de ingesta inicial, los datos se introducen en Experience Platform como un lote. Después, los datos ingeridos posteriores se transmiten al perfil con actualizaciones casi en tiempo real.
 
-## Cree un segmento para evaluar los datos
+## Crear una audiencia para evaluar los datos
 
 La siguiente tarea es crear una audiencia para la nueva campaña de marketing por correo electrónico de Bodea en función de atributos específicos de entidades relacionadas en los datos de origen. En la IU de Platform, el experto en marketing de Bodea selecciona primero **[!UICONTROL Segmentos]** en el panel de navegación izquierdo, **[!UICONTROL Crear segmento]**.
 
-En este ejemplo, el segmento encuentra todas las personas que trabajan en el departamento de ventas y están relacionadas con cualquier cuenta que tenga al menos una oportunidad abierta. Este segmento requiere un vínculo entre la clase Perfil individual de XDM, la clase Cuenta empresarial de XDM y la clase Oportunidad empresarial de XDM.
+En este ejemplo, la audiencia encuentra todas las personas que trabajan en el departamento de ventas y están relacionadas con cualquier cuenta que tenga al menos una oportunidad abierta. Estas audiencias requieren un vínculo entre la clase Perfil individual de XDM, la clase Cuenta empresarial de XDM y la clase Oportunidad empresarial de XDM.
 
 ![Segmento de caso de uso](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Para obtener instrucciones sobre cómo crear segmentos para evaluar los datos, consulte la [Guía de IU del Generador de segmentos](../segmentation/ui/segment-builder.md). Para casos de uso de segmentación B2B más específicos, consulte la [información general de segmentación para Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Para obtener instrucciones sobre cómo crear audiencias para evaluar los datos, consulte la [Guía de IU del Generador de segmentos](../segmentation/ui/segment-builder.md). Para casos de uso de segmentación B2B más específicos, consulte la [información general de segmentación para Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 El Generador de segmentos le permite crear una audiencia comercializable a partir de los datos del perfil del cliente en tiempo real y ver las estimaciones de su audiencia potencial en función de la combinación de atributos, eventos y audiencias existentes que haya definido.
 
 ## Activar los datos evaluados en un destino
 
-Una vez creado el segmento correctamente, se proporciona un resumen en la variable [!UICONTROL Detalles] del espacio de trabajo. Como actualmente no hay destinos activados para el segmento, el experto en marketing de Bodea debe exportar la audiencia a un conjunto de datos al que se pueda acceder y sobre el que se pueda actuar.
+Una vez creada la audiencia correctamente, se proporciona un resumen en la variable [!UICONTROL Detalles] del espacio de trabajo. Como actualmente no hay destinos activados para la definición del segmento, el experto en marketing de Bodea debe exportar la audiencia a un conjunto de datos al que se pueda acceder y sobre el que se pueda actuar.
 
 Dentro de [!UICONTROL Segmentos] espacio de trabajo de la IU de Platform, el experto en marketing de Bodea selecciona **[!UICONTROL Activar en destino]**.
 
-![Activación del segmento en un destino](./assets/b2b-tutorial/activate-to-destination.png)
+![Activar la audiencia en un destino](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Consulte el tutorial sobre [activación de segmentos en un destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) para obtener información detallada sobre cómo hacerlo.
+>Consulte el tutorial sobre [activación de una audiencia en un destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) para obtener información detallada sobre cómo hacerlo.
 
-El especialista en marketing de Bodea activa el segmento en el destino de Marketo, lo que les permite insertar los datos del segmento de Platform en el Marketo Engage en forma de lista estática. Consulte la guía en la [Marketo destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) para obtener más información.
+El especialista en marketing de Bodea activa la audiencia en el destino de Marketo, lo que les permite insertar datos de audiencia de Platform en el Marketo Engage en forma de lista estática. Consulte la guía en la [Marketo destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) para obtener más información.
 
 ## Pasos siguientes
 
