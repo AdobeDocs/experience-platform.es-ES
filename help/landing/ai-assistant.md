@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2730'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Puede consultar el Asistente de IA para obtener información como:
 
 * Directrices sobre cómo realizar tareas relativas a datos y audiencias.
 * Estados y métricas de los objetos de datos existentes en su organización.
-* Utilice ejemplos de casos y matices para comprender mejor los objetos de datos, incluidos atributos, flujos de datos, conjuntos de datos, destinos, esquemas, segmentos y fuentes.
+* Utilice ejemplos de casos y matices para comprender mejor los objetos de datos, incluidos atributos, audiencias, flujos de datos, conjuntos de datos, destinos, esquemas y fuentes.
 
 Lea la guía siguiente para aprender a utilizar el asistente de IA para navegar y comprender los flujos de trabajo de Experience Platform y Real-Time CDP.
 
@@ -51,7 +51,7 @@ Hay dos clases de preguntas que se deben tener en cuenta antes de consultar el A
 * **Preguntas de uso**: Las preguntas de uso tratan sobre los objetos de datos dentro de la organización. Algunos ejemplos de preguntas de uso son:
    * ¿Cuántos conjuntos de datos tengo?
    * ¿Cuántos atributos de esquema nunca se han utilizado?
-   * ¿Qué segmentos se han activado?
+   * ¿Qué audiencias se han activado?
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ Hay dos clases de preguntas que se deben tener en cuenta antes de consultar el A
 
 Puede utilizar el Asistente de IA para objetivos como:
 
-| Objetivo | Descripción |
-| --- | --- |
-| Conceptos de Experience Platform de aprendizaje y Real-Time CDP | Puede hacer preguntas conceptuales sobre el asistente de IA para poder incorporarse a Experience Platform y Real-Time CDP. También puede utilizar el Asistente para IA para obtener información sobre los objetos y comportamientos con los que no está familiarizado. |
-| Garantizar la limpieza de los datos en los entornos limitados | Puede utilizar el Asistente de IA para identificar cualquier objeto duplicado o no utilizado, de modo que pueda mantener de forma eficaz la limpieza de su zona protegida. |
-| Organización del análisis de valor | Puede utilizar el Asistente de IA para identificar los objetos más utilizados y evaluar cualquier indicador de rendimiento o encontrar los datos más valiosos. |
-| Comprender el análisis de impacto | Puede utilizar el asistente de IA para identificar objetos que se han utilizado en determinados flujos de trabajo, de modo que pueda evaluar el impacto de cualquier cambio. |
-| Monitorización de los datos | Puede utilizar el Asistente de IA para monitorizar cualquier flujo de datos, ingesta o trabajo de evaluación, de modo que pueda ver cualquier discrepancia o informar sobre el progreso. |
+| Objetivo | Descripción | Ejemplo |
+| --- | --- | --- |
+| Conceptos de aprendizaje y flujos de trabajo continuos | <ul><li>Como usuario novato, puede utilizar el asistente de IA para aprender los conceptos de Real-Time CDP y Adobe Journey Optimizer e incorporarse a productos y funciones con los que no está familiarizado.</li><li>Como usuario experimentado, puede utilizar el Asistente de IA para resolver un caso extremo que pueda estar bloqueando el flujo de trabajo. | <ul><li>¿Cómo configuro un tablero en Recorrido Analytics?</li><li>Dime algunos casos de uso para Real-Time CDP.</li></ul> |
+| Resolución de problemas | Utilice el Asistente de IA para aprender a depurar los errores básicos que pueden producirse en el flujo de trabajo. | <ul><li>¿Qué causa este error? {ERROR_MESSAGE} ¿Mentiroso?</li><li>¿Por qué no puedo eliminar la audiencia denominada &quot;Luma: Audiencia por correo electrónico&quot;?</li></ul> |
+| Higiene de zona protegida | Utilice el asistente de IA para identificar duplicados u objetos que no se utilicen, de modo que pueda mantener de forma eficaz la zona protegida. | <ul><li>¿Puede mostrarme audiencias que sean similares?</li><li>¿Hay algún esquema que no tenga un conjunto de datos asociado?</li></ul> |
+| Análisis de valor | Utilice el asistente de IA para identificar los objetos de datos más utilizados, evaluar cualquier indicador de rendimiento o encontrar los objetos de datos más valiosos. | <ul><li>¿Cuántos perfiles hay en nuestra definición de segmento &quot;Luma: Audiencia de correo electrónico&quot;?</li><li>¿Cuándo se activaron las audiencias en el destino de Audiencias del Experience Cloud?</li></ul> |
+| Buscar | Utilice el Ayudante de IA para buscar objetos de Experience Platform admitidos, como audiencias, conjuntos de datos, destinos, esquemas y fuentes. | <ul><li>Enumere las audiencias que contienen &quot;Luma&quot; en el nombre y que se crearon en el último trimestre.</li><li>¿Qué atributos hay en el esquema XDM &quot;Luma: Custom Actions&quot;?</li></ul> |
+| Análisis de impacto | Utilice el asistente de IA para identificar objetos de datos que se han utilizado en determinados flujos de trabajo y así poder evaluar el impacto de cualquier cambio. | <ul><li>Qué audiencias utilizan `homeAddress.city` en el esquema &quot;Luma: PersonProfiles&quot;?</li><li>Qué conjuntos de datos son los `consents.marketing.push.val` atributo de perfil almacenado en?</li></ul> |
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
@@ -75,7 +76,7 @@ Para iniciar el asistente de IA, seleccione **[!UICONTROL Icono de asistente de 
 
 Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede utilizar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] para responder preguntas y comandos como:
 
-* [!UICONTROL ¿Cuáles de mis segmentos están activados?]
+* [!UICONTROL ¿Cuál de mis audiencias está activada?]
 * [!UICONTROL ¿Qué es un esquema?]
 * [!UICONTROL Casos de uso comunes de Real-Time CDP]
 
@@ -159,9 +160,9 @@ Aparece una vista expandida de la visualización. Puede utilizar el modal expand
 
 Cuando se le pregunta sobre el uso de los datos, el asistente de IA proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, AI Assistant describe los pasos que realizó para mostrar las definiciones de segmentos con más de 1000 perfiles y sus respectivos estados de activación.
 
-![Pregunta de seguimiento sobre segmentos que ilustran cómo el Asistente de IA calculó la respuesta.](./images/ai-assistant/results-explained.png)
+![Pregunta de seguimiento sobre las definiciones de segmentos que ilustran cómo el Asistente de IA calculó la respuesta.](./images/ai-assistant/results-explained.png)
 
-También puede proporcionar filtros y modificaciones a las consultas, y puede indicar al Asistente de inteligencia artificial que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente de IA que le muestre una tendencia de las definiciones de segmentos de recuento en el orden de su fecha de creación, elimine definiciones de segmentos con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
+También puede proporcionar filtros y modificaciones a las consultas, y puede indicar al Asistente de inteligencia artificial que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente de IA que le muestre una tendencia de las definiciones de segmentos de recuento en el orden de su fecha de creación, elimine definiciones de segmento con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
 
 +++
 
@@ -169,7 +170,7 @@ También puede proporcionar filtros y modificaciones a las consultas, y puede in
 
 +++Seleccione esta opción para ver un ejemplo de autocompletado
 
-Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: segmentos, esquemas, conjuntos de datos, fuentes y destinos.
+Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: audiencias, esquemas, conjuntos de datos, fuentes y destinos.
 
 Se puede utilizar el completado automático incluyendo el símbolo más (**`+`**) en la consulta. Como alternativa, también puede seleccionar el signo más (**`+`**) situado en la parte inferior del cuadro de entrada de texto. Aparece una ventana con una lista de los objetos de datos recomendados de la zona protegida.
 
@@ -208,16 +209,16 @@ El modelo de recuperación de documentación está formado en Experience Platfor
 También puede hacer preguntas al Asistente de IA sobre su uso de datos en los siguientes dominios:
 
 * Atributos
+* Públicos
 * Flujos de datos
 * Conjuntos de datos
 * Destinos _(Las preguntas relativas a las cuentas y algunas preguntas sobre el flujo de datos no se pueden responder en este momento)._
 * Esquemas _(Las preguntas relativas a los grupos de campos no se pueden responder en este momento)._
-* Segmentos
 * Fuentes _(Las preguntas relativas a las cuentas no se pueden responder en este momento)._
 
-En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Es posible que tenga que dar formato a sus preguntas como: &quot;Cuándo fue el segmento con el título {TITLE} creado?&quot; en lugar de, &quot;¿Cuándo fue la {TITLE} ¿segmento creado?&quot;
+En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Es posible que tenga que dar el siguiente formato a sus preguntas: &quot;¿Cuándo fue la audiencia con el título? {TITLE} creado?&quot; en lugar de, &quot;¿Cuándo fue la {TITLE} ¿audiencia creada?&quot;
 
-Deberá iniciar sesión en una zona protegida para consultar sobre datos específicos relacionados con objetos como esquemas, conjuntos de datos, atributos, destinos y segmentos.
+Deberá iniciar sesión en una zona protegida para consultar datos específicos relacionados con objetos como audiencias, esquemas, conjuntos de datos, atributos y destinos.
 
 ### Ejemplo de preguntas de uso de datos {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ Deberá iniciar sesión en una zona protegida para consultar sobre datos especí
 
 | Tipo de pregunta | Descripción | Ejemplos |
 | --- | --- | --- | 
-| Linaje de datos | Rastrear el uso de uno o varios objetos en otros objetos de Experience Platform | <ul><li>Qué conjuntos de datos utilizar {SCHEMA_NAME} esquema?</li><li>¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?</li><li>¿Qué conjuntos de datos se han utilizado en segmentos activados?</li><li>Enumerar los esquemas que tienen atributos utilizados en segmentos activados.</li><li>Mostrar los segmentos que están activados para {DESTINATION_ACCOUNT_NAME} y tienen más de 1000 perfiles.</li><li>Muéstreme los atributos que se utilizan en los segmentos activados que se han modificado después de enero de 2023.</li><li>¿Cuáles son los conjuntos de datos ingeridos mediante {SOURCE_NAME}?</li><li>Con qué flujos de datos están asociados {DATAFLOW_NAME}</li><li>Enumera los esquemas relacionados con los segmentos activados y creados en el último año.</li></ul> |
-| Distribución y agregaciones | Preguntas basadas en resumen sobre el uso de objetos de Experience Platform | <ul><li>¿Cuál es el porcentaje de segmentos activados?</li><li>¿Cuántos campos se utilizan en la segmentación?</li><li>¿Qué segmentos se activan con la mayor cantidad de destinos?</li><li>Enumerar segmentos duplicados.</li><li>Mostrar los segmentos activados a {DESTINATION_ACCOUNT_NAME} y clasificarlos por tamaño de perfil.</li><li>¿Cuál es el porcentaje de segmentos que no se han activado pero que tienen más de 100 perfiles? Muéstrame sus nombres.</li><li>Enumerar los 3 conectores de origen que consumen datos en mis conjuntos de datos.</li><li>Enumere los 5 atributos principales utilizados en segmentos activados en función de su ocurrencia.</li></ul> |
-| Búsqueda de objetos | Recupere o acceda a un objeto Experience Platform o a sus propiedades. | <ul><li>Qué conjuntos de datos no tienen ningún esquema asociado</li><li>Enumeración de los atributos utilizados para {SEGMENT_NAME}?</li><li>Dame la lista de esquemas que tienen un perfil habilitado, pero que no se han modificado desde su creación.</li><li>¿Qué segmentos se han modificado en la última semana?</li><li>Enumere los segmentos que tienen las mismas definiciones de segmentos junto con su fecha de creación.</li><li>Qué conjuntos de datos tienen habilitado el perfil e incluyen también cuántos segmentos se han creado a partir de cada conjunto de datos.</li><li>¿Qué cuentas de origen están asociadas al conjunto de datos XYZ?</li><li>Mostrar la definición del segmento y la fecha de modificación de {SEGMENT_NAME}.</li></ul> |
+| Linaje de datos | Rastrear el uso de uno o varios objetos en otros objetos de Experience Platform | <ul><li>Qué conjuntos de datos utilizar {SCHEMA_NAME} esquema?</li><li>¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?</li><li>¿Qué conjuntos de datos se han utilizado en audiencias activadas?</li><li>Enumerar los esquemas que tienen atributos utilizados en audiencias activadas.</li><li>Mostrar las audiencias que están activadas para {DESTINATION_ACCOUNT_NAME} y tienen más de 1000 perfiles.</li><li>Muéstreme los atributos que se utilizan en las audiencias activadas que se han modificado después de enero de 2023.</li><li>¿Cuáles son los conjuntos de datos ingeridos mediante {SOURCE_NAME}?</li><li>Con qué flujos de datos están asociados {DATAFLOW_NAME}</li><li>Enumera los esquemas relacionados con las audiencias activadas y creados en el último año.</li></ul> |
+| Distribución y agregaciones | Preguntas basadas en resumen sobre el uso de objetos de Experience Platform | <ul><li>¿Cuál es el porcentaje de audiencias activadas?</li><li>¿Cuántos campos se utilizan en la segmentación?</li><li>¿Qué audiencias se activan para la mayor cantidad de destinos?</li><li>Enumerar audiencias duplicadas.</li><li>Mostrar las audiencias activadas a {DESTINATION_ACCOUNT_NAME} y clasificarlos por tamaño de perfil.</li><li>¿Cuál es el porcentaje de audiencias que no se han activado pero que tienen más de 100 perfiles? Muéstrame sus nombres.</li><li>Enumerar los 3 conectores de origen que consumen datos en mis conjuntos de datos.</li><li>Enumere los 5 atributos principales utilizados en las audiencias activadas en función de su ocurrencia.</li></ul> |
+| Búsqueda de objetos | Recupere o acceda a un objeto Experience Platform o a sus propiedades. | <ul><li>Qué conjuntos de datos no tienen ningún esquema asociado</li><li>Enumeración de los atributos utilizados para {AUDIENCE_NAME}?</li><li>Dame la lista de esquemas que tienen un perfil habilitado, pero que no se han modificado desde su creación.</li><li>¿Qué audiencias se han modificado en la última semana?</li><li>Enumerar las audiencias que tienen las mismas definiciones de segmento junto con su fecha de creación.</li><li>Qué conjuntos de datos tienen habilitado el perfil e incluyen también cuántas audiencias se han creado a partir de cada conjunto de datos.</li><li>¿Qué cuentas de origen están asociadas al conjunto de datos XYZ?</li><li>Mostrar la definición del segmento y la fecha de modificación de {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ Consulte esta sección para obtener más información sobre el asistente de IA p
 ### Advertencias y limitaciones {#caveats-and-limitations}
 
 En la siguiente sección se describen las advertencias y limitaciones actuales que se deben tener en cuenta al utilizar el asistente de IA.
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### Conversaciones pequeñas limitadas
 
@@ -356,6 +307,6 @@ Lea la tabla siguiente para ver ejemplos:
 
 | Pregunta incorrecta | Buena pregunta | Notas |
 | --- | --- | --- |
-| ¿Cuál es mi segmento más grande? | ¿Cuál es mi segmento más grande? Uso de datos. | Indique explícitamente al asistente de IA que desea que la respuesta se base en los datos. |
-| ¿Cuál es mi segmento más grande? | Enumerar mi segmento más grande. | Hay casos en los que una pregunta de &quot;qué...&quot; se puede confundir con una pregunta basada en documentación. El uso de un comando como &quot;lista&quot; es un indicador más seguro de que está haciendo una pregunta con datos en contexto. |
-| ¿Cuántos conjuntos de datos tengo? | Contar mis conjuntos de datos. | La pregunta original funciona para segmentos, pero es posible que no funcione con conjuntos de datos. |
+| ¿Cuál es mi mayor audiencia? | ¿Cuál es mi mayor audiencia? Uso de datos. | Indique explícitamente al asistente de IA que desea que la respuesta se base en los datos. |
+| ¿Cuál es mi mayor audiencia? | Enumere mi audiencia más grande. | Hay casos en los que una pregunta de &quot;qué...&quot; se puede confundir con una pregunta basada en documentación. El uso de un comando como &quot;lista&quot; es un indicador más seguro de que está haciendo una pregunta con datos en contexto. |
+| ¿Cuántos conjuntos de datos tengo? | Contar mis conjuntos de datos. | La pregunta original funciona para audiencias, pero es posible que no funcione con conjuntos de datos. |
