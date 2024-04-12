@@ -5,10 +5,10 @@ title: Crear un flujo de datos para orígenes de base de datos mediante la API d
 type: Tutorial
 description: Este tutorial explica los pasos para recuperar datos de una base de datos e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 3%
+source-wordcount: '1416'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,8 @@ Este tutorial explica los pasos para recuperar datos de un origen de base de dat
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que se puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de base de datos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#database) para obtener una lista de orígenes de base de datos con los que se puede crear una conexión base.
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC. La única marca de tiempo compatible con el [[!DNL Snowflake] origen](../../../connectors/databases/snowflake.md) es TIMESTAMP_NTZ con la hora UTC.
 
 ## Introducción
 
@@ -587,7 +588,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debería tener preparados los siguientes valores requeridos:
 
@@ -701,8 +702,8 @@ En la siguiente sección se enumeran los diferentes conectores de origen de alma
 | Nombre del conector | ID de especificación de conexión |
 | -------------- | --------------- |
 | [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| [!DNL Apache Hive] en [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| [!DNL Apache Spark] en [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Apache Hive] el [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] el [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |

@@ -5,9 +5,9 @@ title: Creación de un flujo de datos mediante una fuente de protocolos en la IU
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de protocolos mediante la interfaz de usuario de Platform.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Un flujo de datos es una tarea programada que recupera e ingiere datos de un ori
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener una cuenta autenticada con un origen de protocolos. Puede encontrar una lista de tutoriales para crear diferentes protocolos y cuentas de origen en la interfaz de usuario en [información general de orígenes](../../../home.md#protocols).
+>* Para crear un flujo de datos, ya debe tener una cuenta autenticada con un origen de protocolos. Puede encontrar una lista de tutoriales para crear diferentes protocolos y cuentas de origen en la interfaz de usuario en [información general de orígenes](../../../home.md#protocols).
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
 ## Introducción
 
@@ -140,8 +141,8 @@ Puede eliminar los flujos de datos que ya no son necesarios o que se crearon inc
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de la fuente de protocolos a Platform. Ahora, los datos entrantes pueden utilizarse en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
-* [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Información general de [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

@@ -5,9 +5,9 @@ title: Creación de un flujo de datos para fuentes de automatización de marketi
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de un sistema de automatización de marketing e introducirlos en Adobe Experience Platform mediante conectores de origen y API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial explica los pasos para recuperar datos de una fuente de automatiza
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con una fuente de automatización de marketing. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#marketing-automation) para obtener una lista de fuentes de automatización de marketing con las que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con una fuente de automatización de marketing. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#marketing-automation) para obtener una lista de fuentes de automatización de marketing con las que puede crear una conexión base.
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
 ## Introducción
 
@@ -558,7 +559,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos de automatización de marketing es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 

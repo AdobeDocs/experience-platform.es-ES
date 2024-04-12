@@ -5,9 +5,9 @@ title: Creación de un flujo de datos para fuentes de pagos mediante la API de F
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de pagos e introducirlos en Platform mediante conectores de origen y API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1363'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial trata los pasos para recuperar datos de una fuente de pagos y llev
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con una fuente de pagos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#payments) para obtener una lista de orígenes de pagos con los que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con una fuente de pagos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#payments) para obtener una lista de orígenes de pagos con los que puede crear una conexión base.
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
 ## Introducción
 
@@ -603,7 +604,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debería tener preparados los siguientes valores requeridos:
 

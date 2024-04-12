@@ -5,9 +5,9 @@ title: Creación de un flujo de datos para fuentes CRM mediante la API del servi
 type: Tutorial
 description: Este tutorial cubre los pasos para recuperar datos de un sistema CRM de terceros y llevarlos a Platform mediante conectores de origen y API.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1367'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Este tutorial trata los pasos para recuperar datos de una fuente CRM y llevarlos
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen CRM. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#customer-relationship-management) para obtener una lista de orígenes CRM con los que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen CRM. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#customer-relationship-management) para obtener una lista de orígenes CRM con los que puede crear una conexión base.
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
 ## Introducción
 
@@ -581,7 +582,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos CRM es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 

@@ -5,9 +5,9 @@ title: Creación de un flujo de datos mediante una fuente de preferencias y cons
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente de preferencias y consentimiento mediante la IU de Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Un flujo de datos es una tarea programada que recupera e ingiere datos de un ori
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener una cuenta autenticada con el [!DNL OneTrust Integration] origen. Consulte el tutorial sobre [creación de un [!DNL OneTrust Integration] conexión de origen en la interfaz de usuario](../../ui/create/consent-and-preferences/onetrust.md) para obtener más información.
+>* Para crear un flujo de datos, ya debe tener una cuenta autenticada con el [!DNL OneTrust Integration] origen. Consulte el tutorial sobre [creación de un [!DNL OneTrust Integration] conexión de origen en la interfaz de usuario](../../ui/create/consent-and-preferences/onetrust.md) para obtener más información.
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
 ## Introducción
 
@@ -144,8 +145,8 @@ Puede eliminar los flujos de datos que ya no son necesarios o que se crearon inc
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de su fuente de consentimiento y preferencias a Platform. Ahora, los datos entrantes pueden utilizarse en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
-* [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Información general de [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

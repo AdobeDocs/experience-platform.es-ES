@@ -5,9 +5,9 @@ title: Creación de un flujo de datos para orígenes de protocolos mediante la A
 type: Tutorial
 description: Este tutorial trata los pasos para recuperar datos de una aplicación de protocolos e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1314'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Este tutorial trata los pasos para recuperar datos de una fuente de protocolos y
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de protocolos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#protocols) para obtener una lista de orígenes de protocolos con los que puede crear una conexión base.
+>* Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de protocolos. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#protocols) para obtener una lista de orígenes de protocolos con los que puede crear una conexión base.
 
 ## Introducción
 
@@ -606,7 +606,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos es crear un flujo de datos. En este punto, debería tener preparados los siguientes valores requeridos:
 

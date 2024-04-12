@@ -5,9 +5,9 @@ title: Creación de un flujo de datos mediante una fuente CRM en la IU
 type: Tutorial
 description: Un flujo de datos es una tarea programada que recupera e ingiere datos de un origen a un conjunto de datos de Platform. Este tutorial proporciona pasos sobre cómo crear un flujo de datos para una fuente CRM mediante la interfaz de usuario de Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,10 @@ Un flujo de datos es una tarea programada que recupera e ingiere datos de un ori
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener una cuenta autenticada con un origen CRM. Puede encontrar una lista de tutoriales para crear diferentes cuentas de origen de CRM en la interfaz de usuario de en el [información general de orígenes](../../../home.md#crm).
+>* Para crear un flujo de datos, ya debe tener una cuenta autenticada con un origen CRM. Puede encontrar una lista de tutoriales para crear diferentes cuentas de origen de CRM en la interfaz de usuario de en el [información general de orígenes](../../../home.md#crm).
+>* Para que el Experience Platform pueda introducir datos, las zonas horarias de todos los orígenes de lotes basados en tablas deben configurarse en UTC.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Platform:
 
@@ -113,8 +114,8 @@ Consulte la tabla siguiente para obtener más información sobre las configuraci
 | Campo | Descripción |
 | --- | --- |
 | Frecuencia | La frecuencia con la que se produce una ingesta. Las frecuencias seleccionables incluyen `Once`, `Minute`, `Hour`, `Day`, y `Week`. |
-| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en bueno o igual a 15. |
-| Hora de inicio | Una marca de tiempo UTC que indica cuándo se configurará para que se produzca la primera ingesta. La hora de inicio debe ser buena o igual a la hora UTC actual. |
+| Intervalo | Un entero que define el intervalo para la frecuencia seleccionada. El valor del intervalo debe ser un entero distinto de cero y debe establecerse en mayor o igual que 15. |
+| Hora de inicio | Una marca de tiempo UTC que indica cuándo se configurará para que se produzca la primera ingesta. La hora de inicio debe ser posterior o igual a la hora UTC actual. |
 | Relleno | Un valor booleano que determina qué datos se incorporan inicialmente. Si el relleno está habilitado, todos los archivos actuales de la ruta especificada se introducirán durante la primera ingesta programada. Si se desactiva el relleno, solo se incorporarán los archivos que se carguen entre la primera ejecución de la ingesta y la hora de inicio. Los archivos cargados antes de la hora de inicio no se incorporarán. |
 | Cargar datos incrementales por | Una opción con un conjunto filtrado de campos de esquema de origen de tipo, fecha u hora. Este campo se utiliza para diferenciar entre datos nuevos y existentes. Los datos incrementales se incorporarán en función de la marca de tiempo de la columna seleccionada. |
 
@@ -144,8 +145,8 @@ Puede eliminar los flujos de datos que ya no son necesarios o que se crearon inc
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para llevar los datos de su fuente de CRM a Platform. Ahora, los datos entrantes pueden utilizarse en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-* [Información general del [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
-* [Información general del [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
+* [Información general de [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
+* [Información general de [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]
