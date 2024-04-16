@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Si se activa en un destino por lotes, los datos de la audiencia generada externa
 
 ### ¿Puedo eliminar una audiencia generada externamente?
 
-En este momento, solo puede desactivar una audiencia generada externamente. En este estado, los perfiles **testamento** permanecer activo para su uso en aplicaciones de flujo descendente. En una versión posterior se añadirá compatibilidad para eliminar audiencias generadas externamente.
+¡Sí! Las audiencias generadas externamente se pueden eliminar en Audience Portal.
 
 ### ¿Qué debo hacer si subo accidentalmente una audiencia generada externamente?
 
