@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Clase de perfil individual de XDM
 description: Obtenga información acerca de la clase de perfil individual de XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 0%
 
 Los perfiles pueden variar desde señales de comportamiento anónimas (como las cookies del explorador) hasta perfiles altamente identificados que contienen información detallada como nombre, fecha de nacimiento, ubicación y dirección de correo electrónico. A medida que un perfil crece, se convierte en un repositorio sólido de información personal, identidades, detalles de contacto y preferencias de comunicación para un individuo. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de Platform, consulte la [Información general de XDM](../home.md#data-behaviors).
 
-El [!DNL XDM Individual Profile] proporciona varios valores generados por el sistema que se rellenan automáticamente cuando se incorporan datos, mientras que el resto de campos deben añadirse mediante el uso de [grupos de campos de esquema compatibles](#field-groups):
-
-![](../images/classes/individual-profile.png)
+![Diagrama de esquema de la clase de perfil individual de XDM.](../images/classes/individual-profile.png)
 
 | Propiedad | Descripción |
 | --- | --- |
