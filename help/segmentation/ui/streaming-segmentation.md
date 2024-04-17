@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1541'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,7 @@ Una definición de segmento **no** habilitarse para la segmentación de flujo co
 - La definición del segmento incluye varias entidades (consultas de varias entidades).
 - La definición del segmento incluye una combinación de un solo evento y una `inSegment` evento.
    - Sin embargo, si la definición del segmento contenida en la variable `inSegment` El evento es solo de perfil, la definición del segmento **testamento** habilitarse para la segmentación de flujo continuo.
+- La definición del segmento utiliza &quot;Ignorar año&quot; como parte de sus restricciones de tiempo.
 
 Tenga en cuenta las siguientes directrices a la hora de realizar la segmentación por streaming:
 

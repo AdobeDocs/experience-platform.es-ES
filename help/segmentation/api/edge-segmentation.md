@@ -4,9 +4,9 @@ title: Segmentación de Edge mediante la API
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de Edge con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,7 @@ Una definición de segmento **no** Debe habilitarse la segmentación de Edge en 
 
 - La definición del segmento incluye una combinación de un solo evento y una `inSegment` evento.
    - Sin embargo, si el segmento contenido en la variable `inSegment` El evento es solo de perfil, la definición del segmento **testamento** habilitarse para la segmentación de Edge.
+- La definición del segmento utiliza &quot;Ignorar año&quot; como parte de sus restricciones de tiempo.
 
 ## Recuperar todos los segmentos habilitados para la segmentación de Edge
 
@@ -281,4 +282,4 @@ En la siguiente sección se enumeran las preguntas más frecuentes sobre la segm
 
 ### ¿Cuánto tiempo tarda un segmento en estar disponible en la red perimetral?
 
-Un segmento puede tardar hasta una hora en estar disponible en la red perimetral.
+Un segmento puede tardar hasta una hora en estar disponible en el Edge Network.

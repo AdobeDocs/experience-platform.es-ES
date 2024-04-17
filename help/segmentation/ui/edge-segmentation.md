@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de Edge
 description: Aprenda a utilizar la segmentación de Edge para evaluar definiciones de segmentos en Platform de forma instantánea en Edge de, lo que permite casos de uso de personalización de la misma página y de la siguiente.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Una definición de segmento **no** se habilitará para la segmentación de Edge 
 
 - La definición del segmento incluye una combinación de un solo evento y una `inSegment` evento.
    - Sin embargo, si la definición del segmento contenida en la variable `inSegment` El evento es solo de perfil, la definición del segmento **testamento** habilitarse para la segmentación de Edge.
+- La definición del segmento utiliza &quot;Ignorar año&quot; como parte de sus restricciones de tiempo.
 
 ## Pasos siguientes
 
@@ -64,6 +65,6 @@ En esta guía se explica cómo evaluar las definiciones de segmentos con la segm
 
 En la siguiente sección se enumeran las preguntas más frecuentes sobre la segmentación de Edge:
 
-### ¿Cuánto tiempo tarda una definición de segmento en estar disponible en la red perimetral?
+### ¿Cuánto tiempo tarda una definición de segmento en estar disponible en el Edge Network?
 
-Una definición de segmento tarda hasta una hora en estar disponible en la red perimetral.
+Una definición de segmento tarda hasta una hora en estar disponible en el Edge Network.
