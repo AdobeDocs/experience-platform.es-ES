@@ -5,9 +5,9 @@ description: Aprenda a identificar el manual de tácticas adecuado para su caso 
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '752'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 
 Utilice la ventana de búsqueda y los filtros disponibles en la página para encontrar el manual de tácticas adecuado para su caso de uso.
 
-Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los libros de reproducción mostrados según el sector en el que se encuentre o la asignación de productos a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
+Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los manuales de tácticas mostrados según su sector o la asignación de derechos de producto a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
 
 ![Filtrado de manuales de tácticas por canal, sector o producto de marketing](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
@@ -49,7 +49,7 @@ El diagrama de ideas comienza con una definición de a quién se llega en el rec
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
->title="Assets"
+>title="Recursos"
 >abstract="Estos son los recursos que se generan con este manual de tácticas. Después de crear una instancia del manual de tácticas, puede ver los recursos en la zona protegida de inspiración y promoverlos a otras zonas protegidas, si lo desea."
 
 Inspeccione la sección de resumen para comprender qué recursos se generan una vez que crea instancias desde el manual de tácticas. Los recursos que se generan para cada manual de tácticas se adaptan al caso de uso que este habilita. A continuación, obtendrá más información acerca de todos los elementos de la sección de resumen.
