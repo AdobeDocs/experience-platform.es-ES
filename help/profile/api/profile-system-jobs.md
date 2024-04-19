@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Para ello, es necesario utilizar la API de perfil para crear un trabajo del sistema de perfiles o eliminar una solicitud.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 3%
 
 ---
 
 # Extremo de trabajos del sistema de perfil (solicitudes de eliminación)
 
-Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Datos introducidos en [!DNL Platform] se almacena en [!DNL Data Lake]y, si los conjuntos de datos se han habilitado para Perfil, esos datos se almacenan en [!DNL Real-Time Customer Profile] también el almacén de datos. En ocasiones puede ser necesario eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere el uso de [!DNL Real-Time Customer Profile] API para crear un [!DNL Profile] trabajo del sistema, o `delete request`, que también se pueden modificar, supervisar o eliminar si es necesario.
+Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Datos introducidos en [!DNL Platform] se almacena en [!DNL Data Lake]y, si los conjuntos de datos se han habilitado para Perfil, esos datos se almacenan en [!DNL Real-Time Customer Profile] también el almacén de datos. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere el uso de [!DNL Real-Time Customer Profile] API para crear un [!DNL Profile] trabajo del sistema, o `delete request`, que también se pueden modificar, supervisar o eliminar si es necesario.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ La respuesta incluye una matriz &quot;children&quot; con un objeto para cada sol
 
 El inicio de una nueva solicitud de eliminación se realiza mediante una solicitud del POST a `/systems/jobs` extremo, donde el ID del conjunto de datos o lote que se va a eliminar se proporciona en el cuerpo de la solicitud.
 
-### Eliminar un conjunto de datos
+### Eliminar un conjunto de datos y los datos de perfil asociados
 
-Para eliminar un conjunto de datos del almacén de perfiles, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud del POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
+Para eliminar un conjunto de datos y todos los datos de perfil asociados con él del almacén de perfiles, el ID del conjunto de datos debe incluirse en el cuerpo de la solicitud del POST. Esta acción eliminará TODOS los datos de un conjunto de datos determinado. [!DNL Experience Platform] permite eliminar conjuntos de datos basados en esquemas de registros y series temporales.
 
 **Formato de API**
 

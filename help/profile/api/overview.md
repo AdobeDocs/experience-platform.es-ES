@@ -4,9 +4,9 @@ title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ A medida que los datos se incorporan a Platform, se ejecuta un trabajo de muestr
 
 ## Trabajos del sistema de perfil {#profile-system-jobs}
 
-Datos con perfil habilitado que se incorporan a [!DNL Platform] se almacena en [!DNL Data Lake] así como el [!DNL Real-Time Customer Profile] almacén de datos. En ocasiones puede ser necesario eliminar un conjunto de datos o un lote del [!DNL Profile] almacene para eliminar los datos que ya no necesite o que se hayan añadido por error. Para ello, es necesario utilizar la API de para crear un [!DNL Profile System Job], también conocido como &quot;[!DNL delete request]&quot;, que se puede modificar, supervisar o eliminar si es necesario. Para obtener información sobre cómo trabajar con solicitudes de eliminación mediante `/system/jobs` punto final en la [!DNL Real-Time Customer Profile] API, siga los pasos descritos en la [guía de extremo de trabajos del sistema de perfil](profile-system-jobs.md).
+Datos con perfil habilitado que se incorporan a [!DNL Platform] se almacena en [!DNL Data Lake] así como el [!DNL Real-Time Customer Profile] almacén de datos. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Para ello, es necesario utilizar la API de para crear un [!DNL Profile System Job], también conocido como &quot;[!DNL delete request]&quot;, que se puede modificar, supervisar o eliminar si es necesario. Para obtener información sobre cómo trabajar con solicitudes de eliminación mediante `/system/jobs` punto final en la [!DNL Real-Time Customer Profile] API, siga los pasos descritos en la [guía de extremo de trabajos del sistema de perfil](profile-system-jobs.md).
 
 ## Actualización de atributos de perfiles {#update-profile}
 
