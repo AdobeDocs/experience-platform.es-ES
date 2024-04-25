@@ -1,11 +1,11 @@
 ---
 title: Recopilación de datos interactiva
-description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos interactiva.
+description: Descubra cómo la API de Adobe Experience Platform Edge Network Server realiza la recopilación de datos interactiva.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 7%
+source-wordcount: '179'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 7%
 
 ## Información general {#overview}
 
-Los extremos de recopilación de datos interactivos reciben un único evento y se utilizan cuando el cliente espera que el servidor de Adobe Experience Platform Edge Network devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de red perimetral, mientras realizan la recopilación de datos.
+Los extremos de recopilación de datos interactivos reciben un único evento y se utilizan cuando el cliente espera que el servidor del Edge Network de Adobe Experience Platform devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de Edge Network, mientras realizan la recopilación de datos.
+
+>[!IMPORTANT]
+>
+>El `/interact` El extremo está diseñado principalmente para que lo utilicen los SDK de Experience Platform. Este punto de conexión está sujeto a cambios adicionales y su comportamiento puede evolucionar sin previo aviso. Por ejemplo, en el futuro, se podrían añadir nuevos elementos a la carga útil de respuesta.
 
 La respuesta del servidor incluye una o más `Handle` como se muestra a continuación.
 
@@ -63,7 +67,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sí. | ID de flujo de datos. |
-| `requestId` | `String` | No | Proporcione un ID aleatorio de cliente para correlacionar las solicitudes internas del servidor. Si no se proporciona ninguno, la red perimetral generará uno y lo devolverá en la respuesta. |
+| `requestId` | `String` | No | Proporcione un ID aleatorio de cliente para correlacionar las solicitudes internas del servidor. Si no se proporciona ninguno, el Edge Network genera uno y lo devuelve en la respuesta. |
 
 ### Respuesta {#response}
 
