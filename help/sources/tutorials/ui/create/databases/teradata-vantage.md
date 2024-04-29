@@ -3,18 +3,14 @@ keywords: Experience Platform;inicio;temas populares;Teradata Vantage
 title: Creación de una conexión de origen de Teradata Vantage en la interfaz de usuario
 description: Obtenga información sobre cómo crear una conexión de origen de Teradata Vantage mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
 
-# (Beta) Cree una [!DNL Teradata Vantage] conexión de origen en la interfaz de usuario
-
->[!NOTE]
->
-> El [!DNL Teradata Vantage] el origen está en versión beta. Consulte la [Resumen de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+# Crear un [!DNL Teradata Vantage] conexión de origen en la interfaz de usuario
 
 Este tutorial proporciona los pasos para crear una [!DNL Teradata Vantage] conector de origen mediante la interfaz de usuario de Adobe Experience Platform.
 
@@ -37,13 +33,15 @@ Para obtener más información sobre cómo empezar, consulte esta [[!DNL Teradat
 
 ## Conecte su [!DNL Teradata Vantage] account
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
+En el [!UICONTROL Bases de datos] categoría, seleccionar **[!UICONTROL Teradata Vantage]** y luego seleccione **[!UICONTROL Configuración de]**.
 
-En el [!UICONTROL Bases de datos] categoría, seleccionar **[!UICONTROL Teradata Vantage]** y luego seleccione **[!UICONTROL Añadir datos]**.
+>[!TIP]
+>
+>Las fuentes del catálogo de fuentes muestran el **[!UICONTROL Configuración de]** cuando una fuente determinada aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Añadir datos]**.
 
-![](../../../../images/tutorials/create/teradata/catalog.png)
+![El catálogo de fuentes con la fuente Vantage de Teradata seleccionada.](../../../../images/tutorials/create/teradata/catalog.png)
 
 El **[!UICONTROL Conectar con Teradata Vantage]** página. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -51,13 +49,13 @@ El **[!UICONTROL Conectar con Teradata Vantage]** página. En esta página, pued
 
 Para conectar una cuenta existente, seleccione la [!DNL Teradata Vantage] cuenta con la que desea conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![](../../../../images/tutorials/create/teradata/existing.png)
+![La página cuentas existentes en el espacio de trabajo de orígenes.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nueva cuenta
 
 Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre, una descripción opcional y su [!DNL Teradata Vantage] credenciales. Cuando termine, seleccione **[!UICONTROL Connect]** y, a continuación, espere un poco para que se establezca la nueva conexión.
 
-![](../../../../images/tutorials/create/teradata/new.png)
+![La nueva interfaz de creación de cuentas de en el espacio de trabajo de orígenes.](../../../../images/tutorials/create/teradata/new.png)
 
 ## Pasos siguientes
 
