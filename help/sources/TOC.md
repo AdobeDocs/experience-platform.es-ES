@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 10%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 10%
       - [Flujo de datos de conexión de pago](tutorials/ui/dataflow/payments.md)
       - [Flujo de datos de conexión de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Creación de un flujo de datos de origen mediante plantillas en la IU](tutorials/ui/templates.md)
+   - [Filtrar objetos de origen](tutorials/ui/filter.md)
    - [Ingesta bajo demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorización de flujos de datos por lotes](tutorials/ui/monitor.md)
    - [Monitorización de flujos de datos](tutorials/ui/monitor-streaming.md)
@@ -393,4 +394,4 @@ ht-degree: 10%
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allow-list.md)
 - [Preguntas frecuentes](./troubleshooting.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
