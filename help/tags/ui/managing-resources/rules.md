@@ -2,10 +2,10 @@
 title: Reglas
 description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 81%
+source-wordcount: '2028'
+ht-degree: 73%
 
 ---
 
@@ -23,7 +23,7 @@ Genere reglas para integrar los datos y las funciones de marketing y tecnología
 
 **Eventos (If):** el evento es lo que desea que busque la regla. Se define seleccionando un evento, cualquier condición aplicable y cualquier excepción.
 
-**Acciones (Then):** las activaciones se producen cuando se producen eventos de una regla y se cumplen todas las condiciones. Una regla de etiquetas puede activar tantas acciones discretas como desee y puede controlar el orden en que se producen dichas acciones. Por ejemplo, una única regla para una página de agradecimiento de comercio electrónico puede activar las herramientas de análisis y las etiquetas de terceros desde una única regla. No es necesario crear reglas independientes para cada herramienta o etiqueta.
+**Acciones (Then):** las activaciones se producen cuando se producen eventos de una regla y se cumplen todas las condiciones. Una regla de etiquetas puede activar tantas acciones discretas como desee y puede controlar el orden en que se producen dichas acciones. Por ejemplo, una única regla para una página de agradecimiento de comercio electrónico puede activar las herramientas de análisis y las etiquetas de terceros desde una única regla. No es necesario crear reglas independientes para cada extensión o etiqueta.
 
 Puede añadir más tipos de eventos. Los eventos múltiples se unen con un operador OR, por lo que las condiciones de la regla se evalúan si se cumplen algunos de los eventos.
 
@@ -51,15 +51,19 @@ Las acciones son la porción *Then* de una regla. Definen lo que desea que ocurr
 
 Cree una regla que especifique qué acciones se producen si se cumple una condición.
 
+>[!TIP]
+>
+>Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+
 1. Abra la pestaña [!UICONTROL Reglas] y seleccione **[!UICONTROL Crear nueva regla]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Pestaña Reglas que resalta el campo de nombre.](../../images/launch-rule-builder.png)
 
 1. Asigne un nombre a la regla.
 1. Seleccione el icono de eventos **[!UICONTROL Añadir]**.
 1. Seleccione la extensión y uno de los tipos de evento disponibles para esa extensión y, a continuación, configure los ajustes del evento.
 
-   ![](../../images/rule-event-config.png)
+   ![Página de configuración de eventos de reglas.](../../images/rule-event-config.png)
 
    Los tipos de evento disponibles dependen de la extensión seleccionada. La configuración del evento será diferente según el tipo de evento. Algunos eventos no tienen ajustes que se deban configurar.
 
@@ -85,11 +89,11 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
    * Las reglas con el mismo orden se ejecutan sin ningún orden en particular.
    * Las reglas se activan en orden, pero no necesariamente finalizan en el mismo orden. Si la Regla A y la Regla B comparten un evento y usted asigna el orden para que la Regla A se ejecute primero, si la Regla A hace algo de forma asíncrona, la Regla A termina antes de que la Regla B comience.
 
-      Si desea que se ejecute más tarde, asígnele un número superior a 50. Para obtener más información sobre la ordenación, consulte [Ordenación de reglas](rules.md#rule-ordering).
+     Si desea que se ejecute más tarde, asígnele un número superior a 50. Para obtener más información sobre la ordenación, consulte [Ordenación de reglas](rules.md#rule-ordering).
 
-1. Seleccione el icono de Condiciones **[!UICONTROL Añadir]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione las Condiciones **[!UICONTROL Añadir]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Conservar cambios]**.
 
-   ![](../../images/condition-settings.png)
+   ![Página Configuración de condiciones de reglas.](../../images/condition-settings.png)
 
    Los tipos de condiciones disponibles dependen de la extensión seleccionada. La configuración de la condición será diferente según el tipo de condición.
 
@@ -102,9 +106,9 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
    Puede agregar tantas condiciones como desee. Varias condiciones en la misma regla se unen mediante AND.
 
-1. Seleccione el icono de Acciones **[!UICONTROL Añadir]** y, a continuación, seleccione la extensión y uno de los tipos de acción disponibles para dicha extensión. Configure los ajustes de la acción y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione las acciones **[!UICONTROL Añadir]** , seleccione la extensión y uno de los tipos de acción disponibles para dicha extensión, configure los ajustes de la acción y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
 
-   ![](../../images/action-settings.png)
+   ![Página de configuración de acciones de reglas.](../../images/action-settings.png)
 
    Los tipos de acciones disponibles dependen de la extensión seleccionada. Los ajustes de la acción diferirán según el tipo de acción.
 
@@ -163,7 +167,7 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 
 ## Secuencia de componentes de regla {#sequencing}
 
-El comportamiento del entorno de tiempo de ejecución de depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
+El comportamiento del entorno de ejecución depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en su propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
 
 >[!IMPORTANT]
 >

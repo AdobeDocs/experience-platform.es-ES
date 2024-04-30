@@ -3,10 +3,10 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 8%
+source-wordcount: '1160'
+ht-degree: 7%
 
 ---
 
@@ -24,7 +24,7 @@ El reenvío de eventos en Adobe Experience Platform permite enviar datos de even
 
 Este documento proporciona información general de alto nivel sobre el reenvío de eventos en Platform.
 
-![Reenvío de eventos en el ecosistema de recopilación de datos](../../../collection/images/home/event-forwarding.png)
+![Reenvío de eventos en el ecosistema de recopilación de datos.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -46,38 +46,46 @@ Reenvío de eventos combinado con Adobe Experience Platform [SDK web](/help/web-
 
 En cuanto a la configuración, el reenvío de eventos utiliza muchos de los mismos conceptos que las etiquetas, como [reglas](../managing-resources/rules.md), [elementos de datos](../managing-resources/data-elements.md), y [extensiones](../managing-resources/extensions/overview.md). La principal diferencia entre ambos puede resumirse de la siguiente manera:
 
-* Etiquetas **recoge** datos de evento de un sitio web o una aplicación móvil nativa y los envía a Platform Edge Network.
-* Reenvío de eventos **envía** datos de evento entrantes de Platform Edge Network a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
+* Etiquetas **recoge** datos de evento de un sitio web o una aplicación móvil nativa y los envía al Edge Network de Platform.
+* Reenvío de eventos **envía** datos de evento entrantes del Edge Network de Platform a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
 
-Mientras que las etiquetas recopilan datos de evento directamente del sitio o de la aplicación móvil nativa mediante los SDK web y móvil de Platform, el reenvío de eventos requiere que los datos de evento ya se envíen a través de Platform Edge Network para reenviarlos a los destinos. En otras palabras, debe implementar el SDK web o móvil de Platform en su propiedad digital (mediante etiquetas o mediante código sin procesar) para utilizar el reenvío de eventos.
+Mientras que las etiquetas recopilan datos de evento directamente del sitio o de la aplicación móvil nativa mediante los SDK web y móvil de Platform, el reenvío de eventos requiere que los datos de evento ya se envíen a través del Edge Network de Platform para reenviarlos a los destinos. En otras palabras, debe implementar el SDK web o móvil de Platform en su propiedad digital (mediante etiquetas o mediante código sin procesar) para utilizar el reenvío de eventos.
 
 ### Propiedades {#properties}
 
 El reenvío de eventos mantiene su propio almacén de propiedades separadas de las etiquetas, que puede ver en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos seleccionando **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo.
 
-![Propiedades del reenvío de eventos en la IU de recopilación de datos](../../images/ui/event-forwarding/overview/properties.png)
+>[!TIP]
+>
+>Utilice la ayuda del producto en el panel derecho para obtener más información acerca del reenvío de eventos y ver los recursos disponibles adicionales.
 
-Lista de todas las propiedades del reenvío de eventos **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Platform Edge Network, que a su vez puede recibir datos de eventos de plataformas web y móviles.
+![Propiedades del reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/properties.png)
+
+Lista de todas las propiedades del reenvío de eventos **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Platform Edge Network, que puede recibir datos de evento de plataformas web y móviles.
 
 ### Extensiones {#extensions}
 
 El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como [Núcleo](../../extensions/server/core/overview.md) extensión y [Conector de Adobe Cloud](../../extensions/server/cloud-connector/overview.md) extensión. Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario al seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catálogo]**.
 
-![Extensiones de reenvío de eventos en la IU de recopilación de datos](../../images/ui/event-forwarding/overview/extensions.png)
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+
+![Extensiones de reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Elementos de datos {#data-elements}
 
 Los tipos de Data Elements disponibles en el reenvío de eventos se limitan al catálogo de [extensiones](#extensions) que los proporcionan.
 
-Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos de Platform Edge Network.
+Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos del Edge Network de Platform.
 
-#### Referencia a datos de Platform Edge Network {#data-element-path}
+#### Datos de referencia del Edge Network de Platform {#data-element-path}
 
 Para hacer referencia a datos de Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Núcleo]** para la extensión y **[!UICONTROL Ruta]** para el tipo.
 
 El **[!UICONTROL Ruta]** el valor del elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
 
-![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos](../../images/ui/event-forwarding/overview/data-reference.png)
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+
+![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Reglas {#rules}
 
@@ -85,13 +93,17 @@ La creación de reglas en las propiedades del reenvío de eventos funciona de fo
 
 Además, se aplica un tiempo de espera de 30 segundos a un solo evento cuando se procesa en todas las reglas (y, por lo tanto, en todas las acciones) dentro de una propiedad de reenvío de eventos. Esto significa que todas las reglas y todas las acciones de un solo evento deben completarse en este lapso de tiempo.
 
-![Reglas de reenvío de eventos en la IU de recopilación de datos](../../images/ui/event-forwarding/overview/rules.png)
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+
+![Reglas de reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenización de elementos de datos {#tokenization}
 
 En las reglas de etiquetas, los elementos de datos se identifican mediante token con un `%` al principio y al final del nombre del elemento de datos (por ejemplo: `%viewportHeight%`). En las reglas del reenvío de eventos, los elementos de datos se identifican mediante token con `{{` al principio y `}}` al final del nombre del elemento de datos (por ejemplo: `{{viewportHeight}}`).
 
-![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos](../../images/ui/event-forwarding/overview/tokenization.png)
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+
+![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Secuencia de acciones de regla {#action-sequencing}
 

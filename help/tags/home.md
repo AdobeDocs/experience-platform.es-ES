@@ -2,10 +2,10 @@
 title: Información general sobre etiquetas
 description: Las etiquetas de Adobe Experience Platform son la próxima generación de funcionalidades de administración de etiquetas de Adobe. Las etiquetas ofrecen a los clientes una alternativa sencilla para implementar y administrar todas las etiquetas de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 96%
+source-wordcount: '588'
+ht-degree: 92%
 
 ---
 
@@ -28,6 +28,10 @@ Las etiquetas se ofrecen a los clientes de [!DNL Adobe Experience Cloud] como un
 * Experiencias convincentes mediante la integración de tecnología de marketing y datos con ayuda del generador de reglas.
 
 ## Funciones principales {#key-features}
+
+Utilice el en la ayuda del producto del panel derecho para obtener más información sobre las etiquetas y ver los recursos disponibles adicionales.
+
+![Propiedades de etiquetas en la IU de recopilación de datos.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensiones {#extensions}
 

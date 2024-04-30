@@ -2,10 +2,10 @@
 title: Extensiones
 description: Conozca cómo funcionan las extensiones de etiquetas en Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 93%
+source-wordcount: '523'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +25,7 @@ Las extensiones determinan los elementos disponibles al crear propiedades, regla
 * Elementos de datos
 * Código del lado del cliente
 
-Utilice los enlaces de la parte superior de la lista Extensions para ver las extensiones instaladas, el catálogo de extensiones o las actualizaciones.
+Utilice los enlaces de la parte superior de la lista Extensiones para ver las extensiones instaladas, el catálogo de extensiones o las actualizaciones.
 
 Seleccione una extensión y, a continuación, seleccione [!UICONTROL Configurar] para ver y modificar la configuración de la extensión. Para obtener más información, consulte la sección sobre [adición de una nueva extensión](#add-a-new-extension) para obtener información sobre las opciones de extensión.
 
@@ -39,17 +39,17 @@ De forma predeterminada, Adobe proporciona extensiones compatibles con integraci
 
 Utilice el catálogo de extensiones para examinar, configurar e implementar tecnología de marketing y publicidad creada y mantenida por proveedores de software independientes, así como extensiones para soluciones de Adobe.
 
-La página Extensions proporciona tres vistas:
+La página Extensiones proporciona tres vistas: 
 
 * Instalado
 
-   Muestra todas las extensiones instaladas.
+  Muestra todas las extensiones instaladas.
 
 * Catálogo
 * Muestra todas las extensiones disponibles.
 * Actualizaciones
 
-   Muestra las actualizaciones disponibles para las extensiones instaladas.
+  Muestra las actualizaciones disponibles para las extensiones instaladas.
 
 Seleccione **[!UICONTROL Extensiones]** para ver todas las extensiones instaladas. También puede utilizar el catálogo para ver una lista de todas las extensiones disponibles y qué extensiones tienen actualizaciones disponibles.
 
@@ -59,10 +59,14 @@ Consulte [Referencia de extensiones](../../../extensions/client/overview.md) par
 
 Las etiquetas son muy extensibles. Las extensiones añaden funciones principales a las etiquetas. Un uso habitual de las extensiones es la creación de integraciones con otras aplicaciones.
 
+>[!TIP]
+>
+>Utilice el en la ayuda del producto del panel derecho para obtener más información sobre las extensiones y ver los recursos disponibles adicionales.
+
 1. En la página de información general de una propiedad, abra la pestaña **[!UICONTROL Extensiones]**.
 1. Seleccione una extensión.
 
-   ![Extensión principal](../../../images/extensions.png)
+   ![Pestaña Catálogo que muestra las extensiones principales en la pestaña Extensiones.](../../../images/extensions.png)
 
    * Si la extensión existe, selecciónela en el catálogo de extensiones.
    * Pase el ratón sobre una extensión de la lista para configurarla o deshabilitarla.
