@@ -3,10 +3,10 @@ title: Crear una conexión de origen de Azure Event Hubs mediante la API de Flow
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Azure Event Hubs mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 3%
+source-wordcount: '1473'
+ht-degree: 2%
 
 ---
 
@@ -52,6 +52,29 @@ Para que [!DNL Flow Service] para conectarse con su [!DNL Event Hubs] En su cuen
 | `eventHubName` | El nombre de su [!DNL Event Hubs] origen. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El [!DNL Event Hubs] ID de especificación de conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
+Para obtener más información sobre la autenticación de firmas de acceso compartido (SAS) para [!DNL Event Hubs], lea la [[!DNL Azure] guía sobre el uso de SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+
+>[!TAB Autenticación de Active Directory de Azure Event Hub]
+
+| Credencial | Descripción |
+| --- | --- |
+| `tenantId` | El ID de inquilino desde el que desea solicitar permiso. Su ID de inquilino puede tener el formato de GUID o de nombre descriptivo. **Nota**: el ID de inquilino se denomina &quot;ID de directorio&quot; en la variable [!DNL Microsoft Azure] interfaz. |
+| `clientId` | El ID de aplicación asignado a su aplicación. Puede recuperar este ID desde el [!DNL Microsoft Entra ID] portal donde registró su [!DNL Azure Active Directory]. |
+| `clientSecretValue` | El secreto de cliente que se utiliza junto con el ID de cliente para autenticar la aplicación. Puede recuperar el secreto de cliente desde el [!DNL Microsoft Entra ID] portal donde registró su [!DNL Azure Active Directory]. |
+| `namespace` | El área de nombres del [!DNL Event Hubs] está accediendo a. Un [!DNL Event Hubs] el espacio de nombres proporciona un contenedor de ámbito único, en el que puede crear uno o más [!DNL Event Hubs]. |
+
+Para obtener más información sobre [!DNL Azure Active Directory], lea la [Guía de Azure sobre el uso de Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Auth de Azure Active Directory con ámbito de Event Hub]
+
+| Credencial | Descripción |
+| --- | --- |
+| `tenantId` | El ID de inquilino desde el que desea solicitar permiso. Su ID de inquilino puede tener el formato de GUID o de nombre descriptivo. **Nota**: el ID de inquilino se denomina &quot;ID de directorio&quot; en la variable [!DNL Microsoft Azure] interfaz. |
+| `clientId` | El ID de aplicación asignado a su aplicación. Puede recuperar este ID desde el [!DNL Microsoft Entra ID] portal donde registró su [!DNL Azure Active Directory]. |
+| `clientSecretValue` | El secreto de cliente que se utiliza junto con el ID de cliente para autenticar la aplicación. Puede recuperar el secreto de cliente desde el [!DNL Microsoft Entra ID] portal donde registró su [!DNL Azure Active Directory]. |
+| `namespace` | El área de nombres del [!DNL Event Hubs] está accediendo a. Un [!DNL Event Hubs] el espacio de nombres proporciona un contenedor de ámbito único, en el que puede crear uno o más [!DNL Event Hubs]. |
+| `eventHubName` | El nombre de su [!DNL Event Hubs] origen. |
+
 >[!ENDTABS]
 
 Para obtener más información, consulte [este documento de Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -60,7 +83,7 @@ Para obtener más información, consulte [este documento de Event Hubs](https://
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Cree una conexión base
+## Crear una conexión base
 
 >[!TIP]
 >
@@ -171,6 +194,120 @@ curl -X POST \
 | `auth.params.sasKey` | La firma de acceso compartido generada. |
 | `auth.params.namespace` | El área de nombres del [!DNL Event Hubs] está accediendo a. |
 | `params.eventHubName` | El nombre de su [!DNL Event Hubs] origen. |
+| `connectionSpec.id` | El [!DNL Event Hubs] ID de especificación de conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Respuesta
+
+Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID de conexión es necesario en el siguiente paso para crear una conexión de origen.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB Autenticación de Active Directory de Azure Event Hub]
+
+Para crear una cuenta con la autenticación de Azure Active Directory, realice una solicitud de POST al `/connections` al proporcionar valores para su `tenantId`, `clientId`,`clientSecretValue`, y `namespace`.
+
++++Solicitud
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `auth.params.tenantId` | El ID de inquilino de su aplicación. **Nota**: el ID de inquilino se denomina &quot;ID de directorio&quot; en la variable [!DNL Microsoft Azure] interfaz. |
+| `auth.params.clientId` | El ID de cliente de su organización. |
+| `auth.params.clientSecretValue` | El valor secreto de cliente de su organización. |
+| `auth.params.namespace` | El área de nombres del [!DNL Event Hubs] está accediendo a. |
+| `connectionSpec.id` | El [!DNL Event Hubs] ID de especificación de conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Respuesta
+
+Una respuesta correcta devuelve detalles de la conexión base recién creada, incluido su identificador único (`id`). Este ID de conexión es necesario en el siguiente paso para crear una conexión de origen.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB Auth de Azure Active Directory con ámbito de Event Hub]
+
+Para crear una cuenta con la autenticación de Azure Active Directory, realice una solicitud de POST al `/connections` al proporcionar valores para su `tenantId`, `clientId`,`clientSecretValue`, `namespace`, y `eventHubName`.
+
++++Solicitud
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Scoped Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `auth.params.tenantId` | El ID de inquilino de su aplicación. **Nota**: el ID de inquilino se denomina &quot;ID de directorio&quot; en la variable [!DNL Microsoft Azure] interfaz. |
+| `auth.params.clientId` | El ID de cliente de su organización. |
+| `auth.params.clientSecretValue` | El valor secreto de cliente de su organización. |
+| `auth.params.namespace` | El área de nombres del [!DNL Event Hubs] está accediendo a. |
+| `auth.params.eventHubName` | El nombre de su [!DNL Event Hubs] origen. |
 | `connectionSpec.id` | El [!DNL Event Hubs] ID de especificación de conexión: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
