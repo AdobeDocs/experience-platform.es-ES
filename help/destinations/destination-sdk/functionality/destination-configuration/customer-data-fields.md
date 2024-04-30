@@ -2,10 +2,10 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 5%
+source-wordcount: '1742'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Al crear sus propios campos de datos de cliente, puede utilizar los parámetros 
 | `enum` | Cadena | Opcional | Procesa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
 | `default` | Cadena | Opcional | Define el valor predeterminado a partir de un `enum` lista. |
 | `hidden` | Booleano | Opcional | Indica si el campo de datos del cliente se muestra o no en la interfaz de usuario. |
-| `unique` | Booleano | Opcional | utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor debe ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, el campo **[!UICONTROL Alias de integración]** en el destino [Personalización](../../../catalog/personalization/custom-personalization.md) debe ser único, lo que significa que dos flujos de datos independientes a este destino no pueden tener el mismo valor para este campo. |
+| `unique` | Booleano | Opcional | Utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor deba ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, la variable **[!UICONTROL Alias de integración]** en el campo [Personalización personalizada](../../../catalog/personalization/custom-personalization.md) el destino debe ser único, lo que significa que dos flujos de datos independientes a este destino no pueden tener el mismo valor para este campo. |
 | `readOnly` | Booleano | Opcional | Indica si el cliente puede cambiar el valor del campo o no. |
 
 {style="table-layout:auto"}
@@ -340,6 +340,56 @@ Para crear un selector desplegable dinámico, debe configurar dos componentes:
 
 Configure las variables `destinationServerId` al ID del servidor de destino creado en el paso 1. Puede ver el ID del servidor de destino en la respuesta de [recuperar una configuración de servidor de destino](../../authoring-api/destination-server/retrieve-destination-server.md) Llamada de API.
 
+## Crear campos de datos de clientes anidados {#nested-fields}
+
+Puede crear campos de datos de clientes anidados para patrones de integración complejos. Esto le permite encadenar una serie de selecciones para el cliente.
+
+Por ejemplo, puede agregar campos de datos de clientes anidados para requerir que los clientes seleccionen un tipo de integración con el destino, seguido inmediatamente de otra selección. La segunda selección es un campo anidado dentro del tipo de integración.
+
+Para añadir un campo anidado, utilice el `properties` como se muestra a continuación. En el ejemplo de configuración siguiente, puede ver tres campos anidados independientes dentro del **Su destino: configuración específica de la integración** campo de datos del cliente.
+
+>[!TIP]
+>
+>A partir de la versión de abril de 2024, puede establecer un `isRequired` en campos anidados. Por ejemplo, en el siguiente fragmento de configuración, los dos primeros campos anidados se marcan como obligatorios (línea resaltada xxx) y los clientes no pueden continuar a menos que seleccionen un valor para el campo. Obtenga más información sobre los campos obligatorios en la [parámetros admitidos](#supported-parameters) sección.
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Crear campos de datos de clientes condicionales {#conditional-options}
 
 Puede crear campos de datos de clientes condicionales, que se muestran en el flujo de trabajo de activación solo cuando los usuarios seleccionan una opción determinada.
@@ -358,7 +408,7 @@ Para establecer un campo como condicional, utilice el `conditional` como se mues
 }
 ```
 
-En un contexto más amplio, puede ver el `conditional` que se utiliza en la configuración de destino siguiente, junto con el campo `fileType` cadena y el `csvOptions` objeto en el que se define.
+En un contexto más amplio, puede ver el `conditional` que se utiliza en la configuración de destino siguiente, junto con el campo `fileType` cadena y el `csvOptions` objeto en el que se define. Los campos condicionales se definen en la variable `properties` parámetro.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
