@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2794'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,16 @@ Si ha escrito varias consultas pero sólo necesita ejecutar una, puede resaltar 
 [!UICONTROL Ejecutar consulta seleccionada] icono. Este icono está desactivado de forma predeterminada hasta que seleccione una sintaxis de consulta en el editor.
 
 ![El editor de consultas con [!UICONTROL Ejecutar consulta seleccionada] icono resaltado.](../images/ui/query-editor/run-selected-query.png)
+
+### Cancelar sesión del Editor de consultas {#cancel-query}
+
+Tome el control de la ejecución de consultas y mejore su productividad cancelando consultas de larga duración. Esta acción borra el Editor de consultas durante la ejecución de una consulta. Tenga en cuenta que la consulta sigue ejecutándose en segundo plano. Si es una consulta CTAS, seguirá generando un conjunto de datos de salida. Para cancelar la ejecución en el editor y continuar maquetando una sentencia SQL, seleccione **[!UICONTROL Cancelar consulta]** después de ejecutar una consulta.
+
+![El editor de consultas con [!UICONTROL Cancelar consulta] resaltado.](../images/ui/query-editor/cancel-query-run.png)
+
+Aparecerá un cuadro de diálogo de confirmación. Seleccionar **[!UICONTROL Confirmar]** para cancelar la ejecución de la consulta.
+
+![El cuadro de diálogo de confirmación Cancelar consulta con Confirmar resaltado.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Recuento de resultados {#result-count}
 
@@ -219,7 +229,11 @@ Al guardar una consulta en el Editor de consultas, aparece un mensaje de confirm
 
 Las consultas que se han guardado como plantilla se pueden programar desde el Editor de consultas. La programación de consultas permite automatizar las ejecuciones de consultas en una cadencia personalizada. Puede programar consultas en función de la frecuencia, la fecha y la hora, y también elegir un conjunto de datos de salida para los resultados si es necesario. Las programaciones de consultas también se pueden deshabilitar o eliminar a través de la interfaz de usuario.
 
-Las programaciones se establecen en el Editor de consultas. Al utilizar el Editor de consultas, sólo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado. La misma limitación no se aplica al [!DNL Query Service] API:
+Las programaciones se establecen en el Editor de consultas. Al utilizar el Editor de consultas, sólo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado. La misma limitación no se aplica al [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Las consultas programadas que fallan diez ejecuciones consecutivas se colocan automáticamente en una [!UICONTROL En Cuarentena] estado. Una consulta con este estado requiere su intervención para que se puedan llevar a cabo más ejecuciones. Consulte la [consultas en cuarentena](./monitor-queries.md#quarantined-queries) para obtener más información.
 
 Consulte la documentación de programaciones de consultas para obtener información sobre cómo [crear programaciones de consultas en la interfaz de usuario](./query-schedules.md). Como alternativa, para aprender a añadir programaciones mediante la API, lea la [guía de extremo de consultas programadas](../api/scheduled-queries.md).
 

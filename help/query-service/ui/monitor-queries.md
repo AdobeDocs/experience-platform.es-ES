@@ -2,9 +2,9 @@
 title: Monitorización de consultas programadas
 description: Obtenga información sobre cómo monitorizar las consultas a través de la IU del servicio de consultas.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
+source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,12 @@ La siguiente tabla describe cada columna disponible.
 | **[!UICONTROL Nombre]** | El campo de nombre es el nombre de la plantilla o los primeros caracteres de la consulta SQL. Cualquier consulta creada a través de la interfaz de usuario con el Editor de consultas recibe el nombre al principio. Si la consulta se creó mediante la API, su nombre se convierte en un fragmento del SQL inicial utilizado para crear la consulta. Para ver una lista de todas las ejecuciones asociadas con la consulta, seleccione un elemento de la [!UICONTROL Nombre] columna. Para obtener más información, consulte la [query ejecuta detalles de programación](#query-runs) sección. |
 | **[!UICONTROL Plantilla]** | Nombre de plantilla de la consulta. Seleccione un nombre de plantilla para navegar hasta el Editor de consultas. La plantilla de consulta se muestra en el Editor de consultas para mayor comodidad. Si no hay ningún nombre de plantilla, la fila se marca con un guión y no se puede redirigir al Editor de consultas para ver la consulta. |
 | **[!UICONTROL SQL]** | Un fragmento de la consulta SQL. |
-| **[!UICONTROL Frecuencia de ejecución]** | La cadencia con la que se configurará la consulta para ejecutarse. Los valores disponibles son `Run once` y `Scheduled`. Las consultas se pueden filtrar según su frecuencia de ejecución. |
+| **[!UICONTROL Frecuencia de ejecución]** | La cadencia con la que se configurará la consulta para ejecutarse. Los valores disponibles son `Run once` y `Scheduled`. |
 | **[!UICONTROL Creado por]** | El nombre del usuario que creó la consulta. |
 | **[!UICONTROL Creado]** | La marca de tiempo cuando se creó la consulta, en formato UTC. |
 | **[!UICONTROL Marca de tiempo de última ejecución]** | La marca de tiempo más reciente cuando se ejecutó la consulta. Esta columna resalta si una consulta se ha ejecutado según su programación actual. |
 | **[!UICONTROL Último estado de ejecución]** | El estado de la ejecución de consulta más reciente. Los valores de estado son: `Success`, `Failed`, `In progress`, y `No runs`. |
-| **[!UICONTROL Estado de horario]** | El estado actual de la consulta programada. Hay cinco valores potenciales, [!UICONTROL Registro], [!UICONTROL Activo], [!UICONTROL Inactivo], [!UICONTROL Eliminado]y un guión. <ul><li>El guión indica que la consulta programada es una consulta única y no recurrente.</li><li>El [!UICONTROL Registro] El estado indica que el sistema sigue procesando la creación de la nueva programación para la consulta. Tenga en cuenta que no puede deshabilitar ni eliminar una consulta programada mientras se esté registrando.</li><li>El [!UICONTROL Activo] El estado indica que la consulta programada tiene **aún no se ha aprobado** su fecha y hora de finalización.</li><li>El [!UICONTROL Inactivo] El estado indica que la consulta programada tiene **aprobado** su fecha y hora de finalización.</li><li>El [!UICONTROL Eliminado] El estado indica que se ha eliminado la programación de consultas.</li></ul> |
+| **[!UICONTROL Estado de horario]** | El estado actual de la consulta programada. Hay seis valores potenciales, [!UICONTROL Registro], [!UICONTROL Activo], [!UICONTROL Inactivo], [!UICONTROL Eliminado], un guión y [!UICONTROL En Cuarentena].<ul><li>El **[!UICONTROL Registro]** El estado indica que el sistema sigue procesando la creación de la nueva programación para la consulta. Tenga en cuenta que no puede deshabilitar ni eliminar una consulta programada mientras se esté registrando.</li><li>El **[!UICONTROL Activo]** El estado indica que la consulta programada tiene **aún no se ha aprobado** su fecha y hora de finalización.</li><li>El **[!UICONTROL Inactivo]** El estado indica que la consulta programada tiene **aprobado** su fecha y hora de finalización o ha sido marcado por un usuario para que esté en estado inactivo.</li><li>El **[!UICONTROL Eliminado]** El estado indica que se ha eliminado la programación de consultas.</li><li>El guión indica que la consulta programada es una consulta única y no recurrente.</li><li>El **[!UICONTROL En Cuarentena]** El estado indica que la consulta ha fallado diez ejecuciones consecutivas y requiere su intervención antes de que se puedan llevar a cabo más ejecuciones.</li></ul> |
 
 >[!TIP]
 >
@@ -63,15 +63,19 @@ Active las casillas de verificación correspondientes para quitar o agregar una 
 
 ## Administración de consultas programadas con acciones en línea {#inline-actions}
 
-El [!UICONTROL Consultas programadas] view ofrece varias acciones en línea para administrar todas las consultas programadas desde una ubicación. Las acciones en línea se indican en cada fila con puntos suspensivos. Seleccione los puntos suspensivos de una consulta programada que desee administrar para ver las opciones disponibles en un menú emergente. Las opciones disponibles incluyen [[!UICONTROL Desactivar programación]](#disable) o [!UICONTROL Habilitar programación], [[!UICONTROL Eliminar programación]](#delete), y [[!UICONTROL Suscribirse]](#alert-subscription) para consultar alertas.
+El [!UICONTROL Consultas programadas] view ofrece varias acciones en línea para administrar todas las consultas programadas desde una ubicación. Las acciones en línea se indican en cada fila con puntos suspensivos. Seleccione los puntos suspensivos de una consulta programada que desee administrar para ver las opciones disponibles en un menú emergente. Las opciones disponibles incluyen [[!UICONTROL Desactivar programación]](#disable) o [!UICONTROL Habilitar programación], [[!UICONTROL Eliminar programación]](#delete), [[!UICONTROL Suscribirse]](#alert-subscription) para consultar alertas, y [Habilitar o [!UICONTROL Deshabilitar cuarentena]](#quarantined-queries).
 
-![La pestaña Consultas programadas con los puntos suspensivos de acción en línea y el menú emergente resaltados.](../images/ui/monitor-queries/disable-inline.png)
+![La pestaña Consultas programadas con los puntos suspensivos de acción en línea y el menú emergente resaltados.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Deshabilitar o habilitar una consulta programada {#disable}
 
 Para desactivar una consulta programada, seleccione los puntos suspensivos de una consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Desactivar programación]** en las opciones del menú emergente. Aparecerá un cuadro de diálogo para confirmar la acción. Seleccionar **[!UICONTROL Deshabilitar]** para confirmar la configuración.
 
 Una vez deshabilitada una consulta programada, puede habilitar la programación a través del mismo proceso. Seleccione los puntos suspensivos y luego seleccione **[!UICONTROL Habilitar programación]** en las opciones disponibles.
+
+>[!NOTE]
+>
+>Si una consulta se ha puesto en cuarentena, debe revisar el SQL de la plantilla antes de activar su programación. Esto evita una pérdida de horas calculadas si la consulta de la plantilla sigue teniendo problemas.
 
 ### Eliminar una consulta programada {#delete}
 
@@ -91,6 +95,10 @@ El [!UICONTROL Alertas] se abre. El [!UICONTROL Alertas] Este cuadro de diálogo
 
 ![Cuadro de diálogo de suscripciones de alerta.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>Para recibir una notificación de las ejecuciones de consulta que se ponen en cuarentena, primero debe inscribir las ejecuciones de consulta programadas en la [función de cuarentena](#quarantined-queries).
+
 Consulte la [documentación de API de suscripciones de alerta](../api/alert-subscriptions.md) para obtener más información.
 
 ### Ver los detalles de la consulta {#query-details}
@@ -98,6 +106,16 @@ Consulte la [documentación de API de suscripciones de alerta](../api/alert-subs
 Seleccione el icono de información (![Un icono de información.](../images/ui/monitor-queries/information-icon.png)) para ver el panel de detalles de la consulta. El panel de detalles contiene toda la información relevante sobre la consulta más allá de los hechos incluidos en la tabla de consultas programadas. La información adicional incluye el ID de consulta, la fecha de última modificación, el SQL de la consulta, el ID de programación y la programación definida actual.
 
 ![La pestaña Consultas programadas con el icono de información y el panel de detalles resaltados.](../images/ui/monitor-queries/details-panel.png)
+
+### Consultas en cuarentena {#quarantined-queries}
+
+Cuando se inscribe en la función de cuarentena, cualquier consulta programada que falle diez ejecuciones consecutivas se coloca automáticamente en una [!UICONTROL En Cuarentena] estado. Una consulta con este estado se vuelve inactiva y no se ejecuta a su cadencia programada. Luego requiere su intervención antes de que se puedan llevar a cabo más ejecuciones. Esto protege los recursos del sistema, ya que debe revisar y corregir los problemas con su SQL antes de que se produzcan más ejecuciones.
+
+Para habilitar una consulta programada para la función de cuarentena, seleccione los puntos suspensivos (`...`) seguido de [!UICONTROL Habilitar cuarentena] en el menú desplegable que aparece.
+
+![La pestaña Consultas programadas con los puntos suspensivos y Habilitar cuarentena resaltados en el menú desplegable Acciones en línea.](../images/ui/monitor-queries/inline-enable.png)
+
+Las consultas también se pueden inscribir en la función de cuarentena durante el proceso de creación de la programación. Consulte la [documentación de programaciones de consultas](./query-schedules.md#quarantine) para obtener más información.
 
 ## Filtrar consultas {#filter}
 
@@ -123,12 +141,12 @@ Para abrir la página de detalles de la programación, seleccione un nombre de c
 
 Esta información se proporciona en una tabla de cinco columnas. Cada fila indica una ejecución de consulta.
 
-| El nombre de la columna | Descripción |
+| Nombre de la columna | Descripción |
 |---|---|
 | **[!UICONTROL ID de ejecución de consulta]** | ID de ejecución de consulta para la ejecución diaria. Seleccione el **[!UICONTROL ID de ejecución de consulta]** para ir al [!UICONTROL Resumen de ejecución de consultas]. |
 | **[!UICONTROL Inicio de ejecución de consulta]** | La marca de tiempo cuando se ejecutó la consulta. La marca de tiempo está en formato UTC. |
 | **[!UICONTROL Ejecución de consulta completa]** | La marca de tiempo cuando se completó la consulta. La marca de tiempo está en formato UTC. |
-| **[!UICONTROL Estado]** | El estado de la ejecución de consulta más reciente. Los tres valores de estado son: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Estado]** | El estado de la ejecución de consulta más reciente. Los valores de estado son: `Success`, `Failed`, `In progress`, o `Quarantined`. |
 | **[!UICONTROL Conjunto de datos]** | El conjunto de datos involucrado en la ejecución. |
 
 Los detalles de la consulta que se está programando se pueden ver en la [!UICONTROL Propiedades] panel. Este panel incluye el ID de consulta inicial, el tipo de cliente, el nombre de la plantilla, el SQL de consulta y la cadencia de la programación.
