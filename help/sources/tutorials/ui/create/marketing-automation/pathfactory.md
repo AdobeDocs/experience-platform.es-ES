@@ -1,11 +1,9 @@
 ---
 title: Conecte su cuenta de PathFactory a Experience Platform a través de la interfaz de usuario de
 description: Aprenda a conectar su cuenta de PathFactory a Experience Platform a través de la interfaz de usuario de.
-last-substantial-update: 2024-04-30T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 1%

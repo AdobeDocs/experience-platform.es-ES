@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores de origen
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -170,6 +170,7 @@ Experience Platform proporciona asistencia para la ingesta de datos desde un sis
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Lote]{type=Informative}
+- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Lote]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
