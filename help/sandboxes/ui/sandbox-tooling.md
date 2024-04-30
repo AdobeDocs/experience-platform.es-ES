@@ -2,10 +2,10 @@
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 8%
+source-wordcount: '2241'
+ht-degree: 7%
 
 ---
 
@@ -165,6 +165,52 @@ Se le devolverá a la [!UICONTROL Objeto de paquete y dependencias] página. Des
 
 ![El [!UICONTROL Objeto de paquete y dependencias] Esta página muestra una lista de los recursos incluidos en el paquete, resaltando [!UICONTROL Finalizar].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## Exportar e importar una zona protegida completa
+
+>[!NOTE]
+>
+>Solo se admiten objetos de la plataforma de datos del cliente en tiempo real para una exportación/importación de zona protegida completa. No se incluirán los objetos de recorrido.
+
+### Exportar toda una zona protegida {#export-entire-sandbox}
+
+Para exportar una zona protegida completa, vaya a [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** y seleccione **[!UICONTROL Crear paquete]**.
+
+![El [!UICONTROL Zonas protegidas] **[!UICONTROL Paquetes]** resaltado de tabulaciones [!UICONTROL Crear paquete].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Seleccionar **[!UICONTROL Toda la zona protegida]** para el [!UICONTROL Tipo de paquete] en el [!UICONTROL Crear paquete] diálogo. Proporcione un [!UICONTROL Nombre del paquete] para el nuevo paquete y seleccione **[!UICONTROL Sandbox]** en el menú desplegable. Finalmente, seleccione **[!UICONTROL Crear]** para confirmar las entradas.
+
+![El [!UICONTROL Crear paquete] diálogo que muestra los campos completados y el resaltado [!UICONTROL Crear].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+El paquete se ha creado correctamente, seleccione **[!UICONTROL Publish]** para publicar el paquete.
+
+![Lista de paquetes de zona protegida que resaltan el nuevo paquete publicado.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+Se le devolverá a la **[!UICONTROL Paquetes]** en la pestaña [!UICONTROL Zonas protegidas] entorno, donde puede ver el nuevo paquete publicado.
+
+### Importar todo el paquete de zona protegida {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>Todos los objetos se importarán en la zona protegida de destino como objetos nuevos. Se recomienda importar un paquete de zona protegida completo en una zona protegida vacía.
+
+Para importar el paquete en una zona protegida de Target, vaya a [!UICONTROL Zonas protegidas] **[!UICONTROL Examinar]** y seleccione la opción más (+) junto al nombre de la zona protegida.
+
+![Las zonas protegidas **[!UICONTROL Examinar]** pestaña que resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+En el menú desplegable, seleccione la zona protegida completa con la variable **[!UICONTROL Nombre del paquete]** desplegable. Añadir un **[!UICONTROL Nombre de trabajo]**, que se utilizará para futuras monitorizaciones y un **[!UICONTROL Descripción del trabajo]**, luego seleccione **[!UICONTROL Siguiente]**.
+
+![La página de detalles de importación que muestra [!UICONTROL Nombre del paquete] selección desplegable](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>Debe tener permisos completos para todos los objetos incluidos en el paquete. Si no tiene permisos, la operación de importación fallará y aparecerán mensajes de error.
+
+Se le redirige a la [!UICONTROL Objeto de paquete y dependencias] página en la que puede ver el número de objetos y dependencias que se importan y excluyen. Desde aquí, seleccione **[!UICONTROL Importar]** para completar la importación del paquete.
+
+![El [!UICONTROL Objeto de paquete y dependencias] página muestra el mensaje en línea de los tipos de objeto no admitidos, resaltando [!UICONTROL Importar].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+Espere un poco para que se complete la importación. El tiempo para finalizar puede variar según el número de objetos del paquete. Puede supervisar el trabajo de importación desde el [!UICONTROL Zonas protegidas] **[!UICONTROL Trabajos]** pestaña.
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## Supervisión de trabajos de importación y visualización de detalles de objetos de importación
+## Monitorización de detalles de importación {#view-import-details}
 
-Para ver los objetos importados y los detalles importados, vaya a [!UICONTROL Zonas protegidas] **[!UICONTROL Importaciones]** y seleccione el paquete en la lista. También puede utilizar la barra de búsqueda para buscar el paquete.
+Para ver los detalles importados, vaya al [!UICONTROL Zonas protegidas] **[!UICONTROL Trabajos]** y seleccione el paquete en la lista. También puede utilizar la barra de búsqueda para buscar el paquete.
 
-![Las zonas protegidas [!UICONTROL Importaciones] La pestaña resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/imports-tab.png)
+![Las zonas protegidas [!UICONTROL Trabajos] La pestaña resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/imports-tab.png)
 
-### Ver objetos importados {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-En el **[!UICONTROL Importaciones]** en la pestaña [!UICONTROL Zonas protegidas] entorno, seleccione **[!UICONTROL Ver objetos importados]** en el panel de detalles derecho.
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-Seleccionar **[!UICONTROL Ver objetos importados]** en el panel de detalles derecho de la **[!UICONTROL Importaciones]** en la pestaña [!UICONTROL Zonas protegidas] entorno.
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![Las zonas protegidas [!UICONTROL Importaciones] La pestaña resalta el [!UICONTROL Ver objetos importados] selección en el panel derecho.](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-Utilice las flechas para expandir los objetos y ver la lista completa de campos que se han importado al paquete.
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![Las zonas protegidas [!UICONTROL Objetos importados] mostrar una lista de objetos importados en el paquete.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### Ver detalles de importación {#view-import-details}
-
-Seleccionar **[!UICONTROL Ver detalles de importación]** en el panel de detalles derecho del **[!UICONTROL Importaciones]** en el entorno Zonas protegidas.
+Seleccionar **[!UICONTROL Ver resumen de importación]** en el panel de detalles derecho del **[!UICONTROL Trabajos]** en el entorno Zonas protegidas.
 
 ![Las zonas protegidas [!UICONTROL Importaciones] La pestaña resalta el [!UICONTROL Ver detalles de importación] selección en el panel derecho.](../images/ui/sandbox-tooling/view-import-details.png)
 
-El **[!UICONTROL Importar detalles]** El cuadro de diálogo muestra un desglose detallado de las importaciones.
-
-![El [!UICONTROL Importar detalles] que muestra un desglose detallado de las importaciones.](../images/ui/sandbox-tooling/import-details.png)
+El **[!UICONTROL Importar resumen]** El cuadro de diálogo muestra un desglose de las importaciones con el progreso como porcentaje.
 
 >[!NOTE]
 >
->Cuando se complete una importación, recibirá notificaciones en la interfaz de usuario de Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
+>Puede ver una lista de objetos navegando a páginas de inventario específicas.
+
+![El [!UICONTROL Importar detalles] que muestra un desglose detallado de las importaciones.](../images/ui/sandbox-tooling/import-details.png)
+
+Cuando se completa la importación, se recibe una notificación en la interfaz de usuario de Platform. Puede acceder a estas notificaciones desde el icono de alertas. Puede navegar a la resolución de problemas desde aquí si un trabajo no se ha realizado correctamente.
 
 ## Tutorial de vídeo
 
