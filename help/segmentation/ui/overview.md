@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
+source-wordcount: '4105'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,8 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. |
 | [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archivar] | Carga personalizada | Archiva la audiencia seleccionada. |
+| [!UICONTROL Publish] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
+| [!UICONTROL Desactivar] | Carga personalizada, servicio de segmentación | Desactiva la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
 | [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Puede seleccionar **[!UICONTROL Actualizar resumen de frecuencia]** para mostrar
 
 ![Se resaltará el botón Update frequency summary.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-Aparece un gráfico circular que muestra un desglose de las audiencias por frecuencia de actualización. El gráfico muestra el número total de audiencias en el medio. Si pasa el ratón por encima de las diferentes partes de la audiencia, se mostrará el número de audiencias que pertenecen a cada tipo de frecuencia de actualización.
+Aparece un gráfico circular que muestra un desglose de las audiencias por frecuencia de actualización. El gráfico muestra la cantidad total de audiencias en el centro y el tiempo diario de evaluación por lotes en UTC en la parte inferior. Si pasa el ratón por encima de las diferentes partes de la audiencia, se mostrará el número de audiencias que pertenecen a cada tipo de frecuencia de actualización.
 
-![Se muestra el gráfico circular de frecuencia de actualización.](../images/ui/overview/update-frequency-chart.png)
+![Se resalta el gráfico circular de frecuencia de actualización, con el tiempo de evaluación de segmentación por lotes también mostrado.](../images/ui/overview/update-frequency-chart.png)
 
 ### Personalizar {#customize}
 
@@ -115,7 +116,7 @@ Puede añadir campos adicionales a la [!UICONTROL Examinar] página seleccionand
 | [!UICONTROL Nombre] | El nombre de la audiencia. |
 | [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
 | [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
-| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
+| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, `Published`, y `Archived`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-status). |
 | [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen [!UICONTROL Lote], [!UICONTROL Transmisión], [!UICONTROL Edge], y [!UICONTROL No programado]. |
 | [!UICONTROL Actualizado por última vez por] | El nombre de la persona que actualizó la audiencia por última vez. |
 | [!UICONTROL Creado] | La fecha y la hora, en UTC, en que se creó la audiencia. |
@@ -205,7 +206,7 @@ Se muestra la lista de filtros disponibles.
 | ------ | ----------- |
 | [!UICONTROL Origen] | Le permite filtrar según el origen de la audiencia. Las opciones disponibles son Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
 | [!UICONTROL Tiene cualquier etiqueta] | Le permite filtrar por etiquetas. Puede seleccionar entre **[!UICONTROL Tiene cualquier etiqueta]** y **[!UICONTROL Tiene todas las etiquetas]**. Cuándo **[!UICONTROL Tiene cualquier etiqueta]** está seleccionada, las audiencias filtradas incluirán **cualquiera** de las etiquetas que ha agregado. Cuándo **[!UICONTROL Tiene todas las etiquetas]** está seleccionado, las audiencias filtradas deben incluir **todo** de las etiquetas que ha agregado. |
-| [!UICONTROL Estado del ciclo vital] | Le permite filtrar según el estado del ciclo vital de la audiencia. Las opciones disponibles incluyen [!UICONTROL Activo], [!UICONTROL Archivado], [!UICONTROL Eliminado], [!UICONTROL Borrador], [!UICONTROL Inactivo], y [!UICONTROL Publicado]. |
+| [!UICONTROL Estado del ciclo vital] | Le permite filtrar según el estado del ciclo vital de la audiencia. Las opciones disponibles incluyen [!UICONTROL Eliminado], [!UICONTROL Borrador], [!UICONTROL Inactivo], y [!UICONTROL Publicado]. |
 | [!UICONTROL Frecuencia de actualización] | Le permite filtrar según la frecuencia de actualización de la audiencia. Las opciones disponibles incluyen [!UICONTROL Programado], [!UICONTROL Continuo], y [!UICONTROL Bajo demanda]. |
 | [!UICONTROL Creado por] | Le permite filtrar según la persona que creó la audiencia. |
 | [!UICONTROL Fecha de creación] | Le permite filtrar según la fecha de creación de la audiencia. Puede elegir un intervalo de fechas para filtrar cuándo se creó la audiencia. |
@@ -408,7 +409,7 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 | Campo | Descripción |
 | ----- | ----------- | 
 | [!UICONTROL Nombre] | El nombre de la audiencia. |
-| [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Published`, y `Archived`. |
+| [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, `Published`, y `Archived`. |
 | [!UICONTROL Creado] | La hora y la fecha de creación de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
 | [!UICONTROL Actualizado] | Fecha y hora en la que se actualizó la audiencia por última vez. |

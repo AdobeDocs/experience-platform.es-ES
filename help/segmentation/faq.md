@@ -2,10 +2,10 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 1%
+source-wordcount: '3976'
+ht-degree: 0%
 
 ---
 
@@ -98,18 +98,6 @@ La caducidad de los datos actuales para las audiencias generadas de forma extern
 
 Una vez transcurrido el período de caducidad de los datos, el conjunto de datos asociado seguirá siendo visible dentro del inventario de conjuntos de datos, pero lo hará **no** poder activar la audiencia, y el recuento de perfiles se mostrará como cero.
 
-### ¿Qué representan los distintos estados del ciclo vital?
-
-El siguiente gráfico explica los diferentes estados del ciclo vital, qué representan, dónde se pueden utilizar las audiencias con ese estado, así como el impacto en las protecciones de segmentación.
-
-| Estado | Definición | ¿Visible en Audience Portal? | ¿Visible en destinos? | ¿Afecta a los límites de segmentación? | Impacto en las audiencias basadas en archivos | Impacto en la evaluación de audiencias | ¿Se puede usar dentro de otras audiencias? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Borrador | Una audiencia en **Borrador** el estado es una audiencia que aún está en desarrollo y que aún no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Se puede evaluar para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. |
-| Publicadas | Una audiencia en **Publicado** El estado es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí |
-| Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | Sí |
-| Eliminado | Una audiencia en **Eliminado** El estado es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No |
-| Activo | Este estado se ha **obsoleto** y se sustituye por el **Publicado** estado. | N/A | N/A | N/A | N/A | N/A | N/A |
-
 ### ¿Cómo interactúan Audience Portal y Composición de audiencias con la versión de los datos de socios de Real-Time CDP?
 
 Audience Portal y Composición de audiencias interactuarán con los datos de los socios de dos formas:
@@ -130,9 +118,108 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 | Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. Atributos de enriquecimiento **no puede** se activará. |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
+## Estados del ciclo vital {#lifecycle-states}
+
+En la siguiente sección se enumeran las preguntas relacionadas con los estados del ciclo vital y la administración del estado del ciclo vital en Audience Portal.
+
+### ¿Qué representan los distintos estados del ciclo vital?
+
+El siguiente gráfico explica los diferentes estados del ciclo vital, qué representan, dónde se pueden utilizar las audiencias con ese estado, así como el impacto en las protecciones de segmentación.
+
+| Estado | Definición | ¿Visible en Audience Portal? | ¿Visible en destinos? | ¿Afecta a los límites de segmentación? | Impacto en las audiencias basadas en archivos | Impacto en la evaluación de audiencias | ¿Se puede usar dentro de otras audiencias? | Editable |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Borrador | Una audiencia en **Borrador** el estado es una audiencia que aún está en desarrollo y que aún no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Se puede evaluar para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
+| Publicadas | Una audiencia en **Publicado** El estado es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí | Sí |
+| Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | Sí | Sí |
+| Eliminado | Una audiencia en **Eliminado** El estado es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No | No |
+
+### ¿En qué estados puedo editar mis audiencias?
+
+Las audiencias se pueden editar en los siguientes estados del ciclo vital:
+
+- **Borrador**: Si una audiencia se edita en estado de borrador, permanecerá en estado de borrador a menos que se publique explícitamente.
+- **Publicado**: Si una audiencia se edita en el estado publicado, seguirá publicándose y la audiencia se actualizará automáticamente.
+- **Inactivo**: Si una audiencia se edita en estado inactivo, permanecerá inactiva. Esto significa que no se evaluará ni actualizará. Si necesita actualizar la audiencia, debe publicar la audiencia.
+
+Una vez eliminada una audiencia, **no puede** no se puede editar.
+
+### ¿A qué estados del ciclo vital puedo mover una audiencia?
+
+Los posibles estados del ciclo de vida a los que se puede mover una audiencia dependen del estado actual de la audiencia.
+
+![Diagrama que describe las posibles transiciones de estado del ciclo vital disponibles para las audiencias.](./images/faq/lifecycle-state-transition.png)
+
+Si la audiencia está en estado de borrador, puede publicarla o eliminarla si la audiencia no tiene dependientes.
+
+Si la audiencia está en el estado publicado, puede desactivarla o eliminarla si la audiencia no tiene dependientes.
+
+Si la audiencia está en estado inactivo, puede volver a publicarla o eliminarla si la audiencia no tiene dependientes.
+
+### ¿Hay advertencias para audiencias en determinados estados del ciclo vital?
+
+Las audiencias en estado publicado solo se pueden mover a otro estado si la audiencia lo hace **no** tiene cualquier dependiente. Esto significa que si la audiencia se utiliza en un servicio descendente, no se puede desactivar ni eliminar.
+
+Si se vuelve a publicar una audiencia que se evalúa mediante segmentación por lotes, es decir, cuando una audiencia pasa de inactiva a publicada, la audiencia se actualiza **después** el trabajo por lotes diario. Cuando se vuelva a publicar por primera vez, los perfiles y datos serán los siguientes **igual** como cuando la audiencia quedó inactiva.
+
+### ¿Cómo puedo colocar una audiencia en estado de borrador?
+
+El método para colocar una audiencia en el estado de borrador depende del origen de la audiencia.
+
+Para las audiencias creadas con el Generador de segmentos, puede establecer la audiencia en el estado de borrador seleccionando &quot;[!UICONTROL Guardar como borrador]&quot; en el Generador de segmentos.
+
+Para las audiencias creadas en Composición de audiencia, las audiencias se guardan automáticamente como borrador hasta su publicación.
+
+Para las audiencias creadas externamente, las audiencias se publican automáticamente.
+
+Una vez que una audiencia esté en el estado publicado, debe **no puede** vuelva a cambiar la audiencia original al estado de borrador. Sin embargo, si copia la audiencia, la audiencia recién copiada estará en estado de borrador.
+
+### ¿Cómo puedo colocar una audiencia en el estado publicado?
+
+Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publish]&quot; en sus respectivas IU.
+
+Las audiencias creadas externamente se establecen automáticamente como publicadas.
+
+### ¿Cómo puedo poner una audiencia en estado inactivo?
+
+Puede poner una audiencia publicada en el estado inactivo abriendo el menú de acciones rápidas en Audience Portal y seleccionando &quot;[!UICONTROL Desactivar]&quot;.
+
+### ¿Cómo puedo volver a publicar una audiencia?
+
+>[!NOTE]
+>
+>El estado &quot;Volver a publicar&quot; es el mismo que el estado publicado para el comportamiento de audiencia.
+
+Para volver a publicar una audiencia, seleccione una audiencia que esté en estado inactivo, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Publish].
+
+### ¿Cómo puedo poner una audiencia en el estado eliminado?
+
+>[!IMPORTANT]
+>
+>Solo puede eliminar audiencias que estén **no** se utiliza en cualquier activación descendente. Tampoco puede eliminar una audiencia a la que se haga referencia en otra audiencia. Si no puede eliminar su audiencia, asegúrese de que esté **no** utilizarlo en cualquier servicio descendente o como componente básico de otra audiencia.
+
+Para poner una audiencia en el estado de eliminación, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Eliminar].
+
+### ¿Afecta el uso de una audiencia como audiencia secundaria a las transiciones de estado del ciclo vital?
+
+>[!NOTE]
+>
+>Una audiencia principal es una audiencia que **utiliza** otra audiencia como dependencia de la audiencia.
+>
+>Una audiencia secundaria es una audiencia que **se usa como** una dependencia para la audiencia.
+
+Sí, el uso de una audiencia como audiencia secundaria afecta a las transiciones de estados del ciclo vital que pueden realizar la audiencia principal y la secundaria.
+
+Para que una audiencia secundaria se mueva al estado publicado, seleccione toda su audiencia principal **debe** estar en estado publicado. Las audiencias principales se pueden publicar antes de publicar la audiencia secundaria o, si el usuario lo confirma, se pueden publicar automáticamente cuando se publica la audiencia secundaria.
+
+Para que la audiencia principal se mueva al estado inactivo o eliminado, todas sus audiencias secundarias **debe** desactivarse o eliminarse.
+
+### ¿Puedo hacer referencia a una audiencia que está en un estado de ciclo de vida diferente?
+
+¡Sí! Si la audiencia está actualmente en estado de borrador, puede hacer referencia a audiencias en estado publicado o inactivo. Sin embargo, para publicar esta audiencia, debe **debe** publicar las demás audiencias principales.
+
 ## Inventario de audiencias
 
-En las secciones siguientes se enumeran las preguntas relacionadas con el inventario de audiencias dentro de Audience Portal.
+En la siguiente sección se enumeran las preguntas relacionadas con el inventario de audiencias dentro de Audience Portal.
 
 ### ¿Necesito permisos adicionales para utilizar las funciones del inventario de audiencias?
 
