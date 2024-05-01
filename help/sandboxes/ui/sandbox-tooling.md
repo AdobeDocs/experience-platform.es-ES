@@ -2,9 +2,9 @@
 title: Herramientas de zonas protegidas
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '2241'
+source-wordcount: '2314'
 ht-degree: 7%
 
 ---
@@ -137,7 +137,7 @@ Para importar el paquete en una zona protegida de Target, vaya a las zonas prote
 
 ![Las zonas protegidas **[!UICONTROL Examinar]** pestaña que resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-En el menú desplegable, seleccione la **[!UICONTROL Nombre del paquete]** desea importar a la zona protegida de destino. Añada un opcional **[!UICONTROL Nombre de trabajo]**, que se utilizará para futuras monitorizaciones. De forma predeterminada, el perfil unificado se desactiva cuando se importan los esquemas del paquete. Alternar **Habilitar esquemas para el perfil** para habilitar esto, seleccione **[!UICONTROL Siguiente]**.
+En el menú desplegable, seleccione la **[!UICONTROL Nombre del paquete]** desea importar a la zona protegida de destino. Añadir un **[!UICONTROL Nombre de trabajo]**, que se utilizará para futuras monitorizaciones. De forma predeterminada, el perfil unificado se desactiva cuando se importan los esquemas del paquete. Alternar **Habilitar esquemas para el perfil** para habilitar esto, seleccione **[!UICONTROL Siguiente]**.
 
 ![La página de detalles de importación que muestra [!UICONTROL Nombre del paquete] selección desplegable](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
@@ -169,7 +169,12 @@ Se le devolverá a la [!UICONTROL Objeto de paquete y dependencias] página. Des
 
 >[!NOTE]
 >
->Solo se admiten objetos de la plataforma de datos del cliente en tiempo real para una exportación/importación de zona protegida completa. No se incluirán los objetos de recorrido.
+>Actualmente, solo se admiten objetos de Real-time Customer Data Platform al exportar o importar una zona protegida completa. Los objetos de Adobe Journey Optimizer, como los recorridos, no son compatibles en este momento.
+
+Puede exportar todos los tipos de objetos admitidos en un paquete de zona protegida completo y, a continuación, importar el paquete en varios entornos limitados para replicar las configuraciones de objetos. Por ejemplo, esta funcionalidad le permite:
+
+- Vuelva a importar una zona protegida para reproducir todas las configuraciones del objeto si necesita restablecer la zona protegida
+- Importe el paquete en otros entornos limitados y utilícelo como entorno limitado de modelo para acelerar el proceso de desarrollo.
 
 ### Exportar toda una zona protegida {#export-entire-sandbox}
 
@@ -210,48 +215,6 @@ Se le redirige a la [!UICONTROL Objeto de paquete y dependencias] página en la 
 ![El [!UICONTROL Objeto de paquete y dependencias] página muestra el mensaje en línea de los tipos de objeto no admitidos, resaltando [!UICONTROL Importar].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 Espere un poco para que se complete la importación. El tiempo para finalizar puede variar según el número de objetos del paquete. Puede supervisar el trabajo de importación desde el [!UICONTROL Zonas protegidas] **[!UICONTROL Trabajos]** pestaña.
-
-<!--
-## Export and import an entire sandbox 
-
->[!NOTE]
->
->All export and import actions are recorded in the audit logs.
-
-### Export an entire sandbox {#export-entire-sandbox}
-
-To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
-
-![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
-
-![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
-
-![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
-
-### Import the entire sandbox package {#import-entire-sandbox-package}
-
-To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
-
-![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
-
-![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
-
->[!NOTE]
->
->All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
-
-You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
-
- ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
--->
 
 ## Monitorización de detalles de importación {#view-import-details}
 

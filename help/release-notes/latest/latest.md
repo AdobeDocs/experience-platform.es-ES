@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 16%
+source-wordcount: '1841'
+ht-degree: 17%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Perspectivas | [!DNL Acxiom] Perspectivas de visitantes anónimos | Descubra de dónde provienen los visitantes de su sitio web con [!DNL Acxiom's] Perspectivas del visitante. Al utilizar la tecnología de búsqueda de IP geográfica, localizamos la ubicación de exploradores anónimos. Una vez identificados, una búsqueda rápida en nuestra base de datos organizada ofrece perspectivas adicionales que se envían de vuelta al explorador. Para los creadores de contenido, esto significa una oportunidad de oro para adaptar su contenido a estos puntos de datos, lo que proporciona una experiencia más personalizada y atractiva para los visitantes, incluso si empezaron siendo desconocidos. |
+| Extensiones | [!DNL Acxiom Anonymous Visitor Insights] Extensión de etiquetas | Descubra de dónde provienen los visitantes de su sitio web con [!DNL Acxiom's Visitor Insights]. Al utilizar la tecnología de búsqueda de IP geográfica, Acxiom puede localizar la ubicación de navegadores anónimos. Una vez identificados, una búsqueda en la base de datos organizada genera perspectivas adicionales que se devuelven al explorador. Por lo tanto, los creadores de contenido pueden adaptar su contenido para que coincida con estos puntos de datos, lo que proporciona una experiencia más personalizada y atractiva para los visitantes, incluso si empezaron siendo desconocidos. |
 | Secuencias de datos | [detección de bots de Edge Network](../../datastreams/bot-detection.md) | El tráfico proveniente de entidades no humanas, como programas automatizados, raspadores web, arañas web o escáneres de secuencias de comandos, puede dificultar la identificación de eventos que ocurren desde visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos. <br>La detección de bots permite identificar eventos generados por el [SDK web](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [[!DNL Server API]](../../server-api/overview.md) generadas por arañas web y bots conocidos. Al configurar la detección de bots para sus flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud que desee clasificar como eventos de bots. <br> La identificación del tráfico de bots puede proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil. |
 | SDK móvil | Versión principal | Se han lanzado nuevas versiones principales del SDK móvil para las plataformas siguientes: iOS Mobile Core 5.x y extensiones de iOS compatibles, Android Mobile Core 3.x y extensiones de Android compatibles, React Native Core 6.x y extensiones de React Native compatibles, Flutter Core 4.x y extensiones de Flutter compatibles. Estas versiones proporcionan varias funciones y mejoras nuevas, incluida la compatibilidad con el SDK para Android para Jetpack Compose, la compatibilidad con experiencias basadas en código de Adobe Journey Optimizer y la disponibilidad general de la extensión de mensajería de Adobe Journey Optimizer para Flutter. Para ver notas de la versión más detalladas, consulte [Notas de la versión de Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK móvil | Privacidad | Debido a la actualización de la política de Apple, a partir del 1 de mayo de 2024, los desarrolladores deben implementar nuevas funciones de privacidad para enviarlas a App Store. Todos los clientes de Adobe que utilicen el SDK móvil deberán actualizar a la versión 5.x del SDK si desean recibir la aprobación de App Store después del 1 de mayo. |
