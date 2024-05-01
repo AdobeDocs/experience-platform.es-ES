@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
@@ -115,11 +115,15 @@ El [!UICONTROL Datos de activación] La pestaña muestra una lista de audiencias
 
 ![Destino de flujo de vista de datos de activación](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE Beta]{type=Informative} Eliminar varias audiencias de los flujos de activación {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+Para eliminar varias audiencias de los flujos de activación existentes, seleccione las audiencias y, a continuación, seleccione **[!UICONTROL Eliminar audiencias]**.
+
+![Pantalla de datos de activación que resalta la opción Quitar audiencias.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE Beta]{type=Informative} Exportar varios archivos bajo demanda a destinos por lotes {#bulk-export}
 
