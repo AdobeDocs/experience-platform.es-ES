@@ -2,9 +2,9 @@
 title: Definición de campos de mapa en la IU
 description: Obtenga información sobre cómo definir un campo de asignación en la interfaz de usuario del Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform permite personalizar completamente la estructura de las clases personalizadas del modelo de datos de experiencia (XDM), los grupos de campos de esquema y los tipos de datos.
 
-También puede definir campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles y dinámicas o almacenar una colección de pares clave-valor. La estructura de datos de asignación permite búsquedas, inserciones y eliminaciones eficientes y rápidas donde se organiza y accede a la información en función de identificadores únicos.
+También puede definir campos de asignación en el Editor de esquemas para modelar estructuras de datos flexibles y dinámicas o almacenar una colección de pares clave-valor.
 
 Al definir un nuevo campo en la interfaz de usuario de Platform, utilice el **[!UICONTROL Tipo]** y seleccione &quot;**[!UICONTROL Mapa]**&quot; de la lista.
 
@@ -34,6 +34,8 @@ XDM impone las siguientes restricciones al uso de este tipo de datos:
 * Los tipos de mapa DEBEN ser del tipo `object`.
 * Los tipos de mapa NO DEBEN tener propiedades definidas (es decir, definen objetos &quot;vacíos&quot;).
 * Los tipos de mapa DEBEN incluir un `additionalProperties.type` que describe los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
+* La segmentación de varias entidades solo se puede definir en función de las claves de asignación y no de los valores.
+* Las audiencias de la cuenta no admiten mapas.
 
 Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente necesario, ya que presentan los siguientes inconvenientes de rendimiento:
 
