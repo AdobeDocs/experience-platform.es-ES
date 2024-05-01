@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;perfil;audiencia;audiencias;segmentación;interfaz de usuario;IU;personalización;tablero de audiencias;tablero
-title: Guía del panel de audiencias
+title: Tablero de audiencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de las audiencias que ha creado su organización.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 9%
 
 ---

@@ -2,7 +2,7 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado
 * Cree tablas de dimensiones para ampliar el modelo de perspectivas de creación de informes.
 * Consulte el modelo de datos de perspectivas de informes de tienda acelerados extendidos
 
-Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/cdp-insights-data-model.md).
+Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Asegúrese de establecer una programación para actualizar el modelo de datos personalizado en una cadencia normal. Esto garantiza que los datos regresen como parte de su canalización de ingesta según sea necesario y rellene los paneles definidos por el usuario. Consulte la [guía de consultas de programación](../ui/query-schedules.md#create-schedule) para aprender a configurar la programación.
 

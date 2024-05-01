@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 33%
+source-wordcount: '106'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 33%
    * [Perfiles](insights/profiles.md)
    * [Públicos](insights/audiences.md)
    * [Destinos](insights/destinations.md)
+   * [Perfiles de cuenta](insights/account-profiles.md)
 * Personalizar paneles {#customize}
    * [Información general de personalización](customize/overview.md)
    * [Modificación de paneles](customize/modify.md)
@@ -39,9 +40,11 @@ ht-degree: 33%
    * [Editar esquema](customize/edit-schema.md)
 * Casos de uso de perspectivas {#insights-use-cases}
    * [Análisis de consentimiento](insights-use-cases/consent-analysis.md)
+* Modelos de datos disponibles {#data-models}
+   * [Edición B2B del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edición B2C del modelo de datos de Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integraciones de aplicaciones {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Conjuntos de datos del panel de consultas](query.md)
-* [Modelo de datos de Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Ver SQL de perspectiva](view-sql.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

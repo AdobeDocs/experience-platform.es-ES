@@ -1,9 +1,10 @@
 ---
 title: Audiences Insights
 description: Descubra el SQL que alimenta las perspectivas de audiencia y utilice estas consultas para generar perspectivas personalizadas y explorar aún más los datos de audiencia de Adobe Experience Platform.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -14,8 +15,7 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de audiencia accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más las identidades y perfiles que conforman sus audiencias. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
 Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de audiencias](../guides/audiences.md) o un personalizado [tablero definido por el usuario](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ Consulte la [Documentación del widget de activaciones programadas](../guides/au
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar en SQL para generar sus propias perspectivas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-También puede leer y comprender el SQL que genera perspectivas para [Perfiles](./profiles.md) y [Destinos](./destinations.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para [Perfiles](./profiles.md), [Perfiles de cuenta](./account-profiles.md) y [Destinos](./destinations.md) paneles.

@@ -1,7 +1,8 @@
 ---
 title: Ver Insight SQL
 description: Vea el SQL subyacente a sus perspectivas de perfil, audiencia, destino y personalizadas, y ejecute la consulta bajo demanda mediante el Editor de consultas.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ Aparecerá el Editor de consultas. Ahora puede editar la instrucción y consulta
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo acceder a SQL para cualquier perspectiva dentro de los paneles estándar o de un panel definido por el usuario. Si aún no lo ha hecho, se recomienda leer el [Documento del modelo de datos de Real-time Customer Data Platform Insights](./cdp-insights-data-model.md). Ese documento contiene información sobre la personalización de plantillas SQL para informes de Real-Time CDP adaptados a sus necesidades de marketing y KPI.
+Después de leer este documento, ahora sabe cómo acceder a SQL para cualquier perspectiva dentro de los paneles estándar o de un panel definido por el usuario. Si aún no lo ha hecho, se recomienda leer el [Documento del modelo de datos de Real-time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Ese documento contiene información sobre la personalización de plantillas SQL para informes de Real-Time CDP adaptados a sus necesidades de marketing y KPI.

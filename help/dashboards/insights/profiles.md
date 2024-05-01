@@ -1,9 +1,10 @@
 ---
 title: Perspectivas de perfil
 description: Descubra el SQL que alimenta las perspectivas de perfil y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de perfil accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más a sus clientes y a sus experiencias de consumidor que conforman sus perfiles. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de Platform.
 
 Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de perfiles](../guides/profiles.md) o un personalizado [tablero definido por el usuario](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
-
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Tablero de perfil](../guides/profiles.md) o un tablero personalizado.
 
 ## Superposición de audiencias por política de combinación {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Consulte la [Documentación del widget de perfiles no segmentados](../guides/pro
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar en SQL para generar sus propias perspectivas.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-También puede leer y comprender el SQL que genera perspectivas para [Audiencias](./audiences.md) y [Destinos](./destinations.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para [Audiencias](./audiences.md), [Perfiles de cuenta](./account-profiles.md), y [Destinos](./destinations.md) paneles.

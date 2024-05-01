@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;interfaz de usuario;IU;personalización;tablero de uso de licencias;tablero;uso de licencias;asignación de derechos;consumo
-title: Guía del tablero de uso de licencias
+title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2107'
 ht-degree: 8%
 
 ---
@@ -57,7 +57,7 @@ Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Pl
 
 Este tablero muestra todos sus productos de Adobe Experience Platform con licencia, incluidos los complementos, en formato de tabla. La tabla proporciona información clave sobre el uso de la licencia en todos los perfiles disponibles.
 
-| El nombre de la columna | Descripción |
+| Nombre de la columna | Descripción |
 |---|---|
 | **[!UICONTROL Producto]** | La solución de Adobe con licencia de su organización. |
 | **[!UICONTROL Métrica principal]** | La métrica principal utilizada para rastrear en para ese producto. |
