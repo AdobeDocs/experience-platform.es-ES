@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -352,7 +352,7 @@ Para añadir un campo anidado, utilice el `properties` como se muestra a continu
 >
 >A partir de la versión de abril de 2024, puede establecer un `isRequired` en campos anidados. Por ejemplo, en el siguiente fragmento de configuración, los dos primeros campos anidados se marcan como obligatorios (línea resaltada xxx) y los clientes no pueden continuar a menos que seleccionen un valor para el campo. Obtenga más información sobre los campos obligatorios en la [parámetros admitidos](#supported-parameters) sección.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",

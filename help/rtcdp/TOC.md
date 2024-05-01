@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Recopile datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear públicos a partir de esos perfiles y activar esos públicos en destinos de terceros.
 role: Admin
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 67%
@@ -82,7 +82,7 @@ ht-degree: 67%
       * [Retargeting fuera del sitio de usuarios no autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimiento de perfil {#profile-enrichment}
       * [Complemento de perfiles de origen con atributos proporcionados por socios](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Personalización, perspectivas y participación {#personalization-insights-engagement}
+   * Perspectivas y participación personalizadas {#personalization-insights-engagement}
       * [Vuelva a atraer a sus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Vuelva a atraer a sus clientes de forma inteligente: ejemplos de Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Notas de la versión de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

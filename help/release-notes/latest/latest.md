@@ -1,11 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión de marzo de 2024 de Adobe Experience Platform.
+description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 18%
+source-wordcount: '1849'
+ht-degree: 16%
 
 ---
 
@@ -74,12 +74,12 @@ Para obtener más información sobre las colecciones de datos, lea la [resumen d
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
 | `isRequired` el parámetro ya está disponible para campos de datos de cliente anidados en Destination SDK | Al configurar un destino en Destination SDK, ahora puede [establezca los campos de datos de cliente anidados según sea necesario](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). De este modo, los usuarios que configuren el destino no pueden continuar con su flujo de activación hasta que seleccionen un valor para ese campo. |
+| La segmentación de Edge ya no es un requisito obligatorio al configurar un destino de Adobe Target con SDK web | Anteriormente, al configurar un [Adobe Target destination](/help/destinations/catalog/personalization/adobe-target-connection.md) con el SDK web, la secuencia de datos tenía que habilitarse para la personalización y la segmentación de Edge. El requisito de que la secuencia de datos esté habilitada para la segmentación de Edge [ahora se ha eliminado](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Tenga en cuenta que este patrón de integración solo le permite beneficiarse de un subconjunto de casos de uso de personalización al utilizar Adobe Target con Real-Time CDP. Más información sobre la [casos de uso habilitados por tipo de integración](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Eliminar varias audiencias y conjuntos de datos de los flujos de activación | Ahora puede seleccionar y eliminar varias audiencias y conjuntos de datos de los flujos de activación de destino. Consulte la [detalles del destino](../../destinations/ui/destination-details-page.md#bulk-remove) y [exportación de conjuntos de datos](../../destinations/ui/export-datasets.md) para obtener más información. |
 
 {style="table-layout:auto"}
 
 Para obtener información más general sobre los destinos, consulte la [información general sobre destinos](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Servicio de identidad {#identity-service}
 
