@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Vea el siguiente vídeo para obtener una breve descripción general de cómo com
 
 ## Casos de uso {#use-cases}
 
-Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante [Personalización personalizada](../catalog/personalization/custom-personalization.md) destino. Todo esto, al tiempo que aprovecha las funciones de segmentación y recopilación de datos de Experience Platform Edge Network.
+Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante [Personalización personalizada](../catalog/personalization/custom-personalization.md) destino. Todo esto, a la vez que aprovecha las capacidades de segmentación y recopilación de datos de Experience Platform Edge Network.
 
 Los casos de uso que se describen a continuación incluyen personalización del sitio y publicidad en el sitio segmentada.
 
@@ -78,6 +78,10 @@ Una empresa de venta y alquiler de viviendas quiere personalizar su página de i
 El primer paso para configurar el destino de personalización es configurar una secuencia de datos para el SDK web de Experience Platform. Esto se realiza en la IU de recopilación de datos.
 
 Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]** asegúrese de que ambas **[!UICONTROL Segmentación de Edge]** y **[!UICONTROL Destinos de personalización]** están seleccionados.
+
+>[!TIP]
+>
+>A partir de la versión de abril de 2024, no es necesario seleccionar la casilla Segmentación de Edge cuando [configuración de la conexión con Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). En este caso, [personalización de la próxima sesión](#next-session) es el único caso de uso de personalización disponible.
 
 ![Configuración del flujo de datos con destinos de segmentación de Edge y personalización resaltados.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -146,7 +150,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización personalizada]** El destino requiere que utilice el [API del servidor de red perimetral](../../server-api/overview.md) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, la variable **[!UICONTROL Personalización personalizada]** El destino requiere que utilice el [API de Edge Network Server](../../server-api/overview.md) al configurar el destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../server-api/authentication.md).
 >
 ><br>Si ya utiliza el SDK web o el SDK móvil para la integración, puede recuperar atributos mediante la API del servidor añadiendo una integración del lado del servidor.
 >
