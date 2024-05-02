@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ Para añadir audiencias al bloque Audiencia. select **[!UICONTROL Añadir audien
 >[!IMPORTANT]
 >
 >Tenga en cuenta que **solamente** aparecerán las audiencias definidas con la política de combinación predeterminada.
+>
+>Además, solo **publicado** se pueden utilizar las audiencias creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencia y audiencias generadas externamente son **no** disponible.
 
 Aparecerá una lista de audiencias. Seleccione las audiencias que desee incluir, seguidas de **[!UICONTROL Añadir]** para anexarlas al bloque de audiencia.
 
@@ -101,6 +103,10 @@ El **[!UICONTROL Excluir]** se ha añadido un bloque de. Cuando se selecciona es
 Si excluye por audiencia, puede seleccionar las audiencias que desea excluir seleccionando **[!UICONTROL Añadir audiencia]**.
 
 ![El [!UICONTROL Añadir audiencia] El botón está seleccionado, lo que le permite elegir qué audiencia desea excluir.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Solo **publicado** se pueden utilizar las audiencias creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencia y audiencias generadas externamente son **no** disponible.
 
 Aparecerá una lista de audiencias. Seleccionar **[!UICONTROL Añadir]** para añadir las audiencias que desee excluir al bloque de exclusión.
 
