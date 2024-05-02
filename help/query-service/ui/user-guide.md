@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 2%
 
 ---
 
 # [!DNL Query Editor] Guía de IU
+
+>[!NOTE]
+>
+>A partir del 30 de abril de 2024, la [Editor de consultas mejorado](#enhanced-editor-toggle) se ha convertido en el editor predeterminado para todos los usuarios. El editor anterior dejará de usarse el 30 de mayo de 2024 y ya no estará disponible para su uso.
 
 [!DNL Query Editor] es una herramienta interactiva que proporciona Adobe Experience Platform [!DNL Query Service], que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente dentro de [!DNL Experience Platform] interfaz de usuario. [!DNL Query Editor] admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ Al guardar una consulta en el Editor de consultas, aparece un mensaje de confirm
 
 Las consultas que se han guardado como plantilla se pueden programar desde el Editor de consultas. La programación de consultas permite automatizar las ejecuciones de consultas en una cadencia personalizada. Puede programar consultas en función de la frecuencia, la fecha y la hora, y también elegir un conjunto de datos de salida para los resultados si es necesario. Las programaciones de consultas también se pueden deshabilitar o eliminar a través de la interfaz de usuario.
 
-Las programaciones se establecen en el Editor de consultas. Al utilizar el Editor de consultas, sólo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado. La misma limitación no se aplica al [!DNL Query Service] API.
+Las programaciones se establecen en el Editor de consultas. Al utilizar el Editor de consultas, solo puede agregar una programación a una consulta que ya se ha creado y guardado. La misma limitación no se aplica al [!DNL Query Service] API.
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
-ht-degree: 1%
+source-wordcount: '4425'
+ht-degree: 0%
 
 ---
 
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 También debe consultar la documentación para obtener instrucciones sobre cómo realizar [consultas programadas en la interfaz de usuario](./ui/user-guide.md#scheduled-queries) y mediante [la API](./api/scheduled-queries.md).
 
-Tenga en cuenta lo siguiente al utilizar [!DNL Query Editor] solo puede agregar una programación a una consulta que ya se haya creado, guardado y ejecutado. Esto no se aplica al [!DNL Query Service] API.
+Tenga en cuenta lo siguiente al utilizar [!DNL Query Editor] solo puede agregar una programación a una consulta que ya se ha creado y guardado. Esto no se aplica al [!DNL Query Service] API.
 +++
 
 ### ¿Qué significa el error &quot;Límite de sesión alcanzado&quot;?
@@ -337,7 +337,7 @@ El servicio de consultas admite funciones SQL integradas para convertir una marc
 | Parámetro | Descripción |
 |-----------|---------------|
 | Marca de tiempo | La marca de tiempo puede escribirse en formato UTC o simple `{year-month-day}` formato. Si no se proporciona ninguna hora, el valor predeterminado es medianoche en la mañana del día determinado. |
-| Zona horaria | La zona horaria está escrita en un `{continent/city})` formato. Debe ser uno de los códigos de zona horaria reconocidos, tal como se encuentran en la [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+| Timezone | La zona horaria está escrita en un `{continent/city})` formato. Debe ser uno de los códigos de zona horaria reconocidos, tal como se encuentran en la [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
 #### Convertir a la marca de tiempo UTC
 
@@ -645,21 +645,21 @@ La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 
 | Código de error | Estado de conexión | Descripción | Posible causa |
 |------------|---------------------------|-------------|----------------|
-| **08P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
+| **19P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
 | **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
-| **42P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
+| **72P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
 | **42601** | Consulta | Error de sintaxis | Error de comando o sintaxis no válido |
-| **42P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **42P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
+| **72P01** | Consulta | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **72P07** | Consulta | La tabla existe | Ya existe una tabla con el mismo nombre (CREATE TABLE) |
 | **53400** | Consulta | El LÍMITE supera el valor máximo | El usuario especificó una cláusula LIMIT superior a 100 000 |
 | **53400** | Consulta | Tiempo de espera de instrucción | La declaración en directo enviada ha tardado más de 10 minutos como máximo |
 | **58000** | Consulta | Error del sistema | Fallo interno del sistema |
 | **0A000** | Consulta/Comando | No admitido | No se admite la función/funcionalidad de la consulta/comando |
 | **42501** | DROP TABLE Query | El servicio de consultas no crea la tabla de colocación | El servicio de consultas no creó la tabla que se está quitando mediante el `CREATE TABLE` declaración |
 | **42501** | DROP TABLE Query | Tabla no creada por el usuario autenticado | El usuario que ha iniciado sesión actualmente no ha creado la tabla que se está quitando |
-| **42P01** | DROP TABLE Query | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
-| **42P12** | DROP TABLE Query | No se ha encontrado ninguna tabla para `dbName`: compruebe la `dbName` | No se encontraron tablas en la base de datos actual |
+| **72P01** | DROP TABLE Query | Tabla no encontrada | No se encontró la tabla especificada en la consulta |
+| **72P12** | DROP TABLE Query | No se ha encontrado ninguna tabla para `dbName`: compruebe la `dbName` | No se encontraron tablas en la base de datos actual |
 
 ### ¿Por qué recibí un código de error 58000 al usar el método history_meta() en mi tabla?
 

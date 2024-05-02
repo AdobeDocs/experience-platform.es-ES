@@ -3,9 +3,10 @@ title: Perspectivas del perfil de cuenta
 description: Descubra el SQL que alimenta las perspectivas de su perfil de cuenta y utilice estas consultas para generar perspectivas personalizadas que exploren aún más a sus clientes y sus experiencias como consumidores.
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Cuentas por sector {#accounts-by-industry}
+## Nuevas cuentas por sector {#accounts-by-industry}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Cuentas por tipo {#accounts-by-type}
+## Nuevas cuentas por tipo {#accounts-by-type}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Oportunidades por función de persona {#opportunities-by-person-role}
+## Nuevas oportunidades por función de persona {#opportunities-by-person-role}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Oportunidades por ingresos {#opportunities-by-revenue}
+## Nuevas oportunidades por ingresos {#opportunities-by-revenue}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Oportunidades por estado y etapa {#opportunities-by-status-and-stage}
+## Nuevas oportunidades por estado y etapa {#opportunities-by-status-and-stage}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Oportunidades ganadas {#opportunities-won}
+## Nuevas oportunidades ganadas {#opportunities-won}
 
 Preguntas respondidas por esta perspectiva:
 

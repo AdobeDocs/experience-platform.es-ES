@@ -2,9 +2,9 @@
 title: Panel de perfiles de cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ La información de perfil de cuenta mostrada en la [!UICONTROL Detalles] se ha c
 
 Adobe proporciona widgets estándar que puede utilizar para visualizar diferentes métricas relacionadas con los perfiles de la cuenta.
 
+>[!IMPORTANT]
+>
+>Si no proporciona un filtro de fecha, el comportamiento predeterminado de las perspectivas analiza los datos agregados desde el año anterior hasta hoy.
+
 Para obtener más información sobre cada uno de los widgets estándar disponibles, seleccione el nombre de un widget en la siguiente lista:
 
 * [Perfiles de cuenta añadidos](#account-profiles-added)
-* [Cuentas por sector](#accounts-by-industry)
-* [Cuentas por tipo](#accounts-by-type)
+* [Nuevas cuentas por sector](#accounts-by-industry)
+* [Nuevas cuentas por tipo](#accounts-by-type)
 * [Oportunidades añadidas](#opportunities-added)
-* [Oportunidades por función de persona](#opportunities-by-person-role)
-* [Oportunidades por ingresos](#opportunities-by-revenue)
-* [Oportunidades por estado y etapa](#opportunities-by-status-&-stage)
-* [Oportunidades ganadas](#opportunities-won)
+* [Nuevas oportunidades por función de persona](#opportunities-by-person-role)
+* [Nuevas oportunidades por ingresos](#opportunities-by-revenue)
+* [Nuevas oportunidades por estado y etapa](#opportunities-by-status-&-stage)
+* [Nuevas oportunidades ganadas](#opportunities-won)
 * [Distribución de puntuación predictiva](#predictive-scoring-distribution)
 * [Factores más influyentes de la puntuación predictiva](#predictive-scoring-top-influential-factors)
 * [Cuentas totales por sector](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ El [!UICONTROL Perfiles de cuenta añadidos] El widget utiliza un gráfico de l�
 
 ![El widget Perfiles de cuenta agregados.](../images/account-profiles/account-profiles-added.png)
 
-### Cuentas por sector {#accounts-by-industry}
+### Nuevas cuentas por sector {#accounts-by-industry}
 
-El [!UICONTROL Cuentas por sector] widget muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las diferentes industrias que componen este total. Una clave codificada por colores proporciona un desglose de todas las industrias incluidas. Los recuentos individuales de cada sector se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
+El [!UICONTROL Nuevas cuentas por sector] widget muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las diferentes industrias que componen este total. Una clave codificada por colores proporciona un desglose de todas las industrias incluidas. Los recuentos individuales de cada sector se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
-![El widget Cuentas por sector.](../images/account-profiles/accounts-by-industry.png)
+![El widget Nuevas cuentas por sector.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Cuentas por tipo {#accounts-by-type}
+### Nuevas cuentas por tipo {#accounts-by-type}
 
-El [!UICONTROL Cuentas por tipo] widget muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de los distintos tipos de cuenta que componen este total. Una clave con códigos de color proporciona un desglose de todos los tipos de cuenta incluidos. Los recuentos individuales de cada tipo de cuenta se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
+El [!UICONTROL Nuevas cuentas por tipo] widget muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de los distintos tipos de cuenta que componen este total. Una clave con códigos de color proporciona un desglose de todos los tipos de cuenta incluidos. Los recuentos individuales de cada tipo de cuenta se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
-![El widget Cuentas por tipo.](../images/account-profiles/accounts-by-type.png)
+![El widget Nuevas cuentas por tipo.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Oportunidades añadidas {#opportunities-added}
 
@@ -107,35 +111,35 @@ El [!UICONTROL Oportunidades añadidas] El widget utiliza un gráfico de líneas
 
 ![El widget Oportunidades agregadas.](../images/account-profiles/opportunities-added.png)
 
-### Oportunidades por función de persona {#opportunities-by-person-role}
+### Nuevas oportunidades por función de persona {#opportunities-by-person-role}
 
-El [!UICONTROL Oportunidades por función de persona] widget muestra el número total de sus oportunidades en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las funciones que componen este número total de oportunidades. Una clave codificada por colores proporciona un desglose de todas las funciones incluidas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
+El [!UICONTROL Nuevas oportunidades por función de persona] widget muestra el número total de sus oportunidades en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las funciones que componen este número total de oportunidades. Una clave codificada por colores proporciona un desglose de todas las funciones incluidas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
 
 >[!NOTE]
 >
 >El [!UICONTROL No se han encontrado datos] o [!UICONTROL No se puede cargar] Se produce un error cuando la tabla de puente &quot;Opportunity-Person&quot; no se utiliza en el esquema. Si su perspectiva muestra uno de estos errores, compruebe el esquema de unión y asegúrese de que el grupo de campos Oportunidad-Persona esté introduciendo datos.
 
-![El widget Oportunidades por función de persona.](../images/account-profiles/opportunities-by-person-role.png)
+![El widget Nuevas oportunidades por función de persona.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Oportunidades por ingresos {#opportunities-by-revenue}
+### Nuevas oportunidades por ingresos {#opportunities-by-revenue}
 
-El [!UICONTROL Oportunidades por ingresos] El widget utiliza un gráfico de barras para ilustrar la cantidad total estimada de ingresos generados por las oportunidades. El widget admite hasta seis oportunidades.
+El [!UICONTROL Nuevas oportunidades por ingresos] El widget utiliza un gráfico de barras para ilustrar la cantidad total estimada de ingresos generados por las oportunidades. El widget admite hasta seis oportunidades.
 
 Para ver un cuadro de diálogo que contiene el total de ingresos específico de una oportunidad, utilice el cursor para pasar el ratón sobre barras individuales.
 
-![El widget Oportunidades por ingresos.](../images/account-profiles/opportunities-by-revenue.png)
+![El widget Nuevas oportunidades por ingresos.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Oportunidades por estado y etapa {#opportunities-by-status-&-stage}
+### Nuevas oportunidades por estado y etapa {#opportunities-by-status-&-stage}
 
 Este widget utiliza un gráfico de barras para ilustrar la cantidad de oportunidades que están abiertas o cerradas en todas las etapas del canal de marketing/ventas. El widget utiliza colores para diferenciar el escenario de las oportunidades. Una clave codificada por colores indica las etapas disponibles para las oportunidades.
 
-![El widget Oportunidades por estado y fase.](../images/account-profiles/opportunities-by-status-&-stage.png)
+![El widget Nuevas oportunidades por estado y fase.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Oportunidades ganadas {#opportunities-won}
+### Nuevas oportunidades ganadas {#opportunities-won}
 
-El [!UICONTROL Oportunidades ganadas] widget muestra el número total de oportunidades que se han finalizado correctamente en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las oportunidades que se ganan o no. Una clave codificada por colores distingue entre oportunidades ganadas y no ganadas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
+El [!UICONTROL Nuevas oportunidades ganadas] widget muestra el número total de oportunidades que se han finalizado correctamente en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de las oportunidades que se ganan o no. Una clave codificada por colores distingue entre oportunidades ganadas y no ganadas. Los recuentos individuales de cada rol se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico de anillo.
 
-![Widget de oportunidades ganadas.](../images/account-profiles/opportunities-won.png)
+![El widget Nuevas oportunidades ganadas.](../images/account-profiles/new-opportunities-won.png)
 
 ### Distribución de puntuación predictiva {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ El menú desplegable dentro del widget permite seleccionar el modelo de puntuaci
 ### Cuentas totales por sector {#total-accounts-by-industry}
 
 Este widget muestra el número total de cuentas en una sola métrica y utiliza un gráfico de anillo para ilustrar los tamaños proporcionales de los recuentos de las industrias que conforman el número total. La clave proporciona información de codificación de color para las diferentes industrias que conforman el gráfico circular.
+
+>[!NOTE]
+>
+>La información que muestra esta perspectiva depende del intervalo de fechas especificado por usted. Si no proporciona un filtro de fecha, el comportamiento predeterminado de la perspectiva analiza los datos agregados desde el año anterior hasta hoy.
 
 Los recuentos individuales de las diferentes industrias se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 

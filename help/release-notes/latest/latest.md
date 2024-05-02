@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1895'
 ht-degree: 17%
 
 ---
@@ -37,9 +37,9 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Perspectivas de Real-time Customer Data Platform B2B | Explore perspectivas de datos B2B de Real-Time CDP preconfiguradas en cuentas y oportunidades para ayudarle a comprender sus datos e informar sus decisiones comerciales. También puede crear sus propias perspectivas utilizando el modelo de datos B2B de Real-Time CDP para visualizar y explorar los datos y guardar las visualizaciones personalizadas en el panel. |
+| Perspectivas de Real-time Customer Data Platform B2B | Explorar configuración previa [Perspectivas de datos de Real-Time CDP B2B sobre cuentas y oportunidades](../../dashboards/insights/account-profiles.md) para ayudarle a comprender sus datos e informar sus decisiones comerciales. También puede [cree sus propias perspectivas con el modelo de datos B2B de Real-Time CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para visualizar y explorar los datos y guardar las visualizaciones personalizadas en el tablero. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 
 | Función | Descripción |
 | --- | --- |
-| Cuarentena de consultas | Aísle automáticamente las ejecuciones de consulta fallidas para evitar interrupciones y mantener un rendimiento coherente. |
-| Cancelar consulta | Tome el control de la ejecución de consultas y mejore su productividad cancelando consultas de larga duración. |
-| Alertas de consulta programadas | Manténgase informado con notificaciones proactivas mientras planifica las consultas, lo que garantiza una administración eficiente y oportuna de las tareas. Puede suscribirse a alertas al crear una consulta o mediante las acciones en línea para consultas programadas existentes. |
-| Navegación de consultas programadas mejorada | Navegue fácilmente entre plantillas de consulta y ejecuciones programadas para aumentar la productividad. |
-| Salida de consulta extendida | Acceda a hasta 500 filas de resultados de consulta dentro de la consola para un análisis más profundo de los datos. |
-| Finalización del Editor de consultas heredadas | A partir del 30 de abril de 2024, el Editor de consultas mejorado se ha convertido en el editor predeterminado para todos los usuarios. El editor anterior dejará de usarse el 30 de mayo de 2024 y ya no estará disponible para su uso. |
+| Cuarentena de consultas | Aísle automáticamente las ejecuciones de consulta fallidas para evitar interrupciones y mantener un rendimiento coherente. Consulte la [cuarentena de consultas](../../query-service/ui/query-schedules.md#quarantine) para obtener más información. |
+| Cancelar consulta | Tome el control de la ejecución de consultas y mejore su productividad cancelando consultas de larga duración. Consulte la [cancelar consulta](../../query-service/ui/user-guide.md#cancel-query) para obtener más información. |
+| Alertas de consulta programadas | Manténgase informado con notificaciones proactivas mientras planifica las consultas, lo que garantiza una administración eficiente y oportuna de las tareas. Puede [suscribirse a alertas al crear una consulta](../../query-service/ui/query-schedules.md#alerts-for-query-status) o mediante acciones en línea para consultas programadas existentes. Consulte la [suscripción a alertas con acciones en línea](../../query-service/ui/monitor-queries.md#alert-subscription) para obtener más información. |
+| Navegación de consultas programadas mejorada | Navegue fácilmente entre plantillas de consulta y ejecuciones programadas para aumentar la productividad. Consulte la documentación sobre [ver ejecuciones de consulta programadas](../../query-service/ui/query-schedules.md#scheduled-query-runs) para obtener más información. |
+| Salida de consulta extendida | Acceda a hasta 500 filas de resultados de consulta dentro de la consola para un análisis más profundo de los datos. Consulte la [recuento de resultados](../../query-service/ui/user-guide.md#result-count) para obtener más información. |
+| Finalización del Editor de consultas heredadas | A partir del 30 de abril de 2024, el Editor de consultas mejorado se ha convertido en el editor predeterminado para todos los usuarios. El editor anterior dejará de usarse el 30 de mayo de 2024 y ya no estará disponible para su uso. Consulte la [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md) para obtener más información. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Para obtener más información sobre los servicios de consulta, vea la [Información general del servicio de consulta](../../query-service/home.md).
 

@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights Data Model edición B2B
 description: Aprenda a utilizar las consultas SQL con los modelos de datos de Real-time Customer Data Platform Insights (edición B2B) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ El diagrama siguiente muestra los campos de datos relevantes en cada conjunto de
 
 ![El diagrama relacional de entidades para el modelo de perfil de cuenta.](../images/data-models/account-profile-model.png)
 
-#### Las cuentas por caso de uso del sector {#accounts-by-industry}
+#### Las nuevas cuentas por caso de uso del sector {#accounts-by-industry}
 
-La lógica utilizada para la variable [!UICONTROL Cuentas por sector] insight devuelve los cinco sectores principales según el número de perfiles de cuenta y el tamaño relativo entre ellos. Consulte la [[!UICONTROL Cuentas por sector] documentación del widget](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
+La lógica utilizada para la variable [!UICONTROL Nuevas cuentas por sector] insight devuelve los cinco sectores principales según el número de perfiles de cuenta y el tamaño relativo entre ellos. Consulte la [[!UICONTROL Cuentas por sector] documentación del widget](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
 
 >[!TIP]
 >
 >Puede personalizar esta consulta SQL para que devuelva más o menos que las cinco industrias principales.
 
-El SQL que genera el [!UICONTROL Cuentas por sector] la información se puede ver en la sección plegable a continuación.
+El SQL que genera el [!UICONTROL Nuevas cuentas por sector] la información se puede ver en la sección plegable a continuación.
 
 +++Consulta SQL
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### El caso de uso Cuentas por tipo {#accounts-by-type}
+#### El caso de uso Nuevas cuentas por tipo {#accounts-by-type}
 
-La lógica utilizada para la variable [!UICONTROL Cuentas por tipo] insight devuelve el desglose numérico de las cuentas por tipo. Esta perspectiva puede ayudar a guiar la estrategia y las operaciones empresariales, incluidas las estrategias de asignación de recursos o marketing. Consulte la [[!UICONTROL Cuentas por tipo] documentación del widget](../guides/account-profiles.md#accounts-by-type) para obtener más información.
+La lógica utilizada para la variable [!UICONTROL Nuevas cuentas por tipo] insight devuelve el desglose numérico de las cuentas por tipo. Esta perspectiva puede ayudar a guiar la estrategia y las operaciones empresariales, incluidas las estrategias de asignación de recursos o marketing. Consulte la [[!UICONTROL Nuevas cuentas por tipo] documentación del widget](../guides/account-profiles.md#accounts-by-type) para obtener más información.
 
-El SQL que genera el [!UICONTROL Cuentas por tipo] la información se puede ver en la sección plegable a continuación.
+El SQL que genera el [!UICONTROL Nuevas cuentas por tipo] la información se puede ver en la sección plegable a continuación.
 
 +++Consulta SQL
 

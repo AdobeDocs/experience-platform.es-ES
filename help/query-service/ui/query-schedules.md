@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8d307b9c1c80c7b1672f2bf6b7acb4b85c4dae1b
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Puede automatizar las ejecuciones de consultas creando programaciones de consult
 
 >[!IMPORTANT]
 >
->Solo puede agregar una programación a una consulta que ya se ha creado, guardado y ejecutado.
+>Solo puede agregar una programación a una consulta que ya se ha creado y guardado.
 
 Todas las consultas programadas se agregan a la lista de la [!UICONTROL Consultas programadas] pestaña. Desde ese espacio de trabajo, puede monitorizar el estado de todos los trabajos de consulta programados a través de la interfaz de usuario. En el [!UICONTROL Consultas programadas] pestaña puede encontrar información importante sobre las ejecuciones de consultas y suscribirse a alertas. La información disponible incluye el estado, los detalles de la programación y los mensajes/códigos de error en caso de que falle una ejecución. Consulte la [Documento de supervisión de consultas programadas](./monitor-queries.md) para obtener más información.
 
