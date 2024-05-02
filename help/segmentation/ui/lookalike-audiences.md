@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -197,7 +197,7 @@ Las audiencias similares se pueden configurar para excluir campos de datos restr
 
 La etiqueta estándar &quot;C9&quot; se puede utilizar para etiquetar datos que no deben utilizarse para la ciencia de datos y se puede aplicar habilitando la directiva estándar &quot;Restringir la ciencia de datos&quot;. También puede crear políticas adicionales para restringir el uso de datos con otras etiquetas, incluidas las etiquetas confidenciales, para la ciencia de datos. Para obtener más información sobre la administración de las políticas de uso de datos, lea la [Guía de IU de políticas de uso de datos](../../data-governance/policies/user-guide.md). Para obtener más información sobre la administración de etiquetas de uso de datos, lea la [guía de IU de etiquetas de uso de datos](../../data-governance/labels/user-guide.md).
 
-De forma predeterminada, el proceso de modelado para audiencias de similitud excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización. Si la audiencia base no tiene etiquetas de contrato, el proceso de modelado excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización.
+De forma predeterminada, si una audiencia base no tiene etiquetas de contrato, el proceso de modelado para audiencias de similitud excluirá **cualquiera** campo, conjunto de datos o audiencia en función de la política de privacidad habilitada para su organización.
 
 ## Pasos siguientes
 

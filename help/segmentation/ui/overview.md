@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4274'
 ht-degree: 3%
 
 ---
@@ -82,12 +82,8 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Desactivar] | Carga personalizada, servicio de segmentación | Desactiva la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
-| [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. |
+| [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. Audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias **no puede** se eliminarán. Para obtener más información sobre la eliminación de audiencias, lea la [preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> Lo hará **no** poder eliminar una audiencia que se utilice en una activación de destino.
 
 En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia, crear una audiencia nueva y ver un desglose de la frecuencia de actualización.
 
@@ -356,6 +352,15 @@ Al importar la audiencia generada externamente, debe seleccionar una de las colu
 
 ![El [!UICONTROL Detalles de audiencia] se muestra la página.](../images/ui/overview/import-audience-audience-details.png)
 
+También puede añadir algunos detalles adicionales a la audiencia generada externamente, como asignarle un ID, definir su política de combinación o editar su tipo de datos de columna.
+
+>[!NOTE]
+>
+>Si utiliza un ID de audiencia externa personalizado, debe cumplir las siguientes directrices:
+>
+> - It **debe** empiece por una letra (a-z o A-Z), un guion bajo (_) o un signo de dólar ($).
+> - Los caracteres siguientes pueden ser alfanuméricos (a-z, A-Z, 0-9), guiones bajos (_) o signos de dólar ($).
+
 Después de rellenar los detalles de la audiencia, seleccione **[!UICONTROL Siguiente]**.
 
 ![El [!UICONTROL Siguiente] botón resaltado en la [!UICONTROL Detalles de audiencia] página.](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ Seleccione el **[!UICONTROL Composiciones]** para ver una lista de todas las aud
 ![Una lista de audiencias creadas en Composición de audiencias para su organización.](../images/ui/overview/compositions.png)
 
 De forma predeterminada, esta vista muestra información sobre las audiencias, incluido el nombre, el estado, la fecha de creación, la fecha de creación, la fecha de última actualización y la fecha de última actualización.
+
+Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta opción, se muestra una lista de las acciones rápidas disponibles para la audiencia.
+
+| Acción | Descripción |
+| ------ | ----------- |
+| Duplicar | Copia la audiencia seleccionada. |
+| Administrar acceso | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
+| Eliminar | Elimina la audiencia seleccionada. Audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias **no puede** se eliminarán. Para obtener más información sobre la eliminación de audiencias, lea la [preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 
 Puede seleccionar el ![Personalizar tabla](../images/ui/overview/customize-table.png) para cambiar los campos que se muestran.
 
