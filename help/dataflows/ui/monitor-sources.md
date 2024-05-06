@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -28,7 +28,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 * [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 * [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-## Monitorización de los datos de origen mediante el panel de monitorización
+## Monitorizar los datos de origen mediante el panel de monitorización
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
