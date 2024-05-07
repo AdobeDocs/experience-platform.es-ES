@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
+source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -23,7 +23,7 @@ El trabajo con audiencias y definiciones de segmentos requiere comprender las di
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permite la creación de perfiles de clientes mediante el puente de identidades de fuentes de datos dispares que se están ingiriendo en [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
-También debe comprender dos términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
+También debe comprender tres términos clave que se utilizan en este documento y comprender la diferencia entre ellos:
 
 - **Audiencia**: conjunto de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante las definiciones de segmentos o la composición de audiencias (audiencia generada por Platform), o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente).
 - **Definición del segmento**: Las reglas que utiliza Adobe Experience Platform para describir las características clave o el comportamiento de una audiencia objetivo.
