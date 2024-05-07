@@ -1,17 +1,17 @@
 ---
 title: Configurar anulaciones de secuencia de datos
-description: Obtenga información sobre cómo configurar las anulaciones de secuencias de datos en la interfaz de usuario de secuencias de datos y activarlas mediante el SDK web.
+description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante el SDK web o el SDK móvil.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # Configurar anulaciones de secuencia de datos
 
-Las anulaciones de las secuencias de datos permiten definir configuraciones adicionales para las secuencias de datos, que pasan a la red perimetral mediante el SDK web.
+Las anulaciones de flujos de datos permiten definir configuraciones adicionales para los flujos de datos, que se pasan al Edge Network mediante el SDK web o el SDK móvil.
 
 Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos diferentes a los predeterminados, sin crear un flujo de datos ni modificar la configuración existente.
 
@@ -68,7 +68,7 @@ Una vez creado el conjunto de datos, edite el [Adobe Target](configure.md#target
 
 Después de agregar las anulaciones deseadas, guarde la configuración de la secuencia de datos.
 
-Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Target. Ahora puede [enviar las anulaciones a Edge Network mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Target. Ahora puede [Envíe las invalidaciones al Edge Network mediante el SDK web o el SDK móvil](#send-overrides).
 
 ### Anulaciones de secuencias de datos para Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Seleccione **[!UICONTROL Mostrar modo por lotes]** para habilitar la edición po
 
 Después de agregar las anulaciones deseadas, guarde la configuración de la secuencia de datos.
 
-Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Analytics. Ahora puede [enviar las anulaciones a Edge Network mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Analytics. Ahora puede [Envíe las invalidaciones al Edge Network mediante el SDK web o el SDK móvil](#send-overrides).
 
 ### Anulaciones de secuencia de datos para conjuntos de datos de eventos de Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Una vez creado el conjunto de datos, edite el [Adobe Experience Platform](config
 
 Después de agregar las anulaciones deseadas, guarde la configuración de la secuencia de datos.
 
-Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Experience Platform. Ahora puede [enviar las anulaciones a la red perimetral mediante el SDK web](#send-overrides).
+Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe Experience Platform. Ahora puede [Envíe las invalidaciones al Edge Network mediante el SDK web o el SDK móvil](#send-overrides).
 
 ### Anulaciones de secuencia de datos para contenedores de sincronización de ID de terceros {#container-overrides}
 
@@ -112,9 +112,9 @@ A continuación, utilice la sección **[!UICONTROL Anulaciones de ID de contened
 
 Después de agregar las anulaciones deseadas, guarde la configuración de la secuencia de datos.
 
-Ahora debería tener configuradas las anulaciones del contenedor de sincronización de ID. Ahora puede [enviar las anulaciones a Edge Network mediante el SDK web](#send-overrides).
+Ahora debería tener configuradas las anulaciones del contenedor de sincronización de ID. Ahora puede [Envíe las invalidaciones al Edge Network mediante el SDK web o el SDK móvil](#send-overrides).
 
-## Envíe las anulaciones a Edge Network mediante el SDK web {#send-overrides}
+## Envíe las invalidaciones al Edge Network {#send-overrides}
 
 Después de configurar las invalidaciones de secuencia de datos en la IU de recopilación de datos, puede enviarlas al Edge Network a través del SDK web o el SDK móvil.
 
