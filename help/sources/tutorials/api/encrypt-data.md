@@ -2,16 +2,16 @@
 title: Ingesta de datos cifrados
 description: Obtenga información sobre cómo introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube mediante la API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
 
 # Ingesta de datos cifrados
 
-Adobe Experience Platform le permite introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube. Con la ingesta de datos cifrados, puede aprovechar los mecanismos de cifrado asimétricos para transferir datos por lotes de forma segura a Experience Platform. Actualmente, los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
+Puede introducir archivos de datos cifrados en Adobe Experience Platform mediante fuentes por lotes de almacenamiento en la nube. Con la ingesta de datos cifrados, puede aprovechar los mecanismos de cifrado asimétricos para transferir datos por lotes de forma segura a Experience Platform. Actualmente, los mecanismos de cifrado asimétrico admitidos son PGP y GPG.
 
 El proceso de ingesta de datos cifrados es el siguiente:
 
@@ -27,7 +27,7 @@ El proceso de ingesta de datos cifrados es el siguiente:
 
 Este documento proporciona pasos sobre cómo generar un par de claves de cifrado para cifrar los datos e introducir esos datos cifrados en Experience Platform mediante fuentes de almacenamiento en la nube.
 
-## Introducción
+## Introducción  {#get-started}
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -39,9 +39,9 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
 
-### Extensiones de archivo compatibles con archivos cifrados
+### Extensiones de archivo compatibles con archivos cifrados {#supported-file-extensions-for-encrypted-files}
 
-La lista de extensiones de archivo admitidas para archivos cifrados es la siguiente:
+La lista de extensiones de archivo compatibles con los archivos cifrados es la siguiente:
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Solicitud**
 
++++Ver solicitud de ejemplo
+
 La siguiente solicitud genera un par de claves de cifrado mediante el algoritmo de cifrado PGP.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | El tipo de algoritmo de cifrado que está utilizando. Los tipos de cifrado admitidos son `PGP` y `GPG`. |
 | `params.passPhrase` | La frase de contraseña proporciona una capa adicional de protección para las claves de cifrado. Una vez creada, el Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. |
 
++++
+
 **Respuesta**
+
++++Ver respuesta de ejemplo
 
 Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de clave pública y la hora de caducidad de las claves. La hora de caducidad se establece automáticamente en 180 días después de la fecha de generación de la clave. La hora de caducidad no se puede configurar actualmente.
 
@@ -115,9 +121,93 @@ Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de
 | `publicKeyId` | El ID de clave pública se utiliza para crear un flujo de datos e introducir los datos cifrados del almacenamiento en la nube en Experience Platform. |
 | `expiryTime` | La hora de caducidad define la fecha de caducidad del par de claves de cifrado. Esta fecha se establece automáticamente en 180 días después de la fecha de generación de claves y se muestra en formato unix timestamp. |
 
-+++(Opcional) Crear un par de claves de verificación de firma para los datos firmados
++++
 
-### Crear par de claves administrado por el cliente
+### Recuperar claves de cifrado {#retrieve-encryption-keys}
+
+Para recuperar todas las claves de cifrado de su organización, realice una Solicitud de GET a `/encryption/keys` endpoint=nt.
+
+**Formato de API**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
+
+La siguiente solicitud recupera todas las claves de cifrado de la organización.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Respuesta**
+
++++Ver respuesta de ejemplo
+
+Una respuesta correcta devuelve el algoritmo de cifrado, la clave pública, el ID de clave pública y la hora de caducidad correspondiente de las claves.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Recuperar claves de cifrado por identificador {#retrieve-encryption-keys-by-id}
+
+Para recuperar un conjunto específico de claves de cifrado, realice una solicitud de GET al `/encryption/keys` y proporcione su ID de clave pública como parámetro de encabezado.
+
+**Formato de API**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Respuesta**
+
++++Ver respuesta de ejemplo
+
+Una respuesta correcta devuelve el algoritmo de cifrado, la clave pública, el ID de clave pública y la hora de caducidad correspondiente de las claves.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Crear par de claves administrado por el cliente {#create-customer-managed-key-pair}
 
 Si lo desea, puede crear un par de claves de verificación de firma para firmar e introducir los datos cifrados.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Solicitud**
+
++++Ver solicitud de ejemplo
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | El tipo de algoritmo de cifrado que está utilizando. Los tipos de cifrado admitidos son `PGP` y `GPG`. |
 | `publicKey` | La clave pública que corresponde a las claves administradas por el cliente utilizadas para firmar el cifrado. Esta clave debe tener codificación Base64. |
 
++++
+
 **Respuesta**
+
++++Ver respuesta de ejemplo
 
 ```json
 {    
@@ -206,11 +302,13 @@ Para crear un flujo de datos, realice una solicitud de POST a `/flows` punto fin
 POST /flows
 ```
 
-**Solicitud**
-
 >[!BEGINTABS]
 
 >[!TAB Creación de un flujo de datos para la ingesta de datos cifrados]
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
 
 La siguiente solicitud crea un flujo de datos para introducir datos cifrados para una fuente de almacenamiento en la nube.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
++++
+
+**Respuesta**
+
++++Ver respuesta de ejemplo
+
+Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado para los datos cifrados.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Crear un flujo de datos para introducir datos cifrados y firmados]
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | El ID de la clave de verificación de firma es el mismo que el ID de la clave pública recuperado después de compartir la clave pública codificada en Base64 con Experience Platform. |
 
->[!ENDTABS]
++++
 
 **Respuesta**
+
++++Ver respuesta de ejemplo
 
 Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado para los datos cifrados.
 
@@ -331,10 +451,92 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado p
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Restricciones en la ingesta recurrente**
+### Eliminar claves de cifrado {#delete-encryption-keys}
+
+Para eliminar las claves de cifrado, realice una solicitud de DELETE al `/encryption/keys` y proporcione su ID de clave pública como parámetro de encabezado.
+
+**Formato de API**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
+
+### Validar claves de cifrado {#validate-encryption-keys}
+
+Para validar las claves de cifrado, realice una solicitud de GET al `/encryption/keys/validate/` y proporcione el ID de clave pública que desea validar como parámetro de encabezado.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Respuesta**
+
+Una respuesta correcta devuelve una confirmación de que los ID son válidos o no son válidos.
+
+>[!BEGINTABS]
+
+>[!TAB Válido]
+
+Un ID de clave pública válido devuelve el estado `Active` junto con su ID de clave pública.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB No válido]
+
+Un ID de clave pública no válido devuelve el estado `Expired` junto con su ID de clave pública.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Restricciones en la ingesta recurrente {#restrictions-on-recurring-ingestion}
 
 La ingesta de datos cifrados no admite la ingesta de carpetas recurrentes o de varios niveles en las fuentes. Todos los archivos cifrados deben estar contenidos en una sola carpeta. Tampoco se admiten caracteres comodín con varias carpetas en una sola ruta de origen.
 
@@ -356,14 +558,13 @@ En este escenario, la ejecución del flujo fallará y devolverá un mensaje de e
 * clientes de ACME
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * Subcarpeta1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * Lealtad a ACME
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Pasos siguientes
 
