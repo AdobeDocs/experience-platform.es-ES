@@ -5,18 +5,23 @@ title: Publicación de un modelo como servicio en la IU de Data Science Workspac
 type: Tutorial
 description: El espacio de trabajo de ciencia de datos de Adobe Experience Platform le permite publicar su modelo entrenado y evaluado como servicio, lo que permite a los usuarios de su organización puntuar datos sin necesidad de crear sus propios modelos.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Publicación de un modelo como servicio en la IU de Data Science Workspace
+# Publicación de un modelo como servicio en la IU de Data Science Workspace {#publish-a-model-as-a-service}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_publishmodel"
+>title="Publicación de un modelo como servicio"
+>abstract=""
 
 El espacio de trabajo de ciencia de datos de Adobe Experience Platform le permite publicar su modelo entrenado y evaluado como servicio, lo que permite a los usuarios de su organización puntuar datos sin necesidad de crear sus propios modelos.
 
-## Primeros pasos
+## Introducción
 
 Para completar este tutorial, debe tener acceso a [!DNL Experience Platform]. Si no tiene acceso a una organización en [!DNL Experience Platform], póngase en contacto con el administrador del sistema antes de continuar.
 
