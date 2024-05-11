@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 29%
+source-wordcount: '132'
+ht-degree: 28%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 29%
 * [Información general de paneles](home.md)
 * [Permisos de acceso del panel](permissions.md)
 * [Inventario de paneles](inventory.md)
-* [Paneles definidos por el usuario](user-defined-dashboards.md)
+* [Paneles](user-defined-dashboards.md)
 * [Descargar tableros para el PDF](download.md)
+* Data Distiller {#data-distiller}
+   * [Información general](data-distiller/overview.md)
+   * Perspectivas personalizables para informes de aplicaciones ampliados {#customizable-insights}
+      * [Información general](data-distiller/customizable-insights/overview.md)
+      * [Modo de profesional de consultas (creación de gráficos SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+      * Filtros {#filters}
+         * [Filtro de fecha](data-distiller/customizable-insights/filters/date-filter.md)
+         * [Filtro global](data-distiller/customizable-insights/filters/global-filter.md)
+      * [Ver más](data-distiller/customizable-insights/view-more.md)
+      * [Ver SQL](data-distiller/customizable-insights/view-sql.md)
+      * [Descargar como CSV](data-distiller/customizable-insights/download-csv.md)
 * Paneles disponibles {#guides}
    * [Perfiles](guides/profiles.md)
    * [Perfiles de cuenta](guides/account-profiles.md)

@@ -5,9 +5,9 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '321'
 ht-degree: 19%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 19%
       - [Crear conjuntos de datos derivados basados en deciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Perspectivas personalizables para informes de aplicaciones ampliados {#customizable-insights}
       - [Información general](data-distiller/customizable-insights/overview.md)
+      - [Modo de consulta profesional](data-distiller/customizable-insights/query-pro-mode.md)
       - [Envío de consultas aceleradas](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guía del modelo de datos de Reporting Insights](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Canalizaciones de funciones AI/ML {#ml-feature-pipelines}
@@ -115,4 +116,4 @@ ht-degree: 19%
 - [Preguntas frecuentes](troubleshooting-guide.md)
 - [LISTA DE PERMITIDOS de direcciones IP](ip-address-allowlist.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

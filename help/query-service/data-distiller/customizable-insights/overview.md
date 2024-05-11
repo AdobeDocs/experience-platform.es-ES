@@ -1,9 +1,10 @@
 ---
 title: Perspectivas personalizables
 description: Obtenga información sobre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas personalizable con Data Distiller. Descubra cómo la capacidad Perspectivas personalizables de Data Distiller puede mejorar la transparencia y obtener perspectivas operativas en diferentes dimensiones, como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # Perspectivas personalizables
 
 Cree modelos de datos de informes personalizados para extraer perspectivas más profundas, optimizar estrategias y adaptar los análisis para satisfacer necesidades comerciales específicas con Perspectivas personalizables de Data Distiller. Utilice la capacidad Perspectivas personalizables para mejorar la transparencia y obtener perspectivas operativas de sus datos de Adobe Experience Platform en dimensiones como perfiles, audiencias, campañas, recorridos, autorizaciones y consentimientos. Esta capacidad proporciona una solución versátil y adaptable para adaptar los modelos de datos de creación de informes de su organización a las necesidades específicas de su empresa.
+
+Hasta [visualizar sus perspectivas personalizables](../../../dashboards/data-distiller/overview.md) puede utilizar [modo query pro](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) para realizar análisis complejos con consultas SQL personalizadas y transformar los datos en gráficos fácilmente interpretables. Utilice el modo query pro para crear perspectivas y visualizaciones personalizadas en sus paneles y atender a audiencias técnicas y no técnicas descargando sus perspectivas como archivos CSV.
 
 Este documento cubre los casos de uso, las funcionalidades esenciales y los pasos necesarios para desarrollar un panel de perspectivas personalizable con Data Distiller.
 

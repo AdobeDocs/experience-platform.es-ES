@@ -1,17 +1,18 @@
 ---
-title: Paneles definidos por el usuario
+title: Paneles personalizados
 description: Obtenga información sobre cómo crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 2%
 
 ---
 
-# Paneles definidos por el usuario
+# Paneles personalizados
 
-Los paneles de Adobe Experience Platform le ayudan a acelerar las perspectivas y personalizar la visualización a través de la función de paneles definida por el usuario. Esta función le permite crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización.
+Utilice los paneles de Adobe Experience Platform para acelerar las perspectivas y personalizar la visualización a través de la función de paneles. Utilice esta función para crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave relevantes para su organización.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Para crear un tablero personalizado, primero, navegue hasta el inventario del ta
 
 ![El inventario de tableros con Tableros en la navegación izquierda y &quot;Crear tablero&quot; resaltado.](./images/user-defined-dashboards/create-dashboard.png)
 
-Antes de agregar un tablero personalizado, el inventario de los tableros está vacío y muestra el mensaje &quot;No se encontraron tableros&quot;. Mensaje. Una vez creados, todos los tableros definidos por el usuario se enumeran en el inventario de tableros.
+Antes de agregar un tablero personalizado, el inventario de los tableros está vacío y muestra el mensaje &quot;No se encontraron tableros&quot;. Mensaje. Una vez creados, todos los tableros se enumeran en el inventario de tableros.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Para editar un panel existente, seleccione el nombre del panel en la lista de inventario seguido del icono de lápiz (![Un icono de lápiz.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 El [!UICONTROL Crear tablero] aparece el cuadro de diálogo. Introduzca un nombre descriptivo y sencillo para la colección de widgets que desea crear y seleccione **[!UICONTROL Guardar]**.
 
 ![Cuadro de diálogo Crear tablero.](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Los usuarios que hayan adquirido la SKU de Data Distiller tienen la opción de utilizar consultas SQL personalizadas para crear sus perspectivas. Consulte la [Guía de creación de perspectiva personalizable](./data-distiller/customizable-insights/overview.md) para obtener instrucciones sobre este flujo de trabajo.
 
 El tablero en blanco recién creado aparecerá con el nombre elegido en la esquina superior izquierda de la vista.
 
@@ -42,13 +46,13 @@ El tablero en blanco recién creado aparecerá con el nombre elegido en la esqui
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Número máximo de widgets"
->abstract="Los tableros definidos por el usuario admiten hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris."
+>abstract="El servicio de tableros admite hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris."
 
 En la nueva vista de panel, seleccione **[!UICONTROL Añadir nuevo widget]** para iniciar el proceso de creación del widget.
 
 >[!IMPORTANT]
 >
->Los tableros definidos por el usuario admiten hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris.
+>Cada tablero admite hasta diez widgets. Después de añadir diez widgets al tablero, la opción [!UICONTROL Añadir nuevo widget] está desactivada y aparece en gris.
 
 ![El nuevo tablero vacío con Agregar nuevo widget resaltado.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ Los widgets se pueden reorganizar y cambiar de tamaño en este espacio de trabaj
 
 Para garantizar que cada consulta de un panel de perspectivas de Adobe Real-time Customer Data Platform tenga suficientes recursos para ejecutarse de forma eficaz, la API rastrea el uso de recursos asignando espacios de concurrencia a cada consulta. El sistema puede procesar hasta cuatro consultas simultáneas y, por lo tanto, hay cuatro ranuras de consulta simultáneas disponibles en cualquier momento. Las consultas se colocan en una cola basada en ranuras de concurrencia y, a continuación, espere en la cola hasta que haya suficientes ranuras de concurrencia disponibles.
 
-### Duplicación de un widget
+### Editar, duplicar o eliminar un widget {#duplicate}
 
-Una vez creado un widget, puede duplicar todo el widget y personalizar sus atributos para crear un widget único sin tener que empezar desde cero. Para duplicar un widget, primero vaya al inventario del panel. A continuación, seleccione el nombre del tablero en la lista de inventario. Aparecerá su tablero personalizado.
+Una vez creado un widget, puede editar, duplicar o eliminar widgets completos desde el panel personalizado.
 
-![La interfaz de usuario de Platform con paneles y un nombre de panel personalizado resaltado.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Para cambiar entre cualquiera de los paneles personalizados existentes, seleccione Paneles en la barra de navegación izquierda y, a continuación, seleccione el nombre del panel en la lista de inventario.
 
 Seleccione el icono de lápiz (![Un icono de lápiz.](./images/user-defined-dashboards/edit-icon.png)) desde la parte superior derecha del panel personalizado para entrar en el modo de edición.
 
 ![Un panel personalizado con el icono de lápiz resaltado.](./images/user-defined-dashboards/edit-mode.png)
 
-A continuación, seleccione los puntos suspensivos en la parte superior derecha del widget que desea copiar, seguidos de **[!UICONTROL Duplicar]** de la lista de opciones disponibles.
+A continuación, seleccione los puntos suspensivos en la parte superior derecha del widget que desea editar, copiar o eliminar. Seleccione la acción adecuada en el menú desplegable.
 
-![Un widget en un tablero definido por el usuario con los puntos suspensivos y el widget de duplicado resaltados.](./images/user-defined-dashboards/duplicate.png)
+![Un widget en un panel personalizado con los puntos suspensivos y el widget de duplicado resaltados.](./images/user-defined-dashboards/duplicate.png)
 
-Aparecerá un widget duplicado en el tablero definido por el usuario. Seleccione los puntos suspensivos del nuevo widget, seguidos de **[!UICONTROL Editar]**, para personalizar el nuevo widget.
+>[!NOTE]
+>
+>La duplicación le permite personalizar los atributos de una perspectiva para crear un widget único sin tener que empezar desde cero. Si duplica un widget, aparecerá en el panel personalizado. A continuación, puede seleccionar los puntos suspensivos del nuevo widget seguido de **[!UICONTROL Editar]**, para personalizar su perspectiva.
 
 ## Pasos siguientes y recursos adicionales
 
@@ -172,6 +180,6 @@ Al leer este documento, tiene una mejor comprensión de cómo crear un panel per
 
 Para descubrir las métricas y visualizaciones preconfiguradas disponibles para [perfiles](./guides/profiles.md#standard-widgets), [segmentos](./guides/audiences.md#standard-widgets), y [destinos](./guides/destinations.md#standard-widgets) En los paneles, consulte la lista de widgets estándar en su documentación respectiva.
 
-Para comprender mejor los paneles definidos por el usuario en Experience Platform, vea el siguiente vídeo:
+Para reforzar su comprensión de los paneles de Experience Platform, vea el siguiente vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
