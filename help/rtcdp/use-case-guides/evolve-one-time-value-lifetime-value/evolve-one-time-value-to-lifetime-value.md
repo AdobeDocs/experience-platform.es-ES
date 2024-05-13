@@ -2,7 +2,8 @@
 title: Evolucionar el valor de cliente único al valor de duración
 description: Aprenda a crear campañas personalizadas para ofrecer los mejores productos o servicios complementarios en función de los atributos, el comportamiento y las compras anteriores de un cliente específico.
 feature: Use Cases
-source-git-commit: 1134ca4d8a5901b8fe125578ad7f0bc81f6a320f
+exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
+source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -53,7 +54,7 @@ Para lograrlo, la tecnología requerida consiste en las dos aplicaciones Experie
 
 A continuación se muestra una vista de arquitectura de alto nivel de los distintos componentes de Real-Time CDP y Journey Optimizer. Este diagrama muestra cómo fluyen los datos entre las dos aplicaciones Experience Platform desde la recopilación de datos hasta el punto en que se activan mediante recorridos o campañas hasta los destinos, para lograr el caso de uso descrito en esta página.
 
-![Descripción general visual de alto nivel de arquitectura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
+![Descripción general visual de alto nivel de arquitectura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
 
 ## Cómo lograr el caso de uso: información general de alto nivel {#achieve-the-use-case-high-level}
 
@@ -69,7 +70,7 @@ Comience por enviar un mensaje a su audiencia de clientes de alto valor y baja f
 
 >[!BEGINSHADEBOX]
 
-![Evolucione paso a paso un valor único a un valor de duración información general visual de alto nivel.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
+![Evolucione paso a paso un valor único a un valor de duración información general visual de alto nivel.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
 
 1. Puede crear esquemas y conjuntos de datos y, a continuación, marcarlos para [!UICONTROL Perfil].
 2. Los datos se recopilan e integran en Experience Platform mediante el SDK web, el SDK móvil de Edge o la API. El conector de datos de Analytics también se puede utilizar, pero puede provocar una latencia de recorrido.
@@ -303,7 +304,7 @@ Este caso de uso requiere la creación de dos audiencias para definir atributos 
 
 Específicamente, debe crear y utilizar dos audiencias en diferentes pasos del caso de uso, como se muestra en la siguiente imagen.
 
-![Audiencias resaltadas.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Audiencias resaltadas.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -350,7 +351,7 @@ Para aplicar este caso de uso, debe crear dos recorridos independientes:
 * El recorrido de duración, que incluye el mensaje que envía a sus clientes de alto valor y baja frecuencia
 * El recorrido de confirmación de pedido para los usuarios que responden a su llamada y compran una suscripción.
 
-![Recorridos resaltados.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+![Recorridos resaltados.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
 
 A continuación se enumeran los datos precisos necesarios para cada rama de Recorrido.
 
@@ -360,7 +361,7 @@ A continuación se enumeran los datos precisos necesarios para cada rama de Reco
 
 El recorrido de duración se dirige a la audiencia de clientes de alto valor y baja frecuencia que no fueron objetivos en los últimos 30 días. Se muestra un mensaje a estos clientes y, si después de 7 días aún no compran, puede incluir a los no compradores en una audiencia a la que puede mostrar anuncios de medios de pago. Si compran, puede configurar los compradores en un recorrido de confirmación de pedido, que se detalla en la pestaña independiente.
 
-![Información general visual de alto nivel sobre el recorrido de duración.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Información general visual de alto nivel sobre el recorrido de duración de un valor único."){width="2560" zoomable="yes"}
+![Información general visual de alto nivel sobre el recorrido de duración.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Información general visual de alto nivel sobre el recorrido de duración de un valor único."){width="600" zoomable="yes"}
 
 +++Lógica de Recorrido detallada
 
@@ -382,7 +383,7 @@ El recorrido mostrado anteriormente sigue la siguiente lógica.
 
 El recorrido de confirmación de pedido se centra en si la compra se realizó a través del sitio web o de la aplicación móvil. Una vez que un cliente ha completado correctamente la compra de, por ejemplo, una suscripción con su compañía, puede configurarlos en un recorrido de confirmación de pedido.
 
-![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente."){width="2560" zoomable="yes"}
+![Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Resumen visual de alto nivel del recorrido de confirmación de pedido del cliente."){width="600" zoomable="yes"}
 
 Lógica de Recorrido + + + +
 
