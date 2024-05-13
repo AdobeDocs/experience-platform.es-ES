@@ -3,10 +3,10 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 13%
+source-wordcount: '1459'
+ht-degree: 12%
 
 ---
 
@@ -139,6 +139,16 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 >Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Leer [Activación de audiencias en destinos de personalización de Edge](../../ui/activate-edge-personalization-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+
+## Eliminación de audiencias de un destino de Target {#remove}
+
+Se requieren pasos adicionales para eliminar una audiencia de una conexión de Adobe Target existente cuando esa audiencia ya se está utilizando en un Adobe Target [actividad](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Si se intenta eliminar una audiencia de una conexión de Adobe Target, se produce un error si una actividad de Adobe Target utiliza la audiencia.
+
+![Imagen de la interfaz de usuario de Platform que muestra un error provocado al intentar eliminar una audiencia utilizada por una actividad de Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+Para quitar una audiencia de un destino de Target cuando la audiencia se está usando en una actividad, primero debe quitar la audiencia de la actividad de Target que la está usando o eliminar por completo la actividad. A continuación, puede quitar la audiencia de la conexión de Target.
+
+Si la audiencia no se utiliza en una actividad, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** > **[!UICONTROL Seleccionar flujo de datos de destino]** > **[!UICONTROL Datos de activación]**, seleccione las audiencias que desee eliminar y, a continuación, seleccione **[!UICONTROL Eliminar audiencias]**.
 
 ## Datos exportados {#exported-data}
 
