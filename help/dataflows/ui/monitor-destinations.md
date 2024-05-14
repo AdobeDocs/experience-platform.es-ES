@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Detalles de ejecución del flujo de datos"
->abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación de una audiencia y métricas tomadas de Real-Time Customer Profile para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
+>abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación de un público y las métricas obtenidas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -60,7 +60,7 @@ Consulte la siguiente tabla para obtener más información sobre los estados:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identidades activadas"
->abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas."
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -78,7 +78,7 @@ Las identidades representan las diferentes facetas de un perfil. Por ejemplo, si
 
 Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
-- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas.
+- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se omiten para la activación en función de los atributos que faltan y la infracción de consentimiento.
 - **[!UICONTROL Identidades con errores]**: El número total de identidades de perfil que no se activan en el destino debido a errores.
 
@@ -91,7 +91,7 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
    - Para **[!UICONTROL completado]** se ejecuta, la métrica de tiempo de procesamiento siempre muestra una hora.
    - Para ejecuciones de flujo de datos que siguen en una **[!UICONTROL procesamiento]** estado, la ventana para capturar todas las métricas permanece abierta durante más de una hora para procesar todas las métricas que corresponden a la ejecución del flujo de datos. Por ejemplo, una ejecución de flujo de datos que comenzó a las 9:30 a.m. puede permanecer en un estado de procesamiento durante una hora y treinta minutos para capturar y procesar todas las métricas. A continuación, una vez que se cierra la ventana de procesamiento y se actualiza el estado de la ejecución del flujo de datos a **completado**, el tiempo de procesamiento mostrado se cambia a una hora.
 - **[!UICONTROL Perfiles recibidos]**: El número total de perfiles recibidos en el flujo de datos.
-- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas.
+- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación en función de los atributos que faltan y la infracción de consentimiento.
 - **[!UICONTROL Identidades con errores]** Número total de identidades de perfil que no se activan en el destino debido a errores.
 - **[!UICONTROL Tasa de activación]**: El porcentaje de identidades recibidas que se activaron u omitieron correctamente. La fórmula siguiente muestra cómo se calcula este valor:
@@ -113,7 +113,7 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Detalles de ejecución del flujo de datos"
->abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación de una audiencia y métricas tomadas de Real-Time Customer Profile para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
+>abstract="Los detalles de ejecución del flujo de datos de destino contienen información sobre el estado de activación de un público y las métricas obtenidas del perfil del cliente en tiempo real para generar identidades únicas. Para obtener más información, consulte la guía de definiciones de métricas."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=es#dataflow-runs-for-streaming-destinations" text="El flujo de datos se ejecuta para destinos de streaming"
 
 >[!CONTEXTUALHELP]
@@ -124,7 +124,7 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identidades activadas"
->abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas."
+>abstract="Recuento de identidades de perfil individuales activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -133,7 +133,7 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 
 Para destinos por lotes, la variable [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones del flujo de datos. Se muestra una lista de ejecuciones individuales y sus métricas particulares, junto con los siguientes totales de identidades:
 
-- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas.
+- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil activadas correctamente en el destino seleccionado. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: el recuento de identidades de perfil individuales excluidas de la activación para el destino seleccionado, en función de los atributos que faltan y la infracción de consentimiento.
 
 ![El flujo de datos ejecuta la vista para destinos por lotes.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -144,7 +144,7 @@ Cada ejecución de flujo de datos individual muestra los siguientes detalles:
 - **[!UICONTROL Audiencia]**: Nombre de la audiencia asociada con cada ejecución del flujo de datos.
 - **[!UICONTROL Tiempo de procesamiento]**: Cantidad de tiempo que tardó la ejecución del flujo de datos en procesarse.
 - **[!UICONTROL Perfiles recibidos]**: El número total de perfiles recibidos en el flujo de datos. Este valor se actualiza cada 60 minutos.
-- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye identidades creadas, actualizadas y eliminadas de audiencias exportadas.
+- **[!UICONTROL Identidades activadas]**: El número total de identidades de perfil que se activaron correctamente en el destino seleccionado como parte de la ejecución del flujo de datos. Esta métrica incluye las identidades creadas, actualizadas y eliminadas de los públicos exportados.
 - **[!UICONTROL Identidades excluidas]**: El número total de identidades de perfil que se excluyen de la activación en función de los atributos que faltan y la infracción de consentimiento.
 - **[!UICONTROL Estado]**: Representa el estado en el que se encuentra el flujo de datos. Este puede ser uno de los tres estados: [!UICONTROL Correcto], [!UICONTROL Error], y [!UICONTROL Procesando]. [!UICONTROL Correcto] significa que el flujo de datos está activo y está exportando datos según la programación proporcionada. [!UICONTROL Error] significa que la activación de datos se ha suspendido debido a errores. [!UICONTROL Procesando] significa que el flujo de datos aún no está activo y que, por lo general, se encuentra cuando se crea un nuevo flujo de datos.
 
@@ -176,7 +176,7 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="La vista de activación de destino contiene información sobre el estado de activación de una audiencia y métricas tomadas de Real-Time Customer Profile para generar identidades únicas."
+>abstract="La vista de activación de destino contiene información sobre el estado de activación de un público y las métricas obtenidas del perfil del cliente en tiempo real para generar identidades únicas."
 
 Para acceder a [!UICONTROL Monitorización] panel, seleccione **[!UICONTROL Monitorización]** (![icono de monitorización](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en [!UICONTROL Monitorización] página, seleccione [!UICONTROL Destinos]. El [!UICONTROL Monitorización] el tablero contiene métricas e información sobre los trabajos de ejecución de destino.
 
