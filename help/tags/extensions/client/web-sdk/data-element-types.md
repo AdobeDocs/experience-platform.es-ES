@@ -2,9 +2,9 @@
 title: Tipos de elementos de datos en la extensión SDK para web de Adobe Experience Platform
 description: Obtenga información acerca de los distintos tipos de elementos de datos que proporciona la extensión de etiqueta del SDK web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 5%
 
 ---
@@ -52,11 +52,14 @@ Tenga en cuenta que cuando abre ciertos campos del esquema, como `web.webPageDet
 
 ## Variable {#variable}
 
-Otra forma de crear objetos XDM es utilizar **[!UICONTROL Variable]** elemento de datos. Mientras que el elemento de datos del objeto XDM se crea cuando se hace referencia a él, como dentro de un `sendEvent` , el comando **[!UICONTROL Variable]** El elemento de datos de se puede actualizar mediante [!UICONTROL Actualizar variable] acciones. Para utilizar el elemento de datos, seleccione el esquema y la zona protegida de Adobe Experience Platform correctos.
+Puede crear objetos de carga útil utilizando **[!UICONTROL Variable]** elemento de datos. Ambos [!UICONTROL XDM] y [!UICONTROL Datos] se admiten objetos de.
 
-![Imagen de la IU que muestra la pantalla Crear elemento de datos.](assets/variable-data-element.png)
+* Al seleccionar [!UICONTROL XDM], seleccione el [!UICONTROL Sandbox] y [!UICONTROL Esquema].
+* Al seleccionar [!UICONTROL Datos], seleccione las soluciones que desee. Las soluciones disponibles incluyen [!UICONTROL Adobe Analytics] y [!UICONTROL Adobe Target].
 
-Una vez creado este elemento de datos, puede utilizar [Actualizar variable](./action-types.md#update-variable) acciones para modificar el elemento de datos. A continuación, dentro de las acciones de enviar evento, utilice el elemento de datos variable para la opción XDM.
+![Imagen de la interfaz de usuario de etiquetas que muestra las opciones del elemento de datos.](assets/variable-data-element.png)
+
+Después de crear este elemento de datos, puede utilizar el [Actualizar variable](./action-types.md#update-variable) acción para modificarla. Cuando esté listo, puede incluir este elemento de datos en la [Enviar evento](./action-types.md#send-event) acción para enviar datos a un conjunto de datos.
 
 ## Pasos siguientes {#next-steps}
 

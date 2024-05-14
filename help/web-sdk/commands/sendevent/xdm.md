@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: El objeto alineado con el esquema enviado al Adobe.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Aprenda a enviar datos al Adobe a través del objeto alineado con el esquema XDM.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ El `xdm` contiene la carga útil de datos enviada al Adobe. Los campos estableci
 
 Adobe Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de forma coherente en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos.
 
-Este campo tiene un límite máximo de 32 KB.
+Este objeto tiene un límite máximo de 32 KB.
 
 ## Configuración del objeto XDM mediante la extensión del SDK web
 
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-El ejemplo siguiente utiliza el [Grupo de campos del esquema Detalles de comercio](/help/xdm/field-groups/event/commerce-details.md):
+El ejemplo siguiente utiliza el [Grupo de campos del esquema Detalles de Commerce](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{
