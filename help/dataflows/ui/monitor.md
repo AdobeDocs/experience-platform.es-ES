@@ -1,7 +1,8 @@
 ---
 title: Información general del panel de monitorización
 description: Aprenda a utilizar el tablero de monitorización en la interfaz de usuario de Adobe Experience Platform
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 1%
@@ -100,7 +101,7 @@ Seleccionar **[!UICONTROL Perfiles]** para ver la tasa de éxito de procesamient
 
 >[!TAB Públicos]
 
-Seleccionar **[!UICONTROL Audiencias]** para ver métricas sobre sus audiencias y trabajos de segmentación. Lea la guía de [monitorización de datos de audiencia](monitor-segments.md) para obtener más información.
+Seleccionar **[!UICONTROL Audiencias]** para ver métricas sobre sus audiencias y trabajos de segmentación. Lea la guía de [monitorización de datos de audiencia](monitor-audiences.md) para obtener más información.
 
 ![El panel de monitorización en la interfaz de usuario con la tarjeta Audiencias seleccionada.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Al leer este documento, ahora puede navegar por el panel de monitorización de l
 * [Monitorización de datos de origen](monitor-sources.md).
 * [Monitorización de datos de identidad](monitor-identities.md).
 * [Monitorización de datos de perfil](monitor-profiles.md).
-* [Monitorización de datos de audiencia](monitor-segments.md).
+* [Monitorización de datos de audiencia](monitor-audiences.md).
 * [Monitorización de datos de destinos](monitor-destinations.md).

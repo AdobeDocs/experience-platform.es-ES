@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -112,7 +112,7 @@ Puede añadir campos adicionales a la [!UICONTROL Examinar] página seleccionand
 | [!UICONTROL Nombre] | El nombre de la audiencia. |
 | [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
 | [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
-| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, `Published`, y `Archived`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-status). |
+| [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, y `Published`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-status). |
 | [!UICONTROL Frecuencia de actualización] | Un valor que indica la frecuencia con la que se actualizan los datos de la audiencia. Los valores posibles para este campo incluyen [!UICONTROL Lote], [!UICONTROL Transmisión], [!UICONTROL Edge], y [!UICONTROL No programado]. |
 | [!UICONTROL Actualizado por última vez por] | El nombre de la persona que actualizó la audiencia por última vez. |
 | [!UICONTROL Creado] | La fecha y la hora, en UTC, en que se creó la audiencia. |
@@ -422,7 +422,7 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 | Campo | Descripción |
 | ----- | ----------- | 
 | [!UICONTROL Nombre] | El nombre de la audiencia. |
-| [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, `Published`, y `Archived`. |
+| [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, y `Published`. |
 | [!UICONTROL Creado] | La hora y la fecha de creación de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |
 | [!UICONTROL Actualizado] | Fecha y hora en la que se actualizó la audiencia por última vez. |
