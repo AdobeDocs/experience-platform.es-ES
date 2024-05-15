@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conectar la Power BI al servicio de consultas
 description: Este documento explica los pasos para conectar Power BI con el servicio de consultas de Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 1%
+source-wordcount: '1073'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Este documento describe los pasos para la conexión [!DNL Power BI] Escritorio c
 
 ## Introducción
 
-Esta guía requiere que ya tenga acceso a [!DNL Power BI] y están familiarizados con cómo navegar por su interfaz. Para descargar [!DNL Power BI] Escritorio o para obtener más información, consulte la [funcionario [!DNL Power BI] documentación](https://docs.microsoft.com/es-ES/power-bi/).
+Esta guía requiere que ya tenga acceso a [!DNL Power BI] y están familiarizados con cómo navegar por su interfaz. Para descargar [!DNL Power BI] Escritorio o para obtener más información, consulte la [funcionario [!DNL Power BI] documentación](https://docs.microsoft.com/en-us/power-bi/).
 
 >[!IMPORTANT]
 >
@@ -42,6 +42,10 @@ Para conectar [!DNL Power BI] al servicio de consultas, abra [!DNL Power BI] y s
 El [!DNL PostgreSQL] aparece el cuadro de diálogo base de datos, solicitando valores para el servidor y la base de datos. Instrucciones adicionales sobre cómo [conectarse a una base de datos PostgreSQL desde Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) se puede encontrar en el [!DNL PowerBI] documentación.
 
 Estos valores necesarios se toman de las credenciales de Adobe Experience Platform. Para encontrar sus credenciales, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** desde el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar el nombre de la base de datos, el host, el puerto y las credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md).
+
+>[!IMPORTANT]
+>
+>Como usuario de Power BI o Tableau, puede conectarse con Customer Journey Analytics a sus herramientas de BI desde la pestaña de credenciales del servicio de consulta. Consulte la documentación de credenciales para obtener instrucciones sobre cómo [conectar las herramientas de BI al Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![El espacio de trabajo Consultas del Experience Platform con la pestaña Credenciales y Credenciales de caducidad resaltadas.](../images/clients/power-bi/query-service-credentials-page.png)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 2%
+source-wordcount: '1807'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,28 @@ El **[!UICONTROL Credenciales que caducan]** proporciona la siguiente informaci�
 >![La pestaña Configuración del Admin Console con Privacidad y seguridad, Configuración de autenticación y Duración máxima de la sesión resaltadas.](../images/ui/credentials/max-session-life.png)
 >
 >Consulte la documentación de ayuda de Adobe para obtener más información sobre la [Configuración avanzada](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) ofrecido por Admin Console.
+
+### Conectarse a los datos del Customer Journey Analytics en sesiones de consulta {#connect-to-customer-journey-analytics}
+
+Utilice la extensión de Customer Journey Analytics BI con Power BI o Tableau para acceder a su Customer Journey Analytics [vistas de datos](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) con SQL. Al integrar el servicio de consultas con la extensión de BI, puede acceder a las vistas de datos directamente dentro de las sesiones del servicio de consultas. Esta integración optimiza la funcionalidad de las herramientas de BI que utilizan el servicio de consultas como interfaz PostgreSQL. Esta funcionalidad elimina la necesidad de duplicar vistas de datos en las herramientas de BI, garantiza la creación de informes coherentes en todas las plataformas y simplifica la integración de datos de Customer Journey Analytics con otras fuentes en las plataformas de BI.
+
+Consulte la documentación para obtener información sobre cómo [conectar el servicio de consultas a diversas aplicaciones cliente de escritorio](../clients/overview.md) como [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>Se requieren un proyecto del espacio de trabajo del Customer Journey Analytics y una vista de datos para utilizar esta funcionalidad.
+
+Para acceder a los datos del Customer Journey Analytics en Power BI o Tableau, seleccione [!UICONTROL Base de datos] menú desplegable, luego seleccione `prod:cja` en las opciones disponibles. A continuación, copie su [!DNL Postgres] parámetros de credenciales (host, puerto, base de datos, nombre de usuario y otros) para su uso en la configuración de Power BI o Tableau.
+
+![La pestaña Credenciales del servicio de consulta con la lista desplegable de la base de datos resaltada.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>Al conectar Power BI o Tableau a Customer Journey Analytics, se consume el derecho de &quot;sesiones simultáneas&quot; del servicio de consultas. Si se requieren sesiones y consultas adicionales, se puede adquirir un complemento adicional del paquete de usuarios de consultas ad hoc para obtener cinco sesiones simultáneas adicionales y una consulta simultánea adicional.
+
+También puede acceder a los datos del Customer Journey Analytics directamente desde el Editor de consultas o la CLI de Postgres. Para ello, consulte la `cja` base de datos al escribir la consulta. Consulte el Editor de consultas [guía de creación de consultas](./user-guide.md#query-authoring) para obtener más información sobre cómo escribir, ejecutar y guardar consultas.
+
+Consulte la [Guía de extensión de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obtener instrucciones completas sobre el acceso a las vistas de datos del Customer Journey Analytics con SQL.
 
 ## Credenciales que no caducan {#non-expiring-credentials}
 

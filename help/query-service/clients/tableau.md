@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conexión de Tableau con el servicio de consultas
 description: Este documento explica los pasos para conectar Tableau con el servicio de consultas de Adobe Experience Platform.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ Instrucciones sobre cómo [conectarse a un servidor PostgreSQL con Tableau](http
 | **[!DNL Password]** | Esta cadena alfanumérica es su Experience Platform **[!UICONTROL Contraseña]** credencial. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados del `technicalAccountID` y el `credential` descargado en el archivo JSON de configuración. El valor de la contraseña adopta la forma siguiente: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante su inicialización de la que la Adobe no conserva una copia. |
 
 Para obtener más información sobre cómo encontrar su nombre de usuario, contraseña y credenciales de inicio de sesión, lea la [guía de credenciales](../ui/credentials.md). Para encontrar sus credenciales, inicie sesión en [!DNL Platform], luego seleccione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciales]**.
+
+>[!IMPORTANT]
+>
+>Como usuario de Tableau o Power BI, puede conectar Customer Journey Analytics a sus herramientas de BI desde la pestaña Credenciales del servicio de consulta. Consulte la documentación de credenciales para obtener instrucciones sobre cómo [conectar las herramientas de BI al Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 Asegúrese de haber comprobado las **[!UICONTROL Requerir SSL]** antes de intentar conectarse. Consulte la [Documentación de modos SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad de SSL para conexiones de terceros con Adobe Experience Platform Query Service.
 
