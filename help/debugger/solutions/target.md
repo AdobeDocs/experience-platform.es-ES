@@ -2,10 +2,10 @@
 title: Prueba de una implementación de Adobe Target con Adobe Experience Platform Debugger
 description: Aprenda a utilizar el Adobe Experience Platform Debugger para probar y depurar un sitio web habilitado con Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 5%
+source-wordcount: '1035'
+ht-degree: 2%
 
 ---
 
@@ -109,7 +109,7 @@ Seleccionar **[!DNL Configuration]** para habilitar o deshabilitar una selecció
 | Herramienta de depuración | Descripción |
 | --- | --- |
 | [!DNL Target Console Logging] | Cuando está habilitado, le permite acceder a los registros de at.js en la pestaña de la consola del explorador. Esta función también se puede habilitar añadiendo una `mboxDebug` parámetro de consulta (con cualquier valor) a la dirección URL del explorador. |
-| [!DNL Target Diable] | Cuando está activada, todas las funcionalidades de Target se desactivan en la página. Se puede usar para determinar si una oferta específica de Target es la que causa el problema en la página. |
+| [!DNL Target Disable] | Cuando está activada, todas las funcionalidades de Target se desactivan en la página. Se puede usar para determinar si una oferta específica de Target es la que causa el problema en la página. |
 | [!DNL Target Trace] | **Nota**: debe iniciar sesión para habilitar esta función.<br><br>Cuando está habilitado, los tokens de seguimiento se envían con cada misión y se devuelve un objeto de seguimiento en cada respuesta. `at.js` analiza la respuesta `window.__targetTraces`. Cada objeto de seguimiento contiene la misma información que [[!DNL Network Requests] pestaña], con las siguientes adiciones:<ul><li>Una instantánea de perfil que le permite ver los atributos antes y después de las solicitudes.</li><li>Coincidente e inigualable [actividades](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), mostrando por qué el perfil actual cumplía o no los requisitos para actividades específicas.<ul><li>Esto puede ayudar a identificar para qué audiencias cumple los requisitos un perfil en un momento determinado y por qué.</li><li>Los documentos de Target contienen más información sobre diferentes tipos de actividades</li></ul></li></ul> |
 
 {style="table-layout:auto"}
