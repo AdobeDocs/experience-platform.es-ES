@@ -5,9 +5,9 @@ description: Mediante el uso de perfiles de cuenta, Adobe Real-time Customer Dat
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Seleccionar **[!UICONTROL Perfiles]** bajo [!UICONTROL Cuentas] en la barra de n
 
 ![Pestaña Información general que muestra los widgets](images/b2b-account-profile-overview.png)
 
-Consulte la documentación de la [[!UICONTROL Perfiles de cuenta]](../../dashboards/guides/account-profiles.md) tablero para obtener más información.
+Consulte la documentación de la [[!UICONTROL Perfiles de cuenta]](../../dashboards/guides/account-profiles.md) tablero para obtener más información. Consulte la documentación sobre [Real-time Customer Data Platform Insights Data Model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obtener más información sobre cómo se pueden utilizar los modelos de datos de insights para crear gráficos personalizados para los paneles.
 
 ## Configurar coincidencia de cliente potencial con cuenta {#configure-lead-to-account-matching}
 
