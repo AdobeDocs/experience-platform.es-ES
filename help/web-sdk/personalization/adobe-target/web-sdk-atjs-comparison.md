@@ -3,9 +3,9 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 5%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [Más información](../rendering-personalization-content.md#manually-rendering-content)
 
+**Ejemplo 3: Seguimiento de un evento activado después de realizar una acción**
+
+Este ejemplo rastrea un evento que se activó después de realizar una acción específica, como hacer clic en un botón.
+Puede añadir cualquier parámetro personalizado adicional mediante la variable `__adobe.target` objeto de datos.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Cómo almacenar en déclencheur un cambio de vista en una aplicación de una sola página
 
 ### Uso de at.js
@@ -893,7 +914,7 @@ El registro del lado del servidor de Analytics está habilitado cuando Analytics
 
 ![IU de flujos de datos que muestra la configuración de Analytics.](assets/analytics-enabled-datastream-config.png)
 
-Cuando el registro de Analytics del lado del servidor está habilitado, la carga útil de A4T que debe compartirse con Analytics para que los informes de Analytics muestren impresiones y conversiones correctas se compartan en el nivel de red perimetral, de modo que el cliente no tenga que realizar ningún procesamiento adicional.
+Cuando el registro de Analytics en el servidor está habilitado, la carga útil de A4T que debe compartirse con Analytics para que los informes de Analytics muestren impresiones y conversiones correctas se compartan en el nivel del Edge Network, de modo que el cliente no tenga que realizar ningún procesamiento adicional.
 
 Así es como los datos fluyen a nuestros sistemas cuando el registro de Analytics en el servidor está habilitado:
 
