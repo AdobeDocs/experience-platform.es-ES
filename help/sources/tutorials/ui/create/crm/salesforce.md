@@ -2,9 +2,9 @@
 title: Conexión de la cuenta de Salesforce mediante la interfaz de usuario de Experience Platform
 description: Aprenda a conectar su cuenta de Salesforce y llevar los datos de CRM al Experience Platform mediante la interfaz de usuario.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '829'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Debe proporcionar valores para las siguientes credenciales para conectar su [!DN
 | Nombre de usuario | El nombre de usuario de [!DNL Salesforce] cuenta de usuario. |
 | Una contraseña | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
 | Token de seguridad | El token de seguridad para [!DNL Salesforce] cuenta de usuario. |
-| Versión de API | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0` Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| Versión de API | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 
 Para obtener más información sobre la autenticación, consulte [esta [!DNL Salesforce] guía de autenticación](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -51,9 +51,9 @@ Debe proporcionar valores para las siguientes credenciales para conectar su [!DN
 | Credencial | Descripción |
 | --- | --- |
 | URL de entorno | La dirección URL del [!DNL Salesforce] instancia de origen. |
-| ID de cliente | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. En conjunto, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
-| Secreto de cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. En conjunto, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
-| Versión de API | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0` Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| ID de cliente | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
+| Secreto de cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
+| Versión de API | La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 
 Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] Guía de flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
@@ -63,29 +63,59 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 ## Conecte su [!DNL Salesforce] account
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder al espacio de trabajo de orígenes. El *[!UICONTROL Catálogo]* La pantalla muestra una variedad de fuentes disponibles en el catálogo de fuentes de Experience Platform.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar una fuente específica utilizando la opción de búsqueda.
+En el *CRM* categoría, seleccionar **[!DNL Salesforce]**, y luego seleccione **[!UICONTROL Añadir datos]**.
 
-Seleccionar **[!UICONTROL CRM]** en la lista de categorías de fuentes y, a continuación, seleccione **[!UICONTROL Añadir datos]** desde el [!DNL Salesforce] Tarjeta de.
+>[!TIP]
+>
+>Las fuentes del catálogo de fuentes muestran el **[!UICONTROL Configuración de]** cuando una fuente determinada aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Añadir datos]**.
 
 ![El catálogo de fuentes de la interfaz de usuario de Experience Platform con la tarjeta de origen de Salesforce seleccionada.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 El **[!UICONTROL Conectar con Salesforce]** página. En esta página, puede usar credenciales nuevas o existentes.
 
->[!BEGINTABS]
-
->[!TAB Usar una cuenta de Salesforce existente]
+### Usar una cuenta existente
 
 Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y, a continuación, seleccione la cuenta que desee utilizar en la lista que aparece. Cuando termine, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![Una lista de cuentas de Salesforce autenticadas que ya existen en su organización.](../../../../images/tutorials/create/salesforce/existing.png)
 
->[!TAB Crear una nueva cuenta de Salesforce]
+### Crear una nueva cuenta
 
-Para usar una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y proporcione un nombre, una descripción y su [!DNL Salesforce] credenciales de autenticación. Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y espere unos segundos para que se establezca la nueva conexión.
+Para crear una nueva cuenta, seleccione **[!UICONTROL Nueva cuenta]** y proporcione un nombre y una descripción para su nuevo [!DNL Salesforce] cuenta.
 
 ![Interfaz en la que se puede crear una nueva cuenta de Salesforce al proporcionar las credenciales de autenticación adecuadas.](../../../../images/tutorials/create/salesforce/new.png)
+
+A continuación, seleccione el tipo de autenticación que desee utilizar para la nueva cuenta.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
+
+Para la autenticación básica, seleccione **[!UICONTROL Autenticación básica]** y, a continuación, proporcione valores para las siguientes credenciales:
+
+* URL de entorno
+* Nombre de usuario
+* Una contraseña
+* Versión de API (opcional)
+
+Cuando termine, seleccione **[!UICONTROL Conectar con el origen]**.
+
+![Interfaz de autenticación básica para la creación de cuentas de Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
+
+>[!TAB Credencial de cliente de OAuth2]
+
+Para la credencial de cliente de OAuth 2, seleccione **[!UICONTROL Credencial de cliente de OAuth2]** y, a continuación, proporcione valores para las siguientes credenciales:
+
+* URL de entorno
+* ID de cliente
+* Secreto de cliente
+* Versión de API
+
+Cuando termine, seleccione **[!UICONTROL Conectar con el origen]**.
+
+![Interfaz de OAuth para la creación de cuentas de Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 

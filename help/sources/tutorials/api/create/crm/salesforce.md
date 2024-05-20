@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;inicio;temas populares;Salesforce;salesforce
-solution: Experience Platform
 title: Creación de una conexión base de Salesforce mediante la API de Flow Service
-type: Tutorial
 description: Aprenda a conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 4%
+source-wordcount: '785'
+ht-degree: 3%
 
 ---
 
@@ -29,18 +26,40 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 
 ### Recopilar credenciales necesarias
 
-Para que [!DNL Flow Service] para conectarse a [!DNL Salesforce], debe proporcionar valores para las siguientes propiedades de conexión:
+El [!DNL Salesforce] El origen de admite la autenticación básica y la credencial de cliente de OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
+
+Para conectar su [!DNL Salesforce] cuenta a [!DNL Flow Service] con la autenticación básica, proporcione valores para las siguientes credenciales:
 
 | Credencial | Descripción |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | La dirección URL del [!DNL Salesforce] instancia de origen. |
 | `username` | El nombre de usuario de [!DNL Salesforce] cuenta de usuario. |
 | `password` | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
 | `securityToken` | El token de seguridad para [!DNL Salesforce] cuenta de usuario. |
-| `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0` Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
+| `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Para obtener más información sobre cómo empezar, visite [este documento de Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+
+>[!TAB Credencial de cliente de OAuth 2]
+
+Para conectar su [!DNL Salesforce] cuenta a [!DNL Flow Service] Con la credencial de cliente de OAuth 2, proporcione valores para las siguientes credenciales:
+
+| Credencial | Descripción |
+| --- | --- |
+| `environmentUrl` | La dirección URL del [!DNL Salesforce] instancia de origen. |
+| `clientId` | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
+| `clientSecret` | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
+| `apiVersion` | La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. Este valor es obligatorio para la autenticación de credenciales de cliente de OAuth2. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] Guía de flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 ### Uso de API de Platform
 
@@ -60,7 +79,11 @@ POST /connections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión base para [!DNL Salesforce]:
+>[!BEGINTABS]
+
+>[!TAB Autenticación básica]
+
+La siguiente solicitud crea una conexión base para [!DNL Salesforce] uso de la autenticación básica:
 
 ```shell
 curl -X POST \
@@ -71,14 +94,15 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Salesforce Connection",
-      "description": "Connection for Salesforce account",
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using basic authentication",
       "auth": {
           "specName": "Basic Authentication",
-          "params": {****
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "securityToken": "{SECURITY_TOKEN}"
+          "params":
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce",
+              "password": "xxxx",
+              "securityToken": "xxxx"
           }
       },
       "connectionSpec": {
@@ -89,11 +113,53 @@ curl -X POST \
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- |
+| --- | --- |
+| `auth.params.environmentUrl` | La URL de su [!DNL Salesforce] ejemplo. |
 | `auth.params.username` | El nombre de usuario asociado con su [!DNL Salesforce] cuenta. |
 | `auth.params.password` | La contraseña asociada a su [!DNL Salesforce] cuenta. |
 | `auth.params.securityToken` | El token de seguridad asociado con su [!DNL Salesforce] cuenta. |
 | `connectionSpec.id` | El [!DNL Salesforce] identificador de especificación de conexión: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!TAB Credencial de cliente de OAuth 2]
+
+La siguiente solicitud crea una conexión base para [!DNL Salesforce] usar la credencial de cliente de OAuth 2:
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using OAuth 2",
+      "auth": {
+          "specName": "OAuth2 Client Credential",
+          "params":
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "apiVersion": "60.0"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propiedad | Descripción |
+| --- | --- |
+| `auth.params.environmentUrl` | La URL de su [!DNL Salesforce] ejemplo. |
+| `auth.params.clientId` | El ID de cliente asociado con su [!DNL Salesforce] cuenta. |
+| `auth.params.clientSecret` | El secreto de cliente asociado con su [!DNL Salesforce] cuenta. |
+| `auth.params.apiVersion` | La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. |
+| `connectionSpec.id` | El [!DNL Salesforce] identificador de especificación de conexión: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!ENDTABS]
 
 **Respuesta**
 

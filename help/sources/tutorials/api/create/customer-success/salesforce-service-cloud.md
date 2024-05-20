@@ -5,9 +5,9 @@ title: Creación de una conexión de origen de Salesforce Cloud mediante la API 
 type: Tutorial
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a Salesforce Service Cloud mediante la API de Flow Service.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '498'
 ht-degree: 5%
 
 ---
@@ -32,12 +32,13 @@ Las secciones siguientes proporcionan información adicional que deberá conocer
 Para que [!DNL Flow Service] para conectar con [!DNL Salesforce Service Cloud], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | La dirección URL del [!DNL Salesforce] instancia de origen. |
 | `username` | El nombre de usuario de su [!DNL Salesforce Service Cloud] cuenta de usuario. |
 | `password` | La contraseña de su [!DNL Salesforce Service Cloud] cuenta. |
 | `securityToken` | El token de seguridad de su [!DNL Salesforce Service Cloud] cuenta. |
 | `apiVersion` | (Opcional) La versión de la API de REST de [!DNL Salesforce Service Cloud] instancia de que está utilizando. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce Service Cloud] es: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Salesforce Service Cloud] es: `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Para obtener más información sobre cómo empezar, consulte [este documento de Salesforce Service Cloud](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -45,7 +46,7 @@ Para obtener más información sobre cómo empezar, consulte [este documento de 
 
 Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Cree una conexión base
+## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | Parámetro | Descripción |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | La URL de su [!DNL Salesforce Service Cloud] ejemplo. |
 | `auth.params.username` | El nombre de usuario asociado con su [!DNL Salesforce Service Cloud] cuenta. |
 | `auth.params.password` | La contraseña asociada a su [!DNL Salesforce Service Cloud] cuenta. |
 | `auth.params.securityToken` | El token de seguridad asociado con su [!DNL Salesforce Service Cloud] cuenta. |
-| `connectionSpec.id` | El [!DNL Salesforce Service Cloud] identificador de especificación de conexión: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | El [!DNL Salesforce Service Cloud] identificador de especificación de conexión: `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Respuesta**
 
