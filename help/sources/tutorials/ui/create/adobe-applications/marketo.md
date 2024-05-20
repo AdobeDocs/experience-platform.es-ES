@@ -2,10 +2,10 @@
 title: Crear una conexión de origen y un flujo de datos de Marketo Engage en la IU
 description: Este tutorial proporciona pasos para crear una conexión de origen y un flujo de datos de Marketo Engage en la IU para introducir datos B2B en Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 1%
+source-wordcount: '1831'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Marketo Engage] (en lo sucesivo, &quot;[!DNL Marketo]&quot;) en la interfaz de usuario para introducir datos B2B en Adobe Experience Platform.
 
-## Introducción
+## Introducción 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -31,10 +31,10 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su [!DNL Marketo] en Platform, debe proporcionar los siguientes valores:
+Para acceder a su [!DNL Marketo] cuenta en el Experience Platform, debe proporcionar los siguientes valores:
 
 | Credencial | Descripción |
-| ---------- | ----------- |
+| ---- | ---- |
 | `munchkinId` | El ID de Munchkin es el identificador único de un [!DNL Marketo] ejemplo. |
 | `clientId` | El ID único de cliente de su [!DNL Marketo] ejemplo. |
 | `clientSecret` | El secreto de cliente único de su [!DNL Marketo] ejemplo. |
@@ -45,27 +45,37 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 ## Conecte su [!DNL Marketo] account
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
+En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
+En el *aplicaciones de Adobe* categoría, seleccionar **[!UICONTROL Marketo Engage]**, y luego seleccione **[!UICONTROL Añadir datos]**.
 
-En el [!UICONTROL aplicaciones de Adobe] categoría, seleccionar **[!UICONTROL Marketo Engage]**. A continuación, seleccione **[!UICONTROL Añadir datos]** para crear una nueva [!DNL Marketo] flujo de datos.
+>[!TIP]
+>
+>Las fuentes del catálogo de fuentes muestran el **[!UICONTROL Configuración de]** cuando una fuente determinada aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Añadir datos]**.
 
-![catalogar](../../../../images/tutorials/create/marketo/catalog.png)
+![El catálogo de fuentes con el origen del Marketo Engage seleccionado.](../../../../images/tutorials/create/marketo/catalog.png)
 
 El **[!UICONTROL Conectar cuenta de Marketo Engage]** página. En esta página, puede utilizar una cuenta nueva o acceder a una cuenta existente.
 
-### Cuenta existente
+>[!BEGINTABS]
 
-Para crear un flujo de datos con una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y luego seleccione la [!DNL Marketo] cuenta que desea utilizar. Seleccione **[!UICONTROL Siguiente]** para continuar.
+>[!TAB Crear una nueva cuenta]
 
-![existente](../../../../images/tutorials/create/marketo/existing.png)
+Para crear una nueva cuenta, seleccione **[!UICONTROL Nueva cuenta]** y proporcione un nombre, una descripción opcional y sus credenciales.
 
-### Nueva cuenta
+Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y, a continuación, espere un poco para que se establezca la nueva conexión.
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre de cuenta, una descripción opcional y su [!DNL Marketo] credenciales de autenticación. Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y, a continuación, espere un poco para que se establezca la nueva conexión.
+![La nueva interfaz de cuenta para autenticar una nueva cuenta de Marketo.](../../../../images/tutorials/create/marketo/new.png)
 
-![nuevo](../../../../images/tutorials/create/marketo/new.png)
+>[!TAB Usar una cuenta existente]
+
+Para usar una cuenta existente, seleccione **[!UICONTROL Cuenta existente]** y, a continuación, seleccione la cuenta que desee utilizar en el catálogo de cuentas existente.
+
+Seleccione **[!UICONTROL Siguiente]** para continuar.
+
+![Interfaz de cuenta existente donde puede seleccionar una cuenta existente de Marketo.](../../../../images/tutorials/create/marketo/existing.png)
+
+>[!ENDTABS]
 
 ## Selección de un conjunto de datos
 
@@ -77,59 +87,65 @@ La mitad izquierda de la interfaz es un explorador de directorios, que muestra e
 >
 >Para fines de brevedad, el siguiente tutorial utiliza [!UICONTROL Oportunidades] como ejemplo, pero los pasos descritos a continuación se aplican a cualquiera de los 10 [!DNL Marketo] conjuntos de datos.
 
-Seleccione primero el conjunto de datos que desea introducir y, a continuación, seleccione **[!UICONTROL Siguiente]**.
+Seleccione el conjunto de datos que desea introducir. Esto actualiza la interfaz para mostrar una previsualización del conjunto de datos. Cuando termine, seleccione **[!UICONTROL Siguiente]**.
 
-![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+![Interfaz de previsualización](../../../../images/tutorials/create/marketo/preview.png)
 
-## Proporcionar detalles del flujo de datos {#provide-dataflow-details}
+## Proporcionar detalles del conjunto de datos y flujo de datos {#provide-dataset-and-dataflow-details}
 
-El [!UICONTROL Detalles del flujo de datos] le permite seleccionar si desea utilizar un conjunto de datos existente o uno nuevo. Durante este proceso, también puede configurar las opciones de [!UICONTROL Conjunto de datos de perfil], [!UICONTROL Diagnósticos de error], [!UICONTROL Ingesta parcial], y [!UICONTROL Alertas].
+A continuación, debe proporcionar información sobre el conjunto de datos y el flujo de datos.
 
-![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
+### Detalles del conjunto de datos {#dataset-details}
+
+Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los datos que se incorporan correctamente en Experience Platform se almacenan dentro del lago de datos como conjuntos de datos. Durante este paso, puede crear un nuevo conjunto de datos o utilizar uno existente.
 
 >[!BEGINTABS]
 
->[!TAB Usar un conjunto de datos existente]
-
-Para introducir datos en un conjunto de datos existente, seleccione **[!UICONTROL Conjunto de datos existente]**. Puede recuperar un conjunto de datos existente mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de conjuntos de datos existentes en el menú desplegable. Una vez seleccionado un conjunto de datos, proporcione un nombre y una descripción para el flujo de datos.
-
-![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
 >[!TAB Usar un nuevo conjunto de datos]
 
-Para introducir en un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** y, a continuación, proporcione un nombre del conjunto de datos de salida y una descripción opcional. A continuación, seleccione un esquema al que asignar mediante la variable [!UICONTROL Búsqueda avanzada] o desplazándose por la lista de esquemas existentes en el menú desplegable. Una vez seleccionado un esquema, proporcione un nombre y una descripción para el flujo de datos.
+Para utilizar un nuevo conjunto de datos, seleccione **[!UICONTROL Nuevo conjunto de datos]** a continuación, proporcione un nombre y una descripción opcional para el conjunto de datos. También debe seleccionar un esquema del Modelo de datos de experiencia (XDM) al que se adhiera el conjunto de datos.
 
-![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+![La nueva interfaz de selección de conjuntos de datos.](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!TAB Usar un conjunto de datos existente]
+
+Si ya tiene un conjunto de datos, seleccione **[!UICONTROL Conjunto de datos existente]** y, a continuación, utilice el **[!UICONTROL Búsqueda avanzada]** para ver una ventana de todos los conjuntos de datos de su organización, incluidos sus respectivos detalles, como si están habilitados para su ingesta en el Perfil del cliente en tiempo real o no.
+
+![Interfaz de selección de conjuntos de datos existente.](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
-### Activar [!DNL Profile] Diagnósticos de error y
-
-A continuación, seleccione la **[!UICONTROL Conjunto de datos de perfil]** para habilitar el conjunto de datos para [!DNL Profile]. Esto le permite crear una vista integral de los atributos y comportamientos de una entidad. Datos de todos [!DNL Profile]Los conjuntos de datos habilitados para se incluirán en [!DNL Profile] Los cambios y se aplican al guardar el flujo de datos.
-
-[!UICONTROL Diagnósticos de error] permite generar mensajes de error detallados para cualquier registro erróneo que se produzca en el flujo de datos, mientras que [!UICONTROL Ingesta parcial] permite la ingesta de datos que contienen errores, hasta un determinado umbral que se define manualmente. Consulte la [resumen de ingesta parcial por lotes](../../../../../ingestion/batch-ingestion/partial.md) para obtener más información.
+### Configuraciones de flujo de datos {#dataflow-configurations}
 
 >[!IMPORTANT]
 >
 >El [!DNL Marketo] source utiliza la ingesta por lotes para introducir todos los registros históricos y utiliza la ingesta de transmisión para actualizaciones en tiempo real. Esto permite que el origen siga transmitiendo mientras se ingieren registros erróneos. Habilite la **[!UICONTROL Ingesta parcial]** alternar y luego establecer [!UICONTROL Umbral de error %] al máximo para evitar que falle el flujo de datos.
 
-![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+Si el conjunto de datos está habilitado para Perfil del cliente en tiempo real, durante este paso, puede alternar **[!UICONTROL Conjunto de datos de perfil]** para habilitar los datos para la ingesta de perfiles. También puede utilizar este paso para habilitar **[!UICONTROL Diagnósticos de error]** y **[!UICONTROL Ingesta parcial]**.
 
-### Habilitar alertas
+* **[!UICONTROL Diagnósticos de error]**: Seleccionar **[!UICONTROL Diagnósticos de error]** para indicar a la fuente que produzca diagnósticos de error a los que pueda hacer referencia posteriormente al monitorizar la actividad del conjunto de datos y el estado del flujo de datos.
+* **[!UICONTROL Ingesta parcial]**: [Ingesta parcial por lotes](../../../../../ingestion/batch-ingestion/partial.md) es la capacidad de ingerir datos que contengan errores, hasta un determinado umbral configurable. Esta función le permite introducir correctamente todos los datos precisos en Experience Platform, mientras que todos los datos incorrectos se agrupan por separado con información sobre los motivos por los que no son válidos.
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de fuentes mediante la IU](../../alerts.md).
+Durante este paso, puede activar **[!UICONTROL Flujo de datos de muestra]** para limitar la ingesta de datos y evitar costes adicionales que conlleva la ingesta de todos los datos históricos, incluidas las identidades de las personas.
 
-Cuando haya terminado de proporcionar detalles al flujo de datos, seleccione **[!UICONTROL Siguiente]**.
+>[!BEGINSHADEBOX]
 
-![alertas](../../../../images/tutorials/create/marketo/alerts.png)
+**Guía rápida sobre el uso del flujo de datos de ejemplo**
 
-### Omitir cuentas no reclamadas al ingerir datos de compañías
+El flujo de datos de ejemplo es una configuración que puede establecer para su [!DNL Marketo] flujo de datos para limitar la tasa de ingesta y, a continuación, probar las funciones de Experience Platform sin tener que ingerir grandes cantidades de datos.
 
-Al crear un flujo de datos para introducir datos del conjunto de datos de empresas, puede configurar lo siguiente [!UICONTROL Excluir cuentas no reclamadas] para excluir o incluir cuentas no reclamadas de la ingesta.
+* Habilite el flujo de datos de ejemplo para limitar los datos históricos mediante la ingesta de hasta 100 000 registros (desde el ID de registro más grande) o hasta los últimos 10 días de actividad durante el trabajo de relleno.
+* Al utilizar la configuración de flujo de datos de ejemplo para todas las entidades B2B, debe tener en cuenta que es posible que falten algunos registros relacionados porque no se incorpora todo el historial de los datos de origen.
+
+>[!ENDSHADEBOX]
+
+![La sección de configuraciones de flujo de datos de la página de detalles del flujo de datos.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
+
+Además, si está introduciendo datos del conjunto de datos de empresas, puede habilitar lo siguiente **[!UICONTROL Excluir cuentas no reclamadas]** para excluir de la ingesta las cuentas no reclamadas.
 
 Cuando las personas rellenan un formulario, [!DNL Marketo] crea un registro de cuenta fantasma basado en el Nombre de la compañía que no contiene otros datos. Para los nuevos flujos de datos, la opción para excluir las cuentas no reclamadas está habilitada de forma predeterminada. Para los flujos de datos existentes, puede habilitar o deshabilitar la función, con cambios que se aplican a los datos recién ingeridos y no a los datos existentes.
 
-![cuentas no reclamadas](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![Excluir cuentas no reclamadas](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Asigne su [!DNL Marketo] campos de origen del conjunto de datos a campos XDM de destino
 
@@ -150,7 +166,7 @@ Cada [!DNL Marketo] el conjunto de datos tiene sus propias reglas de asignación
 
 En función de sus necesidades, puede elegir asignar campos directamente o utilizar funciones de preparación de datos para transformar los datos de origen y derivar valores calculados o calculados. Para ver los pasos detallados sobre el uso de la interfaz de asignación, consulte la [Guía de IU de preparación de datos](../../../../../data-prep/ui/mapping.md).
 
-![asignación](../../../../images/tutorials/create/marketo/mapping.png)
+![Interfaz de asignación para datos de Marketo.](../../../../images/tutorials/create/marketo/mapping.png)
 
 Una vez que los conjuntos de asignaciones estén listos, seleccione **[!UICONTROL Siguiente]** y espere unos momentos para crear el nuevo flujo de datos.
 
@@ -163,7 +179,7 @@ El **[!UICONTROL Revisar]** Este paso aparece, lo que le permite revisar el nuev
 
 Una vez revisado el flujo de datos, seleccione **[!UICONTROL Guardar e introducir]** y deje pasar un tiempo para crear el flujo de datos.
 
-![reseña](../../../../images/tutorials/create/marketo/review.png)
+![La página de revisión donde puede confirmar los detalles del flujo de datos antes de la ingesta.](../../../../images/tutorials/create/marketo/review.png)
 
 ## Monitorización del flujo de datos
 
@@ -179,10 +195,7 @@ Puede eliminar los flujos de datos que ya no son necesarios o que se crearon inc
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para incorporar [!DNL Marketo] datos. Ahora, los servicios de Platform posteriores pueden utilizar los datos entrantes, como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
-
-* [Información general de [!DNL Real-Time Customer Profile]](/help/profile/home.md)
-* [Información general de [!DNL Data Science Workspace]](/help/data-science-workspace/home.md)
+Al seguir este tutorial, ha creado correctamente un flujo de datos para introducir datos B2B de su [!DNL Marketo Engage] origen a Experience Platform.
 
 ## Apéndice {#appendix}
 
