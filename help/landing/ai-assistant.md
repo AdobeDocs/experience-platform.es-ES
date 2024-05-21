@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '3122'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Hay dos clases de preguntas que se deben tener en cuenta antes de consultar el A
 
 >[!ENDSHADEBOX]
 
-## Objetivos que puede lograr con el asistente de IA
+## Objetivos que puede lograr con el asistente de IA {#objectives}
 
 Puede utilizar el Asistente de IA para objetivos como:
 
@@ -140,15 +140,15 @@ Para ver las citas y validar la respuesta del asistente de IA, seleccione **[!UI
 
 +++
 
-### Uso y visualización de datos {#data-usage-and-visualization}
+### Visualización y datos de uso {#usage-data-and-visualization}
 
-+++Seleccione esta opción para ver un ejemplo de las preguntas sobre el uso de los datos y la visualización de los datos
++++Seleccione esta opción para ver un ejemplo de uso, preguntas de datos y visualización de datos
 
 Para que el asistente de IA responda a una consulta sobre el uso de datos dentro de su organización, debe estar en una zona protegida activa.
 
 En el ejemplo siguiente, se proporciona un asistente de IA con la siguiente consulta: **&quot;Mostrarme definiciones de segmentos con más de 1000 perfiles e incluir el estado de activación&quot;.** A continuación, el asistente de IA responde con un gráfico que visualiza los datos de segmentos y perfiles.
 
-![Pregunta de seguimiento sobre el uso de datos.](./images/ai-assistant/data-usage-question.png)
+![Pregunta de seguimiento sobre los datos de uso.](./images/ai-assistant/data-usage-question.png)
 
 Puede situarse sobre una barra individual para ver datos específicos. También puede seleccionar el icono de expansión para obtener una vista más amplia del gráfico.
 
@@ -158,7 +158,7 @@ Aparece una vista expandida de la visualización. Puede utilizar el modal expand
 
 ![Gráfico ampliado.](./images/ai-assistant/chart-expanded.png)
 
-Cuando se le pregunta sobre el uso de los datos, el asistente de IA proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, AI Assistant describe los pasos que realizó para mostrar las definiciones de segmentos con más de 1000 perfiles y sus respectivos estados de activación.
+Cuando se le pregunta sobre los datos de uso, el asistente de IA proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, AI Assistant describe los pasos que realizó para mostrar las definiciones de segmentos con más de 1000 perfiles y sus respectivos estados de activación.
 
 ![Pregunta de seguimiento sobre las definiciones de segmentos que ilustran cómo el Asistente de IA calculó la respuesta.](./images/ai-assistant/results-explained.png)
 
@@ -204,9 +204,9 @@ Actualmente, el índice de documentación cubre Adobe Experience Platform (Real-
 
 El modelo de recuperación de documentación está formado en Experience Platform (Real-Time CDP y Audiencias). Preguntas que no entran en el ámbito de Adobe Experience Platform, como las preguntas sobre otros productos de Adobe como Adobe Target y el grupo de Creative Cloud, no pueden responderse.
 
-## Uso de datos {#data-usage}
+## Datos de uso {#usage-date}
 
-También puede hacer preguntas al Asistente de IA sobre su uso de datos en los siguientes dominios:
+También puede hacer preguntas al asistente de IA sobre sus datos de uso en los siguientes dominios:
 
 * Atributos
 * Públicos
@@ -216,21 +216,50 @@ También puede hacer preguntas al Asistente de IA sobre su uso de datos en los s
 * Esquemas _(Las preguntas relativas a los grupos de campos no se pueden responder en este momento)._
 * Fuentes _(Las preguntas relativas a las cuentas no se pueden responder en este momento)._
 
-En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Es posible que tenga que dar el siguiente formato a sus preguntas: &quot;¿Cuándo fue la audiencia con el título? {TITLE} creado?&quot; en lugar de, &quot;¿Cuándo fue la {TITLE} ¿audiencia creada?&quot;
+En el caso de las consultas de datos de uso, las respuestas pueden no reflejar el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Además, deberá iniciar sesión en una zona protegida para consultar sobre datos específicos relacionados con objetos como audiencias, esquemas, conjuntos de datos, atributos y destinos.
 
-Deberá iniciar sesión en una zona protegida para consultar datos específicos relacionados con objetos como audiencias, esquemas, conjuntos de datos, atributos y destinos.
+### Ejemplo de preguntas de datos de uso {#example-usage-data-questions}
 
-### Ejemplo de preguntas de uso de datos {#example-data-usage-questions}
++++Seleccione esta opción para ver una lista de preguntas de datos de uso de ejemplo
 
-+++Seleccione esta opción para ver una lista de preguntas de uso de datos de ejemplo
+Lea la tabla siguiente para ver ejemplos de preguntas sobre los datos de uso y sus respectivos casos de uso:
 
-| Tipo de pregunta | Descripción | Ejemplos |
+| Tipo de pregunta | Caso de uso | Ejemplos |
 | --- | --- | --- | 
-| Linaje de datos | Rastrear el uso de uno o varios objetos en otros objetos de Experience Platform | <ul><li>Qué conjuntos de datos utilizar {SCHEMA_NAME} esquema?</li><li>¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?</li><li>¿Qué conjuntos de datos se han utilizado en audiencias activadas?</li><li>Enumerar los esquemas que tienen atributos utilizados en audiencias activadas.</li><li>Mostrar las audiencias que están activadas para {DESTINATION_ACCOUNT_NAME} y tienen más de 1000 perfiles.</li><li>Muéstreme los atributos que se utilizan en las audiencias activadas que se han modificado después de enero de 2023.</li><li>¿Cuáles son los conjuntos de datos ingeridos mediante {SOURCE_NAME}?</li><li>Con qué flujos de datos están asociados {DATAFLOW_NAME}</li><li>Enumera los esquemas relacionados con las audiencias activadas y creados en el último año.</li></ul> |
-| Distribución y agregaciones | Preguntas basadas en resumen sobre el uso de objetos de Experience Platform | <ul><li>¿Cuál es el porcentaje de audiencias activadas?</li><li>¿Cuántos campos se utilizan en la segmentación?</li><li>¿Qué audiencias se activan para la mayor cantidad de destinos?</li><li>Enumerar audiencias duplicadas.</li><li>Mostrar las audiencias activadas a {DESTINATION_ACCOUNT_NAME} y clasificarlos por tamaño de perfil.</li><li>¿Cuál es el porcentaje de audiencias que no se han activado pero que tienen más de 100 perfiles? Muéstrame sus nombres.</li><li>Enumerar los 3 conectores de origen que consumen datos en mis conjuntos de datos.</li><li>Enumere los 5 atributos principales utilizados en las audiencias activadas en función de su ocurrencia.</li></ul> |
-| Búsqueda de objetos | Recupere o acceda a un objeto Experience Platform o a sus propiedades. | <ul><li>Qué conjuntos de datos no tienen ningún esquema asociado</li><li>Enumeración de los atributos utilizados para {AUDIENCE_NAME}?</li><li>Dame la lista de esquemas que tienen un perfil habilitado, pero que no se han modificado desde su creación.</li><li>¿Qué audiencias se han modificado en la última semana?</li><li>Enumerar las audiencias que tienen las mismas definiciones de segmento junto con su fecha de creación.</li><li>Qué conjuntos de datos tienen habilitado el perfil e incluyen también cuántas audiencias se han creado a partir de cada conjunto de datos.</li><li>¿Qué cuentas de origen están asociadas al conjunto de datos XYZ?</li><li>Mostrar la definición del segmento y la fecha de modificación de {AUDIENCE_NAME}.</li></ul> |
+| Linaje de datos | Rastrear el uso de uno o varios objetos en otros objetos de Experience Platform | <ul><li>¿Qué conjuntos de datos utilizan el esquema &quot;esquema ACME&quot;?</li><li>¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?</li><li>¿Qué conjuntos de datos se han utilizado en audiencias activadas?</li><li>Enumerar los esquemas que tienen atributos utilizados en audiencias activadas.</li><li>Muéstreme las audiencias que están activadas en &quot;Destinos ACME&quot; y que tienen más de 1000 perfiles.</li><li>Muéstreme los atributos que se utilizan en las audiencias activadas que se han modificado después de enero de 2023.</li><li>¿Cuáles son los conjuntos de datos ingeridos mediante la fuente &quot;ACME Amazon S3&quot;?</li><li>¿Qué flujos de datos están asociados con el &quot;flujo de datos de fidelidad ACME&quot;?</li><li>Enumera los esquemas relacionados con las audiencias activadas y creados en el último año.</li></ul> |
+| Distribución y agregaciones | Preguntas basadas en resumen sobre el uso de objetos de Experience Platform | <ul><li>¿Cuál es el porcentaje de audiencias activadas?</li><li>¿Cuántos campos se utilizan en la segmentación?</li><li>¿Qué audiencias se activan para la mayor cantidad de destinos?</li><li>Enumerar audiencias duplicadas.</li><li>Muéstreme las audiencias activadas en &quot;Destinos ACME&quot; y clasifíquelas por tamaño de perfil.</li><li>¿Cuál es el porcentaje de audiencias que no se han activado pero que tienen más de 100 perfiles? Muéstrame sus nombres.</li><li>Enumerar los 3 conectores de origen que consumen datos en mis conjuntos de datos.</li><li>Enumere los 5 atributos principales utilizados en las audiencias activadas en función de su ocurrencia.</li></ul> |
+| Búsqueda de objetos | Recupere o acceda a un objeto Experience Platform o a sus propiedades. | <ul><li>Qué conjuntos de datos no tienen ningún esquema asociado</li><li>¿Enumerar los atributos utilizados para &quot;Audiencia ACME&quot;?</li><li>Dame la lista de esquemas que tienen un perfil habilitado, pero que no se han modificado desde su creación.</li><li>¿Qué audiencias se han modificado en la última semana?</li><li>Enumerar las audiencias que tienen las mismas definiciones de segmento junto con su fecha de creación.</li><li>Qué conjuntos de datos tienen habilitado el perfil e incluyen también cuántas audiencias se han creado a partir de cada conjunto de datos.</li><li>¿Qué cuentas de origen están asociadas al conjunto de datos XYZ?</li><li>Muéstreme la definición del segmento y la fecha de modificación de &quot;Audiencia ACME&quot;.</li></ul> |
+| Comparación de objetos | Identificar audiencias duplicadas. | <ul><li>En función de su definición de segmento, enumere las audiencias que están duplicadas.</li><li>Qué audiencias duplicadas están activadas en &quot;Destinos ACME&quot;.</li></ul> |
 
 +++
+
+## Formulación de preguntas {#phrasing-your-questions}
+
+Debe formular sus preguntas al asistente de IA con claridad y contexto para obtener una respuesta lo más precisa posible. Consulte la siguiente lista de sugerencias para obtener instrucciones sobre cómo hacer una pregunta clara con contexto:
+
+* Exponga su tarea y/o pregunta de forma concisa.
+* Evite el lenguaje ambiguo o la sintaxis demasiado compleja para facilitar la comprensión.
+* Proporcione un contexto relevante con respecto a su tarea o pregunta, ya que el contexto puede ayudar al Asistente de IA a generar respuestas más relevantes.
+
+Lea la tabla siguiente para obtener más orientación sobre las prácticas recomendadas que deben seguirse al hacer preguntas al asistente de IA:
+
+| Hacer | Ejemplo |
+| --- | --- |
+| <ul><li>Sea específico sobre el objeto o la información que desea recuperar o analizar.</li><li>Intente poner los nombres de los objetos de datos entre comillas. Si sólo conoce una parte del nombre del objeto, también puede especificarlo en la pregunta.</li><li>Uso [autocompletar objeto](./ui-guide.md#use-auto-complete) para ayudar al asistente de IA a comprender mejor el contexto de la consulta.</li></ul> | <ul><li>¿Qué conjuntos de datos utilizan el esquema &quot;Lealtad de Luma&quot;?</li><li>Muéstreme los segmentos activados que tienen &quot;Luma&quot; en sus nombres. Clasificarlos por recuento de perfiles.</li></ul> |
+| <ul><li>Evite la ambigüedad y utilice un lenguaje claro</li><li>Utilice una terminología precisa para garantizar una mejor claridad en la consulta.</li><li>Cuando haga preguntas sobre Adobe Experience Platform, intente utilizar una terminología específica de Experience Platform para mejorar la relevancia de las respuestas.</li></ul> | <ul><li>¿Cuántos perfiles tengo en &quot;Audiencia ACME&quot;?</li><li>Mostrar los 5 atributos XDM principales utilizados en audiencias activadas.</li></ul> |
+| <ul><li>Proporcione contexto o especifique un criterio para filtrar los resultados.</li><li>Utilice un criterio de filtro en las preguntas para limitar el volumen de datos en la respuesta.</li></ul> | <ul><li>Mostrar audiencias que no se hayan activado y creado hace más de 6 meses y que nunca se hayan modificado.</li><li>Mostrar las audiencias activadas en &quot;Destino ACME&quot; y tener más de 10000 perfiles.</li></ul> |
+
+{style="table-layout:auto"}
+
+| No lo hagas | Ejemplo |
+| --- | --- |
+| Utilice un lenguaje vago o ambiguo. | <ul><li>Proporcionarme información sobre conjuntos de datos.</li><li>¿Cuántos usuarios tengo en &quot;Audiencia ACME&quot;?</li><li>Mostrar segmentos.</li><li>Atributos de lista.</li></ul> |
+| Realizar solicitudes incompletas. | &quot;Luma: Conjunto de datos de fidelización&quot; |
+| Asumir el conocimiento sin contexto. | <ul><li>Audiencias en los últimos 6 meses.</li><li>Cree una consulta para mí.</li></ul> |
+| Formular consultas demasiado complejas. | Proporcionar un análisis completo del linaje de datos en todos los objetos y sus dependencias. |
+| Omitir criterios o parámetros. | Mostrar conjuntos de datos. |
+
+{style="table-layout:auto"}
 
 ## Proporcionar comentarios {#feedback}
 
