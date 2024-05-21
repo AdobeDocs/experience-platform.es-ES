@@ -4,10 +4,10 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 8%
+source-wordcount: '2639'
+ht-degree: 0%
 
 ---
 
@@ -63,6 +63,20 @@ Para utilizar el destino de la API HTTP para exportar datos fuera de Experience 
 >
 > También puede utilizar [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) para configurar una integración y enviar datos de perfil del Experience Platform a un extremo HTTP.
 
+## Compatibilidad con el protocolo mTLS y certificado {#mtls-protocol-support}
+
+Puede utilizar [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) para garantizar una seguridad mejorada en las conexiones salientes a las conexiones de destino de la API HTTP.
+
+[!DNL mTLS] es un método de seguridad de extremo a extremo para la autenticación mutua que garantiza que ambas partes que comparten información sean quienes dicen ser antes de compartir los datos. [!DNL mTLS] incluye un paso adicional en comparación con [!DNL TLS], en el que el servidor también solicita el certificado del cliente y lo verifica en su extremo.
+
+Si desea utilizar [!DNL mTLS] con [!DNL HTTP API] destinos, la dirección del servidor que introdujo en el [detalles del destino](#destination-details) la página debe tener [!DNL TLS] protocolos deshabilitados y solo [!DNL mTLS] activado. Si la variable [!DNL TLS] El protocolo 1.2 sigue habilitado en el extremo; no se envía ningún certificado para la autenticación del cliente. Esto significa que debe utilizar [!DNL mTLS] con su [!DNL HTTP API] destino, el extremo del servidor de &quot;recepción&quot; debe ser un [!DNL mTLS]Extremo de conexión habilitado solo para.
+
+### Descargar certificado {#certificate}
+
+Si desea consultar la [!DNL Common Name] (CN) y [!DNL Subject Alternative Names] (SAN) para realizar una validación adicional de terceros, puede descargar el certificado a continuación:
+
+* [Certificado público mTLS de la API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
 
 Para cumplir los requisitos de seguridad y cumplimiento de normas de los clientes, Experience Platform proporciona una lista de direcciones IP estáticas que puede lista de permitidos para el destino de la API HTTP. Consulte [LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de direcciones IP que se van a lista de permitidos.
@@ -94,7 +108,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [Concesión de contraseña de OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## Conexión al destino {#connect-destination}
+## Conectar con el destino {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -107,7 +121,7 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo de credenciales del cliente"
->abstract="Seleccione **Formulario de cuerpo codificado** para incluir el ID de cliente y el secreto de cliente en el cuerpo de la solicitud o **Autorización básica** para incluir el ID de cliente y el secreto de cliente en un encabezado de autorización. Vea ejemplos en la documentación."
+>abstract="Seleccionar **Formulario de cuerpo codificado** para incluir el ID de cliente y el secreto de cliente en el cuerpo de la solicitud o **Autorización básica** para incluir el ID de cliente y el secreto de cliente en un encabezado de autorización. Vea ejemplos en la documentación."
 
 #### Autenticación de token de portador {#bearer-token-authentication}
 
@@ -155,27 +169,27 @@ Si selecciona la opción **[!UICONTROL Credenciales del cliente de OAuth 2]** ti
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="Encabezados"
->abstract="Introduzca los encabezados personalizados que desea incluir en las llamadas de destino, siguiendo este formato: `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="Introduzca cualquier encabezado personalizado que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Punto final HTTP"
->abstract="Dirección URL del punto final HTTP al que desea enviar los datos de perfil."
+>abstract="Dirección URL del extremo HTTP al que desea enviar los datos de perfil."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Incluir nombres de segmentos"
->abstract="Alterne si desea que la exportación de datos incluya los nombres del público que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+>abstract="Cambie la opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Incluir marcas de tiempo de segmentos"
->abstract="Alterne si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron los públicos, así como la marca de tiempo UNIX cuando los públicos se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
+>abstract="Cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Vea la documentación de un ejemplo de exportación de datos con esta opción seleccionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="Parámetros de consulta"
->abstract="De forma opcional, puede añadir parámetros de consulta a la dirección URL del punto final HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
+>abstract="De forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`."
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -185,7 +199,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Descripción]**: introduzca una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Encabezados]**: introduzca los encabezados personalizados que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Punto final HTTP]**: Dirección URL del extremo HTTP al que desea enviar los datos de perfil.
-* **[!UICONTROL Parámetros de consulta]**: Opcionalmente, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Parámetros de consulta]**: Opcionalmente, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Dé este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Incluir nombres de segmentos]**: cambie si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la [Datos exportados](#exported-data) más abajo.
 * **[!UICONTROL Incluir marcas de tiempo de segmentos]**: Marque esta opción si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la [Datos exportados](#exported-data) más abajo.
 
@@ -195,7 +209,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar públicos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
