@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
+source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
@@ -288,6 +288,10 @@ Para confirmar que el descriptor se ha eliminado, puede realizar una [solicitud 
 En la siguiente sección se proporciona información adicional sobre cómo trabajar con descriptores en [!DNL Schema Registry] API.
 
 ### Definición de descriptores {#defining-descriptors}
+
+>[!NOTE]
+>
+>El número máximo de descriptores que se pueden aplicar a un esquema es 4000.
 
 En las secciones siguientes se ofrece una descripción general de los tipos de descriptor disponibles, incluidos los campos obligatorios para definir un descriptor de cada tipo.
 
