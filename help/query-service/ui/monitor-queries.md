@@ -2,9 +2,9 @@
 title: Monitorización de consultas programadas
 description: Obtenga información sobre cómo monitorizar las consultas a través de la IU del servicio de consultas.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La siguiente tabla describe cada columna disponible.
 
 >[!NOTE]
 >
->El icono de suscripciones de alerta está contenido en cada fila de una columna sin título. Consulte la [suscripciones de alerta](#alert-subscription) para obtener más información.
+>El icono de alertas de suscripciones (![Un icono de suscripciones de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) está contenido en cada fila de una columna sin título. Consulte la [suscripciones de alerta](#alert-subscription) para obtener más información.
 
 | Columna | Descripción |
 |---|---|
@@ -69,7 +69,7 @@ El [!UICONTROL Consultas programadas] view ofrece varias acciones en línea para
 
 ### Deshabilitar o habilitar una consulta programada {#disable}
 
-Para desactivar una consulta programada, seleccione los puntos suspensivos de una consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Desactivar programación]** en las opciones del menú emergente. Aparecerá un cuadro de diálogo para confirmar la acción. Seleccionar **[!UICONTROL Deshabilitar]** para confirmar la configuración.
+Para desactivar una consulta programada, seleccione los puntos suspensivos de la consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Desactivar programación]** en las opciones del menú emergente. Aparecerá un cuadro de diálogo para confirmar la acción. Seleccionar **[!UICONTROL Deshabilitar]** para confirmar la configuración.
 
 Una vez deshabilitada una consulta programada, puede habilitar la programación a través del mismo proceso. Seleccione los puntos suspensivos y luego seleccione **[!UICONTROL Habilitar programación]** en las opciones disponibles.
 
@@ -79,21 +79,33 @@ Una vez deshabilitada una consulta programada, puede habilitar la programación 
 
 ### Eliminar una consulta programada {#delete}
 
-Para eliminar una consulta programada, seleccione los puntos suspensivos de una consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Eliminar programación]** en las opciones del menú emergente. Aparecerá un cuadro de diálogo para confirmar la acción. Seleccionar **[!UICONTROL Eliminar]** para confirmar la configuración.
+Para eliminar una consulta programada, seleccione los puntos suspensivos de la consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Eliminar programación]** en las opciones del menú emergente. Aparecerá un cuadro de diálogo para confirmar la acción. Seleccionar **[!UICONTROL Eliminar]** para confirmar la configuración.
 
-Una vez eliminada una consulta programada, se **no** se ha eliminado de la lista de consultas programadas. Las acciones dentro de la línea proporcionadas por los puntos suspensivos se eliminan y reemplazan por el icono de alerta de adición atenuado. No puede suscribirse a alertas para la programación eliminada. La fila permanece en la interfaz de usuario para proporcionar información sobre las ejecuciones realizadas como parte de la consulta programada.
+Una vez eliminada una consulta programada, se **no** se ha eliminado de la lista de consultas programadas. Las acciones en línea proporcionadas por los puntos suspensivos se eliminan y reemplazan por el icono de suscripción de alerta de adición atenuado. No puede suscribirse a alertas para la programación eliminada. La fila permanece en la interfaz de usuario para proporcionar información sobre las ejecuciones realizadas como parte de la consulta programada.
 
-![La pestaña Consultas programadas con una consulta programada eliminada y el icono de alerta atenuado resaltado.](../images/ui/monitor-queries/post-delete.png)
+![La pestaña Consultas programadas con una consulta programada eliminada y el icono de suscripción de alerta atenuado resaltado.](../images/ui/monitor-queries/post-delete.png)
 
 Si desea programar ejecuciones para esa plantilla de consulta, seleccione el nombre de la plantilla en la fila adecuada para navegar hasta el Editor de consultas y, a continuación, siga las [instrucciones para agregar una programación a una consulta](./query-schedules.md#create-schedule) tal como se describe en la documentación.
 
 ### Suscribirse a alertas {#alert-subscription}
 
-Para suscribirse a alertas para ejecuciones de consultas programadas, seleccione los puntos suspensivos de una consulta programada que desee administrar y, a continuación, seleccione **[!UICONTROL Suscribirse]** en las opciones del menú emergente.
+Para suscribirse a alertas para ejecuciones de consultas programadas, seleccione `...` (elipsis) o icono de suscripción de alerta (![Un icono de suscripción de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) para la consulta programada que desea administrar. Aparecerá el menú desplegable de acciones en línea. A continuación, seleccione **[!UICONTROL Suscribirse]** en las opciones disponibles.
 
-El [!UICONTROL Alertas] se abre. El [!UICONTROL Alertas] Este cuadro de diálogo le suscribe tanto a las notificaciones de IU como a las alertas de correo electrónico. Las alertas se basan en el estado de la consulta. Hay tres opciones disponibles: `start`, `success`, y `failure`. Marque las casillas correspondientes y seleccione **[!UICONTROL Guardar]** para suscribirse. Puede suscribirse a las alertas siempre que no tengan un [!UICONTROL Marca de tiempo de última ejecución] valor.
+![Se ha resaltado el espacio de trabajo de consultas programadas con elipses, icono de suscripción de alerta y el menú desplegable de acciones en línea.](../images/ui/monitor-queries/subscribe.png)
+
+El [!UICONTROL Alertas] se abre. El [!UICONTROL Alertas] Este cuadro de diálogo le suscribe tanto a las notificaciones de IU como a las alertas de correo electrónico. Hay varias opciones de suscripción a alertas disponibles: `start`, `success`, `failure`, `quarantine`, y `delay`. Marque las casillas correspondientes y seleccione **[!UICONTROL Guardar]** para suscribirse.
 
 ![Cuadro de diálogo de suscripciones de alerta.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+En la tabla siguiente se explican los tipos de alertas de consulta admitidos:
+
+| Tipo de alerta | Descripción |
+|---|---|
+| `start` | Esta alerta le avisa cuando se inicia o comienza a procesarse una ejecución de consulta programada. |
+| `success` | Esta alerta le informa cuando una ejecución de consulta programada se completa correctamente, lo que indica que la consulta se ejecutó sin errores. |
+| `failed` | Esta alerta déclencheur cuando una ejecución de consulta programada encuentra un error o no se ejecuta correctamente. Le ayuda a identificar y abordar los problemas con prontitud. |
+| `quarantine` | Esta alerta se activa cuando una ejecución de consulta programada se pone en estado de cuarentena. Cuando las consultas se inscriben en el [función de cuarentena](#quarantined-queries), cualquier consulta programada que falle diez ejecuciones consecutivas se coloca automáticamente en una [!UICONTROL En Cuarentena] estado. Luego requieren su intervención antes de que se pueda llevar a cabo cualquier otra ejecución. |
+| `delay` | Esta alerta le notifica si hay un [retraso en el resultado de la ejecución de una consulta](#query-run-delay) más allá de un umbral especificado. Puede establecer una hora personalizada que almacene en déclencheur la alerta cuando la consulta se ejecute durante ese tiempo sin completarse ni producirse errores. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Seleccione el icono de información (![Un icono de información.](../images/ui/m
 
 ![La pestaña Consultas programadas con el icono de información y el panel de detalles resaltados.](../images/ui/monitor-queries/details-panel.png)
 
-### Consultas en cuarentena {#quarantined-queries}
+## Consultas en cuarentena {#quarantined-queries}
+
+>[!NOTE]
+>
+>La alerta de cuarentena no está disponible para consultas ad hoc &#39;de una sola ejecución&#39;. La alerta de cuarentena solo es aplicable a consultas por lotes programadas (CTAS e ITAS).
 
 Cuando se inscribe en la función de cuarentena, cualquier consulta programada que falle diez ejecuciones consecutivas se coloca automáticamente en una [!UICONTROL En Cuarentena] estado. Una consulta con este estado se vuelve inactiva y no se ejecuta a su cadencia programada. Luego requiere su intervención antes de que se puedan llevar a cabo más ejecuciones. Esto protege los recursos del sistema, ya que debe revisar y corregir los problemas con su SQL antes de que se produzcan más ejecuciones.
 
@@ -116,6 +132,22 @@ Para habilitar una consulta programada para la función de cuarentena, seleccion
 ![La pestaña Consultas programadas con los puntos suspensivos y Habilitar cuarentena resaltados en el menú desplegable Acciones en línea.](../images/ui/monitor-queries/inline-enable.png)
 
 Las consultas también se pueden inscribir en la función de cuarentena durante el proceso de creación de la programación. Consulte la [documentación de programaciones de consultas](./query-schedules.md#quarantine) para obtener más información.
+
+## Retraso de ejecución de consulta {#query-run-delay}
+
+Mantenga el control de las horas del equipo mediante la configuración de alertas para los retrasos de las consultas. Puede supervisar el rendimiento de la consulta y recibir notificaciones si el estado de una consulta permanece sin cambios después de un período específico. Use el &#39;[!UICONTROL Retraso de ejecución de consulta]&#39; alerta que debe notificarse si una consulta continúa procesándose después de un período de tiempo específico sin completarse.
+
+Cuando usted [suscribirse a alertas](#alert-subscription) para ejecuciones de consulta programadas, una de las alertas disponibles es [!UICONTROL Retraso de ejecución de consulta]. Esta alerta requiere que establezca un umbral para el tiempo empleado en la ejecución, momento en el que se le notifica del retraso en el procesamiento.
+
+Para seleccionar una duración de umbral que almacene en déclencheur la notificación, introduzca un número en el campo de entrada de texto o utilice las flechas arriba y abajo para aumentar en incrementos de un minuto. Dado que el umbral se establece en minutos, la duración máxima para observar un retraso de ejecución de consulta es de 1440 minutos (24 horas). El período de tiempo predeterminado para un retraso de ejecución es de 150 minutos.
+
+>[!NOTE]
+>
+>Una ejecución de consulta solo puede tener un tiempo de retraso de ejecución. Si cambia el umbral de retraso, se cambia para el usuario suscrito a la alerta y para toda la organización.
+
+![El cuadro de diálogo Alertas en la pestaña Consultas programadas con el campo de entrada de retraso de ejecución de consulta resaltado.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Consulte la sección Suscripción a alertas para obtener información sobre cómo [suscribirse a [!UICONTROL Retraso de ejecución de consulta] alertas](#alert-subscription).
 
 ## Filtrar consultas {#filter}
 
@@ -141,7 +173,7 @@ Para abrir la página de detalles de la programación, seleccione un nombre de c
 
 Esta información se proporciona en una tabla de cinco columnas. Cada fila indica una ejecución de consulta.
 
-| Nombre de la columna | Descripción |
+| Nombre de columna | Descripción |
 |---|---|
 | **[!UICONTROL ID de ejecución de consulta]** | ID de ejecución de consulta para la ejecución diaria. Seleccione el **[!UICONTROL ID de ejecución de consulta]** para ir al [!UICONTROL Resumen de ejecución de consultas]. |
 | **[!UICONTROL Inicio de ejecución de consulta]** | La marca de tiempo cuando se ejecutó la consulta. La marca de tiempo está en formato UTC. |

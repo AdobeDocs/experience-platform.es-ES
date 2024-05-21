@@ -2,9 +2,9 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform mantiene un registro de todos los eventos de consulta 
 
 Los archivos de registro se generan automáticamente mediante cualquier evento de consulta y contienen información como el SQL utilizado, el estado de la consulta, cuánto tiempo tardó y el último tiempo de ejecución. Puede utilizar los datos de registro de consultas como una herramienta potente para solucionar consultas ineficientes o problemáticas. La información de registro más completa se conserva como parte de la función de registro de auditoría y se puede encontrar en la [documentación del registro de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Comprobar registros de consultas
+## Comprobar registros de consultas {#check-query-logs}
 
 Para comprobar los registros de consultas, seleccione [!UICONTROL Consultas] para navegar al espacio de trabajo del servicio de consultas y seleccionar [!UICONTROL Registro] en las opciones disponibles.
+
+>[!NOTE]
+>
+>Tanto las consultas del sistema como las consultas del panel se excluyen de forma predeterminada. Consulte la [filtros](#filter-logs) para obtener información sobre cómo refinar los registros mostrados en función de su configuración.
 
 ![La interfaz de usuario de Platform con las consultas y el registro resaltados.](../images/ui/query-log/logs.png)
 
@@ -77,11 +81,12 @@ Se muestra la lista de filtros disponibles.
 
 ![El espacio de trabajo Registro de consultas con las opciones de filtro mostradas y resaltadas.](../images/ui/query-log/log-filter-settings.png)
 
-La siguiente tabla muestra una descripción de cada filtro.
+En la tabla siguiente se proporciona una descripción de cada filtro.
 
 | Filtro | Descripción |
 | ------ | ----------- |
 | [!UICONTROL Excluir consultas de panel] | Esta casilla de verificación está activada de forma predeterminada y excluye los registros generados por las consultas utilizadas para generar perspectivas. Estas consultas son generadas por el sistema y oscurecen los registros generados por el usuario necesarios para monitorizar, administrar y solucionar problemas. Para ver los registros generados por el sistema, desactive la casilla de verificación. |
+| [!UICONTROL Excluir consultas del sistema] | Esta casilla de verificación está activada de forma predeterminada y excluye los registros generados por el sistema. Las consultas generadas por el sistema suelen incluir tareas en segundo plano u operaciones de mantenimiento que pueden no ser relevantes para la supervisión del usuario, la administración o la resolución de problemas. Si necesita inspeccionar los registros generados por el sistema, anule la selección de esta casilla de verificación para incluirlos en la vista de registro. |
 | [!UICONTROL Fecha de inicio] | Para filtrar los registros de las consultas creadas durante un periodo específico, establezca el [!UICONTROL Inicio] y [!UICONTROL Fin] fechas en la [!UICONTROL Fecha de inicio] sección. |
 | [!UICONTROL Fecha de finalización] | Para filtrar los registros de las consultas que se completaron durante un período específico, establezca el [!UICONTROL Inicio] y [!UICONTROL Fin] fechas en la [!UICONTROL Fecha de finalización] sección. |
 | [!UICONTROL Estado] | Para filtrar registros basados en el [!UICONTROL Estado] de la consulta, seleccione el botón de opción adecuado. Las opciones disponibles incluyen [!UICONTROL Enviado], [!UICONTROL En curso], [!UICONTROL Correcto], y [!UICONTROL Error]. Solo puede filtrar registros en función de una condición de estado a la vez. |

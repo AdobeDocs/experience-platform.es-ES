@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1822'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,23 @@ También puede inscribir una consulta programada en la función de cuarentena de
 
 ### Definir alertas para un estado de consulta programado {#alerts-for-query-status}
 
-También puede suscribirse a alertas de consulta como parte de la configuración de consultas programadas. Esto significa que recibe notificaciones cuando cambia el estado de la consulta. Las alertas se pueden recibir como notificaciones emergentes o correos electrónicos. Las opciones de alerta de estado de consulta disponibles incluyen inicio, éxito y error. Seleccione la casilla de verificación para suscribirse a las alertas de ese estado de consulta programada.
+También puede suscribirse a alertas de consulta como parte de la configuración de consultas programadas. Puede configurar los ajustes para recibir notificaciones en diversas situaciones. Las alertas se pueden configurar para un estado en cuarentena, retrasos en el procesamiento de consultas o un cambio en el estado de la consulta. Las opciones de alerta de estado de consulta disponibles incluyen inicio, éxito y error. Las alertas se pueden recibir como notificaciones emergentes o por correo electrónico. Seleccione la casilla de verificación para suscribirse a las alertas de ese estado de consulta programada.
 
 ![El panel Detalles de programación con las opciones de Alerta resaltadas.](../images/ui/query-editor/alerts.png)
+
+En la tabla siguiente se explican los tipos de alertas de consulta admitidos:
+
+| Tipo de alerta | Descripción |
+|---|---|
+| `start` | Esta alerta le avisa cuando se inicia o comienza a procesarse una ejecución de consulta programada. |
+| `success` | Esta alerta le informa cuando una ejecución de consulta programada se completa correctamente, lo que indica que la consulta se ejecutó sin errores. |
+| `failed` | Esta alerta déclencheur cuando una ejecución de consulta programada encuentra un error o no se ejecuta correctamente. Le ayuda a identificar y abordar los problemas con prontitud. |
+| `quarantine` | Esta alerta se activa cuando una ejecución de consulta programada se pone en estado de cuarentena. Una vez que una consulta es [inscrito en la función de cuarentena](#quarantine), cualquier consulta programada que falle diez ejecuciones consecutivas se coloca automáticamente en una [!UICONTROL En Cuarentena] estado. A continuación, una consulta en cuarentena requiere su intervención para que se puedan llevar a cabo más ejecuciones. Nota: Las consultas deben estar inscritas para la función de cuarentena para que pueda suscribirse a las alertas de cuarentena. |
+| `delay` | Esta alerta le notifica si hay un [retraso en el resultado de la ejecución de una consulta programada](./monitor-queries.md#query-run-delay) más allá de un umbral especificado. Puede establecer una hora personalizada que almacene en déclencheur la alerta cuando la consulta se ejecute durante ese tiempo sin completarse ni producirse errores. El comportamiento predeterminado establece una alerta durante 150 minutos después de que la consulta comience a procesarse. |
+
+>[!NOTE]
+>
+>Si elige configurar una [!UICONTROL Retraso de ejecución de consulta] , debe establecer el tiempo de retraso deseado en minutos en la IU de Platform. Introduzca la duración en minutos. El retraso máximo es de 24 horas (1440 minutos).
 
 Para obtener una descripción general de las alertas de Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta, consulte la [información general sobre alertas](../../observability/alerts/overview.md). Para obtener instrucciones sobre la administración de alertas y reglas de alerta dentro de la interfaz de usuario de Adobe Experience Platform, consulte [Guía de IU de alertas](../../observability/alerts/ui.md).
 
