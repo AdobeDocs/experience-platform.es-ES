@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4334'
 ht-degree: 3%
 
 ---
@@ -85,7 +85,11 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Eliminar] | Composición de audiencias, carga personalizada, servicio de segmentación | Elimina la audiencia seleccionada. Audiencias que se utilizan en destinos descendentes o que dependen de otras audiencias **no puede** se eliminarán. Para obtener más información sobre la eliminación de audiencias, lea la [preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Añadir a paquete] | Composición de audiencias, carga personalizada, servicio de segmentación | Mueve la audiencia entre zonas protegidas. Para obtener más información acerca de esta funcionalidad, lea la [guía de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
-En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia, crear una audiencia nueva y ver un desglose de la frecuencia de actualización.
+>[!IMPORTANT]
+>
+>Antes de eliminar su audiencia, asegúrese de que la audiencia esté **no** se utiliza como componente en una audiencia basada en cuentas o se utiliza en Adobe Journey Optimizer.
+
+En la parte superior de la página hay opciones para añadir todas las audiencias a una programación, importar una audiencia, crear una audiencia nueva y ver un resumen de la evaluación de audiencias.
 
 Alternar **[!UICONTROL Programar todas las audiencias]** habilitará la segmentación programada. Encontrará más información sobre la segmentación programada en la [sección segmentación programada de esta guía del usuario](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Seleccionar **[!UICONTROL Crear audiencia]** le permitirá crear una audiencia. 
 
 ![Se resalta la barra de navegación superior de la página de navegación de la audiencia. Esta barra contiene un botón para crear una audiencia y un botón para importar una audiencia.](../images/ui/overview/browse-audiences-top.png)
 
-Puede seleccionar **[!UICONTROL Actualizar resumen de frecuencia]** para mostrar un gráfico circular con la frecuencia de actualización.
+Puede seleccionar **[!UICONTROL Resumen de evaluación]** para mostrar un gráfico circular que muestre un resumen de las evaluaciones de audiencia.
 
-![Se resaltará el botón Update frequency summary.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![Se resalta el botón Resumen de evaluación.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-Aparece un gráfico circular que muestra un desglose de las audiencias por frecuencia de actualización. El gráfico muestra la cantidad total de audiencias en el centro y el tiempo diario de evaluación por lotes en UTC en la parte inferior. Si pasa el ratón por encima de las diferentes partes de la audiencia, se mostrará el número de audiencias que pertenecen a cada tipo de frecuencia de actualización.
+Aparece un gráfico circular que muestra un desglose de las audiencias por evaluación de audiencia. El gráfico muestra la cantidad total de audiencias en el centro y el tiempo diario de evaluación por lotes en UTC en la parte inferior. Si pasa el ratón por encima de las diferentes partes de la audiencia, se mostrará el número de audiencias que pertenecen a cada tipo de frecuencia de actualización.
 
-![Se resalta el gráfico circular de frecuencia de actualización, con el tiempo de evaluación de segmentación por lotes también mostrado.](../images/ui/overview/update-frequency-chart.png)
+![Se resalta el gráfico circular de evaluación de audiencias, con el tiempo de evaluación de segmentación por lotes también mostrado.](../images/ui/overview/evaluation-summary.png)
 
 ### Personalizar {#customize}
 
@@ -203,7 +207,7 @@ Se muestra la lista de filtros disponibles.
 | [!UICONTROL Origen] | Le permite filtrar según el origen de la audiencia. Las opciones disponibles son Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
 | [!UICONTROL Tiene cualquier etiqueta] | Le permite filtrar por etiquetas. Puede seleccionar entre **[!UICONTROL Tiene cualquier etiqueta]** y **[!UICONTROL Tiene todas las etiquetas]**. Cuándo **[!UICONTROL Tiene cualquier etiqueta]** está seleccionada, las audiencias filtradas incluirán **cualquiera** de las etiquetas que ha agregado. Cuándo **[!UICONTROL Tiene todas las etiquetas]** está seleccionado, las audiencias filtradas deben incluir **todo** de las etiquetas que ha agregado. |
 | [!UICONTROL Estado del ciclo vital] | Le permite filtrar según el estado del ciclo vital de la audiencia. Las opciones disponibles incluyen [!UICONTROL Eliminado], [!UICONTROL Borrador], [!UICONTROL Inactivo], y [!UICONTROL Publicado]. |
-| [!UICONTROL Frecuencia de actualización] | Le permite filtrar según la frecuencia de actualización de la audiencia. Las opciones disponibles incluyen [!UICONTROL Programado], [!UICONTROL Continuo], y [!UICONTROL Bajo demanda]. |
+| [!UICONTROL Frecuencia de actualización] | Le permite filtrar según la frecuencia de actualización de la audiencia (método de evaluación). Las opciones disponibles incluyen [!UICONTROL Programado], [!UICONTROL Continuo], y [!UICONTROL Bajo demanda]. |
 | [!UICONTROL Creado por] | Le permite filtrar según la persona que creó la audiencia. |
 | [!UICONTROL Fecha de creación] | Le permite filtrar según la fecha de creación de la audiencia. Puede elegir un intervalo de fechas para filtrar cuándo se creó la audiencia. |
 | [!UICONTROL Fecha de modificación] | Le permite filtrar según la última fecha de modificación de la audiencia. Puede elegir un intervalo de fechas para filtrar cuándo se modificó la audiencia por última vez. |
@@ -329,6 +333,10 @@ Seleccionar **[!UICONTROL Generar regla]** le lleva al Generador de segmentos. E
 ![Se muestra el espacio de trabajo del Generador de segmentos.](../images/ui/overview/segment-builder.png)
 
 ### Importación de una audiencia {#import-audience}
+
+>[!IMPORTANT]
+>
+>Para importar una audiencia generada externamente, debe **debe** tiene los siguientes permisos: [!UICONTROL Ver segmentos], [!UICONTROL Administración de segmentos], y [!UICONTROL Importar audiencia]. Para obtener más información sobre estos permisos, lea la [información general de control de acceso](../../access-control/home.md#permissions).
 
 Puede seleccionar **[!UICONTROL Importar audiencia]** para importar una audiencia generada externamente.
 

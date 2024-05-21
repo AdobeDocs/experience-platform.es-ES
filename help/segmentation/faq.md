@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '4056'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Sí, las audiencias generadas previamente de forma externa son compatibles con A
 
 ### ¿Qué permisos necesito tener para poder cargar audiencias generadas externamente?
 
-Para cargar audiencias generadas externamente, necesita tener los permisos &quot;Ver audiencias/segmentos&quot;, &quot;Administrar audiencias/segmentos&quot;, &quot;Ver conjuntos de datos&quot;, &quot;Administrar conjuntos de datos&quot;, &quot;Ver fuentes&quot; y &quot;Administrar fuentes&quot;. No se requieren controles específicos basados en funciones para cargar audiencias generadas externamente.
+Para cargar audiencias generadas externamente, debe tener los permisos de &quot;Ver segmentos&quot;, &quot;Administrar segmentos&quot; e &quot;Importar audiencias&quot;. No se requieren controles específicos basados en funciones para cargar audiencias generadas externamente.
 
 ### ¿Qué sucede cuando se carga una audiencia generada externamente?
 
@@ -198,6 +198,14 @@ Para volver a publicar una audiencia, seleccione una audiencia que esté en esta
 >Solo puede eliminar audiencias que estén **no** se utiliza en cualquier activación descendente. Tampoco puede eliminar una audiencia a la que se haga referencia en otra audiencia. Si no puede eliminar su audiencia, asegúrese de que esté **no** utilizarlo en cualquier servicio descendente o como componente básico de otra audiencia.
 
 Para poner una audiencia en el estado de eliminación, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Eliminar].
+
+### ¿Hay alguna advertencia para las transiciones de estado del ciclo vital?
+
+Sí, hay que tener en cuenta algunas advertencias cuando se utilizan audiencias en servicios descendentes, como Adobe Journey Optimizer, o audiencias no basadas en clientes, como audiencias basadas en cuentas.
+
+En este momento, usted **debe** compruebe manualmente si la audiencia se utiliza en sentido descendente en Adobe Journey Optimizer, ya que este estado no se comprueba automáticamente en la actualidad.
+
+Además, puede **debe** compruebe manualmente si la audiencia se utiliza como componente de una audiencia basada en cuentas, ya que este estado tampoco se comprueba automáticamente en este momento.
 
 ### ¿Afecta el uso de una audiencia como audiencia secundaria a las transiciones de estado del ciclo vital?
 
