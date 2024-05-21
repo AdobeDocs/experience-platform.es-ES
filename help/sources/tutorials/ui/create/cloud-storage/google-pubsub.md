@@ -3,9 +3,9 @@ title: Crear una conexión de origen Google PubSub en la interfaz de usuario de
 description: Aprenda a crear un conector PubSub de Google mediante la interfaz de usuario de Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Este tutorial proporciona los pasos para crear una [!DNL Google PubSub] (en lo sucesivo, &quot;[!DNL PubSub]&quot;) mediante la interfaz de usuario de Platform.
 
-## Introducción
+## Introducción 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -29,7 +29,8 @@ Si ya tiene un válido [!DNL PubSub] conexión, puede omitir el resto de este do
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse [!DNL PubSub] En Platform, debe proporcionar un valor válido para las siguientes credenciales:
+Debe proporcionar valores para las propiedades de conexión descritas a continuación para conectar su [!DNL PubSub] cuenta para el Experience Platform. Para obtener más información sobre la autenticación y la configuración de requisitos previos, lea la [[!DNL PubSub source] descripción general](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -37,7 +38,7 @@ Para poder conectarse [!DNL PubSub] En Platform, debe proporcionar un valor vál
 
 | Credencial | Descripción |
 | --- | --- |
-| Proyecto  ID | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
+| Identificador de proyecto | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
 | Credenciales | La credencial necesaria para autenticarse [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
 
 >[!TAB Autenticación por tema y por suscripción]
