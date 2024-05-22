@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: mayo de 2024'
 description: Las notas de la versión de mayo de 2024 de Adobe Experience Platform.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 20%
+source-wordcount: '1596'
+ht-degree: 19%
 
 ---
 
@@ -71,9 +71,9 @@ La gobernanza de datos de Adobe Experience Platform es una serie de estrategias 
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| Reordenar los campos de asignación para destinos por lotes | Ahora puede cambiar el orden de las columnas en las exportaciones CSV arrastrando y soltando los campos de asignación en la [paso de asignación](../../destinations/ui/activate-batch-profile-destinations.md#mapping). El orden de los campos asignados en la interfaz de usuario se refleja en el orden de las columnas del archivo CSV exportado, de arriba a abajo, siendo la fila superior la columna situada más a la izquierda en el archivo CSV. |
+| Reordenar los campos de asignación para destinos por lotes | Ahora puede cambiar el orden de las columnas en las exportaciones CSV arrastrando y soltando los campos de asignación en la [paso de asignación](../../destinations/ui/activate-batch-profile-destinations.md#mapping). El orden de los campos asignados en la interfaz de usuario se refleja en el orden de las columnas del archivo CSV exportado, de arriba a abajo, siendo la fila superior la columna situada más a la izquierda en el archivo CSV. <br> ![Vista de cómo se pueden reordenar las asignaciones.](../2024/assets/may/reorder-mappings.gif "Vista de cómo se pueden reordenar las asignaciones."){width="100" zoomable="yes"} |
 | Programaciones de exportación predeterminadas preseleccionadas para destinos por lotes | Experience Platform ahora establece automáticamente una programación predeterminada para cada exportación de archivo. Consulte la documentación sobre [programación de exportaciones de audiencia](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) para aprender a modificar la programación predeterminada. |
-| Editar varias programaciones de activación de audiencia para destinos por lotes | Ahora puede editar la programación de activación para varias audiencias desde el [página de detalles de destino](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Editar varias programaciones de activación de audiencia para destinos por lotes | Ahora puede editar la programación de activación para varias audiencias exportadas a un destino por lotes (basado en archivos) desde el **[!UICONTROL Datos de activación]** de la pestaña [página de detalles de destino](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Ver cómo seleccionar varias audiencias y editar la programación de exportación de archivos.](../2024/assets/may/bulk-edit-schedule.gif "Ver cómo seleccionar varias audiencias y editar la programación de exportación de archivos."){width="100" zoomable="yes"} |
 | Exportar varias audiencias bajo demanda a destinos por lotes | Ahora puede seleccionar y exportar varias audiencias a destinos por lotes mediante el [exportar archivos bajo demanda](../../destinations/ui/export-file-now.md) funcionalidad. |
 
 {style="table-layout:auto"}
