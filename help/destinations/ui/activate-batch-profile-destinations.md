@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 11%
+source-wordcount: '3937'
+ht-degree: 1%
 
 ---
 
@@ -77,7 +77,7 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >
 >Puede eliminar audiencias de flujos de activación existentes de la **[!UICONTROL Datos de activación]** página. Consulte la [documentación dedicada](../ui/destination-details-page.md#bulk-remove) para obtener más información.
 
-## Programar exportación de público {#scheduling}
+## Programar exportación de audiencias {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -100,18 +100,18 @@ Experience Platform establece automáticamente una programación predeterminada 
 >
 >Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación más grande, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-### Exportación de archivos completos {#export-full-files}
+### Exportar archivos completos {#export-full-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opciones de exportación de archivos"
->abstract="Seleccione **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el público. Seleccione **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el público desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el público, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el público desde la primera exportación de archivos incrementales."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#export-incremental-files" text="Exportación de archivos incrementales"
+>abstract="Seleccionar **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles aptos para la audiencia. Seleccionar **Exportar archivos incrementales** para exportar solo los perfiles aptos para la audiencia desde la última exportación. <br> La primera exportación de archivos incremental incluye todos los perfiles aptos para la audiencia, y actúa como relleno. Los archivos incrementales futuros solo incluyen los perfiles aptos para la audiencia desde la primera exportación de archivo incremental."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Exportar archivos incrementales"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Activar después de la evaluación de público"
->abstract="La activación se ejecuta inmediatamente después de que se complete el trabajo de segmentación diaria. Esto garantiza que se exporten los perfiles más actualizados."
+>title="Activar tras la evaluación de audiencia"
+>abstract="La activación se ejecuta inmediatamente después de que se complete el trabajo de segmentación diario. Esto garantiza que se exporten los perfiles más actualizados."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -150,12 +150,12 @@ Utilice el **[!UICONTROL Programado]** para que el trabajo de activación se eje
 
 4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
-### Exportación de archivos incrementales
+### Exportar archivos incrementales
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="Configurar nombre de archivo"
->abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por público. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
+>abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por audiencia. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
 
 Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en déclencheur una exportación en la que el primer archivo es una instantánea completa de todas las cualificaciones de perfil para la audiencia seleccionada y los archivos siguientes son cualificaciones de perfil incrementales desde la exportación anterior.
 
@@ -180,12 +180,12 @@ Seleccionar **[!UICONTROL Exportar archivos incrementales]** para almacenar en d
 
 4. Seleccionar **[!UICONTROL Crear]** para guardar la programación.
 
-### Configuración de nombres de archivo
+### Configurar nombres de archivo
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="Configurar nombre de archivo"
->abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por público. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
+>abstract="Para los destinos basados en archivos, se genera un nombre de archivo único por audiencia. Utilice el editor de nombres de archivo para crear y editar un nombre de archivo único o mantener el nombre predeterminado."
 
 Para la mayoría de los destinos, los nombres de archivo predeterminados constan del nombre de destino, el ID de audiencia y un indicador de fecha y hora. Por ejemplo, puede editar los nombres de archivo exportados para distinguir entre diferentes campañas o para que el tiempo de exportación de datos se anexe a los archivos. Tenga en cuenta que algunos desarrolladores de destinos pueden elegir que se muestren opciones de adición de nombres de archivo predeterminadas diferentes para sus destinos.
 
@@ -256,7 +256,7 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 
    ![Ventana modal que muestra atributos de perfil que se pueden exportar al destino.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. (Opcional) El orden de los campos asignados en la interfaz de usuario se refleja en el orden de las columnas del archivo CSV exportado, de arriba a abajo, siendo la fila superior la columna situada más a la izquierda en el archivo CSV. Puede reordenar los campos asignados del modo que desee, arrastrando y soltando las filas de asignación, como se muestra a continuación.
 
    >[!NOTE]
    >
@@ -274,7 +274,7 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
->title="Acerca de los atributos obligatorios"
+>title="Atributos obligatorios."
 >abstract="Seleccione los atributos de esquema XDM que deben incluir todos los perfiles exportados. Los perfiles sin la clave obligatoria no se exportan al destino. Al no seleccionar una clave obligatoria, se exportan todos los perfiles cualificados independientemente de sus atributos."
 
 Un atributo obligatorio es una casilla de verificación activada por el usuario que garantiza que todos los registros de perfil contengan el atributo seleccionado. Por ejemplo: todos los perfiles exportados contienen una dirección de correo electrónico&#x200B;
@@ -285,12 +285,12 @@ Al no seleccionar un atributo obligatorio, se exportan todos los perfiles cualif
 
 Se recomienda que uno de los atributos sea un [identificador único](../../destinations/catalog/email-marketing/overview.md#identity) desde el esquema. Para obtener más información sobre los atributos obligatorios, consulte la sección de identidad en la [Destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#identity) documentación.
 
-### Claves de anulación de duplicación {#deduplication-keys}
+### Claves de deduplicación {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="Acerca de las claves de deduplicación"
->abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de deduplicación. Seleccione una sola área de nombres o hasta dos atributos de esquema XDM como clave de deduplicación. Si no se selecciona una clave de deduplicación, es posible que se dupliquen entradas de perfil en los archivos de exportación."
+>abstract="Elimine varios registros del mismo perfil en los archivos de exportación seleccionando una clave de anulación de duplicación. Seleccione un área de nombres único o hasta dos atributos de esquema XDM como clave de anulación de duplicación. Si no se selecciona una clave de anulación de duplicación, es posible que haya entradas de perfil duplicadas en los archivos de exportación."
 
 Una clave de anulación de duplicación es una clave principal definida por el usuario que determina la identidad por la que los usuarios desean que se dedupliquen sus perfiles&#x200B;
 
@@ -505,8 +505,8 @@ Las exportaciones de archivos varían de las siguientes maneras, dependiendo de 
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Excluir atributos de enriquecimiento"
-abstract="Active esta opción para exportar los perfiles de los públicos que se han cargado, personalizado y seleccionado a su destino, excluyendo al mismo tiempo todos sus atributos."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#select-enrichment-attributes" text="Obtenga más información en la documentación"
+abstract="Active esta opción para exportar los perfiles de las audiencias cargadas personalizadas seleccionadas a su destino, excluyendo al mismo tiempo todos sus atributos."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Obtenga más información en la documentación"
 
 >[!IMPORTANT]
 >
@@ -533,7 +533,7 @@ Si desea activar audiencias externas en sus destinos sin exportar ningún atribu
 
 Seleccionar **[!UICONTROL Siguiente]** para desplazarse a [Revisar](#review) paso.
 
-## Revisión {#review}
+## Revisar {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
@@ -544,9 +544,9 @@ En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccio
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
 title="Ver directivas de consentimiento aplicables"
-abstract="Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Este control está deshabilitado si su empresa no tiene acceso a los SKU mencionados anteriormente."
+abstract="Si su organización compró **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Este control está desactivado si su empresa no tiene acceso a los SKU mencionados anteriormente."
 
-Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
+Si su organización compró **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 
