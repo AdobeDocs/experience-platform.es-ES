@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Descripción general de Adobe Experience Platform
 breadcrumb-title: Información general de Experience Platform
 user-guide-description: Descubra cómo Experience Platform permite ofrecer experiencias personalizadas a sus clientes en tiempo real con guías, documentación y tutoriales.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 23%
+source-wordcount: '281'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
-* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
+* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience.md)
 * [En segundo plano, una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience-bts.md)
 * Introducción {#getting-started}
@@ -40,7 +40,7 @@ ht-degree: 23%
 * Documentación de Platform {#documentation}
    * [Información general](documentation/overview.md)
    * [Compatibilidad de idiomas](documentation/language-support.md)
-* Servicios de aplicación creados en Platform {#ecosystem}
+* Aplicaciones creadas en Platform {#ecosystem}
    * [Información general](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
@@ -51,7 +51,7 @@ ht-degree: 23%
    * [Integraciones de Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
-   * Gestión de consentimiento {#consent}
+   * Gestión del consentimiento {#consent}
       * Adobe estándar {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/adobe/dataset.md)
@@ -74,11 +74,11 @@ ht-degree: 23%
       * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Uso de licencias y protecciones {#license}
    * [Prácticas recomendadas de asignación de licencias de administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Tablero de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [protecciones de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [protecciones de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [protecciones de Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Guía de resolución de problemas](troubleshooting.md)
 * [Migración de lago de datos Gen2](adls2-gen2-migration.md)
 * [Glosario](glossary.md)
-* [Notas de la versión](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

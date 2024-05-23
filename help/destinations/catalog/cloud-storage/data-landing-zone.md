@@ -3,10 +3,10 @@ title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '1586'
-ht-degree: 4%
+source-wordcount: '1585'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-[!DNL Data Landing Zone] es una interfaz de almacenamiento de [!DNL Azure Blob] aprovisionada por Adobe Experience Platform, que le otorga acceso a una función de almacenamiento de archivos segura y basada en la nube para exportar archivos fuera de Platform. Tiene acceso a uno [!DNL Data Landing Zone] contenedor por zona protegida y el volumen total de datos en todos los contenedores se limita a los datos totales proporcionados con la licencia de productos y servicios de Platform. Todos los clientes de Platform y sus servicios de aplicaciones como [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], y [!DNL Real-Time Customer Data Platform] se han aprovisionado con uno [!DNL Data Landing Zone] contenedor por zona protegida. Puede leer y escribir archivos en el contenedor mediante [!DNL Azure Storage Explorer] o su interfaz de línea de comandos.
+[!DNL Data Landing Zone] es una interfaz de almacenamiento de [!DNL Azure Blob] aprovisionada por Adobe Experience Platform, que le otorga acceso a una función de almacenamiento de archivos segura y basada en la nube para exportar archivos fuera de Platform. Tiene acceso a uno [!DNL Data Landing Zone] contenedor por zona protegida y el volumen total de datos en todos los contenedores se limita a los datos totales proporcionados con la licencia de productos y servicios de Platform. Todos los clientes de Platform y sus aplicaciones, como [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], y [!DNL Real-Time Customer Data Platform] se han aprovisionado con uno [!DNL Data Landing Zone] contenedor por zona protegida. Puede leer y escribir archivos en el contenedor mediante [!DNL Azure Storage Explorer] o su interfaz de línea de comandos.
 
 [!DNL Data Landing Zone] admite la autenticación basada en SAS y sus datos están protegidos con [!DNL Azure Blob] mecanismos de seguridad de almacenamiento en reposo y en tránsito. La autenticación basada en SAS le permite acceder de forma segura a su [!DNL Data Landing Zone] a través de una conexión pública a internet. No se requieren cambios de red para acceder a su [!DNL Data Landing Zone] contenedor, lo que significa que no es necesario configurar listas de permitidos ni configuraciones entre regiones para la red.
 
@@ -196,7 +196,7 @@ Una conexión correcta actualiza su [!DNL Azure Storage Explorer] Interfaz de us
 
 Con su [!DNL Data Landing Zone] contenedor conectado a [!DNL Azure Storage Explorer], ahora puede empezar a exportar archivos de Experience Platform a su [!DNL Data Landing Zone] contenedor. Para exportar archivos, debe establecer una conexión con el [!DNL Data Landing Zone] en la interfaz de usuario de Experience Platform, tal como se describe en la sección siguiente.
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -204,7 +204,7 @@ Con su [!DNL Data Landing Zone] contenedor conectado a [!DNL Azure Storage Explo
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticarse en el destino {#authenticate}
+### Autenticar en el destino {#authenticate}
 
 Asegúrese de haber conectado su [!DNL Data Landing Zone] contenedor a [!DNL Azure Storage Explorer] como se describe en la [requisitos previos](#prerequisites) sección. Porque [!DNL Data Landing Zone] es un almacenamiento aprovisionado por Adobe, no es necesario realizar ningún paso adicional en la interfaz de usuario de Experience Platform para autenticarse en el destino.
 
@@ -230,7 +230,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar públicos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
