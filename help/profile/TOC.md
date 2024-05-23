@@ -4,10 +4,10 @@ user-guide-title: Guía de perfil del cliente en tiempo real
 user-guide-description: Combine datos de clientes para crear una vista unificada de las interacciones de clientes entre canales.
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 23%
+source-wordcount: '132'
+ht-degree: 14%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 23%
 * [Perfiles de borde](edge-profiles.md)
 * [Caducidad de Experience Event](event-expirations.md)
 * [Caducidad de perfil seudónimo](pseudonymous-profiles.md)
+* [Solicitud de marca de tiempo del cliente](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
@@ -40,7 +41,7 @@ ht-degree: 23%
 * Políticas de combinación {#merge-policies}
    * [Información general](merge-policies/overview.md)
    * [API de políticas de combinación](api/merge-policies.md)
-   * [Guía de IU de políticas de combinación](merge-policies/ui-guide.md)
+   * [Guía de la IU de las políticas de combinación](merge-policies/ui-guide.md)
    * [Creación de políticas de combinación (vídeo)](video/create-merge-policies.md)
 * Esquemas de unión {#union-schemas}
    * [Guía de IU de esquema de unión](ui/union-schema.md)
@@ -49,8 +50,8 @@ ht-degree: 23%
    * [Añadir datos al perfil del cliente en tiempo real](tutorials/add-profile-data.md)
    * [Configurar un conjunto de datos para el perfil](tutorials/dataset-configuration.md)
    * [Generar el informe de superposición de conjuntos de datos](tutorials/dataset-overlap-report.md)
-   * [Más tutoriales](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=es)
+   * [Más tutoriales](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Procesamiento de solicitud de privacidad](privacy.md)
 * [[!DNL Profile] guía de solución de problemas](troubleshooting.md)
 * [Referencia de API de perfil](https://www.adobe.com/go/profile-apis-en)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

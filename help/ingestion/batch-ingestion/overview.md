@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general de API de ingesta por lotes
 description: La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser los datos de perfil de un archivo plano de un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
@@ -56,16 +56,16 @@ Al ingerir datos, es importante comprender cómo [!DNL Experience Data Model] Lo
 
 Existe cierta flexibilidad a la hora de ingerir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no es así, el lote fallará con un `TypeCompatibilityException`.
 
-Por ejemplo, ni JSON ni CSV tienen un valor `date` o `date-time` escriba. Como resultado, estos valores se expresan mediante [Cadenas con formato ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo de Unix en milisegundos (1531263959000) y se convierten en el momento de la ingesta al tipo XDM de destino.
+Por ejemplo, ni JSON ni CSV tienen un valor `date` o `date-time` escriba. Como resultado, estos valores se expresan mediante [Cadenas con formato ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo de Unix en milisegundos (1531263959000) y se convierten en el momento de la ingesta al tipo XDM de destino.
 
 La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 
-| Entrante (fila) frente a destino (col) | Cadena | Byte | corto | Número entero | Largo | Doble | Fecha | Fecha-hora | Objeto | Mapa |
+| Entrante (fila) frente a destino (col) | Cadena | Byte | Corto | Entero | Largo | Doble | Fecha | Fecha-hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |   |   |
 | Byte | X | X | X | X | X | X |   |   |   |   |
-| corto | X | X | X | X | X | X |   |   |   |   |
-| Número entero | X | X | X | X | X | X |   |   |   |   |
+| Corto | X | X | X | X | X | X |   |   |   |   |
+| Entero | X | X | X | X | X | X |   |   |   |   |
 | Largo | X | X | X | X | X | X | X | X |   |   |
 | Doble | X | X | X | X | X | X |   |   |   |   |
 | Fecha |   |   |   |   |   |   | X |   |   |   |
@@ -138,7 +138,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | `id` | El ID del lote que acaba de crear (utilizado en solicitudes posteriores). |
 | `relatedObjects.id` | El ID del conjunto de datos en el que cargar los archivos. |
 
-## Carga de archivos
+## Carga de archivo
 
 Después de crear correctamente un nuevo lote para cargar, los archivos se pueden cargar en un conjunto de datos específico.
 
@@ -415,7 +415,7 @@ El `"status"` Este campo muestra el estado actual del lote solicitado. Los lotes
 | Inactivo | El lote se ha promocionado correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
 | Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
 | Cargando | Los datos de este lote se están cargando y el lote se está cargando **no** listo para ser promocionado. |
-| Reintentando | Se están procesando los datos de este lote. Sin embargo, debido a un error transitorio o del sistema, el lote falló. Como resultado, se está reintentando este lote. |
-| Ensayado | La fase de ensayo del proceso de promoción de un lote se ha completado y el trabajo de ingesta se ha ejecutado. |
+| Intentando de nuevo | Se están procesando los datos de este lote. Sin embargo, debido a un error transitorio o del sistema, el lote falló. Como resultado, se está reintentando este lote. |
+| Fase | La fase de ensayo del proceso de promoción de un lote se ha completado y el trabajo de ingesta se ha ejecutado. |
 | Ensayo | Se están procesando los datos del lote. |
 | Parado | Se están procesando los datos del lote. Sin embargo, la promoción por lotes se ha detenido después de una serie de reintentos. |
