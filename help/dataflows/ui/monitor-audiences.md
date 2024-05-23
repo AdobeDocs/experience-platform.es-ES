@@ -53,7 +53,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 
 | Métrica | Descripción |
 | ------ | ----------- |
-| **[!UICONTROL Nombre de audiencia]** | El nombre de la audiencia. |
+| **[!UICONTROL Nombre de audiencia]** | Nombre de la audiencia. |
 | **[!UICONTROL Tipo de datos]** | El tipo de datos de la audiencia. Los valores posibles incluyen **[!UICONTROL Cliente]**, **[!UICONTROL Cuenta]**, y **[!UICONTROL Perspectiva]**. Puede ver para audiencias de un tipo de datos especificado utilizando el [!UICONTROL Tipo de datos] filtre por encima de la cinta de tarjetas. |
 | **[!UICONTROL Última marca de tiempo de evaluación]** | La fecha y la hora en que se ejecutó el último trabajo de evaluación de la audiencia. |
 | **[!UICONTROL Último estado de evaluación]** | El estado del último trabajo de evaluación de la audiencia. Los valores posibles incluyen **[!UICONTROL Correcto]**, **[!UICONTROL Sin ejecuciones]**, y **[!UICONTROL Error]**. |
