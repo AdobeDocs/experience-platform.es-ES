@@ -47,7 +47,10 @@ El servicio de catálogo es el sistema de registro para la ubicación y el linaj
 Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas**
-| Función | Descripción | | — | — | | Perspectivas personalizables para informes de aplicaciones ampliados | Perfecto [transición del resultado del análisis SQL a formatos visuales comprensibles y fáciles de usar](../../dashboards/data-distiller/customizable-insights/overview.md). Utilice consultas SQL personalizadas para la manipulación de datos precisa y la creación de gráficos dinámicos a partir de diversos conjuntos de datos estructurados. Puede utilizar el modo query pro para realizar análisis complejos con SQL y luego compartir este análisis con usuarios no técnicos a través de gráficos en su panel personalizado o exportarlos en archivos CSV. |
+
+| Función | Descripción |
+| --- | --- |
+| Perspectivas personalizables para informes de aplicaciones ampliados | Perfecto [transición del resultado del análisis SQL a formatos visuales comprensibles y fáciles de usar](../../dashboards/data-distiller/customizable-insights/overview.md). Utilice consultas SQL personalizadas para la manipulación de datos precisa y la creación de gráficos dinámicos a partir de diversos conjuntos de datos estructurados. Puede utilizar el modo query pro para realizar análisis complejos con SQL y luego compartir este análisis con usuarios no técnicos a través de gráficos en su panel personalizado o exportarlos en archivos CSV. |
 
 {style="table-layout:auto"}
 
