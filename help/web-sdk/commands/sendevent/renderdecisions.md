@@ -1,9 +1,10 @@
 ---
 title: renderDecisions
 description: Procesar contenido personalizado que pueda procesarse automáticamente.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,10 @@ Seleccione el **[!UICONTROL Procesar decisiones de personalización visuales]** 
 ## Representar contenido personalizado mediante la biblioteca JavaScript del SDK web
 
 Configure las variables `renderDecisions` booleano al ejecutar el `sendEvent` comando. Si se omite, el valor predeterminado de esta propiedad es `false`. Establezca esta propiedad como `true` si desea procesar automáticamente el contenido personalizado.
+
+>[!IMPORTANT]
+>
+>El `renderDecisions` La propiedad no es compatible con [`documentUnloading`](documentunloading.md) propiedad. No debe establecer ambas propiedades en `true` simultáneamente.
 
 ```js
 alloy("sendEvent", {

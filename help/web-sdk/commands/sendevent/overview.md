@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Envíe datos a Adobe Experience Platform Edge Network.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Envíe datos al Edge Network de Adobe Experience Platform.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ Ejecute el `sendEvent` al llamar a la instancia configurada del SDK web. Asegúr
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -44,6 +44,6 @@ alloy("sendEvent", {
 
 Si decide hacerlo [gestionar respuestas](../command-responses.md) con este comando, están disponibles las siguientes propiedades en el objeto response:
 
-* **`propositions`**: matriz de propuestas que devuelve la red perimetral. Las propuestas que se procesan automáticamente incluyen el indicador `renderAttempted` establezca en `true`.
+* **`propositions`**: matriz de propuestas que devuelve el Edge Network. Las propuestas que se procesan automáticamente incluyen el indicador `renderAttempted` establezca en `true`.
 * **`inferences`**: matriz de objetos de inferencia que contienen información de aprendizaje automático sobre este usuario.
-* **`destinations`**: matriz de objetos de destino devueltos por la red perimetral.
+* **`destinations`**: matriz de objetos de destino devueltos por el Edge Network.
