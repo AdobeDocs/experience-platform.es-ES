@@ -1,10 +1,10 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: mayo de 2024'
 description: Las notas de la versión de mayo de 2024 de Adobe Experience Platform.
-source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
+source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
 workflow-type: tm+mt
 source-wordcount: '1596'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
