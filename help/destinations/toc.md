@@ -5,10 +5,10 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 5%
+source-wordcount: '1224'
+ht-degree: 3%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 5%
       * [Conexión de Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Conexión de Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Conexión de Google Customer Match](./catalog/advertising/google-customer-match.md)
+      * [(Beta) Conexión Google Customer Match + DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Conexión de Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extensión gtag de Google](./catalog/advertising/gtag-advertising.md)
       * [Extensión de etiqueta de linkedIn Insight](./catalog/advertising/linkedin.md)
@@ -128,7 +129,7 @@ ht-degree: 5%
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Conexión de Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Zona de aterrizaje de datos](./catalog/cloud-storage/data-landing-zone.md)
-      * [Almacenamiento de Google Cloud](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Almacenamiento en la nube de Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Conexión SFTP](./catalog/cloud-storage/sftp.md)
       * [LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en la nube basados en archivos](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinos de administración de la relación con los clientes (CRM) {#crm}
@@ -144,7 +145,7 @@ ht-degree: 5%
       * [Supresión de perspectiva de Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Mejora de datos de Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinos de comercio electrónico {#ecommerce}
-      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
+      * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * Destinos de correo electrónico {#email}
       * [Extensión Bizible](./catalog/email/bizible.md)
       * [Extensión de Marketo](./catalog/email/marketo.md)
@@ -297,4 +298,4 @@ ht-degree: 5%
       * [Plantilla de autoservicio de documentación](./destination-sdk/docs-framework/self-service-template.md)
       * [Prácticas recomendadas de creación](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Preguntas frecuentes](./destinations-faq.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

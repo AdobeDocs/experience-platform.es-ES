@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexión
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 4%
+source-wordcount: '1206'
+ht-degree: 1%
 
 ---
 
@@ -83,7 +83,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar la pr
 2. En el [!DNL Google Ad Manager] interfaz, vaya a **[!UICONTROL Administrador]** > **[!UICONTROL Configuración global]** > **[!UICONTROL Configuración de red]** y habilite la opción **[!UICONTROL Acceso a API]** deslizador.
 
 
-## Conexión al destino {#connect}
+## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -91,7 +91,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar la pr
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticarse en el destino {#authenticate}
+### Autenticar en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -104,8 +104,8 @@ Para obtener más información sobre estos valores, consulte la [Claves HMAC de 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Anexar el ID de público al nombre de público"
->abstract="Seleccione esta opción para que el nombre de público en Google Ad Manager 360 incluya el ID de público de Experience Platform, de esta manera: `Audience Name (Audience ID)`"
+>title="Anexar ID de audiencia al nombre de audiencia"
+>abstract="Seleccione esta opción para que el nombre de audiencia en este destino incluya el ID de audiencia del Experience Platform, de esta manera: `Audience Name (Audience ID)`"
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -125,7 +125,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar públicos en este destino {#activate}
+## Activar audiencias en este destino {#activate}
 
 >[!IMPORTANT]
 > 
