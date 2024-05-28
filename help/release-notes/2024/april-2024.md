@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -121,7 +121,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 | Alertas de consulta programadas | Manténgase informado con notificaciones proactivas mientras planifica las consultas, lo que garantiza una administración eficiente y oportuna de las tareas. Puede [suscribirse a alertas al crear una consulta](../../query-service/ui/query-schedules.md#alerts-for-query-status) o mediante acciones en línea para consultas programadas existentes. Consulte la [suscripción a alertas con acciones en línea](../../query-service/ui/monitor-queries.md#alert-subscription) para obtener más información. |
 | Navegación de consultas programadas mejorada | Navegue fácilmente entre plantillas de consulta y ejecuciones programadas para aumentar la productividad. Consulte la documentación sobre [ver ejecuciones de consulta programadas](../../query-service/ui/query-schedules.md#scheduled-query-runs) para obtener más información. |
 | Salida de consulta extendida | Acceda a hasta 500 filas de resultados de consulta dentro de la consola para un análisis más profundo de los datos. Consulte la [recuento de resultados](../../query-service/ui/user-guide.md#result-count) para obtener más información. |
-| Finalización del Editor de consultas heredadas | A partir del 30 de abril de 2024, el Editor de consultas mejorado se ha convertido en el editor predeterminado para todos los usuarios. El editor anterior dejará de usarse el 30 de mayo de 2024 y ya no estará disponible para su uso. Consulte la [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md) para obtener más información. |
+| Finalización del Editor de consultas heredadas | A partir del 30 de abril de 2024, el Editor de consultas mejorado se ha convertido en el editor predeterminado para todos los usuarios. El editor anterior dejará de usarse el 24 de mayo de 2024 y ya no estará disponible para su uso. Consulte la [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md) para obtener más información. |
 
 {style="table-layout:auto"}
 

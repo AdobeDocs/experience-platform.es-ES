@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El editor anterior quedó obsoleto el 30 de mayo de 2024. Ya no es accesible para su uso. Ahora puede utilizar la variable [Editor de consultas mejorado](#enhanced-editor-toggle) para escribir, validar y ejecutar consultas
+>El editor anterior quedó obsoleto el 24 de mayo de 2024. Ya no es accesible para su uso. Ahora puede utilizar la variable [Editor de consultas mejorado](#enhanced-editor-toggle) para escribir, validar y ejecutar consultas
 
 El Editor de consultas es una herramienta interactiva que proporciona el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas para datos de experiencia del cliente dentro de [!DNL Experience Platform] interfaz de usuario. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ Las consultas ejecutadas desde el Editor de consultas se ejecutan de forma inter
 
 >[!NOTE]
 >
->El editor anterior quedó obsoleto el 30 de mayo de 2024. Ya no es accesible para su uso. Ahora puede utilizar el Editor de consultas mejorado para escribir, validar y ejecutar consultas.
+>El editor anterior quedó obsoleto el 24 de mayo de 2024. Ya no es accesible para su uso. Ahora puede utilizar el Editor de consultas mejorado para escribir, validar y ejecutar consultas.
 
 Con el Editor de consultas, puede escribir, ejecutar y guardar consultas para datos de experiencia del cliente. Todas las consultas ejecutadas o guardadas en el Editor de consultas están disponibles para todos los usuarios de su organización con acceso al Servicio de consultas.
 

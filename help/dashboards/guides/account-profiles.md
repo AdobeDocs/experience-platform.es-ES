@@ -2,10 +2,10 @@
 title: Panel de perfiles de cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 1%
 
 ---
 
@@ -76,14 +76,13 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [Perfiles de cuenta añadidos](#account-profiles-added)
 * [Nuevas cuentas por sector](#accounts-by-industry)
 * [Nuevas cuentas por tipo](#accounts-by-type)
-* [Oportunidades añadidas](#opportunities-added)
 * [Nuevas oportunidades por función de persona](#opportunities-by-person-role)
 * [Nuevas oportunidades por ingresos](#opportunities-by-revenue)
 * [Nuevas oportunidades por estado y etapa](#opportunities-by-status-&-stage)
 * [Nuevas oportunidades ganadas](#opportunities-won)
+* [Oportunidades añadidas](#opportunities-added)
 * [Distribución de puntuación predictiva](#predictive-scoring-distribution)
 * [Factores más influyentes de la puntuación predictiva](#predictive-scoring-top-influential-factors)
-* [Cuentas totales por sector](#total-accounts-by-industry)
 
 ### Perfiles de cuenta añadidos {#account-profiles-added}
 
@@ -102,14 +101,6 @@ El [!UICONTROL Nuevas cuentas por sector] widget muestra el número total de cue
 El [!UICONTROL Nuevas cuentas por tipo] widget muestra el número total de cuentas en una sola métrica dentro de un gráfico circular. El gráfico de anillo ilustra la composición relativa de los distintos tipos de cuenta que componen este total. Una clave con códigos de color proporciona un desglose de todos los tipos de cuenta incluidos. Los recuentos individuales de cada tipo de cuenta se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
 
 ![El widget Nuevas cuentas por tipo.](../images/account-profiles/new-accounts-by-type.png)
-
-### Oportunidades añadidas {#opportunities-added}
-
-El [!UICONTROL Oportunidades añadidas] El widget utiliza un gráfico de líneas para mostrar el número de oportunidades agregadas cada día durante un período de tiempo. Utilice el filtro de fecha global situado en la parte superior del panel para determinar el periodo de análisis. Si no se proporciona ningún filtro de fecha, el comportamiento predeterminado enumera las oportunidades agregadas para el año anterior a hoy. Los resultados se pueden utilizar para deducir una tendencia en el número de oportunidades agregadas.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![El widget Oportunidades agregadas.](../images/account-profiles/opportunities-added.png)
 
 ### Nuevas oportunidades por función de persona {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ El [!UICONTROL Nuevas oportunidades ganadas] widget muestra el número total de 
 
 ![El widget Nuevas oportunidades ganadas.](../images/account-profiles/new-opportunities-won.png)
 
+### Oportunidades añadidas {#opportunities-added}
+
+El [!UICONTROL Oportunidades añadidas] El widget utiliza un gráfico de líneas para mostrar el número de oportunidades agregadas cada día durante un período de tiempo. Utilice el filtro de fecha global situado en la parte superior del panel para determinar el periodo de análisis. Si no se proporciona ningún filtro de fecha, el comportamiento predeterminado enumera las oportunidades agregadas para el año anterior a hoy. Los resultados se pueden utilizar para deducir una tendencia en el número de oportunidades agregadas.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![El widget Oportunidades agregadas.](../images/account-profiles/opportunities-added.png)
+
 ### Distribución de puntuación predictiva {#predictive-scoring-distribution}
 
 El [!UICONTROL Distribución de puntuación predictiva] Este widget muestra la distribución de puntuación de todos los perfiles de cuenta para ayudarle a comprender el estado de su canal de ventas de un vistazo. Los datos de puntuación se transmiten mediante un gráfico circular y un gráfico de columnas.
@@ -170,18 +169,6 @@ El menú desplegable dentro del widget permite seleccionar el modelo de puntuaci
 >Los filtros de intervalo de fechas globales no se aplican a las perspectivas de puntuación predictiva. Los widgets de puntuación predictiva analizan los datos en función del modelo de puntuación de cuenta seleccionado en la lista desplegable.
 
 ![El widget de factores influyentes principales de puntuación predictiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Cuentas totales por sector {#total-accounts-by-industry}
-
-Este widget muestra el número total de cuentas en una sola métrica y utiliza un gráfico de anillo para ilustrar los tamaños proporcionales de los recuentos de las industrias que conforman el número total. La clave proporciona información de codificación de color para las diferentes industrias que conforman el gráfico circular.
-
->[!NOTE]
->
->La información que muestra esta perspectiva depende del intervalo de fechas especificado por usted. Si no proporciona un filtro de fecha, el comportamiento predeterminado de la perspectiva analiza los datos agregados desde el año anterior hasta hoy.
-
-Los recuentos individuales de las diferentes industrias se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
-
-![El total de cuentas por widget de sector.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Pasos siguientes
 
