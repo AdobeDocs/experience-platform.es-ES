@@ -2,9 +2,9 @@
 title: Creación de una conexión base de Salesforce mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '774'
 ht-degree: 3%
 
 ---
@@ -99,11 +99,11 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params":
-              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-              "username": "acme-salesforce",
-              "password": "xxxx",
-              "securityToken": "xxxx"
-          }
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "username": "acme-salesforce",
+            "password": "xxxx",
+            "securityToken": "xxxx"
+        }
       },
       "connectionSpec": {
           "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -163,7 +163,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve la conexión recién creada, incluido su identificador único (`id`). Este ID es necesario para explorar el sistema CRM en el siguiente paso.
+Una respuesta correcta devuelve la conexión base recién creada junto con su ID único.
 
 ```json
 {

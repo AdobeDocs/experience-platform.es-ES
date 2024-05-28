@@ -2,10 +2,10 @@
 title: Conexión de la cuenta de Salesforce mediante la interfaz de usuario de Experience Platform
 description: Aprenda a conectar su cuenta de Salesforce y llevar los datos de CRM al Experience Platform mediante la interfaz de usuario.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ Debe proporcionar valores para las siguientes credenciales para conectar su [!DN
 | --- | --- |
 | URL de entorno | La dirección URL del [!DNL Salesforce] instancia de origen. |
 | Nombre de usuario | El nombre de usuario de [!DNL Salesforce] cuenta de usuario. |
-| Una contraseña | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
+| Contraseña | La contraseña para el [!DNL Salesforce] cuenta de usuario. |
 | Token de seguridad | El token de seguridad para [!DNL Salesforce] cuenta de usuario. |
 | Versión de API | (Opcional) La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 
@@ -52,7 +52,7 @@ Debe proporcionar valores para las siguientes credenciales para conectar su [!DN
 | --- | --- |
 | URL de entorno | La dirección URL del [!DNL Salesforce] instancia de origen. |
 | ID de cliente | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
-| Secreto de cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
+| Secreto del cliente | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación para [!DNL Salesforce]. |
 | Versión de API | La versión de la API de REST de [!DNL Salesforce] instancia de que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si utiliza la versión de API `52`, entonces debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. |
 
 Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] Guía de flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
@@ -65,7 +65,7 @@ Una vez que haya recopilado las credenciales necesarias, puede seguir los pasos 
 
 En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el *CRM* categoría, seleccionar **[!DNL Salesforce]**, y luego seleccione **[!UICONTROL Añadir datos]**.
+Seleccionar **[!DNL Salesforce]** en el *[!UICONTROL CRM]* y, a continuación, seleccione **[!UICONTROL Añadir datos]**.
 
 >[!TIP]
 >
@@ -97,7 +97,7 @@ Para la autenticación básica, seleccione **[!UICONTROL Autenticación básica]
 
 * URL de entorno
 * Nombre de usuario
-* Una contraseña
+* Contraseña
 * Versión de API (opcional)
 
 Cuando termine, seleccione **[!UICONTROL Conectar con el origen]**.
@@ -110,7 +110,7 @@ Para la credencial de cliente de OAuth 2, seleccione **[!UICONTROL Credencial de
 
 * URL de entorno
 * ID de cliente
-* Secreto de cliente
+* Secreto del cliente
 * Versión de API
 
 Cuando termine, seleccione **[!UICONTROL Conectar con el origen]**.
