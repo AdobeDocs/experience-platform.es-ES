@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4064'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,11 @@ La división de audiencias permite subdividir aún más la audiencia en grupos m
 
 Al dividir por atributo, existe exclusividad mutua entre los grupos. Esto significa que si un registro cumple los criterios de varias rutas divididas, se le asigna la variable **primero** ruta desde la izquierda y **no** asignado a cualquiera de las otras rutas.
 
-Al dividir por porcentaje, las divisiones son **aleatoriamente** hecho. Esto significa que los perfiles se asignan aleatoriamente a cada ruta. La división es **no** persistente, de modo que el perfil podría estar en una subaudiencia diferente en cada evaluación.
+Al dividir por porcentaje, las divisiones son **aleatoriamente** hecho. Esto significa que los perfiles se asignan aleatoriamente a cada ruta. La división **es** persistente, lo que significa que el perfil estará en la misma subaudiencia en cada evaluación.
+
+>[!NOTE]
+>
+>Anteriormente, las divisiones en Composición de audiencia eran **no** persistente.
 
 Para obtener más información sobre el bloque Split, lea la [Guía de IU de composición de audiencia](./ui/audience-composition.md#split).
 
@@ -341,7 +345,7 @@ Para obtener más información sobre el bloque Split, lea la [Guía de IU de com
 
 Sí, todos los tipos de segmentación ([segmentación por lotes, segmentación de streaming y segmentación de edge](./home.md#evaluate-segments)) son compatibles con el flujo de trabajo de Composición de audiencia. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
 
-## Abono a audiencia
+## Abono de público
 
 En la siguiente sección se enumeran las preguntas relacionadas con la pertenencia a audiencias.
 
