@@ -4,14 +4,14 @@ title: Servicio de segmentación en Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform se basa en Adobe Experience Platform y utiliza muchos de los servicios y funciones de Experience Platform. Con el servicio de segmentación puede ofrecer marketing a medida dividiendo a sus clientes en grupos más pequeños con características similares.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] en [!DNL Real-Time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
 [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) le permite traer datos de varias fuentes para impulsar una experiencia coordinada y coherente para sus clientes. Puede conseguir campañas de marketing personalizadas y relevantes utilizando [!DNL Segmentation Service], parte de Adobe Experience Platform.
 

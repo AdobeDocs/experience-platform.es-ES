@@ -2,7 +2,7 @@
 title: Perfiles de Edge
 description: Obtenga información acerca de los perfiles de Edge, así como la terminología relacionada, las regiones disponibles para perfiles de Edge y los servicios disponibles para perfiles de Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -55,7 +55,7 @@ El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extre
 
 ## Pasos siguientes
 
-Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Información general de Edge Network](../web-sdk/home.md#edge-network).
+Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Introducción al Edge Network](../web-sdk/home.md#edge-network).
 
 ## Apéndice
 

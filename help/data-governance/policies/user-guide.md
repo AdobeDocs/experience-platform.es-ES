@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Administrar las políticas de uso de datos en la IU
 description: Administración de datos de Adobe Experience Platform proporciona una interfaz de usuario que le permite crear y administrar políticas de uso de datos. Este documento proporciona información general sobre las acciones que se pueden realizar en el área de trabajo Directivas en la interfaz de usuario del Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 18%
+source-wordcount: '1768'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integración y aplicación del consentimiento del cliente en los datos de perfil"
->abstract="<h2>Descripción</h2><p>Platform le permite integrar los datos de consentimiento que ha recopilado de sus clientes en sus respectivos perfiles. A continuación, puede configurar directivas de consentimiento para determinar si estos datos se pueden incluir en segmentos activados en determinados destinos.</p>"
+>abstract="<h2>Descripción</h2><p>Platform le permite integrar los datos de consentimiento recopilados de sus clientes en sus respectivos perfiles. A continuación, puede configurar políticas de consentimiento para determinar si estos datos se pueden incluir en segmentos activados para determinados destinos.</p>"
 
 Este documento explica cómo usar el **[!UICONTROL Políticas]** espacio de trabajo en la IU de Adobe Experience Platform para crear y administrar políticas de uso de datos.
 
@@ -104,7 +104,7 @@ El **[!UICONTROL Examinar]** vuelve a aparecer la pestaña, que ahora enumera la
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instrucciones"
->abstract="<ul><li>Asegúrese de introducir datos de preferencias en los esquemas de unión a través del conector de origen OneTrust o del esquema XDM estándar para el consentimiento.</li><li>Seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Directivas</a> en la navegación izquierda y, a continuación, <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#create-governance-policy">Crear directiva</a>.</li><li>En la sección <b>Si</b>, describa las condiciones o acciones que activarán la comprobación de la directiva.</li><li>En la sección <b>Entonces</b>, introduzca los atributos de consentimiento que deben estar presentes para que un perfil se incluya en la acción que activó la directiva.</li><li>Seleccione <b>Guardar</b> para crear la directiva. Para habilitar la directiva, seleccione el botón de alternancia <b>Estado</b> en el carril derecho.</li><li>Experience Platform aplica automáticamente las directivas de consentimiento habilitadas cuando activa segmentos en destinos y proporciona detalles sobre cómo afectan al tamaño de la audiencia.</li><li>Para obtener más ayuda con esta función, consulte la guía de <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#consent-policy">creación de directivas de consentimiento</a> en Experience League.</li></ul>"
+>abstract="<ul><li>Asegúrese de introducir datos de preferencia en los esquemas de unión a través del conector de origen de OneTrust o del esquema XDM estándar para el consentimiento.</li><li>Seleccionar <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=es">Políticas</a> en el panel de navegación izquierdo, seleccione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Crear política</a>.</li><li>En el <b>If</b> , describa las condiciones o acciones que almacenarán en déclencheur la comprobación de directivas.</li><li>En el <b>Entonces</b> , introduzca los atributos de consentimiento que deben estar presentes para que un perfil se incluya en la acción que activó la directiva.</li><li>Seleccionar <b>Guardar</b> para crear la directiva. Para habilitar la directiva, seleccione <b>Estado</b> alterne en el carril derecho.</li><li>Experience Platform aplica automáticamente las directivas de consentimiento habilitadas al activar segmentos en destinos y proporciona detalles sobre cómo afecta cada directiva al tamaño de la audiencia.</li><li>Para obtener más ayuda con esta función, consulte la guía de <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=es#consent-policy">creación de directivas de consentimiento</a> en el Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -125,8 +125,8 @@ Las políticas de consentimiento se componen de dos componentes lógicos:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condición “If”"
->abstract="Comience definiendo las condiciones que activarán la comprobación de directivas. Las condiciones pueden incluir la realización de determinadas acciones de marketing, la presencia de ciertas etiquetas de gobernanza de datos o una combinación de ambas."
+>title="Condición"
+>abstract="Comience por definir las condiciones que almacenarán en déclencheur la comprobación de directivas. Las condiciones pueden incluir ciertas acciones de marketing que se están realizando, ciertas etiquetas de gobernanza de datos que están presentes o una combinación de ambas."
 
 En el **[!UICONTROL If]** , seleccione las acciones de marketing o las etiquetas de uso de datos que deben almacenar en déclencheur esta directiva. Seleccionar **[!UICONTROL Ver todo]** y **[!UICONTROL Seleccionar etiquetas]** para ver las listas completas de las acciones de marketing y etiquetas disponibles, respectivamente.
 
@@ -142,16 +142,16 @@ Si selecciona más de una condición, puede utilizar el icono que aparece entre 
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condición “Then”"
->abstract="Una vez definida la condición “If”, utilice la sección “Then” para seleccionar al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva."
+>title="Condición «then»"
+>abstract="Una vez definida la condición &quot;If&quot;, utilice la sección &quot;Then&quot; para seleccionar al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regida por esta directiva."
 
-En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regulada por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
+En el **[!UICONTROL Entonces]** , seleccione al menos un atributo de consentimiento del esquema de unión. Este es el atributo que debe estar presente para que los perfiles se incluyan en la acción regida por esta directiva. Puede elegir una de las opciones proporcionadas en la lista o seleccionar **[!UICONTROL Ver todo]** para elegir el atributo directamente desde el esquema de unión.
 
 Al seleccionar el atributo de consentimiento, elija los valores del atributo que desea que compruebe esta directiva.
 
 ![](../images/policies/select-schema-field.png)
 
-Después de seleccionar al menos un atributo de consentimiento, la variable **[!UICONTROL Propiedades de directiva]** el panel se actualiza para mostrar el número estimado de perfiles que se permitirían según esta directiva, incluido el porcentaje del almacén total de perfiles. Esta estimación se actualiza automáticamente a medida que ajusta la configuración de la directiva.
+Después de seleccionar al menos un atributo de consentimiento, la variable **[!UICONTROL Propiedades de directiva]** El panel se actualiza para mostrar el número estimado de perfiles que se permitirían bajo esta directiva, incluido el porcentaje del almacén de perfiles total. Esta estimación se actualiza automáticamente a medida que ajusta la configuración de la directiva.
 
 ![](../images/policies/audience-preview.png)
 

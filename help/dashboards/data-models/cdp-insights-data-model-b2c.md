@@ -4,7 +4,7 @@ description: Aprenda a utilizar consultas SQL con los modelos de datos de Real-t
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -98,7 +98,7 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Perfiles por caso de uso de identidad {#profiles-by-identity}
 
-El [!UICONTROL Perfiles por identidad] Este widget muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](../guides/profiles.md#profiles-by-identity) para obtener más información.
+El [!UICONTROL Perfiles por identidad] Este widget muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](../guides/profiles.md#profiles-by-identity) para obtener más información.
 
 El SQL que genera el [!UICONTROL Perfiles por identidad] El widget se ve en la sección contraíble a continuación.
 
@@ -291,7 +291,7 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Perfiles por identidad para un caso de uso de audiencia {#audience-profiles-by-identity}
 
-La lógica utilizada en la variable [!UICONTROL Perfiles por identidad] El widget proporciona un desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles para una audiencia determinada. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](../guides/audiences.md#profiles-by-identity) para obtener más información.
+La lógica utilizada en la variable [!UICONTROL Perfiles por identidad] El widget proporciona un desglose de identidades en todos los perfiles combinados del almacén de perfiles para una audiencia determinada. Consulte la [[!UICONTROL Perfiles por identidad] documentación del widget](../guides/audiences.md#profiles-by-identity) para obtener más información.
 
 El SQL que genera el [!UICONTROL Perfiles por identidad] El widget se ve en la sección contraíble a continuación.
 
@@ -327,7 +327,7 @@ La siguiente imagen contiene los campos de datos relevantes en cada conjunto de 
 
 #### Caso de uso de superposición de identidad (perfiles) {#profiles-identity-overlap}
 
-La lógica utilizada en la variable [!UICONTROL Superposición de identidad] widget muestra la superposición de perfiles en su **Almacenamiento de perfiles** que contienen las dos identidades seleccionadas. Para obtener más información, consulte la [[!UICONTROL Superposición de identidad] sección de widget de [!UICONTROL Perfiles] documentación del panel](../guides/profiles.md#identity-overlap).
+La lógica utilizada en la variable [!UICONTROL Superposición de identidad] widget muestra la superposición de perfiles en su **Almacén de perfiles** que contienen las dos identidades seleccionadas. Para obtener más información, consulte la [[!UICONTROL Superposición de identidad] sección de widget de [!UICONTROL Perfiles] documentación del panel](../guides/profiles.md#identity-overlap).
 
 El SQL que genera el [!UICONTROL Superposición de identidad] El widget se ve en la sección contraíble a continuación.
 

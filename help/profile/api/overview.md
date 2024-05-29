@@ -4,10 +4,10 @@ title: Guía de la API del perfil del cliente en tiempo real
 description: La API de perfil del cliente en tiempo real permite a los desarrolladores explorar y trabajar con datos de perfil, incluidos los perfiles de vista, crear y actualizar políticas de combinación, exportar o muestrear datos de perfil y eliminar datos de perfil que ya no sean necesarios o que se hayan añadido por error. Siga esta guía para aprender a realizar operaciones clave con la API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '883'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 

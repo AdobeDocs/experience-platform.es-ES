@@ -2,10 +2,10 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Este documento proporciona información general de alto nivel sobre el proceso p
 
 Para ver y visitar [!UICONTROL Cifrado] en Adobe Experience Platform, debe haber creado una función y asignado el [!UICONTROL Administrar clave gestionada por el cliente] permiso para ese rol. Cualquier usuario que tenga el [!UICONTROL Administrar clave gestionada por el cliente] El permiso puede habilitar CMK para su organización.
 
-Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación de configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es).
+Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación de configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Para habilitar CMK, su [!DNL Azure] Key Vault debe configurarse con la siguiente configuración:
 
@@ -66,7 +66,7 @@ Después de eliminar el acceso a la clave o deshabilitar o eliminar la clave de 
 
 >[!NOTE]
 >
->Existen dos excepciones específicas de casos de uso a la caducidad de conjuntos de datos de siete días en datos no principales (almacenados en caché/transitorios). Consulte su documentación correspondiente para obtener más información sobre estas funciones.<ul><li>[Acortador de URL de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms)</li><li>[Proyecciones de Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Existen dos excepciones específicas de casos de uso a la caducidad de conjuntos de datos de siete días en datos no principales (almacenados en caché/transitorios). Consulte su documentación correspondiente para obtener más información sobre estas funciones.<ul><li>[Acortador de URL de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Proyecciones de Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Pasos siguientes
 

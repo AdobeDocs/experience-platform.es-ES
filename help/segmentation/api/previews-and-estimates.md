@@ -4,10 +4,10 @@ title: Previsualizaciones y estimaciones de extremos de API
 description: A medida que se desarrollan las definiciones de segmentos, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver información de resumen a fin de asegurarse de aislar la audiencia esperada.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Para elegir una política de combinación del **[!UICONTROL Seleccionar polític
 
 ![Se muestra un cuadro de diálogo en el que puede seleccionar la política de combinación por la que filtrar.](../images/user-guide/select-merge-policy.png)
 
-Los perfiles que se muestran representan una muestra de hasta 20 perfiles del almacén de perfiles de su organización, después de aplicar la política de combinación seleccionada. Los perfiles de muestra para la política de combinación seleccionada se actualizan cuando se añaden nuevos datos al almacén de perfiles de su organización.
+Los perfiles que se muestran representan una muestra de hasta 20 perfiles del almacén de perfiles de su organización, después de aplicar la política de combinación seleccionada. Los perfiles de muestra para la política de combinación seleccionada se actualizan cuando se agregan nuevos datos al almacén de perfiles de su organización.
 
 Para ver los detalles de uno de los perfiles de muestra, seleccione la opción **[!UICONTROL ID de perfil]**. Para obtener más información, consulte la sección que aparece más adelante en esta guía sobre [visualización de detalles del perfil](#profile-detail).
 

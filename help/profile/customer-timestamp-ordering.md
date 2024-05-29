@@ -4,9 +4,9 @@ description: Aprenda a añadir el orden de marcas de hora de los clientes a sus 
 badgePrivateBeta: label="Beta privada" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c5789b872be49c3bd4a1ca61a2d44392ebd4a746
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -14,21 +14,23 @@ ht-degree: 0%
 
 # Solicitud de marca de tiempo del cliente
 
-En Adobe Experience Platform, el orden de los datos no se garantiza automáticamente al ingerir datos mediante la transmisión al almacén de perfiles. Al solicitar la marca de tiempo del cliente, puede garantizar que el mensaje más reciente, según la marca de tiempo del cliente proporcionada, se conservará en el almacén de perfiles. Como resultado, esto permite que los datos de perfil sean coherentes y que permanezcan sincronizados con los sistemas de origen.
+En Adobe Experience Platform, el orden de los datos no se garantiza automáticamente al ingerir datos mediante la transmisión de flujo continuo al almacén de perfiles. Al solicitar la marca de tiempo del cliente, puede garantizar que el mensaje más reciente, según la marca de tiempo del cliente proporcionada, se conservará en el almacén de perfiles. A continuación, se perderán todos los mensajes antiguos y **no** estar disponible para su uso en servicios descendentes que utilicen datos de perfil como la segmentación y los destinos. Como resultado, esto permite que los datos de perfil sean coherentes y que permanezcan sincronizados con los sistemas de origen.
 
-Para habilitar la solicitud de marca de hora del cliente, deberá utilizar la variable `lastUpdatedDate` dentro del campo [Tipo de datos Atributos de auditoría del sistema de origen externo](../xdm/data-types/external-source-system-audit-attributes.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
+Para habilitar la solicitud de marcas de hora de cliente, use `extSourceSystemAudit.lastUpdatedDate` dentro del campo [Tipo de datos Atributos de auditoría del sistema de origen externo](../xdm/data-types/external-source-system-audit-attributes.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
 
 ## Restricciones
 
 Durante esta versión beta privada, se aplican las siguientes restricciones al utilizar la ordenación de marcas de tiempo del cliente:
 
-- Solo puede utilizar la solicitud de marca de hora del cliente con **atributos de perfil** ingerido con **ingesta por streaming**.
+- Solo puede utilizar la solicitud de marca de hora del cliente con **atributos de perfil** ingerido con **ingesta por streaming** en el almacén de perfiles.
+   - No hay **no** Garantías de pedido previstas para los datos en el lago de datos o el servicio de identidad.
 - Solo puede utilizar la solicitud de marca de hora del cliente en **no producción** zonas protegidas.
 - Solo puede aplicar pedidos de marca de hora de cliente a **5** conjuntos de datos por zona protegida.
-- El `lastUpdatedDate` el campo debe estar en [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato.
-- Todas las filas de datos introducidas **debe** contener el `lastUpdatedDate` field. Si falta este campo o tiene un formato incorrecto, la ingesta fallará.
+- Usted **no puede** utilice actualizaciones de flujo continuo para enviar actualizaciones de fila parciales en un conjunto de datos que tenga habilitada la ordenación de marcas de tiempo de clientes.
+- El `extSourceSystemAudit.lastUpdatedDate` campo **debe** estar en el [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato. Cuando se utiliza el formato ISO 8601, es **debe** ser como una fecha y hora completas con el formato `yyyy-MM-ddTHH:mm:ss.sssZ` (por ejemplo, `2028-11-13T15:06:49.001Z`).
+- Todas las filas de datos introducidas **debe** contener el `extSourceSystemAudit.lastUpdatedDate` como un grupo de campos de nivel superior. Esto significa que este campo **debe** no se puede anidar dentro del esquema XDM. Si falta este campo o tiene un formato incorrecto, el registro con formato incorrecto **no** y se enviará un mensaje de error correspondiente.
 - Cualquier conjunto de datos habilitado para el pedido de marcas de tiempo de clientes **debe** ser un nuevo conjunto de datos sin ningún dato introducido anteriormente.
-- Para cualquier fragmento de perfil determinado, solo las filas que contienen un `lastUpdatedDate` se incorporarán. Si la fila no contiene un más reciente `lastUpdatedDate`, la fila se descartará.
+- Para cualquier fragmento de perfil determinado, solo las filas que contienen un `extSourceSystemAudit.lastUpdatedDate` se incorporarán. Si la fila no contiene un más reciente `extSourceSystemAudit.lastUpdatedDate`, la fila se descartará.
 
 ## Recomendaciones 
 
@@ -36,4 +38,3 @@ Al implementar la solicitud de marca de hora del cliente, tenga en cuenta las si
 
 - Usted es responsable de sincronizar los relojes en todos los sistemas internos que envían datos al almacén de perfiles.
 - Debe tener una precisión de milisegundos en las marcas de tiempo con formato ISO 8061.
-- El uso de la preparación de datos en coordinación con el pedido de marcas de tiempo del cliente es **muy recomendable**, al mismo tiempo crea una copia de todas las filas ingeridas junto con sus marcas de tiempo, lo que permite una mejor depuración en caso de que surjan problemas.

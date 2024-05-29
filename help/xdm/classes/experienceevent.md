@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Clase XDM ExperienceEvent
 description: Obtenga información acerca de la clase XDM ExperienceEvent y las prácticas recomendadas para el modelado de datos de evento.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2672'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -69,7 +69,7 @@ El Adobe proporciona varios grupos de campos estándar para su uso con el [!DNL 
 * [[!UICONTROL Detalles de marketing de campaña]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Acciones de tarjeta]](../field-groups/event/card-actions.md)
 * [[!UICONTROL Detalles del canal]](../field-groups/event/channel-details.md)
-* [[!UICONTROL Detalles de comercio]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Detalles de Commerce]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL Detalles de depósito]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL Detalles de intercambio de dispositivos]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL Reserva de restaurante]](../field-groups/event/dining-reservation.md)
@@ -164,7 +164,7 @@ En la tabla siguiente se describen los valores aceptados para `eventType`, junto
 | `media.sessionComplete` | Este evento rastrea cuándo se produce una `sessionComplete` se ha producido un evento. Este evento marca el final de una sesión de reproducción de contenido. |
 | `media.sessionEnd` | Este evento rastrea cuándo se produce una `sessionEnd` se ha producido un evento. Este evento indica la finalización de una sesión de medios. Esta conclusión podría implicar el cierre del reproductor de contenidos o la detención de la reproducción. |
 | `media.sessionStart` | Este evento rastrea cuándo se produce una `sessionStart` se ha producido un evento. Este evento marca el comienzo de una sesión de reproducción de contenido. Se activa cuando un usuario comienza a reproducir un archivo multimedia. |
-| `media.statesUpdate` | Este evento rastrea cuándo se produce una `statesUpdate` se ha producido un evento. La funcionalidad de seguimiento de estado del reproductor se puede adjuntar a un flujo de audio o vídeo. Los estados estándar son fullscreen, mute, closedCaptioning, pictureInPicture e inFocus. |
+| `media.statesUpdate` | Este evento rastrea cuándo se produce una `statesUpdate` se ha producido un evento. Las funcionalidades de seguimiento de estado del reproductor se pueden adjuntar a un flujo de audio o vídeo. Los estados estándar son: pantalla completa, silenciar, closedCaptioning, pictureInPicture e inFocus. |
 | `opportunityEvent.addToOpportunity` | Este evento registra cuándo se añadió una persona a una oportunidad. |
 | `opportunityEvent.opportunityUpdated` | Este evento rastrea cuándo se actualizó una oportunidad. |
 | `opportunityEvent.removeFromOpportunity` | Este evento rastrea cuándo se eliminó una persona de una oportunidad. |

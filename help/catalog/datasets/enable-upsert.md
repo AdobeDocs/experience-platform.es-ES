@@ -4,7 +4,7 @@ title: Habilitar un conjunto de datos para actualizaciones de perfil mediante AP
 type: Tutorial
 description: Este tutorial muestra cómo utilizar las API de Adobe Experience Platform para habilitar un conjunto de datos con funcionalidades de "actualización" y así poder realizar actualizaciones en los datos del perfil del cliente en tiempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 7%

@@ -1,12 +1,12 @@
 ---
 title: Interactúe y adquiera nuevos clientes sin depender de cookies de terceros
-description: Descubra cómo captar y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
+description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -71,7 +71,7 @@ A medida que complete los pasos para implementar el caso de uso, utilizará las 
 * [Conjuntos de datos](/help/catalog/datasets/overview.md)
 * [Fuentes](/help/sources/home.md)
 * [Perfiles de clientes potenciales](/help/profile/ui/prospect-profile.md)
-* [Audiencias potenciales](/help/segmentation/ui/prospect-audience.md)
+* [Públicos de clientes potenciales](/help/segmentation/ui/prospect-audience.md)
 * [Destinos](/help/destinations/home.md)
 
 ### Detalles del perfil de terceros de licencia del socio {#license-profiles-from-partner}
@@ -110,7 +110,7 @@ El **[!UICONTROL Perfil de cliente potencial individual de XDM]** viene preconfi
 
 ![Campos preconfigurados para la clase de perfil de cliente potencial individual de XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-A continuación, debe seleccionar la identidad de ID de socio que creó anteriormente como identidad principal para el esquema. Los registros de perfil deben llevar un identificador principal. Este paso es necesario para asegurarse de que los datos del cliente potencial se puedan cargar en el almacén de perfiles y estén disponibles para la segmentación y activación.
+A continuación, debe seleccionar la identidad de ID de socio que creó anteriormente como identidad principal para el esquema. Los registros de perfil deben llevar un identificador principal. Este paso es necesario para asegurarse de que los datos de clientes potenciales se pueden cargar en el almacén de perfiles y estar disponibles para la segmentación y activación.
 
 >[!AVAILABILITY]
 >

@@ -3,7 +3,7 @@ title: Evolucionar el valor de cliente único al valor de duración
 description: Aprenda a crear campañas personalizadas para ofrecer los mejores productos o servicios complementarios en función de los atributos, el comportamiento y las compras anteriores de un cliente específico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Las personas a las que está dirigiendo son los visitantes poco frecuentes de su
 Piense en estos clientes que visitan sus propiedades y compran esporádicamente los productos o servicios que ofrece. Es posible que quiera crear campañas personalizadas para atraer a estos clientes de modo que su marca pueda ofrecerles valor a largo plazo en lugar de valor único. Obtenga información sobre cómo:
 
 * Recopilación y administración de datos
-* Creación de públicos
+* Crear público
 * Cree recorridos para dirigirse a estas audiencias en Adobe Journey Optimizer y activarlas en Real-Time CDP.
 
 ![Evolucione paso a paso un valor único a un valor de duración información general visual de alto nivel.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
@@ -46,8 +46,8 @@ Para lograrlo, la tecnología requerida consiste en las dos aplicaciones Experie
    * [Públicos](/help/segmentation/home.md)
    * [Destinos](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Diseñe recorridos, configure déclencheur y cree los mensajes adecuados para dirigirse a los visitantes.
-   * [Evento o Déclencheur de audiencia](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=es)
-   * [Audiencias y eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=es)
+   * [Evento o Déclencheur de audiencia](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Audiencias y eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Arquitectura de Real-Time CDP y Journey Optimizer
@@ -294,7 +294,7 @@ No hay ninguna [políticas de marketing](/help/data-governance/policies/overview
 * Restringir la segmentación entre sitios
 * Restringir la combinación de datos directamente identificables con datos anónimos
 
-### Creación de públicos {#create-audiences}
+### Crear público {#create-audiences}
 
 Este caso de uso requiere la creación de dos audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles con el fin de distinguir un grupo comercializable de personas. Las audiencias se pueden crear de varias formas en Adobe Experience Platform:
 

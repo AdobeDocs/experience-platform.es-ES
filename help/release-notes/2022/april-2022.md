@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2022'
 description: Las notas de la versión de abril de 2022 de Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2670'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
@@ -36,7 +36,7 @@ Los siguientes widgets están disponibles a través de la biblioteca Widget en s
 
 | Widget | Panel | Descripción |
 | ------ | --------- | ----------- |
-| [!UICONTROL Tendencia de perfiles añadidos] | Perfiles | Este widget utiliza un gráfico de líneas para ilustrar el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. |
+| [!UICONTROL Tendencia de perfiles añadidos] | Perfiles | Este widget utiliza un gráfico de líneas para ilustrar el número total de perfiles combinados que se han agregado al almacén de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. |
 | [!UICONTROL Audiencias asignadas al estado de destino] | Perfiles | Este widget muestra el número total de audiencias asignadas y no asignadas en una sola métrica y utiliza un gráfico de anillos para ilustrar la diferencia proporcional entre sus totales. |
 | [!UICONTROL Tamaño de audiencia] | Perfiles | Este widget proporciona una tabla de dos columnas que enumera hasta 20 segmentos y el número total de audiencias que contiene cada segmento. La lista depende de la política de combinación aplicada y se ordena de alta a baja según el número total de audiencias. |
 | [!UICONTROL Tendencia de recuento de perfiles] | Perfiles | Este widget utiliza un gráfico de líneas para ilustrar la tendencia en el número total de perfiles contenidos en el sistema a lo largo del tiempo. Los datos se pueden visualizar en períodos de 30 días, 90 días y 12 meses. |
@@ -45,7 +45,7 @@ Los siguientes widgets están disponibles a través de la biblioteca Widget en s
 | [!UICONTROL Destinos activos por plataforma de destino] | Destinos | Este widget utiliza una tabla de dos columnas para mostrar una lista de las plataformas de destino activas y el número total de destinos activos para cada plataforma de destino. |
 | [!UICONTROL Audiencias activadas en todos los destinos] | Destinos | Este widget proporciona el número total de audiencias activadas en todos los destinos en una sola métrica. |
 | [!UICONTROL Orden de activación de audiencia] | Segmentos | Este widget proporciona una tabla de tres columnas que enumera el nombre de destino, la plataforma y la fecha de activación de la audiencia. |
-| [!UICONTROL Tendencia de tamaño de público] | Segmentos | Este widget proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento en períodos de 30 días, 90 días y 12 meses. |
+| [!UICONTROL Tendencia de tamaño de audiencia] | Segmentos | Este widget proporciona una ilustración de gráfico de líneas para el número total de perfiles que cumplen los criterios de cualquier definición de segmento en períodos de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia de cambio de tamaño de audiencia] | Segmentos | Este widget proporciona un gráfico de líneas que ilustra la diferencia en el número total de perfiles aptos para un segmento determinado entre las instantáneas diarias más recientes. El periodo de análisis de tendencias se puede visualizar en periodos de 30 días, 90 días y 12 meses. |
 | [!UICONTROL Tendencia del tamaño de la audiencia por identidad] | Segmentos | Este widget ilustra la tendencia del tamaño de la audiencia de un segmento en particular en función de un tipo de identidad seleccionado. El periodo de análisis de tendencias se puede visualizar en periodos de 30 días, 90 días y 12 meses. |
 

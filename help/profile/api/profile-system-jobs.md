@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Para ello, es necesario utilizar la API de perfil para crear un trabajo del sistema de perfiles o eliminar una solicitud.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 3%
@@ -305,4 +305,4 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que conoce los pasos necesarios para eliminar conjuntos de datos y lotes de la [!DNL Profile Store] dentro [!DNL Experience Platform], puede eliminar con seguridad los datos que se hayan añadido por error o que su organización ya no necesite. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo tanto, solo debe eliminar datos que esté seguro de que no necesita ahora y que no necesitará en el futuro.
+Ahora que conoce los pasos necesarios para eliminar conjuntos de datos y lotes de la [!DNL Profile store] dentro [!DNL Experience Platform], puede eliminar con seguridad los datos que se hayan añadido por error o que su organización ya no necesite. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo tanto, solo debe eliminar datos que esté seguro de que no necesita ahora y que no necesitará en el futuro.

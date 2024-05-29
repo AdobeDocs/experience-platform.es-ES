@@ -4,10 +4,10 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4995'
-ht-degree: 9%
+ht-degree: 0%
 
 ---
 
@@ -195,17 +195,17 @@ Se proporciona una carga de widget predeterminada para todas las instancias nuev
 
 ## Widgets de Customer AI {#customer-ai-profiles-widgets}
 
-La AI del cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. La inteligencia artificial aplicada al cliente lo hace analizando los datos de evento de experiencia del consumidor existentes para predecir **puntuaciones de tendencia de pérdida o conversión**. Estos modelos de tendencia de los clientes de alta precisión permiten una segmentación y una segmentación más exactas. El [distribución de puntuaciones](#customer-ai-distribution-of-scores) y [resumen de puntuación](#customer-ai-scoring-summary) las perspectivas demuestran la división en su audiencia. Resaltan qué perfiles son los de tendencia alta/baja/media y cómo se distribuyen en los recuentos de perfiles.
+La inteligencia artificial aplicada al cliente se utiliza para generar puntuaciones de tendencia personalizadas, como la generación y la conversión de perfiles individuales a escala. La inteligencia artificial aplicada al cliente lo hace analizando los datos de evento de experiencia del consumidor existentes para predecir **puntuaciones de tendencia de pérdida o conversión**. Estos modelos de tendencia de los clientes de alta precisión permiten una segmentación y una segmentación más exactas. El [distribución de puntuaciones](#customer-ai-distribution-of-scores) y [resumen de puntuación](#customer-ai-scoring-summary) las perspectivas demuestran la división en su audiencia. Resaltan qué perfiles son los de tendencia alta/baja/media y cómo se distribuyen en los recuentos de perfiles.
 
-* [[!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente]](#customer-ai-scoring-summary)
-* [[!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Resumen de puntuación de Customer AI]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribución de puntuaciones de Customer AI]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Distribución de puntuaciones de inteligencia artificial aplicada al cliente] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Distribución de puntuaciones de Customer AI] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
->title="Distribución de las puntuaciones"
->abstract="Este widget visualiza la distribución del número total de perfiles por sus puntuaciones de tendencia en incrementos de cinco por ciento. La distribución del recuento de perfiles viene determinada por el modelo de inteligencia artificial y las políticas de combinación seleccionadas. Puede cambiar el modelo de inteligencia artificial desde el menú desplegable debajo del título del widget."
+>title="Distribución de puntuaciones"
+>abstract="Este widget visualiza la distribución del número total de perfiles por sus puntuaciones de tendencia en incrementos de cinco por ciento. La distribución del recuento de perfiles viene determinada por el modelo de IA y la política de combinación seleccionada. Puede cambiar el modelo de IA desde el menú desplegable debajo del título del widget."
 
 El [!UICONTROL Distribución de puntuaciones de Customer AI] widget categoriza el número total de perfiles según sus puntuaciones de tendencia. La distribución del recuento de perfiles viene determinada por el modelo de IA y la política de combinación seleccionada y, a continuación, se visualiza en incrementos de cinco por ciento que indican su tendencia. El recuento de perfiles se proporciona a lo largo del eje Y y las puntuaciones de tendencia se proporcionan a lo largo del eje X.
 
@@ -229,11 +229,11 @@ Aparecerá la página de información detallada del modelo.
 
 Puede encontrar más información sobre la inteligencia artificial aplicada al cliente en la [guía de IU de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Resumen de puntuación de inteligencia artificial aplicada al cliente] {#customer-ai-scoring-summary}
+### [!UICONTROL Resumen de puntuación de Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
->title="Resumen de las puntuaciones"
+>title="Resumen de puntuación"
 >abstract="Este widget muestra el número total de perfiles puntuados y los clasifica en bloques que contienen una tendencia alta, media y baja. El gráfico de anillo ilustra la composición proporcional de los perfiles totales en las tendencias alta, media y baja."
 
 Este widget muestra el número total de perfiles marcados y los clasifica en bloques que contienen alta, media y baja tendencia como verde, amarillo y rojo respectivamente. Un gráfico de anillo ilustra la composición proporcional de perfiles entre tendencias altas, medias y bajas. Un perfil cumple los requisitos para una alta tendencia a más de 75 años, una tendencia media entre 25 y 74 años y una baja tendencia a menos de 24 años. Una leyenda indica el código de color y los umbrales de tendencia. Los recuentos de perfiles para las tendencias alta, media y baja se muestran en un cuadro de diálogo cuando el cursor se pasa por encima de la sección correspondiente del gráfico circular.
@@ -268,7 +268,7 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 * [[!UICONTROL Perfiles de identidad únicos]](#single-identity-profiles)
 * [[!UICONTROL Perfiles de identidad únicos por identidad]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Perfiles no segmentados]](#unsegmented-profiles)
-* [[!UICONTROL Tendencia de cambio de los perfiles no segmentados]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL Los perfiles no segmentados cambian de tendencia]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Perfiles no segmentados por identidad]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Públicos]](#audiences)
 * [[!UICONTROL Audiencias asignadas al estado de destino]](#audiences-mapped-to-destination-status)
@@ -281,9 +281,9 @@ Para obtener más información sobre cada uno de los widgets estándar disponibl
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Recuento de perfiles"
->abstract="Este widget muestra el número total de perfiles combinados en el almacén de perfiles en el momento en que se tomó la instantánea. El número depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
+>abstract="Este widget muestra el número total de perfiles combinados dentro del almacén de perfiles en el momento en que se tomó la instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos del perfil."
 
-El **[!UICONTROL Recuento de perfiles]** Este widget muestra el número total de perfiles combinados dentro del Almacenamiento de perfiles en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
+El **[!UICONTROL Recuento de perfiles]** Este widget muestra el número total de perfiles combinados dentro del almacén de perfiles en el momento en que se tomó la instantánea. Este número es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
 Consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies) para obtener más información.
 
@@ -306,13 +306,13 @@ El [!UICONTROL Tendencia de recuento de perfiles] El widget utiliza un gráfico 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Cambio de recuento de perfiles"
->abstract="Este widget muestra el número total de perfiles combinados **añadidos** al almacén de perfiles en el momento de la última instantánea. El número depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
+>abstract="Este widget muestra el número total de perfiles combinados **añadido** al almacén de perfiles en el momento de la última instantánea. El número depende de la política de combinación seleccionada que se aplique a los datos del perfil."
 
-El **[!UICONTROL Cambio de recuento de perfiles]** Este widget muestra el número de perfiles combinados agregados al Almacenamiento de perfiles desde la instantánea anterior. Este número es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver el número de perfiles agregados en los últimos 30 días, 90 días o 12 meses.
+El **[!UICONTROL Cambio de recuento de perfiles]** Este widget muestra el número de perfiles combinados agregados al almacén de perfiles desde la instantánea anterior. Este número es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo. Puede utilizar el selector desplegable para ver el número de perfiles agregados en los últimos 30 días, 90 días o 12 meses.
 
 >[!NOTE]
 >
->El [!UICONTROL Cambio de recuento de perfiles] widget refleja el número de perfiles añadidos **después** la ingesta inicial de perfiles y la configuración del Almacenamiento de perfiles. En otras palabras, si su organización configura el Almacenamiento de perfiles e ingiere 4 000 000 de en el día 1, en un plazo de 24 horas el tablero estaría disponible, aunque la variable [!UICONTROL Cambio de recuento de perfiles] el widget se establecería en 0. Este método de contabilización se realiza para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización introducirá 1 000 000 de perfiles adicionales en el almacén de perfiles de. Una vez que se toma la siguiente instantánea, [!UICONTROL Cambio de recuento de perfiles] El widget mostraría un total de 1 000 000 de perfiles agregados, mientras que el [!UICONTROL Recuento de perfiles] El widget mostraría 5 000 000 de perfiles totales.
+>El [!UICONTROL Cambio de recuento de perfiles] widget refleja el número de perfiles añadidos **después** la ingesta inicial de perfiles y la configuración del almacén de perfiles. En otras palabras, si su organización configura el almacén de perfiles e ingiere 4 000 000 de en el día 1, en un plazo de 24 horas el tablero estaría disponible, aunque la variable [!UICONTROL Cambio de recuento de perfiles] el widget se establecería en 0. Este método de contabilización se realiza para evitar un pico asociado con la ingesta inicial de perfiles en el sistema. En los próximos 30 días, su organización introducirá 1 000 000 de perfiles adicionales en el almacén de perfiles de. Una vez que se toma la siguiente instantánea, [!UICONTROL Cambio de recuento de perfiles] El widget mostraría un total de 1 000 000 de perfiles agregados, mientras que el [!UICONTROL Recuento de perfiles] El widget mostraría 5 000 000 de perfiles totales.
 
 ![El panel Perfiles de la interfaz de usuario de Platform con el widget Cambio de recuento de perfiles resaltado.](../images/profiles/profile-count-change.png)
 
@@ -321,9 +321,9 @@ El **[!UICONTROL Cambio de recuento de perfiles]** Este widget muestra el númer
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Tendencia de cambio de recuento de perfiles"
->abstract="Este widget muestra el número de perfiles combinados que se han añadido al almacén de perfiles diariamente durante los últimos 30 días, 90 días o 12 meses. El número también depende de las políticas de combinación seleccionadas que se apliquen a los datos de perfil."
+>abstract="Este widget muestra el número de perfiles combinados que se han agregado diariamente al almacén de perfiles en los últimos 30 días, 90 días o 12 meses. El número también depende de la política de combinación seleccionada que se aplique a los datos del perfil."
 
-El **[!UICONTROL Tendencia de cambio de recuento de perfiles]** widget muestra el número total de perfiles combinados que se han agregado al Almacenamiento de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si tuviera que introducir perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
+El **[!UICONTROL Tendencia de cambio de recuento de perfiles]** widget muestra el número total de perfiles combinados que se han agregado al almacén de perfiles diariamente en los últimos 30 días, 90 días o 12 meses. Este número se actualiza cada día que se toma la instantánea, por lo que si tuviera que introducir perfiles en Platform, el número de perfiles no se reflejaría hasta que se tome la siguiente instantánea. El recuento de perfiles agregados es el resultado de la política de combinación seleccionada que se está aplicando a los datos del perfil para combinar fragmentos de perfil y formar un único perfil para cada individuo.
 
 Para obtener más información, consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies).
 
@@ -350,9 +350,9 @@ Este widget le ayuda a administrar sus necesidades de activación de destino mos
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Perfiles por identidad"
->abstract="Este widget muestra el desglose de todos los perfiles combinados en su almacén de perfiles por identidades."
+>abstract="Este widget muestra el desglose de todos los perfiles combinados del almacén de perfiles por identidades."
 
-El **[!UICONTROL Perfiles por identidad]** Este widget muestra el desglose de identidades en todos los perfiles combinados del Almacenamiento de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias áreas de nombres a ese cliente individual.
+El **[!UICONTROL Perfiles por identidad]** Este widget muestra el desglose de identidades en todos los perfiles combinados del almacén de perfiles. El número total de perfiles por identidad (es decir, sumando los valores mostrados para cada área de nombres) puede ser mayor que el número total de perfiles combinados, ya que un perfil podría tener varias áreas de nombres asociadas. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias áreas de nombres a ese cliente individual.
 
 Para obtener más información, consulte la [sección sobre políticas de combinación anteriormente en este documento](#merge-policies).
 
@@ -371,9 +371,9 @@ Para obtener más información sobre las identidades, consulte la [Documentació
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Superposición de identidad"
->abstract="Este widget utiliza un diagrama de Venn para mostrar la superposición de perfiles en su almacén de perfiles que contienen las dos identidades seleccionadas."
+>abstract="Este widget utiliza un diagrama de Venn para mostrar la superposición de perfiles en el almacén de perfiles que contienen las dos identidades seleccionadas."
 
-El **[!UICONTROL Superposición de identidad]** Este widget utiliza un diagrama de Venn, o diagrama de conjunto, para mostrar la superposición de perfiles en el Almacenamiento de perfiles que contienen las dos identidades seleccionadas.
+El **[!UICONTROL Superposición de identidad]** Este widget utiliza un diagrama de Venn, o diagrama de conjunto, para mostrar la superposición de perfiles en el almacén de perfiles que contienen las dos identidades seleccionadas.
 
 Utilice los menús desplegables del widget para seleccionar las identidades que desea comparar. Los círculos muestran el recuento total relativo de perfiles que contienen cada identidad. El número de perfiles que contienen ambas identidades se representa mediante el tamaño de la superposición entre los círculos. Si un cliente interactúa con su marca en más de un canal, se asociarán varias identidades a ese cliente individual. En esta situación, es probable que su organización tenga varios perfiles que contengan fragmentos de más de una identidad.
 
@@ -407,18 +407,18 @@ Para ver un cuadro de diálogo que detalla el recuento total de perfiles de una 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Perfiles no segmentados"
->abstract="Este widget proporciona el número total de perfiles que no están adjuntos a ningún público y representa la oportunidad de activar perfiles en toda la organización."
+>abstract="Este widget proporciona el número total de perfiles no adjuntos a ninguna audiencia y representa la oportunidad de activar perfiles en toda la organización."
 
 El [!UICONTROL Perfiles no segmentados] widget proporciona el número total de perfiles no adjuntos a ninguna audiencia. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. También indica la oportunidad de eliminar perfiles que no proporcionan un ROI adecuado.
 
 ![El widget Perfiles no segmentados.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Tendencia de cambio de los perfiles no segmentados] {#unsegmented-profiles-change-trend}
+### [!UICONTROL Los perfiles no segmentados cambian de tendencia] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendencia de perfiles no segmentados"
->abstract="Este widget proporciona una ilustración de un gráfico de líneas que muestra el número de perfiles que no están adjuntos a ningún público durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a ningún público se puede visualizar en períodos de 30 días, 90 días y 12 meses."
+>abstract="Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ninguna audiencia durante un período de tiempo determinado. La tendencia de los perfiles no adjuntos a una audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses."
 
 El [!UICONTROL Los perfiles no segmentados cambian de tendencia] el widget utiliza un gráfico de líneas para ilustrar el número de perfiles agregados desde la última instantánea diaria que no están adjuntos a ninguna audiencia. La tendencia de cambio de perfiles no adjuntos a ninguna audiencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. El período de tiempo se elige en un menú desplegable del widget. El recuento de perfiles se refleja en el eje Y y el tiempo en el eje X.
 

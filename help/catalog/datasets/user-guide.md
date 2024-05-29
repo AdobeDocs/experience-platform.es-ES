@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="Números negativos en la actividad del conjunto de datos"
->abstract="Los números negativos de los registros ingeridos implican que un usuario ha eliminado determinados lotes en un intervalo de tiempo seleccionado."
+>abstract="Los números negativos en los registros ingeridos significan que un usuario ha eliminado ciertos lotes en un intervalo de tiempo seleccionado."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -313,7 +313,7 @@ Si desea eliminar el lote, seleccione **[!UICONTROL Eliminar lote]** cerca de la
 
 >[!NOTE]
 >
->Si los datos ingeridos se han habilitado para el perfil y se han procesado, al eliminar un lote no se eliminan esos datos del almacén de perfiles.
+>Si los datos ingeridos se han habilitado para Perfil y se han procesado, al eliminar un lote no se eliminan esos datos del almacén de perfiles.
 
 ![El botón Eliminar lote se resalta en la página de detalles del conjunto de datos.](../images/datasets/user-guide/delete-batch.png)
 

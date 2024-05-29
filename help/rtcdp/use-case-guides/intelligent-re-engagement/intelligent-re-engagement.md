@@ -1,12 +1,12 @@
 ---
 title: Reparticipación inteligente
-description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a los clientes poco frecuentes.
+description: Ofrezca experiencias atractivas y conectadas durante los momentos clave de conversión para volver a atraer de forma inteligente a clientes poco frecuentes.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -46,7 +46,7 @@ A medida que complete los pasos para implementar el caso de uso, utilizará las 
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=es) : ayuda a ofrecer a sus clientes experiencias conectadas, contextuales y personalizadas.
    * [Evento o Déclencheur de audiencia](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [Audiencias/ Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=es)
+   * [Audiencias/ Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Acciones de recorrido](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Cómo lograr el caso de uso {#achieve-use-case-instruction}
@@ -178,9 +178,9 @@ El [Detalles del ID del usuario final](/help/xdm/field-groups/event/enduserids.m
 
 +++
 
-+++Detalles de comercio (grupo de campos)
++++Detalles de Commerce (grupo de campos)
 
-El [Detalles de comercio](/help/xdm/field-groups/event/commerce-details.md) El grupo de campos se utiliza para describir datos de comercio, como información del producto (SKU, nombre y cantidad) y operaciones estándar del carro de compras (pedidos, pagos y abandonos).
+El [Detalles de Commerce](/help/xdm/field-groups/event/commerce-details.md) El grupo de campos se utiliza para describir datos de comercio, como información del producto (SKU, nombre y cantidad) y operaciones estándar del carro de compras (pedidos, pagos y abandonos).
 
 | Campos | Descripción |
 | --- | --- |
@@ -221,9 +221,9 @@ El [[!UICONTROL ExperienceEvent de XDM]](/help/xdm/classes/experienceevent.md) L
 
 +++
 
-+++Detalles de comercio (grupo de campos)
++++Detalles de Commerce (grupo de campos)
 
-El [Detalles de comercio](/help/xdm/field-groups/event/commerce-details.md) El grupo de campos se utiliza para describir datos de comercio, como información del producto (SKU, nombre y cantidad) y operaciones estándar del carro de compras (pedidos, pagos y abandonos).
+El [Detalles de Commerce](/help/xdm/field-groups/event/commerce-details.md) El grupo de campos se utiliza para describir datos de comercio, como información del producto (SKU, nombre y cantidad) y operaciones estándar del carro de compras (pedidos, pagos y abandonos).
 
 | Campos | Descripción |
 | --- | --- |
@@ -342,9 +342,9 @@ No hay ninguna [políticas de uso de datos](/help/data-governance/policies/overv
 * Restringir la segmentación entre sitios
 * Restringir la combinación de datos directamente identificables con datos anónimos
 
-### Creación de públicos {#create-audience}
+### Crear público {#create-audience}
 
-Los escenarios de renovación de participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles para distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de varias formas en [!DNL Adobe Experience Platform].
+Los escenarios de renovación de participación utilizan audiencias para definir atributos o comportamientos específicos compartidos por un subconjunto de perfiles del almacén de perfiles con el fin de distinguir un grupo comercializable de personas de la base de clientes. Las audiencias se pueden crear de varias formas en [!DNL Adobe Experience Platform].
 
 Para obtener más información sobre cómo crear una audiencia, lea la [guía de IU de audience service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -446,7 +446,7 @@ El escenario de exploración de productos abandonados se dirige a la exploració
 
 +++Events
 
-Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Los eventos le permiten almacenar en déclencheur sus recorridos de forma unitaria para enviar mensajes, en tiempo real, a la persona que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: Vistas del producto
    * Esquema: Transacciones digitales del cliente
@@ -571,7 +571,7 @@ El escenario de carro de compras abandonado se dirige a productos que se han col
 
 +++Events
 
-Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Los eventos le permiten almacenar en déclencheur sus recorridos de forma unitaria para enviar mensajes, en tiempo real, a la persona que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: Agregar al carro
    * Esquema: Transacciones digitales del cliente
@@ -704,7 +704,7 @@ El escenario de confirmación de pedido se centra en las compras de productos re
 
 +++Events
 
-Los eventos permiten activar sus recorridos de forma unitaria para enviar mensajes, en tiempo real, al particular que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Los eventos le permiten almacenar en déclencheur sus recorridos de forma unitaria para enviar mensajes, en tiempo real, a la persona que entra en el recorrido. Para obtener más información sobre los eventos, lea la [guía general de eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: Compras en línea
    * Esquema: Transacciones digitales del cliente

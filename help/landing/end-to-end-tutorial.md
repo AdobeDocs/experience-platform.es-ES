@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;CJA;análisis de recorrido;
 title: Flujo de trabajo de ejemplo completo de Adobe Experience Platform
 description: Conozca el flujo de trabajo completo básico para Adobe Experience Platform de alto nivel.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 1%
@@ -56,7 +56,7 @@ Al cargar datos en un nuevo conjunto de datos por primera vez, o al configurar u
 
 ## Evaluación de los datos
 
-Una vez que haya generado correctamente perfiles a partir de los datos ingeridos, puede evaluar los datos mediante la segmentación. La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de personas desde el almacén de perfiles, con el fin de distinguir un grupo comercializable de personas de su base de clientes. Para obtener más información sobre la segmentación, lea la [resumen del servicio de segmentación](../segmentation/home.md).
+Una vez que haya generado correctamente perfiles a partir de los datos ingeridos, puede evaluar los datos mediante la segmentación. La segmentación es el proceso de definir atributos o comportamientos específicos compartidos por un subconjunto de personas del almacén de perfiles con el fin de distinguir un grupo comercializable de personas de la base de clientes. Para obtener más información sobre la segmentación, lea la [resumen del servicio de segmentación](../segmentation/home.md).
 
 ### Creación de una definición de segmento
 

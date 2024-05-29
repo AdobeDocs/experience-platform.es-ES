@@ -5,7 +5,7 @@ title: Procesamiento de solicitudes de privacidad en el perfil del cliente en ti
 type: Documentation
 description: Adobe Experience Platform Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según se define en numerosas regulaciones de privacidad. Este documento cubre conceptos esenciales relacionados con el procesamiento de solicitudes de privacidad para el Perfil del cliente en tiempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Esta guía requiere una comprensión práctica de lo siguiente [!DNL Platform] c
 * [[!DNL Identity Service]](../identity-service/home.md): resuelve el desafío fundamental que plantea la fragmentación de los datos de experiencia del cliente al unir identidades entre dispositivos y sistemas.
 * [[!DNL Real-Time Customer Profile]](home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-## Explicación de áreas de nombres de identidad {#namespaces}
+## Explicación de los espacios de nombres de identidad {#namespaces}
 
 Adobe Experience Platform [!DNL Identity Service] vincula los datos de identidad del cliente entre sistemas y dispositivos. [!DNL Identity Service] utiliza **áreas de nombres de identidad** proporcionar contexto a los valores de identidad relacionándolos con su sistema de origen. Un área de nombres puede representar un concepto genérico como una dirección de correo electrónico (&quot;correo electrónico&quot;) o asociar la identidad a una aplicación específica, como un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o Adobe Target ID (&quot;TNTID&quot;).
 
@@ -52,7 +52,7 @@ Las secciones siguientes describen cómo realizar solicitudes de privacidad para
 >
 >El Privacy Service solo puede procesar [!DNL Profile] datos que utilizan una política de combinación que no realiza la vinculación de identidad. Consulte la sección sobre [limitaciones de políticas de combinación](#merge-policy-limitations) para obtener más información.
 >
->Tenga en cuenta que las solicitudes de privacidad se procesan de forma asíncrona dentro de los requisitos regulatorios y que la cantidad de tiempo que tardan en completarse puede variar. Si se producen cambios en su [!DNL Profile] datos mientras una solicitud sigue procesándose, no se garantiza que esos registros entrantes también se procesen en esa solicitud. Solo se garantiza la eliminación de los perfiles que se mantienen en el lago de datos o el Almacenamiento de perfiles en el momento en que se solicita el trabajo de privacidad. Si ingiere datos de perfil relacionados con el asunto de una solicitud de eliminación durante el trabajo de eliminación, no se garantiza que se eliminen todos los fragmentos de perfil.
+>Tenga en cuenta que las solicitudes de privacidad se procesan de forma asíncrona dentro de los requisitos regulatorios y que la cantidad de tiempo que tardan en completarse puede variar. Si se producen cambios en su [!DNL Profile] datos mientras una solicitud sigue procesándose, no se garantiza que esos registros entrantes también se procesen en esa solicitud. Solo se garantiza la eliminación de los perfiles que se mantienen en el lago de datos o en el almacén de perfiles en el momento en que se solicita el trabajo de privacidad. Si ingiere datos de perfil relacionados con el asunto de una solicitud de eliminación durante el trabajo de eliminación, no se garantiza que se eliminen todos los fragmentos de perfil.
 >Es responsabilidad del cliente tener en cuenta los datos entrantes en Platform o el servicio de perfil en el momento de una solicitud de eliminación, ya que esos datos se insertarán en los almacenes de registros. Debe ser prudente con la ingesta de datos que se han eliminado o que se están eliminando.
 
 ### Uso de la API

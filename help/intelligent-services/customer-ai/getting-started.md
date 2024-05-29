@@ -5,10 +5,10 @@ feature: Customer AI
 title: Introducción a Customer AI
 description: Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 11%
+source-wordcount: '570'
+ht-degree: 8%
 
 ---
 

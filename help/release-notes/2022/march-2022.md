@@ -2,16 +2,16 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2022'
 description: Las notas de la versión de marzo de 2022 de Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 18%
+source-wordcount: '1172'
+ht-degree: 11%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 30 de marzo de 2022**
+**Fecha de la versión: jueves, 30 de marzo de 2022**
 
 Nuevas funciones de Adobe Experience Platform:
 
@@ -84,8 +84,8 @@ El panel Perfiles muestra una instantánea de los datos de atributo (registro) q
 | Función | Descripción |
 | --- | --- |
 | Widget de perfiles no segmentados | El widget proporciona el número total de todos los perfiles no adjuntos a ningún segmento. El número generado es preciso desde la última instantánea y representa la oportunidad de activación de perfiles en toda la organización. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
-| Widget de tendencias de perfiles no segmentados | Este widget proporciona una ilustración gráfica de líneas del número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
-| Perfiles no segmentados por widget de identidad | Este widget clasifica el número total de perfiles no segmentados por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Widget de tendencias de perfiles no segmentados | Este widget proporciona una ilustración de gráfico de líneas para el número de perfiles que no están adjuntos a ningún segmento durante un período de tiempo determinado. La tendencia se puede visualizar en períodos de 30 días, 90 días y 12 meses. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
+| Perfiles no segmentados por widget de identidad | Este widget categoriza el número total de perfiles no segmentados por su identificador único. Los datos se visualizan en un gráfico de barras. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 | Widget de perfiles de identidad única | Este widget proporciona un recuento de los perfiles de su organización que solo tienen un tipo de ID que crea su identidad, ya sea un correo electrónico o un ECID. Consulte la [documentación de widgets estándar de perfiles](../../dashboards/guides/profiles.md#standard-widgets) para obtener más información. |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ El panel Destinos muestra una instantánea de los destinos que su organización 
 
 | Función | Descripción |
 | --- | --- |
-| Widget de recuento de destinos | El widget proporciona el número total de puntos de conexión disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos tanto activos como inactivos. Consulte la [destinos documentación de widget estándar](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
+| Widget de recuento de destinos | El widget proporciona el número total de puntos de conexión disponibles en los que se puede activar y enviar una audiencia dentro del sistema. Este número incluye destinos activos e inactivos. Consulte la [destinos documentación de widget estándar](../../dashboards/guides/destinations.md#standard-widgets) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -108,14 +108,14 @@ Para obtener más información sobre paneles de destinos en Platform, consulte l
 
 ## Recopilación de datos {#data-collection}
 
-Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos a la red perimetral de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
+Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos al Edge Network de Adobe Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
 | Configuración global de flujo de datos | Ahora puede configurar varias opciones globales nuevas al configurar un conjunto de datos: ubicación geográfica, cookie de ID de origen y sincronización de ID de terceros. Consulte la sección sobre [configuración de una secuencia de datos](../../datastreams/overview.md#create) en la guía de la interfaz de usuario de flujos de datos para obtener más información. |
-| [API del servidor de red perimetral](../../server-api/overview.md) | La API de servidor permite que los clientes interactúen con la red perimetral de Experience Platform mediante un punto de conexión nuevo y autenticado, para impulsar una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. |
+| [API de Edge Network Server](../../server-api/overview.md) | La API de servidor permite que los clientes interactúen con el Edge Network del Experience Platform mediante un punto de conexión nuevo y autenticado, para impulsar una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. |
 
 Para obtener más información sobre la recopilación de datos en Platform, consulte la [resumen de recopilación de datos](../../collection/home.md).
 

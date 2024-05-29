@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 0%
@@ -130,7 +130,7 @@ Las siguientes operaciones son compatibles con [!DNL Real-Time Customer Profile]
 | --- | --- | 
 | `create` | La operación predeterminada. Esto genera un método de creación de entidad XDM para [!DNL Real-Time Customer Profile]. |
 | `merge` | Esto genera un método de actualización de entidad XDM para [!DNL Real-Time Customer Profile]. |
-| `delete` | Esto genera un método de eliminación de entidad XDM para [!DNL Real-Time Customer Profile] y elimina permanentemente los datos del [!DNL Profile Store]. |
+| `delete` | Esto genera un método de eliminación de entidad XDM para [!DNL Real-Time Customer Profile] y elimina permanentemente los datos del [!DNL Profile store]. |
 
 Las siguientes operaciones son compatibles con [!DNL Identity Service]:
 

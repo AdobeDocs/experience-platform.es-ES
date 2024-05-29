@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía API de ingesta por lotes
 description: Este documento proporciona una guía completa para los desarrolladores que trabajan con las API de ingesta por lotes para Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Este documento proporciona una guía completa para utilizar [extremos de API de 
 
 En el apéndice del presente documento se proporciona información sobre [datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de ejemplo.
 
-## Primeros pasos
+## Introducción
 
 Los extremos de API utilizados en esta guía forman parte de la variable [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). La ingesta por lotes se proporciona a través de una API RESTful, donde puede realizar operaciones básicas de CRUD con los tipos de objetos admitidos.
 
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que cree tengan un espacio de nombres correcto y estén contenidos en su organización. |
+| `{TENANT_ID}` | Este ID se utiliza para garantizar que los recursos que crea tengan un espacio de nombres correcto y estén contenidos en su organización. |
 | `{SCHEMA_ID}` | El ID del esquema que ha creado. |
 
 ### Crear lote
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Parche de un lote
 
-En ocasiones puede ser necesario actualizar los datos en el almacén de perfiles de su organización. Por ejemplo, es posible que tenga que corregir registros o cambiar un valor de atributo. Adobe Experience Platform admite la actualización o el parche de datos del Almacenamiento de perfiles mediante una acción de actualización o &quot;aplicación de parches a un lote&quot;.
+En ocasiones puede ser necesario actualizar los datos en el almacén de perfiles de su organización. Por ejemplo, es posible que tenga que corregir registros o cambiar un valor de atributo. Adobe Experience Platform admite la actualización o el parche de datos del almacén de perfiles mediante una acción de actualización o &quot;aplicación de parches a un lote&quot;.
 
 >[!NOTE]
 >
@@ -759,7 +759,7 @@ En ocasiones puede ser necesario actualizar los datos en el almacén de perfiles
 Para aplicar parches a un lote, es necesario lo siguiente:
 
 - **Un conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere un `isUpsert:true` se añadirá a la etiqueta `unifiedProfile` matriz. Para obtener más información sobre los pasos que muestran cómo crear un conjunto de datos o configurar uno existente para su actualización, siga el tutorial de [habilitar un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
-- **Archivo de parquet que contiene los campos a los que se va a aplicar el parche y los campos de identidad del perfil.** El formato de datos para aplicar parches a un lote es similar al proceso normal de introducción por lotes. La entrada requerida es un archivo de Parquet. Además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos del almacén de perfiles.
+- **Archivo de parquet que contiene los campos a los que se va a aplicar el parche y los campos de identidad del perfil.** El formato de datos para aplicar parches a un lote es similar al proceso normal de ingesta por lotes. La entrada requerida es un archivo de Parquet y, además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos en el almacén de perfiles.
 
 Una vez que tenga un conjunto de datos habilitado para Perfil y actualización, y un archivo de Parquet que contenga los campos a los que desee aplicar parches, así como los campos de identidad necesarios, puede seguir los pasos para [ingesta de archivos de Parquet](#ingest-parquet-files) para completar el parche mediante la ingesta por lotes.
 

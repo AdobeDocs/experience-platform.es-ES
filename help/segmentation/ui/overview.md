@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
@@ -50,17 +50,17 @@ Para obtener más información, visite la [guía del panel de audiencias](../../
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Pérdida"
->abstract="La pérdida representa el porcentaje de perfiles que cambian dentro de un público en comparación con la última vez que se ejecutó el trabajo del público."
+>abstract="La pérdida representa el porcentaje de perfiles que están cambiando dentro de una audiencia en comparación con la última vez que se ejecutó el trabajo de segmentación."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Método de evaluación"
->abstract="Los métodos de evaluación de públicos incluyen lote, streaming y Edge."
+>abstract="Los métodos de evaluación para audiencias incluyen batch, streaming y edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Añadir todos los públicos a la programación"
->abstract="Habilite la opción para incluir todos los públicos evaluados mediante la segmentación por lotes en la actualización programada diaria. Deshabilite para quitar todos los públicos de la actualización programada."
+>title="Añadir todas las audiencias a la programación"
+>abstract="Habilite la opción para incluir todas las audiencias evaluadas mediante la segmentación por lotes en la actualización programada diaria. Deshabilite esta opción para eliminar todas las audiencias de la actualización programada."
 
 Seleccione el **[!UICONTROL Examinar]** para ver una lista de todas las audiencias de su organización. Esta vista muestra información sobre las audiencias, incluido el recuento de perfiles, el origen, la fecha de creación, la fecha de la última modificación, las etiquetas y el desglose.
 
@@ -113,7 +113,7 @@ Puede añadir campos adicionales a la [!UICONTROL Examinar] página seleccionand
 
 | Campo | Descripción |
 | ----- | ----------- |
-| [!UICONTROL Nombre] | El nombre de la audiencia. |
+| [!UICONTROL Nombre] | Nombre de la audiencia. |
 | [!UICONTROL Recuento de perfiles] | Número total de perfiles aptos para la audiencia. |
 | [!UICONTROL Origen] | El origen de la audiencia. Indica de dónde proviene la audiencia. Los valores posibles incluyen Servicio de segmentación, Carga personalizada, Composición de audiencias y Audience Manager. |
 | [!UICONTROL Estado del ciclo vital] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, y `Published`. Para obtener más información sobre los estados del ciclo vital, incluidos el significado de los distintos estados y cómo mover audiencias a diferentes estados del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-status). |
@@ -166,7 +166,7 @@ El **[!UICONTROL Administración de etiquetas]** aparece la ventana emergente. E
 | Tipo de etiqueta | Descripción |
 | -------- | ----------- |
 | Categorizado | Una etiqueta que crean y administran los administradores de su organización. |
-| Sin categoría | Una etiqueta que se crea dentro de [!UICONTROL Administración de etiquetas] popover. Cualquiera puede crear o administrar este tipo de etiquetas. |
+| Sin categorizar | Una etiqueta que se crea dentro de [!UICONTROL Administración de etiquetas] popover. Cualquiera puede crear o administrar este tipo de etiquetas. |
 
 ![El [!UICONTROL Administración de etiquetas] se muestra la ventana emergente. Se resaltan las opciones para elegir una categoría o una categoría sin clasificar.](../images/ui/overview/create-tag.png)
 
@@ -226,7 +226,7 @@ Cuando se aplican acciones masivas a estas audiencias, se aplican las siguientes
 - Usted **no puede** elimine una audiencia que se esté usando en una activación de destino.
 - Si selecciona un filtro, las audiencias seleccionadas **testamento** restablecer.
 
-### Detalles de audiencia {#audience-details}
+### Detalles de público {#audience-details}
 
 Para ver más detalles acerca de una audiencia específica, seleccione el nombre de una audiencia dentro de la **[!UICONTROL Examinar]** pestaña.
 
@@ -250,7 +250,7 @@ Seleccionar **[!UICONTROL Aplicar etiquetas de acceso]** permite administrar las
 
 >[!BEGINTABS]
 
->[!TAB Composición de público]
+>[!TAB Composición de audiencia]
 
 ![Se muestra la página de detalles de la audiencia con la variable [!UICONTROL Abrir composición] botón resaltado.](../images/ui/overview/audience-details-open-composition.png)
 
@@ -278,7 +278,7 @@ Seleccionar **[!UICONTROL Editar propiedades]** le permitirá editar los detalle
 
 El **[!UICONTROL Audiencia total]** Esta sección muestra el número total de perfiles aptos para la audiencia.
 
-Las estimaciones se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en su almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Puede encontrar más información sobre la generación de estimaciones en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de audiencias.
+Las estimaciones se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en el almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Puede encontrar más información sobre la generación de estimaciones en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de audiencias.
 
 **Destinos activados** {#activated-destinations}
 
@@ -429,7 +429,7 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 
 | Campo | Descripción |
 | ----- | ----------- | 
-| [!UICONTROL Nombre] | El nombre de la audiencia. |
+| [!UICONTROL Nombre] | Nombre de la audiencia. |
 | [!UICONTROL Estado] | El estado de la audiencia. Los valores posibles para este campo incluyen `Draft`, `Inactive`, y `Published`. |
 | [!UICONTROL Creado] | La hora y la fecha de creación de la audiencia. |
 | [!UICONTROL Creado por] | El nombre de la persona que creó la audiencia. |

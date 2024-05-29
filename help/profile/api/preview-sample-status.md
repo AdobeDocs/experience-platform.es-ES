@@ -4,7 +4,7 @@ title: Punto final de API de previsualización de estado de muestra (previsualiz
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Para obtener más información sobre los perfiles y su función dentro del Exper
 
 ## Activación del trabajo de muestra
 
-A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacena en el almacén de datos de perfil. Cuando la ingesta de registros en el Almacenamiento de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacena en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
 * Para **flujos de trabajo de datos**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si es así, se activa automáticamente un trabajo de muestra para actualizar el recuento.
 * Para **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
@@ -100,7 +100,7 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
 | Propiedad | Descripción |
 |---|---|
 | `numRowsToRead` | Número total de perfiles combinados en la muestra. |
-| `sampleJobRunning` | Un valor booleano que devuelve `true` cuando hay un trabajo de muestra en curso. Proporciona transparencia sobre la latencia que se produce cuando se carga un archivo por lotes en, cuando se agrega realmente al Almacenamiento de perfiles. |
+| `sampleJobRunning` | Un valor booleano que devuelve `true` cuando hay un trabajo de muestra en curso. Proporciona transparencia sobre la latencia que se produce cuando se carga un archivo por lotes en, cuando se agrega realmente al almacén de perfiles. |
 | `cosmosDocCount` | Recuento total de documentos en Cosmos. |
 | `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de perfiles. |
 | `lastSuccessfulBatchTimestamp` | Marca de tiempo de la última ingesta correcta por lotes. |
@@ -207,7 +207,7 @@ La respuesta incluye una `data` matriz, que contiene una lista de objetos del co
 
 ## Enumerar la distribución de perfiles por área de nombres de identidad
 
-Puede realizar una solicitud de GET a `/previewsamplestatus/report/namespace` punto de conexión para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por Adobe como las identidades personalizadas definidas por su organización.
+Puede realizar una solicitud de GET a `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por Adobe como las identidades personalizadas definidas por su organización.
 
 Las áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service, y sirven de indicadores del contexto al que se relacionan los datos de los clientes. Para obtener más información, comience por leer el [información general del área de nombres de identidad](../../identity-service/features/namespaces.md).
 
@@ -304,7 +304,7 @@ La respuesta incluye una `data` , con objetos individuales que contienen los det
 
 ## Generar el informe de superposición de conjuntos de datos
 
-El informe de superposición de conjuntos de datos proporciona visibilidad de la composición del Almacenamiento de perfiles de su organización al exponer los conjuntos de datos que más contribuyen a su audiencia direccionable (perfiles combinados). Además de proporcionar perspectivas sobre sus datos, este informe puede ayudarle a realizar acciones para optimizar el uso de las licencias, como configurar las caducidades de ciertos conjuntos de datos.
+El informe de superposición de conjuntos de datos proporciona visibilidad de la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que más contribuyen a su audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre sus datos, este informe puede ayudarle a realizar acciones para optimizar el uso de las licencias, como configurar las caducidades de ciertos conjuntos de datos.
 
 GET Puede generar el informe de superposición de conjuntos de datos realizando una solicitud al `/previewsamplestatus/report/dataset/overlap` punto final.
 
@@ -372,7 +372,7 @@ Este informe proporciona la siguiente información:
 
 ## Generar el informe de superposición del área de nombres de identidad {#identity-overlap-report}
 
-El informe de superposición de áreas de nombres de identidad proporciona visibilidad sobre la composición del Almacenamiento de perfiles de su organización al exponer las áreas de nombres de identidad que más contribuyen a su audiencia a la que se puede dirigir (perfiles combinados). Esto incluye tanto las áreas de nombres de identidad estándar proporcionadas por Adobe, como las áreas de nombres de identidad personalizadas definidas por su organización.
+El informe de superposición de áreas de nombres de identidad proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer las áreas de nombres de identidad que más contribuyen a su audiencia a la que se puede dirigir (perfiles combinados). Esto incluye tanto las áreas de nombres de identidad estándar proporcionadas por Adobe, como las áreas de nombres de identidad personalizadas definidas por su organización.
 
 GET Puede generar el informe de superposición de área de nombres de identidad realizando una solicitud a la variable `/previewsamplestatus/report/namespace/overlap` punto final.
 
@@ -468,7 +468,7 @@ Este informe proporciona la siguiente información:
 
 ## Generación del informe de perfiles no enlazados
 
-Puede obtener más visibilidad sobre la composición del Almacenamiento de perfiles de su organización a través del informe de perfiles no enlazados. Un perfil &quot;no identificado&quot; es un perfil que contiene solo un fragmento de perfil. Un perfil &quot;desconocido&quot; es un perfil asociado a áreas de nombres de identidad seudónimas como `ECID` y `AAID`. Los perfiles desconocidos están inactivos, lo que significa que no han agregado nuevos eventos para el período de tiempo especificado. El informe de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
+Puede obtener más visibilidad sobre la composición del almacén de perfiles de su organización a través del informe de perfiles no enlazados. Un perfil &quot;no identificado&quot; es un perfil que contiene solo un fragmento de perfil. Un perfil &quot;desconocido&quot; es un perfil asociado a áreas de nombres de identidad seudónimas como `ECID` y `AAID`. Los perfiles desconocidos están inactivos, lo que significa que no han agregado nuevos eventos para el período de tiempo especificado. El informe de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
 
 GET Puede generar el informe de perfiles no enlazados realizando una solicitud a la variable `/previewsamplestatus/report/unstitchedProfiles` punto final.
 

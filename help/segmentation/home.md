@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Resumen del servicio de segmentación
 description: Obtenga información acerca del servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
-ht-degree: 12%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ La segmentación es el proceso de definir atributos o comportamientos específic
 
 Una vez que una audiencia se ha definido conceptualmente, se integra [!DNL Experience Platform]. Normalmente, las audiencias las crea el especialista en marketing o audiencia, aunque algunas organizaciones prefieren que las cree su departamento de marketing en colaboración con los analistas de datos. Al revisar los datos que se envían a [!DNL Platform]Sin embargo, el analista de datos puede crear la audiencia de dos formas: creando una definición de segmento seleccionando qué campos y valores se utilizarán para crear las reglas o condiciones de la audiencia o componiendo una audiencia con la Composición de audiencia.
 
-## Creación de públicos
+## Crear público
 
 Las audiencias se pueden crear de dos formas diferentes en Adobe Experience Platform: directamente compuestas como audiencias o a través de definiciones de segmentos derivadas de Platform.
 
@@ -52,20 +52,20 @@ Para obtener información sobre la creación de definiciones de segmentos median
 >
 >Además, si un valor de caducidad de Evento de experiencia está habilitado en el conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía de [Caducidad de Experience Event](../profile/event-expirations.md) para obtener más información sobre cómo esta función puede afectar a la segmentación.
 
-## Evaluar públicos {#evaluate-segments}
+## Evaluar audiencias {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Métodos de evaluación"
->abstract="Actualmente, Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge."
+>abstract="Actualmente, Platform admite tres métodos de evaluación de audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Evaluación de streaming"
->abstract="La segmentación de streaming es un proceso continuo de selección de datos que actualiza las audiencias en respuesta a la actividad de los usuarios."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=es" text="Evaluar eventos en tiempo casi real con segmentación de streaming"
+>abstract="La segmentación por streaming es un proceso de selección de datos continuo que actualiza las audiencias en respuesta a la actividad del usuario."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluar eventos en tiempo casi real con segmentación de flujo continuo"
 
-Actualmente, Platform admite tres métodos de evaluación de públicos: segmentación de streaming, segmentación por lotes y segmentación de Edge.
+Actualmente, Platform admite tres métodos de evaluación de audiencias: segmentación de streaming, segmentación por lotes y segmentación de Edge.
 
 ### Segmentación de streaming {#streaming}
 
@@ -78,9 +78,9 @@ Para obtener más información acerca de la segmentación de flujo continuo, lea
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Evaluación por lotes"
->abstract="Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creado, el público se guarda y se almacena para que pueda exportarlo para utilizarlo."
+>abstract="Como alternativa a un proceso de selección de datos en curso, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir audiencias correspondientes. Una vez creada, la audiencia se guarda y almacena para que pueda exportarla y utilizarla."
 
-Como alternativa a un proceso continuo de selección de datos, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir las audiencias correspondientes. Una vez creada, la audiencia resultante se guarda y almacena para que pueda exportarla y utilizarla.
+Como alternativa a un proceso de selección de datos en curso, la segmentación por lotes mueve todos los datos de perfil a la vez a través de definiciones de segmentos para producir audiencias correspondientes. Una vez creada, la audiencia resultante se guarda y almacena para que pueda exportarla y utilizarla.
 
 Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea evaluar una audiencia por lotes bajo demanda, puede utilizar un trabajo de segmentación. Para obtener más información sobre los trabajos de segmentos, lea la [documentación de trabajos de segmentos](./api/segment-jobs.md).
 
@@ -89,10 +89,10 @@ Las audiencias por lotes se evalúan automáticamente cada 24 horas. Si desea ev
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Evaluación de Edge"
->abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform instantáneamente en la red de Edge, lo que permite casos de uso de personalización de la misma página y de la siguiente página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=es" text="Guía de la interfaz de usuario de segmentación de Edge"
+>abstract="La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea en el Edge Network, lo que permite casos de uso de personalización de la misma página y de la siguiente."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guía de IU de segmentación de Edge"
 
-La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en la red perimetral](../web-sdk/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
+La segmentación de Edge es la capacidad de evaluar segmentos en Platform de forma instantánea [en el Edge Network](../web-sdk/home.md), habilitando casos de uso de personalización de la misma página y de la siguiente.
 
 Para obtener más información acerca de la segmentación de Edge, lea cualquiera de las dos [Documentación de API](./api/edge-segmentation.md) o el [Documentación de IU](./ui/edge-segmentation.md).
 

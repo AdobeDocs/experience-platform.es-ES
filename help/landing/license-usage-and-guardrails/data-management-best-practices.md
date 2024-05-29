@@ -1,11 +1,11 @@
 ---
 title: Prácticas recomendadas de licencia de administración de datos
-description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
+description: Conozca las prácticas recomendadas y las herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ El [!DNL Profile Richness] La métrica varía según la licencia que haya adquir
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización.
 
-## Panel de uso de licencias
+## Tablero de uso de licencias
 
 La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver una instantánea de los datos relacionados con las licencias de su organización para Platform. Los datos del tablero se muestran exactamente como aparecen en el momento específico en el que se tomó la instantánea. La instantánea no es una aproximación ni una muestra de datos y el panel no se actualiza en tiempo real.
 
