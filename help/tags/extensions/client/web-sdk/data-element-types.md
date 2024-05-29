@@ -2,9 +2,9 @@
 title: Tipos de elementos de datos en la extensión SDK para web de Adobe Experience Platform
 description: Obtenga información acerca de los distintos tipos de elementos de datos que proporciona la extensión de etiqueta del SDK web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -60,6 +60,12 @@ Puede crear objetos de carga útil utilizando **[!UICONTROL Variable]** elemento
 ![Imagen de la interfaz de usuario de etiquetas que muestra las opciones del elemento de datos.](assets/variable-data-element.png)
 
 Después de crear este elemento de datos, puede utilizar el [Actualizar variable](./action-types.md#update-variable) acción para modificarla. Cuando esté listo, puede incluir este elemento de datos en la [Enviar evento](./action-types.md#send-event) acción para enviar datos a un conjunto de datos.
+
+## Medios: calidad de la experiencia {#quality-experience}
+
+A **[!UICONTROL Calidad de la experiencia]** Este elemento de datos es útil cuando se envían eventos de medios de streaming a Adobe Experience Platform. Puede añadir este elemento al crear una sesión de contenido y los siguientes eventos de contenido contendrán datos actualizados de calidad de la experiencia.
+
+![Imagen de la IU que muestra la pantalla Crear calidad del elemento de datos de la experiencia.](assets/qoe-data-element.png)
 
 ## Pasos siguientes {#next-steps}
 

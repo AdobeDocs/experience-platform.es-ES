@@ -3,13 +3,13 @@ solution: Data Collection
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
-user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
+user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red de Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 23%
+source-wordcount: '226'
+ht-degree: 14%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 23%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [streamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -43,7 +44,7 @@ ht-degree: 23%
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
       * [Información general](commands/sendevent/overview.md)
-      * [data](commands/sendevent/data.md)
+      * [datos](commands/sendevent/data.md)
       * [documentUnloading](commands/sendevent/documentunloading.md)
       * [personalización](commands/sendevent/personalization.md)
       * [renderDecisions](commands/sendevent/renderdecisions.md)
@@ -52,12 +53,15 @@ ht-degree: 23%
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyPropositions](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [Configurar anulaciones de secuencia de datos](commands/datastream-overrides.md)
    * [Respuestas de comando](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identidad {#identity}
    * [Información general](identity/overview.md)

@@ -2,16 +2,16 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # Configurar la extensión de etiqueta del SDK web
 
-El [!DNL Web SDK] La extensión de etiqueta de envía datos a Adobe Experience Cloud desde las propiedades web a través de Experience Platform Edge Network.
+El [!DNL Web SDK] la extensión de etiqueta envía datos a Adobe Experience Cloud desde las propiedades web a través del Edge Network del Experience Platform.
 
 La extensión de le permite transmitir datos a Platform, sincronizar identidades, procesar señales de consentimiento de clientes y recopilar automáticamente datos de contexto.
 
@@ -47,7 +47,7 @@ Las opciones de configuración en la parte superior de la página indican a Adob
 
 Esta sección le permite seleccionar los flujos de datos que deben utilizarse para cada uno de los tres entornos disponibles (producción, ensayo y desarrollo).
 
-Cuando se envía una solicitud a la red perimetral, se utiliza un ID de secuencia de datos para hacer referencia a la configuración del lado del servidor. Puede actualizar la configuración sin tener que realizar cambios en el código del sitio web.
+Cuando se envía una solicitud al Edge Network, se utiliza un ID de conjunto de datos para hacer referencia a la configuración del lado del servidor. Puede actualizar la configuración sin tener que realizar cambios en el código del sitio web.
 
 Consulte la guía de [flujos de datos](../../../../datastreams/overview.md) para aprender a configurar una secuencia de datos.
 
@@ -113,9 +113,24 @@ Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL C
 
 ![Imagen que muestra la configuración de recopilación de datos de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Función Callback]**: La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](/help/web-sdk/commands/configure/onbeforeeventsend.md) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos a la red perimetral.
+* **[!UICONTROL Función Callback]**: La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](/help/web-sdk/commands/configure/onbeforeeventsend.md) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos al Edge Network.
 * **[!UICONTROL Habilitar la recopilación de datos de clics]**: el SDK web puede recopilar automáticamente la información sobre clics en vínculos. Esta función está habilitada de forma predeterminada, pero se puede deshabilitar con esta opción. Los vínculos también se etiquetan como vínculos de descarga si contienen una de las expresiones de descarga enumeradas en la variable [!UICONTROL Cualificador de vínculo de descarga] cuadro de texto. El Adobe le proporciona algunos calificadores de vínculo de descarga predeterminados. Puede editarlas según sus necesidades.
 * **[!UICONTROL Datos de contexto recopilados automáticamente]**: De forma predeterminada, el SDK web recopila determinados datos de contexto relacionados con el contexto del dispositivo, la web, el entorno y el lugar. Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, seleccione **[!UICONTROL Información de contexto específica]** y seleccione los datos que desea recopilar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obtener más información.
+
+## Configuración de la colección de medios {#media-collection}
+
+La función de recopilación de contenido le ayuda a recopilar datos relacionados con las sesiones de contenido del sitio web.
+
+Los datos recopilados pueden incluir información sobre reproducciones de contenido, pausas, finalizaciones y otros eventos relacionados. Una vez recopilados, puede enviar estos datos a Adobe Experience Platform o Adobe Analytics para generar informes. Esta función proporciona una solución completa para realizar el seguimiento y comprender el comportamiento del consumo de medios en el sitio web.
+
+![Imagen que muestra la configuración de recopilación de medios de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/media-collection.png)
+
+
+* **[!UICONTROL Canal]**: Nombre del canal en el que se produce la recopilación de medios. Ejemplo: `Video channel`.
+* **[!UICONTROL Nombre del reproductor]**: Nombre del reproductor de contenidos.
+* **[!UICONTROL Versión de aplicación]**: versión de la aplicación de reproducción de contenido.
+* **[!UICONTROL Intervalo de ping principal]**: Frecuencia de pings para el contenido principal, en segundos. El valor predeterminado es `10`. Los valores pueden variar desde `10` hasta `50` segundos.  Si no se especifica ningún valor, se utiliza el valor predeterminado al utilizar [sesiones rastreadas automáticamente](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Intervalo de ping de anuncio]**: Frecuencia de pings para el contenido del anuncio, en segundos. El valor predeterminado es `10`. Los valores pueden variar desde `1` hasta `10` segundos. Si no se especifica ningún valor, se utiliza el valor predeterminado al utilizar [sesiones rastreadas automáticamente](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurar anulaciones de secuencia de datos {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Esto le ayuda a activar comportamientos de secuencias de datos diferentes de los
 La anulación de la configuración de la secuencia de datos es un proceso de dos pasos:
 
 1. En primer lugar, debe definir las anulaciones de configuración de la secuencia de datos en la [página de configuración de secuencia de datos](/help/datastreams/configure.md).
-2. A continuación, debe enviar las invalidaciones a la red perimetral mediante un comando del SDK web o mediante la extensión de etiqueta del SDK web.
+2. A continuación, debe enviar las invalidaciones al Edge Network a través de un comando del SDK web o mediante la extensión de etiqueta del SDK web.
 
 Consulte la secuencia de datos [la configuración anula la documentación](/help/datastreams/overrides.md) para obtener instrucciones detalladas sobre cómo anular las configuraciones de secuencia de datos.
 
@@ -140,6 +155,6 @@ Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos 
 
 ## Configuración avanzada
 
-Utilice el **[!UICONTROL Ruta base del borde]** campo si necesita cambiar la ruta base que se utiliza para interactuar con la red perimetral. Esto no debería requerir ninguna actualización, pero en caso de que participe en una versión beta o alfa, Adobe podría pedirle que cambie este campo.
+Utilice el **[!UICONTROL Ruta base del borde]** campo si necesita cambiar la ruta base que se utiliza para interactuar con el Edge Network. Esto no debería requerir ninguna actualización, pero en caso de que participe en una versión beta o alfa, Adobe podría pedirle que cambie este campo.
 
 ![Imagen que muestra la configuración avanzada de mediante la página de extensión de etiquetas del SDK web.](assets/advanced-settings.png)

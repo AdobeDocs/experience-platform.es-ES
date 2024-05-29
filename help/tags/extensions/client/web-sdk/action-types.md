@@ -3,10 +3,10 @@ title: Tipos de acción en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de los diferentes tipos de acción que proporciona la extensión de etiqueta SDK web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ El esquema XDM utilizado para el editor es el esquema seleccionado en la [!UICON
 ![](assets/update-variable-set-property.png)
 
 Existen algunas diferencias entre el editor de la acción de la variable de actualización y el editor del elemento de datos del objeto XDM. En primer lugar, la acción de actualización de la variable tiene un elemento de nivel raíz denominado &quot;xdm&quot;. Si hace clic en este elemento, puede especificar un elemento de datos para utilizar y establecer el objeto completo. En segundo lugar, la acción actualizar variable tiene casillas de verificación para borrar los datos del objeto xdm. Haga clic en una de las propiedades de la izquierda y, a continuación, marque la casilla de verificación de la derecha para borrar el valor. Esto borrará el valor actual antes de establecer cualquier valor en la variable.
+
+## Enviar evento multimedia {#send-media-event}
+
+Envía un evento multimedia a Adobe Experience Platform o Adobe Analytics. Esta acción es útil cuando realiza un seguimiento de eventos de medios en el sitio web. Seleccione una instancia (si tiene más de una). La acción requiere un `playerId` que representa un identificador único para una sesión de medios rastreada. También requiere un **[!UICONTROL Calidad de la experiencia]** y una `playhead` elemento de datos al iniciar una sesión de contenido.
+
+![Imagen de la IU de Platform que muestra la pantalla de envío de eventos multimedia.](assets/send-media-event.png)
+
+El **[!UICONTROL Enviar evento multimedia]** el tipo de acción admite las siguientes propiedades:
+
+- **[!UICONTROL Instancia]**: la instancia del SDK web que se está utilizando.
+- **[!UICONTROL Tipo de evento de medios]**: tipo de evento multimedia que se rastrea.
+- **[!UICONTROL ID del reproductor]**: el identificador único de la sesión de contenidos.
+- **[!UICONTROL Cabezal De Reproducción]**: Posición actual de la reproducción del contenido, en segundos.
+- **[!UICONTROL Detalles de sesión de medios]**: al enviar un evento de inicio de contenido, se deben especificar los detalles de sesión de contenido necesarios.
+- **[!UICONTROL Detalles del capítulo]**: en esta sección puede especificar los detalles del capítulo al enviar un evento de medios de inicio de capítulos.
+- **[!UICONTROL Detalles de publicidad]**: Al enviar un `AdBreakStart` evento, debe especificar los detalles publicitarios necesarios.
+- **[!UICONTROL Detalles de Advertising pod]**: Detalles sobre el pod de publicidad al enviar un `AdStart` evento.
+- **[!UICONTROL Detalles del error]**: Detalles sobre el error de reproducción que se está rastreando.
+- **[!UICONTROL Detalles de actualización de estado]**: El estado del reproductor que se está actualizando.
+- **[!UICONTROL Metadatos personalizados]**: los metadatos personalizados sobre el evento multimedia del que se está realizando un seguimiento.
+- **[!UICONTROL Calidad de la experiencia]**: la calidad de los medios de los datos de experiencia que se están rastreando.
+
+## Obtener rastreador de Media Analytics {#get-media-analytics-tracker}
+
+Esta acción se utiliza para obtener la API heredada de Media Analytics. Al configurar la acción y proporcionar un nombre de objeto, la API heredada de Media Analytics se exportará a ese objeto de ventana. Si no se proporciona ninguno, se exporta a `window.Media` como la biblioteca Media JS actual.
+
+![Imagen de la IU de Platform que muestra el tipo de acción Obtener rastreador de Media Analytics.](assets/get-media-analytics-tracker.png)
 
 ## Pasos siguientes {#next-steps}
 
