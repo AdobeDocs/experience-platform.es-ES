@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
+source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
 workflow-type: tm+mt
-source-wordcount: '2024'
-ht-degree: 32%
+source-wordcount: '2096'
+ht-degree: 31%
 
 ---
 
@@ -13,6 +13,21 @@ ht-degree: 32%
 # Notas de la versión de la extensión Adobe Experience Platform Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión del propio SDK, consulte la [Notas de la versión de Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versión 2.23.1: 28 de mayo de 2024
+
+**Nuevas funciones**
+
+* Se ha agregado compatibilidad con [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) en la configuración de la extensión de.
+* Se ha añadido la [`Send Media Event`](action-types.md#send-media-event) acción para el [!DNL Streaming Media Collection] funcionalidad.
+* Se ha añadido la [`Media: Quality of Experience`](data-element-types.md#quality-experience) elemento de datos para [!DNL Streaming Media Collection] funcionalidad.
+
+Contiene la versión 2.20.0 del SDK web de Adobe Experience Platform.
+
+**Correcciones y mejoras**
+
+* Se ha corregido un error que se producía al buscar elementos de datos en [Actualizar variable](action-types.md#update-variable) acción.
+* Eliminado [!UICONTROL Medios] tipos de eventos de los tipos de eventos sugeridos para ser usados en la `sendEvent` acción.
 
 ## Versión 2.22.0: 3 de mayo de 2024
 
