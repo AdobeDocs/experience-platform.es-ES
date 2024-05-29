@@ -4,26 +4,26 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
 workflow-type: tm+mt
-source-wordcount: '2107'
-ht-degree: 8%
+source-wordcount: '2069'
+ht-degree: 1%
 
 ---
 
-# Panel de uso de licencias {#license-usage-dashboard}
+# Tablero de uso de licencias {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
->title="Panel de uso de licencias"
->abstract="El panel de uso de licencias ofrece datos de los productos de Adobe Experience Platform que ha adquirido. La información general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas."
+>title="Tablero de uso de licencias"
+>abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
->title="Panel de uso de licencias"
->abstract="El panel de uso de licencias ofrece datos de los productos de Adobe Experience Platform que ha adquirido. La información general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas.<br><br>Las predicciones de uso se actualizan mensualmente a fin de mes y prevén su uso para el próximo período de seis meses. Para reducir el uso, configure la caducidad de los conjuntos de datos o de perfiles seudónimos para las zonas protegidas y los conjuntos de datos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=es" text="Caducidades de los conjuntos de datos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidades de los datos de perfiles seudónimos"
+>title="Tablero de uso de licencias"
+>abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Caducidad de conjuntos de datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de datos de perfiles seudónimos"
 
 Puede ver información importante sobre el uso de licencias de su organización en Adobe Experience Platform [!UICONTROL Uso de licencias] panel. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 
@@ -57,7 +57,7 @@ Para navegar al panel de uso de licencias dentro de la interfaz de usuario de Pl
 
 Este tablero muestra todos sus productos de Adobe Experience Platform con licencia, incluidos los complementos, en formato de tabla. La tabla proporciona información clave sobre el uso de la licencia en todos los perfiles disponibles.
 
-| Nombre de la columna | Descripción |
+| Nombre de columna | Descripción |
 |---|---|
 | **[!UICONTROL Producto]** | La solución de Adobe con licencia de su organización. |
 | **[!UICONTROL Métrica principal]** | La métrica principal utilizada para rastrear en para ese producto. |
