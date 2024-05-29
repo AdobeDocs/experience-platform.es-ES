@@ -2,9 +2,9 @@
 title: Datos de identidad en el SDK web
 description: Obtenga información sobre cómo recuperar y administrar Adobe Experience Cloud ID (ECID) mediante el SDK web de Adobe Experience Platform.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ Este documento proporciona información general sobre cómo administrar los ECID
 
 El SDK web de Platform asigna y rastrea los ECID mediante cookies, con varios métodos disponibles para configurar cómo se generan estas cookies.
 
-Cuando un usuario nuevo llega a su sitio web, el servicio de identidad de Adobe Experience Cloud intenta establecer una cookie de identificación de dispositivo para ese usuario. Para los visitantes que acceden al sitio por primera vez, se genera un ECID que se devuelve en la primera respuesta de Adobe Experience Platform Edge Network. Para visitantes repetidos, el ECID se recupera del `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` y se agrega a la carga útil mediante la red perimetral.
+Cuando un usuario nuevo llega a su sitio web, el servicio de identidad de Adobe Experience Cloud intenta establecer una cookie de identificación de dispositivo para ese usuario. Para los visitantes que acceden al sitio por primera vez, se genera un ECID que se devuelve en la primera respuesta del Edge Network de Adobe Experience Platform. Para visitantes repetidos, el ECID se recupera del `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` y el Edge Network la agrega a la carga útil.
 
 Una vez establecida la cookie que contiene el ECID, cada solicitud posterior generada por el SDK web incluye un ECID codificado en la variable `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
-Al utilizar cookies para la identificación del dispositivo, tiene dos opciones para interactuar con la red perimetral:
+Al utilizar cookies para identificar el dispositivo, tiene dos opciones para interactuar con el Edge Network:
 
-1. Enviar datos directamente al dominio de red perimetral `adobedc.net`. Este método se denomina [recopilación de datos de terceros](#third-party).
+1. Envío de datos directamente al dominio del Edge Network `adobedc.net`. Este método se denomina [recopilación de datos de terceros](#third-party).
 1. Cree un CNAME en su propio dominio que apunte a `adobedc.net`. Este método se denomina [recopilación de datos de origen](#first-party).
 
 Como se explica en las secciones siguientes, el método de recopilación de datos que decide utilizar tiene un impacto directo en la duración de las cookies en los exploradores.
 
 ### Recopilación de datos de terceros {#third-party}
 
-La recopilación de datos de terceros implica el envío de datos directamente al dominio de red perimetral `adobedc.net`.
+La recopilación de datos de terceros implica el envío de datos directamente al dominio del Edge Network `adobedc.net`.
 
 En los últimos años, los navegadores web se han vuelto cada vez más restrictivos en el manejo de cookies configuradas por terceros. Algunos exploradores bloquean las cookies de terceros de forma predeterminada. Si utiliza cookies de terceros para identificar a los visitantes del sitio, la duración de dichas cookies es casi siempre más corta que la que estaría disponible de otro modo utilizando cookies de origen en su lugar. A veces, una cookie de terceros caduca en tan solo siete días.
 
@@ -56,9 +56,36 @@ Si un usuario final visita el sitio tres veces en una semana y luego no regresa 
 
 Para tener en cuenta los efectos de la duración de las cookies como se describe más arriba, puede optar por establecer y administrar sus propios identificadores de dispositivo en su lugar. Consulte la guía de [ID de dispositivos de origen](./first-party-device-ids.md) para obtener más información.
 
-## Recuperación del ECID y la región para el usuario actual
+## Recupere el ECID y la región del usuario actual {#retrieve-ecid}
 
-Para recuperar el ECID único del visitante actual, utilice el `getIdentity` comando. Para los visitantes nuevos que aún no tienen un ECID, este comando genera un nuevo ECID. `getIdentity` también devuelve el ID de región del visitante.
+Según el caso de uso, hay dos formas de acceder a la variable [!DNL ECID]:
+
+* [Recupere el [!DNL ECID] mediante la preparación de datos para la recopilación de datos](#retrieve-ecid-data-prep): Este es el método recomendado que debe utilizar.
+* [Recupere el [!DNL ECID] a través de `getIdentity()` mando](#retrieve-ecid-getidentity): Utilice este método únicamente cuando necesite lo siguiente [!DNL ECID] información del lado del cliente.
+
+### Recupere el [!DNL ECID] mediante la preparación de datos para la recopilación de datos {#retrieve-ecid-data-prep}
+
+Uso [Preparación de datos para la recopilación de datos](../../datastreams/data-prep.md) para asignar el [!DNL ECID] a un [!DNL XDM] field. Esta es la forma recomendada de acceder a [!DNL ECID].
+
+Para ello, establezca el campo de origen en la siguiente ruta:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+A continuación, establezca el campo de destino en una ruta XDM donde el campo sea del tipo `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### Recupere el [!DNL ECID] a través de `getIdentity()` mando {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>Solo debe recuperar el ECID a través del `getIdentity()` si necesita el comando [!DNL ECID] en el lado del cliente. Si solo desea asignar el ECID a un campo XDM, utilice [Preparación de datos para la recopilación de datos](#retrieve-ecid-data-prep) en su lugar.
+
+Para recuperar el ECID único del visitante actual, utilice el `getIdentity` comando. Para visitantes nuevos que no tienen un [!DNL ECID] sin embargo, este comando genera un nuevo [!DNL ECID]. `getIdentity` también devuelve el ID de región del visitante.
 
 >[!NOTE]
 >
@@ -118,7 +145,7 @@ Cada objeto de identidad de la matriz de identidades contiene las siguientes pro
 | `authenticationState` | Cadena | **(Obligatorio)** El estado de autenticación del ID. Los valores posibles son `ambiguous`, `authenticated`, y `loggedOut`. |
 | `primary` | Booleano | Determina si esta identidad debe utilizarse como fragmento principal en el perfil. De forma predeterminada, el ECID se establece como identificador principal del usuario. Si se omite, el valor predeterminado es `false`. |
 
-Uso del `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que usar el campo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=es) método desde el [!DNL ID Service API]. Consulte la [Documentación de API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obtener más información.
+Uso del `identityMap` para identificar dispositivos o usuarios lleva al mismo resultado que usar el campo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) método desde el [!DNL ID Service API]. Consulte la [Documentación de API del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) para obtener más información.
 
 ## Migración de la API de visitante a ECID
 
