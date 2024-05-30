@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
    * [Activar datos en destinos basados en archivos mediante la API de Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Conéctese a destinos de flujo continuo y active los datos mediante la API de Flow Service](./api/streaming-destinations.md)
    * [Conéctese a destinos de marketing por correo electrónico basados en archivos y active los datos mediante la API de Flow Service](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Active audiencias en destinos por lotes a través de la API de activación ad hoc](./api/ad-hoc-activation-api.md)
+   * [Activar audiencias en destinos por lotes mediante la API de activación ad hoc](./api/ad-hoc-activation-api.md)
    * [Editar destino](./api/edit-destination.md)
    * [Actualizar flujos de datos de destino](./api/update-destination-dataflows.md)
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
