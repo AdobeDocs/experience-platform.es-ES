@@ -5,7 +5,7 @@ feature: Customer AI
 title: Creación de segmentos de clientes con puntuaciones previstas
 description: Cuando se completa una ejecución de predicción, los perfiles consumen automáticamente las puntuaciones de tendencia predichas. El enriquecimiento de perfiles con puntuaciones de inteligencia artificial aplicada al cliente permite crear segmentos de clientes para encontrar audiencias en función de sus puntuaciones de tendencia. En esta sección se proporcionan los pasos para crear segmentos mediante el Generador de segmentos.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -22,21 +22,21 @@ Cuando se completa una ejecución de predicción, los perfiles consumen automát
 
 En la IU de Platform, haga clic en **[!UICONTROL Segmentos]** en el panel de navegación izquierdo y haga clic en **[!UICONTROL Crear segmento]**.
 
-![](../images/user-guide/segments.png)
+![](../images/user-guide/segments_new.png)
 
 El **Generador de segmentos** aparece. Desde la izquierda **[!UICONTROL Campos]** y debajo de la **[!UICONTROL Atributos]** , haga clic en la carpeta denominada **[!UICONTROL Perfil individual de XDM]** y, a continuación, haga clic en la carpeta con el área de nombres de su organización. La carpeta denominada **[!UICONTROL Inteligencia artificial aplicada al cliente]** contiene los resultados de las ejecuciones de predicción y tiene el nombre de la instancia a la que pertenecen las puntuaciones. Haga clic en una carpeta de instancias para acceder a los resultados de la instancia deseada.
 
-![](../images/user-guide/results.png)
+![](../images/user-guide/results_new.png)
 
 Situado en el centro del Generador de segmentos, arrastre y suelte el **[!UICONTROL Puntuación]** en el *lienzo del generador de reglas* para definir una regla.
 
 Debajo de la derecha *Propiedades del segmento* , proporcione un nombre para el segmento.
 
-![](../images/user-guide/properties.png)
+![](../images/user-guide/properties_new.png)
 
 Encima de la mano izquierda *Campos* Haga clic en la columna **engranaje** y seleccione un *Política de combinación* de la lista desplegable. Clic **[!UICONTROL Guardar]** para crear el segmento.
 
-![](../images/user-guide/merge_policy.png)
+![](../images/user-guide/merge_policy_new.png)
 
 ## Pasos siguientes
 
