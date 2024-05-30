@@ -2,7 +2,7 @@
 description: Aprenda a configurar los metadatos de audiencia para los destinos creados con Destination SDK.
 title: Configuración de metadatos de audiencia
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Al crear la configuración de metadatos de audiencia, puede utilizar los paráme
 | `mapExperiencePlatformSegmentName` | Booleano | Indica si la variable [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) el valor en el flujo de trabajo de activación de destino debe ser el nombre de la audiencia del Experience Platform. |
 | `mapExperiencePlatformSegmentId` | Booleano | Indica si la variable [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) El valor en el flujo de trabajo de activación de destino debe ser el ID de audiencia del Experience Platform. |
 | `mapUserInput` | Booleano | Habilita o deshabilita los datos introducidos por el usuario para [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) en el flujo de trabajo de activación de destino. Si se establece en `true`, `audienceTemplateId` no puede estar presente. |
-| `audienceTemplateId` | Booleano | El `instanceId` de la [plantilla de metadatos de audiencia](../../metadata-api/create-audience-template.md) se utiliza para el destino. |
+| `audienceTemplateId` | Cadena | El `instanceId` de la [plantilla de metadatos de audiencia](../../metadata-api/create-audience-template.md) se utiliza para el destino. |
 
 {style="table-layout:auto"}
 
