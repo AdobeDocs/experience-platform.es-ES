@@ -2,10 +2,10 @@
 title: Administración de permisos para la recopilación de datos en Experience Platform
 description: Una descripción general de alto nivel de cómo administrar permisos y controlar el acceso a las funciones de recopilación de datos en Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 28%
+source-wordcount: '1338'
+ht-degree: 26%
 
 ---
 
@@ -33,9 +33,9 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 | --- | --- | --- |
 | Zonas protegidas | (N/D) | Según la variable [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
 | Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [Esquemas del modelo de datos de experiencia (XDM)](../xdm/home.md). |
-| Modelado de datos | Esquemas de vistas | Otorga acceso de solo lectura a los esquemas. |
-| Administración de identidades | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/features/namespaces.md). |
-| Administración de identidades | Ver espacios de nombres de identidad | Otorga acceso de solo lectura a las áreas de nombres de identidad. |
+| Modelado de datos | Esquemas de vista | Otorga acceso de solo lectura a los esquemas. |
+| Identity Management | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/features/namespaces.md). |
+| Identity Management | Ver áreas de nombres de identidad | Otorga acceso de solo lectura a las áreas de nombres de identidad. |
 | Recopilación de datos | Administrar flujos de datos | Concede la capacidad de ver, crear y editar [flujos de datos](../datastreams/overview.md). |
 | Recopilación de datos | Ver flujos de datos | Otorga acceso de solo lectura a las secuencias de datos. |
 
@@ -56,7 +56,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 | Derechos de propiedad | Editar propiedad | Concede la capacidad de editar la configuración básica de las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administrar entornos | Concede la capacidad de administrar el [entornos](../tags/ui/publishing/environments.md) para las propiedades a las que un usuario tiene acceso. |
 | Derechos de propiedad | Administración de extensiones | Concede la capacidad de administrar el [extensiones](../tags/ui/managing-resources/extensions/overview.md) para las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Publicación | Concede la capacidad de publicar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Derechos de propiedad | Publicar | Concede la capacidad de publicar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de compañía | Desarrollo de extensiones | Concede la capacidad de crear y modificar paquetes de extensión que sean propiedad de su organización, incluidas versiones privadas y solicitudes de lanzamiento público. |
 | Derechos de compañía | Administrar configuraciones de aplicación | Este permiso solo es aplicable si tiene una licencia para Adobe Journey Optimizer u otra solución que conceda acceso a la mensajería móvil en la aplicación y a la mensajería push. Esto le permite administrar las aplicaciones que Adobe Experience Cloud conoce, así como las credenciales push necesarias para comunicarse con el servicio Firebase Cloud Messaging y el servicio de notificaciones push de Apple. |
 | Derechos de compañía | Administrar propiedades | Concede la capacidad de crear y administrar etiquetas (propiedad web), reenvío de eventos (propiedad edge) y propiedades móviles. |
@@ -78,7 +78,15 @@ Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar 
 
 ### Administración de permisos en Adobe Experience Platform {#manage-platform}
 
-Desde el **[!UICONTROL Permisos]** área en Adobe Experience Platform seleccione la función que desea editar.
+>[!NOTE]
+>
+>Para administrar permisos para una función, necesitará derechos de administrador. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema.
+
+Experience Cloud **[!UICONTROL Permisos]** permite definir funciones de usuario y directivas para administrar el acceso a funciones y objetos dentro de una aplicación de producto.
+
+Pasante [!UICONTROL Permisos]Además, puede crear y administrar funciones y asignar los permisos de recursos deseados para estas funciones.
+
+![Adobe Experience Cloud resalta el producto Permisos.](./images/permissions/permissions-product.png)
 
 Para acceder a las funciones de recopilación de datos, debe habilitar todos los permisos en la **[!UICONTROL Zonas protegidas]**, **[!UICONTROL Modelado de datos]**, **[!UICONTROL Identity Management]**, y **[!UICONTROL Recopilación de datos]** categorías.
 
