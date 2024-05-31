@@ -4,7 +4,7 @@ description: Aprenda a añadir el orden de marcas de hora de los clientes a sus 
 badgePrivateBeta: label="Beta privada" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 En Adobe Experience Platform, el orden de los datos no se garantiza de forma predeterminada al ingerir datos mediante la transmisión de flujo continuo al almacén de perfiles. Al solicitar la marca de tiempo del cliente, puede garantizar que el mensaje más reciente, según la marca de tiempo del cliente proporcionada, se conservará en el almacén de perfiles. A continuación, se perderán todos los mensajes antiguos y **no** estar disponible para su uso en servicios descendentes que utilicen datos de perfil como la segmentación y los destinos. Como resultado, esto permite que los datos de perfil sean coherentes y que permanezcan sincronizados con los sistemas de origen.
 
-Para habilitar la solicitud de marcas de hora de cliente, use `extSourceSystemAudit.lastUpdatedDate` dentro del campo [Tipo de datos Atributos de auditoría del sistema de origen externo](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
+Para habilitar la solicitud de marcas de hora de cliente, use `extSourceSystemAudit.lastUpdatedDate` dentro del campo [Grupo de campos Atributos de auditoría del sistema de origen externo](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
 
 ## Restricciones
 
