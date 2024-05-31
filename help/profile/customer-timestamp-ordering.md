@@ -4,9 +4,9 @@ description: Aprenda a añadir el orden de marcas de hora de los clientes a sus 
 badgePrivateBeta: label="Beta privada" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Solicitud de marca de tiempo del cliente
 
-En Adobe Experience Platform, el orden de los datos no se garantiza automáticamente al ingerir datos mediante la transmisión de flujo continuo al almacén de perfiles. Al solicitar la marca de tiempo del cliente, puede garantizar que el mensaje más reciente, según la marca de tiempo del cliente proporcionada, se conservará en el almacén de perfiles. A continuación, se perderán todos los mensajes antiguos y **no** estar disponible para su uso en servicios descendentes que utilicen datos de perfil como la segmentación y los destinos. Como resultado, esto permite que los datos de perfil sean coherentes y que permanezcan sincronizados con los sistemas de origen.
+En Adobe Experience Platform, el orden de los datos no se garantiza de forma predeterminada al ingerir datos mediante la transmisión de flujo continuo al almacén de perfiles. Al solicitar la marca de tiempo del cliente, puede garantizar que el mensaje más reciente, según la marca de tiempo del cliente proporcionada, se conservará en el almacén de perfiles. A continuación, se perderán todos los mensajes antiguos y **no** estar disponible para su uso en servicios descendentes que utilicen datos de perfil como la segmentación y los destinos. Como resultado, esto permite que los datos de perfil sean coherentes y que permanezcan sincronizados con los sistemas de origen.
 
-Para habilitar la solicitud de marcas de hora de cliente, use `extSourceSystemAudit.lastUpdatedDate` dentro del campo [Tipo de datos Atributos de auditoría del sistema de origen externo](../xdm/data-types/external-source-system-audit-attributes.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
+Para habilitar la solicitud de marcas de hora de cliente, use `extSourceSystemAudit.lastUpdatedDate` dentro del campo [Tipo de datos Atributos de auditoría del sistema de origen externo](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) y póngase en contacto con el administrador de cuentas técnico de Adobe o con el servicio de atención al cliente de Adobe con su información de zona protegida y conjunto de datos.
 
 ## Restricciones
 
@@ -30,7 +30,7 @@ Durante esta versión beta privada, se aplican las siguientes restricciones al u
 - El `extSourceSystemAudit.lastUpdatedDate` campo **debe** estar en el [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato. Cuando se utiliza el formato ISO 8601, es **debe** ser como una fecha y hora completas con el formato `yyyy-MM-ddTHH:mm:ss.sssZ` (por ejemplo, `2028-11-13T15:06:49.001Z`).
 - Todas las filas de datos introducidas **debe** contener el `extSourceSystemAudit.lastUpdatedDate` como un grupo de campos de nivel superior. Esto significa que este campo **debe** no se puede anidar dentro del esquema XDM. Si falta este campo o tiene un formato incorrecto, el registro con formato incorrecto **no** y se enviará un mensaje de error correspondiente.
 - Cualquier conjunto de datos habilitado para el pedido de marcas de tiempo de clientes **debe** ser un nuevo conjunto de datos sin ningún dato introducido anteriormente.
-- Para cualquier fragmento de perfil determinado, solo las filas que contienen un `extSourceSystemAudit.lastUpdatedDate` se incorporarán. Si la fila no contiene un más reciente `extSourceSystemAudit.lastUpdatedDate`, la fila se descartará.
+- Para cualquier fragmento de perfil determinado, solo las filas que contienen un `extSourceSystemAudit.lastUpdatedDate` se incorporarán. Filas que contienen un `extSourceSystemAudit.lastUpdatedDate` que sea mayor o de la misma edad se descartará.
 
 ## Recomendaciones 
 
