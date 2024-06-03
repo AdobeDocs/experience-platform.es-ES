@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform Web SDK Extension
 description: Extensión de etiqueta de SDK web de Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 31%
+source-wordcount: '2158'
+ht-degree: 30%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 31%
 # Notas de la versión de la extensión Adobe Experience Platform Web SDK
 
 Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión del propio SDK, consulte la [Notas de la versión de Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versión 2.23.2: 3 de junio de 2024
+
+**Correcciones y mejoras**
+
+* Se ha corregido un error que se producía al modificar la configuración de la extensión cuando se definían las anulaciones de configuración.
+* Permitir la configuración de valores vacíos para los intervalos de ping de la colección de medios.
+* Se ha corregido un error que se producía al modificar una acción de actualización de variable.
+* Permitir el restablecimiento del contenedor de sincronización de ID en las anulaciones de configuración.
+
+Contiene la versión 2.20.0 del SDK web de Adobe Experience Platform.
 
 ## Versión 2.23.1: 28 de mayo de 2024
 
