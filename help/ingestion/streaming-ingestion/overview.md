@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de ingesta de streaming
 description: La introducción por transmisión para Adobe Experience Platform proporciona a los usuarios un método para enviar datos desde dispositivos del cliente y del lado del servidor al Experience Platform en tiempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,11 @@ Una vez que esté seguro de que los datos están limpios, puede habilitar los co
 
 Para obtener más información sobre la activación de un conjunto de datos para [!DNL Profile] y [!DNL Identity Service], lea la [configuración de una guía de conjuntos de datos](../../profile/tutorials/dataset-configuration.md).
 
-## ¿Cuál es la latencia esperada para la transmisión de la ingesta en [!DNL Platform]?
+## ¿Cuál es la latencia esperada para la transmisión de la ingesta en Experience Platform?
+
+>[!IMPORTANT]
+>
+>Las protecciones para la ingesta de transmisión se calculan en el nivel de organización y no en el de zona protegida. Esto significa que el uso de datos por zona protegida está enlazado al derecho de uso de licencias total que corresponde con toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información sobre el derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destino | Latencia esperada |
 | --------- | ---------------- |
