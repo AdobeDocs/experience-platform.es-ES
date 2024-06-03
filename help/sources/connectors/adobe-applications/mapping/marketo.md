@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Asignación de campos para el origen del Marketo Engage
 description: Las siguientes tablas contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 4%
+source-wordcount: '890'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,11 @@ Las siguientes tablas contienen las asignaciones entre los campos de los nueve [
 
 El [!DNL Marketo] La fuente de ahora admite actividades estándar adicionales. Para utilizar actividades estándar, debe actualizar el esquema con la variable [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md) porque si crea nuevos `activities` flujo de datos sin actualizar el esquema, las plantillas de asignación fallarán porque los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, aún puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Platform.
 
-Consulte la documentación sobre [clase Evento de experiencia XDM](../../../../xdm/classes/experienceevent.md) para obtener más información sobre la clase XDM y los grupos de campos XDM.
+Lea la documentación sobre [clase Evento de experiencia XDM](../../../../xdm/classes/experienceevent.md) para obtener más información sobre la clase XDM y los grupos de campos XDM.
+
+>[!NOTE]
+>
+>El `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` El campo de origen es un campo calculado que debe añadirse utilizando **[!UICONTROL Añadir campo calculado]** en la interfaz de usuario de Experience Platform. Lea el tutorial sobre [adición de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
 | Conjunto de datos de origen | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ Consulte la documentación sobre [clase Evento de experiencia XDM](../../../../x
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | Este es un campo calculado. |
 
 {style="table-layout:auto"}
 
@@ -402,16 +407,11 @@ Lea el [Información general del perfil individual XDM](../../../../xdm/classes/
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Este es un campo calculado. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Este es un campo calculado. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Este es un campo calculado. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->El `to_object('ECID',arrays_to_objects('id',explode(ecids)))` El campo de origen es un campo calculado que debe añadirse utilizando [!UICONTROL Añadir campo calculado] en la interfaz de usuario de Platform. Consulte el tutorial sobre [adición de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
 ## Pasos siguientes
 
