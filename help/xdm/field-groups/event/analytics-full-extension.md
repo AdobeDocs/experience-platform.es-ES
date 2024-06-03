@@ -2,7 +2,7 @@
 title: Grupo de campos de esquema de extensión completa de Adobe Analytics ExperienceEvent
 description: Obtenga información acerca del grupo de campos de esquema Extensión completa de Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 5%
@@ -37,7 +37,7 @@ El grupo de campos proporciona un solo `_experience` objeto a un esquema, que co
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` captura datos personalizados [dimensiones](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=es) que Analytics rastrea.
+`customDimensions` captura datos personalizados [dimensiones](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) que Analytics rastrea.
 
 ![campo customDimensions](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -62,7 +62,7 @@ El grupo de campos proporciona un solo `_experience` objeto a un esquema, que co
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `firstWeb` | [[!UICONTROL Información web]](../../data-types/web-information.md) | La información relacionada con la página web, el vínculo y el referente del primer evento de experiencia de este usuario final. |
-| `firstTimestamp` | Número entero | Una marca de tiempo Unix para el primer ExperienceEvent de este usuario final. |
+| `firstTimestamp` | Entero | Una marca de tiempo Unix para el primer ExperienceEvent de este usuario final. |
 
 ## `environment` {#environment}
 
@@ -72,12 +72,12 @@ El grupo de campos proporciona un solo `_experience` objeto a un esquema, que co
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `browserIDStr` | Cadena | El identificador de Adobe Analytics del navegador utilizado (también conocido como [dimensión de tipo de explorador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=es)). |
-| `operatingSystemIDStr` | Cadena | El identificador de Adobe Analytics del sistema operativo utilizado (también conocido como [dimensión tipo de sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=es)). |
+| `browserIDStr` | Cadena | El identificador de Adobe Analytics del navegador utilizado (también conocido como [dimensión de tipo de explorador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
+| `operatingSystemIDStr` | Cadena | El identificador de Adobe Analytics del sistema operativo utilizado (también conocido como [dimensión tipo de sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
 
 ## Campos de evento personalizados {#events}
 
-El grupo de campos Extensión de Analytics proporciona diez campos de objeto que capturan hasta 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=es) cada uno, para un total de 1000 para el grupo de campos.
+El grupo de campos Extensión de Analytics proporciona diez campos de objeto que capturan hasta 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) cada uno, para un total de 1000 para el grupo de campos.
 
 Cada objeto de evento de nivel superior contiene los objetos de evento individuales para su intervalo respectivo. Por ejemplo, `event101to200` contiene los eventos con claves de `event101` hasta `event200`.
 
@@ -95,9 +95,9 @@ Cada objeto de evento utiliza el [[!UICONTROL Medida]](../../data-types/measure.
 | --- | --- | --- |
 | `search` | [[!UICONTROL Buscar]](../../data-types/search.md) | Registra información relacionada con la búsqueda web o móvil de la entrada de sesión. |
 | `web` | [[!UICONTROL Información web]](../../data-types/web-information.md) | Registra información sobre los clics en vínculos, los detalles de página web, la información del referente y los detalles del explorador para la entrada de sesión. |
-| `depth` | Número entero | La profundidad de la sesión actual (como el número de página) para el usuario final. |
-| `num` | Número entero | Número de la sesión actual del usuario final. |
-| `timestamp` | Número entero | Una marca de tiempo Unix para la entrada de sesión. |
+| `depth` | Entero | La profundidad de la sesión actual (como el número de página) para el usuario final. |
+| `num` | Entero | Número de la sesión actual del usuario final. |
+| `timestamp` | Entero | Una marca de tiempo Unix para la entrada de sesión. |
 
 ## Pasos siguientes
 

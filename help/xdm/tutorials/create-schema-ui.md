@@ -5,9 +5,9 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
+source-wordcount: '4813'
 ht-degree: 0%
 
 ---
@@ -353,11 +353,36 @@ Seleccionar **[!UICONTROL Activar]** para confirmar su elección. Puede seleccio
 
 ## Más acciones {#more}
 
-En el Editor de esquemas también puede realizar acciones rápidas para copiar la estructura JSON del esquema o eliminar el esquema si no se ha habilitado para el perfil del cliente en tiempo real o tiene conjuntos de datos asociados. Seleccionar [!UICONTROL Más] en la parte superior de la vista para mostrar una lista desplegable con acciones rápidas.
-
-La funcionalidad Copiar estructura JSON le permite ver el aspecto que tendría una carga útil de ejemplo mientras sigue creando el esquema y las canalizaciones de datos. Resulta especialmente útil en situaciones en las que hay estructuras de mapa de objetos complejas en el esquema, como un mapa de identidad.
+En el Editor de esquemas también puede realizar acciones rápidas para copiar la estructura JSON del esquema o eliminarlo. Seleccionar [!UICONTROL Más] en la parte superior de la vista para mostrar una lista desplegable con acciones rápidas.
 
 ![Editor de esquemas con el botón Más resaltado y las opciones desplegables resaltadas.](../images/tutorials/create-schema/more-actions.png)
+
+### Eliminación de un esquema {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="No se puede eliminar el esquema"
+>abstract="No se puede eliminar el esquema porque se ha habilitado para el perfil y tiene conjuntos de datos asociados."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="No se puede eliminar el esquema"
+>abstract="No se puede eliminar el esquema porque se ha habilitado para el perfil."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="No se puede eliminar el esquema"
+>abstract="No se puede eliminar el esquema porque tiene conjuntos de datos asociados."
+
+Se puede eliminar un esquema en la interfaz de usuario desde el Editor de esquemas utilizando [!UICONTROL Más] y también desde los detalles de esquema en la [!UICONTROL Examinar] pestaña. Existen ciertas condiciones que impiden que se elimine un esquema. Un esquema no se puede eliminar si:
+
+* El esquema está habilitado para el perfil.
+* El esquema está habilitado para el perfil y tiene conjuntos de datos asociados.
+* El esquema tiene conjuntos de datos asociados, pero no está habilitado para el perfil.
+
+### Copiar estructura de JSON {#copy-json-structure}
+
+Seleccionar **[!UICONTROL Copiar estructura de JSON]** para generar una carga útil de exportación para cualquier esquema de la biblioteca de esquemas. Esta acción copia la estructura JSON en el portapapeles. El JSON exportado se puede utilizar para importar el esquema y cualquier recurso relacionado en una zona protegida u organización diferente. Esto hace que compartir y reutilizar esquemas entre diferentes entornos sea sencillo y eficaz.
 
 ## Pasos siguientes y recursos adicionales
 

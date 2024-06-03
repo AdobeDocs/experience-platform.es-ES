@@ -4,14 +4,19 @@ title: Exportación de esquemas XDM en la IU
 description: Obtenga información sobre cómo exportar un esquema existente a una zona protegida u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
 
-# Exportación de esquemas XDM en la IU
+# Exportación de esquemas XDM en la IU {#export-xdm-schemas-in-the-UI}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_copyjsonstructure"
+>title="Copiar estructura de JSON"
+>abstract="Genere una carga útil de exportación para el esquema elegido copiando la estructura JSON en el portapapeles. Utilice esta función para exportar los detalles de cualquier esquema de la biblioteca de esquemas. Este JSON exportado se puede utilizar para importar el esquema y cualquier recurso relacionado en una zona protegida u organización diferente. Esto hace que compartir y reutilizar esquemas entre diferentes entornos sea sencillo y eficaz."
 
 Todos los recursos de la biblioteca de esquemas están contenidos en una zona protegida específica de una organización. En algunos casos, es posible que desee compartir recursos del Modelo de datos de experiencia (XDM) entre entornos limitados y organizaciones.
 
@@ -40,6 +45,8 @@ A continuación, seleccione la **[!UICONTROL Copiar JSON]** icono (![Icono Copia
 ![El espacio de trabajo Esquemas con una fila de esquema y [!UICONTROL Copiar a JSON] resaltado.](../images/ui/export/copy-json.png)
 
 Esto copia una carga útil JSON en el portapapeles, generada en función de la estructura de esquema. Para el &quot;[!DNL Loyalty Members]&quot; como se muestra arriba, se genera el siguiente JSON:
+
++++Seleccione para ampliar una carga útil JSON de ejemplo
 
 ```json
 [
@@ -203,6 +210,8 @@ Esto copia una carga útil JSON en el portapapeles, generada en función de la e
 ]
 ```
 
++++
+
 La carga útil también se puede copiar seleccionando [!UICONTROL Más] en la parte superior derecha del Editor de esquemas. Un menú desplegable ofrece dos opciones: [!UICONTROL Copiar estructura de JSON] y [!UICONTROL Eliminar esquema].
 
 >[!NOTE]
@@ -215,7 +224,7 @@ La carga útil adopta la forma de una matriz, y cada elemento de matriz es un ob
 
 Tenga en cuenta que cada instancia del ID de inquilino de su organización aparece como `<XDM_TENANTID_PLACEHOLDER>` en la carga útil. Estos marcadores de posición se reemplazarán automáticamente con el valor de ID de inquilino adecuado según dónde importe el esquema en el siguiente paso.
 
-## Importe el recurso mediante la API
+## Importe el recurso mediante la API {#import-resource-with-api}
 
 Una vez copiado el JSON de exportación para el esquema, puede utilizarlo como carga útil para una solicitud de POST a `/rpc/import` en la API de Registro de esquemas. Consulte la [guía de importar extremo](../api/import.md) para obtener más información sobre cómo configurar la llamada para enviar el esquema a la organización y al entorno limitado deseados.
 

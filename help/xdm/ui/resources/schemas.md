@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3732'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Creación y edición de esquemas en la IU
+# Creación y edición de esquemas en la IU {#create-edit-schemas-in-ui}
 
 Esta guía proporciona información general sobre cómo crear, editar y administrar esquemas del Modelo de datos de experiencia (XDM) para su organización en la interfaz de usuario de Adobe Experience Platform.
 
@@ -281,12 +281,12 @@ Después de aplicar los cambios, el nuevo campo aparece en el área de nombres d
 
 ![Campo añadido al objeto estándar](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Habilitación de un esquema para el perfil del cliente en tiempo real {#profile}
+## Habilitar un esquema para el perfil del cliente en tiempo real {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Habilitar un esquema para perfil"
->abstract="Cuando se habilita un esquema para el perfil, cualquier conjunto de datos creado a partir de este esquema participa en el perfil del cliente en tiempo real, que combina datos de fuentes diferentes para construir una vista completa de cada cliente. Una vez que se utiliza un esquema para ingerir datos en el perfil, no se puede deshabilitar. Consulte la documentación para obtener más información."
+>title="Habilitar un esquema para el perfil"
+>abstract="Cuando un esquema está habilitado para Perfil, cualquier conjunto de datos creado a partir de este esquema participa en el Perfil del cliente en tiempo real, que combina datos de fuentes dispares para construir una vista completa de cada cliente. Una vez que se utiliza un esquema para introducir datos en el perfil, no se puede desactivar. Consulte la documentación para obtener más información."
 
 [Perfil del cliente en tiempo real](../../../profile/home.md) combina datos de diferentes fuentes para crear una vista completa de cada cliente individual. Si desea que los datos capturados por un esquema participen en este proceso, debe habilitar el esquema para utilizarlo en [!DNL Profile].
 
