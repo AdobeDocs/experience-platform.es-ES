@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general del sistema XDM
 description: La estandarización y la interoperabilidad son conceptos clave detrás de Adobe Experience Platform. El modelo de datos de experiencia (XDM), impulsado por el Adobe, es un esfuerzo para estandarizar los datos de experiencia del cliente y definir esquemas para la administración de experiencias del cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 4%
+source-wordcount: '2101'
+ht-degree: 0%
 
 ---
 
@@ -48,12 +48,12 @@ Para obtener más información sobre cómo administrar e interactuar con esquema
 * [Guía de IU de XDM](./ui/overview.md)
 * [Guía de API de Registro de esquemas](./api/overview.md)
 
-## Comportamientos de los datos en el sistema XDM {#data-behaviors}
+## Comportamientos de datos en el sistema XDM {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamientos de datos"
->abstract="Los datos que se van a usar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un asunto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos que son áreas de nombres para uso exclusivo de un conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de los datos en Platform."
+>abstract="Los datos que se van a utilizar en Experience Platform se agrupan en tres tipos de comportamiento: registro, serie temporal y ad hoc. Los esquemas de registro proporcionan información sobre los atributos de un sujeto, mientras que los esquemas de series temporales capturan una instantánea del sistema en el momento en que se realizó una acción. Los esquemas ad hoc capturan campos con espacio de nombres para su uso exclusivo en un único conjunto de datos. Consulte la documentación para obtener más información sobre los comportamientos de datos en Platform."
 
 Los datos que se van a utilizar en Experience Platform se agrupan en tres tipos de comportamiento:
 
@@ -118,10 +118,6 @@ Consulte la [Introducción al servicio de consultas](../query-service/home.md) p
 El Perfil del cliente en tiempo real proporciona un perfil de consumidor centralizado para la administración de experiencias personalizada y dirigida. Cada perfil contiene datos que se agregan en todos los sistemas e incluyen cuentas con marca de tiempo procesables de eventos que involucran al sujeto del perfil. Estos eventos pueden haber tenido lugar en cualquiera de los sistemas utilizados con Experience Platform.
 
 El perfil del cliente en tiempo real consume datos con formato de esquema basados en el [!UICONTROL Perfil individual de XDM] y [!UICONTROL ExperienceEvent de XDM] y responde a consultas basadas en esos datos.
-
->[!NOTE]
->
->El perfil del cliente en tiempo real sí lo tiene **no** admitir esquemas basados en clases distintas de [!UICONTROL ExperienceEvent de XDM] clase.
 
 El sistema mantiene una instancia de cada perfil del cliente, combinando los datos para formar una &quot;única fuente fiable&quot; para el individuo. Estos datos unificados se representan con lo que se conoce como &quot;esquema de unión&quot; (a veces denominado &quot;vista de unión&quot;). Un esquema de unión agrega los campos de todos los esquemas que implementan la misma clase en un único esquema. Al maquetar un esquema mediante la interfaz de usuario o la API de, puede activar el esquema para utilizarlo con el perfil del cliente en tiempo real y etiquetarlo para incluirlo en la unión. El esquema etiquetado participará en la definición del esquema que se envía al perfil.
 
