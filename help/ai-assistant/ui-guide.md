@@ -1,9 +1,7 @@
 ---
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
-hide: true
-hidefromtoc: true
-source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%

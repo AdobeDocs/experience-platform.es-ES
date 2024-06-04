@@ -1,9 +1,7 @@
 ---
 title: Privacidad, seguridad y administración en el asistente de IA
 description: Obtenga información acerca de las prácticas de privacidad, seguridad y gobernanza de AI Assistant.
-hide: true
-hidefromtoc: true
-source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
