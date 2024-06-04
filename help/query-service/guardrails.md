@@ -3,9 +3,9 @@ keywords: Experience Platform;consulta;servicio de consultas;solución de proble
 title: Protecciones para el servicio de consultas
 description: Este documento proporciona información sobre los límites de uso de los datos del servicio de consultas para ayudarle a optimizar el uso de las consultas.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 2%
 # Protecciones para el servicio de consultas
 
 Las protecciones son umbrales que guían el uso de los datos y el sistema, la optimización del rendimiento y la prevención de errores o resultados inesperados en Adobe Experience Platform.
-
 Este documento proporciona límites de uso predeterminados para los datos del servicio de consulta para ayudarle a optimizar el rendimiento del sistema al consultar datos en relación con sus derechos de licencia.
+
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
 
 ## Requisitos previos
 

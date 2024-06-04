@@ -1,16 +1,16 @@
 ---
-title: Protecciones de rendimiento para la API del servidor de red perimetral
+title: Protecciones de rendimiento para la API de Edge Network Server
 description: Aprenda a utilizar la API de servidor dentro de protecciones de rendimiento óptimas.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
 
 
-# Protecciones de rendimiento para la API del servidor de red perimetral
+# Protecciones de rendimiento para la API de Edge Network Server
 
 ## Información general {#overview}
 
@@ -18,14 +18,18 @@ Las protecciones de rendimiento definen los límites de uso relacionados con los
 
 El Adobe de no es responsable de la degradación del rendimiento causada por los límites de uso excedidos. Los clientes que superan de forma consistente las barreras de rendimiento pueden solicitar capacidad de procesamiento adicional para evitar una degradación del rendimiento.
 
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
+
 ## Definiciones
 
-* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por la red perimetral de Experience Platform que no fallan con errores y se relacionan únicamente con las API de red perimetral aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
+* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por el Edge Network Experience Platform que no fallan con errores y se relacionan únicamente con las API de Edge Network aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
 * **Porcentaje de tiempo activo mensual** para una región determinada se calcula como el promedio de la disponibilidad para todos los intervalos de cinco minutos en un mes.
-* Un **corriente arriba** es un servicio detrás de la red perimetral, habilitado para un conjunto de datos específico, como el reenvío del lado del servidor de Adobe, la segmentación de Adobe Edge o Adobe Target.
+* Un **corriente arriba** es un servicio detrás del Edge Network, habilitado para una secuencia de datos específica, como Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
 * A **unidad de solicitud** corresponde a un fragmento de 8 KB de una solicitud y a un flujo ascendente configurado para una secuencia de datos.
 * A **solicitud** es un mensaje único enviado por una aplicación propiedad del cliente a [!DNL Server API]. Una solicitud puede contener una o más unidades de solicitud.
-* Un **error** es cualquier solicitud que falla debido a una red perimetral [error de servicio interno](error-handling.md).
+* Un **error** es cualquier solicitud que falla debido a un Edge Network [error de servicio interno](error-handling.md).
 
 ## Límites de servicio
 
@@ -48,7 +52,7 @@ Todos los límites se aplican y normalizan sobre una **unidad de solicitud (RU)*
 
 La tabla siguiente muestra los valores de límite predeterminados. Si necesita límites de unidades de solicitud más altos, póngase en contacto con el representante de la cuenta.
 
-| Extremo | Unidades de solicitudes por segundo |
+| Punto de conexión | Unidades de solicitudes por segundo |
 | --- | --- |
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
@@ -58,7 +62,7 @@ La tabla siguiente muestra los valores de límite predeterminados. Si necesita l
 
 | Formato de carga útil | Tamaño máximo de una solicitud | Fragmentos de solicitud máximos de 8 KB |
 | --- | --- | --- |
-| Texto sin formato JSON | 64 kB | 8 |
+| Texto sin formato JSON | 64 KB | 8 |
 
 
 >[!NOTE]

@@ -5,16 +5,20 @@ product: experience platform
 type: Documentation
 description: Obtenga información acerca del rendimiento y las protecciones aplicadas por el sistema para los datos y la segmentación de perfiles a fin de garantizar un uso óptimo de la funcionalidad de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 2%
+source-wordcount: '2457'
+ht-degree: 1%
 
 ---
 
 # Protecciones predeterminadas para [!DNL Real-Time Customer Profile] datos y segmentación
 
 Adobe Experience Platform le permite ofrecer experiencias multicanal personalizadas en función de perspectivas de comportamiento y atributos del cliente en forma de perfiles del cliente en tiempo real. Para admitir este nuevo enfoque para los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
+
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
 
 Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos de perfil para obtener un rendimiento óptimo del sistema. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
@@ -89,8 +93,8 @@ Las siguientes protecciones hacen referencia al tamaño de los datos y proporcio
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --------- | ----- | ---------- | ----------- |
-| Tamaño máximo de ExperienceEvent | 10KB | Protección impuesta por el sistema | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, aunque se perderán todos los eventos de más de 10 KB. |
-| Tamaño máximo de registro de perfil | 100KB | Protección impuesta por el sistema | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil que superen los 100 KB. |
+| Tamaño máximo de ExperienceEvent | 10 KB | Protección impuesta por el sistema | **El tamaño máximo de un evento es de 10 KB.** La ingesta continuará, aunque se perderán todos los eventos de más de 10 KB. |
+| Tamaño máximo de registro de perfil | 100 KB | Protección impuesta por el sistema | **El tamaño máximo de un registro de perfil es de 100 KB.** La ingesta continuará, pero se perderán los registros de perfil que superen los 100 KB. |
 | Tamaño máximo del fragmento de perfil | 50 MB | Protección impuesta por el sistema | **El tamaño máximo de un solo fragmento de perfil es de 50 MB.** La segmentación, las exportaciones y las búsquedas pueden fallar en cualquier [fragmento de perfil](#profile-fragments) que supera los 50 MB. |
 | Tamaño máximo de almacenamiento de perfil | 50 MB | Protección de rendimiento | **El tamaño máximo de un perfil almacenado es de 50 MB.** Agregando nuevo [fragmentos de perfil](#profile-fragments) en un perfil que supere los 50 MB afectará al rendimiento del sistema. Por ejemplo, un perfil puede contener un solo fragmento de 50 MB o varios fragmentos en varios conjuntos de datos con un tamaño total combinado de 50 MB. Si se intenta almacenar un perfil con un solo fragmento de más de 50 MB o con varios fragmentos de más de 50 MB de tamaño combinado, el rendimiento del sistema se verá afectado. |
 | Número de lotes de Perfil o ExperienceEvent introducidos por día | 90 | Protección de rendimiento | **El número máximo de lotes de Perfil o ExperienceEvent ingeridos por día es de 90.** Esto significa que el total combinado de lotes Profile y ExperienceEvent introducidos cada día no puede superar los 90. La ingesta de lotes adicionales afectará al rendimiento del sistema. |
@@ -116,7 +120,7 @@ Las protecciones descritas en esta sección se refieren al número y la naturale
 | --------- | ----- | ---------- | ----------- |
 | Audiencias por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias en total, siempre y cuando haya menos de 4000 audiencias en cada zona protegida individual. Esto incluye audiencias por lotes, de streaming y de Edge. Si se intenta crear audiencias adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [creación de audiencias](/help/segmentation/ui/segment-builder.md) a través del generador de segmentos. |
 | Audiencias de Edge por zona protegida | 150 | Protección de rendimiento | Una organización puede tener más de 150 audiencias de Edge en total, siempre y cuando haya menos de 150 audiencias de Edge en cada zona protegida individual. Si se intentan crear audiencias perimetrales adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
-| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en Adobe Experience Platform Edge Network. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en Adobe Experience Platform Edge Network. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
+| Rendimiento de Edge en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación de Edge admite un valor máximo de 1500 eventos entrantes por segundo al entrar en el Edge Network de Adobe Experience Platform. La segmentación de Edge puede tardar hasta 350 milisegundos en procesar un evento entrante después de que entre en el Edge Network de Adobe Experience Platform. Más información sobre [audiencias de edge](/help/segmentation/ui/edge-segmentation.md). |
 | Audiencias de streaming por zona protegida | 500 | Protección de rendimiento | Una organización puede tener más de 500 audiencias de streaming en total, siempre y cuando haya menos de 500 audiencias de streaming en cada zona protegida individual. Esto incluye tanto a las audiencias de streaming como a las de Edge. Si se intenta crear audiencias de flujo adicionales, el rendimiento del sistema puede verse afectado. Más información sobre [streaming de audiencias](/help/segmentation/ui/streaming-segmentation.md). |
 | Rendimiento de streaming en todas las zonas protegidas | 1500 RPS | Protección de rendimiento | La segmentación por flujo continuo admite un valor máximo de 1500 eventos entrantes por segundo. La segmentación por streaming puede tardar hasta 5 minutos en calificar un perfil para el abono a un segmento. Más información sobre [streaming de audiencias](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiencias por lotes por zona protegida | 4000 | Protección de rendimiento | Una organización puede tener más de 4000 audiencias de lote en total, siempre y cuando haya menos de 4000 audiencias de lote en cada zona protegida individual. Si intenta crear audiencias por lotes adicionales, el rendimiento del sistema puede verse afectado. |

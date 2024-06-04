@@ -3,16 +3,20 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 0%
+source-wordcount: '1549'
+ht-degree: 1%
 
 ---
 
 # Protecciones para [!DNL Identity Service] datos
 
 Este documento proporciona información sobre los límites de uso y tasa para [!DNL Identity Service] datos para ayudarle a optimizar el uso del gráfico de identidad. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
+
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
 
 ## Introducción 
 
@@ -62,7 +66,7 @@ Cuando se actualiza un gráfico de identidad completo, el servicio de identidad 
 
 La prioridad de eliminación es la siguiente:
 
-1. ID de cookie
+1. ID de cookies
 2. ID de dispositivo
 3. ID entre dispositivos, correo electrónico y teléfono
 

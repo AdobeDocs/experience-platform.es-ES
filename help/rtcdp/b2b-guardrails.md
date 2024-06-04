@@ -6,10 +6,10 @@ description: Adobe Experience Platform utiliza un modelo de datos híbrido altam
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >Los límites descritos en este documento representan los cambios habilitados por Real-time Customer Data Platform B2B Edition. Para obtener una lista completa de los límites predeterminados de Real-Time CDP B2B Edition, combínelos con los límites generales de Adobe Experience Platform descritos en la sección [protecciones para la documentación de datos del perfil del cliente en tiempo real](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B Edition le permite ofrecer experiencias multicanal personalizadas basadas en perspectivas de comportamiento y atributos del cliente en forma de Perfiles de cliente en tiempo real y Perfiles de cuenta. Para admitir este nuevo enfoque para los perfiles, Experience Platform utiliza un modelo de datos híbrido altamente desnormalizado que difiere del modelo de datos relacional tradicional.
+
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
 
 Este documento proporciona límites predeterminados de uso y velocidad para ayudarle a modelar los datos para obtener un rendimiento óptimo del sistema. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 

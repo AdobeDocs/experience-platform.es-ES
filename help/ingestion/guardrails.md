@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Obtenga información sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
+source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >Las protecciones para la ingesta por lotes y de flujo continuo se calculan en el nivel de organización y no en el de zona protegida. Esto significa que el uso de datos por zona protegida está enlazado al derecho de uso de licencias total que corresponde con toda la organización. Además, el uso de datos en entornos limitados de desarrollo está limitado al 10 % del total de perfiles. Para obtener más información sobre el derecho de uso de licencias, lea la [guía de prácticas recomendadas de administración de datos](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 Las protecciones son umbrales que proporcionan directrices para el uso de datos y sistemas, la optimización del rendimiento y la prevención de errores o resultados inesperados en Adobe Experience Platform. Las protecciones pueden hacer referencia al uso o consumo de datos y al procesamiento en relación con los derechos de licencia.
+
+>[!IMPORTANT]
+>
+>Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
 
 Este documento proporciona instrucciones sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 
