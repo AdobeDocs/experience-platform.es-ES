@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guía del asistente de IA en Adobe Experience Platform
-user-guide-description: El asistente de IA de Adobe Experience Platform es una experiencia conversacional que puede utilizar para acelerar los flujos de trabajo en aplicaciones de Adobe. Puede utilizar el asistente de IA para comprender mejor el conocimiento del producto, solucionar problemas o buscar a través de la información y encontrar perspectivas operativas.
+user-guide-description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 description: Este documento enumera la tabla de contenido del Asistente de IA en Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: 9b8d2422d3b5e13b980002a21f02dbbb6de8c6c6
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '74'
 ht-degree: 1%
 
 ---
