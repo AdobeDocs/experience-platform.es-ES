@@ -4,9 +4,9 @@ description: Aprenda a utilizar las consultas SQL con los modelos de datos de Re
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edición B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ El diagrama siguiente muestra los campos de datos relevantes en cada conjunto de
 
 #### Las nuevas cuentas por caso de uso del sector {#accounts-by-industry}
 
-La lógica utilizada para la variable [!UICONTROL Nuevas cuentas por sector] insight devuelve los cinco sectores principales según el número de perfiles de cuenta y el tamaño relativo entre ellos. Consulte la [[!UICONTROL Cuentas por sector] documentación del widget](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
+La lógica utilizada para la variable [!UICONTROL Nuevas cuentas por sector] insight devuelve los cinco sectores principales según el número de perfiles de cuenta y el tamaño relativo entre ellos. Consulte la [[!UICONTROL Nuevas cuentas por sector] documentación del widget](../guides/account-profiles.md#accounts-by-industry) para obtener más información.
 
 >[!TIP]
 >
