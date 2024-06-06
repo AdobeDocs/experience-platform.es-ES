@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Guía de Assurance
-user-guide-description: Adobe Experience Platform Assurance le permite inspeccionar, comprobar, simular y validar cómo recopila datos o sirve experiencias en sus aplicaciones móviles.
+user-guide-description: Adobe Experience Platform Assurance le permite inspeccionar, probar, simular y validar la forma en que recopila datos o sirve las experiencias dentro de sus aplicaciones móviles.
 feature: Assurance
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 94%
+source-wordcount: '71'
+ht-degree: 57%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 94%
 - Vistas {#view}
    - [Transacciones de eventos](./views/event-transactions.md)
    - [Versiones de extensión](./views/extension-versions.md)
+   - [Entrega en Edge](./views/edge-delivery.md)
    - [Mensajería en la aplicación](./views/in-app-messaging.md)
    - [En vistas de dispositivos](./views/on-device-views.md)
    - [Servicio de Places](./views/places-service.md)
