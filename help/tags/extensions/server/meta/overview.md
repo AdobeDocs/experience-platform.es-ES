@@ -2,9 +2,9 @@
 title: Información general sobre la extensión API Meta Conversions
 description: Obtenga información acerca de la extensión de la API de metaconversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 El [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) le permite conectar los datos de marketing del lado del servidor a [!DNL Meta] para optimizar la segmentación de anuncios, reducir el coste por acción y medir los resultados. Los eventos están vinculados a una [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) Los ID y se procesan de forma similar a los eventos del lado del cliente.
 
-Uso del [!DNL Meta Conversions API] , puede aprovechar las capacidades de la API en su [reenvío de eventos](../../../ui/event-forwarding/overview.md) reglas para enviar datos a [!DNL Meta] de Adobe Experience Platform Edge Network. Este documento explica cómo instalar la extensión y utilizar sus funcionalidades en un reenvío de eventos [regla](../../../ui/managing-resources/rules.md).
+Uso del [!DNL Meta Conversions API] , puede aprovechar las capacidades de la API en su [reenvío de eventos](../../../ui/event-forwarding/overview.md) reglas para enviar datos a [!DNL Meta] del Edge Network de Adobe Experience Platform. Este documento explica cómo instalar la extensión y utilizar sus funcionalidades en un reenvío de eventos [regla](../../../ui/managing-resources/rules.md).
 
 ## Demostración
 
@@ -35,7 +35,7 @@ Para utilizar la variable [!DNL Conversions API] extensión, debe tener acceso a
 >
 >Si planea utilizar esta extensión con datos de aplicaciones móviles o si también trabaja con datos de eventos sin conexión en su [!DNL Meta] Para las campañas de, debe crear el conjunto de datos a través de una aplicación existente y seleccionar **Crear a partir de un ID de píxel** cuando se le solicite. Consulte el artículo [Decida qué opción de creación de conjuntos de datos es la adecuada para su empresa](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) para obtener más información. Consulte la [API de conversiones para eventos de aplicación](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) para todos los parámetros de seguimiento de aplicación opcionales y requeridos.
 
-## Instalar la extensión
+## Instalación de la extensión
 
 Para instalar el [!DNL Meta Conversions API] extensión, vaya a la IU de recopilación de datos o a la IU del Experience Platform y seleccione **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
 
@@ -53,15 +53,15 @@ Cuando termine, seleccione **[!UICONTROL Guardar]**
 
 La extensión está instalada y ahora puede utilizar sus funcionalidades en las reglas de reenvío de eventos.
 
-## Integración con la extensión Meta Business (MBE) {#mbe}
+## Integración con la extensión de Facebook y Instagram {#facebook}
 
-La integración con la mejora de Meta Business Extensions (MBE) le permite autenticarse rápidamente en su cuenta de Meta Business. A continuación, rellena automáticamente su [!UICONTROL ID de píxel] y la API de metaconversiones [!UICONTROL Token de acceso], lo que facilita la instalación y configuración de la API de conversiones de metadatos.
+La integración con la extensión Facebook y Instagram le permite autenticarse rápidamente en su cuenta de Meta Business. A continuación, rellena automáticamente su [!UICONTROL ID de píxel] y la API de metaconversiones [!UICONTROL Token de acceso], lo que facilita la instalación y configuración de la API de conversiones de metadatos.
 
-Aparecerá un mensaje de diálogo para autenticarse en MBE al instalar el [!UICONTROL API de metaconversiones] extensión.
+Aparece un mensaje de diálogo para autenticarse en Facebook y Instagram al instalar el [!UICONTROL API de metaconversiones] extensión.
 
 ![El [!UICONTROL Extensión de API de metaconversiones] resaltado de página de instalación [!UICONTROL Conectar con Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-También aparece un mensaje de diálogo para autenticarse en MBE en la interfaz de usuario del flujo de trabajo de inicio rápido dentro del reenvío de eventos.
+También aparece un mensaje de diálogo para autenticarse en Facebook y Instagram en la interfaz de usuario del flujo de trabajo de inicio rápido dentro del reenvío de eventos.
 
 ![Resaltado de la IU del flujo de trabajo de inicio rápido [!UICONTROL Conectar con Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ Al enviar eventos compartidos, asegúrese de incluir un ID y un nombre de evento
 
 La función de inicio rápido le ayuda a configurarse con facilidad y eficacia con la API de conversiones de metadatos y las extensiones de píxeles. Esta herramienta automatiza varios pasos que se realizan en las etiquetas de Adobe y en el reenvío de eventos, lo que reduce significativamente el tiempo de configuración.
 
-Esta función instala y configura automáticamente la API de conversiones de metadatos y las extensiones de píxeles en una propiedad de etiquetas y reenvío de eventos generada automáticamente con las reglas y los elementos de datos necesarios. Además, también instala y configura automáticamente el SDK web de Experience Platform y el conjunto de datos. Por último, la función de inicio rápido publica automáticamente la biblioteca en la dirección URL designada en un entorno de desarrollo, lo que permite la recopilación de datos del lado del cliente y el reenvío de eventos del lado del servidor en tiempo real mediante el reenvío de eventos y la red perimetral del Experience Platform.
+Esta función instala y configura automáticamente la API de conversiones de metadatos y las extensiones de píxeles en una propiedad de etiquetas y reenvío de eventos generada automáticamente con las reglas y los elementos de datos necesarios. Además, también instala y configura automáticamente el SDK web de Experience Platform y el conjunto de datos. Por último, la función de inicio rápido publica automáticamente la biblioteca en la dirección URL designada en un entorno de desarrollo, lo que permite la recopilación de datos del lado del cliente y el reenvío de eventos del lado del servidor en tiempo real mediante el reenvío de eventos y el Edge Network del Experience Platform.
 
 El siguiente vídeo proporciona una introducción a la función de inicio rápido.
 
