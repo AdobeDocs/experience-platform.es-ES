@@ -1,9 +1,10 @@
 ---
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Lea esta guía para aprender a utilizar el asistente de IA en la interfaz de usu
 
 Para iniciar el asistente de IA, seleccione **[!UICONTROL Icono de asistente de IA]** desde el encabezado superior de la interfaz de usuario de Experience Platform.
 
-![La página de inicio del Experience Platform, con el icono Asistente de IA seleccionado y la interfaz del asistente de IA abierta.](./images/ai-assistant.png)
+![La página de inicio del Experience Platform, con el icono Asistente de IA seleccionado y la interfaz del asistente de IA abierta.](./images/ai-assistant-full-icon.png)
 
 Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede utilizar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] para responder preguntas y comandos como:
 
@@ -86,9 +87,13 @@ Debe encontrarse en una zona protegida activa para que el asistente de IA respon
 
 +++Seleccione esta opción para ver un ejemplo de una pregunta de información operativa
 
-En el siguiente ejemplo, se realiza la siguiente consulta al asistente de IA: **&quot;Mostrar los flujos de datos creados con la fuente de Amazon S3&quot;** A continuación, AI Assistant responde con una tabla que enumera los flujos de datos y sus ID correspondientes. Para ver toda la tabla de datos, seleccione el icono de expansión en la parte superior derecha.
+En el siguiente ejemplo, se realiza la siguiente consulta al asistente de IA: **&quot;Mostrar los flujos de datos creados con la fuente de Amazon S3&quot;**.
 
-![Pregunta de seguimiento sobre perspectivas operativas.](./images/usage-data-question.png)
+![Una pregunta sobre perspectivas operativas.](./images/op-insights-question.png)
+
+A continuación, el asistente de IA responde con una tabla que enumera los flujos de datos y sus ID correspondientes. Para ver toda la tabla de datos, seleccione el icono de expansión en la parte superior derecha.
+
+![Una respuesta de perspectivas operativas](./images/op-insights-answer.png)
 
 Aparece una vista expandida de la tabla, que le proporciona una lista más completa de flujos de datos basados en los parámetros de la consulta.
 
@@ -96,9 +101,13 @@ Aparece una vista expandida de la tabla, que le proporciona una lista más compl
 
 Cuando se le solicita una pregunta de perspectivas operativas, AI Assistant proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, AI Assistant describe los pasos que realizó para identificar los flujos de datos creados con el [!DNL Amazon S3] origen.
 
-![Pregunta de seguimiento sobre las definiciones de segmentos que ilustran cómo el Asistente de IA calculó la respuesta.](./images/answer-explained.png)
+![Un asistente de IA que proporciona una explicación sobre cómo calcula su respuesta.](./images/answer-explained.png)
 
 También puede proporcionar filtros y modificaciones a las preguntas, y puede indicar al Asistente de inteligencia artificial que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente de IA que le muestre una tendencia del recuento de definiciones de segmento en el orden de su fecha de creación, elimine definiciones de segmento con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
+
+**Nota:** Las respuestas de Operational Insights se encuentran actualmente en fase beta. Seleccione el icono de información de objeto en la interfaz de usuario del Ayudante de IA para ver el aviso Beta y un vínculo a la documentación.
+
+![Icono de información del asistente de IA seleccionado.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ Puede utilizar las capacidades de varias vueltas de AI Assistant para tener una 
 
 En el siguiente ejemplo, se solicita al asistente de IA primero el número total de flujos de datos y, a continuación, se le solicita que enumere los 10 flujos de datos más recientes.
 
-![Ejemplo de giro múltiple](./images/multi-turn.png)
+![Ejemplo de giro múltiple](./images/multiturn.png)
+
+Para restablecer, seleccione los puntos suspensivos (**`...`**) en la interfaz del asistente de IA y, a continuación, seleccione **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
+
+![Los puntos suspensivos seleccionados y la opción Iniciar nueva conversación seleccionada.](./images/reset.png)
+
++++
+
+### Uso de detectabilidad {#use-discoverability}
+
+Puede utilizar la función de detección del asistente de IA para ver una lista de los temas generales, agrupados en entidades, que admite.
+
++++Seleccione esta opción para ver un ejemplo de la capacidad de detección
+
+Para ver la detección, seleccione el icono de la bombilla en el encabezado superior de la interfaz del asistente de IA.
+
+![La función de detección del asistente de IA.](./images/lightbulb.png)
+
+A continuación, seleccione una categoría y, a continuación, seleccione una solicitud de la lista proporcionada. Puede utilizar esta función para tener una mejor idea de los tipos de preguntas que AI Assistant puede responder. También puede actualizar las solicitudes preexistentes con detalles específicos relacionados con su zona protegida utilizando texto libre o [autocompletar](#use-auto-complete).
+
+![El Ayudante de IA solicita la detección.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ Puede proporcionar comentarios sobre su experiencia con el asistente de IA media
 Para proporcionar comentarios, seleccione los pulgares hacia arriba, hacia abajo o un indicador después de recibir una respuesta del asistente de IA y, a continuación, introduzca sus comentarios en el cuadro de texto proporcionado.
 
 ![La opción de comentarios del asistente de IA.](./images/provide-feedback.png)
-
-Para restablecer, seleccione los puntos suspensivos (**`...`**) en la interfaz del asistente de IA y, a continuación, seleccione **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
 
 +++Seleccione para ver más ejemplos
 

@@ -2,7 +2,7 @@
 title: Información general sobre el asistente de IA en Adobe Experience Platform
 description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
+source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 1%
@@ -15,7 +15,7 @@ Lea este documento para obtener más información sobre el asistente de IA en Ad
 
 El asistente de IA de Adobe Experience Platform es una experiencia conversacional que puede utilizar para acelerar los flujos de trabajo en aplicaciones de Adobe. Puede utilizar el asistente de IA para comprender mejor el conocimiento del producto, solucionar problemas o buscar a través de la información y encontrar perspectivas operativas. El asistente de IA es compatible con Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer y Customer Journey Analytics.
 
-![Interfaz del asistente de IA con la primera experiencia del usuario activada.](./images/blank.png)
+![Interfaz del asistente de IA con la primera experiencia del usuario activada.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
