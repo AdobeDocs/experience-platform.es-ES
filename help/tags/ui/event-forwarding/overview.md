@@ -3,9 +3,9 @@ title: Información general sobre el reenvío de eventos
 description: Obtenga información acerca del reenvío de eventos en Adobe Experience Platform, que le permite utilizar Platform Edge Network para ejecutar tareas sin cambiar la implementación de etiquetas.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1178'
 ht-degree: 7%
 
 ---
@@ -112,6 +112,12 @@ El [!UICONTROL Acciones] de una regla de reenvío de eventos siempre se ejecuta 
 ## Secretos {#secrets}
 
 El reenvío de eventos permite crear, administrar y almacenar secretos que se pueden utilizar para autenticarse en los servidores a los que envía datos. Consulte la guía de [secretos](./secrets.md) Obtenga información sobre los distintos tipos de tipos de secretos disponibles y cómo se implementan en la interfaz de usuario.
+
+## Vídeo introductorio {#video}
+
+El siguiente vídeo pretende ayudarle a comprender mejor las conexiones de Reenvío de eventos y Real-Time CDP.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Pasos siguientes
 
