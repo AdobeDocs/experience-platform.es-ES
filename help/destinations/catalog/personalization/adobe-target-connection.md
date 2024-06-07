@@ -3,9 +3,9 @@ keywords: personalización de target; destino; destino de experience platform ta
 title: Conexión de Adobe Target
 description: Adobe Target es una aplicación que proporciona capacidades de personalización y experimentación en tiempo real impulsadas por IA en todas las interacciones de clientes entrantes entre sitios web, aplicaciones móviles y mucho más.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Abril de 2024 | Actualización de funcionalidad y documentación | Al conectarse al destino de Target con mediante un ID de conjunto de datos, ahora *no necesita* para habilitar necesariamente la secuencia de datos para la segmentación de Edge. Esto significa que el destino de Target funcionará con audiencias por lotes y de flujo continuo, aunque los casos de uso que puede realizar difieren. Vea la tabla en la [parámetros de conexión](#parameters) para obtener más información. |
+| Abril de 2024 | Actualización de funcionalidad y documentación | Al conectarse al destino de Target y utilizar un ID de flujo de datos, ahora *no necesita* para habilitar necesariamente la secuencia de datos para la segmentación de Edge. Esto significa que el destino de Target funcionará con audiencias por lotes y de flujo continuo, aunque los casos de uso que puede realizar difieren. Vea la tabla en la [parámetros de conexión](#parameters) para obtener más información. |
 | Enero de 2024 | Actualización de funcionalidad y documentación | Ahora puede compartir audiencias y atributos de perfil con la conexión de Adobe Target para la zona protegida de producción predeterminada y otras zonas protegidas no predeterminadas. |
 | Junio de 2023 | Actualización de funcionalidad y documentación | A partir de junio de 2023, puede seleccionar el espacio de trabajo de Adobe Target con el que desea compartir audiencias al configurar una nueva conexión de destino de Adobe Target. Consulte la sección [parámetros de conexión](#parameters) para obtener más información. Además, consulte el tutorial sobre [configuración de espacios de trabajo](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) en Adobe Target para obtener más información acerca de los espacios de trabajo. |
 | Mayo de 2023 | Actualización de funcionalidad y documentación | A partir de mayo de 2023, la **[!UICONTROL Adobe Target]** compatibilidad de conexión [personalización basada en atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) y está disponible para todos los clientes. |
@@ -62,9 +62,9 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 >[!IMPORTANT]
 >
->Las audiencias que active en este destino deben utilizar el [Política de combinación activa en el perímetro](../../../segmentation/ui/segment-builder.md#merge-policies). El [!DNL Active-On-Edge] la política de combinación garantiza que las audiencias se evalúen constantemente [en el borde](../../../segmentation/ui/edge-segmentation.md) y están disponibles para casos de uso de personalización en tiempo real y de la página siguiente.
-> Si asigna audiencias que utilizan una política de combinación diferente a destinos Edge, esas audiencias no se evalúan.
-> Siga las instrucciones de [creación de una política de combinación](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)y asegúrese de habilitar la variable **[!UICONTROL Política de combinación activa en Edge]** alternar.
+>Al activar *audiencias de edge para casos de uso de personalización de la misma página y de la página siguiente*, las audiencias *debe* use un [política de combinación activa en el perímetro](../../../segmentation/ui/segment-builder.md#merge-policies). El [!DNL active-on-edge] la política de combinación garantiza que las audiencias se evalúen constantemente [en el borde](../../../segmentation/ui/edge-segmentation.md) y están disponibles para casos de uso de personalización en tiempo real y de la página siguiente.  Más información [todos los casos de uso disponibles](#parameter), según el tipo de implementación.
+>Si asigna audiencias perimetrales que utilizan una política de combinación diferente a destinos de Adobe Target, esas audiencias no se evalúan para casos de uso en tiempo real y de la página siguiente.
+>Siga las instrucciones de [creación de una política de combinación](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)y asegúrese de habilitar la variable **[!UICONTROL Política de combinación activa en Edge]** alternar.
 
 
 | Origen de audiencia | Admitido | Descripción |
