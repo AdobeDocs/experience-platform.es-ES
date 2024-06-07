@@ -5,10 +5,10 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Ingeste datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 24%
+source-wordcount: '1046'
+ht-degree: 23%
 
 ---
 
@@ -350,6 +350,7 @@ ht-degree: 24%
       - [Flujo de datos de conexión de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Creación de un flujo de datos de origen mediante plantillas en la IU](tutorials/ui/templates.md)
    - [Filtrar objetos de origen](tutorials/ui/filter.md)
+   - [Ingesta de datos cifrados](tutorials/ui/encryped-ingestion.md)
    - [Ingesta bajo demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorización de flujos de datos por lotes](tutorials/ui/monitor.md)
    - [Monitorización de flujos de datos](tutorials/ui/monitor-streaming.md)
