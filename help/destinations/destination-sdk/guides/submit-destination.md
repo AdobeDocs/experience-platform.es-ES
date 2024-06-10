@@ -2,9 +2,9 @@
 description: Esta página proporciona toda la información necesaria para enviar a revisión un destino de productos creado con Destination SDK.
 title: Enviar para revisión un destino de productos creado en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 >* Si el equipo de Adobe le pide que realice actualizaciones en las configuraciones después del envío inicial, debe enviar otra solicitud de publicación de destino después de realizar las actualizaciones.
 >
 >* Incluso después de que el destino esté activo en el catálogo del Experience Platform, si necesita realizar alguna actualización en las configuraciones, debe enviar una nueva solicitud de publicación de destino para que las actualizaciones se reflejen en las configuraciones.
+>
+>* El cronograma de revisión y los artefactos requeridos son los mismos para los destinos nuevos y los destinos existentes que está actualizando.
 
 Antes de publicar el destino en [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar al Adobe determinada información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
 
@@ -45,7 +47,7 @@ Puede encontrar información detallada sobre cada elemento en las secciones sigu
 Proporcione una descripción de los casos de uso que el destino resuelve para los clientes de Experience Platform. Las descripciones pueden ser similares a los casos de uso de los socios existentes:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que desean dirigirse a un grupo de audiencia específico que no tiene claves para las direcciones de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia y enviar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que desean dirigirse a un grupo de audiencia específico que no tiene clave de dirección de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia y enviar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
 
 ## Motivo de la actualización {#reason-for-update}
 
