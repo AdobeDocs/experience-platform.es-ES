@@ -3,10 +3,10 @@ title: Eliminar registros
 description: Obtenga información sobre cómo eliminar registros en la interfaz de usuario de Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 8%
+source-wordcount: '1567'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Utilice el [[!UICONTROL Ciclo de datos] workspace](./overview.md) para eliminar 
 
 ## Requisitos previos {#prerequisites}
 
-La eliminación de registros requiere una comprensión práctica del funcionamiento de los campos de identidad en Experience Platform. Específicamente, debe conocer los valores de identidad principales de las entidades cuyos registros desea eliminar, según el conjunto de datos (o conjuntos de datos) desde el que los elimine.
+La eliminación de registros requiere una comprensión práctica del funcionamiento de los campos de identidad en Experience Platform. Específicamente, debe conocer los valores del área de nombres de identidad de las entidades cuyos registros desea eliminar, según el conjunto de datos (o conjuntos de datos) desde el que los elimine.
 
 Consulte la siguiente documentación para obtener más información sobre las identidades en Platform:
 
@@ -43,13 +43,13 @@ Aparecerá el flujo de trabajo de creación de solicitudes. De forma predetermin
 
 >[!IMPORTANT]
 > 
->Como parte de los cambios en curso para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se denomina migración delta. Los usuarios de organizaciones que se han migrado de forma delta pueden elegir eliminar registros de uno o de todos los conjuntos de datos. Los usuarios de organizaciones que no se han migrado de forma delta no pueden elegir eliminar registros de un único conjunto de datos o de todos ellos, tal como se ve en la siguiente imagen. En este caso, continúe con el [proporcionar identidades](#provide-identities) de la guía.
+>Para mejorar la eficacia y reducir el coste de las operaciones de los conjuntos de datos, las organizaciones que se han trasladado al formato Delta pueden eliminar datos del servicio de identidad, del perfil del cliente en tiempo real y del lago de datos. Este tipo de usuario se denomina migración delta. Los usuarios de organizaciones que se han migrado de forma delta pueden elegir eliminar registros de uno o de todos los conjuntos de datos. Los usuarios de organizaciones que no se han sometido a la migración delta no pueden eliminar selectivamente registros de un único conjunto de datos o de todos ellos, como se muestra en la siguiente imagen. En este caso, continúe con el [Proporcionar identidades](#provide-identities) de la guía.
 
 ![El flujo de trabajo de creación de solicitudes con [!UICONTROL Eliminar registro] opción seleccionada y resaltada.](../images/ui/record-delete/delete-record.png)
 
 ## Seleccionar conjuntos de datos {#select-dataset}
 
-El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Si esta opción no está disponible para usted, continúe con el [proporcionar identidades](#provide-identities) de la guía.
+El siguiente paso es determinar si desea eliminar registros de un único conjunto de datos o de todos ellos. Si esta opción no está disponible para usted, continúe con el [Proporcionar identidades](#provide-identities) de la guía.
 
 En el **[!UICONTROL Detalles de registro]** , utilice el botón de opción para seleccionar entre un conjunto de datos específico y todos los conjuntos de datos. Si elige **[!UICONTROL Seleccionar conjunto de datos]**, proceda a seleccionar el icono de base de datos (![El icono de base de datos](../images/ui/record-delete/database-icon.png)) para abrir un cuadro de diálogo que proporcione una lista de conjuntos de datos disponibles. Seleccione el conjunto de datos deseado de la lista seguido de **[!UICONTROL Listo]**.
 
@@ -67,30 +67,30 @@ Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICO
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identidad principal"
->abstract="Una identidad principal es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de identidad principal de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para la identidad principal del registro, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
+>title="Espacio de nombres de identidad"
+>abstract="Un área de nombres de identidad es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo Área de nombres de identidad de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para el área de nombres de identidad del registro, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la Guía de la IU del ciclo vital de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Valor de identidad"
->abstract="En esta columna, debe proporcionar el valor de la identidad principal del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de identidad principal es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
+>title="Valor de identidad principal"
+>abstract="En esta columna, debe proporcionar el valor del área de nombres de identidad del registro, que debe corresponder al tipo de identidad proporcionado en la columna izquierda. Si el tipo de área de nombres de identidad es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
 
-Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Platform, los registros se eliminan en función de la variable **identidad principal** campo definido por el esquema del conjunto de datos.
+Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Platform, los registros se eliminan en función de la variable **área de nombres de identidad** campo definido por el esquema del conjunto de datos.
 
-Al igual que todos los campos de identidad de Platform, una identidad principal se compone de dos cosas: una **type** (a veces denominado área de nombres de identidad) y una **valor**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico) y el valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el `email` tipo de identidad). Los campos comunes utilizados como identidades incluyen información de la cuenta, ID de dispositivo e ID de cookie.
+Al igual que todos los campos de identidad de Platform, un área de nombres de identidad está compuesta por dos cosas: una **type** (a veces denominado área de nombres de identidad) y una **valor**. El tipo de identidad proporciona contexto sobre cómo el campo identifica un registro (como una dirección de correo electrónico). El valor representa la identidad específica de un registro para ese tipo (por ejemplo, `jdoe@example.com` para el `email` tipo de identidad). Los campos comunes utilizados como identidades incluyen información de la cuenta, ID de dispositivo e ID de cookie.
 
 >[!TIP]
 >
->Si no conoce la identidad principal de un conjunto de datos concreto, puede encontrarla en la interfaz de usuario de Platform. En el **[!UICONTROL Conjuntos de datos]** workspace, seleccione el conjunto de datos en cuestión en la lista. En la página de detalles del conjunto de datos, pase el ratón sobre el nombre del esquema del conjunto de datos en el carril derecho. La identidad principal se muestra junto con el nombre y la descripción del esquema.
+>Si no conoce el área de nombres de identidad de un conjunto de datos concreto, puede encontrarla en la interfaz de usuario de Platform. En el **[!UICONTROL Conjuntos de datos]** workspace, seleccione el conjunto de datos en cuestión en la lista. En la página de detalles del conjunto de datos, pase el ratón sobre el nombre del esquema del conjunto de datos en el carril derecho. El área de nombres de identidad se muestra junto con el nombre y la descripción del esquema.
 >
 >![El panel Conjuntos de datos con un conjunto de datos seleccionado y un cuadro de diálogo de esquema abierto desde el panel de detalles del conjunto de datos. Se resaltará el ID principal del conjunto de datos.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Si elimina registros de un único conjunto de datos, todas las identidades proporcionadas deben tener el mismo tipo, ya que un conjunto de datos solo puede tener una identidad principal. Si está eliminando de todos los conjuntos de datos, puede incluir varios tipos de identidad, ya que distintos conjuntos de datos pueden tener diferentes identidades principales.
+Si elimina registros de un único conjunto de datos, todas las identidades proporcionadas deben tener el mismo tipo, ya que un conjunto de datos solo puede tener un área de nombres de identidad. Si está eliminando de todos los conjuntos de datos, puede incluir varios tipos de identidad, ya que distintos conjuntos de datos pueden tener diferentes identidades principales.
 
 Existen dos opciones para proporcionar identidades al eliminar registros:
 
 * [Cargar un archivo JSON](#upload-json)
-* [Introducir valores de identidad manualmente](#manual-identity)
+* [Introduzca manualmente los valores de identidad principales](#manual-identity)
 
 ### Cargar un archivo JSON {#upload-json}
 
@@ -116,7 +116,7 @@ El archivo JSON debe tener el formato de una matriz de objetos; cada objeto repr
 | Propiedad | Descripción |
 | --- | --- |
 | `namespaceCode` | El tipo de identidad. |
-| `value` | El valor de identidad indicado por el tipo. |
+| `value` | El valor de identidad principal indicado por el tipo. |
 
 Una vez cargado el archivo, puede continuar a [enviar la solicitud](#submit).
 
@@ -126,7 +126,7 @@ Para introducir identidades manualmente, seleccione **[!UICONTROL Añadir identi
 
 ![El flujo de trabajo de creación de solicitudes con [!UICONTROL Añadir identidad] opción resaltada.](../images/ui/record-delete/add-identity.png)
 
-Aparecen controles que permiten introducir las identidades de una en una. En **[!UICONTROL Identidad principal]**, utilice el menú desplegable para seleccionar el tipo de identidad. En **[!UICONTROL Valor de identidad]**, proporcione el valor de identidad principal para el registro.
+Aparecen controles que permiten introducir las identidades de una en una. En **[!UICONTROL área de nombres de identidad]**, utilice el menú desplegable para seleccionar el tipo de identidad. En **[!UICONTROL Valor de identidad principal]**, proporcione el valor del área de nombres de identidad para el registro.
 
 ![Flujo de trabajo de creación de solicitudes con un campo de identidad añadido manualmente.](../images/ui/record-delete/identity-added.png)
 
