@@ -2,9 +2,9 @@
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, se utilizará por Adobe para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ Tenga en cuenta que, en algunos ejemplos, los campos de macro como `{{authData.a
 
 Busque descripciones de todos los parámetros en la plantilla en la [Creación de una plantilla de audiencia](../metadata-api/create-audience-template.md) Referencia de API.
 
-## Macros utilizadas en plantillas de metadatos de audiencia
+## Macros utilizadas en plantillas de metadatos de audiencia {#macros}
 
 Para pasar información como ID de audiencia, tokens de acceso, mensajes de error y mucho más entre Experience Platform y la API, las plantillas de audiencia incluyen macros que puede utilizar. Lea a continuación una descripción de las macros que se utilizan en los tres ejemplos de configuración de esta página:
 
