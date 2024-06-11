@@ -1,22 +1,20 @@
 ---
 title: Resumen de reglas de vinculación de gráficos de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 0%
+source-wordcount: '1114'
+ht-degree: 1%
 
 ---
 
 # Resumen de reglas de vinculación de gráficos de identidad
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Las reglas de vinculación de gráficos de identidad están actualmente en Alpha. La funcionalidad y la documentación están sujetas a cambios.
+>Esta función aún no está disponible; se espera que el programa beta para reglas de vinculación de gráficos de identidad comience en julio en zonas protegidas de desarrollo. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación.
 
 ## Índice 
 
@@ -24,9 +22,9 @@ ht-degree: 0%
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Casos de ejemplo](./example-scenarios.md)
 
-Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona individual a través de un identificador de persona, como un ID de CRM. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de perfil&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
+Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona individual a través de un identificador de persona, como un ID de CRM. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
-## Casos de ejemplo en los que podría producirse un colapso de perfil
+## Casos de ejemplo en los que podría producirse un colapso de gráfico
 
 * **Dispositivo compartido**: dispositivo compartido hace referencia a dispositivos utilizados por más de un individuo. Algunos ejemplos de dispositivos compartidos son tabletas, equipos de biblioteca y quioscos.
 * **Correo electrónico y números de teléfono incorrectos**: Los números de correo electrónico y teléfono incorrectos hacen referencia a usuarios finales que registran información de contacto no válida, como &quot;prueba&quot;<span>@test.com&quot; para correo electrónico y &quot;+1-111-111-1111&quot; para número de teléfono.
@@ -34,81 +32,67 @@ Con el servicio de identidad de Adobe Experience Platform y el perfil del client
 
 Para obtener más información sobre casos de uso de reglas de vinculación de gráficos de identidad, lea el documento sobre [escenarios de ejemplo](./example-scenarios.md).
 
-## Objetivos de reglas de vinculación de gráfico de identidad
+## Reglas de vinculación de gráfico de identidad {#identity-graph-linking-rules}
 
 Con las reglas de vinculación de gráficos de identidad puede:
 
-* Cree un único gráfico de identidad o perfil combinado para cada usuario configurando áreas de nombres únicas (límites), lo que evitará que dos identificadores de persona diferentes se combinen en un gráfico de identidad.
+* Cree un único gráfico de identidad o perfil combinado para cada usuario configurando áreas de nombres únicas, lo que evitará que dos identificadores de persona diferentes se combinen en un gráfico de identidad.
 * Asociar eventos autenticados en línea a la persona configurando prioridades
 
-### Límites
+### Terminología {#terminology}
 
-Un área de nombres única es un identificador que representa a un individuo, como un ID de CRM, un ID de inicio de sesión y un correo electrónico con hash. Si un área de nombres se designa como única, un gráfico solo puede tener una identidad con ese área de nombres (`limit=1`). Esto evitará la combinación de dos identificadores de persona dispares dentro del mismo gráfico.
+| Terminología | Descripción |
+| --- | --- |
+| Área de nombres única | Un área de nombres única es un área de nombres de identidad que se ha configurado para que sea distinta en el contexto de un gráfico de identidades. Puede configurar un área de nombres para que sea única mediante la interfaz de usuario. Una vez que un área de nombres se define como única, un gráfico solo puede tener una identidad que contenga ese área de nombres. |
+| Prioridad de área de nombres | La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la IU. Puede clasificar las áreas de nombres en un gráfico de identidad determinado. Una vez habilitada, la prioridad de los nombres se utilizará en varios escenarios, como la entrada para el algoritmo de optimización de identidades y la determinación de la identidad principal para los fragmentos de eventos de experiencia. |
+| Algoritmo de optimización de identidad | El algoritmo de optimización de identidad garantiza que las directrices creadas al configurar un área de nombres única y las prioridades de área de nombres se apliquen en un gráfico de identidad determinado. |
 
-* Si no se configura un límite, esto podría dar como resultado combinaciones de gráficos no deseadas, como dos identidades con un área de nombres de ID de CRM en un gráfico.
-* Si no se configura un límite, el gráfico puede agregar tantas áreas de nombres como sea necesario siempre y cuando el gráfico esté dentro de las barreras (50 identidades/gráfico).
-* Si se configura un límite, el algoritmo de optimización de identidad garantizará que se aplique.
+### Área de nombres única {#unique-namespace}
 
-### Algoritmo de optimización de identidad
+Puede configurar un área de nombres para que sea única mediante el área de trabajo de IU de configuración de identidad. Al hacerlo, informa al algoritmo de optimización de identidad de que un gráfico determinado solo puede tener una identidad que contenga ese área de nombres única. Esto evita la combinación de dos identificadores de persona dispares dentro del mismo gráfico.
 
-El algoritmo de optimización de identidad es una regla que garantiza que se apliquen los límites. El algoritmo respeta los vínculos más recientes y elimina los vínculos más antiguos para garantizar que un gráfico determinado se mantenga dentro de los límites definidos.
+Considere el siguiente escenario:
 
-A continuación se muestra una lista de implicaciones del algoritmo en la asociación de eventos anónimos a identificadores conocidos:
+* Scott usa una tableta y abre su navegador Google Chrome para ir a Nike<span>.com, donde inicia sesión y busca nuevos zapatos de baloncesto.
+   * En segundo plano, este escenario registra las siguientes identidades:
+      * Un área de nombres y valor ECID para representar el uso del explorador
+      * Un área de nombres y valor de ID de CRM para representar al usuario autenticado (Scott inició sesión con su nombre de usuario y contraseña combinados).
+* A continuación, su hijo Peter utiliza la misma tableta y también utiliza Google Chrome para ir a Nike<span>.com, donde inicia sesión con su propia cuenta para buscar equipos de fútbol.
+   * En segundo plano, este escenario registra las siguientes identidades:
+      * El mismo espacio de nombres y valor de ECID para representar el explorador.
+      * Un nuevo área de nombres y valor de ID de CRM para representar al usuario autenticado.
 
-* El ECID se asociará al último usuario autenticado si se cumplen las siguientes condiciones:
-   * Si ECID (dispositivo compartido) combina los ID de CRM.
-   * Si los límites están configurados para un solo ID de CRM.
+Si CRM ID se configuró como un área de nombres única, el algoritmo de optimización de identidad divide los CRM ID en dos gráficos de identidad independientes, en lugar de combinarlos juntos.
 
-Para obtener más información, lea el documento sobre [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
+Si no configura un área de nombres única, puede terminar con combinaciones de gráficos no deseadas, como dos identidades con el mismo área de nombres de ID de CRM, pero con valores de identidad diferentes (escenarios como estos suelen representar dos entidades de persona diferentes en el mismo gráfico).
 
-### Prioridad
+Debe configurar un área de nombres única para informar al algoritmo de optimización de identidad a fin de aplicar limitaciones a los datos de identidad que se incorporan en un gráfico de identidad determinado.
 
->[!IMPORTANT]
->
->Actualmente, las prioridades de área de nombres no están disponibles para alfa.
+### Prioridad de área de nombres {#namespace-priority}
 
-Puede utilizar la prioridad del área de nombres para definir qué áreas de nombres son más importantes que otras. La prioridad que establezca para sus áreas de nombres se utiliza a continuación para definir las identidades principales, que es la identidad que almacena fragmentos de perfil (datos de atributo y evento) en el Perfil del cliente en tiempo real. Si se establece la configuración de prioridad, ya no se utilizará la configuración de identidad principal del SDK web para determinar qué fragmentos de perfil se almacenan.
+La prioridad del área de nombres hace referencia a la importancia relativa de las áreas de nombres en comparación con otras. La prioridad del área de nombres se puede configurar a través de la interfaz de usuario y puede clasificar las áreas de nombres en un gráfico de identidad determinado.
 
-* Los límites y la prioridad son configuraciones independientes y lo hacen **no** se afectan mutuamente:
-   * Límites es una configuración de gráfico de identidad en el servicio de identidad.
-   * La prioridad es una configuración de fragmento de perfil en el Perfil del cliente en tiempo real.
-   * La prioridad sí **no** afectan a las protecciones del sistema de gráficos de identidad.
+Una forma de utilizar la prioridad del área de nombres es determinar la identidad principal de los fragmentos de evento de experiencia (comportamiento del usuario) en el perfil del cliente en tiempo real. Si se establece la configuración de prioridad, ya no se utilizará la configuración de identidad principal del SDK web para determinar qué fragmentos de perfil se almacenan.
+
+Las áreas de nombres únicas y las prioridades de área de nombres se pueden configurar en el área de trabajo de IU de configuración de identidad. Sin embargo, los efectos de sus configuraciones son diferentes:
+
+| | Servicio de identidad | Perfil del cliente en tiempo real |
+| --- | --- | --- |
+| Área de nombres única | En el servicio de identidad, el algoritmo de optimización de identidad hace referencia a áreas de nombres únicas para determinar los datos de identidad que se incorporan a un gráfico de identidad determinado. | Las áreas de nombres únicas no afectan al perfil del cliente en tiempo real. |
+| Prioridad de área de nombres | En el servicio de identidad, para los gráficos que tienen varias capas, la prioridad del área de nombres determinará que se eliminen los vínculos adecuados. | Cuando se incorpora un evento de experiencia en el perfil, el área de nombres con la prioridad más alta se convierte en la identidad principal del fragmento de perfil. |
+
+* La prioridad del área de nombres no afecta al comportamiento del gráfico cuando se alcanza el límite de 50 identidades por gráfico.
 * **La prioridad del área de nombres es un valor numérico** asignado a un área de nombres que indica su importancia relativa. Es una propiedad de un área de nombres.
 * **La identidad principal es la identidad con la que se almacena un fragmento de perfil**. Un fragmento de perfil es un registro de datos que almacena información sobre un usuario determinado: atributos (normalmente incorporados mediante registros CRM) o eventos (normalmente incorporados a partir de eventos de experiencia o datos en línea).
-* La prioridad del área de nombres determina la identidad principal para los eventos de experiencia.
+* La prioridad del área de nombres determina la identidad principal de los fragmentos de eventos de experiencia.
    * Para los registros de perfil, puede utilizar el espacio de trabajo de esquemas de la interfaz de usuario de Experience Platform para definir campos de identidad, incluida la identidad principal. Lea la guía de [definición de campos de identidad en la IU](../../xdm/ui/fields/identity.md) para obtener más información.
 
->[!BEGINSHADEBOX]
-
-**Ejemplo de prioridad de área de nombres**
-
-Supongamos que ha configurado la siguiente prioridad para sus áreas de nombres:
-
-1. ID de CRM: representa a un usuario.
-2. IDFA: representa un dispositivo de hardware de Apple, como un iPhone y iPad.
-3. GAID: representa un dispositivo de hardware de Google, como Google Pixel.
-4. ECID: Representa un explorador web, como Firefox, Safari y Chrome.
-5. AAID: Representa un explorador web.
-Si ECID y AAID se envían simultáneamente, ambas identidades representan el mismo explorador web (duplicado).
-
-Si se incorporan los siguientes eventos de experiencia en Experience Platform, los fragmentos de perfil se almacenan con el área de nombres con la prioridad más alta.
-
-**Eventos autenticados:**
-
-* Si el mapa de identidad contiene un ECID, un GAID y un ID de CRM, la información del evento se almacenará con el ID de CRM (identidad principal).
-   * GAID representa un dispositivo de hardware Google (por ejemplo, Google Pixel), ECID representa un explorador web (por ejemplo, Google Chrome) y CRM ID representa un usuario autenticado.
-   * Si el mapa de identidad contiene un ID de CRM, un ECID y un AAID, la información del evento se almacenará con el ID de CRM (identidad principal).
-
-**Eventos no autenticados:**
-
-* Si el mapa de identidad contiene un ECID, IDFA y AAID, la información del evento se almacenará con el IDFA (identidad principal).
-   * IDFA representa un dispositivo de hardware Apple (por ejemplo, iPhone), ECID y AAID representan un explorador web (Safari).
-
->[!ENDSHADEBOX]
+Para obtener más información, lea la guía de [prioridad de área de nombres](./namespace-priority.md).
 
 ## Pasos siguientes
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
-* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
-* [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
+* [Prioridad de área de nombres](./namespace-priority.md).
+* [Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md).

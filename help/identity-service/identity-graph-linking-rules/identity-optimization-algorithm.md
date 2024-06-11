@@ -3,24 +3,30 @@ title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 hide: true
 hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
 
 # Algoritmo de optimización de identidad
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->El algoritmo de optimización de identidad está en Alpha. La funcionalidad y la documentación están sujetas a cambios.
+>Esta función aún no está disponible; se espera que el programa beta para reglas de vinculación de gráficos de identidad comience en julio en zonas protegidas de desarrollo. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación.
 
-El algoritmo de optimización de identidad es una regla que ayuda a garantizar que un gráfico de identidad sea representativo de una sola persona y, por lo tanto, evita la combinación no deseada de identidades en el perfil del cliente en tiempo real.
+El algoritmo de optimización de identidad es un algoritmo gráfico del servicio de identidad que ayuda a garantizar que un gráfico de identidad sea representativo de una sola persona y, por lo tanto, evita la combinación no deseada de identidades en el perfil del cliente en tiempo real.
 
-## Parámetros de entrada
+## Parámetros de entrada {#input-parameters}
+
+Lea esta sección para obtener información sobre áreas de nombres únicas y prioridad de áreas de nombres. Estos dos conceptos sirven como parámetros de entrada requeridos por el algoritmo de optimización de identidad.
+
+### Área de nombres única {#unique-namespace}
+
+Un área de nombres única determina los vínculos que se eliminan si se contrae el gráfico.
 
 Un solo perfil combinado y su gráfico de identidad correspondiente deben representar a un único individuo (entidad de persona). Un solo individuo suele estar representado por ID de CRM o ID de inicio de sesión. Se espera que no se combinen dos personas (ID de CRM) en un solo perfil o gráfico.
 
@@ -29,17 +35,44 @@ Debe especificar qué áreas de nombres representan una entidad de persona en Id
 * Área de nombres de ID de CRM = única
 * Área de nombres de correo electrónico = única
 
-Un área de nombres que declare única se configurará automáticamente para tener un límite máximo de uno dentro de un gráfico de identidad determinado. Por ejemplo, si declara un área de nombres de ID de CRM como única, un gráfico de identidades solo puede tener una identidad que contenga un área de nombres de ID de CRM.
+Un área de nombres que declare única se configurará automáticamente para tener un límite máximo de uno dentro de un gráfico de identidad determinado. Por ejemplo, si declara un área de nombres de ID de CRM como única, un gráfico de identidades solo puede tener una identidad que contenga un área de nombres de ID de CRM. Si no declara un área de nombres como única, el gráfico puede contener más de una identidad con ese área de nombres.
 
 >[!NOTE]
 >
->* Actualmente, el algoritmo solo admite el uso de un único identificador de inicio de sesión (un área de nombres de inicio de sesión). En este momento no se admiten varios identificadores de inicio de sesión (se usan varias áreas de nombres de identidad para iniciar sesión), gráficos de entidades domésticas y estructuras de gráficos jerárquicos.
+>* En este momento no se admite la representación de entidades del hogar (&quot;gráficos del hogar&quot;).
 >
 >* Todas las áreas de nombres que sean identificadores de persona y que se utilicen en la zona protegida para generar gráficos de identidad deben marcarse como un área de nombres única. De lo contrario, puede ver resultados de vinculación no deseados.
 
-## Proceso
+### Prioridad de área de nombres {#namespace-priority}
 
-Al ingerir nuevas identidades, el servicio de identidad comprueba si las nuevas identidades y sus áreas de nombres correspondientes superarán los límites configurados. Si no se superan los límites, la ingesta de nuevas identidades se realizará y estas identidades se vincularán al gráfico. Sin embargo, si se superan los límites, el algoritmo de optimización de la identidad actualizará el gráfico de modo que se respete la marca de tiempo más reciente y se eliminen los vínculos más antiguos con las áreas de nombres de prioridad inferior.
+La prioridad del área de nombres determina cómo elimina los vínculos el algoritmo de optimización de identidad.
+
+Los espacios de nombres del servicio de identidad tienen un orden de importancia relativo implícito. Consideremos un gráfico estructurado como una pirámide. Hay un nodo en la capa superior, dos nodos en la capa media y cuatro nodos en la capa inferior. La prioridad del área de nombres debe reflejar este orden relativo para garantizar que una entidad de persona se represente con precisión.
+
+Para obtener información detallada sobre la prioridad del área de nombres y sus funcionalidades y usos completos, lea la [guía de prioridad de área de nombres](./namespace-priority.md).
+
+![capas de gráficos y prioridad de área de nombres](../images/namespace-priority/graph-layers.png)
+
+## Proceso {#process}
+
+
+Al ingerir nuevas identidades, el servicio de identidad comprueba si las nuevas identidades y sus áreas de nombres correspondientes se adhieren a configuraciones de área de nombres únicas. Si se siguen las configuraciones, la ingesta continúa y las nuevas identidades se vinculan al gráfico. Sin embargo, si no se siguen las configuraciones, el algoritmo de optimización de identidad:
+
+
+* Introduzca el evento más reciente, teniendo en cuenta la prioridad del área de nombres.
+* Elimine el vínculo que combinaría dos entidades de persona de la capa de gráfico adecuada.
+
+## Detalles del algoritmo de optimización de identidad
+
+Cuando se infringe la restricción de área de nombres única, el algoritmo de optimización de identidad vuelve a reproducir los vínculos y reconstruye el gráfico desde cero.
+
+* Los vínculos se ordenan en el siguiente orden:
+   * Último evento.
+   * Marca de tiempo por suma de prioridad de área de nombres (suma inferior = orden superior).
+* El gráfico se restablecería en función del orden anterior. Si al agregar el vínculo se infringe la restricción del límite (por ejemplo, el gráfico contiene dos o más identidades con un área de nombres única), los vínculos se eliminan.
+* El gráfico resultante será compatible con la restricción de área de nombres única que ha configurado.
+
+![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido.png)
 
 ## Ejemplo de escenarios de algoritmo de optimización de identidad
 
@@ -53,27 +86,27 @@ Un dispositivo compartido hace referencia a un dispositivo que utilizan más de 
 
 >[!TAB Ejemplo 1]
 
-| Área de nombres | Límite |
+| Área de nombres | Área de nombres única |
 | --- | --- |
-| ID de CRM | 1 |
-| Correo electrónico | 1 |
-| ECID | N/A |
+| ID de CRM | Sí |
+| Correo electrónico | Sí |
+| ECID | No |
 
-En este ejemplo, tanto el ID de CRM como el correo electrónico se designan como áreas de nombres únicas. En `timestamp=0`, se incorpora un conjunto de datos de registro CRM y se crean dos gráficos diferentes debido a la configuración de límite. Cada gráfico contiene un ID de CRM y un área de nombres de correo electrónico.
+En este ejemplo, tanto el ID de CRM como el correo electrónico se designan como áreas de nombres únicas. En `timestamp=0`, se incorpora un conjunto de datos de registro CRM y se crean dos gráficos diferentes debido a la configuración del área de nombres única. Cada gráfico contiene un ID de CRM y un área de nombres de correo electrónico.
 
 * `timestamp=1`: Jane inicia sesión en su sitio web de comercio electrónico con un ordenador portátil. Jane está representada por su ID de CRM y su correo electrónico, mientras que el explorador web de su portátil que utiliza está representado por un ECID.
 * `timestamp=2`: John inicia sesión en el sitio web de comercio electrónico con el mismo equipo portátil. John está representado por su ID de CRM y su correo electrónico, mientras que el explorador web que utilizó ya está representado por un ECID. Debido a que el mismo ECID se vincula a dos gráficos diferentes, el servicio de identidad puede saber que este dispositivo (portátil) es compartido.
-* Sin embargo, debido a la configuración de límite que establece un máximo de un área de nombres de ID de CRM y un área de nombres de correo electrónico por gráfico, el algoritmo de optimización de identidad divide el gráfico en dos.
+* Sin embargo, debido a la configuración del área de nombres única que establece un máximo de un área de nombres de ID de CRM y un área de nombres de correo electrónico por gráfico, el algoritmo de optimización de identidad divide el gráfico en dos.
    * Finalmente, como John es el último usuario autenticado, el ECID que representa el portátil permanece vinculado a su gráfico en lugar de al de Jane.
 
 ![caso uno del dispositivo compartido](../images/identity-settings/shared-device-case-one.png)
 
 >[!TAB Ejemplo dos]
 
-| Área de nombres | Límite |
+| Área de nombres | Área de nombres única |
 | --- | --- |
-| ID de CRM | 1 |
-| ECID | N/A |
+| ID de CRM | Sí |
+| ECID | No |
 
 En este ejemplo, el área de nombres de ID de CRM se designa como un área de nombres única.
 
@@ -91,11 +124,11 @@ En este ejemplo, el área de nombres de ID de CRM se designa como un área de no
 
 Hay casos en los que un usuario puede introducir valores erróneos en su correo electrónico o números de teléfono.
 
-| Área de nombres | Límite |
+| Área de nombres | Área de nombres única |
 | --- | --- |
-| ID de CRM | 1 |
-| Correo electrónico | 1 |
-| ECID | N/A |
+| ID de CRM | Sí |
+| Correo electrónico | Sí |
+| ECID | No |
 
 En este ejemplo, el ID de CRM y las áreas de nombres de correo electrónico se designan como únicos. Considere el caso de que Jane y John se hayan registrado en su sitio web de comercio electrónico con un valor incorrecto de correo electrónico (por ejemplo, probar<span>@test.com).
 
@@ -103,7 +136,7 @@ En este ejemplo, el ID de CRM y las áreas de nombres de correo electrónico se 
 * `timestamp=2`: John inicia sesión en el sitio web de comercio electrónico utilizando Google Chrome en su iPhone, estableciendo su CRM ID (información de inicio de sesión) y ECID (explorador).
 * `timestamp=3`: su ingeniero de datos ingiere el registro CRM de Jane, lo que provoca que su ID de CRM se vincule al correo electrónico incorrecto.
 * `timestamp=4`: el ingeniero de datos ingiere el registro CRM de John, lo que provoca que su ID de CRM se vincule al correo electrónico incorrecto.
-   * Esto se convierte en una infracción de los límites configurados, ya que crea un solo gráfico con dos áreas de nombres de ID de CRM.
+   * Esto se convierte en una infracción de la configuración del área de nombres única, ya que crea un solo gráfico con dos áreas de nombres de ID de CRM.
    * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el vínculo entre la identidad de Jane con el área de nombres de ID de CRM y la identidad con prueba<span>@test.
 
 Con el algoritmo de optimización de identidad, los valores de identidad incorrectos, como correos electrónicos o números de teléfono falsos, no se propagan en varios gráficos de identidad diferentes.

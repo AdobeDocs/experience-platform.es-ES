@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Servicio de identidad de Adobe Experience Platform
-breadcrumb-title: Guía del servicio de identidad de Experience Platform
+breadcrumb-title: Guía del servicio de identidad de Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 28%
+source-wordcount: '126'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 28%
 - [Introducción al servicio de identidad](home.md)
 - [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
 - Funciones {#features}
-   - [Espacio de nombre de identidad](./features/namespaces.md)
+   - [Espacio de nombres de identidad](./features/namespaces.md)
    - [Lógica de vinculación de identidad](./features/identity-linking-logic.md)
    - [Visualizador de gráficos de identidad](./features/identity-graph-viewer.md)
    - [Eliminaciones en el servicio de identidad](./features/deletion.md)
@@ -40,7 +40,8 @@ ht-degree: 28%
 - [Reglas de vinculación de gráfico de identidad] {#identity-graph-linking-rules}
    - [Resumen de funciones](./identity-graph-linking-rules/overview.md)
    - [Algoritmo de optimización de identidad](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+   - [Prioridad de área de nombres](./identity-graph-linking-rules/namespace-priority.md)
    - [Casos de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
 - [Procesamiento de solicitud de privacidad](privacy.md)
 - [Guía de resolución de problemas](troubleshooting-guide.md)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
