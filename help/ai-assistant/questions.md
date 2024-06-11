@@ -1,9 +1,10 @@
 ---
 title: Guía de preguntas para el asistente de IA
 description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ Las siguientes preguntas de ejemplo se agrupan por objetivos que puede lograr al
 
 Las preguntas siguientes están agrupadas por objetos de datos y se clasifican como [perspectivas operativas](./home.md#operational-insights) o [conocimiento del producto](./home.md#product-knowledge).
 
-| Objeto | Descripción |
-| --- | --- |
-| Audiencias: perspectivas operativas | <ul><li>¿Qué audiencias utilizan otras audiencias?</li><li>¿Cuál es la distribución del número de perfiles entre audiencias?</li><li>Mostrar las audiencias que se modificaron por última vez antes {RELATIVE_DATE}.</li><li>¿Qué audiencias tienen 0 perfiles?</li><li>Es {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} ¿se utiliza en otras audiencias?</li></ul> |
-| Atributos: perspectivas operativas | <ul><li>Qué audiencias tienen un atributo XDM {ATTRIBUTE_PATH} ¿en su definición del segmento?</li><li>¿Cuántos atributos de esquema XDM no se utilizan en ninguna audiencia?</li><li>Qué esquemas tienen el atributo XDM {ATTRIBUTE_PATH} ¿en ellos?</li><li>¿Qué atributos XDM están activados?</li><li>Qué atributos XDM se utilizan en audiencias con más de 10 perfiles</li></ul> |
-| Flujos de datos: perspectivas operativas | <ul><li>A qué flujos de datos contribuyen {DATASET_NAME} conjunto de datos?</li><li>¿Qué flujos de datos de origen no se utilizan o ya no reciben datos?</li><li> |
-| Conjuntos de datos: perspectivas operativas | <ul><li>¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?</li><li>Con qué conector de origen está asociado {DATASET_NAME} conjunto de datos></li><li>¿Qué conjuntos de datos se utilizan en cada audiencia?</li><li>¿Qué esquemas no se utilizan en ningún conjunto de datos?</li><li>¿Cuántos conjuntos de datos tengo?</li></ul> |
-| Destinos: perspectivas operativas | <ul><li>¿Qué destinos están en estado activo?</li><li>¿Qué cuentas de destino tienen 0 audiencias activadas?</li><li> |
-| Recorridos: perspectivas operativas | <ul><li>¿Cuántos recorridos tengo?</li><li>Qué recorridos se han creado en {RELATIVE_DATE} (por ejemplo, la semana pasada) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?</li><li>Mostrar la lista de recorridos modificados en {RELATIVE_DATE} (por ejemplo, la semana pasada) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?</li><li>Enumerar los recorridos que tengo.</li><li>Enumerar las audiencias que se utilizan en recorridos activos.</li></ul> |
-| Esquemas: perspectivas operativas | <ul><li>¿Qué campos del esquema han contribuido a la mayoría de las audiencias?</li><li>¿Cuántos esquemas tienen habilitado el perfil?</li><li>Enumerar todos los esquemas modificados en la última semana.</li><li>¿Qué esquemas no se utilizan en ningún conjunto de datos?</li><li>Enumerar todos los esquemas creados en la última semana.</li></ul> |
-| Fuentes: perspectivas operativas | <ul><li>¿Qué fuentes están en estado activo?</li><li>Qué conector de origen está asociado al conjunto de datos {DATASET_NAME}?</li><li>¿Qué conector de origen tiene el número más alto de cuentas asociadas?</li><li>Mostrar los flujos de datos y sus conectores de origen asociados.</li></ul> |
-| Aprendizaje específico: conocimiento del producto (Real-Time CDP y Journey Optimizer) | <ul><li>¿En qué puede ayudar el Asistente de IA?</li><li>¿Qué son las audiencias de similitud?</li><li>¿Cómo se relacionan los grupos de usuarios con las funciones?</li><li>¿Cuándo debo usar un tipo de datos o un grupo de campos?</li><li>¿Cuál es la diferencia entre una identidad y una clave principal o externa?</li><li>¿Cómo se calcula la riqueza de perfiles?</li></ul> |
-| Solución de problemas: conocimiento del producto (Real-Time CDP y Journey Optimizer) | <ul><li>¿En qué puede ayudar el Asistente de IA?</li><li>¿Puedo eliminar un esquema con perfil habilitado después de la ingesta de datos?</li><li>¿Por qué no puedo eliminar una audiencia?</li><li>¿Cuánto tiempo tardan las audiencias en evaluarse y los resultados en estar disponibles para la segmentación?</li></ul> |
-
-{style="table-layout:auto"}
+* **Audiencias: perspectivas operativas**
+   * ¿Qué audiencias utilizan otras audiencias?
+   * ¿Cuál es la distribución del número de perfiles entre audiencias?
+   * Mostrar las audiencias que se modificaron por última vez antes {RELATIVE_DATE}.
+   * ¿Qué audiencias tienen 0 perfiles?
+   * Es {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} ¿se utiliza en otras audiencias?
+* **Atributos: perspectivas operativas**
+   * Qué audiencias tienen el atributo xdm {ATTRIBUTE_PATH} en su definición de segmento?
+   * ¿Cuántos atributos de esquema XDM no se utilizan en ninguna audiencia?
+   * Qué esquemas tienen el atributo xdm {ATTRIBUTE_PATH} ¿en ellos?
+   * ¿Qué atributos XDM están activados?
+   * ¿Qué atributos XDM se utilizan en audiencias con más de 10 perfiles?
+* **Flujos de datos: perspectivas operativas**
+   * A qué flujos de datos contribuyen {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} conjunto de datos?
+   * ¿Qué flujos de datos de origen no se utilizan o ya no reciben datos?
+   * Enumerar los flujos de datos de origen que tengo.
+   * ¿Qué flujos de datos se configuran para cada conector de origen?
+* **Conjuntos de datos: perspectivas operativas**
+   * ¿Cuántos conjuntos de datos se han introducido utilizando el mismo esquema?
+   * Con qué conector de origen está asociado {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} conjunto de datos?
+   * ¿Qué conjuntos de datos se utilizan en cada audiencia?
+   * ¿Qué esquemas no se utilizan en ningún conjunto de datos?
+   * ¿Cuántos conjuntos de datos tengo?
+* **Destinos: perspectivas operativas**
+   * ¿Qué destinos están en estado activo?
+   * ¿Qué cuentas de destino tienen 0 audiencias activadas?
+   * ¿Cuántas audiencias se activan para cada destino?
+   * ¿Qué destinos tienen el número más alto de audiencias activadas?
+* **Recorridos: perspectivas operativas**
+   * ¿Cuántos recorridos tengo?
+   * Qué recorridos se han creado en {RELATIVE_DATE} (por ejemplo, la última semana) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?
+   * Mostrar la lista de recorridos modificados en {RELATIVE_DATE} (por ejemplo, la última semana) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?
+   * Enumerar los recorridos activos que tengo.
+   * Enumerar las audiencias que se utilizan en recorridos activos.
+* **Fuentes: perspectivas operativas**
+   * ¿Qué fuentes están en estado activo?
+   * Qué conector de origen está asociado al conjunto de datos {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * ¿Qué conector de origen tiene el número más alto de cuentas asociadas?
+   * Mostrar los flujos de datos y sus conectores de origen asociados.
+* **Aprendizaje específico: conocimiento del producto (Real-Time CDP y Journey Optimizer)**
+   * ¿Qué son las audiencias de similitud?
+   * ¿Cómo se relacionan los grupos de usuarios con las funciones?
+   * ¿Cuándo debo usar un tipo de datos o un grupo de campos?
+   * ¿Cuál es la diferencia entre una identidad y una clave principal o externa?
+   * ¿Cómo se calcula la riqueza de perfiles?
+* **Solución de problemas: conocimiento del producto (Real-Time CDP y Journey Optimizer)**
+   * ¿En qué puede ayudar el Asistente de IA?
+   * ¿Puedo eliminar un esquema habilitado para perfiles después de la ingesta de datos?
+   * ¿Por qué no puedo eliminar una audiencia?
+   * ¿Cuánto tiempo tardan las audiencias en evaluarse y los resultados en estar disponibles para la segmentación?
 
 ## Formulación de preguntas {#phrasing-your-questions}
 
