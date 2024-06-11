@@ -3,10 +3,10 @@ title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 7%
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -62,6 +62,10 @@ Puede seleccionar entre varios tipos de audiencias, según su origen:
 >[!IMPORTANT]
 >
 >Este paso solo se aplica a algunos destinos de flujo de audiencia. Si su destino no tiene un **[!UICONTROL Asignación]** paso, saltar a [programación de audiencia](#scheduling).
+>
+>Al activar audiencias en destinos de flujo continuo, también debe asignar *al menos un área de nombres de identidad de destino*, además de atributos de perfil de destinatario. De lo contrario, las audiencias no se activarán en la plataforma de destino.
+> ![Imagen del paso de asignación que muestra una asignación de área de nombres de identidad obligatoria.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Algunos destinos de flujo de audiencia requieren que seleccione atributos de origen o áreas de nombres de identidad para asignar como identidades de destino en el destino.
 
@@ -92,18 +96,18 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformación"
->abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform aplique un algoritmo hash en ellos automáticamente en la activación."
+>abstract="Marque esta opción cuando utilice campos de origen sin hash para que Adobe Experience Platform los hash automáticamente al activarlos."
 
 Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la **Aplicar transformación** para que Adobe Experience Platform agregue automáticamente los atributos de origen al activarlos.
 
 ![Aplique el control de transformación resaltado en el paso Asignación de identidad.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Programar exportación de público {#scheduling}
+## Programar exportación de audiencias {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Fecha final"
->abstract="No está disponible la adición de una fecha de finalización para la programación de público."
+>abstract="La adición de una fecha de finalización para la programación del público no está disponible."
 
 De forma predeterminada, la variable **[!UICONTROL Programación de audiencia]** Esta página muestra únicamente las audiencias recién seleccionadas que eligió en el flujo de activación actual.
 
@@ -129,7 +133,7 @@ Para ver todas las audiencias que se están activando en su destino, utilice la 
 
 1. Seleccionar **[!UICONTROL Siguiente]** para ir a [!UICONTROL Revisar] página.
 
-## Revisión {#review}
+## Revisar {#review}
 
 En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccionar **[!UICONTROL Cancelar]** para romper el flujo, **[!UICONTROL Atrás]** para modificar la configuración, o **[!UICONTROL Finalizar]** para confirmar la selección y comenzar a enviar datos al destino.
 
@@ -137,7 +141,7 @@ En el **[!UICONTROL Revisar]** , puede ver un resumen de su selección. Seleccio
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-Si su organización ha adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué directivas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
+Si su organización compró **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad**, seleccione **[!UICONTROL Ver directivas de consentimiento aplicables]** para ver qué políticas de consentimiento se aplican y cuántos perfiles se incluyen en la activación como resultado de ellas. Más información [evaluación de directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para obtener más información.
 
 ### Comprobaciones de políticas de uso de datos {#data-usage-policy-checks}
 

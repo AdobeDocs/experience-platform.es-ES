@@ -2,10 +2,10 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 4%
+source-wordcount: '918'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 4%
 
 El Experience Platform utiliza áreas de nombres de identidad para describir el tipo de identidades específicas. Por ejemplo, un área de nombres de identidad llamada `Email` identifica un valor como `name@email.com` como dirección de correo electrónico.
 
-Al crear destinos en tiempo real (flujo continuo) a través de Destination SDK, además de [configuración de un esquema de socio](schema-configuration.md) Para que los usuarios puedan asignar atributos de perfil e identidades a, también debe definir áreas de nombres de identidad admitidas por la plataforma de destino. Por ejemplo, si su plataforma de destino acepta correos electrónicos con hash y [!DNL IDFA], debe definir estas dos identidades como [se describe más adelante en este documento](#supported-parameters).
+Según el tipo de destino que cree (de flujo continuo o basado en archivos), tenga en cuenta los siguientes requisitos del área de nombres de identidad:
 
-Al activar audiencias en destinos de flujo continuo, los usuarios también deben asignar identidades de destino, además de atributos de perfil de destino. De lo contrario, las audiencias no se activarán en la plataforma de destino.
+* Al crear destinos en tiempo real (flujo continuo) a través de Destination SDK, además de [configuración de un esquema de socio](schema-configuration.md) a los que los usuarios pueden asignar atributos e identidades de perfil, también debe definir *al menos uno* áreas de nombres de identidad admitidas por la plataforma de destino. Por ejemplo, si su plataforma de destino acepta correos electrónicos con hash y [!DNL IDFA], debe definir estas dos identidades como [se describe más adelante en este documento](#supported-parameters).
 
-Al crear un destino basado en archivos mediante Destination SDK, la configuración de las áreas de nombres de identidad es opcional.
+  >[!IMPORTANT]
+  >
+  >Al activar audiencias en destinos de flujo continuo, los usuarios también deben asignar _al menos una identidad de destino_, además de atributos de perfil de destinatario. De lo contrario, las audiencias no se activarán en la plataforma de destino.
+
+* Al crear destinos basados en archivos mediante Destination SDK, la configuración de las áreas de nombres de identidad es _opcional_.
 
 Para obtener más información sobre Áreas de nombres de identidad en Experience Platform, consulte la [documentación de áreas de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
@@ -114,7 +118,7 @@ La siguiente configuración habilita la opción [Aplicar transformación](../../
    }
 ```
 
-Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform aplique un algoritmo hash en ellos automáticamente en la activación.
+Marque esta opción cuando utilice campos de origen sin hash para que Adobe Experience Platform los hash automáticamente al activarlos.
 
 Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la **Aplicar transformación** para que Adobe Experience Platform agregue automáticamente los atributos de origen al activarlos.
 
