@@ -2,9 +2,9 @@
 title: Panel de perfiles de cuenta
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los perfiles de cuenta B2B de su organización.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -169,6 +169,14 @@ El menú desplegable dentro del widget permite seleccionar el modelo de puntuaci
 >Los filtros de intervalo de fechas globales no se aplican a las perspectivas de puntuación predictiva. Los widgets de puntuación predictiva analizan los datos en función del modelo de puntuación de cuenta seleccionado en la lista desplegable.
 
 ![El widget de factores influyentes principales de puntuación predictiva.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Error de no se pueden cargar los datos {#errors}
+
+Si aparece un widget *[!UICONTROL No se puede cargar. Inténtelo de nuevo.]* esto se debe a que no hay datos disponibles para la entidad B2B. Por ejemplo, el widget mostrado a continuación [!UICONTROL Nuevas oportunidades por función de persona], muestra el mensaje &quot;[!UICONTROL No se puede cargar. Inténtelo de nuevo.]&quot;, ya que esta zona protegida no tiene datos de oportunidades disponibles.
+
+![Error de no se puede cargar la perspectiva.](../images/account-profiles/unable-to-load.png)
+
+Para resolver el problema, debe introducir datos de entidad B2B, como *persona de oportunidad* en la zona protegida. Después de 48 horas, los datos se reflejan en los widgets.
 
 ## Pasos siguientes
 

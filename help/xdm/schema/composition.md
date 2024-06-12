@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conceptos básicos de composición de esquemas
 description: Obtenga información acerca de los esquemas XDM (Experience Data Model) y los componentes básicos, los principios y las prácticas recomendadas para componer esquemas en Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4236'
-ht-degree: 6%
+source-wordcount: '4293'
+ht-degree: 2%
 
 ---
 
@@ -53,7 +53,7 @@ Los esquemas de registros y series temporales contienen un mapa de identidades (
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identidades en esquemas"
->abstract="Las identidades son campos clave dentro de un esquema que pueden utilizarse para identificar un asunto, como una dirección de correo electrónico o un ID de marketing. Estos campos se utilizan para construir el gráfico de identidad para cada particular y crear perfiles de cliente. Consulte la documentación para obtener más información sobre las identidades en los esquemas."
+>abstract="Las identidades son campos clave dentro de un esquema que se pueden utilizar para identificar a un sujeto, como una dirección de correo electrónico o un ID de marketing. Estos campos se utilizan para construir el gráfico de identidad de cada individuo y crear perfiles de clientes. Consulte la documentación para obtener más información sobre las identidades en los esquemas."
 
 Los esquemas se utilizan para la ingesta de datos en Experience Platform. Estos datos se pueden utilizar en varios servicios para crear una única vista unificada de una entidad individual. Por lo tanto, al diseñar esquemas para identidades de clientes, es importante tener en cuenta qué campos se pueden utilizar para identificar a un sujeto, independientemente de dónde provengan los datos.
 
@@ -170,7 +170,12 @@ Los esquemas se componen mediante la fórmula siguiente:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Clase"
->abstract="Cada esquema se basa en una sola clase. La clase define el comportamiento del esquema y las propiedades comunes que deben contener todos los esquemas basados en esa clase. Consulte la documentación para obtener más información sobre cómo participan las clases en la composición de esquemas."
+>abstract="Cada esquema se basa en una sola clase. La clase define el comportamiento del esquema y las propiedades comunes que todos los esquemas basados en esa clase deben contener. Consulte la documentación para obtener más información sobre cómo las clases participan en la composición de esquemas."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="Tipo de sector"
+>abstract="Si selecciona un sector relevante para su negocio, el modelo de aprendizaje automático puede proporcionar una mejor organización de los datos asignando con mayor precisión los campos de origen con los grupos de campos estándar que se alinean con los estándares del sector. Esto garantiza que la integración de datos se adapte a las necesidades específicas de su sector y proporciona perspectivas de datos más precisas y relevantes."
 
 La composición de un esquema comienza asignando una clase. Las clases definen los aspectos de comportamiento de los datos que contendrá el esquema (registro o serie temporal). Además, las clases describen el menor número de propiedades comunes que todos los esquemas basados en esa clase necesitarían incluir y proporcionan una forma de combinar varios conjuntos de datos compatibles.
 
@@ -189,12 +194,12 @@ Para obtener la lista más actualizada de clases XDM estándar disponibles, cons
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Grupo de campo"
->abstract="Los grupos de campos son componentes reutilizables que permiten ampliar esquemas con atributos adicionales. La mayoría de los grupos de campos solo son compatibles con ciertas clases. Puede utilizar grupos de campos estándar definidos por Adobe o puede definir manualmente sus propios grupos de campos personalizados. Consulte la documentación para obtener más información sobre cómo participan los grupos de campos en la composición de esquemas."
+>abstract="Los grupos de campos son componentes reutilizables que permiten ampliar esquemas con atributos adicionales. La mayoría de los grupos de campos solo son compatibles con determinadas clases. Puede utilizar grupos de campos estándar definidos por Adobe o puede definir manualmente sus propios grupos de campos personalizados. Consulte la documentación para obtener más información sobre cómo los grupos de campos participan en la composición del esquema."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Grupo de campos obligatorio"
->abstract="La fuente que utiliza requiere este grupo de campos. Por este motivo, no puede eliminarlo del esquema."
+>abstract="Este grupo de campos es requerido por el origen que está usando. Por este motivo, no puede eliminarlo del esquema."
 
 Un grupo de campos es un componente reutilizable que define uno o varios campos que implementan determinadas funciones, como detalles personales, preferencias de hotel o dirección. Los grupos de campos están pensados para incluirse como parte de un esquema que implementa una clase compatible.
 
@@ -239,7 +244,7 @@ Para obtener la lista más actualizada de tipos de datos XDM estándar disponibl
 Un campo es el bloque de creación más básico de un esquema. Los campos proporcionan restricciones con respecto al tipo de datos que pueden contener al definir un tipo de datos específico. Estos tipos de datos básicos definen un único campo, mientras que la variable [tipos de datos](#data-type) los campos mencionados anteriormente permiten definir varios subcampos y reutilizar la misma estructura de varios campos en varios esquemas. Por tanto, además de definir el &quot;tipo de datos&quot; de un campo como uno de los tipos de datos definidos en el Registro, Experience Platform admite tipos escalares básicos como:
 
 * Cadena
-* Número entero
+* Entero
 * Doble
 * Booleano
 * Matriz
@@ -253,7 +258,7 @@ Los intervalos válidos de estos tipos escalares se pueden restringir aún más 
 
 * Enumeración
 * Largo
-* corto
+* Corto
 * Byte
 * Fecha
 * Fecha-hora

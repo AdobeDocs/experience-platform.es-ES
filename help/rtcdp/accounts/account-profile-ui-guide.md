@@ -5,9 +5,9 @@ description: Mediante el uso de perfiles de cuenta, Adobe Real-time Customer Dat
 badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Para obtener más información sobre cómo se crean los perfiles de cuenta como 
 
 Seleccionar **[!UICONTROL Perfiles]** bajo [!UICONTROL Cuentas] en la barra de navegación izquierda para ver la descripción general de los perfiles de cuenta. En el [!UICONTROL Información general] , el tablero muestra un gráfico o un gráfico que muestra los widgets en un solo punto de entrada.
 
-![Pestaña Información general que muestra los widgets](images/b2b-account-profile-overview.png)
+![La pestaña Información general de perfiles de cuenta con Perfiles en la navegación izquierda e Información general resaltada.](images/b2b-account-profile-overview.png)
 
 Consulte la documentación de la [[!UICONTROL Perfiles de cuenta]](../../dashboards/guides/account-profiles.md) tablero para obtener más información. Consulte la documentación sobre [Real-time Customer Data Platform Insights Data Model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obtener más información sobre cómo se pueden utilizar los modelos de datos de insights para crear gráficos personalizados para los paneles.
 
@@ -38,7 +38,7 @@ Consulte la documentación de la [[!UICONTROL Perfiles de cuenta]](../../dashboa
 
 Para configurar la coincidencia de cliente potencial con cuenta, seleccione **[!UICONTROL Perfiles]** bajo [!UICONTROL Cuentas] en el panel de navegación izquierdo. En el **[!UICONTROL Información general]** pestaña, seleccione **[!UICONTROL Configuración]** en la parte superior derecha.
 
-![Seleccionar configuración](images/b2b-configuring-accounts-profile.png)
+![La pestaña Información general de perfiles de cuenta con la opción Configuración resaltada.](images/b2b-configuring-accounts-profile.png)
 
 El **[!UICONTROL Configuración de cuenta]** se abre. Desde aquí, seleccione la **[!UICONTROL Habilitar coincidencia de cliente potencial con cuenta]** para activar la función. Utilice el menú desplegable para seleccionar **[!UICONTROL Diario]** para el **[!UICONTROL Cadencia coincidente]** configuración. Finalmente, seleccione el **[!UICONTROL Criterios coincidentes]** opciones seguidas de **[!UICONTROL Guardar]** para confirmar la configuración y volver a la **[!UICONTROL Perfiles de cuenta]** pantalla.
 

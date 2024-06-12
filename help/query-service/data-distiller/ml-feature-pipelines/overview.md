@@ -1,21 +1,19 @@
 ---
-title: Canalizaciones de funciones AI/ML
+title: Canalizaciones de funciones de IA/ML
 description: Aprenda a utilizar Data Distiller para enriquecer sus canalizaciones de aprendizaje automático con funciones derivadas de los datos de Adobe Experience Platform. Transforme datos sin procesar en funciones y entregue los datos de las funciones para entrenar o puntuar un modelo que sea compatible con los casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Canalizaciones de funciones AI/ML
+# Canalizaciones de funciones de IA/ML
 
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
-
-<!--  -->
 
 Data Distiller permite a los científicos e ingenieros de datos enriquecer sus canalizaciones de aprendizaje automático con datos de experiencia del cliente de alto valor que se han recopilado y depurado en Adobe Experience Platform. Desde una [!DNL Python] portátil en cualquier entorno, puede explorar de forma interactiva los datos de los clientes en el Experience Platform, definir y calcular las funciones a partir de los datos, y leer las funciones calculadas en su entorno de aprendizaje automático para el modelado.
 

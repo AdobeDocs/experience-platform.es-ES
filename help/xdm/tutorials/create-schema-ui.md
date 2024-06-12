@@ -5,7 +5,7 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 0%
@@ -49,10 +49,6 @@ Para empezar a maquetar un esquema, seleccione **[!UICONTROL Crear esquema]** en
 El [!UICONTROL Crear esquema] flujo de trabajo aparece. A continuación, elija una clase base para el esquema. Puede elegir entre las clases principales de [!UICONTROL Perfil individual de XDM] y [!UICONTROL ExperienceEvent de XDM], o [!UICONTROL Otros] si estas clases no se adaptan a sus propósitos. El [!UICONTROL Otros] La opción de clases permite [crear una nueva clase](#create-new-class) o elija entre otras clases preexistentes.
 
 Consulte la [Perfil individual de XDM](../classes/individual-profile.md) y [ExperienceEvent de XDM](../classes/experienceevent.md) para obtener más información sobre estas clases. Para los fines de este tutorial, seleccione **[!UICONTROL Perfil individual de XDM]** seguido de **[!UICONTROL Siguiente]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
