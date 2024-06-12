@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Solución de problemas de orígenes
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca de las fuentes de Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -47,7 +47,7 @@ A continuación se muestra una lista de restricciones que debe tener en cuenta p
 - No se permiten los siguientes nombres de archivo: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carácter de punto (.) y dos caracteres de punto (..).
 - El número máximo de archivos por lote es de 1500, con un tamaño máximo de lote de 100 GB.
 - El número máximo de propiedades o campos por fila es de 10 000.
-- El número máximo de lotes que se pueden enviar por usuario por minuto es 138.
+- El número máximo de lotes que se pueden enviar por usuario y minuto es 2000.
 
 ### ¿Qué tipos de datos son compatibles?
 
