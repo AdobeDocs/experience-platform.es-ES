@@ -3,10 +3,10 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ La siguiente solicitud recupera las dos últimas audiencias creadas en su organi
 +++Solicitud de ejemplo para recuperar una lista de audiencias.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -173,30 +173,30 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 }
 ```
 
-| Propiedad | Tipo de audiencia | Descripción |
+| Propiedad | Tipo de público | Descripción |
 | -------- | ------------- | ----------- | 
-| `id` | Ambas | Un identificador de solo lectura generado por el sistema para la audiencia. |
-| `audienceId` | Ambas | Si la audiencia es una audiencia generada por Platform, este es el mismo valor que la `id`. Si la audiencia se genera externamente, el cliente proporciona este valor. |
-| `schema` | Ambas | El esquema Experience Data Model (XDM) de la audiencia. |
-| `imsOrgId` | Ambas | El ID de la organización a la que pertenece la audiencia. |
-| `sandbox` | Ambas | Información sobre la zona protegida a la que pertenece la audiencia. Encontrará más información sobre las zonas protegidas en la [información general sobre zonas protegidas](../../sandboxes/home.md). |
-| `name` | Ambas | El nombre de la audiencia. |
-| `description` | Ambas | Una descripción de la audiencia. |
+| `id` | Ambos | Un identificador de solo lectura generado por el sistema para la audiencia. |
+| `audienceId` | Ambos | Si la audiencia es una audiencia generada por Platform, este es el mismo valor que la `id`. Si la audiencia se genera externamente, el cliente proporciona este valor. |
+| `schema` | Ambos | El esquema Experience Data Model (XDM) de la audiencia. |
+| `imsOrgId` | Ambos | El ID de la organización a la que pertenece la audiencia. |
+| `sandbox` | Ambos | Información sobre la zona protegida a la que pertenece la audiencia. Encontrará más información sobre las zonas protegidas en la [información general sobre zonas protegidas](../../sandboxes/home.md). |
+| `name` | Ambos | Nombre de la audiencia. |
+| `description` | Ambos | Una descripción de la audiencia. |
 | `expression` | Generado por Platform | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
 | `mergePolicyId` | Generado por Platform | El ID de la política de combinación a la que está asociada la audiencia. Encontrará más información sobre las políticas de combinación en la [guía de políticas de combinación](../../profile/api/merge-policies.md). |
 | `evaluationInfo` | Generado por Platform | Muestra cómo se evaluará la audiencia. Los posibles métodos de evaluación incluyen por lotes, sincrónico (streaming) o continuo (edge). Encontrará más información sobre los métodos de evaluación en la [resumen de segmentación](../home.md) |
-| `dependents` | Ambas | Una matriz de ID de audiencia que dependen de la audiencia actual. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
-| `dependencies` | Ambas | Una matriz de ID de audiencia de los que depende la audiencia. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
-| `type` | Ambas | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
-| `originName` | Ambas | Campo que hace referencia al nombre del origen de la audiencia. Para audiencias generadas por Platform, este valor es `REAL_TIME_CUSTOMER_PROFILE`. Para las audiencias generadas en Audience Orchestration, este valor es `AUDIENCE_ORCHESTRATION`. Para las audiencias generadas en Adobe Audience Manager, este valor es `AUDIENCE_MANAGER`. Para otras audiencias generadas externamente, este valor será `CUSTOM_UPLOAD`. |
-| `createdBy` | Ambas | El ID del usuario que creó la audiencia. |
-| `labels` | Ambas | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
-| `namespace` | Ambas | El área de nombres al que pertenece la audiencia. Los valores posibles incluyen `AAM`, `AAMSegments`, `AAMTraits`, y `AEPSegments`. |
-| `linkedAudienceRef` | Ambas | Un objeto que contiene identificadores de otros sistemas relacionados con la audiencia. |
+| `dependents` | Ambos | Una matriz de ID de audiencia que dependen de la audiencia actual. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
+| `dependencies` | Ambos | Una matriz de ID de audiencia de los que depende la audiencia. Se utilizaría si va a crear una audiencia que sea un segmento de un segmento. |
+| `type` | Ambos | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
+| `originName` | Ambos | Campo que hace referencia al nombre del origen de la audiencia. Para audiencias generadas por Platform, este valor es `REAL_TIME_CUSTOMER_PROFILE`. Para las audiencias generadas en Audience Orchestration, este valor es `AUDIENCE_ORCHESTRATION`. Para las audiencias generadas en Adobe Audience Manager, este valor es `AUDIENCE_MANAGER`. Para otras audiencias generadas externamente, este valor será `CUSTOM_UPLOAD`. |
+| `createdBy` | Ambos | El ID del usuario que creó la audiencia. |
+| `labels` | Ambos | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
+| `namespace` | Ambos | El área de nombres al que pertenece la audiencia. Los valores posibles incluyen `AAM`, `AAMSegments`, `AAMTraits`, y `AEPSegments`. |
+| `linkedAudienceRef` | Ambos | Un objeto que contiene identificadores de otros sistemas relacionados con la audiencia. |
 
 +++
 
-## Creación de una nueva audiencia {#create}
+## Crear una audiencia nueva {#create}
 
 Puede crear una audiencia nueva realizando una solicitud de POST a `/audiences` punto final.
 
@@ -243,7 +243,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 | Propiedad | Descripción |
 | -------- | ----------- | 
-| `name` | El nombre de la audiencia. |
+| `name` | Nombre de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
 | `expression` | La expresión de lenguaje de consulta de perfil (PQL) de la audiencia. Puede encontrar más información sobre las expresiones PQL en la [Guía de expresiones PQL](../pql/overview.md). |
@@ -285,7 +285,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | Propiedad | Descripción |
 | -------- | ----------- | 
 | `audienceId` | ID proporcionado por el usuario para la audiencia. |
-| `name` | El nombre de la audiencia. |
+| `name` | Nombre de la audiencia. |
 | `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
@@ -719,7 +719,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | Propiedad | Descripción |
 | -------- | ----------- | 
 | `audienceId` | El ID de la audiencia. Para audiencias generadas externamente, este valor lo puede proporcionar el usuario. |
-| `name` | El nombre de la audiencia. |
+| `name` | Nombre de la audiencia. |
 | `namespace` | El área de nombres de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo generado por el sistema que muestra si la audiencia es generada por Platform o por un público generado externamente. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. A `SegmentDefinition` hace referencia a una audiencia generada en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
