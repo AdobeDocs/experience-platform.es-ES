@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: b41a60942460e22556714699975f9eb281d76335
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4060'
 ht-degree: 0%
 
 ---
@@ -128,9 +128,9 @@ El siguiente gráfico explica los diferentes estados del ciclo vital, qué repre
 
 | Estado | Definición | ¿Visible en Audience Portal? | ¿Visible en destinos? | ¿Afecta a los límites de segmentación? | Impacto en las audiencias basadas en archivos | Impacto en la evaluación de audiencias | ¿Se puede usar dentro de otras audiencias? | Editable |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Borrador | Una audiencia en **Borrador** el estado es una audiencia que aún está en desarrollo y que aún no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Se puede evaluar para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
+| Borrador | Una audiencia en **Borrador** el estado es una audiencia que aún está en desarrollo y que aún no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Evaluado para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
 | Publicadas | Una audiencia en **Publicado** El estado es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí | Sí |
-| Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | Sí | Sí |
+| Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | No | Sí |
 | Eliminado | Una audiencia en **Eliminado** El estado es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No | No |
 
 ### ¿En qué estados puedo editar mis audiencias?
@@ -223,7 +223,7 @@ Para que la audiencia principal se mueva al estado inactivo o eliminado, todas s
 
 ### ¿Puedo hacer referencia a una audiencia que está en un estado de ciclo de vida diferente?
 
-¡Sí! Si la audiencia está actualmente en estado de borrador, puede hacer referencia a audiencias en estado publicado o inactivo. Sin embargo, para publicar esta audiencia, debe **debe** publicar las demás audiencias principales.
+¡Sí! Si la audiencia está actualmente en estado de borrador, puede hacer referencia a las audiencias en estado de borrador o publicado. Sin embargo, para publicar esta audiencia, debe **debe** publicar las demás audiencias principales.
 
 ## Inventario de audiencias
 
