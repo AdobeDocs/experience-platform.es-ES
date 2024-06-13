@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Casos de uso y libros de reproducción disponibles para Real-time Customer Data Platform y Adobe Journey Optimizer.
 description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # Manuales de casos de uso disponibles
 
 Lea esta página para obtener una descripción general de todos los libros de reproducción disponibles que puede descubrir y utilizar en Real-time Customer Data Platform y Adobe Journey Optimizer.
 
 ## Casos de uso y manuales en Journey Optimizer {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Libros de reproducción disponibles"
+>abstract="Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer."
 
 | Nombre del manual | Descripción |
 | ------------- |  ----------- |
