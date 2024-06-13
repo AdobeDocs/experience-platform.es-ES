@@ -2,9 +2,10 @@
 title: Prioridad de área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -50,9 +51,9 @@ Las áreas de nombres de persona son relativamente inmutables en comparación co
 
 Otra forma de abordar este tema es a través de la cardinalidad. Para una entidad de persona determinada, ¿cuántas identidades se crearán? En la mayoría de los casos, una persona tendrá un ID de CRM, un puñado de identificadores de dispositivo de hardware (los restablecimientos IDFA/GAID no deberían ocurrir con frecuencia) e incluso más cookies (es concebible que una persona navegue en varios dispositivos, utilice el modo incógnito o restablezca cookies en un momento dado). Generalmente, **la cardinalidad inferior indica un área de nombres con un valor más alto**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Validar la configuración de prioridad del área de nombres
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Una vez que tenga idea de cómo priorizar las áreas de nombres, puede utilizar la herramienta Simulación de gráficos para probar varios escenarios de colapso de gráficos y asegurarse de que las configuraciones de prioridad devuelvan los resultados de gráficos esperados. Para obtener más información, lea la guía sobre el uso de [Herramienta Simulación de gráficos](./graph-simulation.md).
 
 ## Configurar prioridad de área de nombres
 
