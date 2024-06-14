@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4334'
+source-wordcount: '4346'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | [!UICONTROL Compartir con socios] | Composición de audiencias, carga personalizada, servicio de segmentación | Comparte la audiencia con otros usuarios de Platform. Para obtener más información acerca de esta funcionalidad, lea la [Resumen de coincidencia de segmentos](./segment-match/overview.md). |
 | [!UICONTROL Administración de etiquetas] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas definidas por el usuario que pertenecen a la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
 | [!UICONTROL Mover a carpeta] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra a qué carpeta pertenece la audiencia. Para obtener más información acerca de esta funcionalidad, lea la sección sobre [filtrado y etiquetado](#manage-audiences). |
-| [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. |
+| [!UICONTROL Copiar] | Servicio de segmentación | Duplica la audiencia seleccionada. Encontrará más información sobre esta función en la [Preguntas frecuentes sobre segmentación](../faq.md#copy). |
 | [!UICONTROL Aplicar etiquetas de acceso] | Composición de audiencias, carga personalizada, servicio de segmentación | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Carga personalizada, servicio de segmentación | Publica la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |
 | [!UICONTROL Desactivar] | Carga personalizada, servicio de segmentación | Desactiva la audiencia seleccionada. Para obtener más información sobre la administración del estado del ciclo vital, lea la [sección de estado del ciclo vital de las preguntas frecuentes sobre segmentación](../faq.md#lifecycle-states). |

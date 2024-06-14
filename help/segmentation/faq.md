@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Sí, hay que tener en cuenta algunas advertencias cuando se utilizan audiencias 
 En este momento, usted **debe** compruebe manualmente si la audiencia se utiliza en sentido descendente en Adobe Journey Optimizer, ya que este estado no se comprueba automáticamente en la actualidad.
 
 Además, puede **debe** compruebe manualmente si la audiencia se utiliza como componente de una audiencia basada en cuentas, ya que este estado tampoco se comprueba automáticamente en este momento.
+
+### ¿Qué sucede cuando copio una audiencia? {#copy}
+
+Al copiar una audiencia, la nueva estará en estado de borrador y conservará las mismas carpetas, etiquetas y etiquetas que se aplicaron a la audiencia original.
 
 ### ¿Afecta el uso de una audiencia como audiencia secundaria a las transiciones de estado del ciclo vital?
 
