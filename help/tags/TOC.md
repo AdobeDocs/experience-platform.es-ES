@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 45%
+source-wordcount: '765'
+ht-degree: 44%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 45%
    * [Implementar etiquetas de JavaScript para administrar el consentimiento del cliente](./ui/client-side/consent.md)
    * [Ayuda sobre Política de seguridad de contenido (CSP)](./ui/client-side/content-security-policy.md)
    * [Ayuda sobre Integridad de los subrecursos (SRI)](./ui/client-side/sri.md)
-   * [Seguridad de la capa de transporte](./ui/client-side/transport-layer-security.md)
+   * [Seguridad de capa de transporte](./ui/client-side/transport-layer-security.md)
 * Reenvío de eventos {#event-forwarding}
    * [Información general](./ui/event-forwarding/overview.md)
    * [Primeros pasos](./ui/event-forwarding/getting-started.md)
@@ -251,6 +251,8 @@ ht-degree: 45%
          * [Información general](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] API de eventos web {#tiktok}
          * [Información general](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Información general](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] API de eventos {#zendesk}
          * [Información general](./extensions/server/zendesk/overview.md)
 * Desarrollo de extensiones {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 45%
 * [Preguntas frecuentes](./faq.md)
 * [Actualizaciones terminológicas](./term-updates.md)
 * [Compatibilidad en desuso con Internet Explorer 10 y 11](./ie-deprecation.md)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
 
