@@ -3,18 +3,16 @@ title: Información general sobre la extensión de la API de conversiones en tie
 description: Obtenga información acerca de la extensión de la API de Conversiones en tiempo real de Trade Desk para el reenvío de eventos en Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] información general sobre extensiones
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) permite enviar eventos a [!DNL The Trade Desk] para aprovechar el retargeting y la atribución.
-
-Puede usar el complemento [!DNL The Trade Desk Real-Time Conversions API] extensión para enviar datos del Edge Network de Adobe Experience Platform a [!DNL The Trade Desk] mediante la utilización de las capacidades de la API en su [reenvío de eventos](../../../ui/event-forwarding/overview.md) reglas.
+Puede usar el complemento [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) extensión para enviar datos del Edge Network de Adobe Experience Platform a [!DNL The Trade Desk] mediante la utilización de las capacidades de la API en su [reenvío de eventos](../../../ui/event-forwarding/overview.md) reglas.
 
 Uso de [!DNL The Trade Desk Real-Time Conversions API] , puede aprovechar las capacidades de la API en su [reenvío de eventos](../../../ui/event-forwarding/overview.md) reglas para enviar datos a [!DNL The Trade Desk] del Edge Network de Adobe Experience Platform.
 
@@ -91,7 +89,8 @@ Consulte la [!DNL The Trade Desk] documentación para desarrolladores para obten
 
 **[!UICONTROL Parámetros de solicitud de objeto]**
 
-Lea la siguiente sección para obtener más información sobre los parámetros de solicitud con formato JSON como Elementos, Privacidad y Procesamiento de datos.
+Objeto JSON que contiene más información. Tiene la opción de utilizar un conjunto reducido de entradas clave-valor o de proporcionar JSON sin procesar. Además, puede recuperar datos dinámicos de un elemento de datos seleccionando los discos (![Icono de disco](../../../images/extensions/server/tradedesk/disk-icon.png)) a la derecha.
+
 
 ![El [!DNL Object Request Parameters] que muestra los campos disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ Consulte la [Evento de conversiones en tiempo real](https://partner.thetradedesk
 
 **[!UICONTROL Anulaciones de configuración]**
 
->NOTA
+>[!NOTE]
 >
 >El [!UICONTROL Anulaciones de configuración] Los campos de permiten configurar un [!DNL Advertiser ID] y/o [!DNL Merchant ID] en cada regla.
 
 | Entrada | Descripción |
 | --- | --- |
-| ID del anunciante | El ID del anunciante que desea anular el ID del anunciante proporcionado en la configuración de la extensión. |
-| ID de comerciante | El ID del comerciante que desea anular el ID del comerciante proporcionado en la configuración de la extensión. |
+| ID de anunciante | Identificador único del anunciante al que está asociado este evento. Se puede proporcionar un ID del anunciante diferente para anular el ID proporcionado en la configuración de la extensión. |
+| ID de comerciante | El identificador único que proporciona a cada comerciante [!DNL The Trade Desk] durante todo el procedimiento de incorporación. Se puede proporcionar un ID de comerciante diferente para anular el ID proporcionado en la configuración de la extensión. |
 
 ![El [!DNL Configuration Overrides] que muestra los campos disponibles.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
