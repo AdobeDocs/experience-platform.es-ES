@@ -1,7 +1,8 @@
 ---
 title: appendIdentityToUrl
 description: Ofrezca experiencias personalizadas con mayor precisión entre aplicaciones, sitios web y dominios cruzados.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -18,7 +19,7 @@ La cadena de consulta generada y anexada a la dirección URL es `adobe_mc`. Si e
 >
 >Si no se ha proporcionado el consentimiento, la dirección URL de este método se devuelve sin cambios. Este comando se ejecuta inmediatamente; no espera una actualización de consentimiento.
 
-## Anexar identidad a una URL mediante la extensión del SDK web
+## Anexar identidad a una URL mediante la extensión del SDK web {#extension}
 
 La adición de una identidad a una dirección URL se realiza como una acción dentro de una regla de la interfaz de etiquetas de recopilación de datos de Adobe Experience Platform.
 
