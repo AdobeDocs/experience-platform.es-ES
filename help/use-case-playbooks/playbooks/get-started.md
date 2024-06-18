@@ -4,9 +4,9 @@ title: Introducción a los manuales de casos de uso
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Introducción 
 
-Aprenda a configurar su cuenta para los libros de reproducción de casos de uso, diseñados para Real-time Customer Data Platform y Adobe Journey Optimizer. Los tres pasos de configuración principales son:
+Aprenda a configurar su cuenta para libros de reproducción de casos de uso, diseñados para Real-time Customer Data Platform y Adobe Journey Optimizer si no se configura automáticamente. Los tres pasos de configuración principales son:
 
 * Creación de una zona protegida
 * Configuración de permisos de usuario

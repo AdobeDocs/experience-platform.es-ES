@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: Descubra el manual de tácticas adecuado
-description: Aprenda a identificar el manual de tácticas adecuado para su caso de uso y actívelo.
+title: Descubre libros de reproducción
+description: Aprenda a descubrir una galería de libros de reproducción y a empezar con una zona protegida inspiradora.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: ht
-source-wordcount: '752'
-ht-degree: 100%
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
+workflow-type: tm+mt
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# Descubra el manual de tácticas adecuado
+# Descubre libros de reproducción
 
-Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales de tácticas] > [!UICONTROL Manuales de tácticas]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
+Los manuales de casos de uso están disponibles sin coste adicional para todos los clientes de Adobe Experience Platform. Para acceder a una amplia galería de libros de casos de uso en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Manuales]** en el panel de navegación izquierdo.
 
-## Búsqueda y filtrado {#search-and-filter}
+![Caso de uso: galería de libros.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-Utilice la ventana de búsqueda y los filtros disponibles en la página para encontrar el manual de tácticas adecuado para su caso de uso.
+![Acceso directo a los libros de reproducción de casos de uso en la barra de navegación izquierda.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Por ejemplo, puede filtrar los manuales de tácticas que puede aprovechar en función de la fase del canal de marketing objetivo: conversión, participación o retención. También puede filtrar los manuales de tácticas mostrados según su sector o la asignación de derechos de producto a la que tenga acceso: Adobe Journey Optimizer o Real-Time CDP.
+Seleccione cualquier manual para ir a la página de detalles y, a continuación, seleccione **[!UICONTROL Vaya a una zona protegida inspiradora]**. Aparecerá un modal de confirmación. Seleccionar **Confirmar** para ir al simulador para pruebas inspiracional, donde puede explorar y experimentar con los diferentes casos de uso.
 
-![Filtrado de manuales de tácticas por canal, sector o producto de marketing](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+Si no tiene permiso para crear zonas protegidas, póngase en contacto con el administrador para obtener ayuda sobre la creación de una zona protegida inspiradora.
 
-También puede utilizar la funcionalidad de búsqueda para encontrar el manual de tácticas adecuado para usted. Vea a continuación un ejemplo de cómo encontrar un manual de tácticas que le ayude a interactuar con usuarios que pueden haber abandonado el carro de compras.
+>[!TIP]
+>
+>Un simulador para pruebas inspiracional es un simulador para pruebas de desarrollo dentro de Adobe Experience Platform en el que puede crear, probar y experimentar con diferentes casos de uso antes de implementarlos en un entorno de producción en directo.
 
-![Interactúe con usuarios que puedan haber abandonado el carro de compras.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![Vaya a la zona protegida inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-O bien, puede filtrar los manuales de tácticas disponibles por los canales que planea utilizar para llegar a sus clientes, como puede ver a continuación:
+Si aún no ha configurado ninguna zona protegida inspiradora, seleccione **[!UICONTROL Crear una zona protegida inspiradora]**. Aparecerá un modal. Introduzca el **Nombre** y **Título** en los cuadros de campo obligatorios y seleccione **Crear**. Una vez creado el simulador para pruebas inspiracional, asegúrese de lo siguiente [definir permisos](/help/access-control/home.md) antes de volver a la página de detalles de libros de reproducción de casos de uso para crear una instancia.
 
-![Filtrar por canal](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![Cree una zona protegida inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-Experimente con los filtros y la opción de búsqueda y encuentre el manual de tácticas adecuado para usted.
+![Introduzca un nombre y un título para crear una zona protegida inspiradora.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## Vista del manual de tácticas y generación de recursos {#view-playbook-generate-assets}
+Si selecciona una guía de casos de uso desde fuera de una zona protegida inspiradora, no podrá crear una instancia. En la página de detalles, seleccione **Ir a zona protegida inspiracional** para ir a una zona protegida inspiracional existente y, a continuación, seleccione **[!UICONTROL Crear instancia]**.
 
-Antes de decidirse por un manual de tácticas y crear instancias de este, debería inspeccionarlo para asegurarse de que se ajusta a sus necesidades. Para ayudarle a comprender mejor los casos de uso que abarcan, todos los manuales de tácticas contienen las secciones que se enumeran a continuación. Cuando esté listo para continuar y generar recursos, seleccione **[!UICONTROL Crear instancia]**.
+Si no tiene permiso para crear zonas protegidas, póngase en contacto con el administrador para obtener ayuda sobre la creación de una zona protegida inspiradora.
 
-### Diagrama de ideas {#mindmap}
+![No tiene permisos para crear una zona protegida.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Utilice la sección de diagrama de ideas del manual de tácticas para comprender los pasos del flujo de trabajo. Visualice el flujo de cómo todos los objetos generados pueden ayudarle a lograr el caso de uso, desde la perspectiva de la persona objetivo.
+Si ha alcanzado el límite del número de zonas protegidas asignadas, aparece un mensaje que le solicita que se ponga en contacto con el administrador de la organización para aumentar el límite o desactivar o eliminar algunas zonas protegidas activas. Una vez ajustado el límite de la zona protegida o reducido el número de zonas protegidas activas, puede continuar con la creación de la zona protegida inspiradora.
 
-El diagrama de ideas comienza con una definición de a quién se llega en el recorrido del usuario y describe en cada paso si Adobe entrega algo, como un nuevo mensaje o un recordatorio, o si es algo que la persona objetivo hizo que activa el siguiente mensaje o evento.
+![Límite de zona protegida alcanzado.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![Diagrama de ideas del manual de tácticas resaltado.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+Tenga en cuenta que cuando crea un simulador para pruebas inspiracional, las superficies de canal para las notificaciones por correo electrónico, push y SMS no se configuran automáticamente. Póngase en contacto con el administrador de TI para configurarlos manualmente o la creación de la instancia podría fallar.
 
-### Resumen {#summary}
+![Configure los ajustes preestablecidos de canal.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Recursos"
->abstract="Estos son los recursos que se generan con este manual de tácticas. Después de crear una instancia del manual de tácticas, puede ver los recursos en la zona protegida de inspiración y promoverlos a otras zonas protegidas, si lo desea."
+## Configuración de zonas protegidas y superficies de canal en Journey Optimizer {#configure-channel-surfaces}
 
-Inspeccione la sección de resumen para comprender qué recursos se generan una vez que crea instancias desde el manual de tácticas. Los recursos que se generan para cada manual de tácticas se adaptan al caso de uso que este habilita. A continuación, obtendrá más información acerca de todos los elementos de la sección de resumen.
+Si su organización tiene licencia para [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es)Además, y si desea utilizar los libros de reproducción diseñados para Journey Optimizer, deberá configurar los ajustes preestablecidos de canal en su zona protegida, que definen los parámetros técnicos necesarios para sus mensajes. [Obtenga información sobre cómo configurar superficies de canal en Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=es).
 
-| Elemento | Descripción |
----------|----------|
-| **[!UICONTROL Público objetivo]** | Describe las personas a las que quiera llegar a través de este manual de tácticas. |
-| **[!UICONTROL Canales de marketing]** | Describe los canales utilizados para llegar a las personas objetivo en el manual de tácticas. |
-| **[!UICONTROL Recursos técnicos]** | Una lista de los recursos técnicos que se generan después de crear instancias del manual de tácticas. Los recursos generados difieren en cada manual de tácticas, según el caso de uso. Algunos manuales de tácticas pueden generar esquemas, segmentos y recorridos. Otros, destinos. Consulte la sección [Comprensión de los recursos generados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) más adelante en la guía. Trata la creación y reutilización de instancias para obtener más información acerca de cómo puede utilizar y reutilizar los recursos generados. |
+Para crear instancias de libros de reproducción en Journey Optimizer, debe configurar las superficies de canal para las notificaciones por correo electrónico, push y SMS.
 
-{style="table-layout:auto"}
+### Superficie del canal de correo electrónico
 
-![Resumen del manual de tácticas resaltado](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+Ir a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccionar **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [configuración de superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### Instancias {#instances}
+### Superficie del canal SMS
 
-Baje hasta la sección de instancias para leer la información general de las instancias de este manual de tácticas que usted o los miembros de su equipo ya han creado. Puede emplear varios controles para ordenar y filtrar las instancias mostradas; por ejemplo, para ver solo las creadas por usted. También puede ver información diversa acerca de cada instancia, como se muestra a continuación.
+Para crear una superficie de canal SMS, primero cree una credencial de API de SMS y seleccione el proveedor preferido (por ejemplo, Sinch). Asigne un nombre a la superficie del canal SMS (por ejemplo, Marketing SMS), seleccione la configuración e introduzca un número de remitente. Seleccionar **Enviar** en la parte superior derecha de la página para guardar la superficie del canal SMS. Lea la documentación sobre [Cómo configurar superficies de canal SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms).
 
-| Elemento | Descripción |
-|---------|----------|
-| **[!UICONTROL Nombre]** | Nombre de la instancia basado en el manual de tácticas. Puede personalizar el nombre y la descripción de una instancia. Lea la sección sobre [cómo editar metadatos de instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obtener más información. |
-| **[!UICONTROL Estado]** | Indica el estado de la instancia. Una instancia **[!UICONTROL enviada]** está lista para su uso. |
-| **[!UICONTROL Creado]** | Indica cuándo se creó la instancia. |
-| **[!UICONTROL Creado por]** | Indica quién creó la instancia. |
-| **[!UICONTROL Última modificación]** | Indica la última modificación de la instancia. |
+Configure también canales para libros de reproducción que contengan mensajes transaccionales como confirmaciones de pedidos.
 
-{style="table-layout:auto"}
+### Superficie del canal push
 
-![Instancia del manual de tácticas resaltada.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+Confirme que las superficies de la aplicación estén configuradas desde la interfaz de Experience Platform o de Recopilación de datos. Este es el aspecto de las superficies de aplicación en el entorno de recopilación de datos.
 
-## Pasos siguientes: creación de una instancia del manual de tácticas {#next-steps-create-instance}
+## Pasos siguientes {#next-steps}
 
-Cuando desee usar un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proceder y generar recursos técnicos. Lea la guía [Creación, uso compartido y reutilización de instancias de manuales de tácticas](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener más información.
+Ahora que ha leído este documento, debe saber cómo configurar una zona protegida inspiradora y familiarizarse con las diferentes formas de acceder a los libros de casos de uso dentro de Platform. Como paso siguiente, obtenga información sobre cómo [encontrar](/help/use-case-playbooks/playbooks/find.md) el manual correcto.
+
