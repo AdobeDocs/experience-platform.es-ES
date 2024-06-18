@@ -4,10 +4,10 @@ type: Tutorial
 description: Aprenda a utilizar campos calculados para exportar matrices en archivos de esquema plano desde Real-Time CDP a destinos de almacenamiento en la nube.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1477'
+ht-degree: 5%
 
 ---
 
@@ -31,9 +31,13 @@ Obtenga información detallada sobre los campos calculados, qué son y por qué 
 * [Guía e información general de IU](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funciones de preparación de datos](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->No todas las funciones enumeradas anteriormente son compatibles *al exportar campos a destinos de almacenamiento en la nube* uso de la funcionalidad de campos calculados. Consulte la [sección funciones compatibles](#supported-functions) más abajo para obtener más información.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Matrices y otros tipos de objetos en Platform {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Cuando esté listo, seleccione **[!UICONTROL Siguiente]** para continuar con el 
 
 ## Funciones compatibles {#supported-functions}
 
-Tenga en cuenta que solo se admiten las siguientes funciones en la versión beta de los campos calculados y la compatibilidad con matrices para destinos:
+Todos los documentos [Funciones de preparación de datos](/help/data-prep/functions.md) son compatibles al activar datos en destinos basados en archivos.
+
+Sin embargo, tenga en cuenta que actualmente se proporcionan descripciones de casos de uso extensas e información de salida de muestra para las siguientes funciones solo en la versión beta de los campos calculados y la compatibilidad de matrices para destinos:
 
 * `join`
 * `coalesce`
@@ -111,9 +117,9 @@ Utilice el `join` para concatenar los elementos de una matriz en una cadena, uti
 Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se muestra en la captura de pantalla de asignación, utilizando un `join('_',loyalty.loyaltyID)` sintaxis:
 
 * `"organizations": ["Marketing","Sales,"Finance"]` matriz
-* `person.name.firstName` string
-* `person.name.lastName` string
-* `personalEmail.address` string
+* `person.name.firstName` cadena
+* `person.name.lastName` cadena
+* `personalEmail.address` cadena
 
 ![Ejemplo de asignación que incluye la función de unión.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
@@ -159,9 +165,9 @@ Utilice el `coalesce` para acceder al primer elemento no nulo de una matriz y ex
 Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se muestra en la captura de pantalla de asignación, utilizando un `coalesce(subscriptions.hasPromotion)` sintaxis para devolver la primera `true` de `false` en la matriz:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` matriz
-* `person.name.firstName` string
-* `person.name.lastName` string
-* `personalEmail.address` string
+* `person.name.firstName` cadena
+* `person.name.lastName` cadena
+* `personalEmail.address` cadena
 
 ![Ejemplo de asignación que incluye la función coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
@@ -179,7 +185,7 @@ Utilice el `size_of` para indicar cuántos elementos existen en una matriz. Por 
 Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se muestra en la captura de pantalla de asignación.
 
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` matriz que indica cinco momentos de compra independientes del cliente
-* `personalEmail.address` string
+* `personalEmail.address` cadena
 
 ![Ejemplo de asignación que incluye la función size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
