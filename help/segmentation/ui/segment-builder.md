@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '3633'
-ht-degree: 0%
+source-wordcount: '3743'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Los tres tipos de campo que componen una definición de segmento son atributos, eventos y audiencias. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil XDM individual, los eventos permiten crear una audiencia basada en acciones o eventos que tienen lugar mediante elementos de datos XDM ExperienceEvent y las audiencias permiten utilizar audiencias importadas de fuentes externas."
+>abstract="Los tres tipos de campo que componen una definición de segmento son los atributos, eventos y públicos. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil individual XDM, los eventos permiten crear un público basado en acciones o eventos que se producen mediante elementos de datos XDM ExperienceEvent y los públicos permiten utilizar audiencias importadas de fuentes externas."
 
 Los componentes básicos de las definiciones de segmentos son los atributos y los eventos. Además, los atributos y eventos contenidos en las audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 
@@ -114,6 +114,14 @@ Puede situarse sobre el ⓘ situado junto a una audiencia para ver información 
 También puede buscar audiencias mediante la barra de búsqueda, que utiliza [Sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). En el **[!UICONTROL Audiencias]** , al seleccionar una carpeta de nivel superior, aparece la barra de búsqueda, lo que le permite buscar dentro de esa carpeta. Los resultados de la búsqueda solo comienzan a rellenarse una vez que se introducen palabras completas. Por ejemplo, para buscar una audiencia denominada `Online Shoppers`, empiece a escribir &quot;En línea&quot; en la barra de búsqueda. Una vez escrita la palabra &quot;Online&quot;, aparecen los resultados de búsqueda que contienen la palabra &quot;Online&quot;.
 
 ## Lienzo del generador de reglas {#rule-builder-canvas}
+
+>[!IMPORTANT]
+>
+>A partir de la versión de junio de 2024, las restricciones de tiempo &quot;Este mes&quot; y &quot;Este año&quot; representan &quot;mes hasta la fecha&quot; y &quot;año hasta la fecha&quot; respectivamente. Por ejemplo, si crea una audiencia el 18 de julio buscando &quot;todos los clientes cuyo cumpleaños se celebra este mes&quot;, la audiencia obtendrá todos los clientes cuyo cumpleaños se produzca del 1 al 31 de julio. El 1 de agosto, esta audiencia recibirá todos los clientes cuyo cumpleaños se celebre del 1 al 31 de agosto.
+>
+>Anteriormente, &quot;Este mes&quot; y &quot;este año&quot; representaban 30 días y 365 días respectivamente, que no tenían en cuenta los meses con 31 días y años bisiestos.
+>
+>Para actualizar la lógica de sus audiencias, vuelva a guardar las audiencias creadas anteriormente.
 
 Una definición de segmento es un conjunto de reglas que se utilizan para describir las características clave o el comportamiento de una audiencia objetivo. Estas reglas se crean mediante el lienzo del generador de reglas, ubicado en el centro de [!DNL Segment Builder].
 
@@ -232,7 +240,7 @@ Una vez que seleccione **[!UICONTROL Desenvolver contenedor]** el contenedor sec
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Políticas de combinación"
->abstract="Las políticas de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada, o puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para esta audiencia."
+>abstract="La política de combinación permiten la combinación de diferentes conjuntos de datos para formar su perfil. Platform proporciona una política de combinación predeterminada. También puede crear una nueva política de combinación predeterminada en Perfiles. Elija una política de combinación que coincida con su propósito de marketing para este público."
 
 [!DNL Experience Platform] le permite reunir datos de varias fuentes y combinarlos para ver una vista completa de cada uno de sus clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear un perfil.
 
@@ -247,13 +255,13 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propiedades de definición del segmento"
->abstract="La sección de propiedades de la definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, con el número de perfiles cualificados en comparación con el número total de perfiles. Esto le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
+>abstract="La sección Propiedades de definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
->abstract="Puede actualizar las estimaciones de la definición del segmento para ver inmediatamente una previsualización de cuántos perfiles cumplen los requisitos para la definición de segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Estimar y previsualizar una audiencia"
+>abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades de audiencia]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
 
