@@ -5,8 +5,8 @@ description: El Generador de segmentos en la interfaz de usuario de Adobe Experi
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
->abstract="Los tres tipos de campo que componen una definición de segmento son los atributos, eventos y públicos. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil individual XDM, los eventos permiten crear un público basado en acciones o eventos que se producen mediante elementos de datos XDM ExperienceEvent y los públicos permiten utilizar audiencias importadas de fuentes externas."
+>abstract="Los tres tipos de campo que componen una definición de segmento son atributos, eventos y públicos. Los atributos permiten utilizar atributos de perfil que pertenecen a la clase de perfil XDM individual, los eventos permiten crear un público basado en acciones o eventos que tienen lugar mediante elementos de datos XDM ExperienceEvent y los públicos permiten utilizar públicos importados de fuentes externas."
 
 Los componentes básicos de las definiciones de segmentos son los atributos y los eventos. Además, los atributos y eventos contenidos en las audiencias existentes pueden utilizarse como componentes para nuevas definiciones.
 
@@ -255,12 +255,12 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propiedades de definición del segmento"
->abstract="La sección Propiedades de definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, mostrando el número de perfiles cualificados en comparación con el número total de perfiles. Esto permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia."
+>abstract="La sección de propiedades de la definición del segmento muestra una estimación del tamaño de la definición del segmento resultante, con el número de perfiles calificados en comparación con el número total de perfiles. Esto le permite ajustar la definición del segmento según sea necesario antes de crear el propio público."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
->abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de audiencia se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de público se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades de audiencia]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
