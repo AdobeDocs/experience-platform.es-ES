@@ -5,10 +5,10 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 1%
+source-wordcount: '1612'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +84,7 @@ Los recursos de Experience Platform se pueden aislar en zonas protegidas virtual
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
-* Content-Type: `application/json`
+* Tipo de contenido: `application/json`
 
 ## Paso 3: Crear un flujo de activación en la interfaz de usuario de Platform {#activation-flow}
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Propiedad | Descripción |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Los ID de las instancias de destino en las que desea activar audiencias. Puede obtener estos ID desde la interfaz de usuario de Platform navegando hasta **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y haciendo clic en la fila de destino deseada para que aparezca el ID de destino en el carril derecho. Para obtener más información, lea la [documentación de destinos workspace](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Los ID de las audiencias que desea activar en el destino seleccionado. Puede utilizar la API específica para exportar audiencias generadas por Platform, así como audiencias externas (carga personalizada). Cuando active audiencias externas, utilice el ID generado por el sistema en lugar del ID de audiencia. Puede encontrar el ID generado por el sistema en la vista Resumen de audiencias en la interfaz de usuario de audiencias. <br> ![Vista del ID de audiencia que no debe seleccionarse.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vista del ID de audiencia que no debe seleccionarse."){width="100" zoomable="yes"} <br> ![Vista del ID de audiencia generado por el sistema que se debe usar.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vista del ID de audiencia generado por el sistema que se debe usar."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Solicitud con ID de exportación (para dejar de utilizar) {#request-deprecated}
+### Solicitud con ID de exportación {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Tipo de solicitud obsoleta**. Este tipo de ejemplo describe el tipo de solicitud de la API versión 1. En la versión 2 de la API de activación ad-hoc, no es necesario incluir el ID de trabajo de exportación de audiencia más reciente.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
