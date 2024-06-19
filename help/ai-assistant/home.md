@@ -2,10 +2,10 @@
 title: Información general sobre el asistente de IA en Adobe Experience Platform
 description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 1%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ El conocimiento del producto hace referencia a conceptos y temas basados en la d
 
 {style="table-layout:auto"}
 
-### Perspectivas operativas {#operational-insights}
+### Datos operativos {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,18 +69,22 @@ Perspectivas operativas se refiere a las respuestas que genera AI Assistant sobr
 
 Puede hacer preguntas al asistente de IA sobre sus perspectivas operativas en los siguientes dominios:
 
-* Atributos
-* Públicos
-* Flujos de datos
-* Conjuntos de datos
-* Destinos _(Las preguntas relativas a las cuentas y algunas preguntas sobre el flujo de datos no se pueden responder en este momento)._
-* Recorridos
-* Esquemas _(Las preguntas relativas a los grupos de campos no se pueden responder en este momento)._
-* Fuentes _(Las preguntas relativas a las cuentas no se pueden responder en este momento)._
+| Dominio | Metadatos admitidos |
+| --- | --- |
+| Atributos | <ul><li>Búsquedas de nombre de atributo</li><li>Atributo: relación de esquema</li><li>Atributo: relación de conjunto de datos</li><li>Atributo: relación de audiencia</li><li>Atributo: relación de destino</li><li>Atributos no utilizados</li></ul> |
+| Públicos | <ul><li>Recuento de público</li><li>Tipo de audiencia (flujo continuo o por lotes)</li><li>Fechas de creación/modificación</li><li>Estado de activación</li><li>Recuento de perfiles</li><li>Duplicar audiencias</li><li>Búsquedas de definición de audiencia</li><li>Audiencia: relación de atributos</li><li>Audiencia: relación entre conjuntos de datos</li><li>Audiencia: relación de destino</li><li>Reglas de InSegment</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID |
+| Flujos de datos | <ul><li>Recuentos de flujo de datos</li><li>Estado de flujo de datos</li><li>Flujo de datos: relación de conjunto de datos</li><li>Flujo de datos: relación de origen</li></ul> |
+| Conjuntos de datos | <ul><li>Recuento de conjuntos de datos</li><li>Estado de habilitación de perfil</li><li>Fecha de creación/modificación</li><li>Conjunto de datos: relación de esquema</li><li>Conjunto de datos: relación de audiencia</li><li>Conjunto de datos: relación de atributos</li><li>Conjunto de datos: relación de flujo de datos</li><li>Búsquedas de nombres </li><li>Búsquedas de nombre e ID</li></ul> |
+| Destinos | <ul><li>Recuentos de destino configurados</li><li>Destino: relación de audiencia</li><li>Relación de atributo de destino</li></ul> |
+| Recorridos | <ul><li>Recuentos</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID</li><li>Estado del recorrido</li><li>Estado de activación (audiencia frente a eventos)</li><li>Fechas de creación/modificación</li><li>Frecuencia recurrente</li></ul> |
+| Esquemas | <ul><li>Recuentos de esquemas</li><li>Fecha de creación/modificación</li><li>Tipo de clase de esquema</li><li>Esquema: relación de atributos</li><li>Esquema: relación del conjunto de datos</li><li>Esquema: relación de audiencia</li><li>Estado de habilitación de perfil</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID</li></ul> |
+| Fuentes | <ul><li>Recuentos de cuentas</li><li>Estado de cuenta</li><li>Flujos de datos activos/inactivos para cada cuenta</li><li>Conector de origen: relación de flujo de datos</li><li>Cuenta de origen: relación de flujo de datos</li></ul> |
+
+{style="table-layout:auto"}
 
 Para las preguntas de información operativa, es posible que las respuestas no reflejen el estado actual de la interfaz de usuario. Los datos que respaldan estas preguntas se actualizan una vez cada 24 horas. Por ejemplo, los cambios que los usuarios realizan en Real-Time CDP durante el día se sincronizan con los almacenes de datos por la noche y, a continuación, están disponibles para que los usuarios formulen preguntas por la mañana. Deberá iniciar sesión en una zona protegida para consultar sobre datos específicos relacionados con los objetos.
 
-### Alcance de la función {#feature-scope}
+### Funcionalidad del ámbito {#feature-scope}
 
 En la actualidad, el ámbito del asistente de IA es el siguiente:
 

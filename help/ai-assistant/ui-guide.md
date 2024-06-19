@@ -2,9 +2,9 @@
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Guía de IU del asistente de IA
 
 Lea esta guía para aprender a utilizar el asistente de IA en la interfaz de usuario de Adobe Experience Platform.
+
+El siguiente vídeo tiene como objetivo ayudarle a comprender el asistente de IA.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
@@ -81,7 +85,7 @@ También puede utilizar las sugerencias que ofrece el Asistente de IA en **[!UIC
 
 +++
 
-### Perspectivas operativas {#operational-insights}
+### Datos operativos {#operational-insights}
 
 Debe encontrarse en una zona protegida activa para que el asistente de IA responda suficientemente a una pregunta sobre sus perspectivas operativas.
 
@@ -111,6 +115,22 @@ También puede proporcionar filtros y modificaciones a las preguntas, y puede in
 
 +++
 
+### Verificar respuestas de perspectivas operativas {#verify-responses}
+
+Puede verificar cada respuesta relacionada con las preguntas de información operativa mediante una consulta SQL que proporciona el Asistente de inteligencia artificial.
+
++++Selecciónelo para ver un ejemplo de verificación de las respuestas de perspectivas operativas
+
+Después de recibir una respuesta para una pregunta de información operativa, seleccione **[!UICONTROL Mostrar orígenes]** y luego seleccione **[!UICONTROL Ver consulta de origen]**.
+
+![ver consulta de origen](./images/view-source-query.png)
+
+Cuando se consulta con una pregunta de información operativa, el Asistente de IA proporciona una consulta SQL que puede utilizar para verificar el proceso que llevó calcular su respuesta. Esta consulta de origen es solo para fines de verificación y no se admite en el servicio de consultas.
+
+![ejemplo de consulta de origen](./images/source-query.png)
+
++++
+
 ### Usar completado automático {#use-auto-complete}
 
 Puede utilizar la función de autocompletar para recibir una lista de los objetos de datos que existen en su zona protegida. Las recomendaciones de autocompletar están disponibles para los siguientes dominios: audiencias, esquemas, conjuntos de datos, fuentes y destinos.
@@ -132,6 +152,14 @@ Puede utilizar las capacidades de varias vueltas de AI Assistant para tener una 
 En el siguiente ejemplo, se solicita al asistente de IA primero el número total de flujos de datos y, a continuación, se le solicita que enumere los 10 flujos de datos más recientes.
 
 ![Ejemplo de giro múltiple](./images/multiturn.png)
+
++++
+
+### Iniciar una nueva conversación
+
+Puede cambiar los temas con el Asistente de IA restableciendo e iniciando una nueva conversación.
+
++++Seleccione esta opción para ver un ejemplo de cómo restablecer la conversación
 
 Para restablecer, seleccione los puntos suspensivos (**`...`**) en la interfaz del asistente de IA y, a continuación, seleccione **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
 
