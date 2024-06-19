@@ -5,10 +5,10 @@ breadcrumb-title: Guía avanzada de administración del ciclo de vida de datos
 user-guide-description: Elimine registros individuales y programe la caducidad de los conjuntos de datos en Experience Platform para la limpieza de datos, la eliminación de datos anónimos y la minimización de datos.
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 9885c0d75ac28cfd73179b63b3d54da9b0ccf967
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 63%
+source-wordcount: '67'
+ht-degree: 64%
 
 ---
 
@@ -27,3 +27,4 @@ ht-degree: 63%
    * [Eliminaciones de registros](./api/jobs.md)
    * [(Beta) Eliminaciones de registros](./api/workorder.md)
    * [Cuota](./api/quota.md)
+* [Prácticas recomendadas](./best-practices.md)
