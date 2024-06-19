@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Notas de la versión de Adobe Experience Platform
 breadcrumb-title: Notas de la versión de Platform
 user-guide-description: Encuentre notas de la versión mensuales de Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 338fb0720cda1f5d67b0fbf7701caa87b585053b
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 94%
+source-wordcount: '143'
+ht-degree: 100%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 94%
 
 * [Notas de la versión actual de Platform](latest/latest.md)
 * 2024 {#2024}
+   * [Junio de 2024](2024/june-2024.md)
    * [Mayo de 2024](2024/may-2024.md)
    * [Abril de 2024](2024/april-2024.md)
    * [Marzo de 2024](2024/march-2024.md)
