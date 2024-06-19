@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consentimiento para preferencias de privacidad, personalización y marketing está diseñado para admitir la recopilación de permisos y preferencias de clientes generadas por Plataformas de administración de consentimiento (CMP) y otras fuentes a partir de las operaciones de datos.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 0%
@@ -267,7 +267,7 @@ Consulte el tutorial sobre [creación de un esquema en la IU](https://www.adobe.
 
 ## Gestión de cambios de consentimiento y preferencia
 
-Cuando un cliente cambia su consentimiento o preferencias en su sitio web, estos cambios deben recopilarse y aplicarse inmediatamente utilizando [SDK web de Adobe Experience Platform](/help/web-sdk/consent/supporting-consent.md). Si un cliente se excluye de la recopilación de datos, toda la recopilación de datos debe interrumpirse inmediatamente. Si un cliente se excluye de la personalización, no debe haber ninguna personalización presente en la siguiente página que visite.
+Cuando un cliente cambia su consentimiento o preferencias en su sitio web, estos cambios deben recopilarse y aplicarse inmediatamente utilizando [SDK web de Adobe Experience Platform](../../web-sdk/commands/setconsent.md). Si un cliente se excluye de la recopilación de datos, toda la recopilación de datos debe interrumpirse inmediatamente. Si un cliente se excluye de la personalización, no debe haber ninguna personalización presente en la siguiente página que visite.
 
 ## Apéndice {#appendix}
 

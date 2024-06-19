@@ -3,13 +3,13 @@ solution: Data Collection
 audience: user
 user-guide-title: Ayuda del SDK web de Adobe Experience Platform
 breadcrumb-title: Guía del SDK web
-user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red de Edge.
+user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 14%
+source-wordcount: '224'
+ht-degree: 23%
 
 ---
 
@@ -91,7 +91,6 @@ ht-degree: 14%
       * [Configuración de la compatibilidad con la mensajería web en la aplicación en el SDK web](personalization/web-in-app-messaging.md)
 
 * Consentimiento {#consent}
-   * [Consentimiento de apoyo](consent/supporting-consent.md)
    * Marco de transparencia y consentimiento IAB 2.0 {#iab-tcf}
       * [Información general](consent/iab-tcf/overview.md)
       * [Integración con etiquetas](consent/iab-tcf/with-tags.md)

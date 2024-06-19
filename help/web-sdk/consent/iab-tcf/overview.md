@@ -3,9 +3,9 @@ title: Compatibilidad con IAB TCF 2.0 en el SDK web de Adobe Experience Platform
 description: Obtenga información sobre cómo admitir las preferencias de consentimiento de IAB TCF 2.0 mediante el SDK web de Adobe Experience Platform
 keywords: consentimiento;setConsent;Grupo de campos de privacidad de perfil;Grupo de campos de privacidad de evento de experiencia;Grupo de campos de privacidad;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -69,16 +69,16 @@ Por ejemplo, si tiene un cliente que no está dentro de la jurisdicción del Reg
 
 ### Configuración del consentimiento cuando cambia
 
-El SDK web de Adobe Experience Platform tiene un `setConsent` , que comunica las preferencias de consentimiento del cliente a todos los servicios de Adobe mediante IAB TCF 2.0. Si se integra con Real-Time CDP, se actualiza el perfil del cliente. Si se integra con Audience Manager, se actualiza la información del cliente. Al llamar a esto también se establece una cookie con una preferencia de consentimiento de todo o nada que controla si se permite el envío de futuros eventos de experiencia. Se pretende que se llame a esta acción cada vez que cambie el consentimiento. En cargas de páginas futuras, se leerá la cookie de consentimiento de red perimetral para determinar si se pueden enviar eventos de experiencia y si se puede establecer una cookie de identidad.
+El SDK web de Adobe Experience Platform tiene un `setConsent` , que comunica las preferencias de consentimiento del cliente a todos los servicios de Adobe mediante IAB TCF 2.0. Si se integra con Real-Time CDP, se actualiza el perfil del cliente. Si se integra con Audience Manager, se actualiza la información del cliente. Al llamar a esto también se establece una cookie con una preferencia de consentimiento de todo o nada que controla si se permite el envío de futuros eventos de experiencia. Se pretende que se llame a esta acción cada vez que cambie el consentimiento. En cargas de páginas futuras, se lee la cookie de consentimiento del Edge Network para determinar si se pueden enviar eventos de experiencia y si se puede configurar una cookie de identidad.
 
-De forma similar a la integración IAB TCF 2.0 de Audience Manager, la red perimetral da su consentimiento cuando un cliente ha dado su consentimiento explícito para los siguientes fines:
+De forma similar a la integración IAB TCF 2.0 de Audience Manager, el Edge Network da su consentimiento cuando un cliente ha dado su consentimiento explícito para los siguientes fines:
 
 - **Objetivo 1:** Almacenar o acceder a información en un dispositivo
 - **Objetivo 10:** Desarrollar y mejorar productos
 - **Objetivo especial 1:** Garantice la seguridad, evite el fraude y depure. (Según las regulaciones del TCF de IAB, esto siempre se acepta)
 - **Permiso de proveedor de Adobe:** Consentimiento de Adobe (proveedor 565)
 
-Para obtener más información sobre `setConsent` , lea la documentación sobre [Consentimiento de apoyo](../../consent/supporting-consent.md).
+Para obtener más información sobre `setConsent` , lea la documentación del SDK web dedicada en [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Añadir el consentimiento a los eventos de experiencia
 
