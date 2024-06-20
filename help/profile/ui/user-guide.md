@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -132,9 +132,13 @@ Después de seleccionar una **[!UICONTROL ID de perfil]**, el **[!UICONTROL Deta
 
 Los campos predeterminados mostrados también se pueden cambiar a nivel organizativo para mostrar los atributos de perfil preferidos. Para obtener más información sobre cómo personalizar estos campos, incluidas instrucciones paso a paso para agregar y quitar atributos y cambiar el tamaño de los paneles, lea la [guía de personalización de detalles de perfil](profile-customization.md).
 
-![La pestaña Detalles aparece resaltada. Se muestran los detalles del perfil.](../images/user-guide/profile-detail.png)
+![La pestaña Detalles aparece resaltada. Se muestran los detalles del perfil.](../images/user-guide/profile-detail-row-name.png)
 
-Puede ver información adicional relacionada con el perfil del cliente individual seleccionando otra de las pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña pertenencia a audiencias que muestra las audiencias para las que el perfil está cualificado actualmente.
+También puede alternar entre la visualización de los nombres de atributos como nombres para mostrar y sus nombres de rutas de campo. Para cambiar entre estas dos pantallas, seleccione la **[!UICONTROL Mostrar nombres para mostrar]** alternar.
+
+![La opción Mostrar nombres para mostrar se resalta y los nombres para mostrar se muestran en los atributos.](../images/user-guide/profile-detail.png)
+
+Para ver información adicional relacionada con el perfil del cliente individual, seleccione una de las otras pestañas disponibles. Estas pestañas incluyen atributos, eventos y la pestaña pertenencia a audiencias que muestra las audiencias para las que el perfil está cualificado actualmente.
 
 ### Pestaña Atributos
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;interfaz d
 title: Personalización de los detalles del perfil en la IU de
 description: Esta guía proporciona instrucciones paso a paso para personalizar la forma en que se muestran los datos del perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,11 @@ El **[!UICONTROL Atributos seleccionados]** en la parte derecha del cuadro de di
 
 ![Se resaltan los atributos que actualmente conforman los atributos de la tarjeta.](../images/profile-customization/select-before.png)
 
-Puede seleccionar cualquiera de los campos de esquema de unión disponibles para personalizar los atributos de la tarjeta que está editando. Los campos seleccionados se muestran con una marca de verificación junto a ellos y se añaden automáticamente a la lista de atributos seleccionados. Una vez añadidos todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la **[!UICONTROL Editar widget]** pantalla.
+Puede seleccionar cualquiera de los campos de esquema de unión disponibles para personalizar los atributos de la tarjeta que está editando. Al seleccionar los campos, puede elegir ver el nombre de la ruta de archivo o el nombre para mostrar. Para cambiar entre estas dos pantallas, seleccione la **[!UICONTROL Mostrar nombres para mostrar]** alternar.
+
+![El [!UICONTROL Mostrar nombres para mostrar] La opción se resalta en la página Detalles del perfil.](../images/profile-customization/show-display-names.png)
+
+Los campos seleccionados se muestran con una marca de verificación junto a ellos y se añaden automáticamente a la lista de atributos seleccionados. Una vez añadidos todos los atributos que desea que se muestren en la tarjeta, elija **[!UICONTROL Seleccionar]** para volver a la **[!UICONTROL Editar widget]** pantalla.
 
 ![Se resaltan los atributos recién añadidos.](../images/profile-customization/select-after.png)
 
@@ -74,7 +78,7 @@ Para personalizar aún más el aspecto de los perfiles dentro de Experience Plat
 
 ![Se resalta el botón Personalizar detalles del perfil.](../images/profile-customization/customize-profile-details.png)
 
-A continuación, seleccione **[!UICONTROL Agregar widget]** en la esquina superior izquierda del panel.
+A continuación, seleccione **[!UICONTROL Añadir widget]** en la esquina superior izquierda del panel.
 
 ![Se resaltará el botón Añadir widget.](../images/profile-customization/add-widget.png)
 
