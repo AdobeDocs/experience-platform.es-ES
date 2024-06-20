@@ -4,17 +4,17 @@ title: Autenticar y acceder a las API de Experience Platform
 type: Tutorial
 description: Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 9%
+source-wordcount: '2149'
+ht-degree: 3%
 
 ---
 
 
 # Autenticación y acceso a las API de Experience Platform
 
-Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de hacer llamadas a las API de Experience Platform. Al final de este tutorial, habrá generado o recopilado las siguientes credenciales que se requieren como encabezados en todas las llamadas a la API de Platform:
+Este documento proporciona un tutorial paso a paso para obtener acceso a una cuenta de desarrollador de Adobe Experience Platform con el fin de realizar llamadas a las API de Experience Platform. Al final de este tutorial, habrá generado o recopilado las siguientes credenciales que se requieren como encabezados en todas las llamadas a la API de Platform:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -88,15 +88,15 @@ Aparece la pantalla **[!UICONTROL Añadir una API]**. Seleccione el icono de pro
 >
 >Seleccione el **[!UICONTROL Ver documentos]** opción para navegar en una ventana separada del explorador para completar el [Documentación de referencia de la API de Experience Platform](https://developer.adobe.com/experience-platform-apis/).
 
-### Seleccione el tipo de autenticación de servidor a servidor OAuth {#select-oauth-server-to-server}
+### Seleccione el [!UICONTROL Servidor a servidor OAuth] tipo de autenticación {#select-oauth-server-to-server}
 
-A continuación, seleccione el tipo de autenticación para generar tokens de acceso y acceder a la API de Experience Platform.
+A continuación, seleccione la [!UICONTROL Servidor a servidor OAuth] tipo de autenticación para generar tokens de acceso y acceder a la API de Experience Platform.
 
 >[!IMPORTANT]
 >
->Seleccione el **[!UICONTROL Servidor a servidor OAuth]** ya que este será el único método admitido a partir de ahora. El **[!UICONTROL Cuenta de servicio (JWT)]** El método está obsoleto. Aunque las integraciones que utilizan el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo método de servidor a servidor OAuth antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
+>El **[!UICONTROL Servidor a servidor OAuth]** El método es el único método de generación de tokens compatible en adelante. El anteriormente compatible **[!UICONTROL Cuenta de servicio (JWT)]** El método está obsoleto y no se puede seleccionar para nuevas integraciones. Aunque las integraciones existentes que utilicen el método de autenticación JWT seguirán funcionando hasta el 1 de enero de 2025, Adobe recomienda migrar las integraciones existentes al nuevo [!UICONTROL Servidor a servidor OAuth] antes de esa fecha. Obtenga más información en la sección [!BADGE Obsoleto]{type=negative}[Generar un token web JSON (JWT)](#jwt).
 
-![Seleccione API de Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
+![Seleccione el método de autenticación de servidor a servidor OAuth para la API de Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selección de los perfiles de producto para la integración {#select-product-profiles}
 
@@ -125,7 +125,7 @@ Una vez añadida la API al proyecto, la variable **[!UICONTROL API de Experience
 
 ![Información de integración después de agregar una API en Developer Console.](./images/api-authentication/api-integration-information.png)
 
-* `{API_KEY}` ([!UICONTROL ID del cliente])
+* `{API_KEY}` ([!UICONTROL ID de cliente])
 * `{ORG_ID}` ([!UICONTROL ID de organización])
 
 <!--
@@ -154,7 +154,7 @@ También puede utilizar un entorno y una colección de Postman para generar toke
 
 >[!WARNING]
 >
-El método JWT para generar tokens de acceso ha quedado obsoleto. Todas las integraciones nuevas deben crearse con la variable [método de autenticación de servidor a servidor OAuth](#select-oauth-server-to-server). Adobe también recomienda migrar las integraciones existentes al método OAuth. Lea la siguiente documentación importante:
+El método JWT para generar tokens de acceso ha quedado obsoleto. Todas las integraciones nuevas deben crearse con la variable [método de autenticación de servidor a servidor OAuth](#select-oauth-server-to-server). El Adobe también requiere que migre las integraciones existentes al método OAuth antes del 1 de enero de 2025 para que las integraciones sigan funcionando. Lea la siguiente documentación importante:
 > 
 * [Guía de migración para aplicaciones de JWT a OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guía de implementación para aplicaciones nuevas y antiguas con OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -313,7 +313,7 @@ Antes de crear integraciones en la consola de Adobe Developer, la cuenta debe te
 
 ### Añadir desarrolladores al perfil del producto {#add-developers-to-product-profile}
 
-Vaya a [[!DNL Admin Console]](https://adminconsole.adobe.com/) e inicie sesión con su Adobe ID.
+Ir a [[!DNL Admin Console]](https://adminconsole.adobe.com/) e inicie sesión con su Adobe ID.
 
 Seleccionar **[!UICONTROL Productos]**, luego seleccione **[!UICONTROL Adobe Experience Platform]** de la lista de productos.
 
