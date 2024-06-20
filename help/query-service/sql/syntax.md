@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 2%
 
 ---
@@ -104,20 +104,34 @@ Esta cláusula se puede utilizar para leer de forma incremental los datos de una
 #### Ejemplo
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+En la tabla siguiente se explica el significado de cada opción de sintaxis dentro de la cláusula SNAPSHOT.
+
+| Sintaxis | Significado |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | Lee datos a partir del ID de instantánea especificado (exclusivo). |
+| `AS OF end_snapshot_id` | Lee los datos tal como estaban en el ID de instantánea especificado (incluido). |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Lee datos entre los ID de instantánea de inicio y fin especificados. Es exclusivo de la `start_snapshot_id` e incluye el `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | Lee datos desde el principio (antes de la primera instantánea) hasta el ID de instantánea de inicio especificado (incluido). Tenga en cuenta que esto solo devuelve filas en `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lee los datos inmediatamente después del especificado `end-snapshot_id` hasta el final del conjunto de datos (sin incluir el ID de instantánea). Esto significa que si `end_snapshot_id` es la última instantánea del conjunto de datos, la consulta devolverá cero filas porque no hay instantáneas más allá de la última instantánea. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lee datos que comienzan desde el ID de instantánea especificado de `table_to_be_queried` y lo une a los datos de `table_to_be_joined` tal como estaba en `your_chosen_snapshot_id`. La unión se basa en las ID coincidentes de las columnas ID de las dos tablas que se unen. |
 
 A `SNAPSHOT` La cláusula funciona con una tabla o alias de tabla, pero no sobre una subconsulta o vista. A `SNAPSHOT` funciona en cualquier lugar a `SELECT` se puede aplicar una consulta en una tabla.
 
@@ -128,8 +142,6 @@ Además, puede utilizar `HEAD` y `TAIL` como valores de desplazamiento especiale
 >Si está realizando una consulta entre dos ID de instantánea, pueden producirse los dos escenarios siguientes si la instantánea de inicio ha caducado y el indicador de comportamiento de reserva opcional (`resolve_fallback_snapshot_on_failure`) se ha definido:
 >
 >- Si se establece el indicador de comportamiento de reserva opcional, el servicio de consultas selecciona la instantánea disponible más antigua, la define como la instantánea de inicio y devuelve los datos entre la instantánea disponible más antigua y la instantánea de finalización especificada. Estos datos son **inclusivo** de la instantánea más antigua disponible.
->
->- Si no se establece el indicador de comportamiento de reserva opcional, se devuelve un error.
 
 ### Cláusula WHERE
 
