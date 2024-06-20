@@ -2,16 +2,16 @@
 title: Notas de la versión de Adobe Experience Platform de junio de 2024
 description: Las notas de la versión de junio de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
+source-git-commit: af27ca20b7d611bb6f6b13b57dfc2df1f643a0b6
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1357'
 ht-degree: 18%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de publicación: junio de 2024**
+**Fecha de publicación: miércoles, 18 de junio de 2024**
 
 >[!TIP]
 >
