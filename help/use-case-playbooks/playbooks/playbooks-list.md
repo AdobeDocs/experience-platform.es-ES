@@ -4,9 +4,9 @@ title: Casos de uso y libros de reproducción disponibles para Real-time Custome
 description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 ## Pasos siguientes
 
-Ahora que conoce los libros de reproducción disponibles, lea la [guía de descubrimiento](/help/use-case-playbooks/playbooks/discover.md) para comprender cómo empezar a utilizar los libros de reproducción en la interfaz de usuario.
+Ahora que conoce los libros de reproducción disponibles, lea esto [guía](/help/use-case-playbooks/playbooks/choose.md) para comprender cómo empezar a utilizar los libros de reproducción y elegir el más adecuado para usted en la interfaz de usuario.

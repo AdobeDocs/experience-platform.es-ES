@@ -4,10 +4,10 @@ title: Creación, uso compartido y reutilización de instancias de manuales de t
 description: Aprenda a crear, compartir y reutilizar instancias del manual de tácticas para lograr su caso de uso de marketing.
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 83%
+source-wordcount: '785'
+ht-degree: 81%
 
 ---
 
@@ -22,7 +22,7 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 >title="Creación de una instancia"
 >abstract="Genere una lista de recursos como recorridos, públicos, esquemas o destinos para utilizarlos en escenarios de recorrido o activación."
 
-Antes de crear una instancia de manual de tácticas, explore los disponibles y [descubra el adecuado para usted](/help/use-case-playbooks/playbooks/discover.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
+Antes de crear una instancia de libro de reproducción, explore los libros de reproducción disponibles para [elija el manual adecuado](/help/use-case-playbooks/playbooks/choose.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
 
 ![Cree una instancia de un manual de tácticas.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 

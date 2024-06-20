@@ -4,14 +4,14 @@ title: Información general sobre la concienciación en materia de datos en los 
 description: Aprenda a acelerar el tiempo de respuesta al valor copiando los recursos generados en la zona protegida inspiradora final en otras zonas protegidas.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Publicar recursos generados por el manual en otras zonas protegidas {#publish-to-other-sandboxes}
+# Recursos generados por el manual de Publish a otras zonas protegidas {#publish-to-other-sandboxes}
 
 Los libros de reproducción de casos de uso son plantillas de marketing diseñadas para generar recursos como audiencias, esquemas o recorridos para casos de uso de marketing comunes. Puede probar los recursos creados por los libros de reproducción en la zona protegida inspiradora y, cuando esté listo, puede importar los recursos en otras zonas protegidas de desarrollo para realizar más pruebas con los datos que tiene disponibles en esas zonas protegidas. Cuando esté satisfecho con las pruebas, puede mover los recursos de los entornos limitados de desarrollo a los de producción.
 
@@ -19,7 +19,7 @@ Sin embargo, en algunos casos, es posible que ya haya configurado sus propios es
 
 ## Requisitos previos {#prerequisites}
 
-Antes de leer este tutorial, examine la [plantillas de manual de casos de uso disponibles](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) y [creación de una instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md) de un manual de estrategias preferido.
+Antes de leer este tutorial, examine la [plantillas de manual de casos de uso disponibles](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) y [creación de una instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md) de un manual de estrategias preferido.
 
 La creación de una instancia de genera un conjunto de recursos, como recorridos, segmentos, esquemas y mensajes, en la zona protegida inspiracional. Siga leyendo para aprender a copiar estos recursos en otros entornos limitados.
 
@@ -29,11 +29,11 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 >
 > Solo puede importar paquetes en otros entornos limitados de desarrollo. Una vez que haya realizado todos los cambios o actualizaciones necesarios, podrá importar los recursos o paquetes de esos entornos limitados de desarrollo a producción. No puede importar directamente desde las zonas protegidas de los libros de reproducción de casos de uso a la producción.
 
-1. Para importar objetos de la zona protegida inspiracional a otra zona protegida, busque la instancia que desee en un manual de casos de uso y seleccione **[!UICONTROL Publicar en una zona protegida diferente]** para exportar los artefactos como un paquete.
+1. Para importar objetos de la zona protegida inspiracional a otra zona protegida, busque la instancia que desee en un manual de casos de uso y seleccione **[!UICONTROL Publish a una zona protegida diferente]** para exportar los artefactos como un paquete.
 
    ![GIF que muestra las diferentes instancias de caso de uso](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Una vez seleccionada la variable **[!UICONTROL Publicar en una zona protegida diferente]** botón, aparece un modal. Rellene el nombre y la descripción opcional y seleccione **[!UICONTROL Crear]**. Este paso agrupa los recursos generados en un paquete que se puede importar en una zona protegida diferente.
+2. Una vez seleccionada la variable **[!UICONTROL Publish a una zona protegida diferente]** botón, aparece un modal. Rellene el nombre y la descripción opcional y seleccione **[!UICONTROL Crear]**. Este paso agrupa los recursos generados en un paquete que se puede importar en una zona protegida diferente.
 
    ![Un modal para crear un paquete](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

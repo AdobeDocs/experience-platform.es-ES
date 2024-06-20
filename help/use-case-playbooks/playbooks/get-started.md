@@ -4,7 +4,7 @@ title: Introducción a los manuales de casos de uso
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ Lea la documentación sobre [configuración de superficies de canal push](https:
 
 ## Pasos siguientes {#next-steps}
 
-Ahora que ha seguido todos los pasos de este documento, debería haber creado una zona protegida de desarrollo con libros de casos de uso disponibles en el panel de navegación izquierdo. Ahora también sabe cómo conceder a los integrantes del equipo los permisos necesarios para ver y administrar libros de reproducción y generar recursos. Como paso siguiente, lea cómo [descubra el manual adecuado](/help/use-case-playbooks/playbooks/discover.md) para ti y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Ahora que ha seguido todos los pasos de este documento, debería haber creado una zona protegida de desarrollo con libros de casos de uso disponibles en el panel de navegación izquierdo. Ahora también sabe cómo conceder a los integrantes del equipo los permisos necesarios para ver y administrar libros de reproducción y generar recursos. Como paso siguiente, lea cómo [elija el manual adecuado](/help/use-case-playbooks/playbooks/choose.md) para ti y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).
