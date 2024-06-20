@@ -6,7 +6,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -68,12 +68,12 @@ Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Espacio de nombres de identidad"
->abstract="Un área de nombres de identidad es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo Área de nombres de identidad de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o área de nombres) para el área de nombres de identidad del registro, como `email` para direcciones de correo electrónico y `ecid` para ID de Experience Cloud. Para obtener más información, consulte la Guía de la IU del ciclo vital de datos."
+>abstract="Un espacio de nombres de identidad es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de espacio de nombres de identidad de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o espacio de nombres) para el espacio de nombres de identidad del registro, como `email` para direcciones de correo electrónico y `ecid` para los ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valor de identidad principal"
->abstract="En esta columna, debe proporcionar el valor del área de nombres de identidad del registro, que debe corresponder al tipo de identidad proporcionado en la columna izquierda. Si el tipo de área de nombres de identidad es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la IU del ciclo vital de datos."
+>abstract="En esta columna, debe proporcionar el valor del espacio de nombres de identidad del registro, que debe corresponder con el tipo de identidad proporcionado en la columna izquierda. Si el tipo de espacio de nombres de identidad es `email`, el valor debe ser la dirección de correo electrónico del registro. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 Al eliminar registros, debe proporcionar información de identidad para que el sistema pueda determinar qué registros se eliminarán. Para cualquier conjunto de datos en Platform, los registros se eliminan en función de la variable **área de nombres de identidad** campo definido por el esquema del conjunto de datos.
 

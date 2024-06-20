@@ -3,10 +3,11 @@ title: Ingesta de datos cifrados en el espacio de trabajo de IU de fuentes
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 hide: true
 hidefromtoc: true
-source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 7%
+ht-degree: 54%
 
 ---
 
@@ -18,12 +19,12 @@ Lea esta guía para obtener información sobre cómo ingerir datos cifrados en A
 
 * Cifrado de datos
 
-## Ingesta de datos cifrados {#ingest-encrypted-data}
+## Introducir datos cifrados {#ingest-encrypted-data}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
->title="¿Está encriptado el archivo?"
->abstract="Seleccione este botón de alternancia si está introduciendo un archivo que ya está cifrado."
+>title="¿Está cifrado el archivo?"
+>abstract="Seleccione este conmutador si está introduciendo un archivo que ya está cifrado."
 
 
 >[!CONTEXTUALHELP]
