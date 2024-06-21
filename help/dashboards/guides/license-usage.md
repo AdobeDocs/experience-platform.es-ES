@@ -4,33 +4,26 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 7%
 
 ---
 
-# Tablero de uso de licencias {#license-usage-dashboard}
+# Panel de uso de licencias {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
->title="Tablero de uso de licencias"
->abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
+>title="Panel de uso de licencias"
+>abstract="El panel de uso de licencias ofrece datos de los productos de Adobe Experience Platform que ha adquirido. La información general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
->title="Tablero de uso de licencias"
->abstract="El panel de uso de licencias ofrece una perspectiva de los productos de Adobe Experience Platform que ha adquirido. La descripción general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de entornos limitados específicos."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Caducidad de conjuntos de datos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidad de datos de perfiles seudónimos"
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_reduction"
->title="Cómo reducir el uso"
->abstract="Para reducir el uso, puede configurar las caducidades de los datos de perfil de conjunto de datos o seudónimo para los entornos limitados y los conjuntos de datos."
->additional-url="https://experienceleague.adobe.com/es/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Vídeo de caducidad de datos de perfiles seudónimos"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Documentación sobre caducidades de datos de perfiles seudónimos"
+>title="Panel de uso de licencias"
+>abstract="El panel de uso de licencias ofrece datos de los productos de Adobe Experience Platform que ha adquirido. La información general del panel muestra las métricas principales de sus productos, incluido el uso de cada una de las métricas principales y el importe de la licencia contratada. El espacio de trabajo de detalles muestra un desglose de las métricas de cada producto dentro de zonas protegidas específicas."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=es" text="Caducidades de los conjuntos de datos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=es" text="Caducidades de los datos de perfiles seudónimos"
 
 Puede ver información importante sobre el uso de licencias de su organización en Adobe Experience Platform [!UICONTROL Uso de licencias] panel. La información que se muestra aquí se captura durante una captura diaria de la instancia de Platform.
 

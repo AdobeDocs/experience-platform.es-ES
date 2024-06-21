@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 2%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | El valor predeterminado del modo. Si se especifica, el esquema solo se borra si lo hace **no** contiene cualquier tabla. |
 | `CASCADE` | Si se especifica, el esquema se suelta junto con todas las tablas presentes en el esquema. |
 
-## CREAR VISTA
+## CREAR VISTA {#create-view}
+
+Una vista SQL es una tabla virtual basada en el conjunto de resultados de una instrucción SQL. Cree una vista con `CREATE VIEW` y ponle un nombre. A continuación, puede utilizar ese nombre para hacer referencia a los resultados de la consulta. Esto facilita la reutilización de consultas complejas.
 
 La siguiente sintaxis define un `CREATE VIEW` consulta de un conjunto de datos. Este conjunto de datos puede ser un ADLS o un conjunto de datos de almacén acelerado.
 
