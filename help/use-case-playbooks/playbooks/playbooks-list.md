@@ -7,7 +7,7 @@ exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Lea esta página para obtener una descripción general de todos los libros de reproducción disponibles que puede descubrir y utilizar en Real-time Customer Data Platform y Adobe Journey Optimizer.
 
-## Casos de uso y manuales en Journey Optimizer {#optimizer-playbooks}
+## Casos de uso y manuales de tácticas en Journey Optimizer {#optimizer-playbooks}
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
->title="Libros de reproducción disponibles"
->abstract="Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer."
+>title="Manuales de tácticas disponibles"
+>abstract="Una lista de todos los manuales de tácticas de Real-time Customer Data Platform y Adobe Journey Optimizer."
 
 | Nombre del manual | Descripción |
 | ------------- |  ----------- |
