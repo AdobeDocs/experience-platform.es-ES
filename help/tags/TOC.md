@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 44%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 44%
          * [Información general](./extensions/client/brightcove/overview.md)
          * [Notas de la versión](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
-      * [Identificador de origen del canal](https://exchange.adobe.com/apps/ec/101412)
+      * [Identificador de Source de canal](https://exchange.adobe.com/apps/ec/101412)
       * [Experiencias con guepardos](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Complementos comunes de Analytics {#plugins}
@@ -299,6 +299,7 @@ ht-degree: 44%
       * [Reglas](./api/endpoints/rules.md)
       * [Componentes de regla](./api/endpoints/rule-components.md)
       * [Paquetes de extensiones](./api/endpoints/extension-packages.md)
+      * [Autorizaciones de uso del paquete de extensiones](./api/endpoints/extension-package-usage-authorizations.md)
       * [Extensiones](./api/endpoints/extensions.md)
       * [Bibliotecas](./api/endpoints/libraries.md)
       * [Versiones](./api/endpoints/builds.md)
