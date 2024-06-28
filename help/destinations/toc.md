@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 6%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 6%
       * [Activar audiencias de cuenta en destinos](./ui/activate-account-audiences.md)
       * [(Beta) Exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform](./ui/export-file-now.md)
       * [Exportación de conjuntos de datos mediante la IU de Experience Platform](./ui/export-datasets.md)
-      * [(Beta) Utilice el atributo XDM Tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta](./ui/activate-last-qualification-time.md)
+      * [(Beta) Utilice el atributo XDM tiempo de última calificación en los nuevos destinos de almacenamiento en la nube beta](./ui/activate-last-qualification-time.md)
       * [(Beta) Utilice campos calculados para exportar matrices en archivos de esquema plano](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Ver detalles de destino](./ui/destination-details-page.md)
    * [Actualizar cuentas de destino](./ui/update-accounts.md)
@@ -65,8 +65,8 @@ ht-degree: 6%
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Destinos publicitarios{#advertising}
-      * [Información general sobre destinos publicitarios](./catalog/advertising/overview.md)
+   * Destinos de Advertising{#advertising}
+      * [Información general sobre destinos Advertising](./catalog/advertising/overview.md)
       * [Conexión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extensión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [(Beta) Conexión de Amazon Ads](./catalog/advertising/amazon-ads.md)
@@ -81,7 +81,7 @@ ht-degree: 6%
       * [Conexión de Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extensión de Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Conexión de Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [(Beta) Conexión de Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [Conexión de (Beta) Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Conexión de Google Customer Match](./catalog/advertising/google-customer-match.md)
       * [(Beta) Conexión Google Customer Match + DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Conexión de Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
@@ -89,6 +89,7 @@ ht-degree: 6%
       * [Extensión de etiqueta de linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp: conexión de incorporación](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp: conexión de distribución](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
@@ -176,8 +177,8 @@ ht-degree: 6%
       * [Conexión de Braze](./catalog/mobile-engagement/braze.md)
       * [Conexión de línea](./catalog/mobile-engagement/line.md)
       * [Conexión de Moengage](./catalog/mobile-engagement/moengage.md)
-   * Destinos de personalización {#personalization}
-      * [Información general sobre destinos de personalización](./catalog/personalization/overview.md)
+   * Destinos de Personalization {#personalization}
+      * [Información general sobre destinos Personalization](./catalog/personalization/overview.md)
       * [(Disponibilidad limitada) Análisis de audiencia](./catalog/personalization/audience-analysis.md)
       * [Conexión de Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Conexión de Adobe Target](./catalog/personalization/adobe-target-connection.md)
@@ -189,7 +190,7 @@ ht-degree: 6%
       * [Extensión de Experience Cloud ID Service](./catalog/personalization/adobe-ecid.md)
       * [Extensión de Gainsight](./catalog/personalization/gainsight.md)
       * [Extensión de KickFire](./catalog/personalization/kickfire.md)
-      * [Extensión de personalización web de Marketo](./catalog/personalization/marketo-web-personalization.md)
+      * [Extensión de Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
       * [Conexión de Pega Customer Decision Hub](./catalog/personalization/pega.md)
       * [Conexión del perfil Pega](./catalog/personalization/pega-profile.md)
    * Destinos sociales{#social}
