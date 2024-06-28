@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 6%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 6%
       * [Extensión de etiqueta de linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp: conexión de incorporación](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp: conexión de distribución](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Lote de Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Conexión de Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensión de seguimiento de conversión de pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexión de lista de clientes de pinterest](./catalog/advertising/pinterest.md)
