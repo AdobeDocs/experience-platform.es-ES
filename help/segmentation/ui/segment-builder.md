@@ -5,8 +5,8 @@ description: El Generador de segmentos en la interfaz de usuario de Adobe Experi
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3743'
+ht-degree: 6%
 
 ---
 
@@ -260,7 +260,7 @@ Para seleccionar una política de combinación para su definición de segmento, 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualizar estimaciones"
->abstract="Puede actualizar las estimaciones de su definición de segmento para ver inmediatamente una vista previa que muestre cuántos perfiles cumplirían los requisitos para la definición del segmento propuesta. Las estimaciones de público se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
+>abstract="Puede actualizar las estimaciones de la definición del segmento para ver inmediatamente una previsualización de cuántos perfiles cumplen los requisitos para la definición de segmento propuesta. Las estimaciones de público se generan utilizando un tamaño de muestra de los datos de muestra de ese día."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=es#estimate-and-preview-an-audience" text="Calcular y previsualizar una audiencia"
 
 Al crear una definición de segmento, la variable **[!UICONTROL Propiedades de audiencia]** en la parte derecha del espacio de trabajo se muestra una estimación del tamaño de la definición del segmento resultante, que le permite ajustar la definición del segmento según sea necesario antes de crear la propia audiencia.
@@ -291,7 +291,7 @@ También puede seleccionar el método de evaluación. Si sabe qué método de ev
 
 El [!UICONTROL Idoneidad del método de evaluación] aparece la ventana emergente. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por streaming](./streaming-segmentation.md#query-types) o el [segmentación de borde](./edge-segmentation.md#query-types) información general.
 
-También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o Streaming a Batch, lo hará **no** poder volver a cambiarlo a Edge o Streaming. El cambio en el método de evaluación **solamente** surte efecto una vez que seleccione **[!UICONTROL Guardar]** en la ventana emergente. La cancelación del cuadro de diálogo **sostener** el método de evaluación original.
+También puede cambiar el método de evaluación de la definición del segmento una vez que haya terminado de crearla. Si cambia el método de evaluación de Edge o de Transmisión por lotes, **no** poder volver a cambiarlo a Edge o Streaming. El cambio en el método de evaluación **solamente** surte efecto una vez que seleccione **[!UICONTROL Guardar]** en la ventana emergente. La cancelación del cuadro de diálogo **sostener** el método de evaluación original.
 
 ![Aparecerá la ventana emergente de idoneidad del método de evaluación. Esto muestra qué métodos de evaluación son aptos e no aptos para la definición del segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
