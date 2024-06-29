@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Servicio de identidad de Adobe Experience Platform
-breadcrumb-title: Guía del servicio de identidad de Platform
+breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
+source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 17%
+source-wordcount: '137'
+ht-degree: 29%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 17%
       - [Prioridad de área de nombres](./identity-graph-linking-rules/namespace-priority.md)
       - [Casos de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
       - [IU de simulación de gráficos](./identity-graph-linking-rules/graph-simulation.md)
+      - [Guía de configuración de reglas de vinculación de gráfico de identidad](./identity-graph-linking-rules/configuration.md)
+      - [Configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Información general de ECID](./features/ecid.md)
 - [Guía de implementación](implementation.md)
 - [Protecciones para datos de identidad](guardrails.md)
