@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 11%
 
 ---
@@ -131,7 +131,7 @@ Seleccionar **[!UICONTROL Exportar archivos completos]** para almacenar en décl
 
    >[!NOTE]
    >
-   >El **[!UICONTROL Después de la evaluación de segmentos]** La opción que se describe a continuación solo está disponible para clientes beta seleccionados.
+   >El **[!UICONTROL Después de la evaluación de segmentos]** La opción que se describe a continuación solo está disponible para clientes seleccionados de Beta.
 
    Utilice el **[!UICONTROL Después de la evaluación de segmentos]** para que el trabajo de activación se ejecute inmediatamente después de que se complete el trabajo diario de segmentación por lotes de Platform. Esta opción garantiza que, cuando se ejecute el trabajo de activación, los perfiles más actualizados se exporten al destino.
 
@@ -231,7 +231,7 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 
    ![Agregue el nuevo control de campo resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de origen]** entrada.
+1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de Source]** entrada.
 
    ![Seleccione el control de campo de origen resaltado en el flujo de trabajo de asignación.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -442,13 +442,22 @@ El nuevo **[!UICONTROL Asignación]** tiene las siguientes limitaciones conocida
 
 #### El atributo de pertenencia a audiencia no se puede seleccionar mediante el flujo de trabajo de asignación
 
-Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.status` en el campo de esquema, como se muestra a continuación.
+Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
 
 ![Grabación de pantalla que muestra la solución para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-Las exportaciones de archivos variarán de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
-* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y nuevos **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
-* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+
+>[!NOTE]
+>
+Para los destinos de almacenamiento en la nube, se añaden los siguientes atributos a la asignación de forma predeterminada:
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+Las exportaciones de archivos variarán de las siguientes maneras, dependiendo de si `segmentMembership.seg_namespace.seg_id.status` está seleccionado:
+
+* Si la variable `segmentMembership.seg_namespace.seg_id.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y nuevos **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
+* Si la variable `segmentMembership.seg_namespace.seg_id.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
 Más información sobre [comportamiento de exportación de perfiles para destinos basados en archivos](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 
 >[!NOTE]
 >
-Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia desde su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia desde su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagen que muestra atributos recomendados rellenados previamente en el paso de asignación del flujo de trabajo de activación de audiencia.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.status` en el campo de esquema, como se muestra a continuación.
+Debido a una limitación conocida, actualmente no puede utilizar la variable **[!UICONTROL Seleccionar campo]** ventana para añadir `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
 >
 ![Grabación de pantalla que muestra la solución para los miembros de audiencia en el paso de asignación del flujo de trabajo de activación.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.status` está seleccionado:
-* Si la variable `segmentMembership.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
-* Si la variable `segmentMembership.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
+Las exportaciones de archivos varían de las siguientes maneras, dependiendo de si `segmentMembership.seg_namespace.seg_id.status` está seleccionado:
+* Si la variable `segmentMembership.seg_namespace.seg_id.status` está seleccionado, los archivos exportados incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y **[!UICONTROL Activo]** y **[!UICONTROL Caducado]** miembros en exportaciones incrementales subsiguientes.
+* Si la variable `segmentMembership.seg_namespace.seg_id.status` no está seleccionado, los archivos exportados solo incluyen **[!UICONTROL Activo]** miembros en la instantánea completa inicial y en las exportaciones incrementales posteriores.
 
 ## Seleccionar atributos de enriquecimiento {#select-enrichment-attributes}
 
