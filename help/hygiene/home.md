@@ -2,9 +2,9 @@
 title: Información general sobre Advanced Data Lifecycle Management
 description: La administración avanzada del ciclo de vida de los datos permite administrar el ciclo de vida de los datos mediante la actualización o depuración de registros obsoletos o inexactos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,10 @@ Adobe Experience Platform proporciona un conjunto sólido de herramientas para a
 
 Estas actividades se pueden realizar utilizando la variable [[!UICONTROL Ciclo de datos] IU de Workspace](#ui) o el [API de higiene de datos](#api). Cuando se ejecuta un trabajo del ciclo vital de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [plazos y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
+>[!NOTE]
+>
+>Advanced Data Lifecycle Management admite la eliminación de conjuntos de datos mediante [extremo de caducidad del conjunto de datos](./api/dataset-expiration.md) Eliminaciones de ID y (datos de nivel de fila) utilizando identidades principales a través de [extremo de orden de trabajo](./api/workorder.md). También puede administrar [caducidades del conjunto de datos](./ui/dataset-expiration.md) y [eliminaciones de registros](./ui/record-delete.md) mediante la IU de Platform. Consulte la documentación vinculada para obtener más información. Tenga en cuenta que el ciclo de vida de datos no admite la eliminación por lotes.
+
 ## [!UICONTROL Ciclo de datos] IU de Workspace {#ui}
 
 El [!UICONTROL Ciclo de datos] El espacio de trabajo de en la IU de Platform le permite configurar y programar operaciones del ciclo vital de datos, lo que le ayuda a garantizar que los registros se mantengan según lo esperado.
@@ -42,7 +46,7 @@ El [!UICONTROL Ciclo de datos] La interfaz de usuario de se basa en la API de hi
 
 Lo siguiente ocurre cuando una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md) se ha creado:
 
-| Escenario | Tiempo tras el vencimiento programado | Descripción |
+| Prueba | Tiempo tras el vencimiento programado | Descripción |
 | --- | --- | --- |
 | Se ha enviado la solicitud | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud es visible en [!UICONTROL IU del ciclo vital de datos] después de enviarla, y permanece en estado pendiente hasta la hora de caducidad programada, después de la cual se ejecutará la solicitud. |
 | Conjunto de datos perdido | 1 hora | El conjunto de datos se borra del [página de inventario de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Los datos dentro del lago de datos solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |

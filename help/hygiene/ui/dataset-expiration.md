@@ -2,10 +2,10 @@
 title: Caducidad automatizada de conjuntos de datos
 description: Obtenga información sobre cómo programar la caducidad de un conjunto de datos en la IU de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 21%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +26,13 @@ Este documento explica cómo programar y automatizar las caducidades de los conj
 
 >[!NOTE]
 >
->La caducidad del conjunto de datos no elimina datos de Adobe Experience Platform Edge Network en este momento. Sin embargo, no hay posibilidad de que los datos permanezcan dentro de la red perimetral después de que el conjunto de datos esté configurado para caducar. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro de la red perimetral antes de descartarse.
+>La caducidad del conjunto de datos no elimina datos del Edge Network de Adobe Experience Platform en este momento. Sin embargo, no es posible que los datos permanezcan dentro del Edge Network después de que el conjunto de datos esté configurado para que caduque. Esto se debe a que el contrato de licencia de servicio de 15 días para la caducidad del conjunto de datos se superpone con el periodo de 14 días en el que los datos existen dentro del Edge Network antes de descartarse.
+
+Advanced Data Lifecycle Management admite la eliminación de conjuntos de datos mediante [extremo de caducidad del conjunto de datos](../api/dataset-expiration.md) Eliminaciones de ID y (datos de nivel de fila) utilizando identidades principales a través de [extremo de orden de trabajo](../api/workorder.md). También puede administrar las caducidades de los conjuntos de datos y [eliminaciones de registros](./record-delete.md) mediante la IU de Platform. Consulte la documentación vinculada para obtener más información.
+
+>[!NOTE]
+>
+>El ciclo de vida de datos no admite la eliminación por lotes.
 
 ## Programación de una caducidad del conjunto de datos {#schedule-dataset-expiration}
 
@@ -39,7 +45,7 @@ Para crear una solicitud, seleccione **[!UICONTROL Crear solicitud]** en la pág
 
 >[!IMPORTANT]
 >
-Los usuarios de Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics tienen 20 órdenes de trabajo de caducidad de conjuntos de datos programados pendientes. Los usuarios de Healthcare Shield y Privacy and Security Shield tienen 50 órdenes de trabajo pendientes de vencimiento del conjunto de datos programado. Esto significa que puede tener 20 o 50 conjuntos de datos programados para eliminarse a la vez.<br>Por ejemplo, si tiene 20 caducidades programadas de conjuntos de datos y un conjunto de datos se va a eliminar mañana, no puede establecer más caducidades hasta que se haya eliminado ese conjunto de datos.
+>Los usuarios de Real-Time CDP, Adobe Journey Optimizer y Customer Journey Analytics tienen 20 órdenes de trabajo de caducidad de conjuntos de datos programados pendientes. Los usuarios de Healthcare Shield y Privacy and Security Shield tienen 50 órdenes de trabajo pendientes de vencimiento del conjunto de datos programado. Esto significa que puede tener 20 o 50 conjuntos de datos programados para eliminarse a la vez.<br>Por ejemplo, si tiene 20 caducidades programadas de conjuntos de datos y un conjunto de datos se va a eliminar mañana, no puede establecer más caducidades hasta que se haya eliminado ese conjunto de datos.
 
 ![El [!UICONTROL Ciclo de datos] workspace con [!UICONTROL Crear solicitud] resaltado.](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +65,7 @@ Siguiente, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione el ico
 
 >[!NOTE]
 >
-Solo se muestran los conjuntos de datos que pertenecen a la zona protegida actual.
+>Solo se muestran los conjuntos de datos que pertenecen a la zona protegida actual.
 
 ### Enviar la solicitud {#submit-request}
 
@@ -73,7 +79,7 @@ Una vez enviada la solicitud, se crea una orden de trabajo y aparece en la pesta
 
 >[!NOTE]
 >
-Consulte la sección de información general sobre [plazos y transparencia](../home.md#dataset-expiration-transparency) para obtener más información sobre cómo se procesan las caducidades del conjunto de datos una vez que se ejecutan.
+>Consulte la sección de información general sobre [plazos y transparencia](../home.md#dataset-expiration-transparency) para obtener más información sobre cómo se procesan las caducidades del conjunto de datos una vez que se ejecutan.
 
 ## Editar o cancelar la caducidad de un conjunto de datos {#edit-or-cancel}
 
