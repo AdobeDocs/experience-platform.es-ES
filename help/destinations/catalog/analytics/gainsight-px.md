@@ -2,13 +2,13 @@
 title: Conexión de Gainsight PX
 description: Utilice el destino Gainsight PX para enviar información de segmentación a la plataforma Gainsight PX.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 3%
 
 ---
-
 
 # Conexión de Gainsight PX {#gainsight-px}
 
@@ -51,7 +51,7 @@ Esta sección describe qué tipo de audiencia puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | X | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | X | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

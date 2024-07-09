@@ -4,9 +4,9 @@ title: Evaluar y acceder a los resultados del segmento
 type: Tutorial
 description: Siga este tutorial para aprender a evaluar las definiciones de segmentos y acceder a los resultados de la segmentación mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1594'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Una vez que haya desarrollado, probado y guardado la definición del segmento, p
 
 [Evaluación programada](#scheduled-evaluation) (también conocida como &quot;segmentación programada&quot;) permite crear una programación recurrente para ejecutar un trabajo de exportación a una hora específica, mientras que [evaluación a la carta](#on-demand-evaluation) implica crear un trabajo de segmento para crear la audiencia inmediatamente. A continuación se describen los pasos de cada uno.
 
-Si todavía no ha completado la [Creación de una definición de segmento mediante la API de segmentación](./create-a-segment.md) tutorial o creación de una definición de segmento utilizando [Generador de segmentos](../ui/overview.md), hágalo antes de continuar con este tutorial.
+Si todavía no ha completado la [Creación de una definición de segmento mediante la API de segmentación](./create-a-segment.md) tutorial o creación de una definición de segmento utilizando [Generador de segmentos](../ui/segment-builder.md), hágalo antes de continuar con este tutorial.
 
 ## Evaluación programada {#scheduled-evaluation}
 

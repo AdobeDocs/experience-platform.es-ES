@@ -2,7 +2,8 @@
 title: Etiquetas de Mailchimp
 description: El destino de Etiquetas de Mailchimp te permite exportar los datos de tu cuenta y activarlos dentro de Mailchimp para interactuar con tus contactos.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -86,9 +87,9 @@ Consulte la [!DNL Mailchimp] [límites de velocidad](https://mailchimp.com/devel
 Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ Para asignar correctamente los campos XDM a [!DNL Mailchimp Tags] campos de dest
 1. En el **[!UICONTROL Asignación]** paso, seleccione **[!UICONTROL Añadir nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
 1. En el **[!UICONTROL Seleccionar campo de origen]** ventana, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione la `Email` área de nombres de identidad.
 
-   ![Captura de pantalla de la IU de Platform con el campo Fuente como Correo electrónico desde el área de nombres de identidad.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Captura de pantalla de la IU de Platform con el campo de Source como correo electrónico desde el área de nombres de identidad.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. En el **[!UICONTROL Seleccionar campo de destino]** ventana, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione la `Email` área de nombres de identidad.
 
    ![Captura de pantalla de la IU de Platform con el campo de Destino como Correo electrónico desde el área de nombres de identidad.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Las asignaciones entre el esquema de perfil XDM y [!DNL Mailchimp Tags] será el siguiente: | Campo de origen | Campo de destino | Obligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sí |
+   Las asignaciones entre el esquema de perfil XDM y [!DNL Mailchimp Tags] será el siguiente: | Campo de Source | Campo de destino | Obligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sí |
 
    A continuación, se muestra un ejemplo con las asignaciones completadas:
    ![Ejemplo de captura de pantalla de la IU de Platform que muestra asignaciones de campos.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

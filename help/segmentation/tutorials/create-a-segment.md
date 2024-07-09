@@ -4,7 +4,7 @@ title: Creación de una definición de segmento mediante la API del servicio de 
 type: Tutorial
 description: Siga este tutorial para aprender a desarrollar, probar, previsualizar y guardar una definición de segmento mediante la API del servicio de segmentación de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Para obtener información sobre cómo generar definiciones de segmentos mediante la interfaz de usuario, consulte la [Guía del Generador de segmentos](../ui/overview.md).
+Para obtener información sobre cómo generar definiciones de segmentos mediante la interfaz de usuario, consulte la [Guía del Generador de segmentos](../ui/segment-builder.md).
 
 ## Introducción
 
@@ -53,7 +53,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Desarrollar una definición de segmento
 
-El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas PQL.
+El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
 
 Puede crear una nueva definición de segmento realizando una solicitud de POST a `/segment/definitions` punto final en la [!DNL Segmentation] API. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
 
@@ -63,7 +63,7 @@ Para obtener una explicación detallada sobre cómo definir una definición de s
 
 A medida que desarrolle su definición de segmento, puede utilizar las herramientas de estimación y vista previa dentro de [!DNL Real-Time Customer Profile] para ver información de resumen que le ayude a aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las vistas previas proporcionan listas paginadas de perfiles aptos para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 
-Al estimar y previsualizar la audiencia, puede probar y optimizar los predicados PQL hasta que produzcan un resultado deseado, donde luego se pueden utilizar en una definición de segmento actualizada.
+Al estimar y previsualizar la audiencia, puede probar y optimizar los predicados de PQL hasta que produzcan un resultado deseado, donde se pueden utilizar en una definición de segmento actualizada.
 
 Existen dos pasos necesarios para obtener una vista previa o una estimación de la definición de su segmento:
 

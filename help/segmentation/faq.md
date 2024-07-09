@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 0%
@@ -239,11 +239,11 @@ No, tú no. Siempre que tenga permisos de edición para audiencias, podrá crear
 
 ### ¿Hay un límite en el número de carpetas que puedo crear?
 
-No, no hay límite en el número de carpetas que puede crear. Para obtener más información sobre las carpetas, lea la [sección inventario de audiencias](./ui/overview.md#folders) de la Información general sobre la IU del Servicio de segmentación.
+No, no hay límite en el número de carpetas que puede crear. Para obtener más información sobre las carpetas, lea la [sección inventario de audiencias](./ui/audience-portal.md#folders) de la Información general sobre la IU del Servicio de segmentación.
 
 ### ¿Hay un límite en el número de etiquetas que se pueden añadir a una audiencia?
 
-No, no hay límite en el número de etiquetas que se pueden añadir a una audiencia. Para obtener más información sobre las etiquetas, lea la [sección inventario de audiencias](./ui/overview.md#tags) de la Información general sobre la IU del Servicio de segmentación.
+No, no hay límite en el número de etiquetas que se pueden añadir a una audiencia. Para obtener más información sobre las etiquetas, lea la [sección inventario de audiencias](./ui/audience-portal.md#tags) de la Información general sobre la IU del Servicio de segmentación.
 
 ### ¿Hay un límite en el número de etiquetas que puedo crear?
 
@@ -251,7 +251,7 @@ No, no hay límite en el número de etiquetas que puede crear. Sin embargo, pued
 
 ### Cuando busco una audiencia por nombre o etiqueta en una carpeta principal, ¿puedo también buscar en las carpetas secundarias relacionadas?
 
-No, este comportamiento no es compatible. Sin embargo, puede cambiar la vista de inventario de audiencias para que mire **Todas las audiencias**, luego busque en todas las carpetas. Para obtener más información sobre el uso de la búsqueda en el inventario de audiencias, lea la [sección de búsqueda](./ui/overview.md#search) de la Información general sobre la IU del Servicio de segmentación.
+No, este comportamiento no es compatible. Sin embargo, puede cambiar la vista de inventario de audiencias para que mire **Todas las audiencias**, luego busque en todas las carpetas. Para obtener más información sobre el uso de la búsqueda en el inventario de audiencias, lea la [sección de búsqueda](./ui/audience-portal.md#search) de la Información general sobre la IU del Servicio de segmentación.
 
 ### ¿Puedo asignar automáticamente una audiencia a una carpeta en el momento de la creación?
 

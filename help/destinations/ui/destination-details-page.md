@@ -3,7 +3,7 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -139,4 +139,4 @@ Para editar la programación de activación existente de varias audiencias al mi
 
 >[!NOTE]
 >
-Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [Resumen de IU de segmentación](../../segmentation/ui/overview.md#segment-details).
+Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [Información general de Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).

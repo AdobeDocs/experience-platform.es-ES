@@ -3,7 +3,7 @@ keywords: mobile; braze; mensajería;
 title: Conexión de Braze
 description: Braze es una plataforma completa de participación del cliente que potencia experiencias relevantes y memorables entre los clientes y las marcas que aman.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -49,9 +49,9 @@ Como especialista en marketing, quiero segmentar usuarios en un destino de parti
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -115,18 +115,18 @@ En el [!UICONTROL Asignación] , haga clic en **[!UICONTROL Añadir nueva asigna
 
 ![Asignación de adición de destino de Bear](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-En el [!UICONTROL Campo de origen] , haga clic en el botón de flecha situado junto al campo vacío.
+En el [!UICONTROL Campo de Source] , haga clic en el botón de flecha situado junto al campo vacío.
 
-![Asignación de origen de destino de Bear](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Asignación De Source De Destino De Braze](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 En el [!UICONTROL Seleccionar campo de origen] , puede elegir entre dos categorías de campos XDM:
 * [!UICONTROL Seleccionar atributos]: utilice esta opción para asignar un campo específico del esquema XDM a una [!DNL Braze] atributo.
 
-![Atributo de origen de asignación de destino de Bear](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Atributo Source de asignación de destino de Bear](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Seleccionar área de nombres de identidad]: utilice esta opción para asignar un [!DNL Platform] área de nombres de identidad a [!DNL Braze] namespace.
 
-![Espacio De Nombres De Origen De Asignación De Destino De Braze](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Espacio de nombres de Source de asignación de destino de Braze](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Elija el campo de origen y haga clic en **[!UICONTROL Seleccionar]**.
 

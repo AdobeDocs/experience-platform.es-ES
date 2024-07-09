@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 24%
@@ -199,7 +199,7 @@ Para obtener más información sobre Identity Service, lea la [Introducción al 
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos de [!DNL Data Lake] y capturan los resultados de la consulta como un nuevo conjunto de datos para usar en sistema de informes, espacio de trabajo de ciencia de datos o para su inserción en el perfil del cliente en tiempo real.
+El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos de [!DNL Data Lake] y capture los resultados de la consulta como un nuevo conjunto de datos para utilizarlo en el sistema de informes, en Data Science Workspace o para incorporarlo al Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
@@ -220,7 +220,7 @@ Para obtener más información sobre los servicios de consulta, vea la [Informac
 
 | Función | Descripción |
 | ------- | ----------- |
-| Columnas personalizables | Ahora puede personalizar el diseño de Audience Portal con columnas cuyo tamaño se puede cambiar. Para obtener más información acerca de esta funcionalidad, lea la [Guía de IU de segmentación](../../segmentation/ui/overview.md#customize). |
+| Columnas personalizables | Ahora puede personalizar el diseño de Audience Portal con columnas cuyo tamaño se puede cambiar. Para obtener más información acerca de esta funcionalidad, lea la [Información general de Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
 | Desglose de frecuencia de actualización | Ahora puede ver un desglose de las frecuencias de actualización de las audiencias de su organización. Para obtener más información acerca de esta funcionalidad, lea la [Guía de IU de segmentación](../../segmentation/ui/overview.md#browse). |
 
 Para obtener más información sobre el servicio de segmentación, lea la [Resumen del servicio de segmentación](../../segmentation/home.md).

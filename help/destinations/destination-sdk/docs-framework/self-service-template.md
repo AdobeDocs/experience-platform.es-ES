@@ -2,7 +2,7 @@
 title: Plantilla de autoservicio de documentación // Reemplazar por el nombre de su destino
 description: Utilice esta plantilla para crear documentación pública para su destino en el catálogo de Adobe Experience Platform. // Reemplace con el párrafo en la sección Información general
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el *Su destino* D
 
 *Para plataformas de mensajería móvil:*
 
-*Una plataforma de venta y alquiler de viviendas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para informarles de que hay 100 listados actualizados en la zona en la que anteriormente buscaron un alquiler.*
+*Una plataforma de alquiler y venta de casas quiere enviar notificaciones móviles a los dispositivos Android y iOS de los clientes para hacerles saber que hay 100 listados actualizados en el área donde antes buscaron un alquiler.*
 
 ### Caso de uso #2 {#use-case-2}
 
@@ -63,7 +63,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el *Su destino* D
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | ID de publicidad de Google | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
+| GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lea el siguiente documento el [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
 | phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
@@ -79,9 +79,9 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el *Su destino* D
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | X | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | X | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

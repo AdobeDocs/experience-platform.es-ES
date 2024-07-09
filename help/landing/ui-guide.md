@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de IU de Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Esta guía sirve como introducción al uso de la interfaz de usuario (IU) de Ado
 
 Para obtener más información sobre Adobe Experience Platform, lea la [Introducción al Experience Platform](home.md).
 
-## Pantalla principal
+## Pantalla Inicio
 
 Después de iniciar sesión en Adobe Experience Platform, está en la [!UICONTROL Inicio] , que consta de la página [panel de métricas](#metrics), [datos recientes](#recent-data), y [aprendizaje recomendado](#recommended-learning) secciones.
 
@@ -129,7 +129,7 @@ El **[!UICONTROL Destinos]** Esta sección permite crear, actualizar y eliminar 
 
 El **[!UICONTROL Perfiles]** Esta sección permite examinar los perfiles de los clientes, ver las métricas de perfil, crear y administrar políticas de combinación y ver esquemas de unión. Para obtener más información sobre el uso de [!UICONTROL Perfiles] , lea la sección [[!DNL Profile] guía del usuario](../profile/ui/user-guide.md). Puede encontrar más información sobre el perfil del cliente en tiempo real en la [Resumen del perfil del cliente en tiempo real](../profile/home.md).
 
-El **[!UICONTROL Segmentos]** Esta sección le permite crear y gestionar definiciones de segmentos. Para obtener más información sobre el uso de [!UICONTROL Segmentos] , lea la sección [guía del usuario de segmentación](../segmentation/ui/overview.md). Encontrará más información sobre el servicio de segmentación en la [Resumen del servicio de segmentación](../segmentation/home.md).
+El **[!UICONTROL Audiencias]** Esta sección le permite crear y gestionar definiciones de segmentos. Para obtener más información sobre el uso de [!UICONTROL Audiencias] , lea la sección [guía del usuario de segmentación](../segmentation/ui/overview.md). Encontrará más información sobre el servicio de segmentación en la [Resumen del servicio de segmentación](../segmentation/home.md).
 
 El **[!UICONTROL Identidades]** Esta sección permite crear y administrar áreas de nombres de identidad. Para obtener más información sobre [!UICONTROL Identidades] Esta sección, que incluye información sobre áreas de nombres de identidad y cómo utilizar identidades en la interfaz de usuario de Platform, consulte la [información general del área de nombres de identidad](../identity-service/features/namespaces.md).
 
@@ -141,7 +141,7 @@ El **[!UICONTROL Solicitudes]** Esta sección permite crear y administrar solici
 
 ### [!UICONTROL Ciencia de datos]
 
-El **[!UICONTROL Notebooks]** proporciona acceso a JupyterLab, un entorno de desarrollo interactivo que le permite explorar, analizar y modelar sus datos. Para obtener más información sobre el uso de la sección Notebooks, lea la [Guía del usuario de JupyterLab](../data-science-workspace/jupyterlab/overview.md). Encontrará más información sobre Data Science Workspace en la [Resumen de Data Science Workspace](../data-science-workspace/home.md)
+El **[!UICONTROL Notebooks]** proporciona acceso a JupyterLab, un entorno de desarrollo interactivo que le permite explorar, analizar y modelar sus datos. Para obtener más información sobre el uso de la sección Notebooks, lea la [Guía del usuario de JupyterLab](../data-science-workspace/jupyterlab/overview.md). Puede encontrar más información sobre Data Science Workspace en la [Resumen de Data Science Workspace](../data-science-workspace/home.md)
 
 El **[!UICONTROL Modelos]** Esta sección permite utilizar el aprendizaje automático y la inteligencia artificial para crear, desarrollar, entrenar y ajustar modelos para hacer predicciones. Encontrará más información sobre la sección Modelos en el tutorial sobre [formación y evaluación de un modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

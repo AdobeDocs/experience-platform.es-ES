@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiencias con similitud
 description: Aprenda a segmentar nuevas audiencias de alto valor en Adobe Experience Platform mediante audiencias de similitud.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 9%
 
 ---
@@ -106,7 +106,7 @@ Tenga en cuenta que el gráfico es **acumulativo** de derecha a izquierda. Esto 
 
 Puede situarse sobre un punto específico del gráfico para mostrar el porcentaje de similitud y el recuento de perfiles esperado para el punto resaltado actualmente.
 
-### Audiencias de similitud {#list}
+### Públicos de similitud {#list}
 
 La sección Audiencias de similitud muestra una lista de todas las audiencias de similitud que se han creado anteriormente para la audiencia base seleccionada.
 
@@ -179,7 +179,7 @@ Para ver los detalles de una audiencia de similitud, seleccione la audiencia de 
 
 ![Se resalta la sección Audiencias de similitud.](../images/ui/lookalike-audiences/select-laa.png)
 
-Aparecerá la página de detalles de la audiencia. Para obtener más información sobre esta página, lea la [sección de detalles de audiencia de la guía de IU del servicio de segmentación](./overview.md#audience-details).
+Aparecerá la página de detalles de la audiencia. Para obtener más información sobre esta página, lea la [Información general sobre la sección de detalles de audiencia de Audience Portal](./audience-portal.md#audience-details).
 
 ![Se muestran los detalles de la audiencia de similitud.](../images/ui/lookalike-audiences/laa-details.png)
 

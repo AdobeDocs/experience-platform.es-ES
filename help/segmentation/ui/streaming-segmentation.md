@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de segmentación de streaming
 description: La segmentación por streaming en Adobe Experience Platform le permite realizar la segmentación en tiempo casi real al tiempo que se centra en la riqueza de datos. Con la segmentación por streaming, la calificación de segmentos ahora se produce cuando los datos llegan a Platform, lo que alivia la necesidad de programar y ejecutar trabajos de segmentación. Con esta capacidad, la mayoría de las reglas de segmentos ahora se pueden evaluar a medida que los datos se pasan a Platform, lo que significa que la inscripción a segmentos se mantendrá actualizada sin ejecutar trabajos de segmentación programados.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Segmentación de streaming en [!DNL Adobe Experience Platform] permite a los cli
 
 >[!NOTE]
 >
->Para que la segmentación de streaming funcione, deberá habilitar la segmentación programada para la organización. Para obtener más información sobre la activación de la segmentación programada, consulte [Consulte la sección segmentación de streaming en la guía del usuario de segmentación](./overview.md#scheduled-segmentation).
+>Para que la segmentación de streaming funcione, deberá habilitar la segmentación programada para la organización. Para obtener más información sobre la activación de la segmentación programada, consulte [Información general de Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Una consulta se evaluará automáticamente con la segmentación de flujo continuo si cumple cualquiera de los siguientes criterios:
 
@@ -75,7 +75,7 @@ Debajo hay un gráfico de líneas que muestra la cantidad de nuevas audiencias q
 >
 >Una definición de segmento se considera cualificada si pasa de no tener estado a realizada o si pasa de existir a realizada. Una definición de segmento se considera no cualificada si pasa de realizada a saliente.
 >
->Puede encontrar más información sobre estos estados en la tabla de estado dentro de la [resumen de segmentación](./overview.md#browse).
+>Puede encontrar más información sobre estos estados en la tabla de estado dentro de la [Información general de Audience Portal](./audience-portal.md#customize).
 
 ![La tarjeta Perfiles a lo largo del tiempo se resalta y muestra un gráfico de líneas de los perfiles a lo largo del tiempo.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

@@ -2,10 +2,11 @@
 title: Conexión de SAP Commerce
 description: Utilice el conector de destino de SAP Commerce para actualizar los registros de clientes en su cuenta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 2%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +30,7 @@ Consulte las secciones siguientes para conocer todos los requisitos previos que 
 
 ### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar los datos en [!DNL SAP Commerce] destino, debe tener un [esquema](/help/xdm/schema/composition.md), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es), y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creado en [!DNL Experience Platform].
+Antes de activar los datos en [!DNL SAP Commerce] destino, debe tener un [esquema](/help/xdm/schema/composition.md), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creado en [!DNL Experience Platform].
 
 Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a audiencia](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
 
@@ -45,7 +46,7 @@ Para exportar datos de Platform a su [!DNL SAP Commerce] cuenta, necesita tener 
 
 * El [!DNL SAP Commerce] clave de servicio le permite acceder al [!DNL SAP Subscription Billing] API a través del Experience Platform. Consulte la [!DNL SAP Commerce] [crear una clave de servicio con el ID de cliente y el secreto de cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para crear una clave de servicio. [!DNL SAP Commerce] requiere lo siguiente:
    * ID de cliente
-   * Secreto de cliente
+   * Secreto del cliente
    * URL. El patrón de URL es el siguiente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Este valor se utilizará más adelante para obtener valores para `Region` y `Endpoint`.
 
 +++Seleccione para ver un ejemplo de la clave de servicio
@@ -94,8 +95,8 @@ Para conectar [!DNL SAP Commerce] para acceder a Experience Platform, debe propo
 | Credencial | Descripción |
 | --- | --- |
 | ID de cliente | El valor de `clientId` desde la clave de servicio. |
-| Secreto de cliente | El valor de `clientSecret` desde la clave de servicio. |
-| Extremo | El valor de `url` desde la clave de servicio, es similar a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| Secreto del cliente | El valor de `clientSecret` desde la clave de servicio. |
+| Punto de conexión | El valor de `url` desde la clave de servicio, es similar a `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | Región | Su ubicación del centro de datos. La región está presente en el `url` y tiene un valor similar al siguiente `eu10` o `us10`. Por ejemplo, si la variable `url` es `https://eu10.revenue.cloud.sap/api` necesita `eu10`. |
 
 ## Mecanismos de protección {#guardrails}
@@ -118,10 +119,10 @@ Este destino admite la activación de todas las audiencias generadas a través d
 
 Este destino también admite la activación de las audiencias que se describen en la tabla siguiente.
 
-| Tipo de audiencia | Descripción |
----------|----------|
+| Tipo de público | Admitido | Descripción |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

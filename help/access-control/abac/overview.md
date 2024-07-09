@@ -3,10 +3,10 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Resumen de control de acceso basado en atributos
 description: Este documento proporciona información sobre el control de acceso basado en atributos en Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1864'
+ht-degree: 13%
 
 ---
 
@@ -98,7 +98,7 @@ Como administrador, puede utilizar las funcionalidades de control de acceso basa
 >
 >En resumen, tenga en cuenta las siguientes implicaciones al trabajar con destinos y control de acceso basado en atributos:
 >
->* Solo puede activar segmentos para los que tenga permiso de acceso y visualización en la [vista de exploración de segmentos](/help/segmentation/ui/overview.md#browse) y [paso seleccionar segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flujo de trabajo de activación.
+>* Solo puede activar audiencias para las que tenga permiso de acceso y visualización en [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) y [paso seleccionar segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flujo de trabajo de activación.
 >* En el [paso de asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), solo puede ver y seleccionar para su activación los campos para los que tiene permiso de acceso.
 >* Si desea activar segmentos adicionales en un destino existente en el que no tenga acceso a todos los campos asignados para la exportación, el flujo de trabajo de activación se bloqueará por usted.
 

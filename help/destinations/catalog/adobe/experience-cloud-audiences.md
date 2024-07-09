@@ -3,7 +3,7 @@ title: Públicos de Experience Cloud
 description: Aprenda a compartir audiencias de Real-time Customer Data Platform con varias aplicaciones de Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Utilice este destino para activar audiencias de Real-Time CDP a Audience Manager y Adobe Analytics.
 
-Para enviar audiencias a Adobe Analytics, necesita una licencia de Audience Manager. Para obtener más información, consulte la [Introducción al Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=es).
+Para enviar audiencias a Adobe Analytics, necesita una licencia de Audience Manager. Para obtener más información, consulte la [Introducción al Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 Para enviar audiencias a otras soluciones de Adobe, utilice las conexiones directas de Real-Time CDP a [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) y [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -112,7 +112,7 @@ Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los d
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
-| GAID | ID de publicidad de Google | Los perfiles introducidos en Real-Time CDP con una identidad principal de Google Advertising ID (GAID) se pueden exportar a este destino. |
+| GAID | GOOGLE ADVERTISING ID | Los perfiles introducidos en Real-Time CDP con una identidad principal de Google Advertising ID (GAID) se pueden exportar a este destino. |
 | IDFA | Apple ID para anunciantes | Los perfiles introducidos en Real-Time CDP con una identidad principal de Apple ID para anunciantes (IDFA) se pueden exportar a este destino. |
 | email_lc_sha256 | Direcciones de correo electrónico con el algoritmo SHA256 | Los perfiles introducidos en Real-Time CDP con una identidad principal de dirección de correo electrónico con hash se pueden exportar a este destino. |
 
@@ -123,9 +123,9 @@ Los perfiles que se exportan a [!UICONTROL Audiencias de Experience Cloud] Los d
 Esta sección describe qué tipo de audiencia puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+| ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 

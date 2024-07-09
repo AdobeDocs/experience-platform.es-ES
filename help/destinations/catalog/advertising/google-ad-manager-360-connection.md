@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] conexión
 description: Google Ad Manager 360 es una plataforma de servicio de anuncios de Google que ofrece a los editores los medios para administrar la visualización de anuncios en sus sitios web, a través de vídeo y en aplicaciones móviles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Para obtener más información sobre cómo funcionan los identificadores proporc
 
 >[!IMPORTANT]
 >
->Este destino está actualmente en versión beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a [!DNL Google Ad Manager 360] conexión, póngase en contacto con el representante del Adobe y proporcione a [!DNL organization ID].
+>Actualmente, este destino está en Beta y solo está disponible para un número limitado de clientes. Para solicitar acceso a [!DNL Google Ad Manager 360] conexión, póngase en contacto con el representante del Adobe y proporcione a [!DNL organization ID].
 
 El [!DNL Google Ad Manager 360] exportaciones de destino [!DNL CSV] archivos a su [!DNL Google Cloud Storage] cubo. Una vez que haya exportado el [!DNL CSV] archivos, debe importarlos en su [!DNL Google Ad Manager 360] cuenta.
 
@@ -52,9 +52,9 @@ Tenga en cuenta los siguientes detalles específicos de [!DNL Google Ad Manager 
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar la pr
 2. En el [!DNL Google Ad Manager] interfaz, vaya a **[!UICONTROL Administrador]** > **[!UICONTROL Configuración global]** > **[!UICONTROL Configuración de red]** y habilite la opción **[!UICONTROL Acceso a API]** deslizador.
 
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -91,7 +91,7 @@ La inclusión en la lista de permitidos es obligatoria antes de configurar la pr
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Conectar con destino]**.
 
@@ -104,8 +104,8 @@ Para obtener más información sobre estos valores, consulte la [Claves HMAC de 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Anexar ID de audiencia al nombre de audiencia"
->abstract="Seleccione esta opción para que el nombre de audiencia en este destino incluya el ID de audiencia del Experience Platform, de esta manera: `Audience Name (Audience ID)`"
+>title="Anexar el ID de público al nombre de público"
+>abstract="Seleccione esta opción para que el nombre de público en este destino incluya el ID de público de Experience Platform, de la manera siguiente: `Audience Name (Audience ID)`"
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -125,7 +125,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

@@ -3,7 +3,7 @@ title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 6%
@@ -52,7 +52,7 @@ Para seleccionar las audiencias que desea activar en el destino, utilice las cas
 Puede seleccionar entre varios tipos de audiencias, según su origen:
 
 * **[!UICONTROL Servicio de segmentación]**: Audiencias generadas dentro de Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-* **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Carga personalizada]**: Audiencias generadas fuera de Experience Platform y cargadas en Platform como archivos CSV. Para obtener más información acerca de las audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
 * Otros tipos de audiencias, procedentes de otras soluciones de Adobe, como [!DNL Audience Manager].
 
 ![Varias audiencias resaltadas en el paso Seleccionar audiencias.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -73,7 +73,7 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 
    ![Agregar nuevo control de asignación resaltado.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de origen]** entrada.
+1. Seleccione la flecha a la derecha de la **[!UICONTROL Campo de Source]** entrada.
 
    ![Seleccione el control de campo de origen resaltado.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 

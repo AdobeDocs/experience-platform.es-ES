@@ -1,15 +1,15 @@
 ---
-title: Activación expandida de Audience Manager
+title: Activación ampliada de Audience Manager
 description: Aprenda a activar audiencias de Audience Manager en destinos sociales y publicitarios mediante la activación expandida de Audience Manager.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-
-# Activación expandida de Audience Manager
+# Activación ampliada de Audience Manager
 
 La activación expandida de Audience Manager, creada en Adobe Experience Platform, ayuda a los sistemas existentes [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) los usuarios activan sus audiencias en [social](../destinations/catalog/social/overview.md) y [publicidad](../destinations/catalog/advertising/overview.md) plataformas de destino de Real-Time CDP, como [Facebook](../destinations/catalog/social/facebook.md), [Google Ads](../destinations/catalog/advertising/google-ads-destination.md), y más.
 
@@ -21,8 +21,8 @@ La activación expandida de Audience Manager, creada en Adobe Experience Platfor
 
 La activación expandida de Audience Manager utiliza conceptos y componentes de Adobe Experience Platform. Para comprender mejor el flujo de trabajo de activación expandida y los componentes que va a utilizar, asegúrese de tener una comprensión básica de los siguientes conceptos:
 
-* [Audiencias](../segmentation/ui/overview.md): las audiencias son conjuntos de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante las definiciones de segmentos o la composición de audiencias (audiencia generada por Platform), o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente). En la Activación expandida, los segmentos (audiencias) del Audience Manager se importan como [cargas personalizadas](../segmentation/ui/overview.md#import-audience).
-* [Conectores de origen](../sources/home.md): los conectores de origen (también conocidos como fuentes) ayudan a los usuarios de Experience Platform a ingerir fácilmente datos de varias fuentes, lo que permite estructurar, etiquetar y mejorar los datos mediante servicios de Experience Platform. Los datos se pueden ingerir desde una variedad de fuentes, como almacenamiento basado en la nube, software de terceros y sistemas CRM.
+* [Audiencias](../segmentation/ui/overview.md): las audiencias son conjuntos de personas que comparten comportamientos o características similares. Adobe Experience Platform puede generar esta colección de personas mediante las definiciones de segmentos o la composición de audiencias (audiencia generada por Platform), o a partir de fuentes externas como cargas personalizadas (audiencia generada externamente). En la Activación expandida, los segmentos (audiencias) del Audience Manager se importan como [cargas personalizadas](../segmentation/ui/audience-portal.md#import-audience).
+* [Conectores de Source](../sources/home.md): los conectores de Source (también conocidos como fuentes) ayudan a los usuarios de Experience Platform a introducir fácilmente datos de varias fuentes, lo que permite estructurar, etiquetar y mejorar los datos mediante servicios de Experience Platform. Los datos se pueden ingerir desde una variedad de fuentes, como almacenamiento basado en la nube, software de terceros y sistemas CRM.
 * [Conectores de destino](../destinations/home.md): los destinos describen cualquier punto final, como una aplicación de Adobe, una plataforma de publicidad, un servicio de almacenamiento en la nube o un servicio de marketing, en el que se activa y se entrega una audiencia. [!DNL Expanded Activation] admite la activación de audiencias en [publicidad](../destinations/catalog/advertising/overview.md) y [social](../destinations/catalog/social/overview.md) conectores de destino.
 
 ## Requisitos previos {#prerequisites}
@@ -43,4 +43,3 @@ Para activar audiencias mediante [!DNL Expanded Activation], asegúrese de que l
 ## Pasos siguientes {#next-steps}
 
 Ahora que comprende mejor los casos de uso y las ventajas de utilizar [!DNL Expanded Activation], inicio [configuración de la cuenta](administration.md) y luego [activar las audiencias](activate-audiences.md).
-

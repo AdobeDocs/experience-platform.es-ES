@@ -2,7 +2,7 @@
 description: En esta página se muestran y describen los pasos para configurar un destino de flujo continuo mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino de flujo continuo
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -279,10 +279,10 @@ Después de configurar el destino mediante los extremos de configuración de los
 
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
-* [Creación de una página de documentación de audiencia](/help/segmentation/ui/overview.md#create-segment)
+* [Creación de una página de documentación de audiencia](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Tutorial de Creación de un vídeo de audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Paso 7: Publicar el destino {#publish-destination}
+## Paso 7: Publish como destino {#publish-destination}
 
 >[!NOTE]
 >

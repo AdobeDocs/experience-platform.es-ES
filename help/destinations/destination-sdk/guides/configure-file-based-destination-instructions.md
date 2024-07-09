@@ -2,7 +2,7 @@
 description: En esta página se muestran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 1%
@@ -407,7 +407,7 @@ En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o
    * [Autenticación de Amazon S3](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
-   * [Almacenamiento de Google Cloud](../functionality/destination-configuration/customer-authentication.md#gcs)
+   * [Almacenamiento en la nube de Google](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [Autenticación SFTP con clave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticación SFTP con contraseña](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
@@ -420,10 +420,10 @@ Después de configurar el destino mediante los extremos de configuración de los
 
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear audiencias que activar en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
-* [Creación de una audiencia: página de documentación](/help/segmentation/ui/overview.md#create-segment)
+* [Creación de una audiencia: página de documentación](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Creación de una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Paso 6: Publicación del destino {#publish-destination}
+## Paso 6: Publish como destino {#publish-destination}
 
 >[!NOTE]
 >

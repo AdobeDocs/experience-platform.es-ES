@@ -3,10 +3,10 @@ title: Destino de zona de aterrizaje de datos
 description: Obtenga información sobre cómo conectarse a la zona de aterrizaje de datos para activar audiencias y exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1585'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -35,9 +35,9 @@ Platform aplica un estricto tiempo de vida de siete días (TTL) a todos los arch
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ Una conexión correcta actualiza su [!DNL Azure Storage Explorer] Interfaz de us
 
 Con su [!DNL Data Landing Zone] contenedor conectado a [!DNL Azure Storage Explorer], ahora puede empezar a exportar archivos de Experience Platform a su [!DNL Data Landing Zone] contenedor. Para exportar archivos, debe establecer una conexión con el [!DNL Data Landing Zone] en la interfaz de usuario de Experience Platform, tal como se describe en la sección siguiente.
 
-## Conectar con el destino {#connect}
+## Conexión al destino {#connect}
 
 >[!IMPORTANT]
 > 
@@ -204,7 +204,7 @@ Con su [!DNL Data Landing Zone] contenedor conectado a [!DNL Azure Storage Explo
 
 Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-### Autenticar en el destino {#authenticate}
+### Autenticarse en el destino {#authenticate}
 
 Asegúrese de haber conectado su [!DNL Data Landing Zone] contenedor a [!DNL Azure Storage Explorer] como se describe en la [requisitos previos](#prerequisites) sección. Porque [!DNL Data Landing Zone] es un almacenamiento aprovisionado por Adobe, no es necesario realizar ningún paso adicional en la interfaz de usuario de Experience Platform para autenticarse en el destino.
 
@@ -230,7 +230,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
-## Activar audiencias en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 

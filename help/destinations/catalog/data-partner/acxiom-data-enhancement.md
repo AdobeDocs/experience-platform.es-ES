@@ -3,10 +3,11 @@ title: Mejora de datos de Acxiom
 description: Utilice este conector para activar perfiles de Adobe de origen en Real-Time CDP a Acxiom para el enriquecimiento de datos y su uso en todos los canales de marketing. A continuación, puede utilizar la fuente Acxiom para importar los perfiles con datos mejorados y trabajar con ellos en Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -56,7 +57,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | x | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | x | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,14 +144,14 @@ El procesamiento correcto de archivos en el lado Acxiom requiere elementos de no
 
 En la tabla siguiente se proporcionan sugerencias de asignación. Se enumeran los atributos del lado del destino que utiliza el procesamiento Acxiom y a los que los clientes pueden asignar atributos de perfil. Trate estos elementos como sugerencias, ya que no todos los elementos son necesarios y los valores de origen dependerán de las necesidades de la cuenta.
 
-| Campo de destino | Descripción de origen |
+| Campo de destino | Descripción de Source |
 |--------------|-------------------------------------------------------------|
 | name | El `person.name.fullName` valor en Experience Platform. |
 | firstName | El `person.name.firstName` valor en Experience Platform. |
 | lastName | El `person.name.lastName` valor en Experience Platform. |
 | dirección1 | El `mailingAddress.street1` valor en Experience Platform. |
 | dirección2 | El `mailingAddress.street2` valor en Experience Platform. |
-| city | El `mailingAddress.city` valor en Experience Platform. |
+| ciudad | El `mailingAddress.city` valor en Experience Platform. |
 | estado | El `mailingAddress.state` valor en Experience Platform. |
 | zip | El `mailingAddress.postalCode` valor en Experience Platform. |
 

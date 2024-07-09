@@ -3,7 +3,7 @@ keywords: personalización personalizada; destino; destino personalizado de expe
 title: Conexión de personalización personalizada
 description: Este destino proporciona personalización externa, sistemas de administración de contenido, servidores de publicidad y otras aplicaciones que se ejecutan en el sitio para recuperar información de audiencia de Adobe Experience Platform. Este destino proporciona personalización en tiempo real basada en la pertenencia a audiencias de perfil de usuario.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 10%
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe utilizar la variable [API del servidor de red perimetral](/help/server-api/overview.md) al configurar el **[!UICONTROL Personalización personalizada]** destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
+>Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, debe utilizar la variable [API de Edge Network Server](/help/server-api/overview.md) al configurar el **[!UICONTROL Personalization personalizado]** destino para la personalización basada en atributos. Todas las llamadas a la API de servidor deben realizarse en un [contexto autenticado](../../../server-api/authentication.md).
 >
 ><br>Si ya utiliza el SDK web o el SDK móvil para la integración, puede recuperar atributos mediante la API del servidor añadiendo una integración del lado del servidor.
 >
@@ -46,9 +46,9 @@ Esta integración funciona con el [SDK web de Adobe Experience Platform](/help/w
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Respuesta de ejemplo para [!UICONTROL Personalización personalizada con atributos]
+### Respuesta de ejemplo para [!UICONTROL Personalization Personalizado Con Atributos]
 
-Al utilizar **[!UICONTROL Personalización personalizada con atributos]** Sin embargo, la respuesta de la API tendrá un aspecto similar al ejemplo siguiente.
+Al utilizar **[!UICONTROL Personalization Personalizado Con Atributos]** Sin embargo, la respuesta de la API tendrá un aspecto similar al ejemplo siguiente.
 
-La diferencia entre **[!UICONTROL Personalización personalizada con atributos]** y **[!UICONTROL Personalización personalizada]** es la inclusión de `attributes` de la respuesta de la API.
+La diferencia entre **[!UICONTROL Personalization Personalizado Con Atributos]** y **[!UICONTROL Personalization personalizado]** es la inclusión de `attributes` de la respuesta de la API.
 
 ```json
 [

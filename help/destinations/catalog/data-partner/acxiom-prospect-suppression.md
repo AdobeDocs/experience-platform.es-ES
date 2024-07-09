@@ -1,12 +1,13 @@
 ---
-title: Acxiom Prospect-Suppression
+title: Supresión de prospección de Acxiom
 description: Exporte sus audiencias de origen al destino de Acxiom para permitir que Acxiom elimine clientes conocidos o convertidos. A continuación, utilice el conector de origen de Acxiom para introducir y activar listas de clientes potenciales de Acxiom, con sus clientes conocidos o convertidos eliminados.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -58,7 +59,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | x | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | x | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,14 +144,14 @@ Leer [Activar datos de audiencia en destinos de exportación de perfiles por lot
 
 El procesamiento requiere elementos de nombre y dirección, mientras que no todos los elementos son necesarios. Proporcionar lo más posible ayudará a una coincidencia exitosa.  En la tabla siguiente se proporcionan sugerencias de asignación. Se enumeran los atributos del lado del destino que utiliza el procesamiento Acxiom y a los que los clientes pueden asignar atributos de perfil.  Esto debe tratarse como sugerencias, ya que no todos los elementos son necesarios y los valores de origen dependerán de las necesidades de la cuenta.
 
-| Campo de destino | Descripción de origen |
+| Campo de destino | Descripción de Source |
 |--------------|-------------------------------------------------------------|
 | name | El `person.name.fullName` valor en Experience Platform. |
 | firstName | El `person.name.firstName` valor en Experience Platform. |
 | lastName | El `person.name.lastName` valor en Experience Platform. |
 | dirección1 | El `mailingAddress.street1` valor en Experience Platform. |
 | dirección2 | El `mailingAddress.street2` valor en Experience Platform. |
-| city | El `mailingAddress.city` valor en Experience Platform. |
+| ciudad | El `mailingAddress.city` valor en Experience Platform. |
 | estado | El `mailingAddress.state` valor en Experience Platform. |
 | zip | El `mailingAddress.postalCode` valor en Experience Platform. |
 
@@ -164,7 +165,7 @@ El procesamiento requiere elementos de nombre y dirección, mientras que no todo
 
 Utilice la página de revisión para obtener un resumen del flujo de datos antes del envío
 
-![Consulte](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+![Revisar](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
 
 ## Validar exportación de datos {#exported-data}
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 35%
+source-wordcount: '185'
+ht-degree: 42%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 35%
    - [Segmentación de Edge](api/edge-segmentation.md)
    - [Exportar trabajos](api/export-jobs.md)
    - [Previsualizaciones y estimaciones](api/previews-and-estimates.md)
-   - [Horarios](api/schedules.md)
+   - [Programaciones](api/schedules.md)
    - [Definiciones de segmentos](api/segment-definitions.md)
    - [Trabajos de segmento](api/segment-jobs.md)
    - [Búsqueda de segmentos](api/segment-search.md)
@@ -33,11 +33,12 @@ ht-degree: 35%
 - IU de segmentación {#ui}
    - [Información general](ui/overview.md)
    - [Tablero de audiencias](ui/audience-dashboard.md)
+   - [Audience Portal](ui/audience-portal.md)
    - [Composición de público](ui/audience-composition.md)
    - [Generador de segmentos](ui/segment-builder.md)
-   - [Audiencias de cuenta](ui/account-audiences.md)
-   - [Audiencias de similitud](ui/lookalike-audiences.md)
-   - [Audiencias potenciales](ui/prospect-audience.md)
+   - [Públicos de la cuenta](ui/account-audiences.md)
+   - [Públicos de similitud](ui/lookalike-audiences.md)
+   - [Públicos de clientes potenciales](ui/prospect-audience.md)
    - [Segmentación de Edge](ui/edge-segmentation.md)
    - [Segmentación de streaming](ui/streaming-segmentation.md)
    - [Segmentación de streaming (vídeo)](video/streaming-segmentation-overview.md)
@@ -48,7 +49,7 @@ ht-degree: 35%
       - [Resolución de problemas](ui/segment-match/troubleshooting.md)
 - [Respeto del consentimiento](consents.md)
 - [Segmentación de varias entidades](multi-entity-segmentation.md)
-- Idioma de consulta de perfil {#pql}
+- Profile Query Language {#pql}
    - [Información general](pql/overview.md)
    - [Funciones booleanas](pql/boolean-functions.md)
    - [Funciones de comparación](pql/comparison-functions.md)
@@ -73,4 +74,4 @@ ht-degree: 35%
    - [Aplicar el cumplimiento de uso de datos para segmentos](tutorials/governance.md)
 - [Preguntas frecuentes](./faq.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

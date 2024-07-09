@@ -3,14 +3,14 @@ title: Audiencias potenciales
 description: Aprenda a crear y utilizar audiencias de clientes potenciales para dirigirse a clientes desconocidos mediante información de terceros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '395'
+ht-degree: 2%
 
 ---
 
-# Audiencias potenciales
+# Públicos de clientes potenciales
 
 Adobe Experience Platform le permite ofrecer la total facilidad y sofisticación de la experiencia de segmentación fácil de usar para los expertos en marketing a [perfiles de clientes potenciales](../../profile/ui/prospect-profile.md). Puede reducir drásticamente el tiempo empleado en reunir audiencias creando sus propias audiencias potenciales mientras utiliza de forma responsable los datos de sus socios.
 
@@ -28,9 +28,9 @@ Esta vista muestra información sobre la audiencia, incluido el nombre, el recue
 
 Puede añadir campos adicionales a esta visualización seleccionando ![el icono de atributo de filtro](../images/ui/prospect-audience/filter-attribute.png). Estos campos adicionales incluyen la frecuencia de actualización y la última actualización de.
 
-Encontrará más información sobre la página de exploración, incluida información detallada sobre los campos enumerados, en la [sección de la guía de la IU de segmentación](./overview.md#browse).
+Encontrará más información sobre la página de exploración, incluida información detallada sobre los campos enumerados, en la [Información general de Audience Portal](./audience-portal.md#list).
 
-## Detalles de audiencia {#details}
+## Detalles de público {#details}
 
 Para ver detalles sobre una audiencia de cliente potencial específica, seleccione una audiencia en la [!UICONTROL Examinar] página.
 
@@ -40,9 +40,9 @@ Se muestra la página de detalles de audiencia del cliente potencial. Se muestra
 
 ![Se muestra la página de detalles de audiencia del cliente potencial.](../images/ui/prospect-audience/audience-details.png)
 
-Para obtener más información sobre la página de detalles de la audiencia, lea la [sección de detalles de audiencia de la guía de IU de segmentación](./overview.md).
+Para obtener más información sobre la página de detalles de la audiencia, lea la [Información general sobre la sección de detalles de audiencia de Audience Portal](./audience-portal.md#audience-details).
 
-## Crear audiencias {#create}
+## Crear público {#create}
 
 Para crear una audiencia de clientes potenciales, en la [!UICONTROL Examinar] página, seleccione **[!UICONTROL Crear audiencia]**.
 

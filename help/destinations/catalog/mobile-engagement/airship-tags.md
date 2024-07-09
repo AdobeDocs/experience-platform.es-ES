@@ -3,7 +3,7 @@ keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
 description: Transfiera sin problemas los datos de audiencias de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 2%
@@ -41,9 +41,9 @@ Antes de enviar las audiencias de Adobe Experience Platform a [!DNL Airship], de
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/overview.md#import-audience) en el Experience Platform desde archivos CSV. |
+| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -132,11 +132,11 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 ## Consideraciones de asignación {#mapping-considerations}
 
-[!DNL Airship] las etiquetas se pueden establecer en un canal que represente una instancia de dispositivo (por ejemplo, iPhone) o un usuario designado que asigne todos los dispositivos de un usuario a un identificador común (por ejemplo, un ID de cliente). Si tiene direcciones de correo electrónico de texto sin formato (sin hash) como identidad principal en el esquema, seleccione el campo de correo electrónico en su **[!UICONTROL Atributos de origen]** y asigne a [!DNL Airship] usuario designado en la columna derecha debajo de **[!UICONTROL Identidades de destino]**, como se muestra a continuación.
+[!DNL Airship] las etiquetas se pueden establecer en un canal que represente una instancia de dispositivo (por ejemplo, iPhone) o un usuario designado que asigne todos los dispositivos de un usuario a un identificador común (por ejemplo, un ID de cliente). Si tiene direcciones de correo electrónico de texto sin formato (sin hash) como identidad principal en el esquema, seleccione el campo de correo electrónico en su **[!UICONTROL Atributos de Source]** y asigne a [!DNL Airship] usuario designado en la columna derecha debajo de **[!UICONTROL Identidades de destino]**, como se muestra a continuación.
 
 ![Asignación de usuarios con nombre](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-Para los identificadores que deben asignarse a un canal, es decir, a un dispositivo, asígnelos al canal adecuado en función del origen. Las siguientes imágenes muestran cómo se asigna un ID de publicidad de Google a un [!DNL Airship] Canal de Android.
+Para los identificadores que deben asignarse a un canal, es decir, a un dispositivo, asígnelos al canal adecuado en función del origen. Las siguientes imágenes muestran cómo asignar un Advertising ID de Google a una [!DNL Airship] Canal de Android.
 
 ![Conectar con etiquetas de dirigible](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![Conectar con etiquetas de dirigible](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
