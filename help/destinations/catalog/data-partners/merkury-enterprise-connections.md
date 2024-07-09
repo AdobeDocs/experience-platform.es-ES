@@ -1,39 +1,38 @@
 ---
 title: Destino de conexiones de Merkury Enterprise
 description: Obtenga información sobre cómo crear una conexión de destino de conexiones de Experience Enterprise mediante la interfaz de usuario de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
+
 
 # Destino de conexiones de Merkury Enterprise
 
 >[!NOTE]
 >
->El equipo de Mercury crea y mantiene el conector de destino y la página de documentación. Para cualquier consulta o solicitud de actualización, póngase en contacto con el representante de su cuenta de Merkury.
+>El conector de destino y la página de documentación los crea y mantiene el [!DNL Merkury] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto con su [!DNL Merkury] representante de cuentas.
 
 ## Información general
 
-Utilice el destino de conexiones de Merkury Enterprise para enviar audiencias a Merkury de forma segura. Merkury proporciona a los especialistas en marketing una fácil coincidencia y entrega de audiencias basadas en personas a las conexiones de más de 80 canales de TV/CTV, editor y tecnología de publicidad premium de Merkury. Merkury está impulsado por un gráfico integral de identidad de consumidor adulto en Estados Unidos de más de 268 millones de personas.
+Utilice el [!DNL Merkury Enterprise Connections] destino para enviar audiencias de forma segura a [!DNL Merkury]. [!DNL Merkury] proporciona a los especialistas en marketing una coincidencia y un envío sencillos de audiencias basadas en personas a [!DNL Merkury]Más de 80 conexiones premium de TV/CTV, editor y tecnología publicitaria a las que se puede dirigir. [!DNL Merkury] está alimentado por un gráfico integral de identidad de consumidor adulto de EE. UU. de más de 268 millones de personas.
 
 ![Diagrama que muestra la interconexión entre Merkury y Experience Platform, incluida la ingesta y la activación](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Siga los pasos de esta página de documentación para crear una conexión de destino de conexiones de Mercury y activar audiencias mediante la interfaz de usuario de Adobe Experience Platform.
+Siga los pasos de esta página de documentación para crear una [!DNL Merkury Connections] establezca una conexión de destino y active audiencias mediante la interfaz de usuario de Adobe Experience Platform.
 
 >[!NOTE]
 >
->Si desea activar audiencias en destinos de medios con su cuenta de Mercury Connect, utilice nuestro destino de conexiones de Mercury.
+>Si desea activar audiencias en destinos de medios con su [!DNL Merkury Connect] Cuenta de, utilice la [!DNL Merkury Connections] en su lugar.
 
 ![La tarjeta de destino Conexiones de Merkury Enterprise resaltada en el catálogo de destinos de Experience Platform.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Casos de uso
 
-* **Activación de medios digitales**: Fácil coincidencia y entrega de sus perfiles de audiencia a más de 50 editores premium direccionables y conexiones de tecnología publicitaria de Merkury.
-* **Mejore la eficiencia**: Mejore su alcance de medios direccionables y sin cookies, mejore la eficacia de los objetivos y el retorno de la inversión en publicidad (ROAS).
+* **Activación de medios digitales**: coincidencia y envío sencillos de los perfiles de audiencia a [!DNL Merkury]Más de 50 editores premium a los que se puede dirigir y conexiones de tecnología publicitaria.
+* **Mejore la eficiencia**: Mejore su alcance de medios direccionables y sin cookies, mejore la eficacia de los objetivos y la rentabilidad de la inversión en Advertising (ROAS).
 
 ## Requisitos previos
 
@@ -46,7 +45,7 @@ Siga los pasos de esta página de documentación para crear una conexión de des
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| GAID | ID de publicidad de Google | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
+| GAID | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | IDFA | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
 | ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
 | phone_sha256 | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. |
@@ -57,7 +56,7 @@ Siga los pasos de esta página de documentación para crear una conexión de des
 
 ## Audiencias compatibles
 
-En esta sección se describe qué tipo de audiencias puede exportar a este destino.
+Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | **Audiencia** | **Admitido** | **Descripción del origen** |
 |---|---|---|      
@@ -116,15 +115,15 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 >[!NOTE]
 >
->Al seleccionar la opción CSV, se presentarán las opciones Delimitador, Carácter comillas, Carácter de escape, Valor vacío, Valor nulo, Formato de compresión e Incluir archivo de manifiesto. Consulte con su equipo de Mercury la configuración adecuada para su cuenta.
+>Al seleccionar la opción CSV, se presentarán las opciones Delimitador, Comilla, Carácter de escape, Valor vacío, Valor nulo, Formato de compresión e Incluir archivo de manifiesto. Consulte con su equipo de Mercury la configuración adecuada para su cuenta.
 
 ![imagen de las opciones de csv](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### Cuenta existente
 
-Las cuentas ya definidas mediante el destino Conexiones de Merkury Enterprise aparecen en una lista emergente. Cuando se selecciona, puede ver los detalles de la cuenta en el carril derecho. Vea el ejemplo desde la interfaz de usuario de, cuando navega a **Destinos** > **Cuentas**;
+Las cuentas ya definidas mediante el destino Conexiones de Merkury Enterprise aparecen en una lista emergente. Cuando se selecciona, puede ver los detalles de la cuenta en el carril derecho. Vea el ejemplo desde la interfaz de usuario de, cuando navega a **Destinos** > **Cuentas**:
 
-![Captura de pantalla de una cuenta de destino en la página de cuentas de destino](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![Captura de pantalla de la cuenta de destino en la página de cuentas de destino.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Habilitar alertas
 
@@ -136,21 +135,21 @@ Cuando haya terminado de proporcionar detalles para la conexión de destino, sel
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso Ver destinos, Activar destinos, Ver perfiles y Ver segmentos. Lea la descripción general del control de acceso o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar identidades, necesita el permiso de control de acceso Ver gráfico de identidad.
+>* Para activar los datos, necesita el **Ver destinos**, **Activar destinos**, **Ver perfiles**, y **Ver segmentos** permisos de control de acceso. Lea la descripción general del control de acceso o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar identidades, necesita el **Ver gráfico de identidad** permiso de control de acceso.
 
 
 Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Sugerencias de asignación
 
-El procesamiento correcto de los archivos en el lado de Merkury requiere elementos de nombre y dirección. Aunque no todos los elementos son necesarios, proporcionar todo lo posible ayudará a que la coincidencia tenga éxito.
+El procesamiento correcto de los archivos en la [!DNL Merkury] Este lado requiere elementos de nombre y dirección. Aunque no todos los elementos son necesarios, proporcionar todo lo posible ayudará a que la coincidencia tenga éxito.
 
-En la tabla siguiente se proporcionan sugerencias de asignación. Se enumeran los atributos del lado del destino que utiliza el procesamiento de Mercury a los que los clientes pueden asignar atributos de perfil. Trate estos elementos como sugerencias, ya que no todos los elementos son necesarios y los valores de origen dependerán de las necesidades de la cuenta.
+En la tabla siguiente se proporcionan sugerencias de asignación. Se muestran los atributos del lado del destino que utilizan los usuarios [!DNL Merkury] procesamiento al que los clientes pueden asignar atributos de perfil. Trate estos elementos como sugerencias, ya que no todos los elementos son necesarios y los valores de origen dependerán de las necesidades de la cuenta.
 
-| Campo de destino | Descripción de origen |
+| Campo de destino | Descripción de Source |
 |---|---|
-| Identificación | Campo de identidad que se utilizará para asignar datos de merkury al Experience Platform a través del conector de origen de resolución de identidad de Merkury Enterprise |
+| Identificación | Campo de identidad que se utilizará para asignar [!DNL Merkury] datos al Experience Platform a través de [!DNL Merkury Enterprise Identity] Conector de Source |
 | Input_First_Name | El `person.name.firstName` valor en Experience Platform. |
 | Input_Last_Name | El `person.name.lastName` valor en Experience Platform. |
 | Input_Address_Line_1 | El `mailingAddress.street` valor en Experience Platform. |
@@ -173,4 +172,4 @@ Todos los destinos de Adobe Experience Platform cumplen con las políticas de us
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil de Experience Platform a su ubicación de Merkury Managed S3. A continuación, debe ponerse en contacto con su representante de Mercury e indicarle el nombre de la cuenta, los nombres de archivo y la ruta del contenedor para que se pueda configurar el procesamiento.
+Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil de Experience Platform a su [!DNL Merkury] ubicación de S3 administrada. A continuación, debe ponerse en contacto con su [!DNL Merkury] con el nombre de la cuenta, los nombres de archivo y la ruta del contenedor para que se pueda configurar el procesamiento.
