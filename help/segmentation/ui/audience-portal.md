@@ -1,9 +1,9 @@
 ---
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
 workflow-type: tm+mt
-source-wordcount: '3646'
+source-wordcount: '3674'
 ht-degree: 3%
 
 ---
@@ -387,7 +387,7 @@ Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL F
 >
 >De forma predeterminada, las audiencias generadas externamente tienen una caducidad de datos de 30 días. La caducidad de los datos se restablece si la audiencia se actualiza o modifica de alguna manera.
 >
->Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención sanitaria, **debe** aplique las etiquetas de uso de datos necesarias antes de activarlo en cualquier destino. Para obtener más información sobre la aplicación de etiquetas de uso de datos, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md).
+>Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención sanitaria, **debe** aplique las etiquetas de uso de datos necesarias antes de activarlo en cualquier destino. Dado que las variables de audiencias generadas externamente se almacenan en el lago de datos en lugar de en el Perfil del cliente en tiempo real, debe hacer lo siguiente **no** incluir datos de consentimiento en el archivo CSV. Para obtener más información sobre la aplicación de etiquetas de uso de datos, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md).
 
 ## Pasos siguientes
 
