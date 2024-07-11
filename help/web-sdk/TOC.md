@@ -6,9 +6,9 @@ breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
 role: Developer
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '225'
 ht-degree: 23%
 
 ---
@@ -21,12 +21,13 @@ ht-degree: 23%
 * Instalación del SDK web {#install}
    * [Información general](install/overview.md)
    * [Instalación del SDK web mediante la extensión de etiqueta](install/extension.md)
-   * [Instalación del SDK web mediante la biblioteca JavaScript de](install/library.md)
+   * [Instalación del SDK web mediante la biblioteca de JavaScript](install/library.md)
    * [Instalación del SDK web mediante el paquete NPM](install/npm.md)
 * Comandos {#commands}
    * configurar {#configure}
       * [Información general](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+      * [clickCollection](commands/configure/clickcollection.md)
       * [contexto](commands/configure/context.md)
       * [debugEnabled](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -56,12 +57,12 @@ ht-degree: 23%
    * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [Configurar anulaciones de secuencia de datos](commands/datastream-overrides.md)
    * [Respuestas de comando](commands/command-responses.md)
-   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identidad {#identity}
    * [Información general](identity/overview.md)
@@ -71,7 +72,7 @@ ht-degree: 23%
 * Personalización {#personalization}
    * [Administrar eventos de visualización](personalization/display-events.md)
    * [Procesar contenido personalizado](personalization/rendering-personalization-content.md)
-   * [Personalización mediante implementación híbrida](personalization/hybrid-personalization.md)
+   * [Personalization mediante implementación híbrida](personalization/hybrid-personalization.md)
    * [Administrar parpadeo](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Información general](personalization/adobe-target/target-overview.md)

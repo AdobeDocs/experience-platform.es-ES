@@ -2,10 +2,10 @@
 title: Configurar la extensión de etiqueta del SDK web
 description: Obtenga información sobre cómo configurar la extensión de etiquetas de SDK web de Experience Platform en la interfaz de usuario de etiquetas.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -39,9 +39,9 @@ Las opciones de configuración en la parte superior de la página indican a Adob
 
 ![Imagen que muestra la configuración general de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Nombre]**: la extensión del SDK web de Adobe Experience Platform admite varias instancias en la página. El nombre se utiliza para enviar datos a varias organizaciones con una configuración de etiquetas. El nombre de instancia predeterminado es `alloy`. Sin embargo, puede cambiar el nombre de la instancia a cualquier nombre de objeto JavaScript válido.
+* **[!UICONTROL Nombre]**: la extensión del SDK web de Adobe Experience Platform admite varias instancias en la página. El nombre se utiliza para enviar datos a varias organizaciones con una configuración de etiquetas. El nombre de instancia predeterminado es `alloy`. Sin embargo, puede cambiar el nombre de la instancia a cualquier nombre de objeto de JavaScript válido.
 * **[!UICONTROL ID de organización IMS]**: ID de la organización a la que desea que se envíen los datos durante el Adobe. La mayoría de las veces, utilice el valor predeterminado que se rellena automáticamente. Cuando tenga varias instancias en la página, rellene este campo con el valor de la segunda organización a la que desee enviar datos.
-* **[!UICONTROL Dominio de Edge]**: Dominio desde el cual la extensión envía y recibe datos. El Adobe recomienda utilizar un dominio de origen (CNAME) para esta extensión. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
+* **[!UICONTROL dominio de Edge]**: Dominio desde el cual la extensión envía y recibe datos. El Adobe recomienda utilizar un dominio de origen (CNAME) para esta extensión. El dominio de terceros predeterminado funciona para entornos de desarrollo, pero no es adecuado para entornos de producción. Las instrucciones sobre cómo configurar un CNAME de origen se enumeran [aquí](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=es).
 
 ## Configuración del flujo de datos {#datastreams}
 
@@ -111,11 +111,29 @@ Al utilizar el fragmento preocultado, Adobe recomienda utilizar el mismo [!DNL C
 
 ## Configuración de la recopilación de datos {#data-collection}
 
-![Imagen que muestra la configuración de recopilación de datos de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas](assets/web-sdk-ext-collection.png)
+Administrar las opciones de configuración de recopilación de datos. Configuraciones similares en la biblioteca de JavaScript están disponibles mediante la variable [`configure`](/help/web-sdk/commands/configure/overview.md) comando.
 
-* **[!UICONTROL Función Callback]**: La función de llamada de retorno proporcionada en la extensión también se denomina [`onBeforeEventSend` función](/help/web-sdk/commands/configure/onbeforeeventsend.md) en la biblioteca. Esta función le permite modificar eventos globalmente antes de enviarlos al Edge Network.
-* **[!UICONTROL Habilitar la recopilación de datos de clics]**: el SDK web puede recopilar automáticamente la información sobre clics en vínculos. Esta función está habilitada de forma predeterminada, pero se puede deshabilitar con esta opción. Los vínculos también se etiquetan como vínculos de descarga si contienen una de las expresiones de descarga enumeradas en la variable [!UICONTROL Cualificador de vínculo de descarga] cuadro de texto. El Adobe le proporciona algunos calificadores de vínculo de descarga predeterminados. Puede editarlas según sus necesidades.
-* **[!UICONTROL Datos de contexto recopilados automáticamente]**: De forma predeterminada, el SDK web recopila determinados datos de contexto relacionados con el contexto del dispositivo, la web, el entorno y el lugar. Si no desea que se recopilen estos datos o solo desea que se recopilen determinadas categorías de datos, seleccione **[!UICONTROL Información de contexto específica]** y seleccione los datos que desea recopilar. Consulte [`context`](/help/web-sdk/commands/configure/context.md) para obtener más información.
+![Imagen que muestra la configuración de recopilación de datos de la extensión de etiqueta del SDK web en la interfaz de usuario de etiquetas.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL Activado antes de devolución de llamada de envío de evento]**: una función de llamada de retorno para evaluar y modificar la carga útil enviada al Adobe. Utilice el `content` dentro de la función de llamada de retorno para modificar la carga útil. Esta llamada de retorno es la etiqueta equivalente a [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) en la biblioteca de JavaScript.
+* **[!UICONTROL Recopilación de clics en vínculos internos]**: Casilla de verificación que permite recopilar datos de seguimiento de vínculos internos del sitio o la propiedad. Al activar esta casilla de verificación, aparecen las opciones de agrupación de eventos:
+   * **[!UICONTROL Sin agrupación de eventos]**: Los datos de seguimiento de vínculos se envían al Adobe en eventos independientes. Los clics en vínculos enviados en eventos independientes pueden aumentar el uso contractual de los datos enviados a Adobe Experience Platform.
+   * **[!UICONTROL Agrupación de eventos mediante el almacenamiento de sesión]**: almacena los datos de seguimiento de vínculos en el almacenamiento de la sesión hasta el evento de página siguiente. En la página siguiente, los datos de seguimiento de vínculos almacenados y los datos de vista de página se envían al Adobe al mismo tiempo. Adobe recomienda habilitar esta configuración al realizar el seguimiento de vínculos internos.
+   * **[!UICONTROL Agrupación de eventos con objeto local]**: almacena los datos de seguimiento de vínculos en un objeto local hasta el evento de página siguiente. Si un visitante navega a una página nueva, se pierden los datos de seguimiento de vínculos. Esta configuración es más beneficiosa en el contexto de aplicaciones de una sola página.
+* **[!UICONTROL Recopilación de clics en vínculos externos]**: Casilla de verificación que permite recopilar vínculos externos.
+* **[!UICONTROL Recopilar clics en vínculos de descarga]**: Casilla de verificación que habilita la recopilación de vínculos de descarga.
+* **[!UICONTROL Descargar calificador de vínculo]**: Expresión regular que califica una dirección URL de vínculo como vínculo de descarga.
+* **[!UICONTROL Filtrar propiedades de clic]**: una función de llamada de retorno para evaluar y modificar las propiedades relacionadas con los clics antes de la colección. Esta función se ejecuta antes que [!UICONTROL Activado antes de devolución de llamada de envío de evento].
+* **Configuración de contexto**: recopile automáticamente información del visitante que rellena automáticamente campos XDM específicos. Puede elegir **[!UICONTROL Toda la información de contexto predeterminada]** o **[!UICONTROL Información de contexto específica]**. Es la etiqueta equivalente a [`context`](/help/web-sdk/commands/configure/context.md) en la biblioteca de JavaScript.
+   * **[!UICONTROL Web]**: Recopila información sobre la página actual.
+   * **[!UICONTROL Dispositivo]**: recopila información sobre el dispositivo del usuario.
+   * **[!UICONTROL Entorno]**: recopila información sobre el explorador del usuario.
+   * **[!UICONTROL Contexto del lugar]**: recopila información sobre la ubicación del usuario.
+   * **[!UICONTROL Sugerencias de agente de usuario de alta entropía]**: recopila información más detallada sobre el dispositivo del usuario.
+
+>[!TIP]
+>
+El **[!UICONTROL Activado antes del envío de clics en vínculo]** Este campo es una llamada de retorno obsoleta que solo está visible para propiedades que ya lo tienen configurado. Es la etiqueta equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) en la biblioteca de JavaScript. Utilice el **[!UICONTROL Filtrar propiedades de clic]** devolución de llamada para filtrar o ajustar datos de clics, o use **[!UICONTROL Activado antes de devolución de llamada de envío de evento]** para filtrar o ajustar la carga útil general enviada al Adobe. Si tanto la variable **[!UICONTROL Filtrar propiedades de clic]** callback y el **[!UICONTROL Activado antes del envío de clics en vínculo]** se establecen las llamadas de retorno, solo las **[!UICONTROL Filtrar propiedades de clic]** se ejecuta callback.
 
 ## Configuración de la colección de medios {#media-collection}
 
@@ -155,6 +173,6 @@ Las anulaciones de flujos de datos deben configurarse por entorno. Los entornos 
 
 ## Configuración avanzada
 
-Utilice el **[!UICONTROL Ruta base del borde]** campo si necesita cambiar la ruta base que se utiliza para interactuar con el Edge Network. Esto no debería requerir ninguna actualización, pero en caso de que participe en una versión beta o alfa, Adobe podría pedirle que cambie este campo.
+Utilice el **[!UICONTROL Ruta base de Edge]** campo si necesita cambiar la ruta base que se utiliza para interactuar con el Edge Network. Esto no debería requerir ninguna actualización, pero en caso de que participe en una versión beta o alfa, Adobe podría pedirle que cambie este campo.
 
 ![Imagen que muestra la configuración avanzada de mediante la página de extensión de etiquetas del SDK web.](assets/advanced-settings.png)

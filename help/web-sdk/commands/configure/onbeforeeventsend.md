@@ -1,22 +1,23 @@
 ---
 title: onBeforeEventSend
-description: Llamada de retorno que se ejecuta justo antes de que se envíen los datos.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Obtenga información sobre cómo configurar el SDK web para registrar una función de JavaScript que pueda alterar los datos que envía justo antes de que se envíen al Adobe.
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeEventSend`
 
-El `onBeforeEventSend` La devolución de llamada le permite registrar una función de JavaScript que puede alterar los datos que envía justo antes de que se envíen al Adobe. Esta llamada de retorno le permite manipular la variable `xdm` o `data` , incluida la posibilidad de agregar, editar o eliminar elementos. También puede cancelar de forma condicional el envío de datos, por ejemplo, con el tráfico de bots del lado del cliente detectado.
+El `onBeforeEventSend` la devolución de llamada le permite registrar una función de JavaScript que puede alterar los datos que envía justo antes de que se envíen al Adobe. Esta llamada de retorno le permite manipular la variable `xdm` o `data` , incluida la posibilidad de agregar, editar o eliminar elementos. También puede cancelar de forma condicional el envío de datos, por ejemplo, con el tráfico de bots del lado del cliente detectado.
 
 >[!WARNING]
 >
 >Esta llamada de retorno permite el uso de código personalizado. Si algún código que incluya en la llamada de retorno genera una excepción no detectada, se detendrá el procesamiento del evento. Los datos no se envían al Adobe.
 
-## Activado antes de la devolución de llamada de envío de evento mediante la extensión de etiqueta del SDK web
+## Configure en antes de la devolución de llamada de envío de evento mediante la extensión de etiqueta del SDK web {#tag-extension}
 
 Seleccione el **[!UICONTROL Proporcionar antes del código de devolución de llamada de envío de evento]** botón cuando [configuración de la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Este botón abre una ventana modal donde puede insertar el código deseado.
 
@@ -28,21 +29,14 @@ Seleccione el **[!UICONTROL Proporcionar antes del código de devolución de lla
 1. Este botón abre una ventana modal con un editor de código. Inserte el código deseado y haga clic en **[!UICONTROL Guardar]** para cerrar la ventana modal.
 1. Clic **[!UICONTROL Guardar]** en configuración de la extensión, publique los cambios.
 
-En el editor de código, puede agregar, editar o eliminar elementos dentro de la variable `content` objeto. Este objeto contiene la carga útil enviada al Adobe. No es necesario definir la variable `content` o ajuste cualquier código dentro de una función. Cualquier variable definida fuera de `content` se pueden usar, pero no se incluyen en la carga útil enviada al Adobe.
+En el editor de código, tiene acceso a las siguientes variables:
 
->[!TIP]
->
->Los objetos `content.xdm` y `content.data` siempre están definidos en este contexto, por lo que no es necesario comprobar si existen. Algunas variables dentro de estos objetos dependen de la implementación y de la capa de datos. El Adobe recomienda buscar valores no definidos dentro de estos objetos para evitar errores de JavaScript.
+* **`content.xdm`**: La [XDM](../sendevent/xdm.md) carga útil para el evento.
+* **`content.data`**: La [datos](../sendevent/data.md) carga útil del objeto para el evento.
+* **`return true`**: Salga inmediatamente de la llamada de retorno y envíe datos al Adobe con los valores actuales en la `content` objeto.
+* **`return false`**: Salga inmediatamente de la llamada de retorno y anule el envío de datos al Adobe.
 
-Por ejemplo, si desea:
-
-* Añadir el elemento XDM `xdm.commerce.order.purchaseID`
-* Forzar todos los caracteres en `xdm.marketing.trackingCode` a minúsculas
-* Eliminar `xdm.environment.operatingSystemVersion`
-* Si un tipo de evento es un clic en vínculo, envíe inmediatamente datos independientemente del código que haya debajo
-* Cancelación del envío de datos al Adobe si se detecta un bot
-
-El código equivalente dentro de la ventana modal sería el siguiente:
+Cualquier variable definida fuera de `content` se pueden usar, pero no se incluyen en la carga útil enviada al Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Evite volver `false` en el primer evento de una página. Retorno `false` en el primer evento puede afectar negativamente a la personalización.
 
-## Activado antes de la devolución de llamada de envío de evento mediante la biblioteca JavaScript del SDK web
+## Configurar en antes de la devolución de llamada de envío de evento mediante la biblioteca JavaScript del SDK web {#library}
 
 Registre el `onBeforeEventSend` devolución de llamada al ejecutar `configure` comando. Puede cambiar el `content` nombre de la variable a cualquier valor que desee cambiando la variable del parámetro dentro de la función dentro de la línea.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```
