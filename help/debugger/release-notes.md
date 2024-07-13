@@ -4,25 +4,38 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 3%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.6.0: 11 de julio de 2024
+
+### Nuevas características
+
+* Permitir que los usuarios acepten la inclusión/exclusión de la recopilación de datos técnicos y personales.
+
+### Correcciones y mejoras
+
+* Corrija la inyección de scripts de Firefox y el vínculo de la política de privacidad.
+* Capture las solicitudes de Analytics que faltan.
+* Corrija los bloqueos en páginas con muchos mensajes de consola complejos.
+* Actualice el Adobe Experience Platform Debugger a la extensión Manifest v3.
 
 ## Versión 1.5.4: 19 de diciembre de 2023
 
 ### Correcciones y mejoras
 
 * Se ha corregido un problema por el que no se conservaba la configuración de.
-* Se ha corregido un problema que hacía que Debugger se bloqueara al ver las visitas posteriores al procesamiento de Analytics.
+* Se ha corregido un problema que hacía que Debugger se bloqueara al ver las visitas procesadas por Post de Analytics.
 
 ## Versión 1.5.3: 6 de diciembre de 2023
 
-### Nuevas funciones
+### Nuevas características
 
 * Se ha añadido la opción &quot;Bloquear en la pestaña activa al abrir Debugger&quot;.
 
@@ -47,11 +60,11 @@ ht-degree: 3%
 
 * Se han corregido problemas en los que los eventos de Analytics se ignoraban o duplicaban.
 * Se ha corregido un problema en el cual se superaba el tamaño máximo de almacenamiento de estado.
-* Se ha corregido un problema en el cual la búsqueda de registros de Edge no filtraba eventos.
+* Se ha corregido un problema en el cual la búsqueda de Registros de Edge no filtraba eventos.
 
 ## Versión 1.5.0: 19 de octubre de 2023
 
-### Nuevas funciones
+### Nuevas características
 
 * Mostrar vínculos a propiedades, entorno y reglas en Resumen de etiquetas y registros.
 
@@ -62,7 +75,7 @@ ht-degree: 3%
 * Se ha corregido un problema que impedía que apareciera Target Trace.
 * Se ha corregido el botón Enviar comentarios.
 * Se ha corregido el &quot;ID de flujo de datos&quot; que faltaba en el Resumen del SDK web para la versión ≥2.18.0.
-* Se ha corregido un problema en el cual no se podían buscar registros de Edge.
+* Se ha corregido un problema que impedía buscar en los registros de Edge.
 * Se ha añadido una nota sobre perfiles adicionales para determinados tipos de cuenta.
 
 ## Versión 1.4.1: 1 de noviembre de 2022
@@ -100,7 +113,7 @@ ht-degree: 3%
 * Se ha añadido el vínculo Acerca de para mostrar la versión y las notas actuales de la versión.
 * Se ha agregado la opción para ver las visitas posteriores al procesamiento de las solicitudes de Analytics. La opción está disponible en la sección Analytics.
 * Se ha corregido un problema de sesión de depuración remota cuando la sesión se cerraba fuera del depurador.
-* Se ha corregido una notificación de error visible en la pestaña Transacciones perimetrales del SDK web.
+* Se ha corregido una notificación de error visible en la pestaña Transacciones de Edge del SDK web.
 * Se ha corregido la advertencia Etiquetas de Adobe en la obsolescencia de la página cuando el depurador accedió al objeto _satellite.
 * Se han corregido algunos casos en los que no se encontraba una instancia de AppMeasurement en la página.
 * Se ha corregido un problema de conexión de página que se producía al abrir por primera vez la ventana del depurador.
