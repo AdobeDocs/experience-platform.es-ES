@@ -3,7 +3,7 @@ title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 1%
@@ -47,15 +47,13 @@ La prioridad del área de nombres determina cómo elimina los vínculos el algor
 
 Los espacios de nombres del servicio de identidad tienen un orden de importancia relativo implícito. Consideremos un gráfico estructurado como una pirámide. Hay un nodo en la capa superior, dos nodos en la capa media y cuatro nodos en la capa inferior. La prioridad del área de nombres debe reflejar este orden relativo para garantizar que una entidad de persona se represente con precisión.
 
-Para obtener información detallada sobre la prioridad del área de nombres y sus funcionalidades y usos completos, lea la [guía de prioridad de área de nombres](./namespace-priority.md).
+Para obtener información detallada sobre la prioridad del área de nombres y sus funcionalidades y usos completos, lea la [guía de prioridad del área de nombres](./namespace-priority.md).
 
 ![capas de gráficos y prioridad de área de nombres](../images/namespace-priority/graph-layers.png)
 
 ## Proceso {#process}
 
-
 Al ingerir nuevas identidades, el servicio de identidad comprueba si las nuevas identidades y sus áreas de nombres correspondientes se adhieren a configuraciones de área de nombres únicas. Si se siguen las configuraciones, la ingesta continúa y las nuevas identidades se vinculan al gráfico. Sin embargo, si no se siguen las configuraciones, el algoritmo de optimización de identidad:
-
 
 * Introduzca el evento más reciente, teniendo en cuenta la prioridad del área de nombres.
 * Elimine el vínculo que combinaría dos entidades de persona de la capa de gráfico adecuada.
@@ -82,7 +80,7 @@ Un dispositivo compartido hace referencia a un dispositivo que utilizan más de 
 
 >[!BEGINTABS]
 
->[!TAB Ejemplo 1]
+>[!TAB Ejemplo uno]
 
 | Área de nombres | Área de nombres única |
 | --- | --- |
@@ -90,9 +88,9 @@ Un dispositivo compartido hace referencia a un dispositivo que utilizan más de 
 | Correo electrónico | Sí |
 | ECID | No |
 
-En este ejemplo, tanto el ID de CRM como el correo electrónico se designan como áreas de nombres únicas. En `timestamp=0`, se incorpora un conjunto de datos de registro CRM y se crean dos gráficos diferentes debido a la configuración del área de nombres única. Cada gráfico contiene un ID de CRM y un área de nombres de correo electrónico.
+En este ejemplo, tanto el ID de CRM como el correo electrónico se designan como áreas de nombres únicas. En `timestamp=0`, se incorpora un conjunto de datos de registro de CRM y se crean dos gráficos diferentes debido a la configuración del área de nombres única. Cada gráfico contiene un ID de CRM y un área de nombres de correo electrónico.
 
-* `timestamp=1`: Jane inicia sesión en su sitio web de comercio electrónico con un ordenador portátil. Jane está representada por su ID de CRM y su correo electrónico, mientras que el explorador web de su portátil que utiliza está representado por un ECID.
+* `timestamp=1`: Jane inicia sesión en el sitio web de comercio electrónico con un equipo portátil. Jane está representada por su ID de CRM y su correo electrónico, mientras que el explorador web de su portátil que utiliza está representado por un ECID.
 * `timestamp=2`: John inicia sesión en el sitio web de comercio electrónico con el mismo equipo portátil. John está representado por su ID de CRM y su correo electrónico, mientras que el explorador web que utilizó ya está representado por un ECID. Debido a que el mismo ECID se vincula a dos gráficos diferentes, el servicio de identidad puede saber que este dispositivo (portátil) es compartido.
 * Sin embargo, debido a la configuración del área de nombres única que establece un máximo de un área de nombres de ID de CRM y un área de nombres de correo electrónico por gráfico, el algoritmo de optimización de identidad divide el gráfico en dos.
    * Finalmente, como John es el último usuario autenticado, el ECID que representa el portátil permanece vinculado a su gráfico en lugar de al de Jane.
@@ -108,7 +106,7 @@ En este ejemplo, tanto el ID de CRM como el correo electrónico se designan como
 
 En este ejemplo, el área de nombres de ID de CRM se designa como un área de nombres única.
 
-* `timestamp=1`: Jane inicia sesión en su sitio web de comercio electrónico con un ordenador portátil. Está representada por su ID de CRM y el explorador web del portátil está representado por el ECID.
+* `timestamp=1`: Jane inicia sesión en el sitio web de comercio electrónico con un equipo portátil. Está representada por su ID de CRM y el explorador web del portátil está representado por el ECID.
 * `timestamp=2`: John inicia sesión en el sitio web de comercio electrónico con el mismo equipo portátil. Está representado por su ID de CRM y el explorador web que utiliza está representado por el mismo ECID.
    * Este evento vincula dos ID de CRM independientes al mismo ECID, lo que supera el límite configurado de un ID de CRM.
    * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el ID de CRM de Jane que se vinculó en `timestamp=1`.
@@ -128,29 +126,29 @@ Hay casos en los que un usuario puede introducir valores erróneos en su correo 
 | Correo electrónico | Sí |
 | ECID | No |
 
-En este ejemplo, el ID de CRM y las áreas de nombres de correo electrónico se designan como únicos. Considere el caso de que Jane y John se hayan registrado en su sitio web de comercio electrónico con un valor incorrecto de correo electrónico (por ejemplo, probar<span>@test.com).
+En este ejemplo, el ID de CRM y las áreas de nombres de correo electrónico se designan como únicos. Considere el caso de que Jane y John se hayan registrado en el sitio web de comercio electrónico con un valor incorrecto de correo electrónico (por ejemplo, test<span>@test.com).
 
 * `timestamp=1`: Jane inicia sesión en su sitio web de comercio electrónico utilizando Safari en su iPhone, estableciendo su ID de CRM (información de inicio de sesión) y su ECID (explorador).
-* `timestamp=2`: John inicia sesión en el sitio web de comercio electrónico utilizando Google Chrome en su iPhone, estableciendo su CRM ID (información de inicio de sesión) y ECID (explorador).
-* `timestamp=3`: su ingeniero de datos ingiere el registro CRM de Jane, lo que provoca que su ID de CRM se vincule al correo electrónico incorrecto.
+* `timestamp=2`: John inicia sesión en su sitio web de comercio electrónico utilizando Google Chrome en su iPhone, estableciendo su CRM ID (información de inicio de sesión) y ECID (explorador).
+* `timestamp=3`: el ingeniero de datos ingiere el registro CRM de Jane, lo que provoca que su ID de CRM se vincule al correo electrónico incorrecto.
 * `timestamp=4`: el ingeniero de datos ingiere el registro CRM de John, lo que provoca que su ID de CRM se vincule al correo electrónico incorrecto.
    * Esto se convierte en una infracción de la configuración del área de nombres única, ya que crea un solo gráfico con dos áreas de nombres de ID de CRM.
-   * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el vínculo entre la identidad de Jane con el área de nombres de ID de CRM y la identidad con prueba<span>@test.
+   * Como resultado, el algoritmo de optimización de identidad elimina el vínculo más antiguo, que en este caso es el vínculo entre la identidad de Jane con el área de nombres de ID de CRM y la identidad con test<span>@test.
 
 Con el algoritmo de optimización de identidad, los valores de identidad incorrectos, como correos electrónicos o números de teléfono falsos, no se propagan en varios gráficos de identidad diferentes.
 
-![correo electrónico erróneo](../images/identity-settings/bad-email.png)
+![correo electrónico incorrecto](../images/identity-settings/bad-email.png)
 
 ### Asociación de evento anónimo
 
-Los ECID almacenan eventos no autenticados (anónimos), mientras que el ID de CRM almacena eventos autenticados. En el caso de los dispositivos compartidos, el ECID (portador de eventos no autenticados) se asocia al **último usuario autenticado**.
+Los ECID almacenan eventos no autenticados (anónimos), mientras que el ID de CRM almacena eventos autenticados. En el caso de los dispositivos compartidos, el ECID (portador de eventos no autenticados) se asocia con el **último usuario autenticado**.
 
 Vea el diagrama siguiente para comprender mejor cómo funciona la asociación de eventos anónimos:
 
 * Kevin y Nora comparten una tableta.
-   * `timestamp=1`: Kevin inicia sesión en un sitio web de comercio electrónico con su cuenta, lo que establece su ID de CRM (información de inicio de sesión) y un ECID (explorador). En el momento del inicio de sesión, Kevin ahora se considera el último usuario autenticado.
-   * `timestamp=2`: Nora inicia sesión en un sitio web de comercio electrónico con su cuenta, lo que establece su ID de CRM (información de inicio de sesión) y el mismo ECID. En el momento del inicio de sesión, Nora ahora se considera el último usuario autenticado.
-   * `timestamp=3`: Kevin utiliza la tableta para navegar por el sitio web de comercio electrónico, pero no inicia sesión con su cuenta. La actividad de navegación de Kevin se almacena entonces en el ECID, que a su vez se asocia con Nora porque es el último usuario autenticado. En este punto, Nora posee los eventos anónimos.
+   * `timestamp=1`: Kevin inicia sesión en un sitio web de comercio electrónico usando su cuenta, estableciendo así su ID de CRM (información de inicio de sesión) y un ECID (explorador). En el momento del inicio de sesión, Kevin ahora se considera el último usuario autenticado.
+   * `timestamp=2`: Nora inicia sesión en un sitio web de comercio electrónico con su cuenta, estableciendo así su ID de CRM (información de inicio de sesión) y el mismo ECID. En el momento del inicio de sesión, Nora ahora se considera el último usuario autenticado.
+   * `timestamp=3`: Kevin usa la tableta para examinar el sitio web de comercio electrónico, pero no inicia sesión con su cuenta. La actividad de navegación de Kevin se almacena entonces en el ECID, que a su vez se asocia con Nora porque es el último usuario autenticado. En este punto, Nora posee los eventos anónimos.
       * Hasta que Kevin vuelva a iniciar sesión, el perfil combinado de Nora se asociará a todos los eventos no autenticados almacenados con el ECID (con eventos en los que ECID es la identidad principal).
    * `timestamp=4`: Kevin inicia sesión por segunda vez. En este punto, una vez más se convierte en el último usuario autenticado y ahora también posee los eventos no autenticados:
       * Antes de su inicio de sesión anterior a `timestamp=1`; y
