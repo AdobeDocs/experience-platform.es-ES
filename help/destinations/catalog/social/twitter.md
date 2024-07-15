@@ -2,9 +2,9 @@
 title: Conexión de Audiencias personalizadas de twitter
 description: Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de remarketing relevantes activando las audiencias creadas en Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '857'
 ht-degree: 5%
 
 ---
@@ -17,19 +17,19 @@ Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de re
 
 ## Requisitos previos {#prerequisites}
 
-Antes de configurar su [!DNL Twitter Custom Audiences] destino, asegúrese de revisar los siguientes requisitos previos de Twitter que debe cumplir.
+Antes de configurar el destino [!DNL Twitter Custom Audiences], asegúrese de revisar los siguientes requisitos previos de Twitter que debe cumplir.
 
-1. Su [!DNL Twitter Ads] La cuenta debe ser apta para la publicidad. Nuevo [!DNL Twitter Ads] Las cuentas de no son aptas para la publicidad en las 2 primeras semanas después de su creación.
-2. Su cuenta de usuario de Twitter para la que autorizó el acceso en [!DNL Twitter Audience Manager] debe tener el *[!DNL Partner Audience Manager]* permiso habilitado.
+1. Su cuenta de [!DNL Twitter Ads] debe cumplir los requisitos para la publicidad. Las nuevas cuentas de [!DNL Twitter Ads] no son elegibles para la publicidad en las primeras 2 semanas después de crearse.
+2. La cuenta de usuario de Twitter para la que autorizó el acceso en [!DNL Twitter Audience Manager] debe tener habilitado el permiso *[!DNL Partner Audience Manager]*.
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Twitter Custom Audiences] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Google Advertising ID (GAID) y Apple ID para anunciantes (IDFA) son compatibles con Adobe Experience Platform. Asigne estas áreas de nombres o atributos desde su esquema de origen según corresponda en la [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino. |
-| email | Direcciones de correo electrónico del usuario | Asigne sus direcciones de correo electrónico de texto sin formato y sus direcciones de correo electrónico con hash SHA256 a este campo. Si el campo de origen contiene atributos sin hash, marque la **[!UICONTROL Aplicar transformación]** opción, para tener [!DNL Platform] hash automático de los datos en la activación. Si escribe hash las direcciones de correo electrónico de los clientes antes de cargarlas en Adobe Experience Platform, tenga en cuenta que estas identidades deben tener un cifrado hash con SHA256, sin formato. |
+| device_id | IDFA/AdID/Android ID | Google Advertising ID (GAID) y Apple ID para anunciantes (IDFA) son compatibles con Adobe Experience Platform. Asigne estas áreas de nombres o atributos desde el esquema de origen según corresponda en el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino. |
+| email | Direcciones de correo electrónico del usuario | Asigne sus direcciones de correo electrónico de texto sin formato y sus direcciones de correo electrónico con hash SHA256 a este campo. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que [!DNL Platform] aplique automáticamente el hash a los datos durante la activación. Si escribe hash las direcciones de correo electrónico de los clientes antes de cargarlas en Adobe Experience Platform, tenga en cuenta que estas identidades deben tener un cifrado hash con SHA256, sin formato. |
 
 {style="table-layout:auto"}
 
@@ -39,8 +39,8 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL Twitter Custom Audiences] Destino. Estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL Twitter Custom Audiences], aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
 ### #1 de casos de uso
 
@@ -67,16 +67,16 @@ Oriente a sus seguidores y clientes existentes en Twitter y cree campañas de re
 
 >[!IMPORTANT]
 > 
->Para conectarse al destino, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
-1. Busque el [!DNL Twitter Custom Audiences] en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
-2. Seleccionar **[!UICONTROL Conectar con destino]**.
-   ![Autenticar en LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Introduzca las credenciales de Twitter y seleccione **Iniciar sesión**.
+1. Busque el destino [!DNL Twitter Custom Audiences] en el catálogo de destino y seleccione **[!UICONTROL Configurar]**.
+2. Seleccione **[!UICONTROL Conectar con destino]**.
+   ![Autenticar con LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. Escriba sus credenciales de Twitter y seleccione **Iniciar sesión**.
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -87,34 +87,37 @@ Para conectarse a este destino, siga los pasos descritos en la sección [tutoria
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL ID de cuenta]**: su [!DNL Twitter Ads] ID de cuenta. Esto se puede encontrar en su [!DNL Twitter Ads] configuración.
+* **[!UICONTROL ID de cuenta]**: Su ID de cuenta [!DNL Twitter Ads]. Se encuentra en la configuración de [!DNL Twitter Ads].
+
+>[!IMPORTANT]
+>
+>No utilice caracteres especiales (+ &amp; , % : ; @ / = ? $ \n) en los nombres de asignación de audiencia, descripción y audiencia. Si el nombre de la audiencia del Experience Platform contiene estos caracteres, elimínelos antes de asignar la audiencia a un destino de Twitter.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+
+### Consideraciones de asignación {#mapping-considerations}
+
+Al asignar audiencias al Twitter, proporcione nombres de asignación de audiencias legibles por humanos. Se recomienda utilizar el mismo nombre que utilizó para los segmentos del Experience Platform.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos. Consulte la [Resumen de gobernanza de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte la [Información general sobre el control de datos](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es).
 
 ## Recursos adicionales {#additional-resources}
 
-Al asignar audiencias al Twitter, asegúrese de cumplir los siguientes requisitos de nomenclatura de audiencias:
-
-1. Proporcione nombres de asignación de audiencia legibles por humanos. Se recomienda utilizar el mismo nombre que utilizó para los segmentos del Experience Platform.
-2. No utilice caracteres especiales (+ &amp; , % : ; @ / = ? $) en los nombres de asignación de audiencia y audiencia. Si el nombre de la audiencia del Experience Platform contiene estos caracteres, elimínelos antes de asignar la audiencia a un destino de Twitter.
-
-Más información sobre [!DNL List Custom Audiences] en Twitter se puede encontrar en la [documentación del twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Encontrará más información sobre [!DNL List Custom Audiences] en el Twitter en la [documentación del Twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
