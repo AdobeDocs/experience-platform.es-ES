@@ -2,9 +2,9 @@
 title: Información general sobre el asistente de IA en Adobe Experience Platform
 description: Obtenga información sobre el asistente de IA, sus matices y casos de uso, y cómo puede utilizarlo para acelerar el flujo de trabajo con Adobe Experience Platform y Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 8%
 
 ---
@@ -77,7 +77,7 @@ Puede hacer preguntas al asistente de IA sobre sus perspectivas operativas en lo
 | Conjuntos de datos | <ul><li>Recuento de conjuntos de datos</li><li>Estado de habilitación de perfil</li><li>Fecha de creación/modificación</li><li>Conjunto de datos: relación de esquema</li><li>Conjunto de datos: relación de audiencia</li><li>Conjunto de datos: relación de atributos</li><li>Conjunto de datos: relación de flujo de datos</li><li>Búsquedas de nombres </li><li>Búsquedas de nombre e ID</li></ul> | <ul><li>Auditoría</li><li>Creado por</li><li>Conjunto de datos: relación por lotes</li><li>Creación/modificación de conjuntos de datos</li><li>Tamaño del conjunto de datos</li><li>Número de perfiles</li><li>Número de filas</li><li>Búsquedas de valores</li></ul> |
 | Destinos | <ul><li>Recuentos de destino configurados</li><li>Destino: relación de audiencia</li><li>Relación de atributo de destino</li></ul> | <ul><li>Configuración de cuenta</li><li>Información de credenciales de cuenta</li><li>Perfiles únicos activados</li></ul> |
 | Recorridos | <ul><li>Recuentos</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID</li><li>Estado del recorrido</li><li>Estado de activación (audiencia frente a eventos)</li><li>Fechas de creación/modificación</li><li>Frecuencia recurrente</li></ul> | <ul><li>Atributos: relaciones de recorrido</li><li>Auditoría</li><li>Creación/modificación</li><li>Creado por</li><li>Eventos</li><li>Recorrido: conjunto de datos</li><li>Recorrido - esquema</li><li>Ofertas</li><li>Tendencias de calificación de perfiles</li><li>Eventos de paso</li></ul> |
-| Esquemas | <ul><li>Recuentos de esquemas</li><li>Fecha de creación/modificación</li><li>Tipo de clase de esquema</li><li>Esquema: relación de atributos</li><li>Esquema: relación del conjunto de datos</li><li>Esquema: relación de audiencia</li><li>Estado de habilitación de perfil</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID</li></ul> | <ul><li>Auditoría</li><li>Creación/modificación</li><li>Creado por</li><li>Grupos de campo</li><li>Identidades</li><li>Áreas de nombres de identidad</li><li>Etiquetas</li><li>Número de perfiles</li></ul> |
+| Esquemas | <ul><li>Recuentos de esquemas</li><li>Fecha de creación/modificación</li><li>Esquema: relación de atributos</li><li>Esquema: relación del conjunto de datos</li><li>Esquema: relación de audiencia</li><li>Estado de habilitación de perfil</li><li>Búsquedas de nombres</li><li>Búsquedas de nombre e ID</li></ul> | <ul><li>Auditoría</li><li>Creación/modificación</li><li>Creado por</li><li>Grupos de campo</li><li>Identidades</li><li>Áreas de nombres de identidad</li><li>Etiquetas</li><li>Número de perfiles</li></ul> |
 | Fuentes | <ul><li>Recuentos de cuentas</li><li>Estado de cuenta</li><li>Flujos de datos activos/inactivos para cada cuenta</li><li>Conector de Source: relación de flujo de datos</li><li>cuenta de Source: relación de flujo de datos</li></ul> | <ul><li>Información de credenciales de cuenta</li><li>Configuración de cuenta</li><li>Métricas de ingesta de datos</li><li>Número de perfiles</li><li>Source: relaciones por lotes</li></ul> |
 
 {style="table-layout:auto"}

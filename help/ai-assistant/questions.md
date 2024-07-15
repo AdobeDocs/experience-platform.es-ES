@@ -2,9 +2,9 @@
 title: Guía de preguntas para el asistente de IA
 description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -85,30 +85,6 @@ Las preguntas siguientes están agrupadas por objetos de datos y se clasifican c
    * ¿Por qué no puedo eliminar una audiencia?
    * ¿Cuánto tiempo tardan las audiencias en evaluarse y los resultados en estar disponibles para la segmentación?
 
-+++Seleccione esta opción para ver una lista adicional de peticiones de datos sugeridas
-
-* ¿Puedo eliminar un esquema habilitado para perfiles después de la ingesta de datos?
-* ¿Cómo se relacionan los grupos de usuarios con las funciones?
-* ¿Cuándo debo usar un tipo de datos o un grupo de campos?&quot;
-* ¿Cuál es la diferencia entre una identidad y una clave principal o externa?&quot;
-* ¿Cuánto tiempo tardan los segmentos en evaluarse y los resultados en estar disponibles para la segmentación?
-* ¿Cómo se calcula la riqueza de perfiles?&quot;
-* Consulte algunos casos de uso comunes de Real-Time CDP.
-* ¿Por qué no puedo eliminar un segmento?
-* ¿Qué tipo de cambios puedo realizar después de habilitar un esquema para el perfil?
-* ¿Por qué no puedo acceder a los paneles en AEP?
-* Cuántos segmentos utilizan el atributo xdm {FIELD_PATH}
-* ¿Tengo algún segmento que se utilice en otros segmentos?
-* ¿Qué campos del esquema {SCHEMA_NAME} contienen {STRING}?
-* ¿Qué audiencias tienen el atributo xdm {FULL_ATTRIBUTE_PATH} en su definición de segmento?
-* ¿Qué esquemas contienen el atributo xdm {FULL_ATTRIBUTE_PATH}?
-* ¿Qué flujos de datos de origen no se utilizan o ya no reciben datos?
-* Enumerar los recorridos activos que tengo.
-* Enumerar las audiencias que se utilizan en recorridos activos.
-* ¿Qué fuentes están en estado activo?
-
-+++
-
 ## Formulación de preguntas {#phrasing-your-questions}
 
 Debe formular sus preguntas al asistente de IA con claridad y contexto para obtener una respuesta lo más precisa posible. Consulte la siguiente lista de sugerencias para obtener instrucciones sobre cómo hacer una pregunta clara con contexto:
@@ -147,7 +123,7 @@ A continuación se muestra una lista de ejemplos de preguntas que el asistente d
 
 ### Datos operativos
 
-* ¿Cuántos perfiles de esta zona protegida [ cumplen un criterio específico, por ejemplo, &quot;vivir en California&quot;]?
+* ¿Cuántos perfiles de esta zona protegida viven en California? (**Nota**: para preguntas similares, debe proporcionar un criterio específico para dar contexto suficiente a la solicitud, en este caso, el criterio específico es &quot;vivir en California&quot;).
 * ¿En qué segmentos se encuentra este perfil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * ¿Cuántos perfiles del conjunto de datos tienen un correo electrónico?
 * ¿Qué conjunto de datos constituye el máximo número de perfiles en esta zona protegida?
