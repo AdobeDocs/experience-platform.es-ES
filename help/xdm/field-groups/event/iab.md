@@ -11,27 +11,27 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos para esquemas de evento
+# [!UICONTROL Grupo de campos de consentimiento TCF de IAB 2.0] para esquemas de eventos
 
 >[!IMPORTANT]
 >
->Este documento describe el [!UICONTROL Consentimiento de IAB TCF 2.0] grupo de campos de esquema para la clase XDM ExperienceEvent. Este grupo de campos solo debe utilizarse si se desea rastrear los eventos de cambio de consentimiento a lo largo del tiempo.
+>Este documento cubre el grupo de campos de esquema [!UICONTROL Consentimiento TCF 2.0 de IAB] para la clase XDM ExperienceEvent. Este grupo de campos solo debe utilizarse si se desea rastrear los eventos de cambio de consentimiento a lo largo del tiempo.
 >
 >Tenga en cuenta que los valores de consentimiento registrados en los datos de evento no se respetan en los flujos de trabajo de aplicación automática. Para que se aplique automáticamente, los valores de consentimiento deben introducirse en la clase de perfil individual de XDM y habilitarse para el perfil del cliente en tiempo real.
 >
->Para el grupo de campos destinado a la clase de perfil individual de XDM, consulte lo siguiente [documento](../profile/iab.md) en su lugar.
+>Para el grupo de campos destinado a la clase Perfil individual XDM, consulte el siguiente [documento](../profile/iab.md) en su lugar.
 
-[!UICONTROL Consentimiento de IAB TCF 2.0] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) se utiliza para recopilar una serie con marca de tiempo de cadenas de consentimiento IAB, con el fin de rastrear los patrones de cambio de consentimiento a lo largo del tiempo.
+El consentimiento [!UICONTROL IAB TCF 2.0] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) que se usa para capturar una serie con marca de tiempo de cadenas de consentimiento IAB, con el fin de rastrear patrones de cambio de consentimiento a lo largo del tiempo.
 
 ![](../../images/field-groups/iab-event.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `consentStrings` | Matriz de [Cadenas de consentimiento](../../data-types/consent-string.md) | Una matriz de valores de cadena de consentimiento asociados al evento. |
+| `consentStrings` | Matriz de [cadenas de consentimiento](../../data-types/consent-string.md) | Una matriz de valores de cadena de consentimiento asociados al evento. |
 
 {style="table-layout:auto"}
 
-Consulte la guía de [Compatibilidad con IAB TCF 2.0 en Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
+Consulte la guía sobre la compatibilidad con [IAB TCF 2.0 en Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obtener más información sobre el caso de uso de este grupo de campos. Para obtener más información sobre el propio grupo de campos, consulte el repositorio XDM público:
 
 * [Ejemplo completado](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

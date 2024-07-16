@@ -13,39 +13,39 @@ ht-degree: 6%
 
 # Creación de una definición de segmento mediante la API del servicio de segmentación
 
-Este documento proporciona un tutorial para desarrollar, probar, previsualizar y guardar una definición de segmento mediante [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Este documento proporciona un tutorial para desarrollar, probar, obtener una vista previa y guardar una definición de segmento utilizando [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Para obtener información sobre cómo generar definiciones de segmentos mediante la interfaz de usuario, consulte la [Guía del Generador de segmentos](../ui/segment-builder.md).
+Para obtener información sobre cómo generar definiciones de segmentos mediante la interfaz de usuario, consulte la [guía del Generador de segmentos](../ui/segment-builder.md).
 
 ## Introducción
 
-Este tutorial requiere una comprensión práctica de los distintos [!DNL Adobe Experience Platform] servicios implicados en la creación de definiciones de segmentos. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
+Este tutorial requiere una comprensión práctica de los distintos servicios de [!DNL Adobe Experience Platform] implicados en la creación de definiciones de segmentos. Antes de comenzar este tutorial, revise la documentación de los siguientes servicios:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permite crear audiencias utilizando definiciones de segmentos u otras fuentes externas a partir de datos del perfil del cliente en tiempo real.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar mejor la segmentación, asegúrese de que sus datos se incorporan como perfiles y eventos según el [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permite crear audiencias utilizando definiciones de segmentos u otros orígenes externos a partir de datos del perfil del cliente en tiempo real.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente. Para utilizar la segmentación de la mejor manera posible, asegúrate de que tus datos se incorporen como perfiles y eventos según las [prácticas recomendadas para el modelado de datos](../../xdm/schema/best-practices.md).
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Platform] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas correctamente a las API de [!DNL Platform].
 
 ### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -53,22 +53,22 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Desarrollar una definición de segmento
 
-El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o datos de series temporales que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [Guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
+El primer paso de la segmentación es definir una definición de segmento. Una definición de segmento es un objeto que encapsula una consulta escrita en [!DNL Profile Query Language] (PQL). Este objeto también se denomina predicado PQL. Los predicados de PQL definen las reglas para la definición del segmento en función de las condiciones relacionadas con cualquier registro o dato de serie temporal que proporcione a [!DNL Real-Time Customer Profile]. Consulte la [guía de PQL](../pql/overview.md) para obtener más información sobre cómo escribir consultas de PQL.
 
-Puede crear una nueva definición de segmento realizando una solicitud de POST a `/segment/definitions` punto final en la [!DNL Segmentation] API. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
+Puede crear una nueva definición de segmento realizando una solicitud de POST al extremo `/segment/definitions` en la API [!DNL Segmentation]. En el siguiente ejemplo se describe cómo dar formato a una solicitud de definición, incluida la información necesaria para que una definición de segmento se defina correctamente.
 
-Para obtener una explicación detallada sobre cómo definir una definición de segmento, lea la [guía para desarrolladores de definición de segmentos](../api/segment-definitions.md#create).
+Para obtener una explicación detallada sobre cómo definir una definición de segmento, lea la [guía para desarrolladores de definiciones de segmento](../api/segment-definitions.md#create).
 
 ## Calcular y previsualizar una audiencia {#estimate-and-preview-an-audience}
 
-A medida que desarrolle su definición de segmento, puede utilizar las herramientas de estimación y vista previa dentro de [!DNL Real-Time Customer Profile] para ver información de resumen que le ayude a aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las vistas previas proporcionan listas paginadas de perfiles aptos para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
+A medida que desarrolle su definición de segmento, puede usar las herramientas de estimación y vista previa dentro de [!DNL Real-Time Customer Profile] para ver información de resumen a fin de asegurarse de aislar la audiencia esperada. Las estimaciones proporcionan información estadística sobre una definición de segmento, como el tamaño de audiencia proyectado y el intervalo de confianza. Las vistas previas proporcionan listas paginadas de perfiles aptos para una definición de segmento, lo que le permite comparar los resultados con lo que espera.
 
 Al estimar y previsualizar la audiencia, puede probar y optimizar los predicados de PQL hasta que produzcan un resultado deseado, donde se pueden utilizar en una definición de segmento actualizada.
 
 Existen dos pasos necesarios para obtener una vista previa o una estimación de la definición de su segmento:
 
 1. [Creación de un trabajo de vista previa](#create-a-preview-job)
-2. [Ver estimación o previsualización](#view-an-estimate-or-preview) uso del ID del trabajo de vista previa
+2. [Ver estimación o vista previa](#view-an-estimate-or-preview) con el identificador del trabajo de vista previa
 
 ### Cómo se generan las estimaciones
 
@@ -91,17 +91,17 @@ Las estimaciones suelen durar entre 10 y 15 segundos, comenzando con una estimac
 
 ### Creación de un trabajo de vista previa
 
-Puede crear un nuevo trabajo de vista previa realizando una solicitud de POST al `/preview` punto final.
+Puede crear un nuevo trabajo de vista previa realizando una solicitud de POST al extremo `/preview`.
 
-Puede encontrar instrucciones detalladas sobre la creación de un trabajo de vista previa en la [guía de extremos de previsualizaciones y estimaciones](../api/previews-and-estimates.md#create-preview).
+Encontrará instrucciones detalladas sobre la creación de un trabajo de vista previa en la [guía de vistas previas y estimaciones de extremos](../api/previews-and-estimates.md#create-preview).
 
 ### Ver una estimación o previsualización
 
 Los procesos de estimación y vista previa se ejecutan de forma asíncrona, ya que las distintas consultas pueden tardar distintos periodos en completarse. Una vez iniciada una consulta, puede utilizar llamadas a la API para recuperar (GET) el estado actual de la estimación o previsualización a medida que progresa.
 
-Uso del [!DNL Segmentation Service] API, puede buscar el estado actual de un trabajo de vista previa por su ID. Si el estado es &quot;RESULT_READY&quot;, puede ver los resultados. Para consultar el estado actual de un trabajo de vista previa, lea la sección sobre [sección recuperación de un trabajo de vista previa](../api/previews-and-estimates.md#get-preview) en la guía de previsualizaciones y estimaciones de extremos. Para consultar el estado actual de un trabajo de estimación, lea la sección sobre [recuperación de un trabajo de estimación](../api/previews-and-estimates.md#get-estimate) en la guía de previsualizaciones y estimaciones de extremos.
+Con la API [!DNL Segmentation Service], puede buscar el estado actual de un trabajo de vista previa por su ID. Si el estado es &quot;RESULT_READY&quot;, puede ver los resultados. Para buscar el estado actual de un trabajo de vista previa, lea la sección sobre [recuperación de una sección del trabajo de vista previa](../api/previews-and-estimates.md#get-preview) en la guía de vistas previas y extremos de estimaciones. Para consultar el estado actual de un trabajo de estimación, lea la sección sobre [recuperación de un trabajo de estimación](../api/previews-and-estimates.md#get-estimate) en la guía de vistas previas y extremos de estimación.
 
 
 ## Pasos siguientes
 
-Una vez que haya desarrollado, probado y guardado su definición de segmento, puede crear un trabajo de segmento para crear una audiencia utilizando [!DNL Segmentation Service] API. Consulte el tutorial sobre [evaluación y acceso a los resultados de los segmentos](./evaluate-a-segment.md) para ver los pasos detallados sobre cómo hacerlo.
+Una vez que haya desarrollado, probado y guardado su definición de segmento, puede crear un trabajo de segmento para crear una audiencia con la API [!DNL Segmentation Service]. Consulte el tutorial sobre [evaluación y acceso a los resultados del segmento](./evaluate-a-segment.md) para ver los pasos detallados sobre cómo hacerlo.

@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-Para ver las directivas de control de acceso efectivas para el usuario actual, realice una solicitud de POST al `/acl/effective-policies` punto final en la [!DNL Access Control] API. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en la llamada de API de ejemplo a continuación.
+Para ver directivas de control de acceso efectivas para el usuario actual, realice una solicitud de POST al extremo `/acl/effective-policies` en la API [!DNL Access Control]. Los permisos y tipos de recursos que desea recuperar deben proporcionarse en la carga útil de la solicitud en forma de matriz. Esto se muestra en la llamada de API de ejemplo a continuación.
 
 **Formato de API**
 
@@ -28,7 +28,7 @@ POST /acl/effective-policies
 
 **Solicitud**
 
-Las siguientes solicitudes recuperan información sobre &quot;[!UICONTROL Administrar conjuntos de datos]&quot; permiso y acceso al &quot;[!UICONTROL esquemas]&quot; tipo de recurso para el usuario actual.
+Las siguientes solicitudes recuperan información sobre el permiso &quot;[!UICONTROL Administrar conjuntos de datos]&quot; y el acceso al tipo de recurso &quot;[!UICONTROL schemas]&quot; para el usuario actual.
 
 ```shell
 curl -X POST \
@@ -50,7 +50,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve información sobre los permisos y tipos de recursos proporcionados en la solicitud. La respuesta incluye los permisos activos que el usuario actual tiene para los tipos de recursos especificados en la solicitud. Si algún permiso incluido en la carga útil de la solicitud está activo para el usuario actual, la API devuelve el permiso con un asterisco (`*`) para indicar que el permiso está activo. Los permisos proporcionados en la solicitud que no están activos para el usuario se omiten de la carga útil de respuesta.
+Una respuesta correcta devuelve información sobre los permisos y tipos de recursos proporcionados en la solicitud. La respuesta incluye los permisos activos que el usuario actual tiene para los tipos de recursos especificados en la solicitud. Si hay permisos incluidos en la carga útil de la solicitud activos para el usuario actual, la API devuelve el permiso con un asterisco (`*`) para indicar que el permiso está activo. Los permisos proporcionados en la solicitud que no están activos para el usuario se omiten de la carga útil de respuesta.
 
 ```json
 {
@@ -69,15 +69,15 @@ Una respuesta correcta devuelve información sobre los permisos y tipos de recur
 
 ## Pasos siguientes
 
-Este documento explica cómo realizar llamadas a [!DNL Access Control] API para devolver información sobre permisos activos y directivas de acceso relacionadas para tipos de recursos. Para obtener más información sobre el control de acceso de [!DNL Experience Platform], consulte la [información general de control de acceso](../home.md).
+En este documento se explica cómo realizar llamadas a la API [!DNL Access Control] para devolver información sobre los permisos activos y las directivas de acceso relacionadas para los tipos de recursos. Para obtener más información acerca del control de acceso de [!DNL Experience Platform], vea la [descripción general del control de acceso](../home.md).
 
 ## Apéndice
 
-Esta sección proporciona información complementaria para utilizar la variable [!DNL Access Control] API.
+Esta sección proporciona información complementaria para utilizar la API [!DNL Access Control].
 
 ### Permisos aceptados y tipos de recursos
 
-A continuación se muestra una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST a `/acl/active-permissions` punto final.
+A continuación se muestra una lista de permisos y tipos de recursos que puede incluir en la carga útil de una solicitud de POST al extremo `/acl/active-permissions`.
 
 **Permisos**
 

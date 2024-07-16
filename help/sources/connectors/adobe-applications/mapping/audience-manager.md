@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;inicio;temas populares;asignación de Audience Manager;asignación de audience manager
 solution: Experience Platform
-title: Asignación de campos para el conector de origen de Adobe Audience Manager
+title: Asignación de campos para el conector de Adobe Audience Manager Source
 description: Obtenga información sobre cómo asignar datos de Adobe Audience Manager (datos de tiempo real, integrados y de perfil) a los campos correspondientes del modelo de datos de experiencia (XDM) para el conector de origen del Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Las siguientes tablas contienen las asignaciones entre los campos de datos de Adobe Audience Manager (datos en tiempo real, integrados y de perfil) y sus campos XDM correspondientes.
 
-Consulte la [Diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md) para obtener más información sobre cada campo XDM.
+Consulte el [diccionario de campo XDM](../../../../xdm/schema/field-dictionary.md) para obtener más información sobre cada campo XDM.
 
 ## Datos en tiempo real
 

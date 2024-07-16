@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Puntuar un modelo;Espacio de trabajo de ciencia de datos;temas populares;api de aprendizaje automático de sensei
+keywords: Experience Platform;Puntuar un modelo;Workspace de ciencia de datos;temas populares;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Puntuación de un modelo mediante la API de aprendizaje automático de Sensei
 type: Tutorial
@@ -7,20 +7,20 @@ description: Este tutorial muestra cómo aprovechar las API de aprendizaje autom
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
 
-# Puntuación de un modelo con [!DNL Sensei Machine Learning API]
+# Puntuación de un modelo mediante [!DNL Sensei Machine Learning API]
 
-Este tutorial muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista de todos los puntos finales de la API de aprendizaje automático de Sensei, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Este tutorial muestra cómo aprovechar las API para crear un experimento y una ejecución de experimento. Para obtener una lista de todos los extremos de la API de aprendizaje automático de Sensei, consulte [este documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Crear un experimento programado para la puntuación
 
-De forma similar a los Experimentos programados para formación, la creación de un Experimento programado para puntuación también se realiza incluyendo una `template` al parámetro body. Además, la variable `name` campo debajo de `tasks` en el cuerpo se establece como `score`.
+De forma similar a los Experimentos programados para formación, la creación de un Experimento programado para puntuación también se realiza incluyendo una sección `template` en el parámetro de cuerpo. Además, el campo `name` bajo `tasks` en el cuerpo está establecido como `score`.
 
-A continuación se muestra un ejemplo de creación de un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
+A continuación se muestra un ejemplo de cómo crear un experimento que se ejecutará cada 20 minutos a partir de `startTime` y se ejecutará hasta `endTime`.
 
 **Solicitud**
 
@@ -34,9 +34,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Las credenciales de su organización se encuentran en la integración de Adobe Experience Platform única.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`: El valor de clave de API específico que se encuentra en la integración única de Adobe Experience Platform.\
+`{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
 `{JSON_PAYLOAD}`: objeto de ejecución de experimento que se enviará. El ejemplo que utilizamos en nuestro tutorial se muestra aquí:
 
 ```JSON
@@ -102,13 +102,13 @@ La siguiente es la respuesta después de crear el experimento programado.
 }
 ```
 
-`{EXPERIMENT_ID}`: el ID que representa el experimento.\
+`{EXPERIMENT_ID}`: ID que representa el experimento.\
 `{INSTANCE_ID}`: ID que representa la instancia de MLI.
 
 
 ### Crear una ejecución de experimento para puntuación
 
-Ahora, con el modelo entrenado, podemos crear una Ejecución de experimento para la puntuación. El valor del `modelId` El parámetro es el `id` parámetro devuelto en la solicitud del modelo de GET anterior.
+Ahora, con el modelo entrenado, podemos crear una Ejecución de experimento para la puntuación. El valor del parámetro `modelId` es el parámetro `id` devuelto en la solicitud del modelo de GET anterior.
 
 **Solicitud**
 
@@ -122,10 +122,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Las credenciales de su organización se encuentran en la integración de Adobe Experience Platform única.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{API_KEY}`: El valor de clave de API específico que se encuentra en la integración única de Adobe Experience Platform.\
-`{EXPERIMENT_ID}`: el ID correspondiente al experimento al que desea dirigirse. Esto se puede encontrar en la respuesta al crear el experimento.\
+`{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.\
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{API_KEY}`: se encontró el valor de clave de API específico en la integración de Adobe Experience Platform única.\
+`{EXPERIMENT_ID}`: el ID correspondiente al experimento al que desea destinarlo. Esto se puede encontrar en la respuesta al crear el experimento.\
 `{JSON_PAYLOAD}`: datos que se van a publicar. El ejemplo que utilizamos en nuestro tutorial es el siguiente:
 
 ```JSON
@@ -186,8 +186,8 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_ID}`: el ID correspondiente al experimento en el que se encuentra la ejecución.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{ORG_ID}`: Las credenciales de su organización se encuentran en la integración de Adobe Experience Platform única.
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.
 
 Dado que hay varias ejecuciones de experimento para un experimento específico, la respuesta devuelta tendrá una matriz de ID de ejecución.
 
@@ -217,7 +217,7 @@ Dado que hay varias ejecuciones de experimento para un experimento específico, 
 
 ### Detener y eliminar un experimento programado
 
-Si desea detener la ejecución de un experimento programado antes de su `endTime`, esto se puede hacer consultando una solicitud del DELETE a `{EXPERIMENT_ID}`
+Si desea detener la ejecución de un experimento programado antes de su `endTime`, se puede hacer consultando una solicitud del DELETE a `{EXPERIMENT_ID}`
 
 **Solicitud**
 
@@ -229,8 +229,8 @@ curl -X DELETE \
 ```
 
 `{EXPERIMENT_ID}`: ID correspondiente al experimento.\
-`{ACCESS_TOKEN}`: el valor del token de portador específico proporcionado después de la autenticación.\
-`{ORG_ID}`: Las credenciales de su organización se encuentran en la integración de Adobe Experience Platform única.
+`{ACCESS_TOKEN}`: valor de token de portador específico proporcionado después de la autenticación.\
+`{ORG_ID}`: las credenciales de su organización se encontraron en su integración de Adobe Experience Platform única.
 
 >[!NOTE]
 >

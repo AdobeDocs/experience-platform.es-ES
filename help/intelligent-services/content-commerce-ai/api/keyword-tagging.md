@@ -6,7 +6,7 @@ description: Cuando se proporciona un documento de texto, el servicio de etiquet
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 6%
 
 ---
@@ -42,7 +42,7 @@ La siguiente solicitud extrae palabras clave de un documento en función de los 
 
 Consulte la tabla debajo de la carga útil de ejemplo para obtener más información sobre los parámetros de entrada que se muestran.
 
-Esta [pdf de muestra](../pdf-files/simple-text.pdf) se utilizó en el ejemplo mostrado en este documento.
+Este archivo [pdf de muestra](../pdf-files/simple-text.pdf) se utilizó en el ejemplo que se muestra en este documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -101,14 +101,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Dirección URL del documento del que se extraerán las frases clave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositorio donde se almacena el documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilice esto al pasar el documento como un argumento de varias partes en lugar de utilizar direcciones URL prefirmadas. |
-| `dc:format` | string | Sí | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codificación del documento se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |
+| `repo:path` | cadena | - | - | - | Dirección URL del documento del que se extraerán las frases clave. |
+| `sensei:repoType` | cadena | - | - | HTTPS | Tipo de repositorio donde se almacena el documento. |
+| `sensei:multipart_field_name` | cadena | - | - | - | Utilice esto al pasar el documento como un argumento de varias partes en lugar de utilizar direcciones URL prefirmadas. |
+| `dc:format` | cadena | Sí | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codificación del documento se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extraídas en `response` matriz.
+Una respuesta correcta devuelve un objeto JSON que contiene palabras clave extraídas en la matriz `response`.
 
 ```json
 {

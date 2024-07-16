@@ -6,94 +6,94 @@ description: Aprenda a conectar Adobe Experience Platform a campañas de MailChi
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 1%
+source-wordcount: '684'
+ht-degree: 4%
 
 ---
 
-# Crear un [!DNL Mailchimp Campaigns] conexión de origen mediante la IU de Platform
+# Crear una conexión de origen [!DNL Mailchimp Campaigns] mediante la interfaz de usuario de Platform
 
-Este tutorial proporciona los pasos para crear una [!DNL Mailchimp] conector de origen para la ingesta [!DNL Mailchimp Campaigns] datos a Adobe Experience Platform mediante la interfaz de usuario de.
+Este tutorial proporciona los pasos para crear un conector de origen [!DNL Mailchimp] para la ingesta de datos de [!DNL Mailchimp Campaigns] en Adobe Experience Platform mediante la interfaz de usuario.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Platform permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Fuentes](../../../../home.md): Platform permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
 * [Zonas protegidas](../../../../../sandboxes/home.md): Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Recopilar credenciales necesarias
 
-Para poder traer su [!DNL Mailchimp Campaigns] datos a Platform, primero debe proporcionar las credenciales de autenticación adecuadas que se correspondan con su [!DNL Mailchimp] cuenta.
+Para poder llevar los datos de [!DNL Mailchimp Campaigns] a Platform, primero debe proporcionar las credenciales de autenticación adecuadas que se correspondan con la cuenta de [!DNL Mailchimp].
 
-El [!DNL Mailchimp Campaigns] El origen admite código de actualización de OAuth 2 y la autenticación básica. Consulte las tablas siguientes para obtener más información sobre estos tipos de autenticación.
+El origen [!DNL Mailchimp Campaigns] admite código de actualización OAuth 2 y autenticación básica. Consulte las tablas siguientes para obtener más información sobre estos tipos de autenticación.
 
 ### Código de actualización de OAuth 2
 
 | Credenciales | Descripción |
 | --- | --- |
-| Domain | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la URL raíz es el siguiente `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta de. |
-| URL de prueba de autorización | La dirección URL de prueba de autorización se utiliza para validar credenciales al conectarse [!DNL Mailchimp] a Platform. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
+| Dominio | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
+| URL de prueba de autorización | La dirección URL de prueba de autorización se usa para validar credenciales al conectar [!DNL Mailchimp] a Platform. Si no se proporciona, las credenciales se comprueban automáticamente durante el paso de creación de la conexión de origen. |
 | Token de acceso | El token de acceso correspondiente utilizado para autenticar el origen. Esto es necesario para la autenticación basada en OAuth. |
 
-Para obtener más información sobre el uso de OAuth 2 para autenticar el [!DNL Mailchimp] cuenta de a Platform, consulte esto [[!DNL Mailchimp] documento sobre el uso de OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
+Para obtener más información sobre el uso de OAuth 2 para autenticar su cuenta de [!DNL Mailchimp] en Platform, consulte este [[!DNL Mailchimp] documento sobre el uso de OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
 ### Autenticación básica
 
 | Credenciales | Descripción |
 | --- | --- |
-| Domain | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la URL raíz es el siguiente `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta de. |
+| Dominio | La URL raíz utilizada para conectarse a la API de MailChimp. El formato de la URL raíz es `https://{DC}.api.mailchimp.com`, donde `{DC}` representa el centro de datos que corresponde a su cuenta. |
 | Nombre de usuario | El nombre de usuario que corresponde con su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
-| Una contraseña | La contraseña que corresponde a su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
+| Contraseña | La contraseña que corresponde a su cuenta de MailChimp. Esto es necesario para la autenticación básica. |
 
-## Conecte su [!DNL Mailchimp Campaigns] cuenta a Platform
+## Conectar su cuenta de [!DNL Mailchimp Campaigns] a Platform
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el [!UICONTROL Automatización de marketing] categoría, seleccionar **[!UICONTROL Campaña de Mailchimp]**, y luego seleccione **[!UICONTROL Añadir datos]**.
+En la categoría [!UICONTROL Automatización de marketing], selecciona **[!UICONTROL Campaña de Mailchimp]** y, a continuación, selecciona **[!UICONTROL Agregar datos]**.
 
-![catalogar](../../../../images/tutorials/create/mailchimp-campaigns/catalog.png)
+![catálogo](../../../../images/tutorials/create/mailchimp-campaigns/catalog.png)
 
-El **[!UICONTROL Conectar la cuenta de Mailchimp Campaigns]** página. En esta página, puede seleccionar si está accediendo a una cuenta existente u optando por crear una nueva cuenta.
+Aparecerá la página **[!UICONTROL Conectar la cuenta de campañas de Mailchimp]**. En esta página, puede seleccionar si está accediendo a una cuenta existente u optando por crear una nueva cuenta.
 
 ### Cuenta existente
 
-Para utilizar una cuenta existente, seleccione la [!DNL Mailchimp Campaigns] cuenta con la que desea crear un nuevo flujo de datos y seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, seleccione la cuenta de [!DNL Mailchimp Campaigns] con la que desee crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../../../../images/tutorials/create/mailchimp-campaigns/existing.png)
 
 ### Nueva cuenta
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción para su [!DNL Mailchimp Campaigns] detalles de conexión de origen.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción para los detalles de conexión de origen de [!DNL Mailchimp Campaigns].
 
 ![nuevo](../../../../images/tutorials/create/mailchimp-campaigns/new.png)
 
 #### Autenticar con OAuth 2
 
-Para usar OAuth 2, seleccione [!UICONTROL Código de actualización de OAuth 2], proporcione valores para el dominio, la dirección URL de prueba de autorización y el token de acceso y, a continuación, seleccione **[!UICONTROL Conectar con el origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar OAuth 2, seleccione [!UICONTROL Código de actualización de OAuth 2], proporcione valores para su dominio, URL de prueba de autorización y token de acceso y, a continuación, seleccione **[!UICONTROL Conectar con el origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### Autenticar con autenticación básica
 
-Para utilizar la autenticación básica, seleccione [!UICONTROL Autenticación básica], proporcione valores para el dominio, nombre de usuario y contraseña y, a continuación, seleccione **[!UICONTROL Conectar con el origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar la autenticación básica, selecciona [!UICONTROL Autenticación básica], proporciona valores para tu dominio, nombre de usuario y contraseña y, a continuación, selecciona **[!UICONTROL Conectar con el origen]**. Espere unos momentos para que sus credenciales se validen y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![esencial](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
+![básico](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 
 ### Seleccionar [!DNL Mailchimp Campaigns] datos
 
-Una vez autenticado el origen, debe proporcionar el `campaignId` que se corresponde con su [!DNL Mailchimp Campaigns] cuenta.
+Una vez autenticado el origen, debe proporcionar `campaignId` que corresponda a su cuenta de [!DNL Mailchimp Campaigns].
 
-En el [!UICONTROL Seleccionar datos] , introduzca su `campaignId` y luego seleccione **[!UICONTROL Explorar]**.
+En la página [!UICONTROL Seleccionar datos], escriba su `campaignId` y, a continuación, seleccione **[!UICONTROL Explorar]**.
 
 ![explorar](../../../../images/tutorials/create/mailchimp-campaigns/explore.png)
 
-La página se actualiza en un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccionar **[!UICONTROL Siguiente]** para continuar.
+La página se actualiza en un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 ![select-data](../../../../images/tutorials/create/mailchimp-campaigns/select-data.png)
 
 ## Pasos siguientes
 
-Con su [!DNL Mailchimp] cuenta autenticada y su [!DNL Mailchimp Campaigns] Si selecciona datos, ahora puede empezar a crear un flujo de datos para llevar los datos a Platform. Para ver los pasos detallados sobre cómo crear un flujo de datos, consulte la documentación sobre [creación de un flujo de datos para llevar los datos de automatización de marketing a Platform](../../dataflow/marketing-automation.md).
+Con la cuenta [!DNL Mailchimp] autenticada y los datos [!DNL Mailchimp Campaigns] seleccionados, ahora puede empezar a crear un flujo de datos para llevar los datos a Platform. Para ver los pasos detallados sobre cómo crear un flujo de datos, consulte la documentación de [creación de un flujo de datos para llevar los datos de automatización de marketing a la plataforma](../../dataflow/marketing-automation.md).

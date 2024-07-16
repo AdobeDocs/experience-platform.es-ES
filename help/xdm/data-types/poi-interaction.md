@@ -11,17 +11,17 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Interacción del punto de interés] tipo de datos
+# [!UICONTROL Tipo de datos de interacción de punto de interés]
 
-[!UICONTROL Interacción del punto de interés] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica información de identidad a aplicaciones móviles a medida que los dispositivos móviles se encuentran dentro del alcance.
+[!UICONTROL La interacción del punto de interés] es un tipo de datos XDM estándar que describe el dispositivo inalámbrico que comunica información de identidad a aplicaciones móviles a medida que los dispositivos móviles entran en el rango.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `poiDetail` | [[!UICONTROL Detalles del punto de interés]](./poi-details.md) | Describe los detalles del punto de interés que provocó el evento. |
-| `poiEntries` | Objeto | Describe la cantidad de veces que una persona ha ingresado al PDI. Contiene dos propiedades: <ul><li>`id`: Un identificador único para la medida.</li><li>`value`: el valor cuantificable de la medida.</li></ul> |
-| `poiExits` | Objeto | Describe la cantidad de veces que una persona ha salido del PDI. Contiene dos propiedades: <ul><li>`id`: Un identificador único para la medida.</li><li>`value`: el valor cuantificable de la medida.</li></ul> |
+| `poiEntries` | Objeto | Describe la cantidad de veces que una persona ha ingresado al PDI. Contiene dos propiedades: <ul><li>`id`: un identificador único para la medida.</li><li>`value`: el valor cuantificable de la medida.</li></ul> |
+| `poiExits` | Objeto | Describe la cantidad de veces que una persona ha salido del PDI. Contiene dos propiedades: <ul><li>`id`: un identificador único para la medida.</li><li>`value`: el valor cuantificable de la medida.</li></ul> |
 
 {style="table-layout:auto"}
 

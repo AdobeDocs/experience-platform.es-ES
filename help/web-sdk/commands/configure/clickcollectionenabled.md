@@ -11,40 +11,40 @@ ht-degree: 0%
 
 # `clickCollectionEnabled`
 
-El `clickCollectionEnabled` es un booleano que determina si el SDK web recopila automáticamente los datos de vínculos. Si no establece esta variable, su valor predeterminado es `true` lo que significa que los datos de seguimiento de vínculos se recopilan automáticamente de forma predeterminada. Estableciendo esta propiedad en `false` es útil en los casos en los que prefiere rastrear los datos de vínculos manualmente.
+La propiedad `clickCollectionEnabled` es un booleano que determina si el SDK web recopila automáticamente los datos de vínculos. Si no establece esta variable, su valor predeterminado es `true`, lo que significa que los datos de seguimiento de vínculos se recopilan automáticamente de manera predeterminada. Es útil establecer esta propiedad en `false` en los casos en que prefiera rastrear los datos de vínculos manualmente.
 
-Cuándo `clickCollectionEnabled` está activada, los siguientes elementos XDM se rellenan automáticamente con datos:
+Cuando `clickCollectionEnabled` está habilitado, los siguientes elementos XDM se rellenan automáticamente con datos:
 
 * `xdm.web.webInteraction.name`
 * `xdm.web.webInteraction.type`
 * `xdm.web.webInteraction.URL`
 
-Los vínculos internos, de descarga y de salida se rastrean automáticamente de forma predeterminada cuando este booleano está habilitado. Si desea tener más control sobre el seguimiento automático de vínculos, Adobe recomienda utilizar la variable [`clickCollection`](clickcollection.md) objeto.
+Los vínculos internos, de descarga y de salida se rastrean automáticamente de forma predeterminada cuando este booleano está habilitado. Si desea tener más control sobre el seguimiento automático de vínculos, Adobe recomienda utilizar el objeto [`clickCollection`](clickcollection.md).
 
 ## Lógica de seguimiento de vínculos automática
 
-El SDK web rastrea todos los clics en `<a>` y `<area>` elementos de HTML si no tiene un `onClick` atributo. Los clics se capturan con una [captar](https://www.w3.org/TR/uievents/#capture-phase) haga clic en el detector de eventos adjunto al documento. Cuando se hace clic en un vínculo válido, se ejecuta la siguiente lógica en orden:
+El SDK web rastrea todos los clics en `<a>` y `<area>` elementos del HTML si no tiene un atributo `onClick`. Los clics se capturan con un detector de eventos de clic [capture](https://www.w3.org/TR/uievents/#capture-phase) que está adjunto al documento. Cuando se hace clic en un vínculo válido, se ejecuta la siguiente lógica en orden:
 
-1. Si el vínculo coincide con los criterios basados en los valores de [`downloadLinkQualifier`](downloadlinkqualifier.md), o si el vínculo contiene un `download` atributo de HTML, `xdm.web.webInteraction.type` se establece en `"download"` (if `clickCollection.downloadLinkEnabled` está activada).
-1. Si el dominio de destino del vínculo difiere del actual `window.location.hostname`, `xdm.web.webInteraction.type` se establece en `"exit"` (if `clickCollection.exitLinkEnabled` está activada).
-1. Si el vínculo no cumple los requisitos de ninguno de los dos `"download"` o `"exit"`, `xdm.web.webInteraction.type` se establece en `"other"`.
+1. Si el vínculo coincide con criterios basados en valores de [`downloadLinkQualifier`](downloadlinkqualifier.md), o si el vínculo contiene un atributo de HTML `download`, `xdm.web.webInteraction.type` se establece en `"download"` (si `clickCollection.downloadLinkEnabled` está habilitado).
+1. Si el dominio de destino del vínculo difiere del actual `window.location.hostname`, `xdm.web.webInteraction.type` se establece en `"exit"` (si `clickCollection.exitLinkEnabled` está habilitado).
+1. Si el vínculo no cumple los requisitos para `"download"` o `"exit"`, `xdm.web.webInteraction.type` se establece en `"other"`.
 
-En todos los casos, `xdm.web.webInteraction.name` se establece en la etiqueta de texto del vínculo y `xdm.web.webInteraction.URL` se establece en la dirección URL de destino del vínculo. Si también desea establecer el nombre del vínculo en la dirección URL, puede anular este campo XDM con la variable `filterClickDetails` devolución de llamada en `clickCollection` objeto.
+En todos los casos, `xdm.web.webInteraction.name` se establece en la etiqueta de texto del vínculo y `xdm.web.webInteraction.URL` se establece en la dirección URL de destino del vínculo. Si también desea establecer el nombre del vínculo en la dirección URL, puede anular este campo XDM con la llamada de retorno `filterClickDetails` en el objeto `clickCollection`.
 
 ## Habilitar el seguimiento automático de vínculos mediante la extensión de etiqueta del SDK web {#tag-extension}
 
-Seleccione el **[!UICONTROL Habilitar la recopilación de datos de clics]** casilla de verificación cuando [configuración de la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]** al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Iniciar sesión en [experience.adobe.com](https://experience.adobe.com) usando sus credenciales de Adobe ID.
+1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
 1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
 1. Seleccione la propiedad de etiquetas que desee.
-1. Vaya a **[!UICONTROL Extensiones]**, luego haga clic en **[!UICONTROL Configurar]** en el [!UICONTROL SDK web de Adobe Experience Platform] Tarjeta de.
-1. Desplácese hacia abajo hasta el [!UICONTROL Recopilación de datos] y, a continuación, seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
-1. Clic **[!UICONTROL Guardar]** y, a continuación, publique los cambios.
+1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
+1. Desplácese hacia abajo hasta la sección [!UICONTROL Recopilación de datos] y, a continuación, active la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
+1. Haz clic en **[!UICONTROL Guardar]** y después publica los cambios.
 
 ## Habilitar el seguimiento automático de vínculos mediante la biblioteca de JavaScript del SDK web {#library}
 
-Configure las variables `clickCollectionEnabled` booleano al ejecutar el `configure` comando. Si omite esta propiedad al configurar el SDK web, el valor predeterminado es `true`. Establezca este valor en `false` si prefiere configurar `xdm.web.webInteraction.type` y `xdm.web.webInteraction.value` manualmente.
+Establezca el booleano `clickCollectionEnabled` al ejecutar el comando `configure`. Si omite esta propiedad al configurar el SDK web, el valor predeterminado es `true`. Establezca este valor en `false` si prefiere establecer `xdm.web.webInteraction.type` y `xdm.web.webInteraction.value` manualmente.
 
 ```js
 alloy(configure, {

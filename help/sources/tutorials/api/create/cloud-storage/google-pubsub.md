@@ -1,5 +1,5 @@
 ---
-title: Creación de una conexión de suborigen de PubSub de Google mediante la API de Flow Service
+title: Creación de una conexión de Google PubSub Source mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a una cuenta PubSub de Google mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
@@ -10,49 +10,49 @@ ht-degree: 2%
 
 ---
 
-# Crear un [!DNL Google PubSub] Conexión de origen mediante la API de Flow Service
+# Crear una conexión de Source [!DNL Google PubSub] mediante la API de Flow Service
 
 >[!IMPORTANT]
 >
->El [!DNL Google PubSub] La fuente de está disponible en el catálogo de fuentes de para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
+>El origen [!DNL Google PubSub] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
-Este tutorial lo acompañará durante los pasos para conectarse [!DNL Google PubSub] (en lo sucesivo, &quot;[!DNL PubSub]&quot;) al Experience Platform, utilizando [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Este tutorial lo guiará para conectar [!DNL Google PubSub] (denominado en adelante &quot;[!DNL PubSub]&quot;) al Experience Platform mediante la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introducción 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente [!DNL PubSub] a Platform mediante el [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para conectar correctamente [!DNL PubSub] a Platform mediante la API [!DNL Flow Service].
 
 ### Recopilar credenciales necesarias
 
-Debe proporcionar valores para las propiedades de conexión descritas a continuación para conectar su [!DNL PubSub] cuenta a [!DNL Flow Service]. Para obtener más información sobre la autenticación y la configuración de requisitos previos, lea la [[!DNL PubSub source] descripción general](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+Debe proporcionar valores para las propiedades de conexión que se indican a continuación para conectar su cuenta de [!DNL PubSub] a [!DNL Flow Service]. Para obtener más información sobre la autenticación y la configuración de requisitos previos, lea la [[!DNL PubSub source] descripción general](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
->[!TAB Autenticación basada en proyectos]
+>[!TAB Autenticación basada en proyecto]
 
 | Credencial | Descripción |
 | --- | --- |
-| `projectId` | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
-| `credentials` | La credencial necesaria para autenticarse [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino base y de origen. El [!DNL PubSub] ID de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `projectId` | Identificador de proyecto necesario para autenticar [!DNL PubSub]. |
+| `credentials` | Credencial necesaria para autenticar [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino base y de origen. El id. de especificación de conexión [!DNL PubSub] es: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!TAB Autenticación por tema y por suscripción]
+>[!TAB Autenticación basada en temas y suscripciones]
 
 | Credencial | Descripción |
 | --- | --- |
-| `credentials` | La credencial necesaria para autenticarse [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
-| `topicName` | El nombre del recurso que representa una fuente de mensajes. Debe especificar un nombre de tema si desea proporcionar acceso a un flujo de datos específico en su [!DNL PubSub] origen. El formato del nombre del tema es: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | El nombre de su [!DNL PubSub] suscripción. Entrada [!DNL PubSub], las suscripciones le permiten recibir mensajes, suscribiéndose al tema en el que se han publicado los mensajes. **Nota**: Un solo [!DNL PubSub] la suscripción solo se puede utilizar para un flujo de datos. Para poder crear varios flujos de datos, debe tener varias suscripciones. El formato del nombre de suscripción es: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino base y de origen. El [!DNL PubSub] ID de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `credentials` | Credencial necesaria para autenticar [!DNL PubSub]. Debe asegurarse de colocar el archivo JSON completo después de eliminar los espacios en blanco de las credenciales. |
+| `topicName` | El nombre del recurso que representa una fuente de mensajes. Debe especificar un nombre de tema si desea proporcionar acceso a un flujo de datos específico en su origen [!DNL PubSub]. El formato del nombre del tema es: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | Nombre de su suscripción a [!DNL PubSub]. En [!DNL PubSub], las suscripciones le permiten recibir mensajes, mediante suscripción al tema en el que se han publicado los mensajes. **Nota**: una sola suscripción de [!DNL PubSub] solo se puede usar para un flujo de datos. Para poder crear varios flujos de datos, debe tener varias suscripciones. El formato del nombre de suscripción es: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones de destino base y de origen. El id. de especificación de conexión [!DNL PubSub] es: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
 
-Para obtener más información sobre estos valores, lea esto [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) documento. Para utilizar la autenticación basada en cuentas de servicio, lea esto [[!DNL PubSub] guía de creación de cuentas de servicio](https://cloud.google.com/docs/authentication/production#create_service_account) para ver los pasos sobre cómo generar las credenciales.
+Para obtener más información sobre estos valores, lea este documento [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication). Para usar la autenticación basada en cuentas de servicio, lea esta [[!DNL PubSub] guía sobre la creación de cuentas de servicio](https://cloud.google.com/docs/authentication/production#create_service_account) para ver los pasos sobre cómo generar sus credenciales.
 
 >[!TIP]
 >
@@ -60,23 +60,23 @@ Para obtener más información sobre estos valores, lea esto [[!DNL PubSub] auth
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
 >[!TIP]
 >
->Una vez creado, no se puede cambiar el tipo de autenticación de una [!DNL Google PubSub] conexión base. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
+>Una vez creada, no se puede cambiar el tipo de autenticación de una conexión base de [!DNL Google PubSub]. Para cambiar el tipo de autenticación, debe crear una nueva conexión base.
 
-El primer paso para crear una conexión de origen es autenticar su [!DNL PubSub] y generar un ID de conexión base. Un ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar elementos específicos que desee introducir, incluida información sobre sus tipos de datos y formatos.
+El primer paso para crear una conexión de origen es autenticar el origen de [!DNL PubSub] y generar un identificador de conexión base. Un ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar elementos específicos que desee introducir, incluida información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL PubSub] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL PubSub] como parte de los parámetros de solicitud.
 
-El [!DNL PubSub] fuente permite especificar el tipo de acceso que desea permitir durante la autenticación. Puede configurar su cuenta para que tenga acceso raíz o restringir el acceso a un en particular [!DNL PubSub] tema y suscripción.
+El origen [!DNL PubSub] le permite especificar el tipo de acceso que desea permitir durante la autenticación. Puede configurar su cuenta para que tenga acceso raíz o restringir el acceso a un tema y suscripción de [!DNL PubSub] en particular.
 
 >[!NOTE]
 >
->Principal (funciones) asignado a [!DNL PubSub] Los proyectos de se heredan en todos los temas y suscripciones creados dentro de un [!DNL PubSub] proyecto. Si desea que una entidad de seguridad (función) tenga acceso a un tema específico, dicha entidad de seguridad (función) también debe agregarse a la suscripción correspondiente del tema. Para obtener más información, lea la [[!DNL PubSub] documentación sobre el control de acceso](<https://cloud.google.com/pubsub/docs/access-control>).
+>El principal (funciones) asignado a un proyecto [!DNL PubSub] se hereda en todos los temas y suscripciones creados dentro de un proyecto [!DNL PubSub]. Si desea que una entidad de seguridad (función) tenga acceso a un tema específico, dicha entidad de seguridad (función) también debe agregarse a la suscripción correspondiente del tema. Para obtener más información, lea la [[!DNL PubSub] documentación sobre el control de acceso](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **Formato de API**
 
@@ -86,9 +86,9 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Autenticación basada en proyectos]
+>[!TAB Autenticación basada en proyecto]
 
-Para crear una conexión base con la autenticación basada en proyectos, realice una solicitud de POST al `/connections` y proporcione su `projectId` y `credentials` en el cuerpo de la solicitud.
+Para crear una conexión base con la autenticación basada en proyectos, realice una solicitud de POST al extremo `/connections` y proporcione sus `projectId` y `credentials` en el cuerpo de la solicitud.
 
 +++Solicitud
 
@@ -119,9 +119,9 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.projectId` | El ID de proyecto necesario para la autenticación [!DNL PubSub]. |
-| `auth.params.credentials` | La credencial o clave necesaria para autenticarse [!DNL PubSub]. |
-| `connectionSpec.id` | El [!DNL PubSub] ID de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.projectId` | Identificador de proyecto necesario para autenticar [!DNL PubSub]. |
+| `auth.params.credentials` | La credencial o clave necesaria para autenticar [!DNL PubSub]. |
+| `connectionSpec.id` | Id. de especificación de conexión [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 ++++
 
@@ -138,9 +138,9 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 ++++
 
->[!TAB Autenticación por tema y por suscripción]
+>[!TAB Autenticación basada en temas y suscripciones]
 
-Para crear una conexión base con tema y autenticación basada en suscripción, realice una solicitud de POST al `/connections` y proporcione su `credentials`, `topicName`, y `subscriptionName` en el cuerpo de la solicitud.
+Para crear una conexión base con tema y autenticación basada en suscripción, realice una solicitud de POST al extremo `/connections` y proporcione sus `credentials`, `topicName` y `subscriptionName` en el cuerpo de la solicitud.
 
 +++Solicitud
 
@@ -172,10 +172,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.credentials` | La credencial o clave necesaria para autenticarse [!DNL PubSub]. |
-| `auth.params.topicName` | El par de ID de proyecto e ID de tema para [!DNL PubSub] origen al que desea proporcionar acceso. |
-| `auth.params.subscriptionName` | El par de ID de proyecto e ID de suscripción para [!DNL PubSub] origen al que desea proporcionar acceso. |
-| `connectionSpec.id` | El [!DNL PubSub] ID de especificación de conexión: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.credentials` | La credencial o clave necesaria para autenticar [!DNL PubSub]. |
+| `auth.params.topicName` | El par de id. de proyecto e id. de tema para el origen [!DNL PubSub] al que desea proporcionar acceso. |
+| `auth.params.subscriptionName` | El par de id. de proyecto e id. de suscripción para el origen [!DNL PubSub] al que desea proporcionar acceso. |
+| `connectionSpec.id` | Id. de especificación de conexión [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 +++
 
@@ -199,7 +199,7 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 
 Una conexión de origen crea y administra la conexión con el origen externo desde el que se incorporan los datos. Una conexión de origen consta de información como el origen de datos, el formato de datos y un ID de conexión de origen necesario para crear un flujo de datos. Una instancia de conexión de origen es específica de un inquilino y una organización.
 
-Para crear una conexión de origen, realice una solicitud de POST al `/sourceConnections` punto final del [!DNL Flow Service] API.
+Para crear una conexión de origen, realice una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service].
 
 **Formato de API**
 
@@ -240,11 +240,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede proporcionar para incluir más información sobre la conexión de origen. |
-| `baseConnectionId` | El ID de conexión base de su [!DNL PubSub] origen que se generó en el paso anterior. |
-| `connectionSpec.id` | Identificador de especificación de conexión fija para [!DNL PubSub]. Este ID es: `70116022-a743-464a-bbfe-e226a7f8210c` |
-| `data.format` | El formato del [!DNL PubSub] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
-| `params.topicName` | El nombre de su [!DNL PubSub] tema. Entrada [!DNL PubSub], un tema es un recurso con nombre que representa una fuente de mensajes. |
-| `params.subscriptionName` | El nombre de suscripción que corresponde a un tema determinado. Entrada [!DNL PubSub], las suscripciones permiten leer mensajes de un tema. Se pueden asignar una o varias suscripciones a un solo tema. |
+| `baseConnectionId` | Identificador de conexión base del origen [!DNL PubSub] que se generó en el paso anterior. |
+| `connectionSpec.id` | Identificador de especificación de conexión fija para [!DNL PubSub]. Este identificador es: `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | Formato de los datos de [!DNL PubSub] que desea introducir. Actualmente, el único formato de datos compatible es `json`. |
+| `params.topicName` | Nombre de su tema [!DNL PubSub]. En [!DNL PubSub], un tema es un recurso con nombre que representa una fuente de mensajes. |
+| `params.subscriptionName` | El nombre de suscripción que corresponde a un tema determinado. En [!DNL PubSub], las suscripciones permiten leer mensajes de un tema. Se pueden asignar una o varias suscripciones a un solo tema. |
 | `params.dataType` | Este parámetro define el tipo de datos que se están introduciendo. Los tipos de datos admitidos son: `raw` y `xdm`. |
 
 **Respuesta**
@@ -260,4 +260,4 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL PubSub] conexión de origen mediante [!DNL Flow Service] API. Puede utilizar este ID de conexión de origen en el siguiente tutorial para lo siguiente [crear un flujo de datos de flujo continuo utilizando [!DNL Flow Service] API](../../collect/streaming.md).
+Siguiendo este tutorial, ha creado una conexión de origen [!DNL PubSub] mediante la API [!DNL Flow Service]. Puede usar este identificador de conexión de origen en el siguiente tutorial para [crear un flujo de datos de flujo continuo usando la [!DNL Flow Service] API](../../collect/streaming.md).

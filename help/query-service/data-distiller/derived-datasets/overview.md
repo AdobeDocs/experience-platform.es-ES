@@ -50,4 +50,4 @@ También puede calcular métricas empresariales como un atributo derivado y util
 
 ## Pasos siguientes y casos de uso
 
-Al leer este documento, tiene una mejor comprensión de cómo los conjuntos de datos derivados del servicio de consultas facilitan casos de uso complejos para maximizar la utilidad de los datos. A continuación, debería leer la [caso de uso de atributo derivado basado en decilos](../../use-cases/deciles-use-case.md) para ver cómo se aplica esta función en un escenario real.
+Al leer este documento, tiene una mejor comprensión de cómo los conjuntos de datos derivados del servicio de consultas facilitan casos de uso complejos para maximizar la utilidad de los datos. A continuación, debería leer el [caso de uso de atributos derivados basados en deciles](../../use-cases/deciles-use-case.md) para ver cómo se aplica esta característica en un escenario real.

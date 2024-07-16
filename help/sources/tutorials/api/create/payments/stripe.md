@@ -1,46 +1,47 @@
 ---
-title: Ingesta de datos de pagos desde su [!DNL Stripe] Cuenta de para el Experience Platform mediante API de
+title: Ingesta de datos de pagos desde tu cuenta de  [!DNL Stripe] al Experience Platform mediante API
 description: Aprenda a introducir datos de pagos de su cuenta de Stripe en Experience Platform mediante la API de Flow Service
 badge: Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 2%
 
 ---
 
-# Ingesta de datos de pagos desde su [!DNL Stripe] Cuenta de para el Experience Platform mediante API de
+# Ingesta de datos de pagos desde su cuenta de [!DNL Stripe] al Experience Platform mediante API
 
 >[!NOTE]
 >
->El [!DNL Stripe] el origen está en versión beta. Lea el [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de fuentes para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El origen [!DNL Stripe] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Lea el siguiente tutorial para aprender a introducir los datos de pagos de [!DNL Stripe] a Adobe Experience Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lea el siguiente tutorial para aprender a ingerir los datos de pagos de [!DNL Stripe] en Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción 
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Autenticación
 
-Lea el [[!DNL Stripe] descripción general](../../../../connectors/payments/stripe.md) para obtener información sobre cómo recuperar las credenciales de autenticación.
+Lea la [[!DNL Stripe] descripción general](../../../../connectors/payments/stripe.md) para obtener información sobre cómo recuperar sus credenciales de autenticación.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Connect [!DNL Stripe] al Experience Platform
+## Conectar [!DNL Stripe] al Experience Platform
 
-Siga la guía a continuación para aprender a autenticar su [!DNL Stripe] origen, crear una conexión de origen y crear un flujo de datos para llevar los datos de pagos al Experience Platform.
+Siga la guía a continuación para aprender a autenticar su origen de [!DNL Stripe], crear una conexión de origen y crear un flujo de datos para llevar los datos de pagos al Experience Platform.
 
 ### Crear una conexión base {#base-connection}
 
 Una conexión base retiene información entre el origen y el Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. Puede explorar y navegar por archivos desde el origen utilizando el ID de conexión base. Además, puede identificar los elementos específicos que desea introducir, incluidos los detalles sobre los tipos de datos y los formatos de esos elementos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Stripe] credenciales de autenticación como parte del cuerpo de la solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Stripe] como parte del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -80,9 +81,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión base. Asegúrese de que el nombre de la conexión base sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión base. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión base. |
-| `connectionSpec.id` | ID de especificación de conexión del origen. ID de especificación de conexión para [!DNL Stripe] es `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`y este ID es fijo. |
+| `connectionSpec.id` | ID de especificación de conexión del origen. El id. de especificación de conexión para [!DNL Stripe] es `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` y este id. es fijo. |
 | `auth.specName` | El tipo de autenticación que utiliza para autenticar el origen en el Experience Platform. |
-| `auth.params.accessToken` | El token de acceso de su [!DNL Stripe] cuenta. Lea el [[!DNL Stripe] guía de autenticación](../../../../connectors/payments/stripe.md#prerequisites) para ver los pasos sobre cómo recuperar el token de acceso. |
+| `auth.params.accessToken` | El token de acceso de su cuenta de [!DNL Stripe]. Lea la [[!DNL Stripe] guía de autenticación](../../../../connectors/payments/stripe.md#prerequisites) para ver los pasos de cómo recuperar el token de acceso. |
 
 **Respuesta**
 
@@ -97,7 +98,7 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 
 ### Explorar su origen {#explore}
 
-Una vez que tenga el ID de conexión base, ahora puede explorar el contenido y la estructura de los datos de origen realizando una solicitud de GET a `/connections` al proporcionar su ID de conexión base como parámetro de consulta.
+Una vez que tenga el identificador de conexión base, podrá explorar el contenido y la estructura de los datos de origen realizando una solicitud de GET al extremo `/connections` y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta.
 
 **Formato de API**
 
@@ -113,10 +114,10 @@ Al realizar solicitudes para explorar la estructura de archivos y el contenido d
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base generado en el paso anterior. |
 | `objectType=rest` | El tipo de objeto que desea explorar. Este valor siempre se establece en `rest`. |
-| `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. Para esta fuente el valor sería `json`. |
+| `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. Para este origen el valor sería `json`. |
 | `fileType=json` | El tipo de archivo del archivo que desea llevar a Platform. Actualmente, `json` es el único tipo de archivo compatible. |
 | `{PREVIEW}` | Un valor booleano que define si el contenido de la conexión admite la vista previa. |
-| `{SOURCE_PARAMS}` | A [!DNL Base64-]cadena codificada que señala a la ruta de recurso que desea explorar. La ruta de recursos debe codificarse en [!DNL Base64] para obtener el formato aprobado para `{SOURCE_PARAMS}`. Por ejemplo, `{"resourcePath":"charges"}` está codificado como `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. La lista de rutas de recursos disponibles incluye: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
+| `{SOURCE_PARAMS}` | Una cadena codificada [!DNL Base64-] que señala a la ruta de recurso que desea explorar. La ruta de acceso del recurso debe estar codificada en [!DNL Base64] para obtener el formato aprobado para `{SOURCE_PARAMS}`. Por ejemplo, `{"resourcePath":"charges"}` está codificado como `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. La lista de rutas de recursos disponibles incluye: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
@@ -406,7 +407,7 @@ Una respuesta correcta devuelve una estructura JSON como la siguiente:
 
 ### Crear una conexión de origen {#source-connection}
 
-Puede crear una conexión de origen realizando una solicitud de POST a `/sourceConnections` punto final del [!DNL Flow Service] API. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service]. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
 
 **Formato de API**
 
@@ -447,9 +448,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
-| `baseConnectionId` | El ID de conexión base de [!DNL Stripe]. Este ID se generó en un paso anterior. |
+| `baseConnectionId` | Identificador de conexión base de [!DNL Stripe]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato del [!DNL Stripe] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | Formato de los datos de [!DNL Stripe] que desea introducir. Actualmente, el único formato de datos compatible es `json`. |
 
 Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en un paso posterior para crear un flujo de datos.
 
@@ -464,21 +465,21 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para que los datos de origen se utilicen en Experience Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](../../../../../xdm/api/schemas.md#create-a-schema).
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 
 ### Creación de una conexión de destino {#target-connection}
 
-Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este identificador es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -522,13 +523,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
-| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | El formato del [!DNL Stripe] datos que desea introducir. |
-| `params.dataSetId` | El ID del conjunto de datos de destinatario. Este ID lo genera [creación de un conjunto de datos de destinatario](#target-dataset). |
+| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este identificador fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Formato de los datos de [!DNL Stripe] que desea introducir. |
+| `params.dataSetId` | El ID del conjunto de datos de destinatario. Este identificador se genera al [crear un conjunto de datos de destinatario](#target-dataset). |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Este ID es necesario en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) de la nueva conexión de destino. Este ID es necesario en pasos posteriores.
 
 ```json
 {
@@ -539,7 +540,7 @@ Una respuesta correcta devuelve el identificador único ( ) de la nueva conexió
 
 ### Creación de una asignación {#mapping}
 
-Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST al [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
+Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino. Esto se logra realizando una solicitud de POST a la [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con asignaciones de datos definidas dentro de la carga útil de la solicitud.
 
 **Formato de API**
 
@@ -788,10 +789,10 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `xdmSchema` | El ID del esquema XDM de destino. Este ID se genera creando un [esquema XDM de destino](#target-schema). |
+| `xdmSchema` | El ID del esquema XDM de destino. Este identificador se genera al crear un [esquema XDM de destino](#target-schema). |
 | `destinationXdmPath` | El campo XDM al que se asigna el atributo de origen. |
 | `sourceAttribute` | Campo de datos de origen que se asigna. |
-| `identity` | Un valor booleano que define si el campo se mantendrá en [Servicio de identidad](../../../../../identity-service/home.md). |
+| `identity` | Un valor booleano que define si el campo persistirá en [servicio de identidad](../../../../../identity-service/home.md). |
 | `version` | Versión de asignación que está utilizando. |
 
 +++
@@ -813,9 +814,9 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ### Creación de un flujo {#flow}
 
-El último paso para obtener datos de [!DNL Stripe] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
+El último paso para llevar datos de [!DNL Stripe] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
-* [ID de conexión de origen](#source-connection)
+* [ID de conexión de Source](#source-connection)
 * [ID de conexión de destino](#target-connection)
 * [ID de asignación](#mapping)
 
@@ -870,21 +871,21 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en él. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre el flujo de datos. |
-| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este ID fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este identificador fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | La versión correspondiente del ID de especificación de flujo. El valor predeterminado es `1.0`. |
-| `sourceConnectionIds` | El [ID de conexión de origen](#source-connection) se ha generado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) se ha generado en un paso anterior. |
+| `sourceConnectionIds` | [Id. de conexión de origen](#source-connection) generado en un paso anterior. |
+| `targetConnectionIds` | [Id. de conexión de destino](#target-connection) generado en un paso anterior. |
 | `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Experience Platform. |
 | `transformations.name` | El nombre asignado a la transformación. |
-| `transformations.params.mappingId` | El [ID de asignación](#mapping) se ha generado en un paso anterior. |
+| `transformations.params.mappingId` | [ID de asignación](#mapping) generado en un paso anterior. |
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
 | `scheduleParams.startTime` | Hora a la que comenzará el flujo de datos. Debe proporcionar el valor de hora de inicio en formato de marca de tiempo Unix. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Puede configurar la frecuencia de ingesta para:  <ul><li>**Una**: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>**Minuto**: establezca su frecuencia en `minute` para programar el flujo de datos para que ingrese datos por minuto.</li><li>**Hora**:Establezca su frecuencia en `hour` para programar el flujo de datos con el fin de que ingrese datos por hora.</li><li>**Día**: establezca su frecuencia en `day` para programar el flujo de datos para que ingrese datos todos los días.</li><li>**Semana**: establezca su frecuencia en `week` para programar el flujo de datos para que ingrese datos por semana.</li></ul> |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Puede configurar la frecuencia de ingesta para:  <ul><li>**Una vez**: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>**Minuto**: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>**Hora**: Establezca su frecuencia en `hour` para programar su flujo de datos e ingerir datos por hora.</li><li>**Día**: Establezca su frecuencia en `day` para programar su flujo de datos e ingerir datos por día.</li><li>**Semana**: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
 | `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. El valor del intervalo debe ser un entero distinto de cero. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
 
 ```json
 {
@@ -899,21 +900,20 @@ En la siguiente sección se proporciona información sobre los pasos que puede s
 
 ### Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de la API, lea la guía de [monitorización de los flujos de datos de origen mediante la API](../../monitor.md).
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de API, lee la guía sobre [supervisión de los flujos de datos de origen mediante la API](../../monitor.md).
 
 ### Actualizar el flujo de datos
 
-Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados, realizando una solicitud del PATCH al extremo /flows del [!DNL Flow Service] API al proporcionar el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única del flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de flujos de datos de origen mediante la API](../../update-dataflows.md).
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados, realizando una solicitud del PATCH al extremo /flows de la API [!DNL Flow Service], proporcionando al mismo tiempo el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único del flujo de datos en el encabezado `If-Match`. Para ver ejemplos completos de la API, lea la guía sobre [actualización de orígenes y flujos de datos mediante la API](../../update-dataflows.md).
 
 ### Actualice su cuenta
 
-Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud al PATCH de [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la cuenta de origen única `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de la cuenta de origen mediante la API](../../update.md).
+Actualice el nombre, la descripción y las credenciales de su cuenta de origen realizando una solicitud de PATCH a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único de su cuenta de origen en el encabezado `If-Match`. Para ver ejemplos completos de API, lee la guía de [actualización de tu cuenta de origen mediante la API](../../update.md).
 
 ### Eliminar el flujo de datos
 
-Elimine el flujo de datos realizando una solicitud de DELETE a [!DNL Flow Service] API al proporcionar el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de la API, lea la guía de [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
+Elimine el flujo de datos realizando una solicitud de DELETE a la API [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro query. Para ver ejemplos completos de API, lea la guía sobre [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
 
 ### Eliminar su cuenta
 
-Elimine la cuenta realizando una solicitud de DELETE a [!DNL Flow Service] al proporcionar el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de la API, lea la guía de [Eliminar la cuenta de origen mediante la API](../../delete.md).
-
+Elimine la cuenta realizando una solicitud de DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, lee la guía sobre [eliminar tu cuenta de origen mediante la API](../../delete.md).

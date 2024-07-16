@@ -25,9 +25,9 @@ ht-degree: 63%
 * Interactuar con otras soluciones de Adobe {#interacting-other-adobe-solutions}
    * [Interactuar con Adobe Analytics](interacting-adobe-analytics.md)
 * Personalización {#personalization}
-   * [Resumen de personalización](personalization-overview.md)
-   * [Personalización mediante Adobe Target](personalization-target.md)
-   * [Personalización mediante Offer decisioning](personalization-offer-decisioning.md)
+   * [Información general de Personalization](personalization-overview.md)
+   * [Personalization a través de Adobe Target](personalization-target.md)
+   * [Personalization mediante Offer decisioning](personalization-offer-decisioning.md)
 * [Sugerencias de ubicación](location-hints.md)
 * [Control de errores](error-handling.md)
 * [Resolución de problemas](troubleshooting.md)

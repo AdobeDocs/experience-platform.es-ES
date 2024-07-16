@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Generador de segmentos en Real-time Customer Data Platform
 
-Creado sobre Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] puede utilizar todas las funcionalidades del Generador de segmentos que forman parte de [!DNL Experience Platform]. En la interfaz de usuario del Generador de segmentos, puede crear audiencias nuevas, acceder a audiencias existentes y modificar las existentes.
+Compilado en Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] puede usar todas las funcionalidades del Generador de segmentos que forman parte de [!DNL Experience Platform]. En la interfaz de usuario del Generador de segmentos, puede crear audiencias nuevas, acceder a audiencias existentes y modificar las existentes.
 
-Para obtener una guía más detallada sobre el Generador de segmentos, lea la [Guía del usuario del Generador de segmentos](../../segmentation/ui/segment-builder.md).
+Para obtener una guía más detallada sobre el Generador de segmentos, lea la [guía del usuario del Generador de segmentos](../../segmentation/ui/segment-builder.md).

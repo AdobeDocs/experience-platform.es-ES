@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # [!UICONTROL Par de valor clave] tipo de datos
 
-[!UICONTROL Par de valor clave] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura los detalles de un par clave-valor genérico. Este tipo de datos se utiliza en [[!UICONTROL Extensión completa de Adobe Analytics ExperienceEvent] grupo de campos](../field-groups/event/analytics-full-extension.md) para describir los elementos de matriz de una variable de lista.
+[!UICONTROL Par de valor clave] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que captura los detalles de un par de valor clave genérico. Este tipo de datos se usa en el grupo de campos [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md) para describir los elementos de matriz de una variable de lista.
 
 ![Estructura del par de valores clave](../images/data-types/key-value-pair.png)
 

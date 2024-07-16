@@ -11,12 +11,12 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Perfiles] tablero {#profile-dashboard}
+# [!UICONTROL Perfiles] panel {#profile-dashboard}
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de su [!DNL Real-Time Customer Profile] datos, tal como se capturan durante una instantánea diaria.
+La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los datos de [!DNL Real-Time Customer Profile], tal como se capturan durante una instantánea diaria.
 
-Para obtener instrucciones detalladas sobre cómo acceder e interactuar con [!UICONTROL Perfiles] en la interfaz de usuario, así como para obtener más información acerca de las métricas disponibles que se muestran en el panel, visite la [[!UICONTROL Perfiles] guía de panel](../../dashboards/guides/profiles.md).
+Para obtener instrucciones detalladas sobre cómo acceder al panel [!UICONTROL Perfiles] de la interfaz de usuario e interactuar con él, así como para obtener más información sobre las métricas disponibles que se muestran en el panel, visita la guía del panel [[!UICONTROL Perfiles]](../../dashboards/guides/profiles.md).
 
-Para obtener una descripción general de todas las funciones de tablero de la interfaz de usuario del Experience Platform, comience por leer el [información general sobre paneles](../../dashboards/home.md).
+Para obtener una descripción general de todas las características de los paneles de la interfaz de usuario del Experience Platform, comience por leer la [descripción general de los paneles](../../dashboards/home.md).
 
-![Se muestra el panel Perfil.](../images/profile-dashboard/dashboard-overview.png)
+![Se muestra el tablero de perfiles.](../images/profile-dashboard/dashboard-overview.png)

@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * El Adobe recomienda marcar esta página y volver a visitarla cada tres meses para comprobar las direcciones IP más recientes. El Adobe no notifica nuevos intervalos de IP.
-> * La lista de direcciones IP documentada aquí *no tiene* se aplican a cualquier destino que cree mediante [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * La lista de direcciones IP documentadas aquí *no* se aplica a ningún destino que usted genere con [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Información general {#overview}
 
@@ -28,7 +28,7 @@ Los intervalos de IP documentados aquí se aplican a los siguientes destinos:
 
 El tráfico saliente desde Experience Platform a estos destinos siempre pasa por las direcciones IP enumeradas en esta página.
 
-Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar con seguridad datos de Experience Platform a su extremo HTTP. [!DNL Amazon Kinesis], o [!DNL Azure Event Hubs] ejemplo. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
+Esta página proporciona rangos de IP que puede agregar a la lista de permitidos para exportar de forma segura los datos del Experience Platform al extremo HTTP, [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs]. Esta funcionalidad es especialmente útil si el extremo HTTP se encuentra detrás de un cortafuegos empresarial o si los estándares de seguridad y conformidad de la empresa requieren que una lista de intervalos de IP esté incluida en la lista de permitidos.
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 

@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de etiqueta de Adobe M
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '707'
 ht-degree: 94%
 
 ---

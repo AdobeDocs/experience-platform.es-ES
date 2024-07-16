@@ -6,8 +6,8 @@ description: Este artículo muestra el siguiente ejemplo de transformaciones que
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 2%
+source-wordcount: '474'
+ht-degree: 1%
 
 ---
 
@@ -19,14 +19,14 @@ Este artículo muestra el siguiente ejemplo de transformaciones que puede encont
 
 ### Archivos de muestra
 
-Los archivos CSV y JSON de muestra están disponibles en la referencia pública de ETL [!DNL GitHub] cesión temporal mantenida por el Adobe:
+Los archivos CSV y JSON de muestra están disponibles en el repositorio público ETL Reference [!DNL GitHub] mantenido por el Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [perfiles_CRM.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
-### CSV de ejemplo
+### Ejemplo de CSV
 
-Los siguientes datos CRM se han exportado como `CRM_profiles.csv`:
+Los siguientes datos de CRM se exportaron como `CRM_profiles.csv`:
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -42,7 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Asignación
 
 Los requisitos de asignación para los datos CRM se describen en la siguiente tabla e incluyen las siguientes transformaciones:
-- Columnas de identidad a `identityMap` propiedades
+- Columnas de identidad a propiedades de `identityMap`
 - Fecha de nacimiento (DOB) del año y mes-día
 - Cadenas a dobles o enteros cortos.
 
@@ -51,9 +51,9 @@ Los requisitos de asignación para los datos CRM se describen en la siguiente ta
 | TÍTULO | person.name.courtesyTitle | Copiar como cadena |
 | F_NAME | person.name.firstName | Copiar como cadena |
 | L_NAME | person.name.lastName | Copiar como cadena |
-| SEXO | person.gender | Transformar el género como valor de enumeración person.gender correspondiente |
-| Fecha de nacimiento | person.birthDayAndMonth: &quot;DD-MM&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: AAAA | Transformar birthDayAndMonth como cadena<br/>Transformar birthDate como cadena<br/>Transformar birthYear como short int |
-| CORREO ELECTRÓNICO | personalEmail.address | Copiar como cadena |
+| GÉNERO | person.gender | Transformar el género como valor de enumeración person.gender correspondiente |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;AAAA-MM-DD&quot;<br/>person.birthYear: AAAA | Transformar birthDayAndMonth como string<br/>Transformar birthDate como string<br/>Transformar birthYear como short int |
+| EMAIL | personalEmail.address | Copiar como cadena |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie como cadena en la matriz CRMID en identityMap y establezca Principal como falso |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, principal: false}] | Copie como cadena en la primera entrada de la matriz de ECID en identityMap y establezca Principal como falso |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copie como cadena en la matriz LOYALTYID en identityMap y establezca Principal como verdadero |
@@ -176,7 +176,7 @@ La jerarquía de un marco de datos (como un archivo de Parquet) debe coincidir c
 
 ### Ejemplo de marco de datos
 
-La estructura del siguiente marco de datos de ejemplo se ha asignado a un esquema que implementa la variable [!DNL XDM Individual Profile] y contiene los campos más comunes asociados a esquemas de ese tipo.
+La estructura del siguiente marco de datos de ejemplo se ha asignado a un esquema que implementa la clase [!DNL XDM Individual Profile] y contiene los campos más comunes asociados a esquemas de ese tipo.
 
 ```python
 [

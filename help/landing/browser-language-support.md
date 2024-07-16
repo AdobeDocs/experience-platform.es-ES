@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Compatibilidad con el explorador y el idioma para la IU de Experience Platform
-description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform les permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
+description: Adobe Experience Platform es el sistema más potente, flexible y abierto del mercado para crear y administrar soluciones completas que mejoren la experiencia del cliente. Experience Platform permite a las organizaciones centralizar y estandarizar los datos y el contenido de los clientes de cualquier sistema y aplicar la ciencia de datos y el aprendizaje automático para mejorar en gran medida el diseño y el envío de las experiencias personalizadas enriquecidas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 25%
+source-wordcount: '251'
+ht-degree: 10%
 
 ---
 
@@ -16,11 +16,11 @@ La interfaz de usuario (IU) de Adobe Experience Platform está diseñada para ad
 
 ## Compatibilidad con navegadores
 
-La IU de Platform está diseñada para funcionar de forma óptima en **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los exploradores.
+La IU de Platform está diseñada para funcionar de manera óptima en las **últimas versiones** de Google Chrome, Safari, Firefox y Microsoft Edge. Es posible que tenga problemas al utilizar determinadas funciones en versiones anteriores de los exploradores.
 
 | Sistema operativo | Navegadores admitidos |
 |---|---|
-| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **SO Mac X** | Google Chrome, Safari, Firefox |
 | **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
 | **Windows 7** | Google Chrome, Firefox |
 
@@ -30,7 +30,7 @@ No se admiten los siguientes sistemas operativos y exploradores:
 * Internet Explorer 10
 * Opera
 
-## Compatibilidad de idiomas
+## Idiomas de soporte
 
 Actualmente, la interfaz de usuario de Platform está disponible en los siguientes idiomas:
 
@@ -52,10 +52,10 @@ El idioma predeterminado de la interfaz de usuario está determinado por la regi
 Para cambiar el idioma:
 
 1. Inicie sesión en su cuenta de Experience Platform.
-1. Prensa `Ctrl + i` para que aparezca el menú información de cuenta.
+1. Pulse `Ctrl + i` para que aparezca el menú de información de la cuenta.
 1. Ir a **[!UICONTROL Idiomas preferidos]**.
 1. Seleccione las preferencias de idioma de origen y destino.
-1. Seleccionar **[!UICONTROL Guardar]** y cierre la ventana.
+1. Seleccione **[!UICONTROL Guardar]** y cierre la ventana.
 
 >[!NOTE]
 >

@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Configuración del SDK web de Adobe Experience Platform
 
-La configuración del SDK web se realiza con `configure` comando. La configuración del SDK web es un paso vital y necesario que debe producirse cada vez que se utiliza la biblioteca o la extensión de etiqueta.
+La configuración del SDK web se completó con el comando `configure`. La configuración del SDK web es un paso vital y necesario que debe producirse cada vez que se utiliza la biblioteca o la extensión de etiqueta.
 
 ## Configuración del SDK web mediante la extensión de etiqueta {#configure-tag-extension}
 
 Siga los pasos a continuación para configurar el SDK web a través de la extensión de etiqueta.
 
-1. Iniciar sesión en [experience.adobe.com](https://experience.adobe.com) usando sus credenciales de Adobe ID.
+1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
 1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
 1. Seleccione la propiedad de etiquetas que desee.
-1. Vaya a **[!UICONTROL Extensiones]**, luego haga clic en **[!UICONTROL Configurar]** en el [!UICONTROL SDK web de Adobe Experience Platform] Tarjeta de.
-1. Vaya a la [Página de configuración de extensión de etiqueta de SDK web](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para obtener información detallada sobre todas las opciones de configuración.
+1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
+1. Vaya a la [página de configuración de la extensión de etiquetas del SDK web](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para obtener información detallada sobre todas las opciones de configuración.
 
 Estos ajustes de configuración se establecen cada vez que se utiliza la extensión para enviar datos al Adobe.
 
 ## Configuración del SDK web mediante la biblioteca de JavaScript {#configure-js}
 
-Ejecute el `configure` comando. Este comando es necesario para poder llamar a cualquier otro comando del SDK web, como [`sendEvent`](../sendevent/overview.md).
+Ejecute el comando `configure`. Este comando es necesario para poder llamar a cualquier otro comando del SDK web, como [`sendEvent`](../sendevent/overview.md).
 
-El [`edgeConfigId`](edgeconfigid.md) y [`orgId`](orgid.md) se requieren las propiedades. Todas las demás propiedades son opcionales, según los requisitos de implementación de su organización.
+Se requieren las propiedades [`edgeConfigId`](edgeconfigid.md) y [`orgId`](orgid.md). Todas las demás propiedades son opcionales, según los requisitos de implementación de su organización.
 
 Consulte la tabla de contenido de esta guía del usuario para obtener información detallada sobre cada uno de los comandos admitidos.
 

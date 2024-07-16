@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de audiencia accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más las identidades y perfiles que conforman sus audiencias. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de audiencias](../guides/audiences.md) o un personalizado [tablero definido por el usuario](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [tablero de audiencias](../guides/audiences.md) o un [tablero personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
 
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de audiencias](../guides/audiences.md) o un tablero personalizado.
+Las siguientes perspectivas están disponibles para que las use como parte del [tablero de audiencias](../guides/audiences.md) o un tablero personalizado.
 
-## Informe de superposición de audiencia {#audience-overlap-report}
+## Informe de superposición de público {#audience-overlap-report}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -86,9 +86,9 @@ SELECT source_segment_name,
 
 +++
 
-Consulte la [Documentación del widget de informe de superposición de audiencia](../guides/audiences.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de informe de superposición de audiencias](../guides/audiences.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Superposición de audiencias {#audience-overlap}
+## Superposición de público {#audience-overlap}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [Documentación del widget de superposición de audiencias](../guides/audiences.md#audience-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de superposición de audiencias](../guides/audiences.md#audience-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Tendencia de cambio de tamaño de audiencia {#audience-size-change-trend}
+## Tend. cambio tmñ público {#audience-size-change-trend}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -174,9 +174,9 @@ SELECT date_key,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de cambio de tamaño de audiencia](../guides/audiences.md#audience-size-change-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de cambio de tamaño de audiencia](../guides/audiences.md#audience-size-change-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
-## Tendencia del tamaño de la audiencia por identidad {#audience-size-trend-by-identity}
+## Tendencia del tamaño del público por identidad {#audience-size-trend-by-identity}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Consulte la [Tendencia del tamaño de la audiencia por documentación del widget de identidad](../guides/audiences.md#audience-size-trend-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [tendencia de tamaño de audiencia según la documentación del widget de identidad](../guides/audiences.md#audience-size-trend-by-identity) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Tendencia de tamaño de audiencia {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de tamaño de audiencia](../guides/audiences.md#audience-size-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de tamaño de audiencia](../guides/audiences.md#audience-size-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Tamaño de público {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-Consulte la [Documentación del widget de tamaño de audiencia](../guides/audiences.md#audience-size) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tamaño de audiencia](../guides/audiences.md#audience-size) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Distribución de puntuaciones de Customer AI {#customer-ai-distribution-of-scores}
+## Distribución de puntuaciones de inteligencia artificial aplicada al cliente {#customer-ai-distribution-of-scores}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-Consulte la [Documentación del widget de distribución de puntuaciones de la inteligencia artificial aplicada al cliente](../guides/audiences.md#customer-ai-distribution-of-scores) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de distribución de puntuaciones de inteligencia artificial aplicada al cliente](../guides/audiences.md#customer-ai-distribution-of-scores) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
-## Resumen de puntuación de Customer AI {#customer-ai-scoring-summary}
+## Resumen de puntuaciones de la inteligencia artificial aplicada al cliente {#customer-ai-scoring-summary}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -454,7 +454,7 @@ SELECT model_name,
 
 +++
 
-Consulte la [Documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/audiences.md#customer-ai-scoring-summary) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/audiences.md#customer-ai-scoring-summary) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Superposición de identidad {#identity-overlap}
 
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [Documentación del widget de superposición de identidad](../guides/audiences.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de superposición de identidad](../guides/audiences.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Perfiles por identidad {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte la [Documentación de perfiles por widget de identidad](../guides/audiences.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget Perfiles por identidad](../guides/audiences.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Activaciones programadas {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Consulte la [Documentación del widget de activaciones programadas](../guides/audiences.md#scheduled-activations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de activaciones programadas](../guides/audiences.md#scheduled-activations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Pasos siguientes
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar en SQL para generar sus propias perspectivas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-También puede leer y comprender el SQL que genera perspectivas para [Perfiles](./profiles.md), [Perfiles de cuenta](./account-profiles.md) y [Destinos](./destinations.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para los paneles de [Perfiles](./profiles.md), [Perfiles de cuenta](./account-profiles.md) y [Destinos](./destinations.md).

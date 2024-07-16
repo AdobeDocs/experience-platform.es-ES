@@ -7,16 +7,16 @@ description: Este documento describe los detalles importantes que deben conocers
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 3%
+source-wordcount: '1088'
+ht-degree: 2%
 
 ---
 
-# Directrices generales para la ejecución de consultas en [!DNL Query Service]
+# Guía general para la ejecución de consultas en [!DNL Query Service]
 
-Este documento detalla detalles importantes que se deben conocer al escribir consultas en Adobe Experience Platform [!DNL Query Service].
+Este documento detalla detalles importantes que deben conocerse al escribir consultas en Adobe Experience Platform [!DNL Query Service].
 
-Para obtener información detallada sobre la sintaxis SQL utilizada en [!DNL Query Service], lea la [Documentación de sintaxis SQL](../sql/syntax.md).
+Para obtener información detallada sobre la sintaxis SQL utilizada en [!DNL Query Service], lea la [documentación sobre sintaxis SQL](../sql/syntax.md).
 
 ## Modelos de ejecución de consulta
 
@@ -24,29 +24,29 @@ Adobe Experience Platform [!DNL Query Service] tiene dos modelos de ejecución d
 
 ### Ejecución de consulta interactiva
 
-Las consultas se pueden ejecutar de forma interactiva enviándolas a través del [!DNL Query Service] IU o [mediante un cliente conectado](../clients/overview.md). Al ejecutar [!DNL Query Service] mediante un cliente conectado, se ejecuta una sesión activa entre el cliente y [!DNL Query Service] hasta que se devuelva la consulta enviada o se agote el tiempo de espera.
+Las consultas se pueden ejecutar de forma interactiva enviándolas a través de la interfaz de usuario de [!DNL Query Service] o a través de [un cliente conectado](../clients/overview.md). Al ejecutar [!DNL Query Service] a través de un cliente conectado, se ejecuta una sesión activa entre el cliente y [!DNL Query Service] hasta que la consulta enviada devuelva o se agote el tiempo de espera.
 
 La ejecución de consultas interactivas tiene las siguientes limitaciones:
 
-| Parámetro | Limitation |
+| Parámetro | Limitación |
 | --------- | ---------- |
 | Query timeout | 10 minutos |
-| Número máximo de filas devueltas | 50 000 |
+| Número máximo de filas devueltas | 50.000 |
 | Máximo de consultas simultáneas | 5 |
 
 >[!NOTE]
 >
 >Para anular la limitación de filas máximas, incluya `LIMIT 0` en la consulta. Se sigue aplicando el tiempo de espera de consulta de 10 minutos.
 
-De forma predeterminada, los resultados de las consultas interactivas se devuelven al cliente y son **no** persistió. Para mantener los resultados como un conjunto de datos en [!DNL Experience Platform], la consulta debe utilizar el `CREATE TABLE AS SELECT` sintaxis.
+De manera predeterminada, los resultados de las consultas interactivas se devuelven al cliente y **no** persisten. Para mantener los resultados como un conjunto de datos en [!DNL Experience Platform], la consulta debe utilizar la sintaxis `CREATE TABLE AS SELECT`.
 
 ### Ejecución de consulta no interactiva
 
-Consultas enviadas a través de [!DNL Query Service] Las API se ejecutan de forma no interactiva. La ejecución no interactiva significa que [!DNL Query Service] recibe la llamada de API y ejecuta la consulta en el orden en que se recibe. Las consultas no interactivas siempre resultan en la generación de un nuevo conjunto de datos en [!DNL Experience Platform] para recibir los resultados o la inserción de nuevas filas en un conjunto de datos existente.
+Las consultas enviadas a través de la API [!DNL Query Service] se ejecutan de forma no interactiva. La ejecución no interactiva significa que [!DNL Query Service] recibe la llamada de API y ejecuta la consulta en el orden en que se recibió. Las consultas no interactivas siempre dan como resultado la generación de un nuevo conjunto de datos en [!DNL Experience Platform] para recibir los resultados o la inserción de filas nuevas en un conjunto de datos existente.
 
 ## Acceso a un campo específico dentro de un objeto
 
-Para acceder a un campo dentro de un objeto de la consulta, puede utilizar la notación de puntos (`.`) o notación de corchetes (`[]`). La siguiente instrucción SQL utiliza la notación de puntos para recorrer el `endUserIds` objeto hasta el `mcid` objeto.
+Para tener acceso a un campo de un objeto de la consulta, puede usar la notación de puntos (`.`) o la notación de corchetes (`[]`). La siguiente instrucción SQL utiliza la notación de puntos para recorrer el objeto `endUserIds` hasta el objeto `mcid`.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | Nombre de la tabla de análisis. |
 
-La siguiente instrucción SQL utiliza la notación de corchetes para recorrer el `endUserIds` objeto hasta el `mcid` objeto.
+La siguiente instrucción SQL utiliza la notación de corchetes para recorrer el objeto `endUserIds` hasta el objeto `mcid`.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -91,7 +91,7 @@ Las dos consultas de ejemplo anteriores devuelven un objeto aplanado, en lugar d
 (1 row)
 ```
 
-El devuelto `endUserIds._experience.mcid` contiene los valores correspondientes para los parámetros siguientes:
+El objeto `endUserIds._experience.mcid` devuelto contiene los valores correspondientes para los parámetros siguientes:
 
 - `id`
 - `namespace`
@@ -120,7 +120,7 @@ Las comillas simples, las comillas dobles y las comillas invertidas tienen usos 
 
 ### Comillas simples
 
-La comilla simple (`'`) se utiliza para crear cadenas de texto. Por ejemplo, se puede utilizar en la variable `SELECT` para devolver un valor de texto estático en el resultado y en la instrucción `WHERE` para evaluar el contenido de una columna.
+La comilla simple (`'`) se usa para crear cadenas de texto. Por ejemplo, se puede utilizar en la instrucción `SELECT` para devolver un valor de texto estático en el resultado y en la cláusula `WHERE` para evaluar el contenido de una columna.
 
 La siguiente consulta declara un valor de texto estático (`'datasetA'`) para una columna:
 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-La siguiente consulta utiliza una cadena entre comillas simples (`'homepage'`) en su cláusula WHERE para devolver eventos de una página específica.
+La siguiente consulta utiliza una cadena entre comillas simples (`'homepage'`) en su cláusula WHERE para devolver eventos para una página específica.
 
 ```sql
 SELECT 
@@ -148,7 +148,7 @@ LIMIT 10
 
 ### Comillas dobles
 
-Las comillas dobles (`"`) se utiliza para declarar un identificador con espacios.
+Se usa el símbolo de comillas dobles (`"`) para declarar un identificador con espacios.
 
 La siguiente consulta utiliza comillas dobles para devolver valores de columnas especificadas cuando una columna contiene un espacio en su identificador:
 
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->Comillas dobles **no puede** se utilizará con acceso al campo de notación de puntos.
+>No se pueden usar comillas dobles **1} con el acceso al campo de notación de puntos.**
 
 ### Comillas anteriores
 
-La cita final `` ` `` se utiliza para omitir los nombres de columna reservados **solamente** al utilizar sintaxis de notación de puntos. Por ejemplo, desde `order` es una palabra reservada en SQL, debe utilizar comillas invertidas para acceder al campo `commerce.order`:
+La comilla invertida `` ` `` se usa para omitir los nombres de columna reservados **solamente** cuando se usa la sintaxis de notación de puntos. Por ejemplo, dado que `order` es una palabra reservada en SQL, debe utilizar comillas invertidas para acceder al campo `commerce.order`:
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Las comillas invertidas también se utilizan para acceder a un campo que comienza con un número. Por ejemplo, para acceder al campo `30_day_value`, deberá utilizar la notación de comillas invertidas.
+Las comillas invertidas también se utilizan para acceder a un campo que comienza con un número. Por ejemplo, para acceder al campo `30_day_value`, debe utilizar la notación de comillas invertidas.
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Las comillas invertidas son **no** es necesario si utiliza la notación de corchetes.
+Las comillas invertidas son **no** necesarias si usa notación de corchetes.
 
 ```sql
  SELECT
@@ -201,11 +201,11 @@ Las comillas invertidas son **no** es necesario si utiliza la notación de corch
 
 ## Visualización de información de tabla
 
-Después de conectarse al servicio de consultas, puede ver todas las tablas disponibles en Platform mediante el `\d` o `SHOW TABLES` comandos.
+Después de conectarse al servicio de consultas, puede ver todas las tablas disponibles en Platform mediante los comandos `\d` o `SHOW TABLES`.
 
 ### Vista de tabla estándar
 
-El `\d` muestra el estándar [!DNL PostgreSQL] ver para enumerar tablas. A continuación se muestra un ejemplo de la salida de este comando:
+El comando `\d` muestra la vista estándar [!DNL PostgreSQL] para enumerar tablas. A continuación se muestra un ejemplo de la salida de este comando:
 
 ```sql
              List of relations
@@ -218,7 +218,7 @@ El `\d` muestra el estándar [!DNL PostgreSQL] ver para enumerar tablas. A conti
 
 ### Vista de tabla detallada
 
-`SHOW TABLES` es un comando personalizado que proporciona información más detallada sobre las tablas. A continuación se muestra un ejemplo de la salida de este comando:
+El comando `SHOW TABLES` es un comando personalizado que proporciona información más detallada sobre las tablas. A continuación se muestra un ejemplo de la salida de este comando:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -230,9 +230,9 @@ El `\d` muestra el estándar [!DNL PostgreSQL] ver para enumerar tablas. A conti
 
 ### Información del esquema
 
-Para ver información más detallada sobre los esquemas de la tabla, puede utilizar la variable `\d {TABLE_NAME}` comando, donde `{TABLE_NAME}` es el nombre de la tabla cuya información de esquema desea ver.
+Para ver información más detallada sobre los esquemas de la tabla, puede utilizar el comando `\d {TABLE_NAME}`, donde `{TABLE_NAME}` es el nombre de la tabla cuya información de esquema desea ver.
 
-En el ejemplo siguiente se muestra la información de esquema de `luma_midvalues` , que se vería utilizando `\d luma_midvalues`:
+El ejemplo siguiente muestra la información de esquema de la tabla `luma_midvalues`, que se vería con `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -257,7 +257,7 @@ En el ejemplo siguiente se muestra la información de esquema de `luma_midvalues
 
 Además, puede obtener más información sobre una columna concreta añadiendo el nombre de la columna al nombre de la tabla. Esto se escribiría en el formato `\d {TABLE_NAME}_{COLUMN}`.
 
-El siguiente ejemplo muestra información adicional para `web` y se invocarían con el siguiente comando: `\d luma_midvalues_web`:
+El ejemplo siguiente muestra información adicional para la columna `web` y se invocaría mediante el comando siguiente: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -271,7 +271,7 @@ El siguiente ejemplo muestra información adicional para `web` y se invocarían 
 
 Puede unir varios conjuntos de datos para incluir datos de otros conjuntos de datos en la consulta.
 
-El ejemplo siguiente combinaría los dos conjuntos de datos siguientes (`your_analytics_table` y `custom_operating_system_lookup`) y crea un `SELECT` para los 50 sistemas operativos principales por número de vistas de página.
+El siguiente ejemplo uniría los dos conjuntos de datos siguientes (`your_analytics_table` y `custom_operating_system_lookup`) y crearía una instrucción `SELECT` para los 50 sistemas operativos principales según el número de vistas de página.
 
 **Consulta**
 
@@ -292,34 +292,34 @@ LIMIT 50;
 
 | OperatingSystem | PageViews |
 | --------------- | --------- |
-| Windows 7 | 2781979.0 |
-| Windows XP | 1669824.0 |
-| Windows 8 | 420024.0 |
-| Adobe AIR | 315032.0 |
-| Windows Vista | 173566.0 |
-| Mobile iOS 6.1.3 | 119069.0 |
-| Linux | 56516.0 |
-| OSX 10.6.8 | 53652.0 |
-| Android 4.0.4 | 46167.0 |
-| Android 4.0.3 | 31852.0 |
-| Windows Server 2003 y XP x64 Edition | 28883.0 |
-| Android 4.1.1 | 24336.0 |
-| Android 2.3.6 | 15735.0 |
-| OSX 10,6 | 13357.0 |
-| Windows Phone 7.5 | 11054.0 |
-| Android 4.3 | 9221.0 |
+| Windows 7 | 2781979,0 |
+| Windows XP | 1669824,0 |
+| Windows 8 | 420024,0 |
+| Adobe AIR | 315032,0 |
+| Windows Vista | 173566,0 |
+| Mobile iOS 6.1.3 | 119069,0 |
+| Linux | 56516,0 |
+| OSX 10.6.8 | 53652,0 |
+| Android 4.0.4 | 46167,0 |
+| Android 4.0.3 | 31852,0 |
+| Windows Server 2003 y XP x64 Edition | 28883,0 |
+| Android 4.1.1 | 24336,0 |
+| Android 2.3.6 | 15735,0 |
+| OSX 10,6 | 13357,0 |
+| Windows Phone 7.5 | 11054,0 |
+| Android 4.3 | 9221,0 |
 
 ## Anulación de duplicación
 
-El servicio de consulta admite la anulación de duplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la deduplicación, lea la [Guía de anulación de duplicación del servicio de consultas](../key-concepts/deduplication.md).
+El servicio de consulta admite la anulación de duplicación de datos o la eliminación de filas duplicadas de los datos. Para obtener más información sobre la anulación de duplicación, lea la [guía de anulación de duplicación del servicio de consultas](../key-concepts/deduplication.md).
 
 ## Cálculos de zona horaria en el servicio de consultas
 
-El servicio de consulta estandariza los datos persistentes en Adobe Experience Platform mediante el formato de marca de tiempo UTC. Para obtener más información sobre cómo traducir el requisito de zona horaria a y desde una marca de tiempo UTC, consulte la [Sección de preguntas frecuentes sobre cómo cambiar la zona horaria a y desde una marca de tiempo UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+El servicio de consulta estandariza los datos persistentes en Adobe Experience Platform mediante el formato de marca de tiempo UTC. Para obtener más información sobre cómo traducir el requisito de zona horaria a y desde una marca de tiempo UTC, consulte la sección de [preguntas frecuentes sobre cómo cambiar la zona horaria a y desde una marca de tiempo UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Pasos siguientes
 
-Al leer este documento, se le han introducido algunas consideraciones importantes al escribir consultas utilizando [!DNL Query Service]. Para obtener más información sobre cómo utilizar la sintaxis SQL para escribir sus propias consultas, lea la [Documentación de sintaxis SQL](../sql/syntax.md).
+Al leer este documento, se le han presentado algunas consideraciones importantes al escribir consultas con [!DNL Query Service]. Para obtener más información sobre cómo usar la sintaxis SQL para escribir sus propias consultas, lea la [documentación sobre sintaxis SQL](../sql/syntax.md).
 
 Para obtener más ejemplos de consultas que se pueden utilizar en el servicio de consultas, lea la siguiente documentación de caso de uso:
 

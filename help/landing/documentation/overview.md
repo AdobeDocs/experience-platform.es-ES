@@ -6,8 +6,8 @@ description: La documentación de Adobe Experience Platform se proporciona en va
 exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 2%
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
@@ -23,14 +23,14 @@ La documentación de Adobe Experience Platform está disponible para varias func
 
 La documentación de Experience Platform se proporciona en varios formatos, incluidas descripciones generales, tutoriales y guías para la interfaz de usuario (IU) y la API. Los tipos de documentación más comunes se resumen en la siguiente lista:
 
-* **Referencia de API:** Consulte la documentación de referencia de la API para cada servicio para obtener más información acerca de los extremos disponibles, incluidos encabezados, parámetros, solicitudes de muestra y respuestas. Estos materiales de referencia no proporcionan el mismo nivel de detalle que la documentación. Se recomienda consultar la guía para desarrolladores específica del servicio para ver ejemplos detallados del uso de API.
+* **Referencia de API:** Consulte la documentación de referencia de la API para cada servicio para obtener más información acerca de los extremos disponibles, incluidos los encabezados, los parámetros, las solicitudes de ejemplo y las respuestas. Estos materiales de referencia no proporcionan el mismo nivel de detalle que la documentación. Se recomienda consultar la guía para desarrolladores específica del servicio para ver ejemplos detallados del uso de API.
 
-* **Guía para desarrolladores:** Cada guía para desarrolladores proporciona información de uso detallada para todos los extremos de API disponibles para un servicio específico. La guía incluye parámetros de consulta disponibles, solicitudes de muestra y respuestas de muestra, así como la descripción de los problemas que se deben evitar al realizar llamadas a [!DNL Platform] API.
+* **Guía para desarrolladores:** Cada guía para desarrolladores proporciona información detallada sobre el uso de todos los extremos de API disponibles para un servicio específico. La guía incluye los parámetros de consulta disponibles, las solicitudes de muestra y las respuestas de muestra, así como la descripción de los problemas que deben evitarse al realizar llamadas a las API de [!DNL Platform].
 
-* **Información general:** Una descripción general proporciona una descripción general del servicio o la función y de cómo interactúa con otros [!DNL Platform] servicios. La descripción general es el mejor punto de partida para obtener información sobre las nuevas funciones y funcionalidades de [!DNL Platform].
+* **Información general:** Una descripción general proporciona información general de alto nivel sobre el servicio o la característica y cómo interactúa con otros servicios de [!DNL Platform]. La descripción general es el mejor punto de partida para obtener información sobre las nuevas características y funcionalidades de [!DNL Platform].
 
-* **Guía de solución de problemas:** Utilice la guía de solución de problemas para encontrar respuestas a las preguntas más frecuentes e información sobre los mensajes de error que es probable que se encuentren al utilizar la API. El [!DNL Experience Platform] la guía de solución de problemas proporciona ayuda para preguntas generales y errores, mientras que los servicios individuales proporcionan guías de solución de problemas específicas para su área.
+* **Guía de solución de problemas:** Utilice la guía de solución de problemas para encontrar respuestas a las preguntas más frecuentes e información sobre los mensajes de error que probablemente encontrará al utilizar la API. La guía de solución de problemas de [!DNL Experience Platform] proporciona ayuda para preguntas generales y errores, mientras que los servicios individuales proporcionan guías de solución de problemas específicas para su área.
 
-* **Tutorial:** Un tutorial es una guía paso a paso a través de la interfaz de usuario, la API o una combinación de ambas, que conduce a un resultado específico. A diferencia de una guía para desarrolladores, un tutorial de API solo puede centrarse en uno o dos extremos y no es un recurso de API exhaustivo. Del mismo modo, los tutoriales de la interfaz de usuario pueden centrarse únicamente en pasos específicos, no en la interfaz de usuario completa disponible para ese servicio. Los Tutorials suelen formar parte de un flujo de trabajo más amplio y presentan &quot;pasos siguientes&quot; en los que se describen los tutoriales que puede querer probar a continuación.
+* **Tutorial:** Un tutorial es una guía paso a paso a través de la interfaz de usuario, la API o una combinación de ambas, que lleva a un resultado específico. A diferencia de una guía para desarrolladores, un tutorial de API solo puede centrarse en uno o dos extremos y no es un recurso de API exhaustivo. Del mismo modo, los tutoriales de la interfaz de usuario pueden centrarse únicamente en pasos específicos, no en la interfaz de usuario completa disponible para ese servicio. Los Tutorials suelen formar parte de un flujo de trabajo más amplio y presentan &quot;pasos siguientes&quot; en los que se describen los tutoriales que puede querer probar a continuación.
 
-* **Guía de IU:** Una guía de la interfaz de usuario describe las acciones disponibles en [!DNL Platform] interfaz de usuario de un servicio específico. Estos documentos contienen capturas de pantalla y pasos centrados en la interacción con Platform a través de la interfaz de usuario. De forma similar a una guía para desarrolladores, la guía de la interfaz de usuario describe todas las acciones y opciones disponibles, incluidas las acciones que deben evitarse. Este es el recurso más detallado para trabajar con la interfaz de usuario de .
+* **Guía de interfaz de usuario:** Una guía de interfaz de usuario describe las acciones disponibles en la interfaz de usuario de [!DNL Platform] para un servicio específico. Estos documentos contienen capturas de pantalla y pasos centrados en la interacción con Platform a través de la interfaz de usuario. De forma similar a una guía para desarrolladores, la guía de la interfaz de usuario describe todas las acciones y opciones disponibles, incluidas las acciones que deben evitarse. Este es el recurso más detallado para trabajar con la IU de.

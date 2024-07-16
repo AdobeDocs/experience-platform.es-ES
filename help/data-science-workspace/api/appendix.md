@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;extremo;Data Science Workspace;temas populares;
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;
 solution: Experience Platform
 title: Apéndice de la guía de API de aprendizaje automático de Sensei
 description: Las secciones siguientes proporcionan información de referencia sobre diversas funciones de la API de aprendizaje automático de Sensei.
@@ -8,23 +8,23 @@ exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
-# [!DNL Sensei Machine Learning] Apéndice de guía de API
+# Apéndice de guía de API [!DNL Sensei Machine Learning]
 
-Las secciones siguientes proporcionan información de referencia sobre diversas funciones de [!DNL Sensei Machine Learning] API.
+Las secciones siguientes proporcionan información de referencia sobre diversas características de la API [!DNL Sensei Machine Learning].
 
 ## Parámetros de consulta para recuperación de recursos {#query}
 
-El [!DNL Sensei Machine Learning] La API proporciona compatibilidad con parámetros de consulta para recuperar recursos. En la tabla siguiente se describen los parámetros de consulta disponibles y sus usos:
+La API [!DNL Sensei Machine Learning] proporciona compatibilidad con parámetros de consulta para recuperar recursos. En la tabla siguiente se describen los parámetros de consulta disponibles y sus usos:
 
 | Parámetro de consulta | Descripción | Valor predeterminado |
 | --------------- | ----------- | ------- |
 | `start` | Indica el índice de inicio de la paginación. | `start=0` |
 | `limit` | Indica el número máximo de resultados que se van a devolver. | `limit=25` |
-| `orderby` | Indica las propiedades que se van a utilizar para ordenar en orden de prioridad. Incluya un guión (**-**) antes del nombre de una propiedad para ordenar en orden descendente; de lo contrario, los resultados se ordenan en orden ascendente. | `orderby=created` |
+| `orderby` | Indica las propiedades que se van a utilizar para ordenar en orden de prioridad. Incluya un guión (**-**) antes del nombre de una propiedad para ordenar en orden descendente; de lo contrario, los resultados se ordenarán en orden ascendente. | `orderby=created` |
 | `property` | Indica la expresión de comparación que un objeto debe satisfacer para ser devuelto. | `property=deleted==false` |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ El [!DNL Sensei Machine Learning] La API proporciona compatibilidad con parámet
 
 ## Configuraciones de CPU y GPU en Python {#cpu-gpu-config}
 
-Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para sus fines de entrenamiento o puntuación, y se define en una [MLInstance](./mlinstances.md) como especificación de tarea (`tasks.specification`).
+Los motores Python tienen la capacidad de elegir entre una CPU o una GPU para su entrenamiento o puntuación, y se define en una [MLInstance](./mlinstances.md) como una especificación de tarea (`tasks.specification`).
 
 A continuación se muestra un ejemplo de configuración que especifica el uso de una CPU para el aprendizaje y una GPU para la puntuación:
 
@@ -70,7 +70,7 @@ A continuación se muestra un ejemplo de configuración que especifica el uso de
 
 >[!NOTE]
 >
->Los valores de `cpus` y `gpus` no significa el número de CPU o GPU, sino el número de máquinas físicas. Estos valores están permitidos `"1"` y generará una excepción en caso contrario.
+>Los valores de `cpus` y `gpus` no indican el número de CPU o GPU, sino el número de máquinas físicas. Estos valores tienen el permiso `"1"` y, en caso contrario, producirán una excepción.
 
 ## Configuraciones de recursos de PySpark y Spark {#resource-config}
 
@@ -84,7 +84,7 @@ Los motores Spark tienen la capacidad de modificar los recursos computacionales 
 | executeCores | Número de núcleos utilizados por el ejecutor | int |
 | numExecutors | Número de ejecutores | int |
 
-Los recursos se pueden especificar en un [MLInstance](./mlinstances.md) como (A) parámetros de entrenamiento o puntuación individuales, o (B) dentro de un objeto de especificaciones adicional (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
+Los recursos se pueden especificar en una [MLInstance](./mlinstances.md) como (A) parámetros de entrenamiento o puntuación individuales, o (B) dentro de un objeto de especificaciones adicional (`specification`). Por ejemplo, las siguientes configuraciones de recursos son las mismas para la formación y la puntuación:
 
 ```json
 [

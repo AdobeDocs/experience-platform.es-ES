@@ -1,21 +1,21 @@
 ---
 title: Utilice etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino
 description: Obtenga información sobre cómo utilizar las etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino, de modo que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos.
-badgePrivateBeta: label="Beta privada" type="Informative"
+badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 role: Developer, Admin, User
-source-git-commit: 5e5dc2f755be0f396dec1d3f19c166bae3bc9575
+exl-id: 85944720-8551-491c-8991-dd9668beb0ca
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
 
 ---
 
-
 # Utilice etiquetas de acceso para administrar el acceso de los usuarios a los flujos de datos de destino
 
-Como parte de [!UICONTROL Control de acceso basado en atributos] funcionalidad en Real-Time CDP, ahora puede aplicar etiquetas de acceso a los flujos de datos de destino. Por lo tanto, puede asegurarse de que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos.
+Como parte de la funcionalidad [!UICONTROL Control de acceso basado en atributos] en Real-Time CDP, ahora puede aplicar etiquetas de acceso a los flujos de datos de destino. Por lo tanto, puede asegurarse de que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos.
 
 Cuando se agrega una etiqueta de acceso a un destino determinado, solo los usuarios que tienen acceso a una función a la que se les asigna esa etiqueta pueden ver y editar ese flujo de datos de destino. Si un flujo de datos de destino no está marcado con etiquetas, es visible para todos los usuarios que pertenecen a su organización.
 
@@ -23,18 +23,18 @@ Lea esta página para comprender casos de uso de ejemplo, requisitos previos par
 
 ## Requisitos previos {#prerequisites}
 
-Tenga en cuenta los siguientes requisitos previos para completar antes de empezar a utilizar esta funcionalidad. Para familiarizarse con [!UICONTROL Control de acceso basado en atributos] funcionalidad, Adobe también recomienda que lea los siguientes artículos:
+Tenga en cuenta los siguientes requisitos previos para completar antes de empezar a utilizar esta funcionalidad. Para familiarizarse con la funcionalidad [!UICONTROL Control de acceso basado en atributos], Adobe también recomienda leer los siguientes artículos:
 
 * [Información general de control de acceso basado en atributos](/help/access-control/abac/overview.md)
 * [Guía completa de control de acceso basado en atributos](/help/access-control/abac/end-to-end-guide.md)
 
 ### Acceso a la IU de permisos {#access-permissions-ui}
 
-[!UICONTROL Permisos] es el área de Experience Cloud donde los administradores pueden definir roles de usuario y directivas para administrar permisos para funciones y objetos dentro de una aplicación de producto. Lea el [sección de permisos](/help/access-control/abac/end-to-end-guide.md#permissions) para empezar.
+[!UICONTROL Permisos] es el área de Experience Cloud donde los administradores pueden definir roles de usuario y directivas para administrar permisos para características y objetos dentro de una aplicación de producto. Lea la [sección de permisos](/help/access-control/abac/end-to-end-guide.md#permissions) para comenzar.
 
 ### Crear funciones, etiquetas y asignar usuarios {#create-roles-labels-assign-users}
 
-Después de obtener acceso a [!UICONTROL permissions] La interfaz de usuario de, usted o un miembro de su equipo deben configurar funciones de y agregar las etiquetas necesarias a esas funciones. Por último, los usuarios que deben acceder a los recursos etiquetados con las etiquetas específicas deben añadirse a la función. Consulte las siguientes secciones de documentación:
+Después de obtener acceso a la interfaz de usuario de [!UICONTROL permissions], usted o un miembro de su equipo deben configurar funciones y agregarles las etiquetas necesarias. Por último, los usuarios que deben acceder a los recursos etiquetados con las etiquetas específicas deben añadirse a la función. Consulte las siguientes secciones de documentación:
 
 * [Crear una nueva función](/help/access-control/abac/ui/roles.md)
 * [Adición de etiquetas a un rol](/help/access-control/abac/end-to-end-guide.md#label-roles)
@@ -44,11 +44,11 @@ Después de obtener acceso a [!UICONTROL permissions] La interfaz de usuario de,
 
 Primero debe conectarse al destino deseado y crear un flujo de datos para exportar los datos, antes de poder aplicar etiquetas de acceso al flujo de datos.
 
-Lea las guías de [conexión a un destino](/help/destinations/ui/connect-destination.md) y [activación de datos en el destino](/help/destinations/ui/activation-overview.md). A continuación, seleccione el destino deseado en la [catálogo de conectores disponibles](/help/destinations/catalog/overview.md).
+Lea las guías sobre [conectarse a un destino](/help/destinations/ui/connect-destination.md) y [activar datos en el destino](/help/destinations/ui/activation-overview.md). A continuación, seleccione el destino deseado en el [catálogo de conectores disponibles](/help/destinations/catalog/overview.md).
 
 ## Ya disponible: Aplicar etiquetas de acceso a otros recursos de Experience Platform {#apply-labels-other-resources}
 
-Aunque esta versión permite otorgar a los usuarios acceso en el nivel de objeto a flujos de datos de destino específicos, la funcionalidad para otorgar control de acceso en el nivel de objeto ya está disponible de forma general para otros recursos de Experience Platform, como [audiencias](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
+Aunque esta versión le permite conceder a los usuarios acceso a nivel de objeto a flujos de datos de destino específicos, la funcionalidad para conceder control de acceso a nivel de objeto ya está disponible de forma general para otros recursos de Experience Platform, como [audiencias](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
 
 ## Ejemplo de caso de uso {#use-case-example}
 
@@ -58,13 +58,13 @@ Con el control de acceso de nivel de objeto para destinos, limite equipos espec�
 
 Para aplicar etiquetas de acceso a un flujo de datos específico:
 
-1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y busque el flujo de datos de destino al que desee limitar el acceso de los usuarios.
-1. Seleccione los puntos suspensivos (`...`) en el [!UICONTROL Nombre] y utilice la columna ![Editar control de detalles](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Aplicar etiquetas de acceso]** para agregar nuevas etiquetas y administrar las etiquetas existentes para el flujo de datos.
-   ![Seleccione Aplicar etiquetas de acceso en la vista Examinar del espacio de trabajo de destinos.](/help/access-control/images/olac/apply-access-labels.png)
-1. Seleccione las etiquetas que desee añadir al flujo de datos de destino y seleccione **[!UICONTROL Guardar]**.
+1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y busque el flujo de datos de destino al que desea limitar el acceso de los usuarios.
+1. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar detalles](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Aplicar etiquetas de acceso]** para agregar nuevas etiquetas y administrar las etiquetas existentes para el flujo de datos.
+   ![Seleccione Aplicar etiquetas de acceso en la vista Examinar del área de trabajo de destinos.](/help/access-control/images/olac/apply-access-labels.png)
+1. Seleccione las etiquetas que desee agregar al flujo de datos de destino y seleccione **[!UICONTROL Guardar]**.
    ![Seleccione las etiquetas de acceso en que deben aplicarse al flujo de datos de destino.](/help/access-control/images/olac/view-access-labels.png)
 1. Observe cómo el flujo de datos ahora muestra una etiqueta de acceso en la interfaz de usuario.
-   ![Vista de varios flujos de datos de destino con el flujo de datos seleccionado mostrando una etiqueta de acceso.](/help/access-control/images/olac/dataflow-with-access-label.png)
+   ![Vista de varios flujos de datos de destino con el flujo de datos seleccionado y que muestran una etiqueta de acceso.](/help/access-control/images/olac/dataflow-with-access-label.png)
 
 Si un flujo de datos de destino no está marcado con ninguna etiqueta, se mostrará para todos los usuarios. Si el flujo de datos está marcado con una o más etiquetas de acceso, solo se mostrará a los usuarios que pertenezcan a una función que tenga la misma etiqueta o combinación de etiquetas.
 
@@ -72,7 +72,7 @@ Puede añadir etiquetas estándar y personalizadas a los flujos de datos de dest
 
 * Los usuarios asignados a funciones con acceso a la misma etiqueta pueden ver el flujo de datos con la nueva etiqueta en la interfaz de usuario. Pueden ver y editar el flujo de datos de destino en la interfaz de usuario o a través de las API.
 
-* Usuarios que son *no* las funciones asignadas a con acceso a la misma etiqueta no tienen acceso al flujo de datos de destino para verlo o editarlo en la interfaz de usuario o a través de API.
+* Los usuarios *que no son* asignados a roles con acceso a la misma etiqueta no tienen acceso al flujo de datos de destino para verlo o editarlo en la interfaz de usuario o a través de API.
 
 ## Llamadas y elementos importantes que se deben conocer {#important-callouts}
 
@@ -88,4 +88,4 @@ Al agregar varias etiquetas a un flujo de datos de destino, los usuarios que deb
 
 Al seguir los pasos de este documento, ahora sabe cómo aplicar etiquetas de acceso a los flujos de datos de destino para que solo un subconjunto de usuarios de su organización obtenga acceso a flujos de datos de destino específicos.
 
-A continuación, puede obtener más información acerca de otras funcionalidades compatibles con [!UICONTROL Control de acceso basado en atributos] al activar datos en destinos. Por ejemplo, puede limitar el acceso de los usuarios a [ver y activar solo campos específicos](/help/access-control/abac/overview.md#destinations).
+A continuación, puede obtener más información acerca de otras funcionalidades admitidas por [!UICONTROL Control de acceso basado en atributos] al activar datos en destinos. Por ejemplo, puede limitar el acceso de los usuarios a [ver y activar solo campos específicos](/help/access-control/abac/overview.md#destinations).

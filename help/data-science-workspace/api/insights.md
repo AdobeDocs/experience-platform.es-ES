@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;perspectivas;api de aprendizaje automático de sensei
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;perspectivas;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Punto final de API de Insights
 description: Las perspectivas contienen métricas que se utilizan para que un científico de datos pueda evaluar y elegir modelos XML óptimos mediante la visualización de métricas de evaluación relevantes.
@@ -18,7 +18,7 @@ Las perspectivas contienen métricas que se utilizan para que un científico de 
 
 ## Recuperación de una lista de perspectivas
 
-Puede recuperar una lista de perspectivas realizando una única solicitud de GET al extremo de las perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de perspectivas realizando una única solicitud de GET al extremo de las perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye una lista de perspectivas y cada perspectiva tiene un identificador único ( `id` ). Además, recibirá `context` que contiene los identificadores únicos asociados a esa perspectiva en particular, seguidos de los datos de eventos y métricas de Insights.
+Una respuesta correcta devuelve una carga útil que incluye una lista de perspectivas y cada perspectiva tiene un identificador único ( `id`). Además, recibirá `context`, que contiene los identificadores únicos asociados con esa perspectiva en particular, y que siguen a los datos de eventos y métricas de Insights.
 
 ```json
 {
@@ -108,7 +108,7 @@ Una respuesta correcta devuelve una carga útil que incluye una lista de perspec
 
 ## Recuperar una perspectiva específica
 
-Para buscar una perspectiva concreta, realice una solicitud de GET y proporcione un `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Para buscar una perspectiva concreta, realice una solicitud de GET y proporcione un `{INSIGHT_ID}` válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el identificador único de perspectivas (`id`). Además, recibirá `context` que contiene los identificadores únicos asociados a la perspectiva particular que sigue a los datos de eventos y métricas de Insights.
+Una respuesta correcta devuelve una carga útil que incluye el identificador único de perspectivas (`id`). Además, recibirá `context`, que contiene los identificadores únicos asociados con la perspectiva particular que sigue a los datos de eventos y métricas de Insights.
 
 ```json
 {
@@ -264,7 +264,7 @@ Una respuesta correcta devolverá una carga útil que tiene un `{INSIGHT_ID}` y 
 
 ## Recuperación de una lista de métricas predeterminadas para algoritmos
 
-Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una única solicitud de GET al extremo de las métricas. Para consultar una métrica en particular, realice una solicitud de GET y proporcione un `{ALGORITHM}` en la ruta de solicitud.
+Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una única solicitud de GET al extremo de las métricas. Para consultar una métrica en particular, realice una solicitud de GET y proporcione un `{ALGORITHM}` válido en la ruta de solicitud.
 
 **Formato de API**
 
@@ -279,7 +279,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Solicitud**
 
-La siguiente solicitud contiene una consulta y recupera una métrica específica mediante el identificador del algoritmo `{ALGORITHM}`
+La siguiente solicitud contiene una consulta y recupera una métrica específica mediante el identificador de algoritmo `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -292,7 +292,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el `algorithm` identificador único y matriz de métricas predeterminadas.
+Una respuesta correcta devuelve una carga útil que incluye el identificador único `algorithm` y una matriz de métricas predeterminadas.
 
 ```json
 {

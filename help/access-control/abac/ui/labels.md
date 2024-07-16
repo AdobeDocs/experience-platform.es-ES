@@ -27,14 +27,14 @@ Las etiquetas permiten categorizar conjuntos de datos y campos según las polít
 
 >[!NOTE]
 >
->Hay una sola lista de etiquetas para toda una organización. Para crear una etiqueta personalizada, necesitará lo siguiente **[!UICONTROL Administrar etiquetas de uso]** permisos en la zona protegida de producción. En este momento no se admite la eliminación de etiquetas.
+>Hay una sola lista de etiquetas para toda una organización. Para crear una etiqueta personalizada, necesitará los permisos de **[!UICONTROL Administrar etiquetas de uso]** en la zona protegida de producción. En este momento no se admite la eliminación de etiquetas.
 
-Para crear una etiqueta nueva, seleccione **[!UICONTROL Etiquetas]** en la barra lateral y seleccione **[!UICONTROL Crear etiqueta]**.
+Para crear una etiqueta nueva, selecciona la pestaña **[!UICONTROL Etiquetas]** en la barra lateral y selecciona **[!UICONTROL Crear etiqueta]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-El **[!UICONTROL Crear una etiqueta nueva]** aparece un cuadro de diálogo en el que se le solicita que introduzca un nombre, un nombre descriptivo opcional y una descripción opcional.
+Aparece el cuadro de diálogo **[!UICONTROL Crear una nueva etiqueta]**, que le solicita que escriba un nombre, un nombre descriptivo opcional y una descripción opcional.
 
-![new-label-info](../../images/flac-ui/new-label-info.png)
+![información-etiqueta-nueva](../../images/flac-ui/new-label-info.png)
 
 Cuando termine, seleccione **[!UICONTROL Confirmar]**.

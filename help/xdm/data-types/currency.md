@@ -7,21 +7,21 @@ exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Moneda] tipo de datos
+# [!UICONTROL Tipo de datos Moneda]
 
-[!UICONTROL Moneda] es un tipo de datos XDM estándar que describe una cantidad de moneda, incluido el tipo de moneda y la fecha de conversión.
+[!UICONTROL Divisa] es un tipo de datos XDM estándar que describe una cantidad de moneda, incluido el tipo de moneda y la fecha de conversión.
 
 ![](../images/data-types/currency.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `amount` | Doble | La cantidad de moneda definida por la variable `currencyCode`. |
-| `conversionDate` | DateTime | Una marca de tiempo de cuándo se realizó la conversión de moneda. |
-| `currencyCode` | Cadena | Un código ISO 4217 que indica el tipo de moneda que `amount` representa. |
+| `amount` | Duplicada | La cantidad de moneda definida por `currencyCode`. |
+| `conversionDate` | Fecha/Hora | Una marca de tiempo de cuándo se realizó la conversión de moneda. |
+| `currencyCode` | Cadena | Un código ISO 4217 que indica el tipo de moneda que representa `amount`. |
 
 {style="table-layout:auto"}
 

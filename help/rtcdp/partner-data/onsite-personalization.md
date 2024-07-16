@@ -259,11 +259,11 @@ Ya está listo para crear y activar públicos para su personalización.
 
 #### Creación de audiencias y configuración de la segmentación de Edge
 
-En la IU de Platform, navegue hasta **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
+En la interfaz de usuario de Platform, vaya a **[!UICONTROL Cliente]** > **[!UICONTROL Audiencias]** y cree una audiencia para capturar a los visitantes del sitio web.
 
-![Vista de cómo navegar a audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Vista de cómo navegar a las audiencias.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Debe configurar la audiencia con [segmentación de borde](/help/segmentation/ui/edge-segmentation.md) por lo tanto, la pertenencia a audiencias de los visitantes se evalúa en tiempo real a medida que visitan el dominio web.
+Debe configurar su audiencia con [segmentación de Edge](/help/segmentation/ui/edge-segmentation.md) para que la pertenencia a audiencias de sus visitantes se evalúe en tiempo real cuando visiten su propiedad web.
 
 Asegúrese de configurar también [políticas de combinación activas en el perímetro](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) para los públicos de perímetro.
 
@@ -287,4 +287,4 @@ Explore más casos de uso habilitados a través de la compatibilidad con datos d
 
 * [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Utilice la compatibilidad con datos de terceros en Real-Time CDP para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
-* [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.
+* [Se ha ampliado la activación de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.

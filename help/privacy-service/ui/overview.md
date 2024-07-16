@@ -22,25 +22,25 @@ La IU de Privacy Service le permite coordinar las solicitudes de privacidad y co
 
 >[!NOTE]
 >
->Para obtener información sobre la administración de solicitudes de conformidad mediante programación mediante la API de Privacy Service, consulte la [Guía de API de Privacy Service](../api/overview.md). Consulte el documento no [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
+>Para obtener información sobre cómo administrar solicitudes de conformidad mediante programación usando la API de Privacy Service, consulte la [guía de API de Privacy Service](../api/overview.md). Consulte el documento [administración de permisos de Privacy Service](../permissions.md) para obtener más información.
 
-## Inicie sesión en [!DNL Privacy Service] IU
+## Iniciar sesión en la interfaz de usuario de [!DNL Privacy Service]
 
 >[!IMPORTANT]
 >
->Debe tener un Adobe ID para autenticarse en el [!DNL Privacy Service] IU.
+>Debe tener un Adobe ID para autenticarse en la interfaz de usuario de [!DNL Privacy Service].
 
-Para acceder a la IU de, inicie sesión en [Adobe Experience Cloud](https://experience.adobe.com/) y seleccione **[!UICONTROL IU de privacidad]** en el menú acceso rápido.
+Para acceder a la interfaz de usuario, inicia sesión en [Adobe Experience Cloud](https://experience.adobe.com/) y selecciona **[!UICONTROL IU de privacidad]** en el menú de acceso rápido.
 
 ![Panel del Experience Cloud con la IU de privacidad resaltada.](../images/ui-overview/quick-access.png)
 
 
-### Inicio de sesión desde [!DNL Experience Platform]
+### Iniciando sesión desde [!DNL Experience Platform]
 
-Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a la variable [!DNL Privacy Service] IU a través de **[!UICONTROL Solicitudes]** en el panel de navegación izquierdo.
+Si tiene acceso a la interfaz de usuario de Adobe Experience Platform, también puede acceder a la interfaz de usuario de [!DNL Privacy Service] a través de la pestaña **[!UICONTROL Solicitudes]** en el panel de navegación izquierdo.
 
-![La interfaz de usuario de Adobe Experience Platform con solicitudes resaltadas en la barra de navegación izquierda.](../images/ui-overview/platform.png)
+![Interfaz de usuario de Adobe Experience Platform con solicitudes resaltadas en la barra de navegación izquierda.](../images/ui-overview/platform.png)
 
 ## Pasos siguientes
 
-Ahora que ha iniciado sesión correctamente, consulte la [guía del usuario](user-guide.md) para ver los pasos de cómo realizar varias operaciones con la variable [!DNL Privacy Service] IU.
+Ahora que ha iniciado sesión correctamente, consulte la [guía del usuario](user-guide.md) para ver los pasos sobre cómo realizar diversas operaciones con la interfaz de usuario de [!DNL Privacy Service].

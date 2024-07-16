@@ -4,55 +4,55 @@ description: Este tutorial cubre la sintaxis para ordenar y filtrar mediante par
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
 
 # Clasificación y filtrado de respuestas en la API de Flow Service
 
-Al realizar solicitudes de listado (GET) en [API de Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), puede utilizar parámetros de consulta para ordenar y filtrar las respuestas. Esta guía proporciona una referencia sobre cómo utilizar estos parámetros para diferentes casos de uso.
+Al realizar solicitudes de listado (GET) en la [API de Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), puede usar parámetros de consulta para ordenar y filtrar las respuestas. Esta guía proporciona una referencia sobre cómo utilizar estos parámetros para diferentes casos de uso.
 
-## Clasificación
+## Orden
 
-Puede ordenar las respuestas mediante una `orderby` parámetro de consulta. Los siguientes recursos se pueden ordenar en la API:
+Puede ordenar las respuestas mediante un parámetro de consulta `orderby`. Los siguientes recursos se pueden ordenar en la API:
 
 * [Conexiones](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Conexiones de origen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [Conexiones de Source](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
 * [Conexiones de destino](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
 * [Flujos](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [Ejecuciones](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Para utilizar el parámetro, debe establecer su valor en la propiedad específica por la que desea ordenar (por ejemplo, `?orderby=name`). Puede anteponer el valor con un signo más (`+`) para el orden ascendente o el signo menos (`-`) en orden descendente. Si no se proporciona ningún prefijo de orden, la lista se ordena en orden ascendente de forma predeterminada.
+Para utilizar el parámetro, debe establecer su valor en la propiedad específica por la que desea ordenar (por ejemplo, `?orderby=name`). Puede anteponer el valor con un signo más (`+`) para el orden ascendente o un signo menos (`-`) para el orden descendente. Si no se proporciona ningún prefijo de orden, la lista se ordena en orden ascendente de forma predeterminada.
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-También se puede combinar un parámetro de clasificación con un parámetro de filtrado utilizando un símbolo &quot;and&quot; (`&`).
+También puede combinar un parámetro de ordenación con un parámetro de filtrado mediante un símbolo &quot;and&quot; (`&`).
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
 ```
 
-## Filtro
+## Filtrado
 
-Puede filtrar las respuestas mediante una `property` parámetro con una expresión clave-valor. Por ejemplo, `?property=id==12345` solo devuelve recursos cuya `id` propiedad es igual exactamente a `12345`.
+Puede filtrar las respuestas utilizando un parámetro `property` con una expresión clave-valor. Por ejemplo, `?property=id==12345` solo devuelve recursos cuya propiedad `id` sea igual exactamente a `12345`.
 
 El filtrado se puede aplicar genéricamente en cualquier propiedad de una entidad siempre y cuando se conozca la ruta válida a esa propiedad.
 
 >[!NOTE]
 >
->Si una propiedad está anidada en un elemento de matriz, debe anexar corchetes (`[]`) a la matriz en la ruta. Consulte la sección sobre [filtrado en propiedades de matriz](#arrays) para ver ejemplos.
+>Si una propiedad está anidada en un elemento de matriz, debe agregar corchetes (`[]`) a la matriz en la ruta de acceso. Consulte la sección sobre [filtrado en propiedades de matriz](#arrays) para ver ejemplos.
 
-**Devolver todas las conexiones de origen donde el nombre de la tabla de origen es `lead`:**
+**Devuelve todas las conexiones de origen donde el nombre de la tabla de origen es `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Devolver todos los flujos para un ID de segmento específico:**
+**Devolver todos los flujos para un Id. de segmento específico:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -60,9 +60,9 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Combinación de filtros
 
-Múltiple `property` los filtros se pueden incluir en una consulta siempre que estén separados por caracteres &quot;y&quot; (`&`). Se asume una relación AND al combinar filtros, lo que significa que una entidad debe satisfacer todos los filtros para que se incluya en la respuesta.
+Se pueden incluir varios filtros `property` en una consulta siempre que estén separados por caracteres &quot;y&quot; (`&`). Se asume una relación AND al combinar filtros, lo que significa que una entidad debe satisfacer todos los filtros para que se incluya en la respuesta.
 
-**Devolver todos los flujos habilitados para un ID de segmento:**
+**Devuelve todos los flujos habilitados para un ID de segmento:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -70,27 +70,27 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filtrado en propiedades de matriz {#arrays}
 
-Puede filtrar basándose en las propiedades de los elementos dentro de las matrices añadiendo `[]` al nombre de la propiedad de matriz.
+Puede filtrar según las propiedades de los elementos de las matrices adjuntando `[]` al nombre de la propiedad de matriz.
 
-**Devolver flujos asociados a conexiones de origen específicas:**
+**Devolver flujos asociados con conexiones de origen específicas:**
 
 ```http
 GET /flows?property=sourceConnectionIds[]==9874984,6980696
 ```
 
-**Flujos de retorno que tienen una transformación que contiene un ID de valor de selector específico:**
+**Devolver flujos que tienen una transformación que contiene un identificador de valor de selector específico:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Devolver conexiones de origen que tengan una columna con un específico `name` valor:**
+**Devolver conexiones de origen que tienen una columna con un valor `name` específico:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Busque el ID de ejecución de flujo de un destino filtrando por el ID de segmento:**
+**Busque el identificador de ejecución de flujo para un destino filtrando el identificador de segmento:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659
@@ -98,9 +98,9 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Cualquier consulta de filtrado se puede anexar con `count` parámetro de consulta con un valor de `true` para devolver el recuento de los resultados. La respuesta de la API contiene un `count` propiedad cuyo valor representa el recuento del total de elementos filtrados. Los elementos filtrados reales no se devuelven en esta llamada.
+Cualquier consulta de filtrado se puede anexar con `count` parámetro de consulta con un valor de `true` para devolver el recuento de los resultados. La respuesta de la API contiene una propiedad `count` cuyo valor representa el recuento total de elementos filtrados. Los elementos filtrados reales no se devuelven en esta llamada.
 
-**Devolver el recuento de flujos habilitados en el sistema:**
+**Devuelve el recuento de flujos habilitados en el sistema:**
 
 ```http
 GET /flows?property=state==enabled&count=true
@@ -197,17 +197,17 @@ Según la entidad de Flow Service que esté recuperando, se pueden utilizar dist
 
 ## Casos de uso {#use-cases}
 
-Lea esta sección para ver algunos ejemplos específicos de cómo puede utilizar el filtrado y la ordenación para devolver información sobre determinados conectores o para ayudarle en los problemas de depuración. Si hay algún caso de uso adicional que le gustaría que el Adobe añadiera, utilice el **[!UICONTROL Opciones de comentarios detalladas]** en la página para enviar una solicitud.
+Lea esta sección para ver algunos ejemplos específicos de cómo puede utilizar el filtrado y la ordenación para devolver información sobre determinados conectores o para ayudarle en los problemas de depuración. Adobe Si desea agregar algún caso de uso adicional, use las **[!UICONTROL Opciones de comentarios detalladas]** de la página para enviar una solicitud.
 
-**Filtre para devolver conexiones solo a un destino determinado**
+**Filtro para devolver conexiones a un destino determinado solamente**
 
-Puede utilizar filtros para devolver conexiones solo a determinados destinos. Primero, consulte `connectionSpecs` como el siguiente:
+Puede utilizar filtros para devolver conexiones solo a determinados destinos. En primer lugar, consulte el extremo `connectionSpecs` como se muestra a continuación:
 
 ```http
 GET /connectionSpecs
 ```
 
-A continuación, busque el `connectionSpec` inspeccionando el `name` parámetro. Por ejemplo, busque Amazon Ads, Pega o SFTP, etc. en la `name` parámetro. El correspondiente `id` es el `connectionSpec` que puede buscar por en la siguiente llamada de API.
+A continuación, busque su `connectionSpec` deseado inspeccionando el parámetro `name`. Por ejemplo, busque Amazon Ads, Pega o SFTP, etc. en el parámetro `name`. El `id` correspondiente es el `connectionSpec` por el que puede buscar en la siguiente llamada de API.
 
 Por ejemplo, filtre los destinos para que solo devuelvan las conexiones existentes a las conexiones de Amazon S3:
 
@@ -215,15 +215,15 @@ Por ejemplo, filtre los destinos para que solo devuelvan las conexiones existent
 GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
 ```
 
-**Filtre para devolver flujos de datos solo a destinos**
+**Filtro para devolver flujos de datos solo a destinos**
 
-Al consultar el `/flows` extremo, en lugar de devolver todos los flujos de datos de origen y destino, puede utilizar un filtro para devolver solo los flujos de datos a los destinos. Para ello, utilice `isDestinationFlow` como parámetro de consulta, así:
+Al consultar el extremo `/flows`, en lugar de devolver todos los flujos de datos de origen y destino, puede utilizar un filtro para devolver únicamente los flujos de datos a los destinos. Para ello, use `isDestinationFlow` como parámetro de consulta, de esta manera:
 
 ```http
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
 ```
 
-**Filtre para devolver flujos de datos solo a un origen o destino determinado**
+**Filtro para devolver flujos de datos solo a un origen o destino determinado**
 
 Puede filtrar los flujos de datos para devolver flujos de datos a un destino determinado o solo desde un origen determinado. Por ejemplo, filtre los destinos para que solo devuelvan las conexiones existentes a las conexiones de Amazon S3:
 
@@ -231,7 +231,7 @@ Puede filtrar los flujos de datos para devolver flujos de datos a un destino det
 GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
 ```
 
-**Filtre para obtener todas las ejecuciones de un flujo de datos durante un período de tiempo específico**
+**Filtro para obtener todas las ejecuciones de un flujo de datos durante un período de tiempo específico**
 
 Puede filtrar las ejecuciones de flujo de datos de un flujo de datos para ver solo las ejecuciones en un intervalo de tiempo determinado, como se muestra a continuación:
 
@@ -239,7 +239,7 @@ Puede filtrar las ejecuciones de flujo de datos de un flujo de datos para ver so
 GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
 ```
 
-**Filtre para devolver solo los flujos de datos con errores**
+**Filtro para devolver solo flujos de datos con errores**
 
 Para fines de depuración, puede filtrar y ver todas las ejecuciones de flujo de datos fallidas para un flujo de datos de origen o destino determinado, como se muestra a continuación:
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Pasos siguientes
 
-En esta guía se explica cómo utilizar la variable `orderby` y `property` parámetros de consulta para ordenar y filtrar las respuestas en la API de Flow Service. Para obtener guías paso a paso sobre cómo utilizar la API para flujos de trabajo comunes en Platform, consulte los tutoriales de API contenidos en la [orígenes](../../sources/home.md) y [destinos](../../destinations/home.md) documentación.
+En esta guía se explica cómo utilizar los parámetros de consulta `orderby` y `property` para ordenar y filtrar las respuestas en la API de Flow Service. Para obtener guías paso a paso sobre cómo utilizar la API para flujos de trabajo comunes en Platform, consulte los tutoriales de API contenidos en la documentación de [orígenes](../../sources/home.md) y [destinos](../../destinations/home.md).

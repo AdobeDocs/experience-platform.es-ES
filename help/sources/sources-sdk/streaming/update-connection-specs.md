@@ -14,7 +14,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Puede actualizar las propiedades de una especificación de conexión mediante una operación de PUT. Al actualizar una especificación de conexión mediante una solicitud de PUT, el cuerpo debe incluir todos los campos que serían necesarios al crear una nueva especificación de conexión en una solicitud de POST.
 
@@ -196,4 +196,4 @@ Una llamada correcta devuelve los detalles actualizados de la especificación de
 
 ## Pasos siguientes
 
-Una vez que haya completado las actualizaciones de la especificación de conexión, puede continuar con [prueba y envío del origen para la integración](./submit.md).
+Una vez que haya completado las actualizaciones de la especificación de conexión, puede continuar con [probar y enviar el origen para la integración](./submit.md).

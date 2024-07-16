@@ -11,14 +11,14 @@ ht-degree: 3%
 
 # [!UICONTROL Proveedor de atención médica] grupo de campos de esquema
 
-[!UICONTROL Proveedor de atención médica] es un grupo de campos de esquema estándar para [[!UICONTROL Proveedor] clase](../../classes/provider.md). Proporciona un único campo de tipo de objeto `healthcareProvider` que registra propiedades relacionadas con un profesional de la salud individual o una organización de instalaciones de salud con licencia para proporcionar servicios de diagnóstico y tratamiento de atención médica.
+[!UICONTROL Proveedor de atención médica] es un grupo de campos de esquema estándar para la clase [[!UICONTROL Proveedor]](../../classes/provider.md). Proporciona un único campo de tipo de objeto `healthcareProvider` que captura propiedades relacionadas con un profesional de la salud individual o una organización de instalaciones de salud con licencia para proporcionar servicios de diagnóstico y tratamiento de atención médica.
 
 ![](../../images/field-groups/healthcare-provider.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `addressDetails` | Matriz de objetos | Muestra los detalles de dirección del proveedor. Cada objeto incluye las siguientes propiedades: <ul><li>`address`: ([[!UICONTROL Dirección postal]](../../data-types/postal-address.md)): La dirección postal del proveedor.</li><li>`addressType`: (cadena) tipo de dirección que indica dónde proporciona servicios el proveedor.</li></ul> |
-| `emailAddress` | [[!UICONTROL Correo electrónico]](../../data-types/email-address.md) | La dirección de correo electrónico del proveedor. |
+| `emailAddress` | [[!UICONTROL Dirección de correo electrónico]](../../data-types/email-address.md) | La dirección de correo electrónico del proveedor. |
 | `fax` | [[!UICONTROL Número de teléfono]](../../data-types/phone-number.md) | Número de fax del proveedor. |
 | `phoneNumber` | [[!UICONTROL Número de teléfono]](../../data-types/phone-number.md) | Número de teléfono del proveedor. |
 | `qualifications` | Matriz de objetos | Enumera las certificaciones, licencias o formación relacionadas con la prestación de atención. Cada objeto incluye las siguientes propiedades: <ul><li>`issuer`: ([[!UICONTROL Detalles de la cuenta]](../../data-types/account-details.md)): La organización que regula y emite la calificación.</li><li>`activePeriod`: (entero) año hasta el cual la calificación es válida.</li><li>`code`: (Cadena) Una representación codificada de la calificación.</li></ul> |
@@ -32,4 +32,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+Para obtener más información sobre el grupo de campos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

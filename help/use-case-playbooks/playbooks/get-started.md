@@ -37,7 +37,7 @@ Los libros de casos de uso utilizan un tipo especial de zona protegida de desarr
 
 ![Creación de una zona protegida de desarrollo para manuales de tácticas de casos de uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-Ahora debería ver [!UICONTROL Manuales] en el carril izquierdo debajo de [!UICONTROL Manuales de casos de uso].
+Ahora debería ver [!UICONTROL Libros de reproducción] en el carril izquierdo bajo [!UICONTROL Libros de reproducción de casos de uso].
 
 ![Manuales de tácticas de casos de uso en la IU después de crear una zona protegida.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
@@ -45,59 +45,59 @@ Si no ve [!UICONTROL Manuales de tácticas] en el carril izquierdo, como se mues
 
 ## Conceda a su equipo los permisos de acceso necesarios {#grant-access-permissions}
 
-Para empezar con [!UICONTROL Manuales de casos de uso]Sin embargo, los miembros de su equipo de marketing necesitan los permisos adecuados para poder ver la lista de libros de reproducción creados o crearlos ellos mismos.
+Para empezar a usar [!UICONTROL Casos de uso de libros], los miembros de su equipo de marketing necesitan los permisos adecuados para poder ver la lista de libros de reproducción creados o crearlos ellos mismos.
 
 **Permisos necesarios**
 
-Para agregar los permisos necesarios, en la interfaz de usuario de Permisos, incluya el nuevo simulador de pruebas del manual de uso en [funciones que ya ha configurado](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role), incluidos los utilizados para otros entornos limitados de desarrollo.
+Para agregar los permisos necesarios, en la interfaz de usuario de Permisos, incluya la nueva zona protegida del libro de casos de uso en [funciones que ya ha configurado](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role), incluidas las utilizadas para otras zonas protegidas de desarrollo.
 
-![La zona protegida del libro de estrategias para funciones ya está configurada](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
+![Ya se ha configurado la zona protegida del libro de estrategias para las funciones](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
 
-**Configure una función para Libros de reproducción:**
+**Configurar un rol para libros de reproducción:**
 
-También puede considerar la posibilidad de agregar nuevas funciones con [los permisos necesarios](/help/access-control/home.md#sandboxes-and-permissions).
+También podría considerar agregar nuevas funciones con [los permisos necesarios](/help/access-control/home.md#sandboxes-and-permissions).
 
-[Configurar una función nueva](/help/access-control/abac/ui/permissions.md) con los permisos necesarios para tareas esenciales del manual de implementación. Cree una función y añádale la nueva zona protegida, como se muestra a continuación.
+[Configure una función nueva](/help/access-control/abac/ui/permissions.md) con los permisos necesarios para las tareas esenciales del manual de implementación. Cree una función y añádale la nueva zona protegida, como se muestra a continuación.
 
-![Crear una función y agregarla a la zona protegida](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
+![Crear un rol y agregarlo a la zona protegida](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
 
-**Permisos para instancias de libro de estrategias**
+**Permisos para instancias de libros de reproducción**
 
 Como parte de los libros de reproducción de casos de uso, creará varios recursos, como esquemas, audiencias, destinos y recorridos. Usted y otros usuarios necesitarán los permisos adecuados para crear estos objetos.
 
 **Permisos para esquemas**
 
-Para crear y administrar esquemas, utilice los permisos de modelado de datos; **[!UICONTROL Administrar esquemas]**, **[!UICONTROL Esquemas de vista]**, **[!UICONTROL Administrar relaciones]**, **[!UICONTROL Administrar metadatos de identidad]**
+Para crear y administrar esquemas, utilice los permisos de modelado de datos; **[!UICONTROL Administrar esquemas]**, **[!UICONTROL Ver esquemas]**, **[!UICONTROL Administrar relaciones]**, **[!UICONTROL Administrar metadatos de identidad]**
 
 **Permisos para destinos**
 
-Para crear y administrar destinos, utilice los permisos Destinos; **[!UICONTROL Administrar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Administrar y activar el destino del conjunto de datos]**, **[!UICONTROL Creación de destino]**.
+Para crear y administrar destinos, use los permisos de Destinos; **[!UICONTROL Administrar]**, **[!UICONTROL Destinos]**, **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Activar segmento sin asignación]**, **[!UICONTROL Administrar y activar destino de conjunto de datos]**, **[!UICONTROL Creación de destinos]**.
 
 **Permisos para recorridos**
 
-Para crear y administrar recorridos, utilice los permisos de Recorridos; **[!UICONTROL Administrar Recorridos]**, **[!UICONTROL Ver Recorridos]**, **[!UICONTROL Ver informe de Recorridos]**, **[!UICONTROL Administrar Recorridos]**, **[!UICONTROL Eventos]**, **[!UICONTROL Fuentes de datos y acciones]**, **[!UICONTROL Ver Recorridos]**, **[!UICONTROL Eventos]**, **[!UICONTROL Fuentes de datos y acciones, Recorridos de publicación]**.
+Para crear y administrar recorridos, use los permisos de Recorridos; **[!UICONTROL Administrar Recorridos]**, **[!UICONTROL Ver Recorridos]**, **[!UICONTROL Ver informe de Recorridos]**, **[!UICONTROL Administrar Recorridos]**, **[!UICONTROL Eventos]**, **[!UICONTROL Fuentes de datos y acciones]**, **[!UICONTROL Ver Recorridos]**, **[!UICONTROL Eventos]**, **[!UICONTROL Fuentes de datos y acciones, Recorridos de Publish]**.
 
 La siguiente imagen muestra una instantánea de los permisos recomendados para que los usuarios vean, creen y administren libros de reproducción y los recursos generados por libros de reproducción.
 
 ![Instantánea de todos los elementos de permiso necesarios para crear todas las instancias de los libros de reproducción](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
 
-**Agregar usuarios a la función**
+**Agregar usuarios al rol**
 
-Una vez que haya [ha creado una función nueva](/help/access-control/abac/ui/permissions.md#managing-users-for-role) como se ha mencionado anteriormente, añádase como usuario. Si crea una función con acceso limitado para otro conjunto de usuarios con acceso de solo vista, incluya solo los elementos de vista necesarios asociados con estos permisos.
+Una vez que haya [creado una nueva función](/help/access-control/abac/ui/permissions.md#managing-users-for-role) como se menciona arriba, agréguese como usuario a ella. Si crea una función con acceso limitado para otro conjunto de usuarios con acceso de solo vista, incluya solo los elementos de vista necesarios asociados con estos permisos.
 
 ## Configuración de zonas protegidas y superficies de canal en Journey Optimizer {#configure-channel-surfaces}
 
-Si su organización tiene licencia para [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es)Además, y si desea utilizar los libros de reproducción diseñados para Journey Optimizer, deberá configurar los ajustes preestablecidos de canal en su zona protegida, que definen los parámetros técnicos necesarios para sus mensajes. [Obtenga información sobre cómo configurar superficies de canal en Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=es).
+Si su organización tiene licencia para [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es) y quiere usar los libros de reproducción diseñados para Journey Optimizer, deberá configurar los ajustes preestablecidos de canal en su zona protegida, que definen los parámetros técnicos necesarios para sus mensajes. [Obtenga información sobre cómo configurar superficies de canal en Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=es).
 
 Para crear instancias de libros de reproducción en Journey Optimizer, debe configurar las superficies de canal para las notificaciones por correo electrónico, push y SMS.
 
 ### Superficie del canal de correo electrónico
 
-Ir a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccionar **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [configuración de superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Vaya a `Channels` en la interfaz de Journey Optimizer. Configure subdominios y grupos de IP independientes para los correos electrónicos de marketing y la mensajería transaccional, si no están configurados ya. Estas son las prácticas recomendadas para garantizar que los mensajes transaccionales, como los correos electrónicos de confirmación de pedidos, lleguen a sus clientes. Escriba nombres, direcciones de correo electrónico y configuraciones adicionales. Seleccione **Enviar** en la parte superior derecha de la página para crear la superficie del canal de marketing. Lea la documentación sobre [cómo configurar las superficies de canal de correo electrónico](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### Superficie del canal SMS
 
-Para crear una superficie de canal SMS, primero cree una credencial de API de SMS y seleccione el proveedor preferido (por ejemplo, Sinch). Asigne un nombre a la superficie del canal SMS (por ejemplo, Marketing SMS), seleccione la configuración e introduzca un número de remitente. Seleccionar **Enviar** en la parte superior derecha de la página para guardar la superficie del canal SMS. Lea la documentación sobre [Cómo configurar superficies de canal SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms).
+Para crear una superficie de canal SMS, primero cree una credencial de API de SMS y seleccione el proveedor preferido (por ejemplo, Sinch). Asigne un nombre a la superficie del canal SMS (por ejemplo, Marketing SMS), seleccione la configuración e introduzca un número de remitente. Seleccione **Enviar** en la parte superior derecha de la página para guardar la superficie del canal SMS. Lea la documentación sobre [cómo configurar las superficies de canal de SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=es#message-preset-sms).
 
 Configure también canales para libros de reproducción que contengan mensajes transaccionales como confirmaciones de pedidos.
 
@@ -107,10 +107,10 @@ Confirme que las superficies de la aplicación estén configuradas desde la inte
 
 <!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-A continuación, seleccione el canal, las plataformas y las aplicaciones que ha visto en las configuraciones de superficie de la aplicación. Seleccionar **Enviar** para crear la superficie del canal push.
+A continuación, seleccione el canal, las plataformas y las aplicaciones que ha visto en las configuraciones de superficie de la aplicación. Seleccione **Enviar** para crear la superficie del canal push.
 
-Lea la documentación sobre [configuración de superficies de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lea la documentación sobre [cómo configurar las superficies de los canales push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Pasos siguientes {#next-steps}
 
-Ahora que ha seguido todos los pasos de este documento, debería haber creado una zona protegida de desarrollo con libros de casos de uso disponibles en el panel de navegación izquierdo. Ahora también sabe cómo conceder a los integrantes del equipo los permisos necesarios para ver y administrar libros de reproducción y generar recursos. Como paso siguiente, lea cómo [elija el manual adecuado](/help/use-case-playbooks/playbooks/choose.md) para ti y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Ahora que ha seguido todos los pasos de este documento, debería haber creado una zona protegida de desarrollo con libros de casos de uso disponibles en el panel de navegación izquierdo. Ahora también sabe cómo conceder a los integrantes del equipo los permisos necesarios para ver y administrar libros de reproducción y generar recursos. Como paso siguiente, lee cómo [elegir el libro de estrategias correcto](/help/use-case-playbooks/playbooks/choose.md) para ti y luego [crear instancias a partir de él](/help/use-case-playbooks/playbooks/create-share-reuse.md).

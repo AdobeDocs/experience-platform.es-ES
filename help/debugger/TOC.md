@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '72'
-ht-degree: 55%
+ht-degree: 51%
 
 ---
 
@@ -16,10 +16,10 @@ ht-degree: 55%
 # Adobe Experience Platform Debugger {#debugger}
 
 * [Información general de Platform Debugger](./home.md)
-* [Instalar la extensión](./install-debugger.md)
+* [Instalación de la extensión](./install-debugger.md)
 * [Configuración de la extensión](./configure-debugger.md)
 * [Pestaña Resumen](./summary.md)
-* Pestaña Soluciones {#solutions}
+* Ficha Soluciones {#solutions}
    * [Información general](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
 * [Pestaña Registros](./logs.md)

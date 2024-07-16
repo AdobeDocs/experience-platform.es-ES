@@ -23,7 +23,7 @@ Utilice esta funcionalidad para etiquetar campos de esquema del Modelo de datos 
 
 >[!IMPORTANT]
 >
->El control de acceso basado en atributos no se debe confundir con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y directivas para controlar cómo se utilizan los datos en Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [información general sobre gobernanza de datos](../../data-governance/home.md) para obtener más información.
+>El control de acceso basado en atributos no se debe confundir con las capacidades de control de datos de Experience Platform, que le permiten utilizar etiquetas y directivas para controlar cómo se utilizan los datos en Platform en lugar de qué usuarios de su organización tienen acceso a ellos. Consulte la [descripción general del control de datos](../../data-governance/home.md) para obtener más información.
 
 Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y el tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
 
@@ -59,7 +59,7 @@ Mediante Permisos, puede crear y administrar funciones, así como asignar los pe
 
 ## API de control de acceso basado en atributos
 
-La API de control de acceso basada en atributos le permite administrar mediante programación funciones, directivas y productos dentro de Platform mediante API. Para obtener más información, consulte la guía de [uso de la API para administrar configuraciones de control de acceso basadas en atributos](api/overview.md).
+La API de control de acceso basada en atributos le permite administrar mediante programación funciones, directivas y productos dentro de Platform mediante API. Para obtener más información, consulte la guía sobre [uso de la API para administrar configuraciones de control de acceso basadas en atributos](api/overview.md).
 
 ## Control de acceso basado en atributos en Adobe Experience Platform
 
@@ -67,25 +67,25 @@ Las secciones siguientes proporcionan información sobre cómo el control de acc
 
 ### Control de acceso
 
-Platform aprovecha [Adobe Admin Console](https://adminconsole.adobe.com) funciones para vincular usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
+Platform aprovecha las funciones de [Adobe Admin Console](https://adminconsole.adobe.com) para vincular a usuarios con permisos y zonas protegidas. Los permisos controlan el acceso a una variedad de funcionalidades de Platform, incluido el modelado de datos, la administración de perfiles y la administración de zonas protegidas. Una vez que su organización esté habilitada para el control de acceso basado en atributos, puede empezar a utilizar Permisos en Adobe Experience Cloud, en lugar de Funciones en Adobe Admin Console, para administrar permisos para usuarios, funcionalidad, etiquetas y otros recursos de la organización.
 
 Hay disponibilidad limitada para el control de acceso basado en atributos para clientes que compran Escudos de atención médica o de privacidad. Entre las características de esta funcionalidad se incluyen:
 
 * Interfaz de permisos: proporciona una interfaz para definir funciones de usuario, permisos y directivas para el control de acceso basado en atributos.
 
-* Etiquetado: Añada, edite y elimine etiquetas a las funciones de usuario, los campos de esquema, los segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso. **Nota:** Cualquier segmento que utilice un atributo etiquetado debe etiquetarse también si desea que se le apliquen las mismas restricciones de acceso.
+* Etiquetado: Añada, edite y elimine etiquetas a las funciones de usuario, los campos de esquema, los segmentos y otros objetos admitidos para aprovechar las políticas de control de acceso. **Nota:** Cualquier segmento que utilice un atributo etiquetado también debe estar etiquetado si desea que se le apliquen las mismas restricciones de acceso.
 
 Se están cambiando los flujos de trabajo de administración de todas las aplicaciones con tecnología de Experience Platform de Admin Console a la nueva interfaz de Permisos.
 
 >[!IMPORTANT]
 >
->Sus funciones se migran automáticamente a la interfaz Permisos cuando su organización está habilitada. Las funciones en Admin Console se mantendrán sin cambios por el momento. Por favor **no** modifique sus funciones una vez habilitada su organización.
+>Sus funciones se migran automáticamente a la interfaz Permisos cuando su organización está habilitada. Las funciones en Admin Console se mantendrán sin cambios por el momento. **No** modifique sus roles después de habilitar su organización.
 
-Para obtener más información sobre el control de acceso, consulte [información general de control de acceso](../home.md).
+Para obtener más información sobre el control de acceso, vea la [descripción general del control de acceso](../home.md).
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] son integraciones creadas previamente con plataformas de destino que permiten la activación perfecta de los datos de Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+[!DNL Destinations] son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos desde Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
 Como administrador, puede utilizar las funcionalidades de control de acceso basadas en atributos para lo siguiente:
 
@@ -98,8 +98,8 @@ Como administrador, puede utilizar las funcionalidades de control de acceso basa
 >
 >En resumen, tenga en cuenta las siguientes implicaciones al trabajar con destinos y control de acceso basado en atributos:
 >
->* Solo puede activar audiencias para las que tenga permiso de acceso y visualización en [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) y [paso seleccionar segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flujo de trabajo de activación.
->* En el [paso de asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), solo puede ver y seleccionar para su activación los campos para los que tiene permiso de acceso.
+>* Solo puede activar audiencias para las que tenga permiso de acceso y visualización en [Portal de audiencias](/help/segmentation/ui/audience-portal.md#browse) y [seleccionar paso de segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flujo de trabajo de activación.
+>* En el paso de asignación [del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), solo puede ver y seleccionar para la activación los campos para los que tiene permiso de acceso.
 >* Si desea activar segmentos adicionales en un destino existente en el que no tenga acceso a todos los campos asignados para la exportación, el flujo de trabajo de activación se bloqueará por usted.
 
 Para obtener más información sobre [!DNL Destinations], consulte la [[!DNL Destinations] descripción general](../../destinations/home.md).
@@ -108,7 +108,7 @@ Para obtener más información sobre [!DNL Destinations], consulte la [[!DNL Des
 
 Adobe Experience Platform [!DNL Identity Service] le ayuda a obtener una mejor vista de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 
-Como parte del control de acceso basado en atributos, la variable `view-identity-graph` El permiso le permite determinar qué usuarios de su organización pueden acceder al gráfico de identidades a través de la interfaz de usuario o las API. Para obtener más información, consulte la guía de [uso del visualizador de gráficos de identidad](../../identity-service/features/identity-graph-viewer.md).
+Como parte del control de acceso basado en atributos, el permiso `view-identity-graph` le permite determinar qué usuarios de su organización pueden acceder al gráfico de identidades a través de la interfaz de usuario o las API. Para obtener más información, consulte la guía de [uso del visualizador de gráficos de identidad](../../identity-service/features/identity-graph-viewer.md).
 
 Para obtener más información sobre [!DNL Identity Service], consulte la [[!DNL Identity Service] descripción general](../../identity-service/home.md).
 
@@ -123,7 +123,7 @@ Como administrador, puede utilizar las funcionalidades de control de acceso basa
    * Como administrador, puede aprovisionar usuarios de su organización para que solo vean atributos de perfil etiquetados con etiquetas a las que los usuarios tienen acceso al crear segmentos;
 * Configure el acceso de los usuarios a la vista previa de datos mediante el etiquetado de campos de datos específicos utilizados en el esquema XDM del modelo de datos.
 
-Para obtener más información sobre el perfil, consulte [Resumen del perfil](../../profile/home.md).
+Para obtener más información sobre el perfil, consulte [Información general del perfil](../../profile/home.md).
 
 ### Servicio de segmentación
 
@@ -142,7 +142,7 @@ Experience Data Model (XDM) es una especificación de código abierto diseñada 
 
 Con el control de acceso basado en atributos, puede:
 
-* [Aplicar etiquetas de uso de datos a grupos y clases de campos](../../xdm/tutorials/labels.md). Esto permite que varios esquemas con los mismos grupos de campos o clases tengan campos etiquetados con los mismos atributos, según las configuraciones en el nivel de grupo de campos o clase;
+* [Aplicar etiquetas de uso de datos a grupos de campos y clases](../../xdm/tutorials/labels.md). Esto permite que varios esquemas con los mismos grupos de campos o clases tengan campos etiquetados con los mismos atributos, según las configuraciones en el nivel de grupo de campos o clase;
 * Configure el acceso de los usuarios a campos de esquema XDM específicos según los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
-Para obtener más información sobre XDM, consulte la [Información general de XDM](../../xdm/home.md).
+Para obtener más información sobre XDM, consulte la [descripción general de XDM](../../xdm/home.md).

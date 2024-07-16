@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;inicio;temas populares;monitorizar cuentas;monitorizar flujos de datos;flujos de datos
-description: Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona pasos para ver los flujos de datos existentes del espacio de trabajo de fuentes.
+description: Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona pasos para ver los flujos de datos existentes del espacio de trabajo de fuentes.
 solution: Experience Platform
 title: Monitorización de flujos de datos en la IU
 type: Tutorial
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Monitorización de flujos de datos en la IU
 
-Los conectores de origen en Adobe Experience Platform permiten introducir datos de origen externo de forma programada.
+Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada.
 
-Para obtener más información sobre la monitorización de flujos de datos para conectores de origen, lea la [monitorización de flujos de datos en fuentes](../../../dataflows/ui/monitor-sources.md) tutorial.
+Para obtener más información sobre la supervisión de flujos de datos para conectores de origen, lea el tutorial [supervisión de flujos de datos en orígenes](../../../dataflows/ui/monitor-sources.md).

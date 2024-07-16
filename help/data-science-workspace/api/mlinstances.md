@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlinstances;api de aprendizaje automático de sensei
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;mlinstances;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Extremo de API de MLInstances
 description: Una MLInstance es un emparejamiento de un motor existente con un conjunto adecuado de configuraciones que define cualquier parámetro de formación, parámetro de puntuación o configuración de recursos de hardware.
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # Extremo de MLInstances
 
-Una MLInstance es un emparejamiento de una instancia de [Motor](./engines.md) con un conjunto adecuado de configuraciones que define cualquier parámetro de formación, parámetro de puntuación o configuración de recursos de hardware.
+Una MLInstance es un emparejamiento de un [Motor](./engines.md) existente con un conjunto adecuado de configuraciones que define cualquier parámetro de entrenamiento, parámetro de puntuación o configuración de recursos de hardware.
 
 ## Crear una instancia de MLI {#create-an-mlinstance}
 
-Puede crear una MLInstance realizando una solicitud de POST mientras proporciona una carga útil de solicitud que consista en un ID de motor válido (`{ENGINE_ID}`) y un conjunto adecuado de configuraciones predeterminadas.
+Puede crear una MLInstance realizando una solicitud de POST al mismo tiempo que proporciona una carga útil de solicitud que consta de un ID de motor válido (`{ENGINE_ID}`) y un conjunto adecuado de configuraciones predeterminadas.
 
-Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre [Configuraciones de recursos de PySpark y Spark](./appendix.md#resource-config) y [Configuraciones de CPU y GPU en Python](./appendix.md#cpu-gpu-config) para obtener más información.
+Si el ID del motor hace referencia a un motor PySpark o Spark, puede configurar la cantidad de recursos de cálculo, como el número de núcleos o la cantidad de memoria. Si se hace referencia a un motor Python, puede elegir entre usar una CPU o una GPU con fines de formación y puntuación. Consulte las secciones del apéndice sobre [configuraciones de recursos PySpark y Spark](./appendix.md#resource-config) y [configuraciones de CPU y GPU Python](./appendix.md#cpu-gpu-config) para obtener más información.
 
 **Formato de API**
 
@@ -130,7 +130,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de la 
 
 ## Recuperación de una lista de instancias de MLI
 
-Puede recuperar una lista de instancias de MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de instancias de MLI realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) se utiliza para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) que se usa para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
@@ -275,7 +275,7 @@ Puede actualizar una MLInstance existente sobrescribiendo sus propiedades a trav
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud de PUT, se recomienda que realice primero una solicitud de GET a [recuperar la instancia de MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que primero realice una solicitud de GET para [recuperar la instancia de MLI por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
 La siguiente llamada de API de ejemplo actualizará los parámetros de formación y puntuación de una MLInstance aunque tenga estas propiedades inicialmente:
 

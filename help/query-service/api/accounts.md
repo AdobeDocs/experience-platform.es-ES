@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Extremo de cuentas
 
-En Adobe Experience Platform Query Service, las cuentas se utilizan para crear credenciales que no caducan y las puede utilizar con clientes SQL externos. Puede usar el complemento `/accounts` en la API del servicio de consultas, lo que le permite crear, recuperar, editar y eliminar mediante programación sus cuentas de integración del servicio de consultas (también conocidas como cuentas técnicas).
+En Adobe Experience Platform Query Service, las cuentas se utilizan para crear credenciales que no caducan y las puede utilizar con clientes SQL externos. Puede utilizar el extremo `/accounts` en la API del servicio de consultas, que le permite crear, recuperar, editar y eliminar mediante programación las cuentas de integración del servicio de consultas (también conocidas como cuentas técnicas).
 
 ## Introducción
 
-Los extremos utilizados en esta guía forman parte de la API del servicio de consultas. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
+Los extremos utilizados en esta guía forman parte de la API del servicio de consultas. Antes de continuar, revisa la [guía de introducción](./getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Crear una cuenta
 
-Puede crear una cuenta de integración de Query Service realizando una solicitud de POST a `/accounts` punto final.
+Puede crear una cuenta de integración del servicio de consultas realizando una solicitud de POST al extremo `/accounts`.
 
 **Formato de API**
 
@@ -52,10 +52,10 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `accountName` | **Requerido** Nombre de la cuenta de integración del servicio de consultas. |
-| `assignedToUser` | **Requerido** La Adobe ID para la que se creará la cuenta de integración del servicio de consultas. |
-| `credential` | *(Opcional)* La credencial utilizada para la integración del servicio de consultas. Si no se especifica, el sistema generará automáticamente una credencial. |
-| `description` | *(Opcional)* Descripción de la cuenta de integración del servicio de consultas. |
+| `accountName` | **Requerido** El nombre de la cuenta de integración del servicio de consultas. |
+| `assignedToUser` | **Requerido** El Adobe ID para el que se creará la cuenta de integración del servicio de consultas. |
+| `credential` | *(Opcional)* La credencial que se usa para la integración del servicio de consultas. Si no se especifica, el sistema generará automáticamente una credencial. |
+| `description` | *(Opcional)* Una descripción para la cuenta de integración del servicio de consultas. |
 
 **Respuesta**
 
@@ -72,12 +72,12 @@ Una respuesta correcta devuelve el estado HTTP 200, con detalles de la cuenta de
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `technicalAccountName` | El nombre de su cuenta de integración del servicio de consultas. |
-| `technicalAccountId` | El ID de su cuenta de integración del servicio de consultas. Esto, junto con la `credential`, redacta la contraseña de la cuenta. |
-| `credential` | Las credenciales de su cuenta de integración del servicio de consultas. Esto, junto con la `technicalAccountId`, redacta la contraseña de la cuenta. |
+| `technicalAccountId` | El ID de su cuenta de integración del servicio de consultas. Esto, junto con `credential`, crea la contraseña de la cuenta. |
+| `credential` | Las credenciales de su cuenta de integración del servicio de consultas. Esto, junto con `technicalAccountId`, crea la contraseña de la cuenta. |
 
 ## Actualizar una cuenta
 
-Puede actualizar su cuenta de integración de Query Service realizando una solicitud de PUT a `/accounts` punto final.
+Puede actualizar su cuenta de integración del servicio de consultas realizando una solicitud de PUT al extremo `/accounts`.
 
 **Formato de API**
 
@@ -109,10 +109,10 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `accountName` | *(Opcional)* Nombre actualizado de la cuenta de integración del servicio de consultas. |
-| `assignedToUser` | *(Opcional)* Adobe ID actualizado al que está vinculada la cuenta de integración de Query Service. |
+| `accountName` | *(Opcional)* El nombre actualizado de la cuenta de integración del servicio de consultas. |
+| `assignedToUser` | *(Opcional)* El Adobe ID actualizado al que está vinculada la cuenta de integración del servicio de consultas. |
 | `credential` | *(Opcional)* Credencial actualizada para su cuenta del servicio de consultas. |
-| `description` | *(Opcional)* Descripción actualizada de la cuenta de integración del servicio de consultas. |
+| `description` | *(Opcional)* La descripción actualizada de la cuenta de integración del servicio de consultas. |
 
 **Respuesta**
 
@@ -135,7 +135,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la cue
 
 ## Enumerar todas las cuentas
 
-Puede recuperar una lista de todas las cuentas de integración de Query Service realizando una solicitud de GET a `/accounts` punto final.
+Puede recuperar una lista de todas las cuentas de integración de Query Service realizando una solicitud de GET al extremo `/accounts`.
 
 **Formato de API**
 
@@ -206,7 +206,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las cu
 
 ## Eliminación de una cuenta
 
-Puede eliminar su cuenta de integración de Query Service realizando una solicitud de DELETE a `/accounts` punto final.
+Puede eliminar su cuenta de integración del servicio de consultas realizando una solicitud de DELETE al extremo `/accounts`.
 
 **Formato de API**
 

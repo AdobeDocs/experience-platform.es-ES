@@ -4,8 +4,8 @@ description: Obtenga información acerca de la extensión de etiqueta de Adobe A
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 95%
+source-wordcount: '2105'
+ht-degree: 92%
 
 ---
 
@@ -115,8 +115,8 @@ Al marcar la casilla de verificación Cumplimiento de la UE, aparece el campo [!
 
 Cuando se carga una página, el sistema comprueba si hay una cookie denominada sat\_track configurada (o el nombre de cookie personalizado especificado en la página Editar propiedad). Consideremos la información siguiente:
 
-* Si la cookie no existe, o si existe pero está establecida en cualquier valor excepto como “True”, la carga de la herramienta se omite al activar esta configuración. Lo que significa que cualquier parte de una regla que utilice la herramienta no se aplicará. Si una regla cuenta con análisis de Cumplimiento de la UE y código de terceros y la cookie se configura como “False”, se seguirá ejecutando el código de terceros. Sin embargo, las variables de análisis no se configurarán.
-* Si la cookie existe y está establecida en “True”, la herramienta se cargará de forma normal.
+* Si la cookie no existe o si existe y está establecida en cualquier valor excepto true, la carga de la herramienta se omite cuando esta configuración está habilitada. Lo que significa que cualquier parte de una regla que utilice la herramienta no se aplicará. Si una regla cuenta con análisis de Cumplimiento de la UE y código de terceros y la cookie se configura como “False”, se seguirá ejecutando el código de terceros. Sin embargo, las variables de análisis no se configurarán.
+* Si la cookie existe pero está configurada como true, la herramienta se carga normalmente.
 
 Usted es el responsable de configurar la cookie sat\_ track (o personalizada) en “False” si un visitante decide excluirse. Puede realizar esto mediante el uso de un código personalizado:
 
@@ -124,7 +124,7 @@ Usted es el responsable de configurar la cookie sat\_ track (o personalizada) en
 _satellite.cookie.set("sat_track", "false");
 ```
 
-También debe disponer de un mecanismo para definir esa cookie en “True”, si desea que un visitante pueda unirse más adelante:
+También debe tener un mecanismo para configurar esa cookie como true si desea que un visitante pueda aceptar su inclusión más adelante:
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -197,7 +197,7 @@ Consulte [s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytic
 
 Puede utilizar uno de los siguientes métodos para rastrear los vínculos de salida de los sitios de la SPA:
 
-* Si no desea rastrear ningún vínculo de salida de su SPA, introduzca una entrada en la sección No rastrear nunca. Por ejemplo, `http://testsite.com/spa/\#`. Todos los enlaces \# a este host se ignoran. Se rastrearán todos los vínculos de salida a otros hosts, como [https://www.google.com](https://www.google.com).
+* Si no desea rastrear ningún vínculo de salida de su SPA, introduzca una entrada en la sección No rastrear nunca. Por ejemplo, `http://testsite.com/spa/\#`. Se ignorarán todos los enlaces \# a este host. Se rastrearán todos los vínculos de salida a otros hosts, como [https://www.google.com](https://www.google.com).
 * Si hay algún vínculo que quiera rastrear en su SPA, utilice la sección Rastrear siempre.
 
 Por ejemplo, si tiene una página spa/\#/about, puede poner “about” en la sección Rastrear siempre.
@@ -330,13 +330,13 @@ Si lo desea, configure jerarquías adicionales.
 
 #### Nombre de página
 
-Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) en Analytics.
+Este valor hace referencia al nombre de una página determinada y corresponde a la variable [`pageName` ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) de Analytics.
 
 >[!IMPORTANT]
 >
 >En implementaciones de Adobe Experience Manager AEM, esta variable indica a los usuarios dónde almacenar el informe de Analytics recuperado. Para garantizar que los informes se conserven correctamente, la cadena del nombre de página debe tener el formato de una ruta al sitio separada por dos puntos.
 >
->Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor nombre de página de `content:we-retail:language-masters:en:men`.
+>Por ejemplo, una página web en `content/we-retail/language-masters/en/men.html` debe tener el valor de nombre de página `content:we-retail:language-masters:en:men`.
 
 #### Otra información
 
@@ -351,7 +351,7 @@ Esta configuración incluye:
 * Campaign
 * ID de compra
 
-   Especifique un valor o un parámetro de consulta
+  Especifique un valor o un parámetro de consulta
 
 * Estado
 * Código postal

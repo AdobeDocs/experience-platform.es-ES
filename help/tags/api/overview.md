@@ -4,7 +4,7 @@ description: La API de Reactor permite a los desarrolladores administrar mediant
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1079'
 ht-degree: 94%
 
 ---
@@ -41,7 +41,7 @@ Las reglas controlan el comportamiento de los recursos contenidos en una bibliot
 
 Consulte la [guía de extremo de reglas](./endpoints/rules.md) para obtener información sobre cómo administrar reglas en la API.
 
-## Regla componentes
+## Componentes de regla
 
 Los componentes de regla son elementos individuales que constituyen una regla. Los componentes de regla tienen tres tipos básicos:
 
@@ -117,7 +117,7 @@ El extremo `/search` proporciona una forma de encontrar recursos que coincidan c
 
 ## Secretos
 
-Un secreto contiene credenciales que permiten al reenvío de eventos autenticarse en otro sistema para un intercambio de datos seguro. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos, y la [guía de extremo de secretos](./endpoints/secrets.md) para obtener información sobre cómo administrarlos en la API de Reactor.
+Un secreto contiene credenciales que permiten al reenvío de eventos autenticarse en otro sistema para un intercambio de datos seguro. Consulte la [guía de secretos](./guides/secrets.md) para obtener información general sobre cómo funcionan los secretos en el reenvío de eventos y la [guía de extremos de secretos](./endpoints/secrets.md) para obtener información sobre cómo administrarlos en la API de Reactor.
 
 ## Pasos siguientes
 

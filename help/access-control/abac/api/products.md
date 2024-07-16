@@ -18,15 +18,15 @@ ht-degree: 4%
 >
 >Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-El `/products` Este extremo de la API de control de acceso basado en atributos le permite administrar mediante programación productos, así como categorías de permisos y conjuntos de permisos asociados a productos de su organización.
+El extremo `/products` de la API de control de acceso basado en atributos le permite administrar mediante programación productos, así como categorías de permisos y conjuntos de permisos asociados a productos de su organización.
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de productos con derechos {#list}
 
-Puede recuperar una lista de productos autorizados realizando una solicitud de GET a `/products` punto final.
+Puede recuperar una lista de productos autorizados realizando una solicitud de GET al extremo `/products`.
 
 **Formato de API**
 
@@ -70,7 +70,7 @@ Una respuesta correcta devuelve una lista de productos con derechos que pertenec
 
 ## Búsqueda de categorías de permisos por ID de producto
 
-Puede buscar las categorías de permisos de un producto determinado realizando una solicitud de GET a `/products/{PRODUCT_ID}/categories` al especificar su ID de producto.
+Puede buscar categorías de permisos para un producto determinado realizando una solicitud de GET al extremo `/products/{PRODUCT_ID}/categories` al especificar el id. del producto.
 
 **Formato de API**
 
@@ -145,7 +145,7 @@ Una respuesta correcta devuelve las categorías de permisos asociadas con el ID 
 
 ## Búsqueda de conjuntos de permisos por ID de producto
 
-Puede buscar conjuntos de permisos para un producto determinado realizando una solicitud de GET a `/products/{PRODUCT_ID}/permission-sets` al especificar su ID de producto.
+Puede buscar conjuntos de permisos para un producto determinado realizando una solicitud de GET al extremo `/products/{PRODUCT_ID}/permission-sets` mientras especifica el Id. del producto.
 
 **Formato de API**
 
@@ -159,7 +159,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 **Solicitud**
 
-La siguiente solicitud recupera los conjuntos de permisos asociados a `{PRODUCT_ID}`.
+La siguiente solicitud recupera los conjuntos de permisos asociados con `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -242,4 +242,4 @@ Una respuesta correcta devuelve los conjuntos de permisos asociados al ID de pro
 | `category` | La categoría de permisos disponible. |
 | `permissions` | Los permisos incluyen la capacidad de ver o utilizar funciones de Platform, como crear entornos limitados, definir esquemas y administrar conjuntos de datos. |
 | `permissions.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto. Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
-| `permissions.actions` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `view`, `read`, `create`, `edit`, y `delete` |
+| `permissions.actions` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `view`, `read`, `create`, `edit` y `delete` |

@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Como alternativa, los conjuntos de datos también se pueden habilitar para perfiles mediante la IU de Platform. Para obtener más información sobre cómo marcar un conjunto de datos como habilitado para el perfil, consulte la [habilitar un conjunto de datos para la documentación del perfil del cliente en tiempo real](../../../catalog/datasets/user-guide.md#enable-profile).
+Como alternativa, los conjuntos de datos también se pueden habilitar para perfiles mediante la IU de Platform. Para obtener más información sobre cómo marcar un conjunto de datos como habilitado para el perfil, consulte la [documentación sobre cómo habilitar un conjunto de datos para el perfil del cliente en tiempo real](../../../catalog/datasets/user-guide.md#enable-profile).
 
-En la consulta de ejemplo siguiente, la variable `decile_table` el conjunto de datos se crea con `id` como columna de identidad principal y tiene el área de nombres `IDFA`. También tiene un campo llamado `decile1Month` del tipo de datos de asignación. La tabla creada (`decile_table`) está habilitado para el perfil.
+En la consulta de ejemplo siguiente, el conjunto de datos `decile_table` se crea con `id` como columna de identidad principal y tiene el área de nombres `IDFA`. También tiene un campo denominado `decile1Month` del tipo de datos de asignación. La tabla creada (`decile_table`) está habilitada para el perfil.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,13 +69,13 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Uso `label='PROFILE'` en un `CREATE TABLE` para crear un conjunto de datos habilitado para perfiles. El `upsert` La capacidad está activada de forma predeterminada. El `upsert` La capacidad se puede sobrescribir utilizando el `ALTER` , como se muestra en el ejemplo siguiente.
+Use `label='PROFILE'` en un comando `CREATE TABLE` para crear un conjunto de datos con perfil habilitado. La capacidad `upsert` está activada de manera predeterminada. La capacidad `upsert` se puede sobrescribir mediante el comando `ALTER`, como se muestra en el ejemplo siguiente.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-Consulte la documentación sobre la sintaxis SQL para obtener más información sobre el uso de [MODIFICAR TABLA](../../sql/syntax.md#alter-table) comando y [etiqueta como parte de una consulta CTAS](../../sql/syntax.md#create-table-as-select).
+Consulte la documentación de sintaxis SQLl para obtener más información sobre el uso del comando [ALTER TABLE](../../sql/syntax.md#alter-table) y la etiqueta [como parte de una consulta CTAS](../../sql/syntax.md#create-table-as-select).
 
 ## Construcciones para ayudar a administrar conjuntos de datos derivados a través de SQL
 
@@ -91,7 +91,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->Al ejecutar correctamente la variable `ALTER TABLE` comando, la consola devuelve `ALTER SUCCESS`.
+>Si se ejecuta correctamente el comando `ALTER TABLE`, la consola devolverá `ALTER SUCCESS`.
 
 ### Añadir una identidad principal a un conjunto de datos existente {#add-primary-identity}
 
@@ -111,7 +111,7 @@ En el ejemplo proporcionado, `id2` es una columna existente en `test1_dataset`.
 
 ### Deshabilitar un conjunto de datos para el perfil {#disable-dataset-for-profile}
 
-Si desea deshabilitar la tabla para usos de perfil, debe utilizar el comando DROP. Instrucción SQL de ejemplo que utiliza `DROP` se ve a continuación.
+Si desea deshabilitar la tabla para usos de perfil, debe utilizar el comando DROP. A continuación se muestra un ejemplo de una instrucción SQL que USA `DROP`.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -123,7 +123,7 @@ Por ejemplo:
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Esta instrucción SQL proporciona un método alternativo eficaz para utilizar una llamada de API. Para obtener más información, consulte la documentación sobre cómo [deshabilitar un conjunto de datos para utilizarlo con Real-Time CDP mediante la API de conjuntos de datos](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Esta instrucción SQL proporciona un método alternativo eficaz para utilizar una llamada de API. Para obtener más información, consulte la documentación sobre cómo [deshabilitar un conjunto de datos para su uso con Real-Time CDP mediante la API de conjuntos de datos](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### Permitir la actualización e inserción de la funcionalidad para el conjunto de datos {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ Por ejemplo:
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-Esta instrucción SQL proporciona un método alternativo eficaz para utilizar una llamada de API. Para obtener más información, consulte la documentación sobre cómo [habilitar un conjunto de datos para utilizarlo con Real-Time CDP y UPSERT mediante la API de conjuntos de datos](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
+Esta instrucción SQL proporciona un método alternativo eficaz para utilizar una llamada de API. Para obtener más información, consulte la documentación sobre cómo [habilitar un conjunto de datos para su uso con Real-Time CDP y UPSERT mediante la API de conjuntos de datos](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
 ### Deshabilitar la actualización e inserción de la funcionalidad para el conjunto de datos {#disable-upsert-functionality-for-dataset}
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Mostrar información de tabla adicional asociada a cada tabla {#show-labels-for-tables}
 
-Los metadatos adicionales se conservan para conjuntos de datos habilitados para perfiles. Utilice el `SHOW TABLES` para mostrar un extra `labels` que proporciona información sobre cualquier etiqueta asociada con tablas.
+Los metadatos adicionales se conservan para conjuntos de datos habilitados para perfiles. Utilice el comando `SHOW TABLES` para mostrar una columna `labels` adicional que proporcione información sobre cualquier etiqueta asociada con tablas.
 
 A continuación se muestra un ejemplo de la salida de este comando:
 
@@ -174,7 +174,7 @@ A continuación se muestra un ejemplo de la salida de este comando:
 (3 rows)
 ```
 
-Se puede ver en el ejemplo que `table_with_a_decile` se ha habilitado para el perfil y se ha aplicado con etiquetas como [&#39;ACTUALIZAR&#39;](#enable-upsert-functionality-for-dataset), [&#39;PERFIL&#39;](#enable-existing-dataset-for-profile) como se describió anteriormente.
+Puede ver en el ejemplo que `table_with_a_decile` se ha habilitado para el perfil y se ha aplicado con etiquetas como [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILE&#39;](#enable-existing-dataset-for-profile), tal como se describió anteriormente.
 
 ### Creación de un grupo de campos con SQL
 
@@ -188,8 +188,8 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->La creación de grupos de campos mediante SQL fallará si `label` El indicador no se proporciona en la instrucción o si el grupo de campos ya existe.
->Asegúrese de que la consulta incluye un `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
+>La creación del grupo de campos mediante SQL fallará si el indicador `label` no se proporciona en la instrucción o si el grupo de campos ya existe.
+>Asegúrese de que la consulta incluye una cláusula `IF NOT EXISTS` para evitar que la consulta falle porque el grupo de campos ya existe.
 
 Un ejemplo del mundo real podría parecer similar al que se ve a continuación.
 
@@ -199,11 +199,11 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 La ejecución correcta de esta instrucción devuelve el ID de grupo de campos creado. Por ejemplo `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Consulte la documentación sobre cómo [crear un nuevo grupo de campos en el Editor de esquemas](../../../xdm/ui/resources/field-groups.md#create) o utilizando el [API de registro de esquema](../../../xdm/api/field-groups.md#create) para obtener más información sobre métodos alternativos.
+Consulte la documentación sobre cómo [crear un nuevo grupo de campos en el Editor de esquemas](../../../xdm/ui/resources/field-groups.md#create) o usar la [API del Registro de esquemas](../../../xdm/api/field-groups.md#create) para obtener más información sobre métodos alternativos.
 
 ### Soltar un grupo de campos
 
-En ocasiones puede ser necesario quitar un grupo de campos del Registro de esquemas. Esto se hace ejecutando la variable `DROP FIELDGROUP` con el ID de grupo de campos.
+En ocasiones puede ser necesario quitar un grupo de campos del Registro de esquemas. Para ello, ejecute el comando `DROP FIELDGROUP` con el identificador del grupo de campos.
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->La eliminación de un grupo de campos mediante SQL fallará si el grupo de campos no existe. Asegúrese de que la instrucción incluye un `IF EXISTS` para evitar que la consulta falle.
+>La eliminación de un grupo de campos mediante SQL fallará si el grupo de campos no existe. Asegúrese de que la instrucción incluye una cláusula `IF EXISTS` para evitar que la consulta falle.
 
 ### Mostrar todos los nombres e ID de grupos de campos de las tablas
 
-El `SHOW FIELDGROUPS` El comando devuelve una tabla que contiene el nombre, fieldgroupId y el propietario de las tablas.
+El comando `SHOW FIELDGROUPS` devuelve una tabla que contiene el nombre, fieldgroupId y el propietario de las tablas.
 
 A continuación se muestra un ejemplo de la salida de este comando:
 
@@ -237,4 +237,4 @@ A continuación se muestra un ejemplo de la salida de este comando:
 
 ## Pasos siguientes
 
-Después de leer este documento, tiene una mejor comprensión de cómo utilizar SQL para crear un perfil y un conjunto de datos habilitado para la actualización basado en conjuntos de datos derivados. Ya está listo para usar este conjunto de datos con flujos de trabajo de ingesta por lotes para realizar actualizaciones en los datos de perfil. Para obtener más información sobre la ingesta de datos en Adobe Experience Platform, comience por leer el [información general sobre ingesta de datos](../../../ingestion/home.md).
+Después de leer este documento, tiene una mejor comprensión de cómo utilizar SQL para crear un perfil y un conjunto de datos habilitado para la actualización basado en conjuntos de datos derivados. Ya está listo para usar este conjunto de datos con flujos de trabajo de ingesta por lotes para realizar actualizaciones en los datos de perfil. Para obtener más información acerca de la ingesta de datos en Adobe Experience Platform, comience por leer la [descripción general de la ingesta de datos](../../../ingestion/home.md).

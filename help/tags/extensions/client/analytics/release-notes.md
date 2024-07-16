@@ -15,47 +15,47 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 >[!NOTE]
 >
->La extensión de etiquetas de Analytics si se actualiza con frecuencia en respuesta a las actualizaciones del [Biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte la [Notas de la versión de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
+>La extensión de etiquetas de Analytics si se actualiza con frecuencia en respuesta a las actualizaciones de la [biblioteca JavaScript de AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es). Consulte las [notas de la versión del AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es) para obtener más información sobre las versiones específicas que se mencionan a continuación.
 
 ## 4 de marzo de 2024
 
 **Extensión de Adobe Analytics 1.9.4**
 
-**Funciones**:
+**Características**:
 
-* Actualizado a [AppMeasurement a la versión 2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* Se ha actualizado el AppMeasurement [a la versión 2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 15 de septiembre de 2023
 
 **Extensión de Adobe Analytics 1.9.3**
 
-**Funciones**:
+**Características**:
 
-* Actualizado a [AppMeasurement a la versión 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* Se ha actualizado el AppMeasurement [a la versión 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
 ## 19 de julio de 2023
 
 **Extensión de Adobe Analytics 1.9.2**
 
-**Funciones**:
+**Características**:
 
-* Actualizado a [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* Se ha añadido una configuración opcional (`decodeLinkParameters` predeterminado `false`) que descodifica las direcciones URL de los vínculos que incluyen caracteres codificados de doble byte.
+* Se ha actualizado a [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* Se ha agregado una configuración opcional (`decodeLinkParameters` valor predeterminado `false`) que descodifica las direcciones URL de los vínculos que incluyen caracteres codificados de doble byte.
 
 **Correcciones de errores**:
 
-* Se ha añadido la administración de errores adicional para exploradores con alta entropía defectuosa [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API de.
-* Cambiado [POST](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Methods/POST) Encabezado de tipo de contenido para usar `x-www-form-urlencoded` de forma predeterminada.
+* Se ha agregado administración de errores adicional para exploradores con [sugerencias del cliente del agente de usuario](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) de alta entropía defectuosas.
+* Se ha cambiado el encabezado Content-Type de [POST](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Methods/POST) de forma predeterminada para que utilice `x-www-form-urlencoded`.
 
 ## 23 de septiembre de 2022
 
 **Extensión de Adobe Analytics 1.9.1**
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado a la versión 2.23.0 del AppMeasurement.
-* La extensión ahora puede recopilar alta entropía [sugerencias del cliente user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) como se admite en la última versión de AppMeasurement.
+* La extensión ahora puede recopilar [sugerencias del cliente user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) de alta entropía según la versión más reciente de AppMeasurement.
 
 ## 28 de febrero de 2022
 
@@ -88,7 +88,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Correcciones de errores**:
 
-* Actualizado [AppMeasurement a la versión 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
+* Se ha actualizado el AppMeasurement [a la versión 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
 * Se ha actualizado linkName de reserva para reflejar la lógica del Activity Map en lugar de utilizar innerHTML.
 
 ## 6 de agosto de 2020
@@ -99,7 +99,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 * El nombre incorrecto de la cookie en la configuración del módulo de AAM se estaba configurando cuando este campo se dejó en blanco. Este problema se ha corregido.
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado [AppMeasurement a la versión 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es).
 * La IU pequeña cambia para que la configuración adicional aparezca contraída en un acordeón en lugar de una casilla de verificación.
@@ -112,7 +112,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 * Se ha corregido un error en el cual los eventos del carro de compras (prodView, scAdd, scView, etc.) no se mostraban en el menú desplegable de eventos. Todos estos elementos deberían poder seleccionarse del menú desplegable.
 
-**Funciones**:
+**Características**:
 
 * Ahora puede desactivar el Activity Map en la extensión sin tener que usar código personalizado. El Activity Map se carga como un módulo independiente (como el módulo AAM) y puede desactivarlo si lo desea.
 * Se ha limpiado la interfaz de usuario minimizando las variables de jerarquía y otras opciones.
@@ -127,7 +127,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 * Se ha corregido un error que afectaba la configuración de regla y que generaba un error al intentar establecer variables si estaba utilizando una biblioteca personalizada y si los grupos de informes no estaban configurados en Analytics.
 * Al crear una eVar, había un error que no le mostraba la opción de &quot;duplicar desde&quot; una propiedad o viceversa. Esto se ha corregido para reflejar el comportamiento en versiones anteriores.
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado [AppMeasurement a la versión 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es)
 
@@ -139,7 +139,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 * Se corrigió un problema por el cual una sintaxis incorrecta se usaba para eventos numéricos y moneda serializada
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado [AppMeasurement a la versión 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=es)
 * Se ha actualizado la biblioteca DIL del módulo de Audience Manager a 9.4
@@ -165,7 +165,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 * Se ha corregido un error por el cual un pequeño número de clientes no podía ver las opciones del grupo de informes en la lista desplegable
 * Se ha arreglado un error por el que algunas variables se configuraban de forma correcta al usar ECID
 
-**Funciones**:
+**Características**:
 
 * Ordena numéricamente eVars, props y eventos en la vista Extensión
 * Se han realizado cambios en el esquema back end para admitir datos de contexto de Magento
@@ -183,7 +183,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.7.7**
 
-**Funciones**:
+**Características**:
 
 * AppMeasurement actualizada a 2.17
 * Módulo de Gestión de público actualizado para admitir DIL 9.3
@@ -198,7 +198,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.7.6**
 
-**Funciones**:
+**Características**:
 
 * Actualización de la extensión de Adobe Analytics para admitir DIL 9.2 en Audience Manager
 
@@ -209,7 +209,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.7.5**
 
-**Funciones**:
+**Características**:
 
 * Actualización de la extensión de Adobe Analytics a [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), que incluye una corrección de un problema conocido de clearVars
 * Se ha añadido un vínculo Exchange a la extensión. Se puede acceder a la lista de Exchange haciendo clic en el menú desplegable y seleccionando “Información de extensión”
@@ -239,7 +239,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.7.2**
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado la extensión de Adobe Analytics a DIL 9.1.
 * Se ha actualizado la extensión de Adobe Analytics a AppMeasurement 2.12.
@@ -258,7 +258,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.6**
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado la extensión de Adobe Analytics a DIL 9.0, que admitirá la funcionalidad de Inclusión.
 * Se ha actualizado la extensión de Adobe Analytics a AppMeasurement 2.11, que admitirá la funcionalidad Opt-in.
@@ -279,7 +279,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.5**
 
-**Funciones**:
+**Características**:
 
 * Actualización de la extensión de Adobe Analytics para admitir DIL 8.0 en Audience Manager
 * Se separó el campo “Serialize from value” en dos: “Event ID” y “Event Value”. Esto solucionará el problema que asignaba un valor en lugar de serializar un evento
@@ -293,7 +293,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.4**
 
-**Funciones**:
+**Características**:
 
 * Se migró el nombre de cookie de seguimiento a la configuración de la extensión.
 
@@ -305,7 +305,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.3**
 
-**Funciones**:
+**Características**:
 
 * Se ha actualizado la extensión de Adobe Analytics para que admita AppMeasurement 2.9.
 * Se ha añadido la funcionalidad “Make tracker globally accessible” en la extensión de Adobe Analytics, lo que permite al rastreador tener ámbitos globales en `windows.s`.
@@ -320,7 +320,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.2**
 
-**Funciones**:
+**Características**:
 
 * Actualiza AppMeasurement.js a 2.8.0
 * Añade compatibilidad con el reenvío del lado del servidor
@@ -329,7 +329,7 @@ A continuación se muestra una lista de notas de la versión de la extensión de
 
 **Extensión de Adobe Analytics 1.1**
 
-**Funciones**:
+**Características**:
 
 * AppMeasurement se ha actualizado a la versión 2.6
 * El rastreador de Analytics inicializado ahora se expone a través de un módulo compartido en la extensión de etiquetas de Adobe Experience Platform, de modo que otras extensiones puedan incluir código para interactuar con él.

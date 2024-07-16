@@ -14,17 +14,17 @@ ht-degree: 45%
 
 # Configurar Platform Debugger
 
-Puede configurar ciertos aspectos de la apariencia y el funcionamiento de Adobe Experience Platform Debugger.
+Puede configurar ciertos elementos del aspecto y del funcionamiento del Adobe Experience Platform Debugger.
 
 ![](images/settings.jpg)
 
 ## Modo claro u oscuro
 
-Después de abrir Platform Debugger, puede seleccionar el aspecto que prefiera desde el **[!UICONTROL Configuración]** y seleccionando una de estas opciones **Modo oscuro** (predeterminado) o **Modo claro**.
+Después de abrir Platform Debugger, puede seleccionar el aspecto que prefiera desde **[!UICONTROL Configuración]** y seleccionar **Modo oscuro** (predeterminado) o **Modo claro**.
 
 ## Restablecer
 
-Seleccionar **[!UICONTROL Restablecer todos los datos y la configuración]** para volver a borrar todos los datos y volver a la configuración predeterminada.
+Seleccione **[!UICONTROL Restablecer todos los datos y la configuración]** para volver a borrar todos los datos y volver a la configuración predeterminada.
 
 ## Bloquear el Experience Platform Debugger en una página
 

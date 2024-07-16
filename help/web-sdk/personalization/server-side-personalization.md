@@ -1,6 +1,6 @@
 ---
-title: Personalización del lado del servidor mediante la API del servidor de red perimetral
-description: Este artículo muestra cómo puede utilizar la API del servidor de red perimetral para implementar la personalización del lado del servidor en las propiedades web.
+title: Personalización del lado del servidor mediante la API de Edge Network Server
+description: Este artículo muestra cómo puede utilizar la API de Edge Network Server para implementar la personalización del lado del servidor en las propiedades web.
 keywords: personalización; api de servidor; red perimetral; lado del servidor;
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -10,11 +10,11 @@ ht-degree: 2%
 ---
 
 
-# Personalización del lado del servidor mediante la API del servidor de red perimetral
+# Personalización del lado del servidor mediante la API de Edge Network Server
 
 ## Información general {#overview}
 
-La personalización del lado del servidor implica el uso de [API del servidor de red perimetral](../../server-api/overview.md) para personalizar la experiencia del cliente en las propiedades web.
+La personalización del lado del servidor implica el uso de la [API de Edge Network Server](../../server-api/overview.md) para personalizar la experiencia del cliente en sus propiedades web.
 
 En el ejemplo descrito en este artículo, el contenido de personalización se recupera en el lado del servidor mediante la API de servidor. A continuación, el HTML se procesa en el servidor, según el contenido de personalización recuperado.
 
@@ -22,7 +22,7 @@ La siguiente tabla muestra un ejemplo de contenido personalizado y no personaliz
 
 | Página de muestra sin personalización | Página de muestra con personalización |
 |---|---|
-| ![Página web de ejemplo sin personalización](assets/plain.png) | ![Página web de ejemplo con personalización](assets/personalized.png) |
+| ![Ejemplo de página web sin personalización](assets/plain.png) | ![Ejemplo de página web con personalización](assets/personalized.png) |
 
 ## Consideraciones {#considerations}
 
@@ -30,19 +30,19 @@ La siguiente tabla muestra un ejemplo de contenido personalizado y no personaliz
 
 Las cookies se utilizan para mantener la identidad del usuario y la información de clúster.  Al utilizar una implementación del lado del servidor, el servidor de aplicaciones gestiona el almacenamiento y el envío de estas cookies durante el ciclo vital de la solicitud.
 
-| Cookie | Finalidad | Almacenado por | Enviado por |
+| Cookie | Objetivo | Almacenado por | Enviado por |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Contiene detalles de identidad del usuario. | Servidor de aplicaciones | Servidor de aplicaciones |
-| `kndctr_AdobeOrg_cluster` | Indica qué clúster de red perimetral debe usarse para cumplir las solicitudes. | Servidor de aplicaciones | Servidor de aplicaciones |
+| `kndctr_AdobeOrg_cluster` | Indica qué clúster de Edge Network se debe usar para cumplir las solicitudes. | Servidor de aplicaciones | Servidor de aplicaciones |
 
 ### Solicitar ubicación {#request-placement}
 
-Las solicitudes de personalización son necesarias para obtener propuestas y enviar una notificación de visualización. Al utilizar una implementación del lado del servidor, el servidor de aplicaciones realiza estas solicitudes a la API del servidor de red perimetral.
+Las solicitudes de Personalization son necesarias para obtener propuestas y enviar una notificación de visualización. Al utilizar una implementación del lado del servidor, el servidor de aplicaciones realiza estas solicitudes a la API de Edge Network Server.
 
 | Solicitud | Realizado por |
 |---|---|
-| Solicitud de interacción para recuperar propuestas | Servidor de aplicaciones llamando a la API del servidor de red perimetral. |
-| Solicitud de interacción para enviar notificaciones de visualización | Servidor de aplicaciones llamando a la API del servidor de red perimetral. |
+| Solicitud de interacción para recuperar propuestas | Servidor de aplicaciones llamando a la API de Edge Network Server. |
+| Solicitud de interacción para enviar notificaciones de visualización | Servidor de aplicaciones llamando a la API de Edge Network Server. |
 
 ## Aplicación de ejemplo {#sample-app}
 
@@ -50,14 +50,14 @@ El proceso descrito a continuación utiliza una aplicación de ejemplo que puede
 
 Puede descargar este ejemplo y personalizarlo según sus necesidades. Por ejemplo, puede cambiar las variables de entorno para que la aplicación de ejemplo extraiga ofertas de su propia configuración de Experience Platform.
 
-Para ello, abra el `.env` en la raíz del repositorio y modifique las variables según su configuración. Reinicie la aplicación de ejemplo y estará listo para experimentar con su propio contenido de personalización.
+Para ello, abra el archivo `.env` en la raíz del repositorio y modifique las variables según la configuración. Reinicie la aplicación de ejemplo y estará listo para experimentar con su propio contenido de personalización.
 
 ### Ejecución del ejemplo {#running-sample}
 
 Siga los pasos a continuación para ejecutar la aplicación de ejemplo.
 
-1. Clonar [este repositorio](https://github.com/adobe/alloy-samples) a su equipo local.
-2. Abra un terminal y vaya al `personalization-server-side` carpeta.
+1. Clone [este repositorio](https://github.com/adobe/alloy-samples) en su equipo local.
+2. Abra un terminal y vaya a la carpeta `personalization-server-side`.
 3. Ejecutar `npm install`.
 4. Ejecutar `npm start`.
 5. Abra el explorador web y vaya a `http://localhost`.
@@ -66,9 +66,9 @@ Siga los pasos a continuación para ejecutar la aplicación de ejemplo.
 
 En esta sección se describen los pasos utilizados para recuperar el contenido personalizado.
 
-1. [Express](https://expressjs.com/) se utiliza para una implementación ligera del lado del servidor. Esto administra las solicitudes y el enrutamiento básicos del servidor.
-2. El explorador solicita la página web. Las cookies almacenadas anteriormente por el explorador, con el prefijo `kndctr_`, se incluyen.
-3. Cuando se solicita la página desde el servidor de aplicaciones, se envía un evento a [punto final de recopilación de datos interactivos](../../../server-api/interactive-data-collection.md) para recuperar contenido de personalización. La aplicación de ejemplo utiliza métodos de ayuda para simplificar la creación y el envío de solicitudes a la API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). El `POST` la solicitud contiene un `event` y una `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la variable `meta>state>entries` matriz.
+1. [Express](https://expressjs.com/) se usa para una implementación ligera del lado del servidor. Esto administra las solicitudes y el enrutamiento básicos del servidor.
+2. El explorador solicita la página web. Se incluye cualquier cookie previamente almacenada por el explorador, con el prefijo `kndctr_`.
+3. Cuando se solicita la página desde el servidor de aplicaciones, se envía un evento al [extremo interactivo de recopilación de datos](../../../server-api/interactive-data-collection.md) para recuperar el contenido de personalización. La aplicación de ejemplo usa métodos de ayuda para simplificar la creación y el envío de solicitudes a la API (consulte [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). La solicitud `POST` contiene `event` y `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la matriz `meta>state>entries`.
 
    ```js
    fetch(
@@ -196,5 +196,5 @@ En esta sección se describen los pasos utilizados para recuperar el contenido p
    }
    ```
 
-6. [!DNL Visual Experience Composer (VEC)] Las ofertas de se ignoran, ya que solo se pueden procesar mediante SDK web.
+6. Las ofertas [!DNL Visual Experience Composer (VEC)] se omiten, ya que solo se pueden procesar mediante el SDK web.
 7. Cuando se devuelve la respuesta del HTML, el servidor de aplicaciones establece las cookies de identidad y de clúster en la respuesta.

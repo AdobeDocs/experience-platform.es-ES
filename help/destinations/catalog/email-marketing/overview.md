@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -35,17 +35,17 @@ Adobe Experience Platform admite los siguientes destinos de marketing por correo
 
 ## Conectar con un nuevo destino de marketing por correo electrónico {#connect-destination}
 
-Para enviar audiencias a destinos de marketing por correo electrónico para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar audiencias a destinos de marketing por correo electrónico para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destinos](../../ui/connect-destination.md) para obtener información detallada sobre cómo configurar un nuevo destino.
 
 ## Prácticas recomendadas al activar audiencias en destinos de marketing por correo electrónico {#best-practices}
 
 ### Selección de identidad {#identity}
 
-El Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Este es el campo desde el que se desactivan las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la tabla siguiente para conocer los identificadores únicos más comunes y su campo XDM en el esquema.
+El Adobe recomienda que seleccione un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Este es el campo desde el que se desactivan las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la tabla siguiente para conocer los identificadores únicos más comunes y su campo XDM en el esquema.
 
 | Identificador único | Campo XDM en el esquema unificado |
 |----------------- | ---------------------------|
-| Dirección de correo electrónico | `personalEmail.address` |
+| Correo electrónico | `personalEmail.address` |
 | Teléfono | `mobilePhone.number` |
 | ID del programa de fidelización | `Customer-defined XDM field` |
 
@@ -64,7 +64,7 @@ En el selector de Campos de esquema, elija qué otros campos desea exportar al d
 | Estado de dirección | `homeAddress.stateProvince` |
 | Código postal de la dirección | `homeAddress.postalCode` |
 | Cumpleaños | `person.birthDayAndMonth` |
-| Abono de segmentos | `segmentMembership.status` |
+| Pertenencia al segmento | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Algunos destinos de marketing por correo electrónico en el catálogo exportan p
 
 Otros destinos exportan archivos a una ubicación de almacenamiento en la nube. Una vez completada la exportación, debe importar datos de la ubicación de almacenamiento en la nube al destino de marketing de correo electrónico.
 
-Siga los vínculos de la [destinos de marketing por correo electrónico admitidos](#supported-destinations) para aprender a activar audiencias en cada destino de marketing por correo electrónico.
+Siga los vínculos de la sección [destinos de marketing por correo electrónico admitidos](#supported-destinations) para obtener información sobre cómo activar audiencias en cada destino de marketing por correo electrónico.
 
 ## Recursos adicionales {#additional-resources}
 

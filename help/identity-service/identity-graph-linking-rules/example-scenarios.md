@@ -28,7 +28,7 @@ Hay casos en los que se pueden producir varios inicios de sesión en un solo dis
 | Quiosco público | Viajeros en un aeropuerto que inician sesión con su ID de fidelidad para facturar maletas e imprimir tarjetas de embarque. |
 | Centro de llamadas | El personal del centro de llamadas inicia sesión en un solo dispositivo en nombre de los clientes que llaman al servicio de atención al cliente para resolver problemas. |
 
-![shared-devices](../images/identity-settings/shared-devices.png)
+![dispositivos compartidos](../images/identity-settings/shared-devices.png)
 
 En estos casos, desde un punto de vista gráfico y sin límites habilitados, un solo ECID se vinculará a varios ID de CRM.
 
@@ -41,7 +41,7 @@ Con las reglas de vinculación de gráficos de identidad, puede:
 
 También hay casos de usuarios que proporcionan valores falsos como números de teléfono o direcciones de correo electrónico al registrarse. En estos casos, si los límites no están activados, las identidades relacionadas con el teléfono/correo electrónico terminarán vinculándose a varios ID de CRM diferentes.
 
-![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
+![correo electrónico-teléfono no válido](../images/identity-settings/invalid-email-phone.png)
 
 Con las reglas de vinculación de gráficos de identidad, puede:
 

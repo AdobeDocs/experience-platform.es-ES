@@ -95,7 +95,7 @@ Al crear o editar elementos, puede guardar y desarrollar en su [biblioteca activ
 >
 >Los tipos de Data Elements están determinados por la extensión. No hay límite para los tipos que se pueden crear.
 
-Las secciones siguientes describen los tipos de elementos de datos disponibles en la variable **Extensión principal**. Otras extensiones utilizan tipos de Data Elements diferentes.
+Las secciones siguientes describen los tipos de elementos de datos disponibles en la **Extensión principal**. Otras extensiones utilizan tipos de Data Elements diferentes.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Puede utilizar esto en los scripts personalizados con la sintaxis del objeto `_s
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Al utilizar el porcentaje (`%`), solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
+Al utilizar la sintaxis de porcentaje (`%`), solo es necesario especificar el nombre del elemento de datos. No necesita especificar `event`.
 
 ```text
 %data element name%
@@ -176,7 +176,7 @@ Por ejemplo, supongamos que el marcado contiene una variable de JavaScript llama
 
 Debe proporcionar la ruta a esa variable cuando cree el elemento de datos.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`, o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, solo tiene que utilizar la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como `_myData.pageName`, o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 

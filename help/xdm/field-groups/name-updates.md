@@ -7,7 +7,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -20,31 +20,31 @@ En la tabla siguiente se describen los grupos de campos existentes que se han ac
 
 | Nombre anterior | Nombre actualizado |
 | --- | --- |
-| [!UICONTROL Mezcla de privacidad de evento de experiencia] | [!UICONTROL Detalles de privacidad] |
-| [!UICONTROL Detalles de la aplicación ExperienceEvent] | [!UICONTROL Detalles de aplicación] |
-| [!UICONTROL Detalles del canal de ExperienceEvent] | [!UICONTROL Detalles del canal] |
-| [!UICONTROL Detalles comerciales de ExperienceEvent] | [!UICONTROL Detalles de comercio] |
-| [!UICONTROL Detalles de ExperienceEvent para publicidad] | [!UICONTROL Detalles de publicidad] |
+| [!UICONTROL Mezcla de privacidad de eventos de experiencia] | [!UICONTROL Detalles de privacidad] |
+| [!UICONTROL Detalles de la aplicación ExperienceEvent] | [!UICONTROL Detalles de la aplicación] |
+| [!UICONTROL Detalles del canal de ExperienceEvent] | [!UICONTROL Detalles de canal] |
+| [!UICONTROL Detalles comerciales de ExperienceEvent] | [!UICONTROL Detalles de Commerce] |
+| [!UICONTROL Detalles de ExperienceEvent para la publicidad] | [!UICONTROL Detalles de Advertising] |
 | [!UICONTROL Detalles de ExperienceEvent para marketing] | [!UICONTROL Detalles de marketing de campaña] |
-| [!UICONTROL Detalles de ExperienceEvent para contenidos] | [!UICONTROL Detalles de interacción de medios] |
+| [!UICONTROL Detalles de ExperienceEvent para los medios] | [!UICONTROL Detalles de interacción de medios] |
 | [!UICONTROL Detalles de ExperienceEvent para la búsqueda] | [!UICONTROL Detalles de búsqueda] |
 | [!UICONTROL Detalles de marketing directo de ExperienceEvent] | [!UICONTROL Detalles de marketing directo] |
-| [!UICONTROL EndUserID de ExperienceEvent] | [!UICONTROL Detalles del ID del usuario final] |
-| [!UICONTROL Detalles del entorno de ExperienceEvent] | [!UICONTROL Detalles del entorno] |
+| [!UICONTROL EndUserID de ExperienceEvent] | [!UICONTROL Detalles del identificador de usuario final] |
+| [!UICONTROL Detalles del entorno ExperienceEvent] | [!UICONTROL Detalles del entorno] |
 | [!UICONTROL Detalles de implementación de ExperienceEvent] | [!UICONTROL Detalles de implementación] |
 | [!UICONTROL Detalles de unión de perfil de ExperienceEvent] | [!UICONTROL Unión de perfil] |
-| [!UICONTROL Detalles de pertenencia a segmento de ExperienceEvent] | [!UICONTROL Detalles de abono de segmento] |
+| [!UICONTROL Detalles de pertenencia a segmento de ExperienceEvent] | [!UICONTROL Detalles de pertenencia a segmento] |
 | [!UICONTROL Detalles técnicos de ExperienceEvent] | [!UICONTROL Detalles técnicos] |
 | [!UICONTROL Detalles web de ExperienceEvent] | [!UICONTROL Detalles web] |
 | [!UICONTROL Marketing directo de perfil] | [!UICONTROL Detalles de contacto de marketing directo] |
-| [!UICONTROL Detalles de persona del perfil] | [!UICONTROL Datos demográficos] |
-| [!UICONTROL Datos personales del perfil] | [!UICONTROL Datos personales de contacto] |
+| [!UICONTROL Detalles de persona del perfil] | [!UICONTROL Detalles demográficos] |
+| [!UICONTROL Detalles personales del perfil] | [!UICONTROL Datos personales de contacto] |
 | [!UICONTROL Teléfonos de perfil] | [!UICONTROL Detalles de número de teléfono] |
 | [!UICONTROL Detalles de preferencias de perfil] | [!UICONTROL Detalles de preferencia] |
 | [!UICONTROL Privacidad del perfil] | [!UICONTROL Detalles de privacidad] |
-| [!UICONTROL Detalles push del perfil] | [!UICONTROL Detalles de token de notificación push] |
-| [!UICONTROL Segmentación de perfiles] | [!UICONTROL Detalles de abono de segmento] |
+| [!UICONTROL Detalles de inserción de perfil] | [!UICONTROL Detalles de token de notificación push] |
+| [!UICONTROL Segmentación de perfiles] | [!UICONTROL Detalles de pertenencia a segmento] |
 | [!UICONTROL Suscripciones de perfil] | [!UICONTROL Detalles de suscripción] |
 | [!UICONTROL Detalles de trabajo del perfil] | [!UICONTROL Detalles de contacto de trabajo] |
-| [!UICONTROL Detalles de las notificaciones push] | [!UICONTROL Detalles de notificación push] |
+| [!UICONTROL Detalles de notificación push] | [!UICONTROL Detalles de notificación push] |
 | [!UICONTROL Expresión del segmento] | [!UICONTROL Detalles de expresión de segmento] |

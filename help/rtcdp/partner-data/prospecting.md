@@ -1,12 +1,12 @@
 ---
 title: Interactúe y adquiera nuevos clientes sin depender de cookies de terceros
-description: Aprenda a atraer y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
+description: Descubra cómo captar y adquirir nuevos clientes a través de casos de uso de prospección, sin depender de cookies de terceros.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -124,7 +124,7 @@ Tenga en cuenta que el esquema aún no está habilitado para el perfil. Cambie e
 
 #### Añada la etiqueta de control de datos de terceros a todos los campos del esquema
 
-Considere la posibilidad de añadir etiquetas de control de datos de terceros a todos los campos que conforman el esquema. Esto es importante para garantizar un uso responsable de los datos de terceros y minimizar el riesgo de fuga de datos. Encuentre más información sobre [etiquetas de gobernanza de datos de terceros](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Considere la posibilidad de añadir etiquetas de control de datos de terceros a todos los campos que conforman el esquema. Esto es importante para garantizar un uso responsable de los datos de terceros y minimizar el riesgo de fuga de datos. Encuentre más información sobre [etiquetas de control de datos de terceros](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Para realizar esto, siga los pasos a continuación:
 
@@ -221,12 +221,12 @@ Utilice los públicos de clientes potenciales exportándolos a destinos. Actualm
 
 ![Destinos que admiten audiencias de clientes potenciales.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[Más información](/help/destinations/ui/activate-prospect-audiences.md) acerca de la activación de clientes potenciales en destinos de almacenamiento en la nube.
+[Más información](/help/destinations/ui/activate-prospect-audiences.md) sobre la activación de clientes potenciales en destinos de almacenamiento en la nube.
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 
 Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
 
 * [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga historial previo con su marca.
-* [Activación ampliada de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.
+* [Personalice experiencias in situ para visitantes desconocidos mediante el reconocimiento de visitantes con ayuda de socios](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga un historial previo con su marca.
+* [Se ha ampliado la activación de perfiles y audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) para seleccionar destinos.

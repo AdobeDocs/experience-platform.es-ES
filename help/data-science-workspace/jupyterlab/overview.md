@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;JupyterLab;blocs de notas;Data Science Workspace;temas populares;jupyterlab
+keywords: Experience Platform;JupyterLab;blocs de notas;Workspace de ciencia de datos;temas populares;jupyterlab
 solution: Experience Platform
 title: Información general de JupyterLab
 description: JupyterLab es una interfaz de usuario basada en web para el proyecto Jupyter y está totalmente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos. Este documento proporciona información general sobre JupyterLab y sus funciones, así como instrucciones para realizar acciones comunes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 3%
+source-wordcount: '1812'
+ht-degree: 2%
 
 ---
 
 # [!DNL JupyterLab] Información general de IU
 
-[!DNL JupyterLab] es una interfaz de usuario basada en web para [Proyecto Jupyter](https://jupyter.org/) y está totalmente integrado en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos.
+[!DNL JupyterLab] es una interfaz de usuario basada en la web para [Project Jupyter](https://jupyter.org/) y está totalmente integrada en Adobe Experience Platform. Proporciona un entorno de desarrollo interactivo para que los científicos de datos trabajen con Jupyter Notebooks, código y datos.
 
 Este documento proporciona información general sobre [!DNL JupyterLab] y sus características, así como instrucciones para realizar acciones comunes.
 
-## [!DNL JupyterLab] en [!DNL Experience Platform]
+## [!DNL JupyterLab] el [!DNL Experience Platform]
 
 La integración de JupyterLab de Experience Platform se acompaña de cambios arquitectónicos, consideraciones de diseño, extensiones de portátiles personalizadas, bibliotecas preinstaladas y una interfaz temática de Adobe.
 
@@ -25,12 +25,12 @@ La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en
 
 | Función | Descripción |
 | --- | --- |
-| **Núcleos** | Los núcleos proporcionan cuaderno y otros [!DNL JupyterLab] front-end permite ejecutar e inspeccionar código en diferentes lenguajes de programación. [!DNL Experience Platform] proporciona núcleos adicionales para apoyar el desarrollo en [!DNL Python], R, PySpark y [!DNL Spark]. Consulte la [granos](#kernels) para obtener más información. |
-| **Acceso a datos** | Acceder a conjuntos de datos existentes directamente desde [!DNL JupyterLab] con compatibilidad total con las funciones de lectura y escritura. |
-| **[!DNL Platform]integración de servicios** | Las integraciones integradas le permiten utilizar otras [!DNL Platform] servicios directamente desde [!DNL JupyterLab]. En la sección sobre, encontrará una lista completa de las integraciones compatibles [Integración con otros servicios de Platform](#service-integration). |
-| **Autenticación** | Además de <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">El modelo de seguridad integrado de JupyterLab</a>, todas las interacciones entre la aplicación y el Experience Platform, incluida la comunicación entre servicios de Platform, se cifran y autentican a través de <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
-| **Bibliotecas de desarrollo** | Entrada [!DNL Experience Platform], [!DNL JupyterLab] proporciona bibliotecas preinstaladas para [!DNL Python], R y PySpark. Consulte la [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas compatibles. |
-| **Controlador de biblioteca** | Cuando faltan las bibliotecas preinstaladas para sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de [!DNL Platform] y mantenga sus datos seguros. Consulte la [granos](#kernels) para obtener más información. |
+| **Núcleos** | Los núcleos proporcionan al bloc de notas y a otros [!DNL JupyterLab] front-end la capacidad de ejecutar e inspeccionar código en diferentes lenguajes de programación. [!DNL Experience Platform] proporciona núcleos adicionales para admitir el desarrollo en [!DNL Python], R, PySpark y [!DNL Spark]. Consulte la sección [kernels](#kernels) para obtener más información. |
+| **Acceso a datos** | Obtenga acceso a los conjuntos de datos existentes directamente desde [!DNL JupyterLab], con compatibilidad total con las capacidades de lectura y escritura. |
+| **[!DNL Platform]integración de servicio** | Las integraciones integradas le permiten utilizar otros servicios de [!DNL Platform] directamente desde [!DNL JupyterLab]. Se proporciona una lista completa de las integraciones compatibles en la sección sobre [Integración con otros servicios de Platform](#service-integration). |
+| **Autenticación** | Además del modelo de seguridad integrado de <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab</a>, todas las interacciones entre su aplicación y el Experience Platform, incluida la comunicación de servicio a servicio de Platform, se cifran y se autentican mediante <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Bibliotecas de desarrollo** | En [!DNL Experience Platform], [!DNL JupyterLab] proporciona bibliotecas preinstaladas para [!DNL Python], R y PySpark. Consulte el [apéndice](#supported-libraries) para obtener una lista completa de las bibliotecas admitidas. |
+| **Controlador de biblioteca** | Cuando faltan las bibliotecas preinstaladas para sus necesidades, se pueden instalar bibliotecas adicionales para Python y R, y se almacenan temporalmente en contenedores aislados para mantener la integridad de [!DNL Platform] y mantener sus datos a salvo. Consulte la sección [kernels](#kernels) para obtener más información. |
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ La siguiente lista describe algunas de las funciones exclusivas de JupyterLab en
 
 ## Integración con otros [!DNL Platform] servicios {#service-integration}
 
-La estandarización y la interoperabilidad son conceptos clave [!DNL Experience Platform]. La integración de [!DNL JupyterLab] el [!DNL Platform] como IDE incrustado le permite interactuar con otros [!DNL Platform] servicios, lo que le permite utilizar [!DNL Platform] a todo su potencial. Lo siguiente [!DNL Platform] Los servicios de están disponibles en [!DNL JupyterLab]:
+La estandarización y la interoperabilidad son conceptos clave detrás de [!DNL Experience Platform]. La integración de [!DNL JupyterLab] en [!DNL Platform] como IDE incrustado le permite interactuar con otros servicios de [!DNL Platform], lo que le permite utilizar [!DNL Platform] todo su potencial. Los siguientes [!DNL Platform] servicios están disponibles en [!DNL JupyterLab]:
 
 * **[!DNL Catalog Service]:** Acceda y explore conjuntos de datos con funcionalidades de lectura y escritura.
 * **[!DNL Query Service]:** Acceda y explore conjuntos de datos mediante SQL, lo que reduce los gastos generales de acceso a datos al tratar grandes cantidades de datos.
@@ -47,11 +47,11 @@ La estandarización y la interoperabilidad son conceptos clave [!DNL Experience 
 
 >[!NOTE]
 >
->Algunos [!DNL Platform] integraciones de servicio en [!DNL JupyterLab] se limitan a núcleos específicos. Consulte la sección sobre [granos](#kernels) para obtener más información.
+>Algunas integraciones de servicio de [!DNL Platform] en [!DNL JupyterLab] se limitan a núcleos específicos. Consulte la sección sobre [kernels](#kernels) para obtener más información.
 
 ## Funciones clave y operaciones comunes
 
-Información sobre las características principales de [!DNL JupyterLab] En las siguientes secciones se proporcionan instrucciones e instrucciones para realizar operaciones comunes:
+En las secciones siguientes se proporciona información acerca de las características clave de [!DNL JupyterLab] e instrucciones para realizar operaciones comunes:
 
 * [Acceder a JupyterLab](#access-jupyterlab)
 * [Interfaz de JupyterLab](#jupyterlab-interface)
@@ -60,39 +60,39 @@ Información sobre las características principales de [!DNL JupyterLab] En las 
 * [Sesiones de kernel](#kernel-sessions)
 * [Lanzador](#launcher)
 
-### Acceso [!DNL JupyterLab] {#access-jupyterlab}
+### Acceder a [!DNL JupyterLab] {#access-jupyterlab}
 
-Entrada [Adobe Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Notebooks]** en la columna de navegación izquierda. Espere un poco [!DNL JupyterLab] para inicializar completamente.
+En [Adobe Experience Platform](https://platform.adobe.com), seleccione **[!UICONTROL Notebooks]** de la columna de navegación izquierda. Espere un tiempo para que [!DNL JupyterLab] se inicialice por completo.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### [!DNL JupyterLab] interfaz {#jupyterlab-interface}
+### Interfaz de [!DNL JupyterLab] {#jupyterlab-interface}
 
-El [!DNL JupyterLab] La interfaz de consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene pestañas de documentos y actividades.
+La interfaz [!DNL JupyterLab] consta de una barra de menús, una barra lateral izquierda contraíble y el área de trabajo principal que contiene fichas de documentos y actividades.
 
-**Barra de menú**
+**Barra de menús**
 
-La barra de menús de la parte superior de la interfaz tiene menús de nivel superior que exponen acciones disponibles en [!DNL JupyterLab] con sus métodos abreviados del teclado:
+La barra de menús de la parte superior de la interfaz tiene menús de nivel superior que exponen acciones disponibles en [!DNL JupyterLab] con sus métodos abreviados de teclado:
 
 * **Archivo:** Acciones relacionadas con archivos y directorios
-* **Editar:** Acciones relacionadas con la edición de documentos y otras actividades
-* **Ver:** Acciones que modifican el aspecto de [!DNL JupyterLab]
-* **Ejecutar:** Acciones para ejecutar código en diferentes actividades, como blocs de notas y consolas de códigos
-* **Núcleo:** Acciones para administrar núcleos
-* **Fichas:** Lista de documentos y actividades abiertos
+* **Editar:** acciones relacionadas con la edición de documentos y otras actividades
+* **Ver:** acciones que modifican el aspecto de [!DNL JupyterLab]
+* **Ejecutar:** Acciones para ejecutar código en diferentes actividades como blocs de notas y consolas de códigos
+* **Núcleo:** acciones para administrar núcleos
+* **Fichas:** Una lista de documentos y actividades abiertos
 * **Configuración:** Configuración común y un editor de configuración avanzada
-* **Ayuda:** Una lista de [!DNL JupyterLab] Vínculos de ayuda del núcleo y
+* **Ayuda:** Una lista de [!DNL JupyterLab] y vínculos de ayuda del núcleo
 
 **Barra lateral izquierda**
 
 La barra lateral izquierda contiene pestañas en las que se puede hacer clic y que proporcionan acceso a las siguientes funciones:
 
 * **Explorador de archivos:** Lista de documentos y directorios guardados del bloc de notas
-* **Explorador de datos:** Examinar, acceder y explorar conjuntos de datos y esquemas
-* **Núcleos y terminales en ejecución:** Una lista de sesiones activas del núcleo y de terminales con la capacidad de terminar
+* **Explorador de datos:** Examine, acceda y explore conjuntos de datos y esquemas
+* **Ejecución de kernels y terminales:** Una lista de sesiones activas de kernel y terminal con la capacidad de finalizar
 * **Comandos:** Una lista de comandos útiles
 * **Inspector de celdas:** Editor de celdas que proporciona acceso a herramientas y metadatos útiles para configurar un bloc de notas con fines de presentación
-* **pestañas:** Una lista de pestañas abiertas
+* **fichas:** Una lista de fichas abiertas
 
 Seleccione una pestaña para exponer sus funciones o seleccione en una pestaña expandida para contraer la barra lateral izquierda como se muestra a continuación:
 
@@ -100,13 +100,13 @@ Seleccione una pestaña para exponer sus funciones o seleccione en una pestaña 
 
 **Área de trabajo principal**
 
-El área de trabajo principal en [!DNL JupyterLab] permite organizar documentos y otras actividades en paneles de pestañas que se pueden cambiar de tamaño o subdividir. Arrastre una pestaña al centro de un panel de pestañas para migrar la pestaña. Divida un panel arrastrando una pestaña a la izquierda, a la derecha, a la parte superior o a la parte inferior del panel:
+El área de trabajo principal de [!DNL JupyterLab] le permite organizar documentos y otras actividades en paneles de fichas que se pueden cambiar de tamaño o subdividir. Arrastre una pestaña al centro de un panel de pestañas para migrar la pestaña. Divida un panel arrastrando una pestaña a la izquierda, a la derecha, a la parte superior o a la parte inferior del panel:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
 ### Configuración de GPU y servidor de memoria en [!DNL Python]/R
 
-Entrada [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superior derecha para abrirlo *Configuración del servidor de portátiles*. Puede activar la GPU y asignar la cantidad de memoria que necesite mediante el control deslizante. La cantidad de memoria que puede asignar depende de la cantidad que haya aprovisionado su organización. Seleccionar **[!UICONTROL Actualizar configuraciones]** para guardar.
+En [!DNL JupyterLab], seleccione el icono de engranaje en la esquina superior derecha para abrir *Configuración del servidor de portátiles*. Puede activar la GPU y asignar la cantidad de memoria que necesite mediante el control deslizante. La cantidad de memoria que puede asignar depende de la cantidad que haya aprovisionado su organización. Seleccione **[!UICONTROL Actualizar configuraciones]** para guardar.
 
 >[!NOTE]
 >
@@ -114,11 +114,11 @@ Entrada [!DNL JupyterLab] seleccione el icono de engranaje en la esquina superio
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-### Finalizar y reiniciar [!DNL JupyterLab]
+### Terminar y reiniciar [!DNL JupyterLab]
 
-Entrada [!DNL JupyterLab], puede finalizar la sesión para evitar que se utilicen más recursos. Comience por seleccionar la **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png), luego seleccione **[!UICONTROL Apagar]** desde la ventana emergente que parece finalizar la sesión. Las sesiones de Notebook finalizan automáticamente después de 12 horas de inactividad.
+En [!DNL JupyterLab], puede finalizar su sesión para evitar que se usen más recursos. Comience por seleccionar el **icono de energía** ![icono de energía](../images/jupyterlab/user-guide/power_button.png) y, a continuación, seleccione **[!UICONTROL Apagar]** de la ventana emergente que aparece para finalizar su sesión. Las sesiones de Notebook finalizan automáticamente después de 12 horas de inactividad.
 
-Para reiniciar [!DNL JupyterLab], seleccione la **icono de reinicio** ![icono de reinicio](../images/jupyterlab/user-guide/restart_button.png) situado directamente a la izquierda del icono de encendido, y seleccione **[!UICONTROL Restart]** desde la ventana emergente que aparece.
+Para reiniciar [!DNL JupyterLab], selecciona el **icono de reinicio** ![icono de reinicio](../images/jupyterlab/user-guide/restart_button.png) que se encuentra directamente a la izquierda del icono de encendido y, a continuación, selecciona **[!UICONTROL Reiniciar]** de la ventana emergente que aparece.
 
 ![finalizar jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -130,21 +130,21 @@ Las celdas de código son el contenido principal de los blocs de notas. Contiene
 
 Las acciones celulares comunes se describen a continuación:
 
-* **Agregar una celda:** Haga clic en el símbolo más (**+**) en el menú del bloc de notas para agregar una celda vacía. Las nuevas celdas se colocan debajo de la celda con la que se está interactuando actualmente, o al final del bloc de notas si no hay ninguna celda en particular enfocada.
+* **Agregar una celda:** Haga clic en el símbolo más (**+**) del menú del bloc de notas para agregar una celda vacía. Las nuevas celdas se colocan debajo de la celda con la que se está interactuando actualmente, o al final del bloc de notas si no hay ninguna celda en particular enfocada.
 
-* **Mover una celda:** Coloque el cursor a la derecha de la celda que desea mover y, a continuación, haga clic en la celda y arrástrela a una nueva ubicación. Además, al mover una celda de un bloc de notas a otro se replica la celda junto con su contenido.
+* **Mover una celda:** Coloque el cursor a la derecha de la celda que desea mover y, a continuación, haga clic y arrastre la celda a una nueva ubicación. Además, al mover una celda de un bloc de notas a otro se replica la celda junto con su contenido.
 
-* **Ejecutar una celda:** Haga clic en el cuerpo de la celda que desea ejecutar y luego haga clic en el botón **play** icono (**▶**) en el menú del bloc de notas. Un asterisco (**\***) se muestra en el contador de ejecución de la celda cuando el núcleo está procesando la ejecución y se reemplaza por un entero al finalizar.
+* **Ejecutar una celda:** Haga clic en el cuerpo de la celda que desea ejecutar y, a continuación, haga clic en el icono **reproducir** (**▶**) del menú del bloc de notas. Se muestra un asterisco (**\***) en el contador de ejecución de la celda cuando el núcleo está procesando la ejecución y se reemplaza con un entero al finalizar.
 
-* **Eliminar una celda:** Haga clic en el cuerpo de la celda que desea eliminar y, a continuación, haga clic en el botón **tijera** icono.
+* **Eliminar una celda:** Haga clic en el cuerpo de la celda que desea eliminar y, a continuación, haga clic en el icono **tijera**.
 
 ### Núcleos {#kernels}
 
-Los núcleos de los portátiles son los motores informáticos específicos del idioma para el procesamiento de las celdas de los portátiles. Además de [!DNL Python], [!DNL JupyterLab] proporciona compatibilidad adicional con idiomas en R, PySpark y [!DNL Spark] (Scala). Al abrir un documento de bloc de notas, se inicia el núcleo asociado. Cuando se ejecuta una celda de un bloc de notas, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se apaga el núcleo.
+Los núcleos de los portátiles son los motores informáticos específicos del idioma para el procesamiento de las celdas de los portátiles. Además de [!DNL Python], [!DNL JupyterLab] proporciona compatibilidad con idiomas adicional en R, PySpark y [!DNL Spark] (Scala). Al abrir un documento de bloc de notas, se inicia el núcleo asociado. Cuando se ejecuta una celda de un bloc de notas, el núcleo realiza el cálculo y produce resultados que pueden consumir recursos significativos de CPU y memoria. Tenga en cuenta que la memoria asignada no se libera hasta que se apaga el núcleo.
 
 Ciertas características y funcionalidades están limitadas a núcleos particulares como se describe en la tabla siguiente:
 
-| Núcleo | Compatibilidad con instalación de biblioteca | [!DNL Platform] integraciones |
+| Núcleo | Compatibilidad con instalación de biblioteca | Integraciones de [!DNL Platform] |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Sí | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Sí | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
@@ -152,11 +152,11 @@ Ciertas características y funcionalidades están limitadas a núcleos particula
 
 ### Sesiones de kernel {#kernel-sessions}
 
-Cada bloc de notas o actividad activa en [!DNL JupyterLab] utiliza una sesión del núcleo. Todas las sesiones activas se pueden encontrar ampliando el **Terminales y núcleos en funcionamiento** de la barra lateral izquierda. El tipo y el estado del núcleo de un portátil se pueden identificar observando la parte superior derecha de la interfaz del portátil. En el diagrama siguiente, el núcleo asociado del bloc de notas es **[!DNL Python]3** y su estado actual se representa mediante un círculo gris a la derecha. Un círculo hueco implica un núcleo inactivo y un círculo sólido implica un núcleo ocupado.
+Cada bloc de notas o actividad activa en [!DNL JupyterLab] utiliza una sesión del núcleo. Para encontrar todas las sesiones activas, expanda la pestaña **Terminales y núcleos en ejecución** de la barra lateral izquierda. El tipo y el estado del núcleo de un portátil se pueden identificar observando la parte superior derecha de la interfaz del portátil. En el diagrama siguiente, el núcleo asociado del bloc de notas es **[!DNL Python]3** y su estado actual está representado por un círculo gris a la derecha. Un círculo hueco implica un núcleo inactivo y un círculo sólido implica un núcleo ocupado.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
-Si el núcleo está apagado o inactivo durante un periodo prolongado, entonces **¡No hay kernel!** se muestra con un círculo sólido. Active un núcleo haciendo clic en el estado del núcleo y seleccionando el tipo de núcleo apropiado como se muestra a continuación:
+Si el núcleo está apagado o inactivo durante un período prolongado, entonces **No hay núcleo.** se muestra con un círculo sólido. Active un núcleo haciendo clic en el estado del núcleo y seleccionando el tipo de núcleo apropiado como se muestra a continuación:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
@@ -164,26 +164,26 @@ Si el núcleo está apagado o inactivo durante un periodo prolongado, entonces *
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
-El personalizado *Lanzador* le proporciona plantillas de bloc de notas útiles para sus núcleos compatibles que le ayudarán a iniciar su tarea, entre las que se incluyen:
+El *lanzador* personalizado le proporciona plantillas de bloc de notas útiles para los núcleos compatibles que le ayudarán a iniciar su tarea, entre las que se incluyen:
 
 | Plantilla | Descripción |
 | --- | --- |
-| En blanco | Un archivo de bloc de notas vacío. |
+| Vacío | Un archivo de bloc de notas vacío. |
 | Starter | Un bloc de notas precargado que muestra la exploración de datos con datos de ejemplo. |
-| Ventas minoristas | Un portátil precargado con la [fórmula de venta al por menor](../pre-built-recipes/retail-sales.md) uso de datos de ejemplo. |
-| Generador de fórmulas | Una plantilla de bloc de notas para crear una fórmula en [!DNL JupyterLab]. Está rellenado previamente con código y comentarios que muestran y describen el proceso de creación de la fórmula. Consulte la [tutorial de bloc de notas a fórmula](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) para obtener una introducción detallada. |
-| [!DNL Query Service] | Un portátil precargado que muestra el uso de [!DNL Query Service] directamente en [!DNL JupyterLab] con flujos de trabajo de muestra proporcionados que analizan datos a escala. |
+| Ventas minoristas | Un bloc de notas precargado con la [fórmula de venta minorista](../pre-built-recipes/retail-sales.md) y datos de ejemplo. |
+| Generador de fórmulas | Plantilla de bloc de notas para crear una fórmula en [!DNL JupyterLab]. Está rellenado previamente con código y comentarios que muestran y describen el proceso de creación de la fórmula. Consulte el [bloc de notas para ver el tutorial de fórmulas](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) para obtener un tutorial detallado. |
+| [!DNL Query Service] | Un bloc de notas precargado que muestra el uso de [!DNL Query Service] directamente en [!DNL JupyterLab] con flujos de trabajo de ejemplo proporcionados que analizan los datos a escala. |
 | Eventos de XDM | Un bloc de notas precargado que muestra la exploración de datos en datos de evento de experiencia de valor posterior, centrándose en las funciones comunes en toda la estructura de datos. |
 | Consultas de XDM | Un portátil precargado que muestra ejemplos de consultas empresariales sobre los datos de Experience Event. |
 | Agregación | Un portátil precargado que muestra flujos de trabajo de ejemplo para acumular grandes cantidades de datos en fragmentos más pequeños y manejables. |
-| Clustering | Un bloc de notas precargado que muestra el proceso completo de modelado de aprendizaje automático mediante algoritmos de agrupación en clúster. |
+| Clúster | Un bloc de notas precargado que muestra el proceso completo de modelado de aprendizaje automático mediante algoritmos de agrupación en clúster. |
 
 Algunas plantillas de bloc de notas están limitadas a determinados núcleos. La disponibilidad de la plantilla para cada núcleo se asigna en la siguiente tabla:
 
 <table>
     <tr>
         <td></td>
-        <th><strong>En blanco</strong></th>
+        <th><strong>Vacío</strong></th>
         <th><strong>Starter</strong></th>
         <th><strong>Ventas minoristas</strong></th>
         <th><strong>Generador de fórmulas</strong></th>
@@ -191,7 +191,7 @@ Algunas plantillas de bloc de notas están limitadas a determinados núcleos. La
         <th><strong>Eventos de XDM</strong></th>
         <th><strong>Consultas de XDM</strong></th>
         <th><strong>Agregación</strong></th>
-        <th><strong>Clustering</strong></th>
+        <th><strong>Clúster</strong></th>
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>
@@ -218,7 +218,7 @@ Algunas plantillas de bloc de notas están limitadas a determinados núcleos. La
         <td >no</td>
     </tr>
       <tr>
-        <th  ><strong>PySpark 3 ([!DNL Spark] 2,4)</strong></th>
+        <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
         <td >no</td>
         <td >sí</td>
         <td >no</td>
@@ -243,17 +243,17 @@ Algunas plantillas de bloc de notas están limitadas a determinados núcleos. La
     </tr>
 </table>
 
-Para abrir un nuevo *Lanzador*, haga clic en **Archivo > Nuevo lanzador**. Como alternativa, expanda el **Explorador de archivos** en la barra lateral izquierda y haga clic en el símbolo más (**+**):
+Para abrir un nuevo *lanzador*, haz clic en **Archivo > Nuevo lanzador**. También puede expandir **Explorador de archivos** desde la barra lateral izquierda y hacer clic en el símbolo de suma (**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
 ## Pasos siguientes
 
-Para obtener más información sobre cada uno de los portátiles compatibles y cómo utilizarlos, visite el [Acceso a datos de portátiles Jupyterlab](./access-notebook-data.md) guía para desarrolladores. Esta guía se centra en cómo utilizar cuadernos de JupyterLab para acceder a sus datos, incluidos los datos de lectura, escritura y consulta. La guía de acceso a datos también contiene información sobre la cantidad máxima de datos que puede leer cada bloc de notas compatible.
+Para obtener más información sobre cada uno de los blocs de notas compatibles y cómo utilizarlos, visite la guía para desarrolladores de [acceso a datos de los blocs de notas de Jupyterlab](./access-notebook-data.md). Esta guía se centra en cómo utilizar cuadernos de JupyterLab para acceder a sus datos, incluidos los datos de lectura, escritura y consulta. La guía de acceso a datos también contiene información sobre la cantidad máxima de datos que puede leer cada bloc de notas compatible.
 
 ## Bibliotecas compatibles {#supported-libraries}
 
-Para obtener una lista de los paquetes compatibles en Python, R y PySpark, copie y pegue `!conda list` en una celda nueva y, a continuación, ejecute la celda. Una lista de paquetes admitidos se rellena en orden alfabético.
+Para obtener una lista de los paquetes admitidos en Python, R y PySpark, copie y pegue `!conda list` en una celda nueva y, a continuación, ejecute la celda. Una lista de paquetes admitidos se rellena en orden alfabético.
 
 ![ejemplo](../images/jupyterlab/user-guide/libraries.PNG)
 

@@ -15,12 +15,12 @@ ht-degree: 5%
 
 # información general de Adobe Experience Platform Debugger
 
-La extensión de Adobe Experience Platform Debugger para [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) examina sus páginas web y le ayuda a encontrar problemas con la implementación de las soluciones de Adobe Experience Cloud.
+La extensión de Adobe Experience Platform Debugger de [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) examina sus páginas web y le ayuda a encontrar problemas con la implementación de las soluciones de Adobe Experience Cloud.
 
 Puede utilizar Platform Debugger con otras soluciones de activación de Adobe para realizar lo siguiente:
 
-1. Uso [etiquetas](../tags/home.md) para insertar código que se active [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=es) productos en sus páginas.
-1. Utilice el [**[!UICONTROL Auditor ]**pestaña](./auditor/overview.md) en Platform Debugger para probar las implementaciones.
+1. Use [tags](../tags/home.md) para insertar código que active los productos [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=es) en sus páginas.
+1. Use la ficha [**[!UICONTROL Auditor ]**](./auditor/overview.md) en Platform Debugger para probar las implementaciones.
 1. Utilice herramientas específicas de soluciones y basadas en eventos en Platform Debugger para depurar los problemas que ha encontrado Auditor o examinar otra información sobre las implementaciones.
 
 >[!NOTE]
@@ -33,9 +33,9 @@ Puede ejecutar Platform Debugger en cualquier página web y la extensión tendr�
 
 Puede utilizar la información recopilada por Platform Debugger para comprender mejor cómo se implementan las soluciones de Experience Cloud. Por ejemplo:
 
-* **Etiquetas**: Ver qué propiedad, entorno y compilación se implementan en una página.
-* **Adobe Target**: Consulte para qué actividades cumple o no los requisitos y por qué.
-* **Adobe Analytics**: Ver qué grupos de informes están activos en la página actual.
+* **Etiquetas**: ver qué propiedad, entorno y compilación se implementan en una página.
+* **Adobe Target**: consulta para qué actividades calificas o no y por qué.
+* **Adobe Analytics**: vea qué grupos de informes están activos en la página actual.
 
 ## Tutorial de vídeo
 

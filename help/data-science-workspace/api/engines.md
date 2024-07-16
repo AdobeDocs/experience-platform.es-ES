@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;extremo;espacio de trabajo de ciencia de datos;temas populares;motores;api de aprendizaje automático de sensei
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;motores;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Extremo de API de motores
 description: Los motores son la base de los modelos de aprendizaje automático de Data Science Workspace. Contienen algoritmos de aprendizaje automático que resuelven problemas específicos, canalizaciones de características para realizar ingeniería de características o ambos.
@@ -20,7 +20,7 @@ Los motores son la base de los modelos de aprendizaje automático de Data Scienc
 
 >[!TIP]
 >
->Si no tiene una URL de Docker, visite la [Empaquetar archivos de origen en una fórmula](../models-recipes/package-source-files-recipe.md) tutorial para ver un tutorial paso a paso sobre la creación de una URL de host de Docker.
+>Si no tiene una URL de Docker, visite el tutorial [Empaquetar archivos de origen en una fórmula](../models-recipes/package-source-files-recipe.md) para ver un tutorial paso a paso sobre la creación de una URL de host de Docker.
 
 Las credenciales del registro de Docker son necesarias para cargar un archivo de fórmula empaquetado, incluida la URL del host de Docker, el nombre de usuario y la contraseña. Puede buscar esta información realizando la siguiente solicitud de GET:
 
@@ -42,11 +42,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del registro de Docker, incluida la URL de Docker (`host`), nombre de usuario (`username`) y contraseña (`password`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del registro de Docker, incluida la dirección URL de Docker (`host`), el nombre de usuario (`username`) y la contraseña (`password`).
 
 >[!NOTE]
 >
->Su contraseña de Docker cambia cada vez que su `{ACCESS_TOKEN}` se ha actualizado.
+>Su contraseña de Docker cambia cada vez que se actualiza su `{ACCESS_TOKEN}`.
 
 ```json
 {
@@ -104,7 +104,7 @@ curl -X POST \
 
 **Solicitar PySpark/Scala**
 
-Al hacer una solicitud de recetas PySpark, la `executionType` y `type` es PySpark. Cuando se hace una solicitud de recetas de Scala, la `executionType` y `type` es &quot;Spark&quot;. El siguiente ejemplo de fórmula de Scala utiliza Spark:
+Al realizar una solicitud de recetas PySpark, `executionType` y `type` son &quot;PySpark&quot;. Al hacer una solicitud de recetas de Scala, `executionType` y `type` son &quot;Spark&quot;. El siguiente ejemplo de fórmula de Scala utiliza Spark:
 
 ```shell
 curl -X POST \
@@ -137,7 +137,7 @@ curl -X POST \
 | `name` | El nombre deseado para el motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
 | `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. El valor puede establecerse en Spark o PySpark. |
-| `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe configurarse como `databricks-spark`. |
+| `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe establecerse en `databricks-spark`. |
 | `artifacts.default.image.location` | Ubicación de la imagen de Docker. ACR Solo se admite Azure o Dockerhub público (no autenticado). |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
 
@@ -214,18 +214,18 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `type` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. El valor puede establecerse en Spark o PySpark. |
-| `algorithm` | Algoritmo que se está utilizando, establezca este valor en `fp` (canalización de funciones). |
+| `algorithm` | Algoritmo en uso, establezca este valor en `fp` (canalización de características). |
 | `name` | El nombre que desee para el motor de canalización de funciones. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como el nombre de la fórmula. |
 | `description` | Una descripción opcional del motor. La fórmula correspondiente a este motor heredará este valor para mostrarlo en la interfaz de usuario como la descripción de la fórmula. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
-| `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe configurarse como `databricks-spark`. |
+| `mlLibrary` | Campo obligatorio al crear motores para las recetas PySpark y Scala. Este campo debe establecerse en `databricks-spark`. |
 | `artifacts.default.image.location` | Ubicación de la imagen de Docker. ACR Solo se admite Azure o Dockerhub público (no autenticado). |
 | `artifacts.default.image.executionType` | El tipo de ejecución del motor. Este valor corresponde al idioma en el que se crea la imagen Docker. Puede ser &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | El tipo de embalaje del motor. Este valor debe establecerse en `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Su `pipeline.json` parámetros del archivo de configuración. |
+| `artifacts.default.defaultMLInstanceConfigs` | Parámetros del archivo de configuración `pipeline.json`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del motor de canalización de funciones recién creado, incluido su identificador único (`id`). La siguiente respuesta de ejemplo es para una función PySpark del motor de canalización.
+Una respuesta correcta devuelve una carga útil que contiene los detalles del motor de canalización de características recién creado, incluido su identificador único (`id`). La siguiente respuesta de ejemplo es para una función PySpark del motor de canalización.
 
 ```json
 {
@@ -254,7 +254,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 
 ## Recuperación de una lista de motores
 
-Puede recuperar una lista de motores realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de motores realizando una sola solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -387,7 +387,7 @@ Puede modificar y actualizar un motor existente sobrescribiendo sus propiedades 
 
 >[!NOTE]
 >
->Para garantizar el éxito de esta solicitud de PUT, se recomienda que realice primero una solicitud de GET a [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que primero realice una solicitud de GET para [recuperar el motor por ID](#retrieve-specific). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
 La siguiente llamada de API de ejemplo actualizará el nombre y la descripción de un motor al mismo tiempo que tiene estas propiedades inicialmente:
 

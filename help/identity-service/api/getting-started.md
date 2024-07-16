@@ -21,30 +21,30 @@ Adobe Experience Platform [!DNL Identity Service] administra la identificación 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 - [[!DNL Identity Service]](../home.md): resuelve el desafío fundamental que plantea la fragmentación de los datos de perfil del cliente. Para ello, une las identidades entre dispositivos y sistemas en los que los clientes interactúan con la marca.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Proporciona un perfil unificado de consumidor en tiempo real en función de los datos agregados de varias fuentes.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): proporciona un perfil de consumidor unificado en tiempo real en función de los datos agregados de varios orígenes.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Platform] organiza los datos de experiencia del cliente.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer o tener disponible para poder realizar llamadas correctamente a [!DNL Identity Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará saber o tener disponible para realizar llamadas correctamente a la API [!DNL Identity Service].
 
 ### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - Autorización: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -52,16 +52,16 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Enrutamiento basado en regiones
 
-El [!DNL Identity Service] La API emplea puntos de conexión específicos de región que requieren la inclusión de una `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización, se determina una región y se almacena dentro del perfil de la organización. El uso de la región correcta con cada extremo garantiza que todas las solicitudes realizadas con el [!DNL Identity Service] Las API se dirigen a la región adecuada.
+La API [!DNL Identity Service] emplea extremos específicos de región que requieren la inclusión de un `{REGION}` como parte de la ruta de solicitud. Durante el aprovisionamiento de la organización, se determina una región y se almacena dentro del perfil de la organización. El uso de la región correcta con cada extremo garantiza que todas las solicitudes realizadas mediante la API [!DNL Identity Service] se enruten a la región adecuada.
 
-Actualmente, admite dos regiones: [!DNL Identity Service] API: VA7 y NLD2.
+Actualmente hay dos regiones compatibles con las API de [!DNL Identity Service]: VA7 y NLD2.
 
 En la tabla siguiente se muestran ejemplos de rutas que utilizan regiones:
 
-| Service | Región: VA7 | Región: NLD2 |
+| Servicio | Región: VA7 | Región: NLD2 |
 | ------ | -------- |--------- |
-| [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
-| [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
+| API [!DNL Identity Service] | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
+| API [!DNL Identity Namespace] | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
 >[!NOTE]
 >
@@ -69,21 +69,21 @@ En la tabla siguiente se muestran ejemplos de rutas que utilizan regiones:
 
 Si no puede localizar la región dentro del perfil de su organización, póngase en contacto con el administrador del sistema para obtener ayuda.
 
-## Uso del [!DNL Identity Service] API
+## Usando la API [!DNL Identity Service]
 
 Los parámetros de identidad utilizados en estos servicios se pueden expresar de una de las dos maneras siguientes: compuesto o XID.
 
-Las identidades compuestas son construcciones que incluyen el valor de ID y el área de nombres. Cuando se utilizan identidades compuestas, el área de nombres se puede proporcionar mediante el nombre (`namespace.code`) o ID (`namespace.id`).
+Las identidades compuestas son construcciones que incluyen el valor de ID y el área de nombres. Al utilizar identidades compuestas, el espacio de nombres se puede proporcionar mediante el nombre (`namespace.code`) o el identificador (`namespace.id`).
 
-Cuando persiste una identidad, [!DNL Identity Service] genera y asigna un ID a esa identidad, denominado ID nativo o XID. Todas las variaciones de las API de clúster y asignación admiten identidades compuestas y XID en sus solicitudes y respuestas. Uno de los parámetros es obligatorio: `xid` o combinación de [`ns` o `nsid`] y `id` para utilizar estas API.
+Cuando persiste una identidad, [!DNL Identity Service] genera y asigna un ID a esa identidad, denominado ID nativo o XID. Todas las variaciones de las API de clúster y asignación admiten identidades compuestas y XID en sus solicitudes y respuestas. Se requiere uno de los parámetros: `xid` o una combinación de [`ns` o `nsid`] y `id` para usar estas API.
 
 Para limitar la carga útil en las respuestas, las API adaptan sus respuestas al tipo de construcción de identidad utilizada. Es decir, si pasa XID, las respuestas tendrán XID, si pasa identidades compuestas, la respuesta seguirá la estructura utilizada en la solicitud.
 
-Los ejemplos de este documento no abarcan la funcionalidad completa del [!DNL Identity Service] API. Para ver la API completa, consulte la [Referencia de API de Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Los ejemplos de este documento no abarcan toda la funcionalidad de la API [!DNL Identity Service]. Para obtener la API completa, consulte [Referencia de la API de Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >
->Todas las identidades devueltas estarán en formato XID nativo cuando se utilice XID nativo en la solicitud. Se recomienda utilizar el formulario ID/área de nombres. Para obtener más información, consulte la sección sobre [obtención del XID de una identidad](./create-custom-namespace.md).
+>Todas las identidades devueltas estarán en formato XID nativo cuando se utilice XID nativo en la solicitud. Se recomienda utilizar el formulario ID/área de nombres. Para obtener más información, consulte la sección sobre [obtención del XID para una identidad](./create-custom-namespace.md).
 
 ## Pasos siguientes
 

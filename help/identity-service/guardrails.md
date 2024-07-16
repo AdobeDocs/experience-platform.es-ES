@@ -10,20 +10,20 @@ ht-degree: 1%
 
 ---
 
-# Protecciones para [!DNL Identity Service] datos
+# Protecciones para datos de [!DNL Identity Service]
 
-Este documento proporciona información sobre los límites de uso y tasa para [!DNL Identity Service] datos para ayudarle a optimizar el uso del gráfico de identidad. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
+Este documento proporciona información sobre los límites de uso y tasa de datos de [!DNL Identity Service] para ayudarle a optimizar el uso del gráfico de identidad. Al revisar las siguientes protecciones, se da por hecho que los datos se han modelado correctamente. Si tiene preguntas sobre cómo modelar los datos, póngase en contacto con su representante de servicio de atención al cliente.
 
 >[!IMPORTANT]
 >
->Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 ## Introducción 
 
 Los siguientes servicios de Experience Platform participan en el modelado de datos de identidad:
 
-* [Identidades](home.md): vincule identidades de fuentes de datos dispares a medida que se incorporan en Platform.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): cree perfiles de consumidor unificados con datos de varias fuentes.
+* [Identidades](home.md): identidades de Bridge de diferentes fuentes de datos a medida que se incorporan en Platform.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): cree perfiles de consumidor unificados con datos de varios orígenes.
 
 ## Límites del modelo de datos
 
@@ -35,7 +35,7 @@ En la tabla siguiente se describen los límites estáticos aplicados a los datos
 
 | Barrera | Límite | Notas |
 | --- | --- | --- |
-| Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplica el mecanismo de &quot;primero en entrar, primero en salir&quot; y elimina la identidad más antigua para dejar espacio a la identidad más reciente para este gráfico (**Nota**: el perfil del cliente en tiempo real no se ve afectado). La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [explicación de la lógica de eliminación](#deletion-logic). |
+| Número de identidades en un gráfico | 50 | Cuando se actualiza un gráfico con 50 identidades vinculadas, el servicio de identidad aplicará el mecanismo de &quot;primero en entrar, primero en salir&quot; y eliminará la identidad más antigua para dejar espacio a la identidad más reciente para este gráfico (**Nota**: El perfil del cliente en tiempo real no se ve afectado). La eliminación se basa en el tipo de identidad y la marca de tiempo. El límite se aplica en el nivel de zona protegida. Para obtener más información, lea la sección sobre [comprensión de la lógica de eliminación](#deletion-logic). |
 | Número de vínculos a una identidad para una sola ingesta por lotes | 50 | Un solo lote podría contener identidades anómalas que causan combinaciones de gráficos no deseadas. Para evitarlo, el servicio de identidad no ingerirá identidades que ya estén vinculadas a 50 o más identidades. |
 | Número de identidades en un registro XDM | 20 | El número mínimo de registros XDM necesarios es de dos. |
 | Número de áreas de nombres personalizadas | Ninguna | No hay límites en el número de áreas de nombres personalizadas que puede crear. |
@@ -56,7 +56,7 @@ En la tabla siguiente se describen las reglas existentes que debe seguir para ga
 
 ### Ingesta del área de identidad
 
-A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad se suele introducir a través de [fuente de Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) y el [fuente de Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) y es redundante porque el ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con el equipo de la cuenta de Adobe.
+A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad se incorpora generalmente a través de [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) y [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md), y es redundante porque el ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con el equipo de la cuenta de Adobe.
 
 ## Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidades en capacidad {#deletion-logic}
 
@@ -98,7 +98,7 @@ Una vez que esta función esté disponible, los gráficos que excedan el límite
 La eliminación solo se produce en los datos del servicio de identidad y no en el perfil del cliente en tiempo real.
 
 * Por lo tanto, este comportamiento podría crear más perfiles con un solo ECID, ya que el ECID ya no forma parte del gráfico de identidad.
-* Para mantenerse dentro de los números de derechos de audiencia a los que se puede dirigir, se recomienda habilitar [caducidad de datos de perfil seudónimos](../profile/pseudonymous-profiles.md) para eliminar los perfiles antiguos.
+* Para mantenerse dentro de los números de derechos de audiencia a los que se puede dirigir, se recomienda habilitar la [caducidad de datos de perfil seudónimos](../profile/pseudonymous-profiles.md) para eliminar los perfiles antiguos.
 
 #### Perfil del cliente en tiempo real y SDK web: eliminación de identidad principal
 
@@ -111,16 +111,16 @@ Si desea conservar los eventos autenticados con el ID de CRM, se recomienda camb
 
 #### Ejemplo 1: gráfico grande típico
 
-*Notas del diagrama:*
+*Notas de diagrama:*
 
 * `t` = marca de tiempo.
 * El valor de una marca de tiempo corresponde a la actualización de una identidad determinada. Por ejemplo, `t1` representa la primera identidad vinculada (la más antigua) y `t51` representaría la identidad vinculada más reciente.
 
-En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que está más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
+En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una nueva identidad, el servicio de identidad elimina primero la identidad existente con la marca de tiempo más antigua. Sin embargo, como la identidad más antigua es un ID de dispositivo, el servicio de identidad omite esa identidad hasta que llega al área de nombres con un tipo que se encuentra más arriba en la lista de prioridades de eliminación, que en este caso es `ecid-3`. Una vez eliminada la identidad más antigua con un tipo de prioridad de eliminación más alta, el gráfico se actualiza con un nuevo vínculo, `ecid-51`.
 
-* En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los ID en función de [XID](./api/list-native-id.md) y realice la eliminación.
+* En el improbable caso de que haya dos identidades con la misma marca de tiempo y el mismo tipo de identidad, el servicio de identidad ordenará los identificadores en función de [XID](./api/list-native-id.md) y realizará la eliminación.
 
-![Ejemplo de la identidad más antigua que se elimina para dar cabida a la identidad más reciente](./images/graph-limits-v3.png)
+![Ejemplo de la identidad más antigua que se está eliminando para dar cabida a la identidad más reciente](./images/graph-limits-v3.png)
 
 #### Ejemplo 2: &quot;división de gráficos&quot;
 
@@ -128,12 +128,12 @@ En este ejemplo, antes de poder actualizar el gráfico de la izquierda con una n
 
 >[!TAB Evento entrante]
 
-*Notas del diagrama:*
+*Notas de diagrama:*
 
-* El diagrama siguiente supone que en `timestamp=50`, 50 identidades existen en el gráfico de identidades.
-* `(...)` significa las otras identidades que ya están vinculadas dentro del gráfico.
+* El diagrama siguiente supone que en `timestamp=50` existen 50 identidades en el gráfico de identidades.
+* `(...)` significa las otras identidades que ya están vinculadas en el gráfico.
 
-En este ejemplo, ECID:32110 se ingiere y se vincula a un gráfico grande en `timestamp=51`, superando así el límite de 50 identidades.
+En este ejemplo, ECID:32110 se ingiere y se vincula a un gráfico grande en `timestamp=51`, por lo tanto se supera el límite de 50 identidades.
 
 ![](./images/guardrails/before-split.png)
 
@@ -157,14 +157,14 @@ Como resultado de la eliminación de ECID:35577, también se eliminan los extrem
 
 >[!TAB Evento entrante]
 
-*Notas del diagrama:*
+*Notas de diagrama:*
 
-* El diagrama siguiente supone que en `timestamp=50`, 50 identidades existen en el gráfico de identidades.
-* `(...)` significa las otras identidades que ya están vinculadas dentro del gráfico.
+* El diagrama siguiente supone que en `timestamp=50` existen 50 identidades en el gráfico de identidades.
+* `(...)` significa las otras identidades que ya están vinculadas en el gráfico.
 
 En virtud de la lógica de eliminación, algunas identidades &quot;hub&quot; también se pueden eliminar. Estas identidades de concentrador hacen referencia a nodos que están vinculados a varias identidades individuales que, de lo contrario, se desvincularían.
 
-En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `timestamp=51`, superando así el límite de 50 identidades.
+En el ejemplo siguiente, ECID:21011 se ingiere y se vincula al gráfico en `timestamp=51`, por lo tanto se supera el límite de 50 identidades.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -197,5 +197,5 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
 * [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P: paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (Paquetes B2B Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (paquetes B2B - Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

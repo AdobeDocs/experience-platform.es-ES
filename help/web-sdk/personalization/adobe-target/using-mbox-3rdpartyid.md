@@ -6,7 +6,7 @@ exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 5%
+ht-degree: 1%
 
 ---
 
@@ -19,17 +19,17 @@ Cuando un visitante inicia sesión en el sitio de una empresa, esta generalmente
 
 ## Cómo usar `mbox3rdPartyId` con el SDK web
 
-### Paso 1: Configuración de `Target Third Party ID Namespace`
+### Paso 1: Configurar `Target Third Party ID Namespace`
 
-Configure las variables `Target Third Party ID Namespace` en su [Datastream](../../../datastreams/overview.md), usando el área de nombres de ID que desea usar como ID de terceros de mbox.
-[Más información sobre Áreas de nombres de ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es)
+Configure `Target Third Party ID Namespace` en su [secuencia de datos](../../../datastreams/overview.md) con el área de nombres de ID que desea usar como ID de terceros de mbox.
+[Más información sobre áreas de nombres de ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es)
 
-![IU de Platform que muestra el campo del área de nombres de ID de terceros de Target.](assets/mbox3rdpartyid.png)
+![IU de plataforma que muestra el campo de área de nombres de ID de terceros de Target.](assets/mbox3rdpartyid.png)
 
-### Paso 2: Envío de la `mbox3rdpartyId` a Target
+### Paso 2: Enviar `mbox3rdpartyId` a Target
 
-Envíe el `mbox3rdpartyId` a Target en `sendEvent` , utilizando el área de nombres de ID que configuró en el paso 1.
-[Más información sobre el envío de ID](../../identity/overview.md#syncing-identities)
+Envíe `mbox3rdpartyId` a Target en el comando `sendEvent`, utilizando el área de nombres de ID configurado en el paso 1.
+[Más información sobre el envío de identificadores](../../identity/overview.md#syncing-identities)
 
 ```javascript
 alloy("sendEvent", {

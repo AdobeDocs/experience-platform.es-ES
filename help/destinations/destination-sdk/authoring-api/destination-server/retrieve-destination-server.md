@@ -4,14 +4,14 @@ title: Recuperar una configuración de servidor de destino
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 2%
+source-wordcount: '466'
+ht-degree: 1%
 
 ---
 
 # Recuperar una configuración de servidor de destino
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar información sobre una configuración de servidor de destino existente utilizando `/authoring/destination-servers` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar información sobre una configuración de servidor de destino existente mediante el extremo de API `/authoring/destination-servers`.
 
 Para obtener una descripción detallada de las funciones utilizadas por los servidores de destino, lea los siguientes artículos:
 
@@ -22,19 +22,19 @@ Para obtener una descripción detallada de las funciones utilizadas por los serv
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperar una configuración de servidor de destino {#retrieve}
 
-Puede recuperar una configuración de servidor de destino existente realizando una `GET` solicitud a la `/authoring/destination-servers` punto final.
+Puede recuperar una configuración de servidor de destino existente realizando una solicitud `GET` al extremo `/authoring/destination-servers`.
 
 >[!TIP]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
 **Formato de API**
 
@@ -44,13 +44,13 @@ Utilice el siguiente formato de API para recuperar todas las configuraciones del
 GET /authoring/destination-servers
 ```
 
-Utilice el siguiente formato de API para recuperar una configuración específica del servidor de destino, definida por la variable `{INSTANCE_ID}` parámetro.
+Utilice el siguiente formato de API para recuperar una configuración específica del servidor de destino, definida por el parámetro `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-Las dos solicitudes siguientes recuperan todas las configuraciones del servidor de destino para su organización IMS o una configuración específica del servidor de destino, en función de si pasa la variable `INSTANCE_ID` en la solicitud.
+Las dos solicitudes siguientes recuperan todas las configuraciones del servidor de destino para su organización de IMS o una configuración específica del servidor de destino, en función de si pasa el parámetro `INSTANCE_ID` en la solicitud.
 
 Seleccione cada pestaña a continuación para ver la carga útil correspondiente y sus respuestas.
 
@@ -58,7 +58,7 @@ Seleccione cada pestaña a continuación para ver la carga útil correspondiente
 
 >[!TAB Recuperar todas las configuraciones del servidor de destino]
 
-La siguiente solicitud recupera la lista de configuraciones del servidor de destino a las que tiene acceso, según [!DNL IMS Org ID] y la configuración de zona protegida.
+La siguiente solicitud recuperará la lista de configuraciones del servidor de destino a las que tiene acceso, según la configuración de [!DNL IMS Org ID] y la zona protegida.
 
 +++Solicitud
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de configuraciones de servidor de destino a las que tiene acceso, en función de [!DNL IMS Org ID] y el nombre de la zona protegida que ha utilizado. Uno `instanceId` corresponde a un servidor de destino. La respuesta de ejemplo siguiente incluye dos configuraciones de servidor de destino.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de configuraciones de servidor de destino a las que tiene acceso, en función del [!DNL IMS Org ID] y el nombre de zona protegida que ha utilizado. Un `instanceId` corresponde a un servidor de destino. La respuesta de ejemplo siguiente incluye dos configuraciones de servidor de destino.
 
 ```json
 {
@@ -153,7 +153,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de configuracio
 
 >[!TAB Recuperar una configuración específica del servidor de destino]
 
-La siguiente solicitud recupera una configuración específica del servidor de destino definida por el `{INSTANCE_ID}` parámetro.
+La siguiente solicitud recuperará una configuración específica del servidor de destino definida por el parámetro `{INSTANCE_ID}`.
 
 +++Solicitud
 
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con la configuración del servidor de destino correspondiente a `{INSTANCE_ID}` ha proporcionado.
+Una respuesta correcta devuelve el estado HTTP 200 con la configuración del servidor de destino correspondiente al `{INSTANCE_ID}` proporcionado.
 
 ```json
 {
@@ -225,7 +225,7 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo recuperar una configuración de servidor de destino a través del Destination SDK `/authoring/destination-servers` Extremo de API.
+Después de leer este documento, ahora sabe cómo recuperar una configuración de servidor de destino a través del extremo de API del Destination SDK `/authoring/destination-servers`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

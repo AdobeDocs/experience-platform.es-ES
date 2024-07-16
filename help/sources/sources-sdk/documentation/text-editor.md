@@ -6,8 +6,8 @@ description: Este documento proporciona pasos sobre cómo utilizar el entorno lo
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 3%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Este documento proporciona pasos sobre cómo utilizar el entorno local para crea
 
 >[!TIP]
 >
->Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalación de las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configure el repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Los siguientes documentos de la guía de contribución de Adobe se pueden utilizar para respaldar aún más su proceso de documentación: <ul><li>[Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Requisitos previos
 
@@ -25,78 +25,78 @@ El siguiente tutorial requiere que tenga GitHub Desktop instalado en el equipo l
 
 ## Conéctese a GitHub y configure su entorno de creación local
 
-El primer paso para configurar el entorno de creación local es ir a [Repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.es).
+El primer paso para configurar el entorno de creación local es ir al [repositorio de GitHub de Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.es).
 
 ![platform-repo](../assets/platform-repo.png)
 
-En la página principal del repositorio de Platform GitHub, seleccione **Tenedor**.
+En la página principal del repositorio de Platform GitHub, seleccione **Fork**.
 
-![Fork (Ramificación)](../assets/fork.png)
+![bifurcación](../assets/fork.png)
 
 Para clonar el repositorio en el equipo local, seleccione **Código**. En el menú desplegable que aparece, seleccione **HTTPS** y, a continuación, seleccione **Abrir con GitHub Desktop**.
 
 >[!TIP]
 >
->Para obtener más información, consulte el tutorial sobre [configuración del repositorio de Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
+>Para obtener más información, consulte el tutorial sobre [configuración local del repositorio Git para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-A continuación, espere unos momentos para que GitHub Desktop clone el `experience-platform.en` repositorio.
+A continuación, espere unos momentos para que GitHub Desktop clone el repositorio `experience-platform.en`.
 
-![clonación](../assets/cloning.png)
+![clonando](../assets/cloning.png)
 
-Una vez completado el proceso de clonación, vaya a GitHub Desktop para crear una nueva rama. Seleccionar **Principal** en la barra de navegación superior y, a continuación, seleccione **Nueva rama**
+Una vez completado el proceso de clonación, vaya a GitHub Desktop para crear una nueva rama. Seleccione **Principal** en la barra de navegación superior y luego seleccione **Nueva rama**
 
-![new-branch](../assets/new-branch.png)
+![rama nueva](../assets/new-branch.png)
 
 En el panel emergente que aparece, escriba un nombre descriptivo para la rama y, a continuación, seleccione **Crear rama**.
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-A continuación, seleccione **Publicar rama**.
+A continuación, seleccione **rama de Publish**.
 
-![publish-branch](../assets/publish-branch.png)
+![rama de publicación](../assets/publish-branch.png)
 
 ## Crear la página de documentación para el origen
 
-Con el repositorio clonado en el equipo local y una nueva rama creada, ahora puede empezar a crear la página de documentación para el nuevo origen a través de la [editor de texto de su elección](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
+Con el repositorio clonado en el equipo local y una nueva rama creada, ahora puedes empezar a crear la página de documentación para tu nuevo origen a través del [editor de texto que elijas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
-El Adobe recomienda que utilice [Código de Visual Studio](https://code.visualstudio.com/) y que instale la extensión de creación de Adobe Markdown. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione **Extensiones** de la barra de navegación izquierda.
+Adobe recomienda usar [Visual Studio Code](https://code.visualstudio.com/) e instalar la extensión de Adobe Markdown Authoring. Para instalar la extensión, inicie Visual Studio Code y, a continuación, seleccione la ficha **Extensiones** en el panel de navegación izquierdo.
 
 ![ Extensión](../assets/extension.png)
 
-A continuación, introduzca `Adobe Markdown Authoring` en la barra de búsqueda y seleccione **Instalar** de la página que aparece.
+A continuación, escriba `Adobe Markdown Authoring` en la barra de búsqueda y seleccione **Instalar** en la página que aparece.
 
 ![instalar](../assets/install.png)
 
-Con el equipo local listo, descargue el [plantilla de documentación de orígenes](../assets/api-template.zip) y extraiga el archivo en `experience-platform.en/help/sources/tutorials/api/create/...` con [`...`] que representa la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de base de datos.
+Con el equipo local listo, descargue la [plantilla de documentación de orígenes](../assets/api-template.zip) y extraiga el archivo en `experience-platform.en/help/sources/tutorials/api/create/...`, donde [`...`] representa la categoría que elija. Por ejemplo, si está creando un origen de base de datos, seleccione la carpeta de base de datos.
 
 Finalmente, siga las instrucciones descritas en la plantilla y edite la plantilla con la información relevante perteneciente a su fuente.
 
-![edit-template](../assets/edit-template.png)
+![editar-plantilla](../assets/edit-template.png)
 
 ## Envíe su documentación para su revisión
 
-Para crear una solicitud de extracción (PR) y enviar la documentación para su revisión, guarde primero su trabajo en [!DNL Visual Studio Code] (o el editor de texto que haya elegido). A continuación, con GitHub Desktop, introduzca un mensaje de confirmación y seleccione **Compromiso con create-source-documentation**.
+Para crear una solicitud de extracción (PR) y enviar la documentación para su revisión, primero guarde el trabajo en [!DNL Visual Studio Code] (o en el editor de texto que haya elegido). A continuación, con GitHub Desktop, introduzca un mensaje de confirmación y seleccione **Confirmar para crear-documentación-origen**.
 
-![commit-vs](../assets/commit-vs.png)
+![compromiso frente a](../assets/commit-vs.png)
 
-A continuación, seleccione **Origen push** para cargar su trabajo en la rama remota.
+A continuación, seleccione **Origen push** para cargar el trabajo en la rama remota.
 
-![de origen push](../assets/push-origin.png)
+![push-origin](../assets/push-origin.png)
 
 Para crear una solicitud de extracción, seleccione **Crear solicitud de extracción**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Asegúrese de que las ramas base y de comparación son correctas. Añada una nota al PR, describiendo la actualización y, a continuación, seleccione **Crear solicitud de extracción**. Se abrirá una PR para fusionar la rama de trabajo del trabajo en la rama maestra del repositorio de Adobe.
+Asegúrese de que las ramas base y de comparación son correctas. Agregue una nota al PR, describiendo su actualización, y luego seleccione **Crear solicitud de extracción**. Se abrirá una PR para fusionar la rama de trabajo del trabajo en la rama maestra del repositorio de Adobe.
 
 >[!TIP]
 >
->Deje el **Permitir ediciones por responsables** casilla de verificación seleccionada para garantizar que el equipo de documentación de Adobe pueda realizar ediciones en el PR.
+>Deje seleccionada la casilla de verificación **Permitir ediciones por responsables** para garantizar que el equipo de documentación de Adobe pueda realizar ediciones en la PR.
 
-![create-pr](../assets/create-pr.png)
+![crear-pr](../assets/create-pr.png)
 
 Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la pestaña solicitudes de extracción en https://github.com/AdobeDocs/experience-platform.en.
 
-![confirm-pr](../assets/confirm-pr.png)
+![confirmar-pr](../assets/confirm-pr.png)

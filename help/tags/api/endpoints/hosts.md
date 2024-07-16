@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /hosts en la API de Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 90%
+source-wordcount: '793'
+ht-degree: 91%
 
 ---
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `attributes.path` | Ruta de acceso que se anexará a la dirección URL `server`. |
 | `attributes.port` | Un entero que indica el puerto de servidor específico que se va a utilizar. |
 | `attributes.server` | La URL de host del servidor. |
-| `attributes.skip_symlinks`<br><br>(solo para hosts SFTP) | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a las compilaciones de biblioteca guardadas en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando este atributo se incluye y se establece en `true`Además, el host utiliza una operación de copia para actualizar los recursos de compilación directamente en lugar de utilizar enlaces simbólicos. |
+| `attributes.skip_symlinks`<br><br>(solo para hosts SFTP) | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a las compilaciones de biblioteca guardadas en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando este atributo se incluye y se establece en `true`, el host utiliza una operación de copia para actualizar los recursos de compilación directamente en lugar de utilizar enlaces simbólicos. |
 | `attributes.username` | Un nombre de usuario opcional para la autenticación. |
 | `type` | Tipo de recurso que se actualiza. Para este extremo, el valor debe ser `hosts`. |
 

@@ -4,7 +4,7 @@ title: Generar una plantilla de transformación de mensaje de ejemplo
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -14,21 +14,21 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
+>**extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/testing/template/sample` Extremo de API, para generar un [plantilla de transformación de mensaje](../../functionality/destination-server/message-format.md#using-templating) para su destino. Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](create-template.md).
+Esta página enumera y describe todas las operaciones de API que puede realizar mediante el extremo de API `/authoring/testing/template/sample` para generar una [plantilla de transformación de mensajes](../../functionality/destination-server/message-format.md#using-templating) para su destino. Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](create-template.md).
 
 ## Introducción a las operaciones de API de plantilla de muestra {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Obtener plantilla de muestra {#generate-sample-template}
 
-Puede obtener una plantilla de ejemplo realizando una solicitud de GET a la variable `authoring/testing/template/sample/` y proporcionar el ID de destino de la configuración de destino en función de la que esté creando la plantilla.
+Puede obtener una plantilla de ejemplo realizando una solicitud de GET al extremo `authoring/testing/template/sample/` y proporcionando el identificador de destino de la configuración de destino en función de la cual está creando la plantilla.
 
 >[!TIP]
 >
->* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte la [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
+>* El id. de destino que debe usar aquí es el `instanceId` que corresponde a una configuración de destino creada con el extremo `/destinations`. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
 
 **Formato de API**
 
@@ -58,7 +58,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Una respuesta correcta devuelve el estado HTTP 200 con una plantilla de ejemplo que puede editar para que coincida con el formato de datos esperado.
 
-Si el ID de destino proporcionado corresponde a una configuración de destino con [agregación de mejor esfuerzo](../../functionality/destination-configuration/aggregation-policy.md) y `maxUsersPerRequest=1` en la directiva de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el identificador de destino proporcionado corresponde a una configuración de destino con [agregación de mejor esfuerzo](../../functionality/destination-configuration/aggregation-policy.md) y `maxUsersPerRequest=1` en la directiva de agregación, la solicitud devuelve una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +91,7 @@ Si el ID de destino proporcionado corresponde a una configuración de destino co
 }
 ```
 
-Si el ID de destino proporcionado corresponde a una plantilla de servidor de destino con [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) o [agregación de mejor esfuerzo](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) con `maxUsersPerRequest` bueno que uno, la solicitud devuelve una plantilla de ejemplo similar a esta:
+Si el id. de destino proporcionado corresponde a una plantilla de servidor de destino con [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) o [agregación de mejor esfuerzo](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) con `maxUsersPerRequest` mayor que uno, la solicitud devolverá una plantilla de ejemplo similar a esta:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -136,4 +136,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo generar una plantilla de transformación de mensajes utilizando `/authoring/testing/template/sample` Extremo de API. A continuación, puede utilizar la variable [Extremo de API de plantilla de procesamiento](render-template-api.md) para generar perfiles exportados basados en la plantilla y compararlos con el formato de datos esperado del destino.
+Después de leer este documento, ahora sabe cómo generar una plantilla de transformación de mensajes utilizando el extremo de API `/authoring/testing/template/sample`. A continuación, puede usar el [extremo de la API de la plantilla de procesamiento](render-template-api.md) para generar perfiles exportados basados en la plantilla y compararlos con el formato de datos esperado del destino.

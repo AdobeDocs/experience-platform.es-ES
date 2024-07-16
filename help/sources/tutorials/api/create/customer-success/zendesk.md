@@ -4,44 +4,44 @@ description: Aprenda a conectar Adobe Experience Platform a Zendesk mediante la 
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 3%
+source-wordcount: '1942'
+ht-degree: 2%
 
 ---
 
-# Crear un flujo de datos para [!DNL Zendesk] uso del [!DNL Flow Service] API
+# Crear un flujo de datos para [!DNL Zendesk] mediante la API [!DNL Flow Service]
 
-El siguiente tutorial le guiará por los pasos para crear una conexión de origen y un flujo de datos que traer [!DNL Zendesk] a Platform mediante el [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+El siguiente tutorial lo acompañará durante los pasos para crear una conexión de origen y un flujo de datos para llevar datos de [!DNL Zendesk] a Platform mediante la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
 * [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Zendesk] uso del [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL Zendesk] mediante la API [!DNL Flow Service].
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su [!DNL Zendesk] En Platform, debe proporcionar valores para las siguientes credenciales:
+Para tener acceso a su cuenta de [!DNL Zendesk] en Platform, debe proporcionar valores para las siguientes credenciales:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
 | `subdomain` | El dominio único asociado con su cuenta. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Token de API de Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-Para obtener más información sobre la autenticación de [!DNL Zendesk] fuente, consulte la [[!DNL Zendesk] descripción general de origen](../../../../connectors/customer-success/zendesk.md).
+Para obtener más información sobre cómo autenticar el origen de [!DNL Zendesk], consulte la [[!DNL Zendesk] descripción general del origen](../../../../connectors/customer-success/zendesk.md).
 
-## Connect [!DNL Zendesk] a Platform mediante el [!DNL Flow Service] API
+## Conectar [!DNL Zendesk] a la plataforma mediante la API [!DNL Flow Service]
 
-El siguiente tutorial le guiará para crear una [!DNL Zendesk] conexión de origen y cree un flujo de datos para [!DNL Zendesk] a Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+El siguiente tutorial lo acompañará durante los pasos para crear una conexión de origen de [!DNL Zendesk] y un flujo de datos para llevar los datos de [!DNL Zendesk] a Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### Cree una conexión base {#base-connection}
+### Crear una conexión base {#base-connection}
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Zendesk] credenciales de autenticación como parte del cuerpo de la solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Zendesk] como parte del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -82,7 +82,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión base. Asegúrese de que el nombre de la conexión base sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión base. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión base. |
-| `connectionSpec.id` | El ID de especificación de conexión de su origen. Este ID se puede recuperar una vez registrado su origen y aprobado mediante el [!DNL Flow Service] API. |
+| `connectionSpec.id` | El ID de especificación de conexión de su origen. Este identificador se puede recuperar una vez que su origen se haya registrado y aprobado mediante la API [!DNL Flow Service]. |
 | `auth.specName` | El tipo de autenticación que utiliza para autenticar el origen en Platform. |
 | `auth.params.` | Contiene las credenciales necesarias para autenticar el origen. |
 | `auth.params.subdomain` | El dominio único asociado con su cuenta. El formato del subdominio es `https://yoursubdomain.zendesk.com`. |
@@ -116,11 +116,11 @@ Al realizar solicitudes para explorar la estructura de archivos y el contenido d
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base generado en el paso anterior. |
-| `objectType=rest` | El tipo de objeto que desea explorar. Actualmente, este valor siempre se establece en `rest`. |
+| `objectType=rest` | El tipo de objeto que desea explorar. Actualmente, este valor siempre está establecido en `rest`. |
 | `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. |
 | `fileType=json` | El tipo de archivo del archivo que desea llevar a Platform. Actualmente, `json` es el único tipo de archivo compatible. |
 | `{PREVIEW}` | Un valor booleano que define si el contenido de la conexión admite la vista previa. |
-| `{SOURCE_PARAMS}` | Define parámetros para el archivo de origen que desea llevar a Platform. Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar todo el `parameter` cadena en base64. En el ejemplo siguiente, `"{}"` codificado en base64 equivale a `e30`. |
+| `{SOURCE_PARAMS}` | Define parámetros para el archivo de origen que desea llevar a Platform. Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar toda la cadena `parameter` en base64. En el ejemplo siguiente, `"{}"` codificado en base64 equivale a `e30`. |
 
 
 **Solicitud**
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve la estructura del archivo consultado. En el ejemplo siguiente, dentro de la variable ``data[]`` carga útil solo se muestra un único registro, aunque podría haber varios registros.
+Una respuesta correcta devuelve la estructura del archivo consultado. En el ejemplo siguiente dentro de la carga útil ``data[]`` solo se muestra un único registro, aunque podría haber varios registros.
 
 ```json
 {
@@ -313,7 +313,7 @@ Una respuesta correcta devuelve la estructura del archivo consultado. En el ejem
 
 ### Crear una conexión de origen {#source-connection}
 
-Puede crear una conexión de origen realizando una solicitud de POST a [!DNL Flow Service] API. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST a la API [!DNL Flow Service]. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
 
 **Formato de API**
 
@@ -352,9 +352,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
-| `baseConnectionId` | El ID de conexión base de [!DNL Zendesk]. Este ID se generó en un paso anterior. |
+| `baseConnectionId` | Identificador de conexión base de [!DNL Zendesk]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato del [!DNL Zendesk] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | Formato de los datos de [!DNL Zendesk] que desea introducir. Actualmente, el único formato de datos compatible es `json`. |
 
 **Respuesta**
 
@@ -371,21 +371,21 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](../../../../../xdm/api/schemas.md).
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../../../xdm/api/schemas.md).
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 
 ### Creación de una conexión de destino {#target-connection}
 
-Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este identificador es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -425,14 +425,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
-| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este ID fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | El formato del [!DNL Zendesk] datos que desee llevar a Platform. |
+| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este identificador fijo es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Formato de los datos de [!DNL Zendesk] que desea llevar a Platform. |
 | `params.dataSetId` | ID del conjunto de datos de destino recuperado en un paso anterior. |
 
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Este ID es necesario en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) de la nueva conexión de destino. Este ID es necesario en pasos posteriores.
 
 ```json
 {
@@ -647,7 +647,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `xdmSchema` | El ID del [esquema XDM de destino](#target-schema) se ha generado en un paso anterior. |
+| `xdmSchema` | El ID del [esquema XDM de destino](#target-schema) generado en un paso anterior. |
 | `mappings.destinationXdmPath` | Ruta XDM de destino a la que se asigna el atributo de origen. |
 | `mappings.sourceAttribute` | Atributo de origen que debe asignarse a una ruta XDM de destino. |
 | `mappings.identity` | Un valor booleano que designa si el conjunto de asignaciones se marcará para [!DNL Identity Service]. |
@@ -671,13 +671,13 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 El último paso para llevar los datos de Zendesk a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
-* [ID de conexión de origen](#source-connection)
+* [ID de conexión de Source](#source-connection)
 * [ID de conexión de destino](#target-connection)
 * [ID de asignación](#mapping)
 
 Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
 
-Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas; sin embargo, la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day` o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas; sin embargo, la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
 
 
 **Formato de API**
@@ -729,21 +729,21 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en él. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre el flujo de datos. |
-| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este ID fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este identificador fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | La versión correspondiente del ID de especificación de flujo. El valor predeterminado es `1.0`. |
-| `sourceConnectionIds` | El [ID de conexión de origen](#source-connection) se ha generado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) se ha generado en un paso anterior. |
+| `sourceConnectionIds` | [Id. de conexión de origen](#source-connection) generado en un paso anterior. |
+| `targetConnectionIds` | [Id. de conexión de destino](#target-connection) generado en un paso anterior. |
 | `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Platform. |
 | `transformations.name` | El nombre asignado a la transformación. |
-| `transformations.params.mappingId` | El [ID de asignación](#mapping) se ha generado en un paso anterior. |
+| `transformations.params.mappingId` | [ID de asignación](#mapping) generado en un paso anterior. |
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
 | `scheduleParams.startTime` | Esta propiedad contiene información sobre la programación de la ingesta del flujo de datos. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
 
 ```json
 {
@@ -758,20 +758,20 @@ En la siguiente sección se proporciona información sobre los pasos que puede s
 
 ### Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de la API, lea la guía de [monitorización de los flujos de datos de origen mediante la API](../../monitor.md).
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de API, lee la guía sobre [supervisión de los flujos de datos de origen mediante la API](../../monitor.md).
 
 ### Actualizar el flujo de datos
 
-Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH a `/flows` punto final de [!DNL Flow Service] API, mientras proporciona el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única del flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de flujos de datos de origen mediante la API](../../update-dataflows.md).
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH al extremo `/flows` de la API [!DNL Flow Service], proporcionando al mismo tiempo el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único del flujo de datos en el encabezado `If-Match`. Para ver ejemplos completos de la API, lea la guía sobre [actualización de orígenes y flujos de datos mediante la API](../../update-dataflows.md).
 
 ### Actualice su cuenta
 
-Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud al PATCH de [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la cuenta de origen única `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de la cuenta de origen mediante la API](../../update.md).
+Actualice el nombre, la descripción y las credenciales de su cuenta de origen realizando una solicitud de PATCH a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único de su cuenta de origen en el encabezado `If-Match`. Para ver ejemplos completos de API, lee la guía de [actualización de tu cuenta de origen mediante la API](../../update.md).
 
 ### Eliminar el flujo de datos
 
-Elimine el flujo de datos realizando una solicitud de DELETE a [!DNL Flow Service] API al proporcionar el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de la API, lea la guía de [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
+Elimine el flujo de datos realizando una solicitud de DELETE a la API [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro query. Para ver ejemplos completos de API, lea la guía sobre [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
 
 ### Eliminar su cuenta
 
-Elimine la cuenta realizando una solicitud de DELETE a [!DNL Flow Service] al proporcionar el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de la API, lea la guía de [Eliminar la cuenta de origen mediante la API](../../delete.md).
+Elimine la cuenta realizando una solicitud de DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, lee la guía sobre [eliminar tu cuenta de origen mediante la API](../../delete.md).

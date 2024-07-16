@@ -17,4 +17,4 @@ ht-degree: 72%
 
 La extensión de SDK web de Adobe Experience Platform envía datos a Adobe Experience Cloud desde las propiedades web a través de Adobe Experience Platform Edge Network. La extensión SDK para web de Platform permite la transmisión de datos a la plataforma, la sincronización de identidades, la inclusión y la recopilación automática de datos de contexto.
 
-Para obtener más información sobre la configuración de la extensión del SDK web de Platform, consulte la [Configurar la extensión de etiqueta del SDK web](web-sdk-extension-configuration.md).
+Para obtener más información sobre cómo configurar la extensión del SDK web de Platform, consulte [Configurar la extensión de etiqueta del SDK web](web-sdk-extension-configuration.md).

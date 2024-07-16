@@ -7,19 +7,19 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Datos del perfil de cuenta
 
-[Perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) se utilizan para consolidar información de cuentas de varias fuentes, incluidos varios canales de marketing y sistemas organizativos. Esta vista unificada permite comprender las cuentas de los clientes y mejorar las campañas de marketing B2B. Las perspectivas derivadas del análisis del modelo de datos hacen que los datos B2B de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
+[Los perfiles de cuenta](../../rtcdp/accounts/account-profile-overview.md) se utilizan para consolidar información de cuenta de varias fuentes, incluidos varios canales de marketing y sistemas organizativos. Esta vista unificada permite comprender las cuentas de los clientes y mejorar las campañas de marketing B2B. Las perspectivas derivadas del análisis del modelo de datos hacen que los datos B2B de Adobe Real-time Customer Data Platform sean más accesibles, comprensibles e impactantes para la toma de decisiones.
 
 Con acceso al SQL que alimenta sus perspectivas, puede comprender mejor sus datos B2B y generar sus propias perspectivas reutilizables altamente personalizadas para explorar aún más la información de su cuenta de cliente. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de perfiles de cuenta](../guides/account-profiles.md) o una [panel personalizado](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles de cuenta](../guides/account-profiles.md) o un [panel personalizado](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
 
 ## Perfiles de cuenta añadidos {#account-profiles-added}
 
@@ -287,4 +287,4 @@ Al leer este documento, ahora comprende el SQL que genera las perspectivas del p
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-También puede leer y comprender el SQL que genera perspectivas para [Perfiles](./profiles.md), [Audiencias](./audiences.md), y [Destinos](./destinations.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para los paneles de [Perfiles](./profiles.md), [Audiencias](./audiences.md) y [Destinos](./destinations.md).

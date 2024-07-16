@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de etiqueta de AEM Ass
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1062'
 ht-degree: 98%
 
 ---
@@ -24,7 +24,7 @@ Esta extensión está diseñada para utilizarse junto con [AEM Asset Insights](h
 Los informes de AEM Asset de Analytics contienen tres dimensiones de AEM:
 
 * ID del recurso
-* Origen de recursos
+* Asset Source
 * Recurso en el que se hizo clic
 
 También hay dos métricas:

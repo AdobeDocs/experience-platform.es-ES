@@ -51,9 +51,9 @@ En el ejemplo proporcionado, si existe un elemento de datos con un nombre que co
 
 >[!NOTE]
 >
->Puede usar el porcentaje (`%`) sintaxis para hacer referencia a variables para muchos campos de formulario en la implementación de etiquetas, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, con `%product%` accederá al valor del elemento de datos del producto o de la variable personalizada.
+>Puede utilizar la sintaxis de porcentaje (`%`) para hacer referencia a variables de muchos campos de formulario en la implementación de etiquetas, lo que reduce la necesidad de llamar a `_satellite.getVar()`. Por ejemplo, al usar `%product%` se accederá al valor del elemento de datos del producto o de la variable personalizada.
 
-Cuando un evento déclencheur una regla, puede pasar la regla correspondiente `event` objeto en `_satellite.getVar()` como se muestra:
+Cuando un evento déclencheur una regla, puede pasar el objeto `event` correspondiente de la regla a `_satellite.getVar()` de la siguiente manera:
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->El `setVar` El código es completamente independiente de un elemento de datos especificado en Etiquetas.
+>El código `setVar` es completamente independiente de un elemento de datos especificado en Etiquetas.
 
 **Código**
 
@@ -146,11 +146,11 @@ Registra una advertencia en la consola del explorador. El mensaje aparece indepe
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre un uso más avanzado de esta biblioteca, consulte la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` contiene funciones para leer y escribir cookies. Es una copia expuesta de la biblioteca de terceros js-cookie. Para obtener más información sobre un uso más avanzado de esta biblioteca, revisa la [documentación de js-cookie](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Establecer una cookie {#cookie-set}
 
-Para establecer una cookie, utilice `_satellite.cookie.set()`.
+Para establecer una cookie, use `_satellite.cookie.set()`.
 
 **Código**
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->En el viejo [`setCookie`](#setCookie) método para configurar cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba el tiempo de caducidad de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer una caducidad para una cookie mediante el nuevo método, debe proporcionar un `expires` en el objeto attributes y establézcalo en el valor deseado. Esto se muestra en el ejemplo siguiente.
+>En el antiguo método [`setCookie`](#setCookie) de establecer cookies, el tercer argumento (opcional) de esta llamada a la función era un entero que indicaba la hora de caducidad de la cookie en días. En este nuevo método, se acepta un objeto &quot;attributes&quot; como tercer argumento. Para establecer una caducidad para una cookie mediante el nuevo método, debe proporcionar una propiedad `expires` en el objeto de atributos y establecerla en el valor deseado. Esto se muestra en el ejemplo siguiente.
 
 **Ejemplo**
 
@@ -172,7 +172,7 @@ _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 
 ### Recuperación de una cookie {#cookie-get}
 
-Para recuperar una cookie, utilice `_satellite.cookie.get()`.
+Para recuperar una cookie, use `_satellite.cookie.get()`.
 
 **Código**
 
@@ -190,7 +190,7 @@ var product = _satellite.cookie.get('product');
 
 ### Eliminación de una cookie {#cookie-remove}
 
-Para eliminar una cookie, utilice `_satellite.cookie.remove()`.
+Para quitar una cookie, use `_satellite.cookie.remove()`.
 
 **Código**
 
@@ -260,7 +260,7 @@ El objeto contiene las siguientes propiedades:
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID del entorno. |
-| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`, y `production`. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging` y `production`. |
 
 ## `notify`
 

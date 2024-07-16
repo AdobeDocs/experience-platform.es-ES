@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Datos personales de contacto] es un grupo de campos de esquema estándar para [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que describe la información de contacto de una persona individual.
+[!UICONTROL Datos personales de contacto] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que describe la información de contacto de una persona individual.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 | `homeAddress` | [Dirección postal](../../data-types/postal-address.md) | Describe la dirección residencial de la persona. |
 | `homePhone` | [Número de teléfono](../../data-types/phone-number.md) | Describe el número de teléfono particular de la persona. |
 | `mobilePhone` | [Número de teléfono](../../data-types/phone-number.md) | Describe el número de teléfono móvil de la persona. |
-| `personalEmail` | [Correo electrónico](../../data-types/email-address.md) | Describe la dirección de correo electrónico de la persona. |
+| `personalEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | Describe la dirección de correo electrónico de la persona. |
 
 {style="table-layout:auto"}
 

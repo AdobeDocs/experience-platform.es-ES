@@ -23,7 +23,7 @@ Cada propiedad de etiqueta de Adobe Experience Platform requiere que se instalen
 * Servicio de ID de visitante de Experience Cloud
 * Extensión principal
 
-Utilice el [&quot;Incrustar un reproductor con un \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) fragmento de código de los documentos de desarrollador de Google en el HTML de cada página web en la que se va a procesar un reproductor de vídeo.
+Use el [&quot;Incrustar un reproductor con una etiqueta \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) fragmento de código de los documentos de desarrollador de Google en el HTML de cada página web en la que se va a procesar un reproductor de vídeo.
 
 La versión 2.0.1 de esta extensión admite la incrustación de uno o más vídeos de YouTube en una sola página web mediante la inserción de un atributo `id` con un valor único en la etiqueta iframe, y anexando `enablejsapi=1` y `rel=0` al final del valor del atributo `src` si no se ha incluido ya, por ejemplo. Por ejemplo:
 
@@ -75,7 +75,7 @@ Se puede configurar una regla de etiqueta para cada evento de vídeo (los siete 
 Las reglas tienen tres acciones:
 
 * **Establecer variables:** Configure las variables de Adobe Analytics (asigne a todos los elementos de datos incluidos todos o algunos de ellos).
-* **Enviar señalización:** Envíe la señalización de Adobe Analytics como llamada de seguimiento de vínculo personalizado y proporcione un valor &quot;Nombre del vínculo&quot;.
+* **Enviar señalización:** Envíe la señalización Adobe Analytics como una llamada de seguimiento de vínculos personalizados y proporcione un valor &quot;Nombre del vínculo&quot;.
 * **Borrar variables:** Borre las variables de Adobe Analytics.
 
 ## Ejemplo de regla de etiquetas para Inicio de vídeo
@@ -86,7 +86,7 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
 
 * **Condición**: ninguna
 
-* **Acciones**: utilice el **Extensión de Analytics** para la acción &quot;Set Variables&quot;, para asignar:
+* **Acciones**: use la acción **Extensión de Analytics** para &quot;Establecer variables&quot;, para asignar:
 
    * El evento de inicio de vídeo,
    * Un prop/eVar para el elemento de datos de la duración del vídeo
@@ -94,7 +94,7 @@ Se deben incluir los siguientes objetos de extensión de vídeo.
    * Un prop/eVar para el elemento de datos del nombre del vídeo
    * Un prop/eVar para el elemento de datos de la URL de vídeo
 
-  A continuación, incluya la acción Enviar baliza (`s.tl`) con el nombre de vínculo &quot;inicio de vídeo&quot;, seguido de la acción &quot;Borrar variables&quot;.
+  A continuación, incluya la acción &quot;Enviar señalización&quot; (`s.tl`) con el nombre de vínculo &quot;inicio de vídeo&quot;, seguida de una acción &quot;Borrar variables&quot;.
 
 >[!TIP]
 > 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Para obtener más información sobre cómo crear y aprovechar los elementos de datos de forma eficaz en Platform, lea la [elementos de datos](../../../ui/managing-resources/data-elements.md) documentación.
+Para obtener más información sobre cómo crear y aprovechar elementos de datos de forma eficaz en Platform, lea la documentación de [elementos de datos](../../../ui/managing-resources/data-elements.md).

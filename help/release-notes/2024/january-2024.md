@@ -1,10 +1,11 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, enero de 2024
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 30%
+source-wordcount: '1659'
+ht-degree: 31%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 30%
 
 Nuevas funciones de Adobe Experience Platform:
 
-- [Manuales de casos de uso](#use-case-playbooks)
+- [Manuales de tácticas de casos de uso](#use-case-playbooks)
 
 Actualizaciones de funciones existentes en Experience Platform:
 
@@ -28,17 +29,17 @@ Actualizaciones de funciones existentes en Experience Platform:
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
-## Manuales de casos de uso {#use-case-playbooks}
+## Manuales de tácticas de casos de uso {#use-case-playbooks}
 
-El [!UICONTROL Manuales de casos de uso] Ahora la funcionalidad está disponible de forma general para todos los clientes de Real-Time CDP y Adobe Journey Optimizer. [!UICONTROL Manuales de casos de uso] están diseñadas para ayudar a los usuarios a superar los desafíos al comenzar con Real-time Customer Data Platform o Adobe Journey Optimizer. Cuando no está seguro de por dónde empezar o cómo crear los recursos adecuados para los casos de uso deseados, los libros de reproducción de casos de uso proporcionan inspiración y crean diferentes recursos para probarlos e importarlos en entornos de producción cuando estén listos.
+La funcionalidad [!UICONTROL Caso de uso Playbooks] ya está disponible de forma general para todos los clientes de Real-Time CDP y Adobe Journey Optimizer. [!UICONTROL Los libros de reproducción de casos de uso] están diseñados para ayudar a los usuarios a superar los desafíos al comenzar con Real-time Customer Data Platform o Adobe Journey Optimizer. Cuando no está seguro de por dónde empezar o cómo crear los recursos adecuados para los casos de uso deseados, los libros de reproducción de casos de uso proporcionan inspiración y crean diferentes recursos para probarlos e importarlos en entornos de producción cuando estén listos.
 
-Para empezar con [!UICONTROL Manuales de casos de uso], lea las siguientes páginas de documentación:
+Para empezar a usar [!UICONTROL Casos de uso], lea las siguientes páginas de documentación:
 
-- Lea el [página de información general](/help/use-case-playbooks/playbooks/overview.md) para comprender el propósito, la información de disponibilidad y obtener una demostración completa de cómo funcionan los libros de reproducción, desde la detección hasta la creación de instancias y la importación de recursos generados en otros entornos de zona protegida.
-- Obtener una lista de todos los [manuales disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), agrupadas por producto (Real-Time CDP o Journey Optimizer)
-- Obtenga información acerca de todas las [permisos necesarios](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) para utilizar libros de reproducción y los recursos generados por los libros de reproducción.
-- Comprender el [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md) lo que le permite copiar recursos generados en otros entornos de zona protegida
-- Obtener [sugerencias de solución de problemas](/help/use-case-playbooks/playbooks/troubleshooting.md) si tiene errores o dificultades al utilizar los libros de reproducción de casos de uso.
+- Lea la [página de información general](/help/use-case-playbooks/playbooks/overview.md) para comprender el propósito, la información de disponibilidad y obtener una demostración completa de cómo funcionan los libros de reproducción, desde la detección hasta la creación de instancias y la importación de recursos generados en otros entornos de espacio aislado.
+- Obtener una lista de [libros de reproducción disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), agrupados por producto (Real-Time CDP o Journey Optimizer)
+- Obtenga información sobre todos los [permisos necesarios](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) para usar libros de reproducción y los recursos generados por los libros de reproducción.
+- Comprenda la [funcionalidad de reconocimiento de datos](/help/use-case-playbooks/playbooks/data-awareness.md) que le permite copiar recursos generados en otros entornos de espacio aislado
+- Obtenga [sugerencias para la solución de problemas](/help/use-case-playbooks/playbooks/troubleshooting.md) si encuentra errores o dificultades al usar los manuales de casos de uso.
 
 ## Control de acceso basado en atributos {#abac}
 
@@ -50,11 +51,11 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 
 | Actualización de documentación | Descripción |
 | --- | --- |
-| Nuevos extremos de API documentados para el control de acceso basado en atributos | El [Documentación de referencia de API de control de acceso](https://developer.adobe.com/experience-platform-apis/references/access-control/) ahora incluye funciones de API de control de acceso basadas en atributos, directivas y extremos de productos. Estos extremos se pueden utilizar para recuperar funciones, directivas y productos relevantes para un usuario en recursos determinados de una zona protegida especificada. |
+| Nuevos extremos de API documentados para el control de acceso basado en atributos | La [documentación de referencia de la API de control de acceso](https://developer.adobe.com/experience-platform-apis/references/access-control/) ahora incluye roles, directivas y extremos de producto de API de control de acceso basados en atributos. Estos extremos se pueden utilizar para recuperar funciones, directivas y productos relevantes para un usuario en recursos determinados de una zona protegida especificada. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
+Para obtener más información sobre el control de acceso basado en atributos, vea la [descripción general del control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Preparación de los datos {#data-prep}
 
@@ -64,11 +65,11 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 
 | Función | Descripción |
 | --- | --- |
-| Nuevas funciones de asignación | <ul><li>`object_to_map`: utilice el `object_to_map` para crear tipos de datos de mapa. Esta función admite varias sintaxis diferentes. Para obtener más información, lea la guía de [funciones para jerarquías: objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: utilice el `to_map` para crear un mapa con pares de nombre de campo y valor dados utilizando objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilice el `array_to_map` para crear un mapa con pares de nombre de campo y valor determinados utilizando matrices de objetos. Para obtener más información, lea la guía de [funciones para jerarquías: mapas](../../data-prep/functions.md#map). |
+| Nuevas funciones de asignación | <ul><li>`object_to_map`: utilice la función `object_to_map` para crear tipos de datos de asignación. Esta función admite varias sintaxis diferentes. Para obtener más información, lea la guía de [funciones para jerarquías: objetos](../../data-prep/functions.md#objects). </li><li>`to_map`: utilice la función `to_map` para crear un mapa con pares de nombre de campo y valor dados mediante objetos. Para obtener más información, lea la guía de [funciones para jerarquías - mapas](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilice la función `array_to_map` para crear un mapa con pares de nombre de campo y valor determinados mediante matrices de objetos. Para obtener más información, lea la guía de [funciones para jerarquías - mapas](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre la preparación de datos, lea la [Resumen de preparación de datos](../../data-prep/home.md).
+Para obtener más información sobre la preparación de datos, lea la [descripción general de la preparación de datos](../../data-prep/home.md).
 
 ## Paneles {#dashboards}
 
@@ -78,7 +79,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese con el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. SQL también está disponible para su [Perfiles](../../dashboards/insights/profiles.md), [Audiencias](../../dashboards/insights/audiences.md), y [Destinos](../../dashboards/insights/destinations.md) datos en la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de insight SQL](../../dashboards/view-sql.md). |
+| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese con el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Platform en función de sus necesidades comerciales. El SQL también está disponible para las perspectivas de [Perfiles](../../dashboards/insights/profiles.md), [Audiencias](../../dashboards/insights/audiences.md) y [Destinos](../../dashboards/insights/destinations.md) de la documentación del Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de Insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -92,7 +93,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [Conexión pubmática](../../destinations/catalog/advertising/pubmatic.md) | Utilice este destino para enviar datos de audiencia a [!DNL PubMatic Connect] plataforma. |
+| [Conexión pubmática](../../destinations/catalog/advertising/pubmatic.md) | Utilice este destino para enviar datos de audiencia a la plataforma [!DNL PubMatic Connect]. |
 
 {style="table-layout:auto"}
 
@@ -100,7 +101,7 @@ Para obtener más información sobre los paneles, incluido cómo conceder permis
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| Nuevo **función asumida** tipo de autenticación para destinos de Amazon S3 | Utilice el nuevo tipo de autenticación de función asumida al conectar Experience Platform a los bloques de Amazon S3 si no desea compartir claves de cuenta y claves secretas con Experience Platform. Obtenga más información sobre el nuevo método de autenticación en la [sección de autenticación](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) de la documentación de Amazon S3. |
+| Se ha asumido el nuevo tipo de autenticación **role** para los destinos de Amazon S3 | Utilice el nuevo tipo de autenticación de función asumida al conectar Experience Platform a los bloques de Amazon S3 si no desea compartir claves de cuenta y claves secretas con Experience Platform. Obtenga más información acerca del nuevo método de autenticación en la [sección de autenticación](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) de la documentación de Amazon S3. |
 
 {style="table-layout:auto"}
 
@@ -114,11 +115,11 @@ El servicio de identidad de Adobe Experience Platform le ofrece una vista comple
 
 | Actualización de documentación | Descripción |
 | --- | --- |
-| Reestructuración de documentación | La documentación del servicio de identidad se ha reestructurado para mejorar la presentación y la claridad de los conceptos dentro del servicio de identidad:<ul><li>Visite la [Página de información general del servicio de identidad](../../identity-service/home.md) para obtener una guía terminológica expandida, un ejemplo de caso de uso que detalle un recorrido de cliente típico, un desglose de cómo el servicio de identidad vincula las identidades y un resumen de la función que el servicio de identidad coloca dentro del ecosistema de Experience Platform.</li><li>Lea la guía de [Explicación de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](../../identity-service/identity-and-profile.md) para obtener un resumen detallado de cómo funcionan juntos los dos servicios y las diferencias entre sus propósitos, procesos, entradas y salidas.</li><li>Consulte la [Guía lógica de vinculación del servicio de identidad](../../identity-service/features/identity-linking-logic.md) para obtener explicaciones y visualizaciones sobre cómo se comporta el gráfico de identidad, según diferentes escenarios y marcas de tiempo.</li></ul> |
+| Reestructuración de documentación | La documentación del servicio de identidad se ha reestructurado para mejorar la presentación y la claridad de los conceptos dentro del servicio de identidad:<ul><li>Visite la [página de información general del servicio de identidad](../../identity-service/home.md) para obtener una guía terminológica ampliada, un ejemplo de caso de uso que detalle un recorrido típico del cliente, un desglose de cómo el servicio de identidad vincula las identidades y un resumen de la función que el servicio de identidad coloca dentro del ecosistema del Experience Platform.</li><li>Lea la guía sobre [Comprensión de la relación entre el servicio de identidad y el perfil del cliente en tiempo real](../../identity-service/identity-and-profile.md) para obtener un resumen detallado de cómo funcionan juntos los dos servicios y las diferencias entre sus propósitos, procesos, entradas y salidas.</li><li>Consulte la [Guía lógica de vinculación del servicio de identidad](../../identity-service/features/identity-linking-logic.md) para obtener explicaciones y visualizaciones sobre cómo se comporta el gráfico de identidad en función de los distintos escenarios y las marcas de tiempo.</li></ul> |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre Identity Service, lea la [Introducción al servicio de identidad](../../identity-service/home.md).
+Para obtener más información acerca del servicio de identidad, lea la [descripción general del servicio de identidad](../../identity-service/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -128,7 +129,7 @@ El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Rea
 
 | Función | Descripción |
 | --- | --- |
-| Actualizaciones de [Página de inicio de Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de perfiles**: Ahora puede utilizar el widget Perfiles para navegar a la página Información general de Perfiles y ver las métricas de Perfil de su organización.</li><li>**Tarjeta de métricas de perfil**: la tarjeta Métricas de perfil en el panel de página de inicio ahora muestra el recuento total de perfiles en su organización, según las políticas de combinación correspondientes.</li><li>**Widget de esquemas**: ahora puede utilizar el widget de esquemas para ir al flujo de trabajo de creación de esquemas en la interfaz de usuario.</li></ul> |
+| Actualizaciones a la [página principal de Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de perfiles**: ahora puede usar el widget de perfiles para ir a la página de información general de perfiles y ver las métricas de perfil de su organización.</li><li>**Tarjeta de métricas de perfil**: La tarjeta Métricas de perfil del panel de la página de inicio ahora muestra el recuento total de perfiles de su organización, en función de su política de combinación respectiva.</li><li>**Widget de esquemas**: ahora puede usar el widget de esquemas para ir al flujo de trabajo de creación de esquemas en la interfaz de usuario.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -136,12 +137,12 @@ El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Rea
 
 | Actualización de documentación | Descripción |
 | --- | --- |
-| Nueva página de inicio de documentación de Real-Time CDP | Visite la [nueva página de inicio de documentación de Real-Time CDP](/help/rtcdp/home.md) para obtener información rápida sobre cómo empezar a utilizar el producto, las protecciones, los casos de uso de muestra y mucho más. |
-| Ejemplo de casos de uso de Real-Time CDP | Visite la [nueva página de información general de casos de uso de muestra](/help/rtcdp/use-case-guides/overview.md) para obtener una colección de casos de uso de muestra que su organización puede lograr con Real-Time CDP. |
+| Nueva página de inicio de documentación de Real-Time CDP | Visite la [nueva página de inicio de documentación de Real-Time CDP](/help/rtcdp/home.md) para obtener información rápida sobre cómo empezar a usar el producto, las protecciones, los casos de uso de muestra y mucho más. |
+| Ejemplo de casos de uso de Real-Time CDP | Visite la [nueva página de información general de casos de uso de ejemplo](/help/rtcdp/use-case-guides/overview.md) para ver una colección de casos de uso de ejemplo que su organización puede lograr con Real-Time CDP. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre Real-Time CDP, lea la [Información general de Real-Time CDP](../../rtcdp/overview.md).
+Para obtener más información acerca de Real-Time CDP, lea la [descripción general de Real-Time CDP](../../rtcdp/overview.md).
 
 ## Perfil del cliente en tiempo real {#profile}
 
@@ -155,7 +156,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el Perfil del cliente en tiempo real, lea la [Resumen del perfil](../../profile/home.md)
+Para obtener más información sobre el perfil del cliente en tiempo real, lea la [descripción general del perfil](../../profile/home.md)
 
 ## Servicio de segmentación {#segmentation}
 
@@ -166,7 +167,7 @@ Para obtener más información sobre el Perfil del cliente en tiempo real, lea l
 | Función | Descripción |
 | ------- | ----------- |
 | Carga de audiencia generada externamente | El número máximo de columnas se ha aumentado a **25**. |
-| Estimaciones del Generador de segmentos | Las estimaciones y los perfiles cualificados ahora se muestran en la sección de propiedades de audiencia. Para obtener más información sobre este cambio, lea la [Guía de IU del Generador de segmentos](../../segmentation/ui/segment-builder.md). |
+| Estimaciones del Generador de segmentos | Las estimaciones y los perfiles cualificados ahora se muestran en la sección de propiedades de audiencia. Para obtener más información sobre este cambio, lea la [Guía de la interfaz de usuario del Generador de segmentos](../../segmentation/ui/segment-builder.md). |
 
 {style="table-layout:auto"}
 
@@ -180,9 +181,9 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL Oracle NetSuite] orígenes | Utilice el [!DNL Oracle NetSuite] integraciones en el catálogo de fuentes para obtener datos de su [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) y [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) cuentas al Experience Platform. |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents] origen | Utilice el [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) integración en el catálogo de fuentes para obtener datos de su [!DNL Braze] cuenta para el Experience Platform. |
-| Compatibilidad con la autenticación de par de claves para [!DNL Snowflake] origen de lote | Ahora puede utilizar la autenticación de par de claves al crear un nuevo [!DNL Snowflake] cuenta para datos por lotes. Para obtener más información, lea la guía de [creación de un [!DNL Snowflake] Cuenta de mediante la API de](../../sources/tutorials/api/create/databases/snowflake.md) o la guía de [creación de un [!DNL Snowflake] cuenta mediante la interfaz de usuario](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] orígenes | Utilice las integraciones de [!DNL Oracle NetSuite] en el catálogo de orígenes para llevar los datos de sus cuentas de [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) y [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) al Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] origen | Utilice la integración [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) en el catálogo de orígenes para llevar los datos de su cuenta de [!DNL Braze] al Experience Platform. |
+| Compatibilidad con la autenticación de par de claves para el origen por lotes [!DNL Snowflake] | Ahora puede usar la autenticación de par de claves al crear una nueva cuenta de [!DNL Snowflake] para los datos por lotes. Para obtener más información, lee la guía de [creación de una cuenta de [!DNL Snowflake] mediante la API](../../sources/tutorials/api/create/databases/snowflake.md) o la guía de [creación de una cuenta de [!DNL Snowflake] mediante la IU](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
 

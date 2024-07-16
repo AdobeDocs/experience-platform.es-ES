@@ -20,16 +20,16 @@ El Adobe de no es responsable de la degradación del rendimiento causada por los
 
 >[!IMPORTANT]
 >
->Compruebe los derechos de licencia en su pedido de ventas y en los correspondientes [Descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) sobre los límites de uso reales además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 ## Definiciones
 
-* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por el Edge Network Experience Platform que no fallan con errores y se relacionan únicamente con las API de Edge Network aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
-* **Porcentaje de tiempo activo mensual** para una región determinada se calcula como el promedio de la disponibilidad para todos los intervalos de cinco minutos en un mes.
-* Un **corriente arriba** es un servicio detrás del Edge Network, habilitado para una secuencia de datos específica, como Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
-* A **unidad de solicitud** corresponde a un fragmento de 8 KB de una solicitud y a un flujo ascendente configurado para una secuencia de datos.
-* A **solicitud** es un mensaje único enviado por una aplicación propiedad del cliente a [!DNL Server API]. Una solicitud puede contener una o más unidades de solicitud.
-* Un **error** es cualquier solicitud que falla debido a un Edge Network [error de servicio interno](error-handling.md).
+* **Disponibilidad** se calcula para cada intervalo de cinco minutos como el porcentaje de solicitudes procesadas por el Edge Network Experience Platform que no generan errores y que se relacionan únicamente con las API de Edge Network aprovisionadas. Si un inquilino no realizó ninguna solicitud en un intervalo determinado de cinco minutos, ese intervalo se considera disponible al 100 %.
+* **El porcentaje de tiempo de actividad mensual** de una región determinada se calcula como el promedio de la disponibilidad para todos los intervalos de cinco minutos de un mes.
+* Un **flujo ascendente** es un servicio detrás del Edge Network, habilitado para una secuencia de datos específica, como el reenvío del lado del servidor de Adobe, la segmentación de Adobe Edge o Adobe Target.
+* Una **unidad de solicitud** corresponde a un fragmento de 8 KB de una solicitud y un flujo ascendente configurado para una secuencia de datos.
+* Una **solicitud** es un solo mensaje enviado por una aplicación propiedad del cliente a [!DNL Server API]. Una solicitud puede contener una o más unidades de solicitud.
+* Un **error** es cualquier solicitud que falla debido a un [error de servicio interno](error-handling.md) del Edge Network.
 
 ## Límites de servicio
 
@@ -37,7 +37,7 @@ Todos los flujos de datos aplican ciertos límites de uso, que controlan princip
 
 ### Solicitar unidades
 
-Todos los límites se aplican y normalizan sobre una **unidad de solicitud (RU)**, definido como **Fragmento de 8 KB** de una solicitud que va a un servicio ascendente configurado en una secuencia de datos.
+Todos los límites se aplican y normalizan en una **unidad de solicitud (RU)**, definida como un **fragmento de 8 KB** de una solicitud que va a un servicio ascendente configurado en una secuencia de datos.
 
 #### Ejemplos
 
@@ -76,5 +76,5 @@ Consulte la siguiente documentación para obtener más información sobre otras 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
 * [Real-time Customer Data Platform (edición B2C - paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P: paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (Paquetes B2B Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (paquetes B2B - Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

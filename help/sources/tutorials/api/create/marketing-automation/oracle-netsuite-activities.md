@@ -4,47 +4,48 @@ description: Obtenga información sobre cómo crear una conexión de origen y un
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 2%
 
 ---
 
-# Crear una conexión de origen y un flujo de datos para [!DNL Oracle NetSuite Activities] uso de la API de Flow Service
+# Crear una conexión de origen y un flujo de datos para [!DNL Oracle NetSuite Activities] mediante la API de Flow Service
 
 >[!NOTE]
 >
->El [!DNL Oracle NetSuite Activities] el origen está en versión beta. Consulte la [información general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El origen [!DNL Oracle NetSuite Activities] está en la versión beta. Consulte la [descripción general de orígenes](../../../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
-Lea el siguiente tutorial para aprender a extraer datos de eventos de su [!DNL Oracle NetSuite Activities] a Adobe Experience Platform mediante el [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lea el siguiente tutorial para aprender a traer datos de eventos de su cuenta de [!DNL Oracle NetSuite Activities] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [Fuentes](../../../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL Oracle NetSuite Activities] uso del [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL Oracle NetSuite Activities] mediante la API [!DNL Flow Service].
 
 ### Autenticación
 
-Lea el [[!DNL Oracle NetSuite] descripción general](../../../../connectors/marketing-automation/oracle-netsuite.md) para obtener información sobre cómo recuperar las credenciales de autenticación.
+Lea la [[!DNL Oracle NetSuite] descripción general](../../../../connectors/marketing-automation/oracle-netsuite.md) para obtener información sobre cómo recuperar sus credenciales de autenticación.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
-## Connect [!DNL Oracle NetSuite Activities] a Platform mediante el [!DNL Flow Service] API
+## Conectar [!DNL Oracle NetSuite Activities] a la plataforma mediante la API [!DNL Flow Service]
 
-Siga la guía a continuación para aprender a autenticar su [!DNL Oracle NetSuite Activities] origen, crear una conexión de origen y crear un flujo de datos para llevar los datos de eventos al Experience Platform.
+Siga esta guía para aprender a autenticar su origen de [!DNL Oracle NetSuite Activities], crear una conexión de origen y crear un flujo de datos para llevar los datos de eventos al Experience Platform.
 
 ### Crear una conexión base {#base-connection}
 
 Una conexión base retiene información entre el origen y el Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Oracle NetSuite Activities] credenciales de autenticación como parte del cuerpo de la solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione sus credenciales de autenticación [!DNL Oracle NetSuite Activities] como parte del cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -87,12 +88,12 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión base. Asegúrese de que el nombre de la conexión base sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión base. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión base. |
-| `connectionSpec.id` | El ID de especificación de conexión de su origen. Este ID se puede recuperar una vez registrado su origen y aprobado mediante el [!DNL Flow Service] API. |
+| `connectionSpec.id` | El ID de especificación de conexión de su origen. Este identificador se puede recuperar una vez que su origen se haya registrado y aprobado mediante la API [!DNL Flow Service]. |
 | `auth.specName` | El tipo de autenticación que utiliza para autenticar el origen en Platform. |
-| `auth.params.clientId` | El valor ID de cliente al crear el registro de integración. Se puede encontrar el proceso para crear un registro de integración [aquí](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). El valor es una cadena de 64 caracteres similar a `7fce.....b42f`. |
-| `auth.params.clientSecret` | El valor ID de cliente al crear el registro de integración. Se puede encontrar el proceso para crear un registro de integración [aquí](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). El valor es una cadena de 64 caracteres similar a `5c98.....1b46`. |
-| `auth.params.accessTokenUrl` | El [!DNL NetSuite] URL de token de acceso, similar a `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` donde reemplazará ACCOUNT_ID por su [!DNL NetSuite] ID de cuenta. |
-| `auth.params.accessToken` | El valor del token de acceso se genera al final del [Paso dos](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) de la [Flujo de concesión de código de autorización de OAuth 2.0](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Los tokens de acceso caducan y solo son válidos durante 60 minutos. el valor es una cadena de 1024 caracteres con formato de token web JSON (JWT) similar a `eyJr......f4V0`. |
+| `auth.params.clientId` | El valor ID de cliente al crear el registro de integración. El proceso para crear un registro de integración se encuentra [aquí](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). El valor es una cadena de 64 caracteres similar a `7fce.....b42f`. |
+| `auth.params.clientSecret` | El valor ID de cliente al crear el registro de integración. El proceso para crear un registro de integración se encuentra [aquí](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). El valor es una cadena de 64 caracteres similar a `5c98.....1b46`. |
+| `auth.params.accessTokenUrl` | La URL del token de acceso de [!DNL NetSuite], similar a `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`, donde reemplazará ACCOUNT_ID con el identificador de cuenta de [!DNL NetSuite]. |
+| `auth.params.accessToken` | El valor del token de acceso se genera al final del [Paso dos](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) del tutorial [Flujo de concesión de código de autorización de OAuth 2.0](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow). Los tokens de acceso caducan y solo son válidos durante 60 minutos. el valor es una cadena de 1024 caracteres con formato de token web JSON (JWT) similar a `eyJr......f4V0`. |
 
 **Respuesta**
 
@@ -107,7 +108,7 @@ Una respuesta correcta devuelve la conexión base recién creada, incluido su id
 
 ### Explorar su origen {#explore}
 
-Una vez que tenga el ID de conexión base, ahora puede explorar el contenido y la estructura de los datos de origen realizando una solicitud de GET a `/connections` al proporcionar su ID de conexión base como parámetro de consulta.
+Una vez que tenga el identificador de conexión base, ahora puede explorar el contenido y la estructura de los datos de origen realizando una solicitud de GET al extremo `/connections` y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta.
 
 **Formato de API**
 
@@ -122,8 +123,8 @@ Al realizar solicitudes para explorar la estructura de archivos y el contenido d
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base generado en el paso anterior. |
-| `objectType=rest` | El tipo de objeto que desea explorar. Actualmente, este valor siempre se establece en `rest`. |
-| `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. Para esta fuente el valor sería `json`. |
+| `objectType=rest` | El tipo de objeto que desea explorar. Actualmente, este valor siempre está establecido en `rest`. |
+| `{OBJECT}` | Este parámetro solo es necesario cuando se visualiza un directorio específico. Su valor representa la ruta del directorio que desea explorar. Para este origen el valor sería `json`. |
 | `fileType=json` | El tipo de archivo del archivo que desea llevar a Platform. Actualmente, `json` es el único tipo de archivo compatible. |
 | `{PREVIEW}` | Un valor booleano que define si el contenido de la conexión admite la vista previa. |
 | `{SOURCE_PARAMS}` | Define parámetros para el archivo de origen que desea llevar a Platform. Para recuperar el tipo de formato aceptado para `{SOURCE_PARAMS}`, debe codificar toda la cadena en base64. <br> El valor está vacío para [!DNL Oracle NetSuite Activities].</li></ul> |
@@ -330,7 +331,7 @@ Una respuesta correcta devuelve una estructura JSON como la siguiente:
 
 ### Crear una conexión de origen {#source-connection}
 
-Puede crear una conexión de origen realizando una solicitud de POST a `/sourceConnections` punto final del [!DNL Flow Service] API. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
+Puede crear una conexión de origen realizando una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service]. Una conexión de origen consta de un identificador de conexión, una ruta de acceso al archivo de datos de origen y un identificador de especificación de conexión.
 
 **Formato de API**
 
@@ -370,9 +371,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre de la conexión de origen. Asegúrese de que el nombre de la conexión de origen sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de origen. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de origen. |
-| `baseConnectionId` | El ID de conexión base de [!DNL Oracle NetSuite Activities]. Este ID se generó en un paso anterior. |
+| `baseConnectionId` | Identificador de conexión base de [!DNL Oracle NetSuite Activities]. Este ID se generó en un paso anterior. |
 | `connectionSpec.id` | El ID de especificación de conexión que corresponde a su origen. |
-| `data.format` | El formato del [!DNL Oracle NetSuite Activities] datos que desea introducir. Actualmente, el único formato de datos admitido es `json`. |
+| `data.format` | Formato de los datos de [!DNL Oracle NetSuite Activities] que desea introducir. Actualmente, el único formato de datos compatible es `json`. |
 
 Una respuesta correcta devuelve el identificador único (`id`) de la conexión de origen recién creada. Este ID es necesario en un paso posterior para crear un flujo de datos.
 
@@ -387,21 +388,21 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](../../../../../xdm/api/schemas.md#create-a-schema).
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../../catalog/api/create-dataset.md).
 
 ### Creación de una conexión de destino {#target-connection}
 
-Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino en el que se van a almacenar los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija que corresponda al lago de datos. Este identificador es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -445,13 +446,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nombre de la conexión de destino. Asegúrese de que el nombre de la conexión de destino sea descriptivo, ya que puede utilizarlo para buscar información sobre la conexión de destino. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre la conexión de destino. |
-| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este ID fijo es: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | El formato del [!DNL Oracle NetSuite Activities] datos que desea introducir. |
+| `connectionSpec.id` | ID de especificación de conexión que corresponde al lago de datos. Este identificador fijo es: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | Formato de los datos de [!DNL Oracle NetSuite Activities] que desea introducir. |
 | `params.dataSetId` | ID del conjunto de datos de destino recuperado en un paso anterior. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Este ID es necesario en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) de la nueva conexión de destino. Este ID es necesario en pasos posteriores.
 
 ```json
 {
@@ -527,7 +528,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `outputSchema.schemaRef.id` | El ID del [esquema XDM de destino](#target-schema) se ha generado en un paso anterior. |
+| `outputSchema.schemaRef.id` | El ID del [esquema XDM de destino](#target-schema) generado en un paso anterior. |
 | `mappings.sourceType` | El tipo de atributo de origen que se asigna. |
 | `mappings.source` | Atributo de origen que debe asignarse a una ruta XDM de destino. |
 | `mappings.destination` | Ruta XDM de destino a la que se asigna el atributo de origen. |
@@ -549,9 +550,9 @@ Una respuesta correcta devuelve detalles de la asignación recién creada, inclu
 
 ### Creación de un flujo {#flow}
 
-El último paso para obtener datos de [!DNL Oracle NetSuite Activities] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
+El último paso para llevar datos de [!DNL Oracle NetSuite Activities] a Platform es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
-* [ID de conexión de origen](#source-connection)
+* [ID de conexión de Source](#source-connection)
 * [ID de conexión de destino](#target-connection)
 * [ID de asignación](#mapping)
 
@@ -605,13 +606,13 @@ curl -X POST \
 | --- | --- |
 | `name` | Nombre del flujo de datos. Asegúrese de que el nombre del flujo de datos sea descriptivo, ya que puede utilizarlo para buscar información en él. |
 | `description` | Un valor opcional que puede incluir para proporcionar más información sobre el flujo de datos. |
-| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este ID fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.id` | ID de especificación de flujo necesario para crear un flujo de datos. Este identificador fijo es: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | La versión correspondiente del ID de especificación de flujo. El valor predeterminado es `1.0`. |
-| `sourceConnectionIds` | El [ID de conexión de origen](#source-connection) se ha generado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) se ha generado en un paso anterior. |
+| `sourceConnectionIds` | [Id. de conexión de origen](#source-connection) generado en un paso anterior. |
+| `targetConnectionIds` | [Id. de conexión de destino](#target-connection) generado en un paso anterior. |
 | `transformations` | Esta propiedad contiene las distintas transformaciones necesarias para aplicarse a los datos. Esta propiedad es necesaria al llevar datos no compatibles con XDM a Platform. |
 | `transformations.name` | El nombre asignado a la transformación. |
-| `transformations.params.mappingId` | El [ID de asignación](#mapping) se ha generado en un paso anterior. |
+| `transformations.params.mappingId` | [ID de asignación](#mapping) generado en un paso anterior. |
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
 | `scheduleParams.startTime` | Esta propiedad contiene información sobre la programación de la ingesta del flujo de datos. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. |
@@ -619,7 +620,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado. Puede utilizar este ID para monitorizar, actualizar o eliminar el flujo de datos.
 
 ```json
 {
@@ -634,20 +635,20 @@ En la siguiente sección se proporciona información sobre los pasos que puede s
 
 ### Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de la API, lea la guía de [monitorización de los flujos de datos de origen mediante la API](../../monitor.md).
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para ver ejemplos completos de API, lee la guía sobre [supervisión de los flujos de datos de origen mediante la API](../../monitor.md).
 
 ### Actualizar el flujo de datos
 
-Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH a `/flows` punto final de [!DNL Flow Service] API, mientras proporciona el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar la variable única del flujo de datos `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de flujos de datos de origen mediante la API](../../update-dataflows.md).
+Actualice los detalles del flujo de datos, como su nombre y descripción, así como su programación de ejecución y los conjuntos de asignaciones asociados realizando una solicitud del PATCH al extremo `/flows` de la API [!DNL Flow Service], proporcionando al mismo tiempo el ID del flujo de datos. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único del flujo de datos en el encabezado `If-Match`. Para ver ejemplos completos de la API, lea la guía sobre [actualización de orígenes y flujos de datos mediante la API](../../update-dataflows.md).
 
 ### Actualice su cuenta
 
-Actualice el nombre, la descripción y las credenciales de la cuenta de origen realizando una solicitud al PATCH de [!DNL Flow Service] al proporcionar su ID de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar la cuenta de origen única `etag` en el `If-Match` encabezado. Para ver ejemplos completos de la API, lea la guía de [actualización de la cuenta de origen mediante la API](../../update.md).
+Actualice el nombre, la descripción y las credenciales de su cuenta de origen realizando una solicitud de PATCH a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base como parámetro de consulta. Al realizar una solicitud de PATCH, debe proporcionar el `etag` único de su cuenta de origen en el encabezado `If-Match`. Para ver ejemplos completos de API, lee la guía de [actualización de tu cuenta de origen mediante la API](../../update.md).
 
 ### Eliminar el flujo de datos
 
-Elimine el flujo de datos realizando una solicitud de DELETE a [!DNL Flow Service] API al proporcionar el ID del flujo de datos que desea eliminar como parte del parámetro de consulta. Para ver ejemplos completos de la API, lea la guía de [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
+Elimine el flujo de datos realizando una solicitud de DELETE a la API [!DNL Flow Service] mientras proporciona el ID del flujo de datos que desea eliminar como parte del parámetro query. Para ver ejemplos completos de API, lea la guía sobre [eliminación de flujos de datos mediante la API](../../delete-dataflows.md).
 
 ### Eliminar su cuenta
 
-Elimine la cuenta realizando una solicitud de DELETE a [!DNL Flow Service] al proporcionar el ID de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de la API, lea la guía de [Eliminar la cuenta de origen mediante la API](../../delete.md).
+Elimine la cuenta realizando una solicitud de DELETE a la API [!DNL Flow Service] y proporcionando al mismo tiempo el identificador de conexión base de la cuenta que desea eliminar. Para ver ejemplos completos de API, lee la guía sobre [eliminar tu cuenta de origen mediante la API](../../delete.md).

@@ -3,8 +3,8 @@ title: Vista de depuración push
 description: Esta guía detalla información acerca de la vista Depurar push en Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '939'
+workflow-type: tm+mt
+source-wordcount: '940'
 ht-degree: 100%
 
 ---

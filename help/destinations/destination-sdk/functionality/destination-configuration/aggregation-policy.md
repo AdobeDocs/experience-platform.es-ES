@@ -4,7 +4,7 @@ title: Política de agregación
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1006'
 ht-degree: 2%
 
 ---
@@ -17,20 +17,20 @@ Utilice la agregación configurable para profundizar en la configuración propor
 
 Al crear un destino en tiempo real (de flujo continuo) con Destination SDK, puede configurar cómo se deben combinar los perfiles exportados en las exportaciones resultantes. Este comportamiento está determinado por la configuración de la directiva de agregación.
 
-Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un destino de flujo continuo](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un  de flujo continuo](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Puede configurar las opciones de la directiva de agregación mediante el `/authoring/destinations` punto final. Consulte las siguientes páginas de referencia de la API para ver ejemplos detallados de llamadas de la API donde puede configurar los componentes que se muestran en esta página.
+Puede configurar las opciones de la directiva de agregación a través del extremo `/authoring/destinations`. Consulte las siguientes páginas de referencia de la API para ver ejemplos detallados de llamadas de la API donde puede configurar los componentes que se muestran en esta página.
 
 * [Crear una configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Actualizar una configuración de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
 Este artículo describe todas las configuraciones de directiva de agregación admitidas que puede utilizar para el destino.
 
-Después de leer este documento, consulte la documentación sobre [uso de plantillas](../../functionality/destination-server/message-format.md#using-templating) y el [ejemplos de claves de agregación](../../functionality/destination-server/message-format.md#template-aggregation-key) para saber cómo incluir la directiva de agregación en la plantilla de transformación de mensajes en función de la directiva de agregación seleccionada.
+Después de leer este documento, consulte la documentación de [usando la creación de plantillas](../../functionality/destination-server/message-format.md#using-templating) y los [ejemplos de claves de agregación](../../functionality/destination-server/message-format.md#template-aggregation-key) para saber cómo incluir la directiva de agregación en la plantilla de transformación de mensajes en función de la directiva de agregación seleccionada.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -45,7 +45,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 La agregación de mejor esfuerzo funciona mejor para los destinos que prefieren menos perfiles por solicitud y que preferirían aceptar más solicitudes con menos datos que menos solicitudes con más datos.
 
-La configuración de ejemplo siguiente muestra una configuración de agregación de mejor esfuerzo. Para ver un ejemplo de agregación configurable, consulte la [agregación configurable](#configurable-aggregation) sección. Los parámetros aplicables a la agregación del mejor esfuerzo se documentan en la tabla siguiente.
+La configuración de ejemplo siguiente muestra una configuración de agregación de mejor esfuerzo. Para ver un ejemplo de agregación configurable, consulte la sección [agregación configurable](#configurable-aggregation). Los parámetros aplicables a la agregación del mejor esfuerzo se documentan en la tabla siguiente.
 
 ```json
 "aggregation":{
@@ -60,8 +60,8 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `aggregationType` | Cadena | Indica el tipo de directiva de agregación que debe utilizar el destino. Tipos de agregación admitidos: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Número entero | El Experience Platform puede acumular varios perfiles exportados en una sola llamada HTTP. <br><br>Este valor indica el número máximo de perfiles que debe recibir el extremo en una sola llamada HTTP. Tenga en cuenta que se trata de una agregación de mejor esfuerzo. Por ejemplo, si especifica el valor 100, Platform puede enviar cualquier número de perfiles inferior a 100 en una llamada. <br><br> Si el servidor no acepta varios usuarios por solicitud, establezca este valor en `1`. |
-| `bestEffortAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establecer este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
+| `bestEffortAggregation.maxUsersPerRequest` | Entero | El Experience Platform puede acumular varios perfiles exportados en una sola llamada HTTP. <br><br>Este valor indica el número máximo de perfiles que su extremo debe recibir en una sola llamada HTTP. Tenga en cuenta que se trata de una agregación de mejor esfuerzo. Por ejemplo, si especifica el valor 100, Platform puede enviar cualquier número de perfiles inferior a 100 en una llamada. <br><br> Si el servidor no acepta varios usuarios por solicitud, establezca este valor en `1`. |
+| `bestEffortAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 
 La agregación configurable funciona mejor si prefiere utilizar lotes grandes, con miles de perfiles en la misma llamada. Esta opción también le permite agregar los perfiles exportados en función de reglas de agregación complejas.
 
-La configuración de ejemplo siguiente muestra una configuración de agregación configurable. Para ver un ejemplo de agregación de esfuerzo máximo, consulte la [agregación de mejor esfuerzo](#best-effort-aggregation) sección. Los parámetros aplicables a la agregación configurable se documentan en la siguiente tabla.
+La configuración de ejemplo siguiente muestra una configuración de agregación configurable. Para ver un ejemplo de agregación de esfuerzo recomendado, vea la sección [agregación de esfuerzo recomendado](#best-effort-aggregation). Los parámetros aplicables a la agregación configurable se documentan en la siguiente tabla.
 
 ```json
 "aggregation":{
@@ -108,14 +108,14 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
 | `aggregationType` | Cadena | Indica el tipo de directiva de agregación que debe utilizar el destino. Tipos de agregación admitidos: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `configurableAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establecer este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
-| `configurableAggregation.maxBatchAgeInSecs` | Número entero | Se utiliza en combinación con `maxNumEventsInBatch`, este parámetro determina cuánto tiempo debe esperar el Experience Platform hasta enviar una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 1800</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
-| `configurableAggregation.maxNumEventsInBatch` | Número entero | Utilizado en conjunto con `maxBatchAgeInSecs`Sin embargo, este parámetro determina cuántos perfiles cualificados deben agregarse en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
+| `configurableAggregation.splitUserById` | Booleano | Utilice este indicador si la llamada al destino debe dividirse por identidad. Establezca este indicador en `true` si el servidor solo acepta una identidad por llamada, para un área de nombres de identidad determinada. |
+| `configurableAggregation.maxBatchAgeInSecs` | Entero | Este parámetro, que se usa junto con `maxNumEventsInBatch`, determina cuánto tiempo debe esperar el Experience Platform hasta que envíe una llamada de API al extremo. <ul><li>Valor mínimo (segundos): 1800</li><li>Valor máximo (segundos): 3600</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
+| `configurableAggregation.maxNumEventsInBatch` | Entero | Este parámetro, que se usa junto con `maxBatchAgeInSecs`, determina cuántos perfiles completos se deben agregar en una llamada de API. <ul><li>Valor mínimo: 1000</li><li>Valor máximo: 10000</li></ul> Por ejemplo, si utiliza el valor máximo para ambos parámetros, Experience Platform esperará 3600 segundos O hasta que haya 10000 perfiles cualificados antes de realizar la llamada de API, lo que ocurra primero. |
 | `configurableAggregation.aggregationKey` | - | Permite agregar los perfiles exportados asignados al destino en función de los parámetros que se describen a continuación. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar perfiles exportados a su destino por ID de audiencia. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` hasta `true`, si desea agrupar perfiles exportados a su destino por ID de audiencia y estado de audiencia. |
-| `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Establezca este parámetro en `true` si desea agrupar perfiles exportados a su destino por área de nombres de identidad. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Establezca este parámetro en `true` si desea que los perfiles exportados se agreguen en grupos en función de una sola identidad (GAID, IDFA, números de teléfono, correo electrónico, etc.). |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Establezca este parámetro en `true` si desea agrupar los perfiles exportados a su destino por ID de audiencia. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Establezca este parámetro y `includeSegmentId` en `true`, si desea agrupar los perfiles exportados a su destino por ID de audiencia y estado de audiencia. |
+| `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Establezca este parámetro en `true` si desea agrupar los perfiles exportados a su destino por área de nombres de identidad. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Establezca este parámetro en `true` si desea que los perfiles exportados se agreguen en grupos según una sola identidad (GAID, IDFA, números de teléfono, correo electrónico, etc.). |
 | `configurableAggregation.aggregationKey.groups` | Matriz | Cree listas de grupos de identidad si desea agrupar perfiles exportados a su destino por grupos de áreas de nombres de identidad. Por ejemplo, puede combinar perfiles que contengan los identificadores móviles IDFA y GAID en una llamada a su destino y correos electrónicos en otra mediante la configuración que se muestra en el ejemplo anterior. |
 
 {style="table-layout:auto"}

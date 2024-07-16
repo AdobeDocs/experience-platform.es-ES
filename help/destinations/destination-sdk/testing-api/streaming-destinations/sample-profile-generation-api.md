@@ -4,7 +4,7 @@ title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '979'
 ht-degree: 2%
 
 ---
@@ -14,41 +14,41 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+>**extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/sample-profiles` Extremo de API.
+Esta página enumera y describe todas las operaciones de API que puede realizar mediante el extremo de API `/authoring/sample-profiles`.
 
 ## Generar diferentes tipos de perfiles para diferentes API {#different-profiles-different-apis}
 
 >[!IMPORTANT]
 >
 >Utilice este extremo de API para generar perfiles de muestra para dos casos de uso independientes. Puede:
->* generar perfiles para utilizarlos al [creación y prueba de una plantilla de transformación de mensajes](create-template.md) - mediante *ID de destino* como parámetro de consulta.
->* generar perfiles para utilizarlos al realizar llamadas a [compruebe si el destino está configurado correctamente](streaming-destination-testing-overview.md) - mediante *ID de instancia de destino* como parámetro de consulta.
+>* genere perfiles para usar al [crear y probar una plantilla de transformación de mensajes](create-template.md) - usando *id. de destino* como parámetro de consulta.
+>* genere perfiles para usar al hacer llamadas a [pruebe si el destino está configurado correctamente](streaming-destination-testing-overview.md) - usando *id. de instancia de destino* como parámetro de consulta.
 
-Puede generar perfiles de muestra basados en el esquema de origen XDM de Adobe (para utilizarlo al probar el destino) o el esquema de destino admitido por el destino (para utilizarlo al crear la plantilla). Para comprender la diferencia entre el esquema de origen XDM de Adobe y el esquema de destino, lea la sección de información general del [Formato del mensaje](../../functionality/destination-server/message-format.md) artículo.
+Puede generar perfiles de muestra basados en el esquema de origen XDM de Adobe (para utilizarlo al probar el destino) o el esquema de destino admitido por el destino (para utilizarlo al crear la plantilla). Para comprender la diferencia entre el esquema de origen XDM de Adobe y el esquema de destino, lea la sección de información general del artículo [Formato del mensaje](../../functionality/destination-server/message-format.md).
 
-Tenga en cuenta que los propósitos para los que se pueden utilizar los perfiles de muestra no son intercambiables. Perfiles generados en función de la variable *ID de destino* solo se puede utilizar para crear las plantillas de transformación de mensajes y los perfiles generados en función de la variable *ID de instancia de destino* solo se puede usar para probar el punto final de destino.
+Tenga en cuenta que los propósitos para los que se pueden utilizar los perfiles de muestra no son intercambiables. Los perfiles generados a partir del *ID de destino* solo se pueden usar para crear las plantillas de transformación de mensajes y los perfiles generados a partir del *ID de instancia de destino* solo se pueden usar para probar el extremo de destino.
 
 ## Introducción a las operaciones de API de generación de perfiles de muestra {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Generar perfiles de muestra basados en el esquema de origen para utilizarlos al probar el destino {#generate-sample-profiles-source-schema}
 
 >[!IMPORTANT]
 >
->Agregue los perfiles de muestra generados aquí a las llamadas HTTP cuando [prueba del destino](streaming-destination-testing-overview.md).
+>Agregue los perfiles de muestra generados aquí a las llamadas HTTP al [probar su destino](streaming-destination-testing-overview.md).
 
-Puede generar perfiles de muestra basados en el esquema de origen realizando una solicitud de GET al `authoring/sample-profiles/` y proporciona el ID de una instancia de destino que ha creado en función de la configuración de destino que desea probar.
+Puede generar perfiles de muestra basados en el esquema de origen realizando una solicitud de GET al extremo `authoring/sample-profiles/` y proporcionando el ID de una instancia de destino que haya creado en función de la configuración de destino que desee probar.
 
-Para obtener el ID de una instancia de destino, primero debe crear una conexión en la interfaz de usuario de Experience Platform a su destino antes de intentar probar el destino. Lea el [activar tutorial de destino](../../../ui/activation-overview.md) y consulte la sugerencia siguiente sobre cómo obtener el ID de instancia de destinos que se utiliza para esta API.
+Para obtener el ID de una instancia de destino, primero debe crear una conexión en la interfaz de usuario de Experience Platform a su destino antes de intentar probar el destino. Lea el tutorial [activar destino](../../../ui/activation-overview.md) y vea la sugerencia a continuación sobre cómo obtener el ID de instancia de destinos que se utilizará para esta API.
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Leer [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activación de perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
-> * Después de establecer la conexión con su destino, obtenga el ID de instancia de destino que debe utilizar en las llamadas API a este extremo cuando [exploración de una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->![Imagen de interfaz de usuario cómo obtener el ID de instancia de destino](../../assets/testing-api/get-destination-instance-id.png)
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+> * Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino ](../../assets/testing-api/get-destination-instance-id.png)
 
 **Formato de API**
 
@@ -59,14 +59,14 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | Parámetro de consulta | Descripción |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino en función de la cual está generando perfiles de muestra. |
-| `{COUNT}` | *Opcional*. El número de perfiles de muestra que está generando. El parámetro puede tomar valores entre `1 - 1000`. <br> Si no se especifica el parámetro de recuento, el número predeterminado de perfiles generados se determina mediante la variable `maxUsersPerRequest` valor en [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Si no se define esta propiedad, el Adobe generará un perfil de muestra. |
+| `{COUNT}` | *Opcional*. El número de perfiles de muestra que está generando. El parámetro puede tomar valores entre `1 - 1000`. <br> Si no se especifica el parámetro count, el número predeterminado de perfiles generados se determina mediante el valor `maxUsersPerRequest` en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Si no se define esta propiedad, el Adobe generará un perfil de muestra. |
 
 {style="table-layout:auto"}
 
 
 **Solicitud**
 
-La siguiente solicitud genera perfiles de ejemplo, configurados por el `{DESTINATION_INSTANCE_ID}` y `{COUNT}` parámetros de consulta.
+La siguiente solicitud genera perfiles de ejemplo, configurados por los parámetros de consulta `{DESTINATION_INSTANCE_ID}` y `{COUNT}`.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -180,10 +180,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencias](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Una marca de tiempo de la última vez que este perfil se clasificó para el segmento. |
-| `xdm:status` | Campo de cadena que indica si el abono a audiencia se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil se está saliendo de la audiencia como parte de la solicitud actual.</li></ul> |
-| `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, lea [Base de composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
+| `xdm:status` | Campo de cadena que indica si el abono a audiencia se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil está saliendo de la audiencia como parte de la solicitud actual.</li></ul> |
+| `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, lea [Base de la composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -191,13 +191,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 >[!IMPORTANT]
 >
->Utilice los perfiles de muestra generados aquí al crear la plantilla, en la [paso de plantilla de procesamiento](render-template-api.md#multiple-profiles-with-body).
+>Use los perfiles de muestra generados aquí al crear la plantilla, en el [paso de plantilla de procesamiento](render-template-api.md#multiple-profiles-with-body).
 
-Puede generar perfiles de muestra basados en el esquema de destinatario realizando una solicitud a la GET `authoring/sample-profiles/` y proporcionar el ID de destino de la configuración de destino en función de la que esté creando la plantilla.
+Puede generar perfiles de muestra basados en el esquema de destino realizando una solicitud al extremo `authoring/sample-profiles/` y proporcionando el ID de destino de la configuración de destino basada en la que está creando la GET.
 
 >[!TIP]
 >
->* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
+>* El id. de destino que debe usar aquí es el `instanceId` que corresponde a una configuración de destino creada con el extremo `/destinations`. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
 
 **Formato de API**
 
@@ -209,13 +209,13 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | Parámetro de consulta | Descripción |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | El ID de la configuración de destino en función de la cual está generando perfiles de muestra. |
-| `{COUNT}` | *Opcional*. El número de perfiles de muestra que está generando. El parámetro puede tomar valores entre `1 - 1000`. <br> Si no se especifica el parámetro de recuento, el número predeterminado de perfiles generados se determina mediante la variable `maxUsersPerRequest` valor en [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Si no se define esta propiedad, el Adobe generará un perfil de muestra. |
+| `{COUNT}` | *Opcional*. El número de perfiles de muestra que está generando. El parámetro puede tomar valores entre `1 - 1000`. <br> Si no se especifica el parámetro count, el número predeterminado de perfiles generados se determina mediante el valor `maxUsersPerRequest` en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Si no se define esta propiedad, el Adobe generará un perfil de muestra. |
 
 {style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud genera perfiles de ejemplo, configurados por el `{DESTINATION_ID}` y `{COUNT}` parámetros de consulta.
+La siguiente solicitud genera perfiles de ejemplo, configurados por los parámetros de consulta `{DESTINATION_ID}` y `{COUNT}`.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -377,4 +377,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo generar perfiles de muestra para utilizarlos cuando [prueba de una plantilla de transformación de mensajes](create-template.md) o cuando [prueba de si el destino está configurado correctamente](streaming-destination-testing-overview.md).
+Después de leer este documento, ahora sabe cómo generar perfiles de muestra para usarlos al [probar una plantilla de transformación de mensajes](create-template.md) o al [probar si el destino está configurado correctamente](streaming-destination-testing-overview.md).

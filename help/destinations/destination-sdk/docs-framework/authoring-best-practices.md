@@ -4,7 +4,7 @@ description: Descubra qué reglas y sugerencias debe seguir al crear la página 
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -13,48 +13,48 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Esta página describe las reglas que debe seguir cuando [creación de la documentación de destino](./documentation-instructions.md) para asegurarse de que cumple los estándares de calidad de la documentación de Adobe Experience Platform.
+En esta página se describen las reglas que debe seguir al [crear su página de ](./documentation-instructions.md) documentación de destino para asegurarse de que cumple los estándares de calidad de la documentación de Adobe Experience Platform.
 
 ## Directrices generales {#general-guidance}
 
-* Al rellenar el [plantilla](./self-service-template.md) para obtener la documentación de destino, consulte la guía del colaborador de Adobe para obtener información sobre [vinculación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [tablas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), el [sintaxis de markdown admitida](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [guía de escritura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html), y más.
+* Al rellenar la [plantilla](./self-service-template.md) para la documentación de destino, consulte la guía del colaborador de Adobe para obtener información sobre [vinculación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [tablas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), la [sintaxis de markdown admitida](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [instrucciones de escritura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) y más.
 * No incluya observaciones y estimaciones en la documentación del producto.
-* En la documentación de Experience Platform, los redactores de Adobe utilizan **formato de negrita** para hacer referencia a los controles de interfaz de usuario, haga lo siguiente:
-   * Ir a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la opción **[!UICONTROL Catálogo]** pestaña. Vea un ejemplo de cómo se documentan los controles de interfaz de usuario en una [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
+* En la documentación del Experience Platform, los escritores de Adobe usan **formato de negrita** para hacer referencia a los controles de la interfaz de usuario, de esta manera:
+   * Vaya a **[!UICONTROL Conexiones]** > **[!UICONTROL Destinos]** y seleccione la ficha **[!UICONTROL Catálogo]**. Vea un ejemplo de cómo se documentan los controles de la interfaz de usuario en un [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
 
 ## Estilo de escritura
 
 >[!IMPORTANT]
 >
->Leer [Guía de escritura para la documentación de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) antes de empezar a crear la página de documentación de destino.
+>Lea [Guía de escritura para la documentación de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) antes de empezar a crear la página de documentación de destino.
 
 * Mantén tus frases cortas y ve al grano rápidamente. Si tu frase tiene más de 20 palabras o usa múltiples comas, considera separarla en oraciones separadas. Las frases de más de 20 palabras pueden ser especialmente difíciles para los lectores.
 * No seas excesivamente educado. Evite utilizar &quot;por favor&quot; o &quot;amablemente haga...&quot; en la documentación técnica.
 
 ## Vinculación {#linking}
 
-Siga la plantilla de documentación proporcionada y no edite los vínculos existentes en la plantilla. Cuando incluya nuevos vínculos, lea [uso de vínculos en la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) en la guía del colaborador.
+Siga la plantilla de documentación proporcionada y no edite los vínculos existentes en la plantilla. Cuando incluya nuevos vínculos, lea [usando vínculos en la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) de la guía del colaborador.
 
 ## Directrices de marca {#branding}
 
 * AEP no es un término público aprobado. Utilice Adobe Experience Platform en el primer uso, luego Experience Platform y luego Platform.
-   * **No use.**: Para poder exportar datos de AEP a su destino, asegúrese de leer y completar estos requisitos previos.
-   * **Uso**: Para poder exportar datos de Adobe Experience Platform a su destino, asegúrese de leer y completar estos requisitos previos.
+   * **No uses**: Para poder exportar datos de AEP a tu destino, asegúrate de leer y completar estos requisitos previos.
+   * **Usar**: para poder exportar datos de Adobe Experience Platform a tu destino, asegúrate de leer y completar estos requisitos previos.
 
 ## Imágenes y capturas de pantalla {#images-and-screenshots}
 
 * Para obtener información sobre [cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), consulte la guía del colaborador.
 * Cuando utilice capturas de pantalla, asegúrese de que la captura de pantalla capture toda la pantalla de la interfaz de usuario de Platform.
 * Al marcar imágenes para resaltar un control o una etiqueta determinados en la página, intente seguir el estilo de marcado utilizado por el equipo de documentación del Experience Platform. Observe cómo Basado en perfiles se resalta en [esta captura de pantalla](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
-* Utilice `png` formatear imágenes.
+* Utilice `png` imágenes de formato.
 * No utilice capturas de pantalla numeradas como nombres de archivo. Los nombres de archivo de imagen deben ser descriptivos.
-   * **No use.**: `1.png`, `2.png`, `3.png`
-   * **Uso de**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
+   * **No use**: `1.png`, `2.png`, `3.png`
+   * **Usar**: `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
 * Utilice texto alternativo para cualquier imagen que agregue a la documentación y utilice la gramática adecuada en el texto alternativo.
-   * **No use.**: Detalles de conexión de destino
-   * **Uso**: imagen de la interfaz de usuario de Platform, que muestra los detalles de conexión de destino rellenados.
+   * **No usar**: detalles de conexión de destino
+   * **Usar**: imagen de la interfaz de usuario de Platform que muestra los detalles de conexión de destino rellenados.
 
 ## Proceso {#process}
 
-* El [plantilla de documentación](./self-service-template.md) se actualiza con poca frecuencia, según los comentarios del socio. Antes de empezar a crear documentación para el destino, asegúrese de haber descargado el [última versión de la plantilla](../assets/docs-framework/yourdestination-template.zip).
-* Cree la documentación y la solicitud de extracción de documentación (PR) desde una rama de la ramificación *que no sea la rama principal*. Consulte la sección enviar destino para revisión al crear en [Interfaz de GitHub](./use-github-interface-to-create-documentation.md#submit-review) o en [su entorno local](./work-in-local-environment.md#submit-review).
+* La [plantilla de documentación](./self-service-template.md) se actualiza con poca frecuencia, según los comentarios del socio. Antes de empezar a crear documentación para tu destino, asegúrate de haber descargado la [última versión de la plantilla](../assets/docs-framework/yourdestination-template.zip).
+* Cree la documentación y la solicitud de extracción de documentación (PR) a partir de una rama de su ramificación *distinta de la rama principal*. Consulte la sección enviar destino para revisión cuando cree en la [interfaz de GitHub](./use-github-interface-to-create-documentation.md#submit-review) o en [su entorno local](./work-in-local-environment.md#submit-review).

@@ -5,7 +5,7 @@ description: Este documento proporciona información general sobre las configura
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Las especificaciones de autenticación definen cómo los usuarios de Adobe Experience Platform pueden conectarse a su origen.
 
-El `authSpec` contiene información sobre los parámetros de autenticación necesarios para conectar un origen a Platform. Cualquier fuente determinada puede admitir varios tipos diferentes de autenticación.
+La matriz `authSpec` contiene información sobre los parámetros de autenticación necesarios para conectar un origen a Platform. Cualquier fuente determinada puede admitir varios tipos diferentes de autenticación.
 
 ## Especificaciones de autenticación
 
@@ -181,7 +181,7 @@ La autenticación básica es un tipo de autenticación que le permite acceder a 
 
 ## Ejemplo de especificación de autenticación
 
-A continuación se muestra un ejemplo de una especificación de autenticación completada utilizando un [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) origen.
+A continuación se muestra un ejemplo de una especificación de autenticación completada mediante un origen [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
 ```json
   "authSpec": [

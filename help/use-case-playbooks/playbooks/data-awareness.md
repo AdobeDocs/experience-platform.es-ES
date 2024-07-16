@@ -19,7 +19,7 @@ Sin embargo, en algunos casos, es posible que ya haya configurado sus propios es
 
 ## Requisitos previos {#prerequisites}
 
-Antes de leer este tutorial, examine la [plantillas de manual de casos de uso disponibles](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) y [creación de una instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md) de un manual de estrategias preferido.
+Antes de leer este tutorial, examine las [plantillas disponibles del manual de casos de uso](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) y [cree una instancia](/help/use-case-playbooks/playbooks/create-share-reuse.md) de un manual de uso preferido.
 
 La creación de una instancia de genera un conjunto de recursos, como recorridos, segmentos, esquemas y mensajes, en la zona protegida inspiracional. Siga leyendo para aprender a copiar estos recursos en otros entornos limitados.
 
@@ -29,21 +29,21 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 >
 > Solo puede importar paquetes en otros entornos limitados de desarrollo. Una vez que haya realizado todos los cambios o actualizaciones necesarios, podrá importar los recursos o paquetes de esos entornos limitados de desarrollo a producción. No puede importar directamente desde las zonas protegidas de los libros de reproducción de casos de uso a la producción.
 
-1. Para importar objetos de la zona protegida inspiracional a otra zona protegida, busque la instancia que desee en un manual de casos de uso y seleccione **[!UICONTROL Publish a una zona protegida diferente]** para exportar los artefactos como un paquete.
+1. Para importar objetos de una zona protegida inspiradora a otra, busca la instancia que desees de un manual de casos de uso y selecciona **[!UICONTROL Publish a una zona protegida diferente]** para exportar los artefactos como paquete.
 
    ![GIF que muestra las diferentes instancias de caso de uso](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Una vez seleccionada la variable **[!UICONTROL Publish a una zona protegida diferente]** botón, aparece un modal. Rellene el nombre y la descripción opcional y seleccione **[!UICONTROL Crear]**. Este paso agrupa los recursos generados en un paquete que se puede importar en una zona protegida diferente.
+2. Una vez que seleccione el botón **[!UICONTROL Publish a una zona protegida diferente]**, aparecerá un modal. Rellene el nombre y la descripción opcional y seleccione **[!UICONTROL Crear]**. Este paso agrupa los recursos generados en un paquete que se puede importar en una zona protegida diferente.
 
    ![Un modal para crear un paquete](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Vaya a **Zonas protegidas** página en la barra de navegación del lado izquierdo y seleccione la **Paquetes** , busque el paquete y publíquelo. Para publicar un paquete que esté en estado de borrador, siga los pasos de la sección [herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) documento.
+3. Vaya a la página **Zonas protegidas** en el panel de navegación izquierdo y seleccione la pestaña **Paquetes**, busque su paquete y publíquelo. Para publicar un paquete en estado de borrador, siga los pasos del documento [herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish).
 
    ![Paquete en estado de borrador o sin publicar](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![Publicación del paquete](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![Publicando el paquete](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
-4. Una vez publicada correctamente, en la página de exploración de paquetes debería ver un **+** botón habilitado junto al nombre.
+4. Una vez publicada correctamente, en la página de exploración de paquetes debería ver un botón **+** habilitado junto al nombre.
 
    ![Paquetes en la página Zonas protegidas](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
@@ -51,25 +51,25 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
    >
    > El paquete no se puede importar mientras esté en modo de borrador, por lo que debe abrir la página de detalles del paquete y publicarlo.
 
-5. Seleccione el **+** controle e inicie el flujo de trabajo para importar los recursos generados por el manual de casos de uso en **[!UICONTROL Zona protegida de Target]**. Seleccione una zona protegida de destino y confirme el nombre del paquete que desea importar mediante la lista desplegable. Añada los detalles del trabajo, como el nombre y la descripción del trabajo, antes de continuar con el siguiente paso.
+5. Seleccione el control **+** e inicie el flujo de trabajo para importar los recursos generados por el manual de casos de uso en la **[!UICONTROL zona protegida de Target]**. Seleccione una zona protegida de destino y confirme el nombre del paquete que desea importar mediante la lista desplegable. Añada los detalles del trabajo, como el nombre y la descripción del trabajo, antes de continuar con el siguiente paso.
 
-   ![Inicie el flujo de trabajo de importación, seleccione un destino, confirme el paquete y añada detalles del trabajo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
+   ![Iniciar flujo de trabajo de importación, seleccionar destino, confirmar paquete, agregar detalles del trabajo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
-6. En el **[!UICONTROL Ver dependencias]** paso a paso, puede asignar esquemas y copiar otros recursos de la zona protegida de inspiración en la de destino. El **[!UICONTROL Finalizar]** El botón está desactivado hasta que asigne cada esquema.
+6. En el paso **[!UICONTROL Ver dependencias]**, puede asignar esquemas y copiar otros recursos de la zona protegida de inspiración en la de destino. El botón **[!UICONTROL Finalizar]** está deshabilitado hasta que asigne cada esquema.
 
-   ![Asigne esquemas en el paso &quot;Ver dependencias&quot;, habilitando el botón Finalizar.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
+   ![Asignar esquemas en el paso &#39;Ver dependencias&#39;, habilitando el botón Finalizar.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
 ### Asignación de esquemas {#map-schemas}
 
-1. Asigne el primer esquema. El cuadro de diálogo de asignación de esquemas muestra una lista desplegable para seleccionar el esquema de destino. Si el esquema de origen es un esquema de perfil, no hay otras opciones de esquema de destino aparte de la variable [esquema de perfil de unión individual](/help/xdm/classes/individual-profile.md). Puede ver las recomendaciones de asignación generadas automáticamente entre los datos de origen y los campos de destino cuando se muestra la página por primera vez. Puede editar las asignaciones seleccionando el campo de destino y, a continuación, un nuevo campo. Si modifica las asignaciones sugeridas, utilice el **Validate** para validar las nuevas asignaciones y mostrar cualquier error que pueda estar vinculado a las nuevas asignaciones. Seleccionar **Guardar** una vez finalizada la asignación.
+1. Asigne el primer esquema. El cuadro de diálogo de asignación de esquemas muestra una lista desplegable para seleccionar el esquema de destino. Si el esquema de origen es un esquema de perfil, no hay otras opciones de esquema de destino aparte del [esquema de perfil de unión individual](/help/xdm/classes/individual-profile.md). Puede ver las recomendaciones de asignación generadas automáticamente entre los campos Datos de Source y Destino cuando se muestra la página por primera vez. Puede editar las asignaciones seleccionando el campo de destino y, a continuación, un nuevo campo. Si modifica las asignaciones sugeridas, use el botón **Validar** para validar las nuevas asignaciones y mostrar los errores que puedan estar vinculados a las nuevas asignaciones. Seleccione **Guardar** una vez que se haya completado la asignación.
 
-   ![Cuadro de diálogo Asignación de esquemas con un menú desplegable para seleccionar un esquema de destino.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
+   ![Cuadro de diálogo de asignación de esquemas con un menú desplegable para seleccionar un esquema de destino.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
-2. Continúe asignando todos los campos de los esquemas. Si el esquema es un [esquema de eventos](/help/xdm/classes/experienceevent.md), el cuadro de diálogo muestra una lista desplegable en la que puede ver todos los esquemas de evento de la zona protegida de destino.
+2. Continúe asignando todos los campos de los esquemas. Si el esquema es un [esquema de evento](/help/xdm/classes/experienceevent.md), el cuadro de diálogo muestra un menú desplegable donde puede ver todos los esquemas de evento de la zona protegida de destino.
 
-   ![Seleccione un esquema de destino de la lista desplegable](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
+   ![Seleccionar un esquema de destino del menú desplegable](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
 
-3. Seleccione un esquema de los esquemas disponibles en la **Zona protegida de Target**.
+3. Seleccione un esquema de los esquemas disponibles en la **zona protegida de destino**.
 
    ![Seleccionar un esquema](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
 
@@ -77,7 +77,7 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 
    ![Guardar asignación](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
-5. Una vez que haya terminado de asignar todos los campos de los esquemas, seleccione **Finalizar** para completar el flujo de trabajo de importación.
+5. Una vez que haya completado la asignación de todos los campos de los esquemas, seleccione **Finalizar** para completar el flujo de trabajo de importación.
 
    ![Finalizar el flujo](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
@@ -87,14 +87,14 @@ La creación de una instancia de genera un conjunto de recursos, como recorridos
 
 ### Estado de importación {#import-status}
 
-1. Se le redirigirá automáticamente a [**Importaciones**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) página donde puede ver el progreso de la importación.
+1. Se le redirigirá automáticamente a la página [**Importaciones**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details), donde podrá ver el progreso de la importación.
 
-   ![Página que muestra el progreso de importación](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
+   ![Página que muestra el progreso de la importación](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
 2. Mientras se importa el paquete, los recursos del paquete se crean en la zona protegida de destino. Una vez finalizados, hacen referencia a los campos asignados durante el proceso de importación. El proceso se ha completado y los recursos de la zona protegida inspiracional ahora también están presentes en la zona protegida de Target para que los pruebe.
 
-   ![Recursos generados en la zona protegida de destinatario](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![Recursos generados en la zona protegida de destino](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora comprende mejor cómo aprovechar los libros de reproducción de casos de uso junto con [herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para crear recorridos ejecutables que hagan referencia a los esquemas. Obtenga más información sobre los [Casos de uso de Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+Después de leer esta guía, ahora comprende mejor cómo aprovechar los libros de reproducción de casos de uso junto con [herramientas de espacio aislado](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) para crear recorridos ejecutables que hagan referencia a sus esquemas. Obtenga más información sobre los [casos de uso comunes de Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).

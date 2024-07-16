@@ -4,7 +4,7 @@ description: Obtenga información acerca de los diferentes métodos para alojar 
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1315'
 ht-degree: 98%
 
 ---

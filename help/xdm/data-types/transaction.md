@@ -10,9 +10,9 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Transacción] tipo de datos
+# Tipo de datos [!UICONTROL Transacción]
 
-[!UICONTROL Transacción] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe los detalles de una transacción monetaria.
+[!UICONTROL Transacción] es un tipo de datos XDM (Experience Data Model) estándar que describe los detalles de una transacción monetaria.
 
 ![Estructura de transacciones](../images/data-types/transaction.png)
 

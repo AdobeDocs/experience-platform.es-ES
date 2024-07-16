@@ -4,8 +4,8 @@ description: Últimas notas de la versión de la extensión Core en Adobe Experi
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 62%
+source-wordcount: '1632'
+ht-degree: 60%
 
 ---
 
@@ -31,7 +31,7 @@ Versión 3.4.1
       * Query String Parameter
       * Traffic Source
       * Variable
-* Cambia el delegado events/EntersViewport para utilizar el [API de observación de intersección](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) en lugar de la detección manual de elementos que entran en la ventanilla móvil.
+* Cambia el delegado events/EntersViewport para utilizar [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) en lugar de la detección manual de los elementos que entran en la ventanilla.
 * Quita el código que migraba las cookies de DTM a LocalStorage.
 * Registra una advertencia en la consola cuando las API LocalStorage y SessionStorage no están disponibles.
 
@@ -39,7 +39,7 @@ Versión 3.4.1
 
 Versión 3.3.0
 
-* Modifica el [Acción de llamada directa de déclencheur](./overview.md#direct-call-action) para poder proporcionar información de evento personalizada para enviar a reglas de llamada directa.
+* Modifica la acción [Llamada directa de Déclencheur](./overview.md#direct-call-action) para que pueda proporcionar información de evento personalizada para enviar a las reglas de llamada directa.
 
 ## 8 de octubre de 2021
 
@@ -79,7 +79,7 @@ Se han añadido nuevos elementos de datos:
 * Objeto combinado: seleccione varios elementos de datos que proporcionarán un objeto cada uno. Estos objetos se combinarán profunda (recursivamente) para producir un nuevo objeto.
 * Valor condicional: Devuelva uno de los dos valores (conditionalValue o fallbackValue) en función del resultado de la comparación.
 * Entorno de tiempo de ejecución: devuelva una de las siguientes variables de entorno de Launch: fase de entorno, fecha de compilación de la biblioteca, nombre de propiedad, ID de propiedad, nombre de regla, ID de regla, tipo de evento, carga útil de detalle del evento, identificador de llamada directa.
-* Herramientas de JavaScript: contenedor para operaciones comunes de JavaScript: manipulación básica de cadenas (reemplazar, subcadena, coincidencia de regex, primer y último índice, división, fracción), operaciones básicas de matrices (división, unión, desplazamiento) y operaciones básicas universales (división, longitud).
+* Herramientas de JavaScript: contenedor para operaciones comunes de JavaScript: manipulación básica de cadenas (reemplazar, subcadena, coincidencia regex, índice primero y último, división, fracción), operaciones básicas de matrices (división, unión, desplazamiento, desplazamiento) y operaciones básicas universales (división, longitud).
 * Atributos del dispositivo: devuelven atributos del dispositivo como el tamaño de la ventana o el tamaño de la pantalla.
 
 ## 11 de agosto de 2021
@@ -88,7 +88,7 @@ Versión 3.0.0
 
 * PDCL-6153: Añade compatibilidad para extraer de forma fiable la URL completa para acciones de código personalizado en caché.
 
-La versión 3.0.0 de la extensión Core está asociada con cambios en [Versión 27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por Adobe si la empresa del usuario admite CDN Premium.
+La versión 3.0.0 de la extensión principal se asocia con cambios en la versión [v27.2.0 del tiempo de ejecución web de Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite a los usuarios cargar su biblioteca entre muchas regiones de alojamiento administradas por el Adobe si la compañía del usuario admite CDN Premium.
 
 Esta actualización es opcional y compatible con versiones anteriores para usuarios sin CDN Premium, y obligatoria para los clientes que tienen CDN Premium habilitado en su empresa.
 
@@ -123,7 +123,7 @@ Versión 2.0.4
 
 Versión 1.9.0
 
-* **Nueva acción &quot;Llamada directa de Déclencheur&quot;** : La extensión principal ahora incluye un nuevo tipo de acción llamado `Trigger Direct Call`.  Esto se puede utilizar cuando se desea activar una regla de llamada directa a través de una acción desde una regla diferente. Esta se asigna directamente al método `_satellite.track()`. Muchas gracias a Jan Exner por esta contribución.
+* **Nueva acción &quot;Llamada directa de Déclencheur&quot;**: la extensión principal ahora incluye un nuevo tipo de acción denominado `Trigger Direct Call`.  Esto se puede utilizar cuando se desea activar una regla de llamada directa a través de una acción desde una regla diferente. Esta se asigna directamente al método `_satellite.track()`. Muchas gracias a Jan Exner por esta contribución.
 
 ## 8 de diciembre de 2020
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts en línea que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede obtener más información sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
+* **Compatibilidad con el nonce de CSP**: La extensión principal ahora tiene un parámetro de configuración opcional. Puede añadir un elemento de datos que haga referencia a un nonce. En el caso de estar configurados, todos los scripts en línea que una etiqueta añade a la página utilizan el nonce que ha configurado. Este cambio admite el uso de una directiva de seguridad de contenido con un nonce para que los scripts de etiquetas se puedan seguir cargando en un entorno CSP. Puede leer más sobre el uso de etiquetas con un CSP [aquí](../../../ui/client-side/content-security-policy.md).
 
 ## 18 de junio de 2019
 
@@ -210,7 +210,7 @@ v1.4.2
 
 * **Opción Persist Cohort**: La opción para mantener una cohorte se ha añadido a la condición de Muestreo. Esto causa que se mantenga a un usuario dentro o fuera de la cohorte de muestra entre sesiones. Por ejemplo, si la casilla &quot;persist cohort&quot; está marcada y la condición devuelve el valor &quot;True&quot; la primera vez que se ejecute para un visitante determinado, devolverá ese valor en todas las ejecuciones posteriores de la condición para el mismo visitante. Del mismo modo, si la casilla &quot;persist cohort&quot; está marcada y la condición devuelve el valor &quot;False&quot; la primera vez que se ejecuta para un visitante determinado, devolverá el mismo valor en todas las ejecuciones posteriores de la condición para el mismo visitante.
 * **Corrección de errores**: Se ha corregido un problema por el que una regla con un evento Page Bottom y una acción Custom Code en una página donde se estaban cargando etiquetas síncronas, pero incorrectamente (sin llamada a `_satellite.pageBottom()`) borraba el contenido del sitio web.
-* **Corrección de errores** : Se ha corregido un problema en el que Enters Viewport no funcionaba si la biblioteca de etiquetas se cargaba de forma asíncrona y terminaba de cargarse después de activarse el evento DOMContentLoaded del explorador.
+* **Corrección de errores**: se corrigió un problema en el que Enters Viewport no funcionaba si la biblioteca de etiquetas se cargaba de forma asíncrona y terminaba de cargarse después de activarse el evento DOMContentLoaded del explorador.
 
 ## 24 de mayo de 2018
 

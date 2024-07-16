@@ -1,7 +1,8 @@
 ---
 title: personalización
 description: Procesar contenido diferente para diferentes usuarios y crear una experiencia personalizada para ellos.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%
@@ -10,9 +11,9 @@ ht-degree: 0%
 
 # `personalization`
 
-El `personalization` contiene varias propiedades que le permiten adaptar la experiencia del usuario en función del usuario. Resulta especialmente útil en implementaciones de Adobe Target o Adobe Journey Optimizer, ya que es la fuerza motriz que permite personalizar el contenido mostrado por usuario.
+El objeto `personalization` contiene varias propiedades que le permiten adaptar la experiencia del usuario en función del usuario. Resulta especialmente útil en implementaciones de Adobe Target o Adobe Journey Optimizer, ya que es la fuerza motriz que permite personalizar el contenido mostrado por usuario.
 
-Consulte la documentación sobre cómo [representación de contenido personalizado](../../personalization/rendering-personalization-content.md) para obtener más información.
+Consulte la documentación sobre cómo [procesar contenido personalizado](../../personalization/rendering-personalization-content.md) para obtener más información.
 
 <!--
 ## Properties within this object

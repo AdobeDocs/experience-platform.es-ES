@@ -9,23 +9,23 @@ ht-degree: 1%
 
 ---
 
-# Configuración de un [!DNL Amazon S3] destino con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada
+# Configurar un destino [!DNL Amazon S3] con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizado
 
 ## Información general {#overview}
 
-En esta página se describe cómo utilizar Destination SDK para configurar un destino de Amazon S3 con valores predeterminados predefinidos [opciones de formato de archivo](configure-file-formatting-options.md) y un personalizado [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+En esta página se describe cómo usar Destination SDK para configurar un destino de Amazon S3 con [opciones de formato de archivo predefinidas y predeterminadas](configure-file-formatting-options.md) y una [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personalizada.
 
 Esta página muestra todas las opciones de configuración disponibles para [!DNL Amazon S3] destinos. Puede editar las configuraciones que se muestran en los pasos siguientes o eliminar ciertas partes de las configuraciones, según sea necesario.
 
-Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [Opciones de configuración en el SDK de destinos](../../functionality/configuration-options.md).
+Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [opciones de configuración en Destinations SDK](../../functionality/configuration-options.md).
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos descritos a continuación, lea la [Introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos descritos a continuación, lea la página de [introducción al Destination SDK](../../getting-started.md) para obtener información sobre cómo obtener las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
 ## Paso 1: Crear un servidor y una configuración de archivo {#create-server-file-configuration}
 
-Comience por usar la variable `/destination-server` extremo a [crear una configuración de servidor y archivo](../../authoring-api/destination-server/create-destination-server.md).
+Comience por usar el extremo `/destination-server` para [crear un servidor y una configuración de archivo](../../authoring-api/destination-server/create-destination-server.md).
 
 **Formato de API**
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Solicitud**
 
 La siguiente solicitud crea una nueva configuración del servidor de destino, configurada por los parámetros proporcionados en la carga útil.
-La carga útil siguiente incluye un genérico [!DNL Amazon S3] configuración predeterminada, con predefinido [Formato de archivo CSV](../../functionality/destination-server/file-formatting.md) Parámetros de configuración que los usuarios pueden definir en la interfaz de usuario de Experience Platform.
+La carga útil siguiente incluye una configuración [!DNL Amazon S3] genérica, con [parámetros de configuración predefinidos y predeterminados de formato de archivo CSV](../../functionality/destination-server/file-formatting.md) que los usuarios pueden definir en la interfaz de usuario del Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -126,9 +126,9 @@ Una respuesta correcta devuelve la nueva configuración del servidor de destino,
 
 ## Paso 2: Crear la configuración de destino {#create-destination-configuration}
 
-Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, ahora puede utilizar el `/destinations` Punto final de API para crear una configuración de destino.
+Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, puede usar el extremo de la API `/destinations` para crear una configuración de destino.
 
-Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, sustituya el `destinationServerId` valor en la solicitud de API siguiente con el `instanceId` valor obtenido al crear el servidor de destino en [paso 1](#create-server-file-configuration).
+Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, reemplace el valor `destinationServerId` de la solicitud de API siguiente por el valor `instanceId` obtenido al crear el servidor de destino en [paso 1](#create-server-file-configuration).
 
 **Formato de API**
 
@@ -285,7 +285,7 @@ En función de las configuraciones anteriores, el catálogo de Experience Platfo
 
 ![Grabación de pantalla que muestra la página del catálogo de destinos con una tarjeta de destino seleccionada.](../../assets/guides/batch/destination-card.gif)
 
-En las imágenes y grabaciones que aparecen a continuación, observe cómo aparecen las opciones en la [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coincida con las opciones seleccionadas en la configuración de destino.
+En las imágenes y grabaciones siguientes, observe cómo las opciones del flujo de trabajo de [activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coinciden con las opciones que seleccionó en la configuración de destino.
 
 Al rellenar detalles sobre el destino, observe cómo aparecen los campos como campos de datos personalizados que se configuran en la configuración.
 
@@ -295,21 +295,21 @@ Al rellenar detalles sobre el destino, observe cómo aparecen los campos como ca
 
 ![Grabación de pantalla que muestra los campos de datos del cliente definidos en la configuración.](../../assets/guides/batch/file-configuration-options.gif)
 
-Al programar intervalos de exportación, observe cómo aparecen los campos configurados en la variable `batchConfig` configuración.
+Al programar intervalos de exportación, observe cómo aparecen los campos configurados en la configuración `batchConfig`.
 ![opciones de programación de exportación](../../assets/guides/batch/file-export-scheduling.png)
 
-Al ver las opciones de configuración de nombre de archivo, observe cómo los campos que aparecen representan el `filenameConfig` opciones que se configuran en la configuración.
-![opciones de configuración de nombre](../../assets/guides/batch/file-naming-options.gif)
+Al ver las opciones de configuración del nombre de archivo, observe cómo los campos que aparecen representan las opciones de `filenameConfig` que configuró en la configuración.
+![opciones de configuración de nombre de archivo](../../assets/guides/batch/file-naming-options.gif)
 
-Si desea ajustar cualquiera de los campos mencionados anteriormente, repita lo siguiente [pasos uno](#create-server-file-configuration) y [dos](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
+Si desea ajustar cualquiera de los campos mencionados anteriormente, repita los [pasos uno](#create-server-file-configuration) y [dos](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
 
-## Paso 4: (Opcional) Publicar el destino {#publish-destination}
+## Paso 4: (Opcional) Publish su destino {#publish-destination}
 
 >[!NOTE]
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Después de configurar el destino, utilice el [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe para su revisión.
+Después de configurar el destino, usa la [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe y revisarla.
 
 ## Paso 5: (Opcional) Documente su destino {#document-destination}
 
@@ -317,8 +317,8 @@ Después de configurar el destino, utilice el [API de publicación de destino](.
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino en [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea una [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación de productos para su destino en el [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este artículo, ahora sabe cómo crear un personalizado [!DNL Amazon S3] destino mediante Destination SDK. A continuación, su equipo puede utilizar el [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.
+Al leer este artículo, ahora sabe cómo crear un destino [!DNL Amazon S3] personalizado con Destination SDK. A continuación, su equipo puede usar el flujo de trabajo de [activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.

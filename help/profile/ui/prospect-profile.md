@@ -5,8 +5,8 @@ type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 7%
+source-wordcount: '400'
+ht-degree: 1%
 
 ---
 
@@ -18,17 +18,17 @@ Los perfiles de clientes potenciales se utilizan para representar a personas que
 
 ## Examinar {#browse}
 
-Para acceder a los perfiles de clientes potenciales, seleccione **[!UICONTROL Perfiles]** en el **[!UICONTROL Posibles clientes]** sección.
+Para acceder a los perfiles de clientes potenciales, seleccione **[!UICONTROL Perfiles]** en la sección **[!UICONTROL Clientes potenciales]**.
 
-El **[!UICONTROL Examinar]** se muestra la página. Se mostrará una lista de todos los perfiles de clientes potenciales de su organización.
+Se muestra la página **[!UICONTROL Examinar]**. Se mostrará una lista de todos los perfiles de clientes potenciales de su organización.
 
-![El [!UICONTROL Perfiles] botón aparece resaltado y muestra el [!UICONTROL Examinar] para perfiles de clientes potenciales.](../images/prospect-profile/browse-profiles.png)
+![El botón [!UICONTROL Perfiles] está resaltado y muestra la página [!UICONTROL Examinar] en busca de perfiles de clientes potenciales.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
->Aunque la mayor parte de la funcionalidad de navegación entre los perfiles del cliente y los perfiles del cliente potencial es la misma, usted **no puede** examinar los perfiles potenciales mediante una política de combinación. Esto se debe a que los perfiles potenciales se rigen automáticamente por una política de combinación basada en el tiempo y diseñada por el sistema. Encontrará más información sobre las políticas de combinación en la [resumen de políticas de combinación](../merge-policies/overview.md).
+>Aunque la mayor parte de la funcionalidad de exploración entre perfiles de clientes y perfiles de clientes potenciales es la misma, usted **no puede** examinar perfiles de clientes potenciales mediante una política de combinación. Esto se debe a que los perfiles potenciales se rigen automáticamente por una política de combinación basada en el tiempo y diseñada por el sistema. Encontrará más información sobre las políticas de combinación en la [descripción general de la política de combinación](../merge-policies/overview.md).
 
-Para obtener más información sobre los perfiles de navegación, lea la [sección Examinar de la guía de usuario sobre perfiles](./user-guide.md#browse-identity).
+Para obtener más información sobre los perfiles de exploración, lea la [sección de exploración de la guía del usuario del perfil](./user-guide.md#browse-identity).
 
 ## Detalles del perfil del cliente potencial {#profile-details}
 
@@ -36,21 +36,21 @@ Para obtener más información sobre los perfiles de navegación, lea la [secci�
 >
 >Un perfil cliente potencial caducará automáticamente después de 25 días de residir en Adobe Experience Platform.
 
-Para ver más información sobre un perfil de cliente potencial específico, seleccione un perfil en la [!UICONTROL Examinar] página.
+Para ver más información sobre un perfil de cliente potencial específico, seleccione un perfil en la página [!UICONTROL Examinar].
 
-![Un perfil de cliente potencial se resalta en la página de exploración.](../images/prospect-profile/select-specific-profile.png)
+![Un perfil de cliente potencial está resaltado en la página de exploración.](../images/prospect-profile/select-specific-profile.png)
 
 Se muestra información sobre el perfil del cliente potencial, incluidos los atributos asociados con el perfil y la pertenencia a la audiencia.
 
 ![Se muestra la página de detalles del perfil del cliente potencial.](../images/prospect-profile/profile-details.png)
 
-Para obtener más información sobre estas fichas, lea la [Ver la sección Detalles del perfil de la guía del usuario del perfil](./user-guide.md#profile-detail).
+Para obtener más información sobre estas fichas, lea la [sección Ver detalles del perfil de la guía de usuario del perfil](./user-guide.md#profile-detail).
 
-También puede ver todos los atributos en formato JSON seleccionando **[!UICONTROL Ver JSON]**.
+También puede ver todos los atributos en formato JSON al seleccionar **[!UICONTROL Ver JSON]**.
 
-![El [!UICONTROL Ver JSON] aparece resaltado en la página de detalles del perfil del cliente potencial.](../images/prospect-profile/profile-select-view-json.png)
+![El botón [!UICONTROL Ver JSON] está resaltado en la página de detalles del perfil del cliente potencial.](../images/prospect-profile/profile-select-view-json.png)
 
-El [!UICONTROL Ver JSON] aparece el cuadro de diálogo. Los atributos del perfil del cliente potencial ahora se muestran en forma JSON.
+Aparecerá el cuadro de diálogo [!UICONTROL Ver JSON]. Los atributos del perfil del cliente potencial ahora se muestran en forma JSON.
 
 ![Los atributos del perfil del cliente potencial se muestran en forma JSON.](../images/prospect-profile/profile-view-json.png)
 
@@ -62,4 +62,4 @@ Para obtener información sobre cómo puede utilizar la funcionalidad de perfile
 
 ## Pasos siguientes
 
-Después de leer esta guía, ahora comprende cómo se pueden utilizar los perfiles de clientes potenciales en Adobe Experience Platform. Para conocer cómo se pueden utilizar estos perfiles de clientes potenciales en las audiencias, lea la [guía de audiencias de clientes potenciales](../../segmentation/ui/prospect-audience.md).
+Después de leer esta guía, ahora comprende cómo se pueden utilizar los perfiles de clientes potenciales en Adobe Experience Platform. Para saber cómo se pueden usar estos perfiles de clientes potenciales en las audiencias, lea la [guía de audiencias de clientes potenciales](../../segmentation/ui/prospect-audience.md).

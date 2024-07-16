@@ -4,14 +4,14 @@ description: Los atributos calculados son funciones para agregar datos de nivel 
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 4%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
 # Resumen de atributos calculados
 
-La personalización basada en el comportamiento del usuario es un requisito clave para que los especialistas en marketing maximicen el impacto de la personalización. Por ejemplo: personalizar el correo electrónico de marketing con el producto visualizado más recientemente para impulsar la conversión o personalizar la página web en función del total de compras realizadas por los usuarios para conseguir la retención.
+Personalization basado en el comportamiento del usuario es un requisito clave para que los especialistas en marketing maximicen el impacto de la personalización. Por ejemplo: personalizar el correo electrónico de marketing con el producto visualizado más recientemente para impulsar la conversión o personalizar la página web en función del total de compras realizadas por los usuarios para conseguir la retención.
 
 Los atributos calculados ayudan a convertir rápidamente los datos de comportamiento del perfil en valores agregados a nivel de perfil sin dependencia de los recursos de ingeniería para lo siguiente:
 
@@ -36,9 +36,9 @@ Esta guía le ayudará a comprender mejor la función de los atributos calculado
 
 ## Explicación de los atributos calculados
 
-Adobe Experience Platform permite importar y combinar fácilmente datos de varias fuentes para generar [!DNL Real-Time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista del cliente en 360 grados.
+Adobe Experience Platform permite importar y combinar fácilmente datos de varios orígenes para generar [!DNL Real-Time Customer Profiles]. Cada perfil contiene información importante relacionada con un individuo, como su información de contacto, preferencias e historial de compras, lo que proporciona una vista del cliente en 360 grados.
 
-Parte de la información recopilada en el perfil se entiende fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o depender de otros campos y valores para generar la información (por ejemplo, &quot;total de compra de por vida&quot;). Para que estos datos sean más fáciles de entender de un vistazo, [!DNL Platform] permite crear atributos calculados que realizan automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
+Parte de la información recopilada en el perfil se entiende fácilmente al leer los campos de datos directamente (por ejemplo, &quot;nombre&quot;), mientras que otros datos requieren realizar varios cálculos o depender de otros campos y valores para generar la información (por ejemplo, &quot;total de compra de por vida&quot;). Para facilitar la comprensión rápida de estos datos, [!DNL Platform] le permite crear atributos calculados que realicen automáticamente estas referencias y cálculos, devolviendo el valor en el campo correspondiente.
 
 Los atributos calculados incluyen la creación de una expresión, o &quot;regla&quot;, que funciona en los datos entrantes y almacena el valor resultante en un atributo de perfil. Las expresiones se pueden definir de varias formas diferentes, lo que permite especificar en qué eventos se agregan, funciones de agregado o duraciones de retrospectiva.
 
@@ -48,11 +48,11 @@ Los atributos calculados permiten definir acumulados de evento de forma automát
 
 | Función | Descripción | Tipos de datos admitidos | Ejemplo de uso |
 | -------- | ----------- | -------------------- | ------------- |
-| SUM | Una función que **sumas** Configure el valor especificado para eventos calificados. | Enteros, Números, Largos | Suma de todas las compras de los últimos 7 días |
-| RECUENTO | Una función que **recuentos** el número de eventos que se han producido para la regla determinada. | N/A | Recuento de compras en los últimos 3 meses |
-| MIN | Una función que encuentra el **minimum** valor de los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la primera compra en los últimos 7 días<br/>Cantidad mínima del pedido en las últimas 4 semanas |
-| MAX | Una función que encuentra el **maximum** valor de los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la última compra en los últimos 7 días<br/>Cantidad máxima de pedidos en las últimas 4 semanas |
-| MÁS_RECIENTE | Una función que encuentra el valor de atributo especificado del evento cualificado más reciente. Esta función proporciona lo siguiente **ambos** el valor y la marca de tiempo del atributo. | Todos los valores primitivos, Matrices de valores primitivos | Últimos productos vistos en los últimos 7 días |
+| SUM | Una función que **resume** el valor especificado para eventos calificados. | Enteros, Números, Largos | Suma de todas las compras de los últimos 7 días |
+| RECUENTO | Una función que **cuenta** el número de eventos que se han producido para la regla dada. | N/A | Recuento de compras en los últimos 3 meses |
+| MÍN. | Una función que encuentra el valor **minimum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la primera compra en los últimos 7 días<br/>Cantidad mínima del pedido en las últimas 4 semanas |
+| MÁX. | Una función que encuentra el valor **maximum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la última compra en los últimos 7 días<br/>Cantidad máxima del pedido en las últimas 4 semanas |
+| MÁS_RECIENTE | Una función que encuentra el valor de atributo especificado del evento cualificado más reciente. Esta función proporciona a **both** el valor y la marca de tiempo del atributo. | Todos los valores primitivos, Matrices de valores primitivos | Últimos productos vistos en los últimos 7 días |
 
 ### Períodos retroactivos
 
@@ -64,8 +64,8 @@ La frecuencia de actualización hace referencia a la frecuencia con la que se ac
 
 | Período retroactivo | Frecuencia de actualización |
 | --------------- | ----------------- |
-| Hasta 24 horas | Por hora |
-| Hasta 7 días | Diario |
+| Hasta 24 horas | Horaria |
+| Hasta 7 días | Diaria |
 | Hasta 4 semanas | Semanal |
 | Hasta 6 meses | Mensual |
 
@@ -73,9 +73,9 @@ Por ejemplo, si el atributo calculado tiene un período retroactivo de los últi
 
 >[!NOTE]
 >
->Tanto las semanas como los meses se consideran **semanas calendario** y **meses naturales** cuando se utiliza en retrospectivas de eventos. La semana natural comienza el **Domingo** y termina en **Sábado** de la semana. El mes natural comienza el **primero** del mes y finaliza el **último día** del mes.
+>Tanto las semanas como los meses se consideran **semanas de calendario** y **meses de calendario** cuando se usan en retrospectivas de eventos. La semana del calendario comienza el **domingo** y finaliza el **sábado** de la semana. El mes natural comienza el **primer** del mes y finaliza el **último día** del mes.
 
-El período retroactivo para los atributos calculados es un **laminado** periodo retroactivo. Por ejemplo, si se produce una primera evaluación el 15 de octubre a las 12:00 UTC, el periodo retrospectivo de dos semanas recuperaría todos los eventos del 1 al 15 de octubre, se actualizaría en una semana del 22 de octubre y, a continuación, recuperaría todos los eventos del 8 al 22 de octubre.
+El período retrospectivo de los atributos calculados es **móvil**. Por ejemplo, si se produce una primera evaluación el 15 de octubre a las 12:00 UTC, el periodo retrospectivo de dos semanas recuperaría todos los eventos del 1 al 15 de octubre, se actualizaría en una semana del 22 de octubre y, a continuación, recuperaría todos los eventos del 8 al 22 de octubre.
 
 **Actualización rápida** {#fast-refresh}
 
@@ -87,8 +87,8 @@ La actualización rápida permite mantener los atributos actualizados. Al habili
 >
 >Si crea un atributo calculado con un período retrospectivo de dos semanas con la actualización rápida habilitada, el período retrospectivo inicial será de dos semanas. Sin embargo, con cada actualización diaria, el período retroactivo incluirá eventos del día adicional. Esta adición de días continuará hasta que comience la siguiente semana del calendario, en la que la ventana retrospectiva se volverá a mostrar y volverá a dos semanas.
 >
->Por ejemplo, si hubo un período retrospectivo de dos semanas que comenzó el 15 de marzo (domingo) con la actualización rápida habilitada, con actualización diaria, el período retrospectivo seguirá ampliándose inclusive hasta el 22 de marzo, donde se restablecerá a dos semanas. En resumen, el atributo calculado es **actualizado** diariamente, con el periodo retroactivo en aumento desde **dos** semanas para **tres** semanas durante la semana y, posteriormente, volviendo a **dos** semanas.
+>Por ejemplo, si hubo un período retrospectivo de dos semanas que comenzó el 15 de marzo (domingo) con la actualización rápida habilitada, con actualización diaria, el período retrospectivo seguirá ampliándose inclusive hasta el 22 de marzo, donde se restablecerá a dos semanas. En resumen, el atributo calculado es **actualizado** diariamente, con un período retroactivo que aumenta de **dos** semanas a **tres** semanas durante la semana, y que posteriormente vuelve a **dos** semanas.
 
 ## Pasos siguientes
 
-Para obtener más información sobre la creación y administración de atributos calculados, lea la [guía de API de atributos calculados](./api.md) o el [guía de IU de atributos calculados](./ui.md).
+Para obtener más información sobre cómo crear y administrar atributos calculados, lea [guía de API de atributos calculados](./api.md) o [guía de IU de atributos calculados](./ui.md).

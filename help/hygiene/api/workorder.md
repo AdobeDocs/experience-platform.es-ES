@@ -14,25 +14,25 @@ ht-degree: 2%
 
 # Punto final de orden de trabajo {#work-order-endpoint}
 
-El `/workorder` Este extremo de la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de registros en Adobe Experience Platform.
+El extremo `/workorder` de la API de higiene de datos le permite administrar mediante programación las solicitudes de eliminación de registros en Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
->La función de eliminación de registros está actualmente en versión beta y solo está disponible en un **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
+>La característica de eliminación de registros está actualmente en Beta y disponible solamente en **versión limitada**. No está disponible para todos los clientes. Las solicitudes de eliminación de registros solo están disponibles para organizaciones en la versión limitada.
 >
->Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Lo son **no** para su uso en solicitudes de derechos de titulares de los datos (cumplimiento) relacionadas con regulaciones de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de conformidad, utilice [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
+>Las eliminaciones de registros están pensadas para utilizarse para limpiar, eliminar datos anónimos o minimizar datos. Son **no** para usar en solicitudes de derechos de titulares de datos (cumplimiento) relacionadas con normas de privacidad como el Reglamento General de Protección de Datos (RGPD). Para todos los casos de uso de cumplimiento, usa [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) en su lugar.
 
 ## Introducción
 
-El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [descripción general](./overview.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante con respecto a los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Crear una solicitud de eliminación de registro {#create}
 
-Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una solicitud del POST a `/workorder` punto final.
+Puede eliminar una o más identidades de un único conjunto de datos o de todos ellos realizando una solicitud del POST al extremo `/workorder`.
 
 >[!IMPORTANT]
 > 
->Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Organizaciones que han realizado compras **Adobe Healthcare Shield** o **Adobe Escudo de seguridad y privacidad** puede enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Un solo [registrar la solicitud de eliminación a través de la IU](../ui/record-delete.md) le permite enviar 10 000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
+>Existen diferentes límites para el número total de eliminaciones de registros de identidad únicos que se pueden enviar cada mes. Estos límites se basan en el acuerdo de licencia. Las organizaciones que han comprado todas las ediciones de Adobe Real-time Customer Data Platform y Adobe Journey Optimizer pueden enviar hasta 100 000 eliminaciones de registros de identidad cada mes. Las organizaciones que hayan adquirido **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** pueden enviar hasta 600 000 eliminaciones de registros de identidad cada mes.<br>Una sola solicitud de eliminación de registro de [a través de la interfaz de usuario](../ui/record-delete.md) le permite enviar 10.000 ID al mismo tiempo. El método API para eliminar registros permite enviar 100 000 ID al mismo tiempo.<br>Se recomienda enviar tantos ID por solicitud como sea posible, hasta el límite de su ID. Cuando tenga intención de eliminar un gran volumen de ID, debe evitar enviar un bajo volumen o una sola solicitud de eliminación de ID por registro.
 
 **Formato de API**
 
@@ -46,7 +46,7 @@ POST /workorder
 
 **Solicitud**
 
-Según el valor de la variable `datasetId` proporcionada en la carga útil de la solicitud, la llamada de API eliminará las identidades de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de un conjunto de datos específico.
+Según el valor de `datasetId` proporcionado en la carga útil de la solicitud, la llamada de API eliminará las identidades de todos los conjuntos de datos o de un único conjunto de datos que especifique. La siguiente solicitud elimina tres identidades de un conjunto de datos específico.
 
 ```shell
 curl -X POST \
@@ -86,11 +86,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `action` | Acción que se va a realizar. El valor debe establecerse en `delete_identity` para eliminaciones de registros. |
-| `datasetId` | Si está eliminando de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si está eliminando de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si especifica un único conjunto de datos, el esquema del modelo de datos de experiencia (XDM) asociado al conjunto de datos debe tener definida una identidad principal. Si el conjunto de datos no tiene una identidad principal, debe tener un mapa de identidad para que lo modifique una solicitud del ciclo vital de datos.<br>Si existe un mapa de identidad, estará presente como un campo de nivel superior denominado `identityMap`.<br>Tenga en cuenta que una fila del conjunto de datos puede tener muchas identidades en su mapa de identidad, pero solo una se puede marcar como principal. `"primary": true` se debe incluir para forzar la `id` para que coincida con una identidad principal. |
+| `action` | Acción que se va a realizar. El valor debe establecerse en `delete_identity` para las eliminaciones de registros. |
+| `datasetId` | Si está eliminando de un único conjunto de datos, este valor debe ser el ID del conjunto de datos en cuestión. Si está eliminando de todos los conjuntos de datos, establezca el valor en `ALL`.<br><br>Si está especificando un solo conjunto de datos, el esquema XDM (Experience Data Model) asociado del conjunto de datos debe tener definida una identidad principal. Si el conjunto de datos no tiene una identidad principal, debe tener un mapa de identidad para que lo modifique una solicitud del ciclo vital de datos.<br>Si existe un mapa de identidad, estará presente como un campo de nivel superior denominado `identityMap`.<br>Tenga en cuenta que una fila del conjunto de datos puede tener muchas identidades en su mapa de identidad, pero solo una se puede marcar como principal. `"primary": true` debe incluirse para forzar a `id` a coincidir con una identidad principal. |
 | `displayName` | El nombre para mostrar de la solicitud de eliminación de registro. |
 | `description` | Descripción de la solicitud de eliminación de registro. |
-| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de un [área de nombres de identidad](../../identity-service/features/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: El valor de identidad.</ul>If `datasetId` especifica un único conjunto de datos, cada entidad en `identities` debe utilizar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>If `datasetId` se establece en `ALL`, el `identities` La matriz no está restringida a un área de nombres única, ya que cada conjunto de datos puede ser diferente. Sin embargo, las solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como indica [Servicio de identidad](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Matriz que contiene las identidades de al menos un usuario cuya información desea eliminar. Cada identidad consta de [área de nombres de identidad](../../identity-service/features/namespaces.md) y un valor:<ul><li>`namespace`: contiene una sola propiedad de cadena, `code`, que representa el área de nombres de identidad. </li><li>`id`: el valor de identidad.</ul>Si `datasetId` especifica un único conjunto de datos, cada entidad bajo `identities` debe usar el mismo área de nombres de identidad que la identidad principal del esquema.<br><br>Si `datasetId` está establecido en `ALL`, la matriz `identities` no está restringida a ningún área de nombres individual, ya que cada conjunto de datos puede ser diferente. Sin embargo, sus solicitudes siguen restringiendo las áreas de nombres disponibles para su organización, tal como lo informó [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Una respuesta correcta devuelve los detalles de la eliminación del registro.
 
 ## Recuperar el estado de una eliminación de registro {#lookup}
 
-Después de usted [crear una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
+Después de [crear una solicitud de eliminación de registro](#create), puede comprobar su estado mediante una solicitud de GET.
 
 **Formato de API**
 
@@ -203,11 +203,11 @@ Una respuesta correcta devuelve los detalles de la operación de eliminación, i
 | `status` | El estado actual del orden de eliminación. |
 | `createdBy` | El usuario que creó el orden de eliminación. |
 | `datasetId` | El ID del conjunto de datos sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
-| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: Una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
+| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
 
 ## Actualizar una solicitud de eliminación de registro
 
-Puede actualizar el `displayName` y `description` para eliminar un registro realizando una solicitud al PUT.
+Puede actualizar `displayName` y `description` para una eliminación de registro realizando una solicitud de PUT.
 
 **Formato de API**
 
@@ -298,6 +298,6 @@ Una respuesta correcta devuelve los detalles de la eliminación del registro.
 | `status` | El estado actual del orden de eliminación. |
 | `createdBy` | El usuario que creó el orden de eliminación. |
 | `datasetId` | El ID del conjunto de datos sujeto a la solicitud. Si la solicitud es para todos los conjuntos de datos, el valor se establecerá en `ALL`. |
-| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: Nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: Una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
+| `productStatusDetails` | Una matriz que enumera el estado actual de los procesos descendentes relacionados con la solicitud. Cada objeto de matriz contiene las siguientes propiedades:<ul><li>`productName`: nombre del servicio descendente.</li><li>`productStatus`: el estado de procesamiento actual de la solicitud del servicio descendente.</li><li>`createdAt`: una marca de tiempo del momento en el que el servicio publicó el estado más reciente.</li></ul> |
 
 {style="table-layout:auto"}

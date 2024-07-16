@@ -1,7 +1,8 @@
 ---
 title: Administrar tipos de datos de matriz y asignación con funciones de orden superior
 description: Obtenga información sobre cómo administrar tipos de datos de matrices y asignaciones con funciones de orden superior en el servicio de consultas. Se proporcionan ejemplos prácticos con casos de uso comunes.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ La siguiente lista de casos de uso contiene ejemplos de funciones de manipulaci�
 
 `transform(array<T>, function<T, U>): array<U>`
 
-El fragmento anterior aplica una función a cada elemento de la matriz y devuelve una nueva matriz de elementos transformados. En concreto, la variable `transform` toma una matriz de tipo T y convierte cada elemento del tipo T al tipo U. A continuación, devuelve una matriz de tipo U. Los tipos reales T y U dependen del uso específico de la función de transformación.
+El fragmento anterior aplica una función a cada elemento de la matriz y devuelve una nueva matriz de elementos transformados. Específicamente, la función `transform` toma una matriz de tipo T y convierte cada elemento del tipo T al tipo U. A continuación, devuelve una matriz de tipo U. Los tipos reales T y U dependen del uso específico de la función de transformación.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Esta función de transformación de matriz es similar al ejemplo anterior, pero 
 
 **Ejemplo**
 
-El ejemplo de SQL siguiente muestra este caso de uso. La consulta recupera un conjunto limitado de filas de la tabla especificada, transformando el `productListItems` matriz multiplicando el `priceTotal` de cada artículo por 73. El resultado incluye el `_id`, `productListItems`, y el transformado `price_in_inr` columnas. La selección se basa en un intervalo de marca de tiempo específico.
+El ejemplo de SQL siguiente muestra este caso de uso. La consulta recupera un conjunto limitado de filas de la tabla especificada, transformando la matriz `productListItems` al multiplicar el atributo `priceTotal` de cada elemento por 73. El resultado incluye las columnas `_id`, `productListItems` y `price_in_inr` transformadas. La selección se basa en un intervalo de marca de tiempo específico.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ Los resultados de este SQL aparecerían similares a los que se ven a continuaci�
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-En el fragmento anterior, la variable `exists` se aplica a cada elemento de la matriz y devuelve un valor booleano. El valor booleano indica si hay uno o más elementos en la matriz que cumplen una condición especificada. En este caso, confirma si existe un producto con un SKU específico.
+En el fragmento anterior, la función `exists` se aplica a cada elemento de la matriz y devuelve un valor booleano. El valor booleano indica si hay uno o más elementos en la matriz que cumplen una condición especificada. En este caso, confirma si existe un producto con un SKU específico.
 
 **Ejemplo**
 
-En el siguiente ejemplo de SQL, la consulta recupera `productListItems` desde el `geometrixxx_999_xdm_pqs_1batch_10k_rows` y evalúa si un elemento con un SKU igual a `123679` en el `productListItems` la matriz existe. A continuación, filtra los resultados en función de un intervalo específico de marcas de tiempo y limita los resultados finales a diez filas.
+En el siguiente ejemplo de SQL, la consulta recupera `productListItems` de la tabla `geometrixxx_999_xdm_pqs_1batch_10k_rows` y evalúa si existe un elemento con un SKU igual a `123679` en la matriz `productListItems`. A continuación, filtra los resultados en función de un intervalo específico de marcas de tiempo y limita los resultados finales a diez filas.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Esta función filtra una matriz de elementos en función de una condición deter
 
 **Ejemplo**
 
-La siguiente consulta selecciona el `productListItems` , aplica un filtro para incluir solo elementos con un SKU mayor que 100000 y restringe el conjunto de resultados a filas dentro de un rango de marca de tiempo específico. La matriz filtrada se alias como `_filter` en la salida.
+La consulta siguiente selecciona la columna `productListItems`, aplica un filtro para incluir solo elementos con SKU mayor que 100000 y restringe el conjunto de resultados a filas dentro de un intervalo de marca de tiempo específico. A continuación, la matriz filtrada se alias como `_filter` en la salida.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Esta operación de agregado aplica un operador binario a un estado inicial y a t
 
 **Ejemplo**
 
-Este ejemplo de consulta calcula el valor de SKU máximo a partir de la variable `productListItems` dentro del intervalo de marca de tiempo dado y duplica el resultado. La salida incluye el original `productListItems` matriz y el elemento calculado `max_value`.
+Este ejemplo de consulta calcula el valor de SKU máximo de la matriz `productListItems` dentro del intervalo de marca de tiempo especificado y duplica el resultado. La salida incluye la matriz `productListItems` original y la matriz `max_value` calculada.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Este fragmento combina los elementos de dos matrices en una única matriz nueva.
 
 **Ejemplo**
 
-La siguiente consulta utiliza el `zip_with` para crear pares de valores a partir de dos conjuntos. Para ello, añade los valores de SKU del `productListItems` matriz a una secuencia de números enteros, que se generó mediante la variable `Sequence` función. El resultado se selecciona junto con el original `productListItems` y está limitado en función de un intervalo de marca de tiempo.
+La siguiente consulta utiliza la función `zip_with` para crear pares de valores a partir de dos matrices. Para ello, agrega los valores SKU de la matriz `productListItems` a una secuencia de números enteros que se generó mediante la función `Sequence`. El resultado se selecciona junto con la columna `productListItems` original y está limitado según un intervalo de marca de tiempo.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-El `map_form_arrays` función crea un mapa utilizando valores emparejados de dos matrices.
+La función `map_form_arrays` crea un mapa con valores emparejados de dos matrices.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ El `map_form_arrays` función crea un mapa utilizando valores emparejados de dos
 
 **Ejemplo**
 
-El siguiente SQL crea un mapa en el que las claves son números secuenciados generados mediante el `Sequence` y los valores son elementos del campo `productListItems` matriz. La consulta selecciona el `productListItems` y utiliza la columna `Map_from_arrays` para crear el mapa en función de la secuencia de números generada y los elementos de la matriz. El resultado está limitado a diez filas y se filtra en función de un intervalo de marca de tiempo.
+El siguiente SQL crea un mapa donde las claves son números de secuencia generados mediante la función `Sequence` y los valores son elementos de la matriz `productListItems`. La consulta selecciona la columna `productListItems` y utiliza la función `Map_from_arrays` para crear el mapa en función de la secuencia de números generada y los elementos de la matriz. El resultado está limitado a diez filas y se filtra en función de un intervalo de marca de tiempo.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-El `map_concat` La función del fragmento anterior toma varios mapas como argumentos y devuelve un nuevo mapa que combina todos los pares clave-valor de los mapas de entrada. La función concatena varias asignaciones en una sola, y la asignación resultante incluye todos los pares clave-valor de los mapas de entrada.
+La función `map_concat` del fragmento anterior toma varias asignaciones como argumentos y devuelve una nueva asignación que combina todos los pares clave-valor de las asignaciones de entrada. La función concatena varias asignaciones en una sola, y la asignación resultante incluye todos los pares clave-valor de los mapas de entrada.
 
 **Ejemplo**
 
-El siguiente SQL crea una asignación en la que cada elemento de `productListItems` está asociado a un número de secuencia, que luego se concatenará con otro mapa donde las claves se generan en un rango de secuencia específico.
+El SQL siguiente crea un mapa donde cada elemento de `productListItems` está asociado con un número de secuencia, que luego se concatenará con otro mapa donde las claves se generan en un intervalo de secuencia específico.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Para los mapas, devuelve un valor para la clave dada o nulo si la clave no está
 
 **Ejemplo**
 
-La consulta selecciona el `identitymap` de la tabla `geometrixxx_999_xdm_pqs_1batch_10k_rows` y extrae el valor asociado a la clave `AAID` para cada fila. Los resultados están restringidos a filas que se encuentran dentro del rango de marca de tiempo especificado y la consulta limita el resultado a diez filas.
+La consulta selecciona la columna `identitymap` de la tabla `geometrixxx_999_xdm_pqs_1batch_10k_rows` y extrae el valor asociado con la clave `AAID` para cada fila. Los resultados están restringidos a filas que se encuentran dentro del rango de marca de tiempo especificado y la consulta limita el resultado a diez filas.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Este fragmento devuelve el tamaño de una matriz o mapa determinados y proporcio
 
 **Ejemplo**
 
-La siguiente consulta recupera el `identitymap` y la columna `Cardinality` función calcula el número de elementos en cada mapa dentro de la `identitymap`. Los resultados están limitados a diez filas y se filtran según un intervalo de marca de tiempo especificado.
+La consulta siguiente recupera la columna `identitymap` y la función `Cardinality` calcula el número de elementos de cada mapa dentro de `identitymap`. Los resultados están limitados a diez filas y se filtran según un intervalo de marca de tiempo especificado.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ El fragmento anterior elimina los valores duplicados de la matriz determinada.
 
 **Ejemplo**
 
-La siguiente consulta selecciona el `productListItems` , quita los elementos duplicados de las matrices y limita el resultado a diez filas en función de un intervalo de marca de tiempo especificado.
+La consulta siguiente selecciona la columna `productListItems`, quita los elementos duplicados de las matrices y limita el resultado a diez filas en función de un intervalo de marca de tiempo especificado.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Los siguientes ejemplos de funciones de orden superior se explican como parte del caso de uso recuperar registros similares. En la sección correspondiente de ese documento se proporciona un ejemplo y una explicación del uso de cada función.
 
-El [`transform` ejemplo de función](../use-cases/retrieve-similar-records.md#length-adjustment) abarca la tokenización de una lista de productos.
+El ejemplo de función [`transform` ](../use-cases/retrieve-similar-records.md#length-adjustment) cubre la tokenización de una lista de productos.
 
-El [`filter` ejemplo de función](../use-cases/retrieve-similar-records.md#filter-results) demuestra una extracción más refinada y precisa de la información relevante de los datos de texto.
+El ejemplo de la función [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) muestra una extracción más refinada y precisa de información relevante de los datos de texto.
 
-El [`reduce` función](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) proporciona una forma de derivar valores acumulativos o acumulados, que pueden ser fundamentales en varios procesos analíticos y de planificación.
+La función [`reduce`](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) proporciona una forma de derivar valores acumulativos o agregados, que pueden ser fundamentales en varios procesos analíticos y de planificación.

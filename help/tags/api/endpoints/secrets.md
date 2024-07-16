@@ -4,16 +4,16 @@ description: Aprenda a realizar llamadas al extremo /secret en la API de Reactor
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 12%
 
 ---
 
 # Extremo secreto
 
-Un secreto es un recurso que solo existe dentro de las propiedades de reenvío de eventos (propiedades con un `platform` atributo establecido en `edge`). Permiten que el reenvío de eventos se autentique en otro sistema para un intercambio de datos seguro.
+Un secreto es un recurso que sólo existe dentro de propiedades de reenvío de eventos (propiedades con un atributo `platform` establecido en `edge`). Permiten que el reenvío de eventos se autentique en otro sistema para un intercambio de datos seguro.
 
-Esta guía muestra cómo realizar llamadas al `/secrets` en la API de Reactor. Para obtener una explicación detallada de los diferentes tipos de secretos y cómo utilizarlos, consulte la información general de alto nivel sobre [secretos](../guides/secrets.md) antes de volver a esta guía.
+Esta guía muestra cómo realizar llamadas al extremo `/secrets` en la API de Reactor. Para obtener una explicación detallada de los diferentes tipos de secretos y cómo utilizarlos, consulte la descripción general de alto nivel de [secretos](../guides/secrets.md) antes de volver a esta guía.
 
 ## Primeros pasos
 
@@ -302,7 +302,7 @@ Puede crear un secreto realizando una solicitud al POST.
 
 >[!NOTE]
 >
->Cuando crea un nuevo secreto, la API devuelve una respuesta inmediata que contiene información para ese recurso. Al mismo tiempo, se activa una tarea de intercambio secreto para probar que el intercambio de credenciales funciona. Esta tarea se procesa asincrónicamente y actualiza el atributo de estado del secreto a `succeeded` o `failed` en función del resultado.
+>Cuando crea un nuevo secreto, la API devuelve una respuesta inmediata que contiene información para ese recurso. Al mismo tiempo, se activa una tarea de intercambio secreto para probar que el intercambio de credenciales funciona. Esta tarea se procesa asincrónicamente y actualiza el atributo de estado del secreto a `succeeded` o `failed` según el resultado.
 
 **Formato de API**
 
@@ -352,16 +352,16 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Un nombre único y descriptivo para el secreto. |
-| `type_of` | El tipo de credencial de autenticación que representa el secreto. Tiene tres valores aceptados:<ul><li>`token`: una cadena de token.</li><li>`simple-http`: un nombre de usuario y una contraseña.</li><li>`oauth2`: credenciales que cumplen con el estándar OAuth.</li></ul> |
-| `credentials` | Un objeto que contiene los valores de credencial para el secreto. Según la variable `type_of` atributo, se deben proporcionar propiedades diferentes. Consulte la sección sobre [credenciales](../guides/secrets.md#credentials) en la guía de secretos para obtener más información sobre los requisitos de cada tipo. |
-| `relationships.environment` | Cada secreto debe asociarse con un entorno cuando se crea por primera vez. El `data` dentro de esta propiedad debe contener el objeto `id` del entorno al que se asigna el secreto, junto con una `type` valor de `environments`. |
+| `type_of` | El tipo de credencial de autenticación que representa el secreto. Tiene tres valores aceptados:<ul><li>`token`: una cadena de token.</li><li>`simple-http`: nombre de usuario y contraseña.</li><li>`oauth2`: credenciales que cumplen con el estándar OAuth.</li></ul> |
+| `credentials` | Un objeto que contiene los valores de credencial para el secreto. Según el atributo `type_of`, se deben proporcionar propiedades diferentes. Consulte la sección sobre [credenciales](../guides/secrets.md#credentials) en la guía de secretos para obtener detalles sobre los requisitos de cada tipo. |
+| `relationships.environment` | Cada secreto debe asociarse con un entorno cuando se crea por primera vez. El objeto `data` de esta propiedad debe contener `id` del entorno al que se asigna el secreto, junto con un valor `type` de `environments`. |
 | `type` | El tipo de recurso que se crea. Para esta llamada, el valor debe ser `secrets`. |
 
 {style="table-layout:auto"}
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del secreto. Tenga en cuenta que, según el tipo de secreto, algunas propiedades de `credentials` puede estar oculto.
+Una respuesta correcta devuelve los detalles del secreto. Tenga en cuenta que, según el tipo de secreto, algunas propiedades de `credentials` pueden estar ocultas.
 
 ```json
 {
@@ -417,13 +417,13 @@ Una respuesta correcta devuelve los detalles del secreto. Tenga en cuenta que, s
 }
 ```
 
-## Prueba de un `oauth2` secreto {#test}
+## Probar un secreto `oauth2` {#test}
 
 >[!NOTE]
 >
->Esta operación solo se puede realizar en secretos con un `type_of` valor de `oauth2`.
+>Esta operación sólo se puede realizar en secretos con un valor `type_of` de `oauth2`.
 
-Puede probar un `oauth2` secreto incluyendo su ID en la ruta de una petición de PATCH. La operación de prueba realiza un intercambio e incluye la respuesta del servicio de autorización en la `test_exchange` atributo en el secreto `meta` objeto. Esta operación no actualiza el secreto en sí.
+Puede probar un secreto `oauth2` incluyendo su ID en la ruta de una petición de PATCH. La operación de prueba realiza un intercambio e incluye la respuesta del servicio de autorización en el atributo `test_exchange` del objeto `meta` del secreto. Esta operación no actualiza el secreto en sí.
 
 **Formato de API**
 
@@ -433,7 +433,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SECRET_ID}` | El ID del `oauth2` secreto que desea probar. |
+| `{SECRET_ID}` | El identificador del secreto `oauth2` que desea probar. |
 
 {style="table-layout:auto"}
 
@@ -463,8 +463,8 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes` | Debe contener un `type_of` propiedad con un valor de `oauth2`. |
-| `meta` | Debe contener un `action` propiedad con un valor de `test`. |
+| `attributes` | Debe contener una propiedad `type_of` con un valor de `oauth2`. |
+| `meta` | Debe contener una propiedad `action` con un valor de `test`. |
 | `id` | El ID del secreto que está probando. Debe coincidir con el ID proporcionado en la ruta de solicitud. |
 | `type` | El tipo de recurso en el que se opera. Debe definirse en `secrets`. |
 
@@ -580,8 +580,8 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `attributes` | Debe contener un `type_of` propiedad que coincide con la del secreto que se actualiza (`token`, `simple-http`, o `oauth2`). |
-| `meta` | Debe contener un `action` propiedad con un valor de `retry`. |
+| `attributes` | Debe contener una propiedad `type_of` que coincida con la del secreto que se está actualizando (`token`, `simple-http` o `oauth2`). |
+| `meta` | Debe contener una propiedad `action` con un valor de `retry`. |
 | `id` | El ID del secreto que está reintentando. Debe coincidir con el ID proporcionado en la ruta de solicitud. |
 | `type` | El tipo de recurso en el que se opera. Debe definirse en `secrets`. |
 
@@ -589,7 +589,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del secreto, con su estado restablecido a `pending`. Una vez finalizado el intercambio, el estado del secreto se actualizará a `succeeded` o `failed` en función del resultado.
+Una respuesta correcta devuelve los detalles del secreto, con su estado restablecido a `pending`. Una vez finalizado el intercambio, el estado del secreto se actualizará a `succeeded` o `failed` según el resultado.
 
 ```json
 {
@@ -644,11 +644,11 @@ Una respuesta correcta devuelve los detalles del secreto, con su estado restable
 }
 ```
 
-## Volver a autorizar un `oauth2-google` secreto {#reauthorize}
+## Volver a autorizar un secreto `oauth2-google` {#reauthorize}
 
-Cada `oauth2-google` El secreto contiene un `meta.authorization_url_expires_at` que indica cuándo caducará la dirección URL de autorización. Después de este tiempo, el secreto debe volver a autorizarse para que pueda renovar el proceso de autenticación.
+Cada secreto `oauth2-google` contiene una propiedad `meta.authorization_url_expires_at` que indica cuándo caducará la dirección URL de autorización. Después de este tiempo, el secreto debe volver a autorizarse para que pueda renovar el proceso de autenticación.
 
-Para volver a autorizar un `oauth2-google` secret, realice una petición PATCH para el secreto en cuestión.
+Para volver a autorizar un secreto `oauth2-google`, realice una solicitud de PATCH para el secreto en cuestión.
 
 **Formato de API**
 
@@ -662,7 +662,7 @@ PATCH /secrets/{SECRET_ID}
 
 **Solicitud**
 
-El `data` objeto en la carga útil de la solicitud debe contener un `meta.action` propiedad establecida en `reauthorize`.
+El objeto `data` de la carga de la solicitud debe contener una propiedad `meta.action` establecida en `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aquí, debe copiar y pegar el `meta.authorization_url` en un explorador para completar el proceso de autorización.
+Una respuesta correcta devuelve los detalles del secreto actualizado. Desde aquí, debe copiar y pegar `meta.authorization_url` en un explorador para completar el proceso de autorización.
 
 ```json
 {
@@ -795,7 +795,7 @@ La API de Reactor le permite agregar notas a determinados recursos, incluidos se
 
 >[!NOTE]
 >
->Consulte la [guía de extremo de notas](./notes.md) para obtener más información sobre cómo crear y editar notas para recursos de API de Reactor.
+>Consulte la [guía de extremo de notas](./notes.md) para obtener detalles sobre cómo crear y editar notas para recursos de API de Reactor.
 
 Puede recuperar todas las notas relacionadas con un secreto realizando una solicitud de GET.
 
@@ -870,13 +870,13 @@ Una respuesta correcta devuelve una lista de notas que pertenecen al secreto.
 
 ## Recuperación de recursos relacionados para un secreto {#related}
 
-Las siguientes llamadas muestran cómo recuperar los recursos relacionados para un secreto. Cuándo [buscando un secreto](#lookup), estas relaciones se enumeran en la `relationships` propiedad.
+Las siguientes llamadas muestran cómo recuperar los recursos relacionados para un secreto. Cuando [busca un secreto](#lookup), estas relaciones se enumeran en la propiedad `relationships`.
 
 Consulte la [guía de relaciones](../guides/relationships.md) para obtener más información sobre las relaciones en la API de reactor.
 
 ### Buscar un secreto en el entorno relacionado {#environment}
 
-Puede buscar el entorno que utiliza un secreto añadiendo `/environment` a la ruta de una petición GET.
+Puede buscar el entorno que utiliza un secreto anexando `/environment` a la ruta de una solicitud de GET.
 
 **Formato de API**
 
@@ -985,7 +985,7 @@ Una respuesta correcta devuelve los detalles del entorno.
 
 ### Búsqueda de la propiedad relacionada para un secreto {#property}
 
-Puede buscar la propiedad que posee un secreto adjuntando `/property` a la ruta de una petición GET.
+Puede buscar la propiedad que posee un secreto anexando `/property` a la ruta de una solicitud de GET.
 
 **Formato de API**
 

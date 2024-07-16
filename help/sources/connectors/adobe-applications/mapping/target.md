@@ -5,7 +5,7 @@ description: Obtenga información sobre cómo asignar campos de evento de Adobe 
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ En la tabla siguiente se describen los campos de un esquema de evento de experie
 | **`dataSource`** | | Configurado en &quot;1&quot; para todos los clientes. |
 | `dataSource._id` | Un valor generado por el sistema que no se puede pasar con la solicitud. | El ID único de esta fuente de datos. Esto lo proporciona la persona o sistema que creó la fuente de datos. |
 | `dataSource.code` | Un valor generado por el sistema que no se puede pasar con la solicitud. | Un acceso directo al @id completo. Se puede utilizar al menos uno de los códigos o @id. En ocasiones, este código se denomina código de integración de la fuente de datos. |
-| `dataSource.tags` | Un valor generado por el sistema que no se puede pasar con la solicitud. | Las etiquetas se utilizan para indicar cómo las aplicaciones que utilizan los alias representados por una fuente de datos determinada deben interpretarlos.<br><br>Ejemplos:<br><ul><li>`isAVID`: Fuentes de datos que representan los ID de visitante de Analytics.</li><li>`isCRSKey`: fuentes de datos que representan alias que deben utilizarse como claves en CRS.</li></ul>Las etiquetas se establecen cuando se crea la fuente de datos, pero también se incluyen en los mensajes de canalización al hacer referencia a una fuente de datos determinada. |
+| `dataSource.tags` | Un valor generado por el sistema que no se puede pasar con la solicitud. | Las etiquetas se utilizan para indicar cómo las aplicaciones que utilizan los alias representados por una fuente de datos determinada deben interpretarlos.<br><br>Ejemplos:<br><ul><li>`isAVID`: fuentes de datos que representan los ID de visitante de Analytics.</li><li>`isCRSKey`: orígenes de datos que representan alias que deben usarse como claves en CRS.</li></ul>Las etiquetas se establecen cuando se crea la fuente de datos, pero también se incluyen en los mensajes de canalización al hacer referencia a una fuente de datos determinada. |
 | **`timestamp`** | Marca de tiempo del evento |
 | **`channel`** | `context.channel` | Solo funciona con la entrega de vista. Las opciones son &quot;web&quot; y &quot;móvil&quot;, siendo &quot;web&quot; la predeterminada. |
 | **`endUserIds`** |
@@ -40,8 +40,8 @@ En la tabla siguiente se describen los campos de un esquema de evento de experie
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
 | `environment.carrier` | El nombre del operador de telefonía móvil se resuelve en función de la dirección IP de la solicitud. |
-| `environment.ipV4` | `mboxRequest.ipAddress` (en formato V4) |
-| `environment.ipV6` | `mboxRequest.ipAddress` (en formato V6) |
+| `environment.ipV4` | `mboxRequest.ipAddress` (si está en formato V4) |
+| `environment.ipV6` | `mboxRequest.ipAddress` (si está en formato V6) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |

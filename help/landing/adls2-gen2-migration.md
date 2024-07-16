@@ -4,7 +4,7 @@ description: Obtenga información sobre las nuevas funciones que proporciona la 
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ Adobe Experience Platform está migrando al lago de datos Gen2. Se trata de una 
 
 ## Impacto del usuario
 
-Mientras el Adobe migra el lago de datos de Gen1 a Gen 2, los usuarios podrán **leer** del lago de datos, pero todas las funcionalidades que **escribir** en el lago de datos se verá afectado. A continuación se muestra una lista de las capacidades afectadas:
+Mientras el Adobe migra el lago de datos de Gen1 a Gen 2, los usuarios podrán **leer** del lago de datos, pero todas las capacidades que **escriba** en el lago de datos se verán afectadas. A continuación se muestra una lista de las capacidades afectadas:
 
-- **Fuentes**: Se retrasarán los datos que llegan desde las fuentes y varios flujos de trabajo de ingesta de datos. Los usuarios verán sus datos una vez que se haya completado la migración.
+- **Fuentes**: Los datos que llegan desde las fuentes y varios flujos de trabajo de ingesta de datos se retrasarán. Los usuarios verán sus datos una vez que se haya completado la migración.
 - **Servicio de consultas**: los usuarios pueden realizar consultas, pero no podrán escribir el resultado de la consulta en un conjunto de datos.
-- **Perfil del cliente en tiempo real**: datos introducidos en el almacén de perfiles mediante **lote** la ingesta no estará disponible durante la migración. Sin embargo, los datos introducidos mediante **transmisión** la ingesta estará disponible durante la migración. Además, las exportaciones de perfiles no estarán disponibles durante la migración.
-- **Data Science Workspace**: las escrituras desde Data Science Workspace fallarán.
-- **Servicio de segmentación**: audiencias derivadas de **lote** la segmentación no se puede activar durante la migración. Audiencias derivadas de **transmisión** la segmentación no se verá afectada.
-- **Customer Journey Analytics**: los datos de los informes del Customer Journey Analytics pueden estar desactualizados y no se actualizarán durante la migración, ya que los lotes no se están ingiriendo en el lago de datos.
+- **Perfil del cliente en tiempo real**: Los datos ingeridos en el almacén de perfiles mediante la ingesta de **lotes** no estarán disponibles durante la migración. Sin embargo, los datos ingeridos mediante la ingesta de **streaming** estarán disponibles durante la migración. Además, las exportaciones de perfiles no estarán disponibles durante la migración.
+- **Data Science Workspace**: Las escrituras de Data Science Workspace fallarán.
+- **Servicio de segmentación**: Las audiencias derivadas de la segmentación **por lotes** no se pueden activar durante la migración. Las audiencias derivadas de la segmentación **streaming** no se verán afectadas.
+- **Customer Journey Analytics**: los datos de los informes del Customer Journey Analytics pueden no estar actualizados y no se actualizarán durante la migración, ya que los lotes no se están introduciendo en el lago de datos.
 
 ## Comunicación a los usuarios de Platform
 

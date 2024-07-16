@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funciones de cadena PQL
-description: El lenguaje de consulta de perfil (PQL) ofrece funciones para facilitar la interacción con cadenas.
+title: Funciones de cadena de PQL
+description: Profile Query Language (PQL) ofrece funciones para facilitar la interacción con cadenas.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 7%
+source-wordcount: '815'
+ht-degree: 5%
 
 ---
 
 # Funciones de cadena
 
-[!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con cadenas. Puede encontrar más información sobre otras funciones PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
+[!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con cadenas. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
-## Like
+## Me gusta
 
-El `like` se utiliza para determinar si una cadena coincide con un patrón especificado.
+La función `like` se usa para determinar si una cadena coincide con un patrón especificado.
 
 **Formato**
 
@@ -27,11 +27,11 @@ El `like` se utiliza para determinar si una cadena coincide con un patrón espec
 | Argumento | Descripción |
 | --------- | ----------- |
 | `{STRING_1}` | Cadena en la que se realizará la comprobación. |
-| `{STRING_2}` | La expresión que debe coincidir con la primera cadena. Existen dos caracteres especiales admitidos para crear una expresión: `%` y `_`. <ul><li>`%` se utiliza para representar cero o más caracteres.</li><li>`_` se utiliza para representar exactamente un carácter.</li></ul> |
+| `{STRING_2}` | La expresión que debe coincidir con la primera cadena. Existen dos caracteres especiales admitidos para crear una expresión: `%` y `_`. <ul><li>`%` se usa para representar cero o más caracteres.</li><li>`_` se usa para representar exactamente un carácter.</li></ul> |
 
 **Ejemplo**
 
-La siguiente consulta PQL recupera todas las ciudades que contienen el patrón &quot;es&quot;.
+La siguiente consulta de PQL recupera todas las ciudades que contienen el patrón &quot;es&quot;.
 
 ```sql
 city like "%es%"
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Comienza con
 
-El `startsWith` se utiliza para determinar si una cadena empieza con una subcadena especificada.
+La función `startsWith` se usa para determinar si una cadena empieza con una subcadena especificada.
 
 **Formato**
 
@@ -55,15 +55,15 @@ El `startsWith` se utiliza para determinar si una cadena empieza con una subcade
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si el nombre de la persona comienza con &quot;Joe&quot;.
+La siguiente consulta de PQL determina, con distinción entre mayúsculas y minúsculas, si el nombre de la persona comienza por &quot;Joe&quot;.
 
 ```sql
 person.name.startsWith("Joe")
 ```
 
-## Does not start with
+## No empieza por
 
-El `doesNotStartWith` se utiliza para determinar si una cadena no comienza con una subcadena especificada.
+La función `doesNotStartWith` se usa para determinar si una cadena no comienza con una subcadena especificada.
 
 **Formato**
 
@@ -79,15 +79,15 @@ El `doesNotStartWith` se utiliza para determinar si una cadena no comienza con u
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si el nombre de la persona no comienza con &quot;Joe&quot;.
+La siguiente consulta de PQL determina, con distinción entre mayúsculas y minúsculas, si el nombre de la persona no comienza con &quot;Joe&quot;.
 
 ```sql
 person.name.doesNotStartWith("Joe")
 ```
 
-## Finaliza con
+## Termina con
 
-El `endsWith` se utiliza para determinar si una cadena termina con una subcadena especificada.
+La función `endsWith` se usa para determinar si una cadena termina con una subcadena especificada.
 
 **Formato**
 
@@ -103,7 +103,7 @@ El `endsWith` se utiliza para determinar si una cadena termina con una subcadena
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona termina con &quot;.com&quot;.
+La siguiente consulta de PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona termina con &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## No termina por
 
-El `doesNotEndWith` se utiliza para determinar si una cadena no termina con una subcadena especificada.
+La función `doesNotEndWith` se usa para determinar si una cadena no termina con una subcadena especificada.
 
 **Formato**
 
@@ -127,7 +127,7 @@ El `doesNotEndWith` se utiliza para determinar si una cadena no termina con una 
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona no termina con &quot;.com&quot;.
+La siguiente consulta de PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona no termina con &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-El `contains` se utiliza para determinar si una cadena contiene una subcadena especificada.
+La función `contains` se usa para determinar si una cadena contiene una subcadena especificada.
 
 **Formato**
 
@@ -151,7 +151,7 @@ El `contains` se utiliza para determinar si una cadena contiene una subcadena es
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona contiene la cadena &quot;2010@gm&quot;.
+La siguiente consulta de PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona contiene la cadena &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## No contiene
 
-El `doesNotContain` se utiliza para determinar si una cadena no contiene una subcadena especificada.
+La función `doesNotContain` se usa para determinar si una cadena no contiene una subcadena especificada.
 
 **Formato**
 
@@ -175,7 +175,7 @@ El `doesNotContain` se utiliza para determinar si una cadena no contiene una sub
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona no contiene la cadena &quot;2010@gm&quot;.
+La siguiente consulta de PQL determina, con distinción de mayúsculas y minúsculas, si la dirección de correo electrónico de la persona no contiene la cadena &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Es igual a
 
-El `equals` se utiliza para determinar si una cadena es igual a la cadena especificada.
+La función `equals` se usa para determinar si una cadena es igual a la cadena especificada.
 
 **Formato**
 
@@ -198,15 +198,15 @@ El `equals` se utiliza para determinar si una cadena es igual a la cadena especi
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si el nombre de la persona es &quot;John&quot;.
+La siguiente consulta de PQL determina, con distinción entre mayúsculas y minúsculas, si el nombre de la persona es &quot;John&quot;.
 
 ```sql
 person.name.equals("John")
 ```
 
-## Not equal to
+## No igual a
 
-El `notEqualTo` se utiliza para determinar si una cadena no es igual a la cadena especificada.
+La función `notEqualTo` se usa para determinar si una cadena no es igual a la cadena especificada.
 
 **Formato**
 
@@ -221,15 +221,15 @@ El `notEqualTo` se utiliza para determinar si una cadena no es igual a la cadena
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, con distinción de mayúsculas y minúsculas, si el nombre de la persona no es &quot;John&quot;.
+La siguiente consulta de PQL determina, con distinción de mayúsculas y minúsculas, si el nombre de la persona no es &quot;John&quot;.
 
 ```sql
 person.name.notEqualTo("John")
 ```
 
-## Devuelve como resultado 
+## Iguala
 
-El `matches` se utiliza para determinar si una cadena coincide con una expresión regular específica. Consulte la [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre los patrones de coincidencia en expresiones regulares.
+La función `matches` se usa para determinar si una cadena coincide con una expresión regular específica. Consulte [este documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) para obtener más información sobre los patrones coincidentes en las expresiones regulares.
 
 **Formato**
 
@@ -239,7 +239,7 @@ El `matches` se utiliza para determinar si una cadena coincide con una expresió
 
 **Ejemplo**
 
-La siguiente consulta PQL determina, sin distinguir entre mayúsculas y minúsculas, si el nombre de la persona comienza con &quot;John&quot;.
+La siguiente consulta de PQL determina, sin distinguir entre mayúsculas y minúsculas, si el nombre de la persona comienza por &quot;John&quot;.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,11 +247,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Si utiliza funciones de expresión regular como `\w`, usted **debe** escape del carácter de barra invertida. Así que, en lugar de escribir sólo `\w`, debe incluir una barra invertida y una escritura adicionales `\\w`.
+>Si usa funciones de expresión regular como `\w`, **debe** omitir el carácter de barra invertida. Por lo tanto, en lugar de escribir solo `\w`, debe incluir una barra invertida adicional y escribir `\\w`.
 
 ## Grupo de expresiones regulares
 
-El `regexGroup` se utiliza para extraer información específica, basada en la expresión regular proporcionada.
+La función `regexGroup` se usa para extraer información específica, basada en la expresión regular proporcionada.
 
 **Formato**
 
@@ -261,7 +261,7 @@ El `regexGroup` se utiliza para extraer información específica, basada en la e
 
 **Ejemplo**
 
-La siguiente consulta PQL se utiliza para extraer el nombre de dominio de una dirección de correo electrónico.
+La siguiente consulta de PQL se utiliza para extraer el nombre de dominio de una dirección de correo electrónico.
 
 ```sql
 emailAddress.regexGroup("@(\\w+)", 1)
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Si utiliza funciones de expresión regular como `\w`, usted **debe** escape del carácter de barra invertida. Así que, en lugar de escribir sólo `\w`, debe incluir una barra invertida y una escritura adicionales `\\w`.
+>Si usa funciones de expresión regular como `\w`, **debe** omitir el carácter de barra invertida. Por lo tanto, en lugar de escribir solo `\w`, debe incluir una barra invertida adicional y escribir `\\w`.
 
 ## Pasos siguientes
 
-Ahora que ha aprendido acerca de las funciones de cadena, puede utilizarlas en sus consultas PQL. Para obtener más información sobre otras funciones PQL, lea la [Introducción al lenguaje de consulta de perfil](./overview.md).
+Ahora que ha aprendido acerca de las funciones de cadena, puede utilizarlas en sus consultas de PQL. Para obtener más información acerca de otras funciones de PQL, lea la [descripción general de Profile Query Language](./overview.md).

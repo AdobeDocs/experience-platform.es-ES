@@ -11,22 +11,22 @@ ht-degree: 3%
 
 # Recuperar registros similares con funciones de orden superior
 
-Utilice las funciones de orden superior de Data Distiller para resolver una variedad de casos de uso comunes. Para identificar y recuperar registros similares o relacionados de uno o más conjuntos de datos, utilice las funciones de filtro, transformación y reducción que se detallan en esta guía. Para obtener información sobre cómo se pueden utilizar las funciones de orden superior para procesar tipos de datos complejos, consulte la documentación sobre cómo [administrar tipos de datos de matriz y asignación](../sql/higher-order-functions.md).
+Utilice las funciones de orden superior de Data Distiller para resolver una variedad de casos de uso comunes. Para identificar y recuperar registros similares o relacionados de uno o más conjuntos de datos, utilice las funciones de filtro, transformación y reducción que se detallan en esta guía. Para conocer cómo se pueden utilizar las funciones de orden superior para procesar tipos de datos complejos, consulte la documentación sobre cómo [administrar matrices y asignar tipos de datos](../sql/higher-order-functions.md).
 
 Utilice esta guía para identificar productos de diferentes conjuntos de datos que tienen una similitud significativa en sus características o atributos. Esta metodología proporciona soluciones para: deduplicación de datos, vinculación de registros, sistemas de recomendación, recuperación de información y análisis de texto, entre otros.
 
-En el documento se describe el proceso de implementación de una unión de similitud, que a su vez utiliza funciones de orden superior de Data Distiller para calcular la similitud entre conjuntos de datos y filtrarlos en función de atributos seleccionados. Se proporcionan fragmentos de código SQL y explicaciones para cada paso del proceso. El flujo de trabajo implementa las uniones de similitud mediante la medida de similitud de Jaccard y la tokenización mediante funciones de orden superior de Data Distiller. A continuación, estos métodos se utilizan para identificar y recuperar registros similares o relacionados de uno o varios conjuntos de datos en función de una métrica de similitud. Las secciones clave del proceso incluyen las siguientes: [tokenización con funciones de orden superior](#data-transformation), el [combinación cruzada de elementos únicos](#cross-join-unique-elements), el [Cálculo de similitud de Jaccard](#compute-the-jaccard-similarity-measure), y el [filtrado basado en umbrales](#similarity-threshold-filter).
+En el documento se describe el proceso de implementación de una unión de similitud, que a su vez utiliza funciones de orden superior de Data Distiller para calcular la similitud entre conjuntos de datos y filtrarlos en función de atributos seleccionados. Se proporcionan fragmentos de código SQL y explicaciones para cada paso del proceso. El flujo de trabajo implementa las uniones de similitud mediante la medida de similitud de Jaccard y la tokenización mediante funciones de orden superior de Data Distiller. A continuación, estos métodos se utilizan para identificar y recuperar registros similares o relacionados de uno o varios conjuntos de datos en función de una métrica de similitud. Las secciones clave del proceso incluyen: [tokenización con funciones de orden superior](#data-transformation), [combinación cruzada de elementos únicos](#cross-join-unique-elements), [cálculo de similitud de Jaccard](#compute-the-jaccard-similarity-measure) y [filtrado basado en umbrales](#similarity-threshold-filter).
 
 ## Requisitos previos
 
 Antes de continuar con este documento, debe estar familiarizado con los siguientes conceptos:
 
-- A **unión por similitud** es una operación que identifica y recupera pares de registros de una o varias tablas basándose en una medida de similitud entre los registros. Los requisitos clave para una unión de similitud son los siguientes:
-   - **Métrica de similitud**: una unión de similitud se basa en una métrica o medida de similitud predefinida. Estas métricas incluyen: similitud de Jaccard, similitud de coseno, distancia de edición, etc. La métrica depende de la naturaleza de los datos y del caso de uso. Esta métrica cuantifica la similitud o diferencia entre dos registros.
-   - **Umbral**: se utiliza un umbral de similitud para determinar cuándo se considera que los dos registros son lo suficientemente similares como para incluirse en el resultado de la unión. Los registros con una puntuación de similitud por encima del umbral se consideran coincidencias.
-- El **Similitud de Jaccard** index, o medida de similitud de Jaccard, es una estadística utilizada para medir la similitud y diversidad de los conjuntos de muestras. Se define como el tamaño de la intersección dividido por el tamaño de la unión de los conjuntos de muestras. La medición de similitud de Jaccard varía de cero a uno. Una similitud de Jaccard de cero indica que no hay similitud entre los conjuntos, y una similitud de Jaccard de uno indica que los conjuntos son idénticos.
-  ![Diagrama de Venn para ilustrar la medición de similitud de Jaccard.](../images/use-cases/jaccard-similarity.png)
-- **Funciones de orden superior** en Data Distiller son herramientas dinámicas y en línea que procesan y transforman datos directamente dentro de instrucciones SQL. Estas funciones versátiles eliminan la necesidad de realizar múltiples pasos en la manipulación de datos, especialmente cuando [tratar con tipos complejos como matrices y mapas](../sql/higher-order-functions.md). Al mejorar la eficiencia de las consultas y simplificar las transformaciones, las funciones de orden superior contribuyen a un análisis más ágil y a una mejor toma de decisiones en varios escenarios comerciales.
+- Una **combinación de similitud** es una operación que identifica y recupera pares de registros de una o varias tablas basándose en una medida de similitud entre los registros. Los requisitos clave para una unión de similitud son los siguientes:
+   - **Métrica de similitud**: una combinación de similitud se basa en una métrica o medida de similitud predefinida. Estas métricas incluyen: similitud de Jaccard, similitud de coseno, distancia de edición, etc. La métrica depende de la naturaleza de los datos y del caso de uso. Esta métrica cuantifica la similitud o diferencia entre dos registros.
+   - **Umbral**: se usa un umbral de similitud para determinar si los dos registros se consideran lo suficientemente similares como para incluirse en el resultado de la unión. Los registros con una puntuación de similitud por encima del umbral se consideran coincidencias.
+- El índice **Jaccard similarity**, o medida de la similitud de Jaccard, es una estadística que se usa para medir la similitud y la diversidad de los conjuntos de muestras. Se define como el tamaño de la intersección dividido por el tamaño de la unión de los conjuntos de muestras. La medición de similitud de Jaccard varía de cero a uno. Una similitud de Jaccard de cero indica que no hay similitud entre los conjuntos, y una similitud de Jaccard de uno indica que los conjuntos son idénticos.
+  ![Diagrama de Venn que ilustra la medición de similitud de Jaccard.](../images/use-cases/jaccard-similarity.png)
+- **Las funciones de orden superior** en Data Distiller son herramientas dinámicas en línea que procesan y transforman datos directamente dentro de instrucciones SQL. Estas funciones versátiles eliminan la necesidad de realizar múltiples pasos en la manipulación de datos, especialmente cuando [se trata de tipos complejos como matrices y mapas](../sql/higher-order-functions.md). Al mejorar la eficiencia de las consultas y simplificar las transformaciones, las funciones de orden superior contribuyen a un análisis más ágil y a una mejor toma de decisiones en varios escenarios comerciales.
 
 ## Introducción
 
@@ -43,11 +43,13 @@ Los conjuntos de productos A y B contienen los datos de prueba para este flujo d
 - Conjunto de productos A: `{iPhone, iPad, iWatch, iPad Mini}`
 - Conjunto de productos B: `{iPhone, iPad, Macbook Pro}`
 
-Para calcular la similitud de Jaccard entre los conjuntos de productos A y B, busque primero la variable **intersección** (elementos comunes) de los conjuntos de productos. En este caso, `{iPhone, iPad}`. A continuación, busque la **unión** (todos los elementos únicos) de ambos conjuntos de productos. En este ejemplo, `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
+Para calcular la similitud de Jaccard entre los conjuntos de productos A y B, busque primero la **intersección** (elementos comunes) de los conjuntos de productos. En este caso, `{iPhone, iPad}`. A continuación, busque la **unión** (todos elementos únicos) de ambos conjuntos de productos. En este ejemplo, `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
 
 Finalmente, utilice la fórmula de similitud de Jaccard: `J(A,B) = A∪B / A∩B` para calcular la similitud.
 
-J = distancia Jaccard A = juego 1 B = juego 2
+J = Distancia Jaccard
+A = conjunto 1
+B = conjunto 2
 
 La similitud de Jaccard entre los conjuntos de productos A y B es de 0,4. Esto indica un grado moderado de similitud entre las palabras utilizadas en los dos documentos. Esta similitud entre los dos conjuntos define las columnas de la unión de similitud. Estas columnas representan fragmentos de información o características asociadas con los datos, que se almacenan en una tabla y se utilizan para realizar cálculos de similitud.
 
@@ -103,11 +105,11 @@ SELECT * FROM featurevector1;
 
 Las siguientes descripciones proporcionan un desglose del bloque de código SQL anterior:
 
-- Línea 1: `CREATE TEMP TABLE featurevector1 AS`: Esta instrucción crea una tabla temporal denominada `featurevector1`. Las tablas temporales solo suelen ser accesibles dentro de la sesión actual y se sueltan automáticamente al final de la sesión.
-- Líneas 1 y 2: `SELECT * FROM (...)`: Esta parte del código es una subconsulta utilizada para generar los datos insertados en el `featurevector1` tabla.
-Dentro de la subconsulta, varias `SELECT` Las instrucciones se combinan utilizando `UNION ALL` comando. Cada `SELECT` genera una fila de datos con los valores especificados para `ProductName` columna.
-- Línea 3: `SELECT 'iPad' AS ProductName`: Esto genera una fila con el valor `iPad` en el `ProductName` columna.
-- Línea 5: `SELECT 'iPhone'`: Esto genera una fila con el valor `iPhone` en el `ProductName` columna.
+- Línea 1: `CREATE TEMP TABLE featurevector1 AS`: esta instrucción crea una tabla temporal denominada `featurevector1`. Las tablas temporales solo suelen ser accesibles dentro de la sesión actual y se sueltan automáticamente al final de la sesión.
+- Líneas 1 y 2: `SELECT * FROM (...)`: esta parte del código es una subconsulta utilizada para generar los datos insertados en la tabla `featurevector1`.
+Dentro de la subconsulta, se combinan varias instrucciones `SELECT` mediante el comando `UNION ALL`. Cada instrucción `SELECT` genera una fila de datos con los valores especificados para la columna `ProductName`.
+- Línea 3: `SELECT 'iPad' AS ProductName`: esto genera una fila con el valor `iPad` en la columna `ProductName`.
+- Línea 5: `SELECT 'iPhone'`: esto genera una fila con el valor `iPhone` en la columna `ProductName`.
 
 La instrucción SQL crea una tabla como se muestra a continuación:
 
@@ -146,7 +148,7 @@ Las siguientes secciones ilustran las transformaciones de datos previas, como la
 
 ### Anulación de duplicación {#deduplication}
 
-A continuación, utilice el `DISTINCT` para eliminar duplicados. No hay duplicados en este ejemplo, pero es un paso importante para mejorar la precisión de cualquier comparación. A continuación se muestra el SQL necesario:
+A continuación, utilice la cláusula `DISTINCT` para quitar duplicados. No hay duplicados en este ejemplo, pero es un paso importante para mejorar la precisión de cualquier comparación. A continuación se muestra el SQL necesario:
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct FROM featurevector1
@@ -155,7 +157,7 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
 
 ### Eliminación de espacios en blanco {#whitespace-removal}
 
-En la siguiente instrucción SQL, los espacios en blanco se quitan de los vectores de características. El `replace(ProductName, ' ', '') AS featurevector1_nospaces` parte de la consulta toma la `ProductName` de la columna `featurevector1` y utiliza el `replace()` función. El `REPLACE` reemplaza todas las ocurrencias de un espacio (&#39; &#39;) con una cadena vacía (&#39;&#39;). Esto elimina efectivamente todos los espacios del `ProductName` valores. El resultado se alias como `featurevector1_nospaces`.
+En la siguiente instrucción SQL, los espacios en blanco se quitan de los vectores de características. La parte `replace(ProductName, ' ', '') AS featurevector1_nospaces` de la consulta toma la columna `ProductName` de la tabla `featurevector1` y utiliza la función `replace()`. La función `REPLACE` reemplaza todas las apariciones de un espacio (&quot; &quot;) con una cadena vacía (&quot;&quot;). Esto elimina efectivamente todos los espacios de los valores de `ProductName`. El resultado se denomina `featurevector1_nospaces`.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
@@ -194,7 +196,7 @@ Los resultados se muestran de la siguiente manera:
 
 ### Convertir a minúsculas {#lowercase-conversion}
 
-A continuación, SQL se mejora para convertir los nombres de producto a minúsculas y eliminar cualquier espacio en blanco. La función inferior (`lower(...)`) se aplica al resultado de `replace()` función. La función lower convierte todos los caracteres del objeto modificado `ProductName` valores en minúsculas. Esto garantiza que los valores estén en minúsculas independientemente de sus mayúsculas y minúsculas originales.
+A continuación, SQL se mejora para convertir los nombres de producto a minúsculas y eliminar cualquier espacio en blanco. La función lower (`lower(...)`) se aplica al resultado de la función `replace()`. La función lower convierte todos los caracteres de los valores `ProductName` modificados a minúsculas. Esto garantiza que los valores estén en minúsculas independientemente de sus mayúsculas y minúsculas originales.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
@@ -233,9 +235,9 @@ Los resultados se muestran de la siguiente manera:
 
 ### Extraer tokens mediante SQL {#tokenization}
 
-El siguiente paso es la tokenización o división de texto. La tokenización es el proceso de tomar texto y dividirlo en términos individuales. Normalmente, esto implica dividir frases en palabras. En este ejemplo, las cadenas se desglosan en bi-gramas (y n-gramas de orden superior) extrayendo tokens mediante funciones SQL como `regexp_extract_all`. Se deben generar bi-gramas superpuestos para una tokenización eficaz.
+El siguiente paso es la tokenización o división de texto. La tokenización es el proceso de tomar texto y dividirlo en términos individuales. Normalmente, esto implica dividir frases en palabras. En este ejemplo, las cadenas se desglosan en bi-gramas (y n-gramas de orden superior) mediante la extracción de tokens utilizando funciones SQL como `regexp_extract_all`. Se deben generar bi-gramas superpuestos para una tokenización eficaz.
 
-SQL se ha mejorado aún más para utilizar `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` Esta parte de la consulta procesa aún más los cambios `ProductName` valores creados en el paso anterior. Utiliza el `regexp_extract_all()` para extraer todas las subcadenas no superpuestas de uno a dos caracteres de las minúsculas y modificadas `ProductName` valores. El `.{2}` el patrón de expresión regular coincide con subcadenas de dos caracteres de longitud. El `regexp_extract_all(..., '.{2}', 0)` A continuación, parte de la función extrae todas las subcadenas coincidentes del texto de entrada.
+SQL se ha mejorado aún más para utilizar `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` Esta parte de la consulta procesa aún más los valores `ProductName` modificados creados en el paso anterior. Utiliza la función `regexp_extract_all()` para extraer todas las subcadenas no superpuestas de uno a dos caracteres de los valores `ProductName` modificados y en minúsculas. El patrón de expresión regular `.{2}` coincide con subcadenas de dos caracteres de longitud. A continuación, la parte `regexp_extract_all(..., '.{2}', 0)` de la función extrae todas las subcadenas coincidentes del texto de entrada.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
@@ -258,9 +260,9 @@ Los resultados se muestran en la tabla siguiente:
 
 +++
 
-Para mejorar aún más la precisión, SQL debe utilizarse para crear tokens superpuestos. Por ejemplo, a la cadena &quot;iPad&quot; de arriba le falta el token &quot;pa&quot;. Para solucionarlo, cambie el operador lookahead (utilizando `substring`) por un paso y generar los bi-gramas.
+Para mejorar aún más la precisión, SQL debe utilizarse para crear tokens superpuestos. Por ejemplo, a la cadena &quot;iPad&quot; de arriba le falta el token &quot;pa&quot;. Para solucionarlo, cambie el operador de búsqueda anticipada (que usa `substring`) un paso y genere los bi-gramas.
 
-Similar al paso anterior, `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` extrae secuencias de dos caracteres del nombre de producto modificado, pero comienza a partir del segundo carácter con la variable `substring` para crear tokens superpuestos. A continuación, en las líneas 3-7 (`array_union(...) AS tokens`), el `array_union()` Esta función combina las matrices de secuencias de dos caracteres obtenidas mediante las dos extracciones de expresiones regulares. Esto garantiza que el resultado contenga tokens únicos de secuencias no superpuestas y superpuestas.
+Similar al paso anterior, `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` extrae secuencias de dos caracteres del nombre de producto modificado, pero comienza desde el segundo carácter utilizando el método `substring` para crear tokens superpuestos. A continuación, en las líneas 3-7 (`array_union(...) AS tokens`), la función `array_union()` combina las matrices de secuencias de dos caracteres obtenidas mediante las dos extracciones de expresiones regulares. Esto garantiza que el resultado contenga tokens únicos de secuencias no superpuestas y superpuestas.
 
 ```SQL {line-numbers="true"}
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, 
@@ -287,7 +289,7 @@ Los resultados se muestran en la tabla siguiente:
 
 +++
 
-Sin embargo, el uso de `substring` como solución al problema tiene limitaciones. Si tuviera que crear tokens a partir del texto basados en tri-gramas (tres caracteres), se requeriría el uso de dos `substrings` para mirar hacia adelante dos veces para conseguir los turnos necesarios. Para hacer 10 gramos, necesitarías nueve `substring` expresiones. Esto haría que el código se inflara y se volviera insostenible. El uso de expresiones regulares simples no es adecuado. Se necesita un nuevo enfoque.
+Sin embargo, el uso de `substring` como solución al problema tiene limitaciones. Si tuviera que crear tokens a partir del texto basados en tri-gramas (tres caracteres), se requeriría el uso de dos `substrings` para mirar hacia adelante dos veces y obtener los turnos requeridos. Para hacer 10 gramos, necesitaría nueve expresiones `substring`. Esto haría que el código se inflara y se volviera insostenible. El uso de expresiones regulares simples no es adecuado. Se necesita un nuevo enfoque.
 
 ### Ajustar para la longitud del nombre del producto {#length-adjustment}
 
@@ -323,7 +325,7 @@ Los resultados se muestran en la tabla siguiente:
 
 ### Asegúrese de establecer la longitud del token {#ensure-set-token-length}
 
-Se pueden añadir condiciones adicionales a la instrucción para garantizar que las secuencias generadas tengan una longitud específica. La siguiente instrucción SQL amplía la lógica de generación de tokens al realizar la variable `transform` La función es más compleja. La instrucción utiliza el `filter` función dentro de `transform` para asegurarse de que las secuencias generadas tengan una longitud de seis caracteres. Gestiona los casos en los que esto no es posible asignando valores NULL a esas posiciones.
+Se pueden añadir condiciones adicionales a la instrucción para garantizar que las secuencias generadas tengan una longitud específica. La siguiente instrucción SQL amplía la lógica de generación de tokens al hacer que la función `transform` sea más compleja. La instrucción utiliza la función `filter` en `transform` para asegurarse de que las secuencias generadas tengan una longitud de seis caracteres. Gestiona los casos en los que esto no es posible asignando valores NULL a esas posiciones.
 
 ```SQL
 SELECT
@@ -363,9 +365,9 @@ Las funciones de orden superior son construcciones potentes que le permiten impl
 
 En el contexto de Data Distiller, las funciones de orden superior son ideales para crear n-gramas e iterar secuencias de caracteres.
 
-El `reduce` función, especialmente cuando se utiliza dentro de secuencias generadas por `transform`, proporciona una forma de derivar valores acumulativos o acumulados, que pueden ser fundamentales en varios procesos analíticos y de planificación.
+La función `reduce`, especialmente cuando se utiliza dentro de secuencias generadas por `transform`, proporciona una forma de derivar valores acumulativos o agregados, que pueden ser fundamentales en varios procesos analíticos y de planificación.
 
-Por ejemplo, en la instrucción SQL siguiente, la variable `reduce()` función agrega elementos en una matriz utilizando un agregador personalizado. Simula un bucle for en **crear las sumas acumulativas de todos los enteros** de uno a cinco. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
+Por ejemplo, en la instrucción SQL siguiente, la función `reduce()` agrega elementos en una matriz mediante un agregador personalizado. Simula un bucle for para **crear las sumas acumulativas de todos los enteros** de uno a cinco. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
 
 ```SQL {line-numbers="true"}
 SELECT transform(
@@ -383,19 +385,19 @@ A continuación se muestra un análisis de la instrucción SQL:
 - Línea 1: `transform` aplica la función `x -> reduce` en cada elemento generado en la secuencia.
 - Línea 2: `sequence(1, 5)` genera una secuencia de números del uno al cinco.
 - Línea 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` realiza una operación de reducción para cada elemento x de la secuencia (de 1 a 5).
-   - El `reduce` La función toma un valor de acumulador inicial de 0, una secuencia de uno al valor actual de `x`y una función de orden superior `(acc, y) -> acc + y` para añadir los números.
-   - La función de orden superior `acc + y` acumula la suma sumando el valor actual `y` al acumulador `acc`.
+   - La función `reduce` toma un valor de acumulador inicial de 0, una secuencia de uno al valor actual de `x` y una función de orden superior `(acc, y) -> acc + y` para agregar los números.
+   - La función de orden superior `acc + y` acumula la suma agregando el valor actual `y` al acumulador `acc`.
 - Línea 8: `AS sum_result` cambia el nombre de la columna resultante a sum_result.
 
-En resumen, esta función de orden superior emplea dos parámetros (`acc` y `y`) y define la operación que se va a realizar, que en este caso es añadir `y` al acumulador `acc`. Esta función de orden superior se ejecuta para cada elemento de la secuencia durante el proceso de reducción.
+En resumen, esta función de orden superior toma dos parámetros (`acc` y `y`) y define la operación que se va a realizar, que en este caso es agregar `y` al acumulador `acc`. Esta función de orden superior se ejecuta para cada elemento de la secuencia durante el proceso de reducción.
 
-El resultado de esta instrucción es una sola columna (`sum_result`) que contiene las sumas acumuladas de números del uno al cinco.
+El resultado de esta instrucción es una sola columna (`sum_result`) que contiene las sumas acumulativas de números del uno al cinco.
 
 ### El valor de las funciones de orden superior {#value-of-higher-order-functions}
 
 En esta sección se analiza una versión reducida de una instrucción SQL de tres gramos para comprender mejor el valor de las funciones de orden superior en Data Distiller y crear n-gramos de forma más eficaz.
 
-La declaración siguiente opera en el `ProductName` dentro de la columna `featurevector1` tabla. Produce un conjunto de subcadenas de tres caracteres derivadas de los nombres de productos modificados dentro de la tabla, utilizando posiciones obtenidas de la secuencia generada.
+La instrucción siguiente opera en la columna `ProductName` dentro de la tabla `featurevector1`. Produce un conjunto de subcadenas de tres caracteres derivadas de los nombres de productos modificados dentro de la tabla, utilizando posiciones obtenidas de la secuencia generada.
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -410,20 +412,20 @@ FROM
 A continuación se muestra un análisis de la instrucción SQL:
 
 - Línea 2: `transform` aplica una función de orden superior a cada entero de la secuencia.
-- Línea 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` genera una secuencia de enteros a partir de `1` a la longitud del nombre del producto modificado menos dos.
-   - `length(lower(replace(ProductName, ' ', '')))` calcula la longitud de la `ProductName` después de convertirlo en minúsculas y eliminar espacios.
+- Línea 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` genera una secuencia de enteros desde `1` hasta la longitud del nombre de producto modificado menos dos.
+   - `length(lower(replace(ProductName, ' ', '')))` calcula la longitud de `ProductName` después de convertirlo en minúsculas y de quitar espacios.
    - `- 2` resta dos de la longitud para garantizar que la secuencia genera posiciones iniciales válidas para subcadenas de 3 caracteres. Restar 2 garantiza que tiene suficientes caracteres después de cada posición inicial para extraer una subcadena de 3 caracteres. La función de subcadena aquí funciona como un operador de búsqueda anticipada.
-- Línea 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` es una función de orden superior que funciona en cada entero `i` en la secuencia generada.
-   - El `substring(...)` extrae una subcadena de 3 caracteres de la función `ProductName` columna.
-   - Antes de extraer la subcadena, `lower(replace(ProductName, ' ', ''))` convierte el `ProductName` a minúsculas y elimina espacios para garantizar la coherencia.
+- Línea 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` es una función de orden superior que funciona en cada entero `i` de la secuencia generada.
+   - La función `substring(...)` extrae una subcadena de 3 caracteres de la columna `ProductName`.
+   - Antes de extraer la subcadena, `lower(replace(ProductName, ' ', ''))` convierte `ProductName` a minúsculas y quita espacios para garantizar la coherencia.
 
 El resultado es una lista de subcadenas de tres caracteres de longitud, extraídas de los nombres de productos modificados, basándose en las posiciones especificadas en la secuencia.
 
 ## Filtrado de los resultados {#filter-results}
 
-El `filter` función, con subsiguiente [transformaciones de datos](#data-transformation), permite una extracción más refinada y precisa de la información relevante de los datos de texto. Esto le permite obtener perspectivas, mejorar la calidad de los datos y facilitar mejores procesos de toma de decisiones.
+La función `filter`, con las [transformaciones de datos](#data-transformation) subsiguientes, permite una extracción más refinada y precisa de la información relevante de los datos de texto. Esto le permite obtener perspectivas, mejorar la calidad de los datos y facilitar mejores procesos de toma de decisiones.
 
-El `filter` en la siguiente instrucción SQL sirve para refinar y limitar la secuencia de posiciones dentro de la cadena desde la que se extraen las subcadenas utilizando la función de transformación posterior.
+La función `filter` de la siguiente instrucción SQL sirve para restringir y limitar la secuencia de posiciones dentro de la cadena desde la que se extraen las subcadenas mediante la función de transformación posterior.
 
 ```SQL
 SELECT
@@ -441,21 +443,21 @@ FROM
   featurevector1;
 ```
 
-El `filter` La función genera una secuencia de posiciones de inicio válidas dentro de la variable modificada `ProductName` y extrae subcadenas de una longitud específica. Solo se permiten las posiciones de inicio que permiten la extracción de una subcadena de siete caracteres.
+La función `filter` genera una secuencia de posiciones iniciales válidas dentro de `ProductName` modificado y extrae subcadenas de una longitud específica. Solo se permiten las posiciones de inicio que permiten la extracción de una subcadena de siete caracteres.
 
-La condición `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` garantiza que la posición inicial `i` plus `6` (la longitud de la subcadena de siete caracteres deseada menos una) no supera la longitud de la cadena modificada `ProductName`.
+La condición `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` garantiza que la posición inicial `i` más `6` (la longitud de la subcadena de siete caracteres deseada menos uno) no supere la longitud de `ProductName` modificado.
 
-El `CASE` se utiliza para incluir o excluir condicionalmente subcadenas en función de su longitud. Solo se incluyen subcadenas de siete caracteres; otras se sustituyen por NULL. Estas subcadenas las utiliza la variable `transform` para crear una secuencia de subcadenas a partir de la variable `ProductName` en la columna `featurevector1` tabla.
+La instrucción `CASE` se usa para incluir o excluir condicionalmente subcadenas en función de su longitud. Solo se incluyen subcadenas de siete caracteres; otras se sustituyen por NULL. La función `transform` utiliza entonces estas subcadenas para crear una secuencia de subcadenas a partir de la columna `ProductName` en la tabla `featurevector1`.
 
 >[!TIP]
 >
->Puede usar el complemento [plantillas con parámetros](../ui/parameterized-queries.md) función para reutilizar y abstraer la lógica dentro de las consultas. Por ejemplo, cuando crea funciones de utilidad de uso general (como la que se muestra arriba para tokenizar cadenas), puede utilizar plantillas parametrizadas de Data Distiller donde el número de caracteres sería un parámetro.
+>Puede usar la característica [plantillas con parámetros](../ui/parameterized-queries.md) para reutilizar y abstraer la lógica en sus consultas. Por ejemplo, cuando crea funciones de utilidad de uso general (como la que se muestra arriba para tokenizar cadenas), puede utilizar plantillas parametrizadas de Data Distiller donde el número de caracteres sería un parámetro.
 
 ## Calcular la unión cruzada de elementos únicos en dos vectores de funciones {#cross-join-unique-elements}
 
 La identificación de las diferencias o discrepancias entre los dos conjuntos de datos en función de una transformación específica de los datos es un proceso común para mantener la precisión, mejorar la calidad y garantizar la coherencia entre los conjuntos de datos.
 
-Esta instrucción SQL a continuación extrae los nombres de producto únicos que están presentes en `featurevector2` pero no en `featurevector1` después de aplicar las transformaciones.
+Esta instrucción SQL siguiente extrae los nombres de producto únicos que están presentes en `featurevector2` pero no en `featurevector1` después de aplicar las transformaciones.
 
 ```SQL
 SELECT lower(replace(ProductName, ' ', '')) FROM featurevector2
@@ -465,7 +467,7 @@ SELECT lower(replace(ProductName, ' ', '')) FROM featurevector1;
 
 >[!TIP]
 >
->Además de `EXCEPT`, también puede utilizar `UNION` y `INTERSECT` según su caso de uso. Además, puede experimentar con `ALL` o `DISTINCT` para ver la diferencia entre incluir todos los valores y devolver sólo los valores únicos de las columnas especificadas.
+>Además de `EXCEPT`, también podría usar `UNION` y `INTERSECT` según su caso de uso. Además, puede experimentar con las cláusulas `ALL` o `DISTINCT` para ver la diferencia entre incluir todos los valores y devolver sólo los valores únicos de las columnas especificadas.
 
 Los resultados se muestran en la tabla siguiente:
 
@@ -505,7 +507,7 @@ SELECT * FROM featurevector1tokenized;
 
 >[!NOTE]
 >
->Si está utilizando [!DNL DbVisualizer]Después de crear o eliminar una tabla, actualice la conexión de base de datos para que se actualice la caché de metadatos de la tabla. Data Distiller no excluye las actualizaciones de metadatos.
+>Si está usando [!DNL DbVisualizer], después de crear o eliminar una tabla, actualice la conexión a la base de datos para que se actualice la caché de metadatos de la tabla. Data Distiller no excluye las actualizaciones de metadatos.
 
 Los resultados se muestran en la tabla siguiente:
 
@@ -574,9 +576,9 @@ CROSS JOIN
 
 A continuación se muestra un resumen del SQL utilizado para crear la combinación cruzada:
 
-- Línea 2: `A.featurevector1_distinct AS SetA_ProductNames` selecciona el `featurevector1_distinct` de la tabla `A` y le asigna un alias `SetA_ProductNames`. Esta sección de SQL da como resultado una lista de nombres de productos distintos del primer conjunto de datos.
-- Línea 4: `A.tokens AS SetA_tokens1` selecciona el `tokens` de la tabla o subconsulta `A` y le asigna un alias `SetA_tokens1`. Esta sección de SQL da como resultado una lista de valores tokenizados asociados con los nombres de producto del primer conjunto de datos.
-- Línea 8: La `CROSS JOIN` Esta operación combina todas las combinaciones posibles de filas de los dos conjuntos de datos. En otras palabras, vincula cada nombre de producto y sus tokens asociados de la primera tabla (`A`) con cada nombre de producto y sus tokens asociados de la segunda tabla (`B`). Esto da como resultado un producto cartesiano de los dos conjuntos de datos, donde cada fila de la salida representa una combinación del nombre de un producto y sus tokens asociados de ambos conjuntos de datos.
+- Línea 2: `A.featurevector1_distinct AS SetA_ProductNames` selecciona la columna `featurevector1_distinct` de la tabla `A` y le asigna un alias `SetA_ProductNames`. Esta sección de SQL da como resultado una lista de nombres de productos distintos del primer conjunto de datos.
+- Línea 4: `A.tokens AS SetA_tokens1` selecciona la columna `tokens` de la tabla o subconsulta `A` y le asigna un alias `SetA_tokens1`. Esta sección de SQL da como resultado una lista de valores tokenizados asociados con los nombres de producto del primer conjunto de datos.
+- Línea 8: la operación `CROSS JOIN` combina todas las combinaciones posibles de filas de los dos conjuntos de datos. En otras palabras, empareja cada nombre de producto y sus tokens asociados de la primera tabla (`A`) con cada nombre de producto y sus tokens asociados de la segunda tabla (`B`). Esto da como resultado un producto cartesiano de los dos conjuntos de datos, donde cada fila de la salida representa una combinación del nombre de un producto y sus tokens asociados de ambos conjuntos de datos.
 
 Los resultados se muestran en la tabla siguiente:
 
@@ -631,8 +633,8 @@ FROM
 
 A continuación se muestra un resumen del SQL utilizado para calcular el coeficiente de similitud de Jaccard:
 
-- Línea 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` calcula el número de tokens comunes a ambos `SetA_tokens1` y `SetB_tokens2`. Este cálculo se obtiene calculando el tamaño de la intersección de las dos matrices de tokens.
-- Línea 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` calcula el número total de tokens únicos en ambos `SetA_tokens1` y `SetB_tokens2`. Esta línea calcula el tamaño de la unión de las dos matrices de tokens.
+- Línea 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` calcula el número de tokens comunes a `SetA_tokens1` y a `SetB_tokens2`. Este cálculo se obtiene calculando el tamaño de la intersección de las dos matrices de tokens.
+- Línea 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` calcula el número total de tokens únicos en `SetA_tokens1` y `SetB_tokens2`. Esta línea calcula el tamaño de la unión de las dos matrices de tokens.
 - Línea 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` calcula la similitud de Jaccard entre los conjuntos de símbolos. Estas líneas dividen el tamaño de la intersección del token por el tamaño de la unión del token y redondean el resultado a dos decimales. El resultado es un valor entre cero y uno, donde uno indica similitud completa.
 
 Los resultados se muestran en la tabla siguiente:
@@ -644,7 +646,7 @@ Los resultados se muestran en la tabla siguiente:
 | 1 | ipadmini | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 7 | 0,43 |
 | 2 | ipadmini | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 16 | 0,0 |
 | 3 | ipadmini | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 11 | 0,09 |
-| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1.0 |
+| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1,0 |
 | 5 | ipad | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 12 | 0,0 |
 | 6 | ipad | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 7 | 0,14 |
 | 7 | reloj | ipad | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 0 | 8 | 0,0 |
@@ -652,7 +654,7 @@ Los resultados se muestran en la tabla siguiente:
 | 9 | reloj | iphone | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 0 | 10 | 0,0 |
 | 10 | iphone | ipad | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 1 | 7 | 0,14 |
 | 11 | iphone | macbookpro | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 14 | 0,0 |
-| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1.0 |
+| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1,0 |
 
 {style="table-layout:auto"}
 
@@ -715,4 +717,4 @@ Al leer este documento, ahora puede utilizar esta lógica para resaltar relacion
 - Limpieza de datos: para mejorar la calidad de los datos.
 - Análisis de la cesta de la compra: para ofrecer perspectivas sobre el comportamiento de los clientes, sus preferencias y las posibles oportunidades de ventas cruzadas.
 
-Si aún no lo ha hecho, se recomienda leer el [Información general de canalización de funciones AI/ML](../data-distiller/ml-feature-pipelines/overview.md). Utilice esa descripción general para conocer cómo Data Distiller y su aprendizaje automático preferido pueden crear modelos de datos personalizados que admitan sus casos de uso de marketing con datos de Experience Platform.
+Si aún no lo ha hecho, se recomienda leer la [descripción general de la canalización de características de AI/ML](../data-distiller/ml-feature-pipelines/overview.md). Utilice esa descripción general para conocer cómo Data Distiller y su aprendizaje automático preferido pueden crear modelos de datos personalizados que admitan sus casos de uso de marketing con datos de Experience Platform.

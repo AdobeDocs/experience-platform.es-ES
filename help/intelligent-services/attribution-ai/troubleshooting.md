@@ -19,12 +19,12 @@ Este documento proporciona respuestas a las preguntas frecuentes acerca de Attri
 
 ## No se puede acceder a la Attribution AI de incógnito de Chrome
 
-Hay errores de carga en el modo incógnito de Google Chrome debido a las actualizaciones en la configuración de seguridad del modo incógnito de Google Chrome. El problema se está trabajando activamente con Chrome para convertir a experience.adobe.com en un dominio de confianza.
+Los errores de carga en el modo incógnito de Google Chrome están presentes debido a las actualizaciones en la configuración de seguridad del modo incógnito de Google Chrome. El problema se está trabajando activamente con Chrome para hacer de experience.adobe.com un dominio de confianza.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Corrección recomendada
 
-Para solucionar este problema, debe agregar experience.adobe.com como sitio que siempre puede usar cookies. Comience por navegar hasta **chrome://settings/cookies**. A continuación, desplácese hacia abajo hasta la **Comportamientos personalizados** seguido de la selección de la **Añadir** junto a &quot;sitios que siempre pueden usar cookies&quot;. En la ventana emergente que aparece, copie y pegue `[*.]experience.adobe.com` a continuación, seleccione **Inclusión de cookies de terceros** casilla de verificación en este sitio. Una vez finalizado, seleccione **Añadir** y vuelva a cargar el Attribution AI de incógnito.
+Para solucionar este problema, debe agregar experience.adobe.com como sitio que siempre puede usar cookies. Comience por navegar hasta **chrome://settings/cookies**. A continuación, desplácese hacia abajo hasta la sección **Comportamientos personalizados** y, a continuación, seleccione el botón **Agregar** junto a &quot;Sitios que siempre pueden usar cookies&quot;. En la ventana emergente que aparece, copie y pegue `[*.]experience.adobe.com` y, a continuación, active la casilla de verificación **Incluyendo cookies de terceros** en este sitio. Una vez finalizado, selecciona **Agregar** y vuelve a cargar el Attribution AI de incógnito.
 
 ![corrección recomendada](./images/faq/cookies2.gif)

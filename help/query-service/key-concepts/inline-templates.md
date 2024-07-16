@@ -4,7 +4,7 @@ description: Aprenda a reutilizar varias condiciones en numerosas consultas con 
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Las plantillas en línea son compatibles con la interfaz de usuario y con la API
 
 Una vez guardada una consulta, se conoce como plantilla. Cuando la plantilla hace referencia a otra plantilla dentro de la instrucción, se denomina plantilla dentro de la línea. Las plantillas en línea se indican en el SQL utilizando el símbolo hash (#) seguido del nombre de la plantilla. Un ejemplo de esta sintaxis es `#YOUR_TEMPLATE_NAME`.
 
-## Caso de uso {#use-case}
+## Ejemplo de uso {#use-case}
 
 Las siguientes plantillas SQL muestran la utilidad de las plantillas en línea, con un ejemplo para contar el número de clientes de EE. UU. de cualquier región que gastaron más que los &quot;ingresos máximos&quot; y realizaron pedidos antes de junio de 2023. La ventaja de la plantilla en línea es que puede editar fácilmente la plantilla secundaria (en este caso, los ingresos máximos y la fecha de pedido) y no tiene que cambiar la plantilla principal.
 
@@ -40,7 +40,7 @@ Al ejecutar la consulta, el servicio de consultas reemplaza el nombre de la plan
 >
 >Las plantillas de consulta pueden llamar a cualquier número de otras plantillas en línea. No hay restricciones en el número de plantillas en línea que puede invocar desde una sola consulta. Las plantillas también se pueden anidar dentro de otras plantillas en línea.
 
-Puede utilizar plantillas para almacenar una o varias condiciones. No es necesario que sean una consulta completa por sí mismas. Si la plantilla contiene una consulta válida, puede ejecutarla simplemente llamando al nombre de la plantilla precedido de un símbolo hash. Por ejemplo, si almacena `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como plantilla denominada `JUNE_2023_LOYALTY_MEMBERS`, el comando  `#JUNE_2023_LOYALTY_MEMBERS;` ejecutaría la consulta válida contenida dentro de la plantilla.
+Puede utilizar plantillas para almacenar una o varias condiciones. No es necesario que sean una consulta completa por sí mismas. Si la plantilla contiene una consulta válida, puede ejecutarla simplemente llamando al nombre de la plantilla precedido de un símbolo hash. Por ejemplo, si almacenó `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` como una plantilla denominada `JUNE_2023_LOYALTY_MEMBERS`, el comando `#JUNE_2023_LOYALTY_MEMBERS;` ejecutaría la consulta válida contenida dentro de la plantilla.
 
 >
 >
@@ -50,4 +50,4 @@ Puede utilizar plantillas para almacenar una o varias condiciones. No es necesar
 
 Después de leer este documento, ahora sabe cómo hacer referencia a otras plantillas dentro de su SQL, ya sea en el Editor de consultas o a través de la API del servicio de consultas.
 
-Además, debería leer el [guía de bloques anónimos](./anonymous-block.md), que explica cómo minimizar los gastos generales de desarrollo encadenando una o más sentencias SQL que se ejecutan en secuencia.
+Además, debería leer la [guía de bloques anónimos](./anonymous-block.md), que explica cómo minimizar los gastos generales de desarrollo encadenando una o más sentencias SQL que se ejecutan en secuencia.

@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Fuentes de flujo, como la [Fuente de API HTTP](../../sources/connectors/streaming/http.md) no son compatibles actualmente con el tablero de monitorización. En este momento, solo puede utilizar el panel para monitorizar los orígenes de lotes.
+>El tablero de monitorización no admite actualmente fuentes de streaming, como la [fuente de API HTTP](../../sources/connectors/streaming/http.md). En este momento, solo puede utilizar el panel para monitorizar los orígenes de lotes.
 
 Lea este documento para aprender a utilizar el panel de monitorización para monitorizar los flujos de datos de origen en la interfaz de usuario de Experience Platform.
 
@@ -23,10 +23,10 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 * [Flujos de datos](../home.md): los flujos de datos son una representación de los trabajos de datos que mueven datos a través de Platform. Los flujos de datos se configuran en diferentes servicios, lo que ayuda a mover datos de los conectores de origen a los conjuntos de datos de destino, a [!DNL Identity] y [!DNL Profile], y a [!DNL Destinations].
    * [Ejecuciones de flujo de datos](../../sources/notifications.md): Las ejecuciones de flujo de datos son los trabajos programados recurrentes en función de la configuración de frecuencia de los flujos de datos seleccionados.
-* [Fuentes](../../sources/home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Servicio de identidad](../../identity-service/home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
-* [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../sources/home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Servicio de identidad](../../identity-service/home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
+* [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de consumidor unificado en tiempo real basado en datos agregados de múltiples fuentes.
+* [Zonas protegidas](../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ## Monitorizar los datos de origen mediante el panel de monitorización
 
@@ -46,19 +46,19 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-En el panel de monitorización, seleccione [!UICONTROL Fuentes] en el encabezado principal para actualizar el panel con una visualización de las fuentes de la tasa de ingesta de flujo de datos.
+En el panel de monitoreo, seleccione [!UICONTROL Fuentes] del encabezado principal para actualizar el panel con una visualización de la tasa de ingesta de flujo de datos de fuentes.
 
-![Panel de monitorización con la tarjeta de fuentes seleccionada.](../assets/ui/monitor-sources/sources.png)
+![Panel de supervisión con la tarjeta de orígenes seleccionada.](../assets/ui/monitor-sources/sources.png)
 
-El [!UICONTROL Tasa de ingesta] El gráfico muestra la tasa de ingesta de datos en función del lapso de tiempo configurado. De forma predeterminada, el panel de monitorización muestra la tasa de ingesta de las últimas 24 horas. Para ver los pasos sobre cómo configurar el lapso de tiempo, lea la guía en [configuración del intervalo de tiempo de monitorización](monitor.md#configure-monitoring-time-frame).
+El gráfico [!UICONTROL Tasa de ingesta] muestra su tasa de ingesta de datos en función del lapso de tiempo configurado. De forma predeterminada, el panel de monitorización muestra la tasa de ingesta de las últimas 24 horas. Para ver los pasos sobre cómo configurar el lapso de tiempo, lea la guía sobre [configuración del lapso de tiempo de supervisión](monitor.md#configure-monitoring-time-frame).
 
-El gráfico se muestra de forma predeterminada. Para ocultar el gráfico, seleccione **[!UICONTROL Métricas y gráficos]** para desactivar la opción y ocultar el gráfico.
+El gráfico se muestra de forma predeterminada. Para ocultar el gráfico, seleccione **[!UICONTROL Métricas y gráficos]** para deshabilitar la opción y ocultar el gráfico.
 
-![El gráfico de métricas de tasa de ingesta.](../assets/ui/monitor-sources/metrics-graph.png)
+![Gráfico de métricas de tasa de ingesta.](../assets/ui/monitor-sources/metrics-graph.png)
 
 La parte inferior del panel muestra una tabla que describe el informe de métricas actuales para todos los flujos de datos de origen existentes.
 
-![La tabla de métricas del panel de monitorización.](../assets/ui/monitor-sources/metrics-table.png)
+![La tabla de métricas del tablero de monitoreo.](../assets/ui/monitor-sources/metrics-table.png)
 
 | Métricas | Descripción |
 | --- | --- |
@@ -76,22 +76,22 @@ Puede filtrar aún más los datos mediante las opciones proporcionadas sobre la 
 | Filtrado de opciones | Descripción |
 | --- | --- |
 | Buscar | Utilice la barra de búsqueda para filtrar la vista a un solo tipo de origen. |
-| Fuentes | Seleccionar **[!UICONTROL Fuentes]** para filtrar la vista y mostrar los datos de métricas por tipo de origen. Esta es la visualización predeterminada que utiliza el panel de monitorización. |
-| Flujos de datos | Seleccionar **[!UICONTROL Flujos de datos]** para filtrar la vista y mostrar los datos de métricas por flujo de datos. |
-| Mostrar solo errores | Seleccionar **[!UICONTROL Mostrar solo errores]** para filtrar la vista y mostrar solo los flujos de datos que han informado sobre errores de ingesta. |
-| Mis fuentes | Puede filtrar aún más la vista utilizando [!UICONTROL Mis fuentes] menú desplegable. Utilice el menú desplegable para filtrar la vista por categoría. Como alternativa, puede seleccionar **[!UICONTROL Todas las fuentes]** para mostrar las métricas de todos los recursos o fuentes, o seleccione **[!UICONTROL Mis fuentes]** para mostrar solo los orígenes con los que tiene una cuenta correspondiente. |
+| Fuentes | Seleccione **[!UICONTROL Fuentes]** para filtrar la vista y mostrar los datos de métricas por tipo de fuente. Esta es la visualización predeterminada que utiliza el panel de monitorización. |
+| Flujos de datos | Seleccione **[!UICONTROL Flujos de datos]** para filtrar la vista y mostrar los datos de métricas por flujo de datos. |
+| Mostrar solo errores | Seleccione **[!UICONTROL Mostrar solo errores]** para filtrar la vista y mostrar solo los flujos de datos que notificaron errores de ingesta. |
+| Mis fuentes | Puede filtrar aún más la vista mediante el menú desplegable [!UICONTROL Mis fuentes]. Utilice el menú desplegable para filtrar la vista por categoría. También puede seleccionar **[!UICONTROL Todos los orígenes]** para mostrar métricas en todos los orígenes o seleccionar **[!UICONTROL Mis orígenes]** para mostrar únicamente los orígenes con los que tiene una cuenta correspondiente. |
 
 {style="table-layout:auto"}
 
-Para monitorizar los datos que se están introduciendo en un flujo de datos específico, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a una fuente.
+Para monitorizar los datos que se están ingiriendo en un flujo de datos específico, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a un origen.
 
-![Monitorice un flujo de datos específico seleccionando el icono de filtro junto a una fuente determinada.](../assets/ui/monitor-sources/monitor-dataflow.png)
+![Controle un flujo de datos específico seleccionando el icono de filtro junto a una fuente determinada.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 La tabla de métricas se actualiza a una tabla de flujos de datos activos que corresponden al origen seleccionado. Durante este paso, puede ver información adicional sobre los flujos de datos, incluido su conjunto de datos y tipo de datos correspondientes, así como una marca de tiempo para indicar cuándo fueron los últimos activos.
 
 Para inspeccionar más a fondo un flujo de datos, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a un flujo de datos.
 
-![La tabla de flujos de datos del panel de monitorización.](../assets/ui/monitor-sources/select-dataflow.png)
+![La tabla de flujos de datos en el panel de supervisión.](../assets/ui/monitor-sources/select-dataflow.png)
 
 A continuación, se le dirigirá a una interfaz que enumera todas las iteraciones de ejecución de flujo de datos del flujo de datos seleccionado.
 
@@ -99,11 +99,11 @@ Las ejecuciones de flujo de datos representan una instancia de ejecución de flu
 
 Para inspeccionar métricas de una iteración de ejecución de flujo de datos específica, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto al flujo de datos.
 
-![La página de métrica de ejecución del flujo de datos.](../assets/ui/monitor-sources/dataflow-page.png)
+![Página de métrica de ejecución del flujo de datos.](../assets/ui/monitor-sources/dataflow-page.png)
 
 Utilice esta página para ver las métricas y la información de la iteración de ejecución seleccionada.
 
-![La página de detalles de ejecución del flujo de datos.](../assets/ui/monitor-sources/dataflow-run-details.png)
+![Página de detalles de ejecución del flujo de datos.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | Detalles de ejecución del flujo de datos | Descripción |
 | --- | --- |
@@ -124,9 +124,9 @@ Utilice esta página para ver las métricas y la información de la iteración d
 
 {style="table-layout:auto"}
 
-Si el flujo de datos ejecuta informes de errores, puede desplazarse hacia abajo hasta la parte inferior de la página utilizando [!UICONTROL Errores de ejecución de flujo de datos] interfaz.
+Si el flujo de datos se ejecuta, puede desplazarse hacia abajo hasta la parte inferior de la página utilizando la interfaz [!UICONTROL Errores de ejecución del flujo de datos].
 
-Utilice el [!UICONTROL Error de registros] para ver las métricas de los registros que no se han introducido debido a errores. Para ver un informe de errores completo, seleccione **[!UICONTROL Previsualizar diagnósticos de error]**. Para descargar una copia del diagnóstico de errores y del manifiesto del archivo, seleccione **[!UICONTROL Descargar]** y, a continuación, copie la llamada de API de ejemplo que se utilizará con el [!DNL Data Access] API.
+Utilice la sección [!UICONTROL Registros con errores] para ver las métricas de los registros que no se ingirieron debido a errores. Para ver un informe de errores completo, seleccione **[!UICONTROL Previsualizar diagnósticos de error]**. Para descargar una copia de los diagnósticos de error y del manifiesto de archivo, seleccione **[!UICONTROL Descargar]** y, a continuación, copie la llamada de API de ejemplo que se utilizará con la API [!DNL Data Access].
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ Utilice el [!UICONTROL Error de registros] para ver las métricas de los registr
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha monitorizado correctamente el flujo de datos de ingesta desde el nivel de origen utilizando **[!UICONTROL Monitorización]** panel. También ha identificado correctamente los errores que contribuyeron al error de los flujos de datos durante el proceso de ingesta. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha monitorizado correctamente el flujo de datos de ingesta desde el nivel de origen mediante el panel **[!UICONTROL Supervisión]**. También ha identificado correctamente los errores que contribuyeron al error de los flujos de datos durante el proceso de ingesta. Consulte los siguientes documentos para obtener más información:
 
 * [Supervisión de datos de identidad](./monitor-identities.md).
-* [Monitorización de datos de perfil](./monitor-profiles.md).
+* [Supervisar datos de perfil](./monitor-profiles.md).

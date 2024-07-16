@@ -16,11 +16,11 @@ ht-degree: 0%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL IdentityMap] es un grupo de campos de esquema estándar para [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona un único campo de asignación, que contiene un conjunto de identidades de usuario marcadas por el área de nombres.
+[!UICONTROL IdentityMap] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona un único campo de asignación, que contiene un conjunto de identidades de usuario marcadas por el área de nombres.
 
-![Un diagrama de la [!UICONTROL IdentityMap] grupo de campos de esquema](../../images/field-groups/identitymap.png)
+![Un diagrama del grupo de campos de esquema [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 
-Consulte la sección sobre mapas de identidad en la [conceptos básicos de composición de esquemas](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso, incluidas sus ventajas e inconvenientes.
+Consulte la sección sobre mapas de identidad en los [conceptos básicos de la composición de esquemas](../../schema/composition.md#identityMap) para obtener más información sobre su caso de uso, incluidos sus beneficios y desventajas.
 
 **ejemplo**
 
@@ -38,4 +38,4 @@ Consulte la sección sobre mapas de identidad en la [conceptos básicos de compo
 }
 ```
 
-Para obtener más información sobre el grupo de campos, consulte la [esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) en el repositorio XDM público.
+Para obtener más información sobre el grupo de campos, consulte el [esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) en el repositorio XDM público.

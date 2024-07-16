@@ -14,21 +14,21 @@ ht-degree: 2%
 
 # Extremo de políticas de combinación
 
-Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] utiliza para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
+Adobe Experience Platform permite reunir fragmentos de datos de varias fuentes y combinarlos para ver una vista completa de cada uno de los clientes individuales. Al unir estos datos, las políticas de combinación son las reglas que [!DNL Platform] usa para determinar cómo se priorizarán los datos y qué datos se combinarán para crear una vista unificada.
 
 Por ejemplo, si un cliente interactúa con su marca en varios canales, su organización tendrá varios fragmentos de perfil relacionados con ese único cliente que aparecerán en varios conjuntos de datos. Cuando estos fragmentos se incorporan en Platform, se combinan para crear un único perfil para ese cliente. Cuando los datos de varias fuentes entran en conflicto (por ejemplo, un fragmento enumera al cliente como &quot;único&quot;, mientras que el otro indica al cliente como &quot;casado&quot;), la política de combinación determina qué información se incluye en el perfil de la persona.
 
 Mediante las API de RESTful o la interfaz de usuario de, puede crear nuevas políticas de combinación, administrar las políticas existentes y establecer una política de combinación predeterminada para su organización. Esta guía proporciona los pasos para trabajar con las políticas de combinación mediante la API.
 
-Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de IU de políticas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función dentro de Experience Platform, comience por leer la [resumen de políticas de combinación](../merge-policies/overview.md).
+Para trabajar con políticas de combinación mediante la interfaz de usuario, consulte la [guía de la interfaz de usuario de las políticas de combinación](../merge-policies/ui-guide.md). Para obtener más información sobre las políticas de combinación en general y su función dentro del Experience Platform, lea la [descripción general de las políticas de combinación](../merge-policies/overview.md).
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
 
 ## Componentes de las políticas de combinación {#components-of-merge-policies}
 
-Las políticas de combinación son privadas para su organización, lo que le permite crear diferentes políticas para combinar esquemas de las formas específicas que necesite. Cualquier acceso a API [!DNL Profile] Los datos de requieren una política de combinación, aunque se utilizará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una política de combinación predeterminada, o bien puede crear una política de combinación para una clase de esquema del Modelo de datos de experiencia (XDM) específica y marcarla como predeterminada para su organización.
+Las políticas de combinación son privadas para su organización, lo que le permite crear diferentes políticas para combinar esquemas de las formas específicas que necesite. Cualquier API que acceda a datos de [!DNL Profile] requiere una política de combinación, aunque se usará una predeterminada si no se proporciona una de forma explícita. [!DNL Platform] proporciona a las organizaciones una política de combinación predeterminada, o bien puede crear una política de combinación para una clase de esquema Experience Data Model (XDM) específica y marcarla como predeterminada para su organización.
 
 Aunque cada organización puede tener potencialmente varias políticas de combinación por clase de esquema, cada clase solo puede tener una política de combinación predeterminada. Cualquier política de combinación establecida como predeterminada se utilizará en los casos en que se proporcione el nombre de la clase de esquema y se requiera una política de combinación, pero no se proporcione.
 
@@ -36,9 +36,9 @@ Aunque cada organización puede tener potencialmente varias políticas de combin
 >
 >Cuando se establece una nueva política de combinación como predeterminada, cualquier política de combinación existente que se haya establecido anteriormente como predeterminada se actualizará automáticamente para que ya no se utilice como predeterminada.
 
-Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que una audiencia se active en Edge (marcada como audiencia Edge), debe estar vinculada a una política de combinación marcada como activa en Edge. Si una audiencia es **no** ligada a una política de combinación marcada como activa en edge, la audiencia no se marca como activa en edge y se marca como audiencia de flujo continuo.
+Para garantizar que todos los consumidores de perfiles trabajen con la misma vista en los bordes, las políticas de combinación se pueden marcar como activas en el borde. Para que una audiencia se active en Edge (marcada como audiencia Edge), debe estar vinculada a una política de combinación marcada como activa en Edge. Si una audiencia **no** está vinculada a una política de combinación marcada como activa en Edge, la audiencia no se marca como activa en Edge y se marca como una audiencia de flujo continuo.
 
-Además, cada organización solo puede tener **uno** política de combinación activa en edge. Si una política de combinación está activa en Edge, puede utilizarse para otros sistemas en Edge, como Perfil de Edge, Segmentación de Edge y Destinos en Edge.
+Además, cada organización solo puede tener **una** política de combinación activa en Edge. Si una política de combinación está activa en Edge, puede utilizarse para otros sistemas en Edge, como Perfil de Edge, Segmentación de Edge y Destinos en Edge.
 
 ### Completar objeto de política de combinación
 
@@ -72,11 +72,11 @@ El objeto de política de combinación completo representa un conjunto de prefer
 | `id` | El identificador único generado por el sistema asignado en el momento de la creación |
 | `name` | Nombre descriptivo con el que se puede identificar la política de combinación en las vistas de lista. |
 | `imsOrgId` | ID de organización al que pertenece esta política de combinación |
-| `schema.name` | Parte de la [`schema`](#schema) objeto, el `name` Este campo contiene la clase de esquema XDM con la que se relaciona la política de combinación. Para obtener más información sobre esquemas y clases, lea la [Documentación de XDM](../../xdm/home.md). |
-| `version` | [!DNL Platform] versión mantenida de la política de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una política de combinación. |
-| `identityGraph` | [Gráfico de identidad](#identity-graph) objeto que indica el gráfico de identidad del que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
-| `attributeMerge` | [Combinación de atributos](#attribute-merge) objeto que indica la forma en que la política de combinación priorizará los atributos de perfil en caso de conflictos de datos. |
-| `isActiveOnEdge` | Valor booleano que indica si esta política de combinación se puede utilizar en Edge. De forma predeterminada, este valor es `false`. |
+| `schema.name` | Como parte del objeto [`schema`](#schema), el campo `name` contiene la clase de esquema XDM con la que se relaciona la política de combinación. Para obtener más información sobre esquemas y clases, lea la [documentación de XDM](../../xdm/home.md). |
+| `version` | [!DNL Platform] mantuvo la versión de la política de combinación. Este valor de solo lectura se incrementa cada vez que se actualiza una política de combinación. |
+| `identityGraph` | [Objeto de gráfico de identidad](#identity-graph) que indica el gráfico de identidad del que se obtendrán las identidades relacionadas. Se combinarán los fragmentos de perfil encontrados para todas las identidades relacionadas. |
+| `attributeMerge` | [Combinación de atributos](#attribute-merge) que indica la forma en que la política de combinación dará prioridad a los atributos de perfil en caso de conflictos de datos. |
+| `isActiveOnEdge` | Valor booleano que indica si esta política de combinación se puede utilizar en Edge. De manera predeterminada, este valor es `false`. |
 | `default` | Valor booleano que indica si esta política de combinación es la predeterminada para el esquema especificado. |
 | `updateEpoch` | Fecha de la última actualización de la política de combinación. |
 
@@ -105,7 +105,7 @@ El objeto de política de combinación completo representa un conjunto de prefer
 
 ### Gráfico de identidad {#identity-graph}
 
-[Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) administra los gráficos de identidad utilizados globalmente y para cada organización en [!DNL Experience Platform]. El `identityGraph` de la política de combinación define cómo determinar las identidades relacionadas de un usuario.
+[El servicio de identidad de Adobe Experience Platform](../../identity-service/home.md) administra los gráficos de identidad utilizados globalmente y para cada organización en [!DNL Experience Platform]. El atributo `identityGraph` de la política de combinación define cómo determinar las identidades relacionadas de un usuario.
 
 **objeto identityGraph**
 
@@ -117,8 +117,8 @@ El objeto de política de combinación completo representa un conjunto de prefer
 
 Donde `{IDENTITY_GRAPH_TYPE}` es uno de los siguientes:
 
-* **&quot;ninguno&quot;:** No realice ninguna vinculación de identidad.
-* **&quot;pdg&quot;:** Realice la vinculación de identidad en función de su gráfico de identidad privada.
+* **&quot;none&quot;:** No realice ninguna vinculación de identidad.
+* **&quot;pdg&quot;:** Realice la vinculación de identidad en función de su gráfico de identidad privado.
 
 **Ejemplo`identityGraph`**
 
@@ -130,7 +130,7 @@ Donde `{IDENTITY_GRAPH_TYPE}` es uno de los siguientes:
 
 ### Combinación de atributos {#attribute-merge}
 
-Un fragmento de perfil es la información de perfil de una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado genera más de una identidad, existe la posibilidad de que haya conflictos entre los atributos de perfil y se debe especificar la prioridad. Uso de `attributeMerge`Además, puede especificar qué atributos de perfil priorizar en caso de un conflicto de combinación entre conjuntos de datos de tipo Valor clave (datos de registro).
+Un fragmento de perfil es la información de perfil de una sola identidad de la lista de identidades que existen para un usuario en particular. Cuando el tipo de gráfico de identidad utilizado genera más de una identidad, existe la posibilidad de que haya conflictos entre los atributos de perfil y se debe especificar la prioridad. Con `attributeMerge`, puede especificar qué atributos de perfil priorizar en caso de un conflicto de combinación entre conjuntos de datos del tipo Valor clave (datos de registro).
 
 **objeto attributeMerge**
 
@@ -142,11 +142,11 @@ Un fragmento de perfil es la información de perfil de una sola identidad de la 
 
 Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
 
-* **`timestampOrdered`**: (predeterminado) Dé prioridad al perfil que se actualizó en último lugar. Con este tipo de combinación, la variable `data` no es obligatorio.
-* **`dataSetPrecedence`**: Dé prioridad a los fragmentos de perfil en función del conjunto de datos del que procedan. Esto se puede utilizar cuando se prefiere la información presente en un conjunto de datos o cuando se confía en ella sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, la variable `order` es obligatorio, ya que enumera los conjuntos de datos en el orden de prioridad.
-   * **`order`**: Cuando se utiliza &quot;dataSetPrecedence&quot;, una variable `order` La matriz debe proporcionarse con una lista de conjuntos de datos. No se combinarán los conjuntos de datos que no estén incluidos en la lista. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. El `order` matriz enumera los ID de los conjuntos de datos en orden de prioridad.
+* **`timestampOrdered`**: (predeterminado) dar prioridad al perfil que se actualizó por última vez. Con este tipo de combinación, el atributo `data` no es necesario.
+* **`dataSetPrecedence`**: dé prioridad a los fragmentos de perfil en función del conjunto de datos del que procedan. Esto se puede utilizar cuando se prefiere la información presente en un conjunto de datos o cuando se confía en ella sobre los datos de otro conjunto de datos. Al utilizar este tipo de combinación, el atributo `order` es necesario, ya que enumera los conjuntos de datos en el orden de prioridad.
+   * **`order`**: cuando se usa &quot;dataSetPrecedence&quot;, se debe proporcionar una matriz `order` con una lista de conjuntos de datos. No se combinarán los conjuntos de datos que no estén incluidos en la lista. En otras palabras, los conjuntos de datos deben enumerarse explícitamente para combinarse en un perfil. La matriz `order` enumera los identificadores de los conjuntos de datos en orden de prioridad.
 
-#### Ejemplo `attributeMerge` objeto mediante `dataSetPrecedence` type
+#### Ejemplo de objeto `attributeMerge` con tipo `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -160,7 +160,7 @@ Donde `{ATTRIBUTE_MERGE_TYPE}` es uno de los siguientes:
     }
 ```
 
-#### Ejemplo `attributeMerge` objeto mediante `timestampOrdered` type
+#### Ejemplo de objeto `attributeMerge` con tipo `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -190,15 +190,15 @@ Donde el valor de `name` es el nombre de la clase XDM en la que se basa el esque
     }
 ```
 
-Para obtener más información sobre XDM y el trabajo con esquemas en Experience Platform, comience por leer el [Información general del sistema XDM](../../xdm/home.md).
+Para obtener más información sobre XDM y trabajar con esquemas en Experience Platform, comience por leer la [descripción general del sistema XDM](../../xdm/home.md).
 
 ## Acceso a políticas de combinación {#access-merge-policies}
 
-Uso del [!DNL Real-Time Customer Profile] API, la `/config/mergePolicies` Un punto de conexión le permite realizar una solicitud de búsqueda para ver una política de combinación específica por su ID o acceder a todas las políticas de combinación de su organización, filtradas por criterios específicos. También puede utilizar la variable `/config/mergePolicies/bulk-get` punto final para recuperar varias políticas de combinación por sus ID. Los pasos para realizar cada una de estas llamadas se describen en las secciones siguientes.
+Con la API [!DNL Real-Time Customer Profile], el extremo `/config/mergePolicies` le permite realizar una solicitud de búsqueda para ver una política de combinación específica por su ID o acceder a todas las políticas de combinación de su organización, filtradas según criterios específicos. También puede usar el extremo `/config/mergePolicies/bulk-get` para recuperar varias directivas de combinación por sus identificadores. Los pasos para realizar cada una de estas llamadas se describen en las secciones siguientes.
 
 ### Acceso a una única política de combinación por ID
 
-Puede acceder a una única política de combinación por su ID realizando una solicitud de GET al `/config/mergePolicies` punto final e incluir el `mergePolicyId` en la ruta de solicitud.
+GET Puede acceder a una única política de combinación por su ID realizando una solicitud al extremo `/config/mergePolicies` e incluyendo `mergePolicyId` en la ruta de solicitud.
 
 **Formato de API**
 
@@ -245,11 +245,11 @@ Una respuesta correcta devuelve los detalles de la política de combinación.
 }
 ```
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que componen una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
 
 ### Recuperar varias políticas de combinación por sus ID
 
-Puede recuperar varias políticas de combinación realizando una solicitud del POST a la variable `/config/mergePolicies/bulk-get` e incluir los ID de las políticas de combinación que desea recuperar en el cuerpo de la solicitud.
+Puede recuperar varias políticas de combinación realizando una solicitud de POST al extremo `/config/mergePolicies/bulk-get` e incluyendo los ID de las políticas de combinación que desee recuperar en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -344,11 +344,11 @@ Una respuesta correcta devuelve el estado HTTP 207 (varios estados) y los detall
 }
 ```
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que componen una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
 
 ### Enumerar varias políticas de combinación por criterios
 
-Puede enumerar varias políticas de combinación dentro de su organización emitiendo una solicitud de GET a la `/config/mergePolicies` y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Realizar una llamada a este extremo sin parámetros recuperará todas las políticas de combinación disponibles para su organización.
+Puede enumerar varias directivas de combinación dentro de su organización emitiendo una solicitud de GET al extremo `/config/mergePolicies` y utilizando parámetros de consulta opcionales para filtrar, ordenar y paginar la respuesta. Se pueden incluir varios parámetros, separados por el símbolo &quot;et&quot; (&amp;). Realizar una llamada a este extremo sin parámetros recuperará todas las políticas de combinación disponibles para su organización.
 
 **Formato de API**
 
@@ -360,7 +360,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Un valor booleano que filtra los resultados dependiendo de si las políticas de combinación son o no las predeterminadas para una clase de esquema. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. Valor predeterminado: 20 |
-| `orderBy` | Especifica el campo por el que ordenar los resultados como en `orderBy=name` o `orderBy=+name` para ordenar por nombre en orden ascendente, o `orderBy=-name`, para ordenar en orden descendente. Si se omite este valor, se ordenará de forma predeterminada `name` en orden ascendente. |
+| `orderBy` | Especifica el campo por el que ordenar los resultados como en `orderBy=name` o `orderBy=+name` para ordenar por nombre en orden ascendente o `orderBy=-name` para ordenar en orden descendente. Si se omite este valor, la ordenación predeterminada de `name` será en orden ascendente. |
 | `isActiveOnEdge` | Valores booleanos que filtran los resultados según si las políticas de combinación están activas o no en Edge. |
 | `schema.name` | Nombre del esquema para el que se van a recuperar las políticas de combinación disponibles. |
 | `identityGraph.type` | Filtra los resultados por tipo de gráfico de identidad. Los valores posibles incluyen &quot;none&quot; y &quot;pdg&quot; (gráfico privado). |
@@ -368,7 +368,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `start` | Desplazamiento de página: especifique el ID de inicio de los datos que se van a recuperar. Valor predeterminado: 0 |
 | `version` | Especifique esto si desea utilizar una versión específica de la política de combinación. De forma predeterminada, se utiliza la versión más reciente. |
 
-Para obtener más información sobre `schema.name`, `identityGraph.type`, y `attributeMerge.type`, consulte la [componentes de políticas de combinación](#components-of-merge-policies) sección proporcionada anteriormente en esta guía.
+Para obtener más información sobre `schema.name`, `identityGraph.type` y `attributeMerge.type`, consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) que se ha proporcionado anteriormente en esta guía.
 
 
 **Solicitud**
@@ -462,7 +462,7 @@ Una respuesta correcta devuelve una lista paginada de directivas de combinación
 
 ## Crear una política de combinación
 
-Puede crear una nueva política de combinación para su organización realizando una solicitud de POST a `/config/mergePolicies` punto final.
+Puede crear una nueva política de combinación para su organización realizando una solicitud de POST al extremo `/config/mergePolicies`.
 
 **Formato de API**
 
@@ -510,7 +510,7 @@ curl -X POST \
 | `isActiveOnEdge` | Especifica si esta política de combinación está activa en Edge. |
 | `default` | Especifica si esta política de combinación es la predeterminada para el esquema. |
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 **Respuesta**
 
@@ -547,7 +547,7 @@ Una respuesta correcta devuelve los detalles de la política de combinación rec
 }
 ```
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que componen una política de combinación.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) al principio de este documento para obtener detalles sobre cada uno de los elementos individuales que conforman una política de combinación.
 
 ## Actualizar una política de combinación {#update}
 
@@ -555,7 +555,7 @@ Puede modificar una política de combinación existente editando atributos indiv
 
 ### Editar campos de políticas de combinación individuales
 
-Puede editar campos individuales para una política de combinación realizando una solicitud del PATCH a la variable `/config/mergePolicies/{mergePolicyId}` extremo:
+Puede editar campos individuales para una política de combinación realizando una solicitud del PATCH al extremo `/config/mergePolicies/{mergePolicyId}`:
 
 **Formato de API**
 
@@ -569,7 +569,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Solicitud**
 
-La siguiente solicitud actualiza una política de combinación especificada cambiando el valor de su `default` propiedad a `true`:
+La siguiente solicitud actualiza una política de combinación especificada cambiando el valor de su propiedad `default` a `true`:
 
 ```shell
 curl -X PATCH \
@@ -588,11 +588,11 @@ curl -X PATCH \
 
 | Propiedad | Descripción |
 |---|---|
-| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones de PATCH en la [Documentación de parches de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
+| `op` | Especifica la operación que se va a realizar. Encontrará ejemplos de otras operaciones de PATCH en la [documentación de parches de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | Ruta del campo que se va a actualizar. Los valores aceptados son: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | Valor en el que se establece el campo especificado. |
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 
 **Respuesta**
@@ -688,7 +688,7 @@ curl -X PUT \
 | `isActiveOnEdge` | Especifica si esta política de combinación está activa en Edge. |
 | `default` | Especifica si esta política de combinación es la predeterminada para el esquema. |
 
-Consulte la [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
+Consulte la sección [componentes de políticas de combinación](#components-of-merge-policies) para obtener más información.
 
 **Respuesta**
 
@@ -727,11 +727,11 @@ Una respuesta correcta devuelve los detalles de la política de combinación act
 
 ## Eliminar una política de combinación
 
-Se puede eliminar una política de combinación realizando una solicitud del DELETE a la `/config/mergePolicies` punto final e incluir el ID de la política de combinación que desea eliminar en la ruta de solicitud.
+Se puede eliminar una política de combinación realizando una solicitud de DELETE al extremo `/config/mergePolicies` e incluyendo el identificador de la política de combinación que desea eliminar en la ruta de solicitud.
 
 >[!NOTE]
 >
->Si la política de combinación tiene `isActiveOnEdge` establecida como true, la política de combinación **no puede** se eliminarán. Utilice cualquiera de las [PATCH](#edit-individual-merge-policy-fields) o [PUT](#overwrite-a-merge-policy) puntos finales para actualizar la política de combinación antes de eliminarla.
+>Si la política de combinación tiene `isActiveOnEdge` establecido en true, no se puede eliminar la política de combinación **no se puede**. Use los extremos [PATCH](#edit-individual-merge-policy-fields) o [PUT](#overwrite-a-merge-policy) para actualizar la política de combinación antes de eliminarla.
 
 **Formato de API**
 
@@ -762,6 +762,6 @@ Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cue
 
 ## Pasos siguientes
 
-Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes dentro de Platform y para crear audiencias a partir de sus [!DNL Real-Time Customer Profile] datos.
+Ahora que sabe cómo crear y configurar políticas de combinación para su organización, puede utilizarlas para ajustar la vista de perfiles de clientes dentro de Platform y para crear audiencias a partir de los datos de [!DNL Real-Time Customer Profile].
 
-Consulte la [Documentación del Servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con audiencias.
+Consulte la [documentación del servicio de segmentación de Adobe Experience Platform](../../segmentation/home.md) para empezar a definir y trabajar con audiencias.

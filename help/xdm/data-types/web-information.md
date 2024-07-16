@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL Información web] tipo de datos
+# [!UICONTROL Tipo de datos de información web]
 
-[!UICONTROL Información web] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe la información registrada mediante un Evento de experiencia específico para el canal World Wide Web, incluida la página web, el referente o el vínculo relacionado con la interacción en la página.
+[!UICONTROL Información web] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe la información registrada mediante un Evento de experiencia específico para el canal World Wide Web, incluidos la página web, el referente y/o el vínculo relacionado con la interacción en la página.
 
 ![](../images/data-types/web-information.png)
 

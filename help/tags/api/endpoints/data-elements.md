@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /data_elements en la API de 
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 98%
+source-wordcount: '1364'
+ht-degree: 99%
 
 ---
 

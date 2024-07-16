@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de destino accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más la activación de datos de Adobe Experience Platform a sus plataformas de destino. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de destinos](../guides/destinations.md) o un personalizado [tablero definido por el usuario](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las uses como parte del [panel de destinos](../guides/destinations.md) o un [panel personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
 
-## Audiencias activadas {#activated-audiences}
+## Públicos activados {#activated-audiences}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -48,9 +48,9 @@ WHERE
 
 +++
 
-Consulte la [Documentación del widget de audiencias activadas](../guides/destinations.md#activated-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias activadas](../guides/destinations.md#activated-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Audiencias activadas en todos los destinos {#activated-audiences-across-all-destinations}
+## Públicos activados en todos los destinos {#activated-audiences-across-all-destinations}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Consulte la [Audiencias activadas en la documentación del widget de todos los destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias activadas en todos los destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Destinos activos por plataforma de destino {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Consulte la [Documentación del widget de destinos activos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de destinos activos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Tendencia de tamaño de audiencia {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de tamaño de audiencia](../guides/destinations.md#audience-size-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de tamaño de audiencia](../guides/destinations.md#audience-size-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Públicos comunes {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Consulte la [Documentación del widget de audiencias comunes](../guides/destinations.md#common-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias comunes](../guides/destinations.md#common-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Estado del destino {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Consulte la [Documentación del widget de estado de destino](../guides/destinations.md#destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de estado de destino](../guides/destinations.md#destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Recuento de destinos {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Consulte la [Documentación del widget de recuento de destinos](../guides/destinations.md#destinations-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de recuento de destinos](../guides/destinations.md#destinations-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Estado de público asignado {#mapped-audience-health}
 
@@ -325,9 +325,9 @@ SELECT destination_name,
 
 +++
 
-Consulte la [Documentación del widget de estado de audiencia asignada](../guides/destinations.md#mapped-audience-health) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de estado de audiencia asignada](../guides/destinations.md#mapped-audience-health) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Audiencias asignadas {#mapped-audiences}
+## Públicos asignados {#mapped-audiences}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulte la [Documentación del widget de audiencias asignadas](../guides/destinations.md#mapped-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias asignadas](../guides/destinations.md#mapped-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Consulte la [Documentación del widget de destinos más utilizados](../guides/destinations.md#most-used-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de destinos más usados](../guides/destinations.md#most-used-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Públicos activados recientemente {#recently-activated-audiences}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Consulte la [Documentación de audiencias activadas recientemente por widget de destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de audiencias activadas recientemente por el widget de destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Destinos creados recientemente {#recently-created-destinations}
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar estas consultas SQL para generar sus propias perspectivas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-También puede leer y comprender el SQL que genera perspectivas para [Perfiles](./profiles.md), [Perfiles de cuenta](./account-profiles.md) y [Audiencias](./audiences.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para los paneles de [Perfiles](./profiles.md), [Perfiles de cuenta](./account-profiles.md) y [Audiencias](./audiences.md).

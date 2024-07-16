@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales por los que filtrar los resultados. Consulte la [documento anexo](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales por los que filtrar los resultados. Consulte el [documento del apéndice](./appendix.md#query) para obtener una lista de los parámetros disponibles. |
 
 **Solicitud**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de zonas protegidas disponibles para el usuario actual, incluidos detalles como `name`, `title`, `state`, y `type`.
+Una respuesta correcta devuelve una lista de zonas protegidas disponibles para el usuario actual, incluidos detalles como `name`, `title`, `state` y `type`.
 
 ```json
 {
@@ -104,7 +104,7 @@ Una respuesta correcta devuelve una lista de zonas protegidas disponibles para e
 | --- | --- |
 | `name` | Nombre de la zona protegida. Se utiliza con fines de búsqueda en llamadas a la API. |
 | `title` | El nombre para mostrar de la zona protegida. |
-| `state` | El estado de procesamiento actual de la zona protegida. El estado de una zona protegida puede ser cualquiera de los siguientes: <ul><li>`creating`: se ha creado la zona protegida, pero el sistema aún la está aprovisionando.</li><li>`active`: la zona protegida se crea y se activa.</li><li>`failed`: Debido a un error, el sistema no pudo aprovisionar la zona protegida y está deshabilitada.</li><li>`deleted`: la zona protegida se ha deshabilitado manualmente.</li></ul> |
+| `state` | El estado de procesamiento actual de la zona protegida. El estado de una zona protegida puede ser cualquiera de los siguientes: <ul><li>`creating`: se ha creado la zona protegida, pero el sistema aún la está aprovisionando.</li><li>`active`: la zona protegida se ha creado y está activa.</li><li>`failed`: debido a un error, el sistema no pudo aprovisionar la zona protegida y está deshabilitada.</li><li>`deleted`: la zona protegida se ha deshabilitado manualmente.</li></ul> |
 | `type` | El tipo de zona protegida, ya sea de &quot;desarrollo&quot; o de &quot;producción&quot;. |
 | `isDefault` | Una propiedad booleana que indica si esta zona protegida es la zona protegida de producción predeterminada para la organización. |
 | `eTag` | Identificador de una versión específica de la zona protegida. Este valor, que se utiliza para el control de versiones y la eficacia del almacenamiento en caché, se actualiza cada vez que se realiza un cambio en la zona protegida. |

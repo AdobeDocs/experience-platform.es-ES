@@ -14,8 +14,8 @@ ht-degree: 0%
 
 # Creación de una conexión de flujo continuo mediante la IU
 
-Para iniciar la transmisión de datos a [!DNL Experience Platform], primero debe crear una conexión HTTP de flujo continuo. Al crear una conexión de flujo continuo, debe proporcionar detalles clave como la fuente de los datos de flujo continuo y si tiene intención de enviar datos desde una fuente de confianza (autenticada) o una fuente que no es de confianza (no autenticada).
+Para iniciar la transmisión de datos a [!DNL Experience Platform], primero debe crear una conexión HTTP de transmisión. Al crear una conexión de flujo continuo, debe proporcionar detalles clave como la fuente de los datos de flujo continuo y si tiene intención de enviar datos desde una fuente de confianza (autenticada) o una fuente que no es de confianza (no autenticada).
 
-Después de registrar una conexión de flujo continuo, tendrá una URL única que puede utilizarse para transmitir datos a [!DNL Platform].
+Después de registrar una conexión de flujo continuo, tendrá una dirección URL única que se puede usar para transmitir datos a [!DNL Platform].
 
-Para obtener información sobre cómo crear una conexión de flujo continuo, lea la [Guía de IU de origen de HTTP API](../../sources/tutorials/ui/create/streaming/http.md).
+Para obtener información sobre cómo crear una conexión de flujo continuo, lea la [guía de la interfaz de usuario de la fuente de la API HTTP](../../sources/tutorials/ui/create/streaming/http.md).

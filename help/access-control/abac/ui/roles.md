@@ -16,11 +16,11 @@ Las funciones definen el acceso que un administrador, un especialista o un usuar
 
 ## Crear una nueva función
 
-Para crear una función nueva, seleccione la opción **[!UICONTROL Funciones]** en la barra lateral y seleccione **[!UICONTROL Crear rol]**.
+Para crear una función nueva, seleccione la ficha **[!UICONTROL Funciones]** en la barra lateral y seleccione **[!UICONTROL Crear función]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-El **[!UICONTROL Crear una función nueva]** aparece un cuadro de diálogo en el que se le solicita que introduzca un nombre y una descripción opcional.
+Aparecerá el cuadro de diálogo **[!UICONTROL Crear un nuevo rol]**, en el que se le pedirá que escriba un nombre y una descripción opcional.
 
 Cuando termine, seleccione **[!UICONTROL Confirmar]**.
 
@@ -30,7 +30,7 @@ A continuación, seleccione los permisos de recurso que desea incluir en la func
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
 
-Para añadir recursos adicionales, seleccione **[!UICONTROL Adobe Experience Platform]** en el panel de navegación izquierdo, que muestra una lista de recursos. También puede introducir el nombre del recurso en la barra de búsqueda del panel de navegación izquierdo.
+Para agregar recursos adicionales, selecciona **[!UICONTROL Adobe Experience Platform]** en el panel de navegación izquierdo, que muestra una lista de recursos. También puede introducir el nombre del recurso en la barra de búsqueda del panel de navegación izquierdo.
 
 ![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
 
@@ -42,11 +42,11 @@ Seleccione los permisos de recurso que desee incluir en la función mediante el 
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-La nueva función se ha creado correctamente y se le redirigirá a **[!UICONTROL Funciones]** página, donde verá la función recién creada en la lista.
+La nueva función se ha creado correctamente y se le redirigirá a la página **[!UICONTROL Funciones]**, donde verá aparecer la función recién creada en la lista.
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Consulte las secciones sobre [administración de permisos para una función](#manage-permissions-for-a-role) para obtener más información sobre cómo administrar los permisos de funciones una vez creados.
+Consulte las secciones sobre [administración de permisos para una función](#manage-permissions-for-a-role) para obtener más información sobre cómo administrar permisos de funciones una vez creados.
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de una función nueva y a administrar usuarios para esa función.
 
@@ -54,39 +54,39 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender la creación de un
 
 ## Duplicación de un rol
 
-Para duplicar una función existente, seleccione la función en el **[!UICONTROL Funciones]** pestaña. También puede utilizar la opción de filtro para filtrar los resultados y encontrar la función que desea duplicar.
+Para duplicar un rol existente, seleccione el rol en la ficha **[!UICONTROL Roles]**. También puede utilizar la opción de filtro para filtrar los resultados y encontrar la función que desea duplicar.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-A continuación, seleccione **[!UICONTROL Duplicar]** en la parte superior derecha de la pantalla.
+A continuación, seleccione **[!UICONTROL Duplicate]** en la parte superior derecha de la pantalla.
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-El **[!UICONTROL Duplicar función]** aparece un cuadro de diálogo que le solicita que confirme la duplicación.
+Aparece el cuadro de diálogo **[!UICONTROL Duplicar rol]**, que le solicita que confirme la duplicación.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-A continuación, se le redirigirá a la página de detalles de la función, donde podrá cambiar el nombre y los permisos de la función. Los detalles, las etiquetas y las zonas protegidas se duplican con respecto a la función anterior. Los usuarios deberán añadirse a través de la pestaña usuarios. Puede ver el [administrar permisos para una función](permissions.md) para obtener más información sobre cómo agregar detalles, etiquetas, zonas protegidas y usuarios a un rol.
+A continuación, se le redirigirá a la página de detalles de la función, donde podrá cambiar el nombre y los permisos de la función. Los detalles, las etiquetas y las zonas protegidas se duplican con respecto a la función anterior. Los usuarios deberán añadirse a través de la pestaña usuarios. Puede ver el documento [administrar permisos para una función](permissions.md) para obtener más información sobre cómo agregar detalles, etiquetas, zonas protegidas y usuarios a una función.
 
-Haga clic en la flecha izquierda para volver a la **[!UICONTROL Funciones]** pestaña.
+Haga clic en la flecha izquierda para volver a la ficha **[!UICONTROL Roles]**.
 
 ![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
 
-La nueva función aparecerá en la lista de **[!UICONTROL Funciones]** página.
+El nuevo rol aparecerá en la lista de la página **[!UICONTROL Roles]**.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
 ## Eliminar un rol
 
-Seleccione los puntos suspensivos (`…`) junto al nombre de un rol, y un menú desplegable muestra controles para editar, eliminar o duplicar el rol. Seleccione eliminar de la lista desplegable.
+Seleccione los puntos suspensivos (`…`) junto al nombre de un rol y aparecerá una lista desplegable con controles para editar, eliminar o duplicar el rol. Seleccione eliminar de la lista desplegable.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-El **[!UICONTROL Eliminar función de usuario]** aparece un cuadro de diálogo que le solicita que confirme la eliminación.
+Aparecerá el cuadro de diálogo **[!UICONTROL Eliminar función de usuario]**, que le pedirá que confirme la eliminación.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-Se le devolverá a la **[!UICONTROL Funciones]** pestaña.
+Volverá a la ficha **[!UICONTROL Roles]**.
 
 ## Pasos siguientes
 

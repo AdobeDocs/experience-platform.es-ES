@@ -4,7 +4,7 @@ description: Obtenga respuestas a las preguntas frecuentes sobre Adobe Experienc
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 78%
 
 ---
@@ -45,7 +45,7 @@ Las etiquetas han abierto su portal de autoservicio virtual, que los desarrollad
 
 Tenemos muchos clientes que también eligen construir sus propias extensiones privadas para usarlas solo dentro de sus propias compañías con los mismos métodos de desarrollo de extensiones.
 
-Para desarrollar una extensión, consulte [Información general sobre desarrollo de extensiones](./extension-dev/overview.md) página.
+Para desarrollar una extensión, consulte la página [Información general sobre el desarrollo de extensiones](./extension-dev/overview.md).
 
 ## ¿Cumplen las etiquetas con los estándares de seguridad de mi compañía?
 
@@ -73,7 +73,7 @@ Las etiquetas están diseñadas para proporcionar y ejecutar tecnologías de mar
 
 ## ¿Con qué exploradores son compatibles las etiquetas?
 
-Consulte los exploradores admitidos [aquí](./extension-dev/browsers.md).
+Consulte los exploradores compatibles [aquí](./extension-dev/browsers.md).
 
 La mayoría de clientes de Adobe ahora aprovecha las funciones más modernas de plataforma web en los exploradores actuales y crean mejores experiencias de usuario, incluidas las aplicaciones de una sola página y las páginas y los sitios web con gran presencia de Ajax. A medida que la mayoría de los clientes avanzan hacia enfoques más modernos con sus sitios, exigen soluciones como etiquetas, que permiten dichos enfoques.
 
@@ -83,14 +83,14 @@ La mayoría de clientes de Adobe ahora aprovecha las funciones más modernas de 
 
 ## ¿Por qué la interfaz de usuario indica que se ha producido un error al cargar mi cuenta?
 
-Si recibe un mensaje que indica que se ha producido un error al cargar la cuenta, significa que la cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a las funciones de recopilación de datos en la interfaz de usuario.
+Si recibe un mensaje que indica que se ha producido un error al cargar la cuenta, significa que la cuenta no pertenece a ningún perfil de producto para etiquetas. Consulte la guía sobre [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder acceso a las funciones de recopilación de datos en la interfaz de usuario.
 
 ## ¿Por qué no se puede agregar ninguna propiedad en la interfaz de usuario?
 
 Si no puede crear ninguna propiedad nueva al iniciar sesión en la interfaz de usuario, significa que su cuenta no pertenece a un perfil de producto que tenga derechos de administración de propiedades.
 
-Consulte la guía de [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder el derecho Administrar propiedades. Para obtener más información sobre los distintos derechos de las etiquetas, consulte la información general sobre [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
+Consulte la guía sobre [administración de permisos](../collection/permissions.md) para obtener información sobre cómo configurar un perfil de producto en Adobe Admin Console para conceder el derecho Administrar propiedades. Para obtener más información sobre los diferentes derechos de las etiquetas, consulte la descripción general de [permisos de usuario para etiquetas](./ui/administration/user-permissions.md).
 
 ## ¿Y si tengo más preguntas?
 
-Si tiene otras preguntas, puede preguntar en la [Página de la comunidad de recopilación de datos Adobe Experience Platform](https://adobe.com/go/launchme) en el Experience League o únase al [espacio de trabajo de Slack de comunidad](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desarrolladores y temas de implementación técnica.
+Si tiene otras preguntas, puede preguntar en la [página de la comunidad de recopilación de datos de Adobe Experience Platform](https://adobe.com/go/launchme) en Experience League o unirse al [espacio de trabajo de Slack de la comunidad](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desarrolladores y temas de implementación técnica.

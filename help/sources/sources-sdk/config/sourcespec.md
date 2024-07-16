@@ -5,16 +5,16 @@ description: Este documento proporciona información general sobre las configura
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
 
 # Configuración de la especificación de origen para orígenes de autoservicio (SDK por lotes)
 
-Las especificaciones de la fuente contienen información específica de una fuente, incluidos los atributos pertenecientes a la categoría de una fuente, el estado beta y el icono de catálogo. También contienen información útil, como parámetros de URL, contenido, encabezado y programación. Las especificaciones de origen también describen el esquema de los parámetros necesarios para crear una conexión de origen a partir de una conexión base. El esquema es necesario para crear una conexión de origen.
+Las especificaciones de Source contienen información específica de un origen, incluidos los atributos pertenecientes a la categoría de un origen, el estado beta y el icono de catálogo. También contienen información útil, como parámetros de URL, contenido, encabezado y programación. Las especificaciones de Source también describen el esquema de los parámetros necesarios para crear una conexión de origen a partir de una conexión base. El esquema es necesario para crear una conexión de origen.
 
-Consulte la [apéndice](#source-spec) para ver un ejemplo de una especificación de origen completamente rellenada.
+Consulte el [apéndice](#source-spec) para ver un ejemplo de una especificación de origen completamente completada.
 
 
 ```json
@@ -239,41 +239,41 @@ Consulte la [apéndice](#source-spec) para ver un ejemplo de una especificación
 | `sourceSpec.attributes.spec.properties.urlParams` | Contiene información sobre la ruta de acceso del recurso de URL, el método y los parámetros de consulta admitidos. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Define la ruta del recurso desde la que se recuperan los datos. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Define el método HTTP que se utilizará para realizar la solicitud al recurso para recuperar los datos. | `GET`, `POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Define los parámetros de consulta admitidos que se pueden utilizar para anexar la dirección URL de origen al realizar una solicitud de obtención de datos. **Nota**: cualquier valor de parámetro proporcionado por el usuario debe tener el formato de marcador de posición. Por ejemplo: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` se adjuntará a la dirección URL de origen como: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Define los parámetros de consulta admitidos que se pueden utilizar para anexar la dirección URL de origen al realizar una solicitud de obtención de datos. **Nota**: cualquier valor de parámetro proporcionado por el usuario debe tener el formato de marcador de posición. Por ejemplo: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` se anexará a la dirección URL de origen como: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Define los encabezados que deben proporcionarse en la solicitud HTTP a la URL de origen al recuperar los datos. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Este atributo se puede configurar para enviar el cuerpo HTTP a través de una solicitud del POST. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Define el nodo que contiene la lista de elementos que se deben introducir en Platform. Este atributo debe seguir una sintaxis de ruta JSON válida y señalar a una matriz en particular. | Ver el [sección de recursos adicionales](#content-path) para ver un ejemplo del recurso contenido en una ruta de contenido. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Define el nodo que contiene la lista de elementos que se deben introducir en Platform. Este atributo debe seguir una sintaxis de ruta JSON válida y señalar a una matriz en particular. | Vea la sección [recursos adicionales](#content-path) para ver un ejemplo del recurso contenido en una ruta de contenido. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | La ruta que señala a los registros de colección que se van a ingerir en Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Esta propiedad le permite identificar elementos específicos del recurso identificado en la ruta de contenido que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Esta propiedad permite anular el valor del nombre de atributo especificado en `contentPath`. | `email` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Esta propiedad le permite anular el valor del nombre de atributo especificado en `contentPath`. | `email` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath` | Esta propiedad permite acoplar dos matrices y transformar los datos de recursos en un recurso de plataforma. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Ruta de acceso que señala a los registros de colección que desea acoplar. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Esta propiedad permite identificar elementos específicos del recurso identificado en la ruta de entidad que se excluirán de la ingesta. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Esta propiedad permite especificar explícitamente los atributos individuales que desea conservar. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Esta propiedad permite anular el valor del nombre de atributo especificado en `explodeEntityPath`. | `activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Esta propiedad le permite anular el valor del nombre de atributo especificado en `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Define los parámetros o campos que se deben proporcionar para obtener un vínculo a la página siguiente desde la respuesta de página actual del usuario o durante la creación de una dirección URL de página siguiente. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Muestra el tipo de paginación compatible con el origen. | <ul><li>`OFFSET`: este tipo de paginación le permite analizar los resultados especificando un índice desde el que iniciar la matriz resultante y un límite en la cantidad de resultados devueltos.</li><li>`POINTER`: este tipo de paginación le permite utilizar un `pointer` para que apunte a un elemento concreto que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente.</li><li>`CONTINUATION_TOKEN`: este tipo de paginación le permite anexar los parámetros de consulta o encabezado con un token de continuación para recuperar los datos de retorno restantes de su origen, que no se devolvieron inicialmente debido a un máximo predeterminado.</li><li>`PAGE`: este tipo de paginación le permite anexar el parámetro de consulta con un parámetro de paginación para recorrer los datos devueltos por páginas, empezando por la página cero.</li><li>`NONE`: este tipo de paginación se puede utilizar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Tipo de paginación `NONE` devuelve todos los datos de respuesta después de una solicitud.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Muestra el tipo de paginación compatible con el origen. | <ul><li>`OFFSET`: este tipo de paginación le permite analizar los resultados especificando un índice desde el que iniciar la matriz resultante y un límite en la cantidad de resultados devueltos.</li><li>`POINTER`: este tipo de paginación le permite usar una variable `pointer` para señalar a un elemento en particular que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente.</li><li>`CONTINUATION_TOKEN`: este tipo de paginación le permite anexar los parámetros de consulta o encabezado con un token de continuación para recuperar los datos de retorno restantes del origen que no se devolvieron inicialmente debido a un máximo predeterminado.</li><li>`PAGE`: este tipo de paginación le permite anexar el parámetro de consulta con un parámetro de paginación para recorrer los datos devueltos por páginas, empezando desde la página cero.</li><li>`NONE`: este tipo de paginación se puede usar para orígenes que no admiten ninguno de los tipos de paginación disponibles. El tipo de paginación `NONE` devuelve todos los datos de respuesta después de una solicitud.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. | `limit` o `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | El número de registros que se recuperarán en una página. | `limit=10` o `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nombre del atributo de desplazamiento. Esto es necesario si el tipo de paginación está establecido en `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nombre del atributo de puntero. Esto requiere una ruta json al atributo que señalará a la página siguiente. Esto es necesario si el tipo de paginación está establecido en `pointer`. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parámetros que definen los formatos de programación admitidos para el origen. Los parámetros de programación incluyen `startTime` y `endTime`, ambos le permiten establecer intervalos de tiempo específicos para ejecuciones por lotes, lo que garantiza que los registros recuperados en una ejecución por lotes anterior no se recuperen. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parámetros que definen los formatos de programación admitidos para el origen. Los parámetros de programación incluyen `startTime` y `endTime`, lo que le permite establecer intervalos de tiempo específicos para ejecuciones por lotes, lo que garantiza que no se recuperen los registros recuperados en una ejecución por lotes anterior. |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Define el nombre del parámetro de hora de inicio | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Define el nombre del parámetro de hora de finalización | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Define el formato admitido para `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Define el formato admitido para `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Define los parámetros proporcionados por el usuario para recuperar los valores de los recursos. | Consulte la [recursos adicionales](#user-input) por ejemplo, parámetros introducidos por el usuario para `spec.properties`. |
+| `sourceSpec.spec.properties` | Define los parámetros proporcionados por el usuario para recuperar los valores de los recursos. | Consulte los [recursos adicionales](#user-input) para ver un ejemplo de parámetros introducidos por el usuario para `spec.properties`. |
 
 {style="table-layout:auto"}
 
 ## Recursos adicionales {#appendix}
 
-En las siguientes secciones se proporciona información sobre las configuraciones adicionales que puede realizar para `sourceSpec`, incluidos la programación avanzada y los esquemas personalizados.
+En las secciones siguientes se proporciona información sobre configuraciones adicionales que puede realizar en `sourceSpec`, incluida la programación avanzada y los esquemas personalizados.
 
 ### Ejemplo de ruta de contenido {#content-path}
 
-A continuación se muestra un ejemplo del contenido de `contentPath` propiedad en un [!DNL MailChimp Members] especificación de conexión.
+A continuación se muestra un ejemplo del contenido de la propiedad `contentPath` en una especificación de conexión [!DNL MailChimp Members].
 
 ```json
 "contentPath": {
@@ -287,9 +287,9 @@ A continuación se muestra un ejemplo del contenido de `contentPath` propiedad e
 }
 ```
 
-### `spec.properties` ejemplo de entrada de usuario {#user-input}
+### Ejemplo de entrada de usuario `spec.properties` {#user-input}
 
-El siguiente es un ejemplo de un archivo proporcionado por el usuario `spec.properties` uso de un [!DNL MailChimp Members] especificación de conexión.
+El siguiente es un ejemplo de un(a) `spec.properties` proporcionado(a) por el usuario que usa una especificación de conexión [!DNL MailChimp Members].
 
 En este ejemplo, `listId` se proporciona como parte de `urlParams.path`. Si necesita recuperar `listId` de un cliente, también debe definirlo como parte de `spec.properties`.
 
@@ -312,9 +312,9 @@ En este ejemplo, `listId` se proporciona como parte de `urlParams.path`. Si nece
     }
 ```
 
-### Ejemplo de especificación de fuente {#source-spec}
+### Ejemplo de especificación de Source {#source-spec}
 
-A continuación se muestra una especificación de origen completada utilizando [!DNL MailChimp Members]:
+La siguiente es una especificación de origen completada usando [!DNL MailChimp Members]:
 
 ```json
   "sourceSpec": {
@@ -409,7 +409,7 @@ Este tipo de paginación le permite analizar los resultados especificando un ín
 
 >[!TAB Puntero]
 
-Este tipo de paginación le permite utilizar un `pointer` para que apunte a un elemento concreto que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente. Por ejemplo:
+Este tipo de paginación le permite usar una variable `pointer` para señalar a un elemento en particular que debe enviarse con una solicitud. La paginación de tipo de puntero requiere una ruta en la carga útil que dirija a la página siguiente. Por ejemplo:
 
 ```json
 {
@@ -447,9 +447,9 @@ Un origen que admite el tipo de token de continuación de paginación puede tene
 | --- | --- |
 | `type` | El tipo de paginación utilizado para devolver datos. |
 | `continuationTokenPath` | El valor que debe añadirse a los parámetros de consulta para pasar a la siguiente página de los resultados devueltos. |
-| `parameterType` | El `parameterType` define dónde se encuentra la propiedad `parameterName` debe añadirse. El `QUERYPARAM` type le permite anexar la consulta con el `parameterName`. El `HEADERPARAM` le permite añadir su `parameterName` a su solicitud de encabezado. |
+| `parameterType` | La propiedad `parameterType` define dónde se debe agregar `parameterName`. El tipo `QUERYPARAM` le permite anexar su consulta con `parameterName`. El `HEADERPARAM` le permite agregar su `parameterName` a su solicitud de encabezado. |
 | `parameterName` | Nombre del parámetro utilizado para incorporar el token de continuación. El formato es el siguiente: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
-| `delayRequestMillis` | El `delayRequestMillis` La propiedad en la paginación permite controlar la velocidad de las solicitudes realizadas al origen. Algunas fuentes pueden tener un límite en la cantidad de solicitudes que se pueden realizar por minuto. Por ejemplo, [!DNL Zendesk] tiene un límite de 100 solicitudes por minuto y define  `delayRequestMillis` hasta `850` permite configurar el origen para realizar llamadas a solo alrededor de 80 solicitudes por minuto, muy por debajo del umbral de 100 solicitudes por minuto. |
+| `delayRequestMillis` | La propiedad `delayRequestMillis` de la paginación le permite controlar la velocidad de las solicitudes realizadas al origen. Algunas fuentes pueden tener un límite en la cantidad de solicitudes que se pueden realizar por minuto. Por ejemplo, [!DNL Zendesk] tiene un límite de 100 solicitudes por minuto y definir `delayRequestMillis` a `850` le permite configurar el origen para realizar llamadas a solo alrededor de 80 solicitudes por minuto, muy por debajo del umbral de 100 solicitudes por minuto. |
 
 El siguiente es un ejemplo de una respuesta devuelta mediante el tipo de token de continuación de paginación:
 
@@ -480,7 +480,7 @@ El siguiente es un ejemplo de una respuesta devuelta mediante el tipo de token d
 
 >[!TAB Página]
 
-El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en función del número de páginas a partir de cero. Al utilizar `PAGE` Para la paginación de tipo, debe proporcionar el número de registros dados en una sola página.
+El tipo de paginación `PAGE` le permite recorrer los datos devueltos según el número de páginas a partir de cero. Al utilizar paginación de tipo `PAGE`, debe proporcionar el número de registros dados en una sola página.
 
 ```json
 "paginationParams": {
@@ -500,16 +500,16 @@ El `PAGE` El tipo de paginación le permite recorrer los datos devueltos en func
 | `limitName` | Nombre del límite a través del cual la API puede especificar el número de registros que se recuperarán en una página. |
 | `limitValue` | El número de registros que se recuperarán en una página. |
 | `initialPageIndex` | (Opcional) El índice de página inicial define el número de página desde el que se iniciará la paginación. Este campo se puede utilizar para orígenes en los que la paginación no comienza desde 0. Si no se proporciona, el índice de página inicial se establecerá de forma predeterminada en 0. Este campo espera un entero. |
-| `endPageIndex` | (Opcional) El índice de página final permite establecer una condición final y detener la paginación. Este campo se puede utilizar cuando las condiciones de finalización predeterminadas para detener la paginación no están disponibles. Este campo también se puede utilizar si el número de páginas que se van a introducir o el último número de página se proporcionan a través del encabezado de respuesta, que es común al utilizar `PAGE` escriba paginación. El valor del índice de página final puede ser el último número de página o un valor de expresión de tipo cadena del encabezado de respuesta. Por ejemplo, puede utilizar `headers.x-pagecount` para asignar un índice de página final a `x-pagecount` valor de los encabezados de respuesta. **Nota**: `x-pagecount` es un encabezado de respuesta obligatorio para algunas fuentes y contiene el valor número de páginas que se van a introducir. |
+| `endPageIndex` | (Opcional) El índice de página final permite establecer una condición final y detener la paginación. Este campo se puede utilizar cuando las condiciones de finalización predeterminadas para detener la paginación no están disponibles. Este campo también se puede utilizar si el número de páginas que se van a introducir o el último número de página se proporcionan a través del encabezado de respuesta, que es común al utilizar paginación de tipo `PAGE`. El valor del índice de página final puede ser el último número de página o un valor de expresión de tipo cadena del encabezado de respuesta. Por ejemplo, puede usar `headers.x-pagecount` para asignar un índice de página final al valor `x-pagecount` de los encabezados de respuesta. **Nota**: `x-pagecount` es un encabezado de respuesta obligatorio para algunos orígenes y contiene el valor número de páginas que se van a ingerir. |
 | `pageParamName` | Nombre del parámetro que debe anexar a los parámetros de consulta para recorrer diferentes páginas de los datos devueltos. Por ejemplo, `https://abc.com?pageIndex=1` devolvería la segunda página de la carga útil devuelta de una API. |
 | `maximumRequest` | Número máximo de solicitudes que un origen puede realizar para una ejecución incremental determinada. El límite predeterminado actual es 10000. |
 
 {style="table-layout:auto"}
 
 
->[!TAB Ninguna]
+>[!TAB Ninguno]
 
-El `NONE` el tipo de paginación se puede utilizar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Orígenes que utilizan el tipo de paginación de `NONE` simplemente devuelva todos los registros recuperables cuando se realice una solicitud de GET.
+El tipo de paginación `NONE` se puede usar para orígenes que no admiten ninguno de los tipos de paginación disponibles. Las fuentes que utilizan el tipo de paginación de `NONE` simplemente devuelven todos los registros recuperables cuando se realiza una solicitud de GET.
 
 ```json
 "paginationParams": {
@@ -521,9 +521,9 @@ El `NONE` el tipo de paginación se puede utilizar para orígenes que no admiten
 
 ### Programación avanzada de orígenes de autoservicio (SDK por lotes)
 
-Configure la programación incremental y de relleno del origen mediante la programación avanzada. El `incremental` permite configurar una programación en la que el origen solo ingestará registros nuevos o modificados, mientras que la propiedad `backfill` La propiedad permite crear una programación para introducir datos históricos.
+Configure la programación incremental y de relleno del origen mediante la programación avanzada. La propiedad `incremental` le permite configurar una programación en la que su origen solo ingestará registros nuevos o modificados, mientras que la propiedad `backfill` le permite crear una programación para ingerir datos históricos.
 
-Con la programación avanzada, puede utilizar expresiones y funciones específicas del origen para configurar programaciones incrementales y de relleno. En el ejemplo siguiente, la variable [!DNL Zendesk] El origen requiere que la programación incremental tenga el formato `type:user updated > {START_TIME} updated < {END_TIME}` y relleno como `type:user updated < {END_TIME}`.
+Con la programación avanzada, puede utilizar expresiones y funciones específicas del origen para configurar programaciones incrementales y de relleno. En el ejemplo siguiente, el origen [!DNL Zendesk] requiere que la programación incremental tenga el formato `type:user updated > {START_TIME} updated < {END_TIME}` y el relleno sea `type:user updated < {END_TIME}`.
 
 ```json
 "scheduleParams": {
@@ -536,12 +536,12 @@ Con la programación avanzada, puede utilizar expresiones y funciones específic
 
 | Propiedad | Descripción |
 | --- | --- |
-| `scheduleParams.type` | El tipo de programación que utilizará el origen. Establezca este valor en `ADVANCE` para utilizar el tipo de programación avanzada. |
-| `scheduleParams.paramFormat` | El formato definido del parámetro de programación. Este valor puede ser el mismo que el de la fuente `scheduleStartParamFormat` y `scheduleEndParamFormat` valores. |
+| `scheduleParams.type` | El tipo de programación que utilizará el origen. Establezca este valor en `ADVANCE` para utilizar el tipo de programación avanzado. |
+| `scheduleParams.paramFormat` | El formato definido del parámetro de programación. Este valor puede ser el mismo que los valores `scheduleStartParamFormat` y `scheduleEndParamFormat` del origen. |
 | `scheduleParams.incremental` | La consulta incremental del origen. Incremental hace referencia a un método de ingesta en el que solo se incorporan datos nuevos o modificados. |
 | `scheduleParams.backfill` | La consulta de relleno del origen. El relleno se refiere a un método de ingesta en el que se ingieren datos históricos. |
 
-Una vez configurada la programación avanzada, debe consultar la `scheduleParams` en la sección URL, body o header params, según lo que admita la fuente concreta. En el ejemplo siguiente, `{SCHEDULE_QUERY}` es un marcador de posición que se utiliza para especificar dónde se utilizarán las expresiones de programación incremental y de relleno. En el caso de un [!DNL Zendesk] origen, `query` se utiliza en la `queryParams` para especificar la programación avanzada.
+Una vez configurada la programación avanzada, debe hacer referencia a `scheduleParams` en la sección URL, cuerpo o parámetros de encabezado, según lo que admita el origen en particular. En el ejemplo siguiente, `{SCHEDULE_QUERY}` es un marcador de posición utilizado para especificar dónde se utilizarán las expresiones de programación incremental y de relleno. En el caso de un origen [!DNL Zendesk], `query` se usa en `queryParams` para especificar la programación avanzada.
 
 ```json
 "urlParams": {
@@ -556,7 +556,7 @@ Una vez configurada la programación avanzada, debe consultar la `scheduleParams
 
 ### Añada un esquema personalizado para definir los atributos dinámicos del origen
 
-Puede incluir un esquema personalizado en su `sourceSpec` para definir todos los atributos necesarios para el origen, incluidos los atributos dinámicos que pueda necesitar. Puede actualizar la especificación de conexión correspondiente del origen realizando una solicitud del PUT al `/connectionSpecs` punto final del [!DNL Flow Service] API, mientras proporciona su esquema personalizado en la `sourceSpec` de la especificación de conexión.
+Puede incluir un esquema personalizado en `sourceSpec` para definir todos los atributos necesarios para el origen, incluidos los atributos dinámicos que pueda necesitar. Puede actualizar la especificación de conexión correspondiente del origen realizando una solicitud del PUT al extremo `/connectionSpecs` de la API [!DNL Flow Service], al tiempo que proporciona el esquema personalizado en la sección `sourceSpec` de la especificación de conexión.
 
 A continuación se muestra un ejemplo de esquema personalizado que puede agregar a la especificación de conexión del origen:
 
@@ -659,4 +659,4 @@ A continuación se muestra un ejemplo de esquema personalizado que puede agregar
 
 ## Pasos siguientes
 
-Una vez rellenadas las especificaciones de origen, puede continuar con la configuración de las especificaciones de exploración del origen que desea integrar en Platform. Consulte el documento sobre [configuración de especificaciones de exploración](./explorespec.md) para obtener más información.
+Una vez rellenadas las especificaciones de origen, puede continuar con la configuración de las especificaciones de exploración del origen que desea integrar en Platform. Consulte el documento sobre [configuración de las especificaciones de exploración](./explorespec.md) para obtener más información.

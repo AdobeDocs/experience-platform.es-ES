@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Sintaxis SQL en el servicio de consultas
 
-Puede utilizar ANSI SQL estándar para `SELECT` instrucciones y otros comandos limitados en Adobe Experience Platform Query Service. Este documento describe la sintaxis SQL admitida por [!DNL Query Service].
+Puede utilizar ANSI SQL estándar para instrucciones `SELECT` y otros comandos limitados en Adobe Experience Platform Query Service. Este documento describe la sintaxis SQL admitida por [!DNL Query Service].
 
 ## SELECCIONAR consultas {#select-queries}
 
-La siguiente sintaxis define un `SELECT` consulta admitida por [!DNL Query Service]:
+La siguiente sintaxis define una consulta `SELECT` admitida por [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -95,7 +95,7 @@ Las siguientes subsecciones proporcionan detalles sobre cláusulas adicionales q
 
 ### Cláusula SNAPSHOT
 
-Esta cláusula se puede utilizar para leer de forma incremental los datos de una tabla en función de los ID de instantánea. Un ID de instantánea es un marcador de punto de comprobación representado por un número de tipo Long que se aplica a una tabla de lago de datos cada vez que se escriben datos en ella. El `SNAPSHOT` se adjunta a la relación de tabla a la que se utiliza junto.
+Esta cláusula se puede utilizar para leer de forma incremental los datos de una tabla en función de los ID de instantánea. Un ID de instantánea es un marcador de punto de comprobación representado por un número de tipo Long que se aplica a una tabla de lago de datos cada vez que se escriben datos en ella. La cláusula `SNAPSHOT` se adjunta a la relación de tabla a la que se utiliza junto a.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -128,24 +128,24 @@ En la tabla siguiente se explica el significado de cada opción de sintaxis dent
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | `SINCE start_snapshot_id` | Lee datos a partir del ID de instantánea especificado (exclusivo). |
 | `AS OF end_snapshot_id` | Lee los datos tal como estaban en el ID de instantánea especificado (incluido). |
-| `BETWEEN start_snapshot_id AND end_snapshot_id` | Lee datos entre los ID de instantánea de inicio y fin especificados. Es exclusivo de la `start_snapshot_id` e incluye el `end_snapshot_id`. |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Lee datos entre los ID de instantánea de inicio y fin especificados. Es exclusivo de `start_snapshot_id` e incluye `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | Lee datos desde el principio (antes de la primera instantánea) hasta el ID de instantánea de inicio especificado (incluido). Tenga en cuenta que esto solo devuelve filas en `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Lee los datos inmediatamente después del especificado `end-snapshot_id` hasta el final del conjunto de datos (sin incluir el ID de instantánea). Esto significa que si `end_snapshot_id` es la última instantánea del conjunto de datos, la consulta devolverá cero filas porque no hay instantáneas más allá de la última instantánea. |
-| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lee datos que comienzan desde el ID de instantánea especificado de `table_to_be_queried` y lo une a los datos de `table_to_be_joined` tal como estaba en `your_chosen_snapshot_id`. La unión se basa en las ID coincidentes de las columnas ID de las dos tablas que se unen. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lee datos inmediatamente después del `end-snapshot_id` especificado hasta el final del conjunto de datos (sin incluir el ID de instantánea). Esto significa que si `end_snapshot_id` es la última instantánea del conjunto de datos, la consulta devolverá cero filas porque no hay instantáneas más allá de la última instantánea. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lee datos que comienzan desde el identificador de instantánea especificado de `table_to_be_queried` y los une con los datos de `table_to_be_joined` tal y como estaban a las `your_chosen_snapshot_id`. La unión se basa en las ID coincidentes de las columnas ID de las dos tablas que se unen. |
 
-A `SNAPSHOT` La cláusula funciona con una tabla o alias de tabla, pero no sobre una subconsulta o vista. A `SNAPSHOT` funciona en cualquier lugar a `SELECT` se puede aplicar una consulta en una tabla.
+Una cláusula `SNAPSHOT` funciona con una tabla o alias de tabla, pero no sobre una subconsulta o vista. Una cláusula `SNAPSHOT` funciona en cualquier lugar donde se pueda aplicar una consulta `SELECT` en una tabla.
 
-Además, puede utilizar `HEAD` y `TAIL` como valores de desplazamiento especiales para cláusulas de instantánea. Uso de `HEAD` hace referencia a un desplazamiento antes de la primera instantánea, mientras que `TAIL` hace referencia a un desplazamiento después de la última instantánea.
+Además, puede usar `HEAD` y `TAIL` como valores de desplazamiento especiales para cláusulas de instantánea. Usar `HEAD` hace referencia a un desplazamiento antes de la primera instantánea, mientras que `TAIL` hace referencia a un desplazamiento después de la última instantánea.
 
 >[!NOTE]
 >
->Si está realizando una consulta entre dos ID de instantánea, pueden producirse los dos escenarios siguientes si la instantánea de inicio ha caducado y el indicador de comportamiento de reserva opcional (`resolve_fallback_snapshot_on_failure`) se ha definido:
+>Si está realizando una consulta entre dos ID de instantánea, pueden producirse los dos escenarios siguientes si la instantánea de inicio ha caducado y se ha establecido el indicador de comportamiento de reserva opcional (`resolve_fallback_snapshot_on_failure`):
 >
->- Si se establece el indicador de comportamiento de reserva opcional, el servicio de consultas selecciona la instantánea disponible más antigua, la define como la instantánea de inicio y devuelve los datos entre la instantánea disponible más antigua y la instantánea de finalización especificada. Estos datos son **inclusivo** de la instantánea más antigua disponible.
+>- Si se establece el indicador de comportamiento de reserva opcional, el servicio de consultas selecciona la instantánea disponible más antigua, la define como la instantánea de inicio y devuelve los datos entre la instantánea disponible más antigua y la instantánea de finalización especificada. Estos datos son **inclusive** de la instantánea más temprana disponible.
 
 ### Cláusula WHERE
 
-De forma predeterminada, las coincidencias producidas por un `WHERE` Cláusula sobre `SELECT` Las consultas distinguen entre mayúsculas y minúsculas. Si desea que las coincidencias distingan entre mayúsculas y minúsculas, puede utilizar la palabra clave `ILIKE` en lugar de `LIKE`.
+De manera predeterminada, las coincidencias producidas por una cláusula `WHERE` en una consulta `SELECT` distinguen entre mayúsculas y minúsculas. Si desea que las coincidencias distingan entre mayúsculas y minúsculas, puede usar la palabra clave `ILIKE` en lugar de `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -171,7 +171,7 @@ Esta consulta devuelve clientes con nombres que comienzan por &quot;A&quot; o &q
 
 ### UNIRSE
 
-A `SELECT` La consulta que utiliza uniones tiene la siguiente sintaxis:
+Una consulta `SELECT` que utiliza combinaciones tiene la siguiente sintaxis:
 
 ```sql
 SELECT statement
@@ -182,7 +182,7 @@ ON join condition
 
 ### UNION, INTERSECT y EXCEPT
 
-El `UNION`, `INTERSECT`, y `EXCEPT` Las cláusulas se utilizan para combinar o excluir como filas de dos o más tablas:
+Las cláusulas `UNION`, `INTERSECT` y `EXCEPT` se utilizan para combinar o excluir filas similares de dos o más tablas:
 
 ```sql
 SELECT statement 1
@@ -192,7 +192,7 @@ SELECT statement 2
 
 ### CREAR TABLA COMO SELECCIÓN {#create-table-as-select}
 
-La siguiente sintaxis define un `CREATE TABLE AS SELECT` Consulta (CTAS):
+La siguiente sintaxis define una consulta `CREATE TABLE AS SELECT` (CTAS):
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
@@ -202,8 +202,8 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | ----- | ----- |
 | `schema` | Título del esquema XDM. Utilice esta cláusula solo si desea utilizar un esquema XDM existente para el nuevo conjunto de datos creado por la consulta CTAS. |
 | `rowvalidation` | (Opcional) Especifica si el usuario desea la validación a nivel de fila de cada nuevo lote introducido para el conjunto de datos recién creado. El valor predeterminado es `true`. |
-| `label` | Cuando cree un conjunto de datos con una consulta CTAS, utilice esta etiqueta con el valor de `profile` para etiquetar el conjunto de datos como habilitado para el perfil. Esto significa que el conjunto de datos se marca automáticamente para el perfil a medida que se crea. Consulte el documento de extensiones de atributos derivadas para obtener más información sobre el uso de `label`. |
-| `select_query` | A `SELECT` declaración. La sintaxis del `SELECT` La consulta se puede encontrar en la [sección SELECCIONAR consultas](#select-queries). |
+| `label` | Cuando cree un conjunto de datos con una consulta CTAS, utilice esta etiqueta con el valor de `profile` para etiquetar el conjunto de datos como habilitado para el perfil. Esto significa que el conjunto de datos se marca automáticamente para el perfil a medida que se crea. Vea el documento de extensiones de atributos derivadas para obtener más información sobre el uso de `label`. |
+| `select_query` | Una instrucción `SELECT`. La sintaxis de la consulta `SELECT` se encuentra en la sección [SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -217,11 +217,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->El `SELECT` debe tener un alias para las funciones de agregado, como `COUNT`, `SUM`, `MIN`, etc. Además, la variable `SELECT` se puede proporcionar con o sin paréntesis (). Puede proporcionar un `SNAPSHOT` para leer los deltas incrementales en la tabla de destino.
+>La instrucción `SELECT` debe tener un alias para las funciones de agregado como `COUNT`, `SUM`, `MIN`, etc. Además, la instrucción `SELECT` se puede proporcionar con o sin paréntesis (). Puede proporcionar una cláusula `SNAPSHOT` para leer los deltas incrementales en la tabla de destino.
 
 ## INSERTAR EN
 
-El `INSERT INTO` El comando se define de la siguiente manera:
+El comando `INSERT INTO` se define de la siguiente manera:
 
 ```sql
 INSERT INTO table_name select_query
@@ -230,7 +230,7 @@ INSERT INTO table_name select_query
 | Parámetros | Descripción |
 | ----- | ----- |
 | `table_name` | Nombre de la tabla en la que desea insertar la consulta. |
-| `select_query` | A `SELECT` declaración. La sintaxis del `SELECT` La consulta se puede encontrar en la [sección SELECCIONAR consultas](#select-queries). |
+| `select_query` | Una instrucción `SELECT`. La sintaxis de la consulta `SELECT` se encuentra en la sección [SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -246,11 +246,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
->Hacer **no** adjuntar el `SELECT` entre paréntesis (). Además, el esquema del resultado del `SELECT` debe ajustarse a la de la tabla definida en la variable `INSERT INTO` declaración. Puede proporcionar un `SNAPSHOT` para leer los deltas incrementales en la tabla de destino.
+>**no** debe incluir la instrucción `SELECT` entre paréntesis (). Además, el esquema del resultado de la instrucción `SELECT` debe ajustarse al de la tabla definida en la instrucción `INSERT INTO`. Puede proporcionar una cláusula `SNAPSHOT` para leer los deltas incrementales en la tabla de destino.
 
-La mayoría de los campos de un esquema XDM real no se encuentran en el nivel raíz y SQL no permite el uso de notación de puntos. Para lograr un resultado realista utilizando campos anidados, debe asignar cada campo en su `INSERT INTO` ruta.
+La mayoría de los campos de un esquema XDM real no se encuentran en el nivel raíz y SQL no permite el uso de notación de puntos. Para lograr un resultado realista utilizando campos anidados, debe asignar cada campo en la ruta de acceso `INSERT INTO`.
 
-Hasta `INSERT INTO` rutas anidadas, utilice la sintaxis siguiente:
+Para `INSERT INTO` rutas de acceso anidadas, utilice la sintaxis siguiente:
 
 ```sql
 INSERT INTO [dataset]
@@ -268,7 +268,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 
 ## SOLTAR TABLA
 
-El `DROP TABLE` El comando borra una tabla existente y elimina el directorio asociado a la tabla del sistema de archivos si no se trata de una tabla externa. Si la tabla no existe, se produce una excepción.
+El comando `DROP TABLE` quita una tabla existente y elimina el directorio asociado a la tabla del sistema de archivos si no es una tabla externa. Si la tabla no existe, se produce una excepción.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -276,11 +276,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la tabla no lo hace **no** existen. |
+| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la tabla **no existe**. |
 
 ## CREAR BASE DE DATOS
 
-El `CREATE DATABASE` crea una base de datos de Azure Data Lake Storage (ADLS).
+El comando `CREATE DATABASE` crea una base de datos de Azure Data Lake Storage (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -288,7 +288,7 @@ CREATE DATABASE [IF NOT EXISTS] db_name
 
 ## SOLTAR BASE DE DATOS
 
-El `DROP DATABASE` elimina la base de datos de una instancia.
+El comando `DROP DATABASE` elimina la base de datos de una instancia.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -296,11 +296,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la base de datos **no** existen. |
+| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la base de datos **no existe**. |
 
 ## SOLTAR ESQUEMA
 
-El `DROP SCHEMA` El comando borra un esquema existente.
+El comando `DROP SCHEMA` quita un esquema existente.
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -308,15 +308,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `IF EXISTS` | Si se especifica este parámetro y el esquema **no** existen, no se produce ninguna excepción. |
-| `RESTRICT` | El valor predeterminado del modo. Si se especifica, el esquema solo se borra si lo hace **no** contiene cualquier tabla. |
+| `IF EXISTS` | Si se especifica este parámetro y el esquema **no** existe, no se produce ninguna excepción. |
+| `RESTRICT` | El valor predeterminado del modo. Si se especifica, el esquema solo se borra si **no** contiene tablas. |
 | `CASCADE` | Si se especifica, el esquema se suelta junto con todas las tablas presentes en el esquema. |
 
 ## CREAR VISTA {#create-view}
 
-Una vista SQL es una tabla virtual basada en el conjunto de resultados de una instrucción SQL. Cree una vista con `CREATE VIEW` y ponle un nombre. A continuación, puede utilizar ese nombre para hacer referencia a los resultados de la consulta. Esto facilita la reutilización de consultas complejas.
+Una vista SQL es una tabla virtual basada en el conjunto de resultados de una instrucción SQL. Cree una vista con la instrucción `CREATE VIEW` y asígnele un nombre. A continuación, puede utilizar ese nombre para hacer referencia a los resultados de la consulta. Esto facilita la reutilización de consultas complejas.
 
-La siguiente sintaxis define un `CREATE VIEW` consulta de un conjunto de datos. Este conjunto de datos puede ser un ADLS o un conjunto de datos de almacén acelerado.
+La siguiente sintaxis define una consulta `CREATE VIEW` para un conjunto de datos. Este conjunto de datos puede ser un ADLS o un conjunto de datos de almacén acelerado.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -325,7 +325,7 @@ CREATE VIEW view_name AS select_query
 | Parámetros | Descripción |
 | ------ | ------ |
 | `view_name` | Nombre de la vista que se va a crear. |
-| `select_query` | A `SELECT` declaración. La sintaxis del `SELECT` La consulta se puede encontrar en la [sección SELECCIONAR consultas](#select-queries). |
+| `select_query` | Una instrucción `SELECT`. La sintaxis de la consulta `SELECT` se encuentra en la sección [SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -335,7 +335,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-La siguiente sintaxis define un `CREATE VIEW` consulta que crea una vista en el contexto de una base de datos y un esquema.
+La sintaxis siguiente define una consulta `CREATE VIEW` que crea una vista en el contexto de una base de datos y un esquema.
 
 **Ejemplo**
 
@@ -349,7 +349,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | Nombre de la base de datos. |
 | `schema_name` | Nombre del esquema. |
 | `view_name` | Nombre de la vista que se va a crear. |
-| `select_query` | A `SELECT` declaración. La sintaxis del `SELECT` La consulta se puede encontrar en la [sección SELECCIONAR consultas](#select-queries). |
+| `select_query` | Una instrucción `SELECT`. La sintaxis de la consulta `SELECT` se encuentra en la sección [SELECT queries](#select-queries). |
 
 **Ejemplo**
 
@@ -377,7 +377,7 @@ SHOW VIEWS;
 
 ## COLOCAR VISTA
 
-La siguiente sintaxis define un `DROP VIEW` consulta:
+La siguiente sintaxis define una consulta `DROP VIEW`:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -385,7 +385,7 @@ DROP VIEW [IF EXISTS] view_name
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la vista sí lo hace **no** existen. |
+| `IF EXISTS` | Si se especifica, no se produce ninguna excepción si la vista **no existe**. |
 | `view_name` | Nombre de la vista que se va a eliminar. |
 
 **Ejemplo**
@@ -471,7 +471,7 @@ $$BEGIN
  END$$;
 ```
 
-Esta estructura se puede utilizar con `raise_error();` para devolver un mensaje de error personalizado. El bloque de código que se muestra a continuación finaliza el bloque anónimo con &quot;mensaje de error personalizado&quot;.
+Esta estructura se puede usar con `raise_error();` para devolver un mensaje de error personalizado. El bloque de código que se muestra a continuación finaliza el bloque anónimo con &quot;mensaje de error personalizado&quot;.
 
 **Ejemplo**
 
@@ -537,17 +537,17 @@ EXCEPTION WHEN OTHER THEN
 
 ### Automático a JSON {#auto-to-json}
 
-El servicio de consulta admite una configuración opcional de nivel de sesión para devolver campos complejos de nivel superior desde consultas SELECT interactivas como cadenas JSON. El `auto_to_json` Esta configuración permite devolver datos de campos complejos como JSON y luego analizarlos en objetos JSON mediante bibliotecas estándar.
+El servicio de consulta admite una configuración opcional de nivel de sesión para devolver campos complejos de nivel superior desde consultas SELECT interactivas como cadenas JSON. La configuración `auto_to_json` permite que los datos de campos complejos se devuelvan como JSON y luego se analicen en objetos JSON mediante bibliotecas estándar.
 
-ESTABLECER el indicador de funcionalidad `auto_to_json` como true antes de ejecutar la consulta SELECT que contiene campos complejos.
+Establezca el indicador de características `auto_to_json` en true antes de ejecutar la consulta SELECT que contiene campos complejos.
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### Antes de configurar el `auto_to_json` indicador
+#### Antes de establecer la marca `auto_to_json`
 
-En la tabla siguiente se muestra un ejemplo de resultado de consulta antes de `auto_to_json` se aplica la configuración. En ambos casos se utilizó la misma consulta SELECT (como se ve a continuación) dirigida a una tabla con campos complejos.
+La siguiente tabla proporciona un resultado de consulta de ejemplo antes de aplicar la configuración `auto_to_json`. En ambos casos se utilizó la misma consulta SELECT (como se ve a continuación) dirigida a una tabla con campos complejos.
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
@@ -563,9 +563,9 @@ Los resultados son los siguientes:
 (2 rows)  
 ```
 
-#### Después de configurar la variable `auto_to_json` indicador
+#### Después de establecer la marca `auto_to_json`
 
-En la tabla siguiente se muestra la diferencia en los resultados que `auto_to_json` La configuración de tiene en el conjunto de datos resultante. Se utilizó la misma consulta SELECT en ambos casos.
+En la tabla siguiente se muestra la diferencia en los resultados que tiene la configuración `auto_to_json` en el conjunto de datos resultante. Se utilizó la misma consulta SELECT en ambos casos.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -577,15 +577,15 @@ En la tabla siguiente se muestra la diferencia en los resultados que `auto_to_js
 
 ### Resolver instantánea de reserva ante un error {#resolve-fallback-snapshot-on-failure}
 
-El `resolve_fallback_snapshot_on_failure` se utiliza para resolver el problema de un ID de instantánea caducado. Los metadatos de la instantánea caducan al cabo de dos días y una instantánea caducada puede invalidar la lógica de un script. Esto puede suponer un problema al utilizar bloques anónimos.
+La opción `resolve_fallback_snapshot_on_failure` se usa para resolver el problema de un identificador de instantánea caducado. Los metadatos de la instantánea caducan al cabo de dos días y una instantánea caducada puede invalidar la lógica de un script. Esto puede suponer un problema al utilizar bloques anónimos.
 
-Configure las variables `resolve_fallback_snapshot_on_failure` Opción verdadera para anular una instantánea con un ID de instantánea anterior.
+Establezca la opción `resolve_fallback_snapshot_on_failure` en true para anular una instantánea con un ID de instantánea anterior.
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-La siguiente línea de código anula la variable `@from_snapshot_id` con el más antiguo disponible `snapshot_id` de los metadatos.
+La siguiente línea de código anula `@from_snapshot_id` con los primeros `snapshot_id` disponibles de los metadatos.
 
 ```sql
 $$ BEGIN
@@ -629,15 +629,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Consulte la [organización lógica de los recursos de datos](../best-practices/organize-data-assets.md) para obtener una explicación más detallada sobre las prácticas recomendadas del servicio de consultas.
+Consulte la guía [organización lógica de recursos de datos](../best-practices/organize-data-assets.md) para obtener una explicación más detallada sobre las prácticas recomendadas del servicio de consultas.
 
 ## La tabla existe
 
-El `table_exists` El comando SQL se utiliza para confirmar si existe actualmente una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **hace** existen, y `false` si la tabla tiene **no** existen.
+El comando SQL `table_exists` se usa para confirmar si existe actualmente una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **existe**, y `false` si la tabla existe **no**.
 
-Al validar si una tabla existe antes de ejecutar las instrucciones, la variable `table_exists` simplifica el proceso de escritura de un bloque anónimo para cubrir ambos `CREATE` y `INSERT INTO` casos de uso.
+Al validar si existe una tabla antes de ejecutar las instrucciones, la característica `table_exists` simplifica el proceso de escribir un bloque anónimo para cubrir los casos de uso de `CREATE` y `INSERT INTO`.
 
-La siguiente sintaxis define la variable `table_exists` comando:
+La siguiente sintaxis define el comando `table_exists`:
 
 ```SQL
 $$
@@ -665,15 +665,15 @@ END $$;
 
 ## En línea {#inline}
 
-El `inline` separa los elementos de una matriz de estructuras y genera los valores en una tabla. Solo se puede colocar en la `SELECT` lista o un `LATERAL VIEW`.
+La función `inline` separa los elementos de una matriz de estructuras y genera los valores en una tabla. Solo se puede colocar en la lista `SELECT` o en un `LATERAL VIEW`.
 
-El `inline` función **no puede** se colocará en una lista de selección donde haya otras funciones del generador.
+La función `inline` **no se puede** colocar en una lista de selección donde hay otras funciones de generador.
 
-De forma predeterminada, las columnas producidas se denominan &quot;col1&quot;, &quot;col2&quot;, etc. Si la expresión es `NULL` a continuación, no se generan filas.
+De forma predeterminada, las columnas producidas se denominan &quot;col1&quot;, &quot;col2&quot;, etc. Si la expresión es `NULL`, no se produce ninguna fila.
 
 >[!TIP]
 >
->Se puede cambiar el nombre de las columnas utilizando la variable `RENAME` comando.
+>Se puede cambiar el nombre de las columnas con el comando `RENAME`.
 
 **Ejemplo**
 
@@ -688,9 +688,9 @@ El ejemplo devuelve lo siguiente:
 2  b Spark SQL
 ```
 
-Este segundo ejemplo demuestra aún más el concepto y la aplicación del `inline` función. El modelo de datos del ejemplo se ilustra en la siguiente imagen.
+En este segundo ejemplo se muestra más el concepto y la aplicación de la función `inline`. El modelo de datos del ejemplo se ilustra en la siguiente imagen.
 
-![Diagrama de esquema para productListItems.](../images/sql/productListItems.png)
+![Un diagrama de esquema para productListItems.](../images/sql/productListItems.png)
 
 **Ejemplo**
 
@@ -698,7 +698,7 @@ Este segundo ejemplo demuestra aún más el concepto y la aplicación del `inlin
 select inline(productListItems) from source_dataset limit 10;
 ```
 
-Los valores tomados del `source_dataset` se utilizan para rellenar la tabla de destino.
+Los valores tomados de `source_dataset` se utilizan para rellenar la tabla de destino.
 
 | SKU | _experience | cantidad | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
@@ -707,13 +707,13 @@ Los valores tomados del `source_dataset` se utilizan para rellenar la tabla de d
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
-## [!DNL Spark] Comandos SQL
+## [!DNL Spark] comandos SQL
 
 La subsección siguiente cubre los comandos SQL de Spark compatibles con el servicio de consultas.
 
 ### ESTABLECER
 
-El `SET` establece una propiedad y devuelve el valor de una propiedad existente o enumera todas las propiedades existentes. Si se proporciona un valor para una clave de propiedad existente, se anula el valor antiguo.
+El comando `SET` establece una propiedad y devuelve el valor de una propiedad existente o enumera todas las propiedades existentes. Si se proporciona un valor para una clave de propiedad existente, se anula el valor antiguo.
 
 ```sql
 SET property_key = property_value
@@ -724,19 +724,19 @@ SET property_key = property_value
 | `property_key` | El nombre de la propiedad que desea enumerar o modificar. |
 | `property_value` | El valor como el que desea que se establezca la propiedad. |
 
-Para devolver el valor de cualquier configuración, utilice `SET [property key]` sin un `property_value`.
+Para devolver el valor de cualquier configuración, use `SET [property key]` sin `property_value`.
 
 ## [!DNL PostgreSQL] comandos
 
-Las subsecciones siguientes tratan sobre [!DNL PostgreSQL] comandos admitidos por el servicio de consultas.
+Las subsecciones siguientes cubren los comandos [!DNL PostgreSQL] admitidos por el servicio de consultas.
 
 ### ANALIZAR TABLA {#analyze-table}
 
-El `ANALYZE TABLE` realiza un análisis de distribución y cálculos estadísticos para la tabla o tablas con nombre. El uso de `ANALYZE TABLE` varía en función de si los conjuntos de datos se almacenan en la variable [almacén acelerado](#compute-statistics-accelerated-store) o el [lago de datos](#compute-statistics-data-lake). Consulte sus secciones respectivas para obtener más información sobre su uso.
+El comando `ANALYZE TABLE` realiza un análisis de distribución y cálculos estadísticos para la tabla o tablas con nombre. El uso de `ANALYZE TABLE` varía en función de si los conjuntos de datos están almacenados en el [almacén acelerado](#compute-statistics-accelerated-store) o en el [lago de datos](#compute-statistics-data-lake). Consulte sus secciones respectivas para obtener más información sobre su uso.
 
 #### ESTADÍSTICAS DE CÁLCULO en el almacén acelerado {#compute-statistics-accelerated-store}
 
-El `ANALYZE TABLE` El comando calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada del almacén acelerado.
+El comando `ANALYZE TABLE` calcula las estadísticas de una tabla en el almacén acelerado. Las estadísticas se calculan en consultas CTAS o ITAS ejecutadas para una tabla determinada del almacén acelerado.
 
 **Ejemplo**
 
@@ -744,7 +744,7 @@ El `ANALYZE TABLE` El comando calcula las estadísticas de una tabla en el almac
 ANALYZE TABLE <original_table_name>
 ```
 
-A continuación se muestra una lista de cálculos estadísticos disponibles después de utilizar el `ANALYZE TABLE` comando:-
+A continuación se muestra una lista de cálculos estadísticos disponibles después de usar el comando `ANALYZE TABLE`:-
 
 | Valores calculados | Descripción |
 |---|---|
@@ -760,9 +760,9 @@ A continuación se muestra una lista de cálculos estadísticos disponibles desp
 
 #### ESTADÍSTICAS DE CÁLCULO en el lago de datos {#compute-statistics-data-lake}
 
-Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) con `COMPUTE STATISTICS` Comando SQL. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
+Ahora puede calcular estadísticas de nivel de columna en conjuntos de datos de [!DNL Azure Data Lake Storage] (ADLS) con el comando SQL `COMPUTE STATISTICS`. Calcular las estadísticas de columna en todo el conjunto de datos, un subconjunto de un conjunto de datos, todas las columnas o un subconjunto de columnas.
 
-`COMPUTE STATISTICS` amplía el `ANALYZE TABLE` comando. Sin embargo, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, y `FOR COLUMNS` Los comandos de no son compatibles con las tablas de almacenamiento acelerado. Estas extensiones para `ANALYZE TABLE` Actualmente, los comandos solo son compatibles con tablas ADLS.
+`COMPUTE STATISTICS` extiende el comando `ANALYZE TABLE`. Sin embargo, los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS.
 
 **Ejemplo**
 
@@ -770,11 +770,11 @@ Ahora puede calcular las estadísticas de nivel de columna de [!DNL Azure Data L
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-El `FILTER CONTEXT` El comando calcula las estadísticas de un subconjunto del conjunto de datos en función de la condición de filtro proporcionada. El `FOR COLUMNS` el comando segmenta columnas específicas para su análisis.
+El comando `FILTER CONTEXT` calcula las estadísticas de un subconjunto del conjunto de datos en función de la condición de filtro proporcionada. El comando `FOR COLUMNS` identifica columnas específicas para su análisis.
 
 >[!NOTE]
 >
->El `Statistics ID` y las estadísticas generadas solo son válidas para cada sesión y no se puede acceder a ellas en diferentes sesiones de PSQL.<br><br>Limitaciones:<ul><li>La generación de estadísticas no es compatible con los tipos de datos de matriz o asignación</li><li>Las estadísticas calculadas son **no** persistió entre sesiones.</li></ul><br><br>Opciones:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De forma predeterminada, el indicador se establece en true. Como resultado, cuando se solicitan estadísticas sobre un tipo de datos no admitido, no se produce un error, pero omite silenciosamente los campos con tipos de datos no admitidos.<br>Para activar notificaciones de errores cuando se soliciten estadísticas sobre tipos de datos no admitidos, utilice: `SET skip_stats_for_complex_datatypes = false`.
+>`Statistics ID` y las estadísticas generadas solo son válidas para cada sesión y no se puede tener acceso a ellas en las distintas sesiones de PSQL.<br><br>Limitaciones:<ul><li>La generación de estadísticas no es compatible con los tipos de datos de matriz o asignación</li><li>Las estadísticas calculadas **no** persisten entre sesiones.</li></ul><br><br>Opciones:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>De forma predeterminada, el indicador se establece en true. Como resultado, cuando se solicitan estadísticas sobre un tipo de datos no admitido, no se produce un error, pero omite silenciosamente los campos con tipos de datos no admitidos.<br>Para habilitar las notificaciones de errores cuando se soliciten estadísticas con un tipo de datos no admitido, use: `SET skip_stats_for_complex_datatypes = false`.
 
 La salida de la consola aparece como se ve a continuación.
 
@@ -785,14 +785,14 @@ La salida de la consola aparece como se ve a continuación.
 (1 row)
 ```
 
-A continuación, puede consultar las estadísticas calculadas directamente haciendo referencia al `Statistics ID`. Utilice la variable `Statistics ID` o el nombre del alias, como se muestra en la instrucción de ejemplo siguiente, para ver el resultado completo. Para obtener más información acerca de esta función, consulte la [documentación del nombre del alias](../key-concepts/dataset-statistics.md#alias-name).
+Puede consultar las estadísticas calculadas directamente haciendo referencia a `Statistics ID`. Use `Statistics ID` o el nombre de alias como se muestra en la instrucción de ejemplo siguiente para ver el resultado completo. Para obtener más información acerca de esta característica, consulte la [documentación del nombre de alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilice el `SHOW STATISTICS` para mostrar los metadatos de todas las estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
+Utilice el comando `SHOW STATISTICS` para mostrar los metadatos de todas las estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
 
 ```sql
 SHOW STATISTICS;
@@ -814,9 +814,9 @@ Consulte la [documentación de estadísticas de conjuntos de datos](../key-conce
 
 El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas.
 
-Las muestras de conjuntos de datos se utilizan mejor cuando no necesita una respuesta exacta para una operación de agregado sobre un conjunto de datos. Para realizar consultas exploratorias más eficientes en conjuntos de datos grandes emitiendo una consulta aproximada para devolver una respuesta aproximada, utilice el `TABLESAMPLE` función.
+Las muestras de conjuntos de datos se utilizan mejor cuando no necesita una respuesta exacta para una operación de agregado sobre un conjunto de datos. Para realizar consultas exploratorias más eficientes en conjuntos de datos grandes emitiendo una consulta aproximada para devolver una respuesta aproximada, use la característica `TABLESAMPLE`.
 
-Los conjuntos de datos de muestra se crean con muestras aleatorias uniformes de las existentes [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS), utilizando solo un porcentaje de registros del original. La función de ejemplo del conjunto de datos amplía la variable `ANALYZE TABLE` con el comando `TABLESAMPLE` y `SAMPLERATE` Comandos SQL.
+Los conjuntos de datos de ejemplo se crean con muestras aleatorias uniformes de conjuntos de datos de [!DNL Azure Data Lake Storage] (ADLS) existentes, que utilizan solo un porcentaje de registros del original. La característica de ejemplo del conjunto de datos amplía el comando `ANALYZE TABLE` con los comandos SQL `TABLESAMPLE` y `SAMPLERATE`.
 
 En el ejemplo siguiente, la línea uno muestra cómo calcular una muestra del 5 % de la tabla. La línea dos muestra cómo calcular una muestra del 5 % a partir de una vista filtrada de los datos de la tabla.
 
@@ -827,11 +827,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Consulte la [documentación de muestras de conjuntos de datos](../key-concepts/dataset-samples.md) para obtener más información.
+Consulte la [documentación de ejemplos de conjuntos de datos](../key-concepts/dataset-samples.md) para obtener más información.
 
 ### COMENZAR
 
-El `BEGIN` o, alternativamente, el comando `BEGIN WORK` o `BEGIN TRANSACTION` , inicia un bloque de transacciones. Cualquier instrucción que se introduzca después del comando begin se ejecutará en una sola transacción hasta que se proporcione un comando COMMIT o ROLLBACK explícito. Este comando es el mismo que `START TRANSACTION`.
+El comando `BEGIN`, o alternativamente el comando `BEGIN WORK` o `BEGIN TRANSACTION`, inicia un bloque de transacciones. Cualquier instrucción que se introduzca después del comando begin se ejecutará en una sola transacción hasta que se proporcione un comando COMMIT o ROLLBACK explícito. Este comando es el mismo que `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -841,29 +841,29 @@ BEGIN TRANSACTION
 
 ### CERRAR
 
-El `CLOSE` libera los recursos asociados con un cursor abierto. Una vez cerrado el cursor, no se permiten operaciones posteriores. Se debe cerrar un cursor cuando ya no sea necesario.
+El comando `CLOSE` libera los recursos asociados con un cursor abierto. Una vez cerrado el cursor, no se permiten operaciones posteriores. Se debe cerrar un cursor cuando ya no sea necesario.
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-If `CLOSE name` se utiliza, `name` representa el nombre de un cursor abierto que debe cerrarse. If `CLOSE ALL` se utiliza, todos los cursores abiertos se cierran.
+Si se usa `CLOSE name`, `name` representa el nombre de un cursor abierto que debe cerrarse. Si se usa `CLOSE ALL`, se cierran todos los cursores abiertos.
 
 ### DESASIGNAR
 
-Para anular la asignación de una instrucción SQL preparada anteriormente, utilice el `DEALLOCATE` comando. Si no desasigna explícitamente una instrucción preparada, se desasigna cuando finaliza la sesión. Puede encontrar más información sobre las instrucciones preparadas en la [PREPARE, comando](#prepare) sección.
+Para anular la asignación de una instrucción SQL preparada previamente, utilice el comando `DEALLOCATE`. Si no desasigna explícitamente una instrucción preparada, se desasigna cuando finaliza la sesión. Encontrará más información sobre las instrucciones preparadas en la sección [PREPARE command](#prepare).
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-If `DEALLOCATE name` se utiliza, `name` representa el nombre de la instrucción preparada que se debe desasignar. If `DEALLOCATE ALL` se utiliza, se desasignan todas las instrucciones preparadas.
+Si se usa `DEALLOCATE name`, `name` representa el nombre de la instrucción preparada que se debe desasignar. Si se usa `DEALLOCATE ALL`, se desasignan todas las instrucciones preparadas.
 
 ### DECLARAR
 
-El `DECLARE` permite al usuario crear un cursor, que puede utilizarse para recuperar un pequeño número de filas de una consulta mayor. Una vez creado el cursor, se recuperan filas de él utilizando `FETCH`.
+El comando `DECLARE` permite a un usuario crear un cursor, que se puede utilizar para recuperar un pequeño número de filas de una consulta mayor. Una vez creado el cursor, se recuperan las filas mediante `FETCH`.
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -872,13 +872,13 @@ DECLARE name CURSOR FOR query
 | Parámetros | Descripción |
 | ------ | ------ |
 | `name` | Nombre del cursor que se va a crear. |
-| `query` | A `SELECT` o `VALUES` comando que proporciona las filas que el cursor devolverá. |
+| `query` | Un comando `SELECT` o `VALUES` que proporciona las filas que devolverá el cursor. |
 
 ### EJECUTAR
 
-El `EXECUTE` se utiliza para ejecutar una instrucción preparada previamente. Dado que las declaraciones preparadas sólo existen durante un período de sesiones, la declaración preparada debe haber sido creada por un `PREPARE` se ejecutó anteriormente en la sesión actual. Puede encontrar más información sobre el uso de instrucciones preparadas en la [`PREPARE` mando](#prepare) sección.
+El comando `EXECUTE` se usa para ejecutar una instrucción preparada previamente. Dado que las instrucciones preparadas sólo existen durante una sesión, la instrucción preparada debe haberse creado mediante una instrucción `PREPARE` ejecutada anteriormente en la sesión actual. Puede encontrar más información sobre el uso de instrucciones preparadas en la sección [`PREPARE` comando](#prepare).
 
-Si la variable `PREPARE` que creó la instrucción especificó algunos parámetros, se debe pasar un conjunto de parámetros compatible a la instrucción `EXECUTE` declaración. Si no se pasan estos parámetros, se generará un error.
+Si la instrucción `PREPARE` que creó la instrucción especificó algunos parámetros, se debe pasar un conjunto de parámetros compatible a la instrucción `EXECUTE`. Si no se pasan estos parámetros, se generará un error.
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -891,13 +891,13 @@ EXECUTE name [ ( parameter ) ]
 
 ### EXPLICAR
 
-El `EXPLAIN` muestra el plan de ejecución de la instrucción suministrada. El plan de ejecución muestra cómo se analizarán las tablas a las que hace referencia la sentencia. Si se hace referencia a varias tablas, se muestra qué algoritmos de combinación se utilizan para reunir las filas necesarias de cada tabla de entrada.
+El comando `EXPLAIN` muestra el plan de ejecución de la instrucción proporcionada. El plan de ejecución muestra cómo se analizarán las tablas a las que hace referencia la sentencia. Si se hace referencia a varias tablas, se muestra qué algoritmos de combinación se utilizan para reunir las filas necesarias de cada tabla de entrada.
 
 ```sql
 EXPLAIN statement
 ```
 
-Para definir el formato de la respuesta, utilice el `FORMAT` palabra clave con `EXPLAIN` comando.
+Para definir el formato de la respuesta, utilice la palabra clave `FORMAT` con el comando `EXPLAIN`.
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -905,16 +905,16 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `FORMAT` | Utilice el `FORMAT` para especificar el formato de salida. Las opciones disponibles son `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`. |
-| `statement` | Cualquiera `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, o `CREATE MATERIALIZED VIEW AS` , cuyo plan de ejecución desea ver. |
+| `FORMAT` | Utilice el comando `FORMAT` para especificar el formato de salida. Las opciones disponibles son `TEXT` o `JSON`. La salida no textual contiene la misma información que el formato de salida de texto, pero es más fácil de analizar para los programas. El valor predeterminado de este parámetro es `TEXT`. |
+| `statement` | Cualquier instrucción `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS` o `CREATE MATERIALIZED VIEW AS`, cuyo plan de ejecución desee ver. |
 
 >[!IMPORTANT]
 >
->Cualquier salida que `SELECT` La instrucción que podría devolver se descarta cuando se ejecuta con `EXPLAIN` palabra clave. Otros efectos secundarios de la declaración ocurren como de costumbre.
+>Cualquier resultado que devuelva una instrucción `SELECT` se descarta cuando se ejecuta con la palabra clave `EXPLAIN`. Otros efectos secundarios de la declaración ocurren como de costumbre.
 
 **Ejemplo**
 
-En el siguiente ejemplo se muestra el plan para una consulta simple en una tabla con un único `integer` filas de columna y 10000:
+El ejemplo siguiente muestra el plan para una consulta simple en una tabla con una sola columna `integer` y filas 10000:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -929,7 +929,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### BUSCAR
 
-El `FETCH` El comando recupera filas utilizando un cursor creado anteriormente.
+El comando `FETCH` recupera filas utilizando un cursor creado anteriormente.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -942,7 +942,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARAR {#prepare}
 
-El `PREPARE` El comando permite crear una instrucción preparada. Una instrucción preparada es un objeto del lado del servidor que se puede utilizar para crear plantillas de instrucciones SQL similares.
+El comando `PREPARE` le permite crear una instrucción preparada. Una instrucción preparada es un objeto del lado del servidor que se puede utilizar para crear plantillas de instrucciones SQL similares.
 
 Las instrucciones preparadas pueden tomar parámetros, que son valores que se sustituyen en la instrucción cuando se ejecuta. Se hace referencia a los parámetros por posición, utilizando $1, $2, etc., al utilizar instrucciones preparadas.
 
@@ -959,7 +959,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 ### REVERSIÓN
 
-El `ROLLBACK` El comando deshace la transacción actual y descarta todas las actualizaciones realizadas por la transacción.
+El comando `ROLLBACK` deshace la transacción actual y descarta todas las actualizaciones realizadas por la transacción.
 
 ```sql
 ROLLBACK
@@ -968,7 +968,7 @@ ROLLBACK WORK
 
 ### SELECCIONAR EN
 
-El `SELECT INTO` crea una nueva tabla y la rellena con datos calculados por una consulta. Los datos no se devuelven al cliente, como sucede con un `SELECT` comando. Las columnas de la nueva tabla tienen los nombres y tipos de datos asociados con las columnas de salida de la variable `SELECT` comando.
+El comando `SELECT INTO` crea una nueva tabla y la rellena con datos calculados por una consulta. Los datos no se devuelven al cliente, como sucede con un comando `SELECT` normal. Las columnas de la nueva tabla tienen los nombres y tipos de datos asociados con las columnas de salida del comando `SELECT`.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -988,17 +988,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Encontrará más información sobre los parámetros de consulta SELECT estándar en la [sección de consulta SELECT](#select-queries). Esta sección solo enumera los parámetros que son exclusivos de `SELECT INTO` comando.
+Encontrará más información sobre los parámetros de consulta SELECT estándar en la [sección de consulta SELECT](#select-queries). En esta sección sólo se enumeran los parámetros exclusivos del comando `SELECT INTO`.
 
 | Parámetros | Descripción |
 | ------ | ------ |
 | `TEMPORARY` o `TEMP` | Un parámetro opcional. Si se especifica el parámetro, la tabla creada es una tabla temporal. |
-| `UNLOGGED` | Un parámetro opcional. Si se especifica el parámetro, la tabla creada es una tabla sin registrar. Encontrará más información sobre las tablas sin registrar en la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Un parámetro opcional. Si se especifica el parámetro, la tabla creada es una tabla sin registrar. Encontrará más información sobre tablas sin registrar en la [[!DNL PostgreSQL] documentación](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nombre de la tabla que se va a crear. |
 
 **Ejemplo**
 
-La siguiente consulta crea una nueva tabla `films_recent` consiste únicamente en entradas recientes de la tabla `films`:
+La siguiente consulta crea una nueva tabla `films_recent` que consiste únicamente en entradas recientes de la tabla `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -1006,7 +1006,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### MOSTRAR
 
-El `SHOW` muestra la configuración actual de los parámetros de tiempo de ejecución. Estas variables se pueden configurar con la variable `SET` mediante la edición de la `postgresql.conf` archivo de configuración, a través de `PGOPTIONS` variable de entorno (cuando se utiliza libpq o una aplicación basada en libpq), o mediante indicadores de línea de comandos al iniciar el servidor Postgres.
+El comando `SHOW` muestra la configuración actual de los parámetros de tiempo de ejecución. Estas variables se pueden establecer mediante la instrucción `SET`, editando el archivo de configuración `postgresql.conf`, a través de la variable de entorno `PGOPTIONS` (cuando se usa libpq o una aplicación basada en libpq) o a través de indicadores de línea de comandos al iniciar el servidor Postgres.
 
 ```sql
 SHOW name
@@ -1015,7 +1015,7 @@ SHOW ALL
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `name` | El nombre del parámetro de tiempo de ejecución del que desea obtener información. Los valores posibles del parámetro de tiempo de ejecución incluyen los siguientes:<br>`SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.<br>`SERVER_ENCODING`: Este parámetro muestra la codificación del conjunto de caracteres del lado del servidor.<br>`LC_COLLATE`: Este parámetro muestra la configuración regional de la base de datos para la intercalación (orden de texto).<br>`LC_CTYPE`: Este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.<br>`IS_SUPERUSER`: este parámetro muestra si la función actual tiene privilegios de superusuario. |
+| `name` | El nombre del parámetro de tiempo de ejecución del que desea obtener información. Entre los posibles valores del parámetro de tiempo de ejecución se incluyen los siguientes:<br>`SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.<br>`SERVER_ENCODING`: este parámetro muestra la codificación del conjunto de caracteres del servidor.<br>`LC_COLLATE`: este parámetro muestra la configuración regional de la base de datos para intercalación (orden de texto).<br>`LC_CTYPE`: este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.<br>`IS_SUPERUSER`: este parámetro muestra si el rol actual tiene privilegios de superusuario. |
 | `ALL` | Mostrar los valores de todos los parámetros de configuración con descripciones. |
 
 **Ejemplo**
@@ -1035,7 +1035,7 @@ SHOW DateStyle;
 
 ### COPIAR
 
-El `COPY` El comando duplica la salida de cualquier `SELECT` consulta a una ubicación especificada. El usuario debe tener acceso a esta ubicación para que este comando se ejecute correctamente.
+El comando `COPY` duplica el resultado de cualquier consulta `SELECT` en una ubicación especificada. El usuario debe tener acceso a esta ubicación para que este comando se ejecute correctamente.
 
 ```sql
 COPY query
@@ -1046,7 +1046,7 @@ COPY query
 | Parámetros | Descripción |
 | ------ | ------ |
 | `query` | La consulta que desea copiar. |
-| `format_name` | El formato en el que desea copiar la consulta. El `format_name` puede ser uno de `parquet`, `csv`, o `json`. El valor predeterminado es `parquet`. |
+| `format_name` | El formato en el que desea copiar la consulta. `format_name` puede ser `parquet`, `csv` o `json`. De manera predeterminada, el valor es `parquet`. |
 
 >[!NOTE]
 >
@@ -1054,7 +1054,7 @@ COPY query
 
 ### MODIFICAR TABLA {#alter-table}
 
-El `ALTER TABLE` El comando permite añadir o soltar restricciones de clave principal o externa y añadir columnas a la tabla.
+El comando `ALTER TABLE` le permite agregar o soltar restricciones de clave principal o externa y agregar columnas a la tabla.
 
 #### AGREGAR o SOLTAR RESTRICCIÓN
 
@@ -1068,7 +1068,7 @@ ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE name
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
 ```
 
-**Definir una relación entre tablas basada en una o más claves**
+**Defina una relación entre tablas basada en una o más claves**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
@@ -1076,7 +1076,7 @@ ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES ref
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
 ```
 
-**Definición de una columna de identidad**
+**Definir una columna de identidad**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
@@ -1084,7 +1084,7 @@ ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 ```
 
-**Soltar una restricción/relación/identidad**
+**Quitar una restricción, relación o identidad**
 
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
@@ -1113,7 +1113,7 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 #### Adición o eliminación de identidades principales y secundarias
 
-Para añadir o eliminar restricciones para columnas de tabla de identidad principales y secundarias, utilice el `ALTER TABLE` comando.
+Para agregar o eliminar restricciones para columnas de la tabla de identidad principal y secundaria, use el comando `ALTER TABLE`.
 
 En los ejemplos siguientes se agregan una identidad principal y una identidad secundaria mediante la adición de restricciones.
 
@@ -1143,7 +1143,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### Tipos de datos admitidos
 
-En la tabla siguiente se enumeran los tipos de datos aceptados para agregar columnas a una tabla con [!DNL Postgres SQL], XDM y el [!DNL Accelerated Database Recovery] (ADR) en Azure SQL.
+En la tabla siguiente se enumeran los tipos de datos aceptados para agregar columnas a una tabla con [!DNL Postgres SQL], XDM y [!DNL Accelerated Database Recovery] (ADR) en Azure SQL.
 
 | — | cliente PSQL | XDM | ADR | Descripción |
 |---|---|---|---|---|
@@ -1151,12 +1151,12 @@ En la tabla siguiente se enumeran los tipos de datos aceptados para agregar colu
 | 2 | `integer` | `int4` | `integer` | Tipo de datos numérico utilizado para almacenar enteros entre -2.147.483.648 y 2.147.483.647 en 4 bytes. |
 | 3 | `smallint` | `int2` | `smallint` | Tipo de datos numéricos utilizados para almacenar enteros entre -32.768 y 215-1 32.767 en 2 bytes. |
 | 4 | `tinyint` | `int1` | `tinyint` | Tipo de datos numérico utilizado para almacenar enteros de 0 a 255 en 1 byte. |
-| 5 | `varchar(len)` | `string` | `varchar(len)` | Un tipo de datos de caracteres de tamaño variable. `varchar` se utiliza mejor cuando el tamaño de las entradas de datos de la columna varía considerablemente. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Un tipo de datos de caracteres de tamaño variable. Se recomienda utilizar `varchar` cuando el tamaño de las entradas de datos de la columna varía considerablemente. |
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` y `FLOAT` son sinónimos válidos para `DOUBLE PRECISION`. `double precision` es un tipo de datos de punto flotante. Los valores de punto flotante se almacenan en 8 bytes. |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` es un sinónimo válido para `double precision`.`double precision` es un tipo de datos de punto flotante. Los valores de punto flotante se almacenan en 8 bytes. |
-| 8 | `date` | `date` | `date` | El `date` los tipos de datos son valores de fecha de calendario almacenados de 4 bytes sin información de marca de tiempo. El rango de fechas válidas es del 01-01-0001 al 12-31-9999. |
-| 9 | `datetime` | `datetime` | `datetime` | Tipo de datos que se utiliza para almacenar un instante en el tiempo expresado como fecha y hora del día en el calendario. `datetime` incluye los calificadores de: año, mes, día, hora, segundo y fracción. A `datetime` la declaración puede incluir cualquier subconjunto de estas unidades de tiempo que se unan en esa secuencia, o incluso comprender solo una unidad de tiempo. |
-| 10 | `char(len)` | `string` | `char(len)` | El `char(len)` palabra clave se utiliza para indicar que el elemento es un carácter de longitud fija. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` es un sinónimo válido de `double precision`.`double precision` es un tipo de datos de punto flotante. Los valores de punto flotante se almacenan en 8 bytes. |
+| 8 | `date` | `date` | `date` | Los tipos de datos `date` son valores de fecha de calendario almacenados de 4 bytes sin información de marca de tiempo. El rango de fechas válidas es del 01-01-0001 al 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | Tipo de datos que se utiliza para almacenar un instante en el tiempo expresado como fecha y hora del día en el calendario. `datetime` incluye los calificadores de: año, mes, día, hora, segundo y fracción. Una declaración `datetime` puede incluir cualquier subconjunto de estas unidades de tiempo que se unen en esa secuencia, o incluso comprender una sola unidad de tiempo. |
+| 10 | `char(len)` | `string` | `char(len)` | La palabra clave `char(len)` se usa para indicar que el elemento es un carácter de longitud fija. |
 
 #### AÑADIR ESQUEMA
 
@@ -1194,7 +1194,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 ### MOSTRAR CLAVES PRIMARIAS
 
-El `SHOW PRIMARY KEYS` El comando enumera todas las restricciones de clave principal de la base de datos determinada.
+El comando `SHOW PRIMARY KEYS` enumera todas las restricciones de clave principal de la base de datos determinada.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -1209,7 +1209,7 @@ SHOW PRIMARY KEYS
 
 ### MOSTRAR CLAVES EXTERNAS
 
-El `SHOW FOREIGN KEYS` El comando enumera todas las restricciones de clave externa para la base de datos determinada.
+El comando `SHOW FOREIGN KEYS` enumera todas las restricciones de clave externa de la base de datos determinada.
 
 ```sql
 SHOW FOREIGN KEYS
@@ -1225,7 +1225,7 @@ SHOW FOREIGN KEYS
 
 ### MOSTRAR GRUPOS DE DATOS
 
-El `SHOW DATAGROUPS` El comando devuelve una tabla de todas las bases de datos asociadas. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
+El comando `SHOW DATAGROUPS` devuelve una tabla de todas las bases de datos asociadas. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
 
 ```sql
 SHOW DATAGROUPS
@@ -1243,7 +1243,7 @@ SHOW DATAGROUPS
 
 ### MOSTRAR GRUPOS DE DATOS PARA LA tabla
 
-El `SHOW DATAGROUPS FOR 'table_name'` El comando devuelve una tabla de todas las bases de datos asociadas que contienen el parámetro como elemento secundario. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
+El comando `SHOW DATAGROUPS FOR 'table_name'` devuelve una tabla de todas las bases de datos asociadas que contienen el parámetro como elemento secundario. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
@@ -1251,7 +1251,7 @@ SHOW DATAGROUPS FOR 'table_name'
 
 **Parámetros**
 
-- `table_name`: Nombre de la tabla para la que desea buscar bases de datos asociadas.
+- `table_name`: nombre de la tabla para la que desea buscar bases de datos asociadas.
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId

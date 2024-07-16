@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Análisis de puntuaciones de atribución mediante el servicio de consulta
 
-Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras en `touchpointsDetail` columna.
+Cada fila de los datos representa una conversión, en la que la información de los puntos de contacto relacionados se almacena como una matriz de estructuras en la columna `touchpointsDetail`.
 
 | Información de Touchpoint | Columna |
 | ---------------------- | ------ |
@@ -23,45 +23,45 @@ Cada fila de los datos representa una conversión, en la que la información de 
 
 ## Búsqueda de rutas de datos
 
-En la IU de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. El **[!UICONTROL Conjuntos de datos]** página. A continuación, seleccione la **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo. Aparecerá la página **[!UICONTROL Conjuntos de datos]**. A continuación, seleccione la pestaña **[!UICONTROL Examinar]** y busque el conjunto de datos de salida para sus puntuaciones de Attribution AI.
 
-![Acceso al modelo](./images/aai-query/datasets_browse.png)
+![Accediendo a su modelo](./images/aai-query/datasets_browse.png)
 
 Seleccione el conjunto de datos de salida. Aparecerá la página de actividad del conjunto de datos.
 
 ![página de actividad del conjunto de datos](./images/aai-query/select_preview.png)
 
-En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Previsualizar conjunto de datos]** en la esquina superior derecha para previsualizar los datos y asegurarse de que se han introducido según lo esperado.
+En la página de actividad del conjunto de datos, seleccione **[!UICONTROL Previsualizar conjunto de datos]** en la esquina superior derecha para obtener una vista previa de los datos y asegurarse de que se han introducido según lo esperado.
 
 ![previsualizar conjunto de datos](./images/aai-query/preview_dataset.JPG)
 
 Después de previsualizar los datos, seleccione el esquema en el carril derecho. Aparece una ventana emergente con el nombre y la descripción del esquema. Seleccione el hipervínculo del nombre del esquema para redirigirlo al esquema de puntuación.
 
-![seleccione el esquema](./images/aai-query/select_schema.png)
+![seleccionar el esquema](./images/aai-query/select_schema.png)
 
-Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionada, la variable **[!UICONTROL Propiedades del campo]** se abre un carril lateral que le permite copiar la ruta para utilizarla en la creación de consultas.
+Con el esquema de puntuación, puede seleccionar o buscar un valor. Una vez seleccionado, el carril lateral **[!UICONTROL Field properties]** se abre para permitirle copiar la ruta y utilizarla en la creación de consultas.
 
-![copia de la ruta](./images/aai-query/copy_path.png)
+![copiar la ruta de acceso](./images/aai-query/copy_path.png)
 
 ## Acceso al servicio de consultas
 
-Para acceder al servicio de consultas desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seleccione la opción **[!UICONTROL Examinar]** pestaña. Se carga una lista de las consultas guardadas anteriormente.
+Para acceder al servicio de consultas desde la interfaz de usuario de Platform, comience seleccionando **[!UICONTROL Consultas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**. Se carga una lista de las consultas guardadas anteriormente.
 
-![exploración del servicio de consultas](./images/aai-query/query_tab.png)
+![examinar servicio de consulta](./images/aai-query/query_tab.png)
 
 A continuación, seleccione **[!UICONTROL Crear consulta]** en la esquina superior derecha. Se carga el Editor de consultas. Con el Editor de consultas puede empezar a crear consultas utilizando los datos de puntuación.
 
 ![editor de consultas](./images/aai-query/query_example.png)
 
-Para obtener más información sobre el Editor de consultas, visite [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md).
+Para obtener más información sobre el Editor de consultas, visite la [Guía del usuario del Editor de consultas](../../query-service/ui/user-guide.md).
 
 ## Plantillas de consulta para análisis de puntuación de atribución
 
-Las consultas siguientes se pueden utilizar como plantilla para diferentes escenarios de análisis de puntuación. Debe reemplazar el `_tenantId` y `your_score_output_dataset` con los valores adecuados que se encuentran en el esquema de salida de puntuación.
+Las consultas siguientes se pueden utilizar como plantilla para diferentes escenarios de análisis de puntuación. Debe reemplazar `_tenantId` y `your_score_output_dataset` por los valores adecuados que se encuentren en el esquema de salida de puntuación.
 
 >[!NOTE]
 >
-> Según la forma en que se hayan introducido los datos, los valores utilizados a continuación son `timestamp` puede tener un formato diferente.
+> Según la forma en que se introdujeron los datos, los valores utilizados a continuación, como `timestamp`, podrían tener un formato diferente.
 
 ### Ejemplos de validación
 
@@ -88,7 +88,7 @@ Las consultas siguientes se pueden utilizar como plantilla para diferentes escen
         conversionName
 ```
 
-**Número total de eventos solo de conversión (dentro de en una ventana de conversión)**
+**Número total de eventos de solo conversión (en una ventana de conversión)**
 
 ```sql
     SELECT
@@ -180,7 +180,7 @@ Las consultas siguientes se pueden utilizar como plantilla para diferentes escen
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Desglose de unidades incrementales por punto de contacto y fecha de punto de contacto (en una ventana de conversión)**
+**Desglose de unidades incrementales por punto de contacto y fecha de punto de contacto (dentro de en una ventana de conversión)**
 
 ```sql
     SELECT conversionName,
@@ -206,7 +206,7 @@ Las consultas siguientes se pueden utilizar como plantilla para diferentes escen
     LIMIT 20
 ```
 
-**Puntuaciones agregadas para un tipo determinado de punto de contacto para todos los modelos de puntuación (en una ventana de conversión)**
+**Puntuaciones agregadas para un determinado tipo de punto de contacto para todos los modelos de puntuación (en una ventana de conversión)**
 
 ```sql
     SELECT
@@ -268,7 +268,7 @@ Obtenga una distribución de longitud de ruta para cada tipo de evento de conver
         conversionName, path_length
 ```
 
-**Avanzado: número distinto de puntos de contacto en el análisis de rutas de conversión**
+**Avanzado: distinto número de puntos de contacto en el análisis de rutas de conversión**
 
 Obtenga la distribución del número de puntos de contacto distintos en una ruta de conversión para cada tipo de evento de conversión:
 
@@ -305,7 +305,7 @@ Esta consulta aplana la columna struct en varias columnas singulares y explosion
 
 >[!TIP]
 >
-> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. El `COLUMN_NAME` puede tomar los valores de los nombres de columna de paso a través opcionales (columnas de informes) que se añadieron durante la configuración del modelo de Attribution AI. Revise el esquema de salida de puntuación para encontrar la variable `{COLUMN_NAME}` valores necesarios para completar esta consulta.
+> En este ejemplo, debe reemplazar `{COLUMN_NAME}` además de `_tenantId` y `your_score_output_dataset`. La variable `COLUMN_NAME` puede tomar los valores de los nombres de columna de paso a través opcionales (columnas de informes) que se agregaron durante la configuración del modelo de Attribution AI. Revise el esquema de salida de puntuación para encontrar los `{COLUMN_NAME}` valores necesarios para completar esta consulta.
 
 ```sql
 SELECT 

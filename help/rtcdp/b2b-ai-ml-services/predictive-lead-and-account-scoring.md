@@ -7,7 +7,7 @@ badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/l
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '859'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ El servicio predictivo de puntuación de cuenta y posible cliente aborda los des
 
 >[!NOTE]
 >
->[!DNL Marketo] actualmente, se necesita una fuente de datos, ya que es la única fuente de datos que puede proporcionar los eventos de conversión en el nivel de perfil de la persona.
+>En este momento se requiere el origen de datos [!DNL Marketo], ya que es el único que puede proporcionar los eventos de conversión en el nivel de perfil de la persona.
 
 La puntuación predictiva de clientes potenciales y cuentas utiliza un método de aprendizaje automático basado en árbol (aumento aleatorio de bosque/degradado) para crear el modelo de puntuación predictiva de posibles clientes.
 
@@ -37,13 +37,13 @@ La puntuación predictiva de posibles clientes y cuentas admite los siguientes t
 | Tipo de meta | Campos |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Ejemplo: `opportunityEvent.dataValueChanges.attributeName` igual a `Stage` y `opportunityEvent.dataValueChanges.newValue` igual a `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Ejemplo: `opportunityEvent.dataValueChanges.attributeName` es igual a `Stage` y `opportunityEvent.dataValueChanges.newValue` es igual a `Contract`</ul> |
 
 El algoritmo tiene en cuenta los siguientes atributos y datos de entrada:
 
 * Perfil de persona
 
-| Campo XDM | Obligatorio/Opcional |
+| Campo XDM | Obligatorio/ Opcional |
 | --- | --- |
 | `personComponents.sourceAccountKey.sourceKey` | Requerido |
 | `workAddress.country` | Opcional |
@@ -52,11 +52,11 @@ El algoritmo tiene en cuenta los siguientes atributos y datos de entrada:
 
 >[!NOTE]
 > 
->El algoritmo solo inspecciona `sourceAccountKey.sourceKey` en el grupo de campos Persona:componentePersona.
+>El algoritmo solo inspecciona el campo `sourceAccountKey.sourceKey` en el grupo de campos Persona:personaComponentes.
 
 * Perfil de cuenta
 
-| Campo XDM | Obligatorio/Opcional |
+| Campo XDM | Obligatorio/ Opcional |
 | --- | --- |
 | `accountKey.sourceKey` | Requerido |
 | `extSourceSystemAudit.createdDate` | Requerido |
@@ -66,7 +66,7 @@ El algoritmo tiene en cuenta los siguientes atributos y datos de entrada:
 
 * Evento de experiencia
 
-| Campo XDM | Obligatorio/Opcional |
+| Campo XDM | Obligatorio/ Opcional |
 | --- | --- |
 | `_id` | Requerido |
 | `personKey.sourceKey` | Requerido |
@@ -86,11 +86,11 @@ Los requisitos de calidad de los datos son los siguientes:
 
 Los trabajos de puntuación se ejecutan diariamente y los resultados se guardan como atributos de perfil y atributos de cuenta, que luego se pueden utilizar en definiciones de segmentos y personalización. Las perspectivas de análisis listas para usar también están disponibles en el panel de información general de la cuenta.
 
-Consulte la documentación para obtener más información sobre cómo [administrar puntuación de cuenta y posible cliente predictivo](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) servicio.
+Consulte la documentación para obtener más información sobre cómo [administrar el servicio predictivo de puntuación de clientes potenciales y cuentas](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md).
 
 ## Ver resultados predictivos de puntuación de clientes potenciales y cuentas {#how-to-view}
 
-Después de ejecutar el trabajo, los resultados se guardan en un nuevo conjunto de datos del sistema para cada modelo con el nombre `LeadsAI.Scores` - ***el nombre de la puntuación***. Cada grupo de campos de puntuación puede encontrarse en `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Después de la ejecución del trabajo, los resultados se guardan en un nuevo conjunto de datos del sistema para cada modelo con el nombre `LeadsAI.Scores` - ***el nombre de la puntuación***. Cada grupo de campos de puntuación se puede encontrar en `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Atributo | Descripción |
 | --- | --- |
@@ -102,13 +102,13 @@ Después de ejecutar el trabajo, los resultados se guardan en un nuevo conjunto 
 
 ### Ver puntuaciones del perfil del cliente
 
-Para ver las puntuaciones predictivas de un perfil de persona, seleccione **[!UICONTROL Perfiles]** en la sección cliente del panel izquierdo y, a continuación, introduzca el área de nombres de identidad y el valor de identidad. Una vez finalizado, seleccione **[!UICONTROL Ver]**.
+Para ver las puntuaciones predictivas de un perfil de persona, seleccione **[!UICONTROL Perfiles]** en la sección cliente del panel izquierdo y, a continuación, escriba el área de nombres de identidad y el valor de identidad. Una vez finalizado, seleccione **[!UICONTROL Ver]**.
 
 A continuación, seleccione el perfil en la lista.
 
 ![Perfil del cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-El **[!UICONTROL Detalle]** ahora incluye las puntuaciones predictivas. Haga clic en el icono de gráfico junto a la puntuación predictiva.
+La página **[!UICONTROL Detail]** ahora incluye las puntuaciones predictivas. Haga clic en el icono de gráfico junto a la puntuación predictiva.
 
 ![Puntuación predictiva del perfil del cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
@@ -124,4 +124,4 @@ Puede monitorizar las métricas básicas y el estado diario de ejecución del tr
 * Siguiente trabajo de puntuación (fecha)
 * Siguiente trabajo de formación (fecha)
 
-Para obtener más información, consulte la documentación sobre [supervisar trabajos para la puntuación predictiva de clientes potenciales y cuentas](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Para obtener más información, consulte la documentación sobre [supervisión de trabajos para la puntuación predictiva de clientes potenciales y cuentas](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

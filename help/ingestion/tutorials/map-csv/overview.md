@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Asignación de un archivo CSV a un esquema XDM
 
-Para introducir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a una [!DNL Experience Data Model] Esquema (XDM). Los siguientes tutoriales explican cómo asignar archivos CSV a esquemas XDM mediante [!DNL Platform] interfaz de usuario:
+Para ingerir datos CSV en [!DNL Adobe Experience Platform], los datos deben asignarse a un esquema [!DNL Experience Data Model] (XDM). Los siguientes tutoriales explican cómo asignar archivos CSV a esquemas XDM mediante la interfaz de usuario [!DNL Platform]:
 
 * [Asignar un archivo CSV a un esquema XDM existente](./existing-schema.md)
-* [Asignar un archivo CSV a un nuevo esquema XDM mediante recomendaciones generadas por IA](./recommendations.md) (actualmente en fase beta)
+* [Asigne un archivo CSV a un nuevo esquema XDM mediante recomendaciones generadas por IA](./recommendations.md) (actualmente en fase beta)

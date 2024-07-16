@@ -20,10 +20,10 @@ Las identidades relacionadas en un gráfico de identidad, independientemente del
 
 Recupere todos los miembros del clúster para una sola identidad.
 
-Puede utilizar el opcional `graph-type` parámetro que indica el gráfico de identidad desde el que se obtiene el clúster. Las opciones son:
+Puede usar el parámetro `graph-type` opcional para indicar el gráfico de identidad desde el que obtener el clúster. Las opciones son:
 
 - Ninguno: no realice ninguna vinculación de identidad.
-- Gráfico privado: realice la vinculación de identidad en función de su gráfico de identidad privada. Si no `graph-type` se proporciona, este es el valor predeterminado.
+- Gráfico privado: realice la vinculación de identidad en función de su gráfico de identidad privada. Si no se proporciona ningún `graph-type`, este es el valor predeterminado.
 
 **Formato de API**
 
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Solicitud**
 
-Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y el valor de ID (`id`).
+Opción 1: proporcione la identidad como área de nombres (`nsId`, por identificador) y valor de identificador (`id`).
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como área de nombres (`ns`, por nombre) y el valor de ID (`id`).
+Opción 2: proporcione la identidad como área de nombres (`ns`, por nombre) y valor de identificador (`id`).
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: proporcionar la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata [obtención del XID de una identidad](./list-native-id.md).
+Opción 3: proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata sobre [obtención del XID para una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 ## Obtener identidades asociadas para varias identidades
 
-Uso `POST` como equivalente de lote del `GET` método descrito anteriormente para devolver las identidades en los clústeres de identidades múltiples.
+Use `POST` como equivalente de lote del método `GET` descrito anteriormente para devolver las identidades en los clústeres de varias identidades.
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ La siguiente solicitud muestra cómo se proporciona una lista de XID para los qu
 
 **Solicitud de código auxiliar**
 
-Uso de `x-uis-cst-ctx: stub` el encabezado devolverá una respuesta con un stub. Se trata de una solución temporal para facilitar el progreso temprano del desarrollo de la integración, mientras se completan los servicios. Esto quedará obsoleto cuando ya no sea necesario.
+El uso del encabezado `x-uis-cst-ctx: stub` devolverá una respuesta con errores. Se trata de una solución temporal para facilitar el progreso temprano del desarrollo de la integración, mientras se completan los servicios. Esto quedará obsoleto cuando ya no sea necesario.
 
 ```shell
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-**Llamar a mediante XID**
+**Llamar usando XID**
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**Llamar a mediante UID**
+**Llamar usando UID**
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **Respuesta**
 
-**Respuesta &#39;Stubbed&#39;**
+**&#39;Stubbed&#39; response**
 
 ```json
 {

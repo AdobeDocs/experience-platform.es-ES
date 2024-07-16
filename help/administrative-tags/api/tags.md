@@ -2,19 +2,19 @@
 title: Extremo de etiquetas unificadas
 description: Obtenga información sobre cómo crear, actualizar, administrar y eliminar etiquetas y categorías de etiquetas mediante las API de Adobe Experience Platform.
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-
 # Extremo de etiquetas unificadas
 
 >[!IMPORTANT]
 >
->La dirección URL del extremo para este conjunto de extremos es `https://experience.adobe.io`.
+>La dirección URL de extremo para este conjunto de extremos es `https://experience.adobe.io`.
 
 Las etiquetas son una funcionalidad que permite administrar taxonomías de metadatos para clasificar objetos empresariales y facilitar así su detección y categorización. Posteriormente, puede organizar estas etiquetas en otros grupos añadiéndolas a las categorías de etiquetas.
 
@@ -22,19 +22,19 @@ Esta guía proporciona información para ayudarle a comprender mejor las etiquet
 
 ## Introducción
 
-Los extremos utilizados en esta guía forman parte de las API de Adobe Experience Platform. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados necesarios y cómo leer llamadas de API de ejemplo
+Los extremos utilizados en esta guía forman parte de las API de Adobe Experience Platform. Antes de continuar, revisa la [guía de introducción](./getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo
 
 ### Glosario
 
 El siguiente glosario resalta la diferencia entre una **etiqueta** y una **categoría de etiqueta**.
 
-- **Etiqueta**: una etiqueta permite administrar la taxonomía de metadatos para objetos empresariales, lo que permite clasificar estos objetos para facilitar la detección y la categorización.
-   - **Etiqueta sin categoría**: una etiqueta sin clasificar es una etiqueta que no pertenece a una categoría de etiqueta. De forma predeterminada, las etiquetas creadas no se clasificarán.
-- **Categoría de etiqueta**: una categoría de etiqueta permite agrupar las etiquetas en conjuntos significativos, lo que le permite proporcionar más contexto al propósito de la etiqueta.
+- **Etiqueta**: una etiqueta permite administrar la taxonomía de metadatos de los objetos empresariales, lo que permite clasificar estos objetos para facilitar su detección y su categorización.
+   - **Etiqueta sin categoría**: una etiqueta sin categoría es una etiqueta que no pertenece a ninguna categoría de etiqueta. De forma predeterminada, las etiquetas creadas no se clasificarán.
+- **Categoría de etiqueta**: una categoría de etiqueta permite agrupar las etiquetas en conjuntos significativos, lo que permite proporcionar más contexto para el propósito de la etiqueta.
 
 ## Recuperación de una lista de categorías de etiquetas {#get-tag-categories}
 
-Puede recuperar una lista de categorías de etiquetas que pertenezcan a su organización realizando una solicitud de GET a `/tagCategory` punto final.
+Puede recuperar una lista de categorías de etiquetas que pertenezcan a su organización realizando una solicitud de GET al extremo `/tagCategory`.
 
 **Formato de API**
 
@@ -49,9 +49,9 @@ Se pueden utilizar los siguientes parámetros de consulta opcionales al recupera
 | --------------- | ----------- | ------- |
 | `start` | Ubicación desde la que comienza la lista de resultados. Puede utilizarlo para indicar el índice inicial para la paginación de los resultados. | `start=a` |
 | `limit` | Número máximo de categorías de etiquetas que desea recuperar por página. | `limit=20` |
-| `property` | Atributo por el que se desea filtrar al recuperar las categorías de etiqueta. Los valores admitidos son: &lt;ul><li>`name`: nombre de la categoría de etiqueta.</li></ul> | `property=name==category` |
-| `sortBy` | Orden por el que se ordenan las categorías de etiquetas. Los valores admitidos incluyen `name`, `createdAt`, y `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | Dirección por la que se ordenan las categorías de etiquetas. Los valores admitidos incluyen `asc` y `desc`. | `sortOrder=asc` |
+| `property` | Atributo por el que se desea filtrar al recuperar las categorías de etiqueta. Los valores admitidos son: &lt;ul≥<li>`name`: nombre de la categoría de etiqueta.</li></ul> | `property=name==category` |
+| `sortBy` | Orden por el que se ordenan las categorías de etiquetas. Los valores admitidos son `name`, `createdAt` y `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | Dirección por la que se ordenan las categorías de etiquetas. Los valores admitidos son `asc` y `desc`. | `sortOrder=asc` |
 
 **Solicitud**
 
@@ -104,7 +104,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las ca
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede crear una nueva categoría de etiquetas realizando una solicitud de POST a `/tagCategory` punto final.
+Puede crear una nueva categoría de etiqueta realizando una solicitud de POST al extremo `/tagCategory`.
 
 **Formato de API**
 
@@ -159,7 +159,7 @@ Una respuesta de ejemplo devuelve el estado HTTP 200 con detalles de la categor�
 
 ## Recuperar una categoría de etiqueta específica {#get-tag-category}
 
-Puede recuperar una categoría de etiquetas específica que pertenezca a su organización realizando una solicitud de GET a `/tagCategory` y especificando el ID de la categoría de etiqueta.
+Puede recuperar una categoría de etiqueta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
 
 **Formato de API**
 
@@ -224,7 +224,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la categoría
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede actualizar los detalles de una categoría de etiquetas específica que pertenezca a su organización realizando una solicitud de PATCH a `/tagCategory` y especificando el ID de la categoría de etiqueta.
+Puede actualizar los detalles de una categoría de etiquetas específica que pertenezca a su organización realizando una solicitud de PATCH al extremo `/tagCategory` y especificando el ID de la categoría de etiquetas.
 
 **Formato de API**
 
@@ -257,7 +257,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `op` | Operación que se ha completado. Para actualizar una categoría de etiqueta específica, establezca este valor en `replace`. |
-| `path` | La ruta del campo que se actualizará. Los valores admitidos incluyen `name` y `description`. |
+| `path` | La ruta del campo que se actualizará. Los valores admitidos son `name` y `description`. |
 | `value` | El valor actualizado del campo que desea actualizar. |
 | `from` | El valor original del campo que desea actualizar. |
 
@@ -291,7 +291,7 @@ Un estado HTTP de respuesta 200 correcto con información sobre la categoría de
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede eliminar una categoría de etiquetas específica que pertenezca a su organización realizando una solicitud de DELETE a `/tagCategory` y especificando el ID de la categoría de etiqueta.
+Puede eliminar una categoría de etiqueta específica que pertenezca a su organización realizando una solicitud de DELETE al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
 
 **Formato de API**
 
@@ -323,7 +323,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta vací
 
 ## Recuperación de una lista de etiquetas {#get-tags}
 
-Puede recuperar una lista de etiquetas que pertenezcan a su organización realizando una solicitud de GET a `/tags` y el ID de la categoría de etiqueta.
+Puede recuperar una lista de etiquetas que pertenezcan a su organización realizando una solicitud de GET al extremo `/tags` y al ID de la categoría de etiqueta.
 
 **Formato de API**
 
@@ -339,8 +339,8 @@ Los siguientes parámetros de consulta opcionales se pueden utilizar al recupera
 | `start` | Ubicación desde la que comienza la lista de resultados. Puede utilizarlo para indicar el índice inicial para la paginación de los resultados. | `start=a` |
 | `limit` | Número máximo de etiquetas que desea recuperar por página. | `limit=20` |
 | `property` | Atributo por el que desea filtrar al recuperar etiquetas. Los valores admitidos son:<ul><li>`name`: nombre de la etiqueta.</li><li>`archived`: Si las etiquetas se archivan o no. Puede establecer este valor en `true` o `false`.</li><li>`tagCategoryId`: ID de la categoría de etiqueta a la que pertenece la etiqueta.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | Orden por el que se ordenan las etiquetas. Los valores admitidos incluyen `name`, `createdAt`, y `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | Dirección por la que se ordenan las categorías de etiquetas. Los valores admitidos incluyen `asc` y `desc`. | `sortOrder=asc` |
+| `sortBy` | Orden por el que se ordenan las etiquetas. Los valores admitidos son `name`, `createdAt` y `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | Dirección por la que se ordenan las categorías de etiquetas. Los valores admitidos son `asc` y `desc`. | `sortOrder=asc` |
 
 
 **Solicitud**
@@ -506,9 +506,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las etiquetas
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API para crear una nueva etiqueta en una categoría de etiqueta especificada.
 >
->Si está creando una etiqueta sin clasificar, debe hacer lo siguiente **no** necesita permisos de administrador.
+>Si está creando una etiqueta sin clasificar, **no** necesita permisos de administrador.
 
-Puede crear una etiqueta nueva realizando una solicitud de POST a `/tags` punto final.
+Puede crear una etiqueta nueva realizando una solicitud de POST al extremo `/tags`.
 
 **Formato de API**
 
@@ -575,7 +575,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la etiqueta r
 
 ## Recuperación de una etiqueta específica {#get-tag}
 
-Puede recuperar una etiqueta específica que pertenezca a su organización realizando una solicitud de GET a `/tags` y especificando el ID de la etiqueta que desea recuperar.
+Puede recuperar una etiqueta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/tags` y especificando el ID de la etiqueta que desea recuperar.
 
 **Formato de API**
 
@@ -639,7 +639,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la etiqueta e
 
 ## Validar etiquetas {#validate-tags}
 
-Puede validar si existen etiquetas realizando una solicitud de POST a `/tags/validate` punto final.
+Puede validar si existen POST realizando una solicitud al extremo `/tags/validate`.
 
 **Formato de API**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `ids` | Matriz que contiene una lista de los ID de etiqueta que desea validar. |
-| `entity` | La entidad que solicita la validación. Puede usar el complemento `{API_KEY}` valor de este parámetro. |
+| `entity` | La entidad que solicita la validación. Puede usar el valor `{API_KEY}` para este parámetro. |
 
 +++
 
@@ -705,7 +705,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre las et
 
 ## Actualizar una etiqueta específica {#update-tag}
 
-Puede actualizar una etiqueta especificada realizando una solicitud de PATCH a `/tags` y proporciona el ID de la etiqueta que desea actualizar.
+Puede actualizar una etiqueta especificada realizando una solicitud de PATCH al extremo `/tags` y proporcionando el ID de la etiqueta que desea actualizar.
 
 **Formato de API**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `op` | La operación que debe realizarse. En este caso de uso, siempre se establece en `replace`. |
-| `path` | La ruta del campo que se actualizará. Los valores admitidos incluyen `name`, `archived`, y `tagCategoryId`. |
+| `op` | La operación que debe realizarse. En este caso de uso, siempre se establecerá en `replace`. |
+| `path` | La ruta del campo que se actualizará. Los valores admitidos son `name`, `archived` y `tagCategoryId`. |
 | `value` | El valor actualizado del campo que desea actualizar. |
 | `from` | El valor original del campo que desea actualizar. |
 
@@ -773,9 +773,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la etiqueta r
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 >
->Además, la etiqueta **no puede** estar asociado a cualquier objeto comercial y **debe** se archivarán antes de poder eliminar la etiqueta. Puede archivar la etiqueta utilizando la variable [actualizar extremo de etiqueta](#update-tag).
+>Además, la etiqueta **no se puede** asociar con ningún objeto comercial y **debe** archivarse antes de poder eliminar la etiqueta. Puede archivar la etiqueta usando el [extremo de la etiqueta de actualización](#update-tag).
 
-Para borrar una etiqueta específica, cree una etiqueta de DELETE en la `/tags` y especificando el ID de la etiqueta que desea eliminar.
+Para eliminar una etiqueta específica, cree una etiqueta de DELETE al extremo `/tags` y especifique el identificador de la etiqueta que desea eliminar.
 
 **Formato de API**
 
@@ -807,4 +807,4 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta vací
 
 ## Pasos siguientes
 
-Después de leer esta guía, tiene una mejor comprensión de cómo crear, administrar y eliminar etiquetas y categorías de etiquetas mediante las API de Adobe Experience Platform. Para obtener más información sobre la administración de etiquetas mediante la IU, lea la [guía de administración de etiquetas](../ui/managing-tags.md). Para obtener más información sobre la administración de categorías de etiquetas mediante la IU, lea la [guía de categorías de etiquetas](../ui/tags-categories.md).
+Después de leer esta guía, tiene una mejor comprensión de cómo crear, administrar y eliminar etiquetas y categorías de etiquetas mediante las API de Adobe Experience Platform. Para obtener más información sobre la administración de etiquetas mediante la interfaz de usuario, lea la [guía de administración de etiquetas](../ui/managing-tags.md). Para obtener más información sobre la administración de categorías de etiquetas mediante la interfaz de usuario, lea la [guía de categorías de etiquetas](../ui/tags-categories.md).

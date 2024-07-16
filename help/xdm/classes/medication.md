@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL Medicación] clase
+# clase [!UICONTROL Medicamento]
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Medicación] Esta clase registra el conjunto mínimo de propiedades que definen una sustancia utilizada para el tratamiento médico, especialmente un medicamento o un fármaco.
+En el Experience Data Model (XDM), la clase [!UICONTROL Medication] captura el conjunto mínimo de propiedades que definen una sustancia utilizada para el tratamiento médico, especialmente un medicamento o un fármaco.
 
 ![Estructura de clase](../images/classes/medication.png)
 
@@ -23,4 +23,4 @@ En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Medicación]
 
 {style="table-layout:auto"}
 
-La clase se puede ampliar con la variable [[!UICONTROL Medicación sanitaria] grupo de campos](../field-groups/medication/healthcare-medication.md) para obtener más información sobre el medicamento o fármaco.
+La clase se puede ampliar con el grupo de campo [[!UICONTROL Medicamentos para la atención médica]](../field-groups/medication/healthcare-medication.md) para describir más detalles sobre el medicamento o el medicamento.

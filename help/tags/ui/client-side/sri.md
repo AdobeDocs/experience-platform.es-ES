@@ -4,8 +4,8 @@ description: Conozca cómo se admite la Integridad de los subrecursos (SRI) en A
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 97%
+source-wordcount: '594'
+ht-degree: 96%
 
 ---
 

@@ -18,9 +18,9 @@ ht-degree: 2%
 >
 >Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al `/acl/reference` punto final. Estos nombres se pueden usar en llamadas de API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
+Puede enumerar los nombres de todos los permisos y tipos de recursos realizando una solicitud de GET al extremo `/acl/reference`. Estos nombres se pueden usar en llamadas API a [ver directivas de control de acceso efectivas](./effective-policies.md) para el usuario actual.
 
-Un permiso es una directiva que se administra mediante Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo de recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de [!DNL Platform] recurso (como conjuntos de datos o esquemas).
+Un permiso es una directiva que se administra mediante Adobe Admin Console y que se asigna a cero o más directivas de tipo de recurso. Un tipo de recurso es una directiva que habilita las capacidades de lectura, escritura o eliminación para un tipo específico de recurso [!DNL Platform] (como conjuntos de datos o esquemas).
 
 **Formato de API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve un valor `permissions` objeto y un `resource-types` objeto, cada uno de los cuales contiene una lista completa de nombres para los permisos de acceso o tipos de recursos, respectivamente.
+Una respuesta correcta devuelve un objeto `permissions` y un objeto `resource-types`, cada uno de los cuales contiene una lista completa de nombres de permisos de acceso o tipos de recursos, respectivamente.
 
 ```json
 {

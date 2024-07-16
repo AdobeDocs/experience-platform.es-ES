@@ -6,7 +6,7 @@ exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -21,15 +21,15 @@ Para ver una introducción a las etiquetas, consulte los recursos siguientes:
 
 ## Cómo encontrar extensiones de etiquetas en la interfaz de Platform {#how-to-find-extensions-in-interface}
 
-Para buscar las extensiones en la interfaz de Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el **[!UICONTROL Tipos]** filtro.
+Para encontrar las extensiones en la interfaz de Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]**.
 
-![Filtro Extensiones en la interfaz](../../assets/catalog/launch-extensions/filter.png)
+![Filtro de extensiones en la interfaz](../../assets/catalog/launch-extensions/filter.png)
 
 ## Funcionamiento de las extensiones de etiquetas {#how-extensions-work}
 
-A [extensión de etiqueta](../../../tags/home.md#extensions) es un paquete de código que mejora la funcionalidad de un sitio web o una aplicación móvil. Esto puede incluir el envío de datos de evento sin procesar a un destino como [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) pero también pueden servir para otras funciones.
+Una [extensión de etiqueta](../../../tags/home.md#extensions) es un paquete de código que mejora la funcionalidad de un sitio web o aplicación móvil. Esto podría incluir el envío de datos de evento sin procesar a un destino como [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), pero también pueden servir para otras funciones.
 
-Es importante diferenciar entre extensiones de etiqueta y de reenvío de eventos. Las extensiones que aparecen en la interfaz de usuario de destinos de Platform son *extensiones de etiquetas*. Consulte la información general sobre el reenvío de eventos para obtener más información sobre [diferencias entre etiquetas y reenvío de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+Es importante diferenciar entre extensiones de etiqueta y de reenvío de eventos. Las extensiones que aparecen en la interfaz de usuario de destinos de Platform son *extensiones de etiqueta*. Consulte la descripción general del reenvío de eventos para obtener más información sobre las [diferencias entre las etiquetas y el reenvío de eventos](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
 
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 Las funciones de etiquetas de Platform son gratuitas para los clientes Experience Cloud existentes. El sistema simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que se pueden instalar, configurar, actualizar y eliminar. Las etiquetas dejan un pequeño espacio en el sitio web y le permiten mantener las páginas cargadas rápidamente.
 
-Aunque no puede activar audiencias para etiquetar extensiones, puede configurar reglas para reenviar solo datos de evento en determinadas situaciones. Esta potente funcionalidad le permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea acerca de las reglas en [documentación de etiquetas](../../../tags/ui/managing-resources/rules.md).
+Aunque no puede activar audiencias para etiquetar extensiones, puede configurar reglas para reenviar solo datos de evento en determinadas situaciones. Esta potente funcionalidad le permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea acerca de las reglas en la [documentación de etiquetas](../../../tags/ui/managing-resources/rules.md).
 
 ## Casos de uso de ejemplo para extensiones {#extensions-use-cases}
 

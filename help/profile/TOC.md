@@ -7,7 +7,7 @@ role: User
 source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 14%
+ht-degree: 27%
 
 ---
 
@@ -17,21 +17,21 @@ ht-degree: 14%
 * [Información general de [!DNL Profile]](home.md)
 * [Información general de perfil (vídeo)](video/profile-overview.md)
 * [[!DNL Profile] y protecciones de segmentación](guardrails.md)
-* [[!DNL Profile] tablero](ui/profile-dashboard.md)
-* [Perfiles de borde](edge-profiles.md)
+* [[!DNL Profile] panel](ui/profile-dashboard.md)
+* [Perfiles de Edge](edge-profiles.md)
 * [Caducidad de Experience Event](event-expirations.md)
 * [Caducidad de perfil seudónimo](pseudonymous-profiles.md)
 * [Solicitud de marca de tiempo del cliente](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
-   * [Entidades ([!DNL Profile] access)](api/entities.md)
-   * [Exportar trabajos ([!DNL Profile] export)](api/export-jobs.md)
-   * [Previsualizar estado de muestra ([!DNL Profile] preview)](api/preview-sample-status.md)
-   * [[!DNL Profile] trabajos del sistema (eliminar solicitudes)](api/profile-system-jobs.md)
+   * [Entidades (acceso de [!DNL Profile])](api/entities.md)
+   * [Trabajos de exportación ([!DNL Profile] exportar)](api/export-jobs.md)
+   * [Previsualizar estado de muestra ([!DNL Profile] vista previa)](api/preview-sample-status.md)
+   * [[!DNL Profile] trabajos del sistema (Eliminar solicitudes)](api/profile-system-jobs.md)
 * IU de perfil {#ui}
-   * [[!DNL Profile] Guía de IU](ui/user-guide.md)
-   * [[!DNL Profile] personalización de detalles](ui/profile-customization.md)
+   * [Guía de la interfaz de usuario [!DNL Profile]](ui/user-guide.md)
+   * [Personalización de detalles de [!DNL Profile]](ui/profile-customization.md)
    * [Perfiles de clientes potenciales](ui/prospect-profile.md)
 * Atributos calculados {#computed-attributes}
    * [Información general](computed-attributes/overview.md)

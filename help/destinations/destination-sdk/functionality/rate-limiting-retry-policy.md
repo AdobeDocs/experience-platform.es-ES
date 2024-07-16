@@ -4,7 +4,7 @@ title: Política de limitación de velocidad y reintentos para destinos de strea
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Los destinos creados por el socio pueden devolver varios errores y tener diferentes políticas de limitación de velocidad. En esta página se explica cómo Experience Platform gestiona los distintos tipos de errores devueltos por los destinos de flujo continuo.
 
-Al configurar un destino con Destination SDK, puede seleccionar entre dos tipos de agregación: [agregación de mejor esfuerzo](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) y [agregación configurable](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Según el tipo de agregación que seleccione, lea a continuación cómo gestiona Experience Platform los errores y las limitaciones de velocidad.
+Al configurar un destino mediante el Destination SDK, puede seleccionar entre dos tipos de agregación: [agregación óptima](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) y [agregación configurable](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Según el tipo de agregación que seleccione, lea a continuación cómo gestiona Experience Platform los errores y las limitaciones de velocidad.
 
 ## Agregación del mejor esfuerzo {#best-effort-aggregation}
 
@@ -26,7 +26,7 @@ En el caso de las plataformas de destino configuradas con agregación configurab
 * Errores en los que el Experience Platform reintenta enviar los datos a su plataforma:
    * Códigos de respuesta HTTP 420 y 429
    * Códigos de respuesta HTTP superiores a 500
-* Errores donde el Experience Platform *no tiene* vuelva a intentar enviar los datos a su plataforma: todas las demás que devuelve su plataforma
+* Errores en los que el Experience Platform *no* intenta enviar los datos a su plataforma: todos los demás devueltos por su plataforma
 
 ### Método de reintento descrito {#retry-approach}
 

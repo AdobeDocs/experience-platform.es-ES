@@ -20,15 +20,15 @@ El SDK web de Adobe Experience Platform es una biblioteca JavaScript del lado de
 
 El SDK web envía datos de forma independiente de la solución (XDM) al Edge Network de Experience Platform, que a su vez asigna los datos a formatos y destinos específicos de la solución y los envía en tiempo real.
 
-Consulte el siguiente vídeo para obtener más información sobre el SDK web: [Conozca Alloy.js y no vuelva a etiquetar para un eVar o Mbox](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
+Vea el siguiente vídeo para obtener más información sobre el SDK web: [Conozca Alloy.js y no vuelva a etiquetar para un eVar o Mbox](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
 ## ¿En qué se diferencian el SDK web de Adobe Experience Platform de las soluciones anteriores?
 
 ### Antes del SDK web de Experience Platform
 
-Actualmente, debe implementar diferentes bibliotecas de JavaScript en función de cada solución individual.
+Actualmente, debe implementar diferentes bibliotecas de JavaScript basadas en cada solución individual.
 
-* Cada solución tiene su propia biblioteca JavaScript, esquema y dominio.
+* Cada solución tiene su propia biblioteca, esquema y dominio de JavaScript.
 * Ninguna de estas bibliotecas se creó para funcionar entre sí.
 * Los casos de uso entre soluciones y Adobe Experience Platform requieren que estas bibliotecas dispares sean interdependientes, lo que provoca fricciones en la implementación.
 
@@ -42,7 +42,7 @@ Aunque las etiquetas en Platform facilitan al máximo la implementación y admin
 * Confusión de esquemas entre soluciones (A4T)
 * Muchas otras cosas menos óptimas
 
-Además, actualmente no hay ninguna biblioteca JavaScript que envíe datos directamente a Adobe Experience Platform.
+Además, actualmente no hay ninguna biblioteca de JavaScript que envíe datos directamente a Adobe Experience Platform.
 
 ### Con SDK web de Experience Platform
 
@@ -60,29 +60,29 @@ El SDK web de Adobe Experience Platform también puede enviar datos directamente
 
 ## ¿Cuál es el valor de este nuevo SDK web?
 
-**Rendimiento:** El SDK web es más pequeño que todas las bibliotecas de Adobes actuales y proporciona cargas de página considerablemente más rápidas.
+**Rendimiento:** El SDK web es más pequeño que todas las bibliotecas de Adobe actuales y proporciona cargas de página considerablemente más rápidas.
 
 **Simplicidad:** La combinación de XDM, SDK web, etiquetas, Edge Network, soluciones de Adobe Experience Cloud y Adobe Experience Platform crea una historia de recopilación de datos fácil de entender y seguir.
 
-* **XDM:** Esquema independiente de la solución que se utiliza para enviar datos al Adobe. Se acabaron las etiquetas para evars y mboxes.
-* **SDK web:** Facilita el envío y la recepción de datos a Adobe Experience Platform Edge Network.
-* **Etiquetas:** Simplifica la implementación y la configuración del SDK web (y otras etiquetas JavaScript) en un sitio.
-* **Edge Network:** Enrute fácilmente los datos a Adobe Experience Platform y a las soluciones en el formato que necesitan.
-* **Soluciones de Adobe Experience Platform y Adobe:** Habilite su propuesta de valor.
+* **XDM:** esquema independiente de soluciones que usa para enviar datos al Adobe. Se acabaron las etiquetas para evars y mboxes.
+* **SDK web:** facilita el envío y la recepción de datos al Edge Network de Adobe Experience Platform.
+* **Etiquetas:** simplifica la implementación y configuración del SDK web (y cualquier otra etiqueta JavaScript) en un sitio.
+* **Edge Network:** enrute fácilmente los datos a Adobe Experience Platform y a las soluciones en el formato que necesitan.
+* **Soluciones de Adobe y Adobe Experience Platform:** Habilite su propuesta de valor.
 
-**Control:** Como todos los datos utilizan un único flujo de datos conectado, puede seguir y controlar lógicamente el aspecto de los datos en cada milisegundo de su recorrido, desde y hacia aplicaciones.
+**Control:** Como todos los datos utilizan una única secuencia de datos conectada, puede seguir y controlar lógicamente el aspecto de los datos en cada milisegundo de su recorrido, desde y hacia aplicaciones.
 
-**Moderno y listo para el futuro:** El SDK web y su conexión con el Edge Network han permitido a Adobe modernizar significativamente la forma en que el Adobe gestiona la recopilación de datos, la personalización, el consentimiento y el futuro de las cookies de terceros. (Habilita un dominio de origen, administrado por Adobe).
+**Moderno y listo para el futuro:** El SDK web y su conexión con el Edge Network han permitido a Adobe modernizar de manera significativa la forma en que Adobe trata la recopilación de datos, la personalización, el consentimiento y el futuro de las cookies de terceros. (Habilita un dominio de origen, administrado por Adobe).
 
-**Tiempo de respuesta:** Adobe ha trabajado duro (y seguirá haciéndolo) para que sea lo más fácil posible implementar el SDK web mediante  y asignar datos del lado del cliente a XDM. Una vez finalizado ese trabajo, todas las demás soluciones de Adobe y servicios de Adobe Experience Platform se pueden activar o desactivar en el lado del servidor. Por ejemplo, si utiliza esto para Adobe Analytics y desea activar Target o Experience Platform, simplemente puede activar una opción en la configuración del flujo de datos y activar esos casos de uso.
+El Adobe **Tiempo de obtención del valor:** ha trabajado duro (y seguirá haciéndolo) para que sea lo más fácil posible implementar el SDK web mediante etiquetas y asignar datos del lado del cliente a XDM. Una vez finalizado ese trabajo, todas las demás soluciones de Adobe y servicios de Adobe Experience Platform se pueden activar o desactivar en el lado del servidor. Por ejemplo, si utiliza esto para Adobe Analytics y desea activar Target o Experience Platform, simplemente puede activar una opción en la configuración del flujo de datos y activar esos casos de uso.
 
 ## ¿Qué es [!DNL alloy.js]?
 
 [!DNL alloy.js] es el nombre de la biblioteca JavaScript del SDK web. Se hace referencia a él dentro del código fuente y del nombre de archivo del SDK.
 
-## ¿Necesitan los clientes comprar Adobe Experience Platform para utilizar? [!DNL Web SDK]?
+## ¿Necesitan los clientes comprar Adobe Experience Platform para usar [!DNL Web SDK]?
 
-No. Cualquier cliente de Adobe Digital Experience puede utilizar el SDK web de Adobe Experience Platform de forma gratuita. Clientes que desean utilizar el [!DNL Web SDK] Deberá configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos en la IU de recopilación de datos o la IU del Experience Platform.
+No. Cualquier cliente de Adobe Digital Experience puede utilizar el SDK web de Adobe Experience Platform de forma gratuita. Los clientes que deseen utilizar [!DNL Web SDK] deberán configurar los permisos adecuados para crear esquemas, conjuntos de datos, áreas de nombres de identidad y flujos de datos en la IU de recopilación de datos o la IU del Experience Platform.
 
 Para obtener más información sobre la configuración de estos permisos, consulte nuestra documentación sobre [administración de permisos de recopilación de datos](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
@@ -104,29 +104,29 @@ El SDK web está disponible actualmente para el público en general y se puede u
 
 El SDK no supone ningún coste y se aloja en el Adobe de forma gratuita. Si es necesario, puede descargarlo y alojarlo en sus propios servidores sin coste alguno.
 
-El SDK web requiere acceso a [configuraciones de secuencia de datos](../datastreams/overview.md) y el Experience Platform [Generador de esquemas XDM](../xdm/tutorials/create-schema-ui.md), para que los servidores de Adobe gestionen correctamente los datos de entrada procedentes del SDK. Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
+El SDK web requiere acceso a [configuraciones de secuencia de datos](../datastreams/overview.md) y al generador de esquemas XDM](../xdm/tutorials/create-schema-ui.md) del Experience Platform para que los servidores de Adobe administren correctamente los datos entrantes procedentes del SDK. [ Si desea obtener acceso, póngase en contacto con el equipo de su cuenta de Adobe para iniciar el proceso de solicitud.
 
 ## ¿Qué casos de uso admite actualmente el SDK web?
 
-El SDK web evoluciona rápidamente. Se están trabajando en más casos de uso. Puede encontrar el [lista de casos de uso admitidos actualmente aquí.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
+El SDK web evoluciona rápidamente. Se están trabajando en más casos de uso. Aquí puede encontrar la [lista de casos de uso actualmente admitidos.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## ¿Los clientes actuales tienen que volver a etiquetar sus sitios?
 
-Depende. El SDK web de Adobe Experience Platform se puede implementar en dos estilos diferentes. Un documento de migración futuro proporcionará detalles adicionales.
+Depende de ti. El SDK web de Adobe Experience Platform se puede implementar en dos estilos diferentes. Un documento de migración futuro proporcionará detalles adicionales.
 
-* **Solo otra etiqueta:** Si el sitio ya está etiquetado para soluciones de y no puede volver a etiquetar, pero desea enviar datos al Edge Network de Adobe Experience Platform para casos de uso del Experience Platform o para las próximas funciones de reenvío de eventos (ver a continuación), puede añadir la variable `alloy.js` al sitio, donde funciona como &quot;solo otra etiqueta&quot;.
+* **Solo otra etiqueta:** Si el sitio ya está etiquetado para soluciones y no puede volver a etiquetar, pero desea enviar datos al Edge Network de Adobe Experience Platform para casos de uso del Experience Platform o para las próximas funciones de reenvío de eventos (ver a continuación), puede agregar la etiqueta `alloy.js` al sitio, donde funciona como &quot;solo otra etiqueta&quot;.
 
-* **La única etiqueta:** Si desea utilizar el SDK web para una solución de Experience Cloud, debe utilizarlo para _todo_ de las soluciones de esa página. Por ejemplo: Si su sitio ya está etiquetado para Adobe Analytics y desea utilizarlo para Target, debe utilizarlo tanto para como para cualquier otro en el futuro.
+* **La única etiqueta:** Si desea usar el SDK web para una solución de Experience Cloud, debe usarlo para _todas_ las soluciones de esa página. Por ejemplo: Si su sitio ya está etiquetado para Adobe Analytics y desea utilizarlo para Target, debe utilizarlo tanto para como para cualquier otro en el futuro.
 
-En otras palabras, si decide utilizar el SDK web de Adobe Experience Platform para casos de uso que no sean de solución, puede etiquetar el sitio con `alloy.js` y seguir adelante como si fuera una nueva solución. Si desea utilizarlo para Adobe Analytics, Target o Audience Manager, o para casos de uso de aplicaciones, es posible que tenga que eliminar cualquiera del código heredado en su página.
+En otras palabras, si decide utilizar el SDK web de Adobe Experience Platform para casos de uso que no sean de solución, puede etiquetar el sitio con `alloy.js` y continuar como si fuera una nueva solución. Si desea utilizarlo para Adobe Analytics, Target o Audience Manager, o para casos de uso de aplicaciones, es posible que tenga que eliminar cualquiera del código heredado en su página.
 
 ## ¿Puedo migrar los ECID cuando empiece a utilizar el SDK web para que los visitantes del sitio web no empiecen a mostrarse como nuevos visitantes?
 
-Sí, el SDK web de Adobe Experience Platform proporciona una función de migración de identidad. Siga las instrucciones de migración de ID en la [Documentación de identidad del SDK web de Platform](/help/web-sdk/identity/overview.md#id-migration) para obtener más información.
+Sí, el SDK web de Adobe Experience Platform proporciona una función de migración de identidad. Siga las instrucciones para la migración de ID en la [documentación de identidad del SDK web de Platform](/help/web-sdk/identity/overview.md#id-migration) para obtener más información.
 
 ## ¿En qué se diferencia el SDK web de las etiquetas?
 
-* **Etiquetas en el Experience Platform** administrar el código del dispositivo. Utilícelos para implementar el código con mayor facilidad. Son libres y poderosos.
+* **Las etiquetas del Experience Platform** administran el código del dispositivo. Utilícelos para implementar el código con mayor facilidad. Son libres y poderosos.
 
 * **SDK web de Adobe Experience Platform** es el nombre oficial del nuevo código que implementarían las etiquetas para los casos de uso de Adobe. También es libre y poderoso.
 
@@ -134,15 +134,15 @@ Sí, el SDK web de Adobe Experience Platform proporciona una función de migraci
 
 ## ¿Tengo que utilizar etiquetas para implementar el SDK web?
 
-No. Puede descargar el `alloy.js` preséntese usted mismo.
+No. Puede descargar el archivo de `alloy.js` usted mismo.
 
 Sin embargo:
 
 * El SDK web de Adobe Experience Platform requiere un elemento denominado ID de flujo de datos para que la red perimetral pueda identificar el flujo y determinar qué hacer con los datos. Este ID se crea en el Experience Platform. Esto no significa que tenga que utilizar la interfaz de usuario para crear propiedades o implementar el código JavaScript, pero sí necesita utilizar etiquetas para crear un ID de configuración.
 
-* Las etiquetas no solo son el mejor administrador de etiquetas y SDK disponible, sino que su implementación es muy sencilla `alloy.js` y asigne datos a esquemas XDM. Si decide no utilizar etiquetas, deberá administrar la implementación `alloy.js`, eventos y asignación de datos en XDM antes de enviarlos. Este es un _mucho_ un proceso más difícil que el uso de etiquetas.
+* Las etiquetas no solo son el mejor administrador de etiquetas y SDK disponible, sino que también facilita la implementación de `alloy.js` y la asignación de datos a esquemas XDM. Si decide no utilizar etiquetas, deberá administrar la implementación de `alloy.js`, los eventos y la asignación de los datos en XDM antes de enviarlos. Este es un proceso _mucho_ más difícil que usar etiquetas.
 
-* Se recomienda utilizar etiquetas para implementar `alloy.js`, incluso si es la única etiqueta para la que la utiliza.
+* Se recomienda usar etiquetas para implementar `alloy.js`, incluso si es la única etiqueta para la que se usa.
 
 ## ¿Qué es el reenvío de eventos?
 
@@ -150,25 +150,25 @@ Si utiliza nuestros SDK y envía XDM al Edge Network, estas nuevas funciones y e
 
 ## ¿Qué es un CNAME o dominio de origen y por qué importa?
 
-Encontrará más información sobre un CNAME en la [documentación del Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=es)
+Encontrará más información sobre un CNAME en la [documentación de Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=es)
 
 ## ¿Utiliza cookies el SDK web de Adobe Experience Platform? En caso afirmativo, ¿qué cookies utiliza?
 
 Sí, actualmente el SDK web utiliza entre una y siete cookies en función de su implementación. A continuación se muestra una lista de las cookies que puede ver con el SDK web y la forma en que se utilizan:
 
-| **Nombre** | **maxAge** | **Página descriptiva** | **Descripción** |
+| **Nombre** | **maxAge** | **Edad amistosa** | **Descripción** |
 |---|---|---|---|
 | **kndct_orgid_identity** | 34128000 | 395 días | La cookie de identidad almacena el ECID, así como otra información relacionada con el ECID. |
 | **kndctr_orgid_permission_check** | 7200 | 2 horas | Esta cookie basada en sesión indica al servidor que busque las preferencias de consentimiento del lado del servidor. |
 | **kndctr_orgid_permission** | 15552000 | 180 días | Esta cookie almacena la preferencia de consentimiento del usuario para el sitio web. |
 | **kndctr_orgid_cluster** | 1800 | 30 minutos | Esta cookie almacena la región del Edge Network que atiende las solicitudes del usuario actual. La región se utiliza en la ruta URL para que el Edge Network pueda enrutar la solicitud a la región correcta. Esta cookie tiene una duración de 30 minutos, de modo que si un usuario se conecta con una dirección IP diferente, la solicitud se puede enrutar a la región más cercana. |
-| **mbox** | 63072000 | 2 años | Esta cookie aparece cuando la configuración de migración de Target se establece en verdadera. Esto permitirá que el destinatario [Cookie de mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) que establecerá el SDK web. |
+| **mbox** | 63072000 | 2 años | Esta cookie aparece cuando la configuración de migración de Target se establece en verdadera. Esto permitirá que el SDK web establezca la cookie [mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) de Target. |
 | **mboxEdgeCluster** | 1800 | 30 minutos | Esta cookie aparece cuando la configuración de migración de Target se establece en verdadera. Esta cookie permite al SDK web comunicar el clúster perimetral correcto a at.js para que los perfiles de Target puedan permanecer sincronizados a medida que los usuarios navegan por un sitio. |
 | **AMCV_###@AdobeOrg** | 34128000 | 395 días | Esta cookie solo aparece cuando la migración de ID en el SDK web de Adobe Experience Platform está habilitada. Esta cookie es útil cuando se realiza la transición al SDK web mientras algunas partes del sitio aún utilizan visitor.js. Consulte [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) para obtener más información. |
 
-Al utilizar el SDK web, el Edge Network establece una o más de las cookies anteriores. El Edge Network establece todas las cookies con el `secure` y `sameSite="none"` atributos.
+Al utilizar el SDK web, el Edge Network establece una o más de las cookies anteriores. El Edge Network establece todas las cookies con los atributos `secure` y `sameSite="none"`.
 
-Si actualmente tiene secciones seguras y no seguras en su sitio web, esto podría interferir con la identificación del usuario. Cuando un usuario navega de una sección segura del sitio a una sección no segura, el Edge Network genera un nuevo `ECID` con la solicitud.
+Si actualmente tiene secciones seguras y no seguras en su sitio web, esto podría interferir con la identificación del usuario. Cuando un usuario navega de una sección segura del sitio a una sección no segura, el Edge Network genera un nuevo(a) `ECID` con la solicitud.
 
 ## ¿Con qué exploradores es compatible el SDK web de Adobe Experience Platform?
 
@@ -177,38 +177,38 @@ El SDK web de Adobe Experience Platform está diseñado para funcionar de forma 
 ## ¿Dónde puedo obtener más información acerca del SDK web de Adobe Experience Platform?
 
 * [Documentación](/help/web-sdk/home.md)
-* [Código fuente](https://github.com/adobe/alloy)
+* [Código Source](https://github.com/adobe/alloy)
 
 ### Compatibilidad con Internet Explorer {#support-internet-explore}
 
-Este SDK utiliza promesas, que son un método de comunicación de la finalización de tareas asincrónicas. El [Promesa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La implementación utilizada por el SDK es compatible de forma nativa con todos los navegadores de destino, excepto [!DNL Internet Explorer]. Para usar el SDK en [!DNL Internet Explorer], debe tener `window.Promise` [polillenado](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Este SDK utiliza promesas, que son un método de comunicación de la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que usa el SDK es compatible de forma nativa con todos los navegadores de destino excepto [!DNL Internet Explorer]. Para usar el SDK en [!DNL Internet Explorer], debe tener `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Para determinar si ya tiene `window.Promise` polillenado:
 
 1. Abra el sitio web en [!DNL Internet Explorer].
 1. Abra la consola de depuración del explorador.
-1. Tipo `window.Promise` en la consola y, a continuación, pulse Entrar.
+1. Escriba `window.Promise` en la consola y, a continuación, presione Entrar.
 
-Si algo distinto de `undefined` aparece, probablemente ya haya rellenado correctamente `window.Promise`. Otra forma de determinar si `window.Promise` es polyfill es cargando su sitio web después de haber completado las instrucciones de instalación anteriores. Si el SDK genera un error al mencionar algo sobre una promesa, es probable que no haya rellenado correctamente `window.Promise`.
+Si aparece algo distinto de `undefined`, es probable que ya haya rellenado correctamente `window.Promise`. Otra forma de determinar si `window.Promise` está polillenado es cargando el sitio web después de completar las instrucciones de instalación anteriores. Si el SDK genera un error al mencionar algo sobre una promesa, es probable que no haya rellenado correctamente `window.Promise`.
 
-Si ha determinado que debe rellenar políticamente `window.Promise`, incluya la siguiente etiqueta de script encima del código base proporcionado anteriormente:
+Si ha determinado que debe rellenar correctamente `window.Promise`, incluya la siguiente etiqueta de script encima del código base proporcionado anteriormente:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 ```
 
-Esta etiqueta carga una secuencia de comandos que garantiza que `window.Promise` es una implementación de Promise válida.
+Esta etiqueta carga un script que garantiza que `window.Promise` sea una implementación Promise válida.
 
 >[!NOTE]
 >
->Si decide cargar una implementación de Promise diferente, asegúrese de que admita `Promise.prototype.finally`.
+>Si decide cargar una implementación Promise diferente, asegúrese de que admita `Promise.prototype.finally`.
 
 ### Compatibilidad con Internet Explorer
 
-El SDK de Adobe Experience Platform utiliza promesas, que son un método de comunicación de la finalización de tareas asincrónicas. El [Promesa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La implementación utilizada por el SDK es compatible de forma nativa con todos los navegadores de destino, excepto [!DNL Internet Explorer]. Para usar el SDK en [!DNL Internet Explorer], debe tener `window.Promise` [polillenado](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+El SDK de Adobe Experience Platform utiliza promesas, que son un método de comunicación de la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que usa el SDK es compatible de forma nativa con todos los navegadores de destino excepto [!DNL Internet Explorer]. Para usar el SDK en [!DNL Internet Explorer], debe tener `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
-Una biblioteca que podría usar para polyfill promise es promise-polyfill. Consulte la [documentación de promise-polyfill](https://www.npmjs.com/package/promise-polyfill) para obtener más información sobre cómo instalar con NPM.
+Una biblioteca que podría usar para polyfill promise es promise-polyfill. Consulte la [documentación de promise-polyfill](https://www.npmjs.com/package/promise-polyfill) para obtener más información sobre cómo realizar la instalación con NPM.
 
 >[!NOTE]
 >
->Si decide cargar una implementación de Promise diferente, asegúrese de que admita `Promise.prototype.finally`.
+>Si decide cargar una implementación Promise diferente, asegúrese de que admita `Promise.prototype.finally`.

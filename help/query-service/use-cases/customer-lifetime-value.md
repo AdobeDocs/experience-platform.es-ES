@@ -15,7 +15,7 @@ Puede utilizar Real-time Customer Data Platform para hacer un seguimiento del va
 
 La siguiente infografía muestra el ciclo de recopilación, manipulación, análisis y activación de datos que genera datos de alto rendimiento para mejorar sus campañas de marketing.
 
-![La infografía de ida y vuelta de los datos de la observación al análisis a la acción.](../images/use-cases/infographic-use-case-cycle.png)
+![La infografía de ida y vuelta de datos de la observación al análisis y a la acción.](../images/use-cases/infographic-use-case-cycle.png)
 
 Este caso de uso de extremo a extremo muestra cómo se pueden capturar y modificar las señales de datos para calcular el atributo derivado del valor de duración del cliente. Estos conjuntos de datos derivados se pueden aplicar a los datos de perfil de Real-Time CDP y están disponibles para su uso con paneles definidos por el usuario para crear un panel para el análisis de perspectivas. A través de Data Distiller, puede ampliar el modelo de datos de perspectivas de Real-Time CDP y utilizar los conjuntos de datos derivados de CLV y las perspectivas de panel para crear una nueva audiencia y activarla en un destino deseado. Estas audiencias de alto rendimiento se pueden usar para impulsar la próxima campaña de marketing.
 
@@ -27,16 +27,16 @@ Esta guía se ha diseñado para ayudarle a comprender mejor la experiencia del c
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Servicio de consultas](../home.md): Proporciona una interfaz de usuario y una API RESTful en las que se pueden utilizar consultas SQL para analizar y enriquecer datos.
-* [Servicio de segmentación](../../segmentation/home.md): Permite generar audiencias a partir de los datos del perfil del cliente en tiempo real.
+* [Servicio de consultas](../home.md): Proporciona una interfaz de usuario y una API RESTful donde puede usar consultas SQL para analizar y enriquecer los datos.
+* [Servicio de segmentación](../../segmentation/home.md): permite generar audiencias a partir de los datos del perfil del cliente en tiempo real.
 
 ## Requisitos previos
 
-Esta guía requiere que tenga el [Data Distiller](../data-distiller/overview.md) SKU como parte de la oferta de paquetes. Si no está seguro de si lo tiene, póngase en contacto con su representante de servicios de Adobe.
+Esta guía requiere que tenga el SKU [Data Distiller](../data-distiller/overview.md) como parte de la oferta de paquetes. Si no está seguro de si lo tiene, póngase en contacto con su representante de servicios de Adobe.
 
 ## Crear un conjunto de datos derivado {#create-derived-dataset}
 
-El primer paso para establecer el CLV es crear un conjunto de datos derivado a partir de las señales de datos capturadas de las acciones del usuario. Este caso de uso concreto se recoge en un documento independiente sobre un plan de fidelización de aerolínea. Consulte la guía para obtener información sobre cómo [utilice el servicio de consulta para crear conjuntos de datos derivados basados en deciles para utilizarlos con los datos de perfil](./deciles-use-case.md). En el documento se proporcionan ejemplos completos y explicaciones que explican los siguientes pasos:
+El primer paso para establecer el CLV es crear un conjunto de datos derivado a partir de las señales de datos capturadas de las acciones del usuario. Este caso de uso concreto se recoge en un documento independiente sobre un plan de fidelización de aerolínea. Consulte la guía para obtener información sobre cómo [usar el servicio de consulta para crear conjuntos de datos derivados basados en deciles que se utilizarán con los datos de perfil](./deciles-use-case.md). En el documento se proporcionan ejemplos completos y explicaciones que explican los siguientes pasos:
 
 * Cree un esquema para permitir el agrupamiento de deciles.
 * Utilice el servicio de consulta para crear deciles.
@@ -47,7 +47,7 @@ El primer paso para establecer el CLV es crear un conjunto de datos derivado a p
 
 ## Ampliación del modelo de datos de perspectivas y programación de actualizaciones {#extend-data-model-and-set-refresh-schedule}
 
-Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para obtener información sobre cómo [cree un modelo de datos de perspectivas de informes a través del servicio de consultas para utilizarlo con datos de almacenamiento acelerado y paneles definidos por el usuario](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
+Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para aprender a [crear un modelo de datos de perspectivas de informes a través del servicio de consultas para usarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
 
 * Cree un modelo para informar sobre perspectivas con Data Distiller.
 * Crear tablas, relaciones y rellenar datos.
@@ -56,13 +56,13 @@ Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado
 * Cree tablas de dimensiones para ampliar el modelo de perspectivas de creación de informes.
 * Consulte el modelo de datos de perspectivas de informes de tienda acelerados extendidos
 
-Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalizar las plantillas de consultas SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Asegúrese de establecer una programación para actualizar el modelo de datos personalizado en una cadencia normal. Esto garantiza que los datos regresen como parte de su canalización de ingesta según sea necesario y rellene los paneles definidos por el usuario. Consulte la [guía de consultas de programación](../ui/query-schedules.md#create-schedule) para aprender a configurar la programación.
+Asegúrese de establecer una programación para actualizar el modelo de datos personalizado en una cadencia normal. Esto garantiza que los datos regresen como parte de su canalización de ingesta según sea necesario y rellene los paneles definidos por el usuario. Consulte la [guía de consultas de programación](../ui/query-schedules.md#create-schedule) para obtener información sobre cómo configurar la programación.
 
 ## Crear un tablero para capturar información {#build-a-custom-dashboard}
 
-Ahora que ha creado su modelo de datos personalizado, está listo para visualizar los datos con consultas personalizadas y paneles definidos por el usuario. Consulte la información general sobre los paneles definidos por el usuario para obtener instrucciones completas sobre cómo [crear un tablero personalizado](../../dashboards/user-defined-dashboards.md). La guía de la interfaz de usuario incluye detalles sobre:
+Ahora que ha creado su modelo de datos personalizado, está listo para visualizar los datos con consultas personalizadas y paneles definidos por el usuario. Consulte la información general sobre los paneles definidos por el usuario para obtener instrucciones completas sobre cómo [crear un panel personalizado](../../dashboards/user-defined-dashboards.md). La guía de la interfaz de usuario incluye detalles sobre:
 
 * Cómo crear un widget.
 * Cómo usar el compositor de widgets.
@@ -73,7 +73,7 @@ A continuación se muestran ejemplos de widgets de CLV personalizados que utiliz
 
 ## Crear y activar audiencias de alto rendimiento {#create-and-activate-audiences}
 
-El siguiente paso es crear una definición de segmento y generar audiencias a partir de los datos del perfil del cliente en tiempo real. Consulte la guía de la IU del Generador de segmentos para obtener información sobre cómo [crear y activar audiencias en Platform](../../segmentation/ui/segment-builder.md). La guía proporciona secciones sobre cómo:
+El siguiente paso es crear una definición de segmento y generar audiencias a partir de los datos del perfil del cliente en tiempo real. Consulte la guía de la interfaz de usuario del Generador de segmentos para obtener información sobre cómo [crear y activar audiencias en la plataforma](../../segmentation/ui/segment-builder.md). La guía proporciona secciones sobre cómo:
 
 * Cree definiciones de segmentos utilizando una combinación de atributos, eventos y audiencias existentes como componentes básicos.
 * Utilice el lienzo y los contenedores del generador de reglas para controlar el orden en que se ejecutan las reglas de segmentación.
@@ -81,17 +81,17 @@ El siguiente paso es crear una definición de segmento y generar audiencias a pa
 * Habilite todas las definiciones de segmentos para la segmentación programada.
 * Habilite las definiciones de segmento especificadas para la segmentación de flujo continuo.
 
-Si lo prefiere, también dispone de [tutorial de vídeo del generador de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponible para obtener más información.
+También hay un [tutorial en vídeo del generador de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponible para obtener más información.
 
 ## Activar la audiencia para una campaña de correo electrónico {#activate-audience-for-campaign}
 
 Una vez creada la audiencia, está listo para activarla en un destino. Platform admite una variedad de proveedores de servicios de correo electrónico (ESP) que le permiten administrar sus actividades de marketing por correo electrónico, como enviar campañas de correo electrónico promocionales.
 
-Compruebe la [resumen de destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#connect-destination) para obtener una lista de los destinos admitidos a los que desea exportar datos (por ejemplo, [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) página).
+Consulte la [descripción general de los destinos de marketing por correo electrónico](../../destinations/catalog/email-marketing/overview.md#connect-destination) para obtener una lista de los destinos admitidos a los que desea exportar datos (por ejemplo, la página [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)).
 
 ## Ver los datos de análisis devueltos de la campaña {#post-campaign-data-analysis}
 
-Los datos de las fuentes ahora se pueden [procesado gradualmente](../key-concepts/incremental-load.md) como parte de una actualización programada del modelo de datos en el almacén de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que se produce o por lotes. El modelo de datos se puede actualizar una o varias veces al día, según la configuración o los conectores de origen. Consulte la [información general de API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md) o el [información general sobre ingesta de streaming](../../ingestion/streaming-ingestion/overview.md) para obtener más información.
+Ahora, los datos de las fuentes se pueden [procesar de manera incremental](../key-concepts/incremental-load.md) como parte de una actualización programada del modelo de datos en el almacén de datos acelerado. Cualquier evento de respuesta de los clientes se puede ingerir en Adobe Experience Platform a medida que se produce o por lotes. El modelo de datos se puede actualizar una o varias veces al día, según la configuración o los conectores de origen. Consulte la [descripción general de la API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md) o la [descripción general de la ingesta por transmisión](../../ingestion/streaming-ingestion/overview.md) para obtener más información.
 
 Una vez actualizado el modelo de datos, los widgets de panel personalizados proporcionan señales significativas que le permiten medir y visualizar el valor de duración del cliente.
 
@@ -99,7 +99,7 @@ Una vez actualizado el modelo de datos, los widgets de panel personalizados prop
 
 Se proporcionan varias opciones de visualización para el análisis personalizado.
 
-![El correo electrónico abierto por el widget de bloques de campañas.](../images/use-cases/email-opened-by-campaign-buckets.png)
+![El correo electrónico que abrió el widget de bloques de campañas.](../images/use-cases/email-opened-by-campaign-buckets.png)
 
 Estas perspectivas pueden, a su vez, ayudarle a desarrollar sus estrategias empresariales para campañas posteriores.
 

@@ -7,7 +7,7 @@ exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 >title="Información general sobre servicios inteligentes"
 >abstract=""
 
-Los servicios inteligentes permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones específicas de las necesidades de una empresa mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos. Además, los profesionales de marketing pueden activar predicciones en [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], y aplicaciones de terceros.
+Los servicios inteligentes permiten a los analistas y profesionales de marketing aprovechar el poder de la inteligencia artificial y el aprendizaje automático en casos prácticos de experiencias del cliente. Esto permite a los analistas de marketing formular predicciones específicas de las necesidades de una empresa mediante configuraciones de negocio sin necesidad de tener experiencia en la ciencia de datos. Además, los profesionales del marketing pueden activar predicciones en [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] y aplicaciones de terceros.
 
 El siguiente vídeo está diseñado para ayudarle a comprender los servicios inteligentes. En este vídeo, que utiliza ejemplos de casos de uso empresariales, se explica un flujo de trabajo de alto nivel y se describen las capacidades de la inteligencia artificial aplicada al cliente y del Attribution AI.
 
@@ -26,7 +26,7 @@ El siguiente vídeo está diseñado para ayudarle a comprender los servicios int
 
 ## Ventajas de los servicios inteligentes
 
-Servicios inteligentes, basados en [!DNL Adobe Experience Platform], ofrece a los especialistas en marketing responsables de la experiencia del cliente acceso a la IA como servicio, lo que facilita a los usuarios predecir el comportamiento del cliente, medir el impacto de una campaña o garantizar un mejor rendimiento de cada inversión. A continuación se enumeran algunas de las ventajas que ofrecen los servicios inteligentes.
+Servicios inteligentes, creados en [!DNL Adobe Experience Platform], proporciona a los especialistas en marketing responsables del acceso a la experiencia del cliente como un servicio, lo que facilita a los usuarios predecir el comportamiento del cliente, medir el impacto de una campaña o garantizar un mejor retorno de cada inversión. A continuación se enumeran algunas de las ventajas que ofrecen los servicios inteligentes.
 
 ### Velocidad de salida al mercado rentable
 
@@ -44,7 +44,7 @@ Habilite a los especialistas en marketing para que puedan empezar a usar la IA/M
 
 ### Ingesta
 
-Los datos del cliente se incorporan y transforman con el Experience Data Model (XDM) en [!DNL Adobe Experience Platform]. Para obtener más información sobre XDM, visite la [Información general de XDM](../xdm/home.md).
+Los datos del cliente se incorporan y transforman con el Experience Data Model (XDM) en [!DNL Adobe Experience Platform]. Para obtener más información sobre XDM, visite la [descripción general de XDM](../xdm/home.md).
 
 ### Configurar
 
@@ -56,8 +56,8 @@ Una vez que los modelos han terminado el entrenamiento y la puntuación, las pun
 
 ### Realizar acción
 
-Por último, puede decidir qué acciones realizar con las predicciones, como consumir perspectivas o activar aplicaciones en todo el [!DNL Adobe Experience Cloud]y creando paneles personalizados.
+Por último, puede decidir qué acciones llevar a cabo con las predicciones, como consumir perspectivas, activar aplicaciones en [!DNL Adobe Experience Cloud] y crear paneles personalizados.
 
 ## Pasos siguientes
 
-Actualmente, los servicios inteligentes ofrecen inteligencia artificial aplicada al cliente y Attribution AI. Attribution AI permite a los especialistas en marketing dirigir de forma inteligente la eficacia de marketing entre canales y campañas. Para obtener más información sobre Attribution AI, visite la [información general de Attribution AI](./attribution-ai/overview.md). La inteligencia artificial aplicada al cliente permite a los especialistas en marketing hiperpersonalizar las experiencias de los clientes. Para obtener más información sobre la inteligencia artificial aplicada al cliente, visite la [Información general sobre Customer AI](./customer-ai/overview.md).
+Actualmente, los servicios inteligentes ofrecen inteligencia artificial aplicada al cliente y Attribution AI. Attribution AI permite a los especialistas en marketing dirigir de forma inteligente la eficacia de marketing entre canales y campañas. Para obtener más información acerca de Attribution AI, visite la [descripción general de la Attribution AI](./attribution-ai/overview.md). La inteligencia artificial aplicada al cliente permite a los especialistas en marketing hiperpersonalizar las experiencias de los clientes. Para obtener más información sobre la inteligencia artificial aplicada al cliente, visite la [Descripción general de la inteligencia artificial aplicada al cliente](./customer-ai/overview.md).

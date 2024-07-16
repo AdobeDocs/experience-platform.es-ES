@@ -1,21 +1,21 @@
 ---
-title: Identificación de visitantes
-description: Descubra cómo la API del servidor de red Adobe Experience Platform Edge identifica a los visitantes
+title: Identificación de visitante
+description: Descubra cómo la API de Adobe Experience Platform Edge Network Server identifica a los visitantes
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: red perimetral;puerta de enlace;api;visitante;identificación
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
-# Identificación de visitantes
+# Identificación de visitante
 
-La API del servidor de red perimetral admite [Identificación de visitante mediante ID de origen ([!DNL FPID])](visitor-identification-fpid.md).
+La API de Edge Network Server admite la identificación de [visitantes mediante el identificador de origen ([!DNL FPID])](visitor-identification-fpid.md).
 
-Todas las identidades de usuario deben proporcionarse en la variable `identityMap` grupo de campos. Este grupo de campos está incluido en el SDK web de AEP `ExperienceEvent` mixin.
+Todas las identidades de usuario deben proporcionarse en el grupo de campos `identityMap`. Este grupo de campos está incluido en el mixin SDK web de AEP `ExperienceEvent`.
 
 ```json
 {
@@ -38,12 +38,12 @@ Todas las identidades de usuario deben proporcionarse en la variable `identityMa
 
 ## Identificadores de dispositivo {#identifiers}
 
-Existen varias formas de identificar un dispositivo dentro de la red perimetral. Consulte la tabla siguiente para obtener una descripción general de los ID admitidos.
+Existen varias formas de identificar un dispositivo dentro del Edge Network. Consulte la tabla siguiente para obtener una descripción general de los ID admitidos.
 
-| Área de nombres de ID | Administrado por | Descripción |
+| Espacio de nombres ID | Administrado por | Descripción |
 | --- | --- | --- |
-| `FPID` | Customer | `FPID` se codificará automáticamente en una `ECID` por la red perimetral, por lo tanto, las soluciones que requieren un `ECID` también funcionará.  <br><br> Para una identificación coherente del dispositivo, estos ID deben persistir en el dispositivo y proporcionarse en cada solicitud. En el caso de las interacciones web, esto implica almacenarlas como cookies de explorador. |
-| `IDFA`/`GAID` | Experience Platform | Pueden identificar a los usuarios entre aplicaciones, por lo que estos ID no se codifican en `ECID` por la red perimetral. |
+| `FPID` | Cliente | El Edge Network codificará automáticamente `FPID` en `ECID`, por lo tanto las soluciones que requieran `ECID` también funcionarán.  <br><br> Para una identificación de dispositivo coherente, estos identificadores deben persistir en el dispositivo y proporcionarse en cada solicitud. En el caso de las interacciones web, esto implica almacenarlas como cookies de explorador. |
+| `IDFA`/`GAID` | Experience Platform | Puede identificar usuarios en varias aplicaciones, por lo que el Edge Network no codifica estos identificadores en `ECID`. |
 
 <!--
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |

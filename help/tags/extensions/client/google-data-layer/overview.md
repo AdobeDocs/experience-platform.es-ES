@@ -11,13 +11,13 @@ ht-degree: 12%
 
 # Extensión de capa de datos Google
 
-La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede utilizar de forma independiente o simultánea con las soluciones de Google y con el código abierto de Google [Biblioteca auxiliar de capa de datos](https://github.com/google/data-layer-helper).
+La extensión de capa de datos de Google le permite utilizar una capa de datos de Google en la implementación de etiquetas. La extensión se puede usar de forma independiente o simultánea con las soluciones de Google y con la biblioteca de código abierto [Data Layer Helper Library](https://github.com/google/data-layer-helper) de Google.
 
-La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la capa de datos del cliente de Adobe (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las del [Extensión ACDL](../client-data-layer/overview.md).
+La biblioteca de ayuda proporciona una funcionalidad impulsada por eventos similar a la capa de datos del cliente de Adobe (ACDL). Los elementos de datos, las reglas y las acciones de la extensión de capa de datos de Google proporcionan una funcionalidad similar a las de la [extensión ACDL](../client-data-layer/overview.md).
 
 ## Instalación
 
-Para instalar la extensión, vaya al catálogo de extensiones en la IU de recopilación de datos y seleccione **[!UICONTROL Capa de datos de Google]**.
+Para instalar la extensión, vaya al catálogo de extensiones en la interfaz de usuario de recopilación de datos y seleccione **[!UICONTROL Capa de datos de Google]**.
 
 Una vez instalada, la extensión crea o accede a una capa de datos en cada carga de la biblioteca de etiquetas de Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Una vez instalada, la extensión crea o accede a una capa de datos en cada carga
 
 La configuración de la extensión se puede utilizar para definir el nombre de la capa de datos que consume la extensión. Si no hay ninguna capa de datos con el nombre configurado cuando se carga Adobe Experience Platform Tags, la extensión crea una.
 
-El nombre predeterminado de la capa de datos es Google `dataLayer`.
+El nombre predeterminado de la capa de datos es el nombre predeterminado de Google `dataLayer`.
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ El nombre predeterminado de la capa de datos es Google `dataLayer`.
 
 >[!NOTE]
 >
->La palabra _evento_ se sobrecarga cuando se utiliza una capa de datos impulsada por evento en las etiquetas de Adobe Experience Platform. _Eventos_ puede ser:
+>La palabra _event_ se sobrecarga cuando se utiliza una capa de datos controlada por evento en las etiquetas de Adobe Experience Platform. _Los eventos_ pueden ser:
 > - Eventos de etiquetas de Adobe Experience Platform (biblioteca cargada, etc.).
 > - Eventos de JavaScript.
-> - Datos insertados en la capa de datos con el _evento_ palabra clave.
+> - Datos insertados en la capa de datos con la palabra clave _event_.
 
 La extensión le ofrece la posibilidad de escuchar cambios en la capa de datos.
 
 >[!NOTE]
 >
->Es importante comprender el uso del complemento _evento_ palabra clave cuando los datos se insertan en una capa de datos de Google, de forma similar a la capa de datos del cliente de Adobe. El _evento_ La palabra clave cambia el comportamiento de la capa de datos de Google y, por lo tanto, de esta extensión.\
+>Es importante comprender el uso de la palabra clave _event_ cuando los datos se insertan en una capa de datos de Google, de manera similar a la capa de datos del cliente de Adobe. La palabra clave _event_ cambia el comportamiento de la capa de datos de Google y, por lo tanto, de esta extensión.\
 > Lea la documentación de Google o investigue si no está seguro sobre este punto.
 
 ### Tipos de eventos de Google
 
-Google admite dos formas de insertar eventos: Google Tag Manager, con el `push()` método, y Google Analytics 4, usando el `gtag()` método.
+Google admite dos métodos para insertar eventos: Google Tag Manager, con el método `push()`, y Google Analytics 4, con el método `gtag()`.
 
 Las versiones de la extensión de capa de datos de Google anteriores a 1.2.1 solo admitían eventos creados por `push()`, como se muestra en los ejemplos de código de esta página.
 
 Las versiones 1.2.1 y superiores admiten eventos creados con `gtag()`.  Esto es opcional y se puede habilitar en el cuadro de diálogo Configuración de la extensión.
 
-Para obtener más información acerca de `push()` y `gtag()` eventos, consulte la [Documentación de Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  También se proporciona información en los cuadros de diálogo de configuración y reglas de la extensión.
+Para obtener más información acerca de `push()` y `gtag()` eventos, consulte la [documentación de Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  También se proporciona información en los cuadros de diálogo de configuración y reglas de la extensión.
 
 ### Escuchar todas las inserciones en la capa de datos
 
@@ -105,9 +105,9 @@ Por ejemplo, si se establece `myEvent` al usar esta configuración, el oyente so
 dataLayer.push({"event":"myEvent"})
 ```
 
-Se puede utilizar una regex (ECMAScript / JavaScript) para hacer coincidir nombres de eventos.
+Se puede utilizar una regex (ECMAScript / JavaScript) para hacer coincidir los nombres de evento.
 
-Por ejemplo, si se configura &#39;myEvent\d&#39; se realizará el seguimiento `myEvent` con un dígito (\d):
+Por ejemplo, si se configura &#39;myEvent\d&#39;, se rastreará `myEvent` con un dígito (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -157,4 +157,4 @@ Por lo tanto, el elemento de datos puede devolver:
 
 Los cuadros de diálogo de elementos de datos y eventos de la extensión contienen información de uso detallada y ejemplos.
 
-Encontrará información general adicional en la [LÉAME del proyecto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Encontrará información general adicional en el [archivo LÉAME del proyecto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

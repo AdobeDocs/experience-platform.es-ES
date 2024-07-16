@@ -19,7 +19,7 @@ Las caducidades de Experience Event no se pueden configurar a través de la IU o
 
 >[!IMPORTANT]
 >
->Las caducidades de eventos de experiencia no se deben confundir con las caducidades de conjuntos de datos, que eliminan todo el conjunto de datos después de alcanzar la fecha de caducidad. Se configuran manualmente mediante [Higiene de datos de Adobe Experience Platform](../hygiene/home.md).
+>Las caducidades de eventos de experiencia no se deben confundir con las caducidades de conjuntos de datos, que eliminan todo el conjunto de datos después de alcanzar la fecha de caducidad. Se configuran manualmente mediante [Adobe Experience Platform Data Hygiene](../hygiene/home.md).
 
 ## Proceso de caducidad automatizado
 
@@ -30,7 +30,7 @@ Una vez habilitadas las caducidades de los eventos de experiencia en un conjunto
 
 >[!WARNING]
 >
->Una vez aplicados, cualquier dato que sea anterior a la cantidad de días asignados por el valor de caducidad es **eliminado permanentemente** y no se pueden restaurar.
+>Una vez aplicados, los datos que sean anteriores al número de días asignado por el valor de caducidad se **eliminarán de forma permanente** y no se podrán restaurar.
 
 Por ejemplo, si aplica un valor de caducidad de 30 días el 15 de mayo, se producirían los siguientes pasos:
 
@@ -54,26 +54,26 @@ La caducidad de los datos de Experience Event y la caducidad de los datos de Per
 
 #### Granularidad
 
-La caducidad de los datos del Experience Event funciona en una **conjunto de datos** nivel. Como resultado, cada conjunto de datos puede tener una configuración de caducidad de datos diferente.
+La caducidad de datos del evento de experiencia funciona en un nivel de **conjunto de datos**. Como resultado, cada conjunto de datos puede tener una configuración de caducidad de datos diferente.
 
-La caducidad de datos del perfil seudónimo funciona en un **espacio aislado** nivel. Como resultado, la caducidad de los datos afectará a todos los perfiles de la zona protegida.
+La caducidad de los datos del perfil seudónimo funciona en un nivel de **espacio aislado**. Como resultado, la caducidad de los datos afectará a todos los perfiles de la zona protegida.
 
 #### Tipos de identidad
 
-La caducidad de datos de Experience Event elimina los eventos **solamente** se basa en la marca de tiempo del registro de evento. Las áreas de nombres de identidad incluidas son **ignorado** para fines de caducidad.
+La caducidad de datos de Experience Event elimina los eventos **solamente** en función de la marca de tiempo del registro de evento. Las áreas de nombres de identidad incluidas son **ignoradas** con fines de caducidad.
 
-Caducidad de datos de perfil seudónimo **solamente** considera los perfiles que tienen gráficos de identidad que contienen áreas de nombres de identidad seleccionadas por el cliente, como `ECID`, `AAID`u otros tipos de cookies. Si el perfil contiene **cualquiera** área de nombres de identidad adicional que se **no** en la lista seleccionada por el cliente, el perfil **no** se eliminarán.
+La caducidad de datos de perfil seudónimos **solamente** considera los perfiles que tienen gráficos de identidad que contienen áreas de nombres de identidad seleccionadas por el cliente, como `ECID`, `AAID` u otros tipos de cookies. Si el perfil contiene **cualquier** área de nombres de identidad adicional que era **no** en la lista seleccionada por el cliente, el perfil **no** se eliminará.
 
 #### Elementos eliminados
 
-Caducidad de datos de Experience Event **solamente** elimina eventos y hace **no** quitar datos de clase de perfil. Los datos de clase de perfil solo se eliminan cuando se eliminan todos los datos en **todo** conjuntos de datos y hay **no** registros de clase de perfil restantes para el perfil.
+La caducidad de datos de Experience Event **only** elimina eventos y **not** elimina datos de clase de perfil. Los datos de la clase de perfil solo se eliminan cuando se eliminan todos los datos de **todos** los conjuntos de datos y no quedan **ningún** registro de clase de perfil para el perfil.
 
-Eliminación de la caducidad de datos de perfil seudónimo **ambos** registros de eventos y perfiles. Como resultado, los datos de clase de perfil también se eliminarán.
+La caducidad de datos de perfil seudónimos elimina **ambos** registros de evento y de perfil. Como resultado, los datos de clase de perfil también se eliminarán.
 
 ### ¿Cómo se puede usar la caducidad de datos de perfil seudónimo junto con la caducidad de datos de Experience Event?
 
 La caducidad de datos de perfil seudónimo y la caducidad de datos de evento de experiencia se pueden utilizar para complementarse.
 
-Usted debe **siempre** configure la caducidad de datos de Experience Event en sus conjuntos de datos, en función de sus necesidades de retención de datos sobre sus clientes conocidos. Una vez configurada la caducidad de datos del Evento de experiencia, puede utilizar la caducidad de datos del Perfil seudónimo para eliminar automáticamente los Perfiles seudónimos. Normalmente, el periodo de caducidad de los datos de los perfiles seudónimos es menor que el periodo de caducidad de los datos de los eventos de experiencia.
+**siempre** debe configurar la caducidad de datos del Evento de experiencia en sus conjuntos de datos, según sus necesidades de retener datos sobre sus clientes conocidos. Una vez configurada la caducidad de datos del Evento de experiencia, puede utilizar la caducidad de datos del Perfil seudónimo para eliminar automáticamente los Perfiles seudónimos. Normalmente, el periodo de caducidad de los datos de los perfiles seudónimos es menor que el periodo de caducidad de los datos de los eventos de experiencia.
 
 En un caso de uso típico, puede establecer la caducidad de los datos de Experience Event en función de los valores de los datos de usuario conocidos y puede establecer la caducidad de los datos del perfil seudónimo en una duración mucho más corta para limitar el impacto de los perfiles seudónimos en el cumplimiento de la licencia de Platform.

@@ -26,9 +26,9 @@ Adobe Experience Platform [!DNL Web SDK] puede entregar y procesar ofertas perso
 
 ## Terminología
 
-Es importante comprender la siguiente terminología al trabajar con Offer Decisioning. Para obtener más información y ver términos adicionales, visite la [Glosario del offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Es importante comprender la siguiente terminología al trabajar con Offer Decisioning. Para obtener más información y ver términos adicionales, visite el [glosario de Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas codificadas en Base64 de JSON que contienen los ID de actividad y ubicación que desea que el servicio del offer decisioning utilice para proponer ofertas.
+* **Ámbitos de decisión:** Para el Offer decisioning, los ámbitos de decisión son las cadenas de JSON codificadas en Base64 que contienen los identificadores de actividad y ubicación que desea que utilice el servicio de offer decisioning para proponer ofertas.
 
   *Ámbito de decisión JSON:*
 
@@ -47,28 +47,28 @@ Es importante comprender la siguiente terminología al trabajar con Offer Decisi
 
   >[!TIP]
   >
-  >Puede copiar el valor del ámbito de decisión desde el **Resumen de actividad** en la interfaz de usuario.
+  >Puede copiar el valor del ámbito de decisión desde la página **Información general de actividad** en la interfaz de usuario.
 
   ![Configuración de copia de decisión.](assets/decision-scope-copy.png)
 
-* **Flujos de datos:** Para obtener más información, lea la [flujos de datos](/help/datastreams/overview.md) documentación.
+* **Flujos de datos:** Para obtener más información, lea la documentación de [flujos de datos](/help/datastreams/overview.md).
 
-* **Identidad**: Para obtener más información, lea esta documentación que describe cómo [El SDK web de Platform utiliza el servicio de identidad](../../identity/overview.md).
+* **Identidad**: para obtener más información, lea esta documentación en la que se describe cómo utiliza el SDK web de [Platform el servicio de identidad](../../identity/overview.md).
 
 ## Habilitando Offer decisioning
 
 Para habilitar Offer Decisioning, realice los siguientes pasos:
 
-1. Se ha habilitado Adobe Experience Platform en su [secuencia de datos](/help/datastreams/overview.md) y marque la casilla &quot;Offer decisioning&quot;
+1. Habilitó Adobe Experience Platform en su [secuencia de datos](/help/datastreams/overview.md) y marque la casilla &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Siga las instrucciones de [instalar el SDK](/help/web-sdk/install/overview.md) (El SDK se puede instalar de forma independiente o mediante la interfaz de usuario de. Consulte la [guía de inicio rápido de etiquetas](/help/tags/quick-start/quick-start.md)) para obtener más información.
-1. Configuración del SDK para Offer decisioning mediante `personalization.decisionScopes`. A continuación se proporcionan pasos adicionales específicos para el Offer decisioning.
+1. Siga las instrucciones para [instalar el SDK](/help/web-sdk/install/overview.md) (el SDK se puede instalar de forma independiente o a través de la interfaz de usuario. Consulte la [guía de inicio rápido de etiquetas](/help/tags/quick-start/quick-start.md)) para obtener más información.
+1. Configure el SDK para el Offer decisioning mediante `personalization.decisionScopes`. A continuación se proporcionan pasos adicionales específicos para el Offer decisioning.
 
    * Instalación del SDK independiente
 
-      1. Configure la acción &quot;sendEvent&quot; con `personalization.decisionScopes`
+      1. Configurar la acción &quot;sendEvent&quot; con `personalization.decisionScopes`
 
      ```javascript
      alloy("sendEvent", {
@@ -85,30 +85,30 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
    * Instalación del SDK mediante etiquetas
 
       1. [Creación de una propiedad de etiqueta](/help/tags/ui/administration/companies-and-properties.md)
-      1. [Añadir el código de incrustación](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Agregar el código incrustado](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Instale y configure la extensión del SDK web de Platform con la secuencia de datos que ha creado seleccionando la configuración en la lista desplegable &quot;Secuencia de datos&quot;. Consulte la documentación sobre [extensiones](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Cree los necesarios [Elementos de datos](/help/tags/ui/managing-resources/data-elements.md). Como mínimo, debe crear un mapa de identidad del SDK web de Platform y un elemento de datos del objeto XDM de SDK web de Platform.
+      1. Cree los [elementos de datos](/help/tags/ui/managing-resources/data-elements.md) necesarios. Como mínimo, debe crear un mapa de identidad del SDK web de Platform y un elemento de datos del objeto XDM de SDK web de Platform.
 
-         ![identity-map-data-element](./assets/identity-map-data-element.png)
+         ![elemento de datos del mapa de identidad](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. Cree su [Reglas](/help/tags/ui/managing-resources/rules.md).
+      1. Cree sus [reglas](/help/tags/ui/managing-resources/rules.md).
 
-         * Añada una acción Enviar evento del SDK web de Platform y agregue la acción correspondiente `decisionScopes` a la configuración de esa acción
+         * Agregue una acción Enviar evento del SDK web de Platform y agregue el elemento `decisionScopes` relevante a la configuración de dicha acción
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [Crear y publicar una biblioteca](/help/tags/ui/publishing/libraries.md) que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
+      1. [Cree y publique una biblioteca](/help/tags/ui/publishing/libraries.md) que contenga todas las reglas, elementos de datos y extensiones relevantes que haya configurado
 
 ## Solicitudes y respuestas de ejemplo
 
-### Uno `decisionScopes` valor
+### Un valor `decisionScopes`
 
 **Solicitud**
 
@@ -139,7 +139,7 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 
 | Propiedad | Requerido | Descripción | Límites | Ejemplo |
 |---|---|---|---|---|
-| `identityMap` | Sí | Consulte esta sección [Documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Nota: Los usuarios no necesitan incluir la variable `ECID` en la llamada de API. Este parámetro se agrega automáticamente a la llamada de si es necesario. |
+| `identityMap` | Sí | Consulte esta [documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Nota: Los usuarios no necesitan incluir el parámetro `ECID` en la llamada de API. Este parámetro se agrega automáticamente a la llamada de si es necesario. |
 | `decisionScopes` | Sí | Matriz de cadenas JSON codificadas en Base64 que contiene los ID de actividad y ubicación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Respuesta**
@@ -203,7 +203,7 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 | `deliveryUrl` | Contenido de imagen asociado con la oferta propuesta en formato de dirección URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Características asociadas con la oferta propuesta en formato de objeto JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### Múltiple `decisionScopes` values
+### Varios valores `decisionScopes`
 
 **Solicitud**
 
@@ -236,7 +236,7 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 
 | Propiedad | Requerido | Descripción | Límites | Ejemplo |
 |---|---|---|---|---|
-| `identityMap` | Sí | Consulte esta sección [Documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Nota: Los usuarios no necesitan incluir la variable `ECID` en la llamada de API. Este parámetro se agrega automáticamente a la llamada de si es necesario. |
+| `identityMap` | Sí | Consulte esta [documentación del servicio de identidad](../../identity/overview.md). | Una identidad por solicitud. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Nota: Los usuarios no necesitan incluir el parámetro `ECID` en la llamada de API. Este parámetro se agrega automáticamente a la llamada de si es necesario. |
 | `decisionScopes` | Sí | Matriz de cadenas JSON codificadas en Base64 que contiene los ID de actividad y ubicación. | Máximo 30 `decisionScopes` por solicitud. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **Respuesta**
@@ -332,4 +332,4 @@ Para habilitar Offer Decisioning, realice los siguientes pasos:
 
 ## Limitaciones
 
-Actualmente, algunas restricciones de oferta no son compatibles con los flujos de trabajo de red perimetral móvil, por ejemplo, Límite. El valor del campo Límite especifica el número de veces que se puede presentar una oferta entre todos los usuarios. Para obtener más información, consulte [Documentación de restricciones y reglas de idoneidad de ofertas](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Actualmente, algunas restricciones de oferta no son compatibles con los flujos de trabajo de Edge Network móviles, por ejemplo, Límite. El valor del campo Límite especifica el número de veces que se puede presentar una oferta entre todos los usuarios. Para obtener más información, consulte [Documentación sobre reglas de elegibilidad de ofertas y restricciones](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

@@ -6,8 +6,8 @@ description: Adobe Experience Platform proporciona varios servicios y herramient
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 2%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
@@ -31,15 +31,15 @@ La gobernanza de datos es un concepto esencial que se entrelaza con todas las ca
 
 Como servicio de Platform, Adobe Experience Platform Data Governance le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos. Desempeña un papel clave dentro del Experience Platform en varios niveles, incluido el etiquetado del uso de datos, las políticas de uso de datos, la aplicación de políticas y el linaje de datos.
 
-Consulte la [Resumen de gobernanza de datos](../../data-governance/home.md) para obtener más información.
+Consulte la [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 ### Catálogo y conjuntos de datos {#catalog}
 
-El servicio de catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Platform. Mientras que todos los datos que se incorporan al Experience Platform se almacenan en el lago de datos como archivos y directorios, el catálogo contiene los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y monitorización.
+El servicio de catálogo es el sistema de registro para la ubicación y el linaje de datos dentro de Platform. Mientras que todos los datos que se incorporan a Experience Platform se almacenan en el lago de datos como archivos y directorios, el catálogo contiene los metadatos y la descripción de esos archivos y directorios para fines de búsqueda y monitorización.
 
 El catálogo organiza los datos ingeridos en conjuntos de datos, y cada conjunto de datos contiene metadatos que se pueden utilizar para etiquetar y categorizar los datos que contiene.
 
-Consulte la [Resumen del servicio de catálogo](../../catalog/home.md) para obtener más información sobre el servicio. Para obtener información sobre cómo administrar conjuntos de datos en Experience Platform, consulte la [información general sobre conjuntos de datos](../../catalog/datasets/overview.md).
+Consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener más información sobre el servicio. Para obtener información sobre cómo administrar conjuntos de datos en Experience Platform, consulte la [descripción general de conjuntos de datos](../../catalog/datasets/overview.md).
 
 ## Privacidad {#privacy}
 
@@ -51,15 +51,15 @@ Las regulaciones legales de privacidad, como el Reglamento General de Protecció
 
 Adobe Experience Platform Privacy Service proporciona una API de RESTful y una interfaz de usuario para administrar estas solicitudes. Con Privacy Service, puede enviar solicitudes para acceder a datos privados o personales de clientes o eliminarlos de aplicaciones de Adobe Experience Cloud, lo que facilita el cumplimiento automatizado de las regulaciones de privacidad legales y organizativas.
 
-Consulte la [Introducción al Privacy Service](../../privacy-service/home.md) para obtener más información.
+Consulte la [descripción general del Privacy Service](../../privacy-service/home.md) para obtener más información.
 
 ### Procesamiento de consentimiento {#consent}
 
 Muchas regulaciones legales de privacidad han introducido requisitos para un consentimiento activo y específico en lo que respecta a la recopilación de datos, personalización y otros casos de uso de marketing. Para cumplir estos requisitos, Experience Platform le permite capturar información de consentimiento en perfiles de clientes individuales y utilizar esas preferencias como un factor determinante en la forma en que se utilizan los datos de cada cliente en los flujos de trabajo de la plataforma descendente.
 
-Para obtener información sobre cómo procesar los datos de preferencias y consentimiento del cliente mediante el estándar de Adobe, consulte la información general sobre [procesamiento de consentimiento en Experience Platform](./consent/adobe/overview.md).
+Para obtener información sobre cómo procesar los datos de preferencias y el consentimiento del cliente mediante el estándar de Adobe, consulte la descripción general del procesamiento de [consentimiento en Experience Platform](./consent/adobe/overview.md).
 
-Para obtener información sobre cómo procesar los datos de consentimiento del cliente de acuerdo con el marco de transparencia y consentimiento (TCF) 2.0 de IAB, consulte la información general sobre [Compatibilidad con IAB TCF 2.0 en Platform](./consent/iab/overview.md).
+Para obtener información sobre cómo procesar los datos de consentimiento del cliente de acuerdo con el marco de transparencia y consentimiento (TCF) 2.0 de IAB, consulte la descripción general sobre la compatibilidad con [IAB TCF 2.0 en Platform](./consent/iab/overview.md).
 
 ## Seguridad {#security}
 
@@ -67,13 +67,13 @@ La integridad y seguridad de sus datos es indispensable para su negocio, y este 
 
 ### Cifrado de datos
 
-Todos los datos de Platform se cifran en tránsito y en reposo. Consulte el documento sobre [cifrado de datos en Platform](./encryption.md) para obtener más información.
+Todos los datos de Platform se cifran en tránsito y en reposo. Consulte el documento sobre el cifrado de datos [en Platform](./encryption.md) para obtener más información.
 
 ### Control de acceso {#access-control}
 
 Experience Platform utiliza Adobe Admin Console para proporcionar control de acceso basado en funciones a varias funciones de Platform. Esta funcionalidad aprovecha los perfiles de producto en Admin Console, que vinculan a los usuarios con permisos y entornos limitados.
 
-Consulte la [información general de control de acceso](../../access-control/home.md) para obtener más información.
+Consulte la [descripción general del control de acceso](../../access-control/home.md) para obtener más información.
 
 ### Zonas protegidas {#sandboxes}
 

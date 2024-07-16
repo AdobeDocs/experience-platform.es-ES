@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform es un sistema muy distribuido diseñado para maximizar la fiabilidad y, al mismo tiempo, ampliarse a volúmenes de datos cada vez mayores.
 
-Para la recopilación de datos en tiempo real, [Eventos de experiencia](../xdm/classes/experienceevent.md) se recopilan mediante la variable [Edge Network](../web-sdk/home.md#edge-network), desde fuentes del lado del cliente, como [SDK web](../web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/home/)y se entregan a las capas de procesamiento y almacenamiento del Experience Platform. Estas capas componen soluciones como Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es), y [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es).
+Para la recopilación de datos en tiempo real, [los eventos de experiencia](../xdm/classes/experienceevent.md) se recopilan a través del [Edge Network](../web-sdk/home.md#edge-network), de fuentes del lado del cliente, como [SDK web](../web-sdk/home.md) o [SDK móvil](https://developer.adobe.com/client-sdks/home/), y se entregan a las capas de procesamiento y almacenamiento del Experience Platform. Estas capas componen soluciones como Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es) y [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=es).
 
 Para minimizar la pérdida de Experience Event, los SDK del lado del cliente y el servicio de envío interno del Experience Platform esperan una confirmación de que un evento se ha recopilado correctamente.
 
@@ -21,7 +21,7 @@ Si no se recibe esa confirmación, los SDK del lado del cliente o el déclencheu
 
 Se trata de una práctica recomendada para gestionar errores transitorios. El efecto secundario es la posibilidad de introducir eventos duplicados.
 
-Para comprender mejor las prácticas recomendadas para gestionar errores transitorios, consulte este artículo sobre [gestión transitoria de fallos](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults).
+Para comprender mejor las prácticas recomendadas para administrar errores transitorios, consulte este artículo sobre [administración de errores transitorios](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults).
 
 ## Escenarios de duplicación de eventos {#scenarios}
 
@@ -38,9 +38,9 @@ Para obtener más información sobre el procesamiento de &quot;al menos una vez&
 
 En el caso de escenarios empresariales sensibles a eventos duplicados, Experience Platform utiliza varios métodos de anulación de duplicación de eventos en sus sistemas de almacenamiento descendente, como los que se describen a continuación.
 
-* El almacén de perfiles de Real-Time CDP descarta eventos si un evento con el mismo `_id` ya existe en el [!DNL Profile store]. Consulte la documentación sobre [clase XDM ExperienceEvent](../xdm/classes/experienceevent.md) para obtener más información.
-* El Customer Journey Analytics permite a los usuarios configurar una métrica para que solo cuente los valores de forma no repetitiva. Para obtener información sobre cómo hacerlo, consulte la documentación de [configuración de componentes de anulación de duplicación de métricas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=es).
-* Experience Platform Query Service admite la anulación de duplicación de datos cuando es necesario quitar una fila completa de un cálculo o omitir un conjunto específico de campos porque solo parte de los datos de la fila es información duplicada. Consulte la documentación sobre [anulación de duplicación de datos en Query Service](../query-service/key-concepts/deduplication.md) para obtener más información.
+* El almacén de perfiles de Real-Time CDP descarta eventos si ya existe un evento con el mismo `_id` en [!DNL Profile store]. Consulte la documentación de [XDM ExperienceEvent class](../xdm/classes/experienceevent.md) para obtener más información.
+* El Customer Journey Analytics permite a los usuarios configurar una métrica para que solo cuente los valores de forma no repetitiva. Para obtener información sobre cómo hacerlo, consulte la documentación sobre [configuración del componente de anulación de duplicación de métricas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=es).
+* Experience Platform Query Service admite la anulación de duplicación de datos cuando es necesario quitar una fila completa de un cálculo o omitir un conjunto específico de campos porque solo parte de los datos de la fila es información duplicada. Consulte la documentación sobre la anulación de duplicación de datos de [en el servicio de consultas](../query-service/key-concepts/deduplication.md) para obtener más información.
 
 >[!NOTE]
 >

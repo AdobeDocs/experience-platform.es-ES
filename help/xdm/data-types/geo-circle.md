@@ -7,7 +7,7 @@ exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -21,5 +21,5 @@ ht-degree: 5%
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Coordenadas geográficas]](./geo-coordinates.md) | Describe las coordenadas geográficas del centro del círculo. |
 | `_schema.description` | Cadena | Una descripción de lo que contiene el círculo. |
-| `_schema.radius` | Doble | La longitud del radio del círculo. Este valor se ajusta a [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) y se mide en metros. |
+| `_schema.radius` | Duplicada | La longitud del radio del círculo. Este valor se ajusta a los datos [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) y se mide en metros. |
 | `_id` | Cadena | Un ID único generado por el sistema para el círculo. |

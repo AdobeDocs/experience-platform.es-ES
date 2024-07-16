@@ -11,11 +11,11 @@ ht-degree: 1%
 
 ---
 
-# [!DNL Spark] Funciones SQL
+# [!DNL Spark] funciones SQL
 
 Puede utilizar varias funciones SQL de Spark integradas para ampliar la funcionalidad SQL con Adobe Experience Platform Query Service. Este documento enumera las funciones SQL de Spark que admite el servicio de consultas.
 
-Para obtener información más detallada sobre las funciones, incluida su sintaxis, uso y ejemplos, lea la [Documentación de la función Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
+Para obtener información más detallada sobre las funciones, incluida su sintaxis, uso y ejemplos, lea la [documentación de la función Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -124,30 +124,30 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`date_add`](https://spark.apache.org/docs/latest/api/sql/index.html#date_add) | Añadir días a la fecha |
 | [`date_format`](https://spark.apache.org/docs/latest/api/sql/index.html#date_format) | Modificar formato de fecha |
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | Restar días de la fecha |
-| [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#date_trunc) | Devuelve la fecha truncada a la unidad especificada |
+| [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | Devuelve la fecha truncada a la unidad especificada |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | Devuelve la diferencia entre fechas en días |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Devuelve el día del mes |
-| [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#dayofweek) | Devuelve el día de la semana (1-7) |
-| [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#dayofyear) | Devuelve el día del año |
+| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Devuelve el día del mes |
+| [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Devuelve el día de la semana (1-7) |
+| [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Devuelve el día del año |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Devuelve la fecha en UNIX® hora |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Devuelve la fecha en hora UTC |
-| [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#hour) | Devuelve la hora de la entrada |
+| [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Devuelve la hora de la entrada |
 | [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Devuelve el último día del mes al que pertenece la fecha |
-| [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#minute) | Devuelve el minuto de la entrada |
-| [`month`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#month) | Devuelve el mes de la entrada |
+| [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | Devuelve el minuto de la entrada |
+| [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | Devuelve el mes de la entrada |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | Número de meses entre |
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Devuelve el primer día después de la entrada |
-| [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#quarter) | Devuelve el trimestre de la entrada |
+| [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Devuelve el trimestre de la entrada |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Devuelve el segundo de la cadena |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#to_date) | Convierte la cadena en una fecha. **Nota:** La cadena **debe** estar en el formato `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#to_timestamp) | Convierte la cadena en una marca de tiempo. **Nota:** La cadena **debe** estar en el formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Convierte la cadena en una fecha. **Nota:** La cadena **debe** tener el formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Convierte la cadena en una marca de tiempo. **Nota:** La cadena **debe** tener el formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Convierte la cadena en una marca de tiempo UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Convierte la cadena en una marca de tiempo UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Trunca la fecha |
 | [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Devuelve la marca de tiempo UNIX® |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | Día de la semana (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Devuelve la semana del año de una fecha determinada |
-| [`year`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#year) | Devuelve el año de la cadena |
+| [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Devuelve el año de la cadena |
 
 ### Matrices {#arrays}
 
@@ -190,7 +190,7 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`binary`](https://spark.apache.org/docs/latest/api/sql/index.html#binary) | Cambiar el tipo de datos a binario |
 | [`boolean`](https://spark.apache.org/docs/latest/api/sql/index.html#boolean) | Cambiar el tipo de datos a booleano |
 | [`type`](https://spark.apache.org/docs/latest/api/sql/index.html#type) | Cambiar el tipo de datos al tipo especificado |
-| [`date`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#date) | Cambiar el tipo de datos a fecha |
+| [`date`](https://spark.apache.org/docs/latest/api/sql/index.html#date) | Cambiar el tipo de datos a fecha |
 | [`decimal`](https://spark.apache.org/docs/latest/api/sql/index.html#decimal) | Cambiar el tipo de datos a decimal |
 | [`double`](https://spark.apache.org/docs/latest/api/sql/index.html#double) | Cambiar el tipo de datos a doble |
 | [`float`](https://spark.apache.org/docs/latest/api/sql/index.html#float) | Cambiar el tipo de datos a flotante |
@@ -218,7 +218,7 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | Devolver el valor hash |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Convertir el argumento en un valor hexadecimal |
 | [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Cambia la cadena para que sea un caso de título |
-| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html?lang=es#lower) | Cambia la cadena para que esté en minúscula |
+| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Cambia la cadena para que esté en minúscula |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Rellena el lado izquierdo de una cadena |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Creación de un mapa |
 | [`map_from_arrays`](https://spark.apache.org/docs/latest/api/sql/index.html#map_from_arrays) | Creación de un mapa a partir de una matriz |
@@ -250,7 +250,7 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | Concatenación con separador |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | Devuelve el recuento total de filas |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | Descodificar mediante un conjunto de caracteres |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Devuelva el [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)la entrada |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Devolver la entrada [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)th |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Codificar con un conjunto de caracteres |
 | [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Devuelve el primer valor |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Indica si una columna está agrupada |
@@ -259,7 +259,7 @@ Para obtener información más detallada sobre las funciones, incluida su sintax
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Devuelve una tupla desde una entrada JSON |
 | [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Devuelve el valor antes del desplazamiento |
 | [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Devuelve el último valor |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Devuelve el primero [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Devuelve los primeros [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caracteres |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Devuelve la longitud de la cadena |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Devuelve la distancia entre cadenas de Levenshtein |
 | [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Devuelve la posición de la primera aparición de una subcadena |

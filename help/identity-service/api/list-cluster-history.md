@@ -14,12 +14,12 @@ ht-degree: 2%
 
 # Obtener el historial de clúster de una identidad
 
-Las identidades pueden mover clústeres en el transcurso de varias ejecuciones de gráficos de dispositivos. [!DNL Identity Service] proporciona visibilidad de las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
+Las identidades pueden mover clústeres en el transcurso de varias ejecuciones de gráficos de dispositivos. [!DNL Identity Service] proporciona visibilidad sobre las asociaciones de clúster de una identidad determinada a lo largo del tiempo.
 
-Utilizar opcional `graph-type` para indicar el tipo de salida del que se va a obtener el clúster. Las opciones son:
+Use el parámetro `graph-type` opcional para indicar el tipo de salida del que se va a obtener el clúster. Las opciones son:
 
-- `None` - No realice ninguna vinculación de identidad.
-- `Private Graph` : realice la vinculación de identidad en función de su gráfico de identidad privada. Si no `graph-type` se proporciona, este es el valor predeterminado.
+- `None` - No realizar vinculación de identidad.
+- `Private Graph`: realice la vinculación de identidad en función de su gráfico de identidad privado. Si no se proporciona ningún `graph-type`, este es el valor predeterminado.
 
 ## Obtener el historial de clúster de una sola identidad
 
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Solicitud**
 
-Opción 1: Proporcione la identidad como área de nombres (`nsId`, por ID) y el valor de ID (`id`).
+Opción 1: proporcione la identidad como área de nombres (`nsId`, por identificador) y valor de identificador (`id`).
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 2: Proporcione la identidad como área de nombres (`ns`, por nombre) y el valor de ID (`id`).
+Opción 2: proporcione la identidad como área de nombres (`ns`, por nombre) y valor de identificador (`id`).
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opción 3: proporcionar la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata [obtención del XID de una identidad](./list-native-id.md).
+Opción 3: proporcione la identidad como XID (`xid`). Para obtener más información sobre cómo obtener el XID de una identidad, consulte la sección de este documento que trata sobre [obtención del XID para una identidad](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Obtener el historial de clúster de varias identidades
 
-Utilice el `POST` como equivalente de lote del método `GET` método descrito anteriormente para devolver los historiales de clúster de varias identidades.
+Utilice el método `POST` como un equivalente por lotes del método `GET` descrito anteriormente para devolver los historiales de clúster de varias identidades.
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ Opción 2: Proporcione una lista de identidades como ID compuestos, donde cada u
 
 **Solicitud de código auxiliar**
 
-Uso de `x-uis-cst-ctx: stub` el encabezado devolverá una respuesta con un stub. Se trata de una solución temporal para facilitar el progreso temprano del desarrollo de la integración, mientras se completan los servicios. Esto quedará obsoleto cuando ya no sea necesario.
+El uso del encabezado `x-uis-cst-ctx: stub` devolverá una respuesta con errores. Se trata de una solución temporal para facilitar el progreso temprano del desarrollo de la integración, mientras se completan los servicios. Esto quedará obsoleto cuando ya no sea necesario.
 
 ```shell
 curl -X POST \
@@ -126,7 +126,7 @@ curl -X POST \
       }'
 ```
 
-**Uso de XID**
+**Usando XID**
 
 ```shell
 curl -X POST \
@@ -142,7 +142,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Uso de UID**
+**Usando UID**
 
 ```shell
 curl -X POST \
@@ -166,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Responder**
+**Respuesta**
 
 ```json
 {
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial para [enumerar asignaciones de identidad](./list-identity-mappings.md)
+Continúe con el tutorial siguiente para [enumerar asignaciones de identidad](./list-identity-mappings.md)

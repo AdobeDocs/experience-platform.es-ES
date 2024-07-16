@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo crear, ver, actualizar y eliminar 
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 3%
+source-wordcount: '1664'
+ht-degree: 2%
 
 ---
 
@@ -15,28 +15,28 @@ ht-degree: 3%
 >
 >El acceso a la API está restringido. Para obtener información sobre cómo obtener acceso a la API de atributos calculados, póngase en contacto con el Soporte técnico de Adobe.
 
-Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización. Esta guía incluye llamadas de API de ejemplo para realizar operaciones básicas de CRUD mediante `/attributes` punto final.
+Los atributos calculados son funciones que se utilizan para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización. Esta guía incluye llamadas de API de ejemplo para realizar operaciones básicas de CRUD usando el extremo `/attributes`.
 
-Para obtener más información acerca de los atributos calculados, comience por leer el [información general sobre atributos calculados](overview.md).
+Para obtener más información sobre los atributos calculados, comience por leer la [descripción general de los atributos calculados](overview.md).
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [API de perfil del cliente en tiempo real](https://www.adobe.com/go/profile-apis-en).
+El extremo de API usado en esta guía es parte de la [API del perfil del cliente en tiempo real](https://www.adobe.com/go/profile-apis-en).
 
-Antes de continuar, consulte la [Guía de introducción a la API de perfil](../api/getting-started.md) para obtener vínculos a la documentación recomendada, una guía para leer las llamadas de API de ejemplo que aparecen en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+Antes de continuar, revisa la [Guía de introducción a la API de perfil](../api/getting-started.md) para ver vínculos a la documentación recomendada, una guía para leer las llamadas de API de ejemplo que aparecen en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 Además, revise la documentación del siguiente servicio:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): el marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   - [Guía de introducción al Registro de esquemas](../../xdm/api/getting-started.md#know-your-tenant_id): Información sobre su `{TENANT_ID}`, que aparece en las respuestas de esta guía, se proporciona.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
+   - [Guía de introducción al Registro de esquemas](../../xdm/api/getting-started.md#know-your-tenant_id): se proporciona información sobre su `{TENANT_ID}`, que aparece en las respuestas de esta guía.
 
 ## Recuperación de una lista de atributos calculados {#list}
 
-Puede recuperar una lista de todos los atributos calculados para su organización realizando una solicitud de GET a `/attributes` punto final.
+Puede recuperar una lista de todos los atributos calculados para su organización realizando una solicitud de GET al extremo `/attributes`.
 
 **Formato de API**
 
-El `/attributes` el punto de conexión admite varios parámetros de consulta para filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir la costosa sobrecarga al enumerar recursos. Si realiza una llamada a este extremo sin parámetros, se recuperarán todos los atributos calculados disponibles para su organización. Se pueden incluir varios parámetros separados por el símbolo et (`&`).
+El extremo `/attributes` admite varios parámetros de consulta para filtrar los resultados. Aunque estos parámetros son opcionales, se recomienda encarecidamente su uso para ayudar a reducir la costosa sobrecarga al enumerar recursos. Si realiza una llamada a este extremo sin parámetros, se recuperarán todos los atributos calculados disponibles para su organización. Se pueden incluir varios parámetros, separados por el símbolo et (`&`).
 
 ```http
 GET /attributes
@@ -49,8 +49,8 @@ Los siguientes parámetros de consulta se pueden utilizar al recuperar una lista
 | --------------- | ----------- | ------- |
 | `limit` | Un parámetro que especifica el número máximo de elementos devueltos como parte de la respuesta. El valor mínimo de este parámetro es 1 y el valor máximo es 40. Si este parámetro no se incluye, se devolverán 20 elementos de forma predeterminada. | `limit=20` |
 | `offset` | Un parámetro que especifica el número de elementos que se omitirán antes de devolver los elementos. | `offset=5` |
-| `sortBy` | Un parámetro que especifica el orden en que se ordenan los elementos devueltos. Las opciones disponibles incluyen `name`, `status`, `updateEpoch`, y `createEpoch`. También puede elegir si desea ordenar en orden ascendente o descendente no incluyendo o incluyendo un `-` delante de la opción ordenar. De forma predeterminada, los elementos se ordenarán por `updateEpoch` en orden descendente. | `sortBy=name` |
-| `property` | Un parámetro que permite filtrar varios campos de atributos calculados. Las propiedades compatibles incluyen `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, y `status`. Las operaciones admitidas dependen de la propiedad enumerada. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `sortBy` | Un parámetro que especifica el orden en que se ordenan los elementos devueltos. Las opciones disponibles son `name`, `status`, `updateEpoch` y `createEpoch`. También puede elegir si desea ordenar en orden ascendente o descendente si no incluye o incluye `-` delante de la opción de ordenación. De forma predeterminada, los elementos se ordenarán por `updateEpoch` en orden descendente. | `sortBy=name` |
+| `property` | Un parámetro que permite filtrar varios campos de atributos calculados. Entre las propiedades admitidas se incluyen `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` y `status`. Las operaciones admitidas dependen de la propiedad enumerada. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contiene()), `NOT_CONTAINS` (=!contiene())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contiene()), `NOT_CONTAINS` (=!contiene())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contiene()), `NOT_CONTAINS` (=!contiene())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Solicitud**
 
@@ -211,14 +211,14 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de los últimos
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `_links` | Objeto que contiene la información de paginación necesaria para tener acceso a la última página de resultados, a la siguiente página de resultados, a la página de resultados anterior o a la página de resultados actual. |
-| `computedAttributes` | Matriz que contiene los atributos calculados en función de los parámetros de consulta. Puede encontrar más información sobre la matriz de atributos calculados en la [recuperar una sección de atributo calculado específica](#get). |
+| `computedAttributes` | Matriz que contiene los atributos calculados en función de los parámetros de consulta. Encontrará más información sobre la matriz de atributos calculados en la sección [recuperar un atributo calculado específico](#get). |
 | `_page` | Objeto que contiene metadatos sobre los resultados devueltos. Esto incluye información sobre el desplazamiento actual, el recuento de atributos calculados devueltos, el recuento total de atributos calculados, así como el límite de atributos calculados devueltos. |
 
 +++
 
 ## Creación de un atributo calculado {#create}
 
-Para crear un atributo calculado, comience por realizar una solicitud de POST a `/attributes` extremo con un cuerpo de solicitud que contiene los detalles del atributo calculado que desea crear.
+Para crear un atributo calculado, comience realizando una solicitud de POST al extremo `/attributes` con un cuerpo de solicitud que contenga los detalles del atributo calculado que desea crear.
 
 **Formato de API**
 
@@ -257,17 +257,17 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `name` | Nombre del campo de atributo calculado, como cadena. El nombre del atributo calculado solo puede estar compuesto por caracteres alfanuméricos sin espacios ni guiones bajos. Este valor **debe** ser único entre todos los atributos calculados. Como práctica recomendada, este nombre debe ser una versión camelCase del `displayName`. |
+| `name` | Nombre del campo de atributo calculado, como cadena. El nombre del atributo calculado solo puede estar compuesto por caracteres alfanuméricos sin espacios ni guiones bajos. Este valor **debe** ser único entre todos los atributos calculados. Como práctica recomendada, este nombre debe ser una versión camelCase de `displayName`. |
 | `description` | Una descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros usuarios de la organización a determinar el atributo calculado correcto que se debe utilizar. |
 | `displayName` | El nombre para mostrar del atributo calculado. Este es el nombre que se mostrará al enumerar los atributos calculados en la interfaz de usuario de Adobe Experience Platform. |
 | `expression` | Un objeto que representa la expresión de consulta del atributo calculado que intenta crear. |
 | `expression.type` | Tipo de la expresión. Actualmente, solo se admite PQL. |
-| `expression.format` | El formato de la expresión. Actualmente, solo `pql/text` es compatible. |
+| `expression.format` | El formato de la expresión. Actualmente, solo se admite `pql/text`. |
 | `expression.value` | El valor de la expresión. |
 | `keepCurrent` | Un booleano que determina si el valor del atributo calculado se mantiene actualizado mediante una actualización rápida. Actualmente, este valor debe establecerse en `false`. |
 | `duration` | Un objeto que representa el período retroactivo del atributo calculado. El periodo de retrospectiva representa hasta dónde se puede retroceder para calcular el atributo calculado. |
-| `duration.count` | Un número que representa la duración del periodo de retroactividad. Los valores posibles dependen del valor del `duration.unit` field. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Cadena que representa la unidad de tiempo que se utilizará para el período retroactivo. Los valores posibles incluyen: `HOURS`, `DAYS`, `WEEKS`, y `MONTHS`. |
+| `duration.count` | Un número que representa la duración del periodo de retroactividad. Los valores posibles dependen del valor del campo `duration.unit`. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `duration.unit` | Cadena que representa la unidad de tiempo que se utilizará para el período retroactivo. Los valores posibles incluyen: `HOURS`, `DAYS`, `WEEKS` y `MONTHS`. |
 | `status` | El estado del atributo calculado. Los valores posibles incluyen `DRAFT` y `NEW`. |
 
 +++
@@ -316,7 +316,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el atr
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `id` | El ID generado por el sistema del atributo calculado recién creado. |
-| `status` | El estado del atributo calculado. Esto puede ser `DRAFT` o `NEW`. |
+| `status` | El estado del atributo calculado. Puede ser `DRAFT` o `NEW`. |
 | `createEpoch` | Hora a la que se creó el atributo calculado, en segundos. |
 | `updateEpoch` | Hora a la que se actualizó por última vez el atributo calculado, en segundos. |
 | `createdBy` | El ID del usuario que creó el atributo calculado. |
@@ -325,7 +325,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el atr
 
 ## Recuperación de un atributo calculado específico {#get}
 
-Puede recuperar información detallada sobre un atributo calculado específico realizando una solicitud de GET a `/attributes` y proporciona el ID del atributo calculado que desea recuperar en la ruta de solicitud.
+Puede recuperar información detallada sobre un atributo calculado específico realizando una solicitud de GET al extremo `/attributes` y proporcionando el identificador del atributo calculado que desea recuperar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -396,13 +396,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `displayName` | El nombre para mostrar del atributo calculado. Este es el nombre que se mostrará al enumerar los atributos calculados en la interfaz de usuario de Adobe Experience Platform. |
 | `description` | Una descripción del atributo calculado. Esto resulta especialmente útil una vez que se han definido varios atributos calculados, ya que ayudará a otros usuarios de la organización a determinar el atributo calculado correcto que se debe utilizar. |
 | `imsOrgId` | El ID de la organización a la que pertenece el atributo calculado. |
-| `sandbox` | El objeto de zona protegida contiene detalles de la zona protegida en la que se configuró el atributo calculado. Esta información se obtiene del encabezado de la zona protegida enviado en la solicitud. Para obtener más información, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md). |
+| `sandbox` | El objeto de zona protegida contiene detalles de la zona protegida en la que se configuró el atributo calculado. Esta información se obtiene del encabezado de la zona protegida enviado en la solicitud. Para obtener más información, consulte la [descripción general de las zonas protegidas](../../sandboxes/home.md). |
 | `path` | El `path` al atributo calculado. |
 | `keepCurrent` | Un booleano que determina si el valor del atributo calculado se mantiene actualizado mediante una actualización rápida. |
 | `expression` | Un objeto que contiene la expresión del atributo calculado. |
-| `mergeFunction` | Objeto que contiene la función de combinación para el atributo calculado. Este valor se basa en el parámetro de agregación correspondiente dentro de la expresión del atributo calculado. Los valores posibles incluyen `SUM`, `MIN`, `MAX`, y `MOST_RECENT`. |
-| `status` | El estado del atributo calculado. Puede ser uno de los siguientes valores: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, o `DISABLED`. |
-| `schema` | Un objeto que contiene información sobre el esquema en el que se evalúa la expresión. Actualmente, solo `_xdm.context.profile` es compatible. |
+| `mergeFunction` | Objeto que contiene la función de combinación para el atributo calculado. Este valor se basa en el parámetro de agregación correspondiente dentro de la expresión del atributo calculado. Los valores posibles incluyen `SUM`, `MIN`, `MAX` y `MOST_RECENT`. |
+| `status` | El estado del atributo calculado. Puede ser uno de los siguientes valores: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` o `DISABLED`. |
+| `schema` | Un objeto que contiene información sobre el esquema en el que se evalúa la expresión. Actualmente, solo se admite `_xdm.context.profile`. |
 | `lastEvaluationTs` | Una marca de tiempo que representa cuándo se evaluó por última vez el atributo calculado. |
 | `createEpoch` | Hora a la que se creó el atributo calculado, en segundos. |
 | `updateEpoch` | Hora a la que se actualizó por última vez el atributo calculado, en segundos. |
@@ -412,11 +412,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 ## Eliminar un atributo calculado específico {#delete}
 
-Puede suprimir un atributo calculado específico realizando una solicitud de DELETE a `/attributes` y proporciona el ID del atributo calculado que desea eliminar en la ruta de solicitud.
+Puede eliminar un atributo calculado específico realizando una solicitud de DELETE al extremo `/attributes` y proporcionando el identificador del atributo calculado que desea eliminar en la ruta de solicitud.
 
 >[!IMPORTANT]
 >
->La solicitud de eliminación solo se puede utilizar para eliminar atributos calculados con un estado de **borrador** (`DRAFT`). Este extremo **no puede** se utilizará para eliminar atributos calculados en cualquier otro estado.
+>La solicitud de eliminación solo se puede usar para eliminar atributos calculados que tengan el estado **borrador** (`DRAFT`). Este extremo **no se puede** usar para eliminar atributos calculados en ningún otro estado.
 
 **Formato de API**
 
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | El `id` valor del atributo calculado que desea eliminar. |
+| `{ATTRIBUTE_ID}` | El valor `id` del atributo calculado que desea eliminar. |
 
 **Solicitud**
 
@@ -487,14 +487,14 @@ Una respuesta correcta devuelve el estado HTTP 202 con detalles del atributo cal
 
 ## Actualización de un atributo calculado específico
 
-Puede actualizar un atributo calculado específico realizando una solicitud de PATCH a `/attributes` y proporciona el ID del atributo calculado que desea actualizar en la ruta de solicitud.
+Puede actualizar un atributo calculado específico realizando una solicitud de PATCH al extremo `/attributes` y proporcionando el identificador del atributo calculado que desea actualizar en la ruta de solicitud.
 
 >[!IMPORTANT]
 >
 >Al actualizar un atributo calculado, solo se pueden actualizar los siguientes campos:
 >
 >- Si el estado actual es `NEW`, el estado solo se puede cambiar a `DISABLED`.
->- Si el estado actual es `DRAFT`, puede cambiar los valores de los siguientes campos: `name`, `description`, `keepCurrent`, `expression`, y `duration`. También puede cambiar el estado de `DRAFT` hasta `NEW`. Cualquier cambio en los campos generados por el sistema, como `mergeFunction` o `path` devolverá un error.
+>- Si el estado actual es `DRAFT`, puede cambiar los valores de los campos siguientes: `name`, `description`, `keepCurrent`, `expression` y `duration`. También puede cambiar el estado de `DRAFT` a `NEW`. Cualquier cambio en los campos generados por el sistema, como `mergeFunction` o `path`, devolverá un error.
 >- Si el estado actual es `PROCESSING` o `PROCESSED`, el estado solo se puede cambiar a `DISABLED`.
 
 **Formato de API**
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | El `id` valor del atributo calculado que desea actualizar. |
+| `{ATTRIBUTE_ID}` | El valor `id` del atributo calculado que desea actualizar. |
 
 **Solicitud**
 
-La siguiente solicitud actualizará el estado del atributo calculado de `DRAFT` hasta `NEW`.
+La siguiente solicitud actualizará el estado del atributo calculado de `DRAFT` a `NEW`.
 
 +++ Una solicitud de ejemplo para actualizar un atributo calculado.
 
@@ -579,4 +579,4 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el atr
 
 ## Pasos siguientes
 
-Ahora que ha aprendido los conceptos básicos de los atributos calculados, está listo para empezar a definirlos para su organización. Para aprender a utilizar atributos calculados en la interfaz de usuario de Experience Platform, lea la [guía de IU de atributos calculados](./ui.md).
+Ahora que ha aprendido los conceptos básicos de los atributos calculados, está listo para empezar a definirlos para su organización. Para aprender a utilizar atributos calculados en la interfaz de usuario de Experience Platform, lea la [guía de la interfaz de usuario de atributos calculados](./ui.md).

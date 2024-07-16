@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;inicio;temas populares;servicio de flujo;API de servicio de flujo;fuentes;orígenes
-title: Filtrado de datos de nivel de fila para una fuente mediante la API de Flow Service
+title: Filtrado de datos de nivel de fila para una Source mediante la API de Flow Service
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 3%
+source-wordcount: '778'
+ht-degree: 2%
 
 ---
 
-# Filtrado de datos de nivel de fila para un origen mediante [!DNL Flow Service] API
+# Filtrar datos de nivel de fila para un origen mediante la API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
 >Actualmente, la compatibilidad con el filtrado de datos de nivel de fila solo está disponible para las siguientes fuentes:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics ](../../connectors/crm/ms-dynamics.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
-Este tutorial proporciona pasos sobre cómo filtrar datos de nivel de fila para un origen mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial proporciona pasos sobre cómo filtrar datos de nivel de fila para un origen mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
 
 ## Filtrar datos de origen
 
@@ -42,7 +42,7 @@ A continuación se describen los pasos que se deben seguir para filtrar los dato
 
 Antes de poder utilizar la API para filtrar datos de nivel de fila para un origen, primero debe recuperar los detalles de especificación de conexión del origen para determinar los operadores y el idioma que admite un origen específico.
 
-Para recuperar la especificación de conexión de un origen determinado, realice una solicitud de GET al `/connectionSpecs` punto final del [!DNL Flow Service] al proporcionar el nombre de la propiedad de su origen como parte de los parámetros de consulta.
+Para recuperar la especificación de conexión de un origen determinado, realice una solicitud de GET al extremo `/connectionSpecs` de la API [!DNL Flow Service] y proporcione el nombre de propiedad del origen como parte de los parámetros de consulta.
 
 **Formato de API**
 
@@ -52,7 +52,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMS}` | Parámetros de consulta opcionales por los que filtrar los resultados. Puede recuperar la variable [!DNL Google BigQuery] especificación de conexión mediante la aplicación de `name` y especificar `"google-big-query"` en la búsqueda. |
+| `{QUERY_PARAMS}` | Parámetros de consulta opcionales por los que filtrar los resultados. Puede recuperar la especificación de conexión [!DNL Google BigQuery] aplicando la propiedad `name` y especificando `"google-big-query"` en la búsqueda. |
 
 **Solicitud**
 
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Google BigQuery], incluida información sobre el idioma de consulta admitido y los operadores lógicos.
+Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Google BigQuery], incluida la información sobre el idioma de consulta admitido y los operadores lógicos.
 
 >[!NOTE]
 >
@@ -121,14 +121,14 @@ Una respuesta correcta devuelve las especificaciones de conexión para [!DNL Goo
 | `>` | Filtra por si la propiedad es mayor que el valor proporcionado. |
 | `<=` | Filtra por si la propiedad es menor o igual que el valor proporcionado. |
 | `>=` | Filtra por si la propiedad es mayor o igual que el valor proporcionado. |
-| `like` | Filtros al utilizarse en una `WHERE` para buscar un patrón especificado. |
+| `like` | Filtra al utilizarse en una cláusula `WHERE` para buscar un patrón especificado. |
 | `in` | Filtra por si la propiedad se encuentra dentro de un intervalo especificado. |
 
 {style="table-layout:auto"}
 
 ### Especificar condiciones de filtrado para la ingesta
 
-Una vez identificados los operadores lógicos y el lenguaje de consulta que admite el origen, puede utilizar el lenguaje de consulta de perfil (PQL) para especificar las condiciones de filtrado que desea aplicar a los datos de origen.
+Una vez identificados los operadores lógicos y el lenguaje de consulta que admite el origen, puede utilizar Profile Query Language (PQL) para especificar las condiciones de filtrado que desea aplicar a los datos de origen.
 
 En el ejemplo siguiente, las condiciones se aplican solo a los datos de selección que son iguales a los valores proporcionados para los tipos de nodo enumerados como parámetros.
 
@@ -155,7 +155,7 @@ En el ejemplo siguiente, las condiciones se aplican solo a los datos de selecci�
 
 ### Previsualización de los datos
 
-Puede obtener una vista previa de los datos realizando una solicitud de GET a `/explore` punto final del [!DNL Flow Service] API al proporcionar `filters` como parte de los parámetros de consulta y especificación de las condiciones de entrada PQL en [!DNL Base64].
+Puede obtener una vista previa de los datos realizando una solicitud de GET al extremo `/explore` de la API [!DNL Flow Service], proporcionando `filters` como parte de los parámetros de consulta y especificando las condiciones de entrada de PQL en [!DNL Base64].
 
 **Formato de API**
 
@@ -167,7 +167,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | El ID de conexión base de su origen. |
 | `{TABLE_PATH}` | La propiedad path de la tabla que desea inspeccionar. |
-| `{FILTERS}` | Sus condiciones de filtrado PQL codificadas en [!DNL Base64]. |
+| `{FILTERS}` | Sus condiciones de filtrado de PQL codificadas en [!DNL Base64]. |
 
 **Solicitud**
 
@@ -330,7 +330,7 @@ Una solicitud correcta devuelve la siguiente respuesta.
 
 ### Crear una conexión de origen para los datos filtrados
 
-Para crear una conexión de origen e introducir datos filtrados, realice una solicitud de POST al `/sourceConnections` al tiempo que proporciona las condiciones de filtrado como parte de los parámetros del cuerpo.
+Para crear una conexión de origen e introducir datos filtrados, realice una solicitud de POST al extremo `/sourceConnections` y proporcione las condiciones de filtrado como parte de los parámetros de cuerpo.
 
 **Formato de API**
 
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión de origen desde la que se pueden introducir datos `test1.fasTestTable` donde `city` = `DDN`.
+La siguiente solicitud crea una conexión de origen para ingerir datos de `test1.fasTestTable` donde `city` = `DDN`.
 
 ```shell
 curl -X POST \
@@ -402,7 +402,7 @@ Esta sección proporciona más ejemplos de diferentes cargas útiles para el fil
 
 ### Condiciones singulares
 
-Puede omitir el `fnApply` para escenarios que solo requieren una condición.
+Puede omitir el `fnApply` inicial en escenarios que solo requieran una condición.
 
 ```json
 {
@@ -425,7 +425,7 @@ Puede omitir el `fnApply` para escenarios que solo requieren una condición.
 }
 ```
 
-### Uso del `in` operador
+### Uso del operador `in`
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `in`.
 
@@ -459,7 +459,7 @@ Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `i
 }
 ```
 
-### Uso del `isNull` operador
+### Uso del operador `isNull`
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `isNull`.
 
@@ -480,7 +480,7 @@ Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `i
 }
 ```
 
-### Uso del `NOT` operador
+### Uso del operador `NOT`
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `NOT`.
 

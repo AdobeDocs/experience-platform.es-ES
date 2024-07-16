@@ -6,8 +6,8 @@ description: Un nodo es la unidad fundamental de la que se forman los gráficos.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 1%
+source-wordcount: '652'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ La siguiente guía describe las bibliotecas de nodos compatibles con el aprendiz
 
 ## Descubrimiento de nodos para su uso en la canalización XML
 
-Copie el siguiente código en una [!DNL Python] para ver todos los nodos disponibles para su uso.
+Copie el siguiente código en un bloc de notas [!DNL Python] para ver todos los nodos que están disponibles para su uso.
 
 ```python
 from pprint import pprint
@@ -81,9 +81,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-El siguiente nodo Pandas permite importar cualquier `pd.DataFrame` método o cualquier función general de nivel superior de pandas. Para obtener más información sobre los métodos de Pandas, visite la [Documentación de métodos de Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obtener más información sobre las funciones de nivel superior, visite la [Guía de referencia de API de Pandas para funciones generales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+El siguiente nodo Pandas le permite importar cualquier método `pd.DataFrame` o cualquier función de nivel superior pandas general. Para obtener más información acerca de los métodos Pandas, visite la [documentación sobre métodos Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Para obtener más información sobre las funciones de nivel superior, visita la [Guía de referencia de API de Pandas para ver las funciones generales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-El nodo siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguida de introducir los parámetros como una función de mapa. El ejemplo siguiente lo hace utilizando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una vez colocado el mapa, tiene la opción de establecer `inplace` as `True` o `False`. Establecer `inplace` as `True` o `False` en función de si desea aplicar la transformación local o no. De forma predeterminada `"inplace": False` crea una nueva columna. Se ha configurado la compatibilidad para proporcionar un nuevo nombre de columna para que se añada en una versión posterior. La última línea `cols` puede ser un nombre de columna único o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo `device` se ha especificado.
+El nodo siguiente utiliza `"import": "map"` para importar el nombre del método como una cadena en los parámetros, seguido de la introducción de los parámetros como una función de asignación. El ejemplo siguiente hace esto usando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una vez preparada la asignación, tiene la opción de establecer `inplace` como `True` o `False`. Establezca `inplace` como `True` o `False` en función de si desea aplicar la transformación local o no. De forma predeterminada `"inplace": False` crea una nueva columna. Se ha configurado la compatibilidad para proporcionar un nuevo nombre de columna para que se añada en una versión posterior. La última línea `cols` puede ser un solo nombre de columna o una lista de columnas. Especifique las columnas en las que desea aplicar la transformación. En este ejemplo se especifica `device`.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -121,17 +121,17 @@ msg6 = model_train.process(msg5)
 
 | Valor | Descripción |
 | --- | --- |
-| Funciones | Funciones de entrada al modelo (lista de cadenas). <br> Por ejemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| características | Funciones de entrada al modelo (lista de cadenas). <br> Por ejemplo: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | etiqueta | Nombre de la columna de destino (cadena). |
 | modo | Tren/prueba (cadena). |
 | model_path | Ruta de acceso al modelo guardado localmente en formato onx. |
-| params.model | Ruta de importación absoluta del modelo (cadena); p. ej.: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Hiperparámetros del modelo, consulte la [API sklearn (mapa/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) para obtener más información. |
+| params.model | Ruta de acceso de importación absoluta al modelo (cadena), p. ej.: `sklearn.linear_model.LogisticRegression`. |
+| params.model_params | Para obtener más información sobre los hiperparámetros del modelo, consulte la [documentación de la API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). |
 | node_instance.process(data_message_from_previous_node) | El método `process()` toma DataMsg del nodo anterior y aplica la transformación. Esto depende del nodo actual que se esté utilizando. |
 
-### Split
+### División
 
-Utilice el siguiente nodo para dividir el marco de datos en tren y probar pasando `train_size` o `test_size`. Devuelve un marco de datos con un índice múltiple. Puede acceder a los marcos de datos de tren y prueba mediante el siguiente ejemplo, `msg5.data.xs("train")`.
+Utilice el siguiente nodo para dividir el marco de datos en entrenamiento y prueba pasando `train_size` o `test_size`. Devuelve un marco de datos con un índice múltiple. Puede acceder a los marcos de datos de prueba y entrenamiento con el siguiente ejemplo, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -140,4 +140,4 @@ msg5 = splitter.process(msg4)
 
 ## Pasos siguientes
 
-El siguiente paso es crear nodos para utilizarlos en la puntuación de un modelo de aprendizaje automático en tiempo real. Para obtener más información, visite la [Guía del usuario del portátil de aprendizaje automático en tiempo real](./rtml-authoring-notebook.md).
+El siguiente paso es crear nodos para utilizarlos en la puntuación de un modelo de aprendizaje automático en tiempo real. Para obtener más información, visite la [Guía del usuario del bloc de notas de Aprendizaje automático en tiempo real](./rtml-authoring-notebook.md).

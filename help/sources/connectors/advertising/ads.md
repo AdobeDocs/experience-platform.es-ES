@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Google Ads;anuncios de google
-title: Información general sobre orígenes de Google Ads
+title: Información general sobre Google Ads Source
 description: Obtenga información sobre cómo conectar Google Ads a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->El [!DNL Google Ads] el origen no está disponible temporalmente. El Adobe está trabajando para resolver los problemas con esta fuente.
+>El origen [!DNL Google Ads] no está disponible temporalmente. El Adobe está trabajando para resolver los problemas con esta fuente.
 
 >[!NOTE]
 >
->El [!DNL Google Ads] el origen está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El origen [!DNL Google Ads] está en la versión beta. Consulte [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Experience Platform] proporciona compatibilidad con la ingesta de datos desde un sistema de publicidad de terceros. El soporte para proveedores de publicidad incluye [!DNL Google Ads].
+[!DNL Experience Platform] proporciona soporte para la ingesta de datos desde un sistema de publicidad de terceros. Los proveedores de publicidad admiten [!DNL Google Ads].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-## Connect [!DNL Google Ads] a Platform
+## Conectar [!DNL Google Ads] a Platform
 
-La siguiente documentación proporciona información sobre cómo conectarse [!DNL Google Ads] Vaya a Platform mediante las API o la interfaz de usuario de:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Google Ads] a Platform mediante API o la interfaz de usuario:
 
 ### Uso de API
 

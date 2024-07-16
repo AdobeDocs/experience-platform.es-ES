@@ -14,29 +14,29 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Uso [!DNL PubMatic Connect] para maximizar el valor del cliente al ofrecer la cadena de suministro programática de marketing digital del futuro. [!DNL PubMatic Connect] combina la tecnología de la plataforma y el servicio dedicado para mejorar la forma en que se empaquetan y realizan las transacciones de inventario y datos.
+Utilice [!DNL PubMatic Connect] para maximizar el valor de los clientes mediante la entrega de la cadena de suministro de marketing digital programática del futuro. [!DNL PubMatic Connect] combina tecnología de plataforma y servicio dedicado para mejorar la forma en que se empaquetan y se realizan transacciones de datos e inventarios.
 
-Utilice este destino para enviar datos de audiencia a [!DNL PubMatic Connect] plataforma.
+Utilice este destino para enviar datos de audiencia a la plataforma [!DNL PubMatic Connect].
 
 >[!IMPORTANT]
 >
->El conector de destino y la página de documentación los crea y mantiene el [!DNL PubMatic] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en `support@pubmatic.com`.
+>El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL PubMatic]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en `support@pubmatic.com`.
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el [!DNL PubMatic Connect] Destino, este es un ejemplo de caso de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL PubMatic Connect], aquí tiene un ejemplo de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
 ### Segmentación de usuarios en plataformas móviles, web y CTV {#targeting}
 
-Los editores o proveedores de datos desean enviar audiencias de Adobe Experience Platform a [!DNL PubMatic Connect] para dirigirse a usuarios en plataformas móviles, web y CTV, utilizando una amplia gama de identificadores.
+Los editores o proveedores de datos desean enviar audiencias de Adobe Experience Platform a [!DNL PubMatic Connect] para dirigirse a los usuarios en plataformas móviles, web y CTV, utilizando una amplia gama de identificadores.
 
 ## Requisitos previos {#prerequisites}
 
-Hable con su [!DNL PubMatic] Administrador de cuentas para asegurarse de que su cuenta de está configurada correctamente y admite la incorporación de segmentos de audiencia. También se asegurarán de que tenga todos los detalles relevantes para utilizar este destino y para proporcionarle asistencia durante la configuración.
+Hable con el administrador de cuentas de [!DNL PubMatic] para asegurarse de que su cuenta esté configurada correctamente y admita la incorporación de segmentos de audiencia. También se asegurarán de que tenga todos los detalles relevantes para utilizar este destino y para proporcionarle asistencia durante la configuración.
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL PubMatic Connect] admite la activación de identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
+[!DNL PubMatic Connect] admite la activación de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Descripción | Consideraciones |
 | --------------- | ------ | --- |
@@ -52,8 +52,8 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 
 | Origen de audiencia | Admitido | Descripción |
 | --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -72,9 +72,9 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
-> Para conectarse al destino, necesita el **[!UICONTROL Administrar destinos]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> Para conectarse al destino, necesita el **[!UICONTROL permiso Administrar destinos]** [control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 ### Autenticarse en el destino {#authenticate}
 
@@ -90,31 +90,31 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 
 ![Detalles del destino](../../assets/catalog/advertising/pubmatic/destination-details.png)
 
-- **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+- **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 - **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
-- **[!UICONTROL ID del socio de datos]**: el ID del socio de datos configurado en su [!DNL PubMatic] cuenta para esta integración.
+- **[!UICONTROL ID del socio de datos]**: El ID del socio de datos configurado en su cuenta de [!DNL PubMatic] para esta integración.
 - **[!UICONTROL Código de país predeterminado]**: El código de país predeterminado que debe aplicarse a todas las identidades si no se proporciona ninguna en el perfil.
-- **[!UICONTROL ID de cuenta]**: su [!DNL PubMatic Connect] ID de cuenta.
-- **[!UICONTROL Tipo de cuenta]**: el tipo de cuenta de su [!DNL PubMatic] cuenta de platform. Hable con su [!DNL PubMatic] Administrador de cuentas si tiene alguna pregunta sobre la que elegir. Las opciones disponibles son:
+- **[!UICONTROL ID de cuenta]**: Su ID de cuenta [!DNL PubMatic Connect].
+- **[!UICONTROL Tipo de cuenta]**: El tipo de cuenta de su cuenta de plataforma [!DNL PubMatic]. Hable con el administrador de cuentas de [!DNL PubMatic] si tiene alguna pregunta sobre la cual elegir. Las opciones disponibles son:
    - [!UICONTROL EDITOR]
-   - [!UICONTROL DEMAND_PARTNER]
+   - [!UICONTROL SOCIO_DEMANDA]
    - [!UICONTROL COMPRADOR]
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar segmentos en este destino {#activate}
 
 >[!IMPORTANT]
 >
-> - Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> - Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >
-> - Para exportar _identidades_, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+> - Para exportar _identidades_, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Leer [Activación de perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ### Asignar atributos e identidades {#map}
 
@@ -124,15 +124,15 @@ Selección de campos de origen:
 
 Selección de campos de destino:
 
-- Hable con su [!DNL PubMatic] Administrador de cuentas para obtener la información sobre el tipo de UID que será correcto durante este paso.
-- Seleccione el [!DNL PubMatic UID] escriba un número que coincida con el identificador seleccionado en el primer paso.
+- Hable con el administrador de cuentas de [!DNL PubMatic] para obtener información sobre el tipo de UID que será correcto durante este paso.
+- Seleccione el número de tipo [!DNL PubMatic UID] que coincida con el identificador seleccionado en el primer paso.
 
 ![Asignar atributos e identidades](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
-El [!DNL PubMatic] La interfaz de usuario le permite comprobar si los datos se han insertado correctamente y si los segmentos están disponibles. Puede tardar hasta 24 horas en insertarse los datos para [!DNL PubMatic] IU que se va a actualizar.
+La interfaz de usuario [!DNL PubMatic] le permite comprobar si los datos se han insertado correctamente y si los segmentos están disponibles. Pueden transcurrir hasta 24 horas desde que se insertaron los datos para actualizar la interfaz de usuario de [!DNL PubMatic].
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](/help/data-governance/home.md).

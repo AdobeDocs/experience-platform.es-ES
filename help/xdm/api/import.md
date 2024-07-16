@@ -4,29 +4,29 @@ description: El extremo /import en la API de Registro de esquemas le permite com
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '288'
 ht-degree: 2%
 
 ---
 
 # Importar extremo
 
-El `/rpc/import` punto final en la [!DNL Schema Registry] La API permite crear recursos del Modelo de datos de experiencia (XDM) a partir de cargas útiles de exportación generadas. Las cargas útiles de exportación se pueden crear a partir de dos fuentes:
+El extremo `/rpc/import` de la API [!DNL Schema Registry] le permite crear recursos del modelo de datos de experiencia (XDM) a partir de cargas de exportación generadas. Las cargas útiles de exportación se pueden crear a partir de dos fuentes:
 
-* El [`/rpc/export` punto final](./export.md) crea cargas útiles de exportación a partir de recursos XDM existentes, lo que le permite compartir recursos entre entornos limitados.
-* El [`/rpc/csv2schema` punto final](./csv-to-schema.md) crea cargas útiles de exportación a partir de plantillas CSV.
+* El extremo [`/rpc/export` ](./export.md) crea cargas útiles de exportación a partir de recursos XDM existentes, lo que le permite compartir recursos entre zonas protegidas.
+* El extremo [`/rpc/csv2schema` ](./csv-to-schema.md) crea cargas útiles de exportación a partir de plantillas CSV.
 
-Una vez creada una carga útil de exportación, puede utilizar el `/rpc/import` extremo para generar el recurso (y todos los recursos dependientes) en la zona protegida que elija.
+Una vez creada una carga útil de exportación, puede utilizar el extremo `/rpc/import` para generar el recurso (y todos los recursos dependientes) en la zona protegida que elija.
 
-## Primeros pasos
+## Introducción
 
-El `/rpc/import` El punto final forma parte de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo `/rpc/import` forma parte de la [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
-El `/rpc/import` El extremo forma parte de las llamadas a procedimientos remotos (RPC) compatibles con [!DNL Schema Registry]. A diferencia de otros extremos de [!DNL Schema Registry] API, los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type`, y no use un `CONTAINER_ID`. En su lugar, deben utilizar la variable `/rpc` , como se muestra en las llamadas de API siguientes.
+El extremo `/rpc/import` forma parte de las llamadas a procedimientos remotos (RPC) admitidas por [!DNL Schema Registry]. A diferencia de otros extremos de la API [!DNL Schema Registry], los extremos RPC no requieren encabezados adicionales como `Accept` o `Content-Type` y no utilizan un `CONTAINER_ID`. En su lugar, deben utilizar el área de nombres `/rpc`, como se muestra en las llamadas de API siguientes.
 
 ## Importación de un recurso {#import}
 
-Una vez que haya generado una carga útil de exportación para un recurso XDM, puede utilizar esa carga útil en una solicitud del POST a `/import` extremo para importar ese recurso en una organización de destino y zona protegida.
+Una vez que haya generado una carga útil de exportación para un recurso XDM, puede utilizar esa carga útil en una solicitud de POST al extremo `/import` para importar ese recurso en una organización de destino y zona protegida.
 
 **Formato de API**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Solicitud**
 
-La siguiente solicitud toma la carga útil devuelta desde una llamada a [`/rpc/export` punto final](./export.md) para importar un grupo de campos (`Restaurant`) en una nueva organización y zona protegida, según determine la variable `x-gw-ims-org-id` y `x-sandbox-name` encabezados, respectivamente.
+La siguiente solicitud toma la carga útil devuelta por una llamada al extremo [`/rpc/export`](./export.md) para importar un grupo de campos (`Restaurant`) en una nueva organización y zona protegida, según lo determinado por los encabezados `x-gw-ims-org-id` y `x-sandbox-name`, respectivamente.
 
 ```shell
 curl -X POST \

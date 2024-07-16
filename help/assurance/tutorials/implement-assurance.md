@@ -3,8 +3,8 @@ title: Implementación de la extensión de Adobe Experience Platform Assurance
 description: En esta guía se explica cómo implementar e instalar la extensión de Adobe Experience Platform Assurance.
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '400'
+workflow-type: tm+mt
+source-wordcount: '386'
 ht-degree: 100%
 
 ---

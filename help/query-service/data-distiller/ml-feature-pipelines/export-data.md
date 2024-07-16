@@ -4,16 +4,16 @@ description: Aprenda a compartir un conjunto de datos de formación preparado, c
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 3%
+source-wordcount: '457'
+ht-degree: 5%
 
 ---
 
 # Exportación de datos a entornos XML externos
 
-Este documento muestra cómo compartir un conjunto de datos de formación preparado creado con Data Distiller en una ubicación de almacenamiento en la nube que su entorno de ML puede leer para entrenar y puntuar el modelo. El ejemplo aquí exporta el conjunto de datos de formación a [Zona de aterrizaje de datos (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Puede cambiar el destino de almacenamiento según sea necesario para trabajar con su entorno de aprendizaje automático.
+Este documento muestra cómo compartir un conjunto de datos de formación preparado creado con Data Distiller en una ubicación de almacenamiento en la nube que su entorno de ML puede leer para entrenar y puntuar el modelo. El ejemplo aquí exporta el conjunto de datos de aprendizaje a la [zona de aterrizaje de datos (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Puede cambiar el destino de almacenamiento según sea necesario para trabajar con su entorno de aprendizaje automático.
 
-El [Servicio de flujo para destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/) se utiliza para completar la canalización de funciones aterrizando un conjunto de datos de funciones calculadas en una ubicación de almacenamiento en la nube adecuada.
+[Flow Service for Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) se usa para completar la canalización de características al aterrizar un conjunto de datos de características calculadas en una ubicación de almacenamiento de nube adecuada.
 
 ## Crear la conexión de origen {#create-source-connection}
 
@@ -42,10 +42,10 @@ Cada uno de los destinos de almacenamiento en la nube disponibles se identifica 
 | Tipo de almacenamiento en nube | ID de especificación de conexión |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
-| Almacenamiento de Azure Blob | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Azure Blob Storage | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Zona de aterrizaje de datos | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
-| Almacenamiento de Google Cloud | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
+| Almacenamiento en la nube de Google | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
 | SFTP | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 ```python
@@ -88,10 +88,10 @@ Cada tipo de almacenamiento en la nube disponible se identifica con un ID de esp
 | Tipo de almacenamiento en nube | ID de especificación de flujo |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
-| Almacenamiento de Azure Blob | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Azure Blob Storage | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
 | Zona de aterrizaje de datos | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
-| Almacenamiento de Google Cloud | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
+| Almacenamiento en la nube de Google | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
 | SFTP | 354d6aad-4754-46e4-a576-1b384561c440 |
 
 El siguiente código crea un flujo de datos con una programación configurada para iniciarse en un futuro lejano. Esto le permite almacenar en déclencheur flujos ad hoc durante el desarrollo del modelo. Una vez que tenga un modelo entrenado, puede actualizar la programación del flujo de datos para compartir el conjunto de datos de funciones en la programación deseada.
@@ -170,7 +170,7 @@ activation_res
 
 ## Uso compartido optimizado en la zona de aterrizaje de datos
 
-Para compartir un conjunto de datos en la zona de aterrizaje de datos más fácilmente, la variable `aepp` La biblioteca proporciona un `exportDatasetToDataLandingZone` que ejecuta los pasos anteriores en una sola llamada a la función:
+Para compartir un conjunto de datos en la zona de aterrizaje de datos más fácilmente, la biblioteca `aepp` proporciona una función `exportDatasetToDataLandingZone` que ejecuta los pasos anteriores en una sola llamada de función:
 
 ```python
 from aepp import exportDatasetToDataLandingZone

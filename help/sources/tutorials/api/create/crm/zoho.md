@@ -7,51 +7,51 @@ description: Aprenda a conectar Adobe Experience Platform a Zoho CRM mediante la
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 3%
 
 ---
 
-# Crear un [!DNL Zoho CRM] conexión base mediante el [!DNL Flow Service] API
+# Crear una conexión base [!DNL Zoho CRM] mediante la API [!DNL Flow Service]
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL Zoho CRM] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo guiará para crear una conexión base para [!DNL Zoho CRM] mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Primeros pasos
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesita conocer para conectarse correctamente a [!DNL Zoho CRM] uso del [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesita conocer para conectarse correctamente a [!DNL Zoho CRM] mediante la API [!DNL Flow Service].
 
 ### Recopilar credenciales necesarias
 
-Para que [!DNL Flow Service] para conectar con [!DNL Zoho CRM], debe proporcionar valores para las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con [!DNL Zoho CRM], debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
-| `endpoint` | El punto final del [!DNL Zoho CRM] servidor al que está realizando la solicitud. |
+| `endpoint` | Extremo del servidor [!DNL Zoho CRM] al que realiza la solicitud. |
 | `accountsUrl` | La dirección URL de cuentas se utiliza para generar los tokens de acceso y actualización. La dirección URL debe ser específica del dominio. |
-| `clientId` | El ID de cliente que corresponde con su [!DNL Zoho CRM] cuenta de usuario. |
-| `clientSecret` | El secreto de cliente que corresponde con su [!DNL Zoho CRM] cuenta de usuario. |
-| `accessToken` | El token de acceso autoriza su acceso seguro y temporal a su [!DNL Zoho CRM] cuenta. |
+| `clientId` | Identificador de cliente que corresponde con su cuenta de usuario [!DNL Zoho CRM]. |
+| `clientSecret` | Secreto de cliente que corresponde a su cuenta de usuario [!DNL Zoho CRM]. |
+| `accessToken` | El token de acceso autoriza el acceso seguro y temporal a su cuenta de [!DNL Zoho CRM]. |
 | `refreshToken` | Un token de actualización es un token que se utiliza para generar un nuevo token de acceso, una vez que el token de acceso ha caducado. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL Zoho CRM] es: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Zoho CRM] es: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
-Para obtener más información sobre estas credenciales, consulte la documentación sobre [[!DNL Zoho CRM] authentication](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+Para obtener más información sobre estas credenciales, consulte la documentación sobre la [[!DNL Zoho CRM] autenticación](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL Zoho CRM] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL Zoho CRM] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -98,16 +98,16 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- |
-| `name` | El nombre de su [!DNL Zoho CRM] conexión base. Puede utilizar este nombre para buscar su [!DNL Zoho CRM] conexión base. |
-| `description` | Una descripción opcional para su [!DNL Zoho CRM] conexión base. |
+| `name` | Nombre de su conexión base [!DNL Zoho CRM]. Puede usar este nombre para buscar su conexión base [!DNL Zoho CRM]. |
+| `description` | Descripción opcional de la conexión base [!DNL Zoho CRM]. |
 | `auth.specName` | Tipo de autenticación utilizado para la conexión. |
-| `auth.params.endpoint` | El punto final del [!DNL Zoho CRM] servidor al que está realizando la solicitud. |
+| `auth.params.endpoint` | Extremo del servidor [!DNL Zoho CRM] al que realiza la solicitud. |
 | `auth.params.accountsUrl` | La dirección URL de cuentas se utiliza para generar los tokens de acceso y actualización. La dirección URL debe ser específica del dominio. |
-| `auth.params.clientId` | El ID de cliente que corresponde con su [!DNL Zoho CRM] cuenta de usuario. |
-| `auth.params.clientSecret` | El secreto de cliente que corresponde con su [!DNL Zoho CRM] cuenta de usuario. |
-| `auth.params.accessToken` | El token de acceso autoriza su acceso seguro y temporal a su [!DNL Zoho CRM] cuenta. |
+| `auth.params.clientId` | Identificador de cliente que corresponde con su cuenta de usuario [!DNL Zoho CRM]. |
+| `auth.params.clientSecret` | Secreto de cliente que corresponde a su cuenta de usuario [!DNL Zoho CRM]. |
+| `auth.params.accessToken` | El token de acceso autoriza el acceso seguro y temporal a su cuenta de [!DNL Zoho CRM]. |
 | `auth.params.refreshToken` | Un token de actualización es un token que se utiliza para generar un nuevo token de acceso, una vez que el token de acceso ha caducado. |
-| `connectionSpec.id` | Identificador de especificación de conexión para [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+| `connectionSpec.id` | Id. de especificación de conexión para [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 **Respuesta**
 
@@ -122,7 +122,7 @@ Una respuesta correcta devuelve detalles de la conexión base recién creada, in
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL Zoho] conexión base mediante el [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+Siguiendo este tutorial, ha creado una conexión base [!DNL Zoho] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
-* [Explorar la estructura y el contenido de las tablas de datos mediante [!DNL Flow Service] API](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar datos CRM a Platform mediante [!DNL Flow Service] API](../../collect/crm.md)
+* [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar datos de CRM a Platform mediante la API  [!DNL Flow Service] ](../../collect/crm.md)

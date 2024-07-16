@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo definir vistas para módulos de bi
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2061'
 ht-degree: 98%
 
 ---
@@ -172,7 +172,7 @@ Para indicar a los dónde puede resultar útil utilizar elementos de datos y fac
 
 >[!NOTE]
 >
->Para descargar el icono correspondiente, vaya a [Página de iconos en Espectro de Adobe](https://spectrum.adobe.com/page/icons/) y busque &quot;[!DNL Data]&quot;.
+>Para descargar el ícono apropiado, vaya a la página [Icon en Espectro de Adobe](https://spectrum.adobe.com/page/icons/) y busque &quot;[!DNL Data]&quot;.
 
 Cuando un usuario selecciona el botón que se encuentra junto al campo de texto, se realiza una llamada a `window.extensionBridge.openDataElementSelector`, tal como se ha [descrito anteriormente](#open-data-element). Esto mostrará una lista de los elementos de datos del usuario entre los que el usuario puede elegir en lugar de obligarlos a recordar el nombre y los símbolos de porcentaje. Una vez que el usuario haya seleccionado un elemento de datos, recibirá el nombre del elemento de datos seleccionado escrito entre símbolos de porcentaje (a menos que haya configurado la opción `tokenize` como `false`). Se recomienda rellenar el campo de texto con el resultado.
 

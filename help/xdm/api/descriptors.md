@@ -17,17 +17,17 @@ Los esquemas definen una vista estática de las entidades de datos, pero no prop
 
 Los descriptores de esquema son metadatos de nivel de inquilino, lo que significa que son únicos para su organización y que todas las operaciones de descriptor se realizan en el contenedor de inquilino.
 
-Cada esquema puede tener una o más entidades de descriptor de esquema aplicadas. Cada entidad descriptor de esquema incluye un descriptor `@type` y el `sourceSchema` a los que se aplica. Una vez aplicados, estos descriptores se aplicarán a todos los conjuntos de datos creados con el esquema.
+Cada esquema puede tener una o más entidades de descriptor de esquema aplicadas. Cada entidad descriptor de esquema incluye un descriptor `@type` y el `sourceSchema` al que se aplica. Una vez aplicados, estos descriptores se aplicarán a todos los conjuntos de datos creados con el esquema.
 
-El `/descriptors` punto final en la [!DNL Schema Registry] La API permite administrar descriptores mediante programación dentro de la aplicación de experiencia.
+El extremo `/descriptors` de la API [!DNL Schema Registry] le permite administrar descriptores mediante programación dentro de la aplicación de experiencia.
 
 ## Introducción
 
-El extremo utilizado en esta guía forma parte de la variable [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo utilizado en esta guía forma parte de la [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de descriptores {#list}
 
-Puede enumerar todos los descriptores definidos por su organización realizando una solicitud de GET a `/tenant/descriptors`.
+Puede enumerar todos los descriptores que ha definido su organización realizando una solicitud de GET a `/tenant/descriptors`.
 
 **Formato de API**
 
@@ -47,26 +47,26 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-El formato de respuesta depende de la variable `Accept` encabezado enviado en la solicitud. Observe que la variable `/descriptors` el extremo utiliza `Accept` encabezados que son diferentes de todos los demás extremos de la [!DNL Schema Registry] API.
+El formato de respuesta depende del encabezado `Accept` enviado en la solicitud. Observe que el extremo `/descriptors` utiliza encabezados `Accept` que son diferentes de todos los demás extremos de la API [!DNL Schema Registry].
 
 >[!IMPORTANT]
 >
->Los descriptores requieren funciones únicas `Accept` encabezados que reemplazan a `xed` con `xdm`, y también ofrecen un `link` que es única para los descriptores. La adecuada `Accept` Los encabezados de se han incluido en las llamadas de ejemplo siguientes, pero tenga especial precaución para asegurarse de que se utilizan los encabezados correctos cuando trabaje con descriptores.
+>Los descriptores requieren encabezados `Accept` únicos que reemplazan a `xed` por `xdm`, y también ofrecen la opción `link` que es única para los descriptores. Los encabezados `Accept` adecuados se han incluido en las llamadas de ejemplo siguientes, pero tenga especial precaución para asegurarse de que se utilizan los encabezados correctos al trabajar con descriptores.
 
 | `Accept` encabezado | Descripción |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Devuelve una matriz de ID de descriptor |
 | `application/vnd.adobe.xdm-link+json` | Devuelve una matriz de rutas de API de descriptor |
 | `application/vnd.adobe.xdm+json` | Devuelve una matriz de objetos descriptor expandidos |
-| `application/vnd.adobe.xdm-v2+json` | Esta `Accept` se debe utilizar el encabezado para utilizar las funcionalidades de paginación. |
+| `application/vnd.adobe.xdm-v2+json` | Se debe usar este encabezado `Accept` para usar las capacidades de paginación. |
 
 {style="table-layout:auto"}
 
 **Respuesta**
 
-La respuesta incluye una matriz para cada tipo de descriptor que tenga descriptores definidos. En otras palabras, si no hay descriptores de un determinado `@type` definido, el registro no devolverá una matriz vacía para ese tipo de descriptor.
+La respuesta incluye una matriz para cada tipo de descriptor que tenga descriptores definidos. En otras palabras, si no hay descriptores de un determinado `@type` definido, el Registro no devolverá una matriz vacía para ese tipo de descriptor.
 
-Al usar el `link` `Accept` encabezado, cada descriptor se muestra como un elemento de matriz con el formato `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
+Al utilizar el encabezado `link` `Accept`, cada descriptor se muestra como un elemento de matriz con el formato `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -86,7 +86,7 @@ Al usar el `link` `Accept` encabezado, cada descriptor se muestra como un elemen
 
 ## Búsqueda de un descriptor {#lookup}
 
-Si desea ver los detalles de un descriptor específico, puede buscar (GET) un descriptor individual utilizando su `@id`.
+Si desea ver los detalles de un descriptor específico, puede buscar (GET) un descriptor individual usando su `@id`.
 
 **Formato de API**
 
@@ -102,7 +102,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Solicitud**
 
-La siguiente solicitud recupera un descriptor mediante su `@id` valor. Los descriptores no tienen versiones, por lo que no `Accept` se requiere el encabezado en la solicitud de búsqueda.
+La siguiente solicitud recupera un descriptor por su valor `@id`. Los descriptores no tienen versiones, por lo tanto no se requiere ningún encabezado `Accept` en la solicitud de búsqueda.
 
 ```SHELL
 curl -X GET \
@@ -115,7 +115,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del descriptor, incluido su `@type` y `sourceSchema`, así como información adicional que varía según el tipo de descriptor. El devuelto `@id` debe coincidir con el descriptor `@id` indicada en la solicitud.
+Una respuesta correcta devuelve los detalles del descriptor, incluidos `@type` y `sourceSchema`, así como información adicional que varía según el tipo de descriptor. El elemento devuelto `@id` debe coincidir con el descriptor `@id` proporcionado en la solicitud.
 
 ```JSON
 {
@@ -139,11 +139,11 @@ Una respuesta correcta devuelve los detalles del descriptor, incluido su `@type`
 
 ## Creación de un descriptor {#create}
 
-Puede crear un nuevo descriptor realizando una solicitud de POST a `/tenant/descriptors` punto final.
+Puede crear un nuevo descriptor realizando una solicitud de POST al extremo `/tenant/descriptors`.
 
 >[!IMPORTANT]
 >
->El [!DNL Schema Registry] permite definir varios tipos de descriptor diferentes. Cada tipo de descriptor requiere que se envíen sus propios campos específicos en el cuerpo de la solicitud. Consulte la [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
+>[!DNL Schema Registry] le permite definir varios tipos de descriptor diferentes. Cada tipo de descriptor requiere que se envíen sus propios campos específicos en el cuerpo de la solicitud. Consulte el [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
 
 **Formato de API**
 
@@ -153,7 +153,7 @@ POST /tenant/descriptors
 
 **Solicitud**
 
-La siguiente solicitud define un descriptor de identidad en un campo &quot;dirección de correo electrónico&quot; en un esquema de ejemplo. Esto indica [!DNL Experience Platform] para utilizar la dirección de correo electrónico como identificador para ayudar a unir información sobre el individuo.
+La siguiente solicitud define un descriptor de identidad en un campo &quot;dirección de correo electrónico&quot; en un esquema de ejemplo. Esto indica a [!DNL Experience Platform] que use la dirección de correo electrónico como identificador para ayudar a unir información sobre el individuo.
 
 ```SHELL
 curl -X POST \
@@ -177,7 +177,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del descriptor recién creado, incluido su `@id`. El `@id` es un campo de solo lectura asignado por el [!DNL Schema Registry] y se utiliza para hacer referencia al descriptor en la API.
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del descriptor recién creado, incluido su `@id`. `@id` es un campo de solo lectura asignado por [!DNL Schema Registry] y utilizado para hacer referencia al descriptor en la API.
 
 ```JSON
 {
@@ -195,7 +195,7 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y los detalles del d
 
 ## Actualización de un descriptor {#put}
 
-Puede actualizar un descriptor incluyendo su `@id` en la ruta de una petición de PUT.
+Puede actualizar un descriptor incluyendo su `@id` en la ruta de una solicitud de PUT.
 
 **Formato de API**
 
@@ -215,9 +215,9 @@ Básicamente, esta solicitud reescribe el descriptor, por lo que el cuerpo de la
 
 >[!IMPORTANT]
 >
->Al igual que con la creación de descriptores mediante solicitudes de POST, cada tipo de descriptor requiere que se envíen sus propios campos específicos en las cargas útiles de solicitud de PUT. Consulte la [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
+>Al igual que con la creación de descriptores mediante solicitudes de POST, cada tipo de descriptor requiere que se envíen sus propios campos específicos en las cargas útiles de solicitud de PUT. Consulte el [apéndice](#defining-descriptors) para obtener una lista completa de los descriptores y los campos necesarios para definirlos.
 
-En el siguiente ejemplo, se actualiza un descriptor de identidad para que haga referencia a un elemento diferente `xdm:sourceProperty` (`mobile phone`) y cambie la `xdm:namespace` hasta `Phone`.
+En el siguiente ejemplo se actualiza un descriptor de identidad para que haga referencia a un(a) `xdm:sourceProperty` (`mobile phone`) diferente y cambie el(la) `xdm:namespace` a `Phone`.
 
 ```SHELL
 curl -X PUT \
@@ -240,7 +240,7 @@ curl -X PUT \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 201 (Creado) y la variable `@id` del descriptor actualizado (que debe coincidir con el `@id` enviado en la solicitud).
+Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el `@id` del descriptor actualizado (que debe coincidir con el `@id` enviado en la solicitud).
 
 ```JSON
 {
@@ -248,11 +248,11 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y la variable `@id` 
 }
 ```
 
-Realización de una [solicitud de búsqueda (GET)](#lookup) para ver el descriptor, muestra que los campos ahora se han actualizado para reflejar los cambios enviados en la solicitud del PUT.
+Al realizar una [solicitud de búsqueda (GET)](#lookup) para ver el descriptor, se muestra que los campos se han actualizado para reflejar los cambios enviados en la solicitud del PUT.
 
 ## Eliminación de un descriptor {#delete}
 
-En ocasiones, es posible que deba eliminar un descriptor que haya definido del [!DNL Schema Registry]. Esto se realiza realizando una solicitud de DELETE que hace referencia a la variable `@id` del descriptor que desea eliminar.
+En ocasiones, es posible que deba quitar un descriptor que haya definido del [!DNL Schema Registry]. Para ello, realice una solicitud de DELETE que haga referencia a `@id` del descriptor que desea eliminar.
 
 **Formato de API**
 
@@ -281,11 +281,11 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo en blanco.
 
-Para confirmar que el descriptor se ha eliminado, puede realizar una [solicitud de búsqueda](#lookup) frente al descriptor `@id`. La respuesta devuelve el estado HTTP 404 (no encontrado) porque el descriptor se ha eliminado del [!DNL Schema Registry].
+Para confirmar que el descriptor se ha eliminado, puede realizar una [solicitud de consulta](#lookup) con el descriptor `@id`. La respuesta devuelve el estado HTTP 404 (no encontrado) porque el descriptor se ha eliminado de [!DNL Schema Registry].
 
 ## Apéndice
 
-En la siguiente sección se proporciona información adicional sobre cómo trabajar con descriptores en [!DNL Schema Registry] API.
+La siguiente sección proporciona información adicional sobre cómo trabajar con descriptores en la API [!DNL Schema Registry].
 
 ### Definición de descriptores {#defining-descriptors}
 
@@ -301,7 +301,7 @@ En las secciones siguientes se ofrece una descripción general de los tipos de d
 
 #### Descriptor de identidad
 
-Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de la &quot;[!UICONTROL sourceSchema]&quot; es un [!DNL Identity] tal como lo describe [Servicio de identidad de Adobe Experience Platform](../../identity-service/home.md).
+Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; es un campo [!DNL Identity] tal como lo describe [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -319,18 +319,18 @@ Un descriptor de identidad indica que &quot;[!UICONTROL sourceProperty]&quot; de
 | Propiedad | Descripción |
 | --- | --- |
 | `@type` | El tipo de descriptor que se define. Para un descriptor de identidad, este valor debe establecerse en `xdm:descriptorIdentity`. |
-| `xdm:sourceSchema` | El `$id` URI del esquema donde se define el descriptor. |
+| `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
 | `xdm:sourceVersion` | La versión principal del esquema de origen. |
 | `xdm:sourceProperty` | La ruta a la propiedad específica que será la identidad. La ruta debe comenzar por &quot;/&quot; y no terminar por uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, utilice &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | El `id` o `code` valor del área de nombres de identidad. Se puede encontrar una lista de áreas de nombres con la variable [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
-| `xdm:property` | Cualquiera `xdm:id` o `xdm:code`, según el `xdm:namespace` se utiliza. |
+| `xdm:namespace` | El valor `id` o `code` del área de nombres de identidad. Se puede encontrar una lista de áreas de nombres usando [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
+| `xdm:property` | `xdm:id` o `xdm:code`, según el `xdm:namespace` utilizado. |
 | `xdm:isPrimary` | Un valor booleano opcional. Cuando es true, indica el campo como identidad principal. Los esquemas solo pueden contener una identidad principal. |
 
 {style="table-layout:auto"}
 
 #### Descriptor de nombre descriptivo {#friendly-name}
 
-Los descriptores de nombres descriptivos permiten al usuario modificar la variable `title`, `description`, y `meta:enum` valores de los campos de esquema de la biblioteca principal. Especialmente útil cuando se trabaja con eVars y otros campos &quot;genéricos&quot; que desea etiquetar como que contienen información específica de su organización. La interfaz de usuario puede usarlas para mostrar un nombre más descriptivo o solo para mostrar los campos que tienen un nombre descriptivo.
+Los descriptores de nombres descriptivos permiten al usuario modificar los valores `title`, `description` y `meta:enum` de los campos de esquema de la biblioteca principal. Especialmente útil cuando se trabaja con eVars y otros campos &quot;genéricos&quot; que desea etiquetar como que contienen información específica de su organización. La interfaz de usuario puede usarlas para mostrar un nombre más descriptivo o solo para mostrar los campos que tienen un nombre descriptivo.
 
 ```json
 {
@@ -359,19 +359,19 @@ Los descriptores de nombres descriptivos permiten al usuario modificar la variab
 | Propiedad | Descripción |
 | --- | --- |
 | `@type` | El tipo de descriptor que se define. Para un descriptor de nombre descriptivo, este valor debe establecerse en `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | El `$id` URI del esquema donde se define el descriptor. |
+| `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
 | `xdm:sourceVersion` | La versión principal del esquema de origen. |
-| `xdm:sourceProperty` | La ruta a la propiedad específica cuyos detalles desea modificar. La ruta debe comenzar con una barra (`/`) y no terminar con uno. No incluir `properties` en la ruta (por ejemplo, use `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | La ruta a la propiedad específica cuyos detalles desea modificar. La ruta de acceso debe comenzar con una barra diagonal (`/`) y no terminar con una. No incluya `properties` en la ruta (por ejemplo, use `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
 | `xdm:title` | El nuevo título que desea mostrar para este campo, escrito en Mayúsculas y minúsculas. |
 | `xdm:description` | Se puede añadir una descripción opcional junto con el título. |
-| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` se puede usar para agregar valores sugeridos para el campo en la interfaz de usuario de segmentación. Es importante tener en cuenta que `meta:enum` no declara una enumeración ni proporciona validación de datos para el campo XDM.<br><br>Esto solo debe utilizarse para campos XDM principales definidos por el Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, debe editar el del campo `meta:enum` directamente a través de una solicitud del PATCH al recurso principal del campo. |
-| `meta:excludeMetaEnum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena que tiene valores sugeridos existentes proporcionados en una `meta:enum` , puede incluir este objeto en un descriptor de nombre descriptivo para excluir algunos o todos estos valores de la segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el original `meta:enum` del campo para que se excluya la entrada. |
+| `meta:enum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena, `meta:enum` se puede usar para agregar valores sugeridos para el campo en la interfaz de usuario de la segmentación. Es importante tener en cuenta que `meta:enum` no declara una enumeración ni proporciona validación de datos para el campo XDM.<br><br>Esto solo debe usarse para campos XDM principales definidos por el Adobe. Si la propiedad de origen es un campo personalizado definido por su organización, debe editar la propiedad `meta:enum` del campo directamente mediante una solicitud del PATCH al recurso principal del campo. |
+| `meta:excludeMetaEnum` | Si el campo indicado por `xdm:sourceProperty` es un campo de cadena que tiene valores sugeridos existentes proporcionados bajo un campo `meta:enum`, puede incluir este objeto en un descriptor de nombre descriptivo para excluir algunos o todos estos valores de la segmentación. La clave y el valor de cada entrada deben coincidir con los incluidos en el `meta:enum` original del campo para que se excluya la entrada. |
 
 {style="table-layout:auto"}
 
 #### Descriptor de relación
 
-Los descriptores de relación describen una relación entre dos esquemas diferentes, con claves en las propiedades descritas en `sourceProperty` y `destinationProperty`. Consulte el tutorial sobre [definición de una relación entre dos esquemas](../tutorials/relationship-api.md) para obtener más información.
+Los descriptores de relación describen una relación entre dos esquemas diferentes, con claves en las propiedades descritas en `sourceProperty` y `destinationProperty`. Vea el tutorial sobre [definición de una relación entre dos esquemas](../tutorials/relationship-api.md) para obtener más información.
 
 ```json
 {
@@ -390,10 +390,10 @@ Los descriptores de relación describen una relación entre dos esquemas diferen
 | Propiedad | Descripción |
 | --- | --- |
 | `@type` | El tipo de descriptor que se define. Para un descriptor de relación, este valor debe establecerse en `xdm:descriptorOneToOne`. |
-| `xdm:sourceSchema` | El `$id` URI del esquema donde se define el descriptor. |
+| `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
 | `xdm:sourceVersion` | La versión principal del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo en el esquema de origen donde se define la relación. Debe comenzar por &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, &quot;/personalEmail/address&quot; en lugar de &quot;/properties/personalEmail/properties/address&quot;). |
-| `xdm:destinationSchema` | El `$id` URI del esquema de referencia con el que define una relación este descriptor. |
+| `xdm:destinationSchema` | URI `$id` del esquema de referencia con el que define una relación este descriptor. |
 | `xdm:destinationVersion` | La versión principal del esquema de referencia. |
 | `xdm:destinationProperty` | Ruta opcional a un campo de destino dentro del esquema de referencia. Si se omite esta propiedad, cualquier campo que contenga un descriptor de identidad de referencia coincidente deducirá el campo de destino (consulte a continuación). |
 
@@ -416,7 +416,7 @@ Los descriptores de identidad de referencia proporcionan un contexto de referenc
 | Propiedad | Descripción |
 | --- | --- |
 | `@type` | El tipo de descriptor que se define. Para un descriptor de identidad de referencia, este valor debe establecerse en `xdm:descriptorReferenceIdentity`. |
-| `xdm:sourceSchema` | El `$id` URI del esquema donde se define el descriptor. |
+| `xdm:sourceSchema` | URI `$id` del esquema donde se define el descriptor. |
 | `xdm:sourceVersion` | La versión principal del esquema de origen. |
 | `xdm:sourceProperty` | Ruta al campo en el esquema de origen que se utilizará para hacer referencia al esquema de referencia. Debe comenzar por &quot;/&quot; y no terminar con uno. No incluya &quot;propiedades&quot; en la ruta (por ejemplo, `/personalEmail/address` en lugar de `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | El código del área de nombres de identidad de la propiedad de origen. |
@@ -425,7 +425,7 @@ Los descriptores de identidad de referencia proporcionan un contexto de referenc
 
 #### Descriptor de campo obsoleto
 
-Puede [dejar de utilizar un campo dentro de un recurso XDM personalizado](../tutorials/field-deprecation-api.md#custom) añadiendo una etiqueta `meta:status` atributo establecido en `deprecated` al campo en cuestión. Sin embargo, si desea dejar obsoletos los campos proporcionados por los recursos XDM estándar en los esquemas, puede asignar un descriptor de campo obsoleto al esquema en cuestión para lograr el mismo efecto. Uso del [correcto `Accept` encabezado](../tutorials/field-deprecation-api.md#verify-deprecation)Sin embargo, puede ver qué campos estándar están en desuso para un esquema al buscarlo en la API.
+Puede [dejar de utilizar un campo dentro de un recurso XDM personalizado](../tutorials/field-deprecation-api.md#custom) al agregar un atributo `meta:status` establecido en `deprecated` al campo en cuestión. Sin embargo, si desea dejar obsoletos los campos proporcionados por los recursos XDM estándar en los esquemas, puede asignar un descriptor de campo obsoleto al esquema en cuestión para lograr el mismo efecto. Si usa el [encabezado `Accept` correcto](../tutorials/field-deprecation-api.md#verify-deprecation), podrá ver qué campos estándar están obsoletos para un esquema cuando lo busque en la API.
 
 ```json
 {
@@ -438,9 +438,9 @@ Puede [dejar de utilizar un campo dentro de un recurso XDM personalizado](../tut
 
 | Propiedad | Descripción |
 | --- | --- |
-| `@type` | El tipo de descriptor. Para un descriptor de obsolescencia de campo, este valor debe configurarse como `xdm:descriptorDeprecated`. |
-| `xdm:sourceSchema` | El URI `$id` del esquema al que está aplicando el descriptor. |
-| `xdm:sourceVersion` | La versión del esquema al que está aplicando el descriptor. Debe configurarse como `1`. |
+| `@type` | El tipo de descriptor. Para un descriptor de desaprobación de campo, este valor debe establecerse en `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` del esquema al que está aplicando el descriptor. |
+| `xdm:sourceVersion` | La versión del esquema al que está aplicando el descriptor. Debe establecerse en `1`. |
 | `xdm:sourceProperty` | Ruta a la propiedad dentro del esquema al que está aplicando el descriptor. Si desea aplicar el descriptor a varias propiedades, puede proporcionar una lista de rutas en forma de matriz (por ejemplo, `["/firstName", "/lastName"]`). |
 
 {style="table-layout:auto"}

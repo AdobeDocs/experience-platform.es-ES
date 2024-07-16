@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Obtención del ID nativo de una identidad
 
-Los datos de identidad se proporcionan generalmente como un valor de cadena de ID y un área de nombres de identidad en los datos XDM introducidos y al proporcionar una identidad para su uso en una llamada de API. Cuando las identidades persisten en [!DNL Identity Service], se genera un ID y se asigna a esa identidad, denominado XID nativo. [!DNL Platform] API que requieren compatibilidad con datos de identidad mediante este formulario más compacto para el ID y el área de nombres agregados. XID es una cadena codificada en base64.
+Los datos de identidad se proporcionan generalmente como un valor de cadena de ID y un área de nombres de identidad en los datos XDM introducidos y al proporcionar una identidad para su uso en una llamada de API. Cuando las identidades persisten en [!DNL Identity Service], se genera un ID y se asigna a esa identidad, denominado XID nativo. [!DNL Platform] API que requieren compatibilidad con datos de identidad al utilizar este formulario más compacto para el ID y el área de nombres agregados. XID es una cadena codificada en base64.
 
 >[!NOTE]
 >
->Este formato es principalmente para uso interno del Adobe. El XID nativo como valor singular ahorra espacio y es lo que se utiliza internamente dentro de [!DNL Platform] soluciones para almacenamiento y serialización. Sin embargo, no es legible en lenguaje natural, es opaco y requiere una llamada independiente para obtenerlo y utilizarlo.
+>Este formato es principalmente para uso interno del Adobe. El XID nativo como valor singular ahorra espacio y es lo que se usa internamente en las soluciones [!DNL Platform] para almacenamiento y serialización. Sin embargo, no es legible en lenguaje natural, es opaco y requiere una llamada independiente para obtenerlo y utilizarlo.
 
 Adquiera el XID para un valor de ID y un área de nombres determinados mediante el servicio descrito en esta sección.
 

@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de etiquetas Adobe Aud
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '451'
 ht-degree: 96%
 
 ---

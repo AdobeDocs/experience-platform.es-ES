@@ -4,7 +4,7 @@ description: Encuentre respuestas a las preguntas más frecuentes acerca del uso
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ En Adobe Experience Platform, los atributos calculados son funciones que se util
 
 ## ¿Cómo puedo obtener acceso a los atributos calculados?
 
-Para obtener acceso a los atributos calculados, debe tener los permisos adecuados (**Ver atributos calculados** y **Administrar atributos calculados**). Para obtener más información sobre los permisos necesarios, lea la [documentación de control de acceso](../../access-control/home.md). Para obtener información sobre cómo aplicar estos permisos, lea la [guía de administración de permisos](../../access-control/ui/permissions.md).
+Para obtener acceso a los atributos calculados, necesita tener los permisos adecuados (**Ver atributos calculados** y **Administrar atributos calculados**). Para obtener más información sobre los permisos necesarios, lea la [documentación de control de acceso](../../access-control/home.md). Para aprender a aplicar estos permisos, lea la [guía de administración de permisos](../../access-control/ui/permissions.md).
 
 ## ¿Qué conjuntos de datos contribuyen a los cálculos de atributos calculados?
 
@@ -35,13 +35,13 @@ La frecuencia de actualización se determina automáticamente en función del pe
 
 ## ¿En qué afecta a los cálculos la caducidad de los datos de Experience Event?
 
-Los cálculos de atributos calculados se rellenan con la duración de retrospectiva definida en la primera evaluación y se actualizan en función de los eventos incrementales para las actualizaciones posteriores. Como resultado, estos cálculos son **no** se ve afectado por la caducidad de los datos de Experience Event de los datos antiguos después de la primera evaluación.
+Los cálculos de atributos calculados se rellenan con la duración de retrospectiva definida en la primera evaluación y se actualizan en función de los eventos incrementales para las actualizaciones posteriores. Como resultado, estos cálculos **no** se ven afectados por la caducidad de los datos de Experience Event de los datos antiguos después de la primera evaluación.
 
-Por ejemplo, si crea un atributo calculado que se evalúa mensualmente con un periodo retrospectivo de tres meses, para la primera evaluación, el atributo calculado calculará para todos los eventos dentro de ese periodo retrospectivo de tres meses. Incluso si el conjunto de datos de evento de experiencia tiene una caducidad de datos de un mes, esta caducidad de datos **no** afectan a la actualización mensual de atributos calculados, ya que la ejecución de evaluación del mes siguiente acumulará eventos de forma incremental y actualizará el cálculo.
+Por ejemplo, si crea un atributo calculado que se evalúa mensualmente con un periodo retrospectivo de tres meses, para la primera evaluación, el atributo calculado calculará para todos los eventos dentro de ese periodo retrospectivo de tres meses. Incluso si el conjunto de datos de evento de experiencia tiene una caducidad de datos de un mes, esta caducidad de datos **no** afectará la actualización mensual de atributos calculados, ya que la ejecución de evaluación del mes siguiente agregará eventos de forma incremental y actualizará el cálculo.
 
 >[!NOTE]
 >
->Datos caducados **no puede** Rellenarse más tarde con un atributo calculado. Caducidad de datos del conjunto de datos de eventos **mayo** se ha limitado la capacidad de validar el valor del atributo calculado en un momento posterior. Para validar el valor de atributo calculado, el periodo retroactivo debe permanecer **dentro** los límites de la caducidad de los datos.
+>Los datos caducados **no se pueden** rellenar posteriormente con un atributo calculado. La caducidad de datos del conjunto de datos de evento **may** limitó la capacidad de validar el valor del atributo calculado en un momento posterior. Para validar el valor de atributo calculado, el período retroactivo debe permanecer **dentro de** los límites de las caducidades de datos.
 
 ## ¿Puedo crear un atributo calculado basado en otro atributo calculado?
 
@@ -53,11 +53,11 @@ Sí, hay un límite en el número de atributos calculados que puede crear. Consu
 
 ## ¿Hay alguna consecuencia en sentido descendente de la desactivación de un atributo calculado?
 
-Antes de deshabilitar el atributo calculado, debe hacer lo siguiente **debería** elimínelos de sus sistemas descendentes (como la segmentación, los recorridos o los destinos), ya que puede haber complicaciones que surjan si no se eliminan.
+Antes de deshabilitar el atributo calculado, **debe** quitarlo de los sistemas de flujo descendente (como segmentación, recorridos o destinos), ya que puede haber complicaciones que surgirán si no se quita.
 
 ## ¿Qué sucede cuando se deshabilita un atributo calculado? {#inactive-status}
 
-Cuando un atributo calculado está deshabilitado o inactivo, ya no se actualiza. Como resultado, este atributo calculado **no puede** se utilizará en la búsqueda de perfiles u otros usos posteriores.
+Cuando un atributo calculado está deshabilitado o inactivo, ya no se actualiza. Como resultado, este atributo calculado **no se puede** usar en la búsqueda de perfiles u otros usos posteriores.
 
 ## ¿Cómo ayudan los atributos calculados a impulsar la participación?
 
@@ -65,9 +65,9 @@ Los atributos calculados impulsan el enriquecimiento de perfiles al añadir los 
 
 ## ¿Con qué frecuencia se evalúan los atributos calculados? ¿Está relacionado con el programa de evaluación de audiencias?
 
-Los atributos calculados se evalúan en una **lote** frecuencia que es **independiente** Consulte la programación de la evaluación de audiencia, destino y recorrido. Esto significa que, independientemente del tipo de segmentación (segmentación por lotes o segmentación por flujo continuo), el atributo calculado se evalúa según su propia programación (por hora, diariamente, semanalmente o mensualmente).
+Los atributos calculados se evalúan en una frecuencia de **lote** que es **independiente** de la programación de su evaluación de audiencia, destino y recorrido. Esto significa que, independientemente del tipo de segmentación (segmentación por lotes o segmentación por flujo continuo), el atributo calculado se evalúa según su propia programación (por hora, diariamente, semanalmente o mensualmente).
 
-La primera evaluación del atributo calculado se produce dentro de las 24 horas siguientes a su **creación**. Las evaluaciones por lotes subsiguientes se producen cada hora, cada día, cada semana o cada mes, según el periodo retrospectivo definido.
+La primera evaluación del atributo calculado se realiza dentro de las 24 horas siguientes a su **creación**. Las evaluaciones por lotes subsiguientes se producen cada hora, cada día, cada semana o cada mes, según el periodo retrospectivo definido.
 
 Por ejemplo, si se realiza una primera evaluación a las 12:00 UTC del 9 de octubre, las evaluaciones posteriores se producirían en los momentos siguientes:
 
@@ -77,21 +77,21 @@ Por ejemplo, si se realiza una primera evaluación a las 12:00 UTC del 9 de octu
 
 >[!IMPORTANT]
 >
->Este solo es el caso si la actualización rápida es **no** activado. Para obtener información sobre cómo cambia el período retroactivo cuando la actualización rápida está habilitada, lea la [sección de actualización rápida](./overview.md#fast-refresh).
+>Este es solo el caso si la actualización rápida está **no** habilitada. Para saber cómo cambia el período retroactivo cuando la actualización rápida está habilitada, lea la [sección de actualización rápida](./overview.md#fast-refresh).
 
-Tanto la **semanalmente** y **mensualmente** las actualizaciones se realizan al principio del **semana natural** (el domingo de la nueva semana) o el comienzo de la **mes natural** (el primero del nuevo mes), a diferencia de exactamente una semana o un mes después de la primera fecha de evaluación.
+Las actualizaciones **semanales** y **mensuales** tienen lugar al comienzo de la **semana del calendario** (el domingo de la nueva semana) o al comienzo del **mes del calendario** (el primero del nuevo mes), en contraposición a exactamente una semana o un mes después de la primera fecha de evaluación.
 
 >[!NOTE]
 >
->El valor de atributo calculado es **no** se actualiza inmediatamente en el perfil después de cada ejecución de evaluación. Para asegurarse de que el valor actualizado esté en los perfiles, debe considerar un búfer de unas pocas horas entre el tiempo de evaluación y el uso de atributos calculados. La programación de actualización de atributos calculada es **determinado por el sistema** y **no puede** no se puede modificar. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
+>El valor de atributo calculado es **no** y se actualiza inmediatamente en el perfil después de cada ejecución de evaluación. Para asegurarse de que el valor actualizado esté en los perfiles, debe considerar un búfer de unas pocas horas entre el tiempo de evaluación y el uso de atributos calculados. La programación de actualización de atributos calculada es **determinada por el sistema** y **no se puede** modificar. Para obtener más información, póngase en contacto con el Servicio de atención al cliente de Adobe.
 
 ## ¿Cómo interactúan los atributos calculados con las audiencias evaluadas mediante la segmentación de flujo continuo?
 
-Si una audiencia evaluada por segmentación de flujo continuo utiliza un atributo calculado, tomará el **último valor** del atributo calculado mientras se evalúa la audiencia. Por ejemplo, si la audiencia busca eventos de compra, la audiencia hará referencia al último valor de atributo calculado evaluado cuando se produzca el evento de compra.
+Si una audiencia evaluada por segmentación de flujo continuo usa un atributo calculado, tomará el **último valor** del atributo calculado mientras la audiencia se evalúa. Por ejemplo, si la audiencia busca eventos de compra, la audiencia hará referencia al último valor de atributo calculado evaluado cuando se produzca el evento de compra.
 
 ## ¿Puedo utilizar atributos calculados en Edge?
 
-Al igual que cualquier otro atributo de perfil, los atributos calculados están disponibles y se pueden utilizar en perímetros. Los atributos calculados son los siguientes **no** calculado en edge.
+Al igual que cualquier otro atributo de perfil, los atributos calculados están disponibles y se pueden utilizar en perímetros. Tenga en cuenta que los atributos calculados son **no** calculados en Edge.
 
 ## ¿Cómo se aplican las etiquetas de uso de datos en los atributos calculados?
 
@@ -99,4 +99,4 @@ Los atributos calculados derivan automáticamente las etiquetas de uso de datos 
 
 ## ¿Cómo se utilizan los atributos calculados con Adobe Journey Optimizer?
 
-Para utilizar atributos calculados en recorridos, debe añadir el `SystemComputedAttributes` grupo de campos al origen de datos del Experience Platform. Para obtener más información sobre la configuración de la fuente de datos de Experience Platform, lea la [Guía de fuente de datos de Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Para utilizar atributos calculados en recorridos, deberá agregar el grupo de campos `SystemComputedAttributes` al origen de datos del Experience Platform. Para obtener más información sobre cómo configurar el origen de datos del Experience Platform, lea la [guía del origen de datos de Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

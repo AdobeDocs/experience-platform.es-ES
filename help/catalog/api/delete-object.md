@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Eliminación de un objeto en la API
 
-Puede eliminar un [!DNL Catalog] proporcionando su ID en la ruta de una petición de DELETE.
+Puede eliminar un objeto [!DNL Catalog] si proporciona su ID en la ruta de una solicitud de DELETE.
 
 >[!WARNING]
 >
->Tenga especial cuidado al eliminar objetos, ya que esta acción no se puede deshacer y puede producir cambios importantes en cualquier otra parte de [!DNL Experience Platform].
+>Tenga especial cuidado al eliminar objetos, ya que esto no se puede deshacer y puede producir cambios importantes en cualquier otra parte de [!DNL Experience Platform].
 
 **Formato de API**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->El `DELETE /batches/{ID}` el extremo se ha desaprobado. Para eliminar un lote, debe utilizar la variable [API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>El extremo `DELETE /batches/{ID}` se ha desaprobado. Para eliminar un lote, debe usar la [API de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a eliminar. Los objetos válidos son: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a eliminar. Los objetos válidos son: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | El identificador del objeto específico que desea actualizar. |
 
 **Solicitud**
@@ -59,4 +59,4 @@ Una respuesta correcta devuelve el estado HTTP 200 (OK) y una matriz que contien
 
 >[!NOTE]
 >
->Si no [!DNL Catalog] coincide con el ID proporcionado en la solicitud. Puede que reciba un código de estado HTTP 200, pero la matriz de respuesta estará vacía.
+>Si ningún objeto [!DNL Catalog] coincide con el identificador proporcionado en su solicitud, es posible que reciba un código de estado HTTP 200, pero la matriz de respuesta estará vacía.

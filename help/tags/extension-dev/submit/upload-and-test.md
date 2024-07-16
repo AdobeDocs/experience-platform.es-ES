@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo validar, cargar y probar la extens
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2362'
 ht-degree: 91%
 
 ---
@@ -39,7 +39,7 @@ Un ejemplo específico es el archivo de logotipo: añada una línea `"iconPath":
 
 Para utilizar la API o las herramientas de línea de comandos, necesita una cuenta técnica de Adobe I/O. Debe crearla en la consola de I/O y, a continuación, utilizar la herramienta Cargador para subir el paquete de extensión.
 
-Para obtener información sobre cómo crear una cuenta técnica para utilizarla con Adobe Experience Platform, consulte la [Introducción a la API de Reactor](../../api/getting-started.md) guía.
+Para obtener información sobre cómo crear una cuenta técnica para utilizarla con Adobe Experience Platform, consulte la guía de [Introducción a la API de Reactor](../../api/getting-started.md).
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 
 >[!NOTE]
 >
->Al cargar o aplicar parches, los paquetes de extensión se colocan en un estado pendiente mientras el sistema extrae el paquete y lo implementa de forma asíncrona. Mientras se lleva a cabo este proceso, puede sondear el `extension_package` ID para su estado mediante la API y dentro de la interfaz de usuario. Verá una tarjeta de extensión en el catálogo marcado como Pendiente.
+>Al cargar o aplicar parches, los paquetes de extensión se colocan en un estado pendiente mientras el sistema extrae el paquete y lo implementa de forma asíncrona. Mientras se lleva a cabo este proceso, puede sondear el ID `extension_package` para ver su estado mediante la API y dentro de la interfaz de usuario. Verá una tarjeta de extensión en el catálogo marcado como Pendiente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ El paquete de extensión se cargará y el cargador le proporcionará el ID del e
 
 ## Creación de una propiedad de desarrollo {#property}
 
-Después de iniciar sesión en la interfaz de usuario de y seleccionar **[!UICONTROL Etiquetas]** en el panel de navegación izquierdo, [!UICONTROL Propiedades] se muestra la pantalla. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
+Después de iniciar sesión en la interfaz de usuario y seleccionar **[!UICONTROL Etiquetas]** en la navegación izquierda, se muestra la pantalla [!UICONTROL Propiedades]. Una propiedad es un contenedor para las etiquetas que desea implementar y se puede utilizar en uno o varios sitios.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -200,7 +200,7 @@ Las instrucciones de instalación están disponibles en la pestaña Entornos. Es
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-El **Instrucciones de instalación web** para el entorno de desarrollo. Seleccione el icono de copiar para copiar toda la etiqueta `<script>`.
+Aparece el cuadro de diálogo **Instrucciones de instalación web** para el entorno de desarrollo. Seleccione el icono de copiar para copiar toda la etiqueta `<script>`.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
@@ -217,7 +217,7 @@ El objetivo de esta prueba es comprobar la funcionalidad de la biblioteca implem
 
 Cuando descubre cambios que deben realizarse en el paquete de extensión, el proceso de iteración es similar al proceso de desarrollo.
 
-1. Modifique el código del proyecto..
+1. Realice cambios en el código del proyecto.
 1. Valide los cambios con la herramienta Zona protegida.
 1. Utilice la herramienta Packager para crear un nuevo paquete .zip
 1. Utilice la herramienta Cargador para subir el nuevo paquete .zip. El proceso sigue las mismas instrucciones que antes con respecto a la carga inicial. Sin embargo, observará que, como ya hay un paquete de extensión con ese nombre en el modo de desarrollo, el nuevo sobrescribirá la versión anterior en lugar de crear otra.

@@ -7,37 +7,37 @@ description: Obtenga información sobre cómo eliminar una cuenta mediante la AP
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 2%
+source-wordcount: '336'
+ht-degree: 3%
 
 ---
 
 # Eliminación de una cuenta mediante la API de Flow Service
 
-Puede eliminar las cuentas de origen que contengan errores o que se hayan quedado obsoletas utilizando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Puede eliminar las cuentas de origen que contengan errores o que hayan quedado obsoletas mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 Consulte el siguiente tutorial para ver los pasos sobre cómo eliminar una cuenta mediante la API.
 
-## Primeros pasos
+## Introducción
 
-Este tutorial requiere que tenga un ID de conexión válido. Si no tiene un ID de conexión válido, seleccione el conector que desee en el [información general de orígenes](../../home.md) y siga los pasos descritos antes de intentar realizar este tutorial.
+Este tutorial requiere que tenga un ID de conexión válido. Si no tiene un identificador de conexión válido, seleccione el conector que prefiera en la [descripción general de orígenes](../../home.md) y siga los pasos descritos antes de intentar realizar este tutorial.
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
 
 ## Eliminar cuenta
 
 >[!TIP]
 >
->Antes de eliminar la cuenta de origen, primero debe eliminar cualquier flujo de datos existente asociado a la cuenta de origen. Para eliminar flujos de datos existentes, consulte el tutorial sobre [eliminar orígenes y flujos de datos](./delete-dataflows.md).
+>Antes de eliminar la cuenta de origen, primero debe eliminar cualquier flujo de datos existente asociado a la cuenta de origen. Para eliminar flujos de datos existentes, consulte el tutorial sobre [eliminación de flujos de datos de origen](./delete-dataflows.md).
 
-Para eliminar una cuenta, realice una solicitud de DELETE a [!DNL Flow Service] al proporcionar el ID de conexión base que corresponde a la cuenta que desea eliminar.
+Para eliminar una cuenta, realice una solicitud de DELETE a la API [!DNL Flow Service] y proporcione el identificador de conexión base que corresponda a la cuenta que desea eliminar.
 
 **Formato de API**
 
@@ -68,6 +68,6 @@ Para confirmar la eliminación, intente realizar una solicitud de búsqueda (GET
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha utilizado correctamente la variable [!DNL Flow Service] API para eliminar cuentas existentes.
+Al seguir este tutorial, ha utilizado correctamente la API [!DNL Flow Service] para eliminar cuentas existentes.
 
-Para ver los pasos sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminación de cuentas en la IU](../../tutorials/ui/delete-accounts.md).
+Para obtener información sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminar cuentas en la interfaz de usuario](../../tutorials/ui/delete-accounts.md).

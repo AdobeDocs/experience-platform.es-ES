@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Ayuda de conectores de origen de Adobe Experience Platform
 breadcrumb-title: Guía de conectores de origen
-user-guide-description: Ingeste datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
+user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 23%
       - [fuente de Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origen de atributos del cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fuente de recopilación de datos](connectors/adobe-applications/data-collection.md)
-      - Asignaciones de campos {#mapping}
+      - Asignaciones de campo {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Asignaciones de campos de destino](connectors/adobe-applications/mapping/target.md)
@@ -37,7 +37,7 @@ ht-degree: 23%
          - [guía de autenticación del Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espacios de nombres y esquemas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Guía de migración de asignación ECID](connectors/adobe-applications/marketo/migration.md)
-   - Publicidad {#advertising}
+   - Advertising {#advertising}
       - [Conector de Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -97,7 +97,7 @@ ht-degree: 23%
       - [Ingesta de datos de Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importación de datos de prospección de Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Resolución de identidad de Merkury Enterprise](connectors/data-partners/merkury.md)
-   - eCommerce {#ecommerce}
+   - Comercio electrónico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
@@ -121,11 +121,11 @@ ht-degree: 23%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
       - [Conector de API REST genérico](connectors/protocols/generic-rest.md)
-   - Transmisión {#streaming}
+   - Transmitiendo {#streaming}
       - [Conector de API HTTP](connectors/streaming/http.md)
 - Tutoriales de API {#api-tutorials}
    - Crear una conexión base {#create}
-      - Publicidad {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -180,7 +180,7 @@ ht-degree: 23%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - Comercio electrónico {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -203,9 +203,9 @@ ht-degree: 23%
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
          - [API REST genérica](tutorials/api/create/protocols/generic-rest.md)
-      - Transmisión {#streaming}
+      - Transmitiendo {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
-   - Exploración de datos {#explore}
+   - Explorar datos {#explore}
       - [Exploración de datos publicitarios](tutorials/api/explore/advertising.md)
       - [Explorar datos de almacenamiento en la nube](tutorials/api/explore/cloud-storage.md)
       - [Exploración de datos CRM](tutorials/api/explore/crm.md)
@@ -216,7 +216,7 @@ ht-degree: 23%
       - [Explorar datos de pago](tutorials/api/explore/payments.md)
       - [Explorar datos de protocolo](tutorials/api/explore/protocols.md)
       - [Explorar tablas de datos](tutorials/api/explore/tabular.md)
-   - Recopilación de datos {#collect}
+   - Recopilar datos {#collect}
       - [Recopilación de datos publicitarios](tutorials/api/collect/advertising.md)
       - [Recopilar datos de almacenamiento en la nube](tutorials/api/collect/cloud-storage.md)
       - [Recopilar datos de CRM](tutorials/api/collect/crm.md)
@@ -235,7 +235,7 @@ ht-degree: 23%
    - [Reintentar ejecuciones de flujo de datos fallidas](tutorials/api/retry-flows.md)
    - [Eliminar cuentas](tutorials/api/delete.md)
    - [Eliminar flujos de datos](tutorials/api/delete-dataflows.md)
-   - [Ingesta de datos cifrados](tutorials/api/encrypt-data.md)
+   - [Introducir datos cifrados](tutorials/api/encrypt-data.md)
    - [Guardar un flujo de datos como borrador](tutorials/api/draft.md)
 - Tutoriales de IU {#ui-tutorials}
    - Crear una conexión de origen {#create}
@@ -247,7 +247,7 @@ ht-degree: 23%
          - [Atributos del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Actividades personalizadas de Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Publicidad {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -308,7 +308,7 @@ ht-degree: 23%
          - [Ingesta de datos de Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importación de datos de prospección de Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Resolución de identidad de Merkury Enterprise](tutorials/ui/create/data-partners/merkury.md)
-      - eCommerce {#ecommerce}
+      - Comercio electrónico {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
@@ -333,10 +333,10 @@ ht-degree: 23%
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
-      - Transmisión {#streaming}
+      - Transmitiendo {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
-   - Configuración de un flujo de datos {#dataflow}
-      - [Flujo de datos de Advertising connection](tutorials/ui/dataflow/advertising.md)
+   - Configurar un flujo de datos {#dataflow}
+      - [Flujo de datos de conexión Advertising](tutorials/ui/dataflow/advertising.md)
       - [Flujo de datos de conexión de Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flujo de datos de conexión de almacenamiento en nube por lotes](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flujo de datos de conexión de almacenamiento en nube de streaming](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
@@ -350,7 +350,7 @@ ht-degree: 23%
       - [Flujo de datos de conexión de protocolo](tutorials/ui/dataflow/protocols.md)
    - [Creación de un flujo de datos de origen mediante plantillas en la IU](tutorials/ui/templates.md)
    - [Filtrar objetos de origen](tutorials/ui/filter.md)
-   - [Ingesta de datos cifrados](tutorials/ui/encryped-ingestion.md)
+   - [Introducir datos cifrados](tutorials/ui/encryped-ingestion.md)
    - [Ingesta bajo demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorización de flujos de datos por lotes](tutorials/ui/monitor.md)
    - [Monitorización de flujos de datos](tutorials/ui/monitor-streaming.md)
@@ -358,11 +358,11 @@ ht-degree: 23%
    - [Actualizar flujos de datos](tutorials/ui/update-dataflows.md)
    - [Eliminar cuentas](tutorials/ui/delete-accounts.md)
    - [Eliminar flujos de datos](tutorials/ui/delete.md)
-   - [Suscribirse a alertas de fuentes](tutorials/ui/alerts.md)
+   - [Suscripción a las alertas de fuentes](tutorials/ui/alerts.md)
    - [Guardar un flujo de datos como borrador](tutorials/ui/draft.md)
 - Fuentes de autoservicio (SDK por lotes) {#sdk}
    - [Información general](sources-sdk/overview.md)
-   - Configurar la especificación de conexión {#config}
+   - Configure la especificación de conexión {#config}
       - [Opciones de configuración](sources-sdk/config/config.md)
       - [Configurar la especificación de autenticación](sources-sdk/config/authspec.md)
       - [Configurar especificación de origen](sources-sdk/config/sourcespec.md)

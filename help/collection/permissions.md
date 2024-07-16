@@ -11,7 +11,7 @@ ht-degree: 26%
 
 # Administración de permisos para la recopilación de datos en Experience Platform
 
-[Recopilación de datos en Adobe Experience Platform](./home.md) consta de varias tecnologías diferentes que trabajan juntas para recopilar y transferir sus datos. El acceso a estas tecnologías se controla mediante permisos granulares basados en funciones en Adobe Admin Console.
+[La recopilación de datos en Adobe Experience Platform](./home.md) se compone de diferentes tecnologías que trabajan juntas para recopilar y transferir los datos. El acceso a estas tecnologías se controla mediante permisos granulares basados en funciones en Adobe Admin Console.
 
 Esta guía muestra cómo administrar permisos para funciones de recopilación de datos.
 
@@ -23,7 +23,7 @@ En esta guía se asume que está familiarizado con los conceptos básicos de Adm
 
 ## Permisos disponibles
 
-Los permisos relevantes para la recopilación de datos se proporcionan a través de dos designaciones de producto en Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**. Las secciones siguientes describen los permisos proporcionados en relación con cada producto, así como las descripciones de las capacidades específicas a las que otorgan acceso.
+Los permisos relevantes para la recopilación de datos se proporcionan mediante dos designaciones de productos en el Admin Console: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**. Las secciones siguientes describen los permisos proporcionados en relación con cada producto, así como las descripciones de las capacidades específicas a las que otorgan acceso.
 
 ### Permisos de Adobe Experience Platform
 
@@ -31,8 +31,8 @@ Los permisos de Adobe Experience Platform incluyen el acceso a flujos de datos, 
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| Zonas protegidas | (N/D) | Según la variable [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
-| Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [Esquemas del modelo de datos de experiencia (XDM)](../xdm/home.md). |
+| Zonas protegidas | (N/D) | Según las [zonas protegidas](../sandboxes/home.md) que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console. |
+| Modelado de datos | Administrar esquemas | Concede la capacidad de ver, crear y editar [esquemas XDM (Experience Data Model)](../xdm/home.md). |
 | Modelado de datos | Esquemas de vista | Otorga acceso de solo lectura a los esquemas. |
 | Identity Management | Administrar áreas de nombres de identidad | Concede la capacidad de ver, crear y editar [áreas de nombres de identidad](../identity-service/features/namespaces.md). |
 | Identity Management | Ver áreas de nombres de identidad | Otorga acceso de solo lectura a las áreas de nombres de identidad. |
@@ -47,16 +47,16 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 
 | Categoría | Permiso | Descripción |
 | --- | --- | --- |
-| Plataformas | Web | Concede acceso a [propiedades web](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
-| Plataformas | Dispositivo móvil | Concede acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combina con otros derechos de propiedad. |
-| Plataformas | Edge | Concede acceso a [Propiedades de Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
-| Propiedades | (N/D) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario solo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
-| Derechos de propiedad | Aprobar | Concede la capacidad de aprobar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
-| Derechos de propiedad | Desarrollo | Concede la capacidad de desarrollar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Plataformas | Web | Otorga acceso a [propiedades web](../tags/ui/administration/companies-and-properties.md) cuando se combinan con otros derechos de propiedad. |
+| Plataformas | Dispositivo móvil | Otorga acceso a [propiedades móviles](../tags/ui/administration/companies-and-properties.md) cuando se combinan con otros derechos de propiedad. |
+| Plataformas | Edge | Otorga acceso a [propiedades Edge del reenvío de eventos](../tags/ui/event-forwarding/getting-started.md) cuando se combina con otros derechos de propiedad. |
+| Propiedades | (N/D) | Según las propiedades que se hayan creado en su organización, puede controlar el acceso a cada una de ellas a través de esta categoría de permisos en Admin Console.<br><br>Los derechos de propiedad asignados a un usuario sólo se aplican a las propiedades a las que se les ha concedido acceso a través de esta categoría de permisos. |
+| Derechos de propiedad | Aprobar | Concede la capacidad de aprobar una compilación de biblioteca como parte del [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Derechos de propiedad | Desarrollo | Concede la capacidad de desarrollar una compilación de biblioteca como parte del [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de propiedad | Editar propiedad | Concede la capacidad de editar la configuración básica de las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Administrar entornos | Concede la capacidad de administrar el [entornos](../tags/ui/publishing/environments.md) para las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Administración de extensiones | Concede la capacidad de administrar el [extensiones](../tags/ui/managing-resources/extensions/overview.md) para las propiedades a las que un usuario tiene acceso. |
-| Derechos de propiedad | Publicar | Concede la capacidad de publicar una compilación de biblioteca como parte de [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
+| Derechos de propiedad | Administrar entornos | Concede la capacidad de administrar los [entornos](../tags/ui/publishing/environments.md) para las propiedades a las que un usuario tiene acceso. |
+| Derechos de propiedad | Administración de extensiones | Concede la capacidad de administrar las [extensiones](../tags/ui/managing-resources/extensions/overview.md) para las propiedades a las que un usuario tiene acceso. |
+| Derechos de propiedad | Publicar | Concede la capacidad de publicar una compilación de biblioteca como parte del [flujo de publicación](../tags/ui/publishing/publishing-flow.md). |
 | Derechos de compañía | Desarrollo de extensiones | Concede la capacidad de crear y modificar paquetes de extensión que sean propiedad de su organización, incluidas versiones privadas y solicitudes de lanzamiento público. |
 | Derechos de compañía | Administrar configuraciones de aplicación | Este permiso solo es aplicable si tiene una licencia para Adobe Journey Optimizer u otra solución que conceda acceso a la mensajería móvil en la aplicación y a la mensajería push. Esto le permite administrar las aplicaciones que Adobe Experience Cloud conoce, así como las credenciales push necesarias para comunicarse con el servicio Firebase Cloud Messaging y el servicio de notificaciones push de Apple. |
 | Derechos de compañía | Administrar propiedades | Concede la capacidad de crear y administrar etiquetas (propiedad web), reenvío de eventos (propiedad edge) y propiedades móviles. |
@@ -69,7 +69,7 @@ Los permisos en Recopilación de datos de Adobe Experience Platform controlan el
 
 ## Administración de permisos {#manage}
 
-Los permisos para la recopilación de datos se administran mediante dos designaciones de producto: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**.
+Los permisos para la recopilación de datos se administran mediante dos designaciones de productos: **Adobe Experience Platform** y **Recopilación de datos de Adobe Experience Platform**.
 
 Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar los permisos relevantes en cada producto en Admin Console:
 
@@ -82,17 +82,17 @@ Consulte las subsecciones siguientes para ver los pasos sobre cómo administrar 
 >
 >Para administrar permisos para una función, necesitará derechos de administrador. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema.
 
-Experience Cloud **[!UICONTROL Permisos]** permite definir funciones de usuario y directivas para administrar el acceso a funciones y objetos dentro de una aplicación de producto.
+La sección **[!UICONTROL Permisos]** del Experience Cloud le permite definir roles de usuario y directivas para administrar el acceso a características y objetos dentro de una aplicación de producto.
 
-Pasante [!UICONTROL Permisos]Además, puede crear y administrar funciones y asignar los permisos de recursos deseados para estas funciones.
+Mediante [!UICONTROL Permisos], puede crear y administrar roles y asignar los permisos de recursos deseados para estos roles.
 
 ![Adobe Experience Cloud resalta el producto Permisos.](./images/permissions/permissions-product.png)
 
-Para acceder a las funciones de recopilación de datos, debe habilitar todos los permisos en la **[!UICONTROL Zonas protegidas]**, **[!UICONTROL Modelado de datos]**, **[!UICONTROL Identity Management]**, y **[!UICONTROL Recopilación de datos]** categorías.
+Para tener acceso a las características de recopilación de datos, debe habilitar todos los permisos en las categorías **[!UICONTROL zonas protegidas]**, **[!UICONTROL Modelado de datos]**, **[!UICONTROL Identity Management]** y **[!UICONTROL Recopilación de datos]**.
 
 ![Imagen que muestra la tarjeta de producto de recopilación de datos en Admin Console](./images/permissions/platform-permission-card.png)
 
-Consulte la [guía de IU de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Platform.
+Consulte la [guía de la interfaz de usuario de control de acceso](../access-control/ui/overview.md) para obtener instrucciones detalladas sobre la administración de permisos de Platform.
 
 >[!NOTE]
 >
@@ -100,17 +100,17 @@ Consulte la [guía de IU de control de acceso](../access-control/ui/overview.md)
 
 ### Administración de permisos en Recopilación de datos de Adobe Experience Platform {#manage-collection}
 
-Para administrar estos permisos, inicie sesión en el Admin Console y seleccione **[!UICONTROL Productos]** en la barra de navegación superior, seleccione **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
+Para administrar estos permisos, inicia sesión en el Admin Console, selecciona **[!UICONTROL Productos]** en la barra de navegación superior y luego selecciona **[!UICONTROL Recopilación de datos de Adobe Experience Platform]**.
 
 ![Imagen que muestra la tarjeta de producto de recopilación de datos en Admin Console](./images/permissions/data-collection-card.png)
 
 #### Seleccione o cree un perfil de producto
 
-La siguiente pantalla muestra una lista de perfiles de producto disponibles para la recopilación de datos en su organización, siendo el perfil predeterminado **[!DNL Default Data Collection All Access]**. Puede elegir editar el perfil de producto predeterminado si lo desea o seleccionar **[!UICONTROL Nuevo perfil]** para crear uno. Si tiene varias funciones o grupos de usuarios en su organización que requieren diferentes niveles de acceso, debe crear un perfil de producto independiente para cada uno de ellos.
+La siguiente pantalla muestra una lista de perfiles de producto disponibles para la recopilación de datos en su organización, siendo el perfil predeterminado **[!DNL Default Data Collection All Access]**. Puede elegir editar el perfil de producto predeterminado si lo desea, o bien seleccionar **[!UICONTROL Nuevo perfil]** para crear uno. Si tiene varias funciones o grupos de usuarios en su organización que requieren diferentes niveles de acceso, debe crear un perfil de producto independiente para cada uno de ellos.
 
 ![Imagen que muestra los perfiles de producto para la recopilación de datos en Admin Console](./images/permissions/new-profile.png)
 
-Después de seleccionar o crear un perfil de producto, puede utilizar el **[!UICONTROL Editar]** iconos para iniciar [editar permisos](#edit-permissions) para el perfil o seleccione la opción **[!UICONTROL Usuarios]** pestaña para iniciar [asignación de usuarios](#assign-users) al perfil.
+Después de seleccionar o crear un perfil de producto, puedes usar los iconos de **[!UICONTROL Editar]** para iniciar [permisos de edición](#edit-permissions) para el perfil, o seleccionar la pestaña **[!UICONTROL Usuarios]** para iniciar [la asignación de usuarios](#assign-users) al perfil.
 
 ![Imagen que muestra la pestaña de permisos de un Admin Console de perfil de producto](./images/permissions/edit-permission-categories.png)
 
@@ -118,7 +118,7 @@ Después de seleccionar o crear un perfil de producto, puede utilizar el **[!UIC
 
 Al editar permisos para un perfil, los permisos disponibles se incluyen en la columna izquierda, mientras que los que se incluyen en el perfil se incluyen en la columna derecha. Seleccione los permisos de la lista para moverlos entre cualquiera de las columnas.
 
-![Imagen que muestra los permisos añadidos en la columna incluida](./images/permissions/added-permissions.png)
+![Imagen que muestra los permisos agregados en la columna incluida](./images/permissions/added-permissions.png)
 
 Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la que desee en el panel de navegación izquierdo.
 

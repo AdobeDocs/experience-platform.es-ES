@@ -4,8 +4,8 @@ description: Obtenga información sobre la extensión de etiqueta Adobe Target v
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 92%
+source-wordcount: '1318'
+ht-degree: 91%
 
 ---
 

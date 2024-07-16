@@ -3,8 +3,8 @@ title: Notas de la versión de la extensión Meta Pixel
 description: Últimas notas de la versión de la extensión Meta Pixel en Adobe Experience Platform.
 source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 23%
+source-wordcount: '121'
+ht-degree: 22%
 
 ---
 
@@ -24,5 +24,5 @@ Versión 1.3.1
 
 Versión 1.3.0
 
-* Añada acciones para todos los eventos estándar enumerados aquí: [https://developers.facebook.com/docs/meta-pixel/reference#standard-events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+* Agregue acciones para todos los eventos estándar enumerados aquí: [https://developers.facebook.com/docs/meta-pixel/reference#standard-events](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 * Mueva el ID de evento fuera de la vista de configuración de la extensión y añada campos de ID de evento a todas las acciones.

@@ -6,7 +6,7 @@ user-guide-description: Utilice etiquetas unificadas para administrar taxonomía
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 42%
+ht-degree: 82%
 
 ---
 

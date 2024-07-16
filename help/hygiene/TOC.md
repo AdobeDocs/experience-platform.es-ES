@@ -16,15 +16,15 @@ ht-degree: 64%
 # Administración avanzada del ciclo de vida de datos {#data-lifecycle}
 
 * [Información general sobre Advanced Data Lifecycle Management](./home.md)
-* IU del ciclo vital de datos {#ui}
+* IU del ciclo de vida de datos {#ui}
    * [Información general](./ui/overview.md)
    * [Caducidades automatizadas de conjuntos de datos](./ui/dataset-expiration.md)
-   * [(Beta) Eliminar registros](./ui/record-delete.md)
+   * [(Beta) Eliminación de registros](./ui/record-delete.md)
    * [Examinar órdenes de trabajo sobre el ciclo de datos](./ui/browse.md)
 * API de higiene de datos {#api}
    * [Información general](./api/overview.md)
    * [Caducidades de los conjuntos de datos](./api/dataset-expiration.md)
    * [Eliminaciones de registros](./api/jobs.md)
-   * [(Beta) Eliminaciones de registros](./api/workorder.md)
+   * [(Beta) Eliminación de registros](./api/workorder.md)
    * [Cuota](./api/quota.md)
 * [Prácticas recomendadas](./best-practices.md)

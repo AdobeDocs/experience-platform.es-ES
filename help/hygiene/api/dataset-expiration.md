@@ -12,23 +12,23 @@ ht-degree: 2%
 
 # Extremo de caducidad del conjunto de datos
 
-El `/ttl` Este extremo de la API de higiene de datos le permite programar fechas de caducidad para conjuntos de datos en Adobe Experience Platform.
+El extremo `/ttl` de la API de higiene de datos le permite programar fechas de caducidad para conjuntos de datos en Adobe Experience Platform.
 
-La caducidad de un conjunto de datos es solo una operación de eliminación con retraso programado. El conjunto de datos no está protegido en el ínterin, por lo que puede eliminarse por otros medios antes de que se alcance su vencimiento.
+La caducidad de un conjunto de datos es solo una operación de eliminación con retraso programado. El conjunto de datos no está protegido mientras tanto, por lo que puede eliminarse por otros medios antes de que caduque.
 
 >[!NOTE]
 >
->Aunque la caducidad se especifica como un instante específico en el tiempo, puede haber hasta 24 horas de retraso después de la expiración antes de que se inicie la eliminación real. Una vez iniciada la eliminación, pueden pasar hasta siete días antes de que todos los rastros del conjunto de datos se hayan eliminado de Platform sistemas.
+>Aunque la caducidad se especifica como un instante de tiempo específico, puede haber hasta 24 horas de retraso después de la caducidad antes de que se inicie la eliminación real. Una vez iniciada la eliminación, pueden pasar hasta siete días antes de que se hayan eliminado todos los seguimientos del conjunto de datos de los sistemas de Platform.
 
-En cualquier momento antes de que se inicie realmente la eliminación de conjunto de datos, puede cancelar la caducidad o modificar su tiempo de activación. Después de cancelar una caducidad conjunto de datos, puede volver a abrirla estableciendo una nueva caducidad.
+En cualquier momento antes de que se inicie realmente la eliminación del conjunto de datos, puede cancelar la caducidad o modificar su hora de déclencheur. Después de cancelar la caducidad de un conjunto de datos, puede volver a abrirlo estableciendo una nueva caducidad.
 
-Una vez iniciada la eliminación de la conjunto de datos, su trabajo de caducidad se marcará como `executing`, y no podrá seguir siendo alterado. El propio conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado a través de una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez eliminados los datos de los tres servicios, la caducidad se marca como `completed`.
+Una vez iniciada la eliminación del conjunto de datos, su trabajo de caducidad se marcará como `executing` y no se podrá modificar más. El propio conjunto de datos puede recuperarse durante un máximo de siete días, pero solo a través de un proceso manual iniciado a través de una solicitud de servicio de Adobe. A medida que se ejecuta la solicitud, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Una vez que los datos se eliminen de los tres servicios, la caducidad se marcará como `completed`.
 
 >[!WARNING]
 >
 >Si un conjunto de datos está configurado para caducar, debe cambiar manualmente los flujos de datos que puedan estar introduciendo datos en ese conjunto de datos para que los flujos de trabajo descendentes no se vean afectados negativamente.
 
-Advanced Data Lifecycle Management admite la eliminación de conjuntos de datos mediante el punto final de caducidad del conjunto de datos y la eliminación de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./workorder.md). También puede administrar [caducidades del conjunto de datos](../ui/dataset-expiration.md) y [eliminaciones de registros](../ui/record-delete.md) mediante la IU de Platform. Consulte la documentación vinculada para obtener más información.
+La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el extremo de caducidad del conjunto de datos y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./workorder.md). También puede administrar [caducidades de conjuntos de datos](../ui/dataset-expiration.md) y [eliminaciones de registros](../ui/record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información.
 
 >[!NOTE]
 >
@@ -36,11 +36,11 @@ Advanced Data Lifecycle Management admite la eliminación de conjuntos de datos 
 
 ## Introducción
 
-El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [Guía de API](./overview.md) para obtener información sobre los encabezados necesarios para operaciones de CRUD, mensajes de error, colecciones de Postman y cómo leer llamadas de API de ejemplo.
+El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [guía de API](./overview.md) para obtener información sobre los encabezados necesarios para operaciones de CRUD, mensajes de error, colecciones de Postman y cómo leer llamadas de API de ejemplo.
 
 >[!IMPORTANT]
 >
->Al realizar llamadas a la API de higiene de datos, debe utilizar el -H `x-sandbox-name: {SANDBOX_NAME}` encabezado.
+>Al realizar llamadas a la API de higiene de datos, debe utilizar el encabezado -H `x-sandbox-name: {SANDBOX_NAME}`.
 
 ## Enumerar caducidades del conjunto de datos {#list}
 
@@ -75,7 +75,7 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 
 >[!IMPORTANT]
 >
->El `ttlId` en la respuesta también se denomina la `{DATASET_EXPIRATION_ID}`. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
+>El `ttlId` de la respuesta también se conoce como `{DATASET_EXPIRATION_ID}`. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
 
 ```json
 {
@@ -107,11 +107,11 @@ Una respuesta correcta enumera las caducidades resultantes del conjunto de datos
 
 ## Búsqueda de una caducidad del conjunto de datos {#lookup}
 
-Para buscar la caducidad de un conjunto de datos, realice una petición GET con el `{DATASET_ID}` o el `{DATASET_EXPIRATION_ID}`.
+Para buscar la caducidad de un conjunto de datos, realice una solicitud de GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
 
 >[!IMPORTANT]
 >
->El `{DATASET_EXPIRATION_ID}` se denomina la variable `ttlId` en la respuesta. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
+>`{DATASET_EXPIRATION_ID}` se conoce como `ttlId` en la respuesta. Ambos hacen referencia al identificador único para la caducidad del conjunto de datos.
 
 **Formato de API**
 
@@ -178,7 +178,7 @@ Una respuesta correcta devuelve los detalles de la caducidad del conjunto de dat
 
 ### Etiquetas de caducidad del catálogo
 
-Al usar el [API de catálogo](../../catalog/api/getting-started.md) para buscar los detalles del conjunto de datos, si este tiene una caducidad activa, se enumerará en `tags.adobe/hygiene/ttl`.
+Al usar la [API de catálogo](../../catalog/api/getting-started.md) para buscar detalles del conjunto de datos, si este tiene una caducidad activa, se enumerará en `tags.adobe/hygiene/ttl`.
 
 El siguiente JSON representa una respuesta truncada para los detalles de un conjunto de datos del catálogo, que tiene un valor de caducidad de `32503680000000`. El valor de la etiqueta codifica la caducidad como un número entero de milisegundos desde el comienzo de la época Unix.
 
@@ -200,13 +200,13 @@ El siguiente JSON representa una respuesta truncada para los detalles de un conj
 
 ## Crear una caducidad del conjunto de datos {#create}
 
-Para asegurarse de que los datos se eliminan del sistema después de un período especificado, programe una caducidad para un conjunto de datos específico proporcionando el ID de conjunto de datos y la fecha y hora de caducidad en ISO 8601 formato.
+Para garantizar que los datos se eliminen del sistema después de un periodo especificado, programe una caducidad para un conjunto de datos específico proporcionando el ID del conjunto de datos y la fecha y hora de caducidad en formato ISO 8601.
 
-Para crear una caducidad conjunto de datos, realice un petición POST como se muestra a continuación y proporcione los valores mencionados a continuación dentro de la carga útil.
+Para crear una caducidad del conjunto de datos, realice una solicitud de POST como se muestra a continuación y proporcione los valores mencionados a continuación dentro de la carga útil.
 
 >[!NOTE]
 >
->Si recibe un error 404, asegúrese de que el solicitud no tenga barras diagonales adicionales. Una barra diagonal final puede provocar el fallo de un petición POST.
+>Si recibe un error 404, asegúrese de que la solicitud no tenga barras diagonales adicionales. Una barra diagonal puede provocar un error en la solicitud del POST.
 
 **Formato de API**
 
@@ -233,7 +233,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `datasetId` | **Requerido** El ID del conjunto de datos de destinatario para el que desea programar una caducidad. |
+| `datasetId` | **Obligatorio**: el identificador del conjunto de datos de destino para el que desea programar una caducidad. |
 | `expiry` | **Requerido** Una fecha y hora en formato ISO 8601. Si la cadena no tiene un desplazamiento explícito de zona horaria, se asume que la zona horaria es UTC. La duración de los datos dentro del sistema se establece según el valor de caducidad proporcionado.<br>Nota:<ul><li>La solicitud fallará si ya existe una caducidad del conjunto de datos para él.</li><li>Esta fecha y hora deben ser al menos **24 horas en el futuro**.</li></ul> |
 | `displayName` | Un nombre para mostrar opcional para la solicitud de caducidad del conjunto de datos. |
 | `description` | Una descripción opcional para la solicitud de caducidad. |
@@ -272,11 +272,11 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) y el nuevo estado de
 | `displayName` | Un nombre para mostrar para la solicitud de caducidad. |
 | `description` | Descripción de la solicitud de caducidad. |
 
-Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Una respuesta incorrecta devuelve un estado HTTP 404 (No encontrado) si no existe dicha caducidad de conjunto de datos (o si no tiene acceso al conjunto de datos).
+Se produce un estado HTTP 400 (Solicitud incorrecta) si ya existe una caducidad del conjunto de datos para el conjunto de datos. Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no existe dicha caducidad del conjunto de datos (o si no tiene acceso al conjunto de datos).
 
-## Actualizar una caducidad conjunto de datos {#update}
+## Actualizar la caducidad de un conjunto de datos {#update}
 
-Para actualizar una fecha de caducidad para un conjunto de datos, utilice una solicitud del PUT y la variable `ttlId`. Puede actualizar el `displayName`, `description`, y/o `expiry` información.
+Para actualizar una fecha de caducidad para un conjunto de datos, use una solicitud del PUT y `ttlId`. Puede actualizar la información de `displayName`, `description` o `expiry`.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 **Solicitud**
 
-La siguiente solicitud vuelve a programar la caducidad de un conjunto de datos `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` a finales de 2024 (hora del meridiano de Greenwich). Si se encuentra la caducidad del conjunto de datos existente, esa caducidad se actualiza con el nuevo `expiry` valor.
+La siguiente solicitud vuelve a programar una caducidad del conjunto de datos `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` para que se produzca a finales de 2024 (hora del meridiano de Greenwich). Si se encuentra la caducidad del conjunto de datos existente, esa caducidad se actualiza con el nuevo valor `expiry`.
 
 ```shell
 curl -X PUT \
@@ -315,7 +315,7 @@ curl -X PUT \
 | --- | --- |
 | `expiry` | **Requerido** Una fecha y hora en formato ISO 8601. Si la cadena no tiene un desplazamiento explícito de zona horaria, se asume que la zona horaria es UTC. La duración de los datos dentro del sistema se establece según el valor de caducidad proporcionado. Cualquier marca de tiempo de caducidad anterior para el mismo conjunto de datos se reemplazará por el nuevo valor de caducidad que haya proporcionado. Esta fecha y hora deben ser al menos **24 horas en el futuro**. |
 | `displayName` | Un nombre para mostrar para la solicitud de caducidad. |
-| `description` | Una descripción opcional del solicitud de caducidad. |
+| `description` | Una descripción opcional para la solicitud de caducidad. |
 
 {style="table-layout:auto"}
 
@@ -349,15 +349,15 @@ Una respuesta correcta devuelve el nuevo estado de caducidad del conjunto de dat
 
 {style="table-layout:auto"}
 
-Una respuesta incorrecta devuelve un estado HTTP 404 (No encontrado) si no existe dicha caducidad conjunto de datos.
+Una respuesta incorrecta devolverá un estado HTTP 404 (no encontrado) si no existe dicha caducidad del conjunto de datos.
 
-## Cancelar una caducidad conjunto de datos {#delete}
+## Cancelar una caducidad del conjunto de datos {#delete}
 
-Puede cancelar la caducidad de un conjunto de datos realizando un petición DELETE.
+Puede cancelar la caducidad de un conjunto de datos realizando una solicitud al DELETE.
 
 >[!NOTE]
 >
->Solo caducidades de conjuntos de datos que tengan el estado de `pending` se puede cancelar. Si se intenta cancelar una caducidad que se ha ejecutado o que ya se ha cancelado, se devuelve un error HTTP 404.
+>Solo se pueden cancelar las caducidades del conjunto de datos que tengan un estado de `pending`. Si se intenta cancelar una caducidad que se ha ejecutado o que ya se ha cancelado, se devuelve un error HTTP 404.
 
 **Formato de API**
 
@@ -367,13 +367,13 @@ DELETE /ttl/{EXPIRATION_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{EXPIRATION_ID}` | El `ttlId` de la caducidad del conjunto de datos que desea cancelar. |
+| `{EXPIRATION_ID}` | `ttlId` de la caducidad del conjunto de datos que desea cancelar. |
 
 {style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud cancela una caducidad del conjunto de datos con ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
+La siguiente solicitud cancela la caducidad de un conjunto de datos con el ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
 
 ```shell
 curl -X DELETE \
@@ -386,11 +386,11 @@ curl -X DELETE \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y el de la caducidad `status` el atributo se establece en `cancelled`.
+Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y el atributo `status` de la caducidad está establecido en `cancelled`.
 
 ## Recuperar el historial de estado de caducidad de un conjunto de datos {#retrieve-expiration-history}
 
-Para buscar el historial de estado de caducidad de un conjunto de datos específico, utilice el `{DATASET_ID}` y `include=history` parámetro de consulta en una solicitud de búsqueda. El resultado incluye información sobre la creación de la caducidad del conjunto de datos, cualquier actualización que se haya aplicado y su cancelación o ejecución (si corresponde). También puede utilizar la variable `{DATASET_EXPIRATION_ID}` para recuperar el historial de estado de caducidad del conjunto de datos.
+Para buscar el historial de estado de caducidad de un conjunto de datos específico, use los parámetros de consulta `{DATASET_ID}` y `include=history` en una solicitud de búsqueda. El resultado incluye información sobre la creación de la caducidad del conjunto de datos, cualquier actualización que se haya aplicado y su cancelación o ejecución (si corresponde). También puede usar `{DATASET_EXPIRATION_ID}` para recuperar el historial de estado de caducidad del conjunto de datos.
 
 **Formato de API**
 
@@ -419,7 +419,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la caducidad del conjunto de datos, con un `history` matriz que proporciona los detalles de su `status`, `expiry`, `updatedAt`, y `updatedBy` atributos para cada una de sus actualizaciones registradas.
+Una respuesta correcta devuelve los detalles de la caducidad del conjunto de datos, con una matriz `history` que proporciona los detalles de sus atributos `status`, `expiry`, `updatedAt` y `updatedBy` para cada una de sus actualizaciones registradas.
 
 ```json
 {
@@ -466,7 +466,7 @@ Una respuesta correcta devuelve los detalles de la caducidad del conjunto de dat
 | `displayName` | El nombre para mostrar de la solicitud de caducidad. |
 | `description` | Una descripción para la solicitud de caducidad. |
 | `imsOrg` | ID de su organización. |
-| `history` | Enumera el historial de actualizaciones para la caducidad como una matriz de objetos, cada uno de los cuales contiene el `status`, `expiry`, `updatedAt`, y `updatedBy` atributos para la caducidad en el momento de la actualización. |
+| `history` | Enumera el historial de actualizaciones para la caducidad como una matriz de objetos, cada uno de los cuales contiene los atributos `status`, `expiry`, `updatedAt` y `updatedBy` para la caducidad en el momento de la actualización. |
 
 {style="table-layout:auto"}
 
@@ -474,18 +474,18 @@ Una respuesta correcta devuelve los detalles de la caducidad del conjunto de dat
 
 ### Parámetros de consulta aceptados {#query-params}
 
-En la tabla siguiente se describen los parámetros de consulta disponibles cuando [enumerar caducidades del conjunto de datos](#list):
+En la tabla siguiente se describen los parámetros de consulta disponibles al [enumerar caducidades del conjunto de datos](#list):
 
 >[!NOTE]
 >
->El `description`, `displayName`, y `datasetName` todos los parámetros contienen la capacidad de buscar por valores LIKE. Esto significa que puede encontrar caducidades de conjuntos de datos programados llamados: &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot; buscando la cadena &quot;Name1&quot;.
+>Los parámetros `description`, `displayName` y `datasetName` contienen la capacidad de búsqueda de valores LIKE. Esto significa que puede encontrar caducidades de conjuntos de datos programados llamados: &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot; buscando la cadena &quot;Name1&quot;.
 
 | Parámetro | Descripción | Ejemplo |
 | --- | --- | --- |
-| `author` | Coincide con caducidades cuya `created_by` coincide con la cadena de búsqueda. Si la cadena de búsqueda empieza por `LIKE` o `NOT LIKE`, el resto se trata como un patrón de búsqueda SQL. De lo contrario, toda la cadena de búsqueda se trata como una cadena literal que debe coincidir exactamente con todo el contenido de un `created_by` field. | `author=LIKE %john%`, `author=John Q. Public` |
+| `author` | Coincide con caducidades cuyo `created_by` coincide con la cadena de búsqueda. Si la cadena de búsqueda comienza por `LIKE` o `NOT LIKE`, el resto se trata como un patrón de búsqueda SQL. De lo contrario, toda la cadena de búsqueda se tratará como una cadena literal que debe coincidir exactamente con todo el contenido de un campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
 | `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Coincide con las caducidades que se cancelaron en cualquier momento en el intervalo indicado. Esto se aplica incluso si la caducidad se volvió a abrir más tarde (estableciendo una nueva caducidad para el mismo conjunto de datos). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Coincide con las caducidades que se completaron durante el intervalo especificado. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Coincide con las caducidades creadas en la ventana de 24 horas a partir de la hora indicada.<br><br>Tenga en cuenta que las fechas sin una hora (como `2021-12-07`) representan la fecha y hora al principio de ese día. Por lo tanto, `createdDate=2021-12-07` hace referencia a cualquier caducidad creada el 7 de diciembre de 2021, desde `00:00:00` mediante `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
+| `completedDate` / `completedToDate` / `completedFromDate` | Coincide con las caducidades completadas durante el intervalo especificado. | `completedToDate=2021-11-11-06:00` |
+| `createdDate` | Coincide con las caducidades creadas en la ventana de 24 horas a partir de la hora indicada.<br><br>Tenga en cuenta que las fechas sin una hora (como `2021-12-07`) representan la fecha y hora al principio de ese día. Por lo tanto, `createdDate=2021-12-07` hace referencia a cualquier caducidad creada el 7 de diciembre de 2021, desde `00:00:00` hasta `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Coincide con las caducidades creadas en la hora indicada o posteriormente. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Coincide con las caducidades creadas en la hora indicada o antes. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
 | `datasetId` | Coincide con las caducidades que se aplican a un conjunto de datos específico. | `datasetId=62b3925ff20f8e1b990a7434` |
@@ -493,16 +493,16 @@ En la tabla siguiente se describen los parámetros de consulta disponibles cuand
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Coincide con las caducidades cuyo nombre para mostrar contiene la cadena de búsqueda proporcionada. La coincidencia distingue entre mayúsculas y minúsculas. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtra los resultados en función de una fecha de ejecución exacta, una fecha de finalización para la ejecución o una fecha de inicio para la ejecución. Se utilizan para recuperar datos o registros asociados a la ejecución de una operación en una fecha específica, antes de una fecha determinada o después de una fecha determinada. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Coincide con las caducidades que deben ejecutarse o que ya se han ejecutado durante el intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
-| `limit` | Número entero entre 1 y 100 que indica el número máximo de caducidades que se devolverán. El valor predeterminado es 25. | `limit=50` |
-| `orderBy` | El `orderBy` parámetro consulta especifica el orden de los resultados devueltos por la API. Utilícelo para organizar los datos en función de uno o varios campos, ya sea en orden ascendente (ASC) o descendente (DESC). Utilice el prefijo + o - para indicar ASC y DESC, respectivamente. Se aceptan los siguientes valores: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
-| `orgId` | Coincide con las caducidades de los conjuntos de datos cuyo ID de organización coincide con el del parámetro. Este valor predeterminado es el de `x-gw-ims-org-id` y se omite a menos que la solicitud proporcione un token de servicio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `expiryDate` / `expiryToDate` / `expiryFromDate` | Coincide con las caducidades que se van a ejecutar o que ya se han ejecutado durante el intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `limit` | Un entero entre 1 y 100 que indica el número máximo de caducidades que se van a devolver. Valor predeterminado 25. | `limit=50` |
+| `orderBy` | El parámetro de consulta `orderBy` especifica el orden de clasificación de los resultados devueltos por la API. Utilícelo para organizar los datos en función de uno o varios campos, ya sea en orden ascendente (ASC) o descendente (DESC). Utilice el prefijo + o - para indicar ASC y DESC, respectivamente. Se aceptan los siguientes valores: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orgId` | Coincide con las caducidades de los conjuntos de datos cuyo ID de organización coincide con el del parámetro. Este valor toma como valor predeterminado el de los encabezados `x-gw-ims-org-id` y se omite a menos que la solicitud proporcione un token de servicio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Un entero que indica qué página de caducidades se va a devolver. | `page=3` |
-| `sandboxName` | Coincide con las caducidades del conjunto de datos cuyo nombre de zona protegida coincide exactamente con el argumento. El valor predeterminado es el nombre de la zona protegida en el `x-sandbox-name` encabezado. Uso `sandboxName=*` para incluir las caducidades del conjunto de datos de todas las zonas protegidas. | `sandboxName=dev1` |
-| `search` | Coincide con caducidades en las que la cadena especificada coincide exactamente con el ID de caducidad o **contenido** en cualquiera de estos campos:<br><ul><li>autor</li><li>nombre para mostrar</li><li>descripción</li><li>nombre para mostrar</li><li>nombre del conjunto de datos</li></ul> | `search=TESTING` |
+| `sandboxName` | Coincide con las caducidades del conjunto de datos cuyo nombre de zona protegida coincide exactamente con el argumento. El valor predeterminado es el nombre de la zona protegida en el encabezado `x-sandbox-name` de la solicitud. Use `sandboxName=*` para incluir las caducidades del conjunto de datos de todas las zonas protegidas. | `sandboxName=dev1` |
+| `search` | Coincide con caducidades en las que la cadena especificada coincide exactamente con el identificador de caducidad o está **contenida** en cualquiera de estos campos:<br><ul><li>autor</li><li>nombre para mostrar</li><li>descripción</li><li>nombre para mostrar</li><li>nombre del conjunto de datos</li></ul> | `search=TESTING` |
 | `status` | Una lista de estados separados por comas. Cuando se incluye, la respuesta coincide con las caducidades del conjunto de datos cuyo estado actual está entre los enumerados. | `status=pending,cancelled` |
 | `ttlId` | Coincide la solicitud de caducidad con el ID determinado. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Me gusta `createdDate` / `createdFromDate` / `createdToDate`, pero coincide con una conjunto de datos la hora de actualización de la caducidad en lugar de la hora de creación.<br><br>Una caducidad se considera actualizada en cada edición, incluso cuando se crea, cancela o ejecuta. | `updatedDate=2022-01-01` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | Como `createdDate` / `createdFromDate` / `createdToDate`, pero coincide con la hora de actualización de una caducidad del conjunto de datos en lugar de la hora de creación.<br><br>Se considera que una caducidad está actualizada en cada edición, incluso cuando se crea, cancela o ejecuta. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 

@@ -4,29 +4,29 @@ description: Aprenda a crear una conexión de origen de eventos de SugarCRM medi
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
 source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 2%
 
 ---
 
-# Crear un [!DNL SugarCRM Events] conexión de origen en la interfaz de usuario
+# Crear una conexión de origen [!DNL SugarCRM Events] en la interfaz de usuario
 
-Este tutorial proporciona los pasos para crear una [!DNL SugarCRM Events] conexión de origen mediante la interfaz de usuario de Adobe Experience Platform.
+Este tutorial proporciona los pasos para crear una conexión de origen [!DNL SugarCRM Events] mediante la interfaz de usuario de Adobe Experience Platform.
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-   * [Conceptos básicos de composición de esquemas](../../../../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   * [Tutorial del Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del Editor de esquemas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): El marco de trabajo estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de la experiencia del cliente.
+   * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
 
-Si ya tiene un válido [!DNL SugarCRM] cuenta de, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/crm.md).
+Si ya tiene una cuenta de [!DNL SugarCRM] válida, puede omitir el resto de este documento y continuar con el tutorial sobre [configuración de un flujo de datos](../../dataflow/crm.md).
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse [!DNL SugarCRM Events] En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar [!DNL SugarCRM Events] a Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
@@ -34,62 +34,62 @@ Para poder conectarse [!DNL SugarCRM Events] En Platform, debe proporcionar valo
 | `Username` | Su nombre de usuario de cuenta de desarrollador de SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Contraseña de su cuenta de desarrollador de SugarCRM. | `123456789` |
 
-### Creación de un esquema de Platform para [!DNL SugarCRM]
+### Crear un esquema de plataforma para [!DNL SugarCRM]
 
-Antes de crear un [!DNL SugarCRM] conexión de origen, también debe asegurarse de crear primero un esquema de Platform para utilizarlo en el origen. Consulte el tutorial sobre [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para obtener información detallada sobre cómo crear un esquema.
+Antes de crear una conexión de origen de [!DNL SugarCRM], también debe asegurarse de crear primero un esquema de Platform para utilizarlo en el origen. Consulte el tutorial de [creación de un esquema de Platform](../../../../../xdm/schema/composition.md) para ver los pasos detallados sobre cómo crear un esquema.
 
-![Captura de pantalla de la IU de Platform que muestra un esquema de ejemplo para los eventos SugarCRM](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+![Captura de pantalla de IU de Platform que muestra un esquema de ejemplo para SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->Al asignar el esquema, asegúrese de asignar también el obligatorio `event_id` y `timestamp` campos requeridos por Platform.
+>Al asignar el esquema, asegúrese de asignar también los campos obligatorios `event_id` y `timestamp` requeridos por Platform.
 
-## Conecte su [!DNL SugarCRM Events] account
+## Conectar su cuenta de [!DNL SugarCRM Events]
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el *CRM* categoría, seleccionar **[!UICONTROL Eventos de SugarCRM]**, y luego seleccione **[!UICONTROL Añadir datos]**.
+En la categoría *CRM*, seleccione **[!UICONTROL Eventos de SugarCRM]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-![Captura de pantalla de la IU de Platform para el catálogo con la tarjeta SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
+![Captura de pantalla de la interfaz de usuario de Platform para el catálogo con SugarCRM Events card](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
-El **[!UICONTROL Conectar cuenta de eventos de SugarCRM]** página. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Conectar cuenta de eventos de SugarCRM]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para utilizar una cuenta existente, seleccione la [!DNL SugarCRM Events] cuenta con la que desea crear un nuevo flujo de datos y seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, seleccione la cuenta de [!DNL SugarCRM Events] con la que desee crear un nuevo flujo de datos y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![Captura de pantalla de la IU de Platform para la cuenta de Connect SugarCRM Events con una cuenta existente](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![Captura de pantalla de la IU de Platform para conectar la cuenta de eventos de SugarCRM con una cuenta existente](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### Nueva cuenta
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y, a continuación, espere un poco para que se establezca la nueva conexión.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
 ![Captura de pantalla de la IU de Platform para conectar la cuenta de eventos de SugarCRM con una nueva cuenta](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha establecido una conexión con su [!DNL SugarCRM Events] cuenta. Ahora puede continuar con el siguiente tutorial y [configuración de un flujo de datos para introducir datos en Platform](../../dataflow/crm.md).
+Al seguir este tutorial, ha establecido una conexión con su cuenta de [!DNL SugarCRM Events]. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](../../dataflow/crm.md).
 
 ## Recursos adicionales
 
-Las secciones siguientes proporcionan recursos adicionales a los que puede hacer referencia al utilizar el [!DNL SugarCRM] origen.
+Las secciones siguientes proporcionan recursos adicionales a los que puede hacer referencia al usar el origen [!DNL SugarCRM].
 
 ### Mecanismos de protección {#guardrails}
 
-El [!DNL SugarCRM] Las tarifas de aceleración de API son de 90 llamadas por minuto o 2000 llamadas por día, lo que suceda primero. Sin embargo, esta restricción se ha eludido añadiendo un parámetro a la especificación de conexión que retrasará el tiempo de solicitud para que nunca se alcance el límite de velocidad.
+Las velocidades de aceleración de API [!DNL SugarCRM] son de 90 llamadas por minuto o 2000 llamadas por día, lo que suceda primero. Sin embargo, esta restricción se ha eludido añadiendo un parámetro a la especificación de conexión que retrasará el tiempo de solicitud para que nunca se alcance el límite de velocidad.
 
 ### Validación {#validation}
 
-Para validar que ha configurado correctamente el origen y [!DNL SugarCRM Events] Si se están introduciendo datos, siga los pasos a continuación:
+Para comprobar que ha configurado correctamente el origen y que se están ingiriendo los datos de [!DNL SugarCRM Events], siga los pasos a continuación:
 
-* En la IU de Platform, seleccione **[!UICONTROL Ver flujos de datos]** al lado del [!DNL SugarCRM Events] menú de tarjeta en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para verificar los datos que se han introducido.
+* En la interfaz de usuario de Platform, seleccione **[!UICONTROL Ver flujos de datos]** junto al menú de tarjeta [!DNL SugarCRM Events] en el catálogo de fuentes. A continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para verificar los datos ingeridos.
 
-* Según el tipo de objeto con el que trabaje, puede comprobar los datos agregados con los recuentos visibles en [!DNL SugarMarket] Página de eventos a continuación:
+* Según el tipo de objeto con el que esté trabajando, puede comprobar los datos agregados con los recuentos visibles en la página [!DNL SugarMarket] eventos a continuación:
 
-![Captura de pantalla de la página SugarMarket Accounts que muestra la lista de cuentas](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
+![Captura de pantalla de la página de cuentas de SugarMarket que muestra la lista de cuentas](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
 
 >[!NOTE]
 >
->El [!DNL SugarMarket] las páginas no incluyen los recuentos de objetos eliminados. Sin embargo, los datos recuperados a través de esta fuente también incluirán el recuento eliminado, que se marcaría con un indicador eliminado.
+>Las páginas [!DNL SugarMarket] no incluyen los recuentos de objetos eliminados. Sin embargo, los datos recuperados a través de esta fuente también incluirán el recuento eliminado, que se marcaría con un indicador eliminado.

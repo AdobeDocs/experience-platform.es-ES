@@ -15,20 +15,20 @@ ht-degree: 0%
 
 [!DNL XDM ExperienceEvent] es una clase estándar de modelo de datos de experiencia (XDM). Utilice esta clase para crear una instantánea con marca de tiempo del sistema cuando se produzca un evento específico o cuando se haya alcanzado un conjunto determinado de condiciones.
 
-Un Evento de experiencia es un registro de hechos de lo que ocurrió, incluido el momento y la identidad de la persona involucrada. Los eventos pueden ser explícitos (acciones humanas directamente observables) o implícitos (planteados sin una acción humana directa) y se registran sin agregación ni interpretación. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de Platform, consulte la [Información general de XDM](../home.md#data-behaviors).
+Un Evento de experiencia es un registro de hechos de lo que ocurrió, incluido el momento y la identidad de la persona involucrada. Los eventos pueden ser explícitos (acciones humanas directamente observables) o implícitos (planteados sin una acción humana directa) y se registran sin agregación ni interpretación. Para obtener más información de alto nivel sobre el uso de esta clase en el ecosistema de Platform, consulte la [descripción general de XDM](../home.md#data-behaviors).
 
-El [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con series temporales a un esquema. Dos de estos campos (`_id` y `timestamp`) son **obligatorio** para todos los esquemas basados en esta clase, mientras que el resto son opcionales. Los valores de algunos de los campos se rellenan automáticamente cuando se incorporan datos.
+La propia clase [!DNL XDM ExperienceEvent] proporciona varios campos relacionados con series temporales a un esquema. Dos de estos campos (`_id` y `timestamp`) son **obligatorios** para todos los esquemas basados en esta clase, mientras que el resto son opcionales. Los valores de algunos de los campos se rellenan automáticamente cuando se incorporan datos.
 
-![La estructura de ExperienceEvent de XDM tal como aparece en la IU de Platform.](../images/classes/experienceevent/structure.png)
+![Estructura de ExperienceEvent de XDM tal como aparece en la interfaz de usuario de Platform.](../images/classes/experienceevent/structure.png)
 
 | Propiedad | Descripción |
 | --- | --- |
-| `_id`<br>**(Obligatorio)** | La clase Experience Event `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Platform pueden gestionar la duplicación de forma diferente. Por ejemplo, los eventos duplicados en el servicio de perfil se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) o [Identificador único global (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una determinada combinación de campos que hagan que el evento sea único. Algunos ejemplos de eventos que se pueden concatenar son el ID principal, la marca de tiempo, el tipo de evento, etc. El valor concatenado debe ser un `uri-reference` formatted string, lo que significa que se debe eliminar cualquier carácter de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el propio registro de datos. Los datos de identidad relativos a una persona deben quedar relegados a [campos de identidad](../schema/composition.md#identity) proporcionadas por grupos de campos compatibles. |
-| `eventMergeId` | Si se usa la variable [SDK web de Adobe Experience Platform](/help/web-sdk/home.md) para introducir datos, representa el ID del lote introducido que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingesta de datos. No se admite el uso de este campo fuera del contexto de una implementación de SDK web. |
-| `eventType` | Cadena que indica el tipo o la categoría del evento. Este campo se puede utilizar si desea distinguir distintos tipos de eventos dentro del mismo esquema y conjunto de datos, como distinguir un evento de vista de producto de un evento de complemento al carro de compras para una compañía minorista.<br><br>Los valores estándar para esta propiedad se proporcionan en [sección del apéndice](#eventType), incluidas las descripciones de su caso de uso previsto. Este campo es una enumeración ampliable, lo que significa que también puede utilizar sus propias cadenas de tipo de evento para categorizar los eventos que está rastreando.<br><br>`eventType` limita el uso de un solo evento por visita en la aplicación y, por lo tanto, debe utilizar campos calculados para que el sistema sepa qué evento es el más importante. Para obtener más información, consulte la sección sobre [prácticas recomendadas para campos calculados](#calculated). |
-| `producedBy` | Valor de cadena que describe el productor o el origen del evento. Este campo se puede utilizar para filtrar ciertos productores de eventos si es necesario con fines de segmentación.<br><br>Algunos valores sugeridos para esta propiedad se proporcionan en la variable [sección del apéndice](#producedBy). Este campo es una enumeración extensible, lo que significa que también puede utilizar sus propias cadenas para representar a diferentes productores de eventos. |
-| `identityMap` | Campo de asignación que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en las operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en la [conceptos básicos de composición de esquemas](../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
-| `timestamp`<br>**(Obligatorio)** | Una marca de tiempo ISO 8601 de cuándo se produjo el evento, con el formato establecido por [RFC 3339, sección 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Esta marca de tiempo **debe** ocurren en el pasado, pero **debe** a partir de 1970. Consulte la sección siguiente sobre [marcas de tiempo](#timestamps) para conocer las prácticas recomendadas sobre el uso de este campo. |
+| `_id`<br>**(obligatorio)** | El campo Clase de evento de experiencia `_id` identifica de forma exclusiva los eventos individuales que se incorporan a Adobe Experience Platform. Este campo se utiliza para realizar un seguimiento de la exclusividad de un evento individual, evitar la duplicación de datos y buscar ese evento en los servicios descendentes.<br><br>Cuando se detectan eventos duplicados, las aplicaciones y los servicios de Platform pueden administrar la duplicación de forma diferente. Por ejemplo, los eventos duplicados en el servicio de perfiles se pierden si el evento con el mismo `_id` ya existe en el almacén de perfiles.<br><br>En algunos casos, `_id` puede ser un [Identificador único universal (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) o un [Identificador único global (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>Si está transmitiendo datos desde una conexión de origen o ingiriendo directamente desde un archivo de Parquet, debe generar este valor concatenando una cierta combinación de campos que hagan que el evento sea único. Algunos ejemplos de eventos que se pueden concatenar son el ID principal, la marca de tiempo, el tipo de evento, etc. El valor concatenado debe ser una cadena con formato `uri-reference`, lo que significa que se deben eliminar los caracteres de dos puntos. Después, el valor concatenado debe tener un cifrado hash con SHA-256 u otro algoritmo de su elección.<br><br>Es importante distinguir que **este campo no representa una identidad relacionada con una persona individual**, sino más bien el registro de datos en sí. Los datos de identidad relacionados con una persona deben relegarse a [campos de identidad](../schema/composition.md#identity) proporcionados por grupos de campos compatibles. |
+| `eventMergeId` | Si se usa el [SDK web de Adobe Experience Platform](/help/web-sdk/home.md) para la ingesta de datos, representa el ID del lote ingerido que provocó la creación del registro. El sistema rellena automáticamente este campo tras la ingesta de datos. No se admite el uso de este campo fuera del contexto de una implementación de SDK web. |
+| `eventType` | Cadena que indica el tipo o la categoría del evento. Este campo se puede utilizar si desea distinguir distintos tipos de eventos dentro del mismo esquema y conjunto de datos, como distinguir un evento de vista de producto de un evento de complemento al carro de compras para una compañía minorista.<br><br>Los valores estándar para esta propiedad se proporcionan en la [sección del apéndice](#eventType), con descripciones de su caso de uso previsto. Este campo es una enumeración ampliable, lo que significa que también puede utilizar sus propias cadenas de tipo de evento para categorizar los eventos que está rastreando.<br><br>`eventType` le limita a utilizar un solo evento por visita en la aplicación y, por lo tanto, debe utilizar campos calculados para que el sistema sepa qué evento es el más importante. Para obtener más información, consulte la sección sobre [prácticas recomendadas para campos calculados](#calculated). |
+| `producedBy` | Valor de cadena que describe el productor o el origen del evento. Este campo se puede utilizar para filtrar ciertos productores de eventos si es necesario con fines de segmentación.<br><br>Algunos valores sugeridos para esta propiedad se proporcionan en la [sección del apéndice](#producedBy). Este campo es una enumeración extensible, lo que significa que también puede utilizar sus propias cadenas para representar a diferentes productores de eventos. |
+| `identityMap` | Campo de asignación que contiene un conjunto de identidades con espacio de nombres para el individuo al que se aplica el evento. El sistema actualiza automáticamente este campo a medida que se incorporan los datos de identidad. Para utilizar correctamente este campo para [Perfil del cliente en tiempo real](../../profile/home.md), no intente actualizar manualmente el contenido del campo en sus operaciones de datos.<br /><br />Consulte la sección sobre mapas de identidad en los [conceptos básicos de la composición de esquemas](../schema/composition.md#identityMap) para obtener más información sobre su caso de uso. |
+| `timestamp`<br>**(obligatorio)** | Una marca de tiempo ISO 8601 de cuándo ocurrió el evento, con el formato [RFC 3339, sección 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Esta marca de tiempo **debe** se produjo en el pasado, pero **debe** tener lugar a partir de 1970. Consulte la sección siguiente sobre [marcas de tiempo](#timestamps) para conocer las prácticas recomendadas sobre el uso de este campo. |
 
 {style="table-layout:auto"}
 
@@ -38,9 +38,9 @@ Las siguientes secciones tratan sobre las prácticas recomendadas para diseñar 
 
 ### Marcas de hora {#timestamps}
 
-La raíz `timestamp` de un esquema de evento puede **solamente** representan la observación del evento mismo, y deben ocurrir en el pasado. Sin embargo, el evento **debe** a partir de 1970. Si los casos de uso de la segmentación requieren el uso de marcas de tiempo que puedan producirse en el futuro, estos valores deben restringirse en cualquier parte del esquema de Experience Event.
+El campo raíz `timestamp` de un esquema de evento puede **solamente** representar la observación del propio evento y debe ocurrir en el pasado. Sin embargo, el evento **debe** tener lugar a partir de 1970. Si los casos de uso de la segmentación requieren el uso de marcas de tiempo que puedan producirse en el futuro, estos valores deben restringirse en cualquier parte del esquema de Experience Event.
 
-Por ejemplo, si un negocio del sector de los viajes y la hostelería está modelando un evento de reserva de vuelo, el nivel de clase `timestamp` representa el momento en el que se observó el evento de reserva. Otras marcas de tiempo relacionadas con el evento, como la fecha de inicio de la reserva de viaje, deben capturarse en campos independientes proporcionados por grupos de campos estándar o personalizados.
+Por ejemplo, si un negocio del sector de viajes y hospitalidad está modelando un evento de reserva de vuelo, el campo de nivel de clase `timestamp` representa el momento en el que se observó el evento de reserva. Otras marcas de tiempo relacionadas con el evento, como la fecha de inicio de la reserva de viaje, deben capturarse en campos independientes proporcionados por grupos de campos estándar o personalizados.
 
 ![Esquema de evento de experiencia de ejemplo con la reserva de vuelo y la fecha de inicio resaltadas.](../images/classes/experienceevent/timestamps.png)
 
@@ -48,13 +48,13 @@ Al mantener la marca de tiempo en el nivel de clase separada de otros valores de
 
 ### Uso de campos calculados {#calculated}
 
-Ciertas interacciones en las aplicaciones de experiencia pueden dar como resultado varios eventos relacionados que técnicamente comparten la misma marca de tiempo de evento y, por lo tanto, se pueden representar como un único registro de evento. Por ejemplo, si un cliente ve un producto en su sitio web, esto puede dar como resultado un registro de evento que tenga dos posibilidades `eventType` values: un evento de &quot;vista de producto&quot; (`commerce.productViews`) o un evento genérico de &quot;vista de página&quot; (`web.webpagedetails.pageViews`). En estos casos, puede utilizar campos calculados para capturar los atributos más importantes cuando se capturan varios eventos en una sola visita.
+Ciertas interacciones en las aplicaciones de experiencia pueden dar como resultado varios eventos relacionados que técnicamente comparten la misma marca de tiempo de evento y, por lo tanto, se pueden representar como un único registro de evento. Por ejemplo, si un cliente ve un producto en su sitio web, esto puede generar un registro de evento que tenga dos valores `eventType` potenciales: un evento de &quot;vista de producto&quot; (`commerce.productViews`) o un evento de &quot;vista de página&quot; genérico (`web.webpagedetails.pageViews`). En estos casos, puede utilizar campos calculados para capturar los atributos más importantes cuando se capturan varios eventos en una sola visita.
 
-Uso [Preparación de datos de Adobe Experience Platform](../../data-prep/home.md) para asignar, transformar y validar datos desde y hacia XDM. Uso de los disponibles [funciones de asignación](../../data-prep/functions.md) proporcionado por el servicio puede invocar operadores lógicos para priorizar, transformar o consolidar datos de registros de varios eventos cuando se incorporan en Experience Platform. En el ejemplo anterior, puede designar `eventType` como un campo calculado que priorizaría una &quot;vista de producto&quot; sobre una &quot;vista de página&quot; siempre que se produzcan ambos.
+Use [Preparación de datos de Adobe Experience Platform](../../data-prep/home.md) para asignar, transformar y validar datos desde y hacia XDM. Con las [funciones de asignación](../../data-prep/functions.md) disponibles que proporciona el servicio, puede invocar a los operadores lógicos para priorizar, transformar o consolidar datos de registros de varios eventos cuando se incorporen en Experience Platform. En el ejemplo anterior, puede designar `eventType` como un campo calculado que daría prioridad a una &quot;vista de producto&quot; sobre una &quot;vista de página&quot; siempre que se produzcan ambos.
 
-Si está introduciendo manualmente datos en Platform a través de la interfaz de usuario de, consulte la guía sobre [campos calculados](../../data-prep/ui/mapping.md#calculated-fields) para ver los pasos específicos sobre cómo crear campos calculados.
+Si está ingiriendo datos manualmente en Platform a través de la interfaz de usuario, consulte la guía de [campos calculados](../../data-prep/ui/mapping.md#calculated-fields) para ver los pasos específicos sobre cómo crear campos calculados.
 
-Si está transmitiendo datos a Platform mediante una conexión de origen, puede configurar el origen para que utilice campos calculados en su lugar. Consulte la [documentación de su origen particular](../../sources/home.md) para obtener instrucciones sobre cómo implementar campos calculados al configurar la conexión.
+Si está transmitiendo datos a Platform mediante una conexión de origen, puede configurar el origen para que utilice campos calculados en su lugar. Consulte la [documentación de su origen en particular](../../sources/home.md) para obtener instrucciones sobre cómo implementar campos calculados al configurar la conexión.
 
 ## Grupos de campos de esquema compatibles {#field-groups}
 
@@ -62,34 +62,34 @@ Si está transmitiendo datos a Platform mediante una conexión de origen, puede 
 >
 >Los nombres de varios grupos de campos han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../field-groups/name-updates.md) para obtener más información.
 
-El Adobe proporciona varios grupos de campos estándar para su uso con el [!DNL XDM ExperienceEvent] clase. A continuación se muestra una lista de algunos grupos de campos utilizados comúnmente para la clase:
+El Adobe proporciona varios grupos de campos estándar para su uso con la clase [!DNL XDM ExperienceEvent]. A continuación se muestra una lista de algunos grupos de campos utilizados comúnmente para la clase:
 
 * [[!UICONTROL Extensión completa de Adobe Analytics ExperienceEvent]](../field-groups/event/analytics-full-extension.md)
 * [[!UICONTROL Transferencias de saldo]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Detalles de marketing de campaña]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Acciones de tarjeta]](../field-groups/event/card-actions.md)
-* [[!UICONTROL Detalles del canal]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Detalles de canal]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Detalles de Commerce]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL Detalles de depósito]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL Detalles de intercambio de dispositivos]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL Reserva de restaurante]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL Detalles del ID del usuario final]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Detalles del identificador de usuario final]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Detalles del entorno]](../field-groups/event/environment-details.md)
 * [[!UICONTROL Reserva de vuelo]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL Consentimiento de IAB TCF 2.0]](../field-groups/event/iab.md)
 * [[!UICONTROL Reserva de alojamiento]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL Detalles de interacción de Media Analytics]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL Detalles de interacción de MediaAnalytics]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL Detalles de solicitud de presupuesto]](../field-groups/event/quote-request-details.md)
-* [[!UICONTROL Detalles de reserva]](../field-groups/event/reservation-details.md)
+* [[!UICONTROL Detalles de la reserva]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Detalles web]](../field-groups/event/web-details.md)
 
 ## Apéndice
 
-La siguiente sección contiene información adicional sobre [!UICONTROL ExperienceEvent de XDM] clase.
+La siguiente sección contiene información adicional sobre la clase [!UICONTROL XDM ExperienceEvent].
 
 ### Valores aceptados para `eventType` {#eventType}
 
-En la tabla siguiente se describen los valores aceptados para `eventType`, junto con sus definiciones:
+En la tabla siguiente se describen los valores aceptados de `eventType`, junto con sus definiciones:
 
 | Valor | Definición |
 | --- | --- |
@@ -146,25 +146,25 @@ En la tabla siguiente se describen los valores aceptados para `eventType`, junto
 | `leadOperation.statusInCampaignProgressionChanged` | Este evento rastrea cuándo ha cambiado el estado de un posible cliente en una campaña. |
 | `listOperation.addToList` | Este evento rastrea cuándo se añadió una persona a una lista de marketing. |
 | `listOperation.removeFromList` | Este evento rastrea cuándo se eliminó una persona de una lista de marketing. |
-| `media.adBreakComplete` | Este evento rastrea cuándo una `adBreakComplete` se ha producido un evento. Este evento se activa al principio de una pausa publicitaria. |
-| `media.adBreakStart` | Este evento rastrea cuándo una `adBreakStart` se ha producido un evento. Este evento se activa al final de una pausa publicitaria. |
-| `media.adComplete` | Este evento rastrea cuándo una `adComplete` se ha producido un evento. Este evento se activa cuando se completa un anuncio. |
-| `media.adSkip` | Este evento rastrea cuándo una `adSkip` se ha producido un evento. Este evento se activa cuando se omite un anuncio. |
-| `media.adStart` | Este evento rastrea cuándo una `adStart` se ha producido un evento. Este evento se activa cuando se inicia un anuncio. |
-| `media.bitrateChange` | Este evento rastrea cuándo se produce una `bitrateChange` se ha producido un evento. Este evento se activa cuando hay un cambio en la velocidad de bits. |
-| `media.bufferStart` | Este evento rastrea cuándo se produce una `bufferStart` se ha producido un evento. Este evento se activa cuando el medio ha comenzado a almacenarse en el búfer. |
-| `media.chapterComplete` | Este evento rastrea cuándo se produce una `chapterComplete` se ha producido un evento. Este evento se activa al finalizar un capítulo en el contenido. |
-| `media.chapterSkip` | Este evento rastrea cuándo se produce una `chapterSkip` se ha producido un evento. Este evento se activa cuando un usuario salta hacia delante o hacia atrás a otra sección o capítulo dentro del contenido multimedia. |
-| `media.chapterStart` | Este evento rastrea cuándo se produce una `chapterStart` se ha producido un evento. Este evento se activa al principio de una sección o capítulo específico dentro del contenido multimedia. |
+| `media.adBreakComplete` | Este evento rastrea cuándo se ha producido un evento `adBreakComplete`. Este evento se activa al principio de una pausa publicitaria. |
+| `media.adBreakStart` | Este evento rastrea cuándo se ha producido un evento `adBreakStart`. Este evento se activa al final de una pausa publicitaria. |
+| `media.adComplete` | Este evento rastrea cuándo se ha producido un evento `adComplete`. Este evento se activa cuando se completa un anuncio. |
+| `media.adSkip` | Este evento rastrea cuándo se ha producido un evento `adSkip`. Este evento se activa cuando se omite un anuncio. |
+| `media.adStart` | Este evento rastrea cuándo se ha producido un evento `adStart`. Este evento se activa cuando se inicia un anuncio. |
+| `media.bitrateChange` | Este evento rastrea cuándo se ha producido un evento `bitrateChange`. Este evento se activa cuando hay un cambio en la velocidad de bits. |
+| `media.bufferStart` | Este evento rastrea cuándo se ha producido un evento `bufferStart`. Este evento se activa cuando el medio ha comenzado a almacenarse en el búfer. |
+| `media.chapterComplete` | Este evento rastrea cuándo se ha producido un evento `chapterComplete`. Este evento se activa al finalizar un capítulo en el contenido. |
+| `media.chapterSkip` | Este evento rastrea cuándo se ha producido un evento `chapterSkip`. Este evento se activa cuando un usuario salta hacia delante o hacia atrás a otra sección o capítulo dentro del contenido multimedia. |
+| `media.chapterStart` | Este evento rastrea cuándo se ha producido un evento `chapterStart`. Este evento se activa al principio de una sección o capítulo específico dentro del contenido multimedia. |
 | `media.downloaded` | Este evento rastrea cuándo se ha producido el contenido descargado del medio. |
-| `media.error` | Este evento rastrea cuándo una `error` se ha producido un evento. Este evento se activa cuando se produce un error o un problema durante la reproducción del contenido. |
-| `media.pauseStart` | Este evento rastrea cuándo se produce una `pauseStart` se ha producido un evento. Este evento se activa cuando un usuario inicia una pausa en la reproducción de contenido. |
-| `media.ping` | Este evento rastrea cuándo una `ping` se ha producido un evento. Esto verifica la disponibilidad de un recurso de medios. |
-| `media.play` | Este evento rastrea cuándo se produce una `play` se ha producido un evento. Este evento se activa cuando se reproduce el contenido del contenido multimedia, lo que indica el consumo activo por parte del usuario. |
-| `media.sessionComplete` | Este evento rastrea cuándo se produce una `sessionComplete` se ha producido un evento. Este evento marca el final de una sesión de reproducción de contenido. |
-| `media.sessionEnd` | Este evento rastrea cuándo se produce una `sessionEnd` se ha producido un evento. Este evento indica la finalización de una sesión de medios. Esta conclusión podría implicar el cierre del reproductor de contenidos o la detención de la reproducción. |
-| `media.sessionStart` | Este evento rastrea cuándo se produce una `sessionStart` se ha producido un evento. Este evento marca el comienzo de una sesión de reproducción de contenido. Se activa cuando un usuario comienza a reproducir un archivo multimedia. |
-| `media.statesUpdate` | Este evento rastrea cuándo se produce una `statesUpdate` se ha producido un evento. Las funcionalidades de seguimiento de estado del reproductor se pueden adjuntar a un flujo de audio o vídeo. Los estados estándar son: pantalla completa, silenciar, closedCaptioning, pictureInPicture e inFocus. |
+| `media.error` | Este evento rastrea cuándo se ha producido un evento `error`. Este evento se activa cuando se produce un error o un problema durante la reproducción del contenido. |
+| `media.pauseStart` | Este evento rastrea cuándo se ha producido un evento `pauseStart`. Este evento se activa cuando un usuario inicia una pausa en la reproducción de contenido. |
+| `media.ping` | Este evento rastrea cuándo se ha producido un evento `ping`. Esto verifica la disponibilidad de un recurso de medios. |
+| `media.play` | Este evento rastrea cuándo se ha producido un evento `play`. Este evento se activa cuando se reproduce el contenido del contenido multimedia, lo que indica el consumo activo por parte del usuario. |
+| `media.sessionComplete` | Este evento rastrea cuándo se ha producido un evento `sessionComplete`. Este evento marca el final de una sesión de reproducción de contenido. |
+| `media.sessionEnd` | Este evento rastrea cuándo se ha producido un evento `sessionEnd`. Este evento indica la finalización de una sesión de medios. Esta conclusión podría implicar el cierre del reproductor de contenidos o la detención de la reproducción. |
+| `media.sessionStart` | Este evento rastrea cuándo se ha producido un evento `sessionStart`. Este evento marca el comienzo de una sesión de reproducción de contenido. Se activa cuando un usuario comienza a reproducir un archivo multimedia. |
+| `media.statesUpdate` | Este evento rastrea cuándo se ha producido un evento `statesUpdate`. Las funcionalidades de seguimiento de estado del reproductor se pueden adjuntar a un flujo de audio o vídeo. Los estados estándar son: pantalla completa, silenciar, closedCaptioning, pictureInPicture e inFocus. |
 | `opportunityEvent.addToOpportunity` | Este evento registra cuándo se añadió una persona a una oportunidad. |
 | `opportunityEvent.opportunityUpdated` | Este evento rastrea cuándo se actualizó una oportunidad. |
 | `opportunityEvent.removeFromOpportunity` | Este evento rastrea cuándo se eliminó una persona de una oportunidad. |

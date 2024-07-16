@@ -32,7 +32,7 @@ El SDK permite crear una instancia independiente para cada propiedad añadiendo 
 
 Como resultado, el script crea dos instancias del SDK. La función global para interactuar con la primera instancia se denomina `titanium` y la función global para interactuar con la segunda instancia se denomina `copper`.
 
-Al crear dos instancias independientes, cada una se puede configurar para una propiedad diferente. Cualquier comunicación o persistencia de datos que se produzca debido a la interacción con `titanium` se mantiene aislado de `copper`.
+Al crear dos instancias independientes, cada una se puede configurar para una propiedad diferente. Cualquier comunicación o persistencia de datos que se produzca debido a la interacción con `titanium` se mantiene aislada de `copper`.
 
 Después del ejemplo anterior, puede ejecutar comandos utilizando cada instancia:
 
@@ -60,8 +60,8 @@ copper("sendEvent", {
 });
 ```
 
-Asegúrese de ejecutar el `configure` antes de ejecutar otros comandos en la misma instancia.
+Asegúrese de ejecutar el comando `configure` para cada instancia antes de ejecutar otros comandos en la misma instancia.
 
 >[!IMPORTANT]
 >
->Para evitar conflictos con las cookies, cada instancia del SDK web debe tener su propia instancia única `edgeConfigId` y su propio y único `orgId`.
+>Para evitar conflictos con las cookies, cada instancia del SDK web debe tener su propio `edgeConfigId` único y su propio `orgId` único.

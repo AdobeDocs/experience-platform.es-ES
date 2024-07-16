@@ -19,15 +19,15 @@ El siguiente vídeo tiene como objetivo ayudarle a comprender el asistente de IA
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
-Para iniciar el asistente de IA, seleccione **[!UICONTROL Icono de asistente de IA]** desde el encabezado superior de la interfaz de usuario de Experience Platform.
+Para iniciar el Asistente de IA, seleccione el **[!UICONTROL icono del Asistente de IA]** en el encabezado superior de la interfaz de usuario del Experience Platform.
 
-![La página de inicio del Experience Platform, con el icono Asistente de IA seleccionado y la interfaz del asistente de IA abierta.](./images/ai-assistant-full-icon.png)
+![La página de inicio del Experience Platform, con el icono del Asistente de IA seleccionado y la interfaz del Asistente de IA abierta.](./images/ai-assistant-full-icon.png)
 
-Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede utilizar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] para responder preguntas y comandos como:
+Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente información para empezar. Puede usar las opciones que se proporcionan en [!UICONTROL Ideas para empezar] a responder preguntas y comandos como:
 
 * [!UICONTROL ¿Cuál de mis audiencias está activada?]
 * [!UICONTROL ¿Qué es un esquema?]
-* [!UICONTROL Casos de uso comunes de Real-Time CDP]
+* [!UICONTROL Dime algunos casos de uso comunes de Real-Time CDP]
 
 ## Guía de IU del asistente de IA
 
@@ -35,11 +35,11 @@ Aparecerá la interfaz del Asistente de IA, que le proporcionará inmediatamente
 >
 >El siguiente flujo de trabajo es un ejemplo que utiliza el proceso de creación de esquemas de eventos de experiencia para ilustrar cómo puede utilizar el Asistente de IA al utilizar la interfaz de usuario de Experience Platform.
 
-Considere un caso de uso en el que esté creando una **Esquema de comercio de dispositivos en evento**. Durante el proceso de creación del esquema del evento de experiencia, se encuentra con el `eventType` field. &quot;En este punto, tiene la opción de salir del flujo de trabajo y consultar [conceptos básicos de una composición de esquema](../xdm/schema/composition.md) o puede utilizar AI Assistant para recuperar respuestas a sus preguntas y encontrar recursos adicionales a través de los vínculos de documentación recomendados por AI Assistant&quot;.
+Considere un caso de uso en el que esté creando un **Esquema de comercio de dispositivos en evento**. Durante el proceso de creación del esquema del evento de experiencia, se encuentra con el campo `eventType`. &quot;En este punto, tiene la opción de salir del flujo de trabajo y consultar los [conceptos básicos de una composición de esquema](../xdm/schema/composition.md) documentación, o puede utilizar el Asistente de IA para recuperar respuestas a sus preguntas y encontrar recursos adicionales a través de los vínculos de documentación recomendados por el Asistente de IA&quot;.
 
-Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el siguiente ejemplo, se proporciona un asistente de IA con la pregunta: &quot;**¿Qué es el campo eventType en un esquema ExperienceEvent?**&quot;
+Para empezar, escriba su pregunta en el cuadro de texto proporcionado. En el ejemplo siguiente, se proporciona el Asistente para IA con la pregunta: &quot;**¿Qué es el campo eventType en un esquema ExperienceEvent?**&quot;
 
-![Asistente de IA para Experience Platform con la siguiente pregunta preparada para la consulta: &quot;¿Qué es el campo eventType en un esquema ExperienceEvent?](./images/question.png)
+![Asistente de IA para el Experience Platform con la siguiente pregunta preparada para la consulta: &quot;¿Cuál es el campo eventType en un esquema ExperienceEvent?](./images/question.png)
 
 A continuación, el asistente de IA consulta su base de conocimiento y calcula una respuesta. Después de unos momentos, el Asistente de IA devuelve una respuesta y sugerencias relacionadas que puede utilizar como preguntas de seguimiento.
 
@@ -53,7 +53,7 @@ Esta sección describe las diferentes funciones del asistente de IA que puede ut
 
 ### Ver objetos de datos operativos {#view-operational-data-objects}
 
-Según la consulta, el asistente de IA proporciona información adicional perteneciente a los datos de la zona protegida. Para ver cómo se aplica la respuesta a la consulta a su zona protegida particular, seleccione **[!UICONTROL En su zona protegida].**
+Según la consulta, el asistente de IA proporciona información adicional perteneciente a los datos de la zona protegida. Para ver cómo se aplica la respuesta a su consulta a su zona protegida en particular, seleccione **[!UICONTROL En su zona protegida].**
 
 Al ver datos pertenecientes a su zona protegida, el Asistente de IA puede proporcionar vínculos directos a páginas de interfaz de usuario específicas que muestran los datos consultados.
 
@@ -61,7 +61,7 @@ Al ver datos pertenecientes a su zona protegida, el Asistente de IA puede propor
 
 En este ejemplo, el asistente de IA devuelve información adicional sobre los esquemas XDM existentes en la zona protegida, incluido su recuento total y los cinco campos más utilizados.
 
-![Se abre la ventana desplegable &quot;en la zona protegida&quot;, que muestra información adicional sobre los esquemas.](./images/in-your-sandbox.png)
+![Se abre la ventana desplegable &quot;en su zona protegida&quot;, que muestra información adicional sobre los esquemas.](./images/in-your-sandbox.png)
 
 +++
 
@@ -71,17 +71,17 @@ Puede verificar las respuestas que le devuelve AI Assistant revisando las citas 
 
 +++Seleccione esta opción para ver un ejemplo de cómo mostrar orígenes
 
-Para ver las citas y validar la respuesta del asistente de IA, seleccione **[!UICONTROL Mostrar orígenes]**.
+Para ver las citas y validar la respuesta del asistente de inteligencia artificial, seleccione **[!UICONTROL Mostrar orígenes]**.
 
-![La respuesta del asistente de IA con &quot;Mostrar fuentes&quot; seleccionado.](./images/show-sources.png)
+![Respuesta del Asistente de IA con &quot;Mostrar orígenes&quot; seleccionado.](./images/show-sources.png)
 
 El asistente de IA actualiza la interfaz y le proporciona vínculos a documentación que corrobora la respuesta inicial. Además, cuando las citas están habilitadas, el Asistente de IA actualiza la respuesta para incluir notas al pie de página que indican las partes específicas de la respuesta que hacen referencia a la documentación proporcionada.
 
-![Un menú desplegable de las citas que AI Assistant proporciona para preguntas de concepto.](./images/citations.png)
+![Menú desplegable de las citas que el Asistente de IA proporciona para las preguntas de concepto.](./images/citations.png)
 
-También puede utilizar las sugerencias que ofrece el Asistente de IA en **[!UICONTROL Sugerencias relacionadas]** para explorar más en profundidad los temas relacionados con la pregunta original.
+También puede usar las sugerencias que el Asistente de inteligencia artificial proporciona en **[!UICONTROL Sugerencias relacionadas]** para explorar más en profundidad los temas relacionados con su pregunta original.
 
-![Una lista de sugerencias proporcionadas por AI Assistant.](./images/related-suggestions.png)
+![Una lista de sugerencias proporcionadas por el Asistente de IA.](./images/related-suggestions.png)
 
 +++
 
@@ -91,27 +91,27 @@ Debe encontrarse en una zona protegida activa para que el asistente de IA respon
 
 +++Seleccione esta opción para ver un ejemplo de una pregunta de información operativa
 
-En el siguiente ejemplo, se realiza la siguiente consulta al asistente de IA: **&quot;Mostrar los flujos de datos creados con la fuente de Amazon S3&quot;**.
+En el ejemplo siguiente, se solicita al Asistente de IA la siguiente consulta: **&quot;Mostrar los flujos de datos creados con el origen de Amazon S3&quot;**.
 
-![Una pregunta sobre perspectivas operativas.](./images/op-insights-question.png)
+![Pregunta sobre perspectivas operacionales.](./images/op-insights-question.png)
 
 A continuación, el asistente de IA responde con una tabla que enumera los flujos de datos y sus ID correspondientes. Para ver toda la tabla de datos, seleccione el icono de expansión en la parte superior derecha.
 
-![Una respuesta de perspectivas operativas](./images/op-insights-answer.png)
+![Una respuesta de información operativa](./images/op-insights-answer.png)
 
 Aparece una vista expandida de la tabla, que le proporciona una lista más completa de flujos de datos basados en los parámetros de la consulta.
 
-![Una vista de la tabla expandida.](./images/table.png)
+![Vista de la tabla expandida.](./images/table.png)
 
-Cuando se le solicita una pregunta de perspectivas operativas, AI Assistant proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, AI Assistant describe los pasos que realizó para identificar los flujos de datos creados con el [!DNL Amazon S3] origen.
+Cuando se le solicita una pregunta de perspectivas operativas, AI Assistant proporciona una explicación de cómo calculó la respuesta. En el ejemplo siguiente, el Asistente de IA describe los pasos que realizó para identificar los flujos de datos creados con el origen [!DNL Amazon S3].
 
-![Un asistente de IA que proporciona una explicación sobre cómo calcula su respuesta.](./images/answer-explained.png)
+![Asistente de IA que proporciona una explicación sobre cómo calculó su respuesta.](./images/answer-explained.png)
 
 También puede proporcionar filtros y modificaciones a las preguntas, y puede indicar al Asistente de inteligencia artificial que procese sus conclusiones en función de los filtros que incluya. Por ejemplo, puede pedir al Asistente de IA que le muestre una tendencia del recuento de definiciones de segmento en el orden de su fecha de creación, elimine definiciones de segmento con perfiles totales cero y utilice nombres de mes en lugar de enteros al mostrar los datos.
 
-**Nota:** Las respuestas de Operational Insights se encuentran actualmente en fase beta. Seleccione el icono de información de objeto en la interfaz de usuario del Ayudante de IA para ver el aviso Beta y un vínculo a la documentación.
+**Nota:** Las respuestas de Operational Insights se encuentran actualmente en fase beta. Seleccione el icono de información de objeto en la interfaz de usuario del asistente de IA para ver el aviso de Beta y un vínculo a la documentación.
 
-![Icono de información del asistente de IA seleccionado.](./images/op-insights-beta-note.png)
+![Icono de información sobre herramientas del Ayudante de IA seleccionado.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -121,9 +121,9 @@ Puede verificar cada respuesta relacionada con las preguntas de información ope
 
 +++Selecciónelo para ver un ejemplo de verificación de las respuestas de perspectivas operativas
 
-Después de recibir una respuesta para una pregunta de información operativa, seleccione **[!UICONTROL Mostrar orígenes]** y luego seleccione **[!UICONTROL Ver consulta de origen]**.
+Después de recibir una respuesta para una pregunta de información operativa, seleccione **[!UICONTROL Mostrar orígenes]** y, a continuación, seleccione **[!UICONTROL Ver consulta de origen]**.
 
-![ver consulta de origen](./images/view-source-query.png)
+![consulta de origen de vista](./images/view-source-query.png)
 
 Cuando se consulta con una pregunta de información operativa, el Asistente de IA proporciona una consulta SQL que puede utilizar para verificar el proceso que llevó calcular su respuesta. Esta consulta de origen es solo para fines de verificación y no se admite en el servicio de consultas.
 
@@ -137,7 +137,7 @@ Puede utilizar la función de autocompletar para recibir una lista de los objeto
 
 +++Seleccione esta opción para ver un ejemplo de autocompletado
 
-Se puede utilizar el completado automático incluyendo el símbolo más (**`+`**) en la consulta. Como alternativa, también puede seleccionar el signo más (**`+`**) situado en la parte inferior del cuadro de entrada de texto. Aparece una ventana con una lista de los objetos de datos recomendados de la zona protegida.
+Puede utilizar el completado automático incluyendo el símbolo más (**`+`**) en la consulta. Como alternativa, también puede seleccionar el signo más (**`+`**) situado en la parte inferior del cuadro de entrada de texto. Aparece una ventana con una lista de los objetos de datos recomendados de la zona protegida.
 
 ![Ejemplo de autocompletar](./images/autocomplete.png)
 
@@ -161,7 +161,7 @@ Puede cambiar los temas con el Asistente de IA restableciendo e iniciando una nu
 
 +++Seleccione esta opción para ver un ejemplo de cómo restablecer la conversación
 
-Para restablecer, seleccione los puntos suspensivos (**`...`**) en la interfaz del asistente de IA y, a continuación, seleccione **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
+Para restablecer, selecciona los puntos suspensivos (**`...`**) en la interfaz del Asistente de IA y, a continuación, selecciona **[!UICONTROL Iniciar nueva conversación]**. Esto informa al Asistente de IA de que tiene intención de cambiar los temas y puede resultar especialmente útil para solucionar problemas de consultas que dan error o hacen referencia a información incorrecta.
 
 ![Los puntos suspensivos seleccionados y la opción Iniciar nueva conversación seleccionada.](./images/reset.png)
 
@@ -175,11 +175,11 @@ Puede utilizar la función de detección del asistente de IA para ver una lista 
 
 Para ver la detección, seleccione el icono de la bombilla en el encabezado superior de la interfaz del asistente de IA.
 
-![La función de detección del asistente de IA.](./images/lightbulb.png)
+![Característica de detección del Asistente para IA.](./images/lightbulb.png)
 
-A continuación, seleccione una categoría y, a continuación, seleccione una solicitud de la lista proporcionada. Puede utilizar esta función para tener una mejor idea de los tipos de preguntas que AI Assistant puede responder. También puede actualizar las solicitudes preexistentes con detalles específicos relacionados con su zona protegida utilizando texto libre o [autocompletar](#use-auto-complete).
+A continuación, seleccione una categoría y, a continuación, seleccione una solicitud de la lista proporcionada. Puede utilizar esta función para tener una mejor idea de los tipos de preguntas que AI Assistant puede responder. También puedes actualizar las indicaciones preexistentes con detalles específicos que pertenecen a tu zona protegida usando texto libre o [autocompletar](#use-auto-complete).
 
-![El Ayudante de IA solicita la detección.](./images/prompt.png)
+![El Ayudante de IA solicita confirmación.](./images/prompt.png)
 
 +++
 
@@ -189,29 +189,29 @@ Puede proporcionar comentarios sobre su experiencia con el asistente de IA media
 
 Para proporcionar comentarios, seleccione los pulgares hacia arriba, hacia abajo o un indicador después de recibir una respuesta del asistente de IA y, a continuación, introduzca sus comentarios en el cuadro de texto proporcionado.
 
-![La opción de comentarios del asistente de IA.](./images/provide-feedback.png)
+![La opción de comentarios del Asistente de IA.](./images/provide-feedback.png)
 
 +++Seleccione para ver más ejemplos
 
 >[!BEGINTABS]
 
->[!TAB Pulgares hacia arriba]
+>[!TAB Pulgares arriba]
 
 Seleccione el icono de miniaturas hacia arriba para proporcionar comentarios sobre lo que ha salido bien con su experiencia con el asistente de IA.
 
-![La ventana de comentarios positivos.](./images/thumbs-up.png)
+![Ventana de comentarios positivos.](./images/thumbs-up.png)
 
->[!TAB Pulgar hacia abajo]
+>[!TAB Pulgares hacia abajo]
 
 Seleccione el icono de pulgares hacia abajo para proporcionar comentarios sobre lo que se puede mejorar en función de su experiencia con el asistente de IA. Durante este paso, también puede proporcionar comentarios específicos sobre la experiencia. Los comentarios proporcionados en los comentarios se revisan diariamente.
 
-![La ventana de comentarios negativos.](./images/thumbs-down.png)
+![Ventana de comentarios negativos.](./images/thumbs-down.png)
 
 >[!TAB Indicador]
 
 Seleccione el icono de indicador para proporcionar más informes sobre su experiencia con el asistente de IA.
 
-![La ventana de resultados del informe.](./images/flag.png)
+![Ventana de resultados del informe.](./images/flag.png)
 
 >[!ENDTABS]
 

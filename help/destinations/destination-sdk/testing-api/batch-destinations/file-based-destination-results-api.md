@@ -13,36 +13,36 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Esta página explica cómo utilizar el `/testing/destinationInstance` Punto final de API para ver los detalles completos de los resultados de las pruebas de destino basadas en archivos.
+Esta página explica cómo usar el extremo de API `/testing/destinationInstance` para ver los detalles completos de los resultados de las pruebas de destino basadas en archivos.
 
-Si ya ha [probó su destino](file-based-destination-testing-api.md) y recibió una respuesta de API válida, su destino funciona correctamente.
+Si ya ha [probado su destino](file-based-destination-testing-api.md) y ha recibido una respuesta de API válida, su destino funciona correctamente.
 
-Si desea ver información más detallada acerca del flujo de activación, puede utilizar el `results` de la propiedad [prueba de destino](file-based-destination-testing-api.md) respuesta de la variable, como se describe más adelante.
+Si desea ver información más detallada sobre el flujo de activación, puede utilizar la propiedad `results` de la respuesta de extremo [prueba de destino](file-based-destination-testing-api.md), tal como se describe más adelante.
 
 >[!NOTE]
 >
->Este extremo de API devuelve el mismo resultado que obtendría al usar el [API de Flow Service](../../../api/update-destination-dataflows.md) para monitorizar flujos de datos.
+>Este extremo de API devuelve el mismo resultado que obtendría al usar la [API de servicio de flujo](../../../api/update-destination-dataflows.md) para supervisar flujos de datos.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de usar el `/testing/destinationInstance` extremo, asegúrese de cumplir las siguientes condiciones:
+Antes de usar el extremo `/testing/destinationInstance`, asegúrese de cumplir las siguientes condiciones:
 
-* Tiene un destino basado en archivos existente creado mediante el Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform.
 * Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-  ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
-* Ya ha utilizado anteriormente [probó la configuración de destino](file-based-destination-testing-api.md)y recibió una respuesta de API válida, que incluye una `results` propiedad. Utilizará esto. `results` para probar aún más el destino.
+  ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
+* Anteriormente [probó la configuración de destino](file-based-destination-testing-api.md) y recibió una respuesta de API válida, que incluye una propiedad de `results`. Utilizará este valor `results` para probar aún más su destino.
 
 ## Ver resultados detallados de las pruebas de destino {#test-activation-results}
 
-Una vez que haya [validó la configuración de destino](file-based-destination-testing-api.md), puede ver los resultados detallados de la activación realizando una solicitud de GET al `authoring/testing/destinationInstance/` y proporciona el ID de instancia de destino del destino que está probando y los ID de ejecución de flujo de las audiencias activadas.
+Una vez que haya [validado su configuración de destino](file-based-destination-testing-api.md), podrá ver los resultados detallados de la activación realizando una solicitud de GET al extremo `authoring/testing/destinationInstance/` y proporcionando el identificador de la instancia de destino del destino que está probando, así como los identificadores de ejecución de flujo de las audiencias activadas.
 
-Puede encontrar la dirección URL de API completa que necesita utilizar en la `results` propiedad devuelta en el [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md).
+Puede encontrar la dirección URL de API completa que necesita usar en la propiedad `results` devuelta en la [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md).
 
 **Formato de API**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Parámetros de ruta | Descripción |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
+| `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la sección [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
 
 | Parámetros de cadena de consulta | Descripción |
 | -------- | ----------- |
-| `flowRunIds` | Los ID de ejecución de flujo correspondientes a las audiencias activadas. Puede encontrar los ID de ejecución de flujo en la `results` propiedad devuelta en el [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md). |
+| `flowRunIds` | Los ID de ejecución de flujo correspondientes a las audiencias activadas. Puede encontrar los ID de ejecución de flujo en la propiedad `results` devuelta en la [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md). |
 
 **Solicitud**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **Respuesta**
 
-La respuesta contiene los detalles completos del flujo de activación. Puede obtener la misma respuesta llamando a la función [API de Flow Service](../../../api/update-destination-dataflows.md) para monitorizar flujos de datos.
+La respuesta contiene los detalles completos del flujo de activación. Puede obtener la misma respuesta llamando a la [API de Flow Service](../../../api/update-destination-dataflows.md) para supervisar los flujos de datos.
 
 ```json
 {
@@ -219,4 +219,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 Después de leer este documento, ahora sabe cómo probar la configuración de destino basada en archivos y ver los detalles completos de los resultados de activación.
 
-Si está creando un destino público, ahora puede [envíe su configuración de destino](../../guides/submit-destination.md) al Adobe para su revisión.
+Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) al Adobe para que la revisen.

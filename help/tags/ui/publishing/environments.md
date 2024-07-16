@@ -4,8 +4,8 @@ description: Conozca el concepto de entornos de etiqueta y cómo funcionan dentr
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 97%
+source-wordcount: '1462'
+ht-degree: 96%
 
 ---
 
@@ -91,7 +91,7 @@ Seleccione **[!UICONTROL Host]** para elegir un host preconfigurado para el ento
 
 ![](./images/environments/select-host.png)
 
-Cuando se crea una compilación, esta se envía a la ubicación especificada para el host asignado. Para obtener información sobre cómo crear y configurar hosts de etiquetas, consulte la [información general sobre hosts](./hosts/hosts-overview.md).
+Cuando se crea una compilación, esta se envía a la ubicación especificada para el host asignado. Para obtener información sobre cómo crear y configurar hosts de etiquetas, consulte la [descripción general de hosts](./hosts/hosts-overview.md).
 
 ### Configuración de archivo {#archive}
 
@@ -129,7 +129,7 @@ Para obtener más información sobre esta configuración, consulte la guía de [
 
 #### Implementación sincrónica
 
-Cuando el explorador lee un código incrustado mediante una implementación síncrona, recupera la biblioteca de etiquetas y la ejecuta antes de continuar cargando la página.
+Cuando el explorador lee un código incrustado mediante una implementación sincrónica, recupera la biblioteca de etiquetas y la ejecuta antes de continuar cargando la página.
 
 Los códigos incrustados sincrónicos constan de dos etiquetas `<script>` que deben colocarse dentro del HTML del sitio web. Una etiqueta `<script>` debe colocarse en el documento `<head>`, mientras que la otra debe colocarse justo antes de la etiqueta `</body>` de cierre.
 

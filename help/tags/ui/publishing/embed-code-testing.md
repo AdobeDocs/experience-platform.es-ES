@@ -21,7 +21,7 @@ Según vaya realizando cambios en las compilaciones de su biblioteca de etiqueta
 
 Este tutorial requiere una comprensión práctica del uso de entornos y códigos incrustados para etiquetas. Consulte la [información general de los entornos](./environments.md) para obtener más detalles.
 
-Este tutorial también requiere que tenga instalada la extensión del explorador de Platform Debugger. Platform Debugger está disponible para el navegador Chrome. Utilice el siguiente vínculo para instalar la extensión antes de iniciar el tutorial:
+Este tutorial también requiere que tenga instalada la extensión del explorador de Platform Debugger. Platform Debugger está disponible para el explorador Chrome. Utilice el siguiente vínculo para instalar la extensión antes de iniciar el tutorial:
 
 * [Platform Debugger para Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 

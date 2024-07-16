@@ -6,7 +6,7 @@ description: Varias herramientas de extracción, transformación y carga (ETL) p
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Varias herramientas de extracción, transformación y carga (ETL) pueden tener u
 
 Los siguientes diagramas proporcionan maquetas de acciones comunes de ETL y una experiencia de usuario genérica basada en interacciones estándar. Estas imágenes pueden adaptarse fácilmente a la experiencia específica del usuario de ETL.
 
-Las acciones que se ilustran a continuación se describen en los pasos descritos en la sección [Guía de integración de ETL](home.md). Algunos pasos hacen referencia a &quot;Figuras&quot; específicas, otros describen acciones similares al flujo de trabajo que se muestra aquí.
+Las acciones ilustradas a continuación se describen en los pasos descritos en la [Guía de integración de ETL](home.md). Algunos pasos hacen referencia a &quot;Figuras&quot; específicas, otros describen acciones similares al flujo de trabajo que se muestra aquí.
 
 ### Figura 1: Configuración del nuevo conector de Adobe Experience Platform:
 
 ![](images/image2.png)
 
-### Figura 2 - [!DNL Experience Platform] Conector activado:
+### Figura 2: Conector [!DNL Experience Platform] activado:
 
 ![](images/image3.png)
 
@@ -33,11 +33,11 @@ Las acciones que se ilustran a continuación se describen en los pasos descritos
 
 ![](images/image4.png)
 
-### Figura 4: Nueva interfaz de usuario de transformación, selección [!DNL Experience Platform] Conexión:
+### Figura 4: Nueva interfaz de usuario de transformación al seleccionar [!DNL Experience Platform] conexión:
 
 ![](images/image5.png)
 
-### Figura 5: Búsqueda del origen [!DNL Experience Platform] Conjuntos de datos:
+### Figura 5: Exploración de los conjuntos de datos de origen [!DNL Experience Platform]:
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ Las acciones que se ilustran a continuación se describen en los pasos descritos
 
 ![](images/image10.png)
 
-### Figura 10: Definición de [!DNL Experience Data Model] Conjunto de datos de destino (XDM):
+### Figura 10: Definición del conjunto de datos de destino [!DNL Experience Data Model] (XDM):
 
 ![](images/image11.png)
 

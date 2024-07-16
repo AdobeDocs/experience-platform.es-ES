@@ -22,9 +22,9 @@ Los paneles proporcionan informes listos para usar sobre los datos de su organiz
 
 ## Introducción a los paneles
 
-Para ver y administrar los paneles, vaya a **[!UICONTROL Paneles]** en la interfaz de usuario (IU) de Experience Platform y seleccione la opción **[!UICONTROL Examinar]** para acceder al inventario del tablero.
+Para ver y administrar los paneles, vaya a **[!UICONTROL Paneles]** en la interfaz de usuario (IU) del Experience Platform y seleccione la pestaña **[!UICONTROL Examinar]** para acceder al inventario de paneles.
 
-También puede acceder a los paneles navegando a la sección adecuada dentro de la interfaz de usuario del panel que desee ver. Para ver el tablero de los perfiles, por ejemplo, vaya a **[!UICONTROL Perfiles]** Workspace y seleccione **[!UICONTROL Información general]** pestaña.
+También puede acceder a los paneles navegando a la sección adecuada dentro de la interfaz de usuario del panel que desee ver. Para ver el panel de los perfiles, por ejemplo, ve al área de trabajo de **[!UICONTROL Perfiles]** y selecciona la pestaña **[!UICONTROL Información general]**.
 
 Los datos de la instantánea muestran los datos exactamente como aparecen en el momento específico en el que se tomó. En otras palabras, la instantánea no es una aproximación o una muestra de los datos y los paneles no se actualizan en tiempo real.
 
@@ -34,7 +34,7 @@ Los datos de la instantánea muestran los datos exactamente como aparecen en el 
 
 ## Inventario del panel
 
-Para ver los pasos detallados sobre cómo usar la variable **[!UICONTROL Paneles]** espacio de trabajo para ver todos los paneles disponibles, consulte la [guía de inventario de panel](./inventory.md).
+Para ver los pasos detallados sobre cómo usar el área de trabajo **[!UICONTROL Paneles]** para ver todos los paneles disponibles, consulte la [guía de inventario de paneles](./inventory.md).
 
 ## Paneles disponibles
 

@@ -4,14 +4,14 @@ description: Los conjuntos de datos de ejemplo del servicio de consultas le perm
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # Ejemplos de conjuntos de datos
 
-El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas. Los conjuntos de datos de muestra se crean con muestras aleatorias uniformes de las existentes [!DNL Azure Data Lake Storage] Conjuntos de datos de (ADLS) que utilizan solo un porcentaje de registros del original. Este porcentaje se conoce como tasa de muestreo. Ajustar la tasa de muestreo para controlar el equilibrio de precisión y el tiempo de procesamiento le permite realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de la consulta.
+El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas. Los conjuntos de datos de muestra se crean con muestras aleatorias uniformes de conjuntos de datos de [!DNL Azure Data Lake Storage] (ADLS) existentes que utilizan solo un porcentaje de registros del original. Este porcentaje se conoce como tasa de muestreo. Ajustar la tasa de muestreo para controlar el equilibrio de precisión y el tiempo de procesamiento le permite realizar consultas exploratorias de big data con un tiempo de procesamiento muy reducido a costa de la precisión de la consulta.
 
 Dado que muchos usuarios no necesitan una respuesta exacta para una operación de agregado sobre un conjunto de datos, emitir una consulta aproximada para devolver una respuesta aproximada es más eficiente para consultas exploratorias en conjuntos de datos grandes. Como los conjuntos de datos de ejemplo contienen solo un porcentaje de los datos del conjunto de datos original, le permite intercambiar la precisión de la consulta para un tiempo de respuesta mejorado. En tiempo de lectura, el servicio de consultas debe analizar menos filas, lo que produce resultados más rápidos que si se consultara todo el conjunto de datos.
 
@@ -26,19 +26,19 @@ Para ayudarle a administrar los ejemplos para un procesamiento de consultas apro
 
 ## Introducción {#get-started}
 
-Para utilizar las funcionalidades de procesamiento de consultas de creación y eliminación detalladas en este documento, debe establecer el indicador de sesión en `true`. Desde la línea de comandos del Editor de consultas o del cliente PSQL, introduzca el `SET aqp=true;` comando.
+Para utilizar las capacidades de procesamiento de consultas de creación y eliminación detalladas en este documento, debe establecer el indicador de sesión en `true`. Desde la línea de comandos del Editor de consultas o del cliente PSQL, escriba el comando `SET aqp=true;`.
 
 >[!NOTE]
 >
 >Debe habilitar el indicador de sesión cada vez que inicie sesión en Platform.
 
-![El Editor de consultas con el comando &quot;SET aqp=true;&quot; resaltado.](../images/essential-concepts/set-session-flag.png)
+![Se resaltó el Editor de consultas con el comando &#39;SET aqp=true;&#39;.](../images/essential-concepts/set-session-flag.png)
 
 ## Crear una muestra de conjunto de datos aleatorio uniforme {#create-a-sample}
 
-Utilice el `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nombre de conjunto de datos para crear una muestra aleatoria uniforme a partir de ese conjunto de datos.
+Utilice el comando `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nombre de conjunto de datos para crear una muestra aleatoria uniforme a partir de ese conjunto de datos.
 
-La velocidad de muestreo es el porcentaje de registros tomados del conjunto de datos original. Puede controlar la velocidad de muestreo utilizando la variable `TABLESAMPLE SAMPLERATE` Palabras clave. En este ejemplo, el valor de 5,0 equivale a una velocidad de muestreo del 50 %. Un valor de 2,5 equivaldría a 25 %, etc.
+La velocidad de muestreo es el porcentaje de registros tomados del conjunto de datos original. Puede controlar la velocidad de muestreo utilizando las palabras clave `TABLESAMPLE SAMPLERATE`. En este ejemplo, el valor de 5,0 equivale a una velocidad de muestreo del 50 %. Un valor de 2,5 equivaldría a 25 %, etc.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-En los ejemplos proporcionados, el nombre de la tabla es `large_table`, la condición de filtro de la tabla original es `month(to_timestamp(timestamp)) in ('8', '9')`, y la tasa de muestreo es (X% de los datos filtrados), en este caso, `10`.
+En los ejemplos proporcionados, el nombre de tabla es `large_table`, la condición de filtro en la tabla original es `month(to_timestamp(timestamp)) in ('8', '9')` y la tasa de muestreo es (X% de los datos filtrados), en este caso, `10`.
 
 ## Ver la lista de muestras {#view-list-of-samples}
 
-Utilice el `sample_meta()` para ver la lista de ejemplos asociados a una tabla ADLS.
+Utilice la función `sample_meta()` para ver la lista de ejemplos asociados a una tabla ADLS.
 
 ```sql
 SELECT sample_meta('example_dataset_name')
@@ -89,7 +89,7 @@ La lista de ejemplos de conjuntos de datos se muestra con el formato del ejemplo
 
 ## Consultar el conjunto de datos de ejemplo {#query-sample-datasets}
 
-Utilice el `{EXAMPLE_DATASET_NAME}` para consultar directamente las tablas de ejemplo. Como alternativa, agregue `WITHAPPROXIMATE` al final de una consulta y el servicio de consulta utiliza automáticamente el ejemplo creado más recientemente.
+Use `{EXAMPLE_DATASET_NAME}` para consultar directamente las tablas de ejemplo. Como alternativa, agregue la palabra clave `WITHAPPROXIMATE` al final de una consulta y el servicio de consultas utilizará automáticamente el ejemplo creado más recientemente.
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

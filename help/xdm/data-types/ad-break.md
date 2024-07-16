@@ -5,11 +5,11 @@ exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 6%
+ht-degree: 21%
 
 ---
 
-# [!UICONTROL Pausa para anuncios] tipo de datos
+# [!UICONTROL Tipo de datos de la pausa publicitaria]
 
 [!UICONTROL Pausa para anuncios] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe cómo se inserta un anuncio cronometrado en un medio cronometrado.
 
@@ -19,7 +19,7 @@ ht-degree: 6%
 | --- | --- | --- |
 | `_dc.title` | Cadena | Un nombre descriptivo para la pausa publicitaria. |
 | `_id` | Cadena | Un identificador único de la pausa publicitaria. |
-| `offset` | Número entero | La diferencia en segundos de la pausa publicitaria desde el inicio del contenido principal. |
+| `offset` | Entero | La diferencia en segundos de la pausa publicitaria desde el inicio del contenido principal. |
 
 {style="table-layout:auto"}
 

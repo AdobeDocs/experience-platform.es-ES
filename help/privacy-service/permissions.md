@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo administrar permisos de usuario pa
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -57,7 +57,7 @@ La siguiente pantalla muestra una lista de perfiles de producto disponibles para
 
 Después de seleccionar un perfil de producto, puede usar la pestaña **[!UICONTROL Permisos]** para iniciar [editar permisos](#edit-permissions) para el perfil o seleccionar la pestaña **[!UICONTROL Usuarios]** para iniciar la [asignación de usuarios](#assign-users) al perfil.
 
-![La pestaña Permisos de un Admin Console de perfil de producto.](./images/permissions/users-permissions-tabs.png)
+![Ficha de permisos para un Admin Console de perfil de producto.](./images/permissions/users-permissions-tabs.png)
 
 ### Edición de permisos para el perfil {#edit-permissions}
 
@@ -69,21 +69,21 @@ Al editar permisos para un perfil, los permisos disponibles se incluyen en la co
 
 Los permisos se organizan en categorías. Para cambiar entre categorías, seleccione la que desee en el panel de navegación izquierdo.
 
-![El [!UICONTROL Desactivar la venta] sección en permisos.](./images/permissions/switch-category.png)
+![La sección [!UICONTROL Exclusión de la venta] con permisos.](./images/permissions/switch-category.png)
 
 Seleccionar **[!UICONTROL Guardar]** una vez que haya terminado de configurar los permisos.
 
-![La configuración de permisos para el perfil de producto con Guardar resaltado.](./images/permissions/save-permissions.png)
+![Se ha resaltado la configuración de permisos para el perfil de producto con Guardar.](./images/permissions/save-permissions.png)
 
 La vista de perfil de producto vuelve a aparecer con los permisos añadidos reflejados.
 
-![Los permisos añadidos para el perfil del producto.](./images/permissions/permissions-added.png)
+![Los permisos agregados para el perfil del producto.](./images/permissions/permissions-added.png)
 
 ### Asignación de usuarios al perfil {#assign-users}
 
 Para asignar usuarios al perfil de producto (y concederles los permisos configurados del perfil), seleccione la pestaña **[!UICONTROL Usuarios]**, y a continuación **[!UICONTROL Agregar usuario]**.
 
-![La pestaña Usuarios de un perfil de producto en Admin Console.](./images/permissions/manage-users.png)
+![La ficha Usuarios para un perfil de producto en el Admin Console.](./images/permissions/manage-users.png)
 
 Para obtener más información sobre la administración de usuarios para un perfil de producto, consulte la [Documentación de Admin Console](https://helpx.adobe.com/es/enterprise/using/manage-product-profiles.html).
 

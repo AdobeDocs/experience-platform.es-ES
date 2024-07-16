@@ -7,37 +7,37 @@ description: Este tutorial cubre los pasos para recuperar datos de un almacenami
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 2%
+source-wordcount: '1741'
+ht-degree: 3%
 
 ---
 
-# Cree un flujo de datos para fuentes de almacenamiento en la nube mediante [!DNL Flow Service] API
+# Crear un flujo de datos para orígenes de almacenamiento en la nube mediante la API [!DNL Flow Service]
 
-Este tutorial explica los pasos para recuperar datos de una fuente de almacenamiento en la nube y llevarlos a Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial trata los pasos para recuperar datos de una fuente de almacenamiento en la nube y llevarlos a Platform mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de almacenamiento en la nube. Si no tiene este ID, consulte la [información general de orígenes](../../../home.md#cloud-storage) para obtener una lista de orígenes de almacenamiento en la nube con los que puede crear una conexión base.
+>Para crear un flujo de datos, ya debe tener un ID de conexión base válido con un origen de almacenamiento en la nube. Si no tiene este identificador, consulte la [descripción general de orígenes](../../../home.md#cloud-storage) para obtener una lista de orígenes de almacenamiento en la nube con los que puede crear una conexión base.
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   - [Conceptos básicos de composición de esquemas](../../../../xdm/schema/composition.md): Obtenga información acerca de los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
-   - [Guía para desarrolladores de Schema Registry](../../../../xdm/api/getting-started.md): incluye información importante que necesita conocer para realizar llamadas correctamente a la API de Registro de esquemas. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado Aceptar y sus posibles valores).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): el catálogo es el sistema de registro para la ubicación y el linaje de los datos dentro del Experience Platform.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): el marco estandarizado mediante el cual el Experience Platform organiza los datos de experiencia del cliente.
+   - [Aspectos básicos de la composición de esquemas](../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
+   - [Guía para desarrolladores de Schema Registry](../../../../xdm/api/getting-started.md): Incluye información importante que necesita conocer para realizar correctamente llamadas a la API de Schema Registry. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado Aceptar y sus posibles valores).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): el catálogo es el sistema de registro para la ubicación de datos y el linaje dentro del Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): la API de ingesta por lotes le permite introducir datos en Experience Platform como archivos por lotes.
-- [Zonas protegidas](../../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Zonas protegidas](../../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../landing/api-guide.md).
 
 ## Crear una conexión de origen {#source}
 
-Puede crear una conexión de origen realizando una solicitud de POST a `sourceConnections` punto final de [!DNL Flow Service] API al proporcionar su ID de conexión base, la ruta al archivo de origen que desea introducir y el ID de especificación de conexión correspondiente de su origen.
+Puede crear una conexión de origen realizando una solicitud de POST al extremo `sourceConnections` de la API [!DNL Flow Service], al mismo tiempo que proporciona el identificador de conexión base, la ruta de acceso al archivo de origen que desea introducir y el identificador de especificación de conexión correspondiente del origen.
 
 Al crear una conexión de origen, también debe definir un valor de enumeración para el atributo de formato de datos.
 
@@ -93,14 +93,14 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `baseConnectionId` | El ID de conexión base del origen de almacenamiento en la nube. |
-| `data.format` | El formato de los datos que desea llevar a Platform. Los valores admitidos son: `delimited`, `JSON`, y `parquet`. |
+| `data.format` | El formato de los datos que desea llevar a Platform. Los valores admitidos son: `delimited`, `JSON` y `parquet`. |
 | `data.properties` | (Opcional) Conjunto de propiedades que se pueden aplicar a los datos al crear una conexión de origen. |
-| `data.properties.columnDelimiter` | (Opcional) Un delimitador de columna de un solo carácter que puede especificar al recopilar archivos planos. Cualquier valor de carácter único es un delimitador de columna admisible. Si no se proporciona, escriba una coma (`,`) se usa como valor predeterminado. **Nota**: La `columnDelimiter` La propiedad solo se puede utilizar al ingerir archivos delimitados. |
-| `data.properties.encoding` | (Opcional) Una propiedad que define el tipo de codificación que se utilizará al ingerir los datos en Platform. Los tipos de codificación admitidos son: `UTF-8` y `ISO-8859-1`. **Nota**: La `encoding` El parámetro solo está disponible al ingerir archivos CSV delimitados. Se incorporarán otros tipos de archivo con la codificación predeterminada, `UTF-8`. |
-| `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido para la ingesta. Los tipos de archivo comprimidos admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, y `tar`. **Nota**: La `compressionType` La propiedad solo se puede utilizar al ingerir archivos delimitados o JSON. |
-| `params.path` | La ruta del archivo de origen al que está accediendo. Este parámetro apunta a un archivo individual o a una carpeta completa.  **Nota**: Puede utilizar un asterisco en lugar del nombre del archivo para especificar la ingesta de una carpeta completa. Por ejemplo: `/acme/summerCampaign/*.csv` ingerirá la totalidad `/acme/summerCampaign/` carpeta. |
-| `params.type` | El tipo de archivo del archivo de datos de origen que está ingiriendo. Tipo de uso `file` para introducir un archivo individual y tipo de uso `folder` para introducir una carpeta completa. |
-| `connectionSpec.id` | El ID de especificación de conexión asociado con el origen de almacenamiento en la nube específico. Consulte la [apéndice](#appendix) para obtener una lista de los ID de especificación de conexión. |
+| `data.properties.columnDelimiter` | (Opcional) Un delimitador de columna de un solo carácter que puede especificar al recopilar archivos planos. Cualquier valor de carácter único es un delimitador de columna admisible. Si no se proporciona, se usa una coma (`,`) como valor predeterminado. **Nota**: la propiedad `columnDelimiter` solo se puede usar al ingerir archivos delimitados. |
+| `data.properties.encoding` | (Opcional) Una propiedad que define el tipo de codificación que se utilizará al ingerir los datos en Platform. Los tipos de codificación admitidos son: `UTF-8` y `ISO-8859-1`. **Nota**: el parámetro `encoding` solo está disponible cuando se ingieren archivos CSV delimitados. Se incorporarán otros tipos de archivo con la codificación predeterminada, `UTF-8`. |
+| `data.properties.compressionType` | (Opcional) Una propiedad que define el tipo de archivo comprimido para la ingesta. Los tipos de archivo comprimidos admitidos son: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` y `tar`. **Nota**: la propiedad `compressionType` solo se puede usar al ingerir archivos delimitados o JSON. |
+| `params.path` | La ruta del archivo de origen al que está accediendo. Este parámetro apunta a un archivo individual o a una carpeta completa.  **Nota**: puede usar un asterisco en lugar del nombre de archivo para especificar la ingesta de una carpeta entera. Por ejemplo: `/acme/summerCampaign/*.csv` ingerirá toda la carpeta `/acme/summerCampaign/`. |
+| `params.type` | El tipo de archivo del archivo de datos de origen que está ingiriendo. Use el tipo `file` para ingerir un archivo individual y el tipo `folder` para ingerir una carpeta completa. |
+| `connectionSpec.id` | El ID de especificación de conexión asociado con el origen de almacenamiento en la nube específico. Consulte el [apéndice](#appendix) para obtener una lista de los ID de especificación de conexión. |
 
 **Respuesta**
 
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **Solicitud**
 
-En el ejemplo siguiente, se utiliza una expresión regular en la ruta del archivo para especificar la ingesta de todos los archivos CSV que tienen `premium` en su nombre.
+En el ejemplo siguiente, se utiliza una expresión regular en la ruta de acceso del archivo para especificar la ingesta de todos los archivos CSV que tienen `premium` en su nombre.
 
 ```shell
 curl -X POST \
@@ -155,7 +155,7 @@ curl -X POST \
 
 ### Configurar una conexión de origen para introducir datos de forma recursiva
 
-Al crear una conexión de origen, puede utilizar el `recursive` para introducir datos de carpetas profundamente anidadas.
+Al crear una conexión de origen, puede utilizar el parámetro `recursive` para introducir datos de carpetas anidadas profundamente.
 
 **Formato de API**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Solicitud**
 
-En el ejemplo siguiente, la variable `recursive: true` el parámetro informa [!DNL Flow Service] para leer todas las subcarpetas de forma recursiva durante el proceso de ingesta.
+En el ejemplo siguiente, el parámetro `recursive: true` indica a [!DNL Flow Service] que lea todas las subcarpetas de forma recursiva durante el proceso de ingesta.
 
 ```shell
 curl -X POST \
@@ -198,21 +198,21 @@ curl -X POST \
 
 Para que los datos de origen se utilicen en Platform, se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, el esquema de destino se utiliza para crear un conjunto de datos de Platform en el que se incluyen los datos de origen.
 
-Se puede crear un esquema XDM de destino realizando una solicitud de POST a la variable [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Se puede crear un esquema XDM de destino realizando una solicitud de POST a la [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial sobre [creación de un esquema con la API](../../../../xdm/api/schemas.md).
+Para ver los pasos detallados sobre cómo crear un esquema XDM de destino, consulte el tutorial de [creación de un esquema mediante la API](../../../../xdm/api/schemas.md).
 
 ## Crear un conjunto de datos de destinatario {#target-dataset}
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), que proporcione el ID del esquema de destino en la carga útil.
 
-Para ver los pasos detallados sobre cómo crear un conjunto de datos de destinatario, consulte el tutorial sobre [creación de un conjunto de datos mediante la API](../../../../catalog/api/create-dataset.md).
+Para ver los pasos detallados sobre cómo crear un conjunto de datos de destino, consulte el tutorial de [creación de un conjunto de datos mediante la API](../../../../catalog/api/create-dataset.md).
 
 ## Creación de una conexión de destino {#target-connection}
 
-Una conexión de destino representa la conexión con el destino donde aterrizan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este ID de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una conexión de destino representa la conexión con el destino donde aterrizan los datos introducidos. Para crear una conexión de destino, debe proporcionar el ID de especificación de conexión fija asociado al lago de datos. Este id. de especificación de conexión es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos de un esquema de destino, un conjunto de datos de destino y el ID de especificación de conexión al lago de datos. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -252,13 +252,13 @@ curl -X POST \
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `data.schema.id` | El `$id` del esquema XDM de destino. |
-| `data.schema.version` | La versión del esquema. Se debe establecer este valor `application/vnd.adobe.xed-full+json;version=1`, que devuelve la última versión secundaria del esquema. |
-| `params.dataSetId` | El ID del conjunto de datos de destinatario generado en el paso anterior. **Nota**: Debe proporcionar un ID de conjunto de datos válido al crear una conexión de destino. Si la ID del conjunto de datos no es válida, se producirá un error. |
-| `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este ID es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.schema.version` | La versión del esquema. Este valor debe establecerse `application/vnd.adobe.xed-full+json;version=1`, que devuelve la última versión secundaria del esquema. |
+| `params.dataSetId` | El ID del conjunto de datos de destinatario generado en el paso anterior. **Nota**: debe proporcionar un identificador de conjunto de datos válido al crear una conexión de destino. Si la ID del conjunto de datos no es válida, se producirá un error. |
+| `connectionSpec.id` | ID de especificación de conexión utilizado para conectarse al lago de datos. Este identificador es: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Este ID es necesario en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) de la nueva conexión de destino. Este ID es necesario en pasos posteriores.
 
 ```json
 {
@@ -271,7 +271,7 @@ Una respuesta correcta devuelve el identificador único ( ) de la nueva conexió
 
 Para que los datos de origen se incorporen en un conjunto de datos de destino, primero deben asignarse al esquema de destino al que se adhiere el conjunto de datos de destino.
 
-Para crear un conjunto de asignaciones, realice una solicitud de POST al `mappingSets` punto final del [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) al proporcionar el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
+Para crear un conjunto de asignaciones, realice una solicitud de POST al extremo `mappingSets` de la [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) y proporcione el esquema XDM de destino `$id` y los detalles de los conjuntos de asignaciones que desee crear.
 
 >[!TIP]
 >
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la especificación de flujo de datos responsable de traer datos de su origen a Platform. La respuesta incluye la especificación de flujo única `id` necesario para crear un nuevo flujo de datos.
+Una respuesta correcta devuelve los detalles de la especificación de flujo de datos responsable de traer datos de su origen a Platform. La respuesta incluye la especificación de flujo única `id` necesaria para crear un nuevo flujo de datos.
 
 ```json
 {
@@ -587,11 +587,11 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 
 +++
 
-## Cree un flujo de datos
+## Creación de un flujo de datos
 
 El último paso para recopilar datos de almacenamiento en la nube es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
-- [ID de conexión de origen](#source)
+- [ID de conexión de Source](#source)
 - [ID de conexión de destino](#target)
 - [ID de asignación](#mapping)
 - [ID de especificación de flujo de datos](#specs)
@@ -600,13 +600,13 @@ Un flujo de datos es responsable de programar y recopilar datos de una fuente. P
 
 >[!NOTE]
 >
->Para la ingesta por lotes, cada flujo de datos posterior selecciona los archivos que se van a ingerir desde el origen en función de su **última modificación** marca de tiempo. Esto significa que los flujos de datos por lotes seleccionan archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo de datos.
+>Para la ingesta por lotes, cada flujo de datos subsiguiente selecciona los archivos que se van a ingerir de su origen en función de su marca de tiempo **última modificación**. Esto significa que los flujos de datos por lotes seleccionan archivos del origen que son nuevos o que se han modificado desde la última ejecución del flujo de datos.
 
-Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day`, o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
+Para programar una ingesta, primero debe establecer el valor de la hora de inicio en un tiempo récord en segundos. A continuación, debe establecer el valor de frecuencia en una de las cinco opciones: `once`, `minute`, `hour`, `day` o `week`. El valor de intervalo designa el periodo entre dos ingestas consecutivas y la creación de una ingesta única no requiere que se establezca un intervalo. Para todas las demás frecuencias, el valor del intervalo debe establecerse en igual o mayor que `15`.
 
 >[!IMPORTANT]
 >
->Se recomienda programar el flujo de datos para una ingesta única al utilizar [Conector de FTP](../../../connectors/cloud-storage/ftp.md).
+>Se recomienda programar el flujo de datos para una ingesta única al usar el [conector FTP](../../../connectors/cloud-storage/ftp.md).
 
 **Formato de API**
 
@@ -655,17 +655,17 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `flowSpec.id` | El [ID de especificación de flujo](#specs) recuperado en el paso anterior. |
-| `sourceConnectionIds` | El [ID de conexión de origen](#source) recuperado en un paso anterior. |
-| `targetConnectionIds` | El [ID de conexión de destino](#target-connection) recuperado en un paso anterior. |
-| `transformations.params.mappingId` | El [ID de asignación](#mapping) recuperado en un paso anterior. |
+| `flowSpec.id` | [ID de especificación de flujo](#specs) recuperado en el paso anterior. |
+| `sourceConnectionIds` | [Id. de conexión de origen](#source) recuperado en un paso anterior. |
+| `targetConnectionIds` | [Id. de conexión de destino](#target-connection) recuperado en un paso anterior. |
+| `transformations.params.mappingId` | [ID de asignación](#mapping) recuperado en un paso anterior. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado.
 
 ```json
 {
@@ -676,14 +676,14 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Monitorización del flujo de datos
 
-Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo monitorizar flujos de datos, consulte el tutorial sobre [monitorización de flujos de datos en la API](../monitor.md)
+Una vez creado el flujo de datos, puede monitorizar los datos que se están introduciendo a través de él para ver información sobre las ejecuciones de flujo, el estado de finalización y los errores. Para obtener más información sobre cómo supervisar flujos de datos, consulte el tutorial sobre [supervisión de flujos de datos en la API](../monitor.md)
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un conector de origen para recopilar datos del almacenamiento en la nube de forma programada. Ahora, los servicios de Platform posteriores pueden utilizar los datos entrantes, como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado un conector de origen para recopilar datos del almacenamiento en la nube de forma programada. Ahora, los servicios de la plataforma descendente como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace] pueden usar los datos entrantes. Consulte los siguientes documentos para obtener más información:
 
-- [Resumen del perfil del cliente en tiempo real](../../../../profile/home.md)
-- [Resumen de Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Información general del perfil del cliente en tiempo real](../../../../profile/home.md)
+- [Información general del espacio de trabajo de ciencia de datos](../../../../data-science-workspace/home.md)
 
 ## Apéndice {#appendix}
 
@@ -695,7 +695,7 @@ En la siguiente sección se enumeran los diferentes conectores de origen de alma
 | -------------- | --------------- |
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
 | [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
-| [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| [!DNL Azure Blob] (blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
 | [!DNL Azure Event Hubs] (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;conectores de origen;conector de origen;fuentes;fuentes de datos;fuente de datos;conexión de fuente de datos
 solution: Experience Platform
-title: Información general sobre conectores de origen
+title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
@@ -11,11 +11,11 @@ ht-degree: 2%
 
 ---
 
-# Información general sobre conectores de origen
+# Información general sobre conectores Source
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede ingerir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
+[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Platform. El servicio proporciona una interfaz de usuario y una API RESTful que le permite configurar conexiones de origen a varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticar sus sistemas de terceros, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
 Con Experience Platform, puede centralizar los datos que recopila de fuentes diferentes y utilizar las perspectivas obtenidas de él para hacer más.
 
@@ -28,7 +28,7 @@ Con Experience Platform, puede centralizar los datos que recopila de fuentes dif
 
 ## Fuentes creadas por Adobes y socios {#adobe-and-partner-built-sources}
 
-Algunos de los conectores del catálogo de fuentes de Experience Platform se crean y mantienen mediante Adobe, mientras que otros se crean y mantienen mediante empresas asociadas [SDK de fuentes](/help/sources/sources-sdk/overview.md). Una nota en la parte superior de la página de documentación para cada conector creado por el socio indica si el socio crea y mantiene una fuente. Por ejemplo, la variable [Conector de Amazon S3](/help/sources/connectors/cloud-storage/s3.md) se crea mediante el Adobe, mientras que la variable [Conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) es creado y mantenido por el equipo de RainFocus.
+Algunos de los conectores del catálogo de fuentes de Experience Platform se crean y mantienen mediante Adobe, mientras que otros se crean y mantienen mediante compañías asociadas con [Sources SDK](/help/sources/sources-sdk/overview.md). Una nota en la parte superior de la página de documentación para cada conector creado por el socio indica si el socio crea y mantiene una fuente. Por ejemplo, el [conector Amazon S3](/help/sources/connectors/cloud-storage/s3.md) se crea por Adobe, mientras que el [conector RainFocus](/help/sources/connectors/analytics/rainfocus.md) lo crea y mantiene el equipo RainFocus.
 
 En el caso de los conectores creados y mantenidos por el socio, esto significa que es posible que el equipo del socio tenga que resolver los problemas con el conector (método de contacto proporcionado en la nota de la página de documentación). Para problemas con los conectores creados y mantenidos por el Adobe, póngase en contacto con su representante de Adobe o con el Servicio de atención al cliente.
 
@@ -36,7 +36,7 @@ En el caso de los conectores creados y mantenidos por el socio, esto significa q
 
 Los orígenes de un Experience Platform se agrupan en las siguientes categorías:
 
-### aplicaciones de Adobe {#adobe-applications}
+### Aplicaciones de Adobe {#adobe-applications}
 
 Experience Platform permite la ingesta de datos desde otras aplicaciones de Adobe, incluidas Adobe Analytics y Adobe Audience Manager. Consulte los siguientes documentos relacionados para obtener más información:
 
@@ -51,9 +51,9 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 - [Resumen de origen de Adobe Commerce](connectors/adobe-applications/commerce.md)
 - [Resumen de fuente de recopilación de datos de Adobe](connectors/adobe-applications/data-collection.md)
    - [Crear una conexión de origen de Atributos del cliente en la IU](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] descripción general de origen](connectors/adobe-applications/marketo/marketo.md)
-   - [Crear un [!DNL Marketo Engage] conexión de origen en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [Crear un [!DNL Marketo Engage] conexión de origen y flujo de datos para datos de actividad personalizados](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+- [[!DNL Marketo Engage] información general de origen](connectors/adobe-applications/marketo/marketo.md)
+   - [Crear una  [!DNL Marketo Engage] conexión de origen en la interfaz de usuario](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Crear una conexión de origen y un flujo de datos de  [!DNL Marketo Engage] para los datos de actividad personalizados](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### Advertising {#advertising}
 
@@ -95,7 +95,7 @@ El Experience Platform de proporciona asistencia para la ingesta de datos desde 
 
 ### Administración de la relación con los clientes (CRM) {#customer-relationship-management}
 
-Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los clientes, lo que a su vez crea lealtad e impulsa la retención de clientes. El Experience Platform proporciona asistencia para la ingesta de datos CRM desde [!DNL Microsoft Dynamics 365] y [!DNL Salesforce]. Consulte los siguientes documentos relacionados para obtener más información:
+Los sistemas CRM proporcionan datos que pueden ayudar a crear relaciones con los clientes, lo que a su vez crea lealtad e impulsa la retención de clientes. El Experience Platform proporciona soporte para la ingesta de datos CRM de [!DNL Microsoft Dynamics 365] y [!DNL Salesforce]. Consulte los siguientes documentos relacionados para obtener más información:
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Lote]{type=Informative}
@@ -137,7 +137,7 @@ El Experience Platform proporciona asistencia para la ingesta de datos desde una
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Lote]{type=Informative}
 
-### Socios de datos e identidad {#data-partner}
+### Partners de datos e identidad {#data-partner}
 
 El Experience Platform proporciona asistencia para la ingesta de datos desde una base de datos de terceros. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
@@ -184,7 +184,7 @@ Experience Platform proporciona asistencia para la ingesta de datos desde un sis
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lote]{type=Informative}
 
-### Transmisión {#streaming}
+### Streaming {#streaming}
 
 El Experience Platform de proporciona asistencia para la ingesta de datos de fuentes de flujo continuo. Consulte los siguientes documentos relacionados para obtener más información sobre conectores de origen específicos:
 
@@ -199,17 +199,17 @@ El Experience Platform es compatible con la ingesta de datos desde un sistema de
 
 ## Control de acceso para orígenes en ingesta de datos
 
-Los permisos para las fuentes en la ingesta de datos se pueden administrar dentro de Adobe Admin Console. Puede acceder a los permisos a través de **[!UICONTROL Permisos]** en un perfil de producto en particular. Desde el **[!UICONTROL Editar permisos]** , puede acceder a los permisos pertenecientes a las fuentes a través de la variable **[!UICONTROL ingesta de datos]** entrada de menú. El **[!UICONTROL Ver orígenes]** otorga acceso de solo lectura a los orígenes disponibles en el **[!UICONTROL Catálogo]** pestaña y fuentes autenticadas en la **[!UICONTROL Examinar]** , mientras que la pestaña **[!UICONTROL Administrar fuentes]** el permiso concede acceso completo a la lectura, creación, edición y desactivación de orígenes.
+Los permisos para las fuentes en la ingesta de datos se pueden administrar dentro de Adobe Admin Console. Puede obtener acceso a los permisos a través de la ficha **[!UICONTROL Permisos]** en un perfil de producto concreto. Desde el panel **[!UICONTROL Editar permisos]**, puede acceder a los permisos que pertenecen a las fuentes a través de la entrada de menú **[!UICONTROL ingesta de datos]**. El permiso **[!UICONTROL Ver fuentes]** concede acceso de solo lectura a las fuentes disponibles en la ficha **[!UICONTROL Catálogo]** y a las fuentes autenticadas en la ficha **[!UICONTROL Examinar]**, mientras que el permiso **[!UICONTROL Administrar fuentes]** concede acceso completo para leer, crear, editar y deshabilitar fuentes.
 
 En la tabla siguiente se describe cómo se comporta la interfaz de usuario en función de diferentes combinaciones de estos permisos:
 
 | Nivel de permisos | Descripción |
 | ---- | ----|
-| **[!UICONTROL Ver orígenes]** Activado | Conceda acceso de sólo lectura a los orígenes de cada tipo de origen en la ficha Catálogo, así como a las fichas Examinar, Cuentas y Flujo de datos. |
-| **[!UICONTROL Administrar fuentes]** Activado | Además de las funciones incluidas en **[!UICONTROL Ver orígenes]**, concede acceso a **[!UICONTROL Conectar origen]** opción en **[!UICONTROL Catálogo]** y a **[!UICONTROL Seleccionar datos]** opción en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar fuentes]** también le permite activar o desactivar **[!UICONTROL DataFlows]** y editar sus programaciones. |
-| **[!UICONTROL Ver orígenes]** Desactivado y **[!UICONTROL Administrar fuentes]** Desactivado | Revocar todo acceso a orígenes. |
+| **[!UICONTROL Ver orígenes]** En | Conceda acceso de sólo lectura a los orígenes de cada tipo de origen en la ficha Catálogo, así como a las fichas Examinar, Cuentas y Flujo de datos. |
+| **[!UICONTROL Administrar Fuentes]** En | Además de las funciones incluidas en **[!UICONTROL Ver fuentes]**, concede acceso a la opción **[!UICONTROL Conectar Source]** en el **[!UICONTROL catálogo]** y a la opción **[!UICONTROL Seleccionar datos]** en **[!UICONTROL Examinar]**. **[!UICONTROL Administrar fuentes]** también le permite habilitar o deshabilitar **[!UICONTROL Flujos de datos]** y editar sus programaciones. |
+| **[!UICONTROL Ver fuentes]** desactivadas y **[!UICONTROL Administrar fuentes]** desactivadas | Revocar todo acceso a orígenes. |
 
-Para obtener más información sobre los permisos disponibles otorgados mediante Permisos de Adobe, lea la [información general de control de acceso](../access-control/home.md).
+Para obtener más información sobre los permisos disponibles otorgados mediante Permisos de Adobe, lea la [descripción general del control de acceso](../access-control/home.md).
 
 ### Control de acceso basado en atributos
 
@@ -221,20 +221,20 @@ Con el control de acceso basado en atributos, puede aplicar configuraciones de a
 
 >[!TIP]
 >
->El control de acceso basado en atributos funciona de la siguiente manera: **funciones** se crean para categorizar los tipos de usuarios que interactúan con la instancia de Platform. **Etiquetas** se aplican a **funciones** para designar el acceso de esa función determinada. **Etiquetas** también se aplican a recursos como campos de esquema y segmentos. Para que un usuario tenga acceso a determinados campos y segmentos de esquema, debe añadirlos a *un rol con la misma etiqueta asignada al recurso consultado*. Para obtener más información, lea la [guía completa de control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md).
+>El control de acceso basado en atributos funciona de la siguiente manera: **roles** se crean para categorizar los tipos de usuarios que interactúan con la instancia de Platform. **Las etiquetas** se han aplicado a **roles** para designar el acceso a ese rol dado. **Las etiquetas** también se aplican a recursos como campos de esquema y segmentos. Para que un usuario tenga acceso a ciertos campos y segmentos de esquema, debe agregarlos a *un rol con la misma etiqueta asignada al recurso consultado*. Para obtener más información, lea la [guía completa de control de acceso basado en atributos](../access-control/abac/end-to-end-guide.md).
 
 - Aplique etiquetas a los campos de esquema para definir el acceso a campos de esquema específicos de su organización. Una vez establecido el acceso a campos de esquema específicos, los usuarios solo podrán crear asignaciones para los campos a los que tengan acceso.
 - Los usuarios sin las funciones adecuadas no podrán crear ni actualizar flujos de datos con asignaciones que impliquen campos de esquema inaccesibles. Además, los usuarios no autorizados no pueden actualizar, eliminar, habilitar ni deshabilitar flujos de datos existentes con campos de esquema inaccesibles.
 - Además, un flujo de datos debe tener exactamente el mismo ID y versión de esquema en su asignación, conjunto de datos de destino y conexión de destino.
 
-Para obtener más información sobre el control de acceso basado en atributos, lea la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md).
+Para obtener más información sobre el control de acceso basado en atributos, lea la [descripción general del control de acceso basado en atributos](../access-control/abac/overview.md).
 
 ## Términos y condiciones {#terms-and-conditions}
 
-Al utilizar cualquiera de las Fuentes etiquetadas como beta (&quot;Beta&quot;), el Cliente reconoce por la presente que se proporciona la Beta ***&quot;tal cual&quot; sin garantía de ningún tipo***.
+Al usar cualquiera de las fuentes etiquetadas como beta (&quot;Beta&quot;), el Cliente reconoce por la presente que Beta se proporciona ***&quot;tal cual&quot; sin garantía de ningún tipo***.
 
-El Adobe no tendrá ninguna obligación de mantener, corregir, actualizar, cambiar, modificar o apoyar de otro modo la versión beta. Se le aconseja utilizar Informativo y no confiar en modo alguno en el correcto funcionamiento o rendimiento de dichos materiales beta y/o acompañantes. La versión beta se considera información confidencial de Adobe.
+El Adobe no tendrá ninguna obligación de mantener, corregir, actualizar, cambiar, modificar o de otro modo apoyar a Beta. Se le aconseja utilizar Informativo y no confiar en modo alguno en el correcto funcionamiento o rendimiento de dicho Beta y/o materiales de acompañamiento. Beta se considera información confidencial de Adobe.
 
-Cualquier &quot;comentario&quot; (información sobre la versión beta, incluidos, entre otros, problemas o defectos que encuentre al utilizar la versión beta, sugerencias, mejoras y recomendaciones) proporcionado por el Cliente al Adobe se asigna al Adobe, incluidos todos los derechos, el título y el interés en y para dichos comentarios.
+Cualquier &quot;comentario&quot; (información sobre Beta, incluidos, entre otros, problemas o defectos que encuentre al utilizar Beta, sugerencias, mejoras y recomendaciones) proporcionado por el cliente al Adobe se asigna por la presente al Adobe, incluidos todos los derechos, el título y el interés en y para dichos comentarios.
 
 Envíe comentarios abiertos o cree un ticket de asistencia para compartir sus sugerencias o informar de un error, y busque una mejora de las funciones.

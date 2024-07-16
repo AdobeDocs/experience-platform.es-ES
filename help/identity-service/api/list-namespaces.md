@@ -33,7 +33,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una matriz de objetos, cada uno de los cuales representa un área de nombres disponible. Áreas de nombres con un &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL false]&quot; son áreas de nombres estándar, mientras que las que tienen un &quot;[!UICONTROL personalizado]&quot; valor de &quot;[!UICONTROL true]&quot; son áreas de nombres que su organización ha creado.
+La respuesta incluye una matriz de objetos, cada uno de los cuales representa un área de nombres disponible. Las áreas de nombres con un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; son áreas de nombres estándar, mientras que las que tienen un valor &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; son áreas de nombres que su organización ha creado.
 
 >[!NOTE]
 >

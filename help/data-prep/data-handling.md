@@ -6,8 +6,8 @@ description: Este documento ofrece información general sobre cómo se administr
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 13%
+source-wordcount: '602'
+ht-degree: 11%
 
 ---
 
@@ -19,9 +19,9 @@ La preparación de datos puede gestionar de forma fiable diferentes formatos de 
 
 Si el tipo de origen es una cadena y el tipo de destino es un booleano, la preparación de datos puede analizar automáticamente el valor y convertirlo en un booleano.
 
-Los valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, y `TRUE` se analizan automáticamente para que sean `true`.
+Los valores `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` y `TRUE` se analizarán automáticamente para que sean `true`.
 
-Los valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`, y `FALSE` se analizan automáticamente para que sean `false`.
+Los valores `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` y `FALSE` se analizarán automáticamente para que sean `false`.
 
 ## Fechas {#dates}
 
@@ -40,10 +40,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{DATE}` | Requerido. Cadena que representa la fecha. |
-| `{FORMAT}` | Opcional. Cadena que representa el formato de la fecha de origen. Encontrará más información sobre el formato de cadena en la [sección de cadena de formato de fecha y hora](#format). |
+| `{FORMAT}` | Opcional. Cadena que representa el formato de la fecha de origen. Encontrará más información sobre el formato de cadena en la [sección de cadenas de formato de fecha y hora](#format). |
 | `{DEFAULT_DATE}` | Opcional. La fecha predeterminada que se devolverá si la fecha proporcionada es nula. |
 
-Por ejemplo, la expresión `date(orderDate, "yyyy-MM-dd")` convertirá un `orderDate` valor de &quot;31 de diciembre de 2020&quot; en un valor datetime de &quot;2020-12-31&quot;.
+Por ejemplo, la expresión `date(orderDate, "yyyy-MM-dd")` convertirá un valor `orderDate` de &quot;31 de diciembre de 2020&quot; en un valor de fecha y hora de &quot;2020-12-31&quot;.
 
 ### Conversiones de función de fecha
 
@@ -108,4 +108,4 @@ En la tabla siguiente se muestra qué letras de patrón se definen para las cade
 
 ## Mapas {#maps}
 
-Actualmente, no se admiten mapas en [!DNL Data Prep].
+Actualmente no se admiten mapas en [!DNL Data Prep].

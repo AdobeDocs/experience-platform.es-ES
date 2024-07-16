@@ -17,9 +17,9 @@ Los extremos de recopilación de datos interactivos reciben un único evento y s
 
 >[!IMPORTANT]
 >
->El `/interact` El extremo está diseñado principalmente para que lo utilicen los SDK de Experience Platform. Este punto de conexión está sujeto a cambios adicionales y su comportamiento puede evolucionar sin previo aviso. Por ejemplo, en el futuro, se podrían añadir nuevos elementos a la carga útil de respuesta.
+>El extremo `/interact` está diseñado principalmente para que lo utilicen los SDK de Experience Platform. Este punto de conexión está sujeto a cambios adicionales y su comportamiento puede evolucionar sin previo aviso. Por ejemplo, en el futuro, se podrían añadir nuevos elementos a la carga útil de respuesta.
 
-La respuesta del servidor incluye una o más `Handle` como se muestra a continuación.
+La respuesta del servidor incluye uno o más objetos `Handle`, como se muestra a continuación.
 
 ## Ejemplo de llamada de API
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Respuesta {#response}
 
-Una respuesta correcta devuelve el estado HTTP. `200 OK`, con uno o más `Handle` según los servicios perimetrales en tiempo real habilitados en la configuración del conjunto de datos.
+Una respuesta correcta devuelve el estado HTTP `200 OK`, con uno o más objetos `Handle`, según los servicios perimetrales en tiempo real habilitados en la configuración de secuencia de datos.
 
 ```json
 {

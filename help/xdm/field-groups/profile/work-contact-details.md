@@ -18,14 +18,14 @@ ht-degree: 2%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles de contacto de trabajo] es un grupo de campos de esquema estándar para [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona varios campos que capturan información laboral relativa a una persona individual, como la dirección de trabajo, el correo electrónico de trabajo, el número de teléfono de trabajo y las organizaciones a las que pertenece la persona.
+[!UICONTROL Detalles del contacto de trabajo] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md). El grupo de campos proporciona varios campos que capturan información laboral relativa a una persona individual, como la dirección de trabajo, el correo electrónico de trabajo, el número de teléfono de trabajo y las organizaciones a las que pertenece la persona.
 
 ![](../../images/field-groups/work-contact-details.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `workAddress` | [Dirección postal](../../data-types/postal-address.md) | Describe la dirección de trabajo de la persona. |
-| `workEmail` | [Correo electrónico](../../data-types/email-address.md) | Describe la dirección de correo electrónico de trabajo de la persona. |
+| `workEmail` | [Dirección de correo electrónico](../../data-types/email-address.md) | Describe la dirección de correo electrónico de trabajo de la persona. |
 | `workPhone` | [Número de teléfono](../../data-types/phone-number.md) | Describe el número de teléfono de trabajo de la persona. |
 | `organizations` | Cadena (matriz) | Matriz de cadenas de forma libre que representan las organizaciones a las que pertenece la persona. |
 

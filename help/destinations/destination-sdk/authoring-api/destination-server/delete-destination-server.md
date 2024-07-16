@@ -4,14 +4,14 @@ title: Eliminar una configuración de servidor de destino
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 1%
 
 ---
 
 # Eliminar una configuración de servidor de destino
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de servidor de destino existente mediante `/authoring/destination-servers` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de servidor de destino existente mediante el extremo de API `/authoring/destination-servers`.
 
 Para obtener una descripción detallada de las funciones que puede eliminar a través de este extremo, lea los siguientes artículos:
 
@@ -22,21 +22,21 @@ Para obtener una descripción detallada de las funciones que puede eliminar a tr
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Eliminar una configuración de servidor de destino {#delete}
 
-Puede eliminar un [existente](create-destination-server.md) configuración del servidor de destino realizando una `DELETE` solicitud a la `/authoring/destination-servers` punto final con `{INSTANCE_ID}`de la configuración del servidor de destino que desea eliminar.
+Puede eliminar una configuración de servidor de destino [existente](create-destination-server.md) realizando una solicitud `DELETE` al extremo `/authoring/destination-servers` con el `{INSTANCE_ID}`de la configuración de servidor de destino que desea eliminar.
 
 >[!TIP]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Para obtener una configuración existente del servidor de destino y sus `{INSTANCE_ID}`, consulte el artículo sobre [recuperación de una configuración de servidor de destino](retrieve-destination-server.md).
+Para obtener una configuración de servidor de destino existente y su correspondiente `{INSTANCE_ID}`, vea el artículo acerca de [recuperar una configuración de servidor de destino](retrieve-destination-server.md).
 
 **Formato de API**
 
@@ -46,7 +46,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | El `ID` de la configuración del servidor de destino que desea eliminar. |
+| `{INSTANCE_ID}` | `ID` de la configuración del servidor de destino que desea eliminar. |
 
 +++Solicitud
 
@@ -68,7 +68,7 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo eliminar un servidor de destino existente a través del Destination SDK `/authoring/destination-servers` Extremo de API.
+Después de leer este documento, ahora sabe cómo eliminar un servidor de destino existente a través del extremo de API del Destination SDK `/authoring/destination-servers`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

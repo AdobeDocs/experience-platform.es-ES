@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /callbacks en la API de Reac
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 96%
+source-wordcount: '606'
+ht-degree: 97%
 
 ---
 

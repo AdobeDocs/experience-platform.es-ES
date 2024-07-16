@@ -7,43 +7,43 @@ description: Este tutorial cubre los pasos para recuperar información sobre un 
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '643'
+ht-degree: 14%
 
 ---
 
 # Recuperación de lotes con errores mediante la API de acceso a datos
 
-Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede utilizar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta por secuencias, que le permite insertar sus datos en [!DNL Platform] uso de extremos de transmisión en tiempo real.
+Adobe Experience Platform proporciona dos métodos para cargar e ingerir datos. Puede usar la ingesta por lotes, que le permite insertar sus datos mediante varios tipos de archivo (como CSV), o la ingesta por transmisión, que le permite insertar sus datos en [!DNL Platform] mediante extremos de transmisión en tiempo real.
 
-Este tutorial trata los pasos para recuperar información sobre un lote fallido mediante [!DNL Data Ingestion] API.
+Este tutorial cubre los pasos para recuperar información sobre un lote fallido mediante las API [!DNL Data Ingestion].
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 - [[!DNL Data Ingestion]](../home.md): métodos mediante los cuales se pueden enviar datos a [!DNL Experience Platform].
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen al [!DNL Schema Registry], están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Schema Registry], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado adicional:
 
@@ -51,7 +51,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Lote con errores de muestra
 
-Este tutorial utilizará datos de ejemplo con una marca de tiempo con formato incorrecto que establece el valor del mes en. **00**, como se ve a continuación:
+Este tutorial usará datos de ejemplo con una marca de tiempo con formato incorrecto que establece el valor del mes en **00**, como se ve a continuación:
 
 ```json
 {
@@ -133,7 +133,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Con la respuesta anterior, puede ver qué fragmentos del lote se realizaron correctamente y cuáles fallaron. En esta respuesta, puede ver que el archivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene el lote fallido.
+Con la respuesta anterior, puede ver qué fragmentos del lote se realizaron correctamente y cuáles fallaron. A partir de esta respuesta, puede ver que el archivo `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene el lote con errores.
 
 ## Descargar el lote fallido
 
@@ -184,7 +184,7 @@ Dado que el lote introducido anteriormente tenía una fecha y hora no válidas, 
 
 ## Pasos siguientes
 
-Después de leer este tutorial, ha aprendido a recuperar errores de lotes fallidos. Para obtener más información sobre la ingesta por lotes, lea la [guía para desarrolladores de ingesta por lotes](../batch-ingestion/overview.md). Para obtener más información sobre la ingesta por streaming, lea la [tutorial creación de una conexión de flujo continuo](../tutorials/create-streaming-connection.md).
+Después de leer este tutorial, ha aprendido a recuperar errores de lotes fallidos. Para obtener más información sobre la ingesta por lotes, lea la [guía para desarrolladores de ingesta por lotes](../batch-ingestion/overview.md). Para obtener más información sobre la ingesta de transmisión por secuencias, lea el [tutorial sobre la creación de una conexión de transmisión por secuencias](../tutorials/create-streaming-connection.md).
 
 ## Apéndice
 
@@ -211,7 +211,7 @@ Este error se muestra si el ID de organización que falta en la carga no es vál
 
 ### Falta el esquema XDM
 
-Este error se muestra si la variable `schemaRef` para el `xdmMeta` falta.
+Este error se muestra si falta el `schemaRef` para `xdmMeta`.
 
 ```json
 {
@@ -226,7 +226,7 @@ Este error se muestra si la variable `schemaRef` para el `xdmMeta` falta.
 
 ### Falta el nombre de origen
 
-Este error se muestra si la variable `source` en el encabezado falta su `name`.
+Este error se muestra si a `source` del encabezado le falta su `name`.
 
 ```json
 {

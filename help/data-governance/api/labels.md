@@ -14,19 +14,19 @@ ht-degree: 4%
 
 # Extremo de etiquetas
 
-Las etiquetas de uso de datos le permiten categorizar los datos según las políticas de uso que puedan aplicarse a esos datos. El `/labels` punto final en la [!DNL Policy Service API] le permite administrar mediante programación las etiquetas de uso de datos dentro de la aplicación de experiencia.
+Las etiquetas de uso de datos le permiten categorizar los datos según las políticas de uso que puedan aplicarse a esos datos. El extremo `/labels` en [!DNL Policy Service API] le permite administrar mediante programación las etiquetas de uso de datos dentro de su aplicación de experiencia.
 
 >[!NOTE]
 >
->El `/labels` el punto de conexión solo se utiliza para recuperar, crear y actualizar etiquetas de uso de datos. Para ver los pasos sobre cómo añadir etiquetas a conjuntos de datos y campos mediante llamadas a la API, consulte la guía de [administrar etiquetas de conjuntos de datos](../labels/dataset-api.md).
+>El extremo `/labels` solo se usa para recuperar, crear y actualizar etiquetas de uso de datos. Para ver los pasos sobre cómo agregar etiquetas a conjuntos de datos y campos mediante llamadas API, consulte la guía sobre [administración de etiquetas de conjuntos de datos](../labels/dataset-api.md).
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
 
 ## Recuperación de una lista de etiquetas {#list}
 
-Puede enumerar todos `core` o `custom` mediante una solicitud de GET a `/labels/core` o `/labels/custom`, respectivamente.
+Puede enumerar todas las etiquetas `core` o `custom` realizando una solicitud de GET a `/labels/core` o `/labels/custom`, respectivamente.
 
 **Formato de API**
 
@@ -108,7 +108,7 @@ Una respuesta correcta devuelve una lista de etiquetas personalizadas recuperada
 
 ## Búsqueda de una etiqueta {#look-up}
 
-Puede buscar una etiqueta específica incluyendo la de `name` propiedad en la ruta de una petición de GET a [!DNL Policy Service] API.
+Puede buscar una etiqueta específica incluyendo la propiedad `name` de esa etiqueta en la ruta de una solicitud de GET a la API [!DNL Policy Service].
 
 **Formato de API**
 
@@ -119,11 +119,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{LABEL_NAME}` | El `name` de la etiqueta personalizada que desea buscar. |
+| `{LABEL_NAME}` | La propiedad `name` de la etiqueta personalizada que desea buscar. |
 
 **Solicitud**
 
-La siguiente solicitud recupera la etiqueta personalizada `L2`, tal como se indica en la ruta.
+La siguiente solicitud recupera la etiqueta personalizada `L2`, tal como se indica en la ruta de acceso.
 
 ```shell
 curl -X GET \
@@ -162,7 +162,7 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
 
 ## Crear o actualizar una etiqueta personalizada {#create-update}
 
-Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT a [!DNL Policy Service] API.
+Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT a la API [!DNL Policy Service].
 
 **Formato de API**
 
@@ -172,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{LABEL_NAME}` | El `name` de una etiqueta personalizada. Si no existe una etiqueta personalizada con este nombre, se creará una nueva. Si existe una, se actualizará esa etiqueta. |
+| `{LABEL_NAME}` | La propiedad `name` de una etiqueta personalizada. Si no existe una etiqueta personalizada con este nombre, se creará una nueva. Si existe una, se actualizará esa etiqueta. |
 
 **Solicitud**
 
-La siguiente solicitud crea una etiqueta nueva, `L3`, que tiene como objetivo describir datos que contienen información relacionada con los planes de pago seleccionados de los clientes.
+La siguiente solicitud crea una etiqueta nueva, `L3`, que tiene como objetivo describir los datos que contienen información relacionada con los planes de pago seleccionados de los clientes.
 
 ```shell
 curl -X PUT \
@@ -228,4 +228,4 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada, con c
 
 ## Pasos siguientes
 
-Esta guía trata sobre el uso de `/labels` en la API del servicio de directivas. Para ver los pasos sobre cómo aplicar etiquetas a conjuntos de datos y campos, consulte la [guía de API de etiquetas de conjuntos de datos](../labels/dataset-api.md).
+En esta guía se describe el uso del extremo `/labels` en la API del servicio de directivas. Para ver los pasos sobre cómo aplicar etiquetas a conjuntos de datos y campos, consulte la [guía de API de etiquetas de conjuntos de datos](../labels/dataset-api.md).

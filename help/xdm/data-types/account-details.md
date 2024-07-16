@@ -5,13 +5,13 @@ exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Detalles de cuenta] tipo de datos
+# [!UICONTROL Detalles de la cuenta] tipo de datos
 
-[!UICONTROL Detalles de cuenta] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe detalles relacionados con una organización empresarial.
+[!UICONTROL Detalles de la cuenta] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe detalles relacionados con una organización empresarial.
 
 ![Estructura de tipo de datos](../images/data-types/account-details.png)
 
@@ -25,18 +25,18 @@ ht-degree: 5%
 | `SICDescription` | Cadena | Una breve descripción de la línea de negocio de una organización, basada en su código SIC. |
 | `companyProductAndServices` | Cadena | Los productos y servicios con los que la organización está negociando o haciendo negocios. |
 | `facebookPageUrl` | Cadena | Un vínculo al sitio web de la cuenta de Facebook de la organización. |
-| `industry` | Cadena | La industria de la que forma parte esta organización. Este es un campo de forma libre, y es aconsejable utilizar un valor estructurado para consultas o para utilizar la variable `xdm:classifier` propiedad. |
+| `industry` | Cadena | La industria de la que forma parte esta organización. Este es un campo de forma libre y es recomendable usar un valor estructurado para consultas o usar la propiedad `xdm:classifier`. |
 | `jigsaw` | Cadena | La clave Data.com de la organización. |
 | `linkedinPageUrl` | Cadena | Un vínculo al sitio web de la cuenta de LinkedIn de la organización. |
-| `logoUrl` | Cadena | Una ruta que se combinará con la URL de una instancia de Salesforce (por ejemplo, `https://yourInstance.salesforce.com/`) para generar una URL para solicitar la imagen de perfil de la red social asociada a la organización. La URL generada devuelve un redireccionamiento HTTP (código 302) a la imagen de perfil de la red social de la organización. |
-| `marketSegment` | Cadena | La audiencia de mercado designada en la que participa la organización. Este es un campo de forma libre, y es aconsejable utilizar un valor estructurado para consultas o para utilizar la variable `xdm:identifier` propiedad. |
-| `numberOfEmployees` | Número entero | El número de empleados de la organización. |
+| `logoUrl` | Cadena | Una ruta que combinar con la URL de una instancia de Salesforce (por ejemplo, `https://yourInstance.salesforce.com/`) para generar una URL para solicitar la imagen de perfil de red social asociada con la organización. La URL generada devuelve un redireccionamiento HTTP (código 302) a la imagen de perfil de la red social de la organización. |
+| `marketSegment` | Cadena | La audiencia de mercado designada en la que participa la organización. Este es un campo de forma libre y es recomendable usar un valor estructurado para consultas o usar la propiedad `xdm:identifier`. |
+| `numberOfEmployees` | Entero | El número de empleados de la organización. |
 | `organizationType` | Cadena | Una etiqueta que describe el tipo de organización. |
 | `primaryEmailDomain` | Cadena | El dominio de correo electrónico principal que utiliza la organización para su personal. |
-| `rating` | Doble | La puntuación calculada o la clasificación por estrellas de esta organización. `1` indica la clasificación máxima posible, y `0` es la calificación mínima posible. |
+| `rating` | Duplicada | La puntuación calculada o la clasificación por estrellas de esta organización. `1` indica la clasificación máxima posible y `0` la clasificación mínima posible. |
 | `tickerSymbol` | Cadena | El símbolo del mercado de valores de esta cuenta. Máximo de 20 caracteres. |
 | `twitterHandleUrl` | Cadena | Un vínculo del sitio web al identificador de twitter de la organización. |
-| `website` | Cadena | Dirección URL del sitio web de la organización. |
+| `website` | Cadena | La URL del sitio web de la organización. |
 
 {style="table-layout:auto"}
 

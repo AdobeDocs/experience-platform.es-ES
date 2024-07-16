@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Oracle Eloqua] conector
+# Conector [!DNL Oracle Eloqua]
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Experience Platform proporciona asistencia para la ingesta de datos desde un sistema de automatización de marketing de terceros. La compatibilidad con proveedores de automatización de marketing incluye [!DNL Oracle Eloqua].
+Experience Platform proporciona asistencia para la ingesta de datos desde un sistema de automatización de marketing de terceros. La compatibilidad con los proveedores de automatización de marketing incluye [!DNL Oracle Eloqua].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-La siguiente documentación proporciona información sobre cómo conectarse [!DNL Oracle Eloqua] Vaya a Platform mediante las API o la interfaz de usuario de:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Oracle Eloqua] a Platform mediante API o la interfaz de usuario:
 
-## Connect [!DNL Oracle Eloqua] a Platform mediante API
+## Conectar [!DNL Oracle Eloqua] a Platform mediante API
 
 * [Crear una conexión base de Oracle Eloqua mediante la API de Flow Service](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
 * [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 * [Cree un flujo de datos para una fuente de automatización de marketing mediante la API de Flow Service](../../tutorials/api/collect/marketing-automation.md)
 
-## Connect [!DNL Oracle Eloqua] a Platform mediante la IU
+## Conectar [!DNL Oracle Eloqua] a Platform mediante la interfaz de usuario
 
 * [Crear una conexión de origen de Oracle Eloqua en la interfaz de usuario](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
 * [Cree un flujo de datos para una conexión de origen de automatización de marketing en la interfaz de usuario](../../tutorials/ui/dataflow/marketing-automation.md)

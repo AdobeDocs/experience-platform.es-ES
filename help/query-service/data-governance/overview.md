@@ -5,7 +5,7 @@ exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
 source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '3129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Las siguientes categorías son fundamentales para cumplir con las regulaciones d
 1. Privacidad
 1. Higiene de datos
 
-Este documento examina cada una de las diferentes áreas de gobernanza y muestra cómo facilitar el cumplimiento de los datos al utilizar el servicio de consulta. Consulte la [información general sobre administración, privacidad y seguridad](../../landing/governance-privacy-security/overview.md) para obtener información más amplia sobre cómo Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normas.
+Este documento examina cada una de las diferentes áreas de gobernanza y muestra cómo facilitar el cumplimiento de los datos al utilizar el servicio de consulta. Consulte [información general sobre administración, privacidad y seguridad](../../landing/governance-privacy-security/overview.md) para obtener información más amplia sobre cómo Experience Platform le permite administrar los datos de los clientes y garantizar el cumplimiento de las normas.
 
 ## Seguridad {#security}
 
@@ -33,27 +33,27 @@ La seguridad de los datos es el proceso de proteger los datos contra el acceso n
 
 La seguridad con respecto al servicio de consultas se divide en las siguientes categorías:
 
-* [Control de acceso](#access-control): el acceso se controla mediante funciones y permisos, incluidos los permisos de nivel de columna y conjunto de datos.
-* Protección de datos mediante [conectividad](#connectivity): los datos se protegen mediante Platform y clientes externos mediante la consecución de una conexión limitada con credenciales caducadas o credenciales que no caducan.
-* Protección de datos mediante [cifrado y claves administradas por el cliente (CMK)](#encryption-and-customer-managed-keys): acceso controlado mediante cifrado cuando los datos están en reposo.
+* [Control de acceso](#access-control): el acceso se controla mediante funciones y permisos que incluyen permisos de nivel de columna y conjunto de datos.
+* Proteger datos mediante [conectividad](#connectivity): Los datos se protegen mediante Platform y clientes externos si se logra una conexión limitada con credenciales que caducan o credenciales que no caducan.
+* Protección de datos mediante [cifrado y claves administradas por el cliente (CMK)](#encryption-and-customer-managed-keys): el acceso se controla mediante cifrado cuando los datos están en reposo.
 
 ### Control de acceso {#access-control}
 
-El control de acceso en Adobe Experience Platform le permite utilizar [Adobe Admin Console](https://adminconsole.adobe.com/) para administrar el acceso a las funciones del servicio de consultas mediante permisos basados en funciones. Del mismo modo, se puede controlar el acceso a atributos de datos específicos mediante la administración de etiquetas en esquemas y campos de datos.
+El control de acceso en Adobe Experience Platform le permite usar [Adobe Admin Console](https://adminconsole.adobe.com/) para administrar el acceso a las características del servicio de consultas mediante permisos basados en funciones. Del mismo modo, se puede controlar el acceso a atributos de datos específicos mediante la administración de etiquetas en esquemas y campos de datos.
 
-En esta sección se describen los permisos de control de acceso necesarios que debe tener un usuario para utilizar completamente las funciones del servicio de consulta. Consulte los documentos sobre [administración de permisos](../../access-control/ui/permissions.md) y [administrar usuarios](../../access-control/ui/users.md) para obtener instrucciones detalladas sobre la asignación de acceso a un perfil de producto.
+En esta sección se describen los permisos de control de acceso necesarios que debe tener un usuario para utilizar completamente las funciones del servicio de consulta. Consulte los documentos sobre [administración de permisos](../../access-control/ui/permissions.md) y [administración de usuarios](../../access-control/ui/users.md) para obtener instrucciones detalladas sobre cómo asignar acceso a un perfil de producto.
 
 #### Permisos relevantes
 
 Los permisos de control de acceso relevantes se definen en las tablas siguientes según su nivel de ámbito.
 
-**Permisos de ejecución de consulta**
+**Permisos de ejecución de consultas**
 
 Para ejecutar consultas en el servicio de consultas, se debe asignar a un usuario una función con el siguiente permiso:
 
 | Permiso | Descripción |
 |---|---|
-| [!UICONTROL Administrar consultas] | Este permiso permite a los usuarios ejecutar consultas de exploración de datos y consultas por lotes, que pueden leer un conjunto de datos existente o escribir datos en conjuntos de datos. Esto incluye ambas `CREATE TABLE AS SELECT` (`CTAS`) y `INSERT INTO AS SELECT` (`ITAS`) consultas. |
+| [!UICONTROL Administrar consultas] | Este permiso permite a los usuarios ejecutar consultas de exploración de datos y consultas por lotes, que pueden leer un conjunto de datos existente o escribir datos en conjuntos de datos. Esto incluye consultas `CREATE TABLE AS SELECT` (`CTAS`) y `INSERT INTO AS SELECT` (`ITAS`). |
 
 **Permisos de conjuntos de datos**
 
@@ -70,7 +70,7 @@ A través de la interfaz Permisos, puede definir el control de acceso basado en 
 
 La función de control de acceso basado en atributos permite a los usuarios del servicio de consultas restringir el acceso a datos de usuario críticos. El acceso se puede conceder o restringir según los permisos asignados a una función. El acceso de los usuarios a columnas individuales está controlado por las etiquetas de uso de datos relevantes y los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
-Al etiquetar grupos y clases de campos de esquema con etiquetas de uso de datos, se aplican restricciones de uso de datos a todos los esquemas con los mismos grupos de campos y clases. Consulte la información general sobre [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener información completa sobre esta función.
+Al etiquetar grupos y clases de campos de esquema con etiquetas de uso de datos, se aplican restricciones de uso de datos a todos los esquemas con los mismos grupos de campos y clases. Consulte la descripción general de [control de acceso basado en atributos](../../access-control/abac/overview.md) para obtener información completa sobre esta característica.
 
 Esta función le permite conceder derechos de acceso sobre columnas confidenciales a los grupos de usuarios que elija. El control de acceso de una columna puede restringir las capacidades de lectura y escritura de un tipo concreto de usuario.
 
@@ -80,24 +80,24 @@ Una vez que se ha aplicado el nivel de acceso adecuado mediante etiquetas y func
 
 1. Si se ha denegado a un usuario el acceso a una de las columnas de un esquema, también se deniega al usuario el permiso para leer o escribir en la columna restringida. Esto se aplica a los siguientes escenarios comunes:
 
-   * **Caso 1**: Cuando un usuario intenta ejecutar una consulta que afecta solo a una columna restringida, el sistema emite un error que indica que la columna no existe.
-   * **Caso 2**: Cuando un usuario intenta ejecutar una consulta con varias columnas, incluida una columna restringida, el sistema solo devuelve la salida de todas las columnas no restringidas.
+   * **Caso 1**: Cuando un usuario intenta ejecutar una consulta que afecta solamente a una columna restringida, el sistema genera un error que indica que la columna no existe.
+   * **Caso 2**: Cuando un usuario intenta ejecutar una consulta con varias columnas, incluida una columna restringida, el sistema devuelve únicamente el resultado de todas las columnas no restringidas.
 
 1. Si un usuario intenta acceder a un campo calculado, debe tener acceso a todos los campos utilizados en la composición o el sistema también deniega el acceso al campo calculado.
 
 #### Controles de acceso para vistas
 
-El servicio de consultas permite utilizar ANSI SQL estándar para [`CREATE VIEW`](../sql/syntax.md#create-view) extractos. Para flujos de trabajo de datos muy confidenciales, debe aplicar los controles adecuados al crear vistas.
+El servicio de consultas proporciona la capacidad de usar ANSI SQL estándar para instrucciones [`CREATE VIEW`](../sql/syntax.md#create-view). Para flujos de trabajo de datos muy confidenciales, debe aplicar los controles adecuados al crear vistas.
 
-El `CREATE VIEW` keyword define una vista de una consulta, pero la vista no se materializa físicamente. En su lugar, la consulta se ejecuta cada vez que se hace referencia a la vista en una consulta. Cuando un usuario crea una vista a partir de un conjunto de datos, las reglas de control de acceso basadas en funciones y atributos para el conjunto de datos principal son las siguientes **no** aplicado jerárquicamente. Como resultado, debe establecer explícitamente permisos en cada una de las columnas cuando se cree una vista.
+La palabra clave `CREATE VIEW` define una vista de una consulta, pero la vista no se materializa físicamente. En su lugar, la consulta se ejecuta cada vez que se hace referencia a la vista en una consulta. Cuando un usuario crea una vista a partir de un conjunto de datos, las reglas de control de acceso basadas en roles y atributos para el conjunto de datos principal se aplican **no** jerárquicamente. Como resultado, debe establecer explícitamente permisos en cada una de las columnas cuando se cree una vista.
 
 #### Crear restricciones de acceso basadas en el campo en conjuntos de datos acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Con el [capacidad de control de acceso basado en atributos](../../access-control/abac/overview.md) puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en la variable [almacén acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
+Con la [capacidad de control de acceso basada en atributos](../../access-control/abac/overview.md), puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en el [almacén acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
 
-Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [añadir y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a los esquemas desde el [!UICONTROL Etiquetas] workspace en [!UICONTROL Esquemas] IU.
+Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [agregar y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a sus esquemas desde el área de trabajo [!UICONTROL Etiquetas] en la interfaz de usuario de [!UICONTROL Esquemas].
 
-Las etiquetas de uso de datos también pueden ser [se aplican o editan directamente en el conjunto de datos](../../data-governance/labels/user-guide.md#add-labels) a través de la interfaz de usuario Conjuntos de datos o creados desde el Control de acceso [!UICONTROL Etiquetas] workspace. Consulte la guía sobre cómo [crear una etiqueta nueva](../../access-control/abac/ui/labels.md) para obtener más información.
+Las etiquetas de uso de datos también se pueden [aplicar o editar directamente en el conjunto de datos](../../data-governance/labels/user-guide.md#add-labels) a través de la interfaz de usuario de conjuntos de datos, o crear desde el área de trabajo de control de acceso [!UICONTROL Etiquetas]. Consulte la guía sobre cómo [crear una etiqueta nueva](../../access-control/abac/ui/labels.md) para obtener más información.
 
 El acceso de los usuarios a columnas individuales se puede controlar mediante las etiquetas de uso de datos adjuntas y los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
@@ -107,52 +107,52 @@ Se puede acceder al servicio de consultas a través de la interfaz de usuario de
 
 #### Conectividad a través de clientes externos
 
-El acceso al servicio de consultas mediante un cliente de terceros requiere credenciales de autorización. Estas credenciales son obligatorias para acceder al servicio de consulta con cualquiera de los clientes externos compatibles. Puede conectarse a clientes externos mediante las siguientes opciones [credenciales que caducan](#expiring-credentials) o [credenciales que no caducan](#non-expiring-credentials).
+El acceso al servicio de consultas mediante un cliente de terceros requiere credenciales de autorización. Estas credenciales son obligatorias para acceder al servicio de consulta con cualquiera de los clientes externos compatibles. Puede conectarse a clientes externos usando [credenciales que caducan](#expiring-credentials) o [credenciales que no caducan](#non-expiring-credentials).
 
 #### Tiempo de conexión limitado mediante credenciales que caducan {#expiring-credentials}
 
-[Credenciales que caducan](../ui/credentials.md) permitir que los usuarios formen una conexión temporal con un cliente externo. Este conjunto de credenciales solo es válido durante 24 horas. La caducidad de estos tipos de credenciales se puede ver junto con la pestaña de credenciales en el panel del servicio de consulta.
+[Las credenciales caducan](../ui/credentials.md) y permiten a los usuarios formar una conexión temporal con un cliente externo. Este conjunto de credenciales solo es válido durante 24 horas. La caducidad de estos tipos de credenciales se puede ver junto con la pestaña de credenciales en el panel del servicio de consulta.
 
-![La pestaña Credenciales en el espacio de trabajo del servicio de consulta con las credenciales caducadas resaltadas.](../images/data-governance/overview/expiring-credentials.png)
+![Se ha resaltado la ficha de credenciales en el área de trabajo del servicio de consultas con credenciales que caducan.](../images/data-governance/overview/expiring-credentials.png)
 
 #### Credenciales que no caducan {#non-expiring-credentials}
 
-[Credenciales que no caducan](../ui/credentials.md#non-expiring-credentials) permite establecer una conexión permanente con un cliente externo, facilitando la conexión al servicio de consultas sin necesidad de contraseña manual.
+[Las credenciales que no caducan](../ui/credentials.md#non-expiring-credentials) le permiten formar una conexión permanente con un cliente externo, lo que facilita la conexión al servicio de consultas sin necesidad de una contraseña manual.
 
-Para activar la opción de generar credenciales que no caduquen, debe seguir los pasos descritos [flujo de trabajo necesario](../ui/credentials.md#prerequisites). Como parte de este proceso, el administrador de la organización debe configurar permisos para el perfil del producto, lo que permite al administrador controlar qué cuentas tienen acceso para utilizar credenciales que no caducan.
+Para habilitar la opción de generar credenciales que no caduquen, debe seguir el [flujo de trabajo de requisitos previos](../ui/credentials.md#prerequisites) descrito. Como parte de este proceso, el administrador de la organización debe configurar permisos para el perfil del producto, lo que permite al administrador controlar qué cuentas tienen acceso para utilizar credenciales que no caducan.
 
-Se pueden asignar funciones a las cuentas de usuario técnicas permitidas con credenciales que no caducan para garantizar un control de datos adecuado definiendo el ámbito de su acceso de lectura y escritura en función de sus responsabilidades y necesidades. Consulte la sección anterior sobre [uso de permisos basados en funciones mediante el control de acceso](#access-control) para administrar el acceso al servicio de consultas.
+Se pueden asignar funciones a las cuentas de usuario técnicas permitidas con credenciales que no caducan para garantizar un control de datos adecuado definiendo el ámbito de su acceso de lectura y escritura en función de sus responsabilidades y necesidades. Consulte la sección anterior sobre [uso de permisos basados en roles mediante el control de acceso](#access-control) para administrar el acceso al servicio de consultas.
 
-Una vez completado el flujo de trabajo de requisitos previos, los usuarios autorizados ahora pueden [genere las credenciales de conexión necesarias](../ui/credentials.md#generate-credentials).
+Una vez completado el flujo de trabajo de requisitos previos, los usuarios autorizados ahora pueden [generar las credenciales de conexión necesarias](../ui/credentials.md#generate-credentials).
 
 #### Cifrado de datos SSL
 
 Para aumentar la seguridad, el servicio de consultas proporciona compatibilidad nativa con conexiones SSL para cifrar las comunicaciones cliente/servidor. Platform admite varias opciones SSL para satisfacer sus necesidades de seguridad de datos y equilibrar la sobrecarga de procesamiento del cifrado y el intercambio de claves.
 
-Consulte la guía de disponibles [Opciones SSL para conexiones de cliente de terceros al servicio de consultas](../clients/ssl-modes.md) para obtener más información, incluido cómo conectarse mediante `verify-full` Valor del parámetro SSL.
+Consulte la guía sobre las [opciones SSL disponibles para conexiones de clientes de terceros al servicio de consultas](../clients/ssl-modes.md) para obtener más información, incluido cómo conectarse mediante el valor del parámetro SSL `verify-full`.
 
 ### Cifrado y claves administradas por el cliente (CMK) {#encryption-and-customer-managed-keys}
 
 El cifrado es el uso de un proceso algorítmico para transformar datos en texto codificado e ilegible para garantizar que la información esté protegida e inaccesible sin una clave de descifrado.
 
-El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Azure Data Lake mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener más información sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Azure Data Lake mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener detalles sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, cuando los datos están en reposo en el lago de datos, el cifrado se realiza con la clave de administración del cliente (CMK), que ya es compatible con la administración de lago de datos. La versión admitida actualmente es TLS1.2. Consulte la [documentación de claves administradas por el cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) para obtener información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 
 
 ## Auditoría {#audit}
 
-El servicio de consulta registra la actividad del usuario y clasifica esa actividad en diferentes tipos de registro. Los registros proporcionan información sobre **quién** realizado **qué** acción, y **cuando**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
+El servicio de consulta registra la actividad del usuario y clasifica esa actividad en diferentes tipos de registro. Los registros proporcionan información sobre **quién** realizó **qué** acción y **cuándo**. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción.
 
 Un usuario de Platform puede solicitar cualquiera de las categorías de registro. Esta sección proporciona detalles sobre el tipo de información capturada para el servicio de consultas y dónde se puede acceder a esta información.
 
 ### Registros de consultas {#query-logs}
 
-La interfaz de usuario de registros de consultas permite supervisar y revisar los detalles de ejecución de todas las consultas que se han ejecutado mediante el Editor de consultas o la API del servicio de consultas. Esto aporta transparencia a las actividades del servicio de consultas, lo que le permite comprobar los metadatos de **todo** las consultas que se han ejecutado en el servicio de consultas. Incluye todos los tipos de consultas, ya sean exploratorias, por lotes o programadas.
+La interfaz de usuario de registros de consultas permite supervisar y revisar los detalles de ejecución de todas las consultas que se han ejecutado mediante el Editor de consultas o la API del servicio de consultas. Esto aporta transparencia a las actividades del Servicio de consultas, lo que le permite comprobar los metadatos de **todas** las consultas que se han ejecutado en el Servicio de consultas. Incluye todos los tipos de consultas, ya sean exploratorias, por lotes o programadas.
 
-Se puede acceder a los registros de consultas a través de la IU de Platform en [!UICONTROL Registros] de la pestaña [!UICONTROL Consultas] workspace.
+Se puede acceder a los registros de consultas a través de la IU de Platform en la pestaña [!UICONTROL Registros] del área de trabajo [!UICONTROL Consultas].
 
-![La pestaña Registro de consultas con el panel de detalles resaltado.](../images/data-governance/overview/queries-log.png)
+![Pestaña Registro de consultas con el panel de detalles resaltado.](../images/data-governance/overview/queries-log.png)
 
 ### Registros de auditoría {#audit-logs}
 
@@ -170,15 +170,15 @@ La siguiente tabla indica las categorías de consultas capturadas por los regist
 
 A continuación se muestra una lista de tres registros de servidor extendidos que contienen más detalles que los que se encuentran dentro de los registros de consulta. Los registros extendidos se encuentran dentro de las categorías de consulta de registros de auditoría:
 
-1. **Registros de metaconsultas**: Cuando se ejecuta una consulta, se ejecutan varias subconsultas de back-end asociadas (como el análisis). Estos tipos de consultas se conocen como consultas de &quot;metadatos&quot;. Sus detalles relevantes se pueden encontrar en los registros de auditoría.
-1. **Registros de sesión**: el sistema crea un registro de entrada de sesión para un usuario cuando inicia sesión en el servicio de consultas, independientemente de si ejecuta o no una consulta.
-1. **Registros de conexión de clientes de terceros**: se genera un registro de auditoría de conectividad cuando un usuario conecta correctamente el servicio de consultas a un cliente de terceros.
+1. **Registros de metaconsultas**: cuando se ejecuta una consulta, se ejecutan varias subconsultas de backend asociadas (como el análisis). Estos tipos de consultas se conocen como consultas de &quot;metadatos&quot;. Sus detalles relevantes se pueden encontrar en los registros de auditoría.
+1. **Registros de sesión**: el sistema crea un registro de entrada de sesión para un usuario cuando inicia sesión en el Servicio de consultas, independientemente de si ejecuta o no una consulta.
+1. **Registros de conexión de cliente de terceros**: se genera un registro de auditoría de conectividad cuando un usuario conecta correctamente el servicio de consultas a un cliente de terceros.
 
-Consulte la [información general de registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md) para obtener más información sobre cómo los registros de auditoría pueden ayudar a su organización a abordar el cumplimiento de los datos.
+Consulte la [descripción general de los registros de auditoría](../../landing/governance-privacy-security/audit-logs/overview.md) para obtener más información sobre cómo los registros de auditoría pueden ayudar a su organización a cumplir con los datos.
 
 ## Uso de datos {#data-usage}
 
-El marco de trabajo de control de datos de Platform proporciona una forma uniforme de utilizar los datos de forma responsable en todas las soluciones de Adobe, servicios y plataformas. Coordina el enfoque sistémico para capturar, comunicar y utilizar metadatos en toda la Adobe Experience Cloud. Esto, a su vez, ayuda a los responsables del tratamiento de datos a etiquetar los datos según las acciones de marketing necesarias y las restricciones impuestas a esos datos por estas acciones de marketing previstas. Consulte la información general sobre [etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información sobre cómo la gobernanza de datos le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos.
+El marco de trabajo de control de datos de Platform proporciona una forma uniforme de utilizar los datos de forma responsable en todas las soluciones de Adobe, servicios y plataformas. Coordina el enfoque sistémico para capturar, comunicar y utilizar metadatos en toda la Adobe Experience Cloud. Esto, a su vez, ayuda a los responsables del tratamiento de datos a etiquetar los datos según las acciones de marketing necesarias y las restricciones impuestas a esos datos por estas acciones de marketing previstas. Consulte la descripción general de [etiquetas de uso de datos](../../data-governance/labels/overview.md) para obtener más información sobre cómo el control de datos le permite aplicar etiquetas de uso de datos a conjuntos de datos y campos.
 
 Se recomienda trabajar para que los datos cumplan los requisitos en cada fase del recorrido de los datos. Para ello, los conjuntos de datos derivados que utilizan esquemas ad hoc deben etiquetarse adecuadamente como parte del marco de trabajo de control de datos. Existen dos tipos de conjuntos de datos derivados formados por el servicio de consulta: conjuntos de datos que utilizan un esquema estándar y conjuntos de datos que utilizan un esquema ad hoc.
 
@@ -186,9 +186,9 @@ Se recomienda trabajar para que los datos cumplan los requisitos en cada fase de
 >
 >Los conjuntos de datos que se crean mediante el servicio de consultas se denominan &quot;conjuntos de datos derivados&quot;.
 
-Dado que un usuario individual crea esquemas ad hoc para un propósito específico, los campos de esquema XDM tienen un espacio de nombres para ese conjunto de datos en particular y no están pensados para su uso en diferentes conjuntos de datos. Como resultado, los esquemas ad hoc no son visibles de forma predeterminada en la interfaz de usuario de Experience Platform. Aunque no hay diferencia en la aplicación de etiquetas de uso de datos entre esquemas estándar y ad hoc, los esquemas ad hoc creados por el servicio de consultas con el fin de etiquetar deben hacerse visibles primero en la interfaz de usuario de Platform. Consulte la guía de [detección de esquemas ad hoc en la IU de Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obtener más información.
+Dado que un usuario individual crea esquemas ad hoc para un propósito específico, los campos de esquema XDM tienen un espacio de nombres para ese conjunto de datos en particular y no están pensados para su uso en diferentes conjuntos de datos. Como resultado, los esquemas ad hoc no son visibles de forma predeterminada en la interfaz de usuario de Experience Platform. Aunque no hay diferencia en la aplicación de etiquetas de uso de datos entre esquemas estándar y ad hoc, los esquemas ad hoc creados por el servicio de consultas con el fin de etiquetar deben hacerse visibles primero en la interfaz de usuario de Platform. Consulte la guía sobre [descubrimiento de esquemas ad hoc en la interfaz de usuario de Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obtener más información.
 
-Una vez que haya accedido al esquema, puede [aplicar etiquetas a campos individuales](../../xdm/tutorials/labels.md). Una vez etiquetado un esquema, todos los conjuntos de datos que se derivan de él heredan esas etiquetas. Desde aquí, puede configurar políticas de uso de datos que puedan restringir la activación de datos con determinadas etiquetas a determinados destinos. Para obtener más información, consulte la información general sobre [políticas de uso de datos](../../data-governance/policies/overview.md).
+Una vez que haya obtenido acceso al esquema, puede [aplicar etiquetas a campos individuales](../../xdm/tutorials/labels.md). Una vez etiquetado un esquema, todos los conjuntos de datos que se derivan de él heredan esas etiquetas. Desde aquí, puede configurar políticas de uso de datos que puedan restringir la activación de datos con determinadas etiquetas a determinados destinos. Para obtener más información, consulte la descripción general de [políticas de uso de datos](../../data-governance/policies/overview.md).
 
 ## Privacidad {#privacy}
 
@@ -196,11 +196,11 @@ Una vez que haya accedido al esquema, puede [aplicar etiquetas a campos individu
 
 Las solicitudes de privacidad se pueden enviar al lago de datos o al almacén de datos de perfil. Los registros eliminados del lago de datos no provocan la eliminación de perfiles realizados desde esos registros. Además, un trabajo de privacidad para eliminar información personal del lago de datos no elimina su perfil, por lo que cualquier información (que contenga ese ID de perfil) ingerida después de la finalización del trabajo de privacidad actualiza ese perfil con normalidad. Esto reafirma la necesidad de identificar correctamente los datos utilizados en esquemas específicos.
 
-Consulte la documentación del Privacy Service para obtener más información sobre [datos de identidad para solicitudes de privacidad](../../privacy-service/identity-data.md) y cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad de los clientes.
+Consulte la documentación del Privacy Service para obtener más información sobre [datos de identidad para solicitudes de privacidad](../../privacy-service/identity-data.md) y cómo configurar las operaciones de datos y aprovechar las tecnologías de Adobe para recuperar de forma eficaz la información de identidad adecuada para las solicitudes de privacidad del cliente.
 
-Las funciones del servicio de consulta para el control de datos simplifican y optimizan el proceso de categorización de datos y el cumplimiento de las regulaciones de uso de datos. Una vez identificados los datos, el servicio de consultas permite asignar la identidad principal en todos los conjuntos de datos de salida. Usted **debe** agregue identidades al conjunto de datos para facilitar las solicitudes de privacidad de datos y trabajar para que cumpla los requisitos de datos.
+Las funciones del servicio de consulta para el control de datos simplifican y optimizan el proceso de categorización de datos y el cumplimiento de las regulaciones de uso de datos. Una vez identificados los datos, el servicio de consultas permite asignar la identidad principal en todos los conjuntos de datos de salida. Usted **debe** agregar identidades al conjunto de datos para facilitar las solicitudes de privacidad de datos y trabajar en pos del cumplimiento de los datos.
 
-Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la IU de Platform y el servicio de consulta también le permite [marcar las identidades principales utilizando el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Configuración de una identidad mediante `ALTER TABLE` es especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. Consulte la documentación para obtener instrucciones sobre cómo [definición de campos de identidad en la IU](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
+Los campos de datos de esquema se pueden establecer como un campo de identidad a través de la interfaz de usuario de Platform y el servicio de consulta también le permite [marcar las identidades principales mediante el comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). La configuración de una identidad mediante el comando `ALTER TABLE` resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. Consulte la documentación para obtener instrucciones sobre cómo [definir campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) al utilizar esquemas estándar.
 
 ## Higiene de datos {#data-hygiene}
 
@@ -212,4 +212,4 @@ Por el contrario, cuando se crea un conjunto de datos agregado en el almacén ac
 
 Una excepción a este escenario es el caso de la eliminación. Si se solicita una eliminación de higiene de datos en un conjunto de datos y antes de que se complete la eliminación, se ejecuta otra consulta de conjunto de datos derivado, entonces el conjunto de datos derivado capturará información del conjunto de datos original. En este caso, debe tener en cuenta que si se ha enviado una solicitud para eliminar un conjunto de datos, no debe ejecutar ninguna consulta de conjunto de datos recién derivada utilizando el mismo origen de conjunto de datos.
 
-Consulte la [resumen de higiene de datos](../../hygiene/home.md) para obtener más información sobre la higiene de los datos en Adobe Experience Platform.
+Consulte la [descripción general de la higiene de los datos](../../hygiene/home.md) para obtener más información sobre la higiene de los datos en Adobe Experience Platform.

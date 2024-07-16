@@ -6,7 +6,7 @@ description: Este documento presenta la preparación de datos en Adobe Experienc
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,13 @@ La preparación de datos también aplica varias validaciones de datos intrínsec
 
 >[!NOTE]
 >
->A menos que el mensaje resultante sea XDM no válido, cualquier error de transformación en la preparación de datos hará que esos atributos se establezcan en `null`, mientras que el resto de la fila se ingiere. Si la fila no se resuelve en un XDM no válido, la fila **no** ingerir. En ambos casos, el error se documenta.
+>A menos que el mensaje resultante sea un XDM no válido, cualquier error de transformación en la preparación de datos hará que esos atributos se establezcan en `null`, mientras que el resto de la fila se ingestará. Si la fila se resuelve en un XDM no válido, se ingestará **no**. En ambos casos, el error se documenta.
 
 ## Asignación
 
 Una asignación es una asociación de un atributo de entrada o campo calculado a un atributo XDM. Un solo atributo se puede asignar a varios atributos XDM creando asignaciones individuales.
 
-Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md).
+Para obtener más información acerca de las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md).
 
 ### Campos calculados
 
@@ -42,21 +42,21 @@ Para obtener más información sobre los campos calculados, lea la [guía de cam
 
 ### Escapar de caracteres especiales {#escape-special-characters}
 
-Puede aplicar secuencias de escape a los caracteres especiales de un campo mediante `${...}`. Sin embargo, los archivos JSON que contienen campos con un punto (`.`) no son compatibles con este mecanismo. Al interactuar con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir caracteres especiales. Por ejemplo, `address` es un objeto que contiene el atributo `street.name`, esto se puede denominar `address.street\.name` en lugar de `address.street.name`.
+Puede aplicar secuencias de escape a los caracteres especiales de un campo usando `${...}`. Sin embargo, este mecanismo no admite archivos JSON que contengan campos con un punto (`.`). Al interactuar con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir los caracteres especiales. Por ejemplo, `address` es un objeto que contiene el atributo `street.name`, entonces se puede hacer referencia a este como `address.street\.name` en lugar de `address.street.name`.
 
 ## Conjunto de asignaciones
 
 Un conjunto de asignaciones que transforman un esquema en otro se conocen colectivamente como un conjunto de asignaciones. Se crea un único conjunto de asignaciones como parte de cada flujo de datos. Un conjunto de asignaciones es una parte integral de los flujos de datos y se crea, edita y supervisa como parte de los flujos de datos.
 
-Para obtener más información sobre los conjuntos de asignaciones, incluido cómo utilizar los campos de un conjunto de asignaciones, lea la [guía del conjunto de asignaciones](./mapping-set.md). Para obtener información sobre cómo crear un conjunto de asignaciones y utilizar otras llamadas de API relacionadas con conjuntos de asignaciones, lea la sección conjunto de asignaciones en la [guía para desarrolladores](./api/mapping-set.md).
+Para obtener más información sobre los conjuntos de asignaciones, incluido cómo usar los campos de un conjunto de asignaciones, lea la [guía del conjunto de asignaciones](./mapping-set.md). Para obtener información sobre cómo crear un conjunto de asignaciones y utilizar otras llamadas de API relacionadas con conjuntos de asignaciones, lea la sección conjunto de asignaciones en la [guía para desarrolladores](./api/mapping-set.md).
 
 ## Administración del formato de datos
 
-La preparación de datos puede gestionar de forma fiable diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [información general sobre gestión de formato de datos](./data-handling.md).
+La preparación de datos puede gestionar de forma fiable diferentes formatos de datos introducidos en Platform. Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [descripción general de la administración del formato de datos](./data-handling.md).
 
-## Envío de actualizaciones parciales de fila mediante [!DNL Data Prep]
+## Enviar actualizaciones parciales de fila utilizando [!DNL Data Prep]
 
-Actualizaciones de streaming en [!DNL Data Prep] le permite enviar actualizaciones parciales de fila a [!DNL Profile Service] datos, al tiempo que se crean y establecen nuevos vínculos de identidad con una única solicitud de API. Para obtener más información acerca de cómo transmitir actualizaciones en [!DNL Data Prep], consulte el documento sobre [envío de actualizaciones parciales de fila](./upserts.md).
+La transmisión de actualizaciones en [!DNL Data Prep] le permite enviar actualizaciones parciales de fila a los datos de [!DNL Profile Service], al mismo tiempo que crea y establece nuevos vínculos de identidad con una sola solicitud de API. Para obtener más información sobre cómo transmitir actualizaciones en [!DNL Data Prep], consulte el documento sobre [envío de actualizaciones parciales de fila](./upserts.md).
 
 ## Control de acceso basado en atributos en [!DNL Data Prep]
 
@@ -64,8 +64,8 @@ El control de acceso basado en atributos en Adobe Experience Platform permite a 
 
 El control de acceso basado en atributos garantiza que sólo puede asignar los atributos a los que tiene acceso. Los atributos a los que no tiene acceso no se pueden utilizar en asignaciones de paso a través y campos calculados. De este modo, si no tiene acceso a un campo obligatorio, no podrá guardar correctamente una asignación. Además, no se pueden asignar objetos ni matrices de objetos si no se tiene acceso a ninguno de los atributos secundarios. Sin embargo, puede asignar otros elementos dentro del objeto o de la matriz de objetos individualmente.
 
-Consulte la [información general sobre el control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
+Consulte la [descripción general del control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
 
 ## Pasos siguientes
 
-Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información sobre las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [guía de gestión de formato de datos](./data-handling.md#dates). Para aprender a utilizar la API de preparación de datos, lea la [Guía para desarrolladores de Data Prep](api/overview.md).
+Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información acerca de las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [guía de administración de formato de datos](./data-handling.md#dates). Para aprender a usar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).

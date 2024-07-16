@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la configuración, se utilizará por Adobe para estructurar las llamadas de API a su destino.
 
-Puede configurar la funcionalidad descrita en este documento utilizando `/authoring/audience-templates` Extremo de API. Leer [crear una plantilla de metadatos](../metadata-api/create-audience-template.md) para obtener una lista completa de las operaciones que puede realizar en el extremo.
+Puede configurar la funcionalidad descrita en este documento mediante el extremo de la API `/authoring/audience-templates`. Lea [crear una plantilla de metadatos](../metadata-api/create-audience-template.md) para obtener una lista completa de las operaciones que puede realizar en el extremo.
 
 ## Cuándo usar el punto de conexión de gestión de metadatos de audiencia {#when-to-use}
 
@@ -23,7 +23,7 @@ Según la configuración de la API, puede que necesite o no utilizar el punto de
 
 ## Casos de uso admitidos por la gestión de metadatos de audiencia {#use-cases}
 
-Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino del Experience Platform, puede proporcionar a los usuarios de Platform una de las varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros del [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
+Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino del Experience Platform, puede proporcionar a los usuarios de Platform una de las varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros de la sección [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
 
 ### Caso de uso 1: Tiene una API de terceros y los usuarios no necesitan introducir ID de asignación
 
@@ -35,7 +35,7 @@ Al activar audiencias en el destino en la interfaz de usuario (IU) de Experience
 
 Si los socios o usuarios deben crear audiencias y otros metadatos manualmente en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de audiencia en el flujo de trabajo de activación para sincronizar los metadatos de audiencia entre el destino y el Experience Platform.
 
-![ID de asignación de entrada](../assets/functionality/input-mapping-id.png)
+![Id. de asignación de entrada](../assets/functionality/input-mapping-id.png)
 
 ### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform, los usuarios no necesitan introducir manualmente el ID de asignación
 
@@ -45,7 +45,7 @@ Si el sistema de destino acepta el ID de audiencia de Experience Platform, puede
 
 Para admitir los casos de uso enumerados anteriormente, Adobe proporciona una plantilla genérica que se puede personalizar para ajustarla a las especificaciones de la API.
 
-Puede utilizar la plantilla genérica para lo siguiente [crear una nueva plantilla de audiencia](../metadata-api/create-audience-template.md) si la API admite:
+Puede usar la plantilla genérica para [crear una nueva plantilla de audiencia](../metadata-api/create-audience-template.md) si su API admite:
 
 * Los métodos HTTP: POST, GET, PUT, DELETE, PATCH
 * Los tipos de autenticación: OAuth 1, OAuth 2 con token de actualización, OAuth 2 con token de portador
@@ -57,7 +57,7 @@ El equipo de ingeniería de Adobes puede trabajar con usted para expandir la pla
 
 Esta sección incluye tres ejemplos de configuraciones de metadatos de audiencia genéricas, para su referencia, junto con descripciones de las secciones principales de la configuración. Observe cómo la dirección URL, los encabezados, la solicitud y el cuerpo de respuesta difieren entre las tres configuraciones de ejemplo. Esto se debe a las diferentes especificaciones de la API de marketing de las tres plataformas de ejemplo.
 
-Tenga en cuenta que, en algunos ejemplos, los campos de macro como `{{authData.accessToken}}` o `{{segment.name}}` se utilizan en la dirección URL y, en otros ejemplos, en los encabezados o en el cuerpo de la solicitud. Realmente depende de las especificaciones de su API de marketing.
+Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData.accessToken}}` o `{{segment.name}}` en la dirección URL, y en otros ejemplos se usan en los encabezados o en el cuerpo de la solicitud. Realmente depende de las especificaciones de su API de marketing.
 
 | Sección de plantilla | Descripción |
 |--- |--- |
@@ -521,7 +521,7 @@ Tenga en cuenta que, en algunos ejemplos, los campos de macro como `{{authData.a
 }
 ```
 
-Busque descripciones de todos los parámetros en la plantilla en la [Creación de una plantilla de audiencia](../metadata-api/create-audience-template.md) Referencia de API.
+Busque descripciones de todos los parámetros en la plantilla en la referencia de API [Crear una plantilla de audiencia](../metadata-api/create-audience-template.md).
 
 ## Macros utilizadas en plantillas de metadatos de audiencia {#macros}
 
@@ -534,8 +534,8 @@ Para pasar información como ID de audiencia, tokens de acceso, mensajes de erro
 | `{{segment.id}}` | Permite acceder al ID de audiencia en Experience Platform. |
 | `{{customerData.accountId}}` | Permite acceder al campo ID de cuenta que configuró en la configuración de destino. |
 | `{{oauth2ServiceAccessToken}}` | Permite generar dinámicamente un token de acceso basado en la configuración de OAuth 2. |
-| `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Uso `{{authData.accessToken}}` si el Experience Platform debe utilizar tokens que no caduquen para conectarse a su destino, de lo contrario, utilice `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
-| `{{body.segments[0].segment.id}}` | Devuelve el identificador único de la audiencia creada, como valor de la clave `externalAudienceId`. |
+| `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si el Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
+| `{{body.segments[0].segment.id}}` | Devuelve el identificador único de la audiencia creada, como el valor de la clave `externalAudienceId`. |
 | `{{error.message}}` | Devuelve un mensaje de error que se mostrará a los usuarios en la interfaz de usuario de Experience Platform. |
 
 {style="table-layout:auto"}

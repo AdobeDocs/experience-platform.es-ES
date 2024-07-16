@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /extension_packages en la AP
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 70%
+source-wordcount: '930'
+ht-degree: 68%
 
 ---
 
@@ -25,27 +25,27 @@ Un paquete de extensiones pertenece a la [empresa](./companies.md) del desarroll
 
 El extremo utilizado en esta guía forma parte de la [API de Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante sobre cómo autenticarse en la API.
 
-Además de comprender cómo se realizan llamadas a la API de Reactor, también es importante comprender cómo se ejecuta un paquete de extensión `status` y `availability` Los atributos de afectan a las acciones que puede realizar en ellos. Estas se explican en las secciones siguientes.
+Además de comprender cómo se realizan llamadas a la API de Reactor, también es importante comprender cómo los atributos `status` y `availability` de un paquete de extensión afectan a las acciones que se pueden realizar en él. Estas se explican en las secciones siguientes.
 
 ### Estado
 
-Los paquetes de extensión tienen tres estados potenciales: `pending`, `succeeded`, y `failed`.
+Los paquetes de extensiones tienen tres estados potenciales: `pending`, `succeeded` y `failed`.
 
 | Estado | Descripción |
 | --- | --- |
-| `pending` | Cuando se crea un paquete de extensiones, su `status` se establece en `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que comenzará a procesarse. Paquetes de extensión con un estado de `pending` no están disponibles para su uso. |
-| `succeeded` | El estado de un paquete de extensiones se actualiza a `succeeded` si completa correctamente el procesamiento. |
-| `failed` | El estado de un paquete de extensiones se actualiza a `failed` si finaliza el procesamiento sin éxito. Un paquete de extensiones con un estado de `failed` puede actualizarse hasta que el procesamiento se realice correctamente. Paquetes de extensión con un estado de `failed` no están disponibles para su uso. |
+| `pending` | Cuando se crea un paquete de extensiones, su `status` se establece en `pending`. Esto indica que el sistema recibió la información del paquete de extensión y que comenzará a procesarse. Los paquetes de extensiones con un estado de `pending` no están disponibles para su uso. |
+| `succeeded` | El estado de un paquete de extensión se actualiza a `succeeded` si finaliza correctamente el procesamiento. |
+| `failed` | El estado de un paquete de extensión se actualiza a `failed` si no se completa correctamente el procesamiento. Se puede actualizar un paquete de extensión con un estado de `failed` hasta que el procesamiento se realice correctamente. Los paquetes de extensiones con un estado de `failed` no están disponibles para su uso. |
 
 ### Disponibilidad
 
-Hay niveles de disponibilidad para un paquete de extensión: `development`, `private`, y `public`.
+Hay niveles de disponibilidad para un paquete de extensión: `development`, `private` y `public`.
 
 | Disponibilidad | Descripción |
 | --- | --- |
-| `development` | Un paquete de extensiones en `development` solo está visible para la compañía que lo posee y está disponible dentro de ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
-| `private` | A `private` El paquete de extensiones solo es visible para la compañía que lo posee y solo se puede instalar en propiedades de la compañía. |
-| `public` | A `public` el paquete de extensiones es visible y está disponible para todas las empresas y propiedades. |
+| `development` | Un paquete de extensiones en `development` solo está visible para la compañía propietaria y disponible en ella. Además, solo se puede utilizar en propiedades configuradas para el desarrollo de extensiones. |
+| `private` | Un paquete de extensión `private` solo es visible para la compañía que lo posee y solo se puede instalar en propiedades de la compañía. |
+| `public` | Un paquete de extensión `public` es visible y está disponible para todas las compañías y propiedades. |
 
 >[!NOTE]
 >
@@ -474,7 +474,7 @@ Una respuesta correcta devuelve los detalles del paquete de extensiones, incluid
 
 Los paquetes de extensiones se crean mediante una herramienta de andamiaje de Node.js y se guardan en el equipo local antes de enviarse a la API de Reactor. Para obtener más información sobre la configuración de un paquete de extensiones, consulte la guía sobre [introducción al desarrollo de extensiones](../../extension-dev/getting-started.md).
 
-Una vez creado el archivo del paquete de extensiones, puede enviarlo a la API de React mediante una petición POST.
+Una vez creado el archivo del paquete de extensiones, puede enviarlo a la API de Reactor mediante una solicitud del POST.
 
 **Formato de API**
 

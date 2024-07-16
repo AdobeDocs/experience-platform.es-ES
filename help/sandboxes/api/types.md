@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # Extremo de tipos de zona protegida
 
-Puede recuperar una lista de tipos de zonas protegidas compatibles con su organización realizando una solicitud de GET a la variable `/sandboxTypes` punto final.
+Puede recuperar una lista de tipos de zonas protegidas compatibles con su organización realizando una solicitud de GET al extremo `/sandboxTypes`.
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de tipos de zonas protegidas admitidos
 
-Puede recuperar una lista de tipos de zonas protegidas compatibles con su organización realizando una solicitud de GET a la variable `/sandboxTypes` punto final.
+Puede recuperar una lista de tipos de zonas protegidas compatibles con su organización realizando una solicitud de GET al extremo `/sandboxTypes`.
 
 **Formato de API**
 

@@ -6,7 +6,7 @@ description: Este documento proporciona respuestas a las preguntas más frecuent
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1631'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Este documento proporciona respuestas a las preguntas más frecuentes acerca de 
 
 >[!NOTE]
 >
->Las definiciones de los distintos términos utilizados en este documento se encuentran en la [terminología de regulación de privacidad](terminology.md) guía.
+>Las definiciones de los distintos términos utilizados en este documento se encuentran en la guía [terminología de regulación de privacidad](terminology.md).
 
 ## Preguntas generales
 
@@ -25,7 +25,7 @@ Las siguientes preguntas están relacionadas con todas las regulaciones de priva
 
 ### ¿A quién afectan las regulaciones de privacidad admitidas?
 
-El [regulaciones de privacidad admitidas por el Experience Cloud](./overview.md) se aplican a todas las organizaciones que almacenan y procesan los datos personales de los ciudadanos dentro de las respectivas jurisdicciones de las regulaciones, independientemente de la ubicación geográfica de la organización.
+Las [regulaciones de privacidad que admite el Experience Cloud](./overview.md) se aplican a todas las organizaciones que almacenan y procesan los datos personales de los ciudadanos en las respectivas jurisdicciones de las regulaciones, independientemente de la ubicación geográfica de la organización.
 
 ### ¿Qué constituyen los datos personales?
 
@@ -38,7 +38,7 @@ Los siguientes identificadores se utilizan comúnmente en aplicaciones Experienc
 * Identificador personal único
 * Identificador en línea
 * Dirección IP
-* Correo electrónico Dirección
+* Dirección de correo electrónico
 * Nombre de la cuenta
 
 La información personal también puede incluir información de actividad de Internet u otra red electrónica. Esto incluye, entre otras cosas:
@@ -51,15 +51,15 @@ Aunque las regulaciones de privacidad cubren un amplio conjunto de información 
 
 ### ¿Cuál es la diferencia entre un controlador de datos y un procesador de datos?
 
-A **controlador de datos** es la entidad que determina las finalidades, condiciones y medios de tratamiento de los datos personales, mientras que la **procesador de datos** es una entidad que procesa datos personales en nombre del controlador de datos.
+Un **controlador de datos** es la entidad que determina los propósitos, condiciones y medios de procesamiento de datos personales, mientras que el **procesador de datos** es una entidad que procesa datos personales en nombre del controlador de datos.
 
-A **controlador de datos** es la persona u organización que tiene el poder y la responsabilidad de tomar decisiones con respecto a la recopilación, el uso o la divulgación de datos personales. A **procesador de datos** es la persona u organización que opera en relación con la recopilación, el uso o la divulgación de los datos personales y la dirección del controlador de datos.
+Un **controlador de datos** es la persona u organización que tiene el poder y la responsabilidad de tomar decisiones con respecto a la recopilación, el uso o la divulgación de datos personales. Un **procesador de datos** es la persona u organización que opera en relación con la recopilación, el uso o la divulgación de los datos personales y la dirección del controlador de datos.
 
 ### ¿Cuál es la diferencia entre el consentimiento explícito e inequívoco del interesado?
 
-**Consentimiento explícito** se refiere a un estándar de consentimiento que implica una indicación específica, informada e inequívoca de los deseos del interesado en forma oral o escrita. En pocas palabras, el interesado debe decir literal y explícitamente &quot;Acepto&quot; o &quot;Acepto&quot; para que el consentimiento se considere explícito. Además, debe ser tan fácil retirar el consentimiento como darlo.
+**El consentimiento explícito** se refiere a un estándar de consentimiento que implica una indicación específica, informada e inequívoca de los deseos del interesado en forma oral o escrita. En pocas palabras, el interesado debe decir literal y explícitamente &quot;Acepto&quot; o &quot;Acepto&quot; para que el consentimiento se considere explícito. Además, debe ser tan fácil retirar el consentimiento como darlo.
 
-**Consentimiento inequívoco (implícito)** hace referencia a un consentimiento que no fue otorgado explícitamente por el interesado, pero que, sin embargo, es de naturaleza inequívoca. Por ejemplo, durante el proceso de registro en el sitio web de una empresa, se envía un aviso de que, al proporcionar una dirección de correo electrónico, el interesado consiente en recibir correos electrónicos en ofertas especiales. Si el interesado lee el aviso, la acción afirmativa de introducir su correo electrónico es suficiente para considerarse un consentimiento inequívoco.
+**El consentimiento inequívoco (implícito)** hace referencia a un consentimiento que no fue dado explícitamente por el interesado, pero que, sin embargo, es de naturaleza inequívoca. Por ejemplo, durante el proceso de registro en el sitio web de una empresa, se envía un aviso de que, al proporcionar una dirección de correo electrónico, el interesado consiente en recibir correos electrónicos en ofertas especiales. Si el interesado lee el aviso, la acción afirmativa de introducir su correo electrónico es suficiente para considerarse un consentimiento inequívoco.
 
 Para muchas regulaciones como el RGPD, se requiere un consentimiento explícito para procesar datos personales confidenciales, donde nada menos que la opción de &quot;inclusión&quot; será suficiente. Sin embargo, para los datos no confidenciales es aceptable un consentimiento inequívoco (implícito).
 
@@ -107,7 +107,7 @@ Si las operaciones de datos de su organización entran dentro de las jurisdiccio
 
 ### ¿Cómo puedo admitir solicitudes de privacidad de consumidores si mantengo datos cubiertos por regulaciones de privacidad?
 
-Una vez que haya tomado las medidas necesarias para autenticar a los consumidores que se encuentran dentro de las jurisdicciones legales adecuadas, Adobe Experience Platform Privacy Service le permite enviar solicitudes de privacidad de consumidores a aplicaciones de Experience Cloud compatibles. Consulte la [[!DNL Privacy Service] descripción general](../home.md) para obtener más información. Para obtener información sobre cómo las aplicaciones de un Experience Cloud en particular pueden cumplir con las solicitudes de privacidad, consulte la guía de [Aplicaciones de Privacy Service y Experience Cloud](../experience-cloud-apps.md).
+Una vez que haya tomado las medidas necesarias para autenticar a los consumidores que se encuentran dentro de las jurisdicciones legales adecuadas, Adobe Experience Platform Privacy Service le permite enviar solicitudes de privacidad de consumidores a aplicaciones de Experience Cloud compatibles. Consulte la [[!DNL Privacy Service] descripción general](../home.md) para obtener más información. Para obtener información sobre cómo las aplicaciones de Experience Cloud en particular pueden cumplir con las solicitudes de privacidad, consulte la guía sobre [aplicaciones de Privacy Service y Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ Las siguientes preguntas están relacionadas específicamente con la CCPA.
 
 Según se define en la CCPA, las siguientes funciones se aplican a Adobe y sus clientes:
 
-* Los clientes del Adobe (la parte que solicita la recopilación y el uso de información personal de los residentes de California) se considerarían un **Empresa**.
-* El Adobe, en su función de prestar el servicio, se consideraría un **Proveedor de servicios**.
+* Los clientes del Adobe (la parte que solicita la recopilación y el uso de información personal de los residentes de California) serían considerados un **negocio**.
+* El Adobe, en su función de proporcionar el servicio, se consideraría **Proveedor de servicios**.
 
 Como Proveedor de servicios, Adobe recopila y procesa información personal por cuenta de la Empresa y está obligado contractualmente a utilizar esa información solo para los fines específicos establecidos en el acuerdo.
 
@@ -142,7 +142,7 @@ Las siguientes preguntas están relacionadas específicamente con el RGPD.
 
 ### ¿Cuál es la diferencia entre un reglamento y una directiva?
 
-A **reglamento** es un acto legislativo vinculante y debe aplicarse en su totalidad en toda la UE. A **directiva** Es un acto legislativo que establece un objetivo que todos los países de la UE deben alcanzar, pero depende de cada país decidir cómo hacerlo.
+Una **regulación** es un acto legislativo vinculante y debe aplicarse en su totalidad en toda la UE. Una **directiva** es un acto legislativo que establece un objetivo que todos los países de la UE deben alcanzar, pero es decisión de cada país.
 
 Es importante señalar que el RGPD es un reglamento, a diferencia de la legislación anterior (la Directiva de Protección de Datos), que es una directiva.
 

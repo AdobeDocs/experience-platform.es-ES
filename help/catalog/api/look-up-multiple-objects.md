@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Buscar varios objetos de catálogo
 
-Si desea ver varios objetos específicos, en lugar de realizar una solicitud por objeto, [!DNL Catalog] proporciona un acceso directo simple para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por comas.
+Si desea ver varios objetos específicos, en lugar de realizar una solicitud por cada objeto, [!DNL Catalog] proporciona un acceso directo simple para solicitar varios objetos del mismo tipo. Puede utilizar una sola solicitud de GET para devolver varios objetos específicos incluyendo una lista de ID separados por comas.
 
 >[!NOTE]
 >
->Incluso cuando se solicitan datos específicos [!DNL Catalog] objetos, sigue siendo recomendable `properties` parámetro de consulta para devolver solo las propiedades que necesite.
+>Incluso cuando se solicitan objetos [!DNL Catalog] específicos, se recomienda `properties` parámetro de consulta para devolver solo las propiedades que necesita.
 
 **Formato de API**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a recuperar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo de objeto [!DNL Catalog] que se va a recuperar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | Identificador de uno de los objetos específicos que desea recuperar. |
 
 **Solicitud**
@@ -46,11 +46,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de los conjuntos de datos especificados, que contienen solo las propiedades solicitadas (`name`, `description`, y `files`) para cada uno.
+Una respuesta correcta devuelve una lista de los conjuntos de datos especificados, que contienen únicamente las propiedades solicitadas (`name`, `description` y `files`) para cada uno.
 
 >[!NOTE]
 >
->Si un objeto devuelto no contiene una o más de las propiedades solicitadas indicadas por la variable `properties` consulta, la respuesta devuelve solo las propiedades solicitadas que sí incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** más abajo.
+>Si un objeto devuelto no contiene una o más de las propiedades solicitadas indicadas por la consulta `properties`, la respuesta devuelve únicamente las propiedades solicitadas que sí incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** a continuación.
 
 ```json
 {

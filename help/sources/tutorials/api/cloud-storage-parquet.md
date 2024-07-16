@@ -7,39 +7,39 @@ description: Este tutorial utiliza la API de Flow Service para guiarle por los p
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 3%
+source-wordcount: '1088'
+ht-degree: 10%
 
 ---
 
-# Ingesta de datos de Parquet desde un sistema de almacenamiento en la nube de terceros mediante el [!DNL Flow Service] API
+# Ingesta de datos de Parquet desde un sistema de almacenamiento en la nube de terceros mediante la API [!DNL Flow Service]
 
-[!DNL Flow Service] se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas.
+[!DNL Flow Service] se usa para recopilar y centralizar datos de clientes de distintos orígenes dentro de Adobe Experience Platform. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas.
 
-Este tutorial utiliza el [!DNL Flow Service] API para guiarle por los pasos para ingerir datos de Parquet de un sistema de almacenamiento en la nube de terceros.
+Este tutorial utiliza la API [!DNL Flow Service] para guiarle por los pasos para ingerir datos de Parquet de un sistema de almacenamiento en la nube de terceros.
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-- [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+- [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+- [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para ingerir correctamente datos de Parquet de un almacenamiento en la nube de terceros mediante [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para ingerir correctamente datos de Parquet de un almacenamiento de nube de terceros mediante la API [!DNL Flow Service].
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en todas las [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+Para poder realizar llamadas a las API de [!DNL Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform], incluidos los pertenecientes a [!DNL Flow Service], están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform], incluidos los que pertenecen a [!DNL Flow Service], están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ## Crear una conexión
 
-Para introducir datos de Parquet utilizando [!DNL Platform] Las API requieren que posea una conexión válida para el origen de almacenamiento en la nube de terceros al que acceda. Si todavía no dispone de una conexión para el almacenamiento con el que desea trabajar, puede crearla mediante los siguientes tutoriales:
+Para ingerir datos de Parquet usando las API de [!DNL Platform], debe poseer una conexión válida para el origen de almacenamiento en la nube de terceros al que está accediendo. Si todavía no dispone de una conexión para el almacenamiento con el que desea trabajar, puede crearla mediante los siguientes tutoriales:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,9 +61,9 @@ Obtenga y almacene el identificador único (`$id`) de la conexión y continúe c
 
 ## Creación de un esquema de destino
 
-Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, se utiliza el esquema de destino para crear una [!DNL Platform] conjunto de datos en el que se incluyen los datos de origen.
+Para que los datos de origen se utilicen en [!DNL Platform], también se debe crear un esquema de destino para estructurar los datos de origen según sus necesidades. A continuación, se utiliza el esquema de destino para crear un conjunto de datos de [!DNL Platform] en el que se incluyen los datos de origen.
 
-Si prefiere usar la interfaz de usuario de en [!DNL Experience Platform], el [Tutorial del Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) proporciona instrucciones paso a paso para realizar acciones similares en el Editor de esquemas.
+Si prefiere usar la interfaz de usuario en [!DNL Experience Platform], el tutorial del [Editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) proporciona instrucciones paso a paso para realizar acciones similares en el Editor de esquemas.
 
 **Formato de API**
 
@@ -73,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Solicitud**
 
-La siguiente solicitud de ejemplo crea un esquema XDM que amplía el XDM [!DNL Individual Profile] clase.
+La siguiente solicitud de ejemplo crea un esquema XDM que amplía la clase XDM [!DNL Individual Profile].
 
 ```shell
 curl -X POST \
@@ -198,7 +198,7 @@ Una respuesta correcta devuelve detalles del esquema recién creado, incluido su
 
 ## Crear una conexión de origen {#source}
 
-Con un esquema XDM de destino creado, ahora se puede crear una conexión de origen mediante una solicitud del POST a [!DNL Flow Service] API. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destino recuperado en el paso anterior.
+Con un esquema XDM de destino creado, ahora se puede crear una conexión de origen mediante una solicitud del POST a la API [!DNL Flow Service]. Una conexión de origen consiste en una conexión para la API, un formato de datos de origen y una referencia al esquema XDM de destino recuperado en el paso anterior.
 
 **Formato de API**
 
@@ -257,15 +257,15 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 
 ## Crear una conexión base de conjunto de datos
 
-Para introducir datos externos en [!DNL Platform], un [!DNL Experience Platform] primero se debe adquirir la conexión base del conjunto de datos.
+Para poder ingerir datos externos en [!DNL Platform], primero debe adquirirse una conexión base del conjunto de datos [!DNL Experience Platform].
 
-Para crear una conexión base del conjunto de datos, siga los pasos descritos en la sección [tutorial de conexión base del conjunto de datos](./create-dataset-base-connection.md).
+Para crear una conexión base de conjunto de datos, siga los pasos descritos en el [tutorial de conexión base de conjunto de datos](./create-dataset-base-connection.md).
 
-Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de conjunto de datos. Obtenga y almacene el identificador único (`$id`) y continúe usándolo como ID de conexión base en el siguiente paso para crear una conexión de destino.
+Siga los pasos descritos en la guía para desarrolladores hasta que haya creado una conexión base de conjunto de datos. Obtenga y almacene el identificador único (`$id`) y continúe usándolo como el identificador de conexión base en el siguiente paso para crear una conexión de destino.
 
 ## Crear un conjunto de datos de destinatario
 
-Se puede crear un conjunto de datos de destino realizando una solicitud de POST al [API del servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), proporcionando el ID del esquema de destinatario dentro de la carga útil.
+Se puede crear un conjunto de datos de destino realizando una solicitud de POST a la [API de servicio de catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), que proporcione el ID del esquema de destino en la carga útil.
 
 **Formato de API**
 
@@ -308,7 +308,7 @@ Una respuesta correcta devuelve una matriz que contiene el ID del conjunto de da
 
 ## Creación de una conexión de destino {#target}
 
-Ahora tiene los identificadores únicos para una conexión base de conjunto de datos, un esquema de destino y un conjunto de datos de destino. Con estos identificadores, puede crear una conexión de destino con el [!DNL Flow Service] API para especificar el conjunto de datos que contendrá los datos de origen entrantes.
+Ahora tiene los identificadores únicos para una conexión base de conjunto de datos, un esquema de destino y un conjunto de datos de destino. Con estos identificadores, puede crear una conexión de destino utilizando la API [!DNL Flow Service] para especificar el conjunto de datos que contendrá los datos de origen entrantes.
 
 **Formato de API**
 
@@ -355,7 +355,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el identificador único ( ) de la nueva conexión de destino`id`). Almacene este valor tal como se requiere en pasos posteriores.
+Una respuesta correcta devuelve el identificador único (`id`) de la nueva conexión de destino. Almacene este valor tal como se requiere en pasos posteriores.
 
 ```json
 {
@@ -368,7 +368,7 @@ Una respuesta correcta devuelve el identificador único ( ) de la nueva conexió
 
 El último paso para la ingesta de datos de Parquet desde un almacenamiento en la nube de terceros es crear un flujo de datos. Por ahora, tiene preparados los siguientes valores obligatorios:
 
-- [ID de conexión de origen](#source)
+- [ID de conexión de Source](#source)
 - [ID de conexión de destino](#target)
 
 Un flujo de datos es responsable de programar y recopilar datos de una fuente. Puede crear un flujo de datos realizando una solicitud de POST mientras proporciona los valores mencionados anteriormente dentro de la carga útil.
@@ -416,7 +416,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado.
 
 ```json
 {
@@ -427,7 +427,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado.
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un conector de origen para recopilar datos de Parquet de su sistema de almacenamiento en la nube de terceros de forma programada. Ahora, los datos entrantes pueden utilizarse en el flujo descendente [!DNL Platform] servicios como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
+Al seguir este tutorial, ha creado un conector de origen para recopilar datos de Parquet de su sistema de almacenamiento en la nube de terceros de forma programada. Los datos entrantes ahora pueden ser utilizados por servicios de flujo descendente [!DNL Platform] como [!DNL Real-Time Customer Profile] y [!DNL Data Science Workspace]. Consulte los siguientes documentos para obtener más información:
 
-- [Resumen del perfil del cliente en tiempo real](../../../profile/home.md)
-- [Resumen de Data Science Workspace](../../../data-science-workspace/home.md)
+- [Información general del perfil del cliente en tiempo real](../../../profile/home.md)
+- [Información general del espacio de trabajo de ciencia de datos](../../../data-science-workspace/home.md)

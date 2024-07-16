@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Creación de segmentos de varias entidades en la interfaz de usuario de Experience Platform
 
-El siguiente vídeo pretende ayudarle a comprender la creación de segmentos dinámicos. Muestra un ejemplo de experiencia del cliente seguido de un rápido recorrido por las funciones clave de [!DNL Platform] interfaz. Para obtener más información acerca de la segmentación de varias entidades, lea la guía de [segmentación de varias entidades](../multi-entity-segmentation.md).
+El siguiente vídeo pretende ayudarle a comprender la creación de segmentos dinámicos. Muestra un ejemplo de experiencia del cliente seguido de un recorrido rápido por las características clave de la interfaz [!DNL Platform]. Para obtener más información acerca de la segmentación de varias entidades, lea la guía sobre [segmentación de varias entidades](../multi-entity-segmentation.md).
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [Guía del Generador de segmentos](../ui/segment-builder.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía del Generador de segmentos](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

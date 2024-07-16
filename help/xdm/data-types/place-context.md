@@ -11,19 +11,19 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Contexto del lugar] tipo de datos
+# [!UICONTROL Tipo de datos del contexto del lugar]
 
-[!UICONTROL Contexto del lugar] es un tipo de datos XDM estándar que describe la ubicación de un evento observado, incluida la información de puntos de interés y las coordenadas geográficas.
+[!UICONTROL Contexto del lugar] es un tipo de datos XDM estándar que describe la ubicación de un evento observado, incluida la información del punto de interés y las coordenadas geográficas.
 
 <img src="../images/data-types/place-context.png" width="500" /><br />
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `POIinteraction` | [[!UICONTROL Interacción del punto de interés]](./poi-interaction.md) | Describe los detalles de la interacción del punto de interés (PDI). |
-| `activePOIs` | Matriz de [[!UICONTROL Detalles del punto de interés]](./poi-details.md) | Describe los puntos de interés que provocaron el evento. |
-| `geo` | [[!UICONTROL Ubicación geográfica]](./geo.md) | Describe la ubicación geográfica donde se entregó la experiencia. |
-| `localTime` | DateTime | Una marca de tiempo en [RFC 3339](https://tools.ietf.org/html/rfc3339) , que indica la hora local con un desplazamiento de zona horaria establecido. El patrón de formato es `yyyy-MM-dd'T'HH:mm:ssXXX` (por ejemplo, `2001-07-04T12:08:56-07:00`). |
-| `localTimezoneOffset` | Número entero | La diferencia de la zona horaria local actual en minutos UTC en el caso de `localTime` valor. Debe incluir la diferencia del horario de verano actual, si corresponde. |
+| `POIinteraction` | [[!UICONTROL Interacción de punto de interés]](./poi-interaction.md) | Describe los detalles de la interacción del punto de interés (PDI). |
+| `activePOIs` | Matriz de [[!UICONTROL detalles del punto de interés]](./poi-details.md) | Describe los puntos de interés que provocaron el evento. |
+| `geo` | [[!UICONTROL Geografía]](./geo.md) | Describe la ubicación geográfica donde se entregó la experiencia. |
+| `localTime` | Fecha/Hora | Una marca de tiempo en formato [RFC 3339](https://tools.ietf.org/html/rfc3339), que indica la hora local usando con un desplazamiento de zona horaria establecido. El patrón de formato es `yyyy-MM-dd'T'HH:mm:ssXXX` (por ejemplo, `2001-07-04T12:08:56-07:00`). |
+| `localTimezoneOffset` | Entero | El desplazamiento de zona horaria local actual en minutos UTC para el valor `localTime`. Debe incluir la diferencia del horario de verano actual, si corresponde. |
 
 {style="table-layout:auto"}
 

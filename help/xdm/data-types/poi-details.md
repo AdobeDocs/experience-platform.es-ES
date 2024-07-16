@@ -7,7 +7,7 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 5%
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Baliza]](./beacon.md) | Describe los detalles de la señalización activos para la interacción del PDI. |
+| `beaconInteractionDetails` | [[!UICONTROL Señalización]](./beacon.md) | Describe los detalles de la señalización activos para la interacción del PDI. |
 | `geoInteractionDetails` | [[!UICONTROL Detalles de interacción geográfica]](./geo-interaction-details.md) | Describe los detalles geográficos activos para la interacción del PDI. |
 | `category` | Cadena | Categoría general asignada para organizar puntos de interés por el administrador de definiciones de puntos de interés. |
-| `distanceToPOICenter` | Doble | La distancia estimada desde el centro del PDI en metros. |
+| `distanceToPOICenter` | Duplicada | La distancia estimada desde el centro del PDI en metros. |
 | `locatingType` | Cadena | Mecanismo utilizado para determinar la ubicación. Los valores aceptados incluyen: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
 | `name` | Cadena | Un nombre dado al PDI. |
 | `poiID` | Cadena | Un identificador único del PDI. |

@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /companies en la API de Reac
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 93%
+source-wordcount: '237'
+ht-degree: 94%
 
 ---
 

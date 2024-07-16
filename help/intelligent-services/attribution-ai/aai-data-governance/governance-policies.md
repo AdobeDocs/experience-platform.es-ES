@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Políticas de gobernanza en Attribution AI
 
-Una vez que haya pasado por el flujo de trabajo para crear un modelo y enviar su configuración, la variable [aplicación de políticas](../../../data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Platform cumplan con las políticas de uso de datos.
+Una vez que revise el flujo de trabajo para crear un modelo y enviar su configuración, [aplicación de políticas](../../../data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Platform cumplan con las políticas de uso de datos.
 
 ## Ventana emergente de infracción de directiva
 

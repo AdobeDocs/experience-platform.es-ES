@@ -4,7 +4,7 @@ title: Validar estructura de perfil exportada
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '793'
 ht-degree: 1%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**extremo de API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Esta página enumera y describe todas las operaciones de API que puede realizar con la variable `/authoring/testing/template/render` Punto final de API, para procesar perfiles exportados que coincidan con el formato esperado del destino, en función de su [plantilla de transformación de mensaje](../../functionality/destination-server/message-format.md#using-templating). Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](create-template.md).
+Esta página enumera y describe todas las operaciones de API que puede realizar mediante el extremo de API `/authoring/testing/template/render` para procesar perfiles exportados que coincidan con el formato esperado del destino, según su [plantilla de transformación de mensajes](../../functionality/destination-server/message-format.md#using-templating). Para obtener una descripción de la funcionalidad admitida por este extremo, lea [crear plantilla](create-template.md).
 
 ## Introducción a las operaciones de API de plantilla de procesamiento {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Procesar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
 
-Puede procesar perfiles exportados realizando una solicitud de POST a `authoring/testing/template/render` y proporciona el ID de destino de la configuración de destino y la plantilla que ha creado con la variable [extremo de API de plantilla de muestra](sample-template-api.md).
+Puede procesar perfiles exportados realizando una solicitud de POST al extremo `authoring/testing/template/render` y proporcionando el ID de destino de la configuración de destino y la plantilla que creó mediante el [extremo de API de plantilla de ejemplo](sample-template-api.md).
 
 Puede empezar por utilizar una plantilla sencilla que exporte los perfiles sin procesar sin aplicar ninguna transformación y, a continuación, pasar a una plantilla más compleja que aplique transformaciones a los perfiles. La sintaxis de la plantilla simple es: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* El ID de destino que debe utilizar aquí es el `instanceId` que corresponde a una configuración de destino, creada con la variable `/destinations` punto final. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
+>* El id. de destino que debe usar aquí es el `instanceId` que corresponde a una configuración de destino creada con el extremo `/destinations`. Consulte [recuperar una configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) para obtener más información.
 
 **Formato de API**
 
@@ -43,15 +43,15 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | El ID de la configuración de destino para la que está representando perfiles exportados. |
 | `template` | La versión con caracteres de escape de la plantilla en función de la cual se están representando los perfiles exportados. |
-| `profiles` | *Opcional*. Puede añadir perfiles al cuerpo de la solicitud. Si no agrega ningún perfil, Experience Platform generará y agregará automáticamente perfiles a la solicitud. <br> Si desea agregar perfiles al cuerpo de la llamada, puede generar algunos utilizando el [API de generación de perfiles de muestra](sample-profile-generation-api.md). |
+| `profiles` | *Opcional*. Puede añadir perfiles al cuerpo de la solicitud. Si no agrega ningún perfil, Experience Platform generará y agregará automáticamente perfiles a la solicitud. <br> Si desea agregar perfiles al cuerpo de la llamada, puede generar algunos mediante la [API de generación de perfiles de muestra](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 
-Tenga en cuenta que la respuesta devuelta por el extremo de la API de plantilla de procesamiento difiere según la política de agregación de destino. Si el destino tiene una política de agregación configurable, la clave de agregación que determina cómo se agregan los perfiles también se devuelve en la respuesta. Más información [políticas de agregación](../../functionality/destination-configuration/aggregation-policy.md) para obtener más información.
+Tenga en cuenta que la respuesta devuelta por el extremo de la API de plantilla de procesamiento difiere según la política de agregación de destino. Si el destino tiene una política de agregación configurable, la clave de agregación que determina cómo se agregan los perfiles también se devuelve en la respuesta. Lea acerca de [directivas de agregación](../../functionality/destination-configuration/aggregation-policy.md) para obtener más detalles.
 
 | Parámetro de respuesta | Descripción |
 | -------- | ----------- |
-| `aggregationKey` | Representa la directiva mediante la cual se agregan perfiles en las exportaciones a su destino. Este parámetro es opcional y sólo estará presente si la directiva de agregación de destino se establece en `CONFIGURABLE_AGGREGATION`. |
+| `aggregationKey` | Representa la directiva mediante la cual se agregan perfiles en las exportaciones a su destino. Este parámetro es opcional y estará presente solamente si la directiva de agregación de destino se establece en `CONFIGURABLE_AGGREGATION`. |
 | `profiles` | Muestra los perfiles proporcionados en la solicitud o los perfiles generados automáticamente si no se proporcionaron perfiles en la solicitud. |
 | `output` | Perfil o perfiles procesados, como una cadena con escape, basados en la plantilla de transformación de mensajes proporcionada |
 
@@ -126,7 +126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Respuesta**
 
 La respuesta devuelve el resultado de procesar la plantilla o cualquier error encontrado.
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Busque el perfil exportado en la `output` , como una cadena de escape.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Busque el perfil exportado en el parámetro `output`, como una cadena de escape.
 Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones de los errores encontrados.
 
 ```json
@@ -186,7 +186,7 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
 **Solicitud**
 
 
-La siguiente solicitud procesa varios perfiles exportados que coinciden con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con agregación configurable. En el cuerpo de la solicitud se incluyen dos perfiles, cada uno con tres cualificaciones de audiencia y cinco identidades. Puede generar perfiles para enviar en la llamada utilizando [API de generación de perfiles de muestra](sample-profile-generation-api.md).
+La siguiente solicitud procesa varios perfiles exportados que coinciden con el formato esperado por el destino. En este ejemplo, el ID de destino corresponde a una configuración de destino con agregación configurable. En el cuerpo de la solicitud se incluyen dos perfiles, cada uno con tres cualificaciones de audiencia y cinco identidades. Puede generar perfiles para enviarlos en la llamada usando la [API de generación de perfiles de muestra](sample-profile-generation-api.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Respuesta**
 
 La respuesta devuelve el resultado de procesar la plantilla o cualquier error encontrado.
-Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Observe en la respuesta cómo se agregan los perfiles en función de la pertenencia a la audiencia y las identidades. Busque los perfiles exportados en la `output` , como una cadena de escape.
+Una respuesta correcta devuelve el estado HTTP 200 con detalles de los datos exportados. Observe en la respuesta cómo se agregan los perfiles en función de la pertenencia a la audiencia y las identidades. Busque los perfiles exportados en el parámetro `output`, como una cadena de escape.
 Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones de los errores encontrados.
 
 ```json
@@ -1070,4 +1070,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Leer [cómo utilizar Destination SDK para configurar el destino](../../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Lee [cómo usar el Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

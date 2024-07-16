@@ -1,5 +1,5 @@
 ---
-title: Personalización híbrida mediante SDK web y API de servidor de red perimetral
+title: Personalización híbrida mediante SDK web y API de servidor de Edge Network
 description: Este artículo muestra cómo se puede utilizar el SDK web junto con la API de servidor para implementar la personalización híbrida en las propiedades web.
 keywords: personalización; híbrido; api de servidor; lado del servidor; implementación híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
@@ -10,47 +10,47 @@ ht-degree: 3%
 
 ---
 
-# Personalización híbrida mediante SDK web y API de servidor de red perimetral
+# Personalización híbrida mediante SDK web y API de servidor de Edge Network
 
 ## Información general {#overview}
 
-Personalización híbrida describe el proceso de recuperación de contenido de personalización del lado del servidor, mediante [API del servidor de red perimetral](../../server-api/overview.md)y procesándolo en el lado del cliente, utilizando [SDK web](../home.md).
+La personalización híbrida describe el proceso de recuperar contenido personalizado del lado del servidor, mediante la [API de Edge Network Server](../../server-api/overview.md) y procesarlo del lado del cliente, mediante [SDK web](../home.md).
 
-Puede utilizar la personalización híbrida con soluciones de personalización como Adobe Target, Adobe Journey Optimizer o Offer Decisioning, la diferencia es el contenido del [!UICONTROL API de servidor] carga útil.
+Puede utilizar la personalización híbrida con soluciones de personalización como Adobe Target, Adobe Journey Optimizer o Offer Decisioning, la diferencia es el contenido de la carga útil de [!UICONTROL Server API].
 
 ## Requisitos previos {#prerequisites}
 
 Antes de implementar la personalización híbrida en las propiedades web, asegúrese de cumplir las siguientes condiciones:
 
-* Ha decidido qué solución de personalización desea utilizar. Esto tendrá un impacto en el contenido de la [!UICONTROL API de servidor] carga útil.
-* Tiene acceso a un servidor de aplicaciones que puede utilizar para realizar el [!UICONTROL API de servidor] llamadas.
-* Tiene acceso a la [API del servidor de red perimetral](../../server-api/authentication.md).
-* Ha seleccionado correctamente [configurado](/help/web-sdk/commands/configure/overview.md) e implementó el SDK web en las páginas que desea personalizar.
+* Ha decidido qué solución de personalización desea utilizar. Esto afectará el contenido de la carga útil [!UICONTROL API de servidor].
+* Tiene acceso a un servidor de aplicaciones que puede usar para realizar las llamadas a la API de [!UICONTROL servidor].
+* Tiene acceso a la [API de Edge Network Server](../../server-api/authentication.md).
+* Ha [configurado](/help/web-sdk/commands/configure/overview.md) correctamente e implementado el SDK web en las páginas que desea personalizar.
 
 ## Diagrama de flujo {#flow-diagram}
 
 El diagrama de flujo siguiente describe el orden de los pasos realizados para ofrecer una personalización híbrida.
 
-![Diagrama de flujo visual que muestra el orden de los pasos realizados para ofrecer una personalización híbrida.](assets/hybrid-personalization-diagram.png)
+![Diagrama de flujo visual que muestra el orden de los pasos tomados para ofrecer la personalización híbrida.](assets/hybrid-personalization-diagram.png)
 
-1. Cualquier cookie existente previamente almacenada por el explorador, con el prefijo `kndctr_`, se incluyen en la solicitud del explorador.
+1. Cualquier cookie existente previamente almacenada por el explorador, con el prefijo `kndctr_`, se incluye en la solicitud del explorador.
 1. El explorador web cliente solicita la página web desde el servidor de aplicaciones.
-1. Cuando el servidor de aplicaciones recibe la solicitud de página, realiza una `POST` solicitud a la [Extremo de recopilación de datos interactivos de API de servidor](../../server-api/interactive-data-collection.md) para recuperar contenido de personalización. El `POST` la solicitud contiene un `event` y una `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la variable `meta>state>entries` matriz.
+1. Cuando el servidor de aplicaciones recibe la solicitud de página, realiza una solicitud `POST` al extremo [de recopilación de datos interactivos de la API del servidor](../../server-api/interactive-data-collection.md) para recuperar el contenido de personalización. La solicitud `POST` contiene `event` y `query`. Las cookies del paso anterior, si están disponibles, se incluyen en la matriz `meta>state>entries`.
 1. La API del servidor devuelve el contenido de personalización al servidor de aplicaciones.
-1. El servidor de aplicaciones devuelve una respuesta del HTML al explorador del cliente, que contiene la variable [cookies de identidad y de clúster](#cookies).
-1. En la página de cliente, la variable [!DNL Web SDK] `applyResponse` se llama al comando, pasando los encabezados y el cuerpo del [!UICONTROL API de servidor] respuesta del paso anterior.
-1. El [!DNL Web SDK] procesa Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) ofertas y elementos del canal web de Journey Optimizer automáticamente, ya que la variable `renderDecisions` el indicador se establece en `true`.
-1. Basado en formularios de Target [!DNL HTML]/[!DNL JSON] Las ofertas de y las experiencias basadas en código de Journey Optimizer se aplican manualmente a través de `applyProposition` método, para actualizar el [!DNL DOM] se basa en el contenido de personalización de la propuesta.
-1. Para formularios de Target basados en [!DNL HTML]/[!DNL JSON] ofertas y experiencias basadas en código de Journey Optimizer, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado el contenido devuelto. Esto se realiza mediante la variable `sendEvent` comando.
+1. El servidor de aplicaciones devuelve una respuesta del HTML al explorador del cliente, que contiene [cookies de identidad y de clúster](#cookies).
+1. En la página cliente, se llama al comando [!DNL Web SDK] `applyResponse`, pasando los encabezados y el cuerpo de la respuesta de la [!UICONTROL API de servidor] del paso anterior.
+1. [!DNL Web SDK] procesa automáticamente las ofertas de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) y los elementos del canal web de Journey Optimizer porque el indicador `renderDecisions` está establecido en `true`.
+1. Las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer se aplican manualmente mediante el método `applyProposition` para actualizar [!DNL DOM] según el contenido de personalización de la propuesta.
+1. Para las ofertas [!DNL HTML]/[!DNL JSON] basadas en formularios de Target y las experiencias basadas en código de Journey Optimizer, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado el contenido devuelto. Esto se realiza mediante el comando `sendEvent`.
 
 ## Cookies {#cookies}
 
 Las cookies se utilizan para mantener la identidad del usuario y la información de clúster.  Al utilizar una implementación híbrida, el servidor de aplicaciones web gestiona el almacenamiento y el envío de estas cookies durante el ciclo vital de la solicitud.
 
-| Cookie | Finalidad | Almacenado por | Enviado por |
+| Cookie | Objetivo | Almacenado por | Enviado por |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Contiene detalles de identidad del usuario. | Servidor de aplicaciones | Servidor de aplicaciones |
-| `kndctr_AdobeOrg_cluster` | Indica qué clúster de red perimetral debe usarse para cumplir las solicitudes. | Servidor de aplicaciones | Servidor de aplicaciones |
+| `kndctr_AdobeOrg_cluster` | Indica qué clúster de Edge Network se debe usar para cumplir las solicitudes. | Servidor de aplicaciones | Servidor de aplicaciones |
 
 ## Solicitar ubicación {#request-placement}
 
@@ -65,7 +65,7 @@ Las solicitudes de API del servidor son necesarias para obtener propuestas y env
 
 Al implementar la personalización híbrida, debe prestar especial atención para que las visitas a la página no se cuenten varias veces en Analytics.
 
-Cuando usted [configuración de una secuencia de datos](../../datastreams/overview.md) en Analytics, los eventos se reenvían automáticamente para que se capturen las visitas individuales de la página.
+Al [configurar una secuencia de datos](../../datastreams/overview.md) para Analytics, los eventos se reenvían automáticamente para que se capturen las visitas a la página.
 
 El ejemplo de esta implementación utiliza dos flujos de datos diferentes:
 
@@ -162,8 +162,8 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sí. | El ID de la secuencia de datos que utiliza para pasar las interacciones a la red perimetral. Consulte la [información general sobre flujos de datos](../../datastreams/overview.md) para aprender a configurar una secuencia de datos. |
-| `requestId` | `String` | No | ID aleatorio para correlacionar solicitudes internas del servidor. Si no se proporciona ninguno, la red perimetral generará uno y lo devolverá en la respuesta. |
+| `dataStreamId` | `String` | Sí. | El ID de la secuencia de datos que utiliza para pasar las interacciones al Edge Network. Consulte la [descripción general de flujos de datos](../../datastreams/overview.md) para obtener información sobre cómo configurar un flujo de datos. |
+| `requestId` | `String` | No | ID aleatorio para correlacionar solicitudes internas del servidor. Si no se proporciona ninguno, el Edge Network genera uno y lo devuelve en la respuesta. |
 
 ### Respuesta del lado del servidor {#server-response}
 
@@ -203,7 +203,7 @@ La respuesta de ejemplo siguiente muestra el aspecto que podría tener la respue
 
 ## Solicitud del lado del cliente {#client-request}
 
-En la página de cliente, la variable [!DNL Web SDK] `applyResponse` se llama al comando, pasando los encabezados y el cuerpo de la respuesta del lado del servidor.
+En la página del cliente, se llama al comando [!DNL Web SDK] `applyResponse`, pasando los encabezados y el cuerpo de la respuesta del lado del servidor.
 
 ```js
    alloy("applyResponse", {
@@ -253,7 +253,7 @@ En la página de cliente, la variable [!DNL Web SDK] `applyResponse` se llama al
    ).then(applyPersonalization("sample-json-offer"));
 ```
 
-Basado en formularios [!DNL JSON] Las ofertas de se aplican manualmente a través de `applyPersonalization` método, para actualizar el [!DNL DOM] en función de la oferta de personalización. Para las actividades basadas en formularios, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado la oferta. Esto se realiza mediante la variable `sendEvent` comando.
+Las ofertas [!DNL JSON] basadas en formularios se aplican manualmente mediante el método `applyPersonalization` para actualizar [!DNL DOM] según la oferta de personalización. Para las actividades basadas en formularios, los eventos de visualización deben enviarse manualmente para indicar cuándo se ha mostrado la oferta. Esto se realiza mediante el comando `sendEvent`.
 
 ```js
 function sendDisplayEvent(decision) {
@@ -280,4 +280,4 @@ function sendDisplayEvent(decision) {
 
 ## Aplicación de ejemplo {#sample-app}
 
-Para ayudarle a experimentar y obtener más información sobre este tipo de personalización, le proporcionamos una aplicación de muestra que puede descargar y utilizar para realizar pruebas. Puede descargar la aplicación, junto con instrucciones detalladas sobre cómo utilizarla, desde [Repositorio de GitHub](https://github.com/adobe/alloy-samples).
+Para ayudarle a experimentar y obtener más información sobre este tipo de personalización, le proporcionamos una aplicación de muestra que puede descargar y utilizar para realizar pruebas. Puede descargar la aplicación, junto con instrucciones detalladas sobre cómo utilizarla, desde este [repositorio de GitHub](https://github.com/adobe/alloy-samples).

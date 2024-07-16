@@ -11,16 +11,16 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Marketing] tipo de datos
+# Tipo de datos [!UICONTROL Marketing]
 
-[!UICONTROL Marketing] es un tipo de datos XDM estándar que describe actividades de marketing activas con un punto de contacto determinado.
+[!UICONTROL Marketing] es un tipo de datos XDM estándar que describe actividades de marketing que están activas con un punto de contacto en particular.
 
 ![](../images/data-types/marketing.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `campaignGroup` | Cadena | El nombre del grupo de campañas (en casos en los que varias campañas se agrupan como `50%_DISCOUNT`). |
-| `campaignName` | Cadena | El nombre de la campaña de marketing (por ejemplo, `50%_DISCOUNT_USA` o `50%_DISCOUNT_ASIA`. |
+| `campaignGroup` | Cadena | Nombre del grupo de campañas (en casos en los que se agrupan varias campañas como `50%_DISCOUNT`). |
+| `campaignName` | Cadena | Nombre de la campaña de marketing, como `50%_DISCOUNT_USA` o `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Cadena | El código de seguimiento que se puede utilizar para identificar la campaña de marketing a la que está asociado el evento. |
 
 {style="table-layout:auto"}

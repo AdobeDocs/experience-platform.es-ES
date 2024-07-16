@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /environment en la API de Re
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '999'
 ht-degree: 99%
 
 ---

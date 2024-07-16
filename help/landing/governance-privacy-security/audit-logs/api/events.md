@@ -5,21 +5,21 @@ exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 9%
+ht-degree: 2%
 
 ---
 
 # Extremo de eventos de auditoría
 
-Los registros de auditoría se utilizan para proporcionar detalles de la actividad del usuario para varios servicios y funcionalidades. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción. El `/audit/events` punto final en la [!DNL Audit Query] La API de le permite recuperar mediante programación datos de evento de la actividad de su organización en [!DNL Platform].
+Los registros de auditoría se utilizan para proporcionar detalles de la actividad del usuario para varios servicios y funcionalidades. Cada acción registrada contiene metadatos que indican el tipo de acción, la fecha y la hora, el ID de correo electrónico del usuario que realizó la acción y los atributos adicionales relevantes de ese tipo de acción. El extremo `/audit/events` de la API [!DNL Audit Query] le permite recuperar mediante programación los datos de evento de la actividad de su organización en [!DNL Platform].
 
-## Primeros pasos
+## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
 
 ## Enumerar eventos de auditoría
 
-Puede recuperar datos de eventos realizando una solicitud de GET a `/audit/events` extremo, especificando los eventos que desea recuperar en la carga útil.
+Puede recuperar datos de eventos realizando una solicitud de GET al extremo `/audit/events`, especificando los eventos que desea recuperar en la carga útil.
 
 **Formato de API**
 
@@ -27,7 +27,7 @@ Puede recuperar datos de eventos realizando una solicitud de GET a `/audit/event
 GET /audit/events
 ```
 
-El [!DNL Audit Query] La API admite el uso de parámetros de consulta para paginar y filtrar los resultados al enumerar eventos.
+La API [!DNL Audit Query] admite el uso de parámetros de consulta para paginar y filtrar los resultados al enumerar eventos.
 
 | Parámetro | Descripción |
 | --- | --- |

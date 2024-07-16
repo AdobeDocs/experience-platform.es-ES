@@ -4,8 +4,8 @@ title: Introducción a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 5%
+source-wordcount: '583'
+ht-degree: 1%
 
 ---
 
@@ -17,13 +17,13 @@ En esta página se describe cómo autenticarse y empezar a utilizar Adobe Experi
 
 ## Terminología {#terminology}
 
-Esta guía utiliza conceptos específicos de la plataforma, como la organización y los entornos limitados. Consulte la [Glosario del Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=es) para obtener definiciones de estos y otros términos.
+Esta guía utiliza conceptos específicos de la plataforma, como la organización y los entornos limitados. Consulte el [glosario de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) para ver las definiciones de estos y otros términos.
 
 ## Obtener las credenciales de autenticación requeridas {#obtain-authentication-credentials}
 
-El Destination SDK utiliza el [Adobe I/O](https://www.adobe.io/) puerta de enlace para autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de intercambio de Adobe para configurar la autenticación en el [Consola de Adobe Developer](https://developer.adobe.com/console).
+El Destination SDK utiliza la puerta de enlace [Adobe I/O](https://www.adobe.io/) para la autenticación. Para realizar llamadas de API a extremos de Destination SDK, debe proporcionar ciertos encabezados en las llamadas de API. Trabaje con el equipo de Adobe Exchange para configurar la autenticación en [Adobe Developer Console](https://developer.adobe.com/console).
 
-Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga las [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Inicie el tutorial desde el &quot;[Generar una clave de API, un ID de organización y un secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; paso. El equipo de intercambio de Adobe se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas de API de Destination SDK, como se muestra a continuación:
+Para realizar llamadas correctamente a los extremos de la API de Destination SDK, siga el [tutorial de autenticación de Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=es). Inicie el tutorial desde el paso &quot;[Generar una clave de API, ID de organización y secreto de cliente](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. El equipo de Adobe Exchange se encargará de los pasos anteriores. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas de API de Destination SDK, como se muestra a continuación:
 
 * `x-api-key: {API_KEY}`, también denominado ID de cliente
 * `x-gw-ims-org-id: {ORG_ID}`, también denominado ID de organización
@@ -56,7 +56,7 @@ El equipo de Adobe Exchange le proporciona su nombre de zona protegida, que debe
 
 ## Control de acceso basado en roles (RBAC) {#rbac}
 
-Para usar los extremos de la API de Destination SDK descritos en la sección [documentación de referencia](functionality/configuration-options.md), necesita el **[!UICONTROL Creación de destino]** permiso de control de acceso. Trabaje con el equipo de intercambio de Adobe para que se le asigne este permiso en [Adobe Admin Console](https://adminconsole.adobe.com/).
+Para usar los extremos de la API de Destination SDK descritos en la [documentación de referencia](functionality/configuration-options.md), necesita el permiso de control de acceso de **[!UICONTROL Creación de destinos]**. Trabaje con el equipo de Adobe Exchange para que se le asigne este permiso en [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Permiso de creación de destino](./assets/destination-authoring-permission.png)
 
@@ -80,5 +80,5 @@ Al seguir los pasos de este artículo, obtuvo las credenciales de autenticación
    * [Usar Destination SDK para configurar un destino de flujo continuo](guides/configure-destination-instructions.md)
    * [Usar Destination SDK para configurar un destino basado en archivos](guides/configure-file-based-destination-instructions.md)
 
-* Para todas las operaciones, consulte la [Documentación de API de creación de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Utilice el [Colección Postman de la API de creación de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar el destino mediante los extremos de la API de Destination SDK. Para empezar a usar Postman, consulte las [pasos para importar entornos y colecciones](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) y una [guía de vídeo para crear el entorno de Postman](https://video.tv.adobe.com/v/28832).
+* Para todas las operaciones, consulte la [documentación de la API de creación de destino](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* Use la [colección de Postman de la API de creación de destino](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) para configurar el destino mediante los extremos de la API de Destination SDK. Para empezar a usar Postman, vea los [pasos para importar entornos y colecciones](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) y una [guía de vídeo para crear el entorno de Postman](https://video.tv.adobe.com/v/28832).

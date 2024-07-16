@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Esta página describe cómo utilizar la información de [Opciones de configuración en el SDK de destinos](../functionality/configuration-options.md) y en otros documentos de referencia de la API y la funcionalidad de Destination SDK para configurar un [destino de streaming](../../destination-types.md#streaming-destinations). Los pasos se presentan en orden secuencial a continuación.
+En esta página se describe cómo usar la información de [opciones de configuración en Destinations SDK](../functionality/configuration-options.md) y en otras funciones de Destination SDK y documentos de referencia de API para configurar un [destino de streaming](../../destination-types.md#streaming-destinations). Los pasos se presentan en orden secuencial a continuación.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducción al Destination SDK](../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK. Esto supone que ha completado la asociación y los requisitos previos de permisos y está listo para empezar a desarrollar su destino.
+Antes de avanzar a los pasos que se ilustran a continuación, lea la página de [introducción al Destination SDK](../getting-started.md) para obtener información sobre cómo obtener las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK. Esto supone que ha completado la asociación y los requisitos previos de permisos y está listo para empezar a desarrollar su destino.
 
 ## Pasos para utilizar las opciones de configuración de Destination SDK para configurar el destino {#steps}
 
@@ -25,9 +25,9 @@ Antes de avanzar a los pasos que se ilustran a continuación, lea la [Introducci
 
 ## Paso 1: Crear una configuración de servidor y plantilla {#create-server-template-configuration}
 
-Comenzar por [creación de una configuración de servidor y plantilla](../authoring-api/destination-server/create-destination-server.md) uso del `/destinations-server` punto final.
+Comience por [crear una configuración de servidor y plantilla](../authoring-api/destination-server/create-destination-server.md) utilizando el punto de conexión `/destinations-server`.
 
-A continuación se muestra un ejemplo de configuración. Tenga en cuenta que la plantilla de transformación de mensajes de la variable `requestBody.value` parámetro se aborda en el paso 3, [Crear plantilla de transformación](#create-transformation-template).
+A continuación se muestra un ejemplo de configuración. Tenga en cuenta que la plantilla de transformación de mensajes del parámetro `requestBody.value` se trata en el paso 3, [Crear plantilla de transformación](#create-transformation-template).
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -56,13 +56,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Paso 2: Crear la configuración de destino {#create-destination-configuration}
 
-A continuación se muestra un ejemplo de configuración para una plantilla de destino creada con la variable `/destinations` Extremo de API. Consulte [crear una configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md) para obtener más información.
+A continuación se muestra un ejemplo de configuración para una plantilla de destino creada mediante el extremo de la API `/destinations`. Consulte [crear una configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md) para obtener más información.
 
-Para conectar el servidor y la configuración de plantilla del paso 1 a esta configuración de destino, agregue el ID de instancia del servidor y la configuración de plantilla como `destinationServerId` aquí.
+Para conectar el servidor y la configuración de plantilla del paso 1 a esta configuración de destino, agregue aquí el ID de instancia del servidor y la configuración de plantilla como `destinationServerId`.
 
 >[!IMPORTANT]
 >
->Para crear un destino en tiempo real (flujo) correctamente configurado, debe *debe* añada al menos una identidad de destino en `identityNamespaces`, como se muestra a continuación. Si no se configura ninguna identidad de destino, los usuarios no podrán continuar más allá de [Paso de asignación](../../ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación.
+>Para crear un destino configurado correctamente en tiempo real (streaming), *debe* agregar al menos una identidad de destino en `identityNamespaces`, como se muestra a continuación. Si no se ha configurado ninguna identidad de destino, los usuarios no podrán continuar más allá del [paso de asignación](../../ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación.
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Paso 3: Crear una plantilla de transformación de mensaje: utilice el lenguaje de plantilla para especificar el formato de salida del mensaje {#create-transformation-template}
 
-En función de las cargas útiles que admite su destino, debe crear una plantilla que transforme el formato de los datos exportados del formato XDM de Adobe a un formato compatible con su destino. Consulte los ejemplos de plantilla en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias](../functionality/destination-server/message-format.md#using-templating) y utilice el [herramienta de creación de plantillas](../testing-api/streaming-destinations/create-template.md) proporcionadas por el Adobe.
+En función de las cargas útiles que admite su destino, debe crear una plantilla que transforme el formato de los datos exportados del formato XDM de Adobe a un formato compatible con su destino. Vea ejemplos de plantillas en la sección [Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias](../functionality/destination-server/message-format.md#using-templating) y use la [herramienta de creación de plantillas](../testing-api/streaming-destinations/create-template.md) proporcionada por Adobe.
 
 Una vez que haya creado una plantilla de transformación de mensajes que le funcione, agréguela al servidor y a la configuración de plantilla que creó en el paso 1.
 
@@ -176,9 +176,9 @@ Una vez que haya creado una plantilla de transformación de mensajes que le func
 
 ## Paso 4: Crear la configuración de metadatos de audiencia {#create-audience-metadata-configuration}
 
-Para algunos destinos, Destination SDK requiere que configure los metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Consulte [Gestión de metadatos de audiencia](../functionality/audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
+Para algunos destinos, Destination SDK requiere que configure los metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Consulte [Administración de metadatos de audiencia](../functionality/audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
 
-Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino creada en el paso 2. Añada el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
+Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino creada en el paso 2. Agregue el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
 
 ```json {line-numbers="true" highlight="53"}
 {
@@ -263,24 +263,24 @@ Si utiliza una configuración de metadatos de audiencia, debe conectarla a la co
 
 ## Paso 5: Configuración de la autenticación {#set-up-authentication}
 
-En función de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para su destino mediante el `/destination` o el `/credentials` punto final.
+Dependiendo de si especifica `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` en la configuración de destino anterior, puede configurar la autenticación para su destino mediante el extremo `/destination` o `/credentials`.
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` es la más común de las dos reglas de autenticación y es la que se debe utilizar si se requiere que los usuarios proporcionen algún tipo de autenticación a su destino antes de que puedan configurar una conexión y exportar datos.
+>`CUSTOMER_AUTHENTICATION` es la más común de las dos reglas de autenticación y es la que se debe usar si se requiere que los usuarios proporcionen algún tipo de autenticación a su destino antes de que puedan configurar una conexión y exportar datos.
 
-Si ha seleccionado `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino y el destino admite el método de autenticación OAuth 2, lea lo siguiente [Autenticación OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
+Si seleccionó `"authenticationRule": "CUSTOMER_AUTHENTICATION"` en la configuración de destino y el destino admite el método de autenticación OAuth 2, lea la [autenticación OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
-Si ha seleccionado `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear un [configuración de credenciales](../credentials-api/create-credential-configuration.md).
+Si seleccionó `"authenticationRule": "PLATFORM_AUTHENTICATION"`, debe crear una [configuración de credenciales](../credentials-api/create-credential-configuration.md).
 
 ## Paso 6: Prueba del destino {#test-destination}
 
-Después de configurar el destino mediante los extremos de configuración de los pasos anteriores, puede utilizar el [herramienta de prueba de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
+Después de configurar el destino mediante los extremos de configuración de los pasos anteriores, puede usar la [herramienta de prueba de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para probar la integración entre Adobe Experience Platform y el destino.
 
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear segmentos que activará en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
 * [Creación de una página de documentación de audiencia](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Tutorial de Creación de un vídeo de audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Tutorial de vídeo Crear una audiencia](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Paso 7: Publish como destino {#publish-destination}
 
@@ -288,7 +288,7 @@ Como parte del proceso para probar el destino, debe utilizar la interfaz de usua
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Después de configurar y probar el destino, utilice el [API de publicación de destino](../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe para su revisión.
+Después de configurar y probar el destino, use la [API de publicación de destino](../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe y revisarla.
 
 ## Paso 8: Documentar el destino {#document-destination}
 
@@ -296,7 +296,7 @@ Después de configurar y probar el destino, utilice el [API de publicación de d
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino en [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md).
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea una [integración de productos](../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md) para crear una página de documentación de productos para su destino en el [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md).
 
 ## Paso 9: Enviar destino para su revisión por parte del Adobe {#submit-for-review}
 
@@ -304,4 +304,4 @@ Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI)
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Por último, para que el destino se pueda publicar en el catálogo de Experience Platform y sea visible para todos los clientes de Experience Platform, debe enviar oficialmente el destino para que el Adobe lo revise. Encuentre información completa acerca de cómo [enviar para su revisión un destino de productos creado en Destination SDK](../guides/submit-destination.md).
+Por último, para que el destino se pueda publicar en el catálogo de Experience Platform y sea visible para todos los clientes de Experience Platform, debe enviar oficialmente el destino para que el Adobe lo revise. Encuentre información completa sobre cómo [enviar para su revisión un destino de productos creado en el Destination SDK](../guides/submit-destination.md).

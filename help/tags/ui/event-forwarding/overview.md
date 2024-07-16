@@ -28,9 +28,9 @@ Este documento proporciona información general de alto nivel sobre el reenvío 
 
 >[!NOTE]
 >
->Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Platform, consulte la [resumen de recopilación de datos](../../../collection/home.md).
+>Para obtener información sobre cómo encaja el reenvío de eventos en el ecosistema de recopilación de datos en Platform, consulte la [descripción general de la recopilación de datos](../../../collection/home.md).
 
-Reenvío de eventos combinado con Adobe Experience Platform [SDK web](/help/web-sdk/home.md) y [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
+El reenvío de eventos combinado con el [SDK web](/help/web-sdk/home.md) de Adobe Experience Platform y el [SDK móvil](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) ofrece las siguientes ventajas:
 
 **Rendimiento**:
 
@@ -44,10 +44,10 @@ Reenvío de eventos combinado con Adobe Experience Platform [SDK web](/help/web-
 
 ## Diferencias entre el reenvío de eventos y las etiquetas {#differences-from-tags}
 
-En cuanto a la configuración, el reenvío de eventos utiliza muchos de los mismos conceptos que las etiquetas, como [reglas](../managing-resources/rules.md), [elementos de datos](../managing-resources/data-elements.md), y [extensiones](../managing-resources/extensions/overview.md). La principal diferencia entre ambos puede resumirse de la siguiente manera:
+En cuanto a la configuración, el reenvío de eventos utiliza muchos de los conceptos que emplean las etiquetas, como [reglas](../managing-resources/rules.md), [elementos de datos](../managing-resources/data-elements.md) y [extensiones](../managing-resources/extensions/overview.md). La principal diferencia entre ambos puede resumirse de la siguiente manera:
 
-* Etiquetas **recoge** datos de evento de un sitio web o una aplicación móvil nativa y los envía al Edge Network de Platform.
-* Reenvío de eventos **envía** datos de evento entrantes del Edge Network de Platform a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
+* Las etiquetas **recopila** datos de evento de un sitio web o aplicación móvil nativa y los envía al Edge Network de Platform.
+* El reenvío de eventos **envía** datos de evento entrantes del Edge Network de Platform a un extremo que representa un destino final o un extremo que proporciona datos con los que desea enriquecer la carga útil original.
 
 Mientras que las etiquetas recopilan datos de evento directamente del sitio o de la aplicación móvil nativa mediante los SDK web y móvil de Platform, el reenvío de eventos requiere que los datos de evento ya se envíen a través del Edge Network de Platform para reenviarlos a los destinos. En otras palabras, debe implementar el SDK web o móvil de Platform en su propiedad digital (mediante etiquetas o mediante código sin procesar) para utilizar el reenvío de eventos.
 
@@ -61,57 +61,57 @@ El reenvío de eventos mantiene su propio almacén de propiedades separadas de l
 
 ![Propiedades del reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/properties.png)
 
-Lista de todas las propiedades del reenvío de eventos **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Platform Edge Network, que puede recibir datos de evento de plataformas web y móviles.
+Todas las propiedades del reenvío de eventos enumeran **[!UICONTROL Edge]** como su plataforma. No distinguen entre web o móvil porque solo procesan los datos recibidos de Platform Edge Network, que puede recibir datos de evento de plataformas web y móviles.
 
 ### Extensiones {#extensions}
 
-El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como [Núcleo](../../extensions/server/core/overview.md) extensión y [Conector de Adobe Cloud](../../extensions/server/cloud-connector/overview.md) extensión. Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario al seleccionar **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catálogo]**.
+El reenvío de eventos tiene su propio catálogo de extensiones compatibles, como la extensión [Core](../../extensions/server/core/overview.md) y la extensión [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Puede ver las extensiones disponibles para las propiedades de reenvío de eventos en la interfaz de usuario seleccionando **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Catálogo]**.
 
-Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
 ![Extensiones de reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Elementos de datos {#data-elements}
 
-Los tipos de Data Elements disponibles en el reenvío de eventos se limitan al catálogo de [extensiones](#extensions) que los proporcionan.
+Los tipos de elementos de datos disponibles en el reenvío de eventos se limitan al catálogo de [extensiones](#extensions) compatibles que los proporcionan.
 
 Aunque los elementos de datos se crean y configuran del mismo modo en el reenvío de eventos que para las etiquetas, existen algunas diferencias de sintaxis importantes en cuanto a cómo hacen referencia a los datos del Edge Network de Platform.
 
 #### Datos de referencia del Edge Network de Platform {#data-element-path}
 
-Para hacer referencia a datos de Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Núcleo]** para la extensión y **[!UICONTROL Ruta]** para el tipo.
+Para hacer referencia a datos de Platform Edge Network, debe crear un elemento de datos que proporcione una ruta válida a esos datos. Al crear el elemento de datos en la interfaz de usuario, seleccione **[!UICONTROL Core]** para la extensión y **[!UICONTROL Path]** para el tipo.
 
-El **[!UICONTROL Ruta]** el valor del elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
+El valor **[!UICONTROL Path]** para el elemento de datos debe seguir el patrón `arc.event.{ELEMENT}` (por ejemplo: `arc.event.xdm.web.webPageDetails.URL`). Esta ruta debe especificarse correctamente para que se envíen los datos.
 
-Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
-![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos.](../../images/ui/event-forwarding/overview/data-reference.png)
+![Ejemplo de un elemento de datos de tipo de ruta de acceso para el reenvío de eventos.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Reglas {#rules}
 
-La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [secuencia de datos](../../../datastreams/overview.md) y reenvía esos eventos a destinos si se cumplen determinadas condiciones.
+La creación de reglas en las propiedades del reenvío de eventos funciona de forma similar a las etiquetas, con la diferencia clave de que no se pueden seleccionar eventos como componentes de regla. En su lugar, una regla de reenvío de eventos procesa todos los eventos que recibe del [conjunto de datos](../../../datastreams/overview.md) y reenvía esos eventos a los destinos si se cumplen ciertas condiciones.
 
 Además, se aplica un tiempo de espera de 30 segundos a un solo evento cuando se procesa en todas las reglas (y, por lo tanto, en todas las acciones) dentro de una propiedad de reenvío de eventos. Esto significa que todas las reglas y todas las acciones de un solo evento deben completarse en este lapso de tiempo.
 
-Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
 ![Reglas de reenvío de eventos en la IU de recopilación de datos.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenización de elementos de datos {#tokenization}
 
-En las reglas de etiquetas, los elementos de datos se identifican mediante token con un `%` al principio y al final del nombre del elemento de datos (por ejemplo: `%viewportHeight%`). En las reglas del reenvío de eventos, los elementos de datos se identifican mediante token con `{{` al principio y `}}` al final del nombre del elemento de datos (por ejemplo: `{{viewportHeight}}`).
+En las reglas de etiquetas, los elementos de datos llevan un símbolo de token `%` al principio y al final del nombre del elemento de datos (por ejemplo: `%viewportHeight%`). En las reglas de reenvío de eventos, los elementos de datos se identifican mediante token con `{{` al principio y `}}` al final del nombre del elemento de datos (por ejemplo: `{{viewportHeight}}`).
 
-Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
-![Ejemplo de un elemento de datos de tipo de ruta para el reenvío de eventos.](../../images/ui/event-forwarding/overview/tokenization.png)
+![Ejemplo de un elemento de datos de tipo de ruta de acceso para el reenvío de eventos.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Secuencia de acciones de regla {#action-sequencing}
 
-El [!UICONTROL Acciones] de una regla de reenvío de eventos siempre se ejecuta secuencialmente. Por ejemplo, si una regla tiene dos acciones, la segunda acción no comenzará a ejecutarse hasta que se complete la acción anterior (y en los casos en que se espere una respuesta de un extremo, ese extremo ha respondido). Asegúrese de que el orden de las acciones es correcto al guardar una regla. Esta secuencia de ejecución no se puede ejecutar de forma asíncrona como con las reglas de etiquetas.
+La sección [!UICONTROL Actions] de una regla de reenvío de eventos siempre se ejecuta secuencialmente. Por ejemplo, si una regla tiene dos acciones, la segunda acción no comenzará a ejecutarse hasta que se complete la acción anterior (y en los casos en que se espere una respuesta de un extremo, ese extremo ha respondido). Asegúrese de que el orden de las acciones es correcto al guardar una regla. Esta secuencia de ejecución no se puede ejecutar de forma asíncrona como con las reglas de etiquetas.
 
 ## Secretos {#secrets}
 
-El reenvío de eventos permite crear, administrar y almacenar secretos que se pueden utilizar para autenticarse en los servidores a los que envía datos. Consulte la guía de [secretos](./secrets.md) Obtenga información sobre los distintos tipos de tipos de secretos disponibles y cómo se implementan en la interfaz de usuario.
+El reenvío de eventos permite crear, administrar y almacenar secretos que se pueden utilizar para autenticarse en los servidores a los que envía datos. Consulte la guía de [secretos](./secrets.md) sobre los distintos tipos de secretos disponibles y cómo se implementan en la interfaz de usuario.
 
 ## Vídeo introductorio {#video}
 
@@ -121,4 +121,4 @@ El siguiente vídeo pretende ayudarle a comprender mejor las conexiones de Reenv
 
 ## Pasos siguientes
 
-Este documento proporciona una introducción de alto nivel al reenvío de eventos. Para obtener más información sobre cómo configurar esta función para su organización, consulte la [guía de introducción](./getting-started.md).
+Este documento proporciona una introducción de alto nivel al reenvío de eventos. Para obtener más información sobre cómo configurar esta característica para su organización, consulte la [guía de introducción](./getting-started.md).

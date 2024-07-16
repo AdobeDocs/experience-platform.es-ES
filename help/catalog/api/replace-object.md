@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Reemplazar un objeto Catalog
 
-Puede sobrescribir el contenido de un [!DNL Catalog] objeto con una solicitud de PUT, donde todo el recurso se reemplaza por la carga útil de la solicitud.
+Puede sobrescribir el contenido de un objeto [!DNL Catalog] mediante una solicitud de PUT, en la que todo el recurso se reemplaza por la carga útil de la solicitud.
 
 >[!NOTE]
 >
->Si solo necesita actualizar algunos campos específicos dentro de una [!DNL Catalog] , el uso de una solicitud de PATCH puede ser más eficaz.
+>Si solo necesita actualizar algunos campos específicos dentro de un objeto [!DNL Catalog], el uso de una solicitud de PATCH puede ser más eficiente.
 
 **Formato de API**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se va a reemplazar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se reemplazará. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | El identificador del objeto específico que desea actualizar. |
 
 **Solicitud**

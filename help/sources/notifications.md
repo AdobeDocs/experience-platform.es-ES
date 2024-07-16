@@ -6,46 +6,45 @@ title: Notificaciones de ejecución de flujo
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
 
 # Notificaciones de ejecución de flujo
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) se utiliza para recopilar y centralizar datos de clientes de varias fuentes diferentes dentro de [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas.
+La [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) se usa para recopilar y centralizar datos de clientes de distintos orígenes en [!DNL Platform]. El servicio proporciona una interfaz de usuario y una API RESTful desde las que se pueden conectar todas las fuentes de datos admitidas.
 
 Con Eventos de Adobe I/O, puede suscribirse a eventos y utilizar webhooks para recibir notificaciones sobre el estado de las ejecuciones de flujo. Estas notificaciones contienen información sobre el éxito de la ejecución de flujo o los errores que contribuyeron al error de una ejecución.
 
 Este documento proporciona pasos sobre cómo suscribirse a eventos, registrar webhooks y recibir notificaciones que contengan información sobre el estado de las ejecuciones del flujo.
 
-## Primeros pasos
+## Introducción
 
-En este tutorial se da por hecho que ya ha creado al menos una conexión de origen cuyo flujo de trabajo se ejecuta y que desea supervisar. Si aún no ha configurado una conexión de origen, comience visitando la [información general de orígenes](./home.md) para configurar el origen que elija antes de volver a esta guía.
+En este tutorial se da por hecho que ya ha creado al menos una conexión de origen cuyo flujo de trabajo se ejecuta y que desea supervisar. Si aún no ha configurado una conexión de origen, comience por visitar la [descripción general de orígenes](./home.md) para configurar el origen que elija antes de volver a esta guía.
 
 Este documento también requiere una comprensión práctica de los webhooks y cómo conectar un webhook de una aplicación a otra. Consulte la [[!DNL I/O Events] documentación](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) para ver una introducción a los webhooks.
 
 ## Registrar un webhook para notificaciones de ejecución de flujo
 
-Para recibir notificaciones de ejecución de flujo, debe utilizar la consola de Adobe Developer para registrar un webhook en su [!DNL Experience Platform] integración.
+Para recibir notificaciones de ejecución de flujo, debe usar Adobe Developer Console para registrar un webhook en su integración con [!DNL Experience Platform].
 
-Siga el tutorial de [suscribirse a notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
+Siga el tutorial de [suscripción a las notificaciones de [!DNL I/O Event]](../observability/alerts/subscribe.md) para ver los pasos detallados sobre cómo hacerlo.
 
 >[!IMPORTANT]
 >
->Durante el proceso de suscripción, asegúrese de seleccionar **[!UICONTROL Notificaciones de Platform]** como proveedor de eventos y seleccione las siguientes suscripciones a eventos:
+>Durante el proceso de suscripción, asegúrate de seleccionar **[!UICONTROL Notificaciones de plataforma]** como proveedor de eventos y selecciona las siguientes suscripciones a eventos:
 >
->* **[!UICONTROL Ejecución correcta del flujo del origen del Experience Platform]**
->* **[!UICONTROL Error al ejecutar flujo en origen de Experience Platform]**
-
+>* **[!UICONTROL Ejecución Correcta Del Flujo De Source De Experience Platform]**
+>* **[!UICONTROL Error al ejecutar el flujo del Experience Platform Source]**
 
 ## Recibir notificaciones de ejecución de flujo
 
 Con el webhook conectado y la suscripción al evento completada, puede empezar a recibir notificaciones de ejecución de flujo a través del panel del webhook.
 
-Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con la ejecución del flujo en formato JSON. La carga útil de respuesta se puede clasificar como `sources_flow_run_success` o `sources_flow_run_failure`.
+Una notificación devuelve información como el número de trabajos de ingesta ejecutados, el tamaño del archivo y los errores. Una notificación también devuelve una carga útil asociada con la ejecución del flujo en formato JSON. La carga de respuesta puede clasificarse como `sources_flow_run_success` o `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
@@ -53,7 +52,7 @@ Una notificación devuelve información como el número de trabajos de ingesta e
 
 ### Correcto
 
-Una respuesta correcta devuelve un conjunto de `metrics` que definen las características de una ejecución de flujo específica y `activities` que describen cómo se transforman los datos.
+Una respuesta correcta devuelve un conjunto de `metrics` que define las características de una ejecución de flujo específica y `activities` que describe cómo se transforman los datos.
 
 ```json
 {
@@ -193,7 +192,7 @@ Una respuesta correcta devuelve un conjunto de `metrics` que definen las caracte
 | `fileInfo` | Una URL que lleva a una descripción general de los archivos ingeridos correctamente. |
 | `statusSummary` | Define si la ejecución del flujo es un éxito o un error. |
 
-### Fallo
+### Error
 
 La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un error que se produce cuando se procesan los datos copiados. También pueden producirse errores mientras se copian los datos desde el origen. Una ejecución de flujo fallida incluye información sobre los errores que contribuyeron al fallo de la ejecución, incluido su error y descripción.
 
@@ -312,11 +311,11 @@ La siguiente respuesta es un ejemplo de una ejecución de flujo fallida, con un 
 
 >[!NOTE]
 >
->Consulte la [apéndice](#errors) para obtener más información sobre los mensajes de error.
+>Consulte el [apéndice](#errors) para obtener más información sobre los mensajes de error.
 
 ## Pasos siguientes
 
-Ahora puede suscribirse a eventos que le permiten recibir notificaciones en tiempo real sobre los estados de ejecución de flujo. Para obtener más información sobre las ejecuciones de flujo y las fuentes, consulte la [información general de orígenes](./home.md).
+Ahora puede suscribirse a eventos que le permiten recibir notificaciones en tiempo real sobre los estados de ejecución de flujo. Para obtener más información sobre las ejecuciones de flujo y los orígenes, vea la [descripción general de orígenes](./home.md).
 
 ## Apéndice
 
@@ -324,7 +323,7 @@ Las secciones siguientes proporcionan información adicional para trabajar con n
 
 ### Explicación de los mensajes de error {#errors}
 
-Los errores de ingesta pueden producirse cuando los datos se copian del origen o cuando los datos copiados se procesan en [!DNL Platform]. Consulte la tabla siguiente para obtener más información sobre errores específicos.
+Pueden producirse errores de ingesta cuando los datos se copian del origen o cuando los datos copiados se procesan en [!DNL Platform]. Consulte la tabla siguiente para obtener más información sobre errores específicos.
 
 | Error | Descripción |
 | ---------- | ----------- |

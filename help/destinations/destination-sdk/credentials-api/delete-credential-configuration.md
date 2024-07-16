@@ -4,8 +4,8 @@ title: Eliminar una configuración de credenciales
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 2%
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
@@ -13,35 +13,35 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de credenciales mediante `/authoring/credentials` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de credenciales mediante el extremo de API `/authoring/credentials`.
 
-## Cuándo usar el `/credentials` Extremo de API {#when-to-use}
+## Cuándo usar el extremo de API `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->En la mayoría de los casos, ***no*** necesita usar el `/credentials` Extremo de API. En su lugar, puede configurar la información de autenticación para su destino mediante el `customerAuthenticationConfigurations` parámetros del `/destinations` punto final.
+>En la mayoría de los casos, ***no*** necesita usar el extremo de la API `/credentials`. En su lugar, puede configurar la información de autenticación para su destino a través de los parámetros `customerAuthenticationConfigurations` del extremo `/destinations`.
 > 
->Leer [Configuración de autenticación del cliente](../functionality/destination-configuration/customer-authentication.md) para obtener información detallada sobre los tipos de autenticación admitidos.
+>Lea [Configuración de autenticación de cliente](../functionality/destination-configuration/customer-authentication.md) para obtener información detallada sobre los tipos de autenticación admitidos.
 
-Utilice este extremo de API para crear una configuración de credenciales solo si hay un sistema de autenticación global entre el Adobe y la plataforma de destino, y la variable [!DNL Platform] el cliente no necesita proporcionar credenciales de autenticación para conectarse a su destino. En este caso, debe crear una configuración de credenciales de utilizando `/credentials` Extremo de API.
+Use este extremo de API para crear una configuración de credenciales únicamente si existe un sistema de autenticación global entre la Adobe y la plataforma de destino y el cliente [!DNL Platform] no necesita proporcionar credenciales de autenticación para conectarse al destino. En este caso, debe crear una configuración de credenciales utilizando el extremo de API `/credentials`.
 
-Al utilizar un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en el [envío de destino](../functionality/destination-configuration/destination-delivery.md) configuración, cuando [creación de una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
+Cuando use un sistema de autenticación global, debe establecer `"authenticationRule":"PLATFORM_AUTHENTICATION"` en la configuración de [envío de destino](../functionality/destination-configuration/destination-delivery.md) al [crear una nueva configuración de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Eliminar una configuración de credenciales {#delete}
 
-Puede eliminar un [existente](create-credential-configuration.md) configuración de credenciales realizando una `DELETE` solicitud a la `/authoring/credentials` punto final con `{INSTANCE_ID}`de la configuración de credenciales que desea eliminar.
+Puede eliminar una configuración de credencial [existing](create-credential-configuration.md) realizando una solicitud `DELETE` al extremo `/authoring/credentials` con el `{INSTANCE_ID}`de la configuración de credencial que desea eliminar.
 
-Para obtener una configuración de destino existente y su correspondiente `{INSTANCE_ID}`, consulte el artículo sobre [recuperar una configuración de credenciales](retrieve-credential-configuration.md).
+Para obtener una configuración de destino existente y sus `{INSTANCE_ID}` correspondientes, vea el artículo acerca de [recuperar una configuración de credencial](retrieve-credential-configuration.md).
 
 **Formato de API**
 
@@ -53,7 +53,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | El `ID` de la configuración de credenciales que desea eliminar. |
 
-La siguiente solicitud elimina una configuración de credenciales definida por el `{INSTANCE_ID}` parámetro.
+La siguiente solicitud elimina una configuración de credenciales definida por el parámetro `{INSTANCE_ID}`.
 
 +++Solicitud
 
@@ -79,4 +79,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo eliminar una configuración de credenciales mediante la variable `/authoring/credentials` Extremo de API. Leer [cómo utilizar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cómo eliminar una configuración de credenciales mediante el extremo de API `/authoring/credentials`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

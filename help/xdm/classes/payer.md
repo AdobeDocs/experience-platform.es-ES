@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # [!UICONTROL Pagador] clase
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Pagador] La clase registra el conjunto mínimo de propiedades que definen una entidad comercial pagadora que recopila datos pertenecientes a compañías de seguros (como el seguro de enfermedad).
+En Experience Data Model (XDM), la clase [!UICONTROL Pagador] captura el conjunto mínimo de propiedades que definen una entidad comercial pagadora que recopila datos pertenecientes a compañías de seguros (como el seguro de salud).
 
 ![Estructura de clase](../images/classes/payer.png)
 

@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# Información general del [!DNL Observability Insights]
+# Información general de [!DNL Observability Insights]
 
-Adobe Experience Platform [!DNL Observability Insights] le permite monitorizar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos. Este documento proporciona una visión general de las distintas funcionalidades proporcionadas por el servicio, junto con vínculos a documentación adicional para obtener más información.
+Adobe Experience Platform [!DNL Observability Insights] le permite supervisar las actividades de Platform mediante el uso de métricas estadísticas y notificaciones de eventos. Este documento proporciona una visión general de las distintas funcionalidades proporcionadas por el servicio, junto con vínculos a documentación adicional para obtener más información.
 
-## [!DNL Observability Insights] API
+## API [!DNL Observability Insights]
 
-El [!DNL Observability Insights] La API de es una API de RESTful que le permite exponer métricas clave de observabilidad en Adobe Experience Platform. Estas métricas proporcionan información sobre [!DNL Platform] estadísticas de uso, comprobaciones de estado para [!DNL Platform] servicios, tendencias históricas e indicadores de rendimiento para varios [!DNL Platform] funcionalidades.
+La API [!DNL Observability Insights] es una API RESTful que le permite exponer métricas clave de observabilidad en Adobe Experience Platform. Estas métricas proporcionan información sobre [!DNL Platform] estadísticas de uso, comprobaciones de estado de [!DNL Platform] servicios, tendencias históricas e indicadores de rendimiento para diversas funcionalidades de [!DNL Platform].
 
 Para obtener más información sobre cómo trabajar con la API, consulte la [[!DNL Observability Insights] Guía para desarrolladores de API](./api/overview.md).
 
@@ -27,7 +27,7 @@ Experience Platform le permite suscribirse a alertas basadas en métricas de Obs
 
 Al suscribirse a alertas, puede configurar sus propios protocolos descendentes para cuándo se ha completado un trabajo, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se han producido errores durante el proceso.
 
-Consulte la información general sobre [alertas](./alerts/overview.md) para obtener más información.
+Consulte la descripción general de [alertas](./alerts/overview.md) para obtener más información.
 
 ## Pasos siguientes
 

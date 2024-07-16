@@ -13,15 +13,15 @@ ht-degree: 0%
 
 Si su organización tiene varios paneles disponibles en Adobe Experience Platform, puede revisar el inventario de paneles en la interfaz de usuario (IU).
 
-Para ver los paneles que ha configurado su organización, seleccione **[!UICONTROL Paneles]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Examinar]** pestaña.
+Para ver los paneles que ha configurado su organización, seleccione **[!UICONTROL Paneles]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Examinar]**.
 
-Una lista de todos los paneles disponibles en la instancia de Platform se muestra en la [!UICONTROL Examinar] pestaña. Esto incluye paneles integrados creados por su organización que se han configurado a través de aplicaciones de terceros.
+En la ficha [!UICONTROL Examinar] se muestra una lista de todos los paneles disponibles en la instancia de Platform. Esto incluye paneles integrados creados por su organización que se han configurado a través de aplicaciones de terceros.
 
-![La pestaña Examinar dentro de la sección de paneles de la interfaz de usuario.](./images/inventory/browse-tab.png)
+![La ficha Examinar de la sección de paneles de la interfaz de usuario.](./images/inventory/browse-tab.png)
 
 Para ver un tablero individual, seleccione su nombre en la lista.
 
-![Ficha Examinar con el nombre de un tablero resaltado.](./images/inventory/dashboard-name.png)
+![Ficha Examinar con el nombre de un panel resaltado.](./images/inventory/dashboard-name.png)
 
 Cuando se selecciona, el panel se abre en la interfaz de usuario de Platform o en un espacio de trabajo de aplicaciones completamente integrado que requiere que inicie sesión con las credenciales necesarias.
 

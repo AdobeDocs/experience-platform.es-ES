@@ -1,5 +1,5 @@
 ---
-title: 'Entre bastidores: una experiencia del cliente con la tecnología de Adobe Experience Platform'
+title: Entre bastidores&#58; Una experiencia del cliente con tecnología Adobe Experience Platform
 description: En el vídeo anterior vimos cómo una marca de ejemplo, Luma, podía crear una experiencia del cliente enriquecida, gratificante y relevante. Este vídeo muestra cómo se utiliza Adobe Experience Platform para lograr este recorrido.
 kt: 4340
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # En segundo plano, una experiencia del cliente con tecnología de Experience Platform
 
-Después de ver el vídeo que muestra [una experiencia del cliente con tecnología de Platform](customer-experience.md), pase a segundo plano para ver cómo se utilizó Adobe Experience Platform para impulsar esta experiencia.
+Después de ver el video que muestra [una experiencia del cliente con tecnología de Platform](customer-experience.md), ve entre bastidores para ver cómo se usó Adobe Experience Platform para impulsar esta experiencia.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

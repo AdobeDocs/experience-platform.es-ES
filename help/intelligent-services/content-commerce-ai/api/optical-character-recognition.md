@@ -6,7 +6,7 @@ description: En la API de etiquetado de contenido, el servicio Presencia de text
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 4%
 
 ---
@@ -74,7 +74,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el texto detectado en la variable `tags` para cada imagen que se pasó en la solicitud. Si no hay texto en una imagen determinada, `is_text_present` es 0 y `tags` es una lista vacía.
+Una respuesta correcta devuelve el texto detectado en la lista `tags` para cada imagen pasada en la solicitud. Si no hay texto en una imagen determinada, `is_text_present` es 0 y `tags` es una lista vacía.
 
 [result0, result1, ...]: lista de respuestas para cada documento de entrada. Cada resultado es un diccionario con claves:
 
@@ -204,12 +204,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `dc:format` | Formato codificado de la imagen de entrada. Solo se permiten formatos de imagen como jpeg, jpg, png y tiff para la codificación de imágenes. Dc:format se compara con los formatos permitidos. | No |
 | `correct_with_dictionary` | ¿Si corregir las palabras con un diccionario de inglés? Si no está activada, podría reconocer palabras que no estén en inglés. El valor predeterminado es True: activado.) Tenga en cuenta que cuando el diccionario está activado, no es necesario que siempre obtenga una palabra en inglés. Intentamos corregirlo, pero si no es posible dentro de una cierta distancia de edición, devolvemos la palabra original. | No |
 | `filter_with_dictionary` | ¿Si se filtran las palabras para que contengan solo las del diccionario inglés? Si se activa, las palabras devueltas siempre pertenecerán al gran inglés , que comprende 470.000 palabras. | No |
-| `min_probability` | ¿Cuál es la probabilidad mínima de las palabras reconocidas? El servicio solo devuelve las palabras que se extraen de la imagen y que tienen una buena probabilidad que min_probability. El valor predeterminado es 0,2. | No |
-| `min_relevance` | ¿Cuál es la relevancia mínima de las palabras reconocidas? El servicio solo devuelve las palabras que se extraen de la imagen y que tienen una relevancia buena a min_relevancia. El valor predeterminado es 0,01. La relevancia se calcula como la fracción del área del cuadro delimitador del texto extraído en comparación con la imagen completa. 0,01 se traduciría en un texto que ocupe al menos el 1 % de la imagen. | No |
+| `min_probability` | ¿Cuál es la probabilidad mínima de las palabras reconocidas? El servicio solo devuelve las palabras que se extraen de la imagen y que tienen una probabilidad mayor que min_probability. El valor predeterminado es 0,2. | No |
+| `min_relevance` | ¿Cuál es la relevancia mínima de las palabras reconocidas? El servicio solo devuelve las palabras que se extraen de la imagen y que tienen una relevancia mayor que min_relevancia. El valor predeterminado es 0,01. La relevancia se calcula como la fracción del área del cuadro delimitador del texto extraído en comparación con la imagen completa. 0,01 se traduciría en un texto que ocupe al menos el 1 % de la imagen. | No |
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL con prefijo de la imagen de la que se debe extraer el texto. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositorio donde se almacena la imagen. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilícelo al pasar la imagen como un argumento de varias partes en lugar de usar direcciones URL prefirmadas. |
-| `dc:format` | string | Sí | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | La codificación de imagen se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |
+| `repo:path` | cadena | - | - | - | URL con prefijo de la imagen de la que se debe extraer el texto. |
+| `sensei:repoType` | cadena | - | - | HTTPS | Tipo de repositorio donde se almacena la imagen. |
+| `sensei:multipart_field_name` | cadena | - | - | - | Utilícelo al pasar la imagen como un argumento de varias partes en lugar de usar direcciones URL prefirmadas. |
+| `dc:format` | cadena | Sí | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | La codificación de imagen se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |

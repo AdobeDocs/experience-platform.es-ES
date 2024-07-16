@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Preguntas frecuentes
 
-Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API de RESTful que le permite crear audiencias a través de definiciones de segmentos u otras fuentes a partir de su [!DNL Real-Time Customer Profile] datos. Estas audiencias se configuran de forma centralizada y se mantienen en Platform, y son fácilmente accesibles desde cualquier solución de Adobe. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
+Adobe Experience Platform [!DNL Segmentation Service] proporciona una interfaz de usuario y una API RESTful que le permiten crear audiencias a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estas audiencias se configuran de forma centralizada y se mantienen en Platform, y son fácilmente accesibles desde cualquier solución de Adobe. A continuación se muestra una lista de las preguntas más frecuentes sobre las audiencias y la segmentación.
 
 ## Audience Portal
 
@@ -36,21 +36,21 @@ Para cargar audiencias generadas externamente, debe tener los permisos de &quot;
 Al cargar una audiencia generada externamente, se crean los siguientes elementos:
 
 - Conjunto de datos
-   - El conjunto de datos será visible dentro del inventario del conjunto de datos y su nombre será **igual** como el nombre de la audiencia generada externamente que ha cargado.
+   - El conjunto de datos será visible dentro del inventario del conjunto de datos, y el nombre del conjunto de datos será **same** como nombre de la audiencia generada externamente que usted subió.
 - Trabajo por lotes
-   - Un trabajo por lotes **automáticamente** ejecutar al cargar una audiencia generada externamente. Esto significa que sí **no** Debe esperar a que se ejecute el trabajo de segmentación diario para activar la audiencia generada externamente.
+   - Se ejecutará un trabajo por lotes **automáticamente** al cargar una audiencia generada externamente. Esto significa que **no** necesita esperar a que se ejecute el trabajo de segmentación diario para activar la audiencia generada externamente.
 - Esquema ad hoc
-   - A **nuevo** Se creará un esquema XDM para utilizarlo con la audiencia generada externamente. Los campos de este esquema XDM tienen un espacio de nombres para su uso con el conjunto de datos también creado.
+   - Se creará un **nuevo** esquema XDM para utilizarlo con la audiencia generada externamente. Los campos de este esquema XDM tienen un espacio de nombres para su uso con el conjunto de datos también creado.
 
 ### ¿De qué se compone una audiencia generada externamente y qué sucede con estos datos cuando se importan en Platform?
 
-Durante el flujo de trabajo de importación de audiencia externa, se debe especificar qué columna del archivo CSV corresponde con la columna **Identidad principal**. Un ejemplo de identidad principal incluye una dirección de correo electrónico, un ECID o un área de nombres de identidad personalizada específica de la organización.
+Durante el flujo de trabajo de importación de audiencia externa, debe especificar qué columna del archivo CSV corresponde con la **Identidad principal**. Un ejemplo de identidad principal incluye una dirección de correo electrónico, un ECID o un área de nombres de identidad personalizada específica de la organización.
 
-Los datos asociados con esta columna de identidad principal son **solamente** datos adjuntos al perfil de. Si no hay perfiles que coincidan con los datos en la columna de identidad principal, se creará un nuevo perfil. Sin embargo, este perfil es esencialmente un perfil huérfano ya que **no** los atributos o eventos de experiencia están asociados a este perfil.
+Los datos asociados con esta columna de identidad principal son los datos **solamente** que se adjuntaron al perfil. Si no hay perfiles que coincidan con los datos en la columna de identidad principal, se creará un nuevo perfil. Sin embargo, este perfil es esencialmente un perfil huérfano, ya que **no** atributos o eventos de experiencia están asociados a este perfil.
 
-Se tienen en cuenta todos los demás datos de la audiencia generada externamente **atributos de carga útil**. Estos atributos pueden **solamente** se utilizarán para la personalización y el enriquecimiento durante la activación, y son **no** adjunto a un perfil. Sin embargo, estos atributos se almacenan en el lago de datos.
+El resto de los datos de la audiencia generada externamente se consideran **atributos de carga útil**. Estos atributos **solo** se pueden usar para la personalización y el enriquecimiento durante la activación, y **no** están adjuntos a un perfil. Sin embargo, estos atributos se almacenan en el lago de datos.
 
-Aunque se puede hacer referencia a la audiencia generada externamente al crear audiencias con el Generador de segmentos, los atributos de perfil individuales **no puede** se utilizará.
+Aunque se puede hacer referencia a la audiencia generada externamente al crear audiencias mediante el Generador de segmentos, no se pueden usar los atributos de perfil individuales **not**.
 
 ### ¿Puedo reconciliar los datos de audiencia generados externamente con un perfil existente en Platform?
 
@@ -64,11 +64,11 @@ Sí, cualquier audiencia generada externamente aparecerá en el inventario de au
 
 No, no puedes. Los atributos de perfil están pensados para ser atributos de larga duración, mientras que los datos de audiencia generados externamente que se cargan solo contienen datos contextuales asociados con esa audiencia generada externamente.
 
-Los datos contextuales de la audiencia generada externamente, o atributos de enriquecimiento, son **no** de larga duración, ya que su ciclo de vida está vinculado a la audiencia cargada. Como resultado, debido a su naturaleza transitoria, estos atributos de enriquecimiento son **no** disponible para su uso en la segmentación.
+Los datos contextuales de la audiencia generada externamente, o atributos de enriquecimiento, son **no** de larga duración, ya que su ciclo de vida está vinculado a la audiencia cargada. Como resultado, debido a su naturaleza transitoria, estos atributos de enriquecimiento están **no** disponibles para su uso en la segmentación.
 
 Sin embargo, al asignar audiencias a destinos por lotes o basados en archivos, puede utilizar estos atributos de enriquecimiento generados externamente para aumentar las audiencias y realizar más activaciones descendentes.
 
-Para obtener más información acerca de esta capacidad, lea la guía de [activación de datos de audiencia en destinos de exportación de perfiles por lotes](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+Para obtener más información acerca de esta funcionalidad, lea la guía sobre [activación de datos de audiencia en destinos de exportación de perfiles por lotes](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ### ¿Existe una política de combinación específica para audiencias generadas externamente?
 
@@ -94,28 +94,28 @@ Si ha cargado accidentalmente una audiencia generada externamente y desea elimin
 
 ### ¿Cuánto tiempo duran las audiencias generadas externamente?
 
-La caducidad de los datos actuales para las audiencias generadas de forma externa es **30 días**. Esta caducidad de datos se eligió para reducir la cantidad de datos sobrantes almacenados en su organización.
+La caducidad de los datos actuales para las audiencias generadas externamente es de **30 días**. Esta caducidad de datos se eligió para reducir la cantidad de datos sobrantes almacenados en su organización.
 
-Una vez transcurrido el período de caducidad de los datos, el conjunto de datos asociado seguirá siendo visible dentro del inventario de conjuntos de datos, pero lo hará **no** poder activar la audiencia, y el recuento de perfiles se mostrará como cero.
+Una vez transcurrido el período de caducidad de los datos, el conjunto de datos asociado seguirá visible en el inventario de conjuntos de datos, pero **no** podrá activar la audiencia y el recuento de perfiles se mostrará como cero.
 
 ### ¿Cómo interactúan Audience Portal y Composición de audiencias con la versión de los datos de socios de Real-Time CDP?
 
 Audience Portal y Composición de audiencias interactuarán con los datos de los socios de dos formas:
 
-1. Si introduce una lista de clientes potenciales proporcionada por el socio utilizando la clase y el flujo de trabajo Perfil de clientes potenciales, se conservarán los clientes potenciales **por separado** de combinar perfiles de clientes en el servicio de perfiles. Como resultado, esto significa que las listas de clientes potenciales **no** aparecen en Audience Portal o en Composición de audiencia para su uso.
-2. Si utiliza atributos proporcionados por el socio para enriquecer **existente** perfiles de origen, esas audiencias enriquecidas con datos de socios **testamento** aparecen tanto en Audience Portal como en Composición de audiencia para su uso.
+1. Si ingiere una lista de clientes potenciales proporcionada por el socio mediante la clase y el flujo de trabajo Perfil de cliente potencial, los clientes potenciales se mantendrán **por separado** de la combinación de perfiles de cliente en el servicio de perfil. Como resultado, esto significa que las listas de clientes potenciales **no** aparecerán en el Portal de audiencias o en la Composición de audiencias para su uso.
+2. Si está aprovechando atributos proporcionados por el socio para enriquecer perfiles de origen de **existing**, esas audiencias enriquecidas con datos del socio **aparecerán** en Audience Portal y en Composición de audiencia para su uso.
 
 ### ¿Cómo puedo usar atributos adicionales con mis audiencias?
 
-Con las audiencias, hay **dos** diferentes tipos de atributos adicionales que puede añadir: atributos de carga útil (contextuales) y atributos de enriquecimiento.
+Con las audiencias, hay **dos** tipos diferentes de atributos adicionales que puede agregar: atributos de carga útil (contextuales) y atributos de enriquecimiento.
 
-Los atributos de carga útil son atributos que se incorporan como parte de la carga CSV de una audiencia generada externamente. Estos atributos son **no** se incorpora en el Perfil del cliente en tiempo real, pero se puede utilizar como parte de un destino descendente.
+Los atributos de carga útil son atributos que se incorporan como parte de la carga CSV de una audiencia generada externamente. Estos atributos son **no** introducidos en el perfil del cliente en tiempo real, pero pueden usarse como parte de un destino descendente.
 
 Los atributos de enriquecimiento son atributos que provienen de un conjunto de datos y se unen a una audiencia en Composición de audiencia. Actualmente, estos atributos solo se pueden utilizar en campañas de Adobe Journey Optimizer. La compatibilidad con los recorridos de Adobe Journey Optimizer estará disponible próximamente y la compatibilidad con los destinos descendentes estará pendiente de una versión futura.
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. Atributos de enriquecimiento **no puede** se activará. |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -128,20 +128,20 @@ El siguiente gráfico explica los diferentes estados del ciclo vital, qué repre
 
 | Estado | Definición | ¿Visible en Audience Portal? | ¿Visible en destinos? | ¿Afecta a los límites de segmentación? | Impacto en las audiencias basadas en archivos | Impacto en la evaluación de audiencias | ¿Se puede usar dentro de otras audiencias? | Editable |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Borrador | Una audiencia en **Borrador** el estado es una audiencia que aún está en desarrollo y que aún no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Evaluado para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
-| Publicadas | Una audiencia en **Publicado** El estado es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí | Sí |
-| Inactivo | Una audiencia en **Inactivo** El estado es una audiencia que no está en uso actualmente. Sigue existiendo dentro de Platform, pero lo hará **no** se puede utilizar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | No | Sí |
-| Eliminado | Una audiencia en **Eliminado** El estado es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No | No |
+| Borrador | Una audiencia con el estado **Borrador** es una audiencia que aún está en desarrollo y no está lista para utilizarse en otros servicios. | Sí, pero se puede ocultar. | No | Sí | Se puede importar o actualizar durante el proceso de refinamiento. | Evaluado para obtener recuentos de publicación precisos. | Sí, pero no se recomienda su uso. | Sí |
+| Publicadas | Una audiencia con el estado **Publicado** es una audiencia lista para usar en todos los servicios descendentes. | Sí | Sí | Sí | Se puede importar o actualizar. | Se evalúa mediante segmentación por lotes, flujo continuo o de Edge. | Sí | Sí |
+| Inactivo | Una audiencia con el estado **Inactiva** es una audiencia que no está en uso actualmente. Sigue existiendo en Platform, pero **no** se podrá usar hasta que se marque como borrador o se publique. | No, pero se puede mostrar. | No | No | Ya no se actualiza. | Platform ya no lo evalúa ni actualiza. | No | Sí |
+| Eliminado | Una audiencia con el estado **Eliminado** es una audiencia que se ha eliminado. La eliminación real de los datos puede tardar hasta unos minutos en ejecutarse. | No | No | No | Se eliminan los datos subyacentes. | No se realiza ninguna evaluación ni ejecución de los datos una vez completada la eliminación. | No | No |
 
 ### ¿En qué estados puedo editar mis audiencias?
 
 Las audiencias se pueden editar en los siguientes estados del ciclo vital:
 
 - **Borrador**: Si una audiencia se edita en estado de borrador, permanecerá en estado de borrador a menos que se publique explícitamente.
-- **Publicado**: Si una audiencia se edita en el estado publicado, seguirá publicándose y la audiencia se actualizará automáticamente.
-- **Inactivo**: Si una audiencia se edita en estado inactivo, permanecerá inactiva. Esto significa que no se evaluará ni actualizará. Si necesita actualizar la audiencia, debe publicar la audiencia.
+- **Publicada**: Si una audiencia se edita en el estado publicado, permanecerá publicada y la audiencia se actualizará automáticamente.
+- **Inactiva**: si una audiencia se edita en estado inactivo, permanecerá inactiva. Esto significa que no se evaluará ni actualizará. Si necesita actualizar la audiencia, debe publicar la audiencia.
 
-Una vez eliminada una audiencia, **no puede** no se puede editar.
+Una vez eliminada una audiencia, **no se puede** editar.
 
 ### ¿A qué estados del ciclo vital puedo mover una audiencia?
 
@@ -157,9 +157,9 @@ Si la audiencia está en estado inactivo, puede volver a publicarla o eliminarla
 
 ### ¿Hay advertencias para audiencias en determinados estados del ciclo vital?
 
-Las audiencias en estado publicado solo se pueden mover a otro estado si la audiencia lo hace **no** tiene cualquier dependiente. Esto significa que si la audiencia se utiliza en un servicio descendente, no se puede desactivar ni eliminar.
+Las audiencias en el estado publicado solo se pueden mover a otro estado si la audiencia **no** tiene dependientes. Esto significa que si la audiencia se utiliza en un servicio descendente, no se puede desactivar ni eliminar.
 
-Si se vuelve a publicar una audiencia que se evalúa mediante segmentación por lotes, es decir, cuando una audiencia pasa de inactiva a publicada, la audiencia se actualiza **después** el trabajo por lotes diario. Cuando se vuelva a publicar por primera vez, los perfiles y datos serán los siguientes **igual** como cuando la audiencia quedó inactiva.
+Si se vuelve a publicar una audiencia que se evalúa mediante segmentación por lotes, es decir, cuando una audiencia pasa de inactiva a publicada, la audiencia actualizará **después** del trabajo por lotes diario. Cuando se vuelva a publicar por primera vez, los perfiles y los datos serán **iguales** que cuando la audiencia se inactiva.
 
 ### ¿Cómo puedo colocar una audiencia en estado de borrador?
 
@@ -171,11 +171,11 @@ Para las audiencias creadas en Composición de audiencia, las audiencias se guar
 
 Para las audiencias creadas externamente, las audiencias se publican automáticamente.
 
-Una vez que una audiencia esté en el estado publicado, debe **no puede** vuelva a cambiar la audiencia original al estado de borrador. Sin embargo, si copia la audiencia, la audiencia recién copiada estará en estado de borrador.
+Una vez que una audiencia se encuentra en el estado publicado, **no puede** volver a cambiar la audiencia original al estado de borrador. Sin embargo, si copia la audiencia, la audiencia recién copiada estará en estado de borrador.
 
 ### ¿Cómo puedo colocar una audiencia en el estado publicado?
 
-Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publish]&quot; en sus respectivas IU.
+Para las audiencias creadas con el Generador de segmentos o la Composición de audiencias, puede establecer la audiencia en el estado publicado seleccionando &quot;[!UICONTROL Publish]&quot; en sus respectivas interfaces de usuario.
 
 Las audiencias creadas externamente se establecen automáticamente como publicadas.
 
@@ -195,7 +195,7 @@ Para volver a publicar una audiencia, seleccione una audiencia que esté en esta
 
 >[!IMPORTANT]
 >
->Solo puede eliminar audiencias que estén **no** se utiliza en cualquier activación descendente. Tampoco puede eliminar una audiencia a la que se haga referencia en otra audiencia. Si no puede eliminar su audiencia, asegúrese de que esté **no** utilizarlo en cualquier servicio descendente o como componente básico de otra audiencia.
+>Solo puede eliminar audiencias que sean **no** utilizadas en activaciones posteriores. Tampoco puede eliminar una audiencia a la que se haga referencia en otra audiencia. Si no puedes eliminar tu audiencia, asegúrate de que **no** la esté usando en ningún servicio descendente o como componente básico de otra audiencia.
 
 Para poner una audiencia en el estado de eliminación, abra el menú de acciones rápidas en Audience Portal y seleccione [!UICONTROL Eliminar].
 
@@ -203,9 +203,9 @@ Para poner una audiencia en el estado de eliminación, abra el menú de acciones
 
 Sí, hay que tener en cuenta algunas advertencias cuando se utilizan audiencias en servicios descendentes, como Adobe Journey Optimizer, o audiencias no basadas en clientes, como audiencias basadas en cuentas.
 
-En este momento, usted **debe** compruebe manualmente si la audiencia se utiliza en sentido descendente en Adobe Journey Optimizer, ya que este estado no se comprueba automáticamente en la actualidad.
+En este momento, **debe** comprobar manualmente si la audiencia se utiliza en el flujo descendente en Adobe Journey Optimizer, ya que este estado no se comprueba automáticamente en este momento.
 
-Además, puede **debe** compruebe manualmente si la audiencia se utiliza como componente de una audiencia basada en cuentas, ya que este estado tampoco se comprueba automáticamente en este momento.
+Además, **debe** comprobar manualmente si la audiencia se usa como componente de una audiencia basada en cuentas, ya que este estado tampoco se comprueba automáticamente en este momento.
 
 ### ¿Qué sucede cuando copio una audiencia? {#copy}
 
@@ -215,19 +215,19 @@ Al copiar una audiencia, la nueva estará en estado de borrador y conservará la
 
 >[!NOTE]
 >
->Una audiencia principal es una audiencia que **utiliza** otra audiencia como dependencia de la audiencia.
+>Una audiencia principal es una audiencia que **usa** otra audiencia como dependencia de la audiencia.
 >
->Una audiencia secundaria es una audiencia que **se usa como** una dependencia para la audiencia.
+>Una audiencia secundaria es una audiencia **que se usa como** dependencia de la audiencia.
 
 Sí, el uso de una audiencia como audiencia secundaria afecta a las transiciones de estados del ciclo vital que pueden realizar la audiencia principal y la secundaria.
 
-Para que una audiencia secundaria se mueva al estado publicado, seleccione toda su audiencia principal **debe** estar en estado publicado. Las audiencias principales se pueden publicar antes de publicar la audiencia secundaria o, si el usuario lo confirma, se pueden publicar automáticamente cuando se publica la audiencia secundaria.
+Para que una audiencia secundaria se mueva al estado publicado, toda su audiencia principal **debe** estar en el estado publicado. Las audiencias principales se pueden publicar antes de publicar la audiencia secundaria o, si el usuario lo confirma, se pueden publicar automáticamente cuando se publica la audiencia secundaria.
 
-Para que la audiencia principal se mueva al estado inactivo o eliminado, todas sus audiencias secundarias **debe** desactivarse o eliminarse.
+Para que la audiencia principal se mueva al estado inactivo o eliminado, todas sus audiencias secundarias **deben** desactivarse o eliminarse.
 
 ### ¿Puedo hacer referencia a una audiencia que está en un estado de ciclo de vida diferente?
 
-¡Sí! Si la audiencia está actualmente en estado de borrador, puede hacer referencia a las audiencias en estado de borrador o publicado. Sin embargo, para publicar esta audiencia, debe **debe** publicar las demás audiencias principales.
+¡Sí! Si la audiencia está actualmente en estado de borrador, puede hacer referencia a las audiencias en estado de borrador o publicado. Sin embargo, para publicar esta audiencia, **debe** publicar las otras audiencias principales.
 
 ## Inventario de audiencias
 
@@ -239,19 +239,19 @@ No, tú no. Siempre que tenga permisos de edición para audiencias, podrá crear
 
 ### ¿Hay un límite en el número de carpetas que puedo crear?
 
-No, no hay límite en el número de carpetas que puede crear. Para obtener más información sobre las carpetas, lea la [sección inventario de audiencias](./ui/audience-portal.md#folders) de la Información general sobre la IU del Servicio de segmentación.
+No, no hay límite en el número de carpetas que puede crear. Para obtener más información sobre las carpetas, lea la [sección de inventario de audiencias](./ui/audience-portal.md#folders) de la descripción general de la interfaz de usuario del servicio de segmentación.
 
 ### ¿Hay un límite en el número de etiquetas que se pueden añadir a una audiencia?
 
-No, no hay límite en el número de etiquetas que se pueden añadir a una audiencia. Para obtener más información sobre las etiquetas, lea la [sección inventario de audiencias](./ui/audience-portal.md#tags) de la Información general sobre la IU del Servicio de segmentación.
+No, no hay límite en el número de etiquetas que se pueden añadir a una audiencia. Para obtener más información sobre las etiquetas, lea la [sección de inventario de audiencias](./ui/audience-portal.md#tags) de la descripción general de la interfaz de usuario del servicio de segmentación.
 
 ### ¿Hay un límite en el número de etiquetas que puedo crear?
 
-No, no hay límite en el número de etiquetas que puede crear. Sin embargo, puede crear un máximo de **100** categorías que se aplicarán a las etiquetas. Para obtener más información sobre la administración de etiquetas, lea la [Guía de administración de etiquetas](../administrative-tags/ui/managing-tags.md).
+No, no hay límite en el número de etiquetas que puede crear. Sin embargo, puede crear un máximo de **100** categorías para aplicar a las etiquetas. Para obtener más información acerca de la administración de etiquetas, lea la [Guía de administración de etiquetas](../administrative-tags/ui/managing-tags.md).
 
 ### Cuando busco una audiencia por nombre o etiqueta en una carpeta principal, ¿puedo también buscar en las carpetas secundarias relacionadas?
 
-No, este comportamiento no es compatible. Sin embargo, puede cambiar la vista de inventario de audiencias para que mire **Todas las audiencias**, luego busque en todas las carpetas. Para obtener más información sobre el uso de la búsqueda en el inventario de audiencias, lea la [sección de búsqueda](./ui/audience-portal.md#search) de la Información general sobre la IU del Servicio de segmentación.
+No, este comportamiento no es compatible. Sin embargo, puede cambiar la vista de inventario de audiencias para ver **Todas las audiencias** y luego buscar en todas las carpetas. Para obtener más información sobre cómo usar la búsqueda en el inventario de audiencias, lea la [sección de búsqueda](./ui/audience-portal.md#search) de la descripción general de la interfaz de usuario del servicio de segmentación.
 
 ### ¿Puedo asignar automáticamente una audiencia a una carpeta en el momento de la creación?
 
@@ -269,15 +269,15 @@ En la siguiente sección se enumeran las preguntas relacionadas con la Composici
 
 Tanto la Composición de audiencias como el Generador de segmentos tienen una función importante en la creación de audiencias en Platform.
 
-El Generador de segmentos es más adecuado para la audiencia **creación** (para crear una audiencia desde cero), mientras que Composición de audiencia es más adecuada para la audiencia **depuración y personalización** (para crear nuevas audiencias basadas en una audiencia existente).
+El Generador de segmentos es más adecuado para la audiencia **creación** (para crear una audiencia desde cero), mientras que la Composición de audiencias es más adecuada para la audiencia **depuración y personalización** (para crear nuevas audiencias basadas en una audiencia existente).
 
 La siguiente tabla ilustra la diferencia entre los dos servicios:
 
 | Generador de segmentos | Composición de público |
 | --------------- | -------------------- |
-| <ul><li>Generación de audiencias de un solo escenario</li><li>Crea los bloques básicos de audiencias a partir de datos de perfil, series temporales y de varias entidades</li><li>Se utiliza para crear **uno** audiencia</li></ul> | <ul><li>Generación de audiencias de varias fases mediante operaciones basadas en conjuntos</li><li>Utiliza las audiencias creadas por el Generador de segmentos y aplica opciones de enriquecimiento de datos como la clasificación de atributos de perfil y la división en subaudiencias</li><li>Se utiliza para crear **múltiple** audiencias a la vez</li></ul> |
+| <ul><li>Generación de audiencias de un solo escenario</li><li>Crea los bloques básicos de audiencias a partir de datos de perfil, series temporales y de varias entidades</li><li>Se utilizó para crear la audiencia **one**</li></ul> | <ul><li>Generación de audiencias de varias fases mediante operaciones basadas en conjuntos</li><li>Utiliza las audiencias creadas por el Generador de segmentos y aplica opciones de enriquecimiento de datos como la clasificación de atributos de perfil y la división en subaudiencias</li><li>Se usa para crear **múltiples** audiencias a la vez</li></ul> |
 
-Para obtener más información sobre el Generador de segmentos, lea la [Guía del Generador de segmentos](./ui/segment-builder.md). Para obtener más información sobre la composición de la audiencia, lea la [Guía de composición de audiencias](./ui/audience-composition.md).
+Para obtener más información sobre el Generador de segmentos, lea la [guía del Generador de segmentos](./ui/segment-builder.md). Para obtener más información sobre la composición de audiencias, lea la [guía de composición de audiencias](./ui/audience-composition.md).
 
 ### ¿Puedo utilizar audiencias generadas externamente en la composición de audiencias?
 
@@ -295,23 +295,23 @@ En este momento, solo puede tener **10** composiciones publicadas por zona prote
 
 La colocación del componente de composición sigue una estructura rígida de la siguiente manera:
 
-1. Usted **siempre** empiece con el [!UICONTROL Audiencia] para seleccionar su actividad de inicio. Puede tener un máximo de **uno** [!UICONTROL Audiencia] Bloque.
-2. Si lo desea, puede añadir un [!UICONTROL Excluir] bloque que sigue al [!UICONTROL Audiencia] Bloque.
-3. Si lo desea, puede añadir un [!UICONTROL Enriquecer] bloque que sigue al [!UICONTROL Excluir] Bloque. Solo puede utilizar **uno** [!UICONTROL Enriquecer] bloque por composición.
-4. Si lo desea, puede agregar un [!UICONTROL Rango] o [!UICONTROL Split] Bloque. Puede **solamente** tenga uno de estos bloques por composición.
-5. Usted **siempre** finalizar con un [!UICONTROL Guardar] para guardar la audiencia.
+1. Usted **siempre** comienza con el bloque [!UICONTROL Audiencia] para seleccionar su actividad de inicio. Puede tener un máximo de **un** bloque de [!UICONTROL Audiencia].
+2. Opcionalmente, puede agregar un bloque [!UICONTROL Exclude] que sigue al bloque [!UICONTROL Audience].
+3. Opcionalmente, puede agregar un bloque [!UICONTROL Enrich] que sigue al bloque [!UICONTROL Exclude]. Solo puedes usar **un** bloque [!UICONTROL Enrich] por composición.
+4. Si lo desea, puede agregar un bloque de [!UICONTROL Clasificación] o [!UICONTROL División]. Puede **solamente** tener uno de estos bloques por composición.
+5. Usted **siempre** termina con un bloque [!UICONTROL Guardar] para guardar su audiencia.
 
 Además, las restricciones siguientes (?) aplicar al utilizar estos bloques:
 
 - Bloque de división
-   - Este bloque solo admite **Cadena** tipos de datos. El bloque Split sí **no** admite el tipo de datos fecha o booleano.
-   - Además, este bloque sí **no** admiten atributos de enriquecimiento.
+   - Este bloque solo admite tipos de datos **String**. El bloque dividido **no** admite el tipo de datos booleano o de fecha.
+   - Además, este bloque **no** admite atributos de enriquecimiento.
 - Excluir bloque
-   - Este bloque sí **no** admite el tipo de datos fecha o booleano.
+   - Este bloque **no** admite el tipo de datos booleano o de fecha.
 - Bloque de clasificación
-   - Este bloque sí **no** admiten atributos de enriquecimiento.
+   - Este bloque **no** admite atributos de enriquecimiento.
 
-Para obtener más información sobre el uso de Composición de audiencia, lea la [Guía de IU de composición de audiencia](./ui/audience-composition.md).
+Para obtener más información acerca del uso de Composición de audiencia, lea la [guía de la interfaz de usuario de la Composición de audiencia](./ui/audience-composition.md).
 
 ### ¿Cuándo se guardan y evalúan las audiencias creadas con Composición de audiencia?
 
@@ -321,33 +321,33 @@ Una vez creada la audiencia, puede tardar hasta 24 horas en evaluarse.
 
 ### ¿Cuándo puedo utilizar la audiencia que he creado?
 
-La audiencia creada en Composición de audiencia hará lo siguiente **inmediatamente** se muestran en Audience Portal. Sin embargo, para utilizarlo en Adobe Journey Optimizer, debe esperar al menos 24 horas después de la evaluación.
+La audiencia creada en Composición de audiencias **se mostrará inmediatamente** en el Portal de audiencias. Sin embargo, para utilizarlo en Adobe Journey Optimizer, debe esperar al menos 24 horas después de la evaluación.
 
 ### ¿Los trabajos de evaluación son visibles dentro de la sección de monitorización?
 
-En este momento, los trabajos de evaluación son **no** se muestra en la interfaz de usuario de monitorización.
+En este momento, los trabajos de evaluación **no** se muestran en la interfaz de usuario de supervisión.
 
 ### ¿Puedo usar una composición de audiencia en otra composición?
 
-No, audiencias creadas con Composición de audiencia **no puede** se utilizará como entrada en otra composición de audiencia.
+No, las audiencias creadas con Composición de audiencia **no se pueden** usar como entrada en otra composición de audiencia.
 
 ### ¿Cómo funciona la división en Composición de audiencias?
 
 La división de audiencias permite subdividir aún más la audiencia en grupos más pequeños.
 
-Al dividir por atributo, existe exclusividad mutua entre los grupos. Esto significa que si un registro cumple los criterios de varias rutas divididas, se le asigna la variable **primero** ruta desde la izquierda y **no** asignado a cualquiera de las otras rutas.
+Al dividir por atributo, existe exclusividad mutua entre los grupos. Esto significa que si un registro cumple los criterios de varias rutas de acceso divididas, se le asignará la ruta **first** desde la izquierda y **no** se asignará a ninguna de las otras rutas.
 
-Al dividir por porcentaje, las divisiones son **aleatoriamente** hecho. Esto significa que los perfiles se asignan aleatoriamente a cada ruta. La división **es** persistente, lo que significa que el perfil estará en la misma subaudiencia en cada evaluación.
+Al dividir por porcentaje, las divisiones se **realizan de forma aleatoria**. Esto significa que los perfiles se asignan aleatoriamente a cada ruta. La división **es** persistente, lo que significa que el perfil estará en la misma subaudiencia en cada evaluación.
 
 >[!NOTE]
 >
->Anteriormente, las divisiones en Composición de audiencia eran **no** persistente.
+>Anteriormente, las divisiones en Composición de audiencia eran **no** persistentes.
 
-Para obtener más información sobre el bloque Split, lea la [Guía de IU de composición de audiencia](./ui/audience-composition.md#split).
+Para obtener más información sobre el bloque dividido, lea la [guía de la interfaz de usuario de la composición de audiencias](./ui/audience-composition.md#split).
 
 ### ¿Puedo utilizar todos los tipos de segmentación en el flujo de trabajo de Composición de audiencia?
 
-Sí, todos los tipos de segmentación ([segmentación por lotes, segmentación de streaming y segmentación de edge](./home.md#evaluate-segments)) son compatibles con el flujo de trabajo de Composición de audiencia. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
+Sí, todos los tipos de segmentación ([segmentación por lotes, segmentación por flujo continuo y segmentación de perímetros](./home.md#evaluate-segments)) son compatibles con el flujo de trabajo de composición de audiencias. Sin embargo, dado que las composiciones actualmente solo se ejecutan una vez al día, incluso si se incluyen audiencias evaluadas por streaming o por Edge, el resultado se basará en la pertenencia de la audiencia en el momento en que se ejecutó la composición.
 
 ## Abono de público
 
@@ -355,21 +355,21 @@ En la siguiente sección se enumeran las preguntas relacionadas con la pertenenc
 
 ### ¿Cómo puedo confirmar la pertenencia de un perfil a una audiencia?
 
-Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccionar **[!UICONTROL Atributos]**, seguido de **[!UICONTROL Ver JSON]**, y puede confirmar que la variable `segmentMembership` contiene el ID de la audiencia.
+Para confirmar la pertenencia de un perfil a la audiencia, visite la página de detalles del perfil que desee confirmar. Seleccione **[!UICONTROL Atributos]**, seguido de **[!UICONTROL Ver JSON]**, y podrá confirmar que el objeto `segmentMembership` contiene el ID de la audiencia.
 
 ### ¿Cómo resuelve la segmentación por lotes la pertenencia a perfiles?
 
-Las audiencias evaluadas mediante la segmentación por lotes se resuelven a diario y los resultados de los miembros de la audiencia se registran en el `segmentMembership` atributo. Las búsquedas de perfiles generan una versión nueva del perfil en el momento de la búsqueda, pero no lo hace **no** actualice los resultados de segmentación por lotes.
+Las audiencias evaluadas mediante la segmentación por lotes se resuelven a diario y los resultados de los miembros de la audiencia se registran en el atributo `segmentMembership` del perfil. Las búsquedas de perfiles generan una nueva versión del perfil en el momento de la búsqueda, pero **no** actualiza los resultados de segmentación por lotes.
 
-Como resultado, cuando se realizan cambios en el perfil, como la combinación de dos perfiles, estos cambios **testamento** aparecen en el perfil cuando se busca, pero **no** se reflejará en la `segmentMembership` hasta que el trabajo de evaluación de segmentos se haya ejecutado de nuevo.
+Como resultado, cuando se realizan cambios en el perfil, como combinar dos perfiles, estos cambios **aparecerán** en el perfil cuando se busquen, pero **no** se reflejarán en el atributo `segmentMembership` hasta que el trabajo de evaluación de segmentos se haya ejecutado de nuevo.
 
-Por ejemplo, supongamos que ha creado dos audiencias mutuamente excluyentes: la audiencia A es para personas que viven en Washington y la audiencia B es para personas que viven en Washington **no** Vivo en Washington. Existen dos perfiles: el perfil 1 de una persona que vive en Washington y el perfil 2 de una persona que vive en Oregón.
+Por ejemplo, supongamos que ha creado dos audiencias mutuamente exclusivas: la audiencia A es para personas que viven en Washington y la audiencia B es para personas que **no** viven en Washington. Existen dos perfiles: el perfil 1 de una persona que vive en Washington y el perfil 2 de una persona que vive en Oregón.
 
 Cuando se ejecute el trabajo de evaluación de segmentación por lotes, el perfil 1 irá a la Audiencia A, mientras que el perfil 2 irá a la Audiencia B. Más adelante, pero antes de que se ejecute el trabajo de evaluación de segmentación por lotes del día siguiente, entrará en Platform un evento que reconcilie los dos perfiles. Como resultado, se crea un único perfil combinado que contiene los perfiles 1 y 2.
 
-Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes, el nuevo perfil combinado tendrá pertenencia a audiencia en **ambos** perfil 1 y perfil 2. Como resultado, esto significa que será un miembro de **ambos** Audiencia A y Audiencia B, a pesar de que estas audiencias tienen definiciones contradictorias. Para el usuario final, esta es la **exactamente la misma situación** como antes de que los perfiles estuvieran conectados, ya que siempre solo había una persona involucrada, y Platform lo hizo **no** Tener información suficiente para conectar los dos perfiles.
+Hasta que se ejecute el siguiente trabajo de evaluación de segmentos por lotes, el nuevo perfil combinado tendrá pertenencia a audiencia en **tanto el perfil 1 como el perfil 2 de**. Como resultado, esto significa que será miembro de **tanto de** audiencia A como de la audiencia B, a pesar de que estas audiencias tienen definiciones contradictorias. Para el usuario final, esta es **exactamente la misma situación** que antes de que se conectaran los perfiles, ya que siempre había solo una persona involucrada y Platform simplemente **no** tenía suficiente información para conectar los dos perfiles.
 
-Si utiliza la búsqueda de perfiles para recuperar el perfil recién creado y observar su pertenencia a audiencias, se mostrará que es miembro de **ambos** Audiencia A y Audiencia B, a pesar de que ambas audiencias tienen definiciones contradictorias. Una vez que se ejecute el trabajo diario de evaluación de segmentación por lotes, el abono a audiencia se actualizará para reflejar este estado actualizado de datos de perfil.
+Si usa la búsqueda de perfiles para recuperar el perfil recién creado y observar su pertenencia a audiencias, se mostrará que es miembro de **tanto de la audiencia A como de la audiencia B**, a pesar de que ambas audiencias tienen definiciones contradictorias. Una vez que se ejecute el trabajo diario de evaluación de segmentación por lotes, el abono a audiencia se actualizará para reflejar este estado actualizado de datos de perfil.
 
 Si necesita más resolución de audiencia en tiempo real, utilice streaming o segmentación de Edge.
 
@@ -377,5 +377,5 @@ Si necesita más resolución de audiencia en tiempo real, utilice streaming o se
 
 Los datos de streaming pueden tardar hasta tres horas en estar disponibles en los flujos de trabajo de segmentación por lotes.
 
-Por ejemplo, si un trabajo de segmentación por lotes se ejecuta a las 21:00, se garantiza que contiene datos ingeridos de flujo continuo **hasta** 18H. Transmisión de datos introducidos después de las 18:00 pero antes de las 21:00 **mayo** ser incluido.
+Por ejemplo, si un trabajo de segmentación por lotes se ejecuta a las 9 p. m., se garantiza que contendrá datos ingeridos por streaming de **hasta las** 6 p. m. Se incluirán los datos ingeridos por streaming que se ingirieron después de las 6 p. m. pero antes de las 9 p. m. **puede**.
 

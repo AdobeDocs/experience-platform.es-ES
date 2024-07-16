@@ -14,41 +14,41 @@ ht-degree: 2%
 
 [[!DNL Zendesk]](https://www.zendesk.com) es una solución de servicio al cliente y una herramienta de ventas.
 
-Esta [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha el [[!DNL Zendesk] API de contactos](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), a **creación y actualización de identidades** dentro de una audiencia como contactos dentro de [!DNL Zendesk].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha la API [[!DNL Zendesk] Contactos](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/) para **crear y actualizar identidades** dentro de una audiencia como contactos dentro de [!DNL Zendesk].
 
-[!DNL Zendesk] utiliza tokens de portador como mecanismo de autenticación para comunicarse con el [!DNL Zendesk] API de contactos. Instrucciones para autenticarse en su [!DNL Zendesk] más abajo, en la sección [Autenticar en el destino](#authenticate) sección.
+[!DNL Zendesk] usa tokens de portador como mecanismo de autenticación para comunicarse con la API de contactos de [!DNL Zendesk]. Las instrucciones para autenticarse en su instancia de [!DNL Zendesk] se encuentran más abajo, en la sección [Autenticar en destino](#authenticate).
 
 ## Casos de uso {#use-cases}
 
-El departamento de servicio al cliente de una plataforma B2C multicanal quiere garantizar una experiencia personalizada sin problemas para sus clientes. El departamento puede crear audiencias a partir de sus propios datos sin conexión para crear nuevos perfiles de usuario o actualizar la información de perfil existente de diferentes interacciones (por ejemplo, compras, devoluciones, etc.) y enviar estas audiencias de Adobe Experience Platform a [!DNL Zendesk]. Tener la información actualizada en [!DNL Zendesk] garantiza que el agente de servicio al cliente tenga la información reciente del cliente disponible inmediatamente, lo que permite respuestas y resolución más rápidas.
+El departamento de servicio al cliente de una plataforma B2C multicanal quiere garantizar una experiencia personalizada sin problemas para sus clientes. El departamento puede crear audiencias a partir de sus propios datos sin conexión para crear nuevos perfiles de usuario o actualizar la información de perfil existente de diferentes interacciones (por ejemplo, compras, devoluciones, etc.) y enviar estas audiencias desde Adobe Experience Platform a [!DNL Zendesk]. Tener la información actualizada en [!DNL Zendesk] garantiza que el agente de servicio al cliente tenga disponible de inmediato la información reciente del cliente, lo que permite respuestas y resolución más rápidas.
 
 ## Requisitos previos {#prerequisites}
 
 ### Requisitos previos del Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar los datos en [!DNL Zendesk] destino, debe tener un [esquema](/help/xdm/schema/composition.md), a [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es), y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creado en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Zendesk], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
-Consulte la documentación del Experience Platform para [Grupo de campos de esquema Detalles de pertenencia a audiencia](/help/xdm/field-groups/profile/segmentation.md) si necesita orientación sobre los estados de audiencia.
+Consulte la documentación del Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
 ### [!DNL Zendesk] requisitos previos {#prerequisites-destination}
 
-Para exportar datos de Platform a su [!DNL Zendesk] cuenta necesita tener un [!DNL Zendesk] cuenta.
+Para exportar datos de Platform a su cuenta de [!DNL Zendesk], necesita tener una cuenta de [!DNL Zendesk].
 
-#### Reunir [!DNL Zendesk] credenciales {#gather-credentials}
+#### Recopilar [!DNL Zendesk] credenciales {#gather-credentials}
 
-Tenga en cuenta los elementos siguientes antes de autenticarse en el [!DNL Zendesk] destino:
+Observe los elementos siguientes antes de autenticarse en el destino [!DNL Zendesk]:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
-| `Bearer token` | El token de acceso que ha generado en su [!DNL Zendesk] cuenta. <br> Siga la documentación para [generar un [!DNL Zendesk] token de acceso](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si no tiene uno. | `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | El token de acceso que generó en su cuenta de [!DNL Zendesk]. <br> Siga la documentación para [generar un [!DNL Zendesk] token de acceso](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si no dispone de uno. | `a0b1c2d3e4...v20w21x22y23z` |
 
 ## Mecanismos de protección {#guardrails}
 
-El [Precios y límites de tarifa](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) La página detalla [!DNL Zendesk] Límites de API asociados a su cuenta. Debe asegurarse de que los datos y la carga útil se encuentren dentro de estas restricciones.
+La página [Precios y límites de tarifas](https://developer.zendesk.com/api-reference/sales-crm/rate-limits/#pricing) detalla los límites de API [!DNL Zendesk] asociados con su cuenta. Debe asegurarse de que los datos y la carga útil se encuentren dentro de estas restricciones.
 
 ## Identidades admitidas {#supported-identities}
 
-[!DNL Zendesk] admite la actualización de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
+[!DNL Zendesk] admite la actualización de las identidades descritas en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md).
 
 | Identidad de destino | Ejemplo | Descripción | Obligatorio |
 |---|---|---|---|
@@ -60,7 +60,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 | Elemento | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportación | **[!UICONTROL Basado en perfiles]** | <ul><li>Está exportando todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campo.</li><li> Cada estado del segmento en [!DNL Zendesk] se actualiza con el estado de audiencia correspondiente de Platform, en función de la variable **[!UICONTROL ID de asignación]** valor proporcionado durante la [programación de audiencia](#schedule-segment-export-example) paso.</li></ul> |
+| Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de segmento de [!DNL Zendesk] se actualiza con el estado de audiencia correspondiente de Platform, según el valor de **[!UICONTROL ID de asignación]** proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).</li></ul> |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -69,103 +69,108 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita el **[!UICONTROL Ver destinos]** y **[!UICONTROL Administrar destinos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita los **[!UICONTROL permisos de control de acceso](/help/access-control/home.md#permissions) de Ver destinos]** y **[!UICONTROL Administrar destinos]**[5}. Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para conectarse a este destino, siga los pasos descritos en la sección [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
+Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
-En **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** buscar [!DNL Zendesk]. También puede encontrarlo en la sección **[!UICONTROL CRM]** categoría.
+En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL Zendesk]. También puede ubicarlo en la categoría **[!UICONTROL CRM]**.
 
 ### Autenticarse en el destino {#authenticate}
 
-Rellene los campos obligatorios siguientes. Consulte la [Reunir [!DNL Zendesk] credenciales](#gather-credentials) para obtener cualquier guía.
-* **[!UICONTROL Token de portador]**: El token de acceso que ha generado en su [!DNL Zendesk] cuenta.
+Rellene los campos obligatorios siguientes. Consulte la sección [Recopilar [!DNL Zendesk] credenciales](#gather-credentials) para obtener instrucciones.
+* **[!UICONTROL Token de portador]**: El token de acceso que generó en su cuenta de [!DNL Zendesk].
 
-Para autenticarse en el destino, seleccione **[!UICONTROL Conectar con destino]**.
-![Captura de pantalla de la IU de Platform que muestra cómo autenticarse.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+Para autenticarse en el destino, seleccione **[!UICONTROL Conectarse al destino]**.
+![Captura de pantalla de IU de Platform que muestra cómo autenticarse.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
-Si los detalles proporcionados son válidos, la interfaz de usuario muestra un **[!UICONTROL Conectado]** estado con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
+Si los detalles proporcionados son válidos, la interfaz de usuario mostrará el estado **[!UICONTROL Conectado]** con una marca de verificación verde. A continuación, puede continuar con el paso siguiente.
 
 ### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
-![Captura de pantalla de la IU de Platform que muestra los detalles del destino.](../../assets/catalog/crm/zendesk/destination-details.png)
+![Captura de pantalla de IU de Platform que muestra los detalles del destino.](../../assets/catalog/crm/zendesk/destination-details.png)
 
-* **[!UICONTROL Nombre]**: Un nombre con el que reconocerá este destino en el futuro.
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Leer [Activación de perfiles y audiencias en destinos de exportación de audiencia de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Consideraciones sobre asignación y ejemplo {#mapping-considerations-example}
 
-Para enviar correctamente los datos de audiencia de Adobe Experience Platform a [!DNL Zendesk] destino, debe ir a través del paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino.
+Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL Zendesk], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino.
 
-Atributos especificados en la variable **[!UICONTROL Campo de destino]** debe tener exactamente el nombre descrito en la tabla de asignaciones de atributos, ya que estos atributos formarán el cuerpo de la solicitud.
+Los atributos especificados en el **[!UICONTROL campo de destino]** deben tener exactamente el nombre descrito en la tabla de asignaciones de atributos, ya que estos atributos formarán el cuerpo de la solicitud.
 
-Atributos especificados en la variable **[!UICONTROL Campo de origen]** no siga ninguna de estas restricciones. Puede asignarlo según sus necesidades, pero si el formato de datos no es correcto cuando se inserta en [!DNL Zendesk] se producirá un error.
+Los atributos especificados en el **[!UICONTROL campo Source]** no siguen ninguna restricción de este tipo. Puede asignarlo según sus necesidades. Sin embargo, si el formato de datos no es correcto cuando se inserta en [!DNL Zendesk], se producirá un error.
 
-Para asignar correctamente los campos XDM a [!DNL Zendesk] campos de destino, siga estos pasos:
+Para asignar correctamente los campos XDM a los campos de destino [!DNL Zendesk], siga estos pasos:
 
-1. En el **[!UICONTROL Asignación]** paso, seleccione **[!UICONTROL Añadir nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
-1. En el **[!UICONTROL Seleccionar campo de origen]** , seleccione la **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija el **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
-1. En el **[!UICONTROL Seleccionar campo de destino]** , seleccione la **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad de destino o elija la **[!UICONTROL Seleccionar atributos]** y seleccione uno de los atributos de esquema admitidos.
-   * Repita estos pasos para agregar las siguientes asignaciones obligatorias, también puede agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y su [!DNL Zendesk] instancia: |Campo de origen|Campo de destino| Obligatorio| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Sí | |`IdentityMap: Email`|`Identity: email`| Sí | |`xdm: person.name.firstName`|`xdm: first_name`| |
+1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
+1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
+1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija la categoría **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad de destino, o bien elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione uno de los atributos de esquema admitidos.
+   * Repita estos pasos para agregar las siguientes asignaciones obligatorias, también puede agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la instancia [!DNL Zendesk]:
+|Campo de Source|Campo de destino| Obligatorio|
+|—|—|—|
+|`xdm: person.name.lastName`|`xdm: last_name`| Sí |
+|`IdentityMap: Email`|`Identity: email`| Sí |
+|`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-     ![Ejemplo de captura de pantalla de la IU de Platform con asignaciones de atributos.](../../assets/catalog/crm/zendesk/mappings.png)
+     ![Ejemplo de captura de pantalla de IU de plataforma con asignaciones de atributos.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
->El `Attribute: last_name` y `Identity: email` las asignaciones de destino son obligatorias para este destino. Si faltan estas asignaciones, se ignorarán las demás asignaciones y no se enviarán a [!DNL Zendesk].
+>Las asignaciones de destino `Attribute: last_name` y `Identity: email` son obligatorias para este destino. Si faltan estas asignaciones, se omitirán las demás asignaciones y no se enviarán a [!DNL Zendesk].
 
-Cuando haya terminado de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar las asignaciones para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ### Programar exportación de audiencias y ejemplo {#schedule-segment-export-example}
 
-En el [[!UICONTROL Programar exportación de audiencias]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flujo de trabajo de activación, debe asignar manualmente las audiencias de Platform al atributo de campo personalizado en [!DNL Zendesk].
+En el paso [[!UICONTROL Programar exportación de audiencias]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flujo de trabajo de activación, debe asignar manualmente las audiencias de Platform al atributo de campo personalizado en [!DNL Zendesk].
 
-Para ello, seleccione cada segmento e introduzca el atributo de campo personalizado correspondiente en [!DNL Zendesk] en el **[!UICONTROL ID de asignación]** field.
+Para ello, seleccione cada segmento e introduzca el atributo de campo personalizado correspondiente de [!DNL Zendesk] en el campo **[!UICONTROL ID de asignación]**.
 
 A continuación se muestra un ejemplo:
-![Captura de pantalla de la IU de Platform que muestra Programar exportación de audiencias.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Ejemplo de captura de pantalla de la IU de Platform que muestra Programar exportación de audiencias.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Validar exportación de datos {#exported-data}
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-1. Seleccionar **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y vaya a la lista de destinos.
-1. A continuación, seleccione el destino y cambie a **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de audiencia.
-   ![Captura de pantalla de la IU de Platform que muestra los datos de activación de destinos.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+1. Seleccione **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y vaya a la lista de destinos.
+1. A continuación, seleccione el destino y cambie a la ficha **[!UICONTROL Datos de activación]** y, a continuación, seleccione un nombre de audiencia.
+   ![Ejemplo de captura de pantalla de IU de Platform que muestra datos de activación de destinos.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento dentro del segmento.
-   ![Captura de pantalla de la IU de Platform que muestra el segmento.](../../assets/catalog/crm/zendesk/segment.png)
+   ![Ejemplo de captura de pantalla de IU de Platform que muestra el segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Inicie sesión en [!DNL Zendesk] sitio web y, a continuación, vaya al **[!UICONTROL Contactos]** para comprobar si se han añadido los perfiles de la audiencia. Esta lista se puede configurar para mostrar columnas para los campos adicionales creados con la audiencia**[!UICONTROL ID de asignación]** y estados de audiencia.
-   ![Captura de pantalla de la interfaz de usuario de Zendesk que muestra la página Contactos con los campos adicionales creados con el nombre de la audiencia.](../../assets/catalog/crm/zendesk/contacts.png)
+1. Inicie sesión en el sitio web de [!DNL Zendesk] y luego vaya a la página de **[!UICONTROL Contactos]** para comprobar si se han agregado los perfiles de la audiencia. Esta lista se puede configurar para mostrar columnas para los campos adicionales creados con la audiencia**[!UICONTROL ID de asignación]** y los estados de audiencia.
+   ![Captura de pantalla de la interfaz de usuario de Zendesk que muestra la página Contactos con los campos adicionales creados con el nombre de audiencia.](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. También puede explorar en profundidad un individuo **[!UICONTROL Persona]** y marque la **[!UICONTROL Campos adicionales]** que muestra el nombre y los estados de la audiencia.
-   ![Captura de pantalla de la interfaz de usuario de Zendesk que muestra la página Persona con la sección de campos adicionales que muestra el nombre de la audiencia y los estados de audiencia.](../../assets/catalog/crm/zendesk/contact.png)
+1. También puede explorar en profundidad una página individual de **[!UICONTROL Persona]** y comprobar la sección de **[!UICONTROL Campos adicionales]** que muestra el nombre de la audiencia y los estados de la audiencia.
+   ![Captura de pantalla de la interfaz de usuario de Zendesk que muestra la página Persona con la sección de campos adicionales que muestra el nombre y los estados de audiencia.](../../assets/catalog/crm/zendesk/contact.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos. Consulte la [Resumen de gobernanza de datos](/help/data-governance/home.md).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, consulte la [Información general sobre el control de datos](/help/data-governance/home.md).
 
 ## Recursos adicionales {#additional-resources}
 
-Información útil adicional del [!DNL Zendesk] Esta documentación es:
-* [Realización de la primera llamada](https://developer.zendesk.com/documentation/sales-crm/first-call/)
+A continuación encontrará información útil adicional de la documentación de [!DNL Zendesk]:
+* [Realizando tu primera llamada](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Campos personalizados](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 
 ### Changelog
@@ -176,7 +181,7 @@ Esta sección recoge la funcionalidad y las actualizaciones significativas de la
 
 | Mes de lanzamiento | Tipo de actualización | Descripción |
 |---|---|---|
-| Abril de 2023 | Actualización de documentación | <ul><li>Hemos actualizado la [casos de uso](#use-cases) con un ejemplo más claro de cuándo se beneficiarían los clientes de utilizar este destino.</li> <li>Hemos actualizado la [asignación](#mapping-considerations-example) para reflejar las asignaciones correctas necesarias. El `Attribute: last_name` y `Identity: email` las asignaciones de destino son obligatorias para este destino. Si faltan estas asignaciones, se ignorarán las demás asignaciones y no se enviarán a [!DNL Zendesk].</li> <li>Hemos actualizado la [asignación](#mapping-considerations-example) con ejemplos claros de asignaciones obligatorias y opcionales.</li></ul> |
+| Abril de 2023 | Actualización de documentación | <ul><li>Hemos actualizado la sección [casos de uso](#use-cases) con un ejemplo más claro de cuándo se beneficiarían los clientes de utilizar este destino.</li> <li>Actualizamos la sección [mapping](#mapping-considerations-example) para reflejar las asignaciones requeridas correctas. Las asignaciones de destino `Attribute: last_name` y `Identity: email` son obligatorias para este destino. Si faltan estas asignaciones, se omitirán las demás asignaciones y no se enviarán a [!DNL Zendesk].</li> <li>Hemos actualizado la sección [asignación](#mapping-considerations-example) con ejemplos claros de asignaciones obligatorias y opcionales.</li></ul> |
 | Marzo de 2023 | Versión inicial | Versión de destino inicial y publicación de documentación. |
 
 {style="table-layout:auto"}

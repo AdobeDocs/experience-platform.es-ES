@@ -7,11 +7,11 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '187'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
-# [!UICONTROL Número de teléfono] tipo de datos
+# [!UICONTROL Tipo de datos Número de teléfono]
 
 [!UICONTROL Número de teléfono] es un tipo de datos XDM estándar que describe los detalles de un número de teléfono.
 
@@ -19,9 +19,9 @@ ht-degree: 1%
 
 | Propiedad | Descripción |
 | --- | --- |
-| `extension` | El número de marcado interno que se utiliza para llamar desde una centralita, operador o centralita privada. |
-| `number` | El número de teléfono. Tenga en cuenta que el número de teléfono es una cadena y puede incluir caracteres clave como corchetes `()`, guiones `-`o caracteres para indicar identificadores de submarcado como extensiones `x` por ejemplo, `1-353(0)18391111` o `+613 9403600x1234`. |
-| `primary` | Valor booleano que indica si se trata del número de teléfono principal de la persona. A diferencia de la dirección postal o de correo electrónico, puede haber varios números de teléfono principales, uno por canal de comunicación. El canal de comunicación se define mediante el tipo (indicado por el nombre de la propiedad principal): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, y `fax`. |
+| `extension` | El número de marcado interno que se utiliza para llamar desde una centralita privada o un operador. |
+| `number` | El número de teléfono. Tenga en cuenta que el número de teléfono es una cadena y puede incluir caracteres clave como paréntesis `()`, guiones `-` o caracteres para indicar identificadores de marcado secundario como extensiones `x`, por ejemplo, `1-353(0)18391111` o `+613 9403600x1234`. |
+| `primary` | Valor booleano que indica si se trata del número de teléfono principal de la persona. A diferencia de la dirección postal o de correo electrónico, puede haber varios números de teléfono principales, uno por canal de comunicación. El canal de comunicación está definido por el tipo (indicado por el nombre de la propiedad principal): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` y `fax`. |
 | `status` | Indica si el número de teléfono se puede utilizar actualmente. |
 | `statusReason` | Una descripción del estado actual. |
 | `validity` | Un nivel de corrección técnica del número de teléfono. |

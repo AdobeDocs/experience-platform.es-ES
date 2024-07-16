@@ -1,10 +1,10 @@
 ---
 title: Notas de la versión de Adobe Experience Platform
-description: Las notas de la versión de octubre de 2023 para Adobe Experience Platform.
+description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1052'
 ht-degree: 32%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 **Fecha de la versión: 25 de octubre de 2023**
 
-Actualizaciones de las funciones existentes en Experience Platform:
+Actualizaciones de funciones existentes en Experience Platform:
 
 - [Paneles](#dashboards)
 - [Recopilación de datos](#data-collection)
@@ -30,7 +30,7 @@ Adobe Experience Platform proporciona varios paneles a través de los cuales pue
 
 | Función | Descripción |
 | --- | --- |
-| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. El **[!UICONTROL Tamaño del Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** Las métricas de ofrecen una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Platform en relación con los derechos de uso de licencias. Consulte la [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) documentación para obtener descripciones de estas y otras métricas de uso de licencias. |
+| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. Las métricas **[!UICONTROL Tamaño de Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** proporcionan una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Platform en relación con sus derechos de uso de licencias. Consulte la documentación de [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) para obtener descripciones de estas y otras métricas de uso de licencias. |
 
 {style="table-layout:auto"}
 
@@ -44,11 +44,11 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Extensiones | [!DNL Meta] Mejora de API de conversiones | Se han realizado tres mejoras en [API de metaconversiones](/help/tags/extensions/server/meta/overview.md) extensión: <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Permite pasar el RampID de LiveRamp en el campo CIP, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
-| Extensiones | [!DNL LinkedIn] API de conversiones | El [[!DNL LinkedIn] API de conversiones](../../tags/extensions/server/linkedin/overview.md) Esta extensión le permite evaluar la eficacia de sus campañas de marketing de LinkedIn reenviando datos de evento del Experience Platform a LinkedIn. |
-| Secreto | [!DNL LinkedIn] Secreto de OAuth 2 | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
-| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) rendimiento en Platform, solo se conservarán las compilaciones de desarrollo y de fase más recientes, tanto las que tengan éxito como las que no. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
-| Extensiones | Elementos, reglas y extensiones | [Elementos, reglas y extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=es) ahora se ordenan en la salida de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
+| Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión fluida al permitirle compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
+| Extensiones | API de conversiones [!DNL LinkedIn] | La extensión de la API [[!DNL LinkedIn] Conversiones](../../tags/extensions/server/linkedin/overview.md) le permite evaluar la efectividad de sus campañas de marketing de LinkedIn reenviando datos de evento del Experience Platform a LinkedIn. |
+| Secreto | Secreto de OAuth 2 de [!DNL LinkedIn] | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) le permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
+| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) en Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no se realizaron correctamente. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
+| Extensiones | Elementos, reglas y extensiones | [Los elementos, las reglas y las extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) ahora se ordenan en el resultado de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
 
 Para obtener más información sobre la recopilación de datos, lea la [Información general sobre recopilación de datos](../../tags/home.md).
 
@@ -69,8 +69,8 @@ Para obtener más información sobre la recopilación de datos, lea la [Informac
 
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
-| (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportación de matrices](../../destinations/ui/export-arrays-calculated-fields.md) Para los elementos de una matriz, ahora puede utilizar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) para crear atributos hash en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/ui/account-audiences.md) a determinados destinos. Para obtener más información acerca de esta funcionalidad, lea la [tutorial activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
+| (Beta) Compatibilidad con funciones hash en campos calculados | Además de las funciones específicas de [exportar matrices](../../destinations/ui/export-arrays-calculated-fields.md) o elementos de una matriz, ahora puede usar [funciones hash](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) adicionales para hash atributos en los archivos exportados. Las funciones hash admitidas son: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (GA limitado) Activar audiencias de cuenta en ciertos destinos | Los clientes de Real-Time CDP B2B ahora pueden activar [audiencias de cuenta](../../segmentation/ui/account-audiences.md) a ciertos destinos. Para obtener más información acerca de esta característica, lea el [tutorial para activar audiencias de cuenta](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -86,9 +86,9 @@ Adobe Experience Platform está diseñado para enriquecer las aplicaciones de ex
 
 | Función | Descripción |
 | --- | --- |
-| Herramientas de zona protegida | La función de herramientas de zona protegida le permite mejorar la precisión de la configuración en todas las zonas protegidas, así como exportar e importar sin problemas configuraciones de zonas protegidas entre zonas protegidas. Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Para obtener más información, consulte la [guía de IU de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
+| Herramientas de zona protegida | La función de herramientas de zona protegida le permite mejorar la precisión de la configuración en todas las zonas protegidas, así como exportar e importar sin problemas configuraciones de zonas protegidas entre zonas protegidas. Puede utilizar la función de herramientas de zona protegida para seleccionar diferentes objetos y exportarlos a un paquete. Para obtener más información, consulte la [guía de la interfaz de usuario de herramientas de zona protegida](../../sandboxes/ui/sandbox-tooling.md). |
 
-Para obtener más información sobre los entornos limitados, consulte la [información general sobre zonas protegidas](../../sandboxes/home.md).
+Para obtener más información sobre las zonas protegidas, consulte la [descripción general de las zonas protegidas](../../sandboxes/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
@@ -98,9 +98,9 @@ Para obtener más información sobre los entornos limitados, consulte la [inform
 
 | Función | Descripción |
 | ------- | ----------- |
-| Audiencias de cuenta (GA limitado) | En Real-time Customer Data Platform B2B Edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta funcionalidad, lea la [resumen de audiencias de cuenta](../../segmentation/ui/account-audiences.md). |
+| Audiencias de cuenta (GA limitado) | En Real-time Customer Data Platform B2B Edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [descripción general de las audiencias de la cuenta](../../segmentation/ui/account-audiences.md). |
 
-Para obtener más información sobre el servicio de segmentación, lea la [Resumen del servicio de segmentación](../../segmentation/home.md).
+Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
 ## Fuentes {#sources}
 
@@ -110,8 +110,8 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| Autenticación actualizada para la zona de aterrizaje de datos | Ahora puede ver la fecha de caducidad designada de la zona de aterrizaje de datos al ver sus credenciales. Debe actualizar el token antes de la fecha de caducidad para poder utilizarlo en la aplicación. Si no actualiza manualmente el token antes de la fecha de caducidad indicada, se actualizará automáticamente y proporcionará un nuevo token la próxima vez que recupere las credenciales. Para obtener más información, lea la documentación sobre [uso de la zona de aterrizaje de datos](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
+| Autenticación actualizada para la zona de aterrizaje de datos | Ahora puede ver la fecha de caducidad designada de la zona de aterrizaje de datos al ver sus credenciales. Debe actualizar el token antes de la fecha de caducidad para poder utilizarlo en la aplicación. Si no actualiza manualmente el token antes de la fecha de caducidad indicada, se actualizará automáticamente y proporcionará un nuevo token la próxima vez que recupere las credenciales. Para obtener más información, lea la documentación sobre [usando la zona de aterrizaje de datos](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre las fuentes, lea la [información general de orígenes](../../sources/home.md).
+Para obtener más información sobre las fuentes, lea [información general de fuentes](../../sources/home.md).

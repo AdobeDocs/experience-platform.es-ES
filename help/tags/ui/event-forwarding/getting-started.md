@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 77%
+source-wordcount: '864'
+ht-degree: 76%
 
 ---
 
@@ -31,7 +31,7 @@ Después de enviar datos a Edge Network, puede activar las soluciones de Adobe p
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (póngase en contacto con el equipo de su cuenta de Adobe para conocer los precios)
 * Reenvío de eventos en Adobe Experience Platform
-* SDK web de Adobe Experience Platform, SDK móvil o API del servidor de red perimetral configurada para enviar datos a la red perimetral
+* SDK web de Adobe Experience Platform, SDK móvil o API de servidor de Edge Network configurada para enviar datos al Edge Network
 * Los datos deben asignarse al modelo de datos de experiencia (XDM) (esta asignación puede realizarse utilizando etiquetas)
 
 ## Creación de un esquema XDM
@@ -42,7 +42,7 @@ En Adobe Experience Platform, puede crear su propio esquema.
 
 1. Asigne al esquema un nombre y una descripción breve.
 
-1. Puede añadir el grupo de campo Detalles web de ExperienceEvent seleccionando **[!UICONTROL Añadir]** junto a **[!UICONTROL Grupos de campos]**.
+1. Puede agregar el grupo de campos Detalles web de ExperienceEvent seleccionando **[!UICONTROL Agregar]** junto a **[!UICONTROL Grupos de campos]**.
 
    >[!NOTE]
    >
@@ -54,24 +54,24 @@ Para obtener más información sobre esquemas, consulte la [Ayuda del sistema de
 
 ## Crear una propiedad de reenvío de eventos
 
-En el **[!UICONTROL Etiquetas]** espacio de trabajo, crear una propiedad de tipo **[!UICONTROL Edge]**.
+En el área de trabajo **[!UICONTROL Etiquetas]**, cree una propiedad de tipo **[!UICONTROL Edge]**.
 
 1. Seleccione **[!UICONTROL Nueva propiedad]**.
 
 1. Asigne un nombre a la propiedad.
 
-1. Elija el tipo de plataforma &quot;Edge&quot;.
+1. Elija el tipo de plataforma Edge.
 
 1. Seleccione **[!UICONTROL Guardar]**.
 
 Después de crear la propiedad, vaya a la pestaña **[!UICONTROL Entornos]** de la nueva propiedad y tome
-nota de los ID de entorno. Si la organización de Adobe utilizada en el conjunto de datos difiere de la organización de Adobe utilizada en el reenvío de eventos, puede copiar el ID de entorno del **[!UICONTROL Entornos]** y péguelo al crear una secuencia de datos. De lo contrario, puede seleccionar el entorno de un menú desplegable.
+nota de los ID de entorno. Si la organización de Adobe utilizada en el conjunto de datos difiere de la organización de Adobe utilizada en el reenvío de eventos, puede copiar el ID de entorno de la pestaña **[!UICONTROL Entornos]** y pegarlo al crear un conjunto de datos. De lo contrario, puede seleccionar el entorno de un menú desplegable.
 
 ## Crear un flujo de datos
 
 Para crear un flujo de datos en Adobe Experience Platform, utilice el ID de entorno generado al crear la propiedad de reenvío de eventos.
 
-1. Seleccionar **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
+1. Seleccione **[!UICONTROL Datastreams]** en el panel de navegación izquierdo.
 
 1. Asigne un nombre a la configuración y proporcione una descripción opcional.
 La descripción ayuda a identificar las configuraciones en una lista de varias configuraciones.
@@ -82,7 +82,7 @@ La descripción ayuda a identificar las configuraciones en una lista de varias c
 
 A continuación, configure Edge Network para enviar datos a reenvío de eventos y a otros productos de Adobe.
 
-1. En el **[!UICONTROL Datastreams]** workspace, seleccione la propiedad que ha creado.
+1. En el área de trabajo **[!UICONTROL Datastreams]**, seleccione la propiedad que ha creado.
 
 1. Seleccione el entorno Desarrollo, Producción o Ensayo.
 
@@ -98,9 +98,9 @@ Después de realizar la configuración, anote los ID de entorno para la nueva pr
 
 ## Configure la extensión del SDK web de Platform para enviar datos al conjunto de datos creado anteriormente
 
-Cree su propiedad en **[!UICONTROL Etiquetas]** espacio de trabajo y, a continuación, vaya a **[!UICONTROL Extensiones]** y seleccione la extensión del SDK web de Experience Platform en el catálogo para configurarla e instalarla.
+Cree su propiedad en el área de trabajo **[!UICONTROL Etiquetas]**, luego vaya a **[!UICONTROL Extensiones]** y seleccione la extensión de SDK web de Experience Platform del catálogo para configurarla e instalarla.
 
-Consulte la [Documentación de extensión del SDK web](../../extensions/client/web-sdk/overview.md) para obtener más información sobre las opciones de configuración.
+Consulte la [documentación de la extensión del SDK web](../../extensions/client/web-sdk/overview.md) para obtener más información sobre las opciones de configuración.
 
 ## Creación de una regla de etiqueta para enviar datos al SDK web de Platform
 

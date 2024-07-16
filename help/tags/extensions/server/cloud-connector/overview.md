@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de reenvío de eventos
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1356'
 ht-degree: 98%
 
 ---
@@ -63,11 +63,11 @@ En la siguiente tabla se hace una lista de los encabezados predefinidos. No est�
 
 | Encabezado | Descripción |
 |---|---|
-| [A-IM](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Accept) | Transmitido por un agente de usuario para indicar que desea acceder a un estado anterior de un recurso original. Con este fin, el encabezado `Accept-Datetime` se transmite en una petición HTTP emitida contra una TimeGate para un recurso original, y su valor indica la fecha y hora del estado anterior deseado del recurso original. |
 | Access-Control-Request-Headers | Los exploradores los utilizan para emitir una [solicitud de verificación previa](https://developer.mozilla.org/es-ES/docs/Glossary/preflight_request), a fin de que el servidor sepa qué [encabezados HTTP](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers) puede enviar el cliente cuando se realiza la solicitud real. |
 | Access-Control-Request-Method | Los exploradores los utilizan al emitir una [solicitud de verificación previa](https://developer.mozilla.org/es-ES/docs/Glossary/preflight_request), para hacer saber al servidor qué [método HTTP](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Methods) se utilizará cuando se realice la solicitud real. Este encabezado es necesario porque la solicitud de verificación previa siempre es [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) y no utiliza el mismo método que la solicitud real. |
@@ -83,24 +83,24 @@ En la siguiente tabla se hace una lista de los encabezados predefinidos. No est�
 | Reenviado | Contiene información de los [servidores proxy inversos](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Proxy_servers_and_tunneling) que se alteran o pierden cuando un proxy está involucrado en la ruta de la solicitud. |
 | De | Contiene una dirección de correo electrónico de Internet para un usuario humano que controla el agente de usuario solicitante. |
 | Host | Especifica el host y el número de puerto del servidor al que se envía la solicitud. |
-| Si-Coincidencia |  |
-| Si-Modificado-Desde |  |
-| [Si-Ninguno-Coincidencia](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [Si-Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) |  |
-| [Si-Nomodificado-Desde](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Máx-Avanza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origen](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Pragma) | Encabezado específico para la implementación que puede tener varios efectos en cualquier parte de la cadena de solicitud y respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP/1.0 donde el encabezado Caché-Control aún no está presente. |  |
+| Si-Coincidencia | |
+| Si-Modificado-Desde | |
+| [Si-Ninguno-Coincidencia](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
+| [Si-Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
+| [Si-Nomodificado-Desde](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Máx-Avanza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origen](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Pragma) | Encabezado específico para la implementación que puede tener varios efectos en cualquier parte de la cadena de solicitud y respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP/1.0 donde el encabezado Caché-Control aún no está presente. | |
 | [Autorización de proxy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte de un documento que el servidor debe devolver. |  |
-| [Remitente](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Referer) | Dirección de la página web anterior desde la que se siguió un vínculo a la página solicitada actualmente. |  |
+| [Intervalo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte de un documento que el servidor debe devolver. | |
+| [Remitente](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/Referer) | Dirección de la página web anterior desde la que se siguió un vínculo a la página solicitada actualmente. | |
 | TE | Especifica las codificaciones de transferencia que el agente de usuario está dispuesto a aceptar. (Podría llamarlo `Accept-Transfer-Encoding` de manera informal, lo cual sería más intuitivo). |
-| Actualizar | El documento RFC relevante para el campo de encabezado [`Upgrade` es RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para actualizar o cambiar a un protocolo diferente en la conexión actual de cliente, servidor y protocolo de transporte. Por ejemplo, este estándar de encabezado permite a un cliente cambiar de HTTP 1.1 a HTTP 2.0, suponiendo que el servidor decida reconocer e implementar el campo de encabezado `Upgrade`. No se pide a ninguna de las partes que acepte los términos especificados en el campo de encabezado `Upgrade`. Se puede utilizar en encabezados de cliente y de servidor. Si se especifica el campo de encabezado `Upgrade`, el remitente DEBE enviar también el campo de encabezado `Connection` con la opción `upgrade` especificada. |  |
+| Actualizar | El documento RFC relevante para el campo de encabezado [`Upgrade` es RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para actualizar o cambiar a un protocolo diferente en la conexión actual de cliente, servidor y protocolo de transporte. Por ejemplo, este estándar de encabezado permite a un cliente cambiar de HTTP 1.1 a HTTP 2.0, suponiendo que el servidor decida reconocer e implementar el campo de encabezado `Upgrade`. No se pide a ninguna de las partes que acepte los términos especificados en el campo de encabezado `Upgrade`. Se puede utilizar en encabezados de cliente y de servidor. Si se especifica el campo de encabezado `Upgrade`, el remitente DEBE enviar también el campo de encabezado `Connection` con la opción `upgrade` especificada. | |
 | [User-Agent](https://developer.mozilla.org/es-ES/docs/Web/HTTP/Headers/User-Agent) | Contiene una cadena característica que permite a los pares de protocolo de red identificar el tipo de aplicación, el sistema operativo, el proveedor de software o la versión de software del agente de usuario de software solicitante. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Añadido por proxies, tanto los proxies hacia delante como los de atrás, y puede aparecer en los encabezados de solicitud y en los encabezados de respuesta. |
 | [Advertencia](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Información general de advertencia sobre posibles problemas. |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### Cuerpo como JSON
 

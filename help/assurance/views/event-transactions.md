@@ -3,7 +3,7 @@ title: Vista Transacciones de los eventos
 description: Esta guía detalla información sobre la vista de Transacciones de los eventos en Adobe Experience Platform Assurance.
 exl-id: ad97f2c1-5bbc-49e2-8378-edcb8af149a3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 100%
 

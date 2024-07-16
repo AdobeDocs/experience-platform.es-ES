@@ -10,7 +10,7 @@ exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '571'
-ht-degree: 29%
+ht-degree: 21%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 La inteligencia artificial aplicada al cliente, como parte de los servicios inteligentes, proporciona a los especialistas en marketing la capacidad de generar predicciones sobre clientes a nivel individual con explicaciones.
 
-Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los expertos en marketing pueden beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados.
+Con la ayuda de factores influyentes, la inteligencia artificial aplicada al cliente puede indicarle qué es lo más probable que haga un cliente y por qué. Además, los especialistas en marketing pueden beneficiarse de las predicciones y perspectivas de la inteligencia artificial aplicada al cliente para personalizar las experiencias de los clientes y ofrecerles las ofertas y los mensajes más adecuados.
 
 ## Explicación de Customer AI
 
@@ -38,7 +38,7 @@ El cliente no está diseñado para:
 
 - La inteligencia artificial aplicada al cliente no debe utilizarse para predecir los precios dinámicos o el punto de precio en el que el cliente va a realizar una compra.
 - La inteligencia artificial aplicada al cliente no puede determinar si al realizar una oferta es más probable que el cliente compre un artículo. Aunque puede que decida enviar ofertas de descuento basadas en puntuaciones de tendencia, no es necesariamente la mejor manera de convertir a esos clientes.
-- La inteligencia artificial aplicada al cliente no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no utilice la inteligencia artificial aplicada al cliente como proxy para una solución de recomendaciones de productos real como [!DNL Adobe Target].
+- La inteligencia artificial aplicada al cliente no es una herramienta de recomendaciones de productos. Si tiene miles de SKU, no use la inteligencia artificial aplicada al cliente como proxy para una solución de recomendaciones de productos reales como [!DNL Adobe Target].
 - La inteligencia artificial aplicada al cliente no puede predecir en qué fase del Recorrido de compra se encuentra el cliente, por ejemplo, si se encuentra en las fases de &quot;conocimiento&quot;, &quot;consideración&quot;, &quot;compra&quot; o &quot;retención&quot;.
 - No utilice la inteligencia artificial aplicada al cliente para determinar qué clientes pueden comprar un producto para su lanzamiento en el futuro. Esto requiere que ciertos eventos de éxito estén presentes en el pasado para que la inteligencia artificial aplicada al cliente entrene correctamente el algoritmo de aprendizaje automático en los datos.
 
@@ -52,4 +52,4 @@ La inteligencia artificial aplicada al cliente funciona analizando los datos de 
 
 ## Pasos siguientes
 
-Puede empezar siguiendo las [introducción](./getting-started.md) guía. Esta guía le explica cómo configurar todos los requisitos previos necesarios para la inteligencia artificial aplicada al cliente. Si ya tiene todas sus credenciales y datos listos, visite  [configuración de una instancia de Customer AI](./user-guide/configure.md). Proporciona los pasos para utilizar la inteligencia artificial aplicada al cliente.
+Puede empezar por seguir la guía de [introducción](./getting-started.md). Esta guía le explica cómo configurar todos los requisitos previos necesarios para la inteligencia artificial aplicada al cliente. Si ya tiene todas sus credenciales y datos listos, visite [configurar una instancia de inteligencia artificial aplicada al cliente](./user-guide/configure.md). Proporciona los pasos para utilizar la inteligencia artificial aplicada al cliente.

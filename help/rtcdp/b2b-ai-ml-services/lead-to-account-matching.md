@@ -7,7 +7,7 @@ badgeB2B: label="Edición B2B" type="Informative" url="https://helpx.adobe.com/l
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '605'
 ht-degree: 3%
 
 ---
@@ -26,32 +26,32 @@ El marketing basado en cuentas es una estrategia cada vez más importante para e
 
 El marketing basado en cuentas permite vincular personas conocidas y visitantes web anónimos a cuentas de ventas. Esto permite a los equipos de marketing interactuar con posibles clientes potenciales de las cuentas de Target al principio del recorrido del cliente para aumentar sus posibilidades de conversión. Un registro de persona conocida suele incluir parte o la totalidad de la siguiente información:
 
-- Nombre de persona
-- Correo electrónico Dirección
+- Nombre de la persona
+- Dirección de correo electrónico
 - Número de contacto
-- El nombre de su empresa
+- Nombre de la compañía
 - Sitio web de empresa
-- Título de trabajo
+- Cargo
 - Ubicación
 
 La coincidencia de cliente potencial con cuenta permite unir perfiles de personas conocidas a perfiles de cuenta. A continuación, puede segmentar y segmentar los datos en un contexto B2B como cuentas, oportunidades, etc. Los perfiles de las personas se pueden clasificar en las tres categorías siguientes:
 
-- **Perfil de persona de la cuenta:** El perfil de persona ya está asociado al menos a un perfil de cuenta mediante la relación de una fuente de datos. Esto implica que hay al menos un fragmento de contacto.
+- **Perfil de persona de la cuenta:** El perfil de persona ya está asociado al menos a un perfil de cuenta a través de la relación de una fuente de datos. Esto implica que hay al menos un fragmento de contacto.
 
 >[!NOTE]
 >
 > Los perfiles de persona de cuenta no coinciden al ejecutar los trabajos de coincidencia de clientes potenciales con cuentas.
 
-- **Perfil de la persona conocida:** El perfil de persona NO está asociado a ningún perfil de cuenta y al menos uno de los siguientes atributos de perfil de persona tiene un valor:
+- **Perfil de persona conocido:** El perfil de persona NO está asociado a ningún perfil de cuenta y al menos uno de los siguientes atributos de perfil de persona tiene un valor:
 
-   - Correo electrónico Dirección
-   - El nombre de su empresa
+   - Dirección de correo electrónico
+   - Nombre de la compañía
    - Sitio web de empresa
 
 - **Perfil de persona anónima:** El perfil de persona NO está asociado a ningún perfil de cuenta y ninguno de los siguientes atributos de perfil de persona tiene un valor:
 
-   - Correo electrónico Dirección
-   - El nombre de su empresa
+   - Dirección de correo electrónico
+   - Nombre de la compañía
    - Sitio web de empresa
 
 >[!NOTE]
@@ -80,17 +80,17 @@ El atributo workEmail se puede encontrar como un grupo de campos de nivel superi
 
 Los perfiles obtendrán mejores coincidencias solo si la puntuación de la coincidencia supera un umbral de confianza interna. Los resultados se guardan en un nuevo conjunto de datos del sistema de la relación de persona de la cuenta existente XDM.
 
-El servicio de coincidencia de cliente potencial con cuenta se ejecuta cuando está disponible una nueva instantánea de perfil de persona que se registra una vez cada 24 horas. Consulte la documentación para obtener más información sobre [configuración del posible cliente para la coincidencia de cuentas](/help/rtcdp/accounts/account-profile-ui-guide.md).
+El servicio de coincidencia de cliente potencial con cuenta se ejecuta cuando está disponible una nueva instantánea de perfil de persona que se registra una vez cada 24 horas. Consulte la documentación para obtener más información sobre la [configuración del posible cliente para la coincidencia de cuentas](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Cómo ver el resultado de coincidencia de cliente potencial con cuenta {#how-to-view}
 
 Después de la ejecución del trabajo, los resultados se guardan en un nuevo conjunto de datos del XDM de relación de persona de cuenta existente.
 
-Para previsualizar el conjunto de datos, seleccione **[!UICONTROL Previsualizar conjunto de datos]** en la parte superior derecha.
+Para obtener una vista previa del conjunto de datos, seleccione **[!UICONTROL Vista previa del conjunto de datos]** en la parte superior derecha.
 
 ![Nuevo conjunto de datos](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-El conjunto de datos incluye la información de la cuenta coincidente, así como la puntuación de coincidencia del conjunto de datos elegido. El **[!UICONTROL Origen de relación]** indica si procede del proceso de coincidencia de cliente potencial con cuenta.
+El conjunto de datos incluye la información de la cuenta coincidente, así como la puntuación de coincidencia del conjunto de datos elegido. El campo **[!UICONTROL Source de relación]** indica si procede del proceso de coincidencia de cliente potencial con cuenta.
 
 ![Previsualizar resultados y puntuaciones de confianza del conjunto de datos](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
@@ -98,4 +98,4 @@ El conjunto de datos incluye la información de la cuenta coincidente, así como
 
 A través del panel de control, puede monitorizar el estado del trabajo y las métricas asociadas de cualquier posible cliente que coincida con los trabajos de la cuenta.
 
-Consulte la documentación para obtener más información sobre [supervisar trabajos para la coincidencia de cliente potencial con cuenta](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulte la documentación para obtener más información sobre los [trabajos de supervisión para la coincidencia de clientes potenciales con cuentas](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

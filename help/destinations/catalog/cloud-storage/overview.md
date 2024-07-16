@@ -5,8 +5,8 @@ description: Adobe Experience Platform puede enviar audiencias como archivos de 
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 4%
+source-wordcount: '387'
+ht-degree: 6%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-Adobe Experience Platform puede enviar sus audiencias como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto permite enviar audiencias y sus atributos de perfil a sus sistemas internos mediante archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]y SFTP. Para [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs] destinos, los datos se transmiten fuera del Experience Platform en [!DNL JSON] formato.
+Adobe Experience Platform puede enviar sus audiencias como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos mediante archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs], los datos se transmiten fuera del Experience Platform en formato [!DNL JSON].
 
-![destinos de almacenamiento de Adobe cloud](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![destinos de almacenamiento en la nube de Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Destinos de almacenamiento en la nube compatibles {#supported-destinations}
 
@@ -28,25 +28,25 @@ Adobe Experience Platform admite exportaciones de datos a los siguientes destino
 * [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Conexión de Azure Event Hubs](azure-event-hubs.md)
 * [Zona de aterrizaje de datos](data-landing-zone.md)
-* [Almacenamiento de Google Cloud](google-cloud-storage.md)
+* [Almacenamiento en la nube de Google](google-cloud-storage.md)
 * [Conexión SFTP](sftp.md)
 
 ## Conectarse a un nuevo destino de almacenamiento en la nube {#connect-destination}
 
-Para enviar audiencias a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar audiencias a destinos de almacenamiento en la nube para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destinos](../../ui/connect-destination.md) para obtener información detallada sobre cómo configurar un nuevo destino.
 
 
 ## Utilice macros para crear una carpeta en su ubicación de almacenamiento {#use-macros}
 
 >[!NOTE]
 >
-> La funcionalidad descrita en esta sección está disponible actualmente para [Amazon S3](amazon-s3.md) solo destinos.
+> La funcionalidad descrita en esta sección está disponible actualmente solo para destinos de [Amazon S3](amazon-s3.md).
 
 Para crear una carpeta personalizada por archivo de audiencia en su ubicación de almacenamiento, puede utilizar macros en el campo de entrada de la ruta de la carpeta. Inserte las macros al final del campo de entrada, como se muestra a continuación.
 
-![Cómo utilizar macros para crear una carpeta en el almacenamiento](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+![Cómo usar macros para crear una carpeta en su almacenamiento](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Los ejemplos siguientes hacen referencia a una audiencia de muestra `Luxury Audience` con ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Los ejemplos siguientes hacen referencia a una audiencia de muestra `Luxury Audience` con el identificador `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Macro 1:`%SEGMENT_NAME%`**
 
@@ -67,8 +67,8 @@ Ruta de la carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/Luxu
 
 Los destinos de almacenamiento en la nube admiten los siguientes tipos de exportación:
 * **Exportación basada en perfiles**. Esto significa que está exportando detalles sobre las personas en la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a audiencias, etc.
-* **Exportación de conjuntos de datos**. Esta funcionalidad le permite exportar conjuntos de datos completos a destinos de almacenamiento en la nube. [Más información](/help/destinations/ui/export-datasets.md) sobre la funcionalidad de.
+* **Exportación de conjuntos de datos**. Esta funcionalidad le permite exportar conjuntos de datos completos a destinos de almacenamiento en la nube. [Más información](/help/destinations/ui/export-datasets.md) sobre la funcionalidad.
 
 ## Pasos siguientes {#next-steps}
 
-Después de seleccionar cuál de las [destinos de nube admitidos](#supported-destinations) Si desea utilizar, lea el [tutorial de conexión a destinos](/help/destinations/ui/connect-destination.md) para aprender a establecer una conexión con el destino. A continuación, lea el tutorial de activación a los destinos basados en archivos para aprender a iniciar [exportación](/help/destinations/ui/activate-batch-profile-destinations.md) a su destino de almacenamiento en la nube.
+Después de seleccionar cuál de los [destinos en la nube compatibles](#supported-destinations) desea usar, lea el tutorial de [conectar con destinos](/help/destinations/ui/connect-destination.md) para aprender a establecer una conexión con el destino. A continuación, lea el tutorial de activación a destinos basados en archivos para aprender a empezar a [exportar](/help/destinations/ui/activate-batch-profile-destinations.md) datos a su destino de almacenamiento en la nube.

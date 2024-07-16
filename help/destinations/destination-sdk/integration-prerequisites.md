@@ -4,7 +4,7 @@ title: Requisitos previos de integración
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Para utilizar Destination SDK, asegúrese de cumplir los requisitos técnicos y 
 
 ## Requisitos técnicos previos para destinos por lotes {#batch-prerequisites}
 
-1. Tiene una ubicación de destino alojada en [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], o un privado [!DNL Data Landing Zone], donde puede recibir archivos exportados fuera de Experience Platform.
-2. La plataforma de destino puede introducir archivos en el formato configurado mediante la variable [opciones de formato de archivo](functionality/destination-server/file-formatting.md) en Destination SDK para destinos por lotes.
-3. (Opcional) Tiene una audiencia que crear/recuperar/actualizar/eliminar ([!DNL CRUD]) Punto final de API o API para la administración de metadatos mediante programación.
+1. Tiene una ubicación de destino hospedada en [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud] o un(a) [!DNL Data Landing Zone] privado(a), donde puede recibir archivos exportados fuera del Experience Platform.
+2. Su plataforma de destino puede ingerir archivos en el formato configurado a través de [opciones de formato de archivo](functionality/destination-server/file-formatting.md) en el Destination SDK para destinos por lotes.
+3. (Opcional) Tiene una API de creación/recuperación/actualización/eliminación de audiencia ([!DNL CRUD]) o un extremo de API para la administración de metadatos mediante programación.
 
 ## Requisitos previos de asociación {#partnership-prerequisites}
 
-Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que desea utilizar un Destination SDK, lea los requisitos de colaboración para ISV y SI en el [obtener sección de acceso](overview.md#get-access).
+Si es un proveedor de software independiente (ISV) o un integrador de sistemas (SI) que desea utilizar un Destination SDK, lea los requisitos de asociación para ISV y SI en la [sección de obtención de acceso](overview.md#get-access).

@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles web] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), se utiliza para describir información sobre los eventos de detalles web, como la interacción, los detalles de página y el referente.
+[!UICONTROL Detalles web] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) que se usa para describir información relacionada con eventos de detalles web como interacción, detalles de página y referente.
 
 ![](../../images/field-groups/web-details.png)
 

@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # [!UICONTROL Plan] clase
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Plan] La clase registra el conjunto mínimo de propiedades que definen un plan, como un plan de salud o un plan de seguro.
+En Experience Data Model (XDM), la clase [!UICONTROL Plan] captura el conjunto mínimo de propiedades que definen un plan, como un plan de salud o de seguro.
 
 ![Estructura de clase](../images/classes/plan.png)
 
@@ -23,4 +23,4 @@ En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Plan] La cla
 
 {style="table-layout:auto"}
 
-La clase se puede ampliar con la variable [[!UICONTROL Detalles del plan de atención médica] grupo de campos](../field-groups/plan/healthcare-plan-details.md) para describir más detalles acerca de un plan de seguro de salud.
+La clase se puede ampliar con el grupo de campo [[!UICONTROL Detalles del plan de atención médica]](../field-groups/plan/healthcare-plan-details.md) para describir más detalles acerca de un plan de seguro médico.

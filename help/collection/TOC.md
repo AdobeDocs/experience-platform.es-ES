@@ -9,7 +9,7 @@ role: Developer
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
-ht-degree: 71%
+ht-degree: 67%
 
 ---
 
@@ -21,6 +21,6 @@ ht-degree: 71%
 - [Gestión de duplicación de eventos](event-duplication.md)
 - [Administración de permisos](permissions.md)
 - [Administración de estado del cliente](client-state.md)
-- Identificación de visitantes {#visitor-identification}
+- Identificación de visitante {#visitor-identification}
    - [Información general](visitor-identification.md)
    - [Identificación de visitante mediante FPID](visitor-identification-fpid.md)

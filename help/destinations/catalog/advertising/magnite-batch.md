@@ -28,13 +28,13 @@ Para recapitular: si solo desea enviar audiencias de Adobe Real-Time CDP una vez
 
 
 Siga leyendo a continuación para obtener más información sobre Magnite: Streaming Batch destination, cómo conectarse a él y cómo activar audiencias de Adobe Real-Time CDP en él.
-Para obtener más información sobre el destino en tiempo real, consulte [este documento](magnite-streaming.md) en su lugar.
+Para obtener más información sobre el destino en tiempo real, consulte [este documento](magnite-streaming.md).
 
 >[!IMPORTANT]
 >
 >Este conector de destino está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso, póngase en contacto con el representante del Adobe.
 >
->El conector de destino y la página de documentación los crea y mantiene el [!DNL Magnite] equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en `adobe-tech@magnite.com`.
+>El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL Magnite]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos al `adobe-tech@magnite.com`.
 
 ## Casos de uso {#use-cases}
 
@@ -54,15 +54,15 @@ Cualquier audiencia activada a través de Magnite Streaming: destino del lote se
 
 ## Requisitos previos {#prerequisites}
 
-Para utilizar los destinos de Magnite en Adobe Experience Platform, primero debe tener una cuenta de Magnite Streaming. Si tiene un [!DNL Magnite Streaming] cuenta, póngase en contacto con su [!DNL Magnite] Administrador de cuentas al que se deben proporcionar credenciales para acceder [!DNL Magnite's] destinos. Si no tiene un [!DNL Magnite Streaming] cuenta de, póngase en contacto con adobe-tech@magnite.com
+Para utilizar los destinos de Magnite en Adobe Experience Platform, primero debe tener una cuenta de Magnite Streaming. Si tiene una cuenta de [!DNL Magnite Streaming], póngase en contacto con el administrador de cuentas de [!DNL Magnite] para que se le proporcionen credenciales para acceder a los destinos de [!DNL Magnite's]. Si no tiene una cuenta de [!DNL Magnite Streaming], comuníquese con adobe-tech@magnite.com
 
 ## Identidades admitidas {#supported-identities}
 
-Magnite Streaming: el destino por lotes puede recibir *cualquiera* fuentes de identidad de la CDP de Adobe. Actualmente, este destino tiene tres campos de identidad de destino a los que puede asignar.
+Magnite Streaming: el destino por lotes puede recibir *cualquier* origen de identidad de la CDP de Adobe. Actualmente, este destino tiene tres campos de identidad de destino a los que puede asignar.
 
 >[!NOTE]
 >
->*Cualquiera* las fuentes de identidad pueden asignarse a cualquiera de las identidades de destino magnite_deviceId.
+>*Cualquier* origen de identidad puede asignarse a cualquiera de las identidades de destino magnite_deviceId.
 
 | Identidad de destino | Descripción | Consideraciones |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -76,8 +76,8 @@ Magnite Streaming: el destino por lotes puede recibir *cualquiera* fuentes de id
 
 | Origen de audiencia | Admitido | Descripción |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiencias generadas mediante el Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
-| Cargas personalizadas | ✓ | Audiencias [importado](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiencias generadas a través del Experience Platform [Servicio de segmentación](../../../segmentation/home.md). |
+| Cargas personalizadas | ✓ | Las audiencias [importadas](../../../segmentation/ui/audience-portal.md#import-audience) en el Experience Platform desde archivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Magnite Streaming: el destino por lotes puede recibir *cualquiera* fuentes de id
 | Elemento | Tipo | Notas |
 |-----------------------------|----------|----------|
 | Tipo de exportación | Exportación de audiencia | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en Magnite Streaming: destino por lotes. |
-| Frecuencia de exportación | Lote | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Más información sobre el lote [destinos basados en archivos](/help/destinations/destination-types.md). |
+| Frecuencia de exportación | Lote | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre los [destinos basados en archivos](/help/destinations/destination-types.md) por lotes. |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Busque Magnite Streaming: Batch destination en el catálogo de experiencias de A
 
 Si ya tiene una cuenta, puede localizarla cambiando la opción Account type a &quot;Existing account&quot;. De lo contrario, creará una cuenta a continuación:
 
-Para crear una nueva cuenta y autenticarla en el destino por primera vez, rellene los campos obligatorios de &quot;clave de acceso S3&quot; y &quot;clave secreta S3&quot; (que se le han proporcionado mediante su administrador de cuentas) y seleccione **[!UICONTROL Conectar con destino]**
+Para crear una nueva cuenta y autenticarla en el destino por primera vez, rellene los campos obligatorios &quot;Clave de acceso S3&quot; y &quot;Clave secreta S3&quot; (que se le proporcionaron mediante su administrador de cuentas) y seleccione **[!UICONTROL Conectarse al destino]**
 
 ![campos de autenticación de configuración de destino sin rellenar](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
@@ -112,47 +112,49 @@ Para crear una nueva cuenta y autenticarla en el destino por primera vez, rellen
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-* **[!UICONTROL Nombre]**: Nombre con el que reconocerá esta conexión/instancia de destino en el futuro.
-* **[!UICONTROL Descripción]**: una descripción que le ayudará a identificar esta conexión o instancia de destino en el futuro.
-* **[!UICONTROL Nombre de su socio de origen]**: El nombre que le gustaría usar como fuente en la plataforma de Magnite Streaming.
+* **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá esta conexión/instancia de destino en el
+futuro.
+* **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar esto
+conexión/instancia de destino en el futuro.
+* **[!UICONTROL Nombre de su socio de origen]**: El nombre que le gustaría usar como origen en la plataforma de Magnite Streaming
 
-![campos de autenticación de configuración de destino rellenados](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![campos de autenticación de configuración de destino completados](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
 >Si planea enviar varios tipos de ID (GAID, IDFA, etc.) con el destino Lote, se requiere una nueva conexión/instancia de destino para cada uno. Póngase en contacto con el representante de su cuenta de Magnite para obtener más información.
 
-A continuación, puede continuar seleccionando **[!UICONTROL Siguiente]**
+Puede continuar seleccionando **[!UICONTROL Siguiente]**
 
 En la siguiente pantalla, titulada &quot;Política de gobernanza y acciones de aplicación (opcional)&quot;, puede seleccionar opcionalmente cualquier política de gobernanza de datos relevante. &quot;Exportación de datos&quot; se selecciona generalmente como destino del lote de flujo magnético.
 
-![Política de gobernanza opcional y acciones coercitivas](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![Política de gobernanza opcional y acciones de aplicación](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
 Una vez seleccionada, o si desea omitir esta pantalla opcional, seleccione **[!UICONTROL Crear]**
 
 ### Habilitar alertas {#enable-alerts}
 
-Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía de [suscripción a alertas de destinos mediante la IU](../../ui/alerts.md).
+Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Seleccione una alerta de la lista a la que suscribirse para recibir notificaciones sobre el estado del flujo de datos. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
-Cuando haya terminado de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
+Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Siguiente]**.
 
 ### Activar segmentos en este destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Leer [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
 ### Asignar atributos e identidades {#map}
 
-En el **[!UICONTROL Campo de Source]**, puede seleccionar cualquier atributo o identidad para sus dispositivos. En este ejemplo, se ha seleccionado un mapa de identidad personalizado llamado &quot;DeviceId&quot;
+En el **[!UICONTROL campo de Source]**, puede seleccionar cualquier atributo o identidad para sus dispositivos. En este ejemplo, se ha seleccionado un mapa de identidad personalizado llamado &quot;DeviceId&quot;
 ![asigne los campos de datos deseados al campo device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-En el **[!UICONTROL Campo de destino]**:
-![seleccione la identidad de destino del tipo de dispositivo correspondiente](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consulte [Identidades admitidas](#supported-identities) para obtener más información.
-En este ejemplo, se ha seleccionado la variable **[!UICONTROL Campo de destino]**: magnite_deviceId_CUSTOM, porque nuestra **[!UICONTROL Campo de Source]** se definió como un IdentityMap personalizado: DeviceID.
+En el **[!UICONTROL campo de destino]**:
+![seleccione la identidad de destino del tipo de dispositivo apropiado](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consulte [Identidades admitidas](#supported-identities) para obtener más información.
+En este ejemplo, hemos seleccionado el **[!UICONTROL campo de destino]**: magnite_deviceId_CUSTOM, porque nuestro **[!UICONTROL campo de Source]** se definió como un IdentityMap personalizado: DeviceID.
 
 >[!NOTE]
 >
@@ -167,7 +169,7 @@ En la pantalla &quot;Configure a filename and export schedule for each audience&
 >
 > Se debe proporcionar un ID de asignación cuando una audiencia tenga un ID de segmento preexistente conocido anteriormente para Magnite Streaming. De lo contrario, se debe utilizar &quot;NINGUNO&quot; como ID de asignación.
 >
-> Al configurar el nombre de archivo para cada audiencia, incluya el ID de asignación a través del campo &quot;Texto personalizado&quot; para agregar. El ID de asignación se anexará como: `{previous_filename}\_\[MAPPING_ID\].` Si esta audiencia es nueva en Magnite Streaming y no va a proporcionar un ID de asignación, se debe introducir &quot;NONE&quot; en el campo &quot;Texto personalizado&quot;. El nuevo nombre de archivo en este caso debe ser: `{previous_filename}\_\[NONE\]`.
+> Al configurar el nombre de archivo para cada audiencia, incluya el ID de asignación a través del campo &quot;Texto personalizado&quot; para agregar. El identificador de asignación se anexará como: `{previous_filename}\_\[MAPPING_ID\].` Si esta audiencia es nueva en Magnite Streaming y no va a proporcionar un identificador de asignación, se debe introducir &quot;NONE&quot; en el campo &quot;Texto personalizado&quot;. El nuevo nombre de archivo en este caso debe ser: `{previous_filename}\_\[NONE\]`.
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
@@ -177,12 +179,12 @@ Una vez que las audiencias se hayan cargado, puede validar que se hayan creado y
 
 >[!NOTE]
 >
->Las audiencias activadas o entregadas al destino del lote de flujo Magnite *replace* las mismas audiencias que se activaron o entregaron a través del destino de flujo en tiempo real de Magnite. Si está buscando un segmento con el nombre, es posible que no encuentre el segmento en tiempo real, hasta que la plataforma Magnite Streaming haya ingerido y procesado el lote.
+>Las audiencias activadas/entregadas en el destino del lote de streaming de Magnite *reemplazarán* a las mismas audiencias que se activaron/entregaron a través del destino de streaming en tiempo real de Magnite. Si está buscando un segmento con el nombre, es posible que no encuentre el segmento en tiempo real, hasta que la plataforma Magnite Streaming haya ingerido y procesado el lote.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todo [!DNL Adobe Experience Platform] Los destinos de cumplen con las políticas de uso de datos al gestionar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica la gobernanza de datos, lea la [Resumen de gobernanza de datos](/help/data-governance/home.md).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](/help/data-governance/home.md).
 
 ## Recursos adicionales {#additional-resources}
 
-Para obtener documentación de ayuda adicional, visite la [Centro de ayuda de Magnite](https://help.magnite.com/help).
+Para obtener documentación de ayuda adicional, visite el [Centro de ayuda de Magnite](https://help.magnite.com/help).

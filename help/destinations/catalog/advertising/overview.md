@@ -1,16 +1,16 @@
 ---
 keywords: destinos de publicidad;destinos;destinos de plataforma
-title: Información general sobre destinos publicitarios
+title: Información general sobre destinos Advertising
 description: Conecte Adobe Experience Platform DSP a una plataforma de publicidad de terceros (por ejemplo, una red de publicidad, un SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Información general sobre destinos publicitarios {#advertising-destinations}
+# Información general sobre destinos Advertising {#advertising-destinations}
 
 ## Información general {#overview}
 
@@ -22,7 +22,7 @@ Al conectarse a un destino de publicidad, las audiencias se envían como ID a la
 
 Actualmente, Experience Platform admite los destinos publicitarios que se enumeran a continuación.
 
-Para comprender la diferencia entre conexiones y extensiones, consulte [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
+Para comprender la diferencia entre las conexiones y las extensiones, vea [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
 
 ### Conexiones
 
@@ -32,7 +32,7 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 * [Conexión de Google Display &amp; Video 360](google-dv360.md)
 * [Conexión de Google Ads](google-ads-destination.md)
 * [Conexión de Google Ad Manager](google-ad-manager.md)
-* [(Beta) Conexión de Google Ad Manager 360](google-ad-manager-360-connection.md)
+* [Conexión de (Beta) Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Conexión de Google Customer Match](google-customer-match.md)
 * [Conexión de Microsoft Bing](bing.md)
 * [Conexión de lista de clientes de pinterest](pinterest.md)
@@ -45,8 +45,8 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 ### Extensiones
 
 * [Extensión de Adobe Advertising Cloud](adobe-advertising-cloud.md)
-* [Extensión de etiqueta de conversión de publicidad de Awin](awin-conversiontag.md)
-* [Extensión de Awin Advertising Mastertag](awin-mastertag.md)
+* [Awin Advertising extensión de etiqueta de conversión](awin-conversiontag.md)
+* [Awin Advertising Mastertag extension](awin-mastertag.md)
 * [Extensión de seguimiento de eventos universal de Bing Ads](bing-ads.md)
 * [Extensión de rama](branch.md)
 * [Extensión de Floodlight DoubleClick](doubleclick-floodlight.md)
@@ -60,4 +60,4 @@ Para comprender la diferencia entre conexiones y extensiones, consulte [Conexion
 
 ## Conectar con un nuevo destino de publicidad {#connect-destination}
 
-Para enviar audiencias a destinos publicitarios para sus campañas, Platform debe conectarse primero al destino. Consulte la [tutorial de creación de destino](../../ui/connect-destination.md) para obtener información detallada sobre la configuración de un nuevo destino.
+Para enviar audiencias a destinos publicitarios para sus campañas, Platform debe conectarse primero al destino. Consulte el [tutorial de creación de destinos](../../ui/connect-destination.md) para obtener información detallada sobre cómo configurar un nuevo destino.

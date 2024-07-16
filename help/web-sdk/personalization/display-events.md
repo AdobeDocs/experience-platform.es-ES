@@ -17,12 +17,12 @@ El envío de eventos de visualización mejora la precisión de las métricas de 
 
 El SDK web permite enviar eventos de visualización de dos formas:
 
-* [Automáticamente](#send-automatically), inmediatamente después de que se procese el contenido personalizado en la página. Consulte la documentación sobre cómo [representación de contenido personalizado](rendering-personalization-content.md) para obtener más información.
-* [Manualmente](#send-sendEvent-calls), a través de subsiguientes `sendEvent` llamadas.
+* [Automáticamente](#send-automatically), inmediatamente después de que se represente el contenido personalizado en la página. Consulte la documentación sobre cómo [procesar contenido personalizado](rendering-personalization-content.md) para obtener más información.
+* [Manualmente](#send-sendEvent-calls), a través de llamadas `sendEvent` subsiguientes.
 
 >[!NOTE]
 >
->Los eventos de visualización no se envían automáticamente al llamar a `applyPropositions` función.
+>Los eventos de visualización no se envían automáticamente al llamar a la función `applyPropositions`.
 
 ## Enviar eventos de visualización automáticamente {#send-automatically}
 
@@ -33,29 +33,29 @@ Para enviar eventos de visualización automáticamente después de que se proces
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` o no especificado
 
-El SDK web envía los eventos de visualización inmediatamente después de que se procese cualquier personalización como resultado de una `sendEvent` llamada.
+El SDK web envía los eventos de visualización inmediatamente después de que se procese cualquier personalización como resultado de una llamada a `sendEvent`.
 
 ## Envío de eventos de visualización en llamadas subsiguientes a sendEvent {#send-sendEvent-calls}
 
-Comparado con [automáticamente](#send-automatically) envío de eventos de visualización, cuando se incluyen en las siguientes `sendEvent` llamadas de también tiene la oportunidad de incluir más información sobre la carga de página en la llamada de. Puede tratarse de información adicional, que no estaba disponible al solicitar el contenido personalizado.
+En comparación con [enviar eventos de visualización automáticamente](#send-automatically), cuando los incluye en llamadas a `sendEvent` subsiguientes también tiene la oportunidad de incluir más información sobre la carga de página en la llamada. Puede tratarse de información adicional, que no estaba disponible al solicitar el contenido personalizado.
 
-Además, el envío de eventos de visualización en `sendEvent` Las llamadas de minimizan los errores de tasa de devolución al utilizar Adobe Analytics.
+Además, el envío de eventos de visualización en llamadas de `sendEvent` minimiza los errores de tasa de devolución al utilizar Adobe Analytics.
 
 >[!IMPORTANT]
 >
->Cuando se utilizan propuestas procesadas manualmente, los eventos de visualización solo se admiten mediante `sendEvent` llamadas. En este caso, no se pueden enviar eventos de visualización automáticamente.
+>Cuando se utilizan propuestas procesadas manualmente, los eventos de visualización solo se admiten a través de llamadas a `sendEvent`. En este caso, no se pueden enviar eventos de visualización automáticamente.
 
 ### Enviar eventos de visualización para propuestas procesadas automáticamente {#auto-rendered-propositions}
 
-Para enviar eventos de visualización para propuestas procesadas automáticamente, debe configurar los siguientes parámetros en la variable `sendEvent` llamada:
+Para enviar eventos de visualización para propuestas procesadas automáticamente, debe configurar los siguientes parámetros en la llamada `sendEvent`:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` para la parte superior de la visita individual a la página
+* `personalization.sendDisplayNotifications: false` para la parte superior de la visita de página
 
 Para enviar los eventos de visualización, llame a `sendEvent` con `personalization.includePendingDisplayNotifications: true`
 
 ### Envío de eventos de visualización para propuestas procesadas manualmente {#manually-rendered-propositions}
 
-Para enviar eventos de visualización para propuestas procesadas manualmente, debe incluirlos en la `_experience.decisioning.propositions` Campo XDM, incluido el `id`, `scope`, y `scopeDetails` campos de las propuestas.
+Para enviar eventos de visualización para propuestas procesadas manualmente, debe incluirlas en el campo XDM `_experience.decisioning.propositions`, incluidos los campos `id`, `scope` y `scopeDetails` de las propuestas.
 
-Además, configure el `include _experience.decisioning.propositionEventType.display` field a `1`.
+Además, establezca el campo `include _experience.decisioning.propositionEventType.display` en `1`.

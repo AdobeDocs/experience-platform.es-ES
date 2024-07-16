@@ -15,17 +15,17 @@ ht-degree: 2%
 
 Los campos calculados permiten crear valores basados en los atributos del esquema de entrada. Estos valores se pueden asignar a atributos en el esquema de destino y se les puede proporcionar un nombre y una descripción para facilitar la referencia.
 
-Para crear un campo calculado, seleccione **[!UICONTROL Añadir campo calculado]**.
+Para crear un campo calculado, seleccione **[!UICONTROL Agregar campo calculado]**.
 
 ![](./images/calculated-fields/add-calculated-field.png)
 
-El **[!UICONTROL Crear campo calculado]** aparece el panel. El cuadro de diálogo de la izquierda contiene los campos, funciones y operadores admitidos en los campos calculados. Seleccione una de las pestañas para empezar a añadir funciones, campos u operadores al editor de expresiones.
+Aparecerá el panel **[!UICONTROL Crear campo calculado]**. El cuadro de diálogo de la izquierda contiene los campos, funciones y operadores admitidos en los campos calculados. Seleccione una de las pestañas para empezar a añadir funciones, campos u operadores al editor de expresiones.
 
 ![](./images/calculated-fields/create-calculated-field.png)
 
 | Tabulación | Descripción |
 | --- | ----------- |
-| Función | La pestaña functions enumera las funciones disponibles para transformar los datos. Para obtener más información sobre las funciones que puede utilizar en los campos calculados, lea la guía de [Uso de funciones de preparación de datos (asignador)](./functions.md). |
+| Función | La pestaña functions enumera las funciones disponibles para transformar los datos. Para obtener más información acerca de las funciones que puede usar en los campos calculados, lea la guía de [uso de las funciones de preparación de datos (asignador)](./functions.md). |
 | Campo | La pestaña fields enumera los campos y atributos disponibles en el esquema de origen. |
 | Operador | La pestaña operadores enumera los operadores disponibles para transformar los datos. |
 
@@ -33,7 +33,7 @@ Puede añadir manualmente campos, funciones y operadores utilizando el editor de
 
 ![](./images/calculated-fields/write-calculated-field.png)
 
-Seleccionar **[!UICONTROL Guardar]** para continuar.
+Seleccione **[!UICONTROL Guardar]** para continuar.
 
 La pantalla de asignación vuelve a aparecer con el campo de origen recién creado. Aplique el campo de destino correspondiente y seleccione **[!UICONTROL Finalizar]** para completar la asignación.
 

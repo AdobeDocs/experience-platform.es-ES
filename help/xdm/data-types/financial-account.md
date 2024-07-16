@@ -9,7 +9,7 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Cuenta financiera] tipo de datos
+# [!UICONTROL Tipo de datos de la cuenta financiera]
 
 [!UICONTROL Cuenta financiera] es un tipo de datos XDM estándar que describe los detalles de una cuenta financiera, incluido su tipo, propietario y saldo actual.
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el tipo de datos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Para obtener más información sobre el tipo de datos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

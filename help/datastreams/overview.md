@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Información general de secuencias de datos
 
-Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el [`configure`](/help/web-sdk/commands/configure/overview.md) en el SDK controla los elementos que se deben gestionar en el cliente (como `edgeDomain`), los flujos de datos gestionan todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `edgeConfigId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
+Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el comando [`configure`](/help/web-sdk/commands/configure/overview.md) del SDK controla las cosas que se deben controlar en el cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `edgeConfigId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
 
 Puede crear y administrar secuencias de datos seleccionando **[!UICONTROL Secuencias de datos]** en el panel de navegación izquierdo dentro de la IU de Adobe Experience Platform o de la IU de recopilación de datos.
 
@@ -57,7 +57,7 @@ Si se utiliza un esquema en una secuencia de datos existente con servicios no pr
 
 ### Registros de auditoría
 
-En Experience Platform, las actividades de secuencia de datos se pueden monitorizar en forma de registros de auditoría. Los registros de auditoría indican **quién** realizado **qué** acción, y **cuando**, junto con otros datos contextuales que pueden ayudarle a solucionar problemas relacionados con flujos de datos para ayudar a su empresa a cumplir con las políticas de administración de datos corporativos y los requisitos regulatorios.
+En Experience Platform, las actividades de secuencia de datos se pueden monitorizar en forma de registros de auditoría. Los registros de auditoría indican **quién** realizó **qué** acción, y **cuándo**, junto con otros datos contextuales que pueden ayudarle a solucionar problemas relacionados con flujos de datos para ayudar a su empresa a cumplir con las directivas de administración de datos corporativos y los requisitos regulatorios.
 
 Cada vez que un usuario crea, actualiza o elimina una secuencia de datos, se crea un registro de auditoría para registrar la acción. Lo mismo ocurre cada vez que un usuario crea, actualiza o elimina una asignación mediante [Preparación de datos para la recopilación de datos](./data-prep.md). Independientemente de si se ha actualizado una secuencia de datos o una asignación, el registro de auditoría resultante se clasifica en el tipo de recurso [!UICONTROL Secuencias de datos].
 

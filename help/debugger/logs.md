@@ -1,5 +1,5 @@
 ---
-description: Aprenda a utilizar la pestaña Registros en Adobe Experience Platform Debugger.
+description: Aprenda a utilizar la pestaña Registros en el Adobe Experience Platform Debugger.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;registros
 seo-description: Experience Platform Debugger Logs screen
 seo-title: Logs
@@ -15,15 +15,15 @@ ht-degree: 26%
 
 # Pestaña Registros
 
-El **Registros** proporciona información específica sobre las implementaciones de etiquetas y SDK web de Adobe Experience Platform. Puede filtrar por soluciones implementadas mediante las herramientas de asociadas.
+La ficha **Registros** proporciona información específica sobre las etiquetas y las implementaciones del SDK web de Adobe Experience Platform. Puede filtrar por soluciones implementadas mediante las herramientas de asociadas.
 
 ![](images/logs.jpg)
 
 La pestaña Registros muestra información en cuatro columnas:
 
-**[!UICONTROL Soluciones]:** Muestra los iconos de la solución de Experience Cloud afectada por el elemento registrado. Pase el ratón sobre el icono para ver una descripción.
+**[!UICONTROL Soluciones]:** Muestra iconos para la solución de Experience Cloud afectada por el elemento registrado. Pase el ratón sobre el icono para ver una descripción.
 
-**[!UICONTROL Ocurrido el]:** Muestra cuándo se produjo el problema registrado durante la sesión.
+**[!UICONTROL Ocurrido a las ]:** Muestra cuándo se produjo el problema registrado durante la sesión.
 
 **[!UICONTROL Nivel de registro]:** Muestra la gravedad del problema. La gravedad tiene uno de los siguientes niveles:
 
@@ -34,6 +34,6 @@ La pestaña Registros muestra información en cuatro columnas:
 
 **[!UICONTROL Mensaje de registro]:** Describe el problema.
 
-Algunos mensajes de registro incluyen la opción Mostrar código. Seleccionar **[!UICONTROL Mostrar código]** para ver el código condicional que determina si una regla debe activarse.
+Algunos mensajes de registro incluyen la opción Mostrar código. Seleccione **[!UICONTROL Mostrar código]** para ver el código condicional que determina si una regla debe activarse.
 
-Para borrar el registro, seleccione **[!UICONTROL Eliminar registros]**.
+Para borrar el registro, seleccione **[!UICONTROL Quitar registros]**.

@@ -15,9 +15,9 @@ Al exportar datos de Experience Platform a su destino, es posible que necesite m
 
 Destination SDK ofrece herramientas que puede utilizar para crear, actualizar o eliminar audiencias en la plataforma de destino mediante programación.
 
-Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un destino de flujo continuo](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o consulte la guía sobre cómo [usar Destination SDK para configurar un  de flujo continuo](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Puede configurar la plantilla de metadatos de audiencia mediante el `/authoring/audience-templates` punto final. Después de crear la configuración de metadatos de audiencia, puede usar el `/authoring/destinations` extremo para configurar el `audienceMetadataConfig` sección. Esta sección indica a su destino qué metadatos de audiencia debe asignar a su plantilla de audiencia.
+Puede configurar la plantilla de metadatos de audiencia mediante el extremo `/authoring/audience-templates`. Después de crear la configuración de metadatos de audiencia, puede usar el extremo `/authoring/destinations` para configurar la sección `audienceMetadataConfig`. Esta sección indica a su destino qué metadatos de audiencia debe asignar a su plantilla de audiencia.
 
 Consulte las siguientes páginas de referencia de la API para ver ejemplos detallados de llamadas de la API donde puede configurar los componentes que se muestran en esta página.
 
@@ -28,7 +28,7 @@ Consulte las siguientes páginas de referencia de la API para ver ejemplos detal
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -54,10 +54,10 @@ Al crear la configuración de metadatos de audiencia, puede utilizar los paráme
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Indica si la variable [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) el valor en el flujo de trabajo de activación de destino debe ser el nombre de la audiencia del Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booleano | Indica si la variable [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) El valor en el flujo de trabajo de activación de destino debe ser el ID de audiencia del Experience Platform. |
-| `mapUserInput` | Booleano | Habilita o deshabilita los datos introducidos por el usuario para [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) en el flujo de trabajo de activación de destino. Si se establece en `true`, `audienceTemplateId` no puede estar presente. |
-| `audienceTemplateId` | Cadena | El `instanceId` de la [plantilla de metadatos de audiencia](../../metadata-api/create-audience-template.md) se utiliza para el destino. |
+| `mapExperiencePlatformSegmentName` | Booleano | Indica si el valor de [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) en el flujo de trabajo de activación de destino debe ser el nombre de audiencia del Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Indica si el valor de [[!UICONTROL ID de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) en el flujo de trabajo de activación de destino debe ser el ID de audiencia del Experience Platform. |
+| `mapUserInput` | Booleano | Habilita o deshabilita la entrada del usuario para el valor [[!UICONTROL Id. de asignación]](../../../ui/activate-segment-streaming-destinations.md#scheduling) en el flujo de trabajo de activación de destino. Si se establece en `true`, `audienceTemplateId` no puede estar presente. |
+| `audienceTemplateId` | Cadena | `instanceId` de [plantilla de metadatos de audiencia](../../metadata-api/create-audience-template.md) utilizada para su destino. |
 
 {style="table-layout:auto"}
 

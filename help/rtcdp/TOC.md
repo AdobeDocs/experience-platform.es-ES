@@ -26,7 +26,7 @@ ht-degree: 66%
       * [Caso de uso de ejemplo](./b2b-use-case.md)
       * [Tutorial de extremo a extremo](./b2b-tutorial.md)
       * [Protección de seguridad de Real-time CDP edición B2B](b2b-guardrails.md)
-* AUDIENCE MANAGER y REAL-TIME CDP {#evolution}
+* Audience Manager y Real-Time CDP {#evolution}
    * [Evolución desde Audience Manager](aam-to-rtcdp.md)
 * Perfiles de cuenta {#account}
    * [Información general del perfil de cuenta](accounts/account-profile-overview.md)
@@ -47,7 +47,7 @@ ht-degree: 66%
 * Protecciones {#guardrails}
    * [Introducción a las protecciones Real-Time CDP](guardrails/overview.md)
    * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Protecciones para el [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Protecciones para [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [Protecciones para [!DNL Real-Time Customer Profile] datos y segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es){target="_blank"}
    * [Protecciones para [!DNL Identity Service] datos](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Protecciones para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
@@ -77,12 +77,12 @@ ht-degree: 66%
 * Casos de uso {#use-cases}
    * [Información general sobre casos de uso de muestra](/help/rtcdp/use-case-guides/overview.md)
    * Adquisición de cliente {#customer-acquisition}
-      * [Interactúe y adquiera nuevos clientes sin depender de cookies de terceros](/help/rtcdp/partner-data/prospecting.md)
+      * [Capte y adquiera nuevos clientes sin depender de cookies de terceros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalice experiencias en el sitio para visitantes desconocidos mediante el reconocimiento de visitantes asistido por socios](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Retargeting fuera del sitio de usuarios no autenticados](./partner-data/offsite-retargeting.md)
    * Enriquecimiento de perfil {#profile-enrichment}
       * [Complemento de perfiles de origen con atributos proporcionados por socios](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Perspectivas y participación personalizadas {#personalization-insights-engagement}
+   * Perspectivas personalizadas y participación {#personalization-insights-engagement}
       * [Evolucionar el valor de cliente único al valor de duración](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Vuelva a atraer a sus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Vuelva a atraer a sus clientes de forma inteligente: ejemplos de Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)

@@ -2,19 +2,19 @@
 title: Extremo de carpetas
 description: Obtenga información sobre cómo crear, actualizar, administrar y eliminar carpetas mediante las API de Adobe Experience Platform.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # Extremo de carpetas
 
 >[!IMPORTANT]
 >
->La dirección URL del extremo para este conjunto de extremos es `https://experience.adobe.io`.
+>La dirección URL de extremo para este conjunto de extremos es `https://experience.adobe.io`.
 
 Las carpetas son una capacidad que permite organizar mejor los objetos de negocio para facilitar la navegación y la categorización.
 
@@ -22,11 +22,11 @@ Esta guía proporciona información para ayudarle a comprender mejor las carpeta
 
 ## Introducción
 
-Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluidos los encabezados obligatorios y cómo leer llamadas de API de ejemplo.
+Antes de continuar, revisa la [guía de introducción](./getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluidos los encabezados requeridos y cómo leer llamadas de API de ejemplo.
 
 ## Recuperación de una lista de carpetas {#list}
 
-Puede recuperar una lista de carpetas que pertenezcan a su organización realizando una solicitud de GET a `/folder` y especificando el tipo de carpeta y el ID de carpeta principal.
+Puede recuperar una lista de carpetas que pertenecen a su organización realizando una solicitud de GET al extremo `/folder` y especificando el tipo de carpeta y el ID de carpeta principal.
 
 **Formato de API**
 
@@ -37,7 +37,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | El tipo de objetos contenidos en la carpeta. Los valores admitidos son `segment` y `dataset`. |
-| `{PARENT_FOLDER_ID}` | El ID de la carpeta principal desde la que recupera la lista de carpetas. Para ver una lista de todas las carpetas principales, utilice el ID de carpeta `root`. |
+| `{PARENT_FOLDER_ID}` | El ID de la carpeta principal desde la que recupera la lista de carpetas. Para ver una lista de todas las carpetas principales, use el identificador de carpeta `root`. |
 
 **Solicitud**
 
@@ -113,7 +113,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las ca
 
 ## Crear una carpeta nueva {#create}
 
-Puede crear una nueva carpeta realizando una solicitud de POST a `/folder` y especificando el tipo de carpeta.
+Puede crear una carpeta nueva realizando una solicitud de POST al extremo `/folder` y especificando el tipo de carpeta.
 
 **Formato de API**
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la carpeta re
 
 ## Recuperar una carpeta específica {#get}
 
-Puede recuperar una carpeta específica que pertenezca a su organización realizando una solicitud de GET a `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
+Puede recuperar una carpeta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
 
 **Formato de API**
 
@@ -250,13 +250,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la carpeta so
 | `createdAt` | La marca de tiempo del momento en el que se creó la carpeta. |
 | `modifiedBy` | El ID del usuario que actualizó la carpeta por última vez. |
 | `modifiedAt` | La marca de tiempo de la última actualización de la carpeta. |
-| `status` | El estado de la carpeta solicitada. Los valores admitidos incluyen `IN_USE` y `ARCHIVED`. |
+| `status` | El estado de la carpeta solicitada. Los valores admitidos son `IN_USE` y `ARCHIVED`. |
 
 +++
 
 ## Validar una carpeta especificada {#validate}
 
-Puede validar si una carpeta puede incluir objetos realizando una solicitud de GET a `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` y proporcione el tipo de carpeta y el ID.
+Puede validar si una carpeta cumple los requisitos para tener objetos en ella realizando una solicitud de GET al extremo `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` y proporcionando el tipo de carpeta y el identificador.
 
 **Formato de API**
 
@@ -316,7 +316,7 @@ Un estado correcto devuelve el estado HTTP 200 con detalles de la carpeta que es
 
 ## Actualizar una carpeta específica {#update}
 
-Puede actualizar los detalles de una carpeta específica que pertenezca a su organización realizando una solicitud de PATCH a `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
+Puede actualizar los detalles de una carpeta específica que pertenezca a su organización realizando una solicitud de PATCH al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
 
 **Formato de API**
 
@@ -378,7 +378,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la car
 
 ## Eliminar una carpeta específica {#delete}
 
-Puede eliminar una carpeta específica que pertenezca a su organización realizando una solicitud de DELETE a `/folder` y especificando el tipo de carpeta y el ID de carpeta.
+Puede eliminar una carpeta específica que pertenezca a su organización realizando una solicitud de DELETE a `/folder` y especificando el tipo de carpeta y el identificador de la carpeta.
 
 ***Formato de API**
 

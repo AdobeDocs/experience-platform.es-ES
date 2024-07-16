@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Etiquetado de un campo como identidad en la IU
 
-Los campos que contienen información de identificación personal (PII) se pueden etiquetar como campos de identidad. Un valor proporcionado en un campo de identidad se interpreta como una identidad por [!DNL Identity Service]. El área de nombres de la identidad se especifica como parte del etiquetado del campo.
+Los campos que contienen información de identificación personal (PII) se pueden etiquetar como campos de identidad. [!DNL Identity Service] interpreta un valor proporcionado en un campo de identidad como una identidad. El área de nombres de la identidad se especifica como parte del etiquetado del campo.
 
 Se deben cumplir los siguientes criterios para que un campo se etiquete como identidad:
 
@@ -22,7 +22,7 @@ Se deben cumplir los siguientes criterios para que un campo se etiquete como ide
 * Las identidades solo se reconocen en los datos de registros y series temporales
 * Solo los campos PII deben marcarse como identidad. Elegir un campo que represente datos más genéricos resultaría en relaciones menos precisas y en posibles errores que accederían a identidades relacionadas desde el gráfico de identidades
 
-Para obtener instrucciones sobre cómo etiquetar campos de identidad en la interfaz de usuario, consulte la guía de [definición de campos de identidad en la IU](../xdm/ui/fields/identity.md).
+Para obtener instrucciones sobre cómo etiquetar campos de identidad en la interfaz de usuario, consulte la guía sobre [definición de campos de identidad en la interfaz de usuario](../xdm/ui/fields/identity.md).
 
 ## Pasos siguientes
 

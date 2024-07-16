@@ -1,15 +1,15 @@
 ---
-title: Información general sobre la extensión de Adobe Experience Cloud Identity Service
-description: Obtenga información acerca de la extensión de etiquetas de Identity Service de Adobe Experience Cloud en Adobe Experience Platform.
+title: Información general sobre la extensión del servicio de identidad de Adobe Experience Cloud
+description: Obtenga información acerca de la extensión de etiquetas del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '792'
 ht-degree: 97%
 
 ---
 
-# Información general sobre la extensión de Adobe Experience Cloud Identity Service
+# Información general sobre la extensión del servicio de identidad de Adobe Experience Cloud
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 Utilice esta referencia para obtener información acerca de cómo configurar la extensión del Adobe Experience Cloud ID y las opciones disponibles al utilizar esta extensión para generar una regla.
 
-Utilice esta extensión para integrar Experience Cloud Identity Service con su propiedad. Con Experience Cloud Identity Service, puede crear y almacenar ID únicos y persistentes para los visitantes del sitio.
+Utilice esta extensión para integrar el servicio de identidad de Experience Cloud con su propiedad. Con el servicio de identidad de Experience Cloud, puede crear y almacenar ID únicos y persistentes para los visitantes del sitio.
 
 ## Configurar la extensión Experience Cloud ID
 
@@ -89,7 +89,7 @@ Se definen qué categorías se aprueban o deniegan cuando el visitante no haya e
 
 ### Variables
 
-Establezca pares de nombre-valor como propiedades de instancias de Experience Cloud ID. Utilice la lista desplegable para seleccionar una variable, luego escriba o seleccione un valor. Para obtener información acerca de cada variable, consulte la documentación de [Experience Cloud Identity Service](https://experiencecloud.adobe.com/resources/help/es_ES/mcvid/mcvid-overview.html).
+Establezca pares de nombre-valor como propiedades de instancias de Experience Cloud ID. Utilice la lista desplegable para seleccionar una variable, luego escriba o seleccione un valor. Para obtener información acerca de cada variable, consulte la documentación de [Servicio de identidad de Experience Cloud](https://experiencecloud.adobe.com/resources/help/es_ES/mcvid/mcvid-overview.html).
 
 ## Tipos de acción de extensión de Experience Cloud ID
 

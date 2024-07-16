@@ -33,11 +33,11 @@ Mediante los eventos superior e inferior de página del SDK web, el equipo de ma
 
 ## Ejemplo del evento de la parte superior de la página {#top-of-page}
 
-El siguiente ejemplo de código ejemplifica una parte superior de la configuración de evento de página que solicita personalización, pero no lo hace [enviar eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) para propuestas procesadas automáticamente. El [mostrar eventos](../personalization/display-events.md#send-sendEvent-calls) se enviarán como parte del evento de final de página.
+El ejemplo de código siguiente ejemplifica una parte superior de la configuración de eventos de página que solicita personalización, pero no [envía eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) para propuestas procesadas automáticamente. Los [eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) se enviarán como parte del evento de final de página.
 
 >[!BEGINTABS]
 
->[!TAB Evento de parte superior de la página]
+>[!TAB Evento de inicio de página]
 
 ```js
 alloy("sendEvent", {
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 | Parámetro | Obligatorio/Opcional | Descripción |
 |---|---|---|
 | `type` | Requerido | Establezca este parámetro en `decisioning.propositionFetch`. Este tipo de evento especial indica a Adobe Analytics que elimine este evento. Al utilizar Customer Journey Analytics, también puede configurar un  para soltar estos eventos. |
-| `renderDecisions` | Requerido | Establezca este parámetro en `true`. Este parámetro indica al SDK web que procese las decisiones devueltas por la red perimetral. |
+| `renderDecisions` | Requerido | Establezca este parámetro en `true`. Este parámetro indica al SDK web que procese las decisiones devueltas por el Edge Network. |
 | `personalization.sendDisplayEvent` | Requerido | Establezca este parámetro en `false`. Esto detiene el envío de eventos de visualización. |
 
 >[!ENDTABS]
@@ -61,13 +61,13 @@ alloy("sendEvent", {
 
 >[!BEGINTABS]
 
->[!TAB Proposiciones procesadas automáticamente]
+>[!TAB Propuestas procesadas automáticamente]
 
-El siguiente ejemplo de código ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron automáticamente en la página, pero para las que se suprimieron eventos de visualización en [principio de página](#top-of-page) evento.
+El ejemplo de código siguiente ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron automáticamente en la página, pero para las que se suprimieron eventos de visualización en el evento [top of page](#top-of-page).
 
 >[!NOTE]
 >
->En este escenario, debe llamar a la parte inferior del evento de página _después_ la parte superior de la página uno. Sin embargo, no es necesario esperar a la parte inferior del evento de página hasta que se haya completado la parte superior de la página uno.
+>En este escenario, debe llamar a la parte inferior del evento de página _después de_, la parte superior de la página uno. Sin embargo, no es necesario esperar a la parte inferior del evento de página hasta que se haya completado la parte superior de la página uno.
 
 ```js
 alloy("sendEvent", {
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parámetro | Obligatorio/Opcional | Descripción |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir la propuesta `ID`, `scope`, y `scopeDetails`. Consulte la documentación sobre cómo [personalización del procesamiento manual](../personalization/rendering-personalization-content.md#manually) para obtener más información sobre cómo registrar eventos de visualización para contenido procesado manualmente. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
+| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir las propuestas `ID`, `scope` y `scopeDetails`. Consulte la documentación sobre cómo [procesar manualmente la personalización](../personalization/rendering-personalization-content.md#manually) para obtener más información sobre cómo registrar eventos de visualización para el contenido procesado manualmente. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
 | `xdm._experience.decisioning.propositionEventType` | Requerido | Establezca este parámetro en `display: 1`. |
 | `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
 
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 >[!TAB Primera vista de página]
 
-El ejemplo siguiente incluye la adición del requerido `xdm.web.webPageDetails.viewName` parámetro. Esto es lo que la convierte en una aplicación de una sola página. El `viewName` en este ejemplo es la vista que se carga al cargar la página.
+El ejemplo siguiente incluye la adición del parámetro `xdm.web.webPageDetails.viewName` requerido. Esto es lo que la convierte en una aplicación de una sola página. La `viewName` de este ejemplo es la vista que se carga al cargar la página.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -170,7 +170,7 @@ alloy("sendEvent", {
 });
 ```
 
->[!TAB Segunda vista de página (opción 1)]
+>[!TAB Segunda vista de página (Opción 1)]
 
 En este ejemplo, no es necesario realizar una división superior/inferior de la página porque ya se ha recuperado la personalización de la página.
 
@@ -189,9 +189,9 @@ alloy("sendEvent", {
 ```
 
 
->[!TAB Segunda vista de página (opción 2)]
+>[!TAB Segunda vista de página (Opción 2)]
 
-Si todavía necesita retrasar la parte inferior de la visita individual a la página, puede utilizar `applyPropositions` para la parte superior de la visita individual a la página. Dado que no es necesario recuperar ninguna personalización ni registrar ningún dato de Analytics, no es necesario realizar una solicitud a la red de Edge.
+Si todavía necesita retrasar la parte inferior de la visita individual a la página, puede usar `applyPropositions` para la parte superior de la visita individual a la página. Dado que no es necesario recuperar ninguna personalización ni registrar ningún dato de Analytics, no es necesario realizar una solicitud al Edge Network.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## Ejemplo de GitHub {#github-sample}
 
-La muestra se encuentra en [esta dirección](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) muestra cómo utilizar el Experience Platform y el SDK web para solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Puede descargar el ejemplo y ejecutarlo localmente para comprender cómo funcionan los eventos superior e inferior de la página.
+El ejemplo encontrado en [esta dirección](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) muestra cómo usar el Experience Platform y el SDK web para solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Puede descargar el ejemplo y ejecutarlo localmente para comprender cómo funcionan los eventos superior e inferior de la página.

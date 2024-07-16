@@ -6,14 +6,14 @@ description: Puede crear un lote realizando una solicitud del POST al extremo /b
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 7%
+source-wordcount: '118'
+ht-degree: 5%
 
 ---
 
 # Crear un lote
 
-Para que un conjunto de datos pueda introducir datos, debe tener asociado un lote. Uso del `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud de POST al `/batches` punto final en la [!DNL Catalog] API.
+Para que un conjunto de datos pueda introducir datos, debe tener asociado un lote. Utilizando el valor `id` de un conjunto de datos existente, puede crear un lote realizando una solicitud de POST al extremo `/batches` en la API [!DNL Catalog].
 
 **Formato de API**
 

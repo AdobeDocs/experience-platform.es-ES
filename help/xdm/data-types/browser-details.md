@@ -7,7 +7,7 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 7%
+ht-degree: 27%
 
 ---
 
@@ -31,8 +31,8 @@ ht-degree: 7%
 | `userAgent` | Cadena | La cadena del agente de usuario HTTP de la solicitud del cliente. |
 | `vendor` | Cadena | El proveedor del explorador o la aplicación. |
 | `version` | Cadena | La versión del explorador o la aplicación. |
-| `viewportHeight` | Número entero | El tamaño vertical en píxeles de la ventana en la que se mostró el evento. En el caso de los eventos de visualización web, esta es la altura de la ventanilla del explorador. |
-| `viewportWidth` | Número entero | El tamaño horizontal en píxeles de la ventana en la que se mostró el evento. En un evento de visualización web, esta es la anchura de la ventanilla del explorador. |
+| `viewportHeight` | Entero | El tamaño vertical en píxeles de la ventana en la que se mostró el evento. En el caso de los eventos de visualización web, esta es la altura de la ventanilla del explorador. |
+| `viewportWidth` | Entero | El tamaño horizontal en píxeles de la ventana en la que se mostró el evento. En un evento de visualización web, esta es la anchura de la ventanilla del explorador. |
 
 {style="table-layout:auto"}
 

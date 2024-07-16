@@ -18,4 +18,4 @@ Se requiere el registro de la conexión de flujo continuo para iniciar la transm
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una URL única que se puede utilizar para transmitir datos a Platform.
 
-Para obtener información sobre cómo crear una conexión de flujo continuo autenticada, lea la [Guía de API de origen de HTTP API](../../sources/tutorials/api/create/streaming/http.md).
+Para obtener información sobre cómo crear una conexión de flujo continuo autenticada, lea la [guía de la API de origen HTTP API](../../sources/tutorials/api/create/streaming/http.md).

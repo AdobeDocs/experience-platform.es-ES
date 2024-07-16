@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Esta página proporciona direcciones IP que puede añadir a la lista de permitidos para exportar datos de forma segura de Experience Platform a [Servidor SFTP](../destinations/catalog/cloud-storage/sftp.md).
+Esta página proporciona direcciones IP que puede agregar a su lista de permitidos para exportar con seguridad datos del Experience Platform a su [servidor SFTP](../destinations/catalog/cloud-storage/sftp.md).
 
 Puede definir controles de acceso a la red a través del cortafuegos de la red. Si especifica el rango de IP adecuado, puede permitir el tráfico para el servicio de transferencia de datos.
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;inicio;temas populares;Marketo Engage;marketo engage;Marketo;asignación
 solution: Experience Platform
-title: Asignación de campos para el origen del Marketo Engage
+title: Asignación de campos para el Source de Marketo Engage
 description: Las siguientes tablas contienen las asignaciones entre los campos de los conjuntos de datos de Marketo y sus campos XDM correspondientes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
@@ -11,31 +11,31 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Marketo Engage] asignaciones de campos {#marketo-engage-field-mappings}
+# [!DNL Marketo Engage] asignaciones de campo {#marketo-engage-field-mappings}
 
-Las siguientes tablas contienen las asignaciones entre los campos de los nueve [!DNL Marketo] conjuntos de datos de y sus campos correspondientes del Modelo de datos de experiencia (XDM).
+Las tablas siguientes contienen las asignaciones entre los campos de los nueve conjuntos de datos [!DNL Marketo] y sus campos correspondientes del Modelo de datos de experiencia (XDM).
 
 >[!TIP]
 >
->Todo [!DNL Marketo] conjuntos de datos excepto `Activities` ahora admiten `isDeleted`. Los flujos de datos existentes incluirán automáticamente `isDeleted`, pero solo introducirá el indicador para los datos recién ingeridos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad. Es fundamental que la asignación se mantenga después de rellenarse automáticamente.
+>Todos los conjuntos de datos de [!DNL Marketo] excepto `Activities` ahora admiten `isDeleted`. Los flujos de datos existentes incluirán automáticamente `isDeleted`, pero solamente ingerirán el indicador para los datos recién ingeridos. Si desea aplicar el indicador a todos los datos históricos, debe detener los flujos de datos existentes y volver a crearlos con la nueva asignación. Tenga en cuenta que si elimina `isDeleted`, ya no tendrá acceso a la funcionalidad. Es fundamental que la asignación se mantenga después de rellenarse automáticamente.
 
 ## Actividades {#activities}
 
-El [!DNL Marketo] La fuente de ahora admite actividades estándar adicionales. Para utilizar actividades estándar, debe actualizar el esquema con la variable [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md) porque si crea nuevos `activities` flujo de datos sin actualizar el esquema, las plantillas de asignación fallarán porque los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, aún puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Platform.
+El origen [!DNL Marketo] ahora admite actividades estándar adicionales. Para usar actividades estándar, debe actualizar el esquema con la [utilidad de generación automática de esquemas](../marketo/marketo-namespaces.md), porque si crea un nuevo flujo de datos de `activities` sin actualizar el esquema, las plantillas de asignación fallarán, ya que los nuevos campos de destino no estarán presentes en el esquema. Si decide no actualizar el esquema, aún puede crear un nuevo flujo de datos y descartar cualquier error. Sin embargo, los campos nuevos o actualizados no se incorporarán en Platform.
 
-Lea la documentación sobre [clase Evento de experiencia XDM](../../../../xdm/classes/experienceevent.md) para obtener más información sobre la clase XDM y los grupos de campos XDM.
+Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm/classes/experienceevent.md) para obtener más información sobre la clase XDM y los grupos de campos XDM.
 
 >[!NOTE]
 >
->El `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` El campo de origen es un campo calculado que debe añadirse utilizando **[!UICONTROL Añadir campo calculado]** en la interfaz de usuario de Experience Platform. Lea el tutorial sobre [adición de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
+>El campo de origen `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` es un campo calculado que debe agregarse usando la opción **[!UICONTROL Agregar campo calculado]** en la interfaz de usuario del Experience Platform. Lea el tutorial sobre [agregar campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obtener más información.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -137,15 +137,15 @@ Lea la documentación sobre [clase Evento de experiencia XDM](../../../../xdm/cl
 
 ## Programas {#programs}
 
-Lea el [Información general de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [Grupo de campos del esquema Detalles de Campaign empresarial](../../../../xdm/field-groups/b2b-campaign/details.md) guía.
+Lea la [descripción general de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la guía [Grupo de campos de esquema de detalles de Campaign empresarial](../../../../xdm/field-groups/b2b-campaign/details.md).
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | El  `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -168,14 +168,14 @@ Lea el [Información general de XDM Business Campaign](../../../../xdm/classes/b
 
 ## Pertenencia a programas {#program-memberships}
 
-Lea el [Información general sobre los miembros de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [Grupo de campos de esquema Detalles del miembro de la campaña empresarial XDM](../../../../xdm/field-groups/b2b-campaign-members/details.md) guía.
+Lea la [descripción general de los miembros de XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la guía del campo de esquema [Detalles de miembro de XDM Business Campaign](../../../../xdm/field-groups/b2b-campaign-members/details.md).
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relación |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -189,7 +189,7 @@ Lea el [Información general sobre los miembros de XDM Business Campaign](../../
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -201,15 +201,15 @@ Lea el [Información general sobre los miembros de XDM Business Campaign](../../
 
 ## Compañías {#companies}
 
-Lea el [Información general de cuenta empresarial de XDM](../../../../xdm/classes/b2b/business-account.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de la cuenta empresarial de XDM](../../../../xdm/classes/b2b/business-account.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -233,14 +233,14 @@ Lea el [Información general de cuenta empresarial de XDM](../../../../xdm/class
 
 ## Listas estáticas {#static-lists}
 
-Lea el [Información general de lista de marketing empresarial XDM](../../../../xdm/classes/b2b/business-marketing-list.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de la lista de marketing empresarial de XDM](../../../../xdm/classes/b2b/business-marketing-list.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` se reemplazarán como parte de la API de Explorar. |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` se reemplazará como parte de la API de Explorar. |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -251,14 +251,14 @@ Lea el [Información general de lista de marketing empresarial XDM](../../../../
 
 ## Pertenencia a lista estática {#static-list-memberships}
 
-Lea el [Información general sobre miembros de lista de marketing empresarial XDM](../../../../xdm/classes/b2b/business-marketing-list-members.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de los miembros de la lista de marketing empresarial de XDM](../../../../xdm/classes/b2b/business-marketing-list-members.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relación |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -272,15 +272,15 @@ Lea el [Información general sobre miembros de lista de marketing empresarial XD
 >
 >El conjunto de datos de cuentas con nombre solo es necesario con la función de marketing basado en cuentas (ABM) de Marketo. Si no utiliza ABM, no es necesario configurar asignaciones para cuentas con nombre.
 
-Lea el [Información general de cuenta empresarial de XDM](../../../../xdm/classes/b2b/business-account.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de la cuenta empresarial de XDM](../../../../xdm/classes/b2b/business-account.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -300,14 +300,14 @@ Lea el [Información general de cuenta empresarial de XDM](../../../../xdm/class
 
 ## Oportunidades {#opportunities}
 
-Lea el [Resumen de oportunidad empresarial de XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de la oportunidad empresarial de XDM](../../../../xdm/classes/b2b/business-opportunity.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relación |
 | `description` | `opportunityDescription` |
@@ -327,7 +327,7 @@ Lea el [Resumen de oportunidad empresarial de XDM](../../../../xdm/classes/b2b/b
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Este conjunto de datos de origen solo está disponible para los usuarios con [!DNL Salesforce] integración. |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Este conjunto de datos de origen solo está disponible para usuarios con la integración [!DNL Salesforce]. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -337,15 +337,15 @@ Lea el [Resumen de oportunidad empresarial de XDM](../../../../xdm/classes/b2b/b
 
 ## Funciones de contacto de oportunidad {#opportunity-contact-roles}
 
-Lea el [Información general sobre relación de persona de oportunidad empresarial XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obtener más información sobre la clase XDM.
+Lea la [descripción general de la relación personal de la oportunidad empresarial de XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) para obtener más información sobre la clase XDM.
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán como parte de la API de Explorar. |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará como parte de la API Explorar. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. Los valores de `{CRM_ORG_ID}` y `{CRM_TYPE}` se reemplazarán automáticamente. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relación |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relación |
 | `role` | `personRole` |
@@ -358,15 +358,15 @@ Lea el [Información general sobre relación de persona de oportunidad empresari
 
 ## Personas {#persons}
 
-Lea el [Información general del perfil individual XDM](../../../../xdm/classes/individual-profile.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la [Grupo de campos de esquema de detalles de persona empresarial de XDM](../../../../xdm/field-groups/profile/business-person-details.md) guía y [Grupo de campos de esquema de componentes de persona de negocio XDM](../../../../xdm/field-groups/profile/business-person-components.md) guía.
+Lea la [descripción general del perfil individual de XDM](../../../../xdm/classes/individual-profile.md) para obtener más información sobre la clase XDM. Para obtener más información sobre los grupos de campos XDM, lea la guía [Grupo de campos de esquema de detalles de persona de negocios de XDM](../../../../xdm/field-groups/profile/business-person-details.md) y la guía [Grupo de campos de campos de componentes de persona de negocios de XDM](../../../../xdm/field-groups/profile/business-person-components.md).
 
-| Conjunto de datos de origen | Campo de destino XDM | Notas |
+| Conjunto de datos Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazarán automáticamente. |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Si la cancelación de la suscripción es `true` (por ejemplo, value = `1`) y establezca `consents.marketing.email.val` como (`n`). Si la cancelación de la suscripción es `false` (por ejemplo, value = `0`) y establezca `consents.marketing.email.val` as `null`. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identidad principal. El valor de `"${MUNCHKIN_ID}"` se reemplazará automáticamente. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Si la cancelación de la suscripción es `true` (por ejemplo, value = `1`), establezca `consents.marketing.email.val` como (`n`). Si la cancelación de la suscripción es `false` (por ejemplo, value = `0`), establezca `consents.marketing.email.val` como `null`. |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -378,7 +378,7 @@ Lea el [Información general del perfil individual XDM](../../../../xdm/classes/
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | El `extSourceSystemAudit.externalKey` es la identidad secundaria. |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` es la identidad secundaria. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -415,4 +415,4 @@ Lea el [Información general del perfil individual XDM](../../../../xdm/classes/
 
 ## Pasos siguientes
 
-Al leer este documento, ha obtenido información sobre la relación de asignación entre sus [!DNL Marketo] conjuntos de datos de y sus campos XDM correspondientes. Consulte el tutorial sobre [creación de un [!DNL Marketo] conexión de origen](../../../tutorials/ui/create/adobe-applications/marketo.md) para completar su [!DNL Marketo] flujo de datos.
+Al leer este documento, ha obtenido información sobre la relación de asignación entre sus conjuntos de datos [!DNL Marketo] y sus campos XDM correspondientes. Vea el tutorial sobre [creación de una [!DNL Marketo] conexión de origen](../../../tutorials/ui/create/adobe-applications/marketo.md) para completar su flujo de datos de [!DNL Marketo].

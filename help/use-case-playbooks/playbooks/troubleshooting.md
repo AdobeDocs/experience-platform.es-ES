@@ -22,11 +22,11 @@ Al crear una instancia de un manual de implementación, es posible que vea el me
 
 ![Resolución de problemas](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Esto se debe a que los libros de reproducción de Journey Optimizer crean mensajes para canales de correo electrónico, push y SMS. Lea el [introducción](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) guía para configurar las diferentes superficies.
+Esto se debe a que los libros de reproducción de Journey Optimizer crean mensajes para canales de correo electrónico, push y SMS. Lea la guía de [introducción](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) para configurar las diferentes superficies.
 
-## Estado *error* al crear una nueva instancia {#status-failed}
+## Estado *fallido* al crear una nueva instancia {#status-failed}
 
-Si ve un mensaje de error cuando intenta crear una instancia, puede deberse a que el administrador no le ha concedido los permisos de usuario necesarios. Un libro de reproducción contiene muchos recursos diferentes y el usuario necesita permisos para crear esos recursos para poder crear la instancia del libro de reproducción correctamente. Consulte la [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de esta guía sobre cómo configurar permisos.
+Si ve un mensaje de error cuando intenta crear una instancia, puede deberse a que el administrador no le ha concedido los permisos de usuario necesarios. Un libro de reproducción contiene muchos recursos diferentes y el usuario necesita permisos para crear esos recursos para poder crear la instancia del libro de reproducción correctamente. Consulte la sección [permisos](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de esta guía sobre cómo configurar permisos.
 
 ## Error de importación {#import-failure}
 

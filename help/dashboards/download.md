@@ -23,9 +23,9 @@ Este documento proporciona un resumen de cómo descargar tableros mediante la in
 
 ## Descargar tablero
 
-Para comenzar a descargar un tablero, vaya al tablero que desee descargar (por ejemplo, el [!UICONTROL Perfiles] panel) y, a continuación, seleccione el menú de más opciones (**`...`**), en la esquina superior derecha del tablero. A continuación, seleccione **[!UICONTROL Descargar]**.
+Para comenzar a descargar un panel, vaya al panel que desee descargar (por ejemplo, el panel [!UICONTROL Perfiles]) y, a continuación, seleccione el menú de más opciones (**`...`**) en la esquina superior derecha del panel. A continuación, seleccione **[!UICONTROL Descargar]**.
 
-![El panel Perfiles del Experience Platform con los puntos suspensivos y la lista desplegable Descarga resaltados.](images/download/download-button.png)
+![Panel de perfiles del Experience Platform con los puntos suspensivos y la lista desplegable de descarga resaltados.](images/download/download-button.png)
 
 ## Previsualizar PDF
 
@@ -33,19 +33,19 @@ Después de seleccionar **[!UICONTROL Descargar]**, se abre el menú de impresi�
 
 El menú Imprimir permite obtener una vista previa del PDF que se guardará. El PDF es una representación real de los widgets de panel tal como aparecen en la interfaz de usuario de Platform y el tamaño del PDF se ajusta automáticamente para mostrar todos los widgets de panel visibles actualmente en una sola página.
 
-![La Información general de perfil se muestra en un formato de página única con el panel Opciones de impresión a la derecha.](images/download/download-chrome-print.png)
+![La descripción general del perfil se muestra en un formato de una sola página con el panel Opciones de impresión a la derecha.](images/download/download-chrome-print.png)
 
 El PDF incluye un encabezado generado automáticamente que contiene el logotipo del Experience Platform, el nombre del panel, su nombre, y la fecha y hora en que se descargó el panel. Esta información es de solo lectura y no se puede editar en el PDF.
 
-![Cierre de la vista preliminar con el encabezado generado automáticamente resaltado.](images/download/download-pdf.png)
+![Un primer plano de la vista preliminar con el encabezado generado automáticamente resaltado.](images/download/download-pdf.png)
 
 ## Guardar como PDF
 
-Después de previsualizar el PDF, seleccione **Guardar** para elegir la ubicación en la que desea guardar el PDF.
+Después de obtener una vista previa del PDF, selecciona **Guardar** para elegir la ubicación en la que deseas guardar el PDF.
 
 >[!NOTE]
 >
->Si es necesario, puede utilizar la variable **Destino** menú desplegable para seleccionar **Guardar como PDF** si esa opción no está seleccionada automáticamente.
+>Si es necesario, puede usar el menú desplegable **Destino** para seleccionar **Guardar como PDF** si esa opción no está seleccionada automáticamente.
 
 ![La descripción general del perfil se muestra en un formato de página única con la opción desplegable Destino Guardar como PDF de impresión resaltada.](images/download/download-chrome-print-destination.png)
 
@@ -55,13 +55,13 @@ El PDF que se genera coincide con el panel que se puede ver en la interfaz de us
 
 Por ejemplo, puede modificar el aspecto del panel de perfiles para incluir varios widgets de ancho completo apilados encima de tres widgets estándar.
 
-![Se muestra el tablero Perfil con widgets alargados.](images/download/download-modify.png)
+![Se muestra el tablero de perfiles con widgets alargados.](images/download/download-modify.png)
 
 Si selecciona descargar el panel actualizado, se obtiene una nueva vista previa del PDF que coincide con el aspecto del panel de perfiles personalizado. También ajusta automáticamente el tamaño del PDF para asegurarse de que todos los widgets visibles se incluyen en un PDF de una página.
 
-![La Información general de perfil se muestra en un formato de página única con el panel Opciones de impresión a la derecha.](images/download/download-chrome-print-modified.png)
+![La descripción general del perfil se muestra en un formato de una sola página con el panel Opciones de impresión a la derecha.](images/download/download-chrome-print-modified.png)
 
-Para obtener más información acerca de la personalización de paneles, comience por leer el [información general sobre personalización de tableros](customize/overview.md).
+Para obtener más información acerca de cómo personalizar paneles, comience por leer la [descripción general de la personalización de paneles](customize/overview.md).
 
 ## Pasos siguientes
 

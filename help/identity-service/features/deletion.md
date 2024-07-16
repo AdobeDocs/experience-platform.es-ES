@@ -5,7 +5,7 @@ exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,13 +21,13 @@ Este documento proporciona información general sobre los distintos mecanismos q
 
 El siguiente documento hace referencia a las siguientes funciones de Experience Platform:
 
-* [Servicio de identidad](../home.md): obtenga una mejor vista de los clientes individuales y su comportamiento uniendo identidades entre dispositivos y sistemas.
-   * [Gráfico de identidad](./identity-graph-viewer.md): un gráfico de identidad es un mapa de relaciones entre identidades diferentes para un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
-   * [Áreas de nombres de identidad](./namespaces.md): las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;nombre&quot;<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID numérico de CRM.
-* [Servicio de catálogo](../../catalog/home.md): explore el linaje de datos, los metadatos, las descripciones de los archivos, los directorios y los conjuntos de datos dentro del lago de datos.
-* [Higiene de datos](../../hygiene/home.md): administre los datos de consumidor almacenados programando caducidades automatizadas de conjuntos de datos o eliminando registros individuales de un conjunto de datos o de todos.
-* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): administre las solicitudes de los clientes para acceder, desactivar la venta o eliminar sus datos personales en aplicaciones de Adobe Experience Cloud.
-* [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
+* [Servicio de identidad](../home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
+   * [Gráfico de identidad](./identity-graph-viewer.md): un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que proporciona una representación visual de cómo el cliente interactúa con su marca en diferentes canales.
+   * [Áreas de nombres de identidad](./namespaces.md): Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID numérico de CRM.
+* [Servicio de catálogo](../../catalog/home.md): explore el linaje de datos, los metadatos, las descripciones de archivos, los directorios y los conjuntos de datos dentro del lago de datos.
+* [Higiene de los datos](../../hygiene/home.md): administre los datos de consumidores almacenados programando caducidades automatizadas de conjuntos de datos o eliminando registros individuales de un conjunto de datos o de todos.
+* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): administre las solicitudes de los clientes para obtener acceso, desactivar la venta o eliminar sus datos personales en las aplicaciones de Adobe Experience Cloud.
+* [Perfil del cliente en tiempo real](../../profile/home.md): Proporciona un perfil de cliente unificado en tiempo real basado en datos agregados de múltiples fuentes.
 
 ## Eliminaciones de identidad única
 
@@ -37,7 +37,7 @@ Las secciones siguientes describen los mecanismos que puede utilizar para solici
 
 ### Eliminación de identidad única en el Privacy Service
 
-Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido por las regulaciones de privacidad, como el Reglamento general de protección de datos (RGPD) y la Ley de Privacidad del Consumidor de California (CCPA). Con Privacy Service, puede enviar solicitudes de trabajo mediante la API o la interfaz de usuario. Cuando el Experience Platform recibe una solicitud de eliminación del Privacy Service, Platform envía una confirmación al Privacy Service de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. La eliminación de la identidad individual se basa en el área de nombres o el valor de ID proporcionados. Además, la eliminación se realiza para todas las zonas protegidas asociadas a una organización determinada. Para obtener más información, lea la guía de [procesamiento de solicitudes de privacidad en Identity Service](../privacy.md).
+Privacy Service procesa las solicitudes de los clientes para acceder, excluirse de la venta o eliminar sus datos personales según lo establecido por las regulaciones de privacidad, como el Reglamento general de protección de datos (RGPD) y la Ley de Privacidad del Consumidor de California (CCPA). Con Privacy Service, puede enviar solicitudes de trabajo mediante la API o la interfaz de usuario. Cuando el Experience Platform recibe una solicitud de eliminación del Privacy Service, Platform envía una confirmación al Privacy Service de que la solicitud se ha recibido y de que los datos afectados se han marcado para su eliminación. La eliminación de la identidad individual se basa en el área de nombres o el valor de ID proporcionados. Además, la eliminación se realiza para todas las zonas protegidas asociadas a una organización determinada. Para obtener más información, lea la guía sobre el procesamiento de [solicitudes de privacidad en Identity Service](../privacy.md).
 
 La siguiente tabla proporciona un desglose de la eliminación de una sola identidad en el Privacy Service:
 
@@ -60,7 +60,7 @@ Puede utilizar el servicio de catálogo para enviar solicitudes para la eliminac
 
 ### Caducidad de conjuntos de datos en higiene de datos
 
-El [[!UICONTROL Higiene de datos] workspace](../../hygiene/ui/overview.md) en la IU de Adobe Experience Platform le permite programar caducidades para conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Para obtener más información, lea la guía de [administrar la caducidad del conjunto de datos mediante [!UICONTROL Higiene de datos] workspace](../../hygiene/ui/dataset-expiration.md).
+El espacio de trabajo [[!UICONTROL Higiene de datos]](../../hygiene/ui/overview.md) de la interfaz de usuario de Adobe Experience Platform le permite programar la caducidad de los conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Para obtener más información, lea la guía sobre [administración de la caducidad de los conjuntos de datos mediante el espacio de trabajo [!UICONTROL Higiene de datos]](../../hygiene/ui/dataset-expiration.md).
 
 La siguiente tabla proporciona un desglose de las diferencias entre la eliminación de conjuntos de datos en el servicio de catálogo y la higiene de los datos:
 
@@ -89,7 +89,7 @@ A continuación se describe el impacto potencial que las eliminaciones pueden te
 
 ## Pasos siguientes
 
-Este documento abarcaba los distintos mecanismos que se pueden utilizar para eliminar identidades y conjuntos de datos en Experience Platform. Este documento también describe cómo las eliminaciones de identidades y conjuntos de datos pueden afectar los gráficos de identidad. Para obtener más información sobre el servicio de identidad, lea la [Introducción al servicio de identidad](../home.md).
+Este documento abarcaba los distintos mecanismos que se pueden utilizar para eliminar identidades y conjuntos de datos en Experience Platform. Este documento también describe cómo las eliminaciones de identidades y conjuntos de datos pueden afectar los gráficos de identidad. Para obtener más información sobre el servicio de identidad, lea la [descripción general del servicio de identidad](../home.md).
 
 <!--
 

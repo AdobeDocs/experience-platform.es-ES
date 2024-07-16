@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /extensions en la API de Rea
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 98%
 
 ---

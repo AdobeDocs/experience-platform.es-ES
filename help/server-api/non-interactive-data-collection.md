@@ -1,6 +1,6 @@
 ---
 title: Recopilación de datos no interactiva
-description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform realiza la recopilación de datos no interactiva.
+description: Descubra cómo la API de Adobe Experience Platform Edge Network Server realiza la recopilación de datos no interactiva.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ Los extremos de recopilación de datos de evento no interactivos se utilizan par
 
 Se recomienda enviar eventos por lotes cuando los eventos del usuario final se ponen en cola localmente durante un corto periodo de tiempo (por ejemplo, cuando no hay conexión de red).
 
-Los eventos por lotes no deben pertenecer necesariamente al mismo usuario final, lo que significa que los eventos pueden contener identidades diferentes dentro de su `identityMap` objeto.
+Los eventos por lotes no deben pertenecer necesariamente al mismo usuario final, lo que significa que los eventos pueden contener identidades diferentes dentro de su objeto `identityMap`.
 
 ## Ejemplo de llamada de API no interactiva {#example}
 
@@ -91,15 +91,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sí | ID de la secuencia de datos utilizada por el extremo de recopilación de datos. |
-| `requestId` | `String` | No | Proporcione un ID de seguimiento de solicitud externa. Si no se proporciona ninguno, la red perimetral generará uno para usted y lo devolverá de nuevo en el cuerpo de respuesta/encabezados. |
-| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si la red perimetral debe devolver un `204 No Content` respuesta con una carga útil vacía o no. Los errores críticos se registran utilizando el código de estado HTTP y la carga útil correspondientes. |
+| `requestId` | `String` | No | Proporcione un ID de seguimiento de solicitud externa. Si no se proporciona ninguno, el Edge Network generará uno para usted y lo devolverá de nuevo en el cuerpo/encabezados de respuesta. |
+| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si el Edge Network debe devolver o no una respuesta `204 No Content` con una carga útil vacía. Los errores críticos se registran utilizando el código de estado HTTP y la carga útil correspondientes. |
 
 ### Respuesta {#response}
 
-Una respuesta correcta devuelve uno de los siguientes estados y un `requestID` si no se proporcionó ninguno en la solicitud.
+Una respuesta correcta devuelve uno de los siguientes estados, y un `requestID` si no se proporcionó ninguno en la solicitud.
 
-* `202 Accepted` cuando la solicitud se haya procesado correctamente;
-* `204 No Content` cuando la solicitud se haya procesado correctamente y la variable `silent` el parámetro se ha establecido en `true`;
+* `202 Accepted` cuando la solicitud se procesó correctamente;
+* `204 No Content` cuando la solicitud se procesó correctamente y el parámetro `silent` se estableció en `true`;
 * `400 Bad Request` cuando la solicitud no se formó correctamente (por ejemplo, no se encontró la identidad principal obligatoria).
 
 ```json

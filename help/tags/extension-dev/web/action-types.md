@@ -29,7 +29,7 @@ Este documento explica cómo definir tipos de acción para una extensión web en
 
 Los tipos de acción suelen consistir en lo siguiente:
 
-1. A [vista](./views.md) se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos que permite a los usuarios modificar la configuración de la acción.
+1. Una [vista](./views.md) que se muestra en la IU del Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la acción.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de etiquetas para interpretar la configuración y realizar una acción.
 
 ```js

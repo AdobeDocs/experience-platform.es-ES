@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Búsqueda del sitio de soporte] grupo de campos de esquema
+# [!UICONTROL Búsqueda del sitio de soporte técnico] grupo de campos de esquema
 
-[!UICONTROL Búsqueda del sitio de soporte] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). Proporciona una sola `siteKnowledge.supportSiteSearch` objeto a un esquema que captura información sobre una búsqueda en el sitio de asistencia.
+[!UICONTROL Búsqueda del sitio de soporte técnico] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). Proporciona un solo objeto `siteKnowledge.supportSiteSearch` a un esquema que captura información acerca de una búsqueda en el sitio de soporte técnico.
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+Para obtener más información sobre el grupo de campos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

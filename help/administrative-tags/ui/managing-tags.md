@@ -4,7 +4,7 @@ title: Administración de etiquetas unificadas
 description: Este documento proporciona información sobre la administración de etiquetas unificadas en Adobe Experience Cloud
 exl-id: 179b0618-3bd3-435c-9d17-63681177ca47
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 100%
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Guía de administración de etiquetas
 
-Las etiquetas permiten administrar taxonomías de metadatos para clasificar objetos empresariales y facilitar así la detección y la categorización. Las etiquetas contribuyen a identificar atributos taxonómicos importantes para las audiencias con las que trabajarán sus equipos, de modo que puedan encontrarlos más rápido, además pueden agrupar audiencias comunes en un descriptor. Debe identificar las categorías de etiquetas comunes, como regiones geográficas, unidades de negocio, líneas de productos, proyectos, equipos, intervalos de tiempo (trimestres, meses, años) o cualquier otra información que aporte significado y facilite el descubrimiento de audiencias para su equipo. 
+Las etiquetas permiten administrar taxonomías de metadatos para clasificar objetos empresariales y facilitar así la detección y la categorización. Las etiquetas contribuyen a identificar atributos taxonómicos importantes para los públicos con los que trabajarán sus equipos, de modo que puedan encontrarlos más rápido, además pueden agrupar públicos comunes en un descriptor. Debe identificar las categorías de etiquetas comunes, como regiones geográficas, unidades de negocio, líneas de productos, proyectos, equipos, intervalos de tiempo (trimestres, meses, años) o cualquier otra información que aporte significado y facilite el descubrimiento de públicos para su equipo. 
 
 ## Crear una etiqueta {#create-tag}
 

@@ -53,11 +53,11 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
 >[!TIP]
 >
->Puede ver los recursos adicionales disponibles para obtener más información sobre esta función seleccionando ![acerca de](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
+>Puede ver los recursos adicionales disponibles para obtener más información sobre esta característica seleccionando ![about](../../images/ui/event-forwarding/overview/about.png) en el panel derecho.
 
 1. Abra la pestaña [!UICONTROL Reglas] y seleccione **[!UICONTROL Crear nueva regla]**.
 
-   ![Pestaña Reglas que resalta el campo de nombre.](../../images/launch-rule-builder.png)
+   ![Ficha de reglas que resalta el campo de nombre.](../../images/launch-rule-builder.png)
 
 1. Asigne un nombre a la regla.
 1. Seleccione el icono de eventos **[!UICONTROL Añadir]**.
@@ -91,9 +91,9 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
      Si desea que se ejecute más tarde, asígnele un número superior a 50. Para obtener más información sobre la ordenación, consulte [Ordenación de reglas](rules.md#rule-ordering).
 
-1. Seleccione las Condiciones **[!UICONTROL Añadir]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione el icono de condiciones **[!UICONTROL Add]** y, a continuación, seleccione un tipo de lógica, una extensión y un tipo de condición, y configure los ajustes de la condición. A continuación, seleccione **[!UICONTROL Conservar cambios]**.
 
-   ![Página Configuración de condiciones de reglas.](../../images/condition-settings.png)
+   ![Página de configuración de condiciones de reglas.](../../images/condition-settings.png)
 
    Los tipos de condiciones disponibles dependen de la extensión seleccionada. La configuración de la condición será diferente según el tipo de condición.
 
@@ -106,7 +106,7 @@ Cree una regla que especifique qué acciones se producen si se cumple una condic
 
    Puede agregar tantas condiciones como desee. Varias condiciones en la misma regla se unen mediante AND.
 
-1. Seleccione las acciones **[!UICONTROL Añadir]** , seleccione la extensión y uno de los tipos de acción disponibles para dicha extensión, configure los ajustes de la acción y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
+1. Seleccione el icono Acciones **[!UICONTROL Agregar]**, luego seleccione su extensión y uno de los tipos de acción disponibles para esa extensión, configure los ajustes de la acción y, a continuación, seleccione **[!UICONTROL Conservar cambios]**.
 
    ![Página de configuración de acciones de reglas.](../../images/action-settings.png)
 
@@ -167,13 +167,13 @@ Adobe no puede garantizar que se activen otras reglas y que se necesite el códi
 
 ## Secuencia de componentes de regla {#sequencing}
 
-El comportamiento del entorno de ejecución depende de si **[!UICONTROL Ejecutar componentes de regla en secuencia]** está activado o desactivado en su propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
+El comportamiento del entorno de tiempo de ejecución depende de si **[!UICONTROL Ejecutar componentes de regla en la secuencia]** está activado o desactivado en la propiedad. Esta configuración determina si los componentes de una regla se pueden evaluar en paralelo (asincrónicamente) o en secuencia.
 
 >[!IMPORTANT]
 >
 >Esta configuración solo determina cómo se evalúan las condiciones y las acciones dentro de cada regla y no afecta a la secuencia en que se ejecutan las reglas en la propiedad. Consulte la sección anterior sobre [orden de reglas](#rule-ordering) para obtener más información sobre cómo determinar el orden de ejecución de varias reglas.
 >
->Entrada [reenvío de eventos](../event-forwarding/overview.md) propiedades, las acciones de regla siempre se ejecutan secuencialmente y esta configuración no está disponible. Asegúrese de que el pedido sea correcto cuando cree la regla.
+>En las propiedades de [reenvío de eventos](../event-forwarding/overview.md), las acciones de regla siempre se ejecutan secuencialmente y esta configuración no está disponible. Asegúrese de que el pedido sea correcto cuando cree la regla.
 
 ### Habilitado
 

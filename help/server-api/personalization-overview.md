@@ -1,6 +1,6 @@
 ---
-title: Resumen de personalización
-description: Aprenda a utilizar la API del servidor de red perimetral de Adobe Experience Platform para recuperar contenido personalizado de las soluciones de personalización de Adobe.
+title: Información general de Personalization
+description: Aprenda a utilizar la API de Adobe Experience Platform Edge Network Server para recuperar contenido personalizado de las soluciones de personalización de Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 10%
 
 ---
 
-# Resumen de personalización
+# Información general de Personalization
 
-Con el [!DNL Server API], puede recuperar contenido personalizado de las soluciones de personalización de Adobe, incluyendo [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), y [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es).
+Con [!DNL Server API], puede recuperar contenido personalizado de las soluciones de personalización de Adobe, entre ellas [Adobe Target](https://business.adobe.com/es/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/ajo-home) y [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=es).
 
-Además, la variable [!DNL Server API] potencia las funcionalidades de personalización de la misma página y de la siguiente página a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) y el [conexión de personalización personalizada](../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../destinations/ui/activate-edge-personalization-destinations.md).
+Además, [!DNL Server API] potencia las funciones de personalización de la misma página y de la página siguiente a través de destinos de personalización de Adobe Experience Platform, como [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) y la [conexión de personalización personalizada](../destinations/catalog/personalization/custom-personalization.md). Para obtener información sobre cómo configurar Experience Platform para la personalización de la misma página y de la página siguiente, consulte la [guía especializada](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Al utilizar la API de servidor, debe integrar la respuesta proporcionada por el motor de personalización con la lógica utilizada para representar contenido en el sitio. A diferencia del [SDK web](../web-sdk/home.md), el [!DNL Server API] no tiene un mecanismo para aplicar automáticamente el contenido devuelto por las soluciones de personalización de Adobe.
+Al utilizar la API de servidor, debe integrar la respuesta proporcionada por el motor de personalización con la lógica utilizada para representar contenido en el sitio. A diferencia del [SDK web](../web-sdk/home.md), el [!DNL Server API] no cuenta con un mecanismo para aplicar automáticamente el contenido devuelto por las soluciones de personalización de Adobe.
 
 ## Terminología {#terminology}
 
@@ -23,12 +23,12 @@ Antes de trabajar con soluciones de personalización de Adobe, asegúrese de com
 
 * **Oferta**: una oferta es un mensaje de marketing que puede tener reglas asociadas que especifican quién puede ver la oferta.
 * **Decisión**: Una decisión (anteriormente conocida como actividad de oferta) informa la selección de una oferta.
-* **Esquema**: el esquema de una decisión informa el tipo de oferta devuelta.
+* **Esquema**: el esquema de una decisión indica el tipo de oferta devuelta.
 * **Ámbito**: Ámbito de la decisión.
-   * En Adobe Target, esta es la [!DNL mbox]. El [!DNL global mbox] es el `__view__` ámbito
-   * Para [!DNL Offer Decisioning], son las cadenas de JSON codificadas en Base64 que contienen los ID de actividad y ubicación que desea que el servicio de offer decisioning utilice para proponer ofertas.
+   * En Adobe Target, este es [!DNL mbox]. El [!DNL global mbox] es el ámbito `__view__`
+   * Para [!DNL Offer Decisioning], estas son las cadenas de JSON codificadas en Base64 que contienen los ID de actividad y ubicación que desea que el servicio de offer decisioning use para proponer ofertas.
 
-## El `query` objeto {#query-object}
+## El objeto `query` {#query-object}
 
 La recuperación de contenido personalizado requiere un objeto de consulta de solicitud explícito para un ejemplo de solicitud. El objeto de consulta tiene el formato siguiente:
 
@@ -66,7 +66,7 @@ La recuperación de contenido personalizado requiere un objeto de consulta de so
 
 ## El objeto de identificador {#handle}
 
-El contenido personalizado recuperado de las soluciones de personalización se presenta en un `personalization:decisions` controlador, que tiene el siguiente formato para su carga útil:
+El contenido personalizado recuperado de las soluciones de personalización se presenta en un identificador `personalization:decisions`, que tiene el siguiente formato para su carga útil:
 
 ```json
 {
@@ -121,7 +121,7 @@ El contenido personalizado recuperado de las soluciones de personalización se p
 | --- | --- | --- |
 | `payload.id` | Cadena | ID de decisión. |
 | `payload.scope` | Cadena | Ámbito de decisión que dio lugar a las ofertas propuestas. |
-| `payload.scopeDetails.decisionProvider` | Cadena | Configure como. `TGT` al usar Adobe Target. |
+| `payload.scopeDetails.decisionProvider` | Cadena | Se establece en `TGT` cuando se usa Adobe Target. |
 | `payload.scopeDetails.activity.id` | Cadena | ID único de la actividad de oferta. |
 | `payload.scopeDetails.experience.id` | Cadena | ID único de la ubicación de la oferta. |
 | `items[].id` | Cadena | ID único de la ubicación de la oferta. |
@@ -192,11 +192,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
 | `configId` | Cadena | Sí | ID de la secuencia de datos. |
-| `requestId` | Cadena | No | Proporcione un ID de seguimiento de solicitud externa. Si no se proporciona ninguno, la red perimetral generará uno para usted y lo devolverá de nuevo en el cuerpo de respuesta/encabezados. |
+| `requestId` | Cadena | No | Proporcione un ID de seguimiento de solicitud externa. Si no se proporciona ninguno, el Edge Network generará uno para usted y lo devolverá de nuevo en el cuerpo/encabezados de respuesta. |
 
 ### Respuesta {#response}
 
-Devuelve un `200 OK` estado y uno o más `Handle` según los servicios perimetrales habilitados en la configuración del conjunto de datos.
+Devuelve un estado `200 OK` y uno o más objetos `Handle`, según los servicios perimetrales habilitados en la configuración de la secuencia de datos.
 
 ```json
 {
@@ -254,9 +254,9 @@ Devuelve un `200 OK` estado y uno o más `Handle` según los servicios perimetra
 
 ## Notificaciones {#notifications}
 
-Las notificaciones se deben activar cuando se haya visitado o procesado un contenido o una vista recuperados previamente al usuario final. Para que las notificaciones se activen en el ámbito correcto, asegúrese de realizar un seguimiento de la correspondiente `id` para cada ámbito.
+Las notificaciones se deben activar cuando se haya visitado o procesado un contenido o una vista recuperados previamente al usuario final. Para que las notificaciones se activen en el ámbito correcto, asegúrese de realizar un seguimiento de los `id` correspondientes para cada ámbito.
 
-Notificaciones con el derecho `id` para que los informes se reflejen correctamente, es necesario activar los ámbitos correspondientes.
+Se requiere que se activen las notificaciones con el derecho `id` para los ámbitos correspondientes para que la creación de informes se refleje correctamente.
 
 **Formato de API**
 
@@ -316,15 +316,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parámetro | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sí | ID de la secuencia de datos utilizada por el extremo de recopilación de datos. |
-| `requestId` | `String` | No | ID de seguimiento de solicitud externa externa. Si no se proporciona ninguno, la red perimetral generará uno para usted y lo devolverá de nuevo en el cuerpo de respuesta/encabezados. |
-| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si la red perimetral debe devolver un `204 No Content` respuesta con una carga útil vacía. Los errores críticos se registran utilizando el código de estado HTTP y la carga útil correspondientes. |
+| `requestId` | `String` | No | ID de seguimiento de solicitud externa externa. Si no se proporciona ninguno, el Edge Network generará uno para usted y lo devolverá de nuevo en el cuerpo/encabezados de respuesta. |
+| `silent` | `Boolean` | No | Parámetro booleano opcional que indica si el Edge Network debe devolver una respuesta `204 No Content` con una carga útil vacía. Los errores críticos se registran utilizando el código de estado HTTP y la carga útil correspondientes. |
 
 ### Respuesta {#notifications-response}
 
-Una respuesta correcta devuelve uno de los siguientes estados y un `requestID` si no se proporcionó ninguno en la solicitud.
+Una respuesta correcta devuelve uno de los siguientes estados, y un `requestID` si no se proporcionó ninguno en la solicitud.
 
-* `202 Accepted` cuando la solicitud se haya procesado correctamente;
-* `204 No Content` cuando la solicitud se haya procesado correctamente y la variable `silent` el parámetro se ha establecido en `true`;
+* `202 Accepted` cuando la solicitud se procesó correctamente;
+* `204 No Content` cuando la solicitud se procesó correctamente y el parámetro `silent` se estableció en `true`;
 * `400 Bad Request` cuando la solicitud no se formó correctamente (por ejemplo, no se encontró la identidad principal obligatoria).
 
 ```json

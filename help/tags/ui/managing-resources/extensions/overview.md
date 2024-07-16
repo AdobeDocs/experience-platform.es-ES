@@ -27,7 +27,7 @@ Las extensiones determinan los elementos disponibles al crear propiedades, regla
 
 Utilice los enlaces de la parte superior de la lista Extensiones para ver las extensiones instaladas, el catálogo de extensiones o las actualizaciones.
 
-Seleccione una extensión y, a continuación, seleccione [!UICONTROL Configurar] para ver y modificar la configuración de la extensión. Para obtener más información, consulte la sección sobre [adición de una nueva extensión](#add-a-new-extension) para obtener información sobre las opciones de extensión.
+Seleccione una extensión y, a continuación, seleccione [!UICONTROL Configurar] para ver y modificar la configuración de la extensión. Para obtener más información, consulte la sección sobre [agregar una nueva extensión](#add-a-new-extension) para obtener información sobre las opciones de extensión.
 
 >[!IMPORTANT]
 >
@@ -66,7 +66,7 @@ Las etiquetas son muy extensibles. Las extensiones añaden funciones principales
 1. En la página de información general de una propiedad, abra la pestaña **[!UICONTROL Extensiones]**.
 1. Seleccione una extensión.
 
-   ![Pestaña Catálogo que muestra las extensiones principales en la pestaña Extensiones.](../../../images/extensions.png)
+   ![Pestaña Catálogo que muestra las extensiones principales en la pestaña de extensiones.](../../../images/extensions.png)
 
    * Si la extensión existe, selecciónela en el catálogo de extensiones.
    * Pase el ratón sobre una extensión de la lista para configurarla o deshabilitarla.

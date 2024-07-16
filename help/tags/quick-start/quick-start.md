@@ -4,8 +4,8 @@ description: Aprenda a empezar rápidamente a usar etiquetas con Adobe Experienc
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 90%
+source-wordcount: '1521'
+ht-degree: 88%
 
 ---
 
@@ -37,7 +37,7 @@ Para obtener instrucciones detalladas sobre cómo crear grupos y agregar usuario
 
 ## 2. Iniciar sesión
 
-Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experience.adobe.com/)y seleccionando una de las siguientes opciones **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
+Una vez añadidos los derechos de etiqueta a su Adobe ID, debe iniciar sesión en la interfaz de usuario de Experience Platform o en la interfaz de usuario de recopilación de datos. Para ello, vaya directamente a la [pantalla de inicio de sesión del Experience Cloud](https://experience.adobe.com/) y seleccione **[!UICONTROL Recopilación de datos]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Una extensión es una integración desarrollada por Adobe o un socio de Adobe qu
 
 Todas las propiedades nuevas llevan instalada la [Extensión principal](../extensions/client/core/overview.md). Las propiedades móviles incluyen extensiones adicionales. El equipo de Adobe desarrolla la Extensión principal para ofrecer un conjunto de elementos de datos sólido y robusto para sus reglas de datos y tipos de eventos para sus reglas. La mayoría de las acciones que puede querer realizar (obtener un ECID, enviar señalizaciones [!DNL Adobe Analytics], cargar el mbox global de [!DNL Target], etc.) provienen de las extensiones que se instalan del catálogo.
 
-Lo que hace que las etiquetas de Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte la sección sobre [adición de una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Lo que hace que las etiquetas de Platform sean verdaderamente únicas es que cualquier persona puede crear estas extensiones. ¿Necesita soltar un píxel de remarketing de Facebook en el sitio? Compruebe la extensión desarrollada por Facebook. ¿Desea lo mismo para Twitter o Linked In? Use esas extensiones. ¿Necesita llevar a cabo una encuesta? Consulte Question Pro o Foresee. ¿Necesita administrar la privacidad y el consentimiento de los usuarios finales para ayudarles con [!DNL GDPR]? Eche un vistazo a Evidon y Trust Arc. ¿Desea ver una perspectiva granular del comportamiento de los usuarios individuales en el sitio? Puede probar con Clicktale. Para obtener más información, consulte la sección sobre [agregar una nueva extensión](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Crear elementos de datos y reglas
 

@@ -4,29 +4,29 @@ description: Obtenga información sobre cómo crear borradores de la conexión b
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1188'
 ht-degree: 5%
 
 ---
 
-# Crear borradores de su [!DNL Flow Service] entidades que utilizan la API
+# Crear borradores de las entidades de [!DNL Flow Service] mediante la API
 
-Puede usar el complemento `mode=draft` parámetro de consulta en [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) para configurar su [!DNL Flow Service] entidades como las conexiones base, las conexiones de origen, las conexiones de destino y los flujos de datos a un estado de borrador.
+Puede usar el parámetro de consulta `mode=draft` en la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) para establecer las entidades de [!DNL Flow Service], como las conexiones base, las conexiones de origen, las conexiones de destino y los flujos de datos, a un estado de borrador.
 
-Los borradores se pueden actualizar más adelante con información nueva y, a continuación, publicar una vez que estén listos, utilizando `op=publish` parámetro de consulta.
+Los borradores se pueden actualizar posteriormente con información nueva y, a continuación, publicar una vez que estén listos, utilizando el parámetro de consulta `op=publish`.
 
-Este tutorial proporciona pasos sobre cómo configurar las [!DNL Flow Service] entidades de a un estado de borrador y permiten pausar y guardar los flujos de trabajo para completarlos más adelante.
+Este tutorial proporciona pasos sobre cómo establecer las entidades de [!DNL Flow Service] en un estado de borrador y le permite pausar y guardar los flujos de trabajo para completarlos más adelante.
 
 ## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
 
 ### Compruebe la compatibilidad con el modo de borrador
 
@@ -34,9 +34,10 @@ También debe comprobar si el ID de especificación de conexión y el ID de espe
 
 >[!BEGINTABS]
 
->[!TAB Búsqueda de detalles de especificaciones de conexión]
+>[!TAB Buscar detalles de especificación de conexión]
 
-+++Solicitud La siguiente solicitud recupera la información de especificación de conexión para [!DNL Azure File Storage]:
++++Solicitud
+La siguiente solicitud recupera la información de especificación de conexión para [!DNL Azure File Storage]:
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Respuesta
 
-Una respuesta correcta devuelve la información de especificación de conexión del origen. Para comprobar si el modo de borrador es compatible con el origen, compruebe que la variable `items[0].attributes.isDraftModeSupported` tiene un valor de `true`.
+Una respuesta correcta devuelve la información de especificación de conexión del origen. Para comprobar si el modo de borrador es compatible con el origen, compruebe que `items[0].attributes.isDraftModeSupported` tiene un valor de `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ Una respuesta correcta devuelve la información de especificación de conexión 
 
 +++
 
->[!TAB Búsqueda de detalles de especificaciones de flujo]
+>[!TAB Buscar detalles de especificaciones de flujo]
 
-+++Solicitud La siguiente solicitud recupera los detalles de especificación de flujo para una fuente de almacenamiento en la nube:
++++Solicitud
+La siguiente solicitud recupera los detalles de especificación de flujo para una fuente de almacenamiento en la nube:
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Respuesta
 
-Una respuesta correcta devuelve la información de especificación de flujo del origen. Para comprobar si el modo de borrador es compatible con el origen, compruebe que la variable `items[0].attributes.isDraftModeSupported` tiene un valor de `true`.
+Una respuesta correcta devuelve la información de especificación de flujo del origen. Para comprobar si el modo de borrador es compatible con el origen, compruebe que `items[0].attributes.isDraftModeSupported` tiene un valor de `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -569,7 +571,7 @@ Una respuesta correcta devuelve la información de especificación de flujo del 
 
 ## Crear una conexión base de borrador {#create-a-draft-base-connection}
 
-Para crear una conexión base de borrador, realice una solicitud de POST al `/connections` punto final del [!DNL Flow Service] API y proporcionar `mode=draft` como parámetro de consulta.
+Para crear una conexión base de borrador, realice una solicitud de POST al extremo `/connections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Parámetro | Descripción |
 | --- | --- |
-| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión base. Para establecer una conexión base como borrador, establezca `mode` hasta `draft`. |
+| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión base. Para establecer una conexión base como borrador, establezca `mode` en `draft`. |
 
 **Solicitud**
 
-La siguiente solicitud crea una conexión base de borrador para [!DNL Azure File Storage] fuente:
+La siguiente solicitud crea una conexión base de borrador para el origen [!DNL Azure File Storage]:
 
 ```shell
 curl -X POST \
@@ -622,9 +624,9 @@ Una respuesta correcta devuelve el ID de conexión base y la etiqueta correspond
 }
 ```
 
-## Publicar el borrador de la conexión base {#publish-your-draft-base-connection}
+## Publish su conexión base de borrador {#publish-your-draft-base-connection}
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/connections` y proporcione el ID de la conexión base de borrador que desea publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/connections` y proporcione el identificador de la conexión base de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -634,7 +636,7 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Parámetro | Descripción |
 | --- | --- |
-| `op` | Operación de acción que actualiza el estado de la conexión base consultada. Para publicar un borrador de conexión base, establezca `op` hasta `publish`. |
+| `op` | Operación de acción que actualiza el estado de la conexión base consultada. Para publicar una conexión base de borrador, establezca `op` en `publish`. |
 
 **Solicitud**
 
@@ -663,7 +665,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear una conexión de origen de borrador {#create-a-draft-source-connection}
 
-Para crear una conexión de origen de borrador, realice una solicitud de POST al `/sourceConnections` punto final del [!DNL Flow Service] API y proporcionar `mode=draft` como parámetro de consulta.
+Para crear una conexión de origen de borrador, realice una solicitud de POST al extremo `/sourceConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Parámetro | Descripción |
 | --- | --- |
-| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión de origen. Para establecer una conexión de origen como borrador, establezca `mode` hasta `draft`. |
+| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión de origen. Para establecer una conexión de origen como borrador, establezca `mode` en `draft`. |
 
 **Solicitud**
 
@@ -714,13 +716,13 @@ Una respuesta correcta devuelve el ID de conexión de origen y la etiqueta corre
 }
 ```
 
-## Publicar la conexión de origen de borrador {#publish-your-draft-source-connection}
+## Publish su conexión de origen de borrador {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >No puede publicar una conexión de origen si su conexión base asociada sigue en estado de borrador. Asegúrese de que la conexión base se publique primero, antes de publicar la conexión de origen.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/sourceConnections` y proporcione el ID de la conexión de origen de borrador que desea publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/sourceConnections` y proporcione el identificador de la conexión de origen de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -730,7 +732,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parámetro | Descripción |
 | --- | --- |
-| `op` | Operación de acción que actualiza el estado de la conexión de origen consultada. Para publicar una conexión de origen de borrador, establezca `op` hasta `publish`. |
+| `op` | Operación de acción que actualiza el estado de la conexión de origen consultada. Para publicar una conexión de origen de borrador, establezca `op` en `publish`. |
 
 **Solicitud**
 
@@ -759,7 +761,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear una conexión de destino de borrador {#create-a-draft-target-connection}
 
-Para crear una conexión de destino de borrador, realice una solicitud de POST al `/targetConnections` punto final del [!DNL Flow Service] API y proporcionar `mode=draft` como parámetro de consulta.
+Para crear una conexión de destino de borrador, realice una solicitud de POST al extremo `/targetConnections` de la API [!DNL Flow Service] y proporcione `mode=draft` como parámetro de consulta.
 
 **Formato de API**
 
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Parámetro | Descripción |
 | --- | --- |
-| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión de destino. Para establecer una conexión de destino como borrador, establezca `mode` hasta `draft`. |
+| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado de la conexión de destino. Para establecer una conexión de destino como borrador, establezca `mode` en `draft`. |
 
 **Solicitud**
 
@@ -811,13 +813,13 @@ Una respuesta correcta devuelve el ID de conexión de destino y la etiqueta corr
 }
 ```
 
-## Publicación del borrador de la conexión de destino {#publish-your-draft-target-connection}
+## Publish su conexión de destino de borrador {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >No puede publicar una conexión de destino si su conexión base asociada sigue en estado de borrador. Asegúrese de que la conexión base se publique primero, antes de publicar la conexión de destino.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/targetConnections` y proporcione el ID de la conexión de destino de borrador que desea publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/targetConnections` y proporcione el identificador de la conexión de destino de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -827,7 +829,7 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parámetro | Descripción |
 | --- | --- |
-| `op` | Operación de acción que actualiza el estado de la conexión de destino consultada. Para publicar un borrador de conexión de destino, establezca `op` hasta `publish`. |
+| `op` | Operación de acción que actualiza el estado de la conexión de destino consultada. Para publicar una conexión de destino de borrador, establezca `op` en `publish`. |
 
 **Solicitud**
 
@@ -856,7 +858,7 @@ Una respuesta correcta devuelve el ID y la etiqueta correspondiente para la cone
 
 ## Crear un flujo de datos de borrador {#create-a-draft-dataflow}
 
-Para establecer un flujo de datos como borrador, realice una solicitud de POST a `/flows` al añadir el `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
+Para establecer un flujo de datos como borrador, realice una solicitud de POST al extremo `/flows` al agregar `mode=draft` como parámetro de consulta. Esto le permite crear un flujo de datos y guardarlo como borrador.
 
 **Formato de API**
 
@@ -866,7 +868,7 @@ POST /flows?mode=draft
 
 | Parámetro | Descripción |
 | --- | --- |
-| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado del flujo de datos. Para establecer un flujo de datos como borrador, establezca `mode` hasta `draft`. |
+| `mode` | Parámetro de consulta proporcionado por el usuario que decide el estado del flujo de datos. Para establecer un flujo de datos como borrador, establezca `mode` en `draft`. |
 
 **Solicitud**
 
@@ -906,13 +908,13 @@ Una respuesta correcta devuelve el ID de flujo y la etiqueta correspondiente par
 }
 ```
 
-## Publicación del flujo de datos de borrador {#publish-your-draft-dataflow}
+## Publish el flujo de datos de borrador {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >No puede publicar un flujo de datos si sus conexiones de origen y destino asociadas siguen en estado de borrador. Asegúrese de que las conexiones de origen y destino se publiquen primero antes de publicar el flujo de datos.
 
-Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al `/flows` al proporcionar el ID del flujo de datos de borrador que desea publicar, así como una operación de acción para la publicación.
+Una vez que el borrador esté listo para publicarse, realice una solicitud de POST al extremo `/flows`, proporcionando al mismo tiempo el ID del flujo de datos de borrador que desee publicar, así como una operación de acción para la publicación.
 
 **Formato de API**
 
@@ -922,7 +924,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parámetro | Descripción |
 | --- | --- |
-| `op` | Operación de acción que actualiza el estado del flujo de datos consultado. Para publicar un flujo de datos de borrador, establezca `op` hasta `publish`. |
+| `op` | Operación de acción que actualiza el estado del flujo de datos consultado. Para publicar un flujo de datos de borrador, establezca `op` en `publish`. |
 
 **Solicitud**
 
@@ -940,7 +942,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve el ID y el correspondiente `etag` del flujo de datos.
+Una respuesta correcta devuelve el ID y el `etag` correspondiente del flujo de datos.
 
 ```json
 {
@@ -951,4 +953,4 @@ Una respuesta correcta devuelve el ID y el correspondiente `etag` del flujo de d
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha aprendido a crear borradores de su [!DNL Flow Service] y publicar estos borradores. Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../home.md).
+Al seguir este tutorial, ha aprendido a crear borradores de sus [!DNL Flow Service] entidades, así como a publicar estos borradores. Para obtener más información sobre las fuentes, lea la [información general sobre fuentes](../../home.md).

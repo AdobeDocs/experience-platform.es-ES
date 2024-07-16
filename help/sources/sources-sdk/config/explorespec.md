@@ -84,4 +84,4 @@ Explorar especificaciones define los parámetros necesarios para explorar e insp
 
 ## Pasos siguientes
 
-Una vez completadas las especificaciones de exploración, puede continuar creando una especificación de conexión completa con el [!DNL Flow Service] API. Consulte la [Guía de API de fuentes de autoservicio (SDK por lotes)](../api/api-overview.md) para obtener más información.
+Una vez completadas las especificaciones de exploración, puede continuar creando una especificación de conexión completa mediante la API [!DNL Flow Service]. Consulte la [guía de API de fuentes de autoservicio (SDK por lotes)](../api/api-overview.md) para obtener más información.

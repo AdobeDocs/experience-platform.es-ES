@@ -14,22 +14,22 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-El `/authoring/testing/template/render` El punto de conexión le ayuda a visualizar cómo se personalizan las plantillas [campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) definido en la configuración de destino tendría el siguiente aspecto:.
+El extremo `/authoring/testing/template/render` le ayuda a visualizar el aspecto que tendrían los [campos de datos del cliente](../../functionality/destination-configuration/customer-data-fields.md) con plantillas definidos en la configuración de destino.
 
 El extremo genera valores aleatorios para los campos de datos del cliente y los devuelve en la respuesta. Esto le ayuda a validar la estructura semántica de los campos de datos del cliente, como los nombres de los bloques o las rutas de carpetas.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de usar el `/template/render` extremo, asegúrese de cumplir las siguientes condiciones:
+Antes de usar el extremo `/template/render`, asegúrese de cumplir las siguientes condiciones:
 
-* Tiene un destino basado en archivos existente creado mediante el Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-   ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Procesar campos de cliente con plantillas {#render-customer-fields}
 
@@ -56,7 +56,7 @@ Para ilustrar el comportamiento de este extremo de API, consideremos un destino 
 
 **Solicitud**
 
-La solicitud siguiente llama a `/authoring/testing/template/render` extremo, que devuelve una respuesta con valores generados aleatoriamente para los dos campos de datos del cliente mencionados anteriormente.
+La solicitud siguiente llama al extremo `/authoring/testing/template/render`, que devuelve una respuesta con valores generados aleatoriamente para los dos campos de datos de cliente mencionados anteriormente.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -77,12 +77,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parámetros | Descripción |
 | -------- | ----------- |
-| `destinationId` | El ID del [configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que está probando. |
-| `templates` | Los nombres de los campos con plantillas definidos en su [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | El identificador de la [configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que está probando. |
+| `templates` | Los nombres de campo con plantilla definidos en su [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
 
 **Respuesta**
 
-Una respuesta correcta devuelve un `HTTP 200 OK` estado y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
+Una respuesta correcta devuelve un estado `HTTP 200 OK` y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
 
 Esta respuesta puede ayudarle a validar la estructura correcta de los campos de datos del cliente, como los nombres de los bloques o las rutas de carpetas.
 

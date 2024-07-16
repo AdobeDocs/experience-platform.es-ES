@@ -20,7 +20,7 @@ ht-degree: 44%
 * Primeros pasos {#get-started}
    * [Guía de inicio rápido](./quick-start/quick-start.md)
    * [Guías de implementación](./quick-start/implementation-guides.md)
-* Guías de IU {#ui}
+* Guías de interfaz de usuario {#ui}
    * [Información general](./ui/managing-resources/overview.md)
    * Extensiones {#extensions}
       * [Información general](./ui/managing-resources/extensions/overview.md)
@@ -70,24 +70,24 @@ ht-degree: 44%
       * [Información general](./extensions/client/overview.md)
       * [Métricas de velocidad del sitio accesibles](https://exchange.adobe.com/apps/ec/103053)
       * [Personalizador de Activity Map](https://exchange.adobe.com/apps/ec/101531)
-      * [Actualización de página de acción](https://exchange.adobe.com/apps/ec/102848)
-      * [Seguimiento de sitios web de Adform](https://exchange.adobe.com/apps/ec/103195)
+      * [Actualizar página de acción](https://exchange.adobe.com/apps/ec/102848)
+      * [Seguimiento Del Sitio Web De Adform](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Información general](./extensions/client/analytics/overview.md)
          * [Módulos compartidos](./extensions/client/analytics/shared-modules.md)
          * [Notas de la versión](./extensions/client/analytics/release-notes.md)
-      * [ADOBE ANALYTICS y ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics y Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics y Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics y Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Cadena de producto de Adobe Analytics {#product-string}
          * [Información general](./extensions/client/product-string/overview.md)
          * [Notas de la versión](./extensions/client/product-string/release-notes.md)
-      * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+      * [Generador de cadenas de producto de Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
       * [Adobe Analytics a través del SDK web de Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Información general](./extensions/client/audience-manager/overview.md)
-      * Capa de datos del cliente de Adobe {#client-data-layer}
+      * Capa de datos de cliente de Adobe {#client-data-layer}
          * [Información general](./extensions/client/client-data-layer/overview.md)
          * [Notas de la versión](./extensions/client/client-data-layer/release-notes.md)
       * Adobe de ContextHub {#contexthub}
@@ -108,7 +108,7 @@ ht-degree: 44%
          * [Complementos del SDK web](./extensions/client/web-sdk/web-sdk-plugins.md)
          * [Notas de la versión de la extensión Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
          * [Notas de la versión de complementos de SDK web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
-      * Adobe Experience Manager Asset Insights {#asset-insights}
+      * Datos del recurso de Adobe Experience Manager {#asset-insights}
          * [Información general](./extensions/client/asset-insights/overview.md)
          * [Notas de la versión](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
@@ -120,22 +120,22 @@ ht-degree: 44%
          * [Notas de la versión](./extensions/client/media-analytics-3x/release-notes.md)
       * Privacidad de Adobe {#privacy}
          * [Información general](./extensions/client/privacy/overview.md)
-      * [Selector de grupos de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)
+      * [Selector de grupo de informes de Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Información general](./extensions/client/target/overview.md)
          * [Notas de la versión](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
          * [Información general](./extensions/client/target-v2/overview.md)
          * [Notas de la versión](./extensions/client/target-v2/release-notes.md)
-      * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+      * [Kit de herramientas de Adobe Target](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
-      * [AEM Perspectivas de recursos de](https://exchange.adobe.com/apps/ec/103406)
-      * [Notificador JS de Airbreak](https://exchange.adobe.com/apps/ec/103342)
+      * AEM [Información de recursos de la](https://exchange.adobe.com/apps/ec/103406)
+      * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
       * [Amplitud](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
-      * [Etiqueta de conversión Awin](https://exchange.adobe.com/apps/ec/103240)
-      * [Contexto humano de Beemray](https://exchange.adobe.com/apps/ec/101063)
+      * [Etiqueta de conversión de Awin](https://exchange.adobe.com/apps/ec/103240)
+      * [Contexto humano de Bemray](https://exchange.adobe.com/apps/ec/101063)
       * [Seguimiento de eventos universales de Bing Ads](https://exchange.adobe.com/apps/ec/100154)
       * [Rama](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] seguimiento de vídeo {#brightcove}
@@ -143,35 +143,35 @@ ht-degree: 44%
          * [Notas de la versión](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
       * [Identificador de Source de canal](https://exchange.adobe.com/apps/ec/101412)
-      * [Experiencias con guepardos](https://exchange.adobe.com/apps/ec/102759)
-      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
+      * [Experiencias del guepardo](https://exchange.adobe.com/apps/ec/102759)
+      * [Tabla de clics](https://exchange.adobe.com/apps/ec/100082)
       * Complementos comunes de Analytics {#plugins}
          * [Información general](./extensions/client/plugins/overview.md)
          * [Notas de la versión](./extensions/client/plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
-      * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+      * [CuadradoDeContenido](https://exchange.adobe.com/apps/ec/100364)
       * [Administración de consentimiento de cookies por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * Núcleo {#core}
          * [Información general](./extensions/client/core/overview.md)
          * [Notas de la versión](./extensions/client/core/release-notes.md)
       * [Registrador de depuración personalizado](https://exchange.adobe.com/apps/ec/104698)
-      * [Reconocimiento del cliente](https://exchange.adobe.com/apps/ec/100688)
+      * [Reconocimiento de clientes](https://exchange.adobe.com/apps/ec/100688)
       * [Asistente para elementos de datos (DEA)](https://exchange.adobe.com/apps/ec/101413)
       * [Administrador de capa de datos](https://exchange.adobe.com/apps/ec/101462)
       * [Decibelio](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [Privacidad diferencial](https://exchange.adobe.com/apps/ec/104535)
-      * [Visores de Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
-      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Visualizadores de Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
+      * [Ayudante EDDL](https://exchange.adobe.com/apps/ec/107691)
       * [OneTag parlante](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
-      * [Compromiso predictivo de Genesys](https://exchange.adobe.com/apps/ec/106148)
+      * [Participación predictiva de Genesys](https://exchange.adobe.com/apps/ec/106148)
       * Capa de datos de Google {#google-data-layer}
          * [Información general](./extensions/client/google-data-layer/overview.md)
          * [Notas de la versión](./extensions/client/google-data-layer/release-notes.md)
       * [Etiqueta de sitio global de Google (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
-      * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+      * [EnMomento](https://exchange.adobe.com/apps/ec/100847)
       * [Asistente de JSON](https://exchange.adobe.com/apps/ec/106449)
       * [Análisis del reproductor JW](https://exchange.adobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
@@ -180,7 +180,7 @@ ht-degree: 44%
          * [Información general](./extensions/client/marketo/overview.md)
          * [Notas de la versión](./extensions/client/marketo/release-notes.md)
       * [Administrador de propiedades maestras](https://exchange.adobe.com/apps/ec/102992)
-      * [Etiqueta de mercurio](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Etiqueta Merkury](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [Información general](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -188,25 +188,25 @@ ht-degree: 44%
       * [Administración de consentimiento de OneTrust para cookies](https://exchange.adobe.com/apps/ec/100340)
       * [Mermelada de pimienta](https://exchange.adobe.com/apps/ec/103587)
       * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
-      * [Seguimiento de conversión de pinterest](https://exchange.adobe.com/apps/ec/100523)
+      * [Seguimiento de conversión de Pinterest](https://exchange.adobe.com/apps/ec/100523)
       * [Cargador de píxeles](https://exchange.adobe.com/apps/ec/100152)
       * [Comentarios del sitio web de Qualtrics](https://exchange.adobe.com/apps/ec/101569)
       * [Métrica cuántica](https://exchange.adobe.com/apps/ec/101535)
-      * [Resolver impulso](https://exchange.adobe.com/apps/ec/108352)
+      * [Resolver Momentum](https://exchange.adobe.com/apps/ec/108352)
       * [Rokt](https://exchange.adobe.com/apps/ec/107591)
       * [Encuesta SDI](https://exchange.adobe.com/apps/ec/102991)
-      * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
+      * [Kit de herramientas SDI](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
       * [Llave de almacenamiento](https://exchange.adobe.com/apps/ec/102990)
-      * [ETIQUETAS por Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
-      * [Recolección de Tealio](https://exchange.adobe.com/apps/ec/104217)
-      * [Enriquecimiento de datos de Tealium](https://exchange.adobe.com/apps/ec/104217)
+      * [ETIQUETAS por horizonte de bucle](https://exchange.adobe.com/apps/ec/106092)
+      * [Recopilación de tealio](https://exchange.adobe.com/apps/ec/104217)
+      * [Enriquecimiento De Datos Tealium](https://exchange.adobe.com/apps/ec/104217)
       * [Plataforma de base TMMData](https://exchange.adobe.com/apps/ec/100148)
       * [Administrador de consentimiento de cookies de TrustArc](https://exchange.adobe.com/apps/ec/107037)
       * [Reproducción de Vimeo](https://exchange.adobe.com/apps/ec/108937)
-      * [Elementos vitales web](https://exchange.adobe.com/apps/ec/106769)
-      * [Compositor de XDM](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+      * [constantes web](https://exchange.adobe.com/apps/ec/106769)
+      * [Compositor XDM](https://exchange.adobe.com/apps/ec/106062)
+      * [Punto de Yahoo](https://exchange.adobe.com/apps/ec/106062)
       * [Seguimiento de conversión de texto](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Reproducción](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] seguimiento de vídeo {#youtube}
@@ -221,13 +221,13 @@ ht-degree: 44%
          * [Información general](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Información general](./extensions/server/braze/overview.md)
-      * [Cloud Connector para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Conector de nube para Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Núcleo {#core}
          * [Información general](./extensions/server/core/overview.md)
       * [API de evento Epsilon](https://exchange.adobe.com/apps/ec/109127)
       * Conversiones mejoradas de Google Ads {#google-ads-enhanced-conversions}
          * [Información general](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Google Cloud Platform {#google-cloud-platform}
+      * Plataforma de Google Cloud {#google-cloud-platform}
          * [Información general](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Información general](./extensions/server/linkedin/overview.md)
@@ -239,21 +239,21 @@ ht-degree: 44%
          * [Información general](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Información general](./extensions/server/mixpanel/overview.md)
-      * [Centro de decisiones del cliente de Pega](https://exchange.adobe.com/apps/ec/107597)
+      * [Centro de decisiones de clientes de Pega](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Información general](./extensions/server/pinterest/overview.md)
-      * [API de conversiones de Snap](https://exchange.adobe.com/apps/ec/108550)
+      * [API de conversiones de instantáneas](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Snowflake] {#snowflake}
          * [Información general](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Información general](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Información general](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] API de eventos web {#tiktok}
+      * API {#tiktok} de eventos web de [!DNL Tiktok]
          * [Información general](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Información general](./extensions/server/tradedesk/overview.md)
-      * [!DNL Zendesk] API de eventos {#zendesk}
+      * API de eventos [!DNL Zendesk] {#zendesk}
          * [Información general](./extensions/server/zendesk/overview.md)
 * Desarrollo de extensiones {#extension-dev}
    * [Información general](./extension-dev/overview.md)

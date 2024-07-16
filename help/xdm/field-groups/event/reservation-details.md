@@ -6,35 +6,35 @@ exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
 # [!UICONTROL Detalles de reserva] grupo de campos de esquema
 
-[!UICONTROL Detalles de reserva] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) se utiliza para recopilar información sobre una reserva, incluida la duración, la modificación, el estado reembolsable y el número de habitaciones.
+[!UICONTROL Detalles de la reserva] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md) que se usa para recopilar información sobre una reserva, incluida la longitud, la modificación, el estado de reembolso y el número de habitaciones.
 
 El grupo de campos proporciona un único campo de tipo de objeto, `reservations`. Las propiedades contenidas en este objeto se explican a continuación.
 
-![Estructura de detalles de reserva](../../images/field-groups/reservation-details.png)
+![Estructura de detalles de la reserva](../../images/field-groups/reservation-details.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `nonRefundableAmount` | [Moneda](../../data-types/currency.md) | El importe del precio de la reserva marcado como no reembolsable. |
 | `transaction` | [Transacción](../../data-types/transaction.md) | Describe la transacción de moneda de la reserva. |
 | `id` | Cadena | Un identificador único de la reserva. |
-| `cancellation` | Número entero | Este valor se registra cuando se cancela una reserva. |
+| `cancellation` | Entero | Este valor se registra cuando se cancela una reserva. |
 | `confirmationNumber` | Cadena | El número de confirmación o identificador de la reserva. |
-| `created` | Número entero | Este valor se registra cuando se crea la reserva. |
+| `created` | Entero | Este valor se registra cuando se crea la reserva. |
 | `currencyCode` | Cadena | El código de divisa en formato ISO 4217 usado para realizar la compra. |
-| `endDate` | DateTime | La fecha final de entrega, vuelta o salida de la reserva. |
-| `length` | Número entero | Número total de días de la reserva. |
-| `modification` | Número entero | Este valor se registra cuando se modifica una reserva. |
-| `modificationDate` | DateTime | Hora a la que se modificó la reserva por última vez. |
-| `numberOfAdults` | Número entero | El número de adultos asociados con la reserva. |
-| `numberOfChildren` | Número entero | El número de niños asociados con la reserva. |
+| `endDate` | Fecha/Hora | La fecha final de entrega, vuelta o salida de la reserva. |
+| `length` | Entero | Número total de días de la reserva. |
+| `modification` | Entero | Este valor se registra cuando se modifica una reserva. |
+| `modificationDate` | Fecha/Hora | Hora a la que se modificó la reserva por última vez. |
+| `numberOfAdults` | Entero | El número de adultos asociados con la reserva. |
+| `numberOfChildren` | Entero | El número de niños asociados con la reserva. |
 | `purpose` | Cadena | El propósito de la reserva, por lo general, ya sea comercial o personal. |
-| `startDate` | DateTime | La fecha de inicio de recogida, salida o entrada de la reserva. |
+| `startDate` | Fecha/Hora | La fecha de inicio de recogida, salida o entrada de la reserva. |
 | `triptype` | Cadena | Indica si la reserva es para un viaje de ida, de ida y vuelta o de varias ciudades. |
 
 {style="table-layout:auto"}
@@ -46,7 +46,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 ## Grupos de campos de reserva específicos del sector
 
-Existen otros grupos de campos estándar que amplían el [!UICONTROL Detalles de reserva] para casos de uso específicos del sector. Consulte la siguiente documentación para obtener más detalles:
+Hay varios otros grupos de campos estándar que amplían el esquema [!UICONTROL Detalles de reserva] para casos de uso específicos del sector. Consulte la siguiente documentación para obtener más detalles:
 
 * [[!UICONTROL Reserva de restaurante]](./dining-reservation.md)
 * [[!UICONTROL Reserva de vuelo]](./flight-reservation.md)

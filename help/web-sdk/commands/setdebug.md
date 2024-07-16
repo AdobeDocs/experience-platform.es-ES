@@ -1,7 +1,8 @@
 ---
 title: setDebug
 description: Habilite o deshabilite la configuración de depuración del SDK web.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 9faac147-b7c7-4732-8454-35102970dae0
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -10,15 +11,15 @@ ht-degree: 0%
 
 # `setDebug`
 
-El `setDebug` permite entrar o salir del modo de depuración en el SDK web. Es una de las varias opciones disponibles para [depuración](../use-cases/debugging.md). El Adobe recomienda habilitar el modo de depuración en entornos de desarrollo o solo en el equipo local dentro de entornos de producción.
+El comando `setDebug` le permite entrar o salir del modo de depuración en el SDK web. Es una de las varias opciones disponibles para [depurar](../use-cases/debugging.md). El Adobe recomienda habilitar el modo de depuración en entornos de desarrollo o solo en el equipo local dentro de entornos de producción.
 
 ## Configurar la depuración mediante la extensión de etiqueta del SDK web
 
-La extensión de etiqueta no ofrece la capacidad de alternar las opciones de depuración dentro de la interfaz de usuario. Puede utilizar el editor de código personalizado con sintaxis de JavaScript o introducir el código JavaScript en la consola del explorador mientras está en el sitio.
+La extensión de etiqueta no ofrece la capacidad de alternar las opciones de depuración dentro de la interfaz de usuario. Puede utilizar el editor de código personalizado con la sintaxis de JavaScript o escribir el código de JavaScript en la consola del explorador mientras está en el sitio.
 
 ## Configurar la depuración mediante la biblioteca JavaScript del SDK web
 
-Ejecute el `setDebug` al llamar a la instancia configurada del SDK web. La única opción del objeto de configuración es `enabled`, que es un booleano que determina si el modo de depuración está habilitado.
+Ejecute el comando `setDebug` al llamar a la instancia configurada del SDK web. La única opción en el objeto de configuración es `enabled`, que es un booleano que determina si el modo de depuración está habilitado.
 
 ```js
 alloy("setDebug", {"enabled": true});

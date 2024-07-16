@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Apéndice de guía de API de zona protegida
 
-Este documento proporciona información complementaria relacionada con el trabajo con [!DNL Sandbox] API.
+Este documento proporciona información adicional relacionada con el trabajo con la API [!DNL Sandbox].
 
 ## Uso de parámetros de consulta {#query}
 
-El [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) admite el uso de parámetros de consulta para paginar y filtrar los resultados al enumerar zonas protegidas.
+La [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) admite el uso de parámetros de consulta para paginar y filtrar resultados al enumerar zonas protegidas.
 
 >[!NOTE]
 >
->El `limit` y `offset` los parámetros de consulta deben especificarse juntos. Si especifica solo uno, la API devolverá un error. Si especifica none, el límite predeterminado es 50 y el desplazamiento es 0.
+>Los parámetros de consulta `limit` y `offset` deben especificarse a la vez. Si especifica solo uno, la API devolverá un error. Si especifica none, el límite predeterminado es 50 y el desplazamiento es 0.
 
 | Parámetro | Descripción |
 | --- | --- |

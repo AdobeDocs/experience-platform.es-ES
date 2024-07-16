@@ -1,7 +1,8 @@
 ---
 title: Información de seguridad de la capa de transporte (TLS)
 description: Información acerca de las versiones TLS y los cifrados que se utilizan
-source-git-commit: 35ee2aca2b92cb8abe1fc69ad6cbc66b0e241e89
+exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 16%
@@ -12,9 +13,9 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Para obtener una referencia consolidada de los cambios terminológicos, consulte la [actualizaciones de términos](../../term-updates.md) documento.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Para obtener una referencia consolidada de los cambios terminológicos, consulte el documento [actualizaciones de términos](../../term-updates.md).
 
-Seguridad de la capa de transporte (TLS) es un protocolo criptográfico que proporciona seguridad de extremo a extremo para los datos enviados entre aplicaciones a través de Internet. Para obtener información más detallada sobre TLS, lea la [Conceptos básicos de TLS](https://www.internetsociety.org/deploy360/tls/basics/) documentación.
+Seguridad de la capa de transporte (TLS) es un protocolo criptográfico que proporciona seguridad de extremo a extremo para los datos enviados entre aplicaciones a través de Internet. Para obtener información más detallada sobre TLS, lea la [documentación básica de TLS](https://www.internetsociety.org/deploy360/tls/basics/).
 
 Las etiquetas de Adobe Experience Platform son un sistema de administración de etiquetas diseñado para cargar dinámicamente scripts en su sitio web. TLS asegura la comunicación entre el host de Adobe `assets.adobedtm.com` y el sitio web cuando se cargan estos scripts.
 
@@ -50,7 +51,7 @@ PORT    STATE SERVICE
 
 ### Alojamiento propio
 
-Si es usted [alojamiento propio](../publishing/hosts/self-hosting-libraries.md) Seleccione su biblioteca y, a continuación, las versiones TLS admitidas se determinarán mediante su propio servicio de alojamiento.
+Si está [alojando su biblioteca](../publishing/hosts/self-hosting-libraries.md) por su cuenta, las versiones TLS admitidas serán determinadas por su propio servicio de alojamiento.
 
 ## Cifras TLS que se eliminarán el 1 de mayo de 2024
 

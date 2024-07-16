@@ -22,38 +22,38 @@ Adobe Experience Platform proporciona un conjunto sólido de herramientas para a
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-Estas actividades se pueden realizar utilizando la variable [[!UICONTROL Ciclo de datos] IU de Workspace](#ui) o el [API de higiene de datos](#api). Cuando se ejecuta un trabajo del ciclo vital de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [plazos y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
+Estas actividades se pueden realizar usando el [[!UICONTROL Ciclo de vida de los datos] espacio de trabajo de la interfaz de usuario](#ui) o la [API de higiene de los datos](#api). Cuando se ejecuta un trabajo del ciclo vital de datos, el sistema proporciona actualizaciones de transparencia en cada paso del proceso. Consulte la sección sobre [cronologías y transparencia](#timelines-and-transparency) para obtener más información sobre cómo se representa cada tipo de trabajo en el sistema.
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management admite la eliminación de conjuntos de datos mediante [extremo de caducidad del conjunto de datos](./api/dataset-expiration.md) Eliminaciones de ID y (datos de nivel de fila) utilizando identidades principales a través de [extremo de orden de trabajo](./api/workorder.md). También puede administrar [caducidades del conjunto de datos](./ui/dataset-expiration.md) y [eliminaciones de registros](./ui/record-delete.md) mediante la IU de Platform. Consulte la documentación vinculada para obtener más información. Tenga en cuenta que el ciclo de vida de datos no admite la eliminación por lotes.
+>La administración avanzada del ciclo de vida de datos admite eliminaciones de conjuntos de datos mediante el [extremo de caducidad del conjunto de datos](./api/dataset-expiration.md) y eliminaciones de ID (datos de nivel de fila) mediante identidades principales a través del [extremo de orden de trabajo](./api/workorder.md). También puede administrar [caducidades de conjuntos de datos](./ui/dataset-expiration.md) y [eliminaciones de registros](./ui/record-delete.md) a través de la interfaz de usuario de Platform. Consulte la documentación vinculada para obtener más información. Tenga en cuenta que el ciclo de vida de datos no admite la eliminación por lotes.
 
-## [!UICONTROL Ciclo de datos] IU de Workspace {#ui}
+## [!UICONTROL Ciclo de vida de datos] área de trabajo de IU {#ui}
 
-El [!UICONTROL Ciclo de datos] El espacio de trabajo de en la IU de Platform le permite configurar y programar operaciones del ciclo vital de datos, lo que le ayuda a garantizar que los registros se mantengan según lo esperado.
+El área de trabajo [!UICONTROL Ciclo de vida de datos] de la interfaz de usuario de Platform le permite configurar y programar operaciones del ciclo de vida de datos, lo que le ayuda a garantizar que los registros se mantengan según lo esperado.
 
-Para ver los pasos detallados sobre la administración de tareas del ciclo vital de datos en la IU, consulte [guía de IU del ciclo vital de datos](./ui/overview.md).
+Para ver los pasos detallados sobre la administración de tareas de ciclo de vida de datos en la interfaz de usuario, consulte la [guía de IU de ciclo de vida de datos](./ui/overview.md).
 
 ## API de higiene de datos {#api}
 
-El [!UICONTROL Ciclo de datos] La interfaz de usuario de se basa en la API de higiene de datos, cuyos extremos están disponibles para que los utilice directamente si prefiere automatizar las actividades del ciclo vital de datos. Consulte la [Guía de API de higiene de datos](./api/overview.md) para obtener más información.
+La interfaz de usuario [!UICONTROL Data Lifecycle] se basa en la API de higiene de datos, cuyos extremos están disponibles para que los use directamente si prefiere automatizar las actividades del ciclo de vida de datos. Consulte la [Guía de API de higiene de datos](./api/overview.md) para obtener más información.
 
 ## Cronología y transparencia
 
-[Eliminación de registro](./ui/record-delete.md) Las solicitudes de caducidad de los conjuntos de datos de y tienen sus propias escalas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus respectivos flujos de trabajo.
+[Eliminación de registros](./ui/record-delete.md) y las solicitudes de caducidad de conjuntos de datos tienen sus propias escalas de tiempo de procesamiento y proporcionan actualizaciones de transparencia en puntos clave de sus respectivos flujos de trabajo.
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
-Lo siguiente ocurre cuando una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md) se ha creado:
+Lo siguiente ocurre cuando se crea una [solicitud de caducidad del conjunto de datos](./ui/dataset-expiration.md):
 
 | Prueba | Tiempo tras el vencimiento programado | Descripción |
 | --- | --- | --- |
-| Se ha enviado la solicitud | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud es visible en [!UICONTROL IU del ciclo vital de datos] después de enviarla, y permanece en estado pendiente hasta la hora de caducidad programada, después de la cual se ejecutará la solicitud. |
-| Conjunto de datos perdido | 1 hora | El conjunto de datos se borra del [página de inventario de conjuntos de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Los datos dentro del lago de datos solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |
-| Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles pueden eliminarse del sistema si todos sus atributos de componentes están vinculados a ese conjunto de datos. 30 horas después de eliminar el conjunto de datos, cualquier cambio resultante en los recuentos de perfiles generales se refleja en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
-| Audiencias actualizadas | 48 horas | Una vez actualizados todos los perfiles afectados, todos los [audiencias](../segmentation/home.md) se actualizan para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir como resultado de la eliminación. |
-| Recorridos y destinos actualizados | 50 horas | [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
-| Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo vital de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se actualiza para reflejarlo. |
+| Se ha enviado la solicitud | 0 horas | Un administrador de datos o analista de privacidad envía una solicitud para que un conjunto de datos caduque en un momento determinado. La solicitud es visible en la [!UICONTROL IU del ciclo de vida de datos] después de enviarse y permanece en un estado pendiente hasta la hora de caducidad programada, después de la cual se ejecutará. |
+| Conjunto de datos perdido | 1 hora | El conjunto de datos se quitó de la [página de inventario del conjunto de datos](../catalog/datasets/user-guide.md) en la interfaz de usuario. Los datos dentro del lago de datos solo se eliminan de forma suave y permanecerán así hasta el final del proceso, después del cual se eliminarán de forma dura. |
+| Recuento de perfiles actualizado | 30 horas | Según el contenido del conjunto de datos que se elimine, algunos perfiles pueden eliminarse del sistema si todos sus atributos de componentes están vinculados a ese conjunto de datos. 30 horas después de que se elimine el conjunto de datos, los cambios resultantes en los recuentos generales de perfiles se reflejarán en [widgets de tablero](../dashboards/guides/profiles.md#profile-count-trend) y otros informes. |
+| Audiencias actualizadas | 48 horas | Una vez que se hayan actualizado todos los perfiles afectados, todas las [audiencias](../segmentation/home.md) relacionadas se actualizarán para reflejar su nuevo tamaño. Según el conjunto de datos eliminado y los atributos por los que esté segmentando, el tamaño de cada audiencia podría aumentar o disminuir como resultado de la eliminación. |
+| Recorridos y destinos actualizados | 50 horas | Los [Recorridos](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campañas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) y [destinos](../destinations/home.md) se actualizan según los cambios en segmentos relacionados. |
+| Eliminación completa del hardware | 15 días | Todos los datos relacionados con el conjunto de datos se eliminan del lago de datos. El [estado del trabajo del ciclo de vida de datos](./ui/browse.md#view-details) que eliminó el conjunto de datos se ha actualizado para reflejarlo. |
 
 {style="table-layout:auto"}
 
@@ -74,4 +74,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Pasos siguientes
 
-Este documento proporciona una descripción general de las capacidades del ciclo vital de datos de Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [Guía de IU](./ui/overview.md). Para obtener información sobre cómo crear trabajos del ciclo de vida de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)
+Este documento proporciona una descripción general de las capacidades del ciclo vital de datos de Platform. Para empezar a realizar solicitudes de higiene de datos en la interfaz de usuario, consulte la [guía de la interfaz de usuario](./ui/overview.md). Para aprender a crear trabajos del ciclo de vida de datos mediante programación, consulte la [Guía de API de higiene de datos](./api/overview.md)

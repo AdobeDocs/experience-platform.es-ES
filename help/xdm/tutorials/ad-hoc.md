@@ -7,29 +7,29 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
 
 # Creación de un esquema ad hoc
 
-En circunstancias específicas, puede ser necesario crear un [!DNL Experience Data Model] Esquema (XDM) con campos que tienen un espacio de nombres para su uso únicamente por un único conjunto de datos. Esto se conoce como esquema &quot;ad-hoc&quot;. Los esquemas específicos se utilizan en varios flujos de trabajo de ingesta de datos para [!DNL Experience Platform], incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
+En circunstancias específicas, puede ser necesario crear un esquema [!DNL Experience Data Model] (XDM) con campos que tengan un espacio de nombres para que los use un solo conjunto de datos. Esto se conoce como esquema &quot;ad-hoc&quot;. Los esquemas ad hoc se utilizan en varios flujos de trabajo de ingesta de datos para [!DNL Experience Platform], incluida la ingesta de archivos CSV y la creación de determinados tipos de conexiones de origen.
 
-Este documento proporciona los pasos generales para crear un esquema ad-hoc utilizando [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Está pensado para utilizarse junto con otros medicamentos [!DNL Experience Platform] tutoriales que requieren la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de estos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
+Este documento proporciona pasos generales para crear un esquema ad-hoc mediante la [API de Registro de esquemas](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Está diseñado para utilizarse junto con otros tutoriales de [!DNL Experience Platform] que requieran la creación de un esquema ad-hoc como parte de su flujo de trabajo. Cada uno de estos documentos proporciona información detallada sobre cómo configurar correctamente un esquema ad-hoc para su caso de uso específico.
 
-## Primeros pasos
+## Introducción
 
-Este tutorial requiere una comprensión práctica de [!DNL Experience Data Model] (XDM). Antes de iniciar este tutorial, revise la siguiente documentación de XDM:
+Este tutorial requiere una comprensión práctica del sistema [!DNL Experience Data Model] (XDM). Antes de iniciar este tutorial, revise la siguiente documentación de XDM:
 
 - [Información general del sistema XDM](../home.md): Información general de alto nivel sobre XDM y su implementación en [!DNL Experience Platform].
-- [Conceptos básicos de composición de esquemas](../schema/composition.md): Información general sobre los componentes básicos de los esquemas XDM.
+- [Aspectos básicos de la composición de esquemas](../schema/composition.md): Una descripción general de los componentes básicos de los esquemas XDM.
 
-Antes de iniciar este tutorial, consulte la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para poder realizar llamadas correctamente a [!DNL Schema Registry] API. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado Aceptar y sus posibles valores).
+Antes de comenzar este tutorial, revisa la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API [!DNL Schema Registry] correctamente. Esto incluye su `{TENANT_ID}`, el concepto de &quot;contenedores&quot; y los encabezados necesarios para realizar solicitudes (con especial atención al encabezado Aceptar y sus posibles valores).
 
 ## Creación de una clase ad hoc
 
-El comportamiento de los datos de un esquema XDM está determinado por su clase subyacente. El primer paso para crear un esquema ad-hoc es crear una clase basada en la variable `adhoc` comportamiento. Esto se hace realizando una solicitud de POST a la `/tenant/classes` punto final.
+El comportamiento de los datos de un esquema XDM está determinado por su clase subyacente. El primer paso para crear un esquema ad-hoc es crear una clase basada en el comportamiento `adhoc`. Para ello, realice una solicitud de POST al extremo `/tenant/classes`.
 
 **Formato de API**
 
@@ -39,11 +39,11 @@ POST /tenant/classes
 
 **Solicitud**
 
-La siguiente solicitud crea una nueva clase XDM, configurada por los atributos proporcionados en la carga útil. Suministrando un `$ref` propiedad establecida en `https://ns.adobe.com/xdm/data/adhoc` en el `allOf` , esta clase hereda la matriz `adhoc` comportamiento. La solicitud también define un `_adhoc` , que contiene los campos personalizados para la clase.
+La siguiente solicitud crea una nueva clase XDM, configurada por los atributos proporcionados en la carga útil. Al proporcionar una propiedad `$ref` establecida en `https://ns.adobe.com/xdm/data/adhoc` en la matriz `allOf`, esta clase hereda el comportamiento `adhoc`. La solicitud también define un objeto `_adhoc`, que contiene los campos personalizados para la clase.
 
 >[!NOTE]
 >
->Los campos personalizados definidos en `_adhoc` varían según el caso de uso del esquema ad-hoc. Consulte el flujo de trabajo específico en el tutorial adecuado para los campos personalizados requeridos en función del caso de uso.
+>Los campos personalizados definidos en `_adhoc` varían según el caso de uso del esquema ad hoc. Consulte el flujo de trabajo específico en el tutorial adecuado para los campos personalizados requeridos en función del caso de uso.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles de la nueva clase, reemplazando el `properties._adhoc` nombre del objeto con un GUID que es un identificador único de sólo lectura generado por el sistema para la clase. El `meta:datasetNamespace` El atributo también se genera automáticamente y se incluye en la respuesta.
+Una respuesta correcta devuelve los detalles de la nueva clase y reemplaza el nombre del objeto `properties._adhoc` por un GUID que es un identificador único de sólo lectura generado por el sistema para la clase. El atributo `meta:datasetNamespace` también se genera automáticamente y se incluye en la respuesta.
 
 ```json
 {
@@ -152,7 +152,7 @@ Una respuesta correcta devuelve los detalles de la nueva clase, reemplazando el 
 
 ## Creación de un esquema ad hoc
 
-Una vez creada una clase ad-hoc, puede crear un nuevo esquema que implemente esa clase realizando una solicitud del POST a `/tenant/schemas` punto final.
+Una vez creada una clase ad-hoc, puede crear un nuevo esquema que implemente esa clase realizando una solicitud del POST al extremo `/tenant/schemas`.
 
 **Formato de API**
 
@@ -162,7 +162,7 @@ POST /tenant/schemas
 
 **Solicitud**
 
-La siguiente solicitud crea un nuevo esquema, que proporciona una referencia (`$ref`) a la `$id` de la clase ad-hoc creada anteriormente en su carga útil.
+La siguiente solicitud crea un nuevo esquema y proporciona una referencia (`$ref`) a `$id` de la clase ad-hoc creada anteriormente en su carga útil.
 
 ```shell
 curl -X POST \
@@ -186,7 +186,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve los detalles del esquema recién creado, incluido su esquema de solo lectura generado por el sistema `$id`.
+Una respuesta correcta devuelve los detalles del esquema recién creado, incluido su `$id` de solo lectura generado por el sistema.
 
 ```json
 {
@@ -227,7 +227,7 @@ Una respuesta correcta devuelve los detalles del esquema recién creado, incluid
 
 >[!NOTE]
 >
->Este paso es opcional. Si no desea inspeccionar la estructura de campos del esquema ad-hoc, puede saltar a [pasos siguientes](#next-steps) al final de este tutorial.
+>Este paso es opcional. Si no desea inspeccionar la estructura de campos del esquema ad-hoc, puede saltar a la sección [pasos siguientes](#next-steps) al final de este tutorial.
 
 Una vez creado el esquema ad hoc, puede realizar una solicitud de consulta (GET) para ver el esquema en su forma expandida. Esto se realiza utilizando el encabezado Aceptar adecuado en la solicitud de GET, como se muestra a continuación.
 
@@ -239,13 +239,13 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | La codificación URL `$id` URI o `meta:altId` del esquema ad hoc al que desea acceder. |
+| `{SCHEMA_ID}` | URI `$id` con codificación de dirección URL o `meta:altId` del esquema ad hoc al que desea tener acceso. |
 
 {style="table-layout:auto"}
 
 **Solicitud**
 
-La siguiente solicitud utiliza el encabezado Aceptar `application/vnd.adobe.xed-full+json; version=1`, que devuelve el formulario expandido del esquema. Tenga en cuenta que al recuperar un recurso específico de la variable [!DNL Schema Registry], el encabezado Aceptar de la solicitud debe incluir la versión principal del recurso en cuestión.
+La siguiente solicitud utiliza el encabezado Aceptar `application/vnd.adobe.xed-full+json; version=1`, que devuelve la forma expandida del esquema. Tenga en cuenta que al recuperar un recurso específico de [!DNL Schema Registry], el encabezado Aceptar de la solicitud debe incluir la versión principal del recurso en cuestión.
 
 ```shell
 curl -X GET \
@@ -309,6 +309,6 @@ Una respuesta correcta devuelve los detalles del esquema, incluidos todos los ca
 
 ## Pasos siguientes {#next-steps}
 
-Al seguir este tutorial, ha creado correctamente un nuevo esquema ad hoc. Si ha llegado a este documento como parte de otro tutorial, ahora puede utilizar el `$id` del esquema ad hoc para completar el flujo de trabajo como se indica.
+Al seguir este tutorial, ha creado correctamente un nuevo esquema ad hoc. Si ha llegado a este documento como parte de otro tutorial, ahora puede utilizar `$id` de su esquema ad-hoc para completar el flujo de trabajo como se le ha indicado.
 
-Para obtener más información sobre cómo trabajar con [!DNL Schema Registry] API, consulte la [guía para desarrolladores](../api/getting-started.md).
+Para obtener más información sobre cómo trabajar con la API [!DNL Schema Registry], consulte la [guía para desarrolladores](../api/getting-started.md).

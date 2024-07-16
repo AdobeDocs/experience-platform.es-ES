@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Punto final de cuota
 
-El `/quota` El punto final de la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo vital de datos con respecto a los límites de cuotas de su organización para cada tipo de trabajo.
+El extremo `/quota` de la API de higiene de datos le permite supervisar el uso de la administración avanzada del ciclo de vida de datos en relación con los límites de cuota de su organización para cada tipo de trabajo.
 
 Las cuotas se aplican a cada tipo de trabajo del ciclo vital de datos de las siguientes maneras:
 
@@ -21,7 +21,7 @@ Las cuotas se aplican a cada tipo de trabajo del ciclo vital de datos de las sig
 
 ## Introducción
 
-El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, consulte la [descripción general](./overview.md) para obtener la siguiente información:
+El extremo utilizado en esta guía forma parte de la API de higiene de datos. Antes de continuar, revise la [descripción general](./overview.md) para obtener la siguiente información:
 
 * Vínculos a documentación relacionada
 * Una guía para leer las llamadas de API de ejemplo en este documento
@@ -29,7 +29,7 @@ El extremo utilizado en esta guía forma parte de la API de higiene de datos. An
 
 ## Enumerar cuotas {#list}
 
-Puede ver la información de cuotas de su organización realizando una solicitud de GET a la `/quota` punto final.
+Puede ver la información de cuota de su organización realizando una solicitud de GET al extremo `/quota`.
 
 **Formato de API**
 
@@ -40,7 +40,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUOTA_TYPE}` | Parámetro de consulta opcional que especifica el tipo de cuota que se va a recuperar. Si no `quotaType` Si se proporciona el parámetro, todos los valores de cuota se devuelven en la respuesta de la API. Los valores de tipo aceptados incluyen:<ul><li>`datasetExpirationQuota`: este objeto muestra el número de caducidades del conjunto de datos activas simultáneamente para su organización y la asignación total de caducidades. </li><li>`dailyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización hoy y su asignación diaria total.<br>Nota: Solo se cuentan las solicitudes aceptadas. Si se rechaza una orden de trabajo porque no supera la validación, esas eliminaciones de identidad no se contabilizan en la cuota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización este mes y la asignación mensual total.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: este objeto muestra la cantidad total de solicitudes de actualización de registros realizadas por su organización este mes y la asignación mensual total.</li></ul> |
+| `{QUOTA_TYPE}` | Parámetro de consulta opcional que especifica el tipo de cuota que se va a recuperar. Si no se proporciona ningún parámetro `quotaType`, se devuelven todos los valores de cuota en la respuesta de la API. Los valores de tipo aceptados incluyen:<ul><li>`datasetExpirationQuota`: este objeto muestra el número de caducidades del conjunto de datos activas simultáneamente para su organización y la asignación total de caducidades. </li><li>`dailyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización hoy y su asignación diaria total.<br>Nota: solo se cuentan las solicitudes aceptadas. Si se rechaza una orden de trabajo porque no supera la validación, esas eliminaciones de identidad no se contabilizan en la cuota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: este objeto muestra el número total de solicitudes de eliminación de registros realizadas por su organización este mes y su asignación mensual total.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: este objeto muestra el número total de solicitudes de actualización de registros realizadas por su organización este mes y su asignación mensual total.</li></ul> |
 
 **Solicitud**
 
@@ -90,6 +90,6 @@ Una respuesta correcta devuelve los detalles de las cuotas del ciclo vital de da
 
 | Propiedad | Descripción |
 | --- | --- |
-| `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo del ciclo vital de datos:<ul><li>`expirationDatasetQuota`: Caducidad del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: Eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo del ciclo vital de datos.</li><li>`consumed`: el número de trabajos de este tipo ejecutados en el periodo actual. El nombre del objeto indica el período de cuota.</li><li>`quota`: Asignación para este tipo de trabajo para su organización. Para las eliminaciones y actualizaciones de registros, la cuota representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, la cuota representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
+| `quotas` | Muestra la información de cuota de cada tipo de trabajo del ciclo vital de datos. Cada objeto de cuota contiene las siguientes propiedades:<ul><li>`name`: el tipo de trabajo del ciclo vital de datos:<ul><li>`expirationDatasetQuota`: caducidades del conjunto de datos</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminaciones de registros</li></ul></li><li>`description`: una descripción del tipo de trabajo del ciclo vital de datos.</li><li>`consumed`: número de trabajos de este tipo ejecutados en el período actual. El nombre del objeto indica el período de cuota.</li><li>`quota`: asignación para este tipo de trabajo para su organización. Para las eliminaciones y actualizaciones de registros, la cuota representa el número de trabajos que se pueden ejecutar para cada período mensual. Para las caducidades del conjunto de datos, la cuota representa el número de trabajos que pueden estar activos simultáneamente en un momento determinado.</li></ul> |
 
 {style="table-layout:auto"}

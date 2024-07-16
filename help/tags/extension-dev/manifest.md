@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo configurar un archivo de manifiest
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 99%
+source-wordcount: '2591'
+ht-degree: 98%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 99%
 
 En el directorio base de la extensión debe crear un archivo llamado `extension.json`. Contiene detalles esenciales sobre su extensión que permiten a Adobe Experience Platform consumirla correctamente. Algunos de los contenidos se forman siguiendo [npm `package.json`](https://docs.npmjs.com/files/package.json).
 
-Se puede encontrar un ejemplo `extension.json` en el repositorio [Hello World extension](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) de GitHub.
+Se puede encontrar un ejemplo `extension.json` en el repositorio de extensión [Hello World](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) de GitHub.
 
 Un manifiesto de extensión debe constar de lo siguiente:
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | El nombre de la extensión. Debe ser diferente al de todas las demás extensiones de y debe cumplir con las [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no debe cambiarse después de publicar la extensión.** |
+| `name` | El nombre de la extensión. Debe ser único para todas las demás extensiones y debe cumplir con [reglas de nomenclatura](#naming-rules). **Las etiquetas lo utilizan como identificador y no debe cambiarse después de publicar la extensión.** |
 | `platform` | La plataforma para la extensión. El único valor aceptado en este momento es `web`. |
 | `version` | La versión de la extensión. Debe seguir el formato de versión [semver](https://semver.org/). Esto es coherente con [npm version field](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | El nombre legible en lenguaje natural de su extensión. Esto se mostrará a los usuarios de Platform. No es necesario mencionar “etiquetas” ni “extensión”, pues los usuarios ya sabrán que están viendo una extensión de etiqueta. |
@@ -120,7 +120,7 @@ Una definición de tipo es un objeto que se utiliza para describir un evento, un
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Opcional)</em></td>
-      <td>Cuando se proporcione, <code>displayName</code> se enumerará en <code>categoryName</code> en la interfaz de usuario de inicio de Todos los tipos que tengan el mismo <code>categoryName</code> se enumerarán en la misma categoría. Por ejemplo, si la extensión proporcionaba un tipo de evento <code>keyUp</code> y un tipo de evento <code>keyDown</code> y ambos tenían un <code>categoryName</code> de <code>Keyboard</code>, ambos tipos de evento se enumerarían en la categoría de teclado mientras el usuario seleccionaba entre la lista de tipos de evento disponibles al crear una regla. El valor de <code>categoryName</code> debe ser legible en lenguaje natural.</td>
+      <td>Cuando se proporcione, <code>displayName</code> se enumerará en <code>categoryName</code> dentro de la interfaz de usuario. Todos los tipos que tengan el mismo <code>categoryName</code> se enumerarán en la misma categoría. Por ejemplo, si la extensión proporcionaba un tipo de evento <code>keyUp</code> y un tipo de evento <code>keyDown</code> y ambos tenían un <code>categoryName</code> de <code>Keyboard</code>, ambos tipos de evento se enumerarían en la categoría de teclado mientras el usuario seleccionaba entre la lista de tipos de evento disponibles al crear una regla. El valor de <code>categoryName</code> debe ser legible en lenguaje natural.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

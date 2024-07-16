@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # Crear un área de nombres personalizada en la API del servicio de identidad
 
-Uso del [!DNL Identity Namespace] API, puede crear un área de nombres de identidad personalizada que estará disponible solo para su organización.
+Con la API [!DNL Identity Namespace], puede crear un área de nombres de identidad personalizada que solo estará disponible para su organización.
 
-Para obtener recomendaciones sobre la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas frecuentes sobre Identity Service](../troubleshooting-guide.md).
+Para obtener recomendaciones acerca de la creación de áreas de nombres personalizadas, consulte [la documentación de preguntas más frecuentes sobre el servicio de identidad](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Pasos siguientes
 
-Continúe con el siguiente tutorial para [Enumerar el ID nativo de una identidad](./list-native-id.md)
+Continúe con el siguiente tutorial para [enumerar el identificador nativo de una identidad](./list-native-id.md)

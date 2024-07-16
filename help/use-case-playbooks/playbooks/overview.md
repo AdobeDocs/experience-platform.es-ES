@@ -29,7 +29,7 @@ Lo que encontrará en esta guía de documentación:
 
 ## Información general {#overview}
 
-[!UICONTROL Manuales de casos de uso] puede ayudarle a superar el problema al empezar a usar Real-Time CDP o Adobe Journey Optimizer, cuando es posible que no sepa exactamente por qué empezar o cómo crear los recursos adecuados para lograr los casos de uso deseados. Los manuales de casos de uso pueden ayudarle aquí mediante lo siguiente:
+[!UICONTROL Los libros de reproducción de casos de uso] pueden ayudarle a superar el problema que se produce al empezar a usar Real-Time CDP o Adobe Journey Optimizer, cuando es posible que no sepa exactamente por qué empezar o cómo crear los recursos adecuados para lograr los casos de uso deseados. Los manuales de casos de uso pueden ayudarle aquí mediante lo siguiente:
 
 * Mostrando casos de uso para inspiración
 * Creación de diferentes recursos para utilizarlos, probarlos y promocionarlos en producción cuando estén listos.
@@ -50,11 +50,11 @@ Vea este vídeo para aprender a descubrir, crear, publicar y solucionar problema
 
 ## Disponibilidad {#availability}
 
-Algunos [!UICONTROL Manuales de casos de uso] se adaptan a los casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en la [Descripciones de productos de Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=es).
+Algunos [!UICONTROL libros de reproducción de casos de uso] están diseñados para casos de uso de Real-Time CDP, mientras que otros son los más adecuados para los clientes que utilizan Journey Optimizer. Examine el catálogo para encontrar los libros de reproducción más adecuados para su producto y caso de uso. Obtenga más información sobre Real-Time CDP y Journey Optimizer en las [descripciones de productos de Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=es).
 
 ## Guías de IU {#ui-guides}
 
-Después de decidir el manual de tácticas que va a utilizar, selecciónelo en la IU y comience con él. Lea las guías de IU sobre [cómo elegir el libro de estrategias correcto de una selección](/help/use-case-playbooks/playbooks/choose.md) para usted y [cómo crear, compartir y reutilizar instancias de libro de estrategias](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener información completa sobre cómo crear instancias y sacar el máximo partido a un manual de implementación. Para obtener información sobre cómo promocionar varios recursos de la zona protegida inspiradora a otras zonas protegidas de desarrollo y, a continuación, a producción, lea la documentación sobre [sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md).
+Después de decidir el manual de tácticas que va a utilizar, selecciónelo en la IU y comience con él. Lea las guías de la interfaz de usuario sobre [cómo elegir el libro de reproducción correcto entre una selección](/help/use-case-playbooks/playbooks/choose.md) por usted y [cómo crear, compartir y reutilizar instancias del libro de reproducción](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obtener información completa sobre cómo crear instancias y aprovechar al máximo un libro de reproducción. Para aprender a promocionar varios recursos desde la zona protegida inspiradora a otras zonas protegidas de desarrollo y, a continuación, a producción, lea la documentación sobre [reconocimiento de datos](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Solución de problemas y limitaciones conocidas {#trouble-shooting-known-limitations}
 

@@ -4,8 +4,8 @@ description: Obtenga información sobre cómo configurar Adobe Experience Platfo
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 38%
+source-wordcount: '811'
+ht-degree: 36%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Adobe Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que aloje, lo que le proporciona el bueno control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiquetas en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos.
+Adobe Experience Platform permite enviar compilaciones de biblioteca de etiquetas a un servidor SFTP protegido que aloje, lo que le proporciona un mayor control sobre cómo se almacenan y administran las compilaciones. Esta guía explica cómo configurar un host SFTP para una propiedad de etiquetas en la interfaz de usuario del Experience Platform o en la interfaz de usuario de recopilación de datos.
 
 >[!NOTE]
 >
@@ -51,35 +51,35 @@ Para obtener información más detallada, consulte el siguiente artículo de Med
 
 ## Creación de un host SFTP {#create}
 
-Seleccionar **[!UICONTROL Hosts]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Añadir host]**.
+Seleccione **[!UICONTROL Hosts]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Agregar host]**.
 
 ![Imagen que muestra el botón Agregar host seleccionado en la IU](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-Aparecerá el cuadro de diálogo de creación de hosts. Proporcione un nombre para el host y en **[!UICONTROL Tipo]**, seleccione **[!UICONTROL SFTP]**.
+Aparecerá el cuadro de diálogo de creación de hosts. Proporcione un nombre para el host y, en **[!UICONTROL Tipo]**, seleccione **[!UICONTROL SFTP]**.
 
-![Imagen que muestra la opción de alojamiento SFTP seleccionada.](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
+![Imagen que muestra la opción de alojamiento SFTP seleccionada](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
 ### Configuración del host SFTP {#configure}
 
 El cuadro de diálogo se amplía para incluir opciones de configuración adicionales para el host SFTP. Estas se explican a continuación.
 
-![Imagen que muestra los detalles necesarios para una conexión host SFTP](../../../images/ui/publishing/sftp-hosts/host-details.png)
+![Imagen que muestra los detalles necesarios para una conexión de host SFTP](../../../images/ui/publishing/sftp-hosts/host-details.png)
 
 | Campo de configuración | Descripción |
 | --- | --- |
-| [!UICONTROL No usar enlaces simbólicos] | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a la biblioteca [compilaciones](../builds.md) que se guardan en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando se selecciona esta opción, el host utiliza una operación de copia para actualizar los recursos de la versión directamente en lugar de utilizar enlaces simbólicos. |
+| [!UICONTROL No usar enlaces simbólicos] | De forma predeterminada, todos los hosts SFTP utilizan vínculos simbólicos (enlaces simbólicos) para hacer referencia a las [compilaciones](../builds.md) de la biblioteca que se guardan en el servidor. Sin embargo, no todos los servidores admiten el uso de enlaces simbólicos. Cuando se selecciona esta opción, el host utiliza una operación de copia para actualizar los recursos de la versión directamente en lugar de utilizar enlaces simbólicos. |
 | [!UICONTROL URL del servidor SFTP] | Ruta de acceso base de URL del servidor. |
 | [!UICONTROL Ruta] | Ruta de acceso que se anexará a la dirección URL del servidor base para este host. |
 | [!UICONTROL Puerto] | El puerto debe ser uno de los siguientes:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Como práctica recomendada de seguridad, Adobe limita la cantidad de puertos que se pueden utilizar para el tráfico saliente. Los puertos seleccionados suelen permitirse a través de servidores de seguridad corporativos e incluyen algunos rangos de flexibilidad. |
 | [!UICONTROL Nombre de usuario] | Nombre de usuario que se utilizará al acceder al servidor. |
 | [!UICONTROL Clave privada cifrada] | La clave privada cifrada que creó en un [paso anterior](#access-key). |
 
-Seleccionar **[!UICONTROL Guardar]** para crear el host con la configuración seleccionada.
+Seleccione **[!UICONTROL Guardar]** para crear el host con la configuración seleccionada.
 
-![Imagen que muestra el host SFTP que se guarda](../../../images/ui/publishing/sftp-hosts/save-host.png)
+![Imagen que muestra el host SFTP que se está guardando](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
 Al seleccionar **[!UICONTROL Guardar]**, se comprueba la conexión y la capacidad de enviar los archivos al servidor SFTP. Platform crea una carpeta, escribe un archivo dentro de esa carpeta, comprueba que el archivo esté allí y limpia la carpeta después. Si la cuenta de usuario del servidor SFTP (la que se adjunta al certificado seguro que ha proporcionado a Platform) no tiene los permisos necesarios para realizar esta acción, el host pasa a estar en estado &quot;failed&quot;.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo configurar un servidor SFTP autoalojado para utilizarlo en etiquetas. Una vez establecido el host, puede asociarlo a uno o más de sus [entornos](../environments.md) para publicar bibliotecas de etiquetas. Para obtener más información sobre el proceso de alto nivel de activación de las funcionalidades de etiquetas en las propiedades web o móviles, consulte la [resumen de publicación](../overview.md).
+En esta guía se explica cómo configurar un servidor SFTP autoalojado para utilizarlo en etiquetas. Una vez establecido el host, puede asociarlo con uno o más de sus [entornos](../environments.md) para publicar bibliotecas de etiquetas. Para obtener más información sobre el proceso de alto nivel de activación de las funcionalidades de etiquetas en las propiedades web o móviles, consulte [información general de publicación](../overview.md).

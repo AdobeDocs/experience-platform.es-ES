@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Etiquetas de Experience Platform (China)
 
-Cuando utiliza un [host administrado por Adobe](./hosts/managed-by-adobe-host.md) para ofrecer sus recursos de etiquetas de Adobe Experience Platform en su sitio web, estos se distribuyen entre varias redes de entrega de contenido (CDN) de todo el mundo para ofrecer la velocidad de descarga más rápida. Sin embargo, hay ciertas regiones que requieren que todos los recursos del sitio web se dupliquen y alojen en un servidor dentro de esa región.
+Cuando usas un [host administrado por Adobe](./hosts/managed-by-adobe-host.md) para entregar tus recursos de Adobe Experience Platform tags en tu sitio web, estos se distribuyen entre varias redes de distribución de contenido (CDN) de todo el mundo para ofrecer la mayor velocidad de descarga. Sin embargo, hay ciertas regiones que requieren que todos los recursos del sitio web se dupliquen y alojen en un servidor dentro de esa región.
 
 Para tener en cuenta esto, las etiquetas de Experience Platform proporcionan una función de etiquetas de Experience Platform (China) que le permite enviar contenido a estas regiones especiales.
 
@@ -27,20 +27,20 @@ Una vez habilitadas las etiquetas de Experience Platform (China), no significa q
 
 >[!IMPORTANT]
 >
->Las bibliotecas creadas antes de habilitar las etiquetas en China seguirán funcionando tal cual exactamente como lo hacen hoy. Esto también se aplica a las bibliotecas no administradas por el Adobe, ya que [entornos archivados](./environments.md#archive) solo utilizan direcciones URL relativas para sus rutas de recursos. Tenga en cuenta que, una vez que haya habilitado las etiquetas de Experience Platform (China), cualquier biblioteca que cree que no esté administrada por Adobe se comportará como si la función de etiquetas en China no estuviera habilitada.
+>Las bibliotecas creadas antes de habilitar las etiquetas en China seguirán funcionando tal cual exactamente como lo hacen hoy. Esto también se aplica a las bibliotecas no administradas por el Adobe, ya que [entornos archivados](./environments.md#archive) solo usan URL relativas para sus rutas de recursos. Tenga en cuenta que, una vez que haya habilitado las etiquetas de Experience Platform (China), cualquier biblioteca que cree que no esté administrada por Adobe se comportará como si la función de etiquetas en China no estuviera habilitada.
 
 Una vez que haya habilitado etiquetas en China y haya reconstruido las bibliotecas que desee utilizar desde las nuevas regiones de alojamiento, puede recuperar los nuevos códigos incrustados de la región de alojamiento para añadirlos a sus sitios web.
 
 >[!NOTE]
 >
->El código incrustado de biblioteca de que se enumera en la variable [!UICONTROL Standard] La región de alojamiento seguirá funcionando tal cual, así como cualquier código incrustado de Principio de página o Final de página que ya esté en los sitios web.
+>El código incrustado de biblioteca que aparece en la región de alojamiento [!UICONTROL Standard] seguirá funcionando tal cual, así como los códigos incrustados de Principio de página o Final de página que ya existan en los sitios web.
 
-Visite la **[!UICONTROL Entornos]** o vea las instrucciones de instalación del entorno desde la pantalla de edición de la biblioteca para buscar los nuevos códigos incrustados. Cada nueva región de alojamiento admitida aparece después de [!UICONTROL Standard] región de alojamiento (se utiliza para áreas en el mundo compatibles sin etiquetas de Experience Platform (China)). La captura de pantalla siguiente muestra un código incrustado para la región de China, que utiliza `.cn` como su dominio de nivel superior (TLD).
+Visite la página **[!UICONTROL Entornos]** o vea las instrucciones de instalación de entorno desde la pantalla de edición de la biblioteca para encontrar los nuevos códigos incrustados. Cada nueva región de hospedaje admitida aparece después de la región de hospedaje [!UICONTROL Standard] (que se usa para áreas del mundo que son compatibles sin etiquetas de Experience Platform (China)). La captura de pantalla siguiente muestra un código incrustado para la región de China, que utiliza `.cn` como dominio de nivel superior (TLD).
 
 ![Código incrustado para la región de China](../../images/ui/publishing/premium-cdn/embed-codes.png)
 
-Elija el código incrustado adecuado para la página web y péguelo dentro de `<head>` de su documento. Para obtener más información sobre el uso de códigos incrustados para instalar bibliotecas de etiquetas, consulte la [Guía de IU de entornos](./environments.md#installation).
+Elija el código incrustado apropiado para la página web y péguelo dentro de la etiqueta `<head>` del documento. Para obtener más información sobre el uso de códigos incrustados para instalar bibliotecas de etiquetas, consulte la [guía de la interfaz de usuario de entornos](./environments.md#installation).
 
 ## Pasos siguientes
 
-En esta guía se explica cómo habilitar e instalar la función Etiquetas de Experience Platform (China) para la implementación de etiquetas. Para obtener más información sobre la instalación y prueba de bibliotecas de etiquetas en las propiedades web y móviles, consulte la [resumen de publicación](./overview.md).
+En esta guía se explica cómo habilitar e instalar la función Etiquetas de Experience Platform (China) para la implementación de etiquetas. Para obtener más información sobre cómo instalar y probar bibliotecas de etiquetas en las propiedades web y móviles, consulte [información general de publicación](./overview.md).

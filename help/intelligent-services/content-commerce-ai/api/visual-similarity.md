@@ -1,12 +1,12 @@
 ---
 keywords: Similitud visual;similitud visual;api ccai
 solution: Experience Platform
-title: Similitud visual en la API de IA de contenido y comercio
+title: Similitud visual en el contenido y la API de Commerce AI
 description: El servicio de similitud visual, cuando recibe una imagen, encuentra automáticamente imágenes similares visualmente de un catálogo.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
 source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '512'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] está en versión beta. La documentación está sujeta a cambios.
+>[!DNL Content and Commerce AI] está en la versión beta. La documentación está sujeta a cambios.
 
 El servicio de similitud visual, cuando recibe una imagen, encuentra automáticamente imágenes similares visualmente de un catálogo.
 
@@ -35,7 +35,7 @@ La siguiente solicitud recupera imágenes visualmente similares de un catálogo,
 
 >[!CAUTION]
 >
->`analyzer_id` determina cuál [!DNL Sensei Content Framework] se utiliza. Compruebe que dispone de los `analyzer_id` antes de realizar la solicitud. Póngase en contacto con el equipo beta de Content and Commerce AI para recibir su `analyzer_id` para este servicio.
+>`analyzer_id` determina qué [!DNL Sensei Content Framework] se usa. Verifique que cuenta con el `analyzer_id` apropiado antes de realizar su solicitud. Póngase en contacto con el equipo beta de Content y Commerce AI para recibir su `analyzer_id` para este servicio.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -74,21 +74,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propiedad | Descripción | Obligatorio |
 | --- | --- | --- |
-| `analyzer_id` | El [!DNL Sensei] ID de servicio en el que se implementa la solicitud. Este ID determina cuál de los [!DNL Sensei Content Frameworks] se utilizan. Para obtener servicios personalizados, póngase en contacto con el equipo de inteligencia artificial aplicada al contenido y al comercio para configurar un ID personalizado. | Sí |
+| `analyzer_id` | El ID de servicio [!DNL Sensei] en el que se implementó su solicitud. Este identificador determina cuáles de los [!DNL Sensei Content Frameworks] se utilizan. Para obtener servicios personalizados, póngase en contacto con el equipo de Contenido y Commerce AI para configurar un ID personalizado. | Sí |
 | `application-id` | El ID de la aplicación creada. | Sí |
-| `data` | Matriz que contiene un objeto JSON y cada objeto de la matriz que representa una imagen. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de `data` matriz. Cualquiera de las propiedades restantes descritas a continuación en esta tabla se puede anular desde `data`. | Sí |
+| `data` | Matriz que contiene un objeto JSON y cada objeto de la matriz que representa una imagen. Cualquier parámetro pasado como parte de esta matriz anula los parámetros globales especificados fuera de la matriz `data`. Cualquiera de las propiedades restantes descritas a continuación en esta tabla se puede anular desde dentro de `data`. | Sí |
 | `content-id` | ID único del elemento de datos que se devuelve en la respuesta. Si no se pasa, se asigna un ID generado automáticamente. | No |
-| `content` | El contenido que debe analizar el servicio de similitud visual. En caso de que la imagen forme parte del cuerpo de la solicitud, utilice `-F file=@<filename>` en el comando curl para pasar la imagen, dejando este parámetro como una cadena vacía. <br> Si la imagen es un archivo en S3, pase la dirección URL firmada. Cuando el contenido forma parte del cuerpo de la solicitud, la lista de elementos de datos debe tener un solo objeto. Si se pasa más de un objeto, solo se procesará el primer objeto. | Sí |
+| `content` | El contenido que debe analizar el servicio de similitud visual. En caso de que la imagen forme parte del cuerpo de la solicitud, use `-F file=@<filename>` en el comando curl para pasar la imagen, dejando este parámetro como una cadena vacía. <br> Si la imagen es un archivo en S3, pase la dirección URL firmada. Cuando el contenido forma parte del cuerpo de la solicitud, la lista de elementos de datos debe tener un solo objeto. Si se pasa más de un objeto, solo se procesará el primer objeto. | Sí |
 | `content-type` | Se utiliza para indicar si la entrada es parte del cuerpo de la solicitud o una URL firmada para un bloque de S3. El valor predeterminado de esta propiedad es `inline`. | No |
 | `encoding` | Formato de archivo de la imagen de entrada. Actualmente solo se pueden procesar imágenes de JPEG y PNG. El valor predeterminado de esta propiedad es `jpeg`. | No |
 | `threshold` | El umbral de puntuación (0 a 1) por encima del cual se deben devolver los resultados. Utilice el valor `0` para devolver todos los resultados. El valor predeterminado de esta propiedad es `0`. | No |
-| `top-N` | El número de resultados que se van a devolver (no puede ser un entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se usa en conjunto con `threshold`, el número de resultados devueltos es el menor de los establecidos. El valor predeterminado de esta propiedad es `0`. | No |
+| `top-N` | El número de resultados que se van a devolver (no puede ser un entero negativo). Utilice el valor `0` para devolver todos los resultados. Cuando se usa junto con `threshold`, el número de resultados devuelto es el menor de los establecidos. El valor predeterminado de esta propiedad es `0`. | No |
 | `custom` | Parámetros personalizados que se van a pasar. | No |
 | `historic-metadata` | Matriz que puede pasar metadatos. | No |
 
 **Respuesta**
 
-Una respuesta correcta devuelve un valor `response` matriz que contiene un `feature_value` y `feature_name` para cada una de las imágenes visualmente similares que se encuentran en el catálogo.
+Una respuesta correcta devuelve una matriz `response` que contiene `feature_value` y `feature_name` para cada una de las imágenes visualmente similares encontradas en el catálogo.
 
 En la respuesta de ejemplo que se muestra a continuación se devolvieron las siguientes imágenes visualmente similares:
 

@@ -1,27 +1,27 @@
 ---
-title: Notas de la versión de la extensión Adobe Experience Cloud Identity Service
-description: Últimas notas de la versión de la extensión de etiqueta Adobe Experience Cloud Identity Service en Adobe Experience Platform.
+title: Notas de la versión de la extensión del servicio de identidad de Adobe Experience Cloud
+description: Últimas notas de la versión de la extensión de etiqueta del servicio de identidad de Adobe Experience Cloud en Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '688'
 ht-degree: 75%
 
 ---
 
-# Notas de la versión de la extensión Adobe Experience Cloud Identity Service
+# Notas de la versión de la extensión del servicio de identidad de Adobe Experience Cloud
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en Adobe Experience Platform. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](../../../term-updates.md) para obtener una referencia consolidada de los cambios terminológicos.
 
-Este documento describe las notas de la versión de la extensión de Adobe Experience Cloud Identity Service. Para obtener las notas de la versión del propio servicio de ID de Experience Cloud, consulte la [Documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
+Este documento describe las notas de la versión de la extensión de Adobe Experience Cloud Identity Service. Para obtener las notas de la versión del propio servicio de identidad del Experience Cloud, consulte la [documentación del servicio de identidad](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=es).
 
 ## 17 de octubre de 2022
 
 ### Extensión de Experience Cloud ID 5.5.0
 
-* La extensión ahora es compatible con la versión 5.5.0 de [Cliente JS de visitante](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte la [Notas de la versión del visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para actualizaciones específicas.
+* La extensión ahora admite la versión 5.5.0 de [Visitor JS Client](https://github.com/Adobe-Marketing-Cloud/id-service). Consulte [Notas de la versión de Visitante](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) para obtener actualizaciones específicas.
 
 ## 9 de marzo de 2022
 
@@ -29,7 +29,7 @@ Este documento describe las notas de la versión de la extensión de Adobe Exper
 
 * Esta versión contiene la última versión, Visitor 5.4.0, que tiene las siguientes actualizaciones:
 
-   * Capacidad para configurar la duración del `s_ecid` cookie con la configuración de cookieLifetime
+   * Capacidad para configurar la duración de la cookie `s_ecid` mediante la configuración cookieLifetime
    * Actualización de un problema con el navegador Firefox que se produce cuando una página se carga en un iFrame secundario
 
 ## 10 de octubre de 2021
@@ -38,8 +38,8 @@ Este documento describe las notas de la versión de la extensión de Adobe Exper
 
 * Esta versión contiene la última versión, Visitor 5.3.0, que tiene las siguientes actualizaciones nuevas:
 
-   * Se ha actualizado el algoritmo para generar ECID local
-   * Última inclusión con `Secure` y `SameSite` indicadores de la cookie de privacidad
+   * Algoritmo actualizado para generar ECID local
+   * Última inclusión con `Secure` y `SameSite` indicadores para la cookie de privacidad
    * Se ha corregido un problema con el navegador Firefox cuando una página se carga en un iFrame secundario
 
 ## 12 de enero de 2021
@@ -111,7 +111,7 @@ Los detalles de estos valores de atributos se encuentran en [web.dev](https://we
 * Se ha corregido un error para obtener la entrada de aprobaciones previas de inclusión
 * Se cambió el nombre de VIDEO_ANALYTICS a MEDIA_ANALYTICS en preOptInApprovals
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 17 de julio de 2019
 
@@ -120,7 +120,7 @@ Los detalles de estos valores de atributos se encuentran en [web.dev](https://we
 * Se ha actualizado visitor.js a la versión 4.4.0
 * Ahora se admite el proceso de hash SHA256 para setCustomerIDs
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 13 de mayo de 2019
 
@@ -129,7 +129,7 @@ Los detalles de estos valores de atributos se encuentran en [web.dev](https://we
 * Se ha actualizado visitor.js en 4.3
 * Se ha añadido el tipo de elemento de datos para ECID como parte de la extensión de etiqueta
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 9 de abril de 2019
 
@@ -150,7 +150,7 @@ Los detalles de estos valores de atributos se encuentran en [web.dev](https://we
 * Se ha actualizado visitor.js en 4.0
 * Se han agregado opciones de configuración para el nuevo complemento de objeto integrado. La configuración del complemento se puede utilizar para eliminar llamadas de señalización y señalización de soluciones de Adobe con el fin de admitir mejor algunas normativas como el RGPD
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 20 de marzo de 2018
 

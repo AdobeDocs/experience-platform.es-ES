@@ -5,12 +5,12 @@ exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
 source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '810'
 ht-degree: 4%
 
 ---
 
-# [!DNL AWS] información general sobre extensiones
+# Información general sobre la extensión [!DNL AWS]
 
 >[!NOTE]
 >
@@ -18,47 +18,47 @@ ht-degree: 4%
 
 [[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) es una plataforma de computación en la nube que ofrece una amplia variedad de servicios, como computación distribuida, almacenamiento de bases de datos, entrega de contenido y servicios de integración de software como servicio (SaaS) para la administración de la relación con los clientes (CRM) y la planificación de recursos empresariales (ERP).
 
-El [!DNL AWS] [reenvío de eventos](../../../ui/event-forwarding/overview.md) la extensión aprovecha [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) para enviar eventos de Adobe Experience Platform Edge Network a [!DNL AWS] para un procesamiento posterior. Esta guía explica cómo instalar la extensión y utilizar sus funcionalidades en una regla de reenvío de eventos.
+La extensión [!DNL AWS] [reenvío de eventos](../../../ui/event-forwarding/overview.md) aprovecha [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) para enviar eventos del Edge Network de Adobe Experience Platform a [!DNL AWS] para un procesamiento posterior. Esta guía explica cómo instalar la extensión y utilizar sus funcionalidades en una regla de reenvío de eventos.
 
 ## Requisitos previos
 
-Debe tener un [!DNL AWS] cuenta con un existente [!DNL Kinesis] flujo de datos para utilizar esta extensión. Si no tiene un flujo de datos preexistente, consulte la [!DNL AWS] documentación sobre [crear un nuevo flujo de datos utilizando [!DNL AWS] Consola de administración](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Debe tener una cuenta de [!DNL AWS] con un flujo de datos de [!DNL Kinesis] existente para poder usar esta extensión. Si no tiene un flujo de datos preexistente, consulte la documentación de [!DNL AWS] sobre [creación de un nuevo flujo de datos con la [!DNL AWS] consola de administración](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
 
 ## Instalación de la extensión {#install}
 
-Para instalar el [!DNL AWS] extensión, vaya a la IU de recopilación de datos o a la IU del Experience Platform y seleccione **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
+Para instalar la extensión [!DNL AWS], vaya a la IU de recopilación de datos o a la IU del Experience Platform y seleccione **[!UICONTROL Reenvío de eventos]** en el panel de navegación izquierdo. Aquí, seleccione una propiedad a la que añadir la extensión o cree una nueva propiedad.
 
-Una vez seleccionada o creada la propiedad deseada, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo, seleccione la opción **[!UICONTROL Catálogo]** pestaña. Busque la variable [!UICONTROL AWS] y, a continuación, seleccione **[!UICONTROL Instalar]**.
+Una vez que haya seleccionado o creado la propiedad deseada, seleccione **[!UICONTROL Extensiones]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Catálogo]**. Busque la tarjeta [!UICONTROL AWS] y, a continuación, seleccione **[!UICONTROL Instalar]**.
 
-![El [!UICONTROL Instalar] botón seleccionado para la [!UICONTROL AWS] en la IU de recopilación de datos.](../../../images/extensions/server/aws/install.png)
+![Se está seleccionando el botón [!UICONTROL Instalar] para la extensión [!UICONTROL AWS] en la IU de recopilación de datos.](../../../images/extensions/server/aws/install.png)
 
-En la pantalla siguiente, debe proporcionar las credenciales de conexión para su [!DNL AWS] cuenta. Específicamente, debe proporcionar su [!DNL AWS] ID de clave de acceso y clave de acceso secreta. Si no conoce estos valores, consulte la [!DNL AWS] documentación sobre [cómo obtener el ID de la clave de acceso y la clave de acceso secreta](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+En la pantalla siguiente, debe proporcionar las credenciales de conexión de la cuenta de [!DNL AWS]. Específicamente, debe proporcionar su clave de acceso [!DNL AWS] y su clave de acceso secreta. Si no conoce estos valores, consulte la documentación de [!DNL AWS] sobre [cómo obtener el identificador de clave de acceso y la clave de acceso secreta](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
-![El ID de clave de acceso y la clave de acceso secreta añadidas en la vista de configuración de la extensión.](../../../images/extensions/server/aws/credentials.png)
+![El identificador de clave de acceso y la clave de acceso secreta se agregaron en la vista de configuración de la extensión.](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
->Debe adjuntarse una política de acceso a la [!DNL AWS] cuenta utilizada para generar las credenciales de acceso. Esta directiva debe configurarse para conceder derechos de acceso para enviar datos a [!DNL Kinesis] flujo de datos. Consulte **Ejemplo 2** en el [!DNL AWS] documento en [políticas de ejemplo para [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) para ver cómo se debe definir la directiva.
+>Se debe adjuntar una directiva de acceso a la cuenta de [!DNL AWS] utilizada para generar las credenciales de acceso. Esta directiva debe configurarse para conceder derechos de acceso para enviar datos al flujo de datos de [!DNL Kinesis]. Consulte **Ejemplo 2** en el documento [!DNL AWS] sobre [directivas de ejemplo para [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) para ver cómo se debe definir la directiva.
 
-Cuando termine, seleccione **[!UICONTROL Guardar]** y se instala la extensión de.
+Cuando termine, seleccione **[!UICONTROL Guardar]** y la extensión estará instalada.
 
 ## Configuración de una regla de reenvío de eventos {#rule}
 
-Después de instalar la extensión, cree un nuevo reenvío de eventos [regla](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al configurar las acciones de la regla, seleccione **[!UICONTROL AWS]** extensión y seleccione **[!UICONTROL Enviar datos al flujo de datos de Kinesis]** para el tipo de acción.
+Después de instalar la extensión, cree una nueva regla de reenvío de eventos [rule](../../../ui/managing-resources/rules.md) y configure sus condiciones como desee. Al configurar las acciones de la regla, seleccione la extensión **[!UICONTROL AWS]** y, a continuación, seleccione **[!UICONTROL Enviar datos al flujo de datos de Kinesis]** para el tipo de acción.
 
-![El [!UICONTROL Enviar datos al flujo de datos de Kinesis] Tipo de acción seleccionado para una regla de la IU de recopilación de datos.](../../../images/extensions/server/aws/select-action-type.png)
+![Se está seleccionando el tipo de acción [!UICONTROL Enviar datos a la secuencia de datos de Kinesis] para una regla en la IU de recopilación de datos.](../../../images/extensions/server/aws/select-action-type.png)
 
-El panel derecho se actualiza para mostrar las opciones de configuración de cómo se deben enviar los datos. Específicamente, debe asignar [elementos de datos](../../../ui/managing-resources/data-elements.md) a las distintas propiedades que representan su [!DNL Event Hub] configuración.
+El panel derecho se actualiza para mostrar las opciones de configuración de cómo se deben enviar los datos. En concreto, debe asignar [elementos de datos](../../../ui/managing-resources/data-elements.md) a las distintas propiedades que representan su configuración de [!DNL Event Hub].
 
-![Las opciones de configuración de [!UICONTROL Enviar datos al flujo de datos de Kinesis] tipo de acción que se muestra en la IU.](../../../images/extensions/server/aws/data-stream-details.png)
+![Las opciones de configuración para el tipo de acción [!UICONTROL Enviar datos a la secuencia de datos de Kinesis] que se muestra en la interfaz de usuario.](../../../images/extensions/server/aws/data-stream-details.png)
 
 **[!UICONTROL Detalles del flujo de datos de Kinesis]**
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre del flujo] | Nombre del flujo al que esta regla de reenvío de eventos enviará registros de datos. |
-| [!UICONTROL AWS Region] | El [!DNL AWS] región donde el [!DNL Kinesis] se crea el flujo de datos. |
-| [!UICONTROL Clave de partición] | El [clave de partición](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) que la extensión utilizará al enviar datos al flujo de datos.<br><br>[!DNL Kinesis Data Streams] separa los registros de datos que pertenecen a una secuencia en varios fragmentos. Utiliza la clave de partición que se envía con cada registro de datos para determinar a qué recurso compartido pertenece un registro de datos determinado.<br><br>Una buena clave de partición para distribuir clientes puede ser el número de cliente, ya que es diferente para cada cliente. Una clave de partición deficiente puede afectar a su código postal porque todos pueden vivir en la misma zona cercana. En general, debe elegir una clave de partición que tenga el rango más alto de diferentes valores potenciales. Consulte la [!DNL AWS] artículo sobre [escalar su [!DNL Kinesis] flujos de datos](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) para conocer las prácticas recomendadas sobre la administración de claves de partición. |
+| [!UICONTROL Nombre de secuencia] | Nombre del flujo al que esta regla de reenvío de eventos enviará registros de datos. |
+| [!UICONTROL AWS Region] | Región [!DNL AWS] donde se crea el flujo de datos [!DNL Kinesis]. |
+| [!UICONTROL Clave de partición] | La [clave de partición](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) que la extensión usará al enviar datos al flujo de datos.<br><br>[!DNL Kinesis Data Streams] separa los registros de datos que pertenecen a una secuencia en varios fragmentos. Utiliza la clave de partición que se envía con cada registro de datos para determinar a qué recurso compartido pertenece un registro de datos determinado.<br><br>Una buena clave de partición para distribuir clientes puede ser el número de cliente, ya que es diferente para cada cliente. Una clave de partición deficiente puede afectar a su código postal porque todos pueden vivir en la misma zona cercana. En general, debe elegir una clave de partición que tenga el rango más alto de diferentes valores potenciales. Consulte el artículo de [!DNL AWS] sobre [escalar los flujos de datos [!DNL Kinesis] 3} para conocer las prácticas recomendadas sobre la administración de claves de partición.](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) |
 
 {style="table-layout:auto"}
 
@@ -66,14 +66,14 @@ El panel derecho se actualiza para mostrar las opciones de configuración de có
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Carga útil] | Este campo contiene los datos que se reenviarán al [!DNL Kinesis] flujo de datos, en formato JSON.<br><br>En el **[!UICONTROL Raw]** , puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono de elemento de datos (![Icono de conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionar de una lista de elementos de datos existentes para representar la carga útil.<br><br>También puede utilizar la variable **[!UICONTROL Editor de pares de clave-valor JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
+| [!UICONTROL Carga] | Este campo contiene los datos que se reenviarán al flujo de datos [!DNL Kinesis], en formato JSON.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionarlo de una lista de elementos de datos existentes para representar la carga útil.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
 
 {style="table-layout:auto"}
 
-Cuando termine, seleccione **[!UICONTROL Conservar cambios]** para añadir la acción a la configuración de regla. Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Guardar en biblioteca]**.
+Cuando termine, seleccione **[!UICONTROL Conservar cambios]** para agregar la acción a la configuración de regla. Cuando esté satisfecho con la regla, seleccione **[!UICONTROL Guardar en biblioteca]**.
 
-Por último, publique un nuevo reenvío de eventos [generar](../../../ui/publishing/builds.md) para habilitar los cambios en la biblioteca.
+Por último, publique un nuevo reenvío de eventos [build](../../../ui/publishing/builds.md) para habilitar los cambios en la biblioteca.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo enviar datos a [!DNL Kinesis Data Streams] uso del [!DNL AWS] extensión de reenvío de eventos. Para obtener más información sobre las funcionalidades de reenvío de eventos en Experience Platform, consulte la [resumen del reenvío de eventos](../../../ui/event-forwarding/overview.md).
+Esta guía explica cómo enviar datos a [!DNL Kinesis Data Streams] mediante la extensión de reenvío de eventos [!DNL AWS]. Para obtener más información sobre las funcionalidades de reenvío de eventos en Experience Platform, consulte la [descripción general del reenvío de eventos](../../../ui/event-forwarding/overview.md).

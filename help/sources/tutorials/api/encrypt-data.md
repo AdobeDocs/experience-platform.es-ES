@@ -5,7 +5,7 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,10 +15,10 @@ Puede introducir archivos de datos cifrados en Adobe Experience Platform mediant
 
 El proceso de ingesta de datos cifrados es el siguiente:
 
-1. [Creación de un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, el Experience Platform almacena la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descifrarse antes de utilizar.
+1. [Cree un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, el Experience Platform almacena la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descifrarse antes de usar.
 2. Utilice la clave pública para cifrar el archivo de datos que desea introducir.
 3. Coloque el archivo cifrado en el almacenamiento en la nube.
-4. Una vez que el archivo cifrado esté listo, [cree una conexión de origen y un flujo de datos para su origen de almacenamiento en la nube](#create-a-dataflow-for-encrypted-data). Durante el paso de creación de flujo, debe proporcionar un `encryption` e incluya su ID de clave pública.
+4. Una vez que el archivo cifrado esté listo, [cree una conexión de origen y un flujo de datos para el origen de almacenamiento en la nube](#create-a-dataflow-for-encrypted-data). Durante el paso de creación de flujo, debe proporcionar un parámetro `encryption` e incluir su ID de clave pública.
 5. Experience Platform recupera la clave privada del almacén seguro para descifrar los datos en el momento de la ingesta.
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ Este documento proporciona pasos sobre cómo generar un par de claves de cifrado
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): Experience Platform permite la ingesta de datos desde varias fuentes y, al mismo tiempo, le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
+* [Fuentes](../../home.md): El Experience Platform permite la ingesta de datos de varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform.
    * [Fuentes de almacenamiento en la nube](../api/collect/cloud-storage.md): Cree un flujo de datos para llevar los datos por lotes de su fuente de almacenamiento en la nube al Experience Platform.
-* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona entornos limitados virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Zonas protegidas](../../../sandboxes/home.md): El Experience Platform proporciona zonas protegidas virtuales que dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
 
 ### Extensiones de archivo compatibles con archivos cifrados {#supported-file-extensions-for-encrypted-files}
 
@@ -64,7 +64,7 @@ La lista de extensiones de archivo compatibles con los archivos cifrados es la s
 
 ## Crear par de claves de cifrado {#create-encryption-key-pair}
 
-El primer paso para la ingesta de datos cifrados en Experience Platform es crear el par de claves de cifrado realizando una solicitud del POST a `/encryption/keys` punto final del [!DNL Connectors] API.
+El primer paso para la ingesta de datos cifrados en Experience Platform es crear el par de claves de cifrado realizando una solicitud del POST al extremo `/encryption/keys` de la API [!DNL Connectors].
 
 **Formato de API**
 
@@ -125,7 +125,7 @@ Una respuesta correcta devuelve la clave pública codificada en Base64, el ID de
 
 ### Recuperar claves de cifrado {#retrieve-encryption-keys}
 
-Para recuperar todas las claves de cifrado de su organización, realice una Solicitud de GET a `/encryption/keys` endpoint=nt.
+Para recuperar todas las claves de cifrado de su organización, realice una solicitud de GET al extremo `/encryption/keys`=nt.
 
 **Formato de API**
 
@@ -168,7 +168,7 @@ Una respuesta correcta devuelve el algoritmo de cifrado, la clave pública, el I
 
 ### Recuperar claves de cifrado por identificador {#retrieve-encryption-keys-by-id}
 
-Para recuperar un conjunto específico de claves de cifrado, realice una solicitud de GET al `/encryption/keys` y proporcione su ID de clave pública como parámetro de encabezado.
+Para recuperar un conjunto específico de claves de cifrado, realice una solicitud de GET al extremo `/encryption/keys` y proporcione el identificador de clave pública como parámetro de encabezado.
 
 **Formato de API**
 
@@ -215,7 +215,7 @@ Durante esta fase, debe generar su propia combinación de clave privada y clave 
 
 ### Compartir la clave pública con el Experience Platform
 
-Para compartir la clave pública, realice una solicitud de POST a `/customer-keys` al proporcionar su algoritmo de cifrado y su clave pública codificada en Base64.
+Para compartir la clave pública, realice una solicitud de POST al extremo `/customer-keys` y proporcione el algoritmo de cifrado y la clave pública codificada en Base64.
 
 **Formato de API**
 
@@ -264,7 +264,7 @@ curl -X POST \
 
 +++
 
-## Conecte el origen de almacenamiento en la nube al Experience Platform mediante el [!DNL Flow Service] API
+## Conecte el origen de almacenamiento en la nube al Experience Platform mediante la API [!DNL Flow Service]
 
 Una vez recuperado el par de claves de cifrado, ahora puede continuar y crear una conexión de origen para la fuente de almacenamiento en la nube y llevar los datos cifrados a Platform.
 
@@ -277,8 +277,8 @@ En primer lugar, debe crear una conexión base para autenticar el origen con Pla
 * [Azure File Storage](../api/create/cloud-storage/azure-file-storage.md)
 * [Zona de aterrizaje de datos](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
-* [Almacenamiento de Google Cloud](../api/create/cloud-storage/google.md)
-* [Almacenamiento de objetos de oracle](../api/create/cloud-storage/oracle-object-storage.md)
+* [Almacenamiento en la nube de Google](../api/create/cloud-storage/google.md)
+* [Almacenamiento de objetos de Oracle](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
 Después de crear una conexión base, debe seguir los pasos descritos en el tutorial para [crear una conexión de origen para un origen de almacenamiento en la nube](../api/collect/cloud-storage.md) para crear una conexión de origen, una conexión de destino y una asignación.
@@ -289,12 +289,12 @@ Después de crear una conexión base, debe seguir los pasos descritos en el tuto
 >
 >Debe tener lo siguiente para crear un flujo de datos para la ingesta de datos cifrados:
 >
->* [ID de clave pública](#create-encryption-key-pair)
->* [ID de conexión de origen](../api/collect/cloud-storage.md#source)
->* [ID de conexión de destino](../api/collect/cloud-storage.md#target)
->* [ID de asignación](../api/collect/cloud-storage.md#mapping)
+>* [Id. de clave pública](#create-encryption-key-pair)
+>* [ID. de conexión de Source](../api/collect/cloud-storage.md#source)
+>* [Id. de conexión de destino](../api/collect/cloud-storage.md#target)
+>* [Id. de asignación](../api/collect/cloud-storage.md#mapping)
 
-Para crear un flujo de datos, realice una solicitud de POST a `/flows` punto final del [!DNL Flow Service] API. Para introducir datos cifrados, debe añadir una `encryption` a la sección `transformations` e incluir la propiedad `publicKeyId` que se creó en un paso anterior.
+Para crear un flujo de datos, realice una solicitud de POST al extremo `/flows` de la API [!DNL Flow Service]. Para introducir datos cifrados, debe agregar una sección `encryption` a la propiedad `transformations` e incluir `publicKeyId` que se creó en un paso anterior.
 
 **Formato de API**
 
@@ -304,7 +304,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Creación de un flujo de datos para la ingesta de datos cifrados]
+>[!TAB Crear un flujo de datos para la ingesta de datos cifrados]
 
 **Solicitud**
 
@@ -363,8 +363,8 @@ curl -X POST \
 | `transformations.name` | Al ingerir archivos cifrados, debe proporcionar `Encryption` como parámetro de transformaciones adicional para el flujo de datos. |
 | `transformations[x].params.publicKeyId` | El ID de clave pública que ha creado. Este ID es la mitad del par de claves de cifrado que se usa para cifrar los datos del almacenamiento en la nube. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
-| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es obligatorio cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
+| `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
 
 +++
 
@@ -372,7 +372,7 @@ curl -X POST \
 
 +++Ver respuesta de ejemplo
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado para los datos cifrados.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado para los datos cifrados.
 
 ```json
 {
@@ -383,7 +383,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado p
 
 +++
 
->[!TAB Crear un flujo de datos para introducir datos cifrados y firmados]
+>[!TAB Cree un flujo de datos para introducir datos cifrados y firmados]
 
 **Solicitud**
 
@@ -442,7 +442,7 @@ curl -X POST \
 
 +++Ver respuesta de ejemplo
 
-Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado para los datos cifrados.
+Una respuesta correcta devuelve el identificador (`id`) del flujo de datos recién creado para los datos cifrados.
 
 ```json
 {
@@ -457,7 +457,7 @@ Una respuesta correcta devuelve el ID (`id`) del flujo de datos recién creado p
 
 ### Eliminar claves de cifrado {#delete-encryption-keys}
 
-Para eliminar las claves de cifrado, realice una solicitud de DELETE al `/encryption/keys` y proporcione su ID de clave pública como parámetro de encabezado.
+Para eliminar las claves de cifrado, realice una solicitud de DELETE al extremo `/encryption/keys` y proporcione el identificador de clave pública como parámetro de encabezado.
 
 **Formato de API**
 
@@ -485,7 +485,7 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y un cuerpo e
 
 ### Validar claves de cifrado {#validate-encryption-keys}
 
-Para validar las claves de cifrado, realice una solicitud de GET al `/encryption/keys/validate/` y proporcione el ID de clave pública que desea validar como parámetro de encabezado.
+Para validar las claves de cifrado, realice una solicitud de GET al extremo `/encryption/keys/validate/` y proporcione el identificador de clave pública que desea validar como parámetro de encabezado.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ Una respuesta correcta devuelve una confirmación de que los ID son válidos o n
 
 >[!TAB Válido]
 
-Un ID de clave pública válido devuelve el estado `Active` junto con su ID de clave pública.
+Un identificador de clave pública válido devuelve el estado `Active` junto con el identificador de clave pública.
 
 ```json
 {
@@ -524,7 +524,7 @@ Un ID de clave pública válido devuelve el estado `Active` junto con su ID de c
 
 >[!TAB No válido]
 
-Un ID de clave pública no válido devuelve el estado `Expired` junto con su ID de clave pública.
+Un identificador de clave pública no válido devuelve el estado `Expired` junto con el identificador de clave pública.
 
 ```json
 {
@@ -568,4 +568,4 @@ En este escenario, la ejecución del flujo fallará y devolverá un mensaje de e
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un par de claves de cifrado para los datos de almacenamiento en la nube y un flujo de datos para introducir los datos cifrados mediante [!DNL Flow Service API]. Para obtener actualizaciones de estado sobre la integridad, los errores y las métricas del flujo de datos, lea la guía sobre [monitorización del flujo de datos mediante [!DNL Flow Service] API](./monitor.md).
+Siguiendo este tutorial, ha creado un par de claves de cifrado para los datos de almacenamiento en la nube y un flujo de datos para introducir los datos cifrados mediante [!DNL Flow Service API]. Para obtener actualizaciones de estado sobre la integridad, los errores y las métricas del flujo de datos, lee la guía sobre [monitorización del flujo de datos mediante la [!DNL Flow Service] API](./monitor.md).

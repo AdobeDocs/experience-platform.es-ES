@@ -13,29 +13,29 @@ ht-degree: 1%
 
 # Definición de campos XDM en la IU
 
-El [!DNL Schema Editor] en la interfaz de usuario de Adobe Experience Platform le permite definir sus propios campos dentro de las clases personalizadas del Modelo de datos de experiencia (XDM) y los grupos de campos de esquema. Esta guía explica los pasos para definir campos XDM en la interfaz de usuario de, incluidas las opciones de configuración disponibles para cada tipo de campo.
+[!DNL Schema Editor] en la interfaz de usuario de Adobe Experience Platform le permite definir sus propios campos dentro de clases personalizadas de modelo de datos de experiencia (XDM) y grupos de campos de esquema. Esta guía explica los pasos para definir campos XDM en la interfaz de usuario de, incluidas las opciones de configuración disponibles para cada tipo de campo.
 
 ## Requisitos previos
 
-Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [Información general de XDM](../../home.md) para obtener una introducción a la función de XDM dentro del ecosistema de Experience Platform, y la [conceptos básicos de composición de esquemas](../../schema/composition.md) para conocer cómo las clases y los grupos de campos contribuyen a los campos en los esquemas XDM.
+Esta guía requiere una comprensión práctica del sistema XDM. Consulte la [descripción general de XDM](../../home.md) para ver una introducción al papel de XDM en el ecosistema de Experience Platform y los [conceptos básicos de la composición de esquemas](../../schema/composition.md) para conocer cómo las clases y los grupos de campos aportan campos a los esquemas XDM.
 
-Aunque no es necesario para esta guía, se recomienda seguir el tutorial en [composición de un esquema en la IU](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas capacidades de la [!DNL Schema Editor].
+Aunque no es necesario para esta guía, se recomienda que también siga el tutorial sobre [maquetar un esquema en la interfaz de usuario](../../tutorials/create-schema-ui.md) para familiarizarse con las diversas funcionalidades de [!DNL Schema Editor].
 
 ## Seleccione un recurso al que añadir campos {#select-resource}
 
-Para definir nuevos campos XDM en la interfaz de usuario de, primero debe abrir un esquema dentro de la [!DNL Schema Editor]. Dependiendo de los esquemas que estén disponibles actualmente en el [!DNL Schema Library], puede elegir entre [crear un nuevo esquema](../resources/schemas.md#create) o [seleccione un esquema existente para editarlo](../resources/schemas.md#edit).
+Para definir nuevos campos XDM en la interfaz de usuario, primero debe abrir un esquema dentro de [!DNL Schema Editor]. Según los esquemas que estén disponibles actualmente en [!DNL Schema Library], puede elegir [crear un nuevo esquema](../resources/schemas.md#create) o [seleccionar un esquema existente para editar](../resources/schemas.md#edit).
 
-Una vez que tenga el [!DNL Schema Editor] abierto, los controles para agregar campos aparecen en el lienzo. Estos controles aparecen junto al nombre del esquema, así como cualquier campo de tipo de objeto que se haya definido en la clase o grupo de campos seleccionado.
+Una vez que tenga [!DNL Schema Editor] abierto, los controles para agregar campos aparecerán en el lienzo. Estos controles aparecen junto al nombre del esquema, así como cualquier campo de tipo de objeto que se haya definido en la clase o grupo de campos seleccionado.
 
 ![Editor de esquemas con los iconos de adición resaltados.](../../images/ui/fields/overview/select-resource.png)
 
 >[!WARNING]
 >
->Si intenta agregar un campo a un objeto proporcionado por un grupo de campos estándar, ese grupo de campos se convertirá en un grupo de campos personalizado y el grupo de campos original dejará de estar disponible. Consulte la sección sobre [adición de campos a grupos de campos estándar](../resources/schemas.md#custom-fields-for-standard-groups) en la guía de la interfaz de usuario de esquemas para obtener más información.
+>Si intenta agregar un campo a un objeto proporcionado por un grupo de campos estándar, ese grupo de campos se convertirá en un grupo de campos personalizado y el grupo de campos original dejará de estar disponible. Consulte la sección sobre [agregar campos a grupos de campos estándar](../resources/schemas.md#custom-fields-for-standard-groups) en la guía de IU de esquemas para obtener más información.
 
-Para añadir un nuevo campo al recurso, seleccione la **más (+)** junto al nombre del esquema en el lienzo o junto al campo de tipo de objeto en el que desea definir el campo.
+Para agregar un nuevo campo al recurso, seleccione el icono **más (+)** junto al nombre del esquema en el lienzo o junto al campo de tipo de objeto en el que desea definir el campo.
 
-![Editor de esquemas con un icono de adición resaltado.](../../images/ui/fields/overview/plus-icon.png)
+![Editor de esquemas con un icono de agregar resaltado.](../../images/ui/fields/overview/plus-icon.png)
 
 Dependiendo de si agrega un campo directamente a un esquema o a su clase constituyente y a los grupos de campos, los pasos necesarios para agregar el campo variarán. El resto de este documento se centra en cómo configurar las propiedades de un campo independientemente de dónde aparezca en el esquema. Para obtener más información sobre las diferentes formas en que se pueden añadir campos a un esquema, consulte las siguientes secciones en la guía de la IU de esquemas:
 
@@ -44,37 +44,37 @@ Dependiendo de si agrega un campo directamente a un esquema o a su clase constit
 
 ## Definir las propiedades de un campo {#define}
 
-Después de seleccionar el **más (+)** icono, un **[!UICONTROL Campo sin título]** el marcador de posición aparece en el lienzo.
+Después de seleccionar el icono **más (+)**, aparece un marcador de posición **[!UICONTROL Campo sin título]** en el lienzo.
 
 ![Editor de esquemas con un nuevo campo sin título resaltado.](../../images/ui/fields/overview/new-field.png)
 
-En el carril derecho debajo de **[!UICONTROL Propiedades del campo]**, puede configurar los detalles del nuevo campo. Se requiere la siguiente información para cada campo:
+En el carril derecho bajo **[!UICONTROL Propiedades del campo]**, puede configurar los detalles del nuevo campo. Se requiere la siguiente información para cada campo:
 
 | Propiedad de campo | Descripción |
 | --- | --- |
-| [!UICONTROL Nombre de campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se utiliza para identificar y hacer referencia al campo en el código y en otras aplicaciones posteriores<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **puede que no** empiece con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
-| [!UICONTROL Nombre para mostrar] | Un nombre para mostrar para el campo. Este es el nombre que se utilizará para representar el campo en el lienzo del Editor de esquemas. El nombre del campo se puede cambiar por el nombre para mostrar mediante la variable [alternar nombre para mostrar](../resources/schemas.md#display-name-toggle). |
-| [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. En este menú desplegable, puede seleccionar una de las siguientes opciones [tipos escalares estándar](../../schema/field-constraints.md) compatible con XDM o uno de los campos múltiples [tipos de datos](../resources/data-types.md) que se han definido previamente en la [!DNL Schema Registry].<br>Nota: Si selecciona el tipo de datos Asignar, [!UICONTROL Asignar tipo de valor] aparece la propiedad.<br><br>También puede seleccionar **[!UICONTROL Búsqueda de tipo avanzada]** para buscar y filtrar tipos de datos existentes y localizar el tipo deseado con mayor facilidad. |
-| [!UICONTROL Asignar tipo de valor] | Este valor es obligatorio si selecciona [!UICONTROL Mapa] como el tipo de datos del campo. Los valores disponibles para el mapa son [!UICONTROL Cadena] y [!UICONTROL Entero]. Seleccione un valor de la lista desplegable de opciones disponibles.<br>Para obtener más información acerca de [propiedades de campo específicas del tipo](#type-specific-properties), consulte la información general sobre la definición de campos. |
+| [!UICONTROL Nombre de campo] | Un nombre único y descriptivo para el campo. Tenga en cuenta que el nombre del campo no se puede cambiar una vez guardado el esquema. Este valor se usa para identificar y hacer referencia al campo en el código y en otras aplicaciones de flujo descendente<br><br>Idealmente, el nombre debería escribirse en camelCase. Puede contener caracteres alfanuméricos, guiones o guiones bajos, pero **no** puede comenzar con un guion bajo.<ul><li>**Correcto**: `fieldName`</li><li>**Aceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrecto**: `_fieldName`</li></ul> |
+| [!UICONTROL Nombre para mostrar] | Un nombre para mostrar para el campo. Este es el nombre que se utilizará para representar el campo en el lienzo del Editor de esquemas. El nombre de campo se puede cambiar al nombre para mostrar mediante [display name toggle](../resources/schemas.md#display-name-toggle). |
+| [!UICONTROL Tipo] | Tipo de datos que contendrá el campo. Desde este menú desplegable, puede seleccionar uno de los [tipos escalares estándar](../../schema/field-constraints.md) compatibles con XDM, o uno de los [tipos de datos](../resources/data-types.md) de varios campos que se han definido previamente en [!DNL Schema Registry].<br>Nota: si selecciona el tipo de datos Map, aparecerá la propiedad [!UICONTROL Map value type].<br><br>También puede seleccionar **[!UICONTROL Búsqueda de tipo avanzada]** para buscar y filtrar los tipos de datos existentes y encontrar el tipo deseado con mayor facilidad. |
+| [!UICONTROL Asignar tipo de valor] | Este valor es necesario si selecciona [!UICONTROL Map] como tipo de datos para el campo. Los valores disponibles para el mapa son [!UICONTROL String] y [!UICONTROL Integer]. Seleccione un valor de la lista desplegable de opciones disponibles.<br>Para obtener más información acerca de [propiedades de campo específicas del tipo](#type-specific-properties), consulte la descripción general de definir campos. |
 
 {style="table-layout:auto"}
 
-También puede proporcionar una descripción y notas para cada campo. Utilice el **[!UICONTROL Descripción]** para añadir contexto y describir la funcionalidad del tipo de datos de asignación. Esto contribuye al mantenimiento y a la legibilidad de la implementación. También puede agregar notas para complementar la descripción inicial. Esto debería ofrecer información más granular y específica para ayudar a los desarrolladores a comprender, mantener y utilizar el mapa de forma eficaz en el contexto de la base de código. |
+También puede proporcionar una descripción y notas para cada campo. Utilice el campo **[!UICONTROL Descripción]** para agregar contexto y describir la funcionalidad del tipo de datos de asignación. Esto contribuye al mantenimiento y a la legibilidad de la implementación. También puede agregar notas para complementar la descripción inicial. Esto debería ofrecer información más granular y específica para ayudar a los desarrolladores a comprender, mantener y utilizar el mapa de forma eficaz en el contexto de la base de código. |
 
 
 >[!NOTE]
 >
->Según la variable **[!UICONTROL Tipo]** Si ha seleccionado el campo, pueden aparecer controles de configuración adicionales en el carril derecho. Consulte la sección sobre [propiedades de campo específicas del tipo](#type-specific-properties) para obtener más información sobre estos controles.
+>Según el **[!UICONTROL Tipo]** que seleccionó para el campo, pueden aparecer controles de configuración adicionales en el carril derecho. Consulte la sección sobre [propiedades de campo específicas del tipo](#type-specific-properties) para obtener más información sobre estos controles.
 >
 >El carril derecho también proporciona casillas de verificación para designar tipos de campo especiales. Consulte la sección sobre [tipos de campo especiales](#special) para obtener más información.
 
-Cuando haya terminado de configurar el campo, seleccione **[!UICONTROL Aplicar]**.
+Una vez que haya terminado de configurar el campo, seleccione **[!UICONTROL Aplicar]**.
 
-![El [!UICONTROL Propiedades del campo] del Editor de esquemas aparece resaltada.](../../images/ui/fields/overview/field-details.png)
+![La sección [!UICONTROL Propiedades de campo] del Editor de esquemas está resaltada.](../../images/ui/fields/overview/field-details.png)
 
-El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un espacio de nombres con su ID de inquilino único (mostrado como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por el Adobe. El carril derecho ahora enumera la ruta del campo además de sus otras propiedades.
+El lienzo se actualiza para mostrar el campo recién agregado, ubicado dentro de un objeto que tiene un espacio de nombres con respecto a su ID de inquilino único (mostrado como `_tenantId` en el ejemplo siguiente). Todos los campos personalizados que se agregan a un esquema se colocan automáticamente dentro de este espacio de nombres para evitar conflictos con otros campos de clases y grupos de campos proporcionados por el Adobe. El carril derecho ahora enumera la ruta del campo además de sus otras propiedades.
 
-![Un nuevo campo en el diagrama de esquema y su ruta correspondiente en la variable [!UICONTROL Propiedades del campo] La sección está resaltada.](../../images/ui/fields/overview/field-added.png)
+![Se resalta un nuevo campo en el diagrama de esquema y su ruta correspondiente en la sección [!UICONTROL Propiedades del campo].](../../images/ui/fields/overview/field-added.png)
 
 Puede seguir siguiendo los pasos anteriores para agregar más campos al esquema. Una vez guardado el esquema, su clase base y los grupos de campos también se guardan si se han realizado cambios en ellos.
 
@@ -84,20 +84,20 @@ Puede seguir siguiendo los pasos anteriores para agregar más campos al esquema.
 
 ## Propiedades de campo específicas del tipo {#type-specific-properties}
 
-Al definir un nuevo campo, pueden aparecer opciones de configuración adicionales en el carril derecho, según el **[!UICONTROL Tipo]** elija para el campo. En la tabla siguiente se describen estas propiedades de campo adicionales junto con sus tipos compatibles:
+Al definir un nuevo campo, pueden aparecer opciones de configuración adicionales en el carril derecho según el **[!UICONTROL Tipo]** que elija para el campo. En la tabla siguiente se describen estas propiedades de campo adicionales junto con sus tipos compatibles:
 
 | Propiedad de campo | Tipos compatibles | Descripción |
 | --- | --- | --- |
-| [!UICONTROL Asignar tipo de valor] | [!UICONTROL Mapa] | El [!UICONTROL Asignar tipo de valor] La propiedad solo aparece en la interfaz de usuario si selecciona el valor Asignar de la [!UICONTROL Tipo] opciones desplegables. Puede seleccionar entre los tipos de valor Cadena y Entero para el Mapa.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../../images/ui/fields/overview/map-type.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br>Nota: Todos los tipos de datos de asignación creados a través de la API que no sean de tipo cadena ni entero se muestran como &#39;[!UICONTROL Complejo]&#39; tipo de datos. No puede crear &#39;[!UICONTROL Complejo]&#39; a través de la interfaz de usuario. |
-| [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asigna a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo.<br><br>Los valores predeterminados no se guardan en el conjunto de datos en el momento de la ingesta, ya que pueden cambiar con el tiempo. Los servicios y aplicaciones de Platform secundarios infieren los valores predeterminados establecidos en el esquema cuando leen los datos del conjunto de datos. Por ejemplo, al consultar los datos mediante el servicio de consulta, si el atributo tiene un valor NULL, pero el valor predeterminado está establecido en `5` en el nivel de esquema, se espera que el servicio de consultas devuelva lo siguiente `5` en lugar de NULL. Tenga en cuenta que este comportamiento no es uniforme actualmente en todos los servicios de AEP. |
-| [!UICONTROL Patrón] | [!UICONTROL Cadena] | A [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) que el valor de este campo debe cumplir para que se acepte durante la ingesta. |
-| [!UICONTROL Formato] | [!UICONTROL Cadena] | Seleccione de una lista de formatos predefinidos para cadenas con los que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL fecha-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Asignar tipo de valor] | [!UICONTROL Mapa] | La propiedad [!UICONTROL Map value type] solo aparece en la interfaz de usuario si selecciona el valor Map en las opciones desplegables de [!UICONTROL Type]. Puede seleccionar entre los tipos de valor Cadena y Entero para el Mapa.<br>![Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados.](../../images/ui/fields/overview/map-type.png "Editor de esquemas con los campos Tipo y Tipo de valor de asignación resaltados."){width="100" zoomable="yes"}<br>Nota: todos los tipos de datos de asignación creados mediante la API que no sean de tipo String ni Integer se muestran como un tipo de datos &#39;[!UICONTROL Complex]&#39;. No puede crear tipos de datos &#39;[!UICONTROL Complex]&#39; a través de la interfaz de usuario. |
+| [!UICONTROL Valor predeterminado] | [!UICONTROL Cadena], [!UICONTROL Doble], [!UICONTROL Largo], [!UICONTROL Entero], [!UICONTROL Corto], [!UICONTROL Byte], [!UICONTROL Booleano] | Un valor predeterminado que se asigna a este campo si no se proporciona ningún otro valor durante la ingesta. Este valor debe cumplir con el tipo seleccionado en el campo.<br><br>Los valores predeterminados no se guardan en el conjunto de datos en el momento de la ingesta, ya que pueden cambiar con el tiempo. Los servicios y aplicaciones de Platform secundarios infieren los valores predeterminados establecidos en el esquema cuando leen los datos del conjunto de datos. Por ejemplo, al consultar los datos mediante el servicio de consulta, si el atributo tiene un valor NULL, pero el valor predeterminado está establecido en `5` en el nivel de esquema, se espera que el servicio de consulta devuelva `5` en lugar de NULL. Tenga en cuenta que este comportamiento no es uniforme actualmente en todos los servicios de AEP. |
+| [!UICONTROL Patrón] | [!UICONTROL Cadena] | Una [expresión regular](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) a la que debe ajustarse el valor de este campo para que se acepte durante la ingesta. |
+| [!UICONTROL Formato] | [!UICONTROL Cadena] | Seleccione de una lista de formatos predefinidos para cadenas con los que debe ajustarse el valor. Los formatos disponibles incluyen: <ul><li>[[!UICONTROL fecha-hora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL correo electrónico]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nombre de host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL puntero json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longitud mínima] | [!UICONTROL Cadena] | Número mínimo de caracteres que debe contener la cadena para que el valor se acepte durante la ingesta. |
 | [!UICONTROL Longitud máxima] | [!UICONTROL Cadena] | Número máximo de caracteres que debe contener la cadena para que el valor se acepte durante la ingesta. |
-| [!UICONTROL Valor mínimo] | [!UICONTROL Doble] | El valor mínimo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se acepta el valor. Cuando se utiliza esta restricción, la variable &quot;[!UICONTROL Valor mínimo exclusivo]La restricción &quot; debe dejarse en blanco. |
-| [!UICONTROL Valor máximo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se acepta el valor. Cuando se utiliza esta restricción, la variable &quot;[!UICONTROL Valor máximo exclusivo]La restricción &quot; debe dejarse en blanco. |
-| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se rechaza el valor. Cuando se utiliza esta restricción, la variable &quot;[!UICONTROL Valor mínimo]La restricción &quot; (no exclusiva) debe dejarse en blanco. |
-| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se rechaza el valor. Cuando se utiliza esta restricción, la variable &quot;[!UICONTROL Valor máximo]La restricción &quot; (no exclusiva) debe dejarse en blanco. |
+| [!UICONTROL Valor mínimo] | [!UICONTROL Doble] | El valor mínimo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se acepta el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor mínimo exclusivo]&quot; debe dejarse en blanco. |
+| [!UICONTROL Valor máximo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se acepta el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor máximo exclusivo]&quot; debe dejarse en blanco. |
+| [!UICONTROL Valor mínimo exclusivo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se rechaza el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Minimum value]&quot; (no exclusiva) debe dejarse en blanco. |
+| [!UICONTROL Valor máximo exclusivo] | [!UICONTROL Doble] | El valor máximo de Double que se aceptará durante la ingesta. Si el valor introducido coincide exactamente con el introducido aquí, se rechaza el valor. Al utilizar esta restricción, la restricción &quot;[!UICONTROL Valor máximo]&quot; (no exclusivo) debe dejarse en blanco. |
 
 {style="table-layout:auto"}
 
@@ -111,13 +111,13 @@ Para obtener más información sobre estos tipos especiales, consulte la siguien
 * [[!UICONTROL Requerido]](./required.md)
 * [[!UICONTROL Matriz]](./array.md)
 * [[!UICONTROL Enumeración]](./enum.md)
-* [[!UICONTROL Identidad]](./identity.md) (Disponible solo para campos de cadena)
-* [[!UICONTROL Relación]](./relationship.md) (Disponible solo para campos de cadena)
+* [[!UICONTROL Identidad]](./identity.md) (disponible solo para campos de cadena)
+* [[!UICONTROL Relación]](./relationship.md) (disponible solo para campos de cadena)
 
-Aunque técnicamente no es un tipo de campo especial, también se recomienda que visite la guía en [definición de campos de tipo de objeto](./object.md) para obtener más información sobre la definición de subcampos anidados si las estructuras de esquema.
+Aunque técnicamente no es un tipo de campo especial, también se recomienda que visite la guía de [definición de campos de tipo de objeto](./object.md) para obtener más información sobre la definición de subcampos anidados si sus estructuras de esquema.
 
 ## Pasos siguientes
 
-Esta guía proporciona información general sobre cómo definir campos XDM en la interfaz de usuario. Recuerde que los campos solo se pueden agregar a esquemas mediante el uso de clases y grupos de campos. Para obtener más información sobre cómo administrar estos recursos en la interfaz de usuario, consulte las guías sobre creación y edición [clases](../resources/classes.md) y [grupos de campos](../resources/field-groups.md).
+Esta guía proporciona información general sobre cómo definir campos XDM en la interfaz de usuario. Recuerde que los campos solo se pueden agregar a esquemas mediante el uso de clases y grupos de campos. Para obtener más información sobre cómo administrar estos recursos en la interfaz de usuario, consulte las guías sobre la creación y edición de [clases](../resources/classes.md) y [grupos de campos](../resources/field-groups.md).
 
-Para obtener más información sobre las capacidades de [!UICONTROL Esquemas] Workspace, consulte la [[!UICONTROL Esquemas] información general de workspace](../overview.md).
+Para obtener más información sobre las capacidades del área de trabajo [!UICONTROL Esquemas], consulte la descripción general del área de trabajo [[!UICONTROL Esquemas]](../overview.md).

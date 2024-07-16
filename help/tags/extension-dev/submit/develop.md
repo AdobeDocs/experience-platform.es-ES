@@ -4,8 +4,8 @@ description: Este documento proporciona una visión general del proceso de desar
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 94%
+source-wordcount: '473'
+ht-degree: 93%
 
 ---
 
@@ -29,7 +29,7 @@ Una vez establecido el plan, las directrices que se muestran a continuación pue
 * [Explicación del esquema JSON](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/Validator](https://jsonlint.com/).
 * Extensión [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) para Chrome para resaltar e imprimir JSON y JSONP.
-* Editor [jsonschema.net](https://jsonschema.net/#/editor) para crear esquemas JSON a partir de objetos..
+* Editor [jsonschema.net](https://jsonschema.net/#/editor) para ayudar a crear el esquema JSON a partir de su objeto.
 * [JSON Schema Validator](https://www.jsonschemavalidator.net), que es un validador de esquemas JSON interactivo en línea.
 
 ## Herramientas

@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /app_configurations en la AP
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '550'
 ht-degree: 96%
 
 ---

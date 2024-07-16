@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;datos web de luma;Data Science Workspace;temas populares;recetas;datos de demostración;datos web de demostración;datos de luma
+keywords: Experience Platform;datos web de luma;ciencia de datos Workspace;temas populares;recetas;datos de demostración;datos web de demostración;datos de luma
 solution: Experience Platform
 title: Creación de los esquemas y conjuntos de datos web de Luma
 type: Tutorial
@@ -7,14 +7,14 @@ description: Este tutorial proporciona los requisitos previos y los recursos nec
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 # Creación de esquemas y conjuntos de datos del modelo de tendencia de Luma
 
-Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriales. Una vez completados, los siguientes esquemas y conjuntos de datos estarán disponibles para usted y su organización.
+Este tutorial le proporciona los requisitos previos y los recursos necesarios para los demás tutoriales de [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Una vez completados, los siguientes esquemas y conjuntos de datos estarán disponibles para usted y su organización.
 
 **Esquemas:**
 
@@ -30,7 +30,7 @@ Este tutorial le proporciona los requisitos previos y los recursos necesarios pa
 
 ## Descargar los recursos {#assets}
 
-El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personalizado. Antes de continuar, [descargar los recursos necesarios](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) carpeta zip. Esta carpeta contiene:
+El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personalizado. Antes de continuar, [descargue la carpeta zip de los recursos necesarios](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip). Esta carpeta contiene:
 
 - El portátil modelo de tendencia a la compra
 - Un bloc de notas utilizado para introducir datos en un conjunto de datos de formación y puntuación (un subconjunto de los datos web de Luma)
@@ -43,7 +43,7 @@ El siguiente tutorial utiliza un modelo de tendencia de compra de Luma personali
 
 ### Creación del esquema de datos web de Luma e ingesta de datos
 
-Para crear un modelo, debe tener un conjunto de datos en Platform que se utilice para entrenar y puntuar el modelo. El siguiente tutorial de vídeo de la [Curso de Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=es) le explica cómo crear el esquema de Luma e ingerir los datos utilizados por el modelo de tendencia de compra.
+Para crear un modelo, debe tener un conjunto de datos en Platform que se utilice para entrenar y puntuar el modelo. El siguiente tutorial en vídeo del curso [Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=es) le guiará en la creación del esquema de Luma y en la ingesta de los datos utilizados por el modelo de tendencia de compra.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
@@ -55,6 +55,6 @@ Para ejecutar el bloc de notas del generador de fórmulas o utilizar la API para
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado correctamente los esquemas y conjuntos de datos necesarios para el modelo de tendencia de Luma. Ya está listo para continuar con el siguiente tutorial y crear el modelo con [bloc de notas del generador de fórmulas](../jupyterlab/create-a-model.md) tutorial.
+Al seguir este tutorial, ha creado correctamente los esquemas y conjuntos de datos necesarios para el modelo de tendencia de Luma. Ya está listo para continuar con el siguiente tutorial y crear el modelo con el tutorial de [generador de fórmulas](../jupyterlab/create-a-model.md).
 
-Además, puede explorar los datos mediante el bloc de notas de análisis exploratorio de datos (EDA) proporcionado. Este bloc de notas se puede utilizar para comprender mejor los patrones de los datos de Luma, comprobar la sanidad de los datos y resumir los datos relevantes para el modelo de tendencia predictiva. Para obtener más información sobre Análisis de datos exploratorios, visite la [Documentación de EDA](../jupyterlab/eda-notebook.md).
+Además, puede explorar los datos mediante el bloc de notas de análisis exploratorio de datos (EDA) proporcionado. Este bloc de notas se puede utilizar para comprender mejor los patrones de los datos de Luma, comprobar la sanidad de los datos y resumir los datos relevantes para el modelo de tendencia predictiva. Para obtener más información acerca del análisis exploratorio de datos, visite la [documentación de EDA](../jupyterlab/eda-notebook.md).

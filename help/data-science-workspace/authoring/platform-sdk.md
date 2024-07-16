@@ -6,14 +6,14 @@ description: Este tutorial le proporciona información sobre la conversión de d
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '486'
+ht-degree: 3%
 
 ---
 
-# Creación de modelos con Adobe Experience Platform [!DNL Platform] SDK
+# Creación de modelos mediante el SDK [!DNL Platform] de Adobe Experience Platform
 
-Este tutorial proporciona información sobre la conversión `data_access_sdk_python` al nuevo Python `platform_sdk` tanto en Python como en R. Este tutorial proporciona información sobre las siguientes operaciones:
+Este tutorial le proporciona información sobre la conversión de `data_access_sdk_python` al nuevo Python `platform_sdk` tanto en Python como en R. Este tutorial proporciona información sobre las siguientes operaciones:
 
 - [Autenticación de compilación](#build-authentication)
 - [Lectura básica de los datos](#basic-reading-of-data)
@@ -21,11 +21,11 @@ Este tutorial proporciona información sobre la conversión `data_access_sdk_pyt
 
 ## Autenticación de compilación {#build-authentication}
 
-Se requiere autenticación para realizar llamadas a [!DNL Adobe Experience Platform]y se compone de una clave de API, un ID de organización, un token de usuario y un token de servicio.
+Se requiere autenticación para realizar llamadas a [!DNL Adobe Experience Platform], y consta de clave de API, ID de organización, un token de usuario y un token de servicio.
 
 ### Python
 
-Si está utilizando Jupyter Notebook, utilice el siguiente código para crear el `client_context`:
+Si está usando Jupyter Notebook, utilice el siguiente código para compilar `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Si está utilizando Jupyter Notebook, utilice el siguiente código para crear el `client_context`:
+Si está usando Jupyter Notebook, utilice el siguiente código para compilar `client_context`:
 
 ```r
 library(reticulate)
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lectura básica de los datos {#basic-reading-of-data}
 
-Con el nuevo [!DNL Platform] SDK, el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
+Con el nuevo SDK [!DNL Platform], el tamaño máximo de lectura es de 32 GB, con un tiempo máximo de lectura de 10 minutos.
 
 Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de las siguientes opciones de filtrado:
 
@@ -79,7 +79,7 @@ Si el tiempo de lectura está tardando demasiado, puede intentar utilizar una de
 
 >[!NOTE]
 >
->La organización se configura dentro de `client_context`.
+>La organización se ha establecido en `client_context`.
 
 ### Python
 
@@ -105,7 +105,7 @@ df
 
 ## Filtrar por desplazamiento y límite {#filter-by-offset-and-limit}
 
-Dado que ya no se admite el filtrado por ID de lote, para ampliar el ámbito de lectura de los datos, debe utilizar `offset` y `limit`.
+Dado que ya no se admite el filtrado por id. de lote, para ampliar el ámbito de lectura de los datos, debe usar `offset` y `limit`.
 
 ### Python
 
@@ -145,15 +145,15 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-El nuevo [!DNL Platform] SDK admite las siguientes operaciones:
+El nuevo SDK [!DNL Platform] admite las siguientes operaciones:
 
 | Operación | Función |
 | --------- | -------- |
-| Es igual a (`=`) | `eq()` |
-| Greater than (`>`) | `gt()` |
+| Igual a (`=`) | `eq()` |
+| Mayor que (`>`) | `gt()` |
 | Mayor o igual que (`>=`) | `ge()` |
-| Menos de (`<`) | `lt()` |
-| Less than or equal to (`<=`) | `le()` |
+| Menor que (`<`) | `lt()` |
+| Menor o igual que (`<=`) | `le()` |
 | Y (`&`) | `And()` |
 | O (`|`) | `Or()` |
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->La organización se configura dentro de `client_context`.
+>La organización se ha establecido en `client_context`.
 
 Para escribir datos en Python y R, utilice uno de los siguientes ejemplos:
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Pasos siguientes
 
-Una vez que haya configurado el `platform_sdk` cargador de datos, los datos se preparan y se dividen en el `train` y `val` conjuntos de datos. Para obtener más información acerca de la preparación de datos y la ingeniería de funciones, visite la sección sobre [preparación de datos e ingeniería de funciones](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] cuadernos.
+Una vez configurado el cargador de datos `platform_sdk`, los datos se preparan y se dividen en los conjuntos de datos `train` y `val`. Para obtener más información acerca de la preparación de datos y la ingeniería de características, visite la sección sobre [preparación de datos e ingeniería de características](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) en el tutorial para crear una fórmula con [!DNL JupyterLab] blocs de notas.

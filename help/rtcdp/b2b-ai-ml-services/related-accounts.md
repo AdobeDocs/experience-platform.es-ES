@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Las empresas B2B a menudo almacenan la información de sus clientes en varios sistemas, cada uno de los cuales incluye solo datos parciales o incluso en conflicto para la misma entidad comercial del mundo real. Esto crea un desafío masivo de llegar a una vista precisa de sus clientes, reduciendo así la eficiencia y eficacia de sus esfuerzos de marketing y ventas B2B.
 
-| ID | Nombre | Sitio web | de la industria | Estado | Teléfono | Tiene una oportunidad abierta con un importe > `$1 million` |
+| ID | Nombre | Sitio web | Sector | Estado | Teléfono | Tiene una oportunidad abierta con un importe > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408) 536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
@@ -28,17 +28,17 @@ Las empresas B2B a menudo almacenan la información de sus clientes en varios si
 
 {style="table-layout:auto"}
 
-Con cuentas relacionadas, [!DNL Real-Time CDP B2B] ahora muestra una lista de cuentas similares a la cuenta que está explorando.
+Con las cuentas relacionadas, [!DNL Real-Time CDP B2B] ahora muestra una lista de cuentas similares a la cuenta que está explorando.
 
-![Pantalla que muestra las cuentas relacionadas en la IU de Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![Pantalla que muestra cuentas relacionadas en la interfaz de usuario del Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilice esta función para ver los perfiles de cuenta relacionados de un perfil de cuenta en la interfaz de usuario de Experience Platform y, a continuación, incluya las cuentas relacionadas en las definiciones de segmentos para ampliar su alcance o aplicar criterios más amplios a las audiencias.
 
 ## Habilitar el servicio de cuentas relacionadas {#enable}
 
-Para habilitar el servicio, seleccione **[!UICONTROL Perfiles]** en la barra lateral seguida de **[!UICONTROL Configuración]**.
+Para habilitar el servicio, selecciona **[!UICONTROL Perfiles]** en la barra lateral seguido de **[!UICONTROL Configuración]**.
 
-![IU del Experience Platform que resalta perfiles y configuraciones.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![IU de Experience Platform que resalta perfiles y configuraciones.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
 Seleccione la opción junto a [!UICONTROL Habilitar cuentas relacionadas] para habilitar el servicio y, a continuación, seleccione **[!UICONTROL Guardar]**.
 
@@ -52,18 +52,18 @@ Los trabajos de aprendizaje automático de ejecución diaria utilizan un algorit
 * Dominio web
 * Nombre de la cuenta
 
-Después de un trabajo de procesamiento correcto, cada miembro del grupo de perfiles de cuenta se etiqueta con la lista Cuentas relacionadas. Puede ver la lista en la **Cuentas relacionadas** de la página Perfil de Cuenta y utilice las cuentas relacionadas en las definiciones de segmentos.
+Después de un trabajo de procesamiento correcto, cada miembro del grupo de perfiles de cuenta se etiqueta con la lista Cuentas relacionadas. Puede ver la lista en la ficha **Cuentas relacionadas** de la página Perfil de cuenta y usar las cuentas relacionadas en las definiciones de segmentos.
 
-Consulte la documentación para obtener más información sobre [trabajos de cuentas relacionadas con profile enrichment](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulte la documentación para obtener más información sobre los [trabajos de cuentas relacionadas con el enriquecimiento de perfiles](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
 ## Visualización de cuentas relacionadas {#how-to-view}
 
 Puede ver las cuentas relacionadas de una cuenta que esté explorando en la interfaz de usuario de Experience Platform.
 
-Consulte la documentación para obtener más información sobre [Cómo encontrar cuentas relacionadas en la interfaz de usuario de](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Consulte la documentación para obtener más información sobre [cómo encontrar cuentas relacionadas en la interfaz de usuario](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 
 ## Uso de cuentas relacionadas {#how-to-use}
 
 Puede utilizar cuentas de y cuentas relacionadas en la segmentación. La decisión de usar cuentas relacionadas en las definiciones de segmentos depende de su caso de uso de marketing. Por ejemplo, puede utilizar cuentas relacionadas para campañas de marketing por correo electrónico o publicidad donde puede aceptar una precisión menor a cambio de un alcance más amplio.
 
-Consulte un [ejemplo de segmentación](/help/rtcdp/segmentation/b2b.md#related-accounts) que utiliza cuentas relacionadas.
+Vea un [ejemplo de segmentación](/help/rtcdp/segmentation/b2b.md#related-accounts) que usa cuentas relacionadas.

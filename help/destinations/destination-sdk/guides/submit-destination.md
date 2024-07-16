@@ -25,19 +25,19 @@ ht-degree: 0%
 >
 >* El cronograma de revisión y los artefactos requeridos son los mismos para los destinos nuevos y los destinos existentes que está actualizando.
 
-Antes de publicar el destino en [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar al Adobe determinada información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
+Antes de publicar el destino en el [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar al Adobe cierta información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
 
-En esta página se muestra toda la información que debe proporcionar al enviar o actualizar un destino creado con Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluye:
+En esta página se muestra toda la información que debe proporcionar al enviar o actualizar un destino creado con Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluya lo siguiente:
 
 * Una descripción de los casos de uso que resuelve su destino. Esto solo es necesario si envía una nueva configuración de destino.
 * Una descripción del motivo del envío de destino. Esto solo es necesario si está actualizando una configuración de destino existente.
 * Resultados de la prueba después de usar el punto final de la API de destino de prueba para realizar una llamada HTTP a su destino. Comparta con el Adobe una llamada de API realizada al extremo de destino y la respuesta de API recibida desde el extremo de destino.
 * Requisitos adicionales para destinos basados en archivos:
-   * Comparta una solicitud y un ejemplo de respuesta después de usar la API de prueba para lo siguiente [prueba del destino basado en archivos con perfiles de muestra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Comparta una solicitud y un ejemplo de respuesta después de usar la API de prueba para [probar el destino basado en archivos con perfiles de muestra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Adjunte un archivo de muestra generado por el destino y exportado a la ubicación de almacenamiento.
    * Envíe algún tipo de prueba de que ha ingerido correctamente el archivo exportado desde la ubicación de almacenamiento en el sistema.
-* Prueba de que ha enviado una solicitud de publicación de destino para su destino utilizando [API de publicación de destino](../publishing-api/create-publishing-request.md).
-* Una PR de documentación (solicitud de extracción), siguiendo las instrucciones descritas en la [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md).
+* Prueba de que has enviado una solicitud de publicación de destino para tu destino usando la [API de publicación de destino](../publishing-api/create-publishing-request.md).
+* Una PR de documentación (solicitud de extracción), siguiendo las instrucciones descritas en el [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md).
 * Un archivo de imagen que se mostrará como un logotipo para la tarjeta de destino en el catálogo de destinos de Experience Platform.
 
 Puede encontrar información detallada sobre cada elemento en las secciones siguientes:
@@ -46,8 +46,8 @@ Puede encontrar información detallada sobre cada elemento en las secciones sigu
 
 Proporcione una descripción de los casos de uso que el destino resuelve para los clientes de Experience Platform. Las descripciones pueden ser similares a los casos de uso de los socios existentes:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): cree audiencias a partir de las listas de clientes, personas que hayan visitado el sitio o personas que ya hayan interactuado con el contenido en Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que desean dirigirse a un grupo de audiencia específico que no tiene clave de dirección de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia y enviar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crea audiencias a partir de tus listas de clientes, personas que hayan visitado tu sitio o personas que ya hayan interactuado con tu contenido en Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): Las API de DataX están disponibles para anunciantes que quieran dirigirse a un grupo de audiencia específico que no tenga claves de direcciones de correo electrónico en Verizon Media (VMG) y pueden crear rápidamente una nueva audiencia e insertar el grupo de audiencia deseado mediante la API de VMG en tiempo casi real.
 
 ## Motivo de la actualización {#reason-for-update}
 
@@ -59,7 +59,7 @@ Proporcione una breve descripción del problema que su envío resuelve para el d
 
 ## Resultados de la prueba después de usar la API de destino de prueba {#testing-api-response}
 
-Proporcione los resultados de la prueba después de usar el [probar API de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) extremo para realizar una llamada HTTP a su destino. Esto incluye lo siguiente:
+Proporcione los resultados de la prueba después de usar el extremo [API de destino de prueba](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para realizar una llamada HTTP a su destino. Esto incluye lo siguiente:
 
 * La solicitud de API completa (encabezados y cuerpo) realizada al extremo de destino mediante la API de prueba.
 * La respuesta de API recibida desde su extremo de destino.
@@ -233,11 +233,11 @@ Para los destinos basados en archivos, debe proporcionar una prueba adicional de
 
 ### Prueba de respuesta de API {#testing-api-response-file-based}
 
-Incluya una solicitud y un ejemplo de respuesta después de usar la API de prueba para [prueba del destino basado en archivos con perfiles de muestra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Incluya una solicitud y un ejemplo de respuesta después de usar la API de prueba para [probar el destino basado en archivos con perfiles de muestra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Adjuntar archivo exportado {#attach-exported-file}
 
-En su [correo electrónico de envío](#download-sample-email), adjunte un archivo CSV que el destino configurado haya exportado a su ubicación de almacenamiento.
+En su [correo electrónico de envío](#download-sample-email), adjunte un archivo CSV que el destino que configuró haya exportado a su ubicación de almacenamiento.
 
 ### Prueba de ingesta correcta {#proof-of-successful-ingestion}
 
@@ -249,13 +249,13 @@ Por último, debe proporcionar algún tipo de prueba de que los datos se han int
 
 ## Prueba de que ha enviado una solicitud de publicación de destino {#destination-publishing-request-proof}
 
-Después de probar correctamente el destino, debe usar el complemento [API de publicación de destino](../publishing-api/create-publishing-request.md) para enviar el destino al Adobe para su revisión y publicación.
+Después de probar correctamente el destino, debe usar la [API de publicación de destino](../publishing-api/create-publishing-request.md) para enviar el destino al Adobe para su revisión y publicación.
 
 Proporcione el ID de la solicitud de publicación de su destino. Para obtener información sobre cómo recuperar el ID de solicitud de publicación, lea cómo [recuperar solicitudes de publicación de destino](../publishing-api/retrieve-publishing-request.md).
 
 ## Documentación de destino PR (solicitud de extracción) para integraciones producidas {#documentation-pr}
 
-Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](../overview.md#productized-custom-integrations), debe utilizar el [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino. Como parte del proceso de envío, proporcione la solicitud de extracción (PR) para la documentación de destino.
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea una [integración de productos](../overview.md#productized-custom-integrations), debe usar el [proceso de documentación de autoservicio](../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para su destino. Como parte del proceso de envío, proporcione la solicitud de extracción (PR) para la documentación de destino.
 
 ## Logotipo para su destino {#logo}
 
@@ -267,4 +267,4 @@ Los requisitos de imagen son:
 
 ## Descargar correo electrónico de muestra {#download-sample-email}
 
-[Descargar](../assets/guides/sample-email-submit-destination.rtf) un correo electrónico de ejemplo con toda la información que necesita proporcionar al Adobe.
+[Descargue](../assets/guides/sample-email-submit-destination.rtf) un correo electrónico de ejemplo con toda la información que necesita proporcionar al Adobe.

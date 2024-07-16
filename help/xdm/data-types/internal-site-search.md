@@ -9,15 +9,15 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Búsqueda interna del sitio] tipo de datos
+# [!UICONTROL Tipo de datos de búsqueda interna del sitio]
 
-[!UICONTROL Búsqueda interna del sitio] es un tipo de datos XDM estándar que describe una búsqueda del sitio interna, incluidos todos los comportamientos y detalles de búsqueda relacionados.
+[!UICONTROL Búsqueda interna del sitio] es un tipo de datos XDM estándar que describe una búsqueda interna del sitio, incluidos todos los comportamientos y detalles de búsqueda relacionados.
 
 ![](../images/data-types/internal-site-search.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `autoCompleteClicked` | [!UICONTROL Booleana] | Indica si un visitante utilizó un valor de búsqueda sugerido o autocompletado para ejecutar la búsqueda. |
+| `autoCompleteClicked` | [!UICONTROL Booleano] | Indica si un visitante utilizó un valor de búsqueda sugerido o autocompletado para ejecutar la búsqueda. |
 | `autoCompleteTypedValue` | [!UICONTROL Cadena] | En los casos de autocompletar, los usuarios suelen abandonar la búsqueda y seleccionar un término específico en la lista desplegable. Este valor registra lo que el usuario comenzó a escribir para generar el conjunto específico de términos de búsqueda sugeridos. |
 | `autoCompleteValue` | [!UICONTROL Cadena] | En los casos de autocompletar, los usuarios suelen abandonar la búsqueda y seleccionar un término específico en el menú desplegable. Este valor se utiliza para realizar un seguimiento de los términos específicos seleccionados. |
 | `instances` | [!UICONTROL Entero] | El número de veces que se produjo la búsqueda interna del sitio. |
@@ -39,4 +39,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el tipo de datos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).
+Para obtener más información sobre el tipo de datos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).

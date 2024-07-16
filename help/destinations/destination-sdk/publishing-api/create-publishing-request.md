@@ -4,7 +4,7 @@ title: Crear una solicitud de publicación de destino
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 2%
 
 ---
@@ -17,26 +17,26 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Después de configurar y probar el destino, puede enviarlo al Adobe para que lo revise y publique. Leer [Enviar para revisión un destino creado en Destination SDK](../guides/submit-destination.md) para todos los demás pasos, debe realizar como parte del proceso de envío de destino.
+Después de configurar y probar el destino, puede enviarlo al Adobe para que lo revise y publique. Lea [Enviar para revisión un destino creado en el Destination SDK](../guides/submit-destination.md) para todos los demás pasos que debe realizar como parte del proceso de envío de destino.
 
 Utilice el punto final de la API de destinos de publicación para enviar una solicitud de publicación cuando:
 
 * Como socio Destination SDK, desea que el destino de productos esté disponible en todas las organizaciones de Experience Platform para que lo utilicen todos los clientes Experience Platform;
-* Usted hace *cualquier actualización* a sus configuraciones de. Las actualizaciones de configuración se reflejan en el destino solo después de enviar una nueva solicitud de publicación, que es aprobada por el equipo de Experience Platform.
+* Haces *cualquier actualización* a tus configuraciones. Las actualizaciones de configuración se reflejan en el destino solo después de enviar una nueva solicitud de publicación, que es aprobada por el equipo de Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de publicación de destino {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Enviar una configuración de destino para publicarla {#create}
 
-Puede enviar una configuración de destino para publicarla realizando una solicitud de POST a `/authoring/destinations/publish` punto final.
+Puede enviar una configuración de destino para publicarla realizando una solicitud de POST al extremo `/authoring/destinations/publish`.
 
 **Formato de API**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 +++Solicitud
 
-La siguiente solicitud envía un destino para la publicación, entre las organizaciones configuradas por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por el `/authoring/destinations/publish` punto final.
+La siguiente solicitud envía un destino para la publicación, entre las organizaciones configuradas por los parámetros proporcionados en la carga útil. La carga útil siguiente incluye todos los parámetros aceptados por el extremo `/authoring/destinations/publish`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,8 +64,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parámetro | Tipo | Descripción |
 |---------|----------|------|
-| `destinationId` | Cadena | El ID de destino de la configuración de destino que envía para su publicación. Obtenga el ID de destino de una configuración de destino utilizando [recuperar una configuración de destino](../authoring-api/destination-configuration/retrieve-destination-configuration.md) Llamada de API. |
-| `destinationAccess` | Cadena | Uso `ALL` para que el destino aparezca en el catálogo para todos los clientes de Experience Platform. |
+| `destinationId` | Cadena | El ID de destino de la configuración de destino que envía para su publicación. Obtenga el identificador de destino de una configuración de destino mediante la llamada a la API [recuperar una configuración de destino](../authoring-api/destination-configuration/retrieve-destination-configuration.md). |
+| `destinationAccess` | Cadena | Use `ALL` para que el destino aparezca en el catálogo para todos los clientes de Experience Platform. |
 
 {style="table-layout:auto"}
 

@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Llamadas de API de muestra
 
-Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas al [!DNL Query Service] API. Las siguientes secciones describen las distintas llamadas a la API que puede realizar mediante la variable [!DNL Query Service] API. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Ahora que comprende qué encabezados utilizar, está listo para empezar a realizar llamadas a la API [!DNL Query Service]. Las siguientes secciones describen las distintas llamadas a la API que puede realizar mediante la API [!DNL Query Service]. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperación de una lista de consultas programadas
 
-Puede recuperar una lista de todas las consultas programadas para su organización realizando una solicitud de GET a `/schedules` punto final.
+Puede recuperar una lista de todas las consultas programadas para su organización realizando una solicitud de GET al extremo `/schedules`.
 
 **Formato de API**
 
@@ -31,7 +31,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Opcional*) Parámetros añadidos a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros separados por el símbolo et (`&`). Los parámetros disponibles se enumeran a continuación. |
+| `{QUERY_PARAMETERS}` | (*Opcional*) Parámetros agregados a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo et (`&`). Los parámetros disponibles se enumeran a continuación. |
 
 **Parámetros de consulta**
 
@@ -39,10 +39,10 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por creados en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos por creados en orden descendente. |
+| `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por orden de subida. Si se agrega un(a) `-` antes de crearlo (`orderby=-created`), los elementos se ordenarán por orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero la consulta programada creada más antigua y, a continuación, seguirá enumerando los resultados más recientes.<br> Las marcas de tiempo ISO permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, 8:15:30 a. m., hora estándar del este de EE. UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se denota con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
-| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `templateId`, y `userId`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que), y `==` (igual a). Por ejemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas programadas en las que el ID de usuario es el especificado. |
+| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero la consulta programada creada más antigua y, a continuación, seguirá enumerando los resultados más recientes.Las marcas de tiempo ISO <br> permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, a las 8:15:30 a.m., hora estándar del este de EE.UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se indica con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
+| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape de HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `templateId` y `userId`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que) y `==` (igual a). Por ejemplo, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas programadas en las que el identificador de usuario sea el especificado. |
 
 **Solicitud**
 
@@ -124,7 +124,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pr
 
 ### Creación de una nueva consulta programada
 
-Puede crear una nueva consulta programada realizando una solicitud de POST a `/schedules` punto final. Cuando crea una consulta programada en la API, también puede verla en el Editor de consultas. Para obtener más información sobre consultas programadas en la interfaz de usuario, lea la [Documentación del Editor de consultas](../ui/user-guide.md#scheduled-queries).
+Puede crear una nueva consulta programada realizando una solicitud de POST al extremo `/schedules`. Cuando crea una consulta programada en la API, también puede verla en el Editor de consultas. Para obtener más información sobre consultas programadas en la interfaz de usuario, lea la [documentación del Editor de consultas](../ui/user-guide.md#scheduled-queries).
 
 **Formato de API**
 
@@ -161,12 +161,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nombre de la base de datos para la que está creando una consulta programada. |
 | `query.sql` | La consulta SQL que desea crear. |
 | `query.name` | Nombre de la consulta programada. |
-| `schedule.schedule` | La programación cron para la consulta. Para obtener más información sobre los horarios de cron, lea la [formato de expresión cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación. En este ejemplo, &quot;30 * * *&quot; significa que la consulta se ejecutará cada hora en la marca de 30 minutos.<br><br>Como alternativa, puede utilizar las siguientes expresiones abreviadas:<ul><li>`@once`: la consulta solo se ejecuta una vez.</li><li>`@hourly`: la consulta se ejecuta cada hora al principio de la hora. Es equivalente a la expresión cron `0 * * * *`.</li><li>`@daily`: la consulta se ejecuta una vez al día a medianoche. Es equivalente a la expresión cron `0 0 * * *`.</li><li>`@weekly`: la consulta se ejecuta una vez a la semana, el domingo a medianoche. Es equivalente a la expresión cron `0 0 * * 0`.</li><li>`@monthly`: la consulta se ejecuta una vez al mes, el primer día del mes, a medianoche. Es equivalente a la expresión cron `0 0 1 * *`.</li><li>`@yearly`: la consulta se ejecuta una vez al año, el 1 de enero a medianoche. Es equivalente a la expresión cron `1 0 0 1 1 *`. |
+| `schedule.schedule` | La programación cron para la consulta. Para obtener más información sobre las programaciones de cron, lea la [documentación sobre el formato de las expresiones cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). En este ejemplo, &quot;30 * * *&quot; significa que la consulta se ejecutará cada hora en la marca de 30 minutos.<br><br>Como alternativa, puede utilizar las siguientes expresiones abreviadas:<ul><li>`@once`: la consulta solo se ejecuta una vez.</li><li>`@hourly`: la consulta se ejecuta cada hora al comienzo de la hora. Esto equivale a la expresión cron `0 * * * *`.</li><li>`@daily`: la consulta se ejecuta una vez al día a medianoche. Esto equivale a la expresión cron `0 0 * * *`.</li><li>`@weekly`: la consulta se ejecuta una vez a la semana, el domingo a medianoche. Esto equivale a la expresión cron `0 0 * * 0`.</li><li>`@monthly`: la consulta se ejecuta una vez al mes, el primer día del mes, a medianoche. Esto equivale a la expresión cron `0 0 1 * *`.</li><li>`@yearly`: la consulta se ejecuta una vez al año, el 1 de enero a medianoche. Esto equivale a la expresión cron `1 0 0 1 1 *`. |
 | `schedule.startDate` | La fecha de inicio de la consulta programada, escrita como marca de tiempo UTC. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta programada recién creada. Una vez que la consulta programada haya terminado de activarse, la variable `state` cambiará de `REGISTERING` hasta `ENABLED`.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta programada recién creada. Una vez que la consulta programada haya terminado de activarse, `state` cambiará de `REGISTERING` a `ENABLED`.
 
 ```json
 {
@@ -219,11 +219,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede usar el valor de `_links.delete` hasta [elimine la consulta programada creada](#delete-a-specified-scheduled-query).
+>Puede usar el valor de `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
 
 ### Solicitar detalles de una consulta programada especificada
 
-Puede recuperar información para una consulta programada específica realizando una solicitud de GET a `/schedules` y proporcionar su ID en la ruta de solicitud.
+Puede recuperar información para una consulta programada específica realizando una solicitud de GET al extremo `/schedules` y proporcionando su ID en la ruta de solicitud.
 
 **Formato de API**
 
@@ -233,7 +233,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada que desea recuperar. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea recuperar. |
 
 **Solicitud**
 
@@ -302,17 +302,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la consulta p
 
 >[!NOTE]
 >
->Puede usar el valor de `_links.delete` hasta [elimine la consulta programada creada](#delete-a-specified-scheduled-query).
+>Puede usar el valor de `_links.delete` para [eliminar la consulta programada creada](#delete-a-specified-scheduled-query).
 
 ### Actualizar los detalles de una consulta programada especificada
 
-Puede actualizar los detalles de una consulta programada especificada realizando una solicitud de PATCH a `/schedules` y proporcionando su ID en la ruta de solicitud.
+Puede actualizar los detalles de una consulta programada especificada realizando una solicitud de PATCH al extremo `/schedules` y proporcionando su ID en la ruta de solicitud.
 
 La solicitud del PATCH admite dos rutas diferentes: `/state` y `/schedule/schedule`.
 
 ### Actualizar estado de consulta programada
 
-Puede actualizar el estado de la consulta programada seleccionada configurando la variable `path` propiedad a `/state` y el `value` propiedad como `enable` o `disable`.
+Puede actualizar el estado de la consulta programada seleccionada estableciendo la propiedad `path` en `/state` y la propiedad `value` como `enable` o `disable`.
 
 **Formato de API**
 
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada que desea almacenar en PATCH. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea almacenar en PATCH. |
 
 
 **Solicitud**
@@ -349,7 +349,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `op` | La operación que se va a realizar en la programación de consultas. El valor aceptado es `replace`. |
-| `path` | La ruta del valor al que desea aplicar el parche. En este caso, dado que está actualizando el estado de la consulta programada, debe establecer el valor de `path` hasta `/state`. |
+| `path` | La ruta del valor al que desea aplicar el parche. En este caso, ya que está actualizando el estado de la consulta programada, debe establecer el valor de `path` en `/state`. |
 | `value` | El valor actualizado de `/state`. Este valor puede establecerse como `enable` o `disable` para habilitar o deshabilitar la consulta programada. |
 
 **Respuesta**
@@ -365,7 +365,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Accepted) con el siguiente m
 
 ### Actualizar programación de consultas programadas
 
-Puede actualizar la programación cron de la consulta programada configurando el `path` propiedad a `/schedule/schedule` en el cuerpo de la solicitud. Para obtener más información sobre los horarios de cron, lea la [formato de expresión cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentación.
+Puede actualizar la programación cron de la consulta programada estableciendo la propiedad `path` en `/schedule/schedule` en el cuerpo de la solicitud. Para obtener más información sobre las programaciones de cron, lea la [documentación sobre el formato de las expresiones cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Formato de API**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada que desea almacenar en PATCH. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea almacenar en PATCH. |
 
 **Solicitud**
 
@@ -401,7 +401,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `op` | La operación que se va a realizar en la programación de consultas. El valor aceptado es `replace`. |
-| `path` | La ruta del valor al que desea aplicar el parche. En este caso, ya que está actualizando la programación de la consulta programada, debe establecer el valor de `path` hasta `/schedule/schedule`. |
+| `path` | La ruta del valor al que desea aplicar el parche. En este caso, ya que está actualizando la programación de la consulta programada, debe establecer el valor de `path` en `/schedule/schedule`. |
 | `value` | El valor actualizado de `/schedule`. Este valor debe estar en forma de programación cron. Por lo tanto, en este ejemplo, la consulta programada se ejecutará cada hora en la marca de 45 minutos. |
 
 **Respuesta**
@@ -417,7 +417,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Accepted) con el siguiente m
 
 ### Eliminar una consulta programada especificada
 
-Puede eliminar una consulta programada especificada realizando una solicitud de DELETE a `/schedules` y proporciona el ID de la consulta programada que desea eliminar en la ruta de solicitud.
+Puede eliminar una consulta programada especificada realizando una solicitud de DELETE al extremo `/schedules` y proporcionando el identificador de la consulta programada que desea eliminar en la ruta de acceso de la solicitud.
 
 >[!NOTE]
 >
@@ -431,7 +431,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | El `id` valor de la consulta programada que desea almacenar en DELETE. |
+| `{SCHEDULE_ID}` | El valor `id` de la consulta programada que desea almacenar en DELETE. |
 
 **Solicitud**
 

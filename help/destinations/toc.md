@@ -32,11 +32,11 @@ ht-degree: 6%
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
-   * [Ordenar y filtrar respuestas de API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* Guías de IU {#ui}
+   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+* Guías de interfaz de usuario {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
-   * Activación de datos en destinos{#activate}
+   * Activar datos en destinos{#activate}
       * [Información general de Activation](./ui/activation-overview.md)
       * [Activar audiencias en destinos de exportación de audiencia de flujo continuo](./ui/activate-segment-streaming-destinations.md)
       * [Activación de audiencias en destinos de exportación de perfiles de flujo continuo](./ui/activate-streaming-profile-destinations.md)
@@ -64,7 +64,7 @@ ht-degree: 6%
       * [Públicos de Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinos de Advertising{#advertising}
       * [Información general sobre destinos Advertising](./catalog/advertising/overview.md)
       * [Conexión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -123,7 +123,7 @@ ht-degree: 6%
       * [Extensión SessionCam](./catalog/analytics/sessioncam.md)
       * [Extensión TMMData](./catalog/analytics/tmmdata.md)
       * [Extensión de seguimiento de conversión de texto](./catalog/analytics/yext.md)
-   * Destinos de almacenamiento en nube {#cloud-storage}
+   * Destinos de almacenamiento en la nube {#cloud-storage}
       * [Información general sobre destinos de Cloud Storage](./catalog/cloud-storage/overview.md)
       * [Conexión de Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Conexión de Amazon S3](./catalog/cloud-storage/amazon-s3.md)
@@ -140,7 +140,7 @@ ht-degree: 6%
       * [Conexión de Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexión de divulgación](catalog/crm/outreach.md)
       * [Conexión de Zendesk](catalog/crm/zendesk.md)
-   * Destinos de Data Management Platform {#data-management}
+   * Destinos de la plataforma de administración de datos {#data-management}
       * [Información general sobre los destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extensión de DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing de Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
@@ -170,7 +170,7 @@ ht-degree: 6%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexión de SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensiones de etiquetas {#launch-extensions}
-      * [Resumen de extensión de etiquetas](./catalog/launch-extensions/overview.md)
+      * [Información general sobre la extensión de etiquetas](./catalog/launch-extensions/overview.md)
    * Destinos de participación móvil {#mobile-engagement}
       * [Información general sobre destinos de participación móvil](./catalog/mobile-engagement/overview.md)
       * [Conexión de Atributos del dirigible](./catalog/mobile-engagement/airship-attributes.md)
@@ -250,7 +250,7 @@ ht-degree: 6%
       * [Usar Destination SDK para configurar un destino basado en archivos](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Enviar para revisión un destino creado en Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Configurar destinos basados en archivos {#configure-file-based-destinations}
-         * [Configurar las opciones de formato de archivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Configurar opciones de formato de archivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Configuración de un destino de Amazon S3 con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Configuración de un destino de Amazon S3 con opciones personalizadas de nombre de archivo y formato](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [Configurar un destino de almacenamiento de Azure Blob con opciones de formato de archivo personalizadas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
@@ -259,7 +259,7 @@ ht-degree: 6%
          * [Configurar un destino SFTP con opciones de formato de archivo predefinidas y configuración de nombre de archivo personalizada](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurar un destino basado en archivos para exportar audiencias de clientes potenciales](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referencia de API de creación de destino {#authoring-api}
-      * [Referencia de la API de Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referencia de API de Destination SDK (creación de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operaciones del servidor de destino {#server-operations}
          * [Crear una configuración de servidor de destino](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Recuperar una configuración de servidor de destino](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
@@ -289,7 +289,7 @@ ht-degree: 6%
          * [Prueba del destino de flujo continuo con perfiles de muestra](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Creación y prueba de una plantilla de transformación de mensajes](./destination-sdk/testing-api/streaming-destinations/create-template.md)
       * API de prueba de destino basada en archivos {#batch-destinations}
-         * [Información general sobre la API de prueba de destino basada en archivos](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [Resumen de la API de prueba de destino basada en archivos](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
          * [Generar perfiles de muestra basados en un esquema de origen](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
          * [Prueba del destino basado en archivos con perfiles de muestra](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
          * [Ver resultados detallados de la activación](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)

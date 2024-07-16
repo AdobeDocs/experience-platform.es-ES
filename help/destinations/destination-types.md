@@ -6,7 +6,7 @@ exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ Por último, las conexiones también se pueden distinguir entre destinos públic
 
 ## Conexiones {#connections}
 
-**[!UICONTROL Exportación de perfiles]**, **[!UICONTROL Exportación de audiencia de streaming]**, y **[!DNL Edge Personalization]** destinos en Adobe Experience Platform capture datos de evento, combínelos con otras fuentes de datos para formar el [Perfil del cliente en tiempo real](../profile/home.md), aplique la segmentación y exporte audiencias y perfiles cualificados a destinos.
+**[!UICONTROL Exportación de perfiles]**, **[!UICONTROL Exportación de audiencias de streaming]** y **[!DNL Edge Personalization]** destinos en los datos del evento de captura de Adobe Experience Platform, combínelos con otras fuentes de datos para formar el [Perfil del cliente en tiempo real](../profile/home.md), aplique la segmentación y exporte audiencias y perfiles calificados a destinos.
 
 ## Destinos de exportación de perfil {#profile-export}
 
@@ -37,7 +37,7 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 
 >[!IMPORTANT]
 >
->Los destinos empresariales o los destinos de exportación de perfil de flujo continuo están disponibles para [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) solo para clientes de.
+>Los destinos empresariales o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Utilice los conectores de datos de destino empresariales para ofrecer perfiles de Adobe Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 
@@ -51,17 +51,17 @@ Los destinos empresariales incluyen:
 
 ### Destinos por lotes (basados en archivos) {#file-based}
 
-Los destinos basados en archivos reciben `.csv` archivos que contienen perfiles o atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) es un ejemplo de destino en el que se pueden exportar archivos que contengan exportaciones de perfil.
+Los destinos basados en archivos reciben `.csv` archivos que contienen perfiles o atributos. [Amazon S3](catalog/cloud-storage/amazon-s3.md) es un ejemplo de destino donde puede exportar archivos que contengan exportaciones de perfiles.
 
 ## Destinos de exportación de audiencia de streaming {#streaming-destinations}
 
-Los destinos de exportación de audiencia reciben datos de audiencia de Experience Platform. Estos destinos utilizan ID de audiencia o ID de usuario. Destinos publicitarios y sociales como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), o [Facebook](catalog/social/facebook.md) Estos son ejemplos de destinos de este tipo.
+Los destinos de exportación de audiencia reciben datos de audiencia de Experience Platform. Estos destinos utilizan ID de audiencia o ID de usuario. Advertising y destinos sociales como [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) o [Facebook](catalog/social/facebook.md) son ejemplos de estos destinos.
 
 ## Destinos de personalización de Edge {#edge-personalization-destinations}
 
-Los destinos de personalización de Edge en Experience Platform incluyen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y el [Destino de personalización personalizado](/help/destinations/catalog/personalization/custom-personalization.md). Al utilizar estos destinos, puede habilitar casos de uso de personalización de la misma página y de la siguiente página para sus clientes.
+Los destinos de personalización de Edge en Experience Platform incluyen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalization destination](/help/destinations/catalog/personalization/custom-personalization.md). Al utilizar estos destinos, puede habilitar casos de uso de personalización de la misma página y de la siguiente página para sus clientes.
 
-Obtenga más información sobre cómo [configuración de destinos de personalización para la personalización de la misma página y de la página siguiente](/help/destinations/ui/activate-edge-personalization-destinations.md).
+Obtenga más información sobre cómo [configurar destinos de personalización para la personalización de la misma página y de la página siguiente](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Exportación de perfiles y destinos de exportación de audiencias: vídeo introductorio {#video}
 
@@ -74,14 +74,14 @@ El siguiente vídeo le muestra las particularidades de los dos tipos de destinos
 Puede exportar tres tipos de audiencias desde Experience Platform a varios destinos:
 
 * Audiencias de personas
-* Audiencias de cuenta
-* Audiencias potenciales
+* Públicos de la cuenta
+* Públicos de clientes potenciales
 
-Obtenga más información acerca de [varios tipos de audiencia](/help/segmentation/ui/account-audiences.md#terminology).
+Más información sobre los [distintos tipos de audiencia](/help/segmentation/ui/account-audiences.md#terminology).
 
 Un símbolo en la tarjeta de destino muestra qué tipos de audiencias puede exportar a cada destino.
 
-![Tarjeta de destino de ejemplo con símbolos que muestran qué tipos de audiencia se pueden exportar.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Tarjeta de destino de ejemplo con símbolos que muestran los tipos de audiencia que se pueden exportar.](/help/destinations/assets/destination-types/types-of-audiences.png)
 
 
 ## Destinos de exportación de conjuntos de datos {#dataset-export-destinations}
@@ -96,9 +96,9 @@ Platform aprovecha la potencia y flexibilidad de la administración de etiquetas
 
 >[!TIP]
 >
->Para obtener información detallada sobre las extensiones de etiquetas, incluidos los casos de uso y cómo encontrarlas en la interfaz, consulte la [información general sobre extensiones de etiquetas](./catalog/launch-extensions/overview.md).
+>Para obtener información detallada sobre las extensiones de etiquetas, incluidos los casos de uso y cómo encontrarlas en la interfaz, consulte [descripción general de las extensiones de etiquetas](./catalog/launch-extensions/overview.md).
 
-Las extensiones de etiquetas reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como una **Reenvío de eventos** tipo de destino. Se trata de un tipo de integración más sencillo con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son los siguientes [Extensión de personalización Gainsight](./catalog/personalization/gainsight.md) o el [Confirmar la extensión de Voz del cliente](./catalog/voice/confirmit-digital-feedback.md).
+Las extensiones de etiquetas reenvían datos de evento sin procesar a varios tipos de destinos. Considere las extensiones como un tipo de destino **Reenvío de eventos**. Se trata de un tipo de integración más sencillo con las plataformas de destino, que solo reenvía datos de evento sin procesar. Algunos ejemplos son la [extensión de personalización Gainsight](./catalog/personalization/gainsight.md) o la [extensión de confirmación de voz del cliente](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Extensiones de etiquetas comparadas con otros destinos](./assets/common/launch-and-other-destinations.png)
 
@@ -112,6 +112,6 @@ Las extensiones son útiles cuando los datos de evento se utilizan para almacena
 
 ## Categorías de destino {#categories}
 
-Las conexiones y extensiones de la [catálogo de destinos](https://platform.adobe.com/destination/catalog) se agrupan por categoría de destino (**Publicidad**, **Almacenamiento en la nube**, **Plataformas de encuesta**, **Marketing por email**, etc.), según la acción de marketing que le ayuden a lograr. Para obtener más información sobre cada una de las categorías, así como los destinos incluidos en cada categoría, consulte la [Documentación del catálogo de destinos](./catalog/overview.md).
+Las conexiones y extensiones del [catálogo de destinos](https://platform.adobe.com/destination/catalog) se agrupan por categoría de destino (**Advertising**, **almacenamiento en la nube**, **plataformas de encuestas**, **marketing por correo electrónico**, etc.), según la acción de marketing que le ayuden a lograr. Para obtener más información sobre cada una de las categorías, así como los destinos incluidos en cada categoría, consulte la [documentación del catálogo de destinos](./catalog/overview.md).
 
 ![Categorías de destino resaltadas en la página del catálogo.](./assets/destination-types/destination-categories-menu.png)

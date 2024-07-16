@@ -5,18 +5,18 @@ description: Puede utilizar el punto final /functions en la API de preparación 
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '213'
 ht-degree: 5%
 
 ---
 
 # Extremos de funciones
 
-Las funciones de conjunto de asignaciones le permiten transformar los datos entre esquemas de origen y destino. Puede usar el complemento `/languages/el` extremo para validar las expresiones y obtener una lista de todas las funciones de conjunto de asignaciones disponibles.
+Las funciones de conjunto de asignaciones le permiten transformar los datos entre esquemas de origen y destino. Puede usar el extremo `/languages/el` para validar las expresiones y obtener una lista de todas las funciones de conjunto de asignaciones disponibles.
 
 ## Validar expresiones
 
-Puede validar si la expresión actual es válida realizando una solicitud de POST a `/languages/el/validate` punto final.
+Puede validar si la expresión actual es válida realizando una solicitud de POST al extremo `/languages/el/validate`.
 
 **Formato de API**
 
@@ -52,7 +52,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el estado de validación 
 
 ## Funciones del conjunto de asignaciones de lista
 
-Puede recuperar una lista de todas las funciones del conjunto de asignaciones disponibles realizando una solicitud de GET a la variable `/languages/el/functions` punto final.
+Puede recuperar una lista de todas las funciones del conjunto de asignaciones disponibles realizando una solicitud de GET al extremo `/languages/el/functions`.
 
 **Formato de API**
 
@@ -117,7 +117,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las fu
 
 ## Enumeración de operadores de conjunto de asignaciones
 
-Puede recuperar una lista de todos los operadores de conjuntos de asignaciones disponibles realizando una solicitud de GET a `/languages/el/operators` punto final.
+Puede recuperar una lista de todos los operadores de conjuntos de asignaciones disponibles realizando una solicitud de GET al extremo `/languages/el/operators`.
 
 **Formato de API**
 

@@ -27,12 +27,12 @@ ht-degree: 19%
       - [Información general](data-distiller/derived-datasets/overview.md)
       - [Crear conjuntos de datos derivados con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Crear conjuntos de datos derivados basados en deciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Perspectivas personalizables para informes de aplicaciones ampliados {#customizable-insights}
+   - Perspectivas personalizables para informes de aplicaciones extendidos {#customizable-insights}
       - [Información general](data-distiller/customizable-insights/overview.md)
       - [Modo de consulta profesional](data-distiller/customizable-insights/query-pro-mode.md)
       - [Envío de consultas aceleradas](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guía del modelo de datos de Reporting Insights](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - Canalizaciones de funciones AI/ML {#ml-feature-pipelines}
+   - Canalizaciones de características de AI/ML {#ml-feature-pipelines}
       - [Información general](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar con Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Análisis exploratorio de datos](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
    - [Información general](use-cases/overview.md)
    - [Exploración abandonada](use-cases/abandoned-browse.md)
    - [Análisis de atribución](use-cases/attribution-analysis.md)
-   - [Filtros de bots](use-cases/bot-filtering.md)
+   - [Filtrado de bots](use-cases/bot-filtering.md)
    - [Creación de un informe de tendencias de eventos](use-cases/trended-report-of-events.md)
    - [Análisis de consentimiento](use-cases/consent-analysis.md)
    - [Valor de duración del cliente](use-cases/customer-lifetime-value.md)
@@ -88,16 +88,16 @@ ht-degree: 19%
    - [Monitorización de consultas programadas](ui/monitor-queries.md)
    - [Guía de credenciales](ui/credentials.md)
    - [Generar conjuntos de datos de salida a partir de resultados de consulta](ui/create-datasets.md)
-- Extremos de API del servicio de consultas {#api}
+- Extremos de API de servicio de consultas {#api}
    - [Introducción](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parámetros de conexión](api/connection-parameters.md)
-   - [Horarios](api/scheduled-queries.md)
+   - [Programaciones](api/scheduled-queries.md)
    - [Ejecuta para consultas programadas](api/runs-scheduled-queries.md)
    - [Plantillas de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)
    - [Suscripciones de alerta](api/alert-subscriptions.md)
-- Administración de datos {#data-governance}
+- Gobernanza de datos {#data-governance}
    - [Información general](data-governance/overview.md)
    - [Guía de registro de auditoría](data-governance/audit-log-guide.md)
    - [Identidades en conjuntos de datos de esquema ad hoc](data-governance/ad-hoc-schema-identities.md)

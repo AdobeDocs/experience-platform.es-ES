@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Registro del lado del servidor para datos de A4T en el SDK web de Platform
 
-El SDK web de Adobe Experience Platform le permite implementar la funcionalidad de Adobe Analytics for Target (A4T) en Platform Edge Network. Cuando el registro del lado del servidor está habilitado, todas las visitas de Analytics enviadas a través de la red perimetral se aumentan con detalles de Target en el lado del servidor, sin tener que pasar por el proceso de vinculación de visitas.
+El SDK web de Adobe Experience Platform le permite implementar la funcionalidad de Adobe Analytics for Target (A4T) en Platform Edge Network. Cuando el registro del lado del servidor está habilitado, todas las visitas de Analytics enviadas a través del Edge Network se aumentan con detalles de Target en el lado del servidor, sin tener que pasar por el proceso de vinculación de visitas.
 
 El registro del lado del servidor para Analytics está habilitado cuando Analytics está habilitado en la configuración del flujo de datos:
 
-![Configuración del flujo de datos de Analytics habilitada](../assets/enable-analytics-datastream.png)
+![Configuración de secuencia de datos de Analytics habilitada](../assets/enable-analytics-datastream.png)
 
 El diagrama siguiente muestra cómo fluyen los datos a través del sistema cuando el registro de Analytics en el lado del servidor está habilitado:
 
@@ -26,4 +26,4 @@ El diagrama siguiente muestra cómo fluyen los datos a través del sistema cuand
 
 ## Pasos siguientes
 
-En esta guía se describe el registro en el lado del servidor para datos de A4T en el SDK web. Consulte la guía de [registro en el lado del cliente](./client-side.md) para obtener más información sobre cómo gestionar los datos de A4T en el lado del cliente.
+En esta guía se describe el registro en el lado del servidor para datos de A4T en el SDK web. Consulte la guía de [registro en el lado del cliente](./client-side.md) para obtener más información sobre cómo administrar los datos de A4T en el lado del cliente.

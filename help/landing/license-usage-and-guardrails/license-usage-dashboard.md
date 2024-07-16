@@ -11,12 +11,12 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Uso de licencias] tablero {#license-usage-dashboard}
+# [!UICONTROL Uso de licencias] en el tablero {#license-usage-dashboard}
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización, tal y como se captura durante una instantánea diaria.
 
-Para obtener instrucciones detalladas sobre cómo acceder al panel de uso de licencias e interactuar con él en la interfaz de usuario, así como para obtener más información acerca de las métricas disponibles que se muestran en el panel, visite la [guía del tablero de uso de licencias](../../dashboards/guides/license-usage.md).
+Para obtener instrucciones detalladas sobre cómo acceder al panel de uso de licencias e interactuar con él en la interfaz de usuario, así como para obtener más información sobre las métricas disponibles que se muestran en el panel, visite la [guía del panel de uso de licencias](../../dashboards/guides/license-usage.md).
 
-Para obtener una descripción general de todas las funciones de tablero de Experience Platform, comience por leer el [información general sobre paneles](../../dashboards/home.md).
+Para obtener una descripción general de todas las características de los paneles de Experience Platform, comience por leer la [descripción general de los paneles](../../dashboards/home.md).
 
 ![](../../dashboards/images/license-usage/dashboard-overview.png)

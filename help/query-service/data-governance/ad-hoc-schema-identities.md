@@ -11,28 +11,28 @@ ht-degree: 1%
 
 # Establecimiento de identidades principales en un conjunto de datos ad hoc
 
-Adobe Experience Platform Query Service permite marcar columnas de conjuntos de datos como identidades principales o secundarias mediante restricciones para SQL `ALTER TABLE` comando. Puede utilizar esta función para asegurarse de que los campos marcados son coherentes con los requisitos de privacidad de datos. Este comando permite agregar o eliminar restricciones para las columnas de la tabla de identidad principal y secundaria directamente a través de SQL.
+El servicio de consultas de Adobe Experience Platform permite marcar columnas de conjuntos de datos como identidades principales o secundarias mediante restricciones para el comando SQL `ALTER TABLE`. Puede utilizar esta función para asegurarse de que los campos marcados son coherentes con los requisitos de privacidad de datos. Este comando permite agregar o eliminar restricciones para las columnas de la tabla de identidad principal y secundaria directamente a través de SQL.
 
-## Primeros pasos
+## Introducción
 
-El etiquetado de columnas de conjuntos de datos como identidad principal o secundaria requiere la comprensión de la variable `ALTER TABLE` Comando SQL y una buena comprensión de los requisitos de privacidad de datos. Antes de continuar con este documento, revise la siguiente documentación:
+Para etiquetar columnas de conjuntos de datos como identidad principal o secundaria se requiere comprender el comando SQL `ALTER TABLE` y comprender bien los requisitos de privacidad de datos. Antes de continuar con este documento, revise la siguiente documentación:
 
-* [La guía de sintaxis SQL para `ALTER TABLE` mando](../sql/syntax.md).
-* [Información general sobre Administración de datos](../../data-governance/home.md) para obtener más información.
+* [Guía de sintaxis SQL para el comando `ALTER TABLE`](../sql/syntax.md).
+* [Información general sobre la administración de datos](../../data-governance/home.md) para obtener más información.
 
 ## Añadir restricciones {#add-constraints}
 
-El `ALTER TABLE` El comando permite etiquetar una columna de conjunto de datos como identidad de una persona y, a continuación, utilizar esa etiqueta como identidad principal actualizando los metadatos asociados mediante SQL. Esto resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. El comando se puede utilizar para garantizar que las operaciones de datos en Platform sean compatibles con las políticas de uso de datos.
+El comando `ALTER TABLE` le permite etiquetar una columna de conjunto de datos como identidad de una persona y luego utilizar esa etiqueta como identidad principal al actualizar los metadatos asociados mediante SQL. Esto resulta especialmente útil cuando los conjuntos de datos se crean mediante SQL en lugar de hacerlo directamente desde un esquema a través de la IU de Platform. El comando se puede utilizar para garantizar que las operaciones de datos en Platform sean compatibles con las políticas de uso de datos.
 
 **Ejemplos**
 
-En el siguiente ejemplo se agrega una restricción a la restricción existente `t1` tabla. Los valores del `id` ahora están marcadas como identidades principales en la variable `IDFA` namespace. Un área de nombres de identidad es una palabra clave que declara el tipo de datos de identidad que representa el campo.
+En el siguiente ejemplo se agrega una restricción a la tabla `t1` existente. Los valores de la columna `id` ahora están marcados como identidades principales en el área de nombres `IDFA`. Un área de nombres de identidad es una palabra clave que declara el tipo de datos de identidad que representa el campo.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ```
 
-El segundo ejemplo garantiza que la variable `id` se marca como una identidad secundaria.
+El segundo ejemplo garantiza que la columna `id` se marque como identidad secundaria.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
@@ -40,11 +40,11 @@ ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 
 ## Eliminar restricciones {#drop-constraints}
 
-Las restricciones también se pueden eliminar de las columnas de la tabla mediante la variable `ALTER TABLE` comando.
+Las restricciones también se pueden eliminar de las columnas de la tabla mediante el comando `ALTER TABLE`.
 
 **Ejemplos**
 
-En el ejemplo siguiente se elimina el requisito de que la variable `c1` columna debe etiquetarse como identidad principal en el `t1` tabla.
+El ejemplo siguiente elimina el requisito de que la columna `c1` esté etiquetada como identidad principal en la tabla `t1` existente.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
@@ -58,7 +58,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ## Mostrar identidades
 
-Utilizar el comando de metadatos `show identities` desde la interfaz de línea de comandos para mostrar una tabla con cada atributo asignado como identidad.
+Utilice el comando de metadatos `show identities` de la interfaz de la línea de comandos para mostrar una tabla con todos los atributos asignados como identidad.
 
 ```shell
 > show identities;
@@ -76,6 +76,6 @@ A continuación se muestra un ejemplo de una tabla devuelta.
 
 En la siguiente lista se explican consideraciones importantes para actualizar identidades en conjuntos de datos existentes al utilizar XDM.
 
-* Para especificar una columna como identidad, debe **debe** defina también el área de nombres que se conservará como metadatos para la columna.
+* Para especificar una columna como identidad, **debe** definir también el área de nombres que se conservará como metadatos para la columna.
 * XDM no admite la especificación de un nombre de columna en el atributo namespace.
-* Si el esquema utiliza el `identityMap` Campo XDM, raíz o nivel superior `identityMap` objeto **debe** se etiquetará como identidad o identidad principal.
+* Si el esquema utiliza el campo XDM `identityMap`, el objeto `identityMap` raíz o de nivel superior **debe** etiquetarse como identidad o identidad principal.

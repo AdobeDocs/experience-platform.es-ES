@@ -1,24 +1,24 @@
 ---
 title: sendMediaEvent
 description: Aprenda a utilizar el comando sendMediaEvent para realizar un seguimiento de sesiones de contenido en el SDK web.
-source-git-commit: 83d3de67e7680369dc890f58b16d9668058e221c
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-
 # `sendMediaEvent`
 
-El `sendMediaEvent` forma parte del SDK web `streamingMedia` componente. Puede utilizar este componente para recopilar datos relacionados con las sesiones de contenido en el sitio web. Consulte la `streamingMedia` [documentación](configure/streamingmedia.md) para obtener información sobre cómo configurar este componente.
+El comando `sendMediaEvent` forma parte del componente `streamingMedia` del SDK web. Puede utilizar este componente para recopilar datos relacionados con las sesiones de contenido en el sitio web. Consulte la `streamingMedia` [documentación](configure/streamingmedia.md) para obtener información sobre cómo configurar este componente.
 
-Utilice el `sendMediaEvent` para realizar un seguimiento de reproducciones de contenido, pausas, finalizaciones, actualizaciones de estado del reproductor y otros eventos relacionados.
+Utilice el comando `sendMediaEvent` para rastrear reproducciones de contenido, pausas, finalizaciones, actualizaciones de estado del reproductor y otros eventos relacionados.
 
 El SDK web puede gestionar eventos de medios en función del tipo de seguimiento de sesión de medios:
 
-* **Gestión de eventos para sesiones rastreadas automáticamente**. En este modo no es necesario pasar el `sessionID` al evento de medios o al valor del cabezal de reproducción. El SDK web se encargará de esto, en función del ID de reproductor proporcionado y el `getPlayerDetails` función de llamada de retorno proporcionada al iniciar la sesión de contenido.
-* **Gestión de eventos para sesiones rastreadas manualmente**. En este modo, debe pasar el `sessionID` al evento de medios, junto con el valor del cabezal de reproducción (valor entero). También puede pasar los detalles de calidad de los datos de experiencia, si es necesario.
+* **Control de eventos para sesiones con seguimiento automático**. En este modo no necesita pasar `sessionID` al evento de medios o al valor del cabezal de reproducción. El SDK web se encargará de esto, según el ID del reproductor proporcionado y la función de devolución de llamada `getPlayerDetails` proporcionada al iniciar la sesión de contenido.
+* **Control de eventos para sesiones con seguimiento manual**. En este modo necesita pasar `sessionID` al evento multimedia, junto con el valor del cabezal de reproducción (valor entero). También puede pasar los detalles de calidad de los datos de experiencia, si es necesario.
 
 ## Administrar eventos de medios por tipo {#handle-by-type}
 
@@ -27,7 +27,7 @@ Seleccione las pestañas siguientes para ver ejemplos de control de tipo de even
 
 ### Reproducir {#play}
 
-El `media.play` el tipo de evento se utiliza para rastrear cuándo se inicia la reproducción de contenido. Este evento debe enviarse cuando el reproductor cambia de estado a &quot;reproduciendo&quot;. Otros estados desde los que el reproductor pasa a &quot;reproduciendo&quot; incluyen &quot;almacenamiento en búfer&quot;, reanudación de &quot;pausa&quot; por parte del usuario, recuperación de un error o reproducción automática.
+El tipo de evento `media.play` se usa para rastrear cuándo comienza la reproducción de contenido. Este evento debe enviarse cuando el reproductor cambia de estado a &quot;reproduciendo&quot;. Otros estados desde los que el reproductor pasa a &quot;reproduciendo&quot; incluyen &quot;almacenamiento en búfer&quot;, reanudación de &quot;pausa&quot; por parte del usuario, recuperación de un error o reproducción automática.
 
 >[!BEGINTABS]
 
@@ -61,9 +61,9 @@ sessionPromise.then(sessionID => {
 >[!ENDTABS]
 
 
-### Pausar {#pause}
+### Pause {#pause}
 
-El `media.pauseStart` El tipo de evento se utiliza para rastrear cuándo se pone en pausa una reproducción de contenido. Este evento debe enviarse cuando el usuario pulse **[!UICONTROL Pausar]**. No hay ningún tipo de evento de reanudación. Se infiere un currículum al enviar una `media.play` evento después de un `media.pauseStart`.
+El tipo de evento `media.pauseStart` se usa para hacer un seguimiento de cuándo se pone en pausa una reproducción de contenido. Este evento debe enviarse cuando el usuario presione **[!UICONTROL Pausa]**. No hay ningún tipo de evento de reanudación. Se infiere una reanudación cuando se envía un evento `media.play` después de `media.pauseStart`.
 
 >[!BEGINTABS]
 
@@ -99,7 +99,7 @@ sessionPromise.then(sessionID => {
 
 ### Error {#error}
 
-El `media.error` el tipo de evento se utiliza para realizar un seguimiento de cuándo se produce un error durante la reproducción de contenido. Este evento debe enviarse cuando se produce un error.
+El tipo de evento `media.error` se usa para realizar un seguimiento de cuándo se produce un error durante la reproducción de contenido. Este evento debe enviarse cuando se produce un error.
 
 >[!BEGINTABS]
 
@@ -145,7 +145,7 @@ sessionPromise.then(sessionID => {
 
 ### Inicio de pausa publicitaria {#ad-break-start}
 
-El `media.adBreakStart` el tipo de evento se utiliza para rastrear cuándo se inicia una pausa publicitaria. Este evento debe enviarse cuando se inicie una pausa publicitaria.
+El tipo de evento `media.adBreakStart` se usa para hacer un seguimiento de cuándo comienza una pausa publicitaria. Este evento debe enviarse cuando se inicie una pausa publicitaria.
 
 >[!BEGINTABS]
 
@@ -193,7 +193,7 @@ sessionPromise.then(sessionID => {
 
 ### Pausa publicitaria completa {#ad-break-complete}
 
-El `media.adBreakComplete` El tipo de evento se utiliza para realizar un seguimiento del momento en el que finaliza una pausa publicitaria. Este evento debe enviarse cuando se complete una pausa publicitaria.
+El tipo de evento `media.adBreakComplete` se usa para hacer un seguimiento de cuándo finaliza una pausa publicitaria. Este evento debe enviarse cuando se complete una pausa publicitaria.
 
 >[!BEGINTABS]
 
@@ -229,7 +229,7 @@ sessionPromise.then(sessionID => {
 
 ### Inicio del anuncio {#ad-start}
 
-El `media.adStart` el tipo de evento se utiliza para rastrear cuándo se inicia un anuncio. Este evento debe enviarse cuando se inicie un anuncio.
+El tipo de evento `media.adStart` se usa para hacer un seguimiento del inicio de un anuncio. Este evento debe enviarse cuando se inicie un anuncio.
 
 >[!BEGINTABS]
 
@@ -319,7 +319,7 @@ sessionPromise.then(sessionID => {
 
 ### Anuncio completado {#ad-complete}
 
-El `media.adComplete` el tipo de evento se utiliza para rastrear cuándo se completa un anuncio. Este evento debe enviarse cuando se complete un anuncio.
+El tipo de evento `media.adComplete` se usa para hacer un seguimiento del momento en el que finaliza un anuncio. Este evento debe enviarse cuando se complete un anuncio.
 
 >[!BEGINTABS]
 
@@ -355,7 +355,7 @@ sessionPromise.then(sessionID => {
 
 ### Omisión de publicidad {#ad-skip}
 
-El `media.adSkip` el tipo de evento se utiliza para rastrear cuándo se omite un anuncio. Este evento debe enviarse cuando se omite un anuncio.
+El tipo de evento `media.adSkip` se usa para rastrear cuándo se omite un anuncio. Este evento debe enviarse cuando se omite un anuncio.
 
 >[!BEGINTABS]
 
@@ -391,7 +391,7 @@ sessionPromise.then(sessionID => {
 
 ### Inicio del capítulo {#chapter-start}
 
-El `media.chapterStart` el tipo de evento se utiliza para realizar un seguimiento del inicio de un capítulo. Este evento debe enviarse cuando comience un capítulo.
+El tipo de evento `media.chapterStart` se usa para hacer un seguimiento de cuándo comienza un capítulo. Este evento debe enviarse cuando comience un capítulo.
 
 >[!BEGINTABS]
 
@@ -469,7 +469,7 @@ sessionPromise.then(sessionID => {
 
 ### Capítulo completado {#chapter-complete}
 
-El `media.chapterComplete` El tipo de evento se utiliza para realizar un seguimiento del momento en el que finaliza un capítulo. Este evento debe enviarse cuando se complete un capítulo.
+El tipo de evento `media.chapterComplete` se usa para realizar un seguimiento del momento en que finaliza un capítulo. Este evento debe enviarse cuando se complete un capítulo.
 
 >[!BEGINTABS]
 
@@ -505,7 +505,7 @@ sessionPromise.then(sessionID => {
 
 ### Omisión de capítulo {#chapter-skip}
 
-El `media.chapterSkip` el tipo de evento se utiliza para rastrear cuándo se omite un capítulo. Este evento debe enviarse cuando se omita un capítulo.
+El tipo de evento `media.chapterSkip` se usa para hacer un seguimiento de cuándo se omite un capítulo. Este evento debe enviarse cuando se omita un capítulo.
 
 >[!BEGINTABS]
 
@@ -541,7 +541,7 @@ sessionPromise.then(sessionID => {
 
 ### Inicio del búfer {#buffer-start}
 
-El `media.bufferStart` el tipo de evento se utiliza para rastrear cuándo se inicia el almacenamiento en búfer. Este evento debe enviarse cuando se inicie el almacenamiento en búfer. No hay ninguna `bufferResume` tipo de evento. A `bufferResume` se infiere al enviar un evento de reproducción después de que `bufferStart`.
+El tipo de evento `media.bufferStart` se usa para hacer un seguimiento del inicio del almacenamiento en búfer. Este evento debe enviarse cuando se inicie el almacenamiento en búfer. No hay ningún tipo de evento `bufferResume`. Se infiere un `bufferResume` al enviar un evento de reproducción después de `bufferStart`.
 
 >[!BEGINTABS]
 
@@ -577,7 +577,7 @@ sessionPromise.then(sessionID => {
 
 ### Cambio de velocidad de bits {#bitrate-change}
 
-El `media.bitrateChange` El tipo de evento se utiliza para rastrear cuándo cambia la velocidad de bits. Este evento debe enviarse cuando cambie la velocidad de bits.
+El tipo de evento `media.bitrateChange` se usa para realizar un seguimiento de cuándo cambia la velocidad de bits. Este evento debe enviarse cuando cambie la velocidad de bits.
 
 >[!BEGINTABS]
 
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Actualizaciones de estado {#state-updates}
 
-El `media.stateUpdate` el tipo de evento se utiliza para rastrear cuándo cambia el estado del reproductor. Este evento debe enviarse cuando cambie el estado del reproductor.
+El tipo de evento `media.stateUpdate` se usa para rastrear cuándo cambia el estado del reproductor. Este evento debe enviarse cuando cambie el estado del reproductor.
 
 >[!BEGINTABS]
 
@@ -684,9 +684,9 @@ sessionPromise.then(sessionID => {
 
 ### Fin de sesión {#session-end}
 
-El `media.sessionEnd` El tipo de evento se utiliza para notificar al backend de Media Analytics que cierre inmediatamente la sesión cuando el usuario ha abandonado el contenido y es poco probable que vuelva.
+El tipo de evento `media.sessionEnd` se usa para notificar al backend de Media Analytics que cierre inmediatamente la sesión cuando el usuario ha abandonado el contenido y es poco probable que vuelva.
 
-Si no envía una `sessionEnd` evento, una sesión abandonada agotará el tiempo de espera después de que no se reciba ningún evento durante 10 minutos o cuando no se produzca ningún movimiento del cabezal de reproducción durante 30 minutos. La sesión se elimina automáticamente.
+Si no envía un evento `sessionEnd`, se agotará el tiempo de espera de la sesión abandonada cuando no se reciba ningún evento durante 10 minutos o cuando no se produzca ningún movimiento del cabezal de reproducción durante 30 minutos. La sesión se elimina automáticamente.
 
 >[!BEGINTABS]
 
@@ -722,7 +722,7 @@ sessionPromise.then(sessionID => {
 
 ### Sesión completa {#session-complete}
 
-El `media.sessionComplete` el tipo de evento se utiliza para rastrear cuándo se completa una sesión de contenido. Este evento debe enviarse cuando se llegue al final del contenido principal.
+El tipo de evento `media.sessionComplete` se usa para realizar un seguimiento de cuándo finaliza una sesión multimedia. Este evento debe enviarse cuando se llegue al final del contenido principal.
 
 >[!BEGINTABS]
 
@@ -754,6 +754,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-

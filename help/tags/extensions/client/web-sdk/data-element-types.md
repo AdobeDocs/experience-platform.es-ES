@@ -12,29 +12,29 @@ ht-degree: 5%
 
 # Tipos de elementos de datos
 
-Después de configurar su [tipos de acción](action-types.md) en el [Extensión de etiqueta de SDK web de Adobe Experience Platform](web-sdk-extension-configuration.md), debe configurar los tipos de elementos de datos. Esta página describe los tipos de elementos de datos disponibles.
+Después de establecer los [tipos de acción](action-types.md) en la [extensión de etiqueta del SDK web de Adobe Experience Platform](web-sdk-extension-configuration.md), debe configurar los tipos de elementos de datos. Esta página describe los tipos de elementos de datos disponibles.
 
 ## Mapa de identidad {#identity-map}
 
 Un mapa de identidad permite establecer identidades del visitante de la página web. Un mapa de identidad consta de áreas de nombres, como `CRMID`, `Phone` o `Email`, con cada área de nombres que contiene uno o más identificadores. Por ejemplo, si la persona del sitio web ha proporcionado dos números de teléfono, el área de nombres del teléfono debe contener dos identificadores.
 
-En el [!UICONTROL Mapa de identidad] Para cada elemento de datos, debe proporcionar los siguientes datos para cada identificador:
+En el elemento de datos [!UICONTROL mapa de identidad], debe proporcionar la siguiente información para cada identificador:
 
-* **[!UICONTROL ID]**: El valor que identifica al visitante. Por ejemplo, si el identificador pertenece a _phone_ namespace, la variable [!UICONTROL ID] puede ser _555-555-5555_. Este valor generalmente se deriva de una variable JavaScript o de algún otro dato de la página, por lo que es mejor crear un elemento de datos que haga referencia a los datos de página y, a continuación, hacer referencia al elemento de datos en la [!UICONTROL ID] dentro del campo [!UICONTROL Mapa de identidad] elemento de datos. Si, al ejecutarse en la página, el valor de ID no es una cadena rellenada, el identificador se eliminará automáticamente del mapa de identidad.
-* **[!UICONTROL Estado autenticado]**: una selección que indica si el visitante está autenticado.
-* **[!UICONTROL Principal]**: una selección que indica si el identificador debe utilizarse como identificador principal del individuo. Si no se marca ningún identificador como principal, el ECID se utilizará como identificador principal.
+* **[!UICONTROL ID]**: El valor que identifica al visitante. Por ejemplo, si el identificador pertenece al área de nombres _phone_, el [!UICONTROL ID] puede ser _555-555-5555_. Este valor generalmente se deriva de una variable de JavaScript o de algún otro dato de la página, por lo que es mejor crear un elemento de datos que haga referencia a los datos de la página y, a continuación, hacer referencia al elemento de datos en el campo [!UICONTROL ID] dentro del elemento de datos [!UICONTROL mapa de identidad]. Si, al ejecutarse en la página, el valor de ID no es una cadena rellenada, el identificador se eliminará automáticamente del mapa de identidad.
+* **[!UICONTROL Estado autenticado]**: Una selección que indica si el visitante está autenticado.
+* **[!UICONTROL Principal]**: una selección que indica si el identificador debe usarse como identificador principal del individuo. Si no se marca ningún identificador como principal, el ECID se utilizará como identificador principal.
 
-![Imagen de la IU que muestra la pantalla Editar elemento de datos.](assets/identity-map-data-element.png)
+![Imagen de la interfaz de usuario que muestra la pantalla Editar elemento de datos.](assets/identity-map-data-element.png)
 
 >[!TIP]
 >
->El Adobe recomienda enviar identidades que representen a una persona, como `Luma CRM Id` como identidad principal.
+>El Adobe recomienda enviar identidades que representen a una persona, como `Luma CRM Id`, como la identidad principal.
 >
->Si el mapa de identidad contiene el identificador de persona (por ejemplo, `Luma CRM Id`), el identificador de persona se convertirá en el identificador principal. De lo contrario, `ECID` se convierte en la identidad principal.
+>Si el mapa de identidad contiene el identificador de persona (p. ej. `Luma CRM Id`), entonces el identificador de persona se convertirá en el identificador principal. De lo contrario, `ECID` se convierte en la identidad principal.
 
-No debe proporcionar un [!DNL ECID] al crear un mapa de identidad. Al utilizar el SDK, una variable [!DNL ECID] se genera automáticamente en el servidor y se incluye en el mapa de identidad.
+No debe proporcionar un [!DNL ECID] al crear un mapa de identidad. Al utilizar el SDK, se genera automáticamente un [!DNL ECID] en el servidor y se incluye en el mapa de identidad.
 
-El elemento de datos del mapa de identidad se utiliza a menudo junto con el [[!UICONTROL Objeto XDM] tipo de elemento de datos](#xdm-object) y el [[!UICONTROL Definir consentimiento] tipo de acción](action-types.md#set-consent).
+El elemento de datos del mapa de identidad se usa a menudo en combinación con el tipo de elemento de datos [[!UICONTROL XDM object]](#xdm-object) y el tipo de acción [[!UICONTROL Establecer consentimiento]](action-types.md#set-consent).
 
 Más información sobre [Servicio de identidad de Adobe Experience Platform](../../../../identity-service/home.md).
 
@@ -42,9 +42,9 @@ Más información sobre [Servicio de identidad de Adobe Experience Platform](../
 
 El formato de los datos a XDM es más sencillo con el elemento de datos de objeto XDM. Cuando abra este elemento de datos por primera vez, seleccione el esquema y la zona protegida de Adobe Experience Platform correctos. Después de seleccionar el esquema, verá la estructura del esquema, que puede rellenar fácilmente.
 
-![Imagen de la IU que muestra la estructura de objetos XDM.](assets/XDM-object.png)
+![Imagen de interfaz de usuario que muestra la estructura de objetos XDM.](assets/XDM-object.png)
 
-Tenga en cuenta que cuando abre ciertos campos del esquema, como `web.webPageDetails.URL`Sin embargo, algunos elementos se recopilan automáticamente. Aunque varios elementos se recopilan automáticamente, puede sobrescribir cualquiera, si es necesario. Todos los valores se pueden rellenar manualmente o con otros elementos de datos.
+Tenga en cuenta que cuando abre ciertos campos del esquema, como `web.webPageDetails.URL`, algunos elementos se recopilan automáticamente. Aunque varios elementos se recopilan automáticamente, puede sobrescribir cualquiera, si es necesario. Todos los valores se pueden rellenar manualmente o con otros elementos de datos.
 
 >[!NOTE]
 >
@@ -52,20 +52,20 @@ Tenga en cuenta que cuando abre ciertos campos del esquema, como `web.webPageDet
 
 ## Variable {#variable}
 
-Puede crear objetos de carga útil utilizando **[!UICONTROL Variable]** elemento de datos. Ambos [!UICONTROL XDM] y [!UICONTROL Datos] se admiten objetos de.
+Puede crear objetos de carga útil usando el elemento de datos **[!UICONTROL Variable]**. Se admiten los objetos [!UICONTROL XDM] y [!UICONTROL Data].
 
-* Al seleccionar [!UICONTROL XDM], seleccione el [!UICONTROL Sandbox] y [!UICONTROL Esquema].
-* Al seleccionar [!UICONTROL Datos], seleccione las soluciones que desee. Las soluciones disponibles incluyen [!UICONTROL Adobe Analytics] y [!UICONTROL Adobe Target].
+* Al seleccionar [!UICONTROL XDM], seleccione la [!UICONTROL zona protegida] y el [!UICONTROL esquema] deseados.
+* Cuando seleccione [!UICONTROL Datos], seleccione las soluciones que desee. Las soluciones disponibles incluyen [!UICONTROL Adobe Analytics] y [!UICONTROL Adobe Target].
 
 ![Imagen de la interfaz de usuario de etiquetas que muestra las opciones del elemento de datos.](assets/variable-data-element.png)
 
-Después de crear este elemento de datos, puede utilizar el [Actualizar variable](./action-types.md#update-variable) acción para modificarla. Cuando esté listo, puede incluir este elemento de datos en la [Enviar evento](./action-types.md#send-event) acción para enviar datos a un conjunto de datos.
+Después de crear este elemento de datos, puede usar la acción [Actualizar variable](./action-types.md#update-variable) para modificarlo. Cuando esté listo, puede incluir este elemento de datos en la acción [Enviar evento](./action-types.md#send-event) para enviar datos a un conjunto de datos.
 
 ## Medios: calidad de la experiencia {#quality-experience}
 
-A **[!UICONTROL Calidad de la experiencia]** Este elemento de datos es útil cuando se envían eventos de medios de streaming a Adobe Experience Platform. Puede añadir este elemento al crear una sesión de contenido y los siguientes eventos de contenido contendrán datos actualizados de calidad de la experiencia.
+Un elemento de datos de **[!UICONTROL Calidad de la experiencia]** es útil cuando se envían eventos de medios de streaming a Adobe Experience Platform. Puede añadir este elemento al crear una sesión de contenido y los siguientes eventos de contenido contendrán datos actualizados de calidad de la experiencia.
 
-![Imagen de la IU que muestra la pantalla Crear calidad del elemento de datos de la experiencia.](assets/qoe-data-element.png)
+![Imagen de la interfaz de usuario que muestra la pantalla Crear elemento de datos de calidad de la experiencia.](assets/qoe-data-element.png)
 
 ## Pasos siguientes {#next-steps}
 

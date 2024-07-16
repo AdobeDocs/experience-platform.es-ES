@@ -2,7 +2,8 @@
 title: Casos de uso de muestra en Real-Time CDP
 description: Vea casos de uso de ejemplos entre servicios para aprovechar al máximo la implementación de Real-Time CDP.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -39,7 +40,7 @@ Los casos de uso de muestra se pueden agrupar en casos de adquisición de client
     </a>
     </div>
     <p>
-    <em>Interactúe y adquiera nuevos clientes sin depender de cookies de terceros</em>
+    <em>Capte y adquiera nuevos clientes sin depender de cookies de terceros</em>
     <p>
   </td>
   <td>
@@ -48,7 +49,7 @@ Los casos de uso de muestra se pueden agrupar en casos de adquisición de client
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
-    <strong>Personalización in situ</strong>
+    <strong>Personalización en el sitio</strong>
     </a>
     </div>
     <p>
@@ -61,11 +62,11 @@ Los casos de uso de muestra se pueden agrupar en casos de adquisición de client
     </a>
     <div>
       <a href="../partner-data/offsite-retargeting.md">
-    <strong>Redireccionamiento fuera del sitio de visitantes no autenticados</strong>
+    <strong>Redireccionamiento de visitantes no autenticados fuera del sitio</strong>
     </a>
     </div>
     <p>
-    <em>Aprenda a crear una audiencia de visitantes no autenticados y a redirigirlos mediante los ID duraderos proporcionados por los socios.</em>
+    <em>Aprenda a crear una audiencia de visitantes no autenticados y a redirigirlos mediante los identificadores duraderos proporcionados por el socio.</em>
     <p>
   </td>
   </tr>
@@ -85,13 +86,13 @@ Los casos de uso de muestra se pueden agrupar en casos de adquisición de client
     </a>
     </div>
     <p>
-    <em>Complementa perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar la optimización de audiencias.</em>
+    <em>Complementa perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas de tu base de clientes y mejorar la optimización de audiencias.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personalización, perspectivas, participación {#personalization-insights-engagement}
+## Personalization, perspectivas, participación {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -105,7 +106,7 @@ Los casos de uso de muestra se pueden agrupar en casos de adquisición de client
     </a>
     </div>
     <p>
-    <em>Vuelva a atraer a los clientes que han abandonado una conversión de forma inteligente y responsable. Capte a los clientes caducados con experiencias para aumentar la conversión y aumentar el valor de duración del cliente.</em>
+    <em>Vuelva a atraer a los clientes que han abandonado una conversión de manera inteligente y responsable. Capte a los clientes caducados con experiencias para aumentar la conversión y aumentar el valor de duración del cliente.</em>
     <p>
   </td>
   </tr>

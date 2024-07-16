@@ -5,7 +5,7 @@ exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '600'
-ht-degree: 70%
+ht-degree: 67%
 
 ---
 
@@ -23,13 +23,13 @@ Este documento explica cómo definir los tipos de elementos de datos para una ex
 
 >[!IMPORTANT]
 >
->Si va a desarrollar una extensión de Edge, consulte la guía sobre [tipos de elementos de datos para extensiones de edge](../edge/data-element-types.md) en su lugar.
+>Si está desarrollando una extensión de Edge, consulte la guía sobre [tipos de elementos de datos para extensiones de Edge](../edge/data-element-types.md) en su lugar.
 >
 >Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones web. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 
 Los tipos de elementos de datos suelen consistir en lo siguiente:
 
-1. A [vista](./views.md) se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos que permite a los usuarios modificar la configuración del elemento de datos.
+1. Una [vista](./views.md) que se muestra dentro de la IU del Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración del elemento de datos.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y recuperar fragmentos de datos.
 
 Considere una situación en la que desee permitir que los usuarios recuperen un fragmento de datos de un elemento de almacenamiento local denominado `productName`. Es posible que el módulo tenga este aspecto:

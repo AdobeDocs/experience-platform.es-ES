@@ -13,7 +13,7 @@ ht-degree: 16%
 
 Un paquete de extensiones representa una [extensión](./extensions.md) creada por un desarrollador de extensiones. Las funcionalidades adicionales que se pueden poner a disposición de los usuarios de etiquetas se definen mediante un paquete de extensiones. Estas funcionalidades pueden incluir módulos principales y módulos compartidos, aunque se proporcionan con mayor frecuencia como [componentes de regla](./rule-components.md) (eventos, condiciones y acciones) y [elementos de datos](./data-elements.md).
 
-El desarrollador es el propietario de un paquete de extensiones [compañía](./companies.md). Los propietarios de los paquetes de extensión pueden autorizar a otras empresas a utilizar sus versiones privadas de los paquetes. Cada empresa autorizada recibe una autorización de uso para un solo paquete de extensión, que es válida para todas las versiones privadas futuras y actuales del paquete.
+La [compañía](./companies.md) del desarrollador es propietaria de un paquete de extensiones. Los propietarios de los paquetes de extensión pueden autorizar a otras empresas a utilizar sus versiones privadas de los paquetes. Cada empresa autorizada recibe una autorización de uso para un solo paquete de extensión, que es válida para todas las versiones privadas futuras y actuales del paquete.
 
 ## Primeros pasos
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{PROPERTY_ID}` | El `ID` de la propiedad cuya autorización de uso del paquete de extensiones desea enumerar. |
+| `{PROPERTY_ID}` | El `ID` de la propiedad cuya autorización de uso del paquete de extensión desea enumerar. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Una respuesta correcta devuelve una lista de paquetes de extensiones.
 
 ## Creación de una autorización de uso del paquete de extensiones {#create}
 
-Cree una autorización de uso del paquete de extensiones para cada [paquete de extensión](./extension-packages.md) y `{ORG_ID}` de la organización que desea autorizar. Para crear una nueva autorización de uso del paquete de extensiones, realice una solicitud de POST al punto de conexión siguiente.
+Cree una autorización de uso del paquete de extensión para cada [paquete de extensión](./extension-packages.md) y `{ORG_ID}` de la organización que desee autorizar. Para crear una nueva autorización de uso del paquete de extensiones, realice una solicitud de POST al punto de conexión siguiente.
 
 **Formato de API**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Parámetro | Descripción |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | El `ID` del paquete de extensiones para el que desea crear una autorización.&quot; |
+| `EXTENSION_PACKAGE_ID` | `ID` del paquete de extensión para el que desea crear una autorización&quot;. |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Una respuesta correcta devuelve los detalles de la autorización de uso del paqu
 
 >[!NOTE]
 >
->En la respuesta de ejemplo anterior, la autorización se encuentra actualmente en la variable `pending_approval` escenario. Antes de utilizar el paquete de extensión, la organización debe aprobar la autorización. Los usuarios de la organización pueden examinar el paquete de extensión privado mientras la autorización esté pendiente de aprobación, pero no pueden instalarlo y no pueden encontrarlo en su catálogo de extensiones.
+>En la respuesta de ejemplo anterior, la autorización se encuentra actualmente en la fase `pending_approval`. Antes de utilizar el paquete de extensión, la organización debe aprobar la autorización. Los usuarios de la organización pueden examinar el paquete de extensión privado mientras la autorización esté pendiente de aprobación, pero no pueden instalarlo y no pueden encontrarlo en su catálogo de extensiones.
 
 ## Recuperación de una lista de autorizaciones de uso de paquetes de extensiones {#list_authorizations}
 
@@ -264,7 +264,7 @@ Una respuesta correcta devuelve una lista de paquetes de extensiones.
 
 ## Eliminación de una autorización de uso del paquete de extensiones {#delete}
 
-Para eliminar una autorización de uso de un paquete de extensiones, incluya su `ID` en la ruta de una petición de DELETE. Esto evita que la organización autorizada vea las versiones privadas del paquete de extensión en el catálogo e instale dicho paquete en sus propiedades.
+Para eliminar una autorización de uso de paquete de extensión, incluya su `ID` en la ruta de una solicitud de DELETE. Esto evita que la organización autorizada vea las versiones privadas del paquete de extensión en el catálogo e instale dicho paquete en sus propiedades.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `ID` | El `ID` de la autorización de uso del paquete de extensiones que desea eliminar. |
+| `ID` | `ID` de la autorización de uso del paquete de extensiones que desea eliminar. |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) sin cuerpo de
 
 ## Actualización de una autorización de uso del paquete de extensiones {#update}
 
-Para aprobar o rechazar una autorización de uso del paquete de extensiones, incluya su `ID` en la ruta de una petición de PATCH.
+Para aprobar o rechazar una autorización de uso de paquetes de extensiones, incluya su `ID` en la ruta de una solicitud de PATCH.
 
 >[!NOTE]
 >
->Para aprobar o rechazar una autorización de uso de un paquete de extensiones para su empresa, debe tener `manage_properties` derechos.
+>Para aprobar o rechazar una autorización de uso de paquetes de extensiones para su empresa, debe tener `manage_properties` derechos.
 
 **Formato de API**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `ID` | El `ID` de la autorización de uso del paquete de extensiones que desea eliminar. |
+| `ID` | `ID` de la autorización de uso del paquete de extensiones que desea eliminar. |
 
 {style="table-layout:auto"}
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Parámetro | Descripción |
 | --- | --- |
-| `ID` | El `ID` de la autorización de uso del paquete de extensiones que desea recuperar. |
+| `ID` | `ID` de la autorización de uso del paquete de extensiones que desea recuperar. |
 
 {style="table-layout:auto"}
 

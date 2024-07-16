@@ -4,8 +4,8 @@ title: Actualización de una plantilla de audiencia
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 2%
+source-wordcount: '320'
+ht-degree: 1%
 
 ---
 
@@ -13,25 +13,25 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para actualizar una plantilla de audiencia utilizando `/authoring/audience-templates` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para actualizar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`.
 
-Para obtener una descripción detallada de las funciones que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
+Para obtener una descripción detallada de las funcionalidades que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Actualización de una plantilla de audiencia {#create}
 
-Puede actualizar un [existente](create-audience-template.md) plantilla de audiencia creando un `PUT` solicitud a la `/authoring/audience-templates` punto final con la carga útil actualizada.
+Puede actualizar una plantilla de audiencia [existing](create-audience-template.md) realizando una solicitud `PUT` al extremo `/authoring/audience-templates` con la carga útil actualizada.
 
-Para obtener una plantilla de audiencia existente y su correspondiente `{INSTANCE_ID}`, consulte el artículo sobre [recuperación de una plantilla de audiencia](retrieve-audience-template.md).
+Para obtener una plantilla de audiencia existente y sus `{INSTANCE_ID}` correspondientes, consulte el artículo acerca de [recuperar una plantilla de audiencia](retrieve-audience-template.md).
 
 **Formato de API**
 
@@ -41,7 +41,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | El ID de la plantilla de audiencia que desea actualizar. Para obtener una plantilla de audiencia existente y su correspondiente `{INSTANCE_ID}`, consulte [Recuperación de una plantilla de audiencia](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | El ID de la plantilla de audiencia que desea actualizar. Para obtener una plantilla de audiencia existente y sus `{INSTANCE_ID}` correspondientes, vea [Recuperar una plantilla de audiencia](retrieve-audience-template.md). |
 
 La siguiente solicitud actualiza una plantilla de metadatos de audiencia existente, configurada por los parámetros proporcionados en la carga útil.
 
@@ -157,4 +157,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes
 
-Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo actualizar una plantilla de audiencia mediante `/authoring/audience-templates` Extremo de API. Leer [cómo utilizar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo actualizar una plantilla de audiencia mediante el punto de conexión de API `/authoring/audience-templates`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

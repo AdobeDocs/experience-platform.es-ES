@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 20%
 # Ingesta de datos de Adobe Experience Platform {#ingestion}
 
 - [Resumen de ingesta de datos](home.md)
-- Ingesta por streaming {#streaming}
+- Ingesta de transmisión {#streaming}
    - [Información general](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Resolución de problemas](streaming-ingestion/troubleshooting.md)
 - Ingesta por lotes{#batch}
    - [Introducción a las API de ingesta por lotes](batch-ingestion/getting-started.md)
-   - [Información general de API](batch-ingestion/overview.md)
+   - [Resumen de API](batch-ingestion/overview.md)
    - [Guía para desarrolladores de API](batch-ingestion/api-overview.md)
    - [Ingesta parcial por lotes](batch-ingestion/partial.md)
    - [Resolución de problemas](batch-ingestion/troubleshooting.md)
 - Tutoriales {#tutorials}
-   - Asignación de un archivo CSV a XDM {#map-csv}
+   - Asignar un archivo CSV a XDM {#map-csv}
       - [Información general](./tutorials/map-csv/overview.md)
       - [Asignación de un archivo CSV a un esquema existente](./tutorials/map-csv/existing-schema.md)
       - [Asignación de un archivo CSV mediante recomendaciones generadas por IA](./tutorials/map-csv/recommendations.md)
@@ -38,7 +38,7 @@ ht-degree: 20%
    - [Transmisión de datos de registro](tutorials/streaming-record-data.md)
    - [Datos de series temporales de streaming](tutorials/streaming-time-series-data.md)
    - [Transmisión de varios mensajes](tutorials/streaming-multiple-messages.md)
-- Calidad de los datos y monitorización{#quality}
+- Calidad de datos y supervisión{#quality}
    - [Información general](quality/overview.md)
    - [Monitorización de la ingesta de datos](quality/monitor-data-ingestion.md)
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
@@ -46,7 +46,7 @@ ht-degree: 20%
    - [Validación de ingesta de streaming](quality/streaming-validation.md)
    - [Notificaciones de ingesta de datos](quality/subscribe-events.md)
 - [Protecciones para la ingesta de datos](guardrails.md)
-- [Conectores de origen](source-connectors.md)
+- [Conectores de Source](source-connectors.md)
 - [Referencia de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Referencia de API de ingesta de streaming](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Referencia de API de ingesta de transmisión](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

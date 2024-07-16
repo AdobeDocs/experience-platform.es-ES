@@ -1,5 +1,5 @@
 ---
-title: Ingesta de datos cifrados en el espacio de trabajo de IU de fuentes
+title: Ingesta de datos cifrados en la IU de fuentes de Workspace
 description: Aprenda a introducir datos cifrados en el espacio de trabajo de la interfaz de usuario de fuentes.
 hide: true
 hidefromtoc: true

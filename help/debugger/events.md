@@ -14,7 +14,7 @@ ht-degree: 42%
 
 # Pestaña Eventos
 
-El **Eventos** proporciona una vista gráfica de los eventos que se producen y que se muestran en una cronología.
+La ficha **Eventos** proporciona una vista gráfica de los eventos que se producen y que se muestran en una cronología.
 
 ![](images/events.jpg)
 
@@ -37,8 +37,8 @@ Para habilitar el seguimiento de los cambios en la capa de datos en la cronolog�
 
 1. Seleccione **[!UICONTROL Guardar]**.
 
-Los detalles del cambio de la capa de datos muestran cualquier componente que se haya eliminado o agregado. Puede seleccionar **{}** para profundizar en la capa de datos.
+Los detalles del cambio de la capa de datos muestran cualquier componente que se haya eliminado o agregado. Puede seleccionar **{}** para ver más información en la capa de datos.
 
 ## Descargar información del evento
 
-Seleccionar **[!UICONTROL Descargar]** para descargar un archivo de Excel que muestre información sobre las llamadas de página.
+Seleccione **[!UICONTROL Descargar]** para descargar un archivo de Excel que muestre información sobre las llamadas de página.

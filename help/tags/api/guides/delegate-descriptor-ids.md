@@ -5,7 +5,7 @@ exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ Por ejemplo, si un paquete de extensiones denominado `example-package`tiene una 
 
 Los ID de descriptor delegados son importantes para comprender la definición de componentes de regla (eventos, condiciones y acciones) y elementos de datos en la API. Las secciones siguientes describen cómo entran en juego estos ID para cada recurso.
 
-### Regla componentes
+### Componentes de regla
 
 Un [componente de regla](../endpoints/rule-components.md) debe estar asociado a un evento, condición o acción que pertenezca a un paquete de extensión. Representa el “tipo” del componente de regla en lo que respecta a la lógica de la regla general (un evento, una condición o una acción). Por lo tanto, al crear un componente de regla, se debe proporcionar un ID de descriptor delegado para indicar a qué evento, condición o acción se debe asociar el componente de regla.
 

@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Llamadas de API de muestra
 
-Las siguientes secciones describen las llamadas que puede realizar mediante las API `/queries` punto final en la [!DNL Query Service] API. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
+Las siguientes secciones describen las llamadas que puede realizar mediante el extremo `/queries` en la API [!DNL Query Service]. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ### Recuperación de una lista de consultas
 
-Puede recuperar una lista de todas las consultas de su organización realizando una solicitud de GET a la `/queries` punto final.
+Puede recuperar una lista de todas las consultas de su organización realizando una solicitud de GET al extremo `/queries`.
 
 **Formato de API**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Opcional*) Parámetros añadidos a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros separados por el símbolo et (`&`). Los parámetros disponibles se enumeran a continuación.
+- `{QUERY_PARAMETERS}`: (*Opcional*) Se agregaron parámetros a la ruta de solicitud que configuran los resultados devueltos en la respuesta. Se pueden incluir varios parámetros, separados por el símbolo et (`&`). Los parámetros disponibles se enumeran a continuación.
 
 **Parámetros de consulta**
 
@@ -37,13 +37,13 @@ A continuación se muestra una lista de los parámetros de consulta disponibles 
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por creados en orden ascendente. Adición de un `-` antes de crear (`orderby=-created`) ordenará los elementos por creados en orden descendente. |
+| `orderby` | Especifica el campo por el que se van a ordenar los resultados. Los campos admitidos son `created` y `updated`. Por ejemplo, `orderby=created` ordenará los resultados por orden de subida. Si se agrega un(a) `-` antes de crearlo (`orderby=-created`), los elementos se ordenarán por orden descendente. |
 | `limit` | Especifica el límite de tamaño de página para controlar el número de resultados que se incluyen en una página. (*Valor predeterminado: 20*) |
-| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero la consulta creada más antigua y, a continuación, seguirá enumerando los resultados más recientes.<br> Las marcas de tiempo ISO permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, 8:15:30 a. m., hora estándar del este de EE. UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se denota con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
-| `property` | Filtre los resultados según los campos. Los filtros **debe** ser HTML escapado. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state`, y `id`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que), `>=` (mayor o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a), y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el ID especificado. |
-| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` testamento **include** consultas eliminadas suaves. (*Booleano, valor predeterminado: true*) |
-| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en false, **include** consultas no dirigidas por el usuario, como definiciones de CURSOR, FETCH o consultas de metadatos. (*Booleano, valor predeterminado: true*) |
-| `isPrevLink` | El `isPrevLink` El parámetro de consulta se utiliza para la paginación. Los resultados de la llamada de API se ordenan mediante su `created` marca de tiempo y el `orderby` propiedad. Al navegar por las páginas de resultados, `isPrevLink` se establece en true cuando se pagina hacia atrás. Invierte el orden de la consulta. Consulte los vínculos &quot;siguiente&quot; y &quot;anterior&quot; como ejemplos. |
+| `start` | Especifique una marca de tiempo en formato ISO para ordenar los resultados. Si no se especifica ninguna fecha de inicio, la llamada de API devolverá primero la consulta creada más antigua y, a continuación, seguirá enumerando los resultados más recientes.Las marcas de tiempo ISO <br> permiten diferentes niveles de granularidad en la fecha y la hora. Las marcas de tiempo ISO básicas tienen el formato de: `2020-09-07` para expresar la fecha 7 de septiembre de 2020. Un ejemplo más complejo se escribiría como `2022-11-05T08:15:30-05:00` y corresponde al 5 de noviembre de 2022, a las 8:15:30 a.m., hora estándar del este de EE.UU. Se puede proporcionar una zona horaria con un desplazamiento UTC y se indica con el sufijo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si no se proporciona ninguna zona horaria, el valor predeterminado es cero. |
+| `property` | Filtre los resultados según los campos. Los filtros **deben** ser de escape de HTML. Las comas se utilizan para combinar varios conjuntos de filtros. Los campos admitidos son `created`, `updated`, `state` y `id`. La lista de operadores admitidos es `>` (mayor que), `<` (menor que), `>=` (mayor o igual que), `<=` (menor o igual que), `==` (igual a), `!=` (no igual a) y `~` (contiene). Por ejemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` devolverá todas las consultas con el identificador especificado. |
+| `excludeSoftDeleted` | Indica si se debe incluir una consulta que se ha eliminado de forma suave. Por ejemplo, `excludeSoftDeleted=false` **incluirá** consultas eliminadas parcialmente. (*Booleano, valor predeterminado: true*) |
+| `excludeHidden` | Indica si se deben mostrar consultas no dirigidas por el usuario. Si este valor se establece en false **se incluirán** consultas que no sean dirigidas por el usuario, como las consultas de definiciones de CURSOR, FETCH o de metadatos. (*Booleano, valor predeterminado: true*) |
+| `isPrevLink` | El parámetro de consulta `isPrevLink` se usa para la paginación. Los resultados de la llamada de API se ordenan con la marca de tiempo `created` y la propiedad `orderby`. Al navegar por las páginas de resultados, `isPrevLink` se establece como verdadero al paginar hacia atrás. Invierte el orden de la consulta. Consulte los vínculos &quot;siguiente&quot; y &quot;anterior&quot; como ejemplos. |
 
 **Solicitud**
 
@@ -120,7 +120,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de consultas pa
 
 ### Creación de una consulta
 
-Puede crear una nueva consulta realizando una solicitud de POST a `/queries` punto final.
+Puede crear una nueva consulta realizando una solicitud de POST al extremo `/queries`.
 
 **Formato de API**
 
@@ -173,14 +173,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | La consulta SQL que desea crear. |
 | `name` | Nombre de la consulta SQL. |
 | `description` | La descripción de la consulta SQL. |
-| `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es obligatorio **if** está utilizando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
+| `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es necesario **si** está usando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
 | `templateId` | El identificador único de una consulta preexistente. Puede proporcionar esto en lugar de una instrucción SQL. |
 | `insertIntoParameters` | (Opcional) Si se define esta propiedad, esta consulta se convertirá en una consulta INSERT INTO. |
 | `ctasParameters` | (Opcional) Si se define esta propiedad, esta consulta se convertirá en una consulta CTAS. |
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta recién creada. Una vez que la consulta haya terminado de activarse y se haya ejecutado correctamente, el `state` cambiará de `SUBMITTED` hasta `SUCCESS`.
+Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la consulta recién creada. Una vez que la consulta haya terminado de activarse y se haya ejecutado correctamente, `state` cambiará de `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -223,11 +223,11 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 >[!NOTE]
 >
->Puede usar el valor de `_links.cancel` hasta [cancelar la consulta creada](#cancel-a-query).
+>Puede usar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
 
 ### Recuperación de una consulta por ID
 
-Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET a `/queries` y proporciona el valor de la consulta `id` en la ruta de solicitud.
+Puede recuperar información detallada sobre una consulta específica realizando una solicitud de GET al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de solicitud.
 
 **Formato de API**
 
@@ -237,7 +237,7 @@ GET /queries/{QUERY_ID}
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El `id` valor de la consulta que desea recuperar. |
+| `{QUERY_ID}` | El valor `id` de la consulta que desea recuperar. |
 
 **Solicitud**
 
@@ -294,11 +294,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 
 >[!NOTE]
 >
->Puede usar el valor de `_links.cancel` hasta [cancelar la consulta creada](#cancel-a-query).
+>Puede usar el valor de `_links.cancel` para [cancelar la consulta creada](#cancel-a-query).
 
 ### Cancelar o eliminar una consulta
 
-Puede solicitar cancelar o borrar una consulta especificada realizando una solicitud de PATCH a `/queries` y proporciona el valor de la consulta `id` en la ruta de solicitud.
+Puede solicitar que se cancele o elimine de forma suave una consulta especificada realizando una solicitud de PATCH al extremo `/queries` y proporcionando el valor `id` de la consulta en la ruta de acceso de la solicitud.
 
 **Formato de API**
 
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{QUERY_ID}` | El `id` valor de la consulta en la que desea realizar la operación. |
+| `{QUERY_ID}` | El valor `id` de la consulta en la que desea realizar la operación. |
 
 
 **Solicitud**

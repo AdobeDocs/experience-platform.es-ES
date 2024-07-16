@@ -6,18 +6,18 @@ description: Este documento explica cómo crear un objeto de conjunto de datos e
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '252'
 ht-degree: 2%
 
 ---
 
 # Cree un conjunto de datos en la API
 
-Para crear un conjunto de datos utilizando [!DNL Catalog] API, debe conocer el `$id` valor del [!DNL Experience Data Model] Esquema (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud del POST al `/datasets` punto final en la [!DNL Catalog] API.
+Para crear un conjunto de datos utilizando la API [!DNL Catalog], debe conocer el valor `$id` del esquema [!DNL Experience Data Model] (XDM) en el que se basará el conjunto de datos. Una vez que tenga el ID de esquema, puede crear un conjunto de datos realizando una solicitud del POST al extremo `/datasets` en la API [!DNL Catalog].
 
 >[!NOTE]
 >
->Este documento solo explica cómo crear un objeto de conjunto de datos en [!DNL Catalog]. Para ver los pasos completos sobre cómo crear, rellenar y monitorizar un conjunto de datos, consulte lo siguiente [tutorial](../datasets/create.md).
+>Este documento sólo explica cómo crear un objeto de conjunto de datos en [!DNL Catalog]. Para ver los pasos completos sobre cómo crear, rellenar y supervisar un conjunto de datos, consulte el [tutorial](../datasets/create.md) siguiente.
 
 **Formato de API**
 
@@ -49,12 +49,12 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `name` | Nombre del conjunto de datos que se va a crear. |
-| `schemaRef.id` | El URI `$id` valor para el esquema XDM en el que se basará el conjunto de datos. |
-| `schemaRef.contentType` | Indica el formato y la versión del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la Guía de API de XDM para obtener más información. |
+| `schemaRef.id` | Valor de URI `$id` para el esquema XDM en el que se basará el conjunto de datos. |
+| `schemaRef.contentType` | Indica el formato y la versión del esquema. Consulte la sección sobre [versiones de esquema](../../xdm/api/getting-started.md#versioning) en la guía de API de XDM para obtener más información. |
 
 >[!NOTE]
 >
->Este ejemplo utiliza el [Apache Parquet](https://parquet.apache.org/docs/) formato de archivo para su `containerFormat` propiedad. Un ejemplo que utiliza el formato de archivo JSON se encuentra en la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md).
+>Este ejemplo usa el formato de archivo [Apache Parquet](https://parquet.apache.org/docs/) para su propiedad `containerFormat`. Encontrará un ejemplo que utiliza el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](../../ingestion/batch-ingestion/api-overview.md).
 
 **Respuesta**
 

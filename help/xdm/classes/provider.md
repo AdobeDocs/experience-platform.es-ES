@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL Proveedor] clase
+# clase [!UICONTROL Provider]
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Proveedor] La clase captura el conjunto mínimo de propiedades que definen una entidad empresarial del proveedor (como un proveedor de atención médica o un proveedor de seguros).
+En Experience Data Model (XDM), la clase [!UICONTROL Provider] captura el conjunto mínimo de propiedades que definen una entidad empresarial de proveedor (como un proveedor de atención médica o un proveedor de seguros).
 
 ![Estructura de clase](../images/classes/provider.png)
 
@@ -23,4 +23,4 @@ En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Proveedor] L
 
 {style="table-layout:auto"}
 
-La clase se puede ampliar con la variable [[!UICONTROL Proveedor de atención médica] grupo de campos](../field-groups/provider/healthcare-provider.md) para describir más detalles acerca de un proveedor de atención médica.
+La clase se puede ampliar con el grupo de campo [[!UICONTROL Proveedor de atención médica]](../field-groups/provider/healthcare-provider.md) para describir más detalles acerca de un proveedor de atención médica.

@@ -1,29 +1,29 @@
 ---
-description: Utilice el [!UICONTROL Enriquecimiento de perfil] panel para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la eficacia de los enriquecimientos.
+description: Use el panel [!UICONTROL Enriquecimiento de perfil] para saber si los trabajos de enriquecimiento de perfil se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la efectividad de los enriquecimientos.
 solution: Experience Platform
 title: Supervisión de trabajos de enriquecimiento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '764'
 ht-degree: 2%
 
 ---
 
 # Supervisión de trabajos de enriquecimiento de perfiles en la IU de {#monitor-profile-enrichment}
 
-Utilice el [!UICONTROL Enriquecimiento de perfil] panel para comprender si los trabajos de enriquecimiento de perfiles se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la eficacia de los enriquecimientos.
+Use el panel [!UICONTROL Enriquecimiento de perfil] para saber si los trabajos de enriquecimiento de perfil se ejecutaron y completaron correctamente, y para ver las métricas básicas y medir la efectividad de los enriquecimientos.
 
-En el [IU de Platform](https://platform.adobe.com), seleccione **[!UICONTROL Monitorización]** desde la navegación izquierda para acceder a [!UICONTROL Monitorización] panel. En el selector de vistas, seleccione **Flujo B2B** para ver los elementos de panel específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  El [!UICONTROL Monitorización] el tablero incluye las métricas básicas de la última ejecución correcta y el estado diario del trabajo hasta 90 días antes.
+En la [interfaz de usuario de la plataforma](https://platform.adobe.com), seleccione **[!UICONTROL Supervisión]** en el panel izquierdo para acceder al [!UICONTROL Supervisión]. En el selector de vista, seleccione **Flujo B2B** para ver los elementos de tablero específicos de [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  El panel [!UICONTROL Monitorización] incluye las métricas básicas de la última ejecución correcta y el estado diario de los trabajos hasta 90 días antes.
 
 ## Enriquecimiento de perfil de cuentas relacionadas {#related-accounts}
 
-El [!UICONTROL Cuentas relacionadas] el panel muestra las métricas básicas y el estado del trabajo diario específico del [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) enriquecimiento de perfiles.
+El panel [!UICONTROL Cuentas relacionadas] muestra métricas básicas y el estado del trabajo diario específico del enriquecimiento del perfil [Cuentas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
-![Indicación visual de cómo llegar a la pantalla de monitorización de trabajos de enriquecimiento de perfil en la interfaz de usuario de Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![Indicación visual de cómo llegar a la pantalla de supervisión de trabajos de enriquecimiento de perfil en la interfaz de usuario del Experience Platform.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
-Los datos de la **[!UICONTROL Métricas]** incluye las métricas básicas de la última ejecución correcta del trabajo Cuentas relacionadas.
+Los datos de la tarjeta **[!UICONTROL Métricas]** incluyen las métricas básicas de la última ejecución correcta del trabajo Cuentas relacionadas.
 
 Las siguientes métricas están disponibles para trabajos de enriquecimiento de perfil de cuentas relacionadas:
 
@@ -40,9 +40,9 @@ Las siguientes métricas están disponibles para trabajos de enriquecimiento de 
 
 ## Enriquecimiento del perfil de coincidencia de cliente potencial con cuenta {#lead-to-account-matching}
 
-El [!UICONTROL Coincidencia de cliente potencial con cuenta] El panel muestra las métricas básicas y el estado diario de ejecución del trabajo específico de [Coincidencia de cliente potencial con cuenta](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) enriquecimiento de perfiles.
+El panel [!UICONTROL Coincidencia de cliente potencial con cuenta] muestra las métricas básicas y el estado diario de ejecución del trabajo específico del enriquecimiento de perfil [Coincidencia de cliente potencial con cuenta](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-![Enriquecimiento del perfil de coincidencia de cliente potencial con cuenta](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![Enriquecimiento del perfil coincidente del posible cliente con la cuenta](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
 Las siguientes métricas están disponibles para los trabajos de enriquecimiento de perfil de coincidencia de cuenta de posibles clientes:
 
@@ -58,7 +58,7 @@ Las siguientes métricas están disponibles para los trabajos de enriquecimiento
 
 ## Enriquecimiento predictivo del perfil de puntuación de clientes potenciales y cuentas {#predictive-lead-to-account-scoring}
 
-El [!UICONTROL Puntuación predictiva de posibles clientes y cuentas] El panel muestra las métricas básicas y el estado diario de ejecución del trabajo específico de [Puntuación predictiva de posibles clientes y cuentas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) enriquecimiento de perfiles.
+El panel [!UICONTROL Puntuación predictiva de posibles clientes y cuentas] muestra las métricas básicas y el estado diario de ejecución del trabajo específico para el enriquecimiento del perfil [Puntuación predictiva de posibles clientes y cuentas](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md).
 
 ![Enriquecimiento predictivo del perfil de puntuación de clientes potenciales y cuentas](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
@@ -70,7 +70,7 @@ Las siguientes métricas están disponibles para trabajos predictivos de enrique
 | **[!UICONTROL Tiempo de procesamiento]** | Tiempo total que tarda el trabajo en completarse. |
 | **[!UICONTROL Nombre de puntuación]** | El nombre de puntuación del trabajo. |
 | **[!UICONTROL Tipo de perfil]** | El tipo de puntuación: <ul><li>Persona</li><li>Cuenta</li></ul>. |
-| **[!UICONTROL Tipo de trabajo]** | El tipo de trabajo:<ul><li>Puntuación</li><li>Formación</li>. |
+| **[!UICONTROL Tipo de trabajo]** | El tipo de trabajo:<ul><li>Puntuación</li><li>Aprendizaje</li>. |
 | **[!UICONTROL Estado]** | Indica el estado (correcto, fallido o de procesamiento) del trabajo predictivo de puntuación de cuenta y posible cliente. |
 
 ## Controles de IU {#ui-controls}
@@ -79,13 +79,13 @@ En esta sección se describen varias opciones de la interfaz de usuario (IU) de 
 
 Utilice el icono de flecha (![icono de flecha](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir o descartar la tarjeta en la parte superior de la pantalla, que muestra información rápida sobre los trabajos de enriquecimiento de perfiles.
 
-![Grabación de pantalla que muestra el icono de flecha del control de interfaz de usuario.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![Grabación de pantalla que muestra el icono de flecha del control de IU.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
-Utilice el **[!UICONTROL Métricas y gráficos]** cambie para descartar la vista que muestra las métricas más recientes.
+Use la opción **[!UICONTROL Métricas y gráficos]** para descartar la vista que muestra las métricas más recientes.
 
 ![Grabación de pantalla que muestra la alternancia de métricas y gráficos.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
-Utilice el **[!UICONTROL Mostrar solo errores]** active esta opción para mostrar solo los trabajos de enriquecimiento de perfiles con errores.
+Utilice la opción **[!UICONTROL Mostrar solo errores]** para mostrar únicamente los trabajos de enriquecimiento de perfiles con errores.
 
 ![Grabación de pantalla que muestra la opción Mostrar solo errores.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 

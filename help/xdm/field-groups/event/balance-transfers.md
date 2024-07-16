@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL Transferencias de saldo] grupo de campos de esquema
 
-[!UICONTROL Transferencias de saldo] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un solo `personalFinances.balanceTransfers` objeto a un esquema, que captura detalles sobre una transferencia de saldo financiero entre cuentas.
+[!UICONTROL Transferencias de saldo] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md). El grupo de campos proporciona un único objeto `personalFinances.balanceTransfers` a un esquema, que captura detalles sobre una transferencia de saldo financiero entre cuentas.
 
 ![](../../images/field-groups/balance-transfers.png)
 
@@ -23,4 +23,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el grupo de campos, consulte la [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).
+Para obtener más información sobre el grupo de campos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

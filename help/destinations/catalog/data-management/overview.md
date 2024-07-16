@@ -5,14 +5,14 @@ description: Las plataformas de administración de datos (DMP) permiten a los an
 exl-id: 1c925edc-b31e-440f-bdd9-37aa399565d5
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
-# [!DNL Data Management Platform] Información general sobre destinos de (DMP) {#dmp-destinations}
+# Información general sobre destinos de [!DNL Data Management Platform] (DMP) {#dmp-destinations}
 
-[!DNL Data Management Platforms] (DMP) permiten a los anunciantes, editores y agencias crear perfiles de audiencia únicos, identificar sus segmentos más valiosos y utilizarlos en cualquier canal digital. Esto le permite crear una vista verdadera 360 de un perfil de consumidor, crear y activar audiencias significativas.
+[!DNL Data Management Platforms] (DMP) permite que los anunciantes, editores y agencias creen perfiles de audiencia únicos, identifiquen sus segmentos más valiosos y los usen en cualquier canal digital. Esto le permite crear una vista verdadera 360 de un perfil de consumidor, crear y activar audiencias significativas.
 
 Actualmente, Adobe Experience Platform admite los destinos de la plataforma de administración de datos (DMP) que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 

@@ -13,17 +13,17 @@ ht-degree: 0%
 
 El almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Normalmente, los datos se procesan a intervalos regulares (por ejemplo, por hora o por día), donde se crean vistas agregadas y se crean informes sobre ellas. El análisis de estos informes generados a partir de los datos agregados deriva perspectivas destinadas a mejorar el rendimiento empresarial. El almacén acelerado de consultas proporciona un servicio de caché, concurrencia, una experiencia interactiva y una API sin estado. Sin embargo, supone que los datos están preprocesados y optimizados para consultas agregadas y no para consultas de datos sin procesar.
 
-El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar un modelo de datos de Adobe Real-time Customer Data Platform existente. A continuación, puede interactuar con sus perspectivas de creación de informes o incrustarlas en un marco de creación de informes o visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalice las plantillas de consulta SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+El almacén acelerado de consultas le permite crear un modelo de datos personalizado o ampliar un modelo de datos de Adobe Real-time Customer Data Platform existente. A continuación, puede interactuar con sus perspectivas de creación de informes o incrustarlas en un marco de creación de informes o visualización de su elección. Consulte la documentación del modelo de datos de Real-time Customer Data Platform Insights para obtener información sobre cómo [personalizar las plantillas de consultas SQL para crear informes de Real-Time CDP para los casos de uso de los indicadores clave de rendimiento (KPI) y marketing](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 El modelo de datos de Real-Time CDP de Adobe Experience Platform proporciona perspectivas sobre perfiles, audiencias y destinos y habilita los paneles de perspectivas de Real-Time CDP. Este documento le guía a través del proceso de creación del modelo de datos de perspectivas de creación de informes y también cómo ampliar los modelos de datos de Real-Time CDP según sea necesario.
 
 ## Requisitos previos
 
-Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definidos por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener más información sobre esta función.
+Este tutorial utiliza paneles definidos por el usuario para visualizar datos del modelo de datos personalizado en la interfaz de usuario de Platform. Consulte la [documentación de paneles definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener más información sobre esta función.
 
 ## Introducción
 
-El SKU de Data Distiller es necesario para crear un modelo de datos personalizado para las perspectivas de creación de informes y ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la [empaquetado](../../packaging.md), [barandas](../../guardrails.md#query-accelerated-store), y  [licenciamiento](../../data-distiller/license-usage.md) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
+El SKU de Data Distiller es necesario para crear un modelo de datos personalizado para las perspectivas de creación de informes y ampliar los modelos de datos de Real-Time CDP que contienen datos de Platform enriquecidos. Consulte la documentación de [empaquetado](../../packaging.md), [protecciones](../../guardrails.md#query-accelerated-store) y [licencias](../../data-distiller/license-usage.md) relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
 
 ## Creación de un modelo de datos de perspectivas de informes
 
@@ -31,17 +31,17 @@ Este tutorial utiliza un ejemplo de creación de un modelo de datos de perspecti
 
 Al principio, tiene un modelo de datos inicial de sus fuentes (potencialmente de su API de plataforma de anunciante). Para crear una vista agregada de los datos sin procesar, cree un modelo de perspectivas de creación de informes como se describe en la siguiente imagen. Esto permite que un conjunto de datos obtenga los límites superior e inferior de la coincidencia de audiencia.
 
-![Un diagrama relacional de entidades (ERD) del modelo de usuario de Audience Insight.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
+![Diagrama relacional de entidad (ERD) del modelo de usuario de perspectiva de audiencia.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
 
-En este ejemplo, la variable `externalaudiencereach` La tabla o el conjunto de datos se basa en un ID y rastrea los límites inferior y superior para el recuento de coincidencias. El `externalaudiencemapping` La tabla/conjunto de datos de dimensión asigna el ID externo a un destino y a una audiencia en Platform.
+En este ejemplo, la tabla o el conjunto de datos `externalaudiencereach` se basa en un identificador y realiza un seguimiento de los límites inferior y superior del recuento de coincidencias. La tabla/conjunto de datos de dimensión `externalaudiencemapping` asigna el ID externo a un destino y a una audiencia en Platform.
 
 ## Creación de un modelo para informar sobre perspectivas con Data Distiller
 
-A continuación, cree un modelo de perspectiva de informes (`audienceinsight` en este ejemplo) y utilice el comando SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` para asegurarse de que se crea en el almacén acelerado. A continuación, utilice el servicio de consultas para crear una `audienceinsight.audiencemodel` esquema para `audienceinsight` base de datos.
+A continuación, cree un modelo de perspectiva de informes (`audienceinsight` en este ejemplo) y use el comando SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` para asegurarse de que se crea en el almacén acelerado. A continuación, utilice el servicio de consultas para crear un esquema `audienceinsight.audiencemodel` para la base de datos `audienceinsight`.
 
 >[!NOTE]
 >
->Se requiere el SKU de Distiller de datos para la `ACCOUNT=acp_query_batch` comando. Sin él, se crea un modelo de datos normal en el lago de datos.
+>Se requiere el SKU de Data Distiller para el comando `ACCOUNT=acp_query_batch`. Sin él, se crea un modelo de datos normal en el lago de datos.
 
 ```sql
 CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
@@ -51,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Crear tablas, relaciones y rellenar datos
 
-Ahora que ha creado su `audienceinsight` modelo de perspectiva de informes, cree el `externalaudiencereach` y `externalaudiencemapping` y establecer relaciones entre ellas. A continuación, utilice el `ALTER TABLE` para agregar una restricción FOREIGN KEY entre las tablas y definir una relación. El siguiente ejemplo de SQL muestra cómo hacerlo.
+Ahora que ha creado su modelo de perspectiva de informes de `audienceinsight`, cree las tablas `externalaudiencereach` y `externalaudiencemapping` y establezca relaciones entre ellas. A continuación, utilice el comando `ALTER TABLE` para agregar una restricción de clave externa entre las tablas y definir una relación. El siguiente ejemplo de SQL muestra cómo hacerlo.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -78,9 +78,9 @@ SELECT cast(null as int) audience_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-Después de la ejecución correcta de ambos `ALTER TABLE` comandos, se forma la relación entre las tablas hecho y dimensión.
+Después de la ejecución correcta de ambos comandos `ALTER TABLE`, se forma la relación entre las tablas de hechos y de dimensiones.
 
-Una vez ejecutadas las instrucciones, utilice el `SHOW datagroups;` para devolver una lista de los conjuntos de datos disponibles en el almacén acelerado desde el `audienceinsight.audiencemodel`. Los resultados tabulados deben ser similares al ejemplo que se proporciona a continuación.
+Una vez ejecutadas las instrucciones, utilice el comando `SHOW datagroups;` para devolver una lista de los conjuntos de datos disponibles en el almacén acelerado de `audienceinsight.audiencemodel`. Los resultados tabulados deben ser similares al ejemplo que se proporciona a continuación.
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ Una vez ejecutadas las instrucciones, utilice el `SHOW datagroups;` para devolve
 
 ## Consultar el modelo de datos de perspectiva de informes
 
-Utilice el servicio de consultas para consultar `audiencemodel.externalaudiencereach` tabla de dimensiones. A continuación se muestra un ejemplo de consulta.
+Utilice el servicio de consultas para consultar la tabla de dimensiones `audiencemodel.externalaudiencereach`. A continuación se muestra un ejemplo de consulta.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -131,11 +131,11 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 Puede ampliar el modelo de audiencia con detalles adicionales para crear una tabla de dimensiones más completa. Por ejemplo, puede asignar el nombre de audiencia y el nombre de destino al identificador de audiencia externo. Para ello, utilice el servicio de consulta para crear o actualizar un nuevo conjunto de datos y añadirlo al modelo de audiencia que combina audiencias y destinos con una identidad externa. El diagrama siguiente ilustra el concepto de esta extensión del modelo de datos.
 
-![Diagrama de ERD que vincula el modelo de datos de Real-Time CDP insight y el modelo de almacén acelerado de consultas.](../../images/data-distiller/customizable-insights/updatingAudienceInsightUserModel.png)
+![Diagrama ERD que vincula el modelo de datos de perspectiva de Real-Time CDP con el modelo de almacén acelerado Query.](../../images/data-distiller/customizable-insights/updatingAudienceInsightUserModel.png)
 
 ## Creación de tablas de dimensiones para ampliar el modelo de perspectivas de informes
 
-Utilice el servicio de consultas para agregar atributos descriptivos clave de los conjuntos de datos de dimensión de Real-Time CDP enriquecidos a `audienceinsight` Modelo de datos de y establezca una relación entre la tabla de hechos y la nueva tabla de dimensiones. El SQL siguiente muestra cómo integrar tablas de dimensiones existentes en el modelo de datos de perspectivas de creación de informes.
+Utilice el servicio de consultas para agregar atributos descriptivos clave de los conjuntos de datos de dimensión de Real-Time CDP enriquecidos al modelo de datos de `audienceinsight` y establecer una relación entre la tabla de hechos y la nueva tabla de dimensiones. El SQL siguiente muestra cómo integrar tablas de dimensiones existentes en el modelo de datos de perspectivas de creación de informes.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -154,7 +154,7 @@ CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
 ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES external_seg_dest_map (ext_custom_audience_id) NOT enforced;
 ```
 
-Utilice el `SHOW datagroups;` para confirmar la creación del comando adicional `external_seg_dest_map` tabla de dimensiones.
+Utilice el comando `SHOW datagroups;` para confirmar la creación de la tabla de dimensiones `external_seg_dest_map` adicional.
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
@@ -166,7 +166,7 @@ Utilice el `SHOW datagroups;` para confirmar la creación del comando adicional 
 
 ## Consulte el modelo de datos de perspectivas de informes de tienda acelerados extendidos
 
-Ahora que la variable `audienceinsight` El modelo de datos de se ha aumentado, está listo para consultarse. El siguiente SQL muestra la lista de destinos y audiencias asignados.
+Ahora que el modelo de datos `audienceinsight` se ha ampliado, está listo para ser consultado. El siguiente SQL muestra la lista de destinos y audiencias asignados.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -228,4 +228,4 @@ La siguiente imagen proporciona un ejemplo de las posibles visualizaciones perso
 
 ![Un recuento de coincidencias por destino y widget de audiencia creado a partir del nuevo modelo de datos de perspectivas de informes.](../../images/data-distiller/customizable-insights/user-defined-dashboard-widget.png)
 
-El modelo de datos personalizado se encuentra en la lista de modelos de datos disponibles en el espacio de trabajo del panel definido por el usuario. Consulte la [guía de panel definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener instrucciones sobre cómo utilizar el modelo de datos personalizado.
+El modelo de datos personalizado se encuentra en la lista de modelos de datos disponibles en el espacio de trabajo del panel definido por el usuario. Consulte la [guía de tablero definida por el usuario](../../../dashboards/user-defined-dashboards.md) para obtener instrucciones sobre cómo utilizar su modelo de datos personalizado.

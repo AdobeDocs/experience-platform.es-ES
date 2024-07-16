@@ -6,7 +6,7 @@ description: La fórmula de ventas minoristas permite predecir la previsión de 
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -30,21 +30,21 @@ La fórmula de previsión de ventas minoristas utiliza el aprendizaje automátic
 
 ## ¿Cómo empiezo?
 
-Puede empezar siguiendo este procedimiento [tutorial](../jupyterlab/create-a-model.md).
+Puede empezar siguiendo este [tutorial](../jupyterlab/create-a-model.md).
 
 Este tutorial trata sobre la creación de la fórmula de ventas minoristas en un Jupyter Notebook y el uso del bloc de notas al flujo de trabajo de fórmulas para crear la fórmula en Adobe Experience Platform.
 
 ## Esquema de datos
 
-Esta fórmula utiliza [Esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
+Esta fórmula usa [esquemas XDM](../../xdm/schema/field-dictionary.md) para modelar los datos. El esquema utilizado para esta fórmula se muestra a continuación:
 
 | Nombre del campo | Tipo |
 | --- | --- |
-| date | Cadena |
-| almacenar | Número entero |
+| fecha | Cadena |
+| almacenar | Entero |
 | storeType | Cadena |
 | weeklySales | Número |
-| storeSize | Número entero |
+| storeSize | Entero |
 | temperatura | Número |
 | regionFuelPrice | Número |
 | markdown | Número |
@@ -55,7 +55,7 @@ Esta fórmula utiliza [Esquemas XDM](../../xdm/schema/field-dictionary.md) para 
 
 ## Algoritmo
 
-En primer lugar, el conjunto de datos de aprendizaje en *DSWRetailSales* se ha cargado el esquema. A partir de aquí, el modelo se entrena con una [algoritmo de regresor de aumento de degradado](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). El impulso de degradado utiliza la idea de que los alumnos débiles (que es al menos ligeramente mejor que la probabilidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, se pueden usar para crear un poderoso modelo predictivo.
+Primero, se carga el conjunto de datos de aprendizaje en el esquema *DSWRetailSales*. A partir de aquí, el modelo se entrena mediante un [algoritmo de regresor de mejora de degradado](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). El impulso de degradado utiliza la idea de que los alumnos débiles (que es al menos ligeramente mejor que la probabilidad aleatoria) pueden formar una sucesión de alumnos centrados en mejorar las debilidades del alumno anterior. Juntos, se pueden usar para crear un poderoso modelo predictivo.
 
 El proceso consta de tres elementos: una función de pérdida, un alumno débil y un modelo aditivo.
 

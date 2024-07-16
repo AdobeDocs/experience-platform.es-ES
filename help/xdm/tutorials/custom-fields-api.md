@@ -4,26 +4,26 @@ description: Obtenga información sobre cómo definir diferentes campos al crear
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 0%
 
 ---
 
 # Defina campos XDM en la API del Registro de esquemas
 
-Todos los campos del modelo de datos de experiencia (XDM) se definen con el estándar [Esquema JSON](https://json-schema.org/) restricciones que se aplican a su tipo de campo, con restricciones adicionales para los nombres de campo que exige Adobe Experience Platform. La API de Registro de esquemas permite definir campos personalizados en los esquemas mediante el uso de formatos y restricciones opcionales. Los tipos de campo XDM se exponen mediante el atributo de nivel de campo, `meta:xdmType`.
+Todos los campos del Modelo de datos de experiencia (XDM) se definen con las restricciones estándar del [esquema JSON](https://json-schema.org/) que se aplican a su tipo de campo, con restricciones adicionales para los nombres de campo que aplica Adobe Experience Platform. La API de Registro de esquemas permite definir campos personalizados en los esquemas mediante el uso de formatos y restricciones opcionales. El atributo de nivel de campo `meta:xdmType` expone los tipos de campo XDM.
 
 >[!NOTE]
 >
->`meta:xdmType` es un valor generado por el sistema y, por lo tanto, no es necesario agregar esta propiedad al archivo JSON para el campo al utilizar la API (excepto cuando [crear tipos de mapas personalizados](#custom-maps)). Una práctica recomendada es utilizar tipos de esquemas JSON (como `string` y `integer`) con las restricciones mín./máx. apropiadas, tal como se definen en la tabla siguiente.
+>`meta:xdmType` es un valor generado por el sistema y, por lo tanto, no es necesario que agregue esta propiedad al archivo JSON para su campo al utilizar la API (excepto cuando [se crean tipos de mapas personalizados](#custom-maps)). La práctica recomendada es utilizar tipos de esquemas JSON (como `string` y `integer`) con las restricciones mín./máx. adecuadas, tal como se definen en la tabla siguiente.
 
-Esta guía describe el formato adecuado para definir distintos tipos de campo, incluidos los que tienen propiedades opcionales. Encontrará más información sobre propiedades opcionales y palabras clave específicas del tipo en el [Documentación del esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
+Esta guía describe el formato adecuado para definir distintos tipos de campo, incluidos los que tienen propiedades opcionales. Encontrará más información sobre propiedades opcionales y palabras clave específicas del tipo en la [documentación del esquema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Para empezar, busque el tipo de campo deseado y utilice el código de ejemplo proporcionado para crear su solicitud de API para [creación de un grupo de campos](../api/field-groups.md#create) o [creación de un tipo de datos](../api/data-types.md#create).
+Para empezar, encuentre el tipo de campo deseado y use el código de ejemplo proporcionado para generar su solicitud de API para [crear un grupo de campos](../api/field-groups.md#create) o [crear un tipo de datos](../api/data-types.md#create).
 
 ## [!UICONTROL Cadena] {#string}
 
-[!UICONTROL Cadena] los campos están indicados por `type: string`.
+Los campos [!UICONTROL Cadena] están indicados por `type: string`.
 
 ```json
 "sampleField": {
@@ -35,9 +35,9 @@ Para empezar, busque el tipo de campo deseado y utilice el código de ejemplo pr
 
 Si lo desea, puede restringir qué tipos de valores se pueden introducir para la cadena mediante las siguientes propiedades adicionales:
 
-* `pattern`: un patrón regex con el que restringir.
-* `minLength`: Una longitud mínima para la cadena.
-* `maxLength`: Una longitud máxima para la cadena.
+* `pattern`: un patrón regex para restringir.
+* `minLength`: una longitud mínima para la cadena.
+* `maxLength`: una longitud máxima para la cadena.
 
 ```json
 "sampleField": {
@@ -51,7 +51,7 @@ Si lo desea, puede restringir qué tipos de valores se pueden introducir para la
 
 ## [!UICONTROL URI] {#uri}
 
-[!UICONTROL URI] los campos están indicados por `type: string` con un `format` propiedad establecida en `uri`. No se aceptan otras propiedades.
+`type: string` indica los campos [!UICONTROL URI] con una propiedad `format` establecida en `uri`. No se aceptan otras propiedades.
 
 ```json
 "sampleField": {
@@ -64,7 +64,7 @@ Si lo desea, puede restringir qué tipos de valores se pueden introducir para la
 
 ## [!UICONTROL Enumeración] {#enum}
 
-[!UICONTROL Enumeración] los campos deben utilizar `type: string`, con los propios valores de enumeración proporcionados en una `enum` matriz:
+Los campos [!UICONTROL Enum] deben usar `type: string`, con los valores de enumeración proporcionados en una matriz `enum`:
 
 ```json
 "sampleField": {
@@ -79,7 +79,7 @@ Si lo desea, puede restringir qué tipos de valores se pueden introducir para la
 }
 ```
 
-Si lo desea, puede proporcionar etiquetas dirigidas al cliente para cada valor en una `meta:enum` , con cada etiqueta incrustada en un valor correspondiente en `enum`.
+Opcionalmente, puede proporcionar etiquetas dirigidas al cliente para cada valor bajo una propiedad de `meta:enum`, con cada etiqueta dirigida a un valor correspondiente bajo `enum`.
 
 ```json
 "sampleField": {
@@ -101,9 +101,9 @@ Si lo desea, puede proporcionar etiquetas dirigidas al cliente para cada valor e
 
 >[!NOTE]
 >
->El `meta:enum` el valor sí **no** declare una enumeración o realice cualquier validación de datos por su cuenta. En la mayoría de los casos, las cadenas proporcionadas en `meta:enum` también se incluyen en `enum` para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que `meta:enum` se proporciona sin un correspondiente `enum` matriz. Consulte el tutorial sobre [definición de valores sugeridos](../tutorials/suggested-values.md) para obtener más información.
+>El valor `meta:enum` no declara **ni** una enumeración ni controla ninguna validación de datos por sí solo. En la mayoría de los casos, las cadenas proporcionadas en `meta:enum` también se proporcionan en `enum` para garantizar que los datos estén restringidos. Sin embargo, hay algunos casos de uso en los que se proporciona `meta:enum` sin la matriz `enum` correspondiente. Consulte el tutorial sobre [definición de valores sugeridos](../tutorials/suggested-values.md) para obtener más información.
 
-Si lo desea, puede proporcionar un `default` para indicar el valor predeterminado `enum` valor que el campo utilizará si no se proporciona ningún valor.
+Opcionalmente, puede proporcionar una propiedad `default` para indicar el valor `enum` predeterminado que utilizará el campo si no se proporciona ningún valor.
 
 ```json
 "sampleField": {
@@ -126,11 +126,11 @@ Si lo desea, puede proporcionar un `default` para indicar el valor predeterminad
 
 >[!IMPORTANT]
 >
->Si no `default` se proporciona el valor y el campo de enumeración se establece en `required`, cualquier registro al que le falte un valor aceptado para este campo no superará la validación tras la ingesta.
+>Si no se proporciona ningún valor `default` y el campo de enumeración está establecido en `required`, cualquier registro al que le falte un valor aceptado para este campo no superará la validación tras la ingesta.
 
 ## [!UICONTROL Número] {#number}
 
-Los campos de número se indican mediante `type: number` y no tienen otras propiedades requeridas.
+Los campos numéricos están indicados por `type: number` y no tienen otras propiedades requeridas.
 
 ```json
 "sampleField": {
@@ -142,11 +142,11 @@ Los campos de número se indican mediante `type: number` y no tienen otras propi
 
 >[!NOTE]
 >
->`number` Los tipos se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante, mientras que [`integer` tipos](#integer) se utilizan específicamente para números enteros. Consulte la [Documentación del esquema JSON sobre tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
+>Los tipos `number` se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante, mientras que los tipos [`integer`](#integer) se utilizan específicamente para números enteros. Consulte la [documentación del esquema JSON en tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
 
-## [!UICONTROL Número entero] {#integer}
+## [!UICONTROL Entero] {#integer}
 
-[!UICONTROL Entero] los campos están indicados por `type: integer` y no tienen otros campos obligatorios.
+[!UICONTROL Los campos enteros] están indicados por `type: integer` y no tienen otros campos obligatorios.
 
 ```json
 "sampleField": {
@@ -158,9 +158,9 @@ Los campos de número se indican mediante `type: number` y no tienen otras propi
 
 >[!NOTE]
 >
->While `integer` Los tipos hacen referencia específicamente a números enteros. [`number` tipos](#number) se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante. Consulte la [Documentación del esquema JSON sobre tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
+>Aunque los tipos `integer` hacen referencia específicamente a números enteros, los tipos [`number` ](#number) se utilizan para cualquier tipo numérico, ya sean números enteros o números de coma flotante. Consulte la [documentación del esquema JSON en tipos numéricos](https://json-schema.org/understanding-json-schema/reference/numeric.html) para obtener más información sobre los casos de uso de cada tipo.
 
-Si lo desea, puede restringir el intervalo del entero añadiendo `minimum` y `maximum` propiedades a la definición. Otros tipos numéricos admitidos por la IU del Generador de esquemas son solo `integer` tipos con específicos `minimum` y `maximum` restricciones, como [[!UICONTROL Largo]](#long), [[!UICONTROL Corto]](#short), y [[!UICONTROL Byte]](#byte).
+Si lo desea, puede restringir el intervalo del entero agregando las propiedades `minimum` y `maximum` a la definición. Otros tipos numéricos admitidos por la interfaz de usuario del generador de esquemas son solo `integer` tipos con restricciones `minimum` y `maximum` específicas, como [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) y [[!UICONTROL Byte]](#byte).
 
 ```json
 "sampleField": {
@@ -174,7 +174,7 @@ Si lo desea, puede restringir el intervalo del entero añadiendo `minimum` y `ma
 
 ## [!UICONTROL Largo] {#long}
 
-El equivalente de a [!UICONTROL Largo] El campo creado mediante la interfaz de usuario del Generador de esquemas es un [`integer` campo de tipo](#integer) con específico `minimum` y `maximum` values (`-9007199254740992` y `9007199254740992`, respectivamente).
+El equivalente de un campo [!UICONTROL Long] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-9007199254740992` y `9007199254740992`, respectivamente).
 
 ```json
 "sampleField": {
@@ -186,9 +186,9 @@ El equivalente de a [!UICONTROL Largo] El campo creado mediante la interfaz de u
 }
 ```
 
-## [!UICONTROL corto] {#short}
+## [!UICONTROL Corto] {#short}
 
-El equivalente de a [!UICONTROL Corto] El campo creado mediante la interfaz de usuario del Generador de esquemas es un [`integer` campo de tipo](#integer) con específico `minimum` y `maximum` values (`-32768` y `32768`, respectivamente).
+El equivalente de un campo [!UICONTROL Short] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-32768` y `32768`, respectivamente).
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ El equivalente de a [!UICONTROL Corto] El campo creado mediante la interfaz de u
 
 ## [!UICONTROL Byte] {#byte}
 
-El equivalente de a [!UICONTROL Byte] El campo creado mediante la interfaz de usuario del Generador de esquemas es un [`integer` campo de tipo](#integer) con específico `minimum` y `maximum` values (`-128` y `128`, respectivamente).
+El equivalente de un campo [!UICONTROL Byte] creado a través de la interfaz de usuario del generador de esquemas es un campo de tipo [`integer`](#integer) con valores específicos de `minimum` y `maximum` (`-128` y `128`, respectivamente).
 
 ```json
 "sampleField": {
@@ -214,9 +214,9 @@ El equivalente de a [!UICONTROL Byte] El campo creado mediante la interfaz de us
 }
 ```
 
-## [!UICONTROL Booleana] {#boolean}
+## [!UICONTROL Booleano] {#boolean}
 
-[!UICONTROL Booleano] los campos están indicados por `type: boolean`.
+Los campos [!UICONTROL Boolean] están indicados por `type: boolean`.
 
 ```json
 "sampleField": {
@@ -226,7 +226,7 @@ El equivalente de a [!UICONTROL Byte] El campo creado mediante la interfaz de us
 }
 ```
 
-Si lo desea, puede proporcionar un `default` valor que el campo utilizará cuando no se proporcione ningún valor explícito durante la ingesta.
+Opcionalmente, puede proporcionar un valor `default` que el campo utilizará cuando no se proporcione ningún valor explícito durante la ingesta.
 
 ```json
 "sampleField": {
@@ -239,11 +239,11 @@ Si lo desea, puede proporcionar un `default` valor que el campo utilizará cuand
 
 >[!IMPORTANT]
 >
->Si no `default` se proporciona un valor y el campo booleano se establece en `required`, cualquier registro al que le falte un valor aceptado para este campo no superará la validación tras la ingesta.
+>Si no se proporciona ningún valor `default` y el campo booleano está establecido en `required`, cualquier registro al que le falte un valor aceptado para este campo no superará la validación tras la ingesta.
 
 ## [!UICONTROL Fecha] {#date}
 
-[!UICONTROL Fecha] los campos están indicados por `type: string` y `format: date`. También puede proporcionar una matriz de `examples` para aprovecharlo en los casos en los que desee mostrar una cadena de fecha de ejemplo para los usuarios que introducen los datos manualmente.
+Los campos [!UICONTROL Date] están indicados por `type: string` y `format: date`. Opcionalmente, también puede proporcionar una matriz de `examples` para aprovecharla en los casos en que desee mostrar una cadena de fecha de muestra para los usuarios que introduzcan los datos manualmente.
 
 ```json
 "sampleField": {
@@ -257,7 +257,7 @@ Si lo desea, puede proporcionar un `default` valor que el campo utilizará cuand
 
 ## [!UICONTROL DateTime] {#date-time}
 
-[!UICONTROL DateTime] los campos están indicados por `type: string` y `format: date-time`. También puede proporcionar una matriz de `examples` para aprovecharlo en los casos en los que desee mostrar una cadena de fecha y hora de ejemplo para los usuarios que introduzcan los datos manualmente.
+Los campos [!UICONTROL DateTime] están indicados por `type: string` y `format: date-time`. Opcionalmente, también puede proporcionar una matriz de `examples` para aprovecharla en los casos en que desee mostrar una cadena de fecha y hora de muestra para los usuarios que escriban los datos manualmente.
 
 ```json
 "sampleField": {
@@ -271,7 +271,7 @@ Si lo desea, puede proporcionar un `default` valor que el campo utilizará cuand
 
 ## [!UICONTROL Matriz] {#array}
 
-[!UICONTROL Matriz] los campos están indicados por `type: array` y un `items` que define el esquema de los elementos que aceptará la matriz.
+Los campos [!UICONTROL Array] están indicados por `type: array` y un objeto `items` que define el esquema de los elementos que aceptará la matriz.
 
 Puede definir elementos de matriz utilizando tipos primitivos, como una matriz de cadenas:
 
@@ -286,7 +286,7 @@ Puede definir elementos de matriz utilizando tipos primitivos, como una matriz d
 }
 ```
 
-También puede definir los elementos de la matriz en función de un tipo de datos existente haciendo referencia a `$id` del tipo de datos mediante una `$ref` propiedad. La siguiente es una matriz de [!UICONTROL Elemento de pago] objetos:
+También puede definir los elementos de matriz basados en un tipo de datos existente haciendo referencia al `$id` del tipo de datos a través de una propiedad `$ref`. A continuación se muestra una matriz de [!UICONTROL objetos Elemento de pago]:
 
 ```json
 "sampleField": {
@@ -301,9 +301,9 @@ También puede definir los elementos de la matriz en función de un tipo de dato
 
 ## [!UICONTROL Objeto] {#object}
 
-[!UICONTROL Objeto] los campos están indicados por `type: object` y una `properties` que define subpropiedades para el campo de esquema.
+Los campos [!UICONTROL Object] están indicados por `type: object` y un objeto `properties` que define subpropiedades para el campo de esquema.
 
-Los subcampos definidos en `properties` se puede definir con cualquier primitivo `type` o haciendo referencia a un tipo de datos existente a través de una `$ref` propiedad que señala a `$id` del tipo de datos en cuestión:
+Cada subcampo definido bajo `properties` se puede definir usando cualquier tipo de datos primitivo `type` o haciendo referencia a un tipo de datos existente a través de una propiedad `$ref` que señala al `$id` del tipo de datos en cuestión:
 
 ```json
 "sampleField": {
@@ -321,7 +321,7 @@ Los subcampos definidos en `properties` se puede definir con cualquier primitivo
 }
 ```
 
-También puede definir todo el objeto mediante referencia a un tipo de datos, siempre que el tipo de datos en cuestión se defina como `type: object`:
+También puede definir todo el objeto haciendo referencia a un tipo de datos, siempre que el tipo de datos en cuestión se defina como `type: object`:
 
 ```json
 "sampleField": {
@@ -333,9 +333,9 @@ También puede definir todo el objeto mediante referencia a un tipo de datos, si
 
 ## [!UICONTROL Mapa] {#map}
 
-Un campo de mapa es esencialmente un [`object`Campo de tipo](#object) con un conjunto de claves sin restricciones. Al igual que los objetos, los mapas tienen un `type` valor de `object`, pero sus `meta:xdmType` se establece explícitamente como `map`.
+Un campo de asignación es esencialmente un campo de tipo [`object` ](#object) con un conjunto de claves no restringido. Al igual que los objetos, las asignaciones tienen un valor `type` de `object`, pero su `meta:xdmType` se ha establecido explícitamente en `map`.
 
-Un mapa **no debe** defina cualquier propiedad. It **debe** definir un único `additionalProperties` para describir el tipo de valores contenidos en la asignación (cada asignación solo puede contener un único tipo de datos). El `type` el valor debe ser `string` o `integer`.
+Un mapa **no debe** definir ninguna propiedad. **debe** definir un solo esquema `additionalProperties` para describir el tipo de valores contenidos en el mapa (cada mapa solo puede contener un único tipo de datos). El valor `type` debe ser `string` o `integer`.
 
 Por ejemplo, un campo de asignación con valores de tipo cadena se definiría de esta manera:
 
@@ -355,21 +355,21 @@ Consulte la sección siguiente para obtener más información sobre la creación
 
 ### Creación de tipos de mapas personalizados {#custom-maps}
 
-Para admitir datos &quot;de tipo mapa&quot; de forma eficaz en XDM, los objetos se pueden anotar con un `meta:xdmType` establezca en `map` para dejar claro que un objeto debe administrarse como si el conjunto de claves no estuviera restringido. Los datos que se incorporan a los campos de asignación deben utilizar claves de cadena y solo valores de cadena o enteros (según lo determinado por `additionalProperties.type`).
+Para admitir datos &quot;de tipo mapa&quot; de forma eficaz en XDM, los objetos pueden anotarse con un `meta:xdmType` establecido en `map` para dejar claro que un objeto debe administrarse como si el conjunto de claves no estuviera restringido. Los datos que se incorporan a los campos de asignación deben utilizar claves de cadena y solo valores de cadena o enteros (determinados por `additionalProperties.type`).
 
 XDM impone las siguientes restricciones al uso de esta sugerencia de almacenamiento:
 
 * Los tipos de mapa DEBEN ser del tipo `object`.
 * Los tipos de mapa NO DEBEN tener propiedades definidas (es decir, definen objetos &quot;vacíos&quot;).
-* Los tipos de mapa DEBEN incluir un `additionalProperties.type` que describe los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
+* Los tipos de mapa DEBEN incluir un campo `additionalProperties.type` que describa los valores que se pueden colocar en el mapa, ya sea `string` o `integer`.
 
 Asegúrese de utilizar únicamente campos de tipo mapa cuando sea absolutamente necesario, ya que presentan los siguientes inconvenientes de rendimiento:
 
-* Tiempo de respuesta de [Adobe Experience Platform Query Service](../../query-service/home.md) se degrada de 3 a 10 segundos por 100 millones de registros.
+* El tiempo de respuesta de [Adobe Experience Platform Query Service](../../query-service/home.md) se degrada de tres a diez segundos para 100 millones de registros.
 * Los mapas deben tener menos de 16 claves o se arriesgarán a una mayor degradación.
 
 La interfaz de usuario de Platform también tiene limitaciones en la forma de extraer las claves de los campos de tipo mapa. Mientras que los campos de tipo objeto se pueden expandir, los mapas se muestran como un único campo.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo definir diferentes tipos de campos en la API. Para obtener más información sobre el formato de los tipos de campo XDM, consulte la guía sobre [Restricciones de tipo de campo XDM](../schema/field-constraints.md).
+En esta guía se explica cómo definir diferentes tipos de campos en la API. Para obtener más información sobre el formato de los tipos de campo XDM, consulte la guía sobre [restricciones de tipo de campo XDM](../schema/field-constraints.md).

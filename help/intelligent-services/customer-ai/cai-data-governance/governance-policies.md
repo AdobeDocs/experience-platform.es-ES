@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Políticas de gobernanza en Customer AI
 
-Una vez completado el flujo de trabajo para crear un modelo y enviar su configuración, la variable [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Platform cumplan con las políticas de uso de datos.
+Una vez que haya completado el flujo de trabajo para crear un modelo y enviar su configuración, [aplicación de políticas](/help/data-governance/enforcement/auto-enforcement.md) comprueba si hay alguna infracción. Si se produce una infracción de directiva, aparece una ventana emergente que indica que se han infringido una o más directivas. Esto sirve para garantizar que las operaciones de datos y las acciones de marketing de Platform cumplan con las políticas de uso de datos.
 
 ![Una ventana emergente que muestra información sobre la infracción de directiva](../images/user-guide/policy-violation-popover-cai.png).
 

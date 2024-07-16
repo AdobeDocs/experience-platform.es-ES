@@ -4,8 +4,8 @@ description: Últimas notas de la versión de la extensión de etiqueta de Adobe
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 94%
+source-wordcount: '578'
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 94%
 ### Extensión de Adobe Target 0.11.4
 
 * Actualización a at.js v1.8.3
-* Añadido `SameSite=None` y `Secure` atributos al configurar cookies
+* Se agregaron los atributos `SameSite=None` y `Secure` al configurar las cookies
 
 ## 24 de julio de 2020
 
@@ -68,7 +68,7 @@ ht-degree: 94%
 
 ### Extensión de Adobe Target 0.9.3
 
-* Versión actualizada para utilizar at.js 1.7.1.
+* Versión actualizada de extensión para utilizar at.js 1.7.1.
 
 ## 20 de febrero de 2019
 

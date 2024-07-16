@@ -1,24 +1,25 @@
 ---
 title: Tipo de datos de lista de solicitud
 description: Obtenga información sobre el tipo de datos de la lista de solicitudes Experience Data Model (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '125'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Lista de solicitudes] tipo de datos
+# [!UICONTROL Tipo de datos de la lista de solicitudes]
 
-[!UICONTROL Lista de solicitudes] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe una recopilación depurada de elementos para su adquisición o compra. Utilice el [!UICONTROL Lista de solicitudes] tipo de datos para identificar y describir listas de solicitudes.
+[!UICONTROL Lista de solicitudes] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe una colección revisada de artículos para compras o adquisiciones. Utilice el tipo de datos [!UICONTROL Lista de solicitudes] para identificar y describir listas de solicitudes.
 
-![Un diagrama de la [!UICONTROL Lista de solicitudes] tipo de datos.](../images/data-types/requisition-list.png)
+![Un diagrama del tipo de datos [!UICONTROL Lista de solicitudes].](../images/data-types/requisition-list.png)
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Descripción |
 |---------------------------|-------------------|-----------|--------------------------------------------------|
-| [!UICONTROL Identificador de lista de solicitud] | `ID` | string | Identificador único de la lista de solicitudes. |
-| [!UICONTROL Nombre de lista de solicitudes] | `name` | string | Nombre de la lista de solicitudes especificada por el cliente. |
-| [!UICONTROL Descripción de lista de solicitudes] | `description` | string | Descripción de la lista de solicitudes especificada por el cliente. |
+| [!UICONTROL ID de lista de solicitudes] | `ID` | cadena | Identificador único de la lista de solicitudes. |
+| [!UICONTROL Nombre de lista de solicitudes] | `name` | cadena | Nombre de la lista de solicitudes especificada por el cliente. |
+| [!UICONTROL Descripción de la lista de solicitudes] | `description` | cadena | Descripción de la lista de solicitudes especificada por el cliente. |
 
 {style="table-layout:auto"}
 

@@ -4,32 +4,32 @@ title: Eliminar una configuración de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '279'
 ht-degree: 2%
 
 ---
 
 # Eliminar una configuración de destino
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de destino existente mediante `/authoring/destinations` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una configuración de destino existente mediante el extremo de API `/authoring/destinations`.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Eliminar una configuración de destino {#delete}
 
-Puede eliminar un [existente](create-destination-configuration.md) configuración del servidor de destino realizando una `DELETE` solicitud a la `/authoring/destinations` punto final con `{INSTANCE_ID}`de la configuración de destino que desea eliminar.
+Puede eliminar una configuración de servidor de destino [existente](create-destination-configuration.md) realizando una solicitud `DELETE` al extremo `/authoring/destinations` con el `{INSTANCE_ID}`de la configuración de destino que desea eliminar.
 
 >[!TIP]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Para obtener una configuración de destino existente y su correspondiente `{INSTANCE_ID}`, consulte el artículo sobre [recuperación de una configuración de destino](retrieve-destination-configuration.md).
+Para obtener una configuración de destino existente y su `{INSTANCE_ID}` correspondiente, vea el artículo acerca de [recuperar una configuración de destino](retrieve-destination-configuration.md).
 
 **Formato de API**
 
@@ -39,7 +39,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | El `ID` de la configuración de destino que desea eliminar. |
+| `{INSTANCE_ID}` | `ID` de la configuración de destino que desea eliminar. |
 
 +++Solicitud
 
@@ -62,7 +62,7 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo eliminar una configuración de destino existente a través del Destination SDK `/authoring/destinations` Extremo de API.
+Después de leer este documento, ahora sabe cómo eliminar una configuración de destino existente a través del extremo de API del Destination SDK `/authoring/destinations`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

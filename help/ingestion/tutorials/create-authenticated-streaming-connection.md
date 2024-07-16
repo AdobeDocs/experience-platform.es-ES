@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Creación de una conexión de flujo continuo autenticada
 
-La recopilación de datos autenticados permite servicios de Adobe Experience Platform, como [!DNL Real-Time Customer Profile] y [!DNL Identity], para diferenciar entre registros procedentes de fuentes de confianza y no fiables. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokens de acceso como parte de la solicitud del POST.
+La recopilación de datos autenticados permite a los servicios de Adobe Experience Platform, como [!DNL Real-Time Customer Profile] y [!DNL Identity], diferenciar entre registros procedentes de fuentes de confianza y fuentes que no son de confianza. Los clientes que deseen enviar información de identificación personal (PII) pueden hacerlo enviando tokens de acceso como parte de la solicitud del POST.
 
-Para obtener información sobre cómo crear una conexión de flujo continuo autenticada, lea la [Guía de API de origen de HTTP API](../../sources/tutorials/api/create/streaming/http.md).
+Para obtener información sobre cómo crear una conexión de flujo continuo autenticada, lea la [guía de la API de origen HTTP API](../../sources/tutorials/api/create/streaming/http.md).

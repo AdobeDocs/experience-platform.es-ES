@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Segmentación de streaming en la IU de Experience Platform
 
-El siguiente vídeo pretende ayudarle a comprender la segmentación de flujo continuo. Muestra un ejemplo de experiencia del cliente seguido de un rápido recorrido por las funciones clave de [!DNL Platform] interfaz. Para obtener más información acerca de la segmentación por transmisión y cómo realizar la segmentación por transmisión en la interfaz de usuario, lea la [guía de IU de segmentación de streaming](../ui/streaming-segmentation.md).
+El siguiente vídeo pretende ayudarle a comprender la segmentación de flujo continuo. Muestra un ejemplo de experiencia del cliente seguido de un recorrido rápido por las características clave de la interfaz [!DNL Platform]. Para obtener más información sobre la segmentación por transmisión y cómo realizar la segmentación en la interfaz de usuario, lea la [guía de la interfaz de usuario de segmentación por transmisión](../ui/streaming-segmentation.md).
 
-Si está interesado en la segmentación por streaming mediante la API de segmentación, lea la [guía de API de segmentación de streaming](../api/streaming-segmentation.md).
+Si está interesado en la segmentación de streaming mediante la API de segmentación, lea la [guía de la API de segmentación de streaming](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de IU de segmentación de streaming](../ui/streaming-segmentation.md).
+>La interfaz de usuario del Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte la [guía de la interfaz de usuario de segmentación de streaming](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

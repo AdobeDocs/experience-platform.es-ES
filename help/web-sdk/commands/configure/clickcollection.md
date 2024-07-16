@@ -11,68 +11,68 @@ ht-degree: 0%
 
 # `clickCollection`
 
-El `clickCollection` contiene varias variables que ayudan a controlar los datos de vínculos recopilados automáticamente. Utilice estas variables cuando desee incluir o excluir tipos de vínculos de la recopilación de datos.
+El objeto `clickCollection` contiene varias variables que le ayudan a controlar los datos de vínculos recopilados automáticamente. Utilice estas variables cuando desee incluir o excluir tipos de vínculos de la recopilación de datos.
 
-Requiere [`clickCollectionEnabled`](clickcollectionenabled.md) para que esté habilitado.
+Requiere que [`clickCollectionEnabled`](clickcollectionenabled.md) esté habilitado.
 
 Es compatible con el SDK web 2.25.0 o posterior.
 
-Las siguientes variables están disponibles en el `clickCollection` objeto:
+Las siguientes variables están disponibles en el objeto `clickCollection`:
 
-* **`clickCollection.internalLinkEnabled`**: Un booleano que determina si se realiza un seguimiento automático de los vínculos del dominio actual. Por ejemplo, `https://example.com/index.html` hasta `https://example.com/product.html`.
-* **`clickCollection.downloadLinkEnabled`**: Un booleano que determina si la biblioteca realiza un seguimiento de los vínculos que se clasifican como descargas en función del [`downloadLinkQualifier`](downloadlinkqualifier.md) propiedad.
-* **`clickCollection.externalLinkEnabled`**: Un booleano que determina si se realiza un seguimiento automático de los vínculos a dominios externos. Por ejemplo, `https://example.com` hasta `https://example.net`.
-* **`clickCollection.eventGroupingEnabled`**: Un booleano que determina si la biblioteca de espera hasta la siguiente página para enviar datos de seguimiento de vínculos. Cuando se cargue la página siguiente, combine los datos de seguimiento de vínculos con el evento de carga de página. Al habilitar esta opción, se reduce el número de eventos que se envían al Adobe. If `internalLinkEnabled` está deshabilitada, esta variable no hace nada.
-* **`clickCollection.sessionStorageEnabled`**: Un booleano que determina si los datos de seguimiento de vínculos se almacenan en el almacenamiento de sesión en lugar de en las variables locales. If `internalLinkEnabled` o `eventGroupingEnabled` están desactivadas, esta variable no hace nada.
+* **`clickCollection.internalLinkEnabled`**: un booleano que determina si los vínculos del dominio actual se rastrean automáticamente. Por ejemplo, `https://example.com/index.html` a `https://example.com/product.html`.
+* **`clickCollection.downloadLinkEnabled`**: un booleano que determina si la biblioteca realiza un seguimiento de los vínculos que se califican como descargas en función de la propiedad [`downloadLinkQualifier`](downloadlinkqualifier.md).
+* **`clickCollection.externalLinkEnabled`**: un booleano que determina si se realiza un seguimiento automático de los vínculos a dominios externos. Por ejemplo, `https://example.com` a `https://example.net`.
+* **`clickCollection.eventGroupingEnabled`**: un booleano que determina si la biblioteca espera hasta la siguiente página para enviar los datos de seguimiento de vínculos. Cuando se cargue la página siguiente, combine los datos de seguimiento de vínculos con el evento de carga de página. Al habilitar esta opción, se reduce el número de eventos que se envían al Adobe. Si `internalLinkEnabled` está deshabilitado, esta variable no hace nada.
+* **`clickCollection.sessionStorageEnabled`**: un booleano que determina si los datos de seguimiento de vínculos se almacenan en el almacenamiento de sesión en lugar de en las variables locales. Si `internalLinkEnabled` o `eventGroupingEnabled` están deshabilitados, esta variable no hace nada.
 
-  El Adobe recomienda habilitar esta variable al utilizar `eventGroupingEnabled`. If `eventGroupingEnabled` está habilitado mientras `sessionStorageEnabled` está deshabilitada, al hacer clic en una nueva página se pierden datos de seguimiento de vínculos, ya que no se conserva en el almacenamiento de sesión. Aunque es aceptable deshabilitar `sessionStorageEnabled` SPA en aplicaciones de una sola página, no es ideal para páginas que no sean de una sola página (no de una sola página).
-* **`filterClickDetails`**: función de llamada de retorno que proporciona controles completos sobre los datos de seguimiento de vínculos que recopila. Puede utilizar esta función de llamada de retorno para alterar, ofuscar o cancelar el envío de datos de seguimiento de vínculos. Esta llamada de retorno es útil cuando desea omitir información específica, como información de identificación personal dentro de los vínculos.
+  El Adobe recomienda habilitar esta variable al usar `eventGroupingEnabled`. Si `eventGroupingEnabled` está habilitado mientras que `sessionStorageEnabled` está deshabilitado, hacer clic en una nueva página resulta en la pérdida de datos de seguimiento de vínculos, ya que no se conservan en el almacenamiento de sesión. SPA Aunque se puede deshabilitar `sessionStorageEnabled` en aplicaciones de una sola página, no es ideal para páginas que no sean de una sola página
+* **`filterClickDetails`**: función de devolución de llamada que proporciona controles completos sobre los datos de seguimiento de vínculos que recopila. Puede utilizar esta función de llamada de retorno para alterar, ofuscar o cancelar el envío de datos de seguimiento de vínculos. Esta llamada de retorno es útil cuando desea omitir información específica, como información de identificación personal dentro de los vínculos.
 
 ## Haga clic en Configuración de colección mediante la extensión de etiqueta del SDK web
 
-Seleccione el **[!UICONTROL Habilitar la recopilación de datos de clics]** casilla de verificación cuando [configuración de la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Al activar esta casilla de verificación, se muestran las siguientes opciones relacionadas con la recopilación de clics:
+Seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]** al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Al activar esta casilla de verificación, se muestran las siguientes opciones relacionadas con la recopilación de clics:
 
 * [!UICONTROL Vínculos internos]
    * [!UICONTROL Habilitar agrupación de eventos]
    * [!UICONTROL Habilitar almacenamiento de sesión]
 * [!UICONTROL Vínculos externos]
 * [!UICONTROL Vínculos de descarga]
-* [!UICONTROL Filtrar propiedades de clic]
+* [!UICONTROL Propiedades de clic en filtro]
 
-1. Iniciar sesión en [experience.adobe.com](https://experience.adobe.com) usando sus credenciales de Adobe ID.
+1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
 1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
 1. Seleccione la propiedad de etiquetas que desee.
-1. Vaya a **[!UICONTROL Extensiones]**, luego haga clic en **[!UICONTROL Configurar]** en el [!UICONTROL SDK web de Adobe Experience Platform] Tarjeta de.
-1. Desplácese hacia abajo hasta el [!UICONTROL Recopilación de datos] y, a continuación, seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
+1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
+1. Desplácese hacia abajo hasta la sección [!UICONTROL Recopilación de datos] y, a continuación, active la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
 1. Seleccione la configuración de recopilación de clics que desee.
-1. Clic **[!UICONTROL Guardar]** y, a continuación, publique los cambios.
+1. Haz clic en **[!UICONTROL Guardar]** y después publica los cambios.
 
-El [!UICONTROL Filtrar propiedades de clic] callback abre un editor de código personalizado que le permite insertar el código deseado. En el editor de código, tiene acceso a las siguientes variables:
+La llamada de retorno [!UICONTROL Filter click properties] abre un editor de código personalizado que le permite insertar el código deseado. En el editor de código, tiene acceso a las siguientes variables:
 
-* **`content.clickedElement`**: el elemento DOM en el que se hizo clic.
-* **`content.pageName`**: Nombre de la página cuando se produjo el clic.
-* **`content.linkName`**: nombre del vínculo en el que se hizo clic.
-* **`content.linkRegion`**: La región del vínculo en el que se hizo clic.
-* **`content.linkType`**: el tipo de vínculo (de salida, de descarga, etc.).
-* **`content.linkURL`**: URL de destino del vínculo en el que se hizo clic.
-* **`return true`**: Salga inmediatamente de la llamada de retorno con los valores de variable actuales.
-* **`return false`**: Salga inmediatamente de la llamada de retorno y interrumpa la recopilación de datos.
+* **`content.clickedElement`**: el elemento DOM donde se hizo clic.
+* **`content.pageName`**: nombre de página cuando se produjo el clic.
+* **`content.linkName`**: nombre del vínculo donde se hizo clic.
+* **`content.linkRegion`**: región del vínculo donde se hizo clic.
+* **`content.linkType`**: tipo de vínculo (de salida, de descarga, etc.).
+* **`content.linkURL`**: dirección URL de destino del vínculo donde se hizo clic.
+* **`return true`**: salga inmediatamente de la llamada de retorno con los valores de las variables actuales.
+* **`return false`**: salga inmediatamente de la llamada de retorno y anule la recopilación de datos.
 
-Cualquier variable definida fuera de `content` se pueden usar, pero no se incluyen en la carga útil enviada al Adobe.
+Se puede usar cualquier variable definida fuera de `content`, pero no se incluye en la carga útil enviada al Adobe.
 
 ## Haga clic en Configuración de la colección mediante la biblioteca JavaScript del SDK web
 
-Configure las variables deseadas dentro de la variable `clickCollection` al ejecutar el [`configure`](overview.md) comando. Si no se establece, la configuración predeterminada de este objeto depende del valor de [`clickCollectionEnabled`](clickcollectionenabled.md).
+Establezca las variables deseadas dentro del objeto `clickCollection` al ejecutar el comando [`configure`](overview.md). Si no se establece, la configuración predeterminada de este objeto depende del valor de [`clickCollectionEnabled`](clickcollectionenabled.md).
 
-* `internalLinkEnabled`: coincide `clickCollectionEnabled`
-* `downloadLinkEnabled`: coincide `clickCollectionEnabled`
-* `externalLinkEnabled`: coincide `clickCollectionEnabled`
-* `eventGroupingEnabled`: el valor predeterminado es `false`; debe estar habilitado explícitamente
-* `sessionStorageEnabled`: el valor predeterminado es `false`; debe estar habilitado explícitamente
-* `filterClickDetails`: no contiene una función; debe registrarse explícitamente
+* `internalLinkEnabled`: coincide con `clickCollectionEnabled`
+* `downloadLinkEnabled`: coincide con `clickCollectionEnabled`
+* `externalLinkEnabled`: coincide con `clickCollectionEnabled`
+* `eventGroupingEnabled`: el valor predeterminado es `false`; debe habilitarse explícitamente
+* `sessionStorageEnabled`: el valor predeterminado es `false`; debe habilitarse explícitamente
+* `filterClickDetails`: no contiene una función; debe estar registrado explícitamente
 
 >[!TIP]
->El Adobe recomienda activar `eventGroupingEnabled`, ya que ayuda a reducir el número de eventos que se contabilizan en el uso contractual.
+>Adobe recomienda habilitar `eventGroupingEnabled`, ya que ayuda a reducir el número de eventos que se contabilizan en el uso contractual.
 
 ```js
 alloy("configure", {

@@ -7,49 +7,49 @@ description: Aprenda a conectar Adobe Experience Platform a HubSpot mediante la 
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 2%
+source-wordcount: '479'
+ht-degree: 5%
 
 ---
 
-# Crear un [!DNL HubSpot] conexión base mediante el [!DNL Flow Service] API
+# Crear una conexión base [!DNL HubSpot] mediante la API [!DNL Flow Service]
 
 Una conexión base representa la conexión autenticada entre un origen y Adobe Experience Platform.
 
-Este tutorial lo acompañará durante los pasos para crear una conexión base para [!DNL HubSpot] uso del [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial lo guiará para crear una conexión base para [!DNL HubSpot] mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Primeros pasos
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Zonas protegidas](../../../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para conectarse correctamente a [!DNL HubSpot] uso del [!DNL Flow Service] API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para conectarse correctamente a [!DNL HubSpot] mediante la API [!DNL Flow Service].
 
 ### Recopilar credenciales necesarias
 
-Para que [!DNL Flow Service] para conectar con [!DNL HubSpot], debe proporcionar las siguientes propiedades de conexión:
+Para que [!DNL Flow Service] se conecte con [!DNL HubSpot], debe proporcionar las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | ---------- | ----------- |
-| `clientId` | El ID de cliente asociado con su [!DNL HubSpot] aplicación. |
-| `clientSecret` | El secreto de cliente asociado con su [!DNL HubSpot] aplicación. |
+| `clientId` | Identificador de cliente asociado con la aplicación [!DNL HubSpot]. |
+| `clientSecret` | Secreto de cliente asociado a la aplicación [!DNL HubSpot]. |
 | `accessToken` | El token de acceso obtenido al autenticar inicialmente la integración de OAuth. |
 | `refreshToken` | El token de actualización obtenido al autenticar inicialmente la integración de OAuth. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. Identificador de especificación de conexión para [!DNL HubSpot] es: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL HubSpot] es: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
-Para obtener más información sobre cómo empezar, consulte esta [Documento de HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+Para obtener más información sobre cómo empezar, consulte este [documento de HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../../../landing/api-guide.md).
 
 ## Crear una conexión base
 
 Una conexión base retiene información entre el origen y Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el ID único de conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
 
-Para crear un ID de conexión base, realice una solicitud de POST al `/connections` extremo al proporcionar su [!DNL HubSpot] credenciales de autenticación como parte de los parámetros de solicitud.
+Para crear un identificador de conexión base, realice una solicitud de POST al extremo `/connections` y proporcione las credenciales de autenticación [!DNL HubSpot] como parte de los parámetros de solicitud.
 
 **Formato de API**
 
@@ -90,11 +90,11 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `auth.params.clientId` | El ID de cliente asociado con su [!DNL HubSpot] aplicación. |
-| `auth.params.clientSecret` | El secreto de cliente asociado con su [!DNL HubSpot] aplicación. |
+| `auth.params.clientId` | Identificador de cliente asociado con la aplicación [!DNL HubSpot]. |
+| `auth.params.clientSecret` | Secreto de cliente asociado a la aplicación [!DNL HubSpot]. |
 | `auth.params.accessToken` | El token de acceso obtenido al autenticar inicialmente la integración de OAuth. |
 | `auth.params.refreshToken` | El token de actualización obtenido al autenticar inicialmente la integración de OAuth. |
-| `connectionSpec.id` | El [!DNL HubSpot] identificador de especificación de conexión: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | Identificador de especificación de conexión [!DNL HubSpot]: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Respuesta**
 
@@ -109,7 +109,7 @@ Una respuesta correcta devuelve la conexión recién creada, incluido su identif
 
 ## Pasos siguientes
 
-Al seguir este tutorial, ha creado un [!DNL HubSpot] conexión base mediante el [!DNL Flow Service] API. Puede utilizar este ID de conexión base en los siguientes tutoriales:
+Siguiendo este tutorial, ha creado una conexión base [!DNL HubSpot] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
-* [Explorar la estructura y el contenido de las tablas de datos mediante [!DNL Flow Service] API](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de automatización de marketing a Platform mediante [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
+* [Cree un flujo de datos para llevar los datos de automatización de marketing a Platform mediante la API  [!DNL Flow Service] ](../../collect/marketing-automation.md)

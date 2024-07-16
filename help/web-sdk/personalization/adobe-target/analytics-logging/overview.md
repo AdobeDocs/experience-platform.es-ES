@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Inicio de sesión de Adobe Analytics for Target (A4T) en el SDK web de Platform
 
-Al utilizar Adobe Target para la personalización, puede elegir qué sistema desea utilizar para la medición del rendimiento. Cada [Actividad de Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) le permite seleccionar entre los informes de Target y Adobe Analytics.
+Al utilizar Adobe Target para la personalización, puede elegir qué sistema desea utilizar para la medición del rendimiento. Cada [actividad de Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) le permite seleccionar entre informes de Target y de Adobe Analytics.
 
 Si utiliza los informes de Analytics, Adobe Target debe comunicar lo siguiente a Analytics:
 
@@ -26,10 +26,10 @@ El SDK web de Adobe Experience Platform admite dos tipos de registro de Analytic
 
 | Método de registro | Descripción |
 | --- | --- |
-| Registro de Analytics en el lado del servidor | Todas las visitas de Analytics enviadas a través de la red perimetral se aumentan con los detalles de Target en el servidor, sin tener que pasar por el proceso de vinculación de visitas. |
-| Registro de Analytics en el cliente | Los datos de Target se devuelven en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a Analytics mediante [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Registro de Analytics en el lado del servidor | Todas las visitas de Analytics enviadas mediante el Edge Network se aumentan con los detalles de Target en el servidor, sin tener que pasar por el proceso de vinculación de visitas. |
+| Registro de Analytics en el cliente | Los datos de destino se devuelven en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-El método de registro viene determinado por si tiene Adobe Analytics habilitado en la configuración [secuencia de datos](../../../../datastreams/overview.md):
+El método de registro viene determinado por si tiene Adobe Analytics habilitado en su [secuencia de datos](../../../../datastreams/overview.md) configurada:
 
 ![Flujo de decisión del método de registro](../assets/analytics-logging.png)
 

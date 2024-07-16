@@ -7,7 +7,7 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -20,8 +20,8 @@ ht-degree: 4%
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `geoShape` | [[!UICONTROL Forma geográfica]](./geo-shape.md) | Describe la forma geográfica del área con la que se está interactuando. Este campo puede describir un cuadro, un círculo o un polígono. |
-| `deviceGeoAccuracy` | Doble | La precisión del dispositivo o mecanismo de medición geográfica, medida en metros. |
-| `distanceToCenter` | Doble | La distancia al centro del geo en el caso de un círculo geográfico, medida en metros. |
+| `deviceGeoAccuracy` | Duplicada | La precisión del dispositivo o mecanismo de medición geográfica, medida en metros. |
+| `distanceToCenter` | Duplicada | La distancia al centro del geo en el caso de un círculo geográfico, medida en metros. |
 
 {style="table-layout:auto"}
 

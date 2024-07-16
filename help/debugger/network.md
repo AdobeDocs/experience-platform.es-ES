@@ -1,6 +1,6 @@
 ---
 title: Pestaña Red
-description: Aprenda a utilizar la pestaña Red en Adobe Experience Platform Debugger.
+description: Aprenda a utilizar la pestaña Red en el Adobe Experience Platform Debugger.
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;red;información
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Pestaña Red
 
-El **Red** agrega todas las llamadas de la solución Adobe Experience Cloud realizadas en la página y las muestra en orden de izquierda a derecha. Los parámetros estándar se etiquetan automáticamente con nombres descriptivos y se organizan para agrupar parámetros comunes en la misma función.
+La pestaña **Red** agrega todas las llamadas de la solución Adobe Experience Cloud realizadas en la página y las muestra en orden de izquierda a derecha. Los parámetros estándar se etiquetan automáticamente con nombres descriptivos y se organizan para agrupar parámetros comunes en la misma función.
 
 ![](images/network.jpg)
 
@@ -39,6 +39,6 @@ Seleccione en un elemento de la vista Red para ver una vista expandida. Desde la
 
 ![](images/copy.jpg)-->
 
-Para borrar la lista, seleccione **[!UICONTROL Eliminar eventos]**.
+Para borrar la lista, seleccione **[!UICONTROL Quitar eventos]**.
 
 Para descargar un archivo de Excel que contenga la información de esta pantalla, seleccione **[!UICONTROL Descargar]**.

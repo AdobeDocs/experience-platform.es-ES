@@ -1,21 +1,21 @@
 ---
 description: Obtenga información sobre cómo utilizar Destination SDK para configurar un destino basado en archivos con el fin de exportar audiencias potenciales a una ubicación de almacenamiento.
 title: Configurar un destino basado en archivos para exportar audiencias potenciales a una ubicación de almacenamiento
-source-git-commit: b0884524eb4f42f4f152efcb27aed19d3dabf582
+exl-id: 052fd185-294a-4c1d-8d82-12b27b661e22
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
 
 ---
 
-
 # Configurar un destino basado en archivos para exportar audiencias potenciales a una ubicación de almacenamiento
 
 ## Información general {#overview}
 
-En esta página se describe cómo utilizar Destination SDK para configurar un destino basado en archivos con funciones personalizadas [opciones de formato de archivo](configure-file-formatting-options.md) y un personalizado [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) para exportar [audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md). Los ejemplos de esta guía describen cómo exportar audiencias de perfiles de clientes potenciales a una ubicación de Amazon S3.
+En esta página se describe cómo usar Destination SDK para configurar un destino basado en archivos con [opciones de formato de archivo](configure-file-formatting-options.md) personalizadas y una [configuración de nombre de archivo](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personalizada para exportar [audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md). Los ejemplos de esta guía describen cómo exportar audiencias de perfiles de clientes potenciales a una ubicación de Amazon S3.
 
-También puede configurar STFP u otras ubicaciones de almacenamiento para exportar audiencias de clientes potenciales. La parte importante que debe recordar es añadir el siguiente fragmento a la configuración de destino en [paso 2](#create-destination-configuration) para habilitar el [flujo de trabajo para exportar audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) al destino.
+También puede configurar STFP u otras ubicaciones de almacenamiento para exportar audiencias de clientes potenciales. La parte importante que hay que recordar es agregar el siguiente fragmento a la configuración de destino en el [paso 2](#create-destination-configuration) para habilitar el [flujo de trabajo para exportar audiencias de clientes potenciales](/help/destinations/ui/activate-prospect-audiences.md) al destino.
 
 ```json
   "sources": [
@@ -23,15 +23,15 @@ También puede configurar STFP u otras ubicaciones de almacenamiento para export
   ],
 ```
 
-Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [Opciones de configuración en el SDK de destinos](../../functionality/configuration-options.md).
+Para obtener descripciones detalladas de los parámetros utilizados a continuación, consulte [opciones de configuración en Destinations SDK](../../functionality/configuration-options.md).
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos descritos a continuación, lea la [Introducción al Destination SDK](../../getting-started.md) para obtener información sobre la obtención de las credenciales de autenticación necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos descritos a continuación, lea la página de [introducción al Destination SDK](../../getting-started.md) para obtener información sobre cómo obtener las credenciales de autenticación necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
 ## Paso 1: Crear un servidor y una configuración de archivo {#create-server-file-configuration}
 
-Comience por usar la variable `/destination-server` extremo a [crear una configuración de servidor y archivo](../../authoring-api/destination-server/create-destination-server.md).
+Comience por usar el extremo `/destination-server` para [crear un servidor y una configuración de archivo](../../authoring-api/destination-server/create-destination-server.md).
 
 **Formato de API**
 
@@ -42,7 +42,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Solicitud**
 
 La siguiente solicitud crea una nueva configuración del servidor de destino, configurada por los parámetros proporcionados en la carga útil.
-La carga útil siguiente incluye una configuración genérica de Amazon S3, con [Formato de archivo CSV](../../functionality/destination-server/file-formatting.md) Parámetros de configuración que los usuarios pueden definir en la interfaz de usuario de Experience Platform.
+La carga útil siguiente incluye una configuración genérica de Amazon S3, con [formato de archivo CSV](../../functionality/destination-server/file-formatting.md) personalizado que los usuarios pueden definir en la interfaz de usuario del Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -131,9 +131,9 @@ Una respuesta correcta devuelve la nueva configuración del servidor de destino,
 
 ## Paso 2: Crear la configuración de destino {#create-destination-configuration}
 
-Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, ahora puede utilizar el `/destinations` Punto final de API para crear una configuración de destino.
+Después de crear el servidor de destino y la configuración de formato de archivo en el paso anterior, puede usar el extremo de la API `/destinations` para crear una configuración de destino.
 
-Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, sustituya el `destinationServerId` valor en la solicitud de API siguiente con el valor obtenido al crear su servidor de destino en [paso 1](#create-server-file-configuration).
+Para conectar la configuración del servidor en [paso 1](#create-server-file-configuration) a esta configuración de destino, reemplace el valor `destinationServerId` de la solicitud de API siguiente por el valor obtenido al crear el servidor de destino en [paso 1](#create-server-file-configuration).
 
 **Formato de API**
 
@@ -419,7 +419,7 @@ En función de las configuraciones anteriores, el catálogo de Experience Platfo
 
 ![Grabación de pantalla que muestra la página del catálogo de destinos con una tarjeta de destino seleccionada.](../../assets/guides/batch/destination-card.gif)
 
-En las imágenes y grabaciones que aparecen a continuación, observe cómo aparecen las opciones en la [flujo de trabajo de activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coincida con las opciones seleccionadas en la configuración de destino.
+En las imágenes y grabaciones siguientes, observe cómo las opciones del flujo de trabajo de [activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) coinciden con las opciones que seleccionó en la configuración de destino.
 
 Al rellenar detalles sobre el destino, observe cómo aparecen los campos como campos de datos personalizados que se configuran en la configuración.
 
@@ -429,21 +429,21 @@ Al rellenar detalles sobre el destino, observe cómo aparecen los campos como ca
 
 ![rellenar detalles de destino](../../assets/guides/batch/file-configuration-options.gif)
 
-Al programar intervalos de exportación, observe cómo aparecen los campos configurados en la variable `batchConfig` configuración.
+Al programar intervalos de exportación, observe cómo aparecen los campos configurados en la configuración `batchConfig`.
 ![opciones de programación de exportación](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)
 
-Al ver las opciones de configuración de nombre de archivo, observe cómo los campos que aparecen representan el `filenameConfig` opciones que se configuran en la configuración.
-![opciones de configuración de nombre](../../assets/guides/batch/file-naming-options.gif)
+Al ver las opciones de configuración del nombre de archivo, observe cómo los campos que aparecen representan las opciones de `filenameConfig` que configuró en la configuración.
+![opciones de configuración de nombre de archivo](../../assets/guides/batch/file-naming-options.gif)
 
-Si desea ajustar cualquiera de los campos mencionados anteriormente, repita lo siguiente [pasos uno](#create-server-file-configuration) y [dos](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
+Si desea ajustar cualquiera de los campos mencionados anteriormente, repita los [pasos uno](#create-server-file-configuration) y [dos](#create-destination-configuration) para modificar las configuraciones según sus necesidades.
 
-## Paso 4: (Opcional) Publicar el destino {#publish-destination}
+## Paso 4: (Opcional) Publish su destino {#publish-destination}
 
 >[!NOTE]
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Después de configurar el destino, utilice el [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe para su revisión.
+Después de configurar el destino, usa la [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración al Adobe y revisarla.
 
 ## Paso 5: (Opcional) Documente su destino {#document-destination}
 
@@ -451,8 +451,8 @@ Después de configurar el destino, utilice el [API de publicación de destino](.
 >
 >Este paso no es necesario si está creando un destino privado para su propio uso y no desea publicarlo en el catálogo de destinos para que lo utilicen otros clientes.
 
-Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea un [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación del producto para el destino en [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
+Si es un proveedor de software independiente (ISV) o integrador de sistemas (SI) que crea una [integración de productos](../../overview.md#productized-custom-integrations), use el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) para crear una página de documentación de productos para su destino en el [catálogo de destinos de Experience Platform](../../../catalog/overview.md).
 
 ## Pasos siguientes {#next-steps}
 
-Al leer este artículo, ahora sabe cómo usar Destination SDK para crear un formulario personalizado [!DNL Amazon S3] destino para exportar audiencias de clientes potenciales.
+Al leer este artículo, ahora sabe cómo usar Destination SDK para crear un destino [!DNL Amazon S3] personalizado con el fin de exportar audiencias de clientes potenciales.

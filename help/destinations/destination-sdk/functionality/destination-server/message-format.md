@@ -15,14 +15,14 @@ ht-degree: 0%
 
 Para comprender el formato de mensaje y el proceso de configuración y transformación de perfiles en el lado del Adobe, familiarícese con los siguientes conceptos de Experience Platform:
 
-* **Modelo de datos de experiencia (XDM)**. [Información general de XDM](../../../../xdm/home.md) y  [Cómo crear un esquema XDM en Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
-* **Clase**. [Crear y editar clases en la interfaz de usuario](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [Diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué audiencias pertenece un perfil. Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md).
+* **Modelo de datos de experiencia (XDM)**. [Información general de XDM](../../../../xdm/home.md) y [Cómo crear un esquema XDM en Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
+* **Clase**. [Cree y edite clases en la interfaz de usuario](../../../../xdm/ui/resources/classes.md).
+* **mapa de identidad**. El mapa de identidad representa un mapa de todas las identidades de los usuarios finales en Adobe Experience Platform. Consulte `xdm:identityMap` en el [diccionario de campo XDM](../../../../xdm/schema/field-dictionary.md).
+* **PertenenciaSegmento**. El atributo XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) informa a qué audiencias pertenece un perfil. Para los tres valores diferentes del campo `status`, lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencias](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -43,7 +43,7 @@ El Experience Platform puede ajustar el formato de mensaje de los perfiles expor
 
 * El esquema XDM de origen (1) y destino (2) en Adobe Experience Platform
 * El formato de mensaje esperado del lado del socio (3), y
-* La capa de transformación entre el esquema XDM y el formato de mensaje esperado, que se puede definir creando un [plantilla de transformación de mensaje](#using-templating).
+* La capa de transformación entre el esquema XDM y el formato de mensaje esperado, que puede definir creando una [plantilla de transformación de mensaje](#using-templating).
 
 ![Transformación de esquema a JSON](../../assets/functionality/destination-server/transformations-3-steps.png)
 
@@ -55,11 +55,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Esquema XDM de origen (1)**: este elemento hace referencia al esquema que los clientes utilizan en Experience Platform. En Experience Platform, en la variable [paso de asignación](../../../ui/activate-segment-streaming-destinations.md#mapping) Del flujo de trabajo de activación de destino, los clientes asignan campos de su esquema XDM al esquema de destino (2).
+**Esquema XDM de Source (1)**: Este elemento hace referencia al esquema que los clientes utilizan en Experience Platform. En Experience Platform, en el [paso de asignación](../../../ui/activate-segment-streaming-destinations.md#mapping) del flujo de trabajo de activación de destino, los clientes asignan campos de su esquema XDM al esquema de destino (2).
 
-**Esquema XDM de destino (2)**: Según el esquema estándar JSON (3) del formato esperado del destino y los atributos que el destino puede interpretar, puede definir atributos e identidades de perfil en el esquema XDM de destino. Puede hacerlo en la configuración de destinos, en [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) y [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) objetos.
+**Esquema XDM de destino (2)**: según el esquema estándar JSON (3) del formato esperado del destino y los atributos que el destino puede interpretar, puede definir atributos e identidades de perfil en el esquema XDM de destino. Puede hacerlo en la configuración de destinos, en los objetos [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) e [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md).
 
-**Esquema estándar JSON de sus atributos de perfil de destino (3)**: Este ejemplo representa un [Esquema JSON](https://json-schema.org/learn/miscellaneous-examples.html) de todos los atributos de perfil que admite su plataforma y sus tipos (por ejemplo: objeto, cadena, matriz). Campos de ejemplo compatibles con su destino podrían ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Necesita un [plantilla de transformación de mensaje](#using-templating) para adaptar los datos exportados fuera de Experience Platform al formato esperado.
+**Esquema estándar JSON de sus atributos de perfil de destino (3)**: Este ejemplo representa un [esquema JSON](https://json-schema.org/learn/miscellaneous-examples.html) de todos los atributos de perfil que admite su plataforma y sus tipos (por ejemplo: objeto, cadena, matriz). Campos de ejemplo compatibles con su destino: `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, etc. Necesita una [plantilla de transformación de mensajes](#using-templating) para adaptar los datos exportados fuera de Experience Platform al formato esperado.
 
 En función de las transformaciones de esquema descritas anteriormente, así es como cambia una configuración de perfil entre el esquema XDM de origen y un esquema de muestra en el lado del socio:
 
@@ -67,11 +67,11 @@ En función de las transformaciones de esquema descritas anteriormente, así es 
 
 ## Introducción: transformación de tres atributos básicos {#getting-started}
 
-Para mostrar el proceso de transformación de perfiles, el ejemplo siguiente utiliza tres atributos de perfil comunes en Adobe Experience Platform: **nombre**, **apellido**, y **dirección de email**.
+Para mostrar el proceso de transformación de perfiles, el ejemplo siguiente utiliza tres atributos de perfil comunes en Adobe Experience Platform: **nombre**, **apellido** y **dirección de correo electrónico**.
 
 >[!NOTE]
 >
->El cliente asigna los atributos del esquema XDM de origen al esquema XDM del socio en la interfaz de usuario de Adobe Experience Platform, en **Asignación** paso del [activar flujo de trabajo de destino](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>El cliente asigna los atributos del esquema XDM de origen al esquema XDM del socio en la interfaz de usuario de Adobe Experience Platform, en el paso **Mapping** del flujo de trabajo [activate destination workflow](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Supongamos que su plataforma puede recibir un formato de mensaje como:
 
@@ -111,12 +111,12 @@ Los perfiles tienen 3 secciones:
 * `identityMap` (siempre presente en un perfil)
    * esta sección contiene todas las identidades presentes en el perfil (correo electrónico, GAID de Google, IDFA de Apple, etc.) y que el usuario asignó para la exportación en el flujo de trabajo de activación.
 * atributos (según la configuración de destino, estos pueden estar presentes en el perfil). También hay una ligera diferencia entre los atributos predefinidos y los atributos de forma libre:
-   * para *atributos de forma libre*, contienen un `.value` ruta si el atributo está presente en el perfil (consulte la `lastName` atributo del ejemplo 1). Si no están presentes en el perfil, no contendrán el `.value` ruta (consulte `firstName` atributo del ejemplo 1).
-   * para *atributos predefinidos*, no contienen un `.value` ruta. Todos los atributos asignados que están presentes en un perfil están presentes en la asignación de atributos. Los que no están presentes no estarán presentes (consulte el Ejemplo 2: los `firstName` no existe en el perfil).
+   * para *atributos de forma libre*, contienen una ruta de acceso `.value` si el atributo está presente en el perfil (consulte el atributo `lastName` del ejemplo 1). Si no están presentes en el perfil, no contendrán la ruta de acceso `.value` (consulte el atributo `firstName` del ejemplo 1).
+   * para *atributos predefinidos*, no contienen una ruta de acceso `.value`. Todos los atributos asignados que están presentes en un perfil están presentes en la asignación de atributos. Las que no están presentes (consulte Ejemplo 2: el atributo `firstName` no existe en el perfil).
 
 Consulte a continuación dos ejemplos de perfiles en Experience Platform:
 
-### Ejemplo 1 con `segmentMembership`, `identityMap` Atributos y para atributos de forma libre {#example-1}
+### Ejemplo 1 con `segmentMembership`, `identityMap` y atributos para atributos de forma libre {#example-1}
 
 ```json
 {
@@ -172,13 +172,13 @@ Consulte a continuación dos ejemplos de perfiles en Experience Platform:
 
 ## Uso de un idioma de plantilla para las transformaciones de identidad, atributos y pertenencia a audiencias {#using-templating}
 
-El Adobe utiliza [Plantillas de guijarros](https://pebbletemplates.io/), un idioma de creación de plantillas similar a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar los campos del esquema XDM de Experience Platform en un formato compatible con el destino.
+Adobe usa [Pebble templates](https://pebbletemplates.io/), un lenguaje de creación de plantillas similar a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar los campos del esquema XDM de Experience Platform en un formato compatible con el destino.
 
 Esta sección proporciona varios ejemplos de cómo se realizan estas transformaciones: desde el esquema XDM de entrada, pasando por la plantilla, y la salida en formatos de carga útil aceptados por el destino. Los ejemplos siguientes se presentan por el aumento de la complejidad, de la siguiente manera:
 
-1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para [Atributos de perfil](#attributes), [Abono a audiencia](#segment-membership), y [Identidad](#identities) campos.
-2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Creación de una plantilla que envíe audiencias e identidades](./message-format.md#segments-and-identities) y [Crear una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
-3. Plantillas que incluyen la clave de agregación. Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, el Experience Platform agrupa los perfiles exportados al destino en función de criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
+1. Ejemplos de transformación simples. Descubra cómo funciona la creación de plantillas con transformaciones sencillas para los campos [Atributos de perfil](#attributes), [Pertenencia a audiencias](#segment-membership) e [Identidad](#identities).
+2. Ejemplos de complejidad aumentada de plantillas que combinan los campos anteriores: [Cree una plantilla que envíe audiencias e identidades](./message-format.md#segments-and-identities) y [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](#segments-identities-attributes).
+3. Plantillas que incluyen la clave de agregación. Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, Experience Platform agrupa los perfiles exportados a su destino según criterios como ID de audiencia, estado de audiencia o áreas de nombres de identidad.
 
 ### Atributos de perfil {#attributes}
 
@@ -186,7 +186,7 @@ Para transformar los atributos de perfil exportados a su destino, consulte los e
 
 >[!IMPORTANT]
 >
->Para obtener una lista de todos los atributos de perfil disponibles en Adobe Experience Platform, consulte la [Diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md).
+>Para obtener una lista de todos los atributos de perfil disponibles en Adobe Experience Platform, consulte el [diccionario de campos XDM](../../../../xdm/schema/field-dictionary.md).
 
 
 **Entrada**
@@ -223,7 +223,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -263,10 +263,10 @@ Perfil 2:
 }
 ```
 
-### Abono a audiencia {#audience-membership}
+### Abono de público {#audience-membership}
 
-El [segmentMembership](../../../../xdm/schema/field-dictionary.md) El atributo XDM informa a qué audiencias pertenece un perfil.
-Para los tres valores diferentes en `status` , lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencia](../../../../xdm/field-groups/profile/segmentation.md).
+El atributo XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) informa a qué audiencias pertenece un perfil.
+Para los tres valores diferentes del campo `status`, lea la documentación sobre [Grupo de campos de esquema Detalles de pertenencia a audiencias](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Entrada**
 
@@ -320,7 +320,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 
 ```python
@@ -380,7 +380,7 @@ Perfil 2:
 
 ### Identidades {#identities}
 
-Para obtener información sobre identidades en Experience Platform, consulte la [Información general de área de nombres de identidad](../../../../identity-service/features/namespaces.md).
+Para obtener información acerca de las identidades en Experience Platform, consulte la [descripción general del área de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
 **Entrada**
 
@@ -424,7 +424,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -561,7 +561,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -609,7 +609,7 @@ Perfil 2:
 
 **Resultado**
 
-El `json` a continuación, se representan los datos exportados fuera de Adobe Experience Platform.
+El(la) `json` siguiente representa los datos exportados fuera de Adobe Experience Platform.
 
 ```json
 {
@@ -743,7 +743,7 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -801,7 +801,7 @@ Perfil 2:
 
 **Resultado**
 
-El `json` a continuación, se representan los datos exportados fuera de Adobe Experience Platform.
+El(la) `json` siguiente representa los datos exportados fuera de Adobe Experience Platform.
 
 ```json
 {
@@ -859,13 +859,13 @@ El `json` a continuación, se representan los datos exportados fuera de Adobe Ex
 
 ### Incluya una clave de agregación en la plantilla para acceder a los perfiles exportados agrupados por varios criterios {#template-aggregation-key}
 
-Cuando se usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino en función de criterios como ID de audiencia, alias de audiencia, pertenencia de audiencia o áreas de nombres de identidad.
+Cuando usa [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino, puede agrupar los perfiles exportados a su destino según criterios como ID de audiencia, alias de audiencia, pertenencia de audiencia o áreas de nombres de identidad.
 
 En la plantilla de transformación de mensajes, puede acceder a las claves de agregación mencionadas anteriormente, como se muestra en los ejemplos de las secciones siguientes. Utilice claves de agregación para estructurar el mensaje HTTP exportado fuera del Experience Platform de modo que coincida con el formato y los límites de velocidad esperados por el destino.
 
 #### Usar clave de agregación de ID de audiencia en la plantilla {#aggregation-key-segment-id}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` Si se establece en true, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de audiencia. Consulte a continuación cómo puede acceder al ID de audiencia en la plantilla.
+Si usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, los perfiles de los mensajes HTTP exportados a su destino se agrupan por ID de audiencia. Consulte a continuación cómo puede acceder al ID de audiencia en la plantilla.
 
 **Entrada**
 
@@ -963,9 +963,9 @@ Perfil 4:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe a continuación cómo `audienceId` se utiliza en la plantilla para acceder a los ID de audiencia. En este ejemplo se supone que se utiliza `audienceId` para la pertenencia a audiencias en la taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
+Observe a continuación cómo se utiliza `audienceId` en la plantilla para acceder a los ID de audiencia. En este ejemplo se supone que se usa `audienceId` para la pertenencia a audiencias en la taxonomía de destino. Puede utilizar cualquier otro nombre de campo en su lugar, según su propia taxonomía.
 
 ```python
 {
@@ -1017,7 +1017,7 @@ Cuando se exportan al destino, los perfiles se dividen en dos grupos, según su 
 
 #### Usar clave de agregación de alias de audiencia en la plantilla {#aggregation-key-segment-alias}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` si se establece en true, también puede acceder a alias de audiencia en la plantilla.
+Si usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establece `includeSegmentId` como verdadero, también puede obtener acceso al alias de audiencia en la plantilla.
 
 Añada la línea siguiente a la plantilla para acceder a los perfiles exportados agrupados por alias de audiencia.
 
@@ -1027,7 +1027,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Utilizar la clave de agregación del estado de audiencia en la plantilla {#aggregation-key-segment-status}
 
-Si utiliza [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establecer `includeSegmentId` y `includeSegmentStatus` si el valor es true, se puede acceder al estado de audiencia en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben añadirse o eliminarse de los segmentos.
+Si usa [la agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) y establece `includeSegmentId` y `includeSegmentStatus` en true, puede obtener acceso al estado de la audiencia en la plantilla. De este modo, puede agrupar perfiles en los mensajes HTTP exportados a su destino en función de si los perfiles deben añadirse o eliminarse de los segmentos.
 
 Los valores posibles son:
 
@@ -1043,7 +1043,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Usar clave de agregación del área de nombres de identidad en la plantilla {#aggregation-key-identity}
 
-A continuación se muestra un ejemplo en el que la variable [agregación configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) en la configuración de destino se establece para agregar perfiles exportados por áreas de nombres de identidad, en el formulario `"namespaces": ["email", "phone"]` y `"namespaces": ["GAID", "IDFA"]`. Consulte la `groups` en el campo [crear configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) para obtener más información sobre la agrupación.
+A continuación se muestra un ejemplo en el que la agregación [configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) de la configuración de destino está establecida para agregar perfiles exportados por áreas de nombres de identidad, con el formato `"namespaces": ["email", "phone"]` y `"namespaces": ["GAID", "IDFA"]`. Consulte el parámetro `groups` en la documentación de [crear configuración de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) para obtener más información sobre la agrupación.
 
 **Entrada**
 
@@ -1115,9 +1115,9 @@ Perfil 2:
 
 >[!IMPORTANT]
 >
->Para todas las plantillas que utilice, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar el [plantilla](../../functionality/destination-server/templating-specs.md) en el [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre el escape de comillas dobles, consulte el capítulo 9 en la sección [Estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>Para todas las plantillas que use, debe omitir los caracteres no válidos, como las comillas dobles `""` antes de insertar la [plantilla](../../functionality/destination-server/templating-specs.md) en la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obtener más información sobre cómo escapar comillas dobles, consulte el capítulo 9 del [estándar JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe que `input.aggregationKey.identityNamespaces` se utiliza en la plantilla siguiente
+Observe que `input.aggregationKey.identityNamespaces` se usa en la plantilla siguiente
 
 ```python
 {
@@ -1199,22 +1199,22 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### Referencia: Contexto y funciones utilizadas en las plantillas de transformación {#reference}
 
-El contexto proporcionado a la plantilla contiene `input`  (los perfiles/datos que se exportan en esta llamada) y `destination` (datos sobre el destino al que el Adobe envía los datos, válidos para todos los perfiles).
+El contexto proporcionado a la plantilla contiene `input` (los perfiles/datos exportados en esta llamada) y `destination` (datos sobre el destino al que el Adobe está enviando datos, válidos para todos los perfiles).
 
 En la tabla siguiente se proporcionan descripciones de las funciones de los ejemplos anteriores.
 
 | Función | Descripción | Ejemplo |
 |---------|----------|----------|
 | `input.profile` | El perfil, representado como [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Sigue el esquema XDM de socio mencionado anteriormente en esta página. |
-| `hasSegments` | Esta función toma un mapa de ID de audiencia de área de nombres como parámetro. La función devuelve `true` si hay al menos una audiencia en el mapa (independientemente de su estado), y `false` de lo contrario. Puede utilizar esta función para decidir si desea iterar en un mapa de audiencias o no. | `hasSegments(input.profile.segmentMembership)` |
+| `hasSegments` | Esta función toma un mapa de ID de audiencia de área de nombres como parámetro. La función devuelve `true` si hay al menos una audiencia en el mapa (independientemente de su estado) y `false` en caso contrario. Puede utilizar esta función para decidir si desea iterar en un mapa de audiencias o no. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Mapa de ID de audiencia en un área de nombres de Adobe Experience Platform específica a alias de audiencia en el sistema del socio. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Mapa de nombres de audiencia en áreas de nombres de Adobe Experience Platform específicas a nombres de audiencia en el sistema del socio. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | Devuelve la hora en la que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: devuelve el tiempo en el que el segmento con el ID `seg-id-1`, desde el `ups` , se ha creado en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1`, desde el `ups` se ha actualizado el área de nombres en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1`, desde el `ups` , se activó en el destino, en formato UNIX timestamp.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: devuelve la hora en la que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
-| `addedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen estado `realized`, en todas las áreas de nombres. | `addedSegments(input.profile.segmentMembership)` |
-| `removedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen estado `exited`, en todas las áreas de nombres. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Obsoleto. Reemplazado por`destination.namespaceSegmentAliases`** <br><br> Mapa de ID de audiencia en el área de nombres de Adobe Experience Platform a alias de audiencia en el sistema del socio. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Obsoleto. Reemplazado por`destination.namespaceSegmentNames`** <br><br>  Mapa de nombres de audiencia en el área de nombres de Adobe Experience Platform a nombres de audiencia en el sistema del socio. | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **Obsoleto. Reemplazado por`destination.namespaceSegmentTimestamps`** <br><br> Devuelve la hora en la que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se ha creado, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se ha actualizado, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se activó en el destino, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: devuelve la hora en la que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
+| `destination.namespaceSegmentTimestamps` | Devuelve la hora en la que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: devuelve la hora en la que se creó el segmento con el ID `seg-id-1`, del área de nombres `ups`, en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: devuelve la hora en que se actualizó la audiencia con el ID `seg-id-1`, del área de nombres `ups`, en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1`, desde el área de nombres `ups`, se activó en el destino, en formato de marca de tiempo UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: devuelve la hora en que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen el estado `realized`, en todas las áreas de nombres. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Devuelve solo las audiencias que tienen el estado `exited`, en todas las áreas de nombres. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Obsoleto. Se reemplazó por`destination.namespaceSegmentAliases`** <br><br>. Se ha asignado un mapa de los ID de audiencia en el área de nombres de Adobe Experience Platform a alias de audiencia en el sistema del socio. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Se reemplazó por`destination.namespaceSegmentNames`** <br><br> Asignación de nombres de audiencia en el área de nombres de Adobe Experience Platform a nombres de audiencia en el sistema del socio. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Obsoleto. Reemplazado por`destination.namespaceSegmentTimestamps`** <br><br> Devuelve la hora en que se creó, actualizó o activó una audiencia en formato de marca de tiempo UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: devuelve la hora en que se creó la audiencia con el ID `seg-id-1`, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: devuelve la hora en que se actualizó la audiencia con el ID `seg-id-1`, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: devuelve la hora en que la audiencia con el ID `seg-id-1` se activó en el destino, en formato de marca de tiempo UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: devuelve la hora en que se actualizó la activación de audiencia en el destino, en formato de marca de tiempo UNIX.</li></ul> |
 
 {style="table-layout:auto"}
 

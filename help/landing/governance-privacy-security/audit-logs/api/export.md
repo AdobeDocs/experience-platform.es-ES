@@ -4,14 +4,14 @@ description: Obtenga información sobre cómo exportar eventos de auditoría en 
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 6%
+source-wordcount: '158'
+ht-degree: 4%
 
 ---
 
 # Exportar una lista de eventos de auditoría
 
-Puede recuperar datos de eventos realizando una solicitud de GET a `/audit/export` extremo, especificando los eventos que desea recuperar en la carga útil.
+Puede recuperar datos de eventos realizando una solicitud de GET al extremo `/audit/export`, especificando los eventos que desea recuperar en la carga útil.
 
 **Formato de API**
 
@@ -41,4 +41,4 @@ curl -X POST \
 
 **Respuesta**
 
-Los resultados se generan en un archivo CSV para su exportación. Una respuesta correcta devuelve HTTP 307 sin cuerpo de respuesta. Se proporciona un vínculo al archivo de exportación en la variable `Location` encabezado de respuesta.
+Los resultados se generan en un archivo CSV para su exportación. Una respuesta correcta devuelve HTTP 307 sin cuerpo de respuesta. Se ha proporcionado un vínculo al archivo de exportación en el encabezado de respuesta `Location`.

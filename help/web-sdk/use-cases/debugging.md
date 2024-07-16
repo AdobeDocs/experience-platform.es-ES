@@ -16,9 +16,9 @@ Cuando la depuración está habilitada, el SDK web envía mensajes a la consola 
 
 La depuración está deshabilitada de forma predeterminada, pero se puede activar de cuatro formas diferentes. Puede utilizar cualquier combinación de estos métodos para habilitar o deshabilitar la depuración de la forma más adecuada para el flujo de trabajo de desarrollo.
 
-## Uso `debugEnabled` en el `configure` mando
+## Usar `debugEnabled` en el comando `configure`
 
-Configure las variables `debugEnabled` de forma booleana a true al configurar la extensión. Esta opción se utiliza generalmente para entornos de desarrollo, ya que permite depurar a todos los que visiten cualquier página del sitio:
+Establezca el booleano `debugEnabled` en true al configurar la extensión. Esta opción se utiliza generalmente para entornos de desarrollo, ya que permite depurar a todos los que visiten cualquier página del sitio:
 
 ```js
 alloy("configure", {
@@ -30,7 +30,7 @@ alloy("configure", {
 
 Consulte [`debugEnabled`](../commands/configure/debugenabled.md) para obtener más información.
 
-## Utilice el `setDebug` mando
+## Usar el comando `setDebug`
 
 De forma similar al booleano anterior, este comando habilita la depuración en todos los visitantes de la página.
 
@@ -38,7 +38,7 @@ De forma similar al booleano anterior, este comando habilita la depuración en t
 alloy("setDebug", {"enabled": true});
 ```
 
-Consulte la [`setDebug`](../commands/setdebug.md) para obtener más información.
+Consulte el comando [`setDebug`](../commands/setdebug.md) para obtener más información.
 
 ## Establecer un parámetro de cadena de consulta
 
@@ -54,4 +54,4 @@ El Adobe Experience Platform Debugger es una potente herramienta que examina sus
 
 ![Habilitar depurador](../assets/enable-debugging.png)
 
-Consulte [información general de Adobe Experience Platform Debugger](/help/debugger/home.md) para obtener más información.
+Consulte [descripción general del Adobe Experience Platform Debugger](/help/debugger/home.md) para obtener más información.

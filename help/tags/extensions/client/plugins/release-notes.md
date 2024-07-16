@@ -4,14 +4,14 @@ description: Últimas notas de la versión de la extensión de etiquetas Common 
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 93%
+source-wordcount: '352'
+ht-degree: 94%
 
 ---
 
 # Notas de la versión de Common Analytics Plugins
 
-## 03 de junio de 2022
+## 3 de junio de 2022
 
 ### Extensión de complementos de Analytics comunes 3.0.7
 

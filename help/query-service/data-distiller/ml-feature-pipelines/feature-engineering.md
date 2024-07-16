@@ -4,27 +4,27 @@ description: Aprenda a transformar datos en Adobe Experience Platform en funcion
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 12%
 
 ---
 
 # Funciones de ingeniero para el aprendizaje automático
 
-Este documento muestra cómo se pueden transformar los datos de Adobe Experience Platform en **características** o variables que un modelo de aprendizaje automático puede consumir. Este proceso se denomina **ingeniería de funciones**. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas en su entorno de aprendizaje automático. Esto implica lo siguiente:
+Este documento muestra cómo transformar datos en Adobe Experience Platform en **características** o variables que un modelo de aprendizaje automático puede consumir. Este proceso se conoce como **ingeniería de características**. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas en su entorno de aprendizaje automático. Esto implica lo siguiente:
 
 1. Cree una plantilla de consulta para definir las etiquetas y funciones de destino que desea calcular para el modelo
 2. Ejecute la consulta y almacene los resultados en un conjunto de datos de aprendizaje
 
 ## Definición de los datos de formación {#define-training-data}
 
-El siguiente ejemplo ilustra una consulta para derivar datos de formación de un conjunto de datos de eventos de experiencia para un modelo a fin de predecir la tendencia de un usuario a suscribirse a un boletín informativo. Los eventos de suscripción se representan mediante el tipo de evento `web.formFilledOut`y otros eventos de comportamiento del conjunto de datos se utilizan para derivar funciones de nivel de perfil para predecir suscripciones.
+El siguiente ejemplo ilustra una consulta para derivar datos de formación de un conjunto de datos de eventos de experiencia para un modelo a fin de predecir la tendencia de un usuario a suscribirse a un boletín informativo. Los eventos de suscripción están representados por el tipo de evento `web.formFilledOut`, y otros eventos de comportamiento del conjunto de datos se utilizan para derivar características de nivel de perfil para predecir suscripciones.
 
 ### Etiquetas positivas y negativas de consulta {#query-positive-and-negative-labels}
 
 Un conjunto de datos completo para la formación de un modelo de aprendizaje automático (supervisado) incluye una variable o etiqueta de destino que representa el resultado que se va a predecir, y un conjunto de funciones o variables explicativas utilizadas para describir los perfiles de ejemplo utilizados para entrenar el modelo.
 
-En este caso, la etiqueta es una variable llamada `subscriptionOccurred` que es igual a 1 si el perfil de usuario tiene un evento con tipo `web.formFilledOut` y 0 en caso contrario. La siguiente consulta devuelve un conjunto de 50 000 usuarios del conjunto de datos de eventos, incluidos todos los usuarios con etiquetas positivas (`subscriptionOccurred = 1`) además de un usuario seleccionado aleatoriamente con etiquetas negativas para completar el tamaño de muestra de 50 000 usuarios. Esto garantiza que los datos de formación incluyan ejemplos positivos y negativos de los que el modelo puede aprender.
+En este caso, la etiqueta es una variable denominada `subscriptionOccurred` que es igual a 1 si el perfil de usuario tiene un evento de tipo `web.formFilledOut` y 0 en caso contrario. La siguiente consulta devuelve un conjunto de 50 000 usuarios del conjunto de datos de eventos, incluidos todos los usuarios con etiquetas positivas (`subscriptionOccurred = 1`) más un conjunto de usuarios seleccionados aleatoriamente con etiquetas negativas para completar el tamaño de muestra de 50 000 usuarios. Esto garantiza que los datos de formación incluyan ejemplos positivos y negativos de los que el modelo puede aprender.
 
 ```python
 from aepp import queryservice
@@ -70,13 +70,13 @@ Número de clases: 50000
 
 Con una consulta adecuada, puede reunir los eventos del conjunto de datos en funciones numéricas significativas que se pueden utilizar para entrenar un modelo de tendencia. A continuación se muestran ejemplos de eventos:
 
-- **Número de correos electrónicos** que se enviaron con fines de marketing y que recibió el usuario.
-- Parte de estos correos electrónicos que se **abierto**.
-- Parte de estos correos electrónicos donde el usuario **seleccionado** el vínculo.
+- **Número de correos electrónicos** enviados con fines de marketing y recibidos por el usuario.
+- Parte de estos correos electrónicos que se **abrieron**.
+- Parte de estos correos electrónicos donde el usuario **seleccionó** el vínculo.
 - **Número de productos** que se vieron.
-- Número de **propuestas con las que se ha interactuado**.
+- Número de **propuestas que interactuaron con**.
 - Número de **propuestas que se descartaron**.
-- Número de **vínculos que se han seleccionado**.
+- Número de **vínculos seleccionados**.
 - Número de minutos entre dos correos electrónicos consecutivos recibidos.
 - Número de minutos entre dos correos electrónicos consecutivos abiertos.
 - Número de minutos entre dos correos electrónicos consecutivos en los que el usuario seleccionó el vínculo.
@@ -151,8 +151,8 @@ df_features.head()
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
 | 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0,0 | NaN | NaN | NaN | Ninguna | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0,0 | NaN | NaN | NaN | Ninguna | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Ninguna | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Ninguna | NaN |
 
 {style="table-layout:auto"}
 
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissing | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0,0 | NaN | 1703.0 | NaN | Ninguna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | Ninguna | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17-06-2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 06/06/2023:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Ninguna | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/18/06/2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Ninguna | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21-06-2023 19:17:12,535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21-06-2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ Es habitual volver a entrenar periódicamente un modelo con datos de formación 
 Para ello, es necesario realizar algunas modificaciones en la consulta del conjunto de formación:
 
 - Añada la lógica para crear un nuevo conjunto de datos de aprendizaje si no existe e inserte las nuevas etiquetas y funciones en el conjunto de datos de aprendizaje existente en caso contrario. Esto requiere una serie de dos versiones de la consulta del conjunto de formación:
-   - En primer lugar, utilice el `CREATE TABLE IF NOT EXISTS {table_name} AS` declaración
-   - A continuación, utilice el `INSERT INTO {table_name}` para el caso en el que ya existe el conjunto de datos de formación
-- Añadir un `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` para limitar la consulta a los datos de evento que se agregaron dentro de un intervalo especificado. El `$` El prefijo en los ID de instantánea indica que son variables que se pasarán cuando se ejecute la plantilla de consulta.
+   - Primero, se usa la instrucción `CREATE TABLE IF NOT EXISTS {table_name} AS`
+   - A continuación, utilice la instrucción `INSERT INTO {table_name}` para el caso en el que ya existe el conjunto de datos de aprendizaje
+- Agregue una instrucción `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` para limitar la consulta a los datos de evento que se agregaron dentro de un intervalo especificado. El prefijo `$` de los identificadores de instantánea indica que son variables que se pasarán cuando se ejecute la plantilla de consulta.
 
 La aplicación de estos cambios resulta en la siguiente consulta:
 
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Pasos siguientes:
 
-Al leer este documento, ha aprendido a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. El siguiente paso para crear canalizaciones de funciones de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [exportar conjuntos de datos de características](./export-data.md).
+Al leer este documento, ha aprendido a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. El siguiente paso para crear canalizaciones de características de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [exportar conjuntos de datos de características](./export-data.md).

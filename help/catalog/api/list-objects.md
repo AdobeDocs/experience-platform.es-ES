@@ -24,12 +24,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{OBJECT_TYPE}` | El tipo de [!DNL Catalog] objeto que se enumerará. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con el símbolo et (`&`). Consulte la guía de [filtrado de datos de catálogo](filter-data.md) para obtener más información. |
+| `{OBJECT_TYPE}` | El tipo de objeto [!DNL Catalog] que se va a enumerar. Los objetos válidos son: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{FILTER}` | Un parámetro de consulta utilizado para filtrar los resultados devueltos en la respuesta. Los parámetros múltiples se separan con el símbolo et (`&`). Consulte la guía [filtrado de datos de catálogo](filter-data.md) para obtener más información. |
 
 **Solicitud**
 
-La solicitud de ejemplo siguiente recupera una lista de conjuntos de datos, con un `limit` filtro que reduce la respuesta a cinco resultados y una `properties` filtro que limita las propiedades mostradas para cada conjunto de datos.
+La solicitud de ejemplo siguiente recupera una lista de conjuntos de datos, con un filtro `limit` que reduce la respuesta a cinco resultados y un filtro `properties` que limita las propiedades mostradas para cada conjunto de datos.
 
 ```shell
 curl -X GET \
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para la variable [!DNL Catalog] objeto en cuestión, que se puede utilizar en otra llamada a [ver ese objeto específico](look-up-object.md) para obtener más información.
+Una respuesta correcta devuelve una lista de [!DNL Catalog] objetos en forma de pares clave-valor, filtrados por los parámetros de consulta proporcionados en la solicitud. Para cada par clave-valor, la clave representa un identificador único para el objeto [!DNL Catalog] en cuestión, el cual puede usarse en otra llamada a [vea ese objeto específico](look-up-object.md) para obtener más detalles.
 
 >[!NOTE]
 >
->Si un objeto devuelto no contiene una o varias de las propiedades solicitadas indicadas por la variable `properties` consulta, la respuesta devuelve solo las propiedades solicitadas que sí incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** más abajo.
+>Si un objeto devuelto no contiene una o varias de las propiedades solicitadas indicadas por la consulta `properties`, la respuesta devuelve únicamente las propiedades solicitadas que sí incluye, como se muestra en ***`Sample Dataset 3`*** y ***`Sample Dataset 4`*** a continuación.
 
 ```json
 {

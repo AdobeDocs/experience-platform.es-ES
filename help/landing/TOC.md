@@ -6,7 +6,7 @@ user-guide-description: Descubra cómo Experience Platform permite ofrecer exper
 source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 14%
+ht-degree: 24%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 14%
 
 * [Información general de plataforma](home.md)
 * [Información general de la plataforma (vídeo)](video/platform-overview.md)
-* [Tutoriales de Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Tutoriales de plataforma](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience.md)
 * [En segundo plano, una experiencia del cliente con tecnología de Platform (vídeo)](video/customer-experience-bts.md)
 * Introducción {#getting-started}
@@ -35,11 +35,11 @@ ht-degree: 14%
    * [Autenticar y acceder a las API de Platform](api-authentication.md)
    * [Aspectos básicos de API](api-fundamentals.md)
    * [Uso de Postman con las API de Platform](postman.md)
-   * [Documentos de referencia de API](https://www.adobe.com/go/platform-api-reference-en)
-* Documentación de Platform {#documentation}
+   * [documentos de referencia de API](https://www.adobe.com/go/platform-api-reference-en)
+* Documentación de la plataforma {#documentation}
    * [Información general](documentation/overview.md)
-   * [Compatibilidad de idiomas](documentation/language-support.md)
-* Aplicaciones creadas en Platform {#ecosystem}
+   * [Idiomas de soporte](documentation/language-support.md)
+* Aplicaciones creadas en la plataforma {#ecosystem}
    * [Información general](application-services.md)
    * [Adobe Real-time Customer Data Platform (todas las ediciones)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Servicios inteligentes y de aplicaciones (vídeo)](video/application-intelligent-services.md)
@@ -50,14 +50,14 @@ ht-degree: 14%
    * [Integraciones de Platform con Experience Cloud (vídeo)](video/experience-cloud-integrations.md)
 * Gobernanza, privacidad y seguridad {#governance-privacy-security}
    * [Información general](./governance-privacy-security/overview.md)
-   * Gestión del consentimiento {#consent}
+   * Gestión de consentimiento {#consent}
       * Adobe estándar {#adobe}
          * [Información general](./governance-privacy-security/consent/adobe/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
          * [Información general](./governance-privacy-security/consent/iab/overview.md)
          * [Configurar un conjunto de datos para capturar datos de consentimiento y preferencia](./governance-privacy-security/consent/iab/dataset.md)
-      * [Integración del SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
+      * [Integrar el SDK web de Platform para procesar datos de consentimiento y preferencias](./governance-privacy-security/consent/sdk.md)
    * Registros de auditoría {#audit-logs}
       * [Información general](./governance-privacy-security/audit-logs/overview.md)
       * API de consulta de auditoría {#audit-api}
@@ -72,8 +72,8 @@ ht-degree: 14%
       * [Utilice la API para configurar CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [Uso de la interfaz de usuario para configurar CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Uso de licencias y protecciones {#license}
-   * [Prácticas recomendadas de asignación de licencias de administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Tablero de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Prácticas recomendadas de asignación de licencias para administración de datos](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Panel de uso de licencias](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [protecciones de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [protecciones de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [protecciones de Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)

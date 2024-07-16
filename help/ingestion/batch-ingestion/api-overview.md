@@ -13,15 +13,15 @@ ht-degree: 6%
 
 # Guía para desarrolladores de ingesta por lotes
 
-Este documento proporciona una guía completa para utilizar [extremos de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) en Adobe Experience Platform. Para obtener una descripción general de las API de ingesta por lotes, incluidos los requisitos previos y las prácticas recomendadas, comience por leer el [información general de API de ingesta por lotes](overview.md).
+Este documento proporciona una guía completa para usar [extremos de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) en Adobe Experience Platform. Para obtener una descripción general de las API de ingesta por lotes, incluidos los requisitos previos y las prácticas recomendadas, lea la [descripción general de la API de ingesta por lotes](overview.md).
 
-En el apéndice del presente documento se proporciona información sobre [datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos archivos de datos CSV y JSON de ejemplo.
+En el apéndice de este documento se proporciona información sobre [los datos de formato que se utilizarán para la ingesta](#data-transformation-for-batch-ingestion), incluidos los archivos de datos CSV y JSON de ejemplo.
 
 ## Introducción
 
-Los extremos de API utilizados en esta guía forman parte de la variable [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). La ingesta por lotes se proporciona a través de una API RESTful, donde puede realizar operaciones básicas de CRUD con los tipos de objetos admitidos.
+Los extremos de API utilizados en esta guía forman parte de la [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). La ingesta por lotes se proporciona a través de una API RESTful, donde puede realizar operaciones básicas de CRUD con los tipos de objetos admitidos.
 
-Antes de continuar, consulte la [información general de API de ingesta por lotes](overview.md) y el [guía de introducción](getting-started.md).
+Antes de continuar, revise la [descripción general de la API de ingesta por lotes](overview.md) y la [guía de introducción](getting-started.md).
 
 ## Ingesta de archivos JSON
 
@@ -35,7 +35,7 @@ En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear 
 
 >[!NOTE]
 >
->Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON de varias líneas, la variable `isMultiLineJson` será necesario establecer el indicador. Para obtener más información, lea la [guía de solución de problemas de ingesta por lotes](./troubleshooting.md).
+>Los ejemplos siguientes son para JSON de una sola línea. Para ingerir JSON multilínea, se deberá establecer el indicador `isMultiLineJson`. Para obtener más información, lea la [guía de solución de problemas de ingesta por lotes](./troubleshooting.md).
 
 **Formato de API**
 
@@ -97,7 +97,7 @@ Ahora que ha creado un lote, puede utilizar el ID de lote de la respuesta de cre
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para obtener una [ejemplo de un archivo de datos JSON con formato correcto](#data-transformation-for-batch-ingestion).
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos JSON con formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato de API**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso del archivo es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Respuesta**
 
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` desde antes de cargar los archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede usar `batchId` de antes para cargar los archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso del archivo es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.parquet`. |
 
 **Respuesta**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En enteros, el principio y el final del intervalo solicitado. |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso del archivo es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
 
 
 **Respuesta**
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Archivo grande completo
 
-Ahora que ha creado un lote, puede utilizar el `batchId` desde antes de cargar los archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede usar `batchId` de antes para cargar los archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Ingesta de archivos CSV
 
-Para introducir archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones que se proporcionan en la [tutorial de creación de esquemas ad hoc](../../xdm/api/ad-hoc.md).
+Para introducir archivos CSV, deberá crear una clase, un esquema y un conjunto de datos que admita CSV. Para obtener información detallada sobre cómo crear la clase y el esquema necesarios, siga las instrucciones proporcionadas en el [tutorial de creación de esquemas ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` desde antes de cargar los archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede usar `batchId` de antes para cargar los archivos en el lote. Puede cargar varios archivos en el lote.
 
 >[!NOTE]
 >
->Consulte la sección del apéndice para obtener una [ejemplo de un archivo de datos CSV con el formato correcto](#data-transformation-for-batch-ingestion).
+>Consulte la sección del apéndice para ver un [ejemplo de un archivo de datos CSV con el formato correcto](#data-transformation-for-batch-ingestion).
 
 **Formato de API**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso del archivo es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.csv`. |
 
 
 **Respuesta**
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminar un lote {#delete-a-batch}
 
-Un lote se puede eliminar realizando la siguiente solicitud de POST con el `action=REVERT` parámetro de consulta al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, por lo que es apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
+Se puede eliminar un lote realizando la siguiente solicitud de POST con el parámetro de consulta `action=REVERT` al ID del lote que desea eliminar. El lote está marcado como &quot;inactivo&quot;, por lo que es apto para la recolección de basura. El lote se recopilará asincrónicamente, momento en el que se marcará como &quot;eliminado&quot;.
 
 **Formato de API**
 
@@ -758,10 +758,10 @@ En ocasiones puede ser necesario actualizar los datos en el almacén de perfiles
 
 Para aplicar parches a un lote, es necesario lo siguiente:
 
-- **Un conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere un `isUpsert:true` se añadirá a la etiqueta `unifiedProfile` matriz. Para obtener más información sobre los pasos que muestran cómo crear un conjunto de datos o configurar uno existente para su actualización, siga el tutorial de [habilitar un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
-- **Archivo de parquet que contiene los campos a los que se va a aplicar el parche y los campos de identidad del perfil.** El formato de datos para aplicar parches a un lote es similar al proceso normal de ingesta por lotes. La entrada requerida es un archivo de Parquet y, además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos en el almacén de perfiles.
+- **Conjunto de datos habilitado para actualizaciones de perfiles y atributos.** Esto se realiza mediante etiquetas de conjuntos de datos y requiere que se agregue una etiqueta `isUpsert:true` específica a la matriz `unifiedProfile`. Para obtener detalles sobre los pasos que muestran cómo crear un conjunto de datos o configurar uno existente para su actualización, siga el tutorial de [habilitar un conjunto de datos para actualizaciones de perfil](../../catalog/datasets/enable-upsert.md).
+- **Archivo de parquet que contiene los campos a los que se va a aplicar parches y los campos de identidad del perfil.** El formato de datos para aplicar parches a un lote es similar al proceso normal de ingesta por lotes. La entrada requerida es un archivo de Parquet y, además de los campos que se van a actualizar, los datos cargados deben contener los campos de identidad para que coincidan con los datos en el almacén de perfiles.
 
-Una vez que tenga un conjunto de datos habilitado para Perfil y actualización, y un archivo de Parquet que contenga los campos a los que desee aplicar parches, así como los campos de identidad necesarios, puede seguir los pasos para [ingesta de archivos de Parquet](#ingest-parquet-files) para completar el parche mediante la ingesta por lotes.
+Una vez que tenga un conjunto de datos habilitado para Perfil y actualización, y un archivo de Parquet que contenga los campos a los que desee aplicar parches, así como los campos de identidad necesarios, puede seguir los pasos de [ingesta de archivos de Parquet](#ingest-parquet-files) para completar el parche mediante la ingesta por lotes.
 
 ## Reproducción de un lote
 
@@ -769,7 +769,7 @@ Si desea reemplazar un lote ya introducido, puede hacerlo con &quot;reproducció
 
 ### Crear lote
 
-En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear el lote, deberá proporcionar un ID de conjunto de datos. También deberá asegurarse de que todos los archivos cargados como parte del lote se ajusten al esquema XDM vinculado al conjunto de datos proporcionado. Además, deberá proporcionar los lotes antiguos como referencia en la sección de reproducción. En el siguiente ejemplo, se reproducen lotes con ID `batchIdA` y `batchIdB`.
+En primer lugar, debe crear un lote, con JSON como formato de entrada. Al crear el lote, deberá proporcionar un ID de conjunto de datos. También deberá asegurarse de que todos los archivos cargados como parte del lote se ajusten al esquema XDM vinculado al conjunto de datos proporcionado. Además, deberá proporcionar los lotes antiguos como referencia en la sección de reproducción. En el ejemplo siguiente, está reproduciendo lotes con los identificadores `batchIdA` y `batchIdB`.
 
 **Formato de API**
 
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Cargar archivos
 
-Ahora que ha creado un lote, puede utilizar el `batchId` desde antes de cargar los archivos en el lote. Puede cargar varios archivos en el lote.
+Ahora que ha creado un lote, puede usar `batchId` de antes para cargar los archivos en el lote. Puede cargar varios archivos en el lote.
 
 **Formato de API**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso del archivo es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Ruta de acceso completa y nombre del archivo que intenta cargar. Esta ruta de acceso es la ruta de acceso del archivo local, como `acme/customers/campaigns/summer.json`. |
 
 **Respuesta**
 
@@ -919,9 +919,9 @@ La siguiente sección contiene información adicional para la ingesta de datos e
 
 ### Transformación de datos para la ingesta por lotes
 
-Para introducir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el [Modelo de datos de experiencia (XDM)](../../xdm/home.md) esquema asociado con el conjunto de datos que se carga en.
+Para ingerir un archivo de datos en [!DNL Experience Platform], la estructura jerárquica del archivo debe cumplir con el esquema [Experience Data Model (XDM)](../../xdm/home.md) asociado con el conjunto de datos que se está cargando en.
 
-Encontrará información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM en la [transformaciones de muestra](../../etl/transformations.md) , junto con un ejemplo de un archivo de datos JSON con el formato correcto. Los archivos de ejemplo proporcionados en el documento se pueden encontrar aquí:
+Encontrará información sobre cómo asignar un archivo CSV para cumplir con un esquema XDM en el documento [transformaciones de muestra](../../etl/transformations.md), junto con un ejemplo de archivo de datos JSON con formato correcto. Los archivos de ejemplo proporcionados en el documento se pueden encontrar aquí:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [perfiles_CRM.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

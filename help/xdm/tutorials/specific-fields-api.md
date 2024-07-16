@@ -4,7 +4,7 @@ description: Aprenda a añadir campos individuales de grupos de campos preexiste
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '625'
 ht-degree: 2%
 
 ---
@@ -17,17 +17,17 @@ Al crear un esquema, es posible que desee utilizar algunos campos de un grupo de
 
 >[!NOTE]
 >
->Para obtener información sobre cómo añadir y quitar campos de esquema individuales en la interfaz de usuario de Adobe Experience Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md) (actualmente en fase beta).
+>Para obtener información sobre cómo agregar y quitar campos de esquema individuales en la interfaz de usuario de Adobe Experience Platform, consulte la guía sobre [flujos de trabajo basados en campos](../ui/field-based-workflows.md) (actualmente en fase beta).
 
 ## Requisitos previos
 
-Este tutorial implica realizar llamadas a [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de empezar, revise las [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API de, incluida su `{TENANT_ID}`, el concepto de contenedores y los encabezados necesarios para realizar solicitudes.
+Este tutorial implica realizar llamadas a la [API de Registro de esquemas](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de empezar, revisa la [guía para desarrolladores](../api/getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo tu `{TENANT_ID}`, el concepto de contenedores y los encabezados requeridos para realizar solicitudes.
 
-## Explicación de la `meta:refProperty` campo
+## Explicación del campo `meta:refProperty`
 
-Para cualquier esquema determinado, se hace referencia a la clase y a los grupos de campos que componen su estructura en su `allOf` matriz. Cada componente se representa como un objeto que contiene un `$ref` que hace referencia al URI del componente `$id`.
+Para cualquier esquema determinado, se hace referencia a los grupos de clases y campos que componen su estructura en su matriz `allOf`. Cada componente se representa como un objeto que contiene una propiedad `$ref` que hace referencia al URI `$id` del componente.
 
-El siguiente JSON representa un esquema simplificado que utiliza una sola clase (`experienceevent`) y grupo de campos (`experienceevent-all`):
+El siguiente JSON representa un esquema simplificado que utiliza una sola clase (`experienceevent`) y un grupo de campos (`experienceevent-all`):
 
 ```json
 {
@@ -45,13 +45,13 @@ El siguiente JSON representa un esquema simplificado que utiliza una sola clase 
 }
 ```
 
-Para cualquier objeto de `allOf` matriz que hace referencia a un grupo de campos, puede agregar un elemento secundario `meta:refProperty` para especificar qué campos del grupo deben incluirse en el esquema.
+Para cualquier objeto de la matriz `allOf` que haga referencia a un grupo de campos, puede agregar un campo `meta:refProperty` relacionado para especificar qué campo(s) del grupo se debe incluir en el esquema.
 
 >[!NOTE]
 >
->Cada campo se especifica mediante una cadena de puntero JSON, que representa la ruta al campo dentro de su grupo de campos respectivo. La cadena debe comenzar con una barra diagonal (`/`) y no debe incluir ninguno `properties` áreas de nombres. Por ejemplo: `/_experience/campaign/message/id`.
+>Cada campo se especifica mediante una cadena de puntero JSON, que representa la ruta al campo dentro de su grupo de campos respectivo. La cadena debe comenzar con una barra diagonal (`/`) y no debe incluir ningún área de nombres `properties`. Por ejemplo: `/_experience/campaign/message/id`.
 
-Cuando se incluye como cadena, `meta:refProperty` puede hacer referencia a un solo campo de un grupo. Se pueden incluir otros campos del mismo grupo utilizando el mismo `$ref` en otro objeto con un valor diferente `meta:refProperty` valor.
+Cuando se incluye como una cadena, `meta:refProperty` puede hacer referencia a un solo campo de un grupo. Se pueden incluir otros campos del mismo grupo utilizando el mismo valor `$ref` en otro objeto con un valor `meta:refProperty` diferente.
 
 ```json
 {
@@ -74,7 +74,7 @@ Cuando se incluye como cadena, `meta:refProperty` puede hacer referencia a un so
 }
 ```
 
-Alternativamente, `meta:refProperty` se puede proporcionar como una matriz, lo que permite especificar varios campos que se incluirán de un grupo determinado dentro de un único `allOf` elemento de la lista:
+Como alternativa, `meta:refProperty` se puede proporcionar como una matriz, lo que permite especificar varios campos que se incluirán de un grupo determinado dentro de un único elemento de lista `allOf`:
 
 ```json
 {
@@ -99,7 +99,7 @@ Alternativamente, `meta:refProperty` se puede proporcionar como una matriz, lo q
 
 ## Añadir campos mediante una operación de PUT
 
-Puede utilizar una solicitud del PUT para reescribir un esquema completo y configurar los campos que desea incluir en `allOf`.
+Puede usar una solicitud del PUT para reescribir un esquema completo y configurar los campos que desea incluir en `allOf`.
 
 **Formato de API**
 
@@ -109,11 +109,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea reescribir. |
+| `{SCHEMA_ID}` | `meta:altId` o `$id` con codificación URL del esquema que desea reescribir. |
 
 **Solicitud**
 
-La siguiente solicitud actualiza los campos específicos incluidos en el grupo de campos en `allOf` matriz.
+La siguiente solicitud actualiza los campos específicos incluidos en el grupo de campos de la matriz `allOf`.
 
 ```shell
 curl -X PUT \
@@ -194,7 +194,7 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Añadir campos mediante una operación de PATCH
 
-Puede utilizar una solicitud del PATCH para agregar campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas las siguientes `add`, `remove`, y `replace`. Para obtener más información sobre el parche JSON, consulte la [Guía de aspectos básicos de API](../../landing/api-fundamentals.md#json-patch).
+Puede utilizar una solicitud del PATCH para agregar campos individuales a un esquema sin sobrescribir otros. El Registro de esquemas admite todas las operaciones de parches de JSON estándar, incluidas `add`, `remove` y `replace`. Para obtener más información sobre el parche JSON, consulte la [guía de aspectos básicos de la API](../../landing/api-fundamentals.md#json-patch).
 
 **Formato de API**
 
@@ -204,11 +204,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{SCHEMA_ID}` | El `meta:altId` o con codificación URL `$id` del esquema que desea reescribir. |
+| `{SCHEMA_ID}` | `meta:altId` o `$id` con codificación URL del esquema que desea reescribir. |
 
 **Solicitud**
 
-La siguiente solicitud agrega un nuevo objeto al esquema `allOf` matriz, especificando los campos que se van a agregar.
+La siguiente solicitud agrega un nuevo objeto a la matriz `allOf` del esquema, especificando los campos que se van a agregar.
 
 ```shell
 curl -X PATCH \
@@ -285,6 +285,6 @@ Una respuesta correcta devuelve los detalles del esquema actualizado.
 
 ## Pasos siguientes
 
-En esta guía se explica cómo utilizar las llamadas de API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la IU de Platform, consulte la guía de [flujos de trabajo basados en el campo](../ui/field-based-workflows.md).
+En esta guía se explica cómo utilizar las llamadas de API para añadir campos individuales de un grupo de campos existente a un esquema. Para obtener más información sobre cómo realizar tareas similares basadas en campos en la IU de Platform, consulte la guía sobre [flujos de trabajo basados en campos](../ui/field-based-workflows.md).
 
-Para obtener más información sobre las funcionalidades de la API de Registro de esquemas, consulte la [Resumen de API](../api/overview.md) para obtener una lista completa de los extremos y los procesos.
+Para obtener más información sobre las capacidades de la API de Registro de esquemas, consulte la [descripción general de la API](../api/overview.md) para obtener una lista completa de los extremos y los procesos.

@@ -4,8 +4,8 @@ description: Aprenda a realizar llamadas al extremo /profiles en la API de React
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 75%
+source-wordcount: '161'
+ht-degree: 76%
 
 ---
 

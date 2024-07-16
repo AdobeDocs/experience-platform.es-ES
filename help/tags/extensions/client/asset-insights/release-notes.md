@@ -4,7 +4,7 @@ description: Últimas notas de la versión de la extensión de etiquetas AEM Ass
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '136'
 ht-degree: 64%
 
 ---

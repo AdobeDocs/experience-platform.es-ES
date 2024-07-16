@@ -22,7 +22,7 @@ Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales 
 >title="Creación de una instancia"
 >abstract="Genere una lista de recursos como recorridos, públicos, esquemas o destinos para utilizarlos en escenarios de recorrido o activación."
 
-Antes de crear una instancia de libro de reproducción, explore los libros de reproducción disponibles para [elija el manual adecuado](/help/use-case-playbooks/playbooks/choose.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
+Antes de crear una instancia de libro de reproducción, explore los libros de reproducción disponibles para [elegir el libro de reproducción correcto](/help/use-case-playbooks/playbooks/choose.md). Cuando esté listo para continuar con un manual de tácticas y crear una instancia, seleccione **[!UICONTROL Crear instancia]** para proseguir y generar recursos técnicos.
 
 ![Cree una instancia de un manual de tácticas.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ El comportamiento descrito anteriormente es verdadero para todos los recursos qu
 >
 >Realice pruebas en una zona protegida de desarrollo y pase a la producción cuando termine.
 >
->Una vez generados los objetos, puede seguir probando en las zonas protegidas de desarrollo añadiendo datos. Puede probar los recursos todo el tiempo que desee en el entorno limitado de desarrollo y duplicar la lógica de recursos (definiciones de audiencias, recorridos, esquemas, etc.) en el entorno limitado de producción cuando esté listo. Puede pasar a la zona protegida de desarrollo y, a continuación, a la de producción utilizando [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Una vez generados los objetos, puede seguir probando en las zonas protegidas de desarrollo añadiendo datos. Puede probar los recursos todo el tiempo que desee en el entorno limitado de desarrollo y duplicar la lógica de recursos (definiciones de audiencias, recorridos, esquemas, etc.) en el entorno limitado de producción cuando esté listo. Puede pasar a la zona protegida de desarrollo y luego a la de producción mediante la [funcionalidad de reconocimiento de datos](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Reutilizar manuales de tácticas {#reuse-playbooks}
 

@@ -5,7 +5,7 @@ description: Esta guía proporciona instrucciones paso a paso para crear widgets
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -14,37 +14,37 @@ ht-degree: 0%
 
 En Adobe Experience Platform, puede ver los datos de su organización e interactuar con ellos mediante varios paneles. También puede actualizar ciertos tableros agregando nuevos widgets a la vista de tablero. Además de los widgets estándar que proporciona Adobe, también puede crear widgets personalizados y compartirlos en toda la organización.
 
-Esta guía proporciona instrucciones paso a paso para crear y agregar widgets personalizados al [!UICONTROL Perfiles], [!UICONTROL Segmentos], y [!UICONTROL Destinos] paneles en la IU de Platform.
+Esta guía proporciona instrucciones paso a paso para crear y agregar widgets personalizados a los paneles de [!UICONTROL Perfiles], [!UICONTROL Segmentos] y [!UICONTROL Destinos] de la interfaz de usuario de Platform.
 
 >[!NOTE]
 >
 >Las actualizaciones realizadas en los paneles se realizan por organización y por zona protegida.
 
-Para obtener más información sobre los widgets estándar, consulte la guía de [adición de widgets estándar a los paneles](standard-widgets.md).
+Para obtener más información sobre los widgets estándar, consulte la guía para [agregar widgets estándar a los paneles](standard-widgets.md).
 
 ## Biblioteca de widgets {#widget-library}
 
-Esta guía requiere acceso a [!UICONTROL Biblioteca de widgets] en el Experience Platform. Para obtener más información sobre la biblioteca de widgets y cómo acceder a ella dentro de la interfaz de usuario, comience por leer el [introducción a la biblioteca de widgets](widget-library.md).
+Esta guía requiere acceso a la [!UICONTROL biblioteca de widgets] en el Experience Platform. Para obtener más información sobre la biblioteca de widgets y cómo acceder a ella desde la interfaz de usuario, lea la [descripción general de la biblioteca de widgets](widget-library.md).
 
 ## Introducción a los widgets personalizados
 
-En la biblioteca de widgets, la variable **[!UICONTROL Personalizado]** Esta pestaña permite crear widgets y compartirlos con otros usuarios de su organización para personalizar el aspecto de los paneles.
+Dentro de la biblioteca de widgets, la pestaña **[!UICONTROL Custom]** le permite crear widgets y compartirlos con otros usuarios de su organización para personalizar el aspecto de sus paneles.
 
 >[!IMPORTANT]
 >
 >Su organización puede crear un máximo de 20 widgets personalizados en la biblioteca de widgets.
 
-Seleccione el **[!UICONTROL Personalizado]** para empezar a crear widgets personalizados o para ver widgets personalizados que su organización ya ha creado.
+Seleccione la ficha **[!UICONTROL Personalizado]** para empezar a crear widgets personalizados o para ver los widgets personalizados que su organización ya ha creado.
 
-![Espacio de trabajo de la biblioteca de widgets con la pestaña Personalizado resaltada.](../images/customization/custom-widgets.png)
+![Espacio de trabajo de la biblioteca de widgets con la ficha Personalizado resaltada.](../images/customization/custom-widgets.png)
 
 ## Crear un widget personalizado
 
-Para crear un widget personalizado, seleccione **[!UICONTROL Crear widget]** en la esquina superior derecha de la biblioteca de widgets o, si se trata del primer widget personalizado de su organización, seleccione **[!UICONTROL Crear]** desde el centro de la biblioteca de widgets.
+Para crear un widget personalizado, selecciona **[!UICONTROL Crear widget]** en la esquina superior derecha de la biblioteca de widgets o, si este es el primer widget personalizado de tu organización, selecciona **[!UICONTROL Crear]** en el centro de la biblioteca de widgets.
 
-![La pestaña Personalizado del espacio de trabajo de la biblioteca de widgets con Crear resaltado.](../images/customization/create-widget.png)
+![La ficha Personalizado del área de trabajo de la biblioteca de widgets con Crear resaltado.](../images/customization/create-widget.png)
 
-En el **[!UICONTROL Crear widget]** , proporcione un título y una descripción para el widget nuevo y elija el atributo que desea que muestre el widget.
+En el cuadro de diálogo **[!UICONTROL Crear widget]**, proporcione un título y una descripción para el nuevo widget y elija el atributo que desea que muestre el widget.
 
 >[!NOTE]
 >
@@ -78,33 +78,33 @@ Según el atributo, la IA recomienda distintas opciones de visualización. La li
 >
 >Los datos que se muestran en el widget de ejemplo solo tienen fines ilustrativos. La vista previa no muestra datos reales de su organización.
 
-Para guardar el widget nuevo y volver al [!UICONTROL Personalizado] pestaña, seleccione **[!UICONTROL Crear]**.
+Para guardar el widget nuevo y volver a la ficha [!UICONTROL Personalizado], seleccione **[!UICONTROL Crear]**.
 
-![El cuadro de diálogo Crear widget con las opciones de visualización y Crear resaltadas.](../images/customization/create-widget-select-attribute.png)
+![Cuadro de diálogo Crear widget con las opciones de visualización y Crear resaltado.](../images/customization/create-widget-select-attribute.png)
 
-El nuevo widget ya está disponible para añadirse a un panel seleccionando el widget de la biblioteca y haciendo clic en **[!UICONTROL Añadir widget]**.
+El nuevo widget ya está disponible para agregarse a un tablero. Para ello, elija el widget de la biblioteca y seleccione **[!UICONTROL Agregar widget]**.
 
-![La pestaña Personalizado del espacio de trabajo de la biblioteca de widgets con el nuevo widget y Agregar widget resaltados.](../images/customization/custom-widgets-new.png)
+![La ficha Personalizado del área de trabajo de la biblioteca de widgets con el widget nuevo y el widget Agregar resaltados.](../images/customization/custom-widgets-new.png)
 
 ## Ocultar un widget personalizado
 
-Una vez agregado un widget a la biblioteca, se puede ocultar seleccionando los puntos suspensivos (`...`) en la tarjeta del widget y, a continuación, seleccione **[!UICONTROL Ocultar widget]**. También puede previsualizar y editar el widget desde el mismo menú desplegable.
+Una vez agregado un widget a la biblioteca, se puede ocultar seleccionando los puntos suspensivos (`...`) en la tarjeta del widget y, a continuación, seleccionando **[!UICONTROL Ocultar widget]**. También puede previsualizar y editar el widget desde el mismo menú desplegable.
 
-Para ver los widgets ocultos, seleccione **[!UICONTROL Mostrar widgets ocultos]** desde la esquina superior derecha de la biblioteca de widgets.
+Para ver los widgets ocultos, seleccione **[!UICONTROL Mostrar widgets ocultos]** en la esquina superior derecha de la biblioteca de widgets.
 
 >[!WARNING]
 >
 >Al ocultar un widget en la biblioteca, no se elimina de los paneles de los usuarios individuales. Si un widget ya no debe utilizarse en su organización, asegúrese de comunicarlo directamente a todos los usuarios de Platform, ya que deberán eliminar el widget de sus paneles.
 
-![La pestaña Personalizado del espacio de trabajo de la biblioteca de widgets con las opciones de menú desplegable de widgets y Mostrar widgets ocultos resaltados.](../images/customization/hide-widget.png)
+![La ficha Personalizado del área de trabajo de la biblioteca de widgets con las opciones de menú desplegable de widgets y Mostrar widgets ocultos resaltados.](../images/customization/hide-widget.png)
 
 ## Editar un widget personalizado
 
-Puede editar los widgets personalizados en la biblioteca de widgets seleccionando los puntos suspensivos (`...`) en la tarjeta del widget y, a continuación, seleccione **[!UICONTROL Editar]** en el menú desplegable.
+Puede editar widgets personalizados en la biblioteca de widgets seleccionando los puntos suspensivos (`...`) en la tarjeta de widget y, a continuación, seleccionando **[!UICONTROL Editar]** del menú desplegable.
 
-![Las opciones del menú desplegable del widget con los puntos suspensivos y la opción Editar resaltados.](../images/customization/custom-widget-edit.png)
+![Opciones del menú desplegable del widget con los puntos suspensivos y la opción Editar resaltados.](../images/customization/custom-widget-edit.png)
 
-En el **[!UICONTROL Editar widget]** , puede editar el título y la descripción del widget, así como previsualizar y seleccionar diferentes visualizaciones. Una vez realizadas las ediciones, seleccione **[!UICONTROL Guardar]** para guardar los cambios y volver a la pestaña widgets personalizados.
+En el cuadro de diálogo **[!UICONTROL Editar widget]**, puede editar el título y la descripción del widget, así como previsualizar y seleccionar diferentes visualizaciones. Una vez realizadas las ediciones, selecciona **[!UICONTROL Guardar]** para guardar los cambios y volver a la pestaña de widgets personalizados.
 
 >[!WARNING]
 >
@@ -114,4 +114,4 @@ En el **[!UICONTROL Editar widget]** , puede editar el título y la descripción
 
 ## Pasos siguientes
 
-Después de leer este documento, puede acceder a la biblioteca de widgets y utilizarla para crear y agregar widgets personalizados para su organización. Para modificar el tamaño y la ubicación de los widgets que aparecen en el panel, consulte la [guía de modificación de paneles](modify.md).
+Después de leer este documento, puede acceder a la biblioteca de widgets y utilizarla para crear y agregar widgets personalizados para su organización. Para modificar el tamaño y la ubicación de los widgets que aparecen en el panel, consulte la [guía de paneles de modificación](modify.md).

@@ -24,9 +24,9 @@ Utilice Data Distiller para enriquecer sus canalizaciones de aprendizaje automá
 
 Este documento proporciona una serie de blocs de notas de entornos de aprendizaje automático basados en la nube que muestran un flujo de trabajo completo. El flujo de trabajo utiliza las herramientas de aprendizaje automático que prefiera para crear modelos de datos personalizados que admitan los casos de uso de marketing con datos de Experience Platform.
 
-Este flujo de trabajo requiere el uso de [!DNL Python] portátiles en sus entornos de aprendizaje automático. Instrucciones para empezar a usar estos [!DNL Python] los blocs de notas se incluyen en sus respectivos archivos léame.
+Este flujo de trabajo requiere el uso de [!DNL Python] blocs de notas en los entornos de aprendizaje automático. Las instrucciones para comenzar a usar estos [!DNL Python] blocs de notas se incluyen en sus respectivos archivos léame.
 
-Antes de continuar con esta guía, siga los pasos descritos en la [Información general sobre canalizaciones de funciones AI/ML](./overview.md) para habilitar el uso de los blocs de notas de Python de muestra utilizados en este caso de uso de canalización de funciones AI/ML.
+Antes de continuar con esta guía, siga los pasos descritos en la [descripción general de las canalizaciones de características AI/ML](./overview.md) para habilitar el uso de los blocs de notas de Python de muestra utilizados en este caso de uso de canalización de características AI/ML.
 
 ## Notebooks de entorno de aprendizaje de máquinas en la nube {#cmle-notebooks}
 

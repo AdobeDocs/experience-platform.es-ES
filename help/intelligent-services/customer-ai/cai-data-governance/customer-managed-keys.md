@@ -6,18 +6,18 @@ exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
 source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 13%
+ht-degree: 0%
 
 ---
 
 # Claves administradas por el cliente en Customer AI
 
-La inteligencia artificial aplicada al cliente proporciona la opción para [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) y a los clientes de Privacy &amp; Security Shield para que utilicen las claves gestionadas por el cliente de Azure (CMK) que se aplicarán a los datos de la inteligencia artificial aplicada al cliente. El proceso de configuración es el mismo que [Configuración de Adobe Experience Platform CMK](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) y puede seguir los pasos descritos allí.
+La inteligencia artificial aplicada al cliente proporciona la opción para que los clientes de [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) y Privacy &amp; Security Shield utilicen claves gestionadas por el cliente de Azure (CMK) para aplicarlas a sus datos de inteligencia artificial aplicada al cliente. El proceso de instalación es el mismo que [Adobe Experience Platform CMK setup](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) y puede seguir los pasos descritos aquí.
 
-Puede leer la documentación de [Claves gestionadas por el cliente en Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) y siga los pasos descritos para pasar por el proceso de configuración.
+Puede leer la documentación sobre [Claves administradas por el cliente en Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) y seguir los pasos descritos para pasar por el proceso de configuración.
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] actualmente solo están disponibles para organizaciones que han adquirido el [!DNL Healthcare Shield or Privacy & Security Shield] oferta de complementos.
+>Actualmente, [!DNL Customer Managed Keys] solo están disponibles para las organizaciones que han comprado la oferta de complementos de [!DNL Healthcare Shield or Privacy & Security Shield].
 
-Todos los datos que utiliza Platform se cifran en tránsito y en reposo para mantener sus datos seguros, con o sin CMK. Para obtener información sobre el cifrado de Adobe Experience Platform, lea la documentación sobre [Cifrado de datos](../../../landing/governance-privacy-security/encryption.md).
+Todos los datos utilizados por Platform se cifran en tránsito y en reposo para mantener sus datos seguros, con o sin CMK. Para obtener información sobre el cifrado de Adobe Experience Platform, lea la documentación sobre el [cifrado de datos](../../../landing/governance-privacy-security/encryption.md).

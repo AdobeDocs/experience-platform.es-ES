@@ -4,8 +4,8 @@ description: Utilice la API de herramientas de entorno limitado para examinar ar
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 14%
+source-wordcount: '311'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ Esta guía para desarrolladores proporciona pasos para ayudarle a utilizar la AP
 
 ## Lectura de llamadas de API de muestra {#api-calls}
 
-Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporcionan los datos JSON de muestra devueltos a la respuesta de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporcionan los datos JSON de muestra devueltos a la respuesta de la API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
 ## Recopilación de valores para los encabezados obligatorios {#headers}
 

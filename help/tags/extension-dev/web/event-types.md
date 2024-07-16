@@ -5,7 +5,7 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
@@ -27,7 +27,7 @@ Este documento explica cómo definir tipos de eventos para una extensión web en
 
 Los tipos de eventos se definen mediante extensiones y suelen consistir en lo siguiente:
 
-1. A [vista](./views.md) se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos que permite a los usuarios modificar la configuración del evento.
+1. Una [vista](./views.md) que se muestra en la IU del Experience Platform y en la IU de recopilación de datos y que permite a los usuarios modificar la configuración del evento.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y supervisar que se produzca una determinada actividad.
 
 Las `module.exports` aceptan los parámetros `settings` y `trigger`. Esto permite la personalización del tipo de evento.
@@ -105,9 +105,9 @@ trigger({
 
 ## Respeto del orden de reglas
 
-Las etiquetas permiten a los usuarios ordenar reglas. Por ejemplo, un usuario puede crear dos reglas que utilicen el tipo de evento de cambio de orientación y personalizar el orden en que se activan las reglas. Suponiendo que el usuario de Adobe Experience Platform especifica un valor de pedido de `2` para el evento de cambio de orientación en la regla A y un valor de pedido de `1` para el evento de cambio de orientación en la Regla B. Esto indica que, cuando la orientación cambia en un dispositivo móvil, la Regla B debe activarse antes que la Regla A (las reglas con valores de orden inferior deben activarse primero).
+Las etiquetas permiten a los usuarios ordenar reglas. Por ejemplo, un usuario puede crear dos reglas que utilicen el tipo de evento de cambio de orientación y personalizar el orden en que se activan las reglas. Suponiendo que el usuario de Adobe Experience Platform especifica un valor de pedido de `2` para el evento de cambio de orientación en la regla A y un valor de pedido de `1` para el evento de cambio de orientación en la regla B. Esto indica que, cuando la orientación cambia en un dispositivo móvil, la Regla B debe activarse antes que la Regla A (las reglas con valores de orden inferior deben activarse primero).
 
-Como se mencionó anteriormente, la función exportada en nuestro módulo de evento se llamará una vez para cada regla que se haya configurado para utilizar nuestro tipo de evento. Cada vez que se llama a la función exportada, se pasa una función `trigger` única vinculada a una regla específica. En el escenario que se acaba de describir, se llamará una vez a la función exportada con un `trigger` función vinculada a la regla B y, a continuación, de nuevo con una `trigger` función asociada a la regla A. La regla B es la primera porque el usuario le ha dado un valor de orden inferior al de la regla A. Cuando nuestro módulo de biblioteca detecta un cambio de orientación, es importante que llamemos al `trigger` funciones en el mismo orden en que se proporcionaron al módulo de biblioteca.
+Como se mencionó anteriormente, la función exportada en nuestro módulo de evento se llamará una vez para cada regla que se haya configurado para utilizar nuestro tipo de evento. Cada vez que se llama a la función exportada, se pasa una función `trigger` única vinculada a una regla específica. En el escenario que se acaba de describir, se llamará una vez a nuestra función exportada con una función `trigger` vinculada a la regla B y, a continuación, otra vez con una función `trigger` vinculada a la regla A. La regla B es la primera porque el usuario le ha dado un valor de orden inferior al de la regla A. Cuando nuestro módulo de biblioteca detecta un cambio de orientación, es importante que llamemos a las funciones `trigger` en el mismo orden en que se proporcionaron al módulo de biblioteca.
 
 En el código de ejemplo siguiente, observe que cuando se detecta un cambio de orientación, las funciones desencadenadoras se llaman en el mismo orden en que se proporcionaron a la función exportada:
 

@@ -15,11 +15,11 @@ El servicio de consultas de Adobe Experience Platform admite bloques anónimos. 
 
 La función de bloques anónimos es una forma eficaz de realizar una secuencia de operaciones o consultas. La cadena de consultas dentro del bloque se puede guardar como plantilla y programarse para ejecutarse a una hora o intervalo determinados. Estas consultas se pueden utilizar para escribir y anexar datos para crear un nuevo conjunto de datos y, normalmente, se utilizan donde tiene una dependencia.
 
-La tabla proporciona un desglose de las secciones principales del bloque: ejecución y control de excepciones. Las secciones se definen mediante las palabras clave `BEGIN`, `END`, y `EXCEPTION`.
+La tabla proporciona un desglose de las secciones principales del bloque: ejecución y control de excepciones. Las secciones están definidas por las palabras clave `BEGIN`, `END` y `EXCEPTION`.
 
 | sección | descripción |
 |---|---|
-| ejecución | Una sección ejecutable comienza con la palabra clave `BEGIN` y termina con la palabra clave `END`. Cualquier conjunto de instrucciones incluidas en `BEGIN` y `END` Las palabras clave se ejecutan en secuencia y garantiza que las consultas posteriores no se ejecuten hasta que se haya completado la consulta anterior de la secuencia. |
+| ejecución | Una sección ejecutable comienza con la palabra clave `BEGIN` y termina con la palabra clave `END`. Cualquier conjunto de instrucciones incluidas en las palabras clave `BEGIN` y `END` se ejecutará en secuencia y garantiza que las consultas subsiguientes no se ejecutarán hasta que se haya completado la consulta anterior de la secuencia. |
 | control de excepciones | La sección opcional de control de excepciones comienza con la palabra clave `EXCEPTION`. Contiene el código para detectar y controlar las excepciones en caso de que alguna de las instrucciones SQL de la sección de ejecución falle. Si alguna de las consultas falla, se detiene todo el bloque. |
 
 Cabe señalar que un bloque es una instrucción ejecutable y, por lo tanto, se puede anidar dentro de otros bloques.
@@ -30,7 +30,7 @@ Cabe señalar que un bloque es una instrucción ejecutable y, por lo tanto, se p
 
 ## Ejemplos de consultas de bloque anónimas
 
-La siguiente consulta muestra un ejemplo de encadenamiento de instrucciones SQL. Consulte la [Sintaxis SQL en el servicio de consultas](../sql/syntax.md) para obtener más información sobre cualquiera de las sintaxis SQL utilizadas.
+La siguiente consulta muestra un ejemplo de encadenamiento de instrucciones SQL. Consulte el documento [Sintaxis SQL en Query Service](../sql/syntax.md) para obtener más información sobre cualquiera de las sintaxis SQL utilizadas.
 
 ```SQL
 $$ BEGIN
@@ -42,11 +42,11 @@ END
 $$;
 ```
 
-En el ejemplo siguiente, `SET` persiste en el resultado de una `SELECT` consulta en la variable local especificada. La variable está vinculada al bloque anónimo.
+En el ejemplo siguiente, `SET` conserva el resultado de una consulta `SELECT` en la variable local especificada. La variable está vinculada al bloque anónimo.
 
-El ID de instantánea se almacena como variable local (`@current_sid`). A continuación, se utiliza en la siguiente consulta para devolver resultados basados en la INSTANTÁNEA del mismo conjunto de datos o tabla.
+El id. de instantánea se almacena como variable local (`@current_sid`). A continuación, se utiliza en la siguiente consulta para devolver resultados basados en la INSTANTÁNEA del mismo conjunto de datos o tabla.
 
-Una instantánea de base de datos es una vista estática de sólo lectura de una base de datos de SQL Server. Para obtener más información [información sobre la cláusula de instantánea](../sql/syntax.md#SNAPSHOT-clause) consulte la documentación de sintaxis SQL.
+Una instantánea de base de datos es una vista estática de sólo lectura de una base de datos de SQL Server. Para obtener más [información sobre la cláusula de instantánea](../sql/syntax.md#SNAPSHOT-clause), consulte la documentación de sintaxis SQL.
 
 ```SQL
 $$ BEGIN                                             
@@ -60,7 +60,7 @@ $$;
 
 Algunos clientes de terceros pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de la secuencia de comandos debe gestionarse como una sola instrucción. Si recibe un mensaje de error al utilizar el servicio de consulta con un cliente de terceros, debe consultar la documentación del cliente de terceros sobre el uso de un bloque SQL.
 
-Por ejemplo, **DbVisualizer** requiere que el delimitador sea el único texto de la línea. En DbVisualizer, el valor predeterminado para el Identificador inicial es `--/` y para el Identificador final, es `/`. A continuación se muestra un ejemplo de bloque anónimo en DbVisualizer:
+Por ejemplo, **DbVisualizer** requiere que el delimitador sea el único texto de la línea. En DbVisualizer, el valor predeterminado para el identificador inicial es `--/` y para el identificador final es `/`. A continuación se muestra un ejemplo de bloque anónimo en DbVisualizer:
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-Para DbVisualizer en particular, también hay una opción en la IU para &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Consulte la [Documentación de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) para obtener más información.
+Para DbVisualizer en particular, también hay una opción en la IU para &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Consulte la [documentación de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) para obtener más información.
 
 ## Pasos siguientes
 
-Al leer este documento, ahora tiene una comprensión clara de los bloques anónimos y de cómo están estructurados. Lea el [guía de ejecución de consultas](../best-practices/writing-queries.md) para obtener más información sobre cómo escribir consultas.
+Al leer este documento, ahora tiene una comprensión clara de los bloques anónimos y de cómo están estructurados. Lea la [guía de ejecución de consultas](../best-practices/writing-queries.md) para obtener más información sobre cómo escribir consultas.
 
-También debería leer acerca de [cómo se utilizan los bloques anónimos con el patrón de diseño de carga incremental](./incremental-load.md) para aumentar la eficacia de las consultas.
+También debería leer acerca de [cómo se usan los bloques anónimos con el patrón de diseño de carga incremental](./incremental-load.md) para aumentar la eficacia de la consulta.

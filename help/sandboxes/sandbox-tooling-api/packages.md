@@ -13,11 +13,11 @@ ht-degree: 7%
 
 Las herramientas de espacio aislado permiten seleccionar diferentes artefactos (también conocidos como objetos) y exportarlos a un paquete. Un paquete puede constar de un solo artefacto o de varios artefactos (como conjuntos de datos o esquemas). Cualquier artefacto que se incluya en un paquete debe ser de la misma zona protegida.
 
-El `/packages` El extremo de la API de herramientas de entorno limitado le permite administrar paquetes de forma programada en su organización, incluida la publicación de un paquete y la importación de un paquete en un entorno limitado.
+El extremo `/packages` de la API de herramientas de zona protegida le permite administrar paquetes mediante programación en su organización, incluida la publicación de un paquete y la importación de un paquete en una zona protegida.
 
 ## Creación de un paquete {#create}
 
-Puede crear un paquete de varios artefactos realizando una solicitud de POST a `/packages` proporciona valores para el nombre y el tipo de paquete del paquete.
+Puede crear un paquete de varios artefactos realizando una solicitud de POST al extremo `/packages` y proporcionando al mismo tiempo valores para el nombre y el tipo de paquete del paquete.
 
 **Formato de API**
 
@@ -57,10 +57,10 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | El nombre del paquete. | Cadena | Sí |
 | `description` | Una descripción para proporcionar más información sobre el paquete. | Cadena | No |
-| `packageType` | El tipo de paquete es **PARCIAL** para indicar que está incluyendo artefactos específicos en un paquete. | Cadena | SÍ |
+| `packageType` | El tipo de paquete es **PARTIAL** para indicar que se están incluyendo artefactos específicos en un paquete. | Cadena | SÍ |
 | `sourceSandbox` | La zona protegida de origen del paquete. | Cadena | No |
 | `expiry` | La marca de tiempo que define la fecha de caducidad del paquete. El valor predeterminado es de 90 días a partir de la fecha de creación. El campo de caducidad de la respuesta será la hora UTC epoch. | Cadena (formato de marca de hora UTC) | No |
-| `artifacts` | Una lista de artefactos que se exportarán en el paquete. El `artifacts` el valor debe ser **null** o **vaciar**, cuando la variable `packageType` es `FULL`. | Matriz | No |
+| `artifacts` | Una lista de artefactos que se exportarán en el paquete. El valor `artifacts` debe ser **null** o **empty**, cuando `packageType` es `FULL`. | Matriz | No |
 
 **Respuesta**
 
@@ -100,11 +100,11 @@ Una respuesta correcta devuelve el paquete recién creado. La respuesta incluye 
 
 ## Actualización de un paquete {#update}
 
-Puede actualizar un paquete realizando una solicitud de PUT a `/packages` punto final.
+Puede actualizar un paquete realizando una solicitud de PUT al extremo `/packages`.
 
 ### Adición de artefactos a un paquete {#add-artifacts}
 
-Para añadir artefactos a un paquete, debe proporcionar un `id` e incluyen **AÑADIR** para el `action`.
+Para agregar artefactos a un paquete, debe proporcionar un `id` e incluir **ADD** para `action`.
 
 **Formato de API**
 
@@ -137,8 +137,8 @@ curl -X PUT \
 | Propiedad | Descripción | Tipo | Obligatorio |
 | --- | --- | --- | --- |
 | `id` | El ID del paquete que se va a actualizar. | Cadena | Sí |
-| `action` | Para añadir artefactos al paquete, el valor de acción debe ser **AÑADIR**. Esta acción solo es compatible para **PARCIAL** tipos de paquetes. | Cadena | Sí |
-| `artifacts` | Una lista de artefactos que se añadirán en el paquete. No habrá cambios en el paquete si la lista es **null** o **vaciar**. Los artefactos se deduplican antes de agregarse al paquete. | Matriz | No |
+| `action` | Para agregar artefactos al paquete, el valor de la acción debe ser **ADD**. Esta acción solo es compatible con los tipos de paquete **PARTIAL**. | Cadena | Sí |
+| `artifacts` | Una lista de artefactos que se añadirán en el paquete. No habrá cambios en el paquete si la lista es **null** o **empty**. Los artefactos se deduplican antes de agregarse al paquete. | Matriz | No |
 | `expiry` | La marca de tiempo que define la fecha de caducidad del paquete. El valor predeterminado es de 90 días desde la hora en que se llama a la API del PUT si no se especifica la caducidad en la carga útil. El campo de caducidad de la respuesta será la hora UTC epoch. | Cadena (formato de marca de hora UTC) | No |
 
 **Respuesta**
@@ -183,7 +183,7 @@ Una respuesta correcta devuelve el paquete actualizado. La respuesta incluye el 
 
 ### Eliminación de artefactos de un paquete {#delete-artifacts}
 
-Para eliminar artefactos de un paquete, debe proporcionar un `id` e incluyen **DELETE** para el `action`.
+Para eliminar artefactos de un paquete, debe proporcionar un `id` e incluir **DELETE** para `action`.
 
 
 **Formato de API**
@@ -216,8 +216,8 @@ curl -X PUT \
 | Propiedad | Descripción | Tipo | Obligatorio |
 | --- | --- | --- | --- |
 | `id` | El ID del paquete que se va a actualizar. | Cadena | Sí |
-| `action` | Para eliminar artefactos de un paquete, el valor de la acción debe ser **DELETE**. Esta acción solo es compatible para **PARCIAL** tipos de paquetes. | Cadena | Sí |
-| `artifacts` | Una lista de artefactos que se eliminarán del paquete. No habrá cambios en el paquete si la lista es **null** o **vaciar**. | Matriz | No |
+| `action` | Para eliminar artefactos de un paquete, el valor de la acción debe ser **DELETE**. Esta acción solo es compatible con los tipos de paquete **PARTIAL**. | Cadena | Sí |
+| `artifacts` | Una lista de artefactos que se eliminarán del paquete. No habrá cambios en el paquete si la lista es **null** o **empty**. | Matriz | No |
 
 **Respuesta**
 
@@ -257,9 +257,9 @@ Una respuesta correcta devuelve el paquete actualizado. La respuesta incluye el 
 
 >[!NOTE]
 >
->El **ACTUALIZACIÓN** se utiliza para actualizar los campos de metadatos del paquete y **no puede** se puede utilizar para añadir o eliminar artefactos a un paquete.
+>La acción **UPDATE** se usa para actualizar los campos de metadatos del paquete y **no se puede** usar para agregar o eliminar artefactos a un paquete.
 
-Para actualizar los campos de metadatos en un paquete, debe proporcionar un `id` e incluyen **ACTUALIZACIÓN** para el `action`.
+Para actualizar los campos de metadatos de un paquete, debe proporcionar un `id` e incluir **UPDATE** para el `action`.
 
 **Formato de API**
 
@@ -291,9 +291,9 @@ curl -X PUT \
 | Propiedad | Descripción | Tipo | Obligatorio |
 | --- | --- | --- | --- |
 | `id` | El ID del paquete que se va a actualizar. | Cadena | Sí |
-| `action` | Para actualizar los campos de metadatos en un paquete, el valor de la acción debe ser **ACTUALIZACIÓN**. Esta acción solo es compatible para **PARCIAL** tipos de paquetes. | Cadena | Sí |
+| `action` | Para actualizar los campos de metadatos de un paquete, el valor de la acción debe ser **UPDATE**. Esta acción solo es compatible con los tipos de paquete **PARTIAL**. | Cadena | Sí |
 | `name` | El nombre actualizado del paquete. No se permiten nombres de paquetes duplicados. | Matriz | Sí |
-| `sourceSandbox` | La zona protegida de origen debe pertenecer a la misma organización que se especifica en el encabezado de la solicitud. | Cadena | Sí |
+| `sourceSandbox` | La zona protegida de Source debe pertenecer a la misma organización que se especifica en el encabezado de la solicitud. | Cadena | Sí |
 
 **Respuesta**
 
@@ -331,7 +331,7 @@ Una respuesta correcta devuelve el paquete actualizado. La respuesta incluye el 
 
 ## Eliminación de un paquete {#delete}
 
-Para eliminar un paquete, realice una solicitud de DELETE al `/packages` y especifique el ID del paquete que desea eliminar.
+Para eliminar un paquete, realice una solicitud de DELETE al extremo `/packages` y especifique el identificador del paquete que desea eliminar.
 
 **Formato de API**
 
@@ -345,7 +345,7 @@ DELETE /packages/{PACKAGE_ID}
 
 **Solicitud**
 
-La siguiente solicitud elimina el paquete con el ID de {PACKAGE_ID}.
+La siguiente solicitud elimina el paquete con el identificador {PACKAGE_ID}.
 
 ```shell
 curl -X DELETE \
@@ -365,9 +365,9 @@ Una respuesta correcta devuelve un motivo que muestra el ID del paquete eliminad
 }
 ```
 
-## Publicación de un paquete {#publish}
+## Publish un paquete {#publish}
 
-Para habilitar la importación de un paquete en una zona protegida, debe publicarlo. Realice una solicitud de GET a `/packages` punto final al especificar el ID del paquete que desea publicar.
+Para habilitar la importación de un paquete en una zona protegida, debe publicarlo. Realice una solicitud de GET al extremo `/packages` mientras especifica el identificador del paquete que desea publicar.
 
 **Formato de API**
 
@@ -381,7 +381,7 @@ GET /packages/{PACKAGE_ID}/export
 
 **Solicitud**
 
-La siguiente solicitud publica el paquete con el ID de {PACKAGE_ID}.
+La siguiente solicitud publica el paquete con el identificador {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -393,7 +393,7 @@ curl -X GET \
 
 | Propiedad | Descripción | Tipo | Obligatorio |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Este período de tiempo especificado por el usuario define la fecha de caducidad del paquete (en días) desde el momento en que se publicó. Este valor no debe ser negativo.<br> Si no se especifica ningún valor, el valor predeterminado se calculará en 90 (días) desde la fecha de publicación. | Número entero | No |
+| `expiryPeriod` | Este período de tiempo especificado por el usuario define la fecha de caducidad del paquete (en días) desde el momento en que se publicó. Este valor no debe ser negativo.<br> Si no se especifica ningún valor, el valor predeterminado se calculará en 90 (días) desde la fecha de publicación. | Entero | No |
 
 **Respuesta**
 
@@ -416,7 +416,7 @@ Una respuesta correcta devuelve el paquete publicado.
 
 ## Búsqueda de un paquete {#look-up-package}
 
-Puede buscar un paquete individual realizando una solicitud de GET al `/packages` punto final que incluye el ID correspondiente del paquete en la ruta de solicitud.
+Puede buscar un paquete individual realizando una solicitud de GET al extremo `/packages` que incluya el ID correspondiente del paquete en la ruta de solicitud.
 
 **Formato de API**
 
@@ -483,7 +483,7 @@ Una respuesta correcta devuelve detalles para el ID del paquete consultado. La r
 
 ## Enumeración de paquetes {#list-packages}
 
-Puede enumerar todos los paquetes de su organización realizando una solicitud de GET a `/packages` punto final.
+Puede enumerar todos los paquetes de su organización realizando una solicitud de GET al extremo `/packages`.
 
 **Formato de API**
 
@@ -602,7 +602,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 **Solicitud**
 
-La siguiente solicitud importa el {PACKAGE_ID}.
+La siguiente solicitud importa {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -615,7 +615,7 @@ curl -X GET \
 
 **Respuesta**
 
-Se devuelven conflictos en la respuesta. La respuesta muestra el paquete original más el `alternatives` fragmento como una matriz ordenada por clasificación.
+Se devuelven conflictos en la respuesta. La respuesta muestra el paquete original más el fragmento `alternatives` como una matriz ordenada por clasificación.
 
 Ver respuesta+++
 
@@ -735,7 +735,7 @@ Ver respuesta+++
 >
 >Es inherente a la resolución de conflictos que el artefacto alternativo ya existe en la zona protegida de destino.
 
-Puede enviar una importación para un paquete una vez que haya revisado los conflictos y proporcionado las sustituciones realizando una solicitud de POST a `/packages` punto final. El resultado se proporciona como carga útil, que inicia el trabajo de importación para la zona protegida de destino según se especifica en la carga útil.
+Puede enviar una importación para un paquete una vez que haya revisado los conflictos y proporcionado las sustituciones realizando una solicitud de POST al extremo `/packages`. El resultado se proporciona como carga útil, que inicia el trabajo de importación para la zona protegida de destino según se especifica en la carga útil.
 
 La carga útil también acepta el nombre y la descripción del trabajo especificados por el usuario para el trabajo de importación. Si el nombre y la descripción especificados por el usuario no están disponibles, se utilizan el nombre y la descripción del paquete para el nombre y la descripción del trabajo.
 
@@ -747,7 +747,7 @@ POST /packages/import
 
 **Solicitud**
 
-La siguiente solicitud recupera los paquetes que se van a importar. La carga útil es un mapa de sustituciones donde, si existe una entrada, la clave es `artifactId` proporcionado por el paquete y la alternativa es el valor. Si el mapa o la carga útil es **vaciar**, no se realizan sustituciones.
+La siguiente solicitud recupera los paquetes que se van a importar. La carga útil es un mapa de sustituciones en el que, si existe una entrada, la clave es `artifactId` proporcionada por el paquete y la alternativa es el valor. Si el mapa o la carga útil están **vacíos**, no se realizarán sustituciones.
 
 ```shell
 curl -X POST \
@@ -801,7 +801,7 @@ curl -X POST \
 
 ## Mostrar todos los objetos dependientes {#dependent-objects}
 
-Enumerar todos los objetos dependientes para los objetos exportados en un paquete realizando una solicitud de POST a `/packages` al especificar el ID del paquete.
+Enumere todos los objetos dependientes para los objetos exportados en un paquete realizando una solicitud de POST al extremo `/packages` mientras especifica el identificador del paquete.
 
 **Formato de API**
 
@@ -880,7 +880,7 @@ Una respuesta correcta devuelve una lista de elementos secundarios para los obje
 
 ## Compruebe los permisos basados en funciones para importar todos los artefactos del paquete {#role-based-permissions}
 
-Puede comprobar si tiene permisos para importar artefactos de paquetes realizando una solicitud de GET a `/packages` al especificar el ID del paquete y el nombre de la zona protegida de destino.
+Puede comprobar si tiene permisos para importar artefactos del paquete realizando una solicitud de GET al extremo `/packages` mientras especifica el ID del paquete y el nombre de la zona protegida de destino.
 
 **Formato de API**
 
@@ -894,7 +894,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 **Solicitud**
 
-La siguiente solicitud comprueba los permisos de para {PACKAGE_ID} y zona protegida.
+La siguiente solicitud comprueba sus permisos para {PACKAGE_ID} y la zona protegida.
 
 ```shell
 curl -X GET \
@@ -1028,7 +1028,7 @@ Ver respuesta+++
 
 ## Enumerar trabajos de exportación/importación {#list-jobs}
 
-Puede enumerar los trabajos de exportación e importación actuales realizando una solicitud de GET a `/packages` punto final.
+Puede enumerar los trabajos de exportación e importación actuales realizando una solicitud de GET al extremo `/packages`.
 
 **Formato de API**
 

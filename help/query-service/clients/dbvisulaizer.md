@@ -6,71 +6,71 @@ description: Este documento explica los pasos para conectar DbVisualizer con el 
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '891'
 ht-degree: 1%
 
 ---
 
-# Connect [!DNL DbVisualizer] hasta [!DNL Query Service] {#connect-dbvisualizer}
+# Conectar [!DNL DbVisualizer] a [!DNL Query Service] {#connect-dbvisualizer}
 
-Este documento describe los pasos para conectar el [!DNL DbVisualizer] herramienta de base de datos con Adobe Experience Platform [!DNL Query Service].
+Este documento describe los pasos para conectar la herramienta de base de datos [!DNL DbVisualizer] con Adobe Experience Platform [!DNL Query Service].
 
-## Primeros pasos
+## Introducción
 
-Esta guía requiere que ya tenga acceso a [!DNL DbVisualizer] y están familiarizados con cómo navegar por su interfaz. Para descargar [!DNL DbVisualizer] para obtener más información, consulte la [funcionario [!DNL DbVisualizer] documentación](https://www.dbvis.com/download/).
+Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL DbVisualizer] y que esté familiarizado con la forma de navegar por su interfaz. Para descargar la aplicación de escritorio [!DNL DbVisualizer] o para obtener más información, consulte la [documentación oficial [!DNL DbVisualizer] 3}.](https://www.dbvis.com/download/)
 
-Para adquirir las credenciales necesarias para la conexión [!DNL  DbVisualizer] Para acceder al Experience Platform, debe tener acceso al espacio de trabajo Consultas en la interfaz de usuario de Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
+Para adquirir las credenciales necesarias para conectar [!DNL  DbVisualizer] al Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
 
 ## Crear una conexión de base de datos {#connect-database}
 
-Una vez instalada la aplicación de escritorio en el equipo local, siga las instrucciones oficiales de BDVisualizer para [crear una nueva conexión de base de datos](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection).
+Una vez que haya instalado la aplicación de escritorio en el equipo local, siga las instrucciones oficiales de BDVisualizer para [crear una nueva conexión de base de datos](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection).
 
-Una vez que haya seleccionado **[!DNL PostgreSQL]** desde el [!DNL Connections] lista, una [!DNL Object View] para el nuevo [!DNL PostgreSQL] aparece la conexión.
+Una vez que haya seleccionado **[!DNL PostgreSQL]** de la lista [!DNL Connections], aparecerá una ficha [!DNL Object View] para la nueva conexión [!DNL PostgreSQL].
 
 ### Establecer las propiedades del controlador para la conexión {#properties}
 
-Desde el [!DNL PostgreSQL] pestaña vista de objetos, seleccione **[!DNL Properties]** , seguido de la pestaña **[!DNL Driver Properties]** desde la barra lateral de navegación. Más información sobre [propiedades del controlador](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) se puede encontrar en la documentación oficial.
+En la ficha [!DNL PostgreSQL] vista de objeto, seleccione la ficha **[!DNL Properties]**, seguida de **[!DNL Driver Properties]** en la barra lateral de navegación. Encontrará más información sobre [propiedades del controlador](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) en la documentación oficial.
 
 A continuación, introduzca las propiedades del controlador descritas en la tabla siguiente.
 
 >[!IMPORTANT]
 >
->Para conectar DBVisualizer con Adobe Experience Platform, debe habilitar el uso de SSL. Consulte la [Documentación de modos SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad de SSL para conexiones de terceros con Adobe Experience Platform Query Service y cómo conectarse mediante `verify-full` Modo SSL.
+>Para conectar DBVisualizer con Adobe Experience Platform, debe habilitar el uso de SSL. Consulte la [documentación sobre los modos SSL](./ssl-modes.md) para obtener más información sobre la compatibilidad de SSL para conexiones de terceros al servicio Adobe Experience Platform Query y cómo conectarse mediante el modo SSL `verify-full`.
 
 | Propiedad | Descripción |
 | ------ | ------ |
-| `PGHOST` | El nombre de host del [!DNL PostgreSQL] servidor. Este valor es su Experience Platform **[!UICONTROL Host] credencial**. |
-| `ssl` | Definición del valor SSL `1` para habilitar el uso de SSL. |
-| `sslmode` | Controla el nivel de protección SSL. Se recomienda utilizar el `require` Modo SSL al conectar clientes de terceros a Adobe Experience Platform. El `require` El modo garantiza que se requiere cifrado en todas las comunicaciones y que la red es de confianza para conectarse al servidor correcto. No se requiere la validación del certificado SSL del servidor. |
-| `user` | El nombre de usuario conectado a la base de datos es su ID de organización. Es una cadena alfanumérica que termina en `@Adobe.Org`. Este valor es su Experience Platform **[!UICONTROL Nombre de usuario] credencial**. |
+| `PGHOST` | Nombre de host del servidor [!DNL PostgreSQL]. Este valor es su credencial de Experience Platform **[!UICONTROL Host]**. |
+| `ssl` | Defina el valor SSL `1` para habilitar el uso de SSL. |
+| `sslmode` | Controla el nivel de protección SSL. Se recomienda utilizar el modo SSL `require` al conectar clientes de terceros a Adobe Experience Platform. El modo `require` garantiza que se requiere cifrado en todas las comunicaciones y que se confía en la red para conectarse al servidor correcto. No se requiere la validación del certificado SSL del servidor. |
+| `user` | El nombre de usuario conectado a la base de datos es su ID de organización. Es una cadena alfanumérica que termina en `@Adobe.Org`. Este valor es su credencial de Experience Platform **[!UICONTROL nombre de usuario]**. |
 
-Utilice la barra de búsqueda para buscar cada propiedad y, a continuación, seleccione la celda correspondiente para el valor del parámetro. La celda se resaltará en azul. Introduzca sus credenciales de plataforma en el campo value y seleccione **[!DNL Apply]** para agregar la propiedad driver.
+Utilice la barra de búsqueda para buscar cada propiedad y, a continuación, seleccione la celda correspondiente para el valor del parámetro. La celda se resaltará en azul. Escriba su credencial de plataforma en el campo de valor y seleccione **[!DNL Apply]** para agregar la propiedad del controlador.
 
 >[!NOTE]
 >
->Para agregar un segundo `user` perfil, seleccione `user` en la columna parameter, seleccione el icono azul + (más) para añadir credenciales a cada usuario. Seleccionar **[!DNL Apply]** para agregar la propiedad driver.
+>Para agregar un segundo perfil `user`, seleccione `user` en la columna de parámetros y, a continuación, seleccione el icono azul + (más) para agregar credenciales a cada usuario. Seleccione **[!DNL Apply]** para agregar la propiedad del controlador.
 
-El [!DNL Edited] La columna muestra una marca de verificación para indicar que el valor del parámetro se ha actualizado.
+La columna [!DNL Edited] muestra una marca de verificación para indicar que el valor del parámetro se ha actualizado.
 
 ### Credenciales del servicio de consulta de entrada {#query-service-credentials}
 
-Para encontrar las credenciales necesarias para conectar BBVisualizer con el servicio de consultas, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** desde el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar su **host**, **puerto**, **database**, **nombre de usuario**, y **contraseña** credenciales, lea la [guía de credenciales](../ui/credentials.md).
+Para encontrar las credenciales necesarias para conectar BBVisualizer con Query Service, inicie sesión en la interfaz de usuario de Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar las credenciales de **host**, **puerto**, **base de datos**, **nombre de usuario** y **contraseña**, lea la [guía de credenciales](../ui/credentials.md).
 
-![La página Credenciales del espacio de trabajo Consultas del Experience Platform con las credenciales y las credenciales caducadas resaltadas.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![Se resaltaron la página Credenciales del área de trabajo Consultas de Experience Platform con las credenciales y las credenciales que caducan.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >
->[!DNL Query Service] también ofrece credenciales que no caducan para permitir una configuración única con clientes de terceros. Consulte la documentación de [instrucciones completas sobre cómo generar y utilizar credenciales que no caducan](../ui/credentials.md#non-expiring-credentials). Es necesario completar este proceso si desea conectar BDVisualizer como una configuración única. El `credential` y `technicalAccountId` Los valores adquiridos comprenden el valor del visualizador DBV `password` parámetro.
+>[!DNL Query Service] también ofrece credenciales que no caducan para permitir una configuración única con clientes de terceros. Consulte la documentación para obtener [instrucciones completas sobre cómo generar y utilizar credenciales que no caducan](../ui/credentials.md#non-expiring-credentials). Es necesario completar este proceso si desea conectar BDVisualizer como una configuración única. Los valores `credential` y `technicalAccountId` adquiridos comprenden el valor del parámetro DBVisualizer `password`.
 
 ## Autenticación {#authentication}
 
-Para requerir un ID de usuario y una autenticación basada en contraseña cada vez que se establece una conexión, vaya al [!DNL Properties] y seleccione **[!DNL Authentication]** desde la barra lateral de navegación debajo de [!DNL PostgreSQL].
+Para requerir un identificador de usuario y una autenticación basada en contraseña cada vez que se establece una conexión, vaya a la pestaña [!DNL Properties] y seleccione **[!DNL Authentication]** en la barra lateral de navegación bajo [!DNL PostgreSQL].
 
-En el panel Autenticación de conexión, compruebe ambas opciones: **[!DNL Require Userid]** y **[!DNL Require Password]** marque las casillas y seleccione **[!DNL Apply]**. Más información sobre [configurar opciones de autenticación](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) se puede encontrar en la documentación oficial.
+En el panel Autenticación de conexión, marque las casillas de verificación **[!DNL Require Userid]** y **[!DNL Require Password]** y luego seleccione **[!DNL Apply]**. Encontrará más información sobre [configurar opciones de autenticación](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) en la documentación oficial.
 
 ## Conectar con Platform
 
-Puede establecer una conexión con credenciales que caducan o no caducan. Para establecer una conexión, seleccione la **[!DNL Connection]** de la pestaña [!DNL PostgreSQL] Ficha Vista de objetos e introduzca sus credenciales de Experience Platform para la siguiente configuración. Instrucciones complementarias para [configuración de una conexión manual](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) están disponibles en el sitio web oficial de DBVisualizer.
+Puede establecer una conexión con credenciales que caducan o no caducan. Para establecer una conexión, seleccione la ficha **[!DNL Connection]** en la ficha de vista de objetos [!DNL PostgreSQL] e introduzca sus credenciales de Experience Platform para la siguiente configuración. Las instrucciones complementarias para [configurar una conexión manual](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) están disponibles en el sitio web oficial de DBVisualizer.
 
 >[!NOTE]
 >
@@ -79,16 +79,16 @@ Puede establecer una conexión con credenciales que caducan o no caducan. Para e
 | Parámetro de conexión | Descripción |
 |---|---|
 | **[!UICONTROL Nombre]** | Cree un nombre para la conexión. Se recomienda proporcionar un nombre descriptivo para reconocer la conexión. |
-| **[!UICONTROL Servidor de base de datos]** | Este es su Experience Platform **[!UICONTROL Host]** credencial. |
-| **[!UICONTROL Puerto de base de datos]** | El puerto para [!DNL Query Service]. Debe utilizar el puerto **80** o **5432** para conectar con [!DNL Query Service]. |
-| **[!UICONTROL Base de datos]** | Use su Experience Platform **[!UICONTROL Base de datos]** valor de credencial: `prod:all`. |
-| **[!UICONTROL Userid de base de datos]** | Este es su ID de organización de Platform Use su Experience Platform **[!UICONTROL Nombre de usuario]** valor de credencial. El ID tendrá el formato de `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Contraseña de base de datos]** | Esta cadena alfanumérica es su Experience Platform **[!UICONTROL Contraseña]** credencial. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados del `technicalAccountID` y el `credential` descargado en el archivo JSON de configuración. El valor de la contraseña adopta la forma siguiente: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante su inicialización de la que la Adobe no conserva una copia. |
+| **[!UICONTROL Servidor de base de datos]** | Esta es su credencial de Experience Platform **[!UICONTROL Host]**. |
+| **[!UICONTROL Puerto de base de datos]** | El puerto de [!DNL Query Service]. Debe usar el puerto **80** o **5432** para conectarse con [!DNL Query Service]. |
+| **[!UICONTROL Database]** | Use su valor de credencial de Experience Platform **[!UICONTROL Database]**: `prod:all`. |
+| **[!UICONTROL Id. de usuario de base de datos]** | Este es su ID de organización de Platform Use su valor de credencial de Experience Platform **[!UICONTROL Username]**. El id. tendrá el formato `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Contraseña de base de datos]** | Esta cadena alfanumérica es su credencial de Experience Platform **[!UICONTROL Password]**. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados de `technicalAccountID` y `credential` descargados en el archivo JSON de configuración. El valor de contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante su inicialización de la que la Adobe no conserva una copia. |
 
-Después de introducir todas las credenciales relevantes, seleccione **[!DNL Connect]**.
+Una vez que haya escrito todas las credenciales relevantes, seleccione **[!DNL Connect]**.
 
-El [!DNL Connect] el diálogo aparece en la primera ocasión del período de sesiones. Introduzca su ID de usuario y contraseña y seleccione **[!DNL Connect]**. Aparece un mensaje en el registro para confirmar que la conexión se ha realizado correctamente.
+El cuadro de diálogo [!DNL Connect] aparece en la primera ocasión de la sesión. Escriba su Id. de usuario y contraseña y seleccione **[!DNL Connect]**. Aparece un mensaje en el registro para confirmar que la conexión se ha realizado correctamente.
 
 ## Pasos siguientes
 
-Ahora que se ha conectado [!DNL DbVisualizer] con [!DNL Query Service], puede utilizar [!DNL DbVisualizer] para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la [guía de ejecución de consultas](../best-practices/writing-queries.md).
+Ahora que ha conectado [!DNL DbVisualizer] con [!DNL Query Service], puede usar [!DNL DbVisualizer] para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la [guía sobre la ejecución de consultas](../best-practices/writing-queries.md).

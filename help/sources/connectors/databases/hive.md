@@ -11,29 +11,29 @@ ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Apache Hive] el [!DNL Azure HDInsights] conector
+# (Beta) [!DNL Apache Hive] en el conector [!DNL Azure HDInsights]
 
 >[!NOTE]
 >
->El conector Apache Hive en Azure HDInsights está en versión beta. Consulte la [Resumen de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores etiquetados como beta.
+>El conector Apache Hive en Azure HDInsights está en versión beta. Consulte [Resumen de fuentes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de conectores con etiqueta beta.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-[!DNL Experience Platform] proporciona compatibilidad con la ingesta de datos de una base de datos de terceros. [!DNL Platform] puede conectarse a diferentes tipos de bases de datos, como relacionales, NoSQL o almacenes de datos. Los proveedores de bases de datos admiten [!DNL Apache Hive] el [!DNL Azure HDInsights].
+[!DNL Experience Platform] proporciona soporte para la ingesta de datos desde una base de datos de terceros. [!DNL Platform] puede conectarse a diferentes tipos de bases de datos, como relacionales, NoSQL o almacenes de datos. La compatibilidad con los proveedores de bases de datos incluye [!DNL Apache Hive] en [!DNL Azure HDInsights].
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-La siguiente documentación proporciona información sobre cómo conectarse [!DNL Apache Hive] el [!DNL Azure HDInsights] hasta [!DNL Platform] mediante las API de o la interfaz de usuario de:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Apache Hive] en [!DNL Azure HDInsights] a [!DNL Platform] mediante API o la interfaz de usuario:
 
-## Connect [!DNL Apache Hive] el [!DNL Azure HDInsights] hasta [!DNL Platform] uso de API
+## Conectar [!DNL Apache Hive] en [!DNL Azure HDInsights] a [!DNL Platform] mediante API
 
 - [Crear una conexión base de Apache Hive en Azure HDInsights mediante la API de Flow Service](../../tutorials/api/create/databases/hive.md)
 - [Exploración de tablas de datos mediante la API de Flow Service](../../tutorials/api/explore/tabular.md)
 - [Crear un flujo de datos para un origen de base de datos mediante la API de Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL Apache Hive] el [!DNL Azure HDInsights] hasta [!DNL Platform] uso de la IU
+## Conectar [!DNL Apache Hive] en [!DNL Azure HDInsights] a [!DNL Platform] mediante la interfaz de usuario
 
 - [Crear una conexión de origen de Apache Hive en Azure HDInsights en la interfaz de usuario](../../tutorials/ui/create/databases/hive.md)
 - [Crear un flujo de datos para una conexión de origen de base de datos en la IU](../../tutorials/ui/dataflow/databases.md)

@@ -11,13 +11,13 @@ ht-degree: 5%
 
 # [!UICONTROL Perfil de cliente potencial individual XDM] clase
 
-En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Perfil de cliente potencial individual XDM] La clase captura perfiles potenciales procedentes generalmente de socios de datos para casos de uso de adquisición de clientes principales.
+En Experience Data Model (XDM), la clase [!UICONTROL XDM Individual Prospect Profile] captura perfiles de clientes potenciales que generalmente provienen de socios de datos para casos de uso de adquisición de clientes principales.
 
 >[!NOTE]
 >
 >Para establecer un campo en el perfil de cliente potencial individual de XDM como identidad, primero debe crear al menos un área de nombres de ID de socio. Obtenga más información acerca del ID de socio en la [sección tipos de identidad](../../identity-service/features/namespaces.md).
 
-![El diagrama de esquema de la clase XDM Prospect.](../images/classes/individual-prospect-profile.png)
+![Diagrama de esquema de la clase de cliente potencial XDM.](../images/classes/individual-prospect-profile.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -29,6 +29,6 @@ En el Modelo de datos de experiencia (XDM), la variable [!UICONTROL Perfil de cl
 | `modifiedByBatchID` | [!UICONTROL Cadena] | El ID del último lote ingerido que provocó que se actualizara el registro. |
 | `partnerID` | [!UICONTROL Cadena] | Normalmente, un identificador pseudonímico único que identifica a un cliente potencial individual. Consulte la documentación sobre [tipos de identidad](../../identity-service/features/namespaces.md#identity-type) para obtener más información sobre el ID de socio y los demás tipos de identidad disponibles en Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL Cadena] | El ID del usuario que creó el registro. |
-| `repositoryLastModifiedBy` | [!UICONTROL Cadena] | El ID del usuario que modificó el registro por última vez. Cuando se crea el registro, la variable `modifiedByUser` se establece como. `createdByUser` valor. |
+| `repositoryLastModifiedBy` | [!UICONTROL Cadena] | El ID del usuario que modificó el registro por última vez. Cuando se crea el registro, el valor `modifiedByUser` se establece como el valor `createdByUser`. |
 
 {style="table-layout:auto"}

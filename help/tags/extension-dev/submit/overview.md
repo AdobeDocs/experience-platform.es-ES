@@ -4,8 +4,8 @@ description: Conozca los pasos para presentar su extensión de Adobe Experience 
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 84%
+source-wordcount: '230'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +29,7 @@ Seleccione el vínculo correspondiente para obtener más información sobre cada
 
 ## Asistencia
 
-La compatibilidad está disponible a través del espacio de trabajo de Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo de Slack es una comunidad en línea en la que los autores de extensiones colaboran. Puede solicitar acceso mediante los siguientes métodos [formulario en línea](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+La compatibilidad está disponible a través del espacio de trabajo de Slack de la comunidad de desarrolladores de etiquetas mientras crea y prueba la extensión. El espacio de trabajo de Slack es una comunidad en línea en la que los autores de extensiones colaboran. Puede solicitar acceso utilizando el siguiente [formulario en línea](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

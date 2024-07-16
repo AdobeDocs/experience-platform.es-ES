@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Real-Time CDP B2B Edition, que se creó en Adobe Real-time Customer Data Platform (Real-Time CDP), está diseñado específicamente para los especialistas en marketing que operan en un modelo de servicio de empresa a empresa. Agrupa datos de varias fuentes y los combina en una sola vista de personas y perfiles de cuenta. Estos datos unificados permiten a los especialistas en marketing dirigirse a públicos específicos con precisión y captarlos en todos los canales disponibles.
 
-Se han realizado mejoras en una variedad de funciones de Adobe Experience Platform que distinguen a Real-Time CDP B2B Edition de su homólogo B2C. Incluyen mejoras en el Experience Data Model (XDM) para casos de uso B2B, actualizaciones en la resolución de identidades y segmentación de perfiles, así como un conector creado a medida y un destino para [!DNL Marketo Engage]. El [!DNL Marketo] connector permite a las marcas B2B conectar sus datos de participación B2B líderes en el sector con información de comportamiento para nutrir a los posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
+Se han realizado mejoras en una variedad de funciones de Adobe Experience Platform que distinguen a Real-Time CDP B2B Edition de su homólogo B2C. Incluyen mejoras en el Experience Data Model (XDM) para casos de uso B2B, actualizaciones en la resolución de identidades y segmentación de perfiles, así como un conector y un destino creados a medida para [!DNL Marketo Engage]. El conector [!DNL Marketo] permite a las marcas B2B conectar sus datos de participación B2B líderes del sector con información de comportamiento para fomentar posibles clientes y mejorar las operaciones de marketing basadas en cuentas.
 
 Con Real-Time CDP B2B Edition, puede:
 
@@ -28,9 +28,9 @@ Los detalles más completos sobre las mejoras realizadas para Real-Time CDP B2B 
 
 ## XDM
 
-Real-Time CDP B2B Edition proporciona varias clases de esquema XDM, grupos de campos y tipos de relación nuevos para capturar y estructurar los datos específicamente para fines B2B. Consulte la información general sobre [XDM en Real-Time CDP edición B2B](./schemas/b2b.md) para obtener un desglose de cada una de estas mejoras.
+Real-Time CDP B2B Edition proporciona varias clases de esquema XDM, grupos de campos y tipos de relación nuevos para capturar y estructurar los datos específicamente para fines B2B. Consulte la descripción general de [XDM en Real-Time CDP B2B edition](./schemas/b2b.md) para ver un desglose de cada una de estas mejoras.
 
-Mediante esquemas B2B preconfigurados, puede introducir datos en una estructura estandarizada y procesable. Muchas de las nuevas clases de esquema se asignan casi directamente a las que se encuentran en los CRM principales, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]y otras fuentes de datos B2B. Con Real-Time CDP B2B Edition, puede introducir datos de fuentes B2B en Platform de forma directa y con resultados fáciles de auditar.
+Mediante esquemas B2B preconfigurados, puede introducir datos en una estructura estandarizada y procesable. Muchas de las nuevas clases de esquema se asignan casi directamente a las que se encuentran en los CRM principales, como [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] y otras fuentes de datos B2B. Con Real-Time CDP B2B Edition, puede introducir datos de fuentes B2B en Platform de forma directa y con resultados fáciles de auditar.
 
 Estas mejoras de XDM permiten una mejor ingesta y activación de datos a través de fuentes y destinos centrados en B2B, lo que mejora la unificación y presentación de datos para casos de uso más diversos y flexibles.
 
@@ -59,19 +59,19 @@ Cuando se implementa correctamente, el sistema rastrea a las personas mediante i
 
 ## Fuentes B2B
 
-Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. El [!DNL Marketo] Esta fuente le permite transmitir datos B2B a Platform y mantenerlos actualizados mediante aplicaciones conectadas a Platform. Admite cualquier número de instancias de [!DNL Marketo] (lo que resulta beneficioso para las grandes empresas con varias instancias) y extrae en una sola organización los datos combinados.
+Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. La fuente [!DNL Marketo] le permite transmitir datos B2B a Platform y mantener estos datos actualizados mediante aplicaciones conectadas a Platform. Admite cualquier número de instancias de [!DNL Marketo] (lo que resulta beneficioso para grandes empresas con varias instancias) y extrae una sola organización en la que se combinan los datos.
 
 >[!NOTE]
 >
->El [!DNL Marketo] el origen es **no** necesario para utilizar Real-Time CDP B2B Edition.
+>El origen de [!DNL Marketo] es **no** necesario para usar Real-Time CDP B2B Edition.
 
-Consulte la [orígenes en Real-Time CDP B2B Edition](./sources/b2b.md) para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
+Consulte las [fuentes de Real-Time CDP B2B Edition](./sources/b2b.md) para obtener más información sobre Marketo y la introducción de datos B2B en Platform.
 
 ## Destinos B2B
 
 Los destinos de Experience Platform como Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads y Google Ad Manager están disponibles y son totalmente compatibles con Real-Time CDP B2B Edition. El destino de Marketo Engage también transmite los datos de abono a segmentos desde Platform y los pone a disposición como listas en Marketo.
 
-Consulte la descripción general de la [Destino del Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) para obtener más información.
+Consulte la descripción general del [destino de Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) para obtener más información.
 
 Para las empresas con más de un CRM, Real-Time CDP B2B Edition proporciona la opción de configurar conectores de destino para instancias independientes de Marketo o CRM. Si es necesario, puede configurar los conectores de destino para cada instancia y enviar audiencias a cada una de las instancias de CRM de forma independiente.
 

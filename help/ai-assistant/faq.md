@@ -1,7 +1,8 @@
 ---
 title: Preguntas más frecuentes sobre el asistente de IA
 description: Obtenga información sobre las respuestas a las preguntas frecuentes sobre el asistente de IA
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -16,14 +17,14 @@ A continuación se muestra una lista de respuestas a las preguntas frecuentes so
 
 Los datos presentados en las respuestas del asistente de IA se actualizan diariamente. Esto significa que los datos de las respuestas pueden ser hasta 24 horas anteriores a los datos que se pueden ver en la interfaz de usuario del Experience Platform en el momento de la respuesta.
 
-Los mismos principios se aplican al control de acceso. AI Assistant puede tardar hasta 24 horas en reflejar cualquier cambio realizado en las configuraciones de control de acceso y permisos. Para obtener más información, lea la guía de [privacidad en AI Assistant](./privacy.md).
+Los mismos principios se aplican al control de acceso. AI Assistant puede tardar hasta 24 horas en reflejar cualquier cambio realizado en las configuraciones de control de acceso y permisos. Para obtener más información, lea la guía sobre la [privacidad en el asistente de IA](./privacy.md).
 
 ## ¿Con qué aplicaciones de Adobe es compatible AI Assistant?
 
 En la actualidad, el ámbito del asistente de IA es el siguiente:
 
-* [Conocimiento del producto](./home.md#product-knowledge): el asistente de IA puede responder preguntas de conocimiento del producto para Experience Platform, Real-time Customer Data Platform y Adobe Journey Optimizer. También puede profundizar en los temas de conocimiento del producto para Customer Journey Analytics, pero solo a través de la interfaz de usuario de Customer Journey Analytics.
-* [Perspectivas operativas](./home.md#operational-insights): puede hacer preguntas al asistente de IA sobre las perspectivas operativas en los siguientes objetos de datos: atributos, audiencias, flujos de datos, conjuntos de datos, destinos, recorridos, esquemas y fuentes.
+* [Conocimiento del producto](./home.md#product-knowledge): el Asistente de IA puede responder preguntas de conocimiento del producto para Experience Platform, Real-time Customer Data Platform y Adobe Journey Optimizer. También puede profundizar en los temas de conocimiento del producto para Customer Journey Analytics, pero solo a través de la interfaz de usuario de Customer Journey Analytics.
+* [Perspectivas operativas](./home.md#operational-insights): puede hacer preguntas al Asistente de IA sobre perspectivas operativas en los siguientes objetos de datos: atributos, audiencias, flujos de datos, conjuntos de datos, destinos, recorridos, esquemas y fuentes.
 
 ## ¿Cuáles son las capacidades de AI Assistant?
 

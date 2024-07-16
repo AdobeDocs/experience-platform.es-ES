@@ -6,8 +6,8 @@ description: Obtenga más información acerca de las funciones de accesibilidad 
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '481'
+ht-degree: 0%
 
 ---
 
@@ -35,12 +35,12 @@ Los siguientes elementos de navegación facilitan la accesibilidad:
 
 ## Paletas de color y contraste
 
-El Experience Platform se esfuerza por [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformidad, incluidos los requisitos para el contraste de color. La interfaz de usuario del Experience Platform ofrece suficiente contraste en la aplicación para garantizar una experiencia de visualización accesible para los usuarios con deficiencias visuales o de color bajas.
+El Experience Platform se esfuerza por lograr la conformidad con [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), incluidos los requisitos para el contraste de color. La interfaz de usuario del Experience Platform ofrece suficiente contraste en la aplicación para garantizar una experiencia de visualización accesible para los usuarios con deficiencias visuales o de color bajas.
 
-![La paleta de colores y el contraste están presentes en la página de inicio de la interfaz de usuario de Experience Platform.](images/homepage.png)
+![La paleta de colores y el contraste están presentes en la página principal de la interfaz de usuario de Experience Platform.](images/homepage.png)
 
 ## Validación de campo requerida
 
 Al agregar datos, crear esquemas o definir segmentos, los campos obligatorios se indican tanto visualmente, con un asterisco junto a la etiqueta de texto de un campo, como mediante programación. Estos campos almacenan en déclencheur la validación cuando se introducen datos no válidos en los campos y al guardarlos. Si un campo requerido no supera la validación, se delinea en rojo con un icono de error y también aparece una descripción por escrito del problema que debe solucionarse.
 
-![Primer plano de un campo obligatorio que no ha superado la validación. El campo aparece en rojo y aparece un icono de error.](images/field-validation.png)
+![Un primer plano de un campo obligatorio que no ha superado la validación. El campo aparece en rojo y hay un icono de error.](images/field-validation.png)

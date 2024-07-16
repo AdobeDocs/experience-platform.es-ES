@@ -2,7 +2,7 @@
 keywords: Experience Platform;inicio;temas populares;dirección ip;direcciones ip;lista de permitidos de direcciones ip; lista de permitidos
 description: Las direcciones IP deben agregarse a una lista de permitidos antes de trabajar con conectores de origen.
 solution: Experience Platform
-title: LISTA DE PERMITIDOS de direcciones IP para conexiones de origen
+title: LISTA DE PERMITIDOS de direcciones IP para conexiones de Source
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,7 +69,7 @@ Puede definir controles de acceso a la red a través del cortafuegos de la red. 
 
 ## LISTA DE PERMITIDOS de direcciones IP para fuentes de flujo continuo {#streaming}
 
-Debe añadir las siguientes direcciones IP a la lista de permitidos para permitir el tráfico del servicio de transferencia de datos para fuentes de flujo continuo como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), y [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Debe agregar las siguientes direcciones IP a su lista de permitidos para permitir el tráfico del servicio de transferencia de datos para orígenes de transmisión por secuencias como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) y [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 

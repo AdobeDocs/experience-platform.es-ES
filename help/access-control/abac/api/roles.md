@@ -20,15 +20,15 @@ ht-degree: 6%
 
 Las funciones definen el acceso que un administrador, un especialista o un usuario final tiene a los recursos de su organización. En un entorno de control de acceso basado en funciones, el aprovisionamiento de acceso de los usuarios se agrupa a través de responsabilidades y necesidades comunes. Una función tiene un conjunto determinado de permisos y a los miembros de su organización se les puede asignar una o más funciones, según el ámbito de vista o acceso de escritura que necesiten.
 
-El `/roles` Este extremo de la API de control de acceso basado en atributos le permite administrar mediante programación las funciones de su organización.
+El extremo `/roles` de la API de control de acceso basado en atributos le permite administrar mediante programación los roles de su organización.
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de funciones {#list}
 
-Puede enumerar todas las funciones existentes que pertenecen a su organización realizando una solicitud de GET a `/roles` punto final.
+Puede enumerar todos los roles existentes que pertenecen a su organización realizando una solicitud de GET al extremo `/roles`.
 
 **Formato de API**
 
@@ -113,7 +113,7 @@ Una respuesta correcta devuelve una lista de funciones de su organización, incl
 
 ## Búsqueda de un rol {#lookup}
 
-Puede buscar una función individual realizando una solicitud de GET que incluya la función correspondiente `roleId` en la ruta de solicitud.
+Puede buscar una función individual realizando una solicitud de GET que incluya el(la) `roleId` correspondiente en la ruta de solicitud.
 
 **Formato de API**
 
@@ -180,7 +180,7 @@ Una respuesta correcta devuelve detalles del ID de rol consultado, incluida info
 
 ## Búsqueda de asuntos por ID de función
 
-También puede recuperar asuntos realizando una solicitud de GET al `/roles` al proporcionar un punto final {ROLE_ID}.
+También puede recuperar sujetos realizando una solicitud de GET al extremo `/roles` mientras proporciona un {ROLE_ID}.
 
 **Formato de API**
 
@@ -256,7 +256,7 @@ Una respuesta correcta devuelve los asuntos asociados con el ID de rol consultad
 
 ## Crear una función {#create}
 
-Para crear una función nueva, realice una solicitud de POST a `/roles` proporciona valores para el nombre, la descripción y el tipo de función de la función.
+Para crear una función nueva, realice una solicitud de POST al extremo `/roles` y proporcione valores para el nombre, la descripción y el tipo de función de la función.
 
 **Formato de API**
 
@@ -328,7 +328,7 @@ Una respuesta correcta devuelve la función recién creada, con su ID de funció
 
 ## Actualizar un rol {#patch}
 
-Puede actualizar las propiedades de un rol realizando una solicitud de PATCH a `/roles` al mismo tiempo que proporciona el ID de rol y los valores correspondientes para las operaciones que desea aplicar.
+Puede actualizar las propiedades de un rol realizando una solicitud de PATCH al extremo `/roles` y proporcionando al mismo tiempo el identificador de rol y los valores correspondientes para las operaciones que desea aplicar.
 
 **Formato de API**
 
@@ -361,7 +361,7 @@ curl -X PATCH \
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace` y `remove`. |
 | `path` | Ruta del parámetro que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
@@ -408,7 +408,7 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 
 ## Actualizar un rol por identificador de rol {#put}
 
-Puede actualizar una función realizando una solicitud de PUT a `/roles` y especificando el ID de rol que corresponde al rol que desea actualizar.
+Puede actualizar un rol realizando una solicitud de PUT al extremo `/roles` y especificando el identificador de rol que corresponde al rol que desea actualizar.
 
 **Formato de API**
 
@@ -418,7 +418,7 @@ PUT /roles/{ROLE_ID}
 
 **Solicitud**
 
-La siguiente solicitud actualiza el nombre, la descripción y el tipo de función del ID de función: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La siguiente solicitud actualiza el nombre, la descripción y el tipo de rol para el identificador de rol: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
@@ -482,7 +482,7 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 
 ## Actualizar asunto por ID de rol
 
-Para actualizar los asuntos asociados a un rol, realice una solicitud de PATCH a `/roles` proporciona el ID de rol de los sujetos que desea actualizar.
+Para actualizar los asuntos asociados a un rol, realice una solicitud de PATCH al extremo `/roles` y proporcione el identificador de rol de los asuntos que desea actualizar.
 
 **Formato de API**
 
@@ -515,7 +515,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace` y `remove`. |
 | `path` | Ruta del parámetro que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
@@ -552,7 +552,7 @@ Una respuesta correcta devuelve la función actualizada, incluidos los nuevos va
 
 ## Eliminar un rol {#delete}
 
-Para suprimir una función, realice una solicitud de DELETE al `/roles` punto final al especificar el ID de la función que desea eliminar.
+Para eliminar un rol, realice una solicitud de DELETE al extremo `/roles` mientras especifica el identificador del rol que desea eliminar.
 
 **Formato de API**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Solicitud**
 
-La siguiente solicitud elimina la función con el ID de `{ROLE_ID}`.
+La siguiente solicitud elimina el rol con el identificador `{ROLE_ID}`.
 
 ```shell
 curl -X DELETE \
@@ -584,7 +584,7 @@ Para confirmar la eliminación, intente realizar una solicitud de búsqueda (GET
 
 ## Añadir una credencial de API {#apicredential}
 
-Para añadir una credencial de API, realice una solicitud de PATCH a `/roles` al proporcionar el ID de rol de los sujetos.
+Para agregar una credencial de API, realice una solicitud de PATCH al extremo `/roles` y proporcione el identificador de rol de los sujetos.
 
 **Formato de API**
 
@@ -605,7 +605,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace` y `remove`. |
 | `path` | Ruta del parámetro que se va a agregar. |
 | `value` | El valor con el que desea agregar el parámetro. |
 

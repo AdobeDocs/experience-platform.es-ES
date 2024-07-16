@@ -11,110 +11,110 @@ ht-degree: 0%
 
 # Configurar las claves administradas por el cliente mediante la IU de Platform
 
-Este documento cubre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform mediante la interfaz de usuario de. Para obtener instrucciones sobre cómo completar este proceso mediante la API, consulte la [Documento de configuración de API CMK](./api-set-up.md).
+Este documento cubre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform mediante la interfaz de usuario de. Para obtener instrucciones sobre cómo completar este proceso mediante la API, consulte el [documento de configuración de API CMK](./api-set-up.md).
 
 ## Requisitos previos
 
-Para ver y visitar [!UICONTROL Cifrado] en Adobe Experience Platform, debe haber creado una función y asignado el [!UICONTROL Administrar clave gestionada por el cliente] permiso para ese rol. Cualquier usuario que tenga el [!UICONTROL Administrar clave gestionada por el cliente] El permiso puede habilitar CMK para su organización.
+Para ver y visitar la sección [!UICONTROL Cifrado] en Adobe Experience Platform, debe haber creado una función y asignado el permiso [!UICONTROL Administrar clave administrada por el cliente] a esa función. Cualquier usuario que tenga el permiso [!UICONTROL Administrar clave administrada por el cliente] puede habilitar CMK para su organización.
 
-Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación de configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=es).
+Para obtener más información sobre la asignación de funciones y permisos en Experience Platform, consulte la [documentación sobre la configuración de permisos](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Para habilitar CMK, su [[!DNL Azure] Se debe configurar Key Vault](./azure-key-vault-config.md) con la siguiente configuración:
+Para habilitar CMK, [[!DNL Azure] Key Vault debe estar configurado](./azure-key-vault-config.md) con la siguiente configuración:
 
 * [Habilitar protección contra purgas](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Habilitar eliminación suave](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Configuración del acceso mediante [!DNL Azure] control de acceso basado en roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configuración de un [!DNL Azure] Key Vault](./azure-key-vault-config.md)
+* [Configurar el acceso mediante [!DNL Azure] control de acceso basado en roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [Configurar un  [!DNL Azure] depósito de claves](./azure-key-vault-config.md)
 
 ## Configuración de la aplicación CMK {#register-app}
 
-Una vez configurado el almacén de claves, el siguiente paso es registrar la aplicación CMK que se vinculará a su [!DNL Azure] inquilino.
+Una vez configurado el almacén de claves, el siguiente paso es registrar la aplicación CMK que se vinculará al inquilino de [!DNL Azure].
 
 ### Introducción
 
-Para ver la [!UICONTROL Configuraciones de cifrado] panel, seleccione **[!UICONTROL Cifrado]** en el [!UICONTROL Administration] encabezado de la barra lateral de navegación izquierda.
+Para ver el panel de [!UICONTROL Configuraciones de cifrado], seleccione **[!UICONTROL Cifrado]** en el encabezado de [!UICONTROL Administración] de la barra lateral de navegación izquierda.
 
-![El panel de configuración Cifrado con Cifrado y la tarjeta Claves administradas por el cliente resaltadas.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
+![Se resaltaron el panel de configuración de cifrado con cifrado y la tarjeta Claves administradas por el cliente.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
-Seleccionar **[!UICONTROL Configurar]** para abrir [!UICONTROL Configuración de claves administradas por el cliente] vista. Este espacio de trabajo contiene todos los valores necesarios para completar los pasos que se describen a continuación y realizar la integración con el almacén de claves de Azure.
+Seleccione **[!UICONTROL Configurar]** para abrir la vista de [!UICONTROL configuración de claves administradas por el cliente]. Este espacio de trabajo contiene todos los valores necesarios para completar los pasos que se describen a continuación y realizar la integración con el almacén de claves de Azure.
 
 ### Copiar URL de autenticación {#copy-authentication-url}
 
-Para iniciar el proceso de registro, copie la URL de autenticación de la aplicación para su organización desde el [!UICONTROL Configuración de claves administradas por el cliente] ver y pegarlo en su [!DNL Azure] entorno **[!DNL Key Vault Crypto Service Encryption User]**. Detalles sobre cómo [asignar un rol](#assign-to-role) se proporcionan en la siguiente sección.
+Para iniciar el proceso de registro, copie la URL de autenticación de la aplicación para su organización de la vista [!UICONTROL Configuración de claves administradas por el cliente] y péguela en el entorno [!DNL Azure] **[!DNL Key Vault Crypto Service Encryption User]**. En la siguiente sección se proporcionan detalles sobre cómo [asignar un rol](#assign-to-role).
 
-Seleccione el icono de copia (![El icono Copiar.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) por el [!UICONTROL URL de autenticación de aplicación].
+Seleccione el icono de copia (![El icono de copia.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) por la [!UICONTROL URL de autenticación de aplicación].
 
-![El [!UICONTROL Configuración de claves administradas por el cliente] vista con la sección URL de autenticación de aplicación resaltada.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
+![Vista de la configuración de claves administradas por el cliente [!UICONTROL con la sección URL de autenticación de aplicación resaltada.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)]
 
-Copie y pegue [!UICONTROL URL de autenticación de aplicación] en un explorador para abrir un cuadro de diálogo de autenticación. Seleccionar **[!DNL Accept]** para agregar la entidad de seguridad del servicio de aplicaciones CMK a su [!DNL Azure] inquilino. Al confirmar la autenticación, se le redirige a la página de aterrizaje del Experience Cloud.
+Copie y pegue la [!UICONTROL URL de autenticación de aplicación] en un explorador para abrir un cuadro de diálogo de autenticación. Seleccione **[!DNL Accept]** para agregar la entidad de seguridad del servicio de aplicaciones CMK a su inquilino [!DNL Azure]. Al confirmar la autenticación, se le redirige a la página de aterrizaje del Experience Cloud.
 
 ![Cuadro de diálogo de solicitud de permiso de Microsoft con [!UICONTROL Aceptar] resaltado.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Si tiene varias [!DNL Microsoft Azure] suscripciones, podría conectar potencialmente su instancia de Platform al almacén de claves incorrecto. En este caso, debe intercambiar la variable `common` de la URL de autenticación de la aplicación para el ID de directorio CMK.<br>Copie el ID de directorio CMK de la página Configuración de portal, Directorios y Suscripciones de [!DNL Microsoft Azure] aplicación<br>![El [!DNL Microsoft Azure] página Configuración del portal de la aplicación, Directorios y Suscripciones con el Id. de directorio resaltado.](../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>A continuación, péguelo en la barra de direcciones del explorador.<br>![Una página del explorador Google con la sección &quot;común&quot; de la URL de autenticación de la aplicación resaltada.](../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Si tiene varias suscripciones de [!DNL Microsoft Azure], podría conectar la instancia de Platform al almacén de claves incorrecto. En este caso, debe intercambiar la sección `common` del nombre de URL de autenticación de la aplicación por el ID de directorio CMK.<br>Copie el Id. de directorio CMK de la página Configuración de portal, directorios y suscripciones de la aplicación [!DNL Microsoft Azure]<br>![La página Configuración de portal de aplicaciones, directorios y suscripciones de la aplicación [!DNL Microsoft Azure] con el Id. de directorio resaltado.](../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>A continuación, péguelo en la barra de direcciones del explorador.<br>![Página de explorador Google con la sección &#39;común&#39; de la dirección URL de autenticación de la aplicación resaltada.](../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Asignar la aplicación CMK a un rol {#assign-to-role}
 
 Después de completar el proceso de autenticación, vuelva a su [!DNL Azure] Key Vault y seleccione **[!DNL Access control]** en el panel de navegación izquierdo. Desde aquí, seleccione **[!DNL Add]** seguido de **[!DNL Add role assignment]**.
 
-![El [!DNL Microsoft Azure] panel con [!DNL Add] y [!DNL Add role assignment] resaltado.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![Se resaltó el panel [!DNL Microsoft Azure] con [!DNL Add] y [!DNL Add role assignment].](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
-La siguiente pantalla le pedirá que elija una función para esta asignación. Seleccionar **[!DNL Key Vault Crypto Service Encryption User]** antes de seleccionar **[!DNL Next]** para continuar.
-
->[!NOTE]
->
->Si tiene el [!DNL Managed-HSM Key Vault] , debe seleccionar la variable **[!DNL Managed HSM Crypto Service Encryption User]** función de usuario.
-
-![El [!DNL Microsoft Azure] panel con el [!DNL Key Vault Crypto Service Encryption User] resaltado.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
-
-En la pantalla siguiente, elija **[!DNL Select members]** para abrir un cuadro de diálogo en el carril derecho. Utilice la barra de búsqueda para localizar la entidad de seguridad de servicio de la aplicación CMK y seleccionarla en la lista. Cuando termine, seleccione **[!DNL Save]**.
+La siguiente pantalla le pedirá que elija una función para esta asignación. Seleccione **[!DNL Key Vault Crypto Service Encryption User]** antes de seleccionar **[!DNL Next]** para continuar.
 
 >[!NOTE]
 >
->Si no encuentra su aplicación en la lista, no se ha aceptado su entidad de servicio en su inquilino. Para asegurarse de que tiene los privilegios correctos, trabaje con su [!DNL Azure] administrador o representante.
+>Si tiene el nivel [!DNL Managed-HSM Key Vault], debe seleccionar el rol de usuario **[!DNL Managed HSM Crypto Service Encryption User]**.
 
-Puede verificar la aplicación comparando las variables [!UICONTROL ID de aplicación] proporcionado en la [!UICONTROL Configuración de claves administradas por el cliente] ver con el [!DNL Application ID] proporcionado en la [!DNL Microsoft Azure] descripción general de la aplicación.
+![El panel [!DNL Microsoft Azure] con [!DNL Key Vault Crypto Service Encryption User] resaltado.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
-![El [!UICONTROL Configuración de claves administradas por el cliente] ver con el [!UICONTROL ID de aplicación] resaltado.](../../images/governance-privacy-security/customer-managed-keys/application-id.png)
+En la siguiente pantalla, elija **[!DNL Select members]** para abrir un cuadro de diálogo en el carril derecho. Utilice la barra de búsqueda para localizar la entidad de seguridad de servicio de la aplicación CMK y seleccionarla en la lista. Cuando termine, seleccione **[!DNL Save]**.
+
+>[!NOTE]
+>
+>Si no encuentra su aplicación en la lista, no se ha aceptado su entidad de servicio en su inquilino. Para asegurarse de que tiene los privilegios correctos, trabaje con su administrador o representante de [!DNL Azure].
+
+Puede comprobar la aplicación comparando la [!UICONTROL ID de aplicación] proporcionada en la vista de [!UICONTROL configuración de claves administradas por el cliente] con la [!DNL Application ID] proporcionada en la descripción general de la aplicación [!DNL Microsoft Azure].
+
+![Vista de la configuración de claves administradas por el cliente [!UICONTROL con el identificador de aplicación [!UICONTROL resaltado].](../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
 
 Todos los detalles necesarios para verificar las herramientas de Azure se incluyen en la interfaz de usuario de Platform. Este nivel de granularidad se proporciona ya que muchos usuarios desean utilizar otras herramientas de Azure para mejorar su capacidad de monitorizar y registrar el acceso de estas aplicaciones a su almacén de claves. Comprender estos identificadores es fundamental para ese fin y para ayudar a los servicios de Adobe a acceder a la clave.
 
 ## Habilitar la configuración de clave de cifrado en el Experience Platform {#send-to-adobe}
 
-Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado al Adobe. Seleccionar **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
+Después de instalar la aplicación CMK en [!DNL Azure], puede enviar su identificador de clave de cifrado al Adobe. Seleccione **[!DNL Keys]** en el panel de navegación izquierdo, seguido del nombre de la clave que desea enviar.
 
-![El panel de Microsoft Azure con la variable [!DNL Keys] objeto y el nombre de clave resaltados.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![Panel de Microsoft Azure con el objeto [!DNL Keys] y el nombre de clave resaltados.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Seleccione la última versión de la clave y aparecerá su página de detalles. Desde aquí puede configurar de forma opcional las operaciones permitidas para la clave.
 
 >[!IMPORTANT]
 >
->Las operaciones mínimas requeridas que se permiten para la clave son las siguientes **[!DNL Wrap Key]** y **[!DNL Unwrap Key]** permisos. Puede incluir [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign], y [!DNL Verify] si quieres.
+>Las operaciones mínimas requeridas que se permitirán para la clave son los permisos **[!DNL Wrap Key]** y **[!DNL Unwrap Key]**. Puede incluir [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign] y [!DNL Verify], si lo desea.
 
-El **[!UICONTROL Identificador de clave]** El campo muestra el identificador URI de la clave. Copie este valor de URI para utilizarlo en el siguiente paso.
+El campo **[!UICONTROL Identificador de clave]** muestra el identificador URI de la clave. Copie este valor de URI para utilizarlo en el siguiente paso.
 
-![Los detalles de la clave del panel de Microsoft Azure con la variable [!DNL Permitted operations] y las secciones Copiar URL clave resaltadas.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![Los detalles de la clave del panel de Microsoft Azure con las secciones [!DNL Permitted operations] y URL de la clave de copia resaltadas.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Una vez que haya obtenido la [!DNL Key vault URI], vuelva a la [!UICONTROL Configuración de claves administradas por el cliente] ver e introducir un elemento descriptivo **[!UICONTROL Nombre de configuración]**. A continuación, añada el [!DNL Key Identifier] tomado de la página de detalles de clave de Azure en el **[!UICONTROL Identificador de clave del almacén de claves]** y seleccione **[!UICONTROL Guardar]**.
+Una vez que haya obtenido [!DNL Key vault URI], vuelva a la vista [!UICONTROL Configuración de claves administradas por el cliente] e introduzca un **[!UICONTROL nombre de configuración]** descriptivo. A continuación, agregue el(la) [!DNL Key Identifier] tomado(a) de la página de detalles de la clave de Azure al **[!UICONTROL identificador de clave de almacén de claves]** y seleccione **[!UICONTROL Guardar]**.
 
-![El [!UICONTROL Configuración de claves administradas por el cliente] ver con el [!UICONTROL Nombre de configuración] y el [!UICONTROL Identificador de clave del almacén de claves] secciones resaltadas.](../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
+![Se han resaltado las secciones [!UICONTROL Configuración de claves administradas por el cliente] con [!UICONTROL Nombre de configuración] y [!UICONTROL Identificador de clave de almacén de claves].](../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 
-Se le devolverá a la [!UICONTROL Panel de configuraciones de cifrado]. El estado del [!UICONTROL Claves gestionadas por el cliente] la configuración se muestra como [!UICONTROL Procesando].
+Ha vuelto al [!UICONTROL tablero de configuraciones de cifrado]. El estado de la configuración de [!UICONTROL Claves administradas por el cliente] se muestra como [!UICONTROL Procesando].
 
-![El [!UICONTROL Configuraciones de cifrado] panel con [!UICONTROL Procesando] resaltado en la [!UICONTROL Claves gestionadas por el cliente] Tarjeta de.](../../images/governance-privacy-security/customer-managed-keys/processing.png)
+![El panel de [!UICONTROL configuraciones de cifrado] con [!UICONTROL procesamiento] resaltado en la tarjeta [!UICONTROL Claves administradas por el cliente].](../../images/governance-privacy-security/customer-managed-keys/processing.png)
 
 ## Verificar el estado de la configuración {#check-status}
 
-Conceda una cantidad de tiempo considerable para el procesamiento. Para comprobar el estado de la configuración, vuelva a la [!UICONTROL Configuración de claves administradas por el cliente] ver y desplazarse hacia abajo hasta el [!UICONTROL Estado de configuración]. La barra de progreso ha avanzado hasta el paso uno de tres y explica que el sistema está validando que Platform tiene acceso a la clave y al almacén de claves.
+Conceda una cantidad de tiempo considerable para el procesamiento. Para comprobar el estado de la configuración, vuelva a la vista [!UICONTROL Configuración de claves gestionadas por el cliente] y desplácese hacia abajo hasta [!UICONTROL Estado de configuración]. La barra de progreso ha avanzado hasta el paso uno de tres y explica que el sistema está validando que Platform tiene acceso a la clave y al almacén de claves.
 
 Hay cuatro estados potenciales de la configuración de CMK. Son las siguientes:
 
 * Paso 1: Valida que Platform tenga la capacidad de acceder a la clave y al almacén de claves.
 * Paso 2: El almacén de claves y el nombre de clave están en proceso de añadirse a todos los almacenes de datos de su organización.
 * Paso 3: El almacén de claves y el nombre de clave se han añadido correctamente a los almacenes de datos.
-* `FAILED`: Se ha producido un problema, relacionado principalmente con la clave, el almacén de claves o la configuración de aplicaciones de varios inquilinos.
+* `FAILED`: se produjo un problema, principalmente relacionado con la clave, el almacén de claves o la configuración de la aplicación de varios inquilinos.
 
 ## Pasos siguientes
 
-Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. Los datos que se incorporan a los almacenes de datos principales ahora se cifran y descifran con las claves de su [!DNL Azure] Key Vault.
+Al completar los pasos anteriores, ha habilitado correctamente CMK para su organización. Los datos que se incorporan a los almacenes de datos principales ahora se cifrarán y descifrarán con las claves de su almacén de claves [!DNL Azure].

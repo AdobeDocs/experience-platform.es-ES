@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de etiquetas BrightCov
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 95%
 
 ---
@@ -94,9 +94,9 @@ Se deben incluir los siguientes objetos de extensión de vídeo:
       * Una prop/eVar para el elemento de datos del **nombre del vídeo** (ejemplo: eVar10)
       * Una prop/eVar para el elemento de datos de la **duración del vídeo** (ejemplo: eVar11)
       * Una prop/eVar para el elemento de datos del **sitio del vídeo actual** (ejemplo: eVar12)
+
    1. Acción &quot;Send Beacon&quot; de Analytics (`s.tl`)
    1. Acción &quot;Clear Variables&quot; de Analytics
-
 
 >[!TIP]
 >

@@ -23,7 +23,7 @@ Este documento explica cómo definir tipos de elementos de datos para una extens
 
 >[!IMPORTANT]
 >
->Si va a desarrollar una extensión web, consulte la guía de [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
+>Si está desarrollando una extensión web, consulte la guía sobre [tipos de elementos de datos para extensiones web](../web/data-element-types.md) en su lugar.
 >
 >Este documento supone que ya está familiarizado con los módulos de la biblioteca y con la forma en que se integran con las extensiones de Edge. Si necesita una introducción, consulte la información general sobre el [formato del módulo de biblioteca](./format.md) antes de volver a esta guía.
 

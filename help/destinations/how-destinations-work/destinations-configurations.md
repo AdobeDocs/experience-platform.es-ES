@@ -4,8 +4,8 @@ description: Descubra qué configuración de exportación de destinos se puede c
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 1%
+source-wordcount: '834'
+ht-degree: 0%
 
 ---
 
@@ -17,22 +17,22 @@ Cuando piense en el comportamiento de exportación a destinos de Experience Plat
 * En un segundo nivel, el desarrollador de destinos puede personalizar algunos ajustes en un nivel de destino al crear destinos mediante Destination SDK.
 * En un tercer nivel, hay opciones de configuración que los usuarios de Real-Time CDP pueden establecer en los flujos de trabajo de activación.
 
-![Diagrama que muestra la interacción entre los ajustes de exportación comunes y configurables para los destinos](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
+![Diagrama que muestra la interacción entre las opciones de exportación comunes y configurables para los destinos](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
 Esta página describe o vincula todos los ajustes de exportación comunes y configurables para destinos en los tres niveles descritos anteriormente.
 
 ## Configuración común de exportación entre tipos de destino {#common-settings-across-destination-types}
 
-El comportamiento de exportación de destino es coherente entre los destinos que pertenecen a un tipo de destino con respecto a *qué déclencheur exporta un destino* y *elementos incluidos en las exportaciones de destino*. Las exportaciones de destino se activan mediante notificaciones que el servicio de destinos recibe del [servicio upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+El comportamiento de exportación de destino es consistente entre destinos que pertenecen a un tipo de destino con respecto a *qué déclencheur se exportan* y *qué se incluye en las exportaciones de destino*. Las exportaciones de destino se activan mediante notificaciones que el servicio de destinos recibe del [servicio de perfil del cliente en tiempo real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram) del flujo ascendente.
 
-Lo que se incluye en las exportaciones de destino varía ligeramente entre los tipos de destino. Más información sobre la [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Los desarrolladores de destino o los usuarios de Real-Time CDP no pueden editar esta configuración.
+Lo que se incluye en las exportaciones de destino varía ligeramente entre los tipos de destino. Obtenga más información sobre [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Los desarrolladores de destino o los usuarios de Real-Time CDP no pueden editar esta configuración.
 
 ## Configuración de exportación personalizable por los desarrolladores de destino {#customizable-settings-by-destination-developers}
 
-Los desarrolladores de destino pueden utilizar [Destination SDK](/help/destinations/destination-sdk/overview.md) para crear destinos personalizados o productivos (privados o públicos). Destination SDK proporciona a los desarrolladores una gran flexibilidad para configurar destinos basados en las capacidades de flujo descendente de sus puntos finales de API y sistemas de recepción de archivos. En función de las funciones descendentes, los desarrolladores de destinos tienen disponibles las siguientes opciones de configuración al configurar un destino con Destination SDK:
+Los desarrolladores de destinos pueden usar [Destination SDK](/help/destinations/destination-sdk/overview.md) para crear destinos personalizados o producidos (privados o públicos). Destination SDK proporciona a los desarrolladores una gran flexibilidad para configurar destinos basados en las capacidades de flujo descendente de sus puntos finales de API y sistemas de recepción de archivos. En función de las funciones descendentes, los desarrolladores de destinos tienen disponibles las siguientes opciones de configuración al configurar un destino con Destination SDK:
 
 * Determine qué atributos e identidades se pueden exportar de Experience Platform a destino. Determine también qué identidades son necesarias en sus destinos para que la exportación de datos se realice correctamente.
-* Establezca una directiva de agregación, que determina cuánto tiempo debe esperar el Experience Platform al agregar mensajes HTTP para enviarlos a integraciones de API. Los desarrolladores de destinos pueden configurar diferentes tipos de agregación para determinar cuántos perfiles deben incluirse en los mensajes HTTP salientes y cuánto tiempo debe esperar el Experience Platform hasta que envíe el mensaje HTTP. Encuentre amplia información acerca de [opciones de configuración de directiva de agregación](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponible para los desarrolladores de destino en la documentación de Destination SDK.
+* Establezca una directiva de agregación, que determina cuánto tiempo debe esperar el Experience Platform al agregar mensajes HTTP para enviarlos a integraciones de API. Los desarrolladores de destinos pueden configurar diferentes tipos de agregación para determinar cuántos perfiles deben incluirse en los mensajes HTTP salientes y cuánto tiempo debe esperar el Experience Platform hasta que envíe el mensaje HTTP. Encuentre información detallada acerca de las [opciones de configuración de la directiva de agregación](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponibles para los desarrolladores de destino en la documentación del Destination SDK.
 * Determine si las exportaciones de mensajes HTTP deben incluir perfiles que cumplan los requisitos para los segmentos, que se eliminen de los segmentos o ambos.
 * Determine qué configuraciones de nombre de archivo y formato de archivo deben estar disponibles para los usuarios al exportar archivos.
 
@@ -42,13 +42,13 @@ Además de la configuración no editable que depende del tipo de destino y la co
 
 La configuración disponible para los usuarios al conectarse a un destino depende de cómo haya configurado el destino el desarrollador de destinos y de qué configuración hayan puesto a disposición de los usuarios.
 
-Por ejemplo, para [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations), un desarrollador de destinos puede configurar qué identidades acepta su destino y solo esas identidades se mostrarán al usuario en [paso de asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), como se muestra a continuación:
+Por ejemplo, para [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations), un desarrollador de destino puede configurar qué identidades acepta su destino y solo esas identidades se mostrarán al usuario en el paso [asignación del flujo de trabajo de activación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), como se muestra a continuación:
 
 ![Grabación de pantalla de la selección de identidad para el campo de destino en el paso de asignación del flujo de trabajo de activación. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-Del mismo modo, para [destinos basados en archivos](/help/destinations/destination-types.md#file-based), el desarrollador de destino puede determinar qué [opciones de adición de nombre de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) quieren poner a disposición de su destino, o cuáles [opciones de formato de archivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desean que esté disponible, y el usuario solo podrá seleccionar entre estas opciones, como se muestra a continuación:
+Del mismo modo, para [destinos basados en archivos](/help/destinations/destination-types.md#file-based), el desarrollador de destinos puede determinar qué [opciones de adición de nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) desea que estén disponibles para su destino, o qué [opciones de formato de archivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desea que estén disponibles, y el usuario solo podrá seleccionar entre estas opciones, como se muestra a continuación:
 
-![Grabación en pantalla de la opción de formato de archivo al conectarse a un destino basado en archivos.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
+![Grabación de pantalla de la opción de formato de archivo al conectarse a un destino basado en archivos.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
 ![Grabación de pantalla de la opción de adición de nombre de archivo en el paso de programación del flujo de trabajo de activación. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
@@ -64,6 +64,6 @@ Obtenga más información acerca de las diferentes opciones y pasos disponibles 
 
 Después de leer este documento, ahora sabe qué configuración de exportación para destinos es común en todos los tipos de destino, qué configuración de destino individual pueden configurar los desarrolladores y qué configuración pueden editar los usuarios en el flujo de trabajo de activación.
 
-A continuación, puede leer información más detallada acerca de [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md).
+A continuación, puede leer información más detallada sobre los [patrones de comportamiento de exportación comunes por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
-Para los desarrolladores de destino, puede [introducción](/help/destinations/destination-sdk/getting-started.md) con el Destination SDK. Para los usuarios que buscan activar datos, pueden consultar todos los destinos disponibles en la [catalogar](/help/destinations/catalog/overview.md).
+Para los desarrolladores de destino, puedes [empezar](/help/destinations/destination-sdk/getting-started.md) con Destination SDK. Para los usuarios que buscan activar los datos, puede desproteger todos los destinos disponibles en el [catálogo](/help/destinations/catalog/overview.md).

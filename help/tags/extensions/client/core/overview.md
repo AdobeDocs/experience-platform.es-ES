@@ -4,8 +4,8 @@ description: Obtenga información acerca de la extensión de etiquetas de Core e
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 83%
+source-wordcount: '5445'
+ht-degree: 82%
 
 ---
 
@@ -132,9 +132,9 @@ Se activa el evento si cambia un elemento de datos especificado. Debe proporcion
 
 Un evento de llamada directa evita la detección de eventos y los sistemas de búsqueda. Las reglas de Direct Call son perfectas para situaciones en las que desea decir al sistema exactamente lo que está ocurriendo. Además, son también perfectas para cuando el sistema no puede detectar un evento en el DOM.
 
-Al definir un evento de llamada directa, debe especificar una cadena que actúe como identificador de este evento. Si un [acción de llamada directa de déclencheur](#direct-call-action) que contenga el mismo identificador se active, entonces se ejecutarán todas las reglas de evento de llamada directa que escuchen ese identificador.
+Al definir un evento de llamada directa, debe especificar una cadena que actúe como identificador de este evento. Si se activa una [acción de llamada directa de déclencheur](#direct-call-action) que contiene el mismo identificador, se ejecutará cualquier regla de evento de llamada directa que espere a que se produzca ese identificador.
 
-![Captura de pantalla de un evento de llamada directa en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-event.png)
+![Captura de pantalla de un evento Direct Call en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -223,11 +223,11 @@ Especifique el nombre y el valor de la cookie que deben darse para activar una a
 
 #### Custom Code
 
-Especifique cualquier Custom Code que deba darse como condición del evento.
+Especifique cualquier código personalizado que deba darse como condición del evento.
 
 >[!NOTE]
 >
->JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
+>JAVASCRIPT ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Utilice el editor de código integrado para introducir el código personalizado:
 
@@ -460,7 +460,7 @@ Especifique uno o varios patrones hash que deben darse en la dirección URL.
 1. (Opcional) Habilite Regex si es una expresión regular.
 1. Añada cualquier otro patrón hash.
 
-#### Ruta And Query String
+#### Ruta Y Cadena De Consulta
 
 Especifique una o más rutas que deben darse en la dirección URL. Esto incluye Path And Query String.
 
@@ -548,7 +548,7 @@ En esta sección se describen los tipos de acción disponibles en la Extensión 
 
 >[!NOTE]
 >
->JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
+>JAVASCRIPT ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Proporcione el código que se ejecuta después de activar el evento y de evaluar las condiciones.
 
@@ -632,11 +632,11 @@ setTimeout(function() {
 
 ### Déclencheur Direct Call {#direct-call-action}
 
-Esta acción almacena en déclencheur todas las reglas que utilizan un específico [evento de llamada directa](#direct-call-event). Al configurar la acción, debe proporcionar la cadena de identificador para el evento de llamada directa que desee almacenar en déclencheur. De forma opcional, también puede pasar datos al evento de llamada directa a través de una `detail` objeto, que puede contener un conjunto personalizado de pares clave-valor.
+Esta acción almacena en déclencheur todas las reglas que usan un [evento de llamada directa](#direct-call-event) específico. Al configurar la acción, debe proporcionar la cadena de identificador para el evento de llamada directa que desee almacenar en déclencheur. Opcionalmente, también puede pasar datos al evento de llamada directa a través de un objeto `detail`, que puede contener un conjunto personalizado de pares clave-valor.
 
-![Captura de pantalla de una acción Llamada directa de Déclencheur en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
+![Captura de pantalla de una acción Déclencheur Direct Call en la IU de recopilación de datos](../../../images/extensions/client/core/direct-call-action.png)
 
-La acción se asigna directamente a [`track` método](../../../ui/client-side/satellite-object.md#track) en el `satellite` , a la que se puede acceder mediante código del lado del cliente.
+La acción se asigna directamente al método [`track` ](../../../ui/client-side/satellite-object.md#track) en el objeto `satellite`, al que se puede obtener acceso mediante código del lado del cliente.
 
 ## Tipos de Data Elements de Extensión principal
 
@@ -646,9 +646,9 @@ Las secciones siguientes describen los tipos de Data Elements disponibles en la 
 
 ### Cookie
 
-Es posible hacer referencia a cualquier cookie de dominio disponible en el campo de nombre de cookie.
+Se puede hacer referencia a cualquier cookie de dominio disponible en el campo del nombre de la cookie.
 
-#### Ejemplo:
+#### Por ejemplo:
 
 `cookieName`
 
@@ -664,7 +664,7 @@ Cualquier valor de cadena constante al que se pueda hacer referencia en acciones
 
 >[!NOTE]
 >
->JavaScript de ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
+>JAVASCRIPT ES6+ ahora se admite en el código personalizado. Tenga en cuenta que algunos exploradores más antiguos no son compatibles con ES6+. Para comprender el impacto del uso de las funciones ES6+, realice pruebas con todos los navegadores web compatibles.
 
 Puede introducir código JavaScript personalizado en la IU si selecciona la opción Abrir editor e inserta código en la ventana del editor.
 
@@ -721,7 +721,7 @@ En el ejemplo siguiente, el marcado contiene una variable de JavaScript llamada 
 
 Cuando cree el elemento de datos, simplemente proporcione la ruta a esa variable.
 
-Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos, como `_myData.pageName`, o `digitalData.pageName`, etc.
+Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como `_myData.pageName` o `digitalData.pageName`, etc.
 
 #### Ejemplo:
 
@@ -737,7 +737,7 @@ Utilice el campo proporcionado para especificar el valor que ha creado para un e
 
 ### Objetos combinados
 
-Seleccione varios elementos de datos, cada uno de los cuales proporcionará un objeto. Estos objetos se combinarán profunda (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación en varios objetos de origen, se utilizará el valor del último objeto. Si un valor de propiedad de origen es `undefined`, no anulará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
+Seleccione varios elementos de datos, cada uno de los cuales proporcionará un objeto. Estos objetos se combinarán profunda (recursivamente) para producir un nuevo objeto. Los objetos de origen no se modificarán. Si se encuentra una propiedad en la misma ubicación en varios objetos de origen, se utilizará el valor del último objeto. Si el valor de una propiedad de origen es `undefined`, no se invalidará un valor de un objeto de origen anterior. Si las matrices se encuentran en la misma ubicación en varios objetos de origen, las matrices se concatenarán.
 
 A modo de ejemplo, supongamos que selecciona un elemento de datos que proporciona el siguiente objeto:
 
@@ -859,20 +859,20 @@ Algunos casos de uso común son:
 
 ### Valor condicional
 
-Un envoltorio para [Value Comparison](#value-comparison-value-comparison) condición. En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. Puede manejar &quot;Si... Entonces... Else...&quot; sin necesidad de reglas adicionales.
+Un contenedor para la condición [Value Comparison](#value-comparison-value-comparison). En función del resultado de la comparación, devolverá uno de los dos valores disponibles en el formulario. Puede manejar &quot;Si... Entonces... Else...&quot; sin necesidad de reglas adicionales.
 
 ### Entorno de tiempo de ejecución
 
 Permite seleccionar una de las siguientes variables:
 
-* Fase del entorno: devoluciones `_satellite.environment.stage` para diferenciar entre entornos de desarrollo/ensayo/producción.
-* Fecha de compilación de la biblioteca: devoluciones `turbine.buildInfo.buildDate` que contiene el mismo valor como `_satellite.buildInfo.buildDate`.
-* Nombre de propiedad - Devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
-* ID de propiedad - Devoluciones `_satellite.property.id` para obtener el ID de la propiedad de Launch
+* Fase del entorno: devuelve `_satellite.environment.stage` para diferenciar entre los entornos de desarrollo/ensayo/producción.
+* Fecha de compilación de la biblioteca - Devuelve `turbine.buildInfo.buildDate` que contiene el mismo valor como `_satellite.buildInfo.buildDate`.
+* Nombre de propiedad: devuelve `_satellite.property.name` para obtener el nombre de la propiedad de Launch.
+* ID de propiedad - Devuelve `_satellite.property.id` para obtener el ID de la propiedad de Launch
 * Nombre de regla: devuelve `event.$rule.name` que contiene el nombre de la regla ejecutada.
-* ID de regla - Devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
-* Tipo de evento: devoluciones `event.$type` que contiene el tipo de evento que activó la regla.
-* Carga útil de detalles del evento: devoluciones `event.detail` que contenga la carga útil de un evento personalizado o una regla de llamada directa.
+* ID de regla: devuelve `event.$rule.id` que contiene el ID de la regla ejecutada.
+* Tipo de evento: devuelve `event.$type` que contiene el tipo de evento que activó la regla.
+* Carga útil de detalles del evento: devuelve `event.detail` que contiene la carga útil de un evento personalizado o una regla de llamada directa.
 * Identificador de llamada directa: devuelve `event.identifier` que contiene el identificador de una regla de llamada directa.
 
 ### Atributos del dispositivo
@@ -884,7 +884,7 @@ Devuelve uno de los siguientes atributos de dispositivo del visitante:
 
 ### Herramientas de JavaScript
 
-Es un contenedor para operaciones comunes de JavaScript. Recibe un elemento de datos como entrada. Devuelve el resultado de una de las siguientes transformaciones del valor del elemento de datos:
+Es un contenedor para las operaciones comunes de JavaScript. Recibe un elemento de datos como entrada. Devuelve el resultado de una de las siguientes transformaciones del valor del elemento de datos:
 
 * Manipulación básica de cadenas (reemplazar, subcadena, coincidencia regex, primer y último índice, división, fracción)
 * Operaciones de matriz básicas (división, unión, pop, mayús)

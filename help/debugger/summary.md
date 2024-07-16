@@ -15,7 +15,7 @@ ht-degree: 82%
 
 # Pestaña Resumen
 
-Para ejecutar el Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, seleccione el icono (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abrirá en la **Resumen** pestaña.
+Para ejecutar el Adobe Experience Platform Debugger, abra la página que desee examinar en el explorador y, a continuación, selecciónela (![](images/start-icon.jpg)) en la barra del explorador. La extensión se abrirá en la ficha **Resumen**.
 
 ![](images/summary.jpg)
 
@@ -81,15 +81,15 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versión </p> </td> 
-   <td colname="col2"> <p>La versión de Turbine.</a> </p> </td> 
+   <td colname="col2"> <p>La versión de Turbine</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Fecha de compilación </p> </td> 
-   <td colname="col2"> <p>La etiqueta <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> biblioteca</a> fecha de compilación </p> </td> 
+   <td colname="col2"> <p>Fecha de compilación de la biblioteca </a> de la etiqueta <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Entorno </p> </td> 
-   <td colname="col2"> <p>El <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=es" format="https" scope="external"> entorno</a> lo utiliza la biblioteca de etiquetas </p> </td> 
+   <td colname="col2"> <p>El entorno <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=es" format="https" scope="external"></a> usado por la biblioteca de etiquetas </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensiones </p> </td> 
@@ -162,7 +162,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
   </tr> 
   <tr> 
    <td colname="col1"> <p>Evento de carga de página </p> </td> 
-   <td colname="col2"> <p>El tipo de <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=es" format="html" scope="external">evento</a> que se activa cuando se carga la página. </p> </td> 
+   <td colname="col2"> <p>El tipo de <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">evento</a> que se activa cuando se carga la página. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nombre de la solicitud </p> </td> 
@@ -185,7 +185,7 @@ Experience Platform Debugger muestra la siguiente información para cada soluci�
    <td colname="col2"> <p>El ID de la experiencia de Target. Disponible sin autenticación solo si implementa el detector de eventos de depuración en el administrador de códigos o etiquetas y activa los <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de respuesta</a> necesarios en la interfaz de usuario de Target. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Nombre de oferta</p> </td> 
+   <td colname="col1"> <p>Nombre de la oferta</p> </td> 
    <td colname="col2"> <p>Nombre de la <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> oferta</a> de Target. Disponible sin autenticación solo si implementa el detector de eventos de depuración en el administrador de códigos o etiquetas y activa los <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> tokens de respuesta</a> necesarios en la interfaz de usuario de Target. </p> </td> 
   </tr> 
   <tr> 

@@ -4,8 +4,8 @@ title: Recuperación de una plantilla de audiencia
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 2%
+source-wordcount: '420'
+ht-degree: 1%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar una plantilla de metadatos de audiencia mediante `/authoring/audience-templates` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar una plantilla de metadatos de audiencia mediante el extremo de API `/authoring/audience-templates`.
 
-Para obtener una descripción detallada de las funciones que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
+Para obtener una descripción detallada de las funcionalidades que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperación de una plantilla de audiencia {#retrieve}
 
-Puede recuperar una plantilla de audiencia existente realizando una `GET` solicitud a la `/authoring/audience-templates` punto final.
+Puede recuperar una plantilla de audiencia existente realizando una solicitud `GET` al extremo `/authoring/audience-templates`.
 
 **Formato de API**
 
@@ -39,13 +39,13 @@ Utilice el siguiente formato de API para recuperar todas las plantillas de audie
 GET /authoring/audience-templates
 ```
 
-Utilice el siguiente formato de API para recuperar una plantilla de audiencia específica, definida por la variable `{INSTANCE_ID}` parámetro.
+Utilice el siguiente formato de API para recuperar una plantilla de audiencia específica, definida por el parámetro `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Las dos solicitudes siguientes recuperan todas las plantillas de audiencia de la organización IMS o una plantilla de audiencia específica, en función de si pasa la variable `INSTANCE_ID` en la solicitud.
+Las dos solicitudes siguientes recuperan todas las plantillas de audiencia de la organización IMS o una plantilla de audiencia específica, en función de si se pasa el parámetro `INSTANCE_ID` en la solicitud.
 
 Seleccione cada pestaña a continuación para ver la carga útil correspondiente.
 
@@ -53,7 +53,7 @@ Seleccione cada pestaña a continuación para ver la carga útil correspondiente
 
 >[!TAB Recuperar todas las plantillas de audiencia]
 
-La siguiente solicitud recupera la lista de plantillas de audiencia en la que tiene acceso, según [!DNL IMS Org ID] y la configuración de zona protegida.
+La siguiente solicitud recuperará la lista de plantillas de audiencia a las que tiene acceso, según la configuración de [!DNL IMS Org ID] y la zona protegida.
 
 +++Solicitud
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de audiencia a las que tiene acceso en función de la variable [!DNL IMS Org ID] y el nombre de la zona protegida que ha utilizado. Uno `instanceId` corresponde a una plantilla de audiencia.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas de audiencia a las que tiene acceso, en función de [!DNL IMS Org ID] y del nombre de zona protegida que haya utilizado. Un(a) `instanceId` corresponde a una plantilla de audiencia.
 
 ```json
 {
@@ -182,7 +182,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 >[!TAB Recuperar una plantilla de audiencia específica]
 
-La siguiente solicitud recupera la lista de plantillas de audiencia en la que tiene acceso, según [!DNL IMS Org ID] y la configuración de zona protegida.
+La siguiente solicitud recuperará la lista de plantillas de audiencia a las que tiene acceso, según la configuración de [!DNL IMS Org ID] y la zona protegida.
 
 +++Solicitud
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la plantilla de audiencia correspondientes a `{INSTANCE_ID}` proporcionada en la llamada.
+Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la plantilla de audiencia correspondientes a `{INSTANCE_ID}` proporcionados en la llamada.
 
 ```json
 {
@@ -321,4 +321,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo recuperar detalles acerca de la configuración del servidor de destino mediante el `/authoring/destination-servers` Extremo de API. Leer [cómo utilizar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cómo recuperar detalles acerca de la configuración del servidor de destino mediante el extremo de API `/authoring/destination-servers`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

@@ -7,7 +7,7 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Suscripción de telecomunicaciones] es un grupo de campos de esquema estándar para [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que describe el plan de suscripción de telecomunicaciones de un cliente, incluidos precios, paquetes y suscripciones a productos individuales.
+[!UICONTROL Suscripción de telecomunicaciones] es un grupo de campos de esquema estándar para la [[!DNL XDM Individual Profile] clase](../../classes/individual-profile.md) que describe el plan de suscripción de telecomunicaciones de un cliente, incluidos precios, paquetes y suscripciones a productos individuales.
 
 El grupo de campos proporciona un único campo de tipo de objeto, `telecomSubscription`, cuyas propiedades se describen a continuación.
 
@@ -44,16 +44,16 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 `internetSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
-![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
+![suscripción a Internet](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `subscriptionDetails` | [[!UICONTROL Suscripción de telecomunicaciones]](../../data-types/telecom-subscription.md) | Describe los detalles generales de la suscripción, incluida la duración, las tarifas, el estado y mucho más. Describe los detalles generales de la suscripción, incluida la duración, las tarifas, el estado y mucho más. |
 | `connectionType` | Cadena | Tipo de conexión de la suscripción. |
-| `dataCap` | Número entero | Límite máximo de datos para la cuenta, en megabytes (MB). |
-| `downloadSpeed` | Número entero | Velocidad máxima de descarga disponible con la suscripción, en megabytes (MB). |
+| `dataCap` | Entero | Límite máximo de datos para la cuenta, en megabytes (MB). |
+| `downloadSpeed` | Entero | Velocidad máxima de descarga disponible con la suscripción, en megabytes (MB). |
 | `selfSetup` | Booleano | Indica si un cliente es elegible para la configuración de Internet sin la visita de un técnico. |
-| `uploadSpeed` | Número entero | Velocidad máxima de carga disponible con la suscripción, en megabytes (MB). |
+| `uploadSpeed` | Entero | Velocidad máxima de carga disponible con la suscripción, en megabytes (MB). |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 `landlineSubscription` se proporciona como una matriz de objetos. A continuación se describe la estructura de cada objeto.
 
-![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
+![suscripción de teléfono fijo](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 | `callWaiting` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen llamadas en espera. |
 | `callerID` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen el ID de llamante. |
 | `internationalCalling` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen llamadas internacionales. |
-| `minutes` | Número entero | La cantidad de minutos mensuales disponibles dentro de la suscripción. |
+| `minutes` | Entero | La cantidad de minutos mensuales disponibles dentro de la suscripción. |
 | `threeWayCalling` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen llamadas en tres direcciones. |
 | `unlimitedDomesticLongDistance` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen llamadas nacionales a larga distancia ilimitadas. |
 | `unlimitedLocalCalling` | Booleano | Indica si las funciones de suscripción de teléfono fijo incluyen llamadas locales ilimitadas. |
@@ -88,9 +88,9 @@ Para obtener más información sobre el grupo de campos, consulte el repositorio
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `streamingServices` | Matriz de objetos | Una lista de todos los servicios de streaming incluidos con la suscripción. Cada elemento de matriz incluye las siguientes propiedades: <ul><li>`promotionLength`: Duración de la promoción, en meses, si el servicio de streaming se añadió como parte de una promoción.</li><li>`promotionalAddition`: indica si el servicio de streaming se añadió como parte de una promoción.</li><li>`serviceName`: Nombre del servicio de streaming.</li></ul> |
+| `streamingServices` | Matriz de objetos | Una lista de todos los servicios de streaming incluidos con la suscripción. Cada elemento de matriz incluye las siguientes propiedades: <ul><li>`promotionLength`: duración de la promoción, en meses, si el servicio de streaming se agregó como parte de una promoción.</li><li>`promotionalAddition`: indica si el servicio de streaming se agregó como parte de una promoción.</li><li>`serviceName`: nombre del servicio de streaming.</li></ul> |
 | `subscriptionDetails` | [[!UICONTROL Suscripción de telecomunicaciones]](../../data-types/telecom-subscription.md) | Describe los detalles generales de la suscripción, incluida la duración, las tarifas, el estado y mucho más. |
-| `channels` | Número entero | El número de canales incluidos con la suscripción de medios. |
+| `channels` | Entero | El número de canales incluidos con la suscripción de medios. |
 
 {style="table-layout:auto"}
 

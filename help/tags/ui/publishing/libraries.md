@@ -120,7 +120,7 @@ Ahora, las extensiones, las reglas y los elementos de datos se pueden guardar di
 La siguiente lista proporciona más información sobre la administración de una biblioteca activa.
 
 1. [Creación de una nueva biblioteca](libraries.md#create-a-library).
-1. Vaya a [Rules](../managing-resources/rules.md), [Data elements](../managing-resources/data-elements.md) o [Extensions](../managing-resources/extensions/overview.md).
+1. Vaya a [Reglas](../managing-resources/rules.md), [Elementos de datos](../managing-resources/data-elements.md) o [Extensiones](../managing-resources/extensions/overview.md).
 1. Seleccione su Biblioteca activa.
 1. Realice los cambios y, a continuación, guarde y cree la biblioteca.
 1. Pruebe los cambios y repita estos pasos según considere necesario.

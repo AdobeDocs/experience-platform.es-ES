@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo /properties en la API de Rea
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1100'
 ht-degree: 98%
 
 ---
@@ -22,7 +22,7 @@ En la jerarquía de recursos, una propiedad es la propietaria de lo siguiente:
 * [Extensiones](./extensions.md)
 * [Hosts](./properties.md)
 * [Bibliotecas](./libraries.md)
-* [Regla componentes](./rule-components.md)
+* [Componentes de regla](./rule-components.md)
 * [Reglas](./rules.md)
 
 Una propiedad pertenece a exactamente una [compañía](./companies.md). Una compañía puede tener muchas propiedades.

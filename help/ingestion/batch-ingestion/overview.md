@@ -7,15 +7,15 @@ exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
 # Información general de API de ingesta por lotes
 
-La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser datos de perfil de un archivo plano (como un archivo de Parquet) o datos que se ajusten a un esquema conocido en la [!DNL Experience Data Model] (XDM).
+La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser datos de perfil de un archivo plano (como un archivo Parquet) o datos que se ajusten a un esquema conocido en el registro [!DNL Experience Data Model] (XDM).
 
-El [Referencia de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) proporciona información adicional sobre estas llamadas de API.
+La [referencia de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) proporciona información adicional sobre estas llamadas de API.
 
 El diagrama siguiente describe el proceso de ingesta por lotes:
 
@@ -23,7 +23,7 @@ El diagrama siguiente describe el proceso de ingesta por lotes:
 
 ## Introducción
 
-Los extremos de API utilizados en esta guía forman parte de la variable [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+Los extremos de API utilizados en esta guía forman parte de la [API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ### [!DNL Data Ingestion] requisitos previos
 
@@ -48,26 +48,26 @@ La ingesta de datos por lotes tiene algunas restricciones:
 
 >[!NOTE]
 >
->Para cargar un archivo de más de 512 MB, deberá dividirlo en fragmentos más pequeños. Las instrucciones para cargar un archivo grande se encuentran en la [sección grande de carga de archivos de este documento](#large-file-upload---create-file).
+>Para cargar un archivo de más de 512 MB, deberá dividirlo en fragmentos más pequeños. Las instrucciones para cargar un archivo grande se encuentran en la sección [cargar archivo grande de este documento](#large-file-upload---create-file).
 
 ### Tipos
 
-Al ingerir datos, es importante comprender cómo [!DNL Experience Data Model] Los esquemas (XDM) funcionan. Para obtener más información sobre cómo se asignan los tipos de campo XDM a diferentes formatos, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md).
+Al ingerir datos, es importante comprender cómo funcionan los esquemas XDM ([!DNL Experience Data Model]). Para obtener más información sobre cómo se asignan los tipos de campo XDM a diferentes formatos, lea la [Guía para desarrolladores de Schema Registry](../../xdm/api/getting-started.md).
 
-Existe cierta flexibilidad a la hora de ingerir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no es así, el lote fallará con un `TypeCompatibilityException`.
+Existe cierta flexibilidad a la hora de ingerir datos: si un tipo no coincide con lo que hay en el esquema de destino, los datos se convertirán al tipo de destino expresado. Si no puede, se producirá un error en el lote con un `TypeCompatibilityException`.
 
-Por ejemplo, ni JSON ni CSV tienen un valor `date` o `date-time` escriba. Como resultado, estos valores se expresan mediante [Cadenas con formato ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo de Unix en milisegundos (1531263959000) y se convierten en el momento de la ingesta al tipo XDM de destino.
+Por ejemplo, ni JSON ni CSV tienen un tipo `date` o `date-time`. Como resultado, estos valores se expresan mediante [cadenas con formato ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tiempo Unix formateado en milisegundos (1531263959000) y se convierten en el momento de la ingesta al tipo XDM de destino.
 
 La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 
-| Entrante (fila) frente a destino (col) | Cadena | Byte | Corto | Entero | Largo | Doble | Fecha | Fecha-hora | Objeto | Mapa |
+| Entrante (fila) frente a destino (col) | Cadena | Byte | Corto | Entero | Largo | Duplicada | Fecha | Fecha-hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |   |   |
 | Byte | X | X | X | X | X | X |   |   |   |   |
 | Corto | X | X | X | X | X | X |   |   |   |   |
 | Entero | X | X | X | X | X | X |   |   |   |   |
 | Largo | X | X | X | X | X | X | X | X |   |   |
-| Doble | X | X | X | X | X | X |   |   |   |   |
+| Duplicada | X | X | X | X | X | X |   |   |   |   |
 | Fecha |   |   |   |   |   |   | X |   |   |   |
 | Fecha-hora |   |   |   |   |   |   |   | X |   |   |
 | Objeto |   |   |   |   |   |   |   |   | X | X |
@@ -79,7 +79,7 @@ La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 
 ## Uso de la API
 
-El [!DNL Data Ingestion] La API permite introducir datos por lotes (una unidad de datos que consta de uno o más archivos que se van a introducir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
+La API [!DNL Data Ingestion] le permite ingerir datos por lotes (una unidad de datos que consta de uno o más archivos que se van a ingerir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
 
 1. Cree un nuevo lote.
 2. Cargue archivos a un conjunto de datos especificado que coincida con el esquema XDM de los datos.
@@ -146,11 +146,11 @@ Puede cargar archivos mediante la API de carga de archivos pequeños. Sin embarg
 
 >[!NOTE]
 >
->La ingesta por lotes se puede utilizar para actualizar gradualmente los datos en el almacén de perfiles. Para obtener más información, consulte la sección sobre [actualización de un lote](#patch-a-batch) en el [guía para desarrolladores de ingesta por lotes](api-overview.md).
+>La ingesta por lotes se puede utilizar para actualizar gradualmente los datos en el almacén de perfiles. Para obtener más información, consulte la sección sobre [actualización de un lote](#patch-a-batch) en la [guía para desarrolladores de ingesta por lotes](api-overview.md).
 
 >[!INFO]
 >
->Los ejemplos siguientes utilizan el [Apache Parquet](https://parquet.apache.org/docs/) formato de archivo. Un ejemplo que utiliza el formato de archivo JSON se encuentra en la [guía para desarrolladores de ingesta por lotes](api-overview.md).
+>Los ejemplos siguientes utilizan el formato de archivo [Apache Parquet](https://parquet.apache.org/docs/). Encontrará un ejemplo que utiliza el formato de archivo JSON en la [guía para desarrolladores de ingesta por lotes](api-overview.md).
 
 ### Carga de archivo pequeño
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Finalización de lote de señal
 
-Una vez cargados todos los archivos en el lote, se puede marcar el lote para su finalización. Al hacer esto, la variable [!DNL Catalog] Las entradas de DataSetFile se crean para los archivos completados y se asocian al lote generado anteriormente. El [!DNL Catalog] A continuación, el lote se marca como correcto, que déclencheur los flujos descendentes para introducir los datos disponibles.
+Una vez cargados todos los archivos en el lote, se puede marcar el lote para su finalización. Al hacerlo, se crean las entradas de DataSetFile [!DNL Catalog] para los archivos completados y asociados con el lote generado anteriormente. El lote [!DNL Catalog] se ha marcado como correcto, lo que déclencheur los flujos descendentes para introducir los datos disponibles.
 
 **Solicitud**
 
@@ -401,20 +401,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | El ID del usuario que creó o actualizó el lote. |
 
-El `"status"` Este campo muestra el estado actual del lote solicitado. Los lotes pueden tener uno de los siguientes estados:
+El campo `"status"` es el que muestra el estado actual del lote solicitado. Los lotes pueden tener uno de los siguientes estados:
 
 ## Estados de ingesta por lotes
 
 | Estado | Descripción |
 | ------ | ----------- |
 | Abandonado | El lote no se ha completado en el periodo de tiempo esperado. |
-| Anulado | Se ha anulado una operación **explícitamente** se ha llamado (a través de la API de ingesta por lotes) para el lote especificado. Una vez que el lote está en estado &quot;Cargado&quot;, no se puede cancelar. |
+| Anulado | Se ha llamado a una operación de anulación **explícitamente** (a través de la API de ingesta por lotes) para el lote especificado. Una vez que el lote está en estado &quot;Cargado&quot;, no se puede cancelar. |
 | Activo | El lote se ha promocionado correctamente y está disponible para el consumo descendente. Este estado se puede utilizar de forma intercambiable con Éxito. |
 | Eliminado | Los datos del lote se han eliminado completamente. |
-| Error | Un estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Los datos de un lote fallido se **no** que aparezca. Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
+| Error | Un estado de terminal que resulta de una configuración incorrecta o de datos incorrectos. Se mostrarán los datos de un lote erróneo **no**. Este estado se puede utilizar de forma intercambiable con &quot;Error&quot;. |
 | Inactivo | El lote se ha promocionado correctamente, pero se ha revertido o ha caducado. El lote ya no está disponible para el consumo descendente. |
 | Cargado | Los datos del lote se han completado y el lote está listo para la promoción. |
-| Cargando | Los datos de este lote se están cargando y el lote se está cargando **no** listo para ser promocionado. |
+| Cargando | Los datos de este lote se están cargando y el lote está **no** listo para su promoción. |
 | Intentando de nuevo | Se están procesando los datos de este lote. Sin embargo, debido a un error transitorio o del sistema, el lote falló. Como resultado, se está reintentando este lote. |
 | Fase | La fase de ensayo del proceso de promoción de un lote se ha completado y el trabajo de ingesta se ha ejecutado. |
 | Ensayo | Se están procesando los datos del lote. |

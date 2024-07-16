@@ -49,13 +49,13 @@ Si la recopilación de datos debe ser única para cada sitio, puede ser recomend
 
 ### Variables
 
-De forma similar a los datos, ¿las variables que va a establecer en [!DNL Analytics] y en otras herramientas son muy similares, son parecidas o son únicas?
+De forma similar a los datos, ¿las variables que va a establecer en [!DNL Analytics] y en otras extensiones son muy similares, son parecidas o son únicas?
 
 Por ejemplo, si se utiliza eVar27 para el mismo valor de fuente en todos los sitios o aplicaciones, puede que sea recomendable agrupar estos sitios o aplicaciones de forma que pueda establecer las variables comunes de sus sitios en una única propiedad web.
 
 ### Extensiones, etiquetas y sistemas
 
-¿Las herramientas, las etiquetas y los sistemas que va a implementar son muy similares, son parecidos o son únicos?
+¿Las extensiones, las etiquetas y los sistemas que va a implementar son muy similares, son parecidos o son únicos?
 
 Si las extensiones, etiquetas y sistemas que va a implementar son muy similares en sus sitios o aplicaciones, es posible que desee incluirlos en la misma propiedad.
 
@@ -125,9 +125,9 @@ Siga las instrucciones para crear una propiedad móvil.
    * **Nombre:** el nombre de su propiedad.
    * **Privacy:** de forma predeterminada, la configuración de privacidad se configura en “Opted in”, lo que significa que desea que el SDK recopile y envíe datos a las soluciones. Si selecciona “Opted out”, el SDK de forma predeterminada NO envía datos a las soluciones. Si elige configurarlo en Unknown, el SDK exige que la aplicación pregunte al usuario si permite la recopilación y el uso compartido de datos.
 
-      >[!NOTE]
-      >
-      >Estos ajustes se pueden controlar aún más mediante API en la aplicación móvil.
+     >[!NOTE]
+     >
+     >Estos ajustes se pueden controlar aún más mediante API en la aplicación móvil.
 
    * **Use HTTPS:** seleccione si todas las comunicaciones de datos deben enviarse por HTTP o HTTPS.
 

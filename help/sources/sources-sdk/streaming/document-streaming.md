@@ -1,5 +1,5 @@
 ---
-title: Documente su origen (Streaming SDK)
+title: Documente su Source (Streaming SDK)
 description: El paso final antes de que la nueva fuente se pueda activar en Adobe Experience Platform es documentar la nueva fuente.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
 badge: Beta
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El SDK de flujo de fuentes de autoservicio está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El SDK de flujo de fuentes de autoservicio está en versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 El paso final antes de que el nuevo origen se pueda establecer en Adobe Experience Platform es documentar el nuevo origen.
 
@@ -22,15 +22,15 @@ Esta guía de documentación incluye:
 
 * Un tutorial que puede seguir para crear una página de documentación para el nuevo origen;
 * Una plantilla de documentación para que la rellene para su nuevo origen;
-* [Instrucciones sobre cómo utilizar Markdown para escribir documentación técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Instrucciones para comprender el sabor de Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Instrucciones sobre cómo usar Markdown para escribir documentación técnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instrucciones para comprender el sabor de Markdown de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Requisitos previos
 
 Se requieren los siguientes elementos antes de poder documentar la nueva fuente:
 
-* **Una cuenta de usuario de GitHub válida**: Si no tiene una cuenta de GitHub existente, debe crearla mediante la variable [Página de registro de GitHub](https://github.com/);
-* **Acceso a GitHub Desktop**: debe utilizar el [Aplicación de escritorio de GitHub](https://desktop.github.com/) para crear la documentación de origen en el entorno local;
+* **Una cuenta de usuario de GitHub válida**: si no tiene una cuenta de GitHub existente, debe crearla a través de la [página de registro de GitHub](https://github.com/);
+* **Acceso a GitHub Desktop**: debe usar la [aplicación GitHub Desktop](https://desktop.github.com/) para crear la documentación de origen en su entorno local;
 * La integración con Adobe debe estar en una fase de prueba con el origen implementado en un entorno de ensayo en Platform.
 
 ## Instrucciones de alto nivel para crear documentación para su origen en Platform
@@ -39,7 +39,7 @@ En un nivel superior, para crear documentación para el origen, debe crear una r
 
 ## Plantilla de documentación
 
-Puede usar una etiqueta precargada [Plantilla de documentación de API](streaming-template-api.md) o el [Plantilla de documentación de IU](streaming-template-ui.md) para ayudarle a crear la documentación de su origen. Más abajo encontrará instrucciones sobre cómo editar la plantilla y abrir una solicitud de extracción. El equipo de documentación del Adobe revisará y publicará la documentación enviada para la nueva fuente.
+Puede usar una [plantilla de documentación de API](streaming-template-api.md) rellenada previamente o la [plantilla de documentación de IU](streaming-template-ui.md) para ayudar a crear documentación para su origen. Más abajo encontrará instrucciones sobre cómo editar la plantilla y abrir una solicitud de extracción. El equipo de documentación del Adobe revisará y publicará la documentación enviada para la nueva fuente.
 
 También puede descargar las plantillas de documentación a continuación:
 

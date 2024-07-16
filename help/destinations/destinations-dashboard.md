@@ -11,12 +11,12 @@ ht-degree: 0%
 ---
 
 
-# [!UICONTROL Destinos] tablero {#destinations-dashboard}
+# Panel [!UICONTROL Destinos] {#destinations-dashboard}
 
 La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización, tal como se capturan durante una instantánea diaria.
 
-Para obtener instrucciones detalladas sobre cómo acceder al panel de destinos de la interfaz de usuario e interactuar con él, así como para obtener más información acerca de las métricas disponibles que se muestran en el panel, visite [guía del panel destinos](../dashboards/guides/destinations.md).
+Para obtener instrucciones detalladas sobre cómo acceder al panel de destinos de la interfaz de usuario e interactuar con él, así como para obtener más información sobre las métricas disponibles que se muestran en el panel, visite la [guía del panel de destinos](../dashboards/guides/destinations.md).
 
-Para obtener una descripción general de todas las funciones de tablero de Experience Platform, comience por leer el [información general sobre paneles](../../dashboards/home.md).
+Para obtener una descripción general de todas las características de los paneles de Experience Platform, comience por leer la [descripción general de los paneles](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)

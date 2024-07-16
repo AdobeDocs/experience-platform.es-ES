@@ -4,7 +4,7 @@ title: Prueba del destino basado en archivos con perfiles de muestra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -13,26 +13,26 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Esta página explica cómo utilizar el `/testing/destinationInstance` Punto final de API para probar si el destino basado en archivos está configurado correctamente y comprobar la integridad de los flujos de datos al destino configurado.
+En esta página se explica cómo usar el extremo de API `/testing/destinationInstance` para probar si el destino basado en archivos está configurado correctamente y comprobar la integridad de los flujos de datos al destino configurado.
 
 Puede realizar solicitudes al extremo de prueba con o sin agregar [perfiles de muestra](file-based-sample-profile-generation-api.md) a la llamada. Si no envía ningún perfil en la solicitud, la API genera un perfil de muestra automáticamente y lo añade a la solicitud.
 
-Los perfiles de muestra generados automáticamente contienen datos genéricos. Si desea probar el destino con datos de perfil personalizados e intuitivos, utilice el [API de generación de perfiles de muestra](file-based-sample-profile-generation-api.md) para generar un perfil de muestra, personalice su respuesta e inclúyala en la solicitud a `/testing/destinationInstance` punto final.
+Los perfiles de muestra generados automáticamente contienen datos genéricos. Si desea probar el destino con datos de perfil personalizados e intuitivos, use la [API de generación de perfiles de muestra](file-based-sample-profile-generation-api.md) para generar un perfil de muestra, luego personalice su respuesta e inclúyala en la solicitud al extremo `/testing/destinationInstance`.
 
-## Primeros pasos {#getting-started}
+## Introducción {#getting-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de usar el `/testing/destinationInstance` extremo, asegúrese de cumplir las siguientes condiciones:
+Antes de usar el extremo `/testing/destinationInstance`, asegúrese de cumplir las siguientes condiciones:
 
-* Tiene un destino basado en archivos existente creado mediante el Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Ya tiene un destino basado en archivos creado a través del Destination SDK y puede verlo en su [catálogo de destinos](../../../ui/destinations-workspace.md).
 * Ha creado al menos un flujo de activación para su destino en la interfaz de usuario de Experience Platform.
 * Para realizar correctamente la solicitud de API, necesita el ID de instancia de destino correspondiente a la instancia de destino que va a probar. Obtenga el ID de instancia de destino que debe utilizar en la llamada a la API, desde la dirección URL, al examinar una conexión con su destino en la interfaz de usuario de Platform.
 
-  ![Imagen de la interfaz de usuario que muestra cómo obtener el ID de instancia de destino desde la URL.](../../assets/testing-api/get-destination-instance-id.png)
-* *Opcional*: Si desea probar la configuración de destino con un perfil de muestra añadido a la llamada de API, utilice el [/sample-profiles](file-based-sample-profile-generation-api.md) extremo para generar un perfil de muestra basado en el esquema de origen existente. Si no proporciona un perfil de muestra, la API generará uno y lo devolverá en la respuesta.
+  ![Imagen de interfaz de usuario que muestra cómo obtener el identificador de instancia de destino de la dirección URL.](../../assets/testing-api/get-destination-instance-id.png)
+* *Opcional*: Si desea probar la configuración de destino con un perfil de muestra agregado a la llamada de API, use el extremo [/sample-profiles](file-based-sample-profile-generation-api.md) para generar un perfil de muestra basado en el esquema de origen existente. Si no proporciona un perfil de muestra, la API generará uno y lo devolverá en la respuesta.
 
 ## Pruebe la configuración de destino sin añadir perfiles a la llamada {#test-without-adding-profiles}
 
@@ -55,7 +55,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parámetros de ruta | Descripción |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
+| `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la sección [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
 
 **Respuesta**
 
@@ -111,15 +111,15 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la carga útil de r
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos audiencias a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
-| `results` | Devuelve el ID de instancia de destino y los ID de ejecución de flujo que puede utilizar para llamar al [API de resultados](file-based-destination-results-api.md), para probar aún más la integración. |
+| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si asignó dos audiencias a la instancia de destino, la matriz `activations` contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
+| `results` | Devuelve el identificador de instancia de destino y los identificadores de ejecución de flujo que puede usar para llamar a la API de [resultados](file-based-destination-results-api.md), con el fin de probar aún más la integración. |
 | `inputProfiles` | Devuelve los perfiles de muestra generados automáticamente por la API. |
 
 {style="table-layout:auto"}
 
 ## Pruebe la configuración de destino con perfiles añadidos a la llamada {#test-with-added-profiles}
 
-Para probar el destino con datos de perfil personalizados e intuitivos, puede personalizar la respuesta obtenida del [/sample-profiles](file-based-sample-profile-generation-api.md) punto final con valores de su elección e incluya el perfil personalizado en la solicitud a `/testing/destinationInstance` punto final.
+Para probar el destino con datos de perfil personalizados y más intuitivos, puede personalizar la respuesta obtenida del extremo [/sample-profiles](file-based-sample-profile-generation-api.md) con los valores de su elección e incluir el perfil personalizado en la solicitud al extremo `/testing/destinationInstance`.
 
 **Formato de API**
 
@@ -175,8 +175,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parámetro | Descripción |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | El ID de instancia de destino del destino que está probando.  El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
-| `profiles` | Matriz que puede incluir uno o varios perfiles. Utilice el [ejemplo de extremo de API de perfil](file-based-sample-profile-generation-api.md) para generar perfiles que utilizar en esta llamada de API. |
+| `{DESTINATION_INSTANCE_ID}` | El ID de instancia de destino del destino que está probando.  El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la sección [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
+| `profiles` | Matriz que puede incluir uno o varios perfiles. Use [extremo de API de perfil de muestra](file-based-sample-profile-generation-api.md) para generar perfiles que se usarán en esta llamada de API. |
 
 **Respuesta**
 
@@ -232,8 +232,8 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la carga útil de r
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si ha asignado dos audiencias a la instancia de destino, la variable `activations` La matriz contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
-| `results` | Devuelve el ID de instancia de destino y los ID de ejecución de flujo que puede utilizar para llamar al [API de resultados](file-based-destination-results-api.md), para probar aún más la integración. |
+| `activations` | Devuelve el ID de audiencia y el ID de ejecución de flujo para cada audiencia activada. El número de entradas de activación (y archivos generados asociados) es igual al número de audiencias asignadas en la instancia de destino. <br><br> Ejemplo: Si asignó dos audiencias a la instancia de destino, la matriz `activations` contendrá dos entradas. Cada audiencia activada corresponde a un archivo exportado. |
+| `results` | Devuelve el identificador de instancia de destino y los identificadores de ejecución de flujo que puede usar para llamar a la API de [resultados](file-based-destination-results-api.md), con el fin de probar aún más la integración. |
 | `inputProfiles` | Devuelve los perfiles de ejemplo personalizados que ha pasado en la solicitud de API. |
 
 ## Administración de errores de API {#api-error-handling}
@@ -244,6 +244,6 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 Después de leer este documento, ahora sabe cómo probar la configuración de destino basada en archivos.
 
-Si ha recibido una respuesta de API válida, el destino funciona correctamente. Si desea ver información más detallada acerca del flujo de activación, puede utilizar el `results` de la respuesta a [ver resultados detallados de la activación](file-based-destination-results-api.md).
+Si ha recibido una respuesta de API válida, el destino funciona correctamente. Si desea ver información más detallada sobre el flujo de activación, puede usar la propiedad `results` de la respuesta a [ver resultados detallados de la activación](file-based-destination-results-api.md).
 
-Si está creando un destino público, ahora puede [envíe su configuración de destino](../../guides/submit-destination.md) al Adobe para su revisión.
+Si estás creando un destino público, ahora puedes [enviar tu configuración de destino](../../guides/submit-destination.md) al Adobe para que la revisen.

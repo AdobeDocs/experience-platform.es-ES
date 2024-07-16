@@ -17,13 +17,13 @@ Esta guía proporciona respuestas a preguntas legales y de privacidad que se pla
 
 ## ¿Qué datos se comparten durante las superposiciones de estimaciones y cómo puede el Adobe garantizar que estas métricas se obtengan de forma segura?
 
-![overlap-report.png](./images/overlap-report.png)
+![informe-superposición.png](./images/overlap-report.png)
 
 No se mueven datos de clientes o segmentos entre zonas protegidas para obtener estas métricas de estimación de superposición. Las identidades aplicables seleccionadas por el cliente y con hash previo en cualquier zona protegida se agregan a una estructura de datos probabilística en la que los propios ID se representan en formato con hash.
 
 Se trata de un proceso unidireccional, lo que significa que los identificadores originales con hash previo no se exponen y no se pueden analizar mediante ingeniería inversa.
 
-Estas estructuras de datos tienen propiedades únicas que permiten a los ingenieros realizar operaciones de unión e intersección entre ellas, incluso si la información codificada está gravemente comprimida o con hash. Estas operaciones permiten [!DNL Segment Match] para obtener la intersección estimada de dos estructuras de datos compuestas de ID de dos zonas protegidas diferentes sin tener que comparar los valores reales. Desde [!DNL Segment Match] utiliza únicamente las estructuras de datos, los ID nunca abandonan los almacenes de perfil de sus respectivas organizaciones para realizar estimaciones. Esto permite al Adobe cumplir con los requisitos de privacidad y seguridad de los clientes, al tiempo que ofrece herramientas de estimación muy precisas para guiar los acuerdos de colaboración de datos.
+Estas estructuras de datos tienen propiedades únicas que permiten a los ingenieros realizar operaciones de unión e intersección entre ellas, incluso si la información codificada está gravemente comprimida o con hash. Estas operaciones permiten que [!DNL Segment Match] obtenga la intersección estimada de dos estructuras de datos compuestas de identificadores de dos zonas protegidas diferentes sin tener que comparar los valores reales. Dado que [!DNL Segment Match] solo utiliza las estructuras de datos, los identificadores nunca abandonan los almacenes de perfil de sus respectivas organizaciones con fines de estimación. Esto permite al Adobe cumplir con los requisitos de privacidad y seguridad de los clientes, al tiempo que ofrece herramientas de estimación muy precisas para guiar los acuerdos de colaboración de datos.
 
 ## ¿Cuál es el proceso detrás de la designación de qué identidades reciben los ID de segmento compartidos?
 
@@ -31,4 +31,4 @@ Estas estructuras de datos tienen propiedades únicas que permiten a los ingenie
 
 El proceso de transferencia de datos entre las identidades cifradas de dos organizaciones diferentes se realiza en un entorno de cálculo neutro. El trabajo de transferencia de datos es propiedad de Adobe y las organizaciones involucradas en la asociación no tienen acceso a este entorno ni tienen acceso a ningún registro que pueda ser el resultado del trabajo de transferencia de datos.
 
-Solo se incorpora la pertenencia a segmentos en los fragmentos de perfil superpuestos de una organización receptora, y no se transfiere ninguna identidad adicional de la organización remitente a la organización receptora. El trabajo de transferencia de datos no lee ningún texto sin formato con información de identificación personal (PII) porque [!DNL Segment Match] solo permite superposiciones en áreas de nombres cifradas SHA256 (correo electrónico/teléfono) siempre que los datos sean PII. Los resultados nunca se almacenan en el entorno de cálculo.
+Solo se incorpora la pertenencia a segmentos en los fragmentos de perfil superpuestos de una organización receptora, y no se transfiere ninguna identidad adicional de la organización remitente a la organización receptora. El trabajo de transferencia de datos no lee información de identificación personal (PII) de texto sin formato porque [!DNL Segment Match] solo permite superposiciones en áreas de nombres cifradas SHA256 (correo electrónico/teléfono) cuando los datos son PII. Los resultados nunca se almacenan en el entorno de cálculo.

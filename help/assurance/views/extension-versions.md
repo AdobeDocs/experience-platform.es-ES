@@ -3,7 +3,7 @@ title: Vista de versiones de las extensiones
 description: Esta guía detalla información sobre la vista Extensiones y las versiones en Adobe Experience Platform Assurance.
 exl-id: a3a649da-1ef1-45a3-a1ed-6a7bc16c2987
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

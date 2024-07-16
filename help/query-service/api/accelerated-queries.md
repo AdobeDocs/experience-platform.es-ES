@@ -12,19 +12,19 @@ ht-degree: 1%
 
 # Extremo de consultas aceleradas
 
-Como parte del SKU de Data Distiller, la variable [API del servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/) permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en los datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se utilizan para [paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md).
+Como parte del SKU de Data Distiller, la [API de servicio de consultas](https://developer.adobe.com/experience-platform-apis/references/query-service/) le permite realizar consultas sin estado en el almacén acelerado. Los resultados devueltos se basan en los datos agregados. La disminución de la latencia de los resultados permite un intercambio de información más interactivo. Las API de consultas aceleradas también se usan para activar [paneles definidos por el usuario](../../dashboards/user-defined-dashboards.md).
 
-Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [Guía de API del servicio de consultas](./getting-started.md) para utilizar correctamente la API del servicio de consultas.
+Antes de continuar con esta guía, asegúrese de haber leído y comprendido la [guía de API del servicio de consultas](./getting-started.md) para usar correctamente la API del servicio de consultas.
 
 ## Introducción
 
-El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la [empaquetado](../packaging.md) y [barandas](../guardrails.md#query-accelerated-store), y [licenciamiento](../data-distiller/license-usage.md) la documentación relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
+El SKU de Data Distiller es necesario para utilizar el almacén acelerado de consultas. Consulte la documentación de [empaquetado](../packaging.md) y [protecciones](../guardrails.md#query-accelerated-store), así como la [licencia](../data-distiller/license-usage.md) relacionada con el SKU de Data Distiller. Si no tiene el SKU de Distiller de datos, póngase en contacto con el representante del servicio de atención al cliente de Adobe para obtener más información.
 
 Las siguientes secciones detallan las llamadas de API necesarias para acceder al almacén acelerado de consultas de forma independiente a través de la API del servicio de consultas. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
 ## Ejecutar una consulta acelerada {#run-accelerated-query}
 
-Realizar una solicitud de POST a `/accelerated-queries` extremo para ejecutar una consulta acelerada. La consulta está contenida directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
+Realice una solicitud de POST al extremo `/accelerated-queries` para ejecutar una consulta acelerada. La consulta está contenida directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
 
 **Formato de API**
 
@@ -36,7 +36,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Solicitudes a `/accelerated-queries` El punto de conexión requiere una instrucción SQL O un ID de plantilla, pero no ambos. Enviar ambos en una solicitud provoca un error.
+>Las solicitudes al extremo `/accelerated-queries` requieren una instrucción SQL O un identificador de plantilla, pero no ambas. Enviar ambos en una solicitud provoca un error.
 
 La siguiente solicitud envía una consulta SQL en el cuerpo de la solicitud al almacén acelerado.
 
@@ -80,9 +80,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | Propiedad | Descripción |
 |---|---|
-| `dbName` | El nombre de la base de datos a la que está realizando una consulta acelerada. El valor de `dbName` debe tener el formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de datos proporcionada debe existir dentro del almacén acelerado o la solicitud producirá un error. También debe asegurarse de que la variable `x-sandbox-name` encabezado y nombre de zona protegida en `dbName` consulte misma zona protegida. |
+| `dbName` | El nombre de la base de datos a la que está realizando una consulta acelerada. El valor de `dbName` debe tener el formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de datos proporcionada debe existir dentro del almacén acelerado o la solicitud producirá un error. También debe asegurarse de que el encabezado `x-sandbox-name` y el nombre de la zona protegida en `dbName` hagan referencia a la misma zona protegida. |
 | `sql` | Una cadena de instrucción SQL. El tamaño máximo permitido es de 1000000 caracteres. |
-| `templateId` | El identificador único de una consulta creada y guardada como plantilla cuando se realiza una solicitud de POST al `/templates` punto final. |
+| `templateId` | Identificador único de una consulta creada y guardada como plantilla cuando se realiza una solicitud de POST al extremo `/templates`. |
 | `name` | Un nombre descriptivo y sencillo opcional para la consulta acelerada. |
 | `description` | Un comentario opcional sobre la intención de la consulta para ayudar a otros usuarios a comprender su propósito. El tamaño máximo permitido es de 1000 bytes. |
 

@@ -15,15 +15,15 @@ ht-degree: 1%
 
 Adobe Experience Platform le permite introducir datos de clientes de varias fuentes para crear un perfil sólido y unificado para cada uno de sus clientes individuales. A medida que los datos se incorporan a Platform, se ejecuta un trabajo de muestra para actualizar el recuento de perfiles y otras métricas relacionadas con los datos del perfil del cliente en tiempo real.
 
-Los resultados de este trabajo de muestra se pueden ver mediante el `/previewsamplestatus` punto de conexión, parte de la API del perfil del cliente en tiempo real. Este extremo también se puede utilizar para enumerar distribuciones de perfil por conjunto de datos y área de nombres de identidad, así como para generar varios informes con el fin de obtener visibilidad sobre la composición del almacén de perfiles de su organización. En esta guía se explican los pasos necesarios para ver estas métricas con la variable `/previewsamplestatus` Extremo de API.
+Los resultados de este trabajo de ejemplo se pueden ver mediante el extremo `/previewsamplestatus`, parte de la API del perfil del cliente en tiempo real. Este extremo también se puede utilizar para enumerar distribuciones de perfil por conjunto de datos y área de nombres de identidad, así como para generar varios informes con el fin de obtener visibilidad sobre la composición del almacén de perfiles de su organización. Esta guía muestra los pasos necesarios para ver estas métricas mediante el extremo de API `/previewsamplestatus`.
 
 >[!NOTE]
 >
->Hay puntos finales de estimación y previsualización disponibles como parte de la API del servicio de segmentación de Adobe Experience Platform que le permiten ver información de resumen con respecto a las definiciones de segmentos para asegurarse de aislar la audiencia esperada. Para encontrar los pasos detallados para trabajar con los extremos de vista previa y estimación, visite la [guía de extremos de previsualizaciones y estimaciones](../../segmentation/api/previews-and-estimates.md), parte de [!DNL Segmentation] Guía para desarrolladores de API.
+>Hay puntos finales de estimación y previsualización disponibles como parte de la API del servicio de segmentación de Adobe Experience Platform que le permiten ver información de resumen con respecto a las definiciones de segmentos para asegurarse de aislar la audiencia esperada. Para ver los pasos detallados para trabajar con los extremos de vista previa y estimación, visite la [guía de extremos de vistas previas y estimaciones](../../segmentation/api/previews-and-estimates.md), que forma parte de la guía para desarrolladores de API [!DNL Segmentation].
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte del [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte la [guía de introducción](getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier [!DNL Experience Platform] API.
+El extremo de API utilizado en esta guía forma parte de la [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Antes de continuar, revisa la [guía de introducción](getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de [!DNL Experience Platform].
 
 ## Fragmentos de perfil frente a perfiles combinados
 
@@ -33,20 +33,20 @@ Cada perfil de cliente individual está compuesto por varios fragmentos de perfi
 
 Cuando los fragmentos de perfil se incorporan en Platform, se combinan (según una política de combinación) para crear un único perfil para ese cliente. Por lo tanto, es probable que el número total de fragmentos de perfil siempre sea mayor que el número total de perfiles combinados, ya que cada perfil está compuesto por varios fragmentos.
 
-Para obtener más información sobre los perfiles y su función dentro del Experience Platform, comience por leer el [Resumen del perfil del cliente en tiempo real](../home.md).
+Para obtener más información sobre los perfiles y su función dentro del Experience Platform, comience por leer la [descripción general del perfil del cliente en tiempo real](../home.md).
 
 ## Activación del trabajo de muestra
 
-A medida que los datos habilitados para Perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacena en el almacén de datos de perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
+A medida que los datos habilitados para el perfil del cliente en tiempo real se incorporan en [!DNL Platform], se almacenan dentro del almacén de datos del perfil. Cuando la ingesta de registros en el almacén de perfiles aumenta o disminuye el recuento total de perfiles en más del 5 %, se activa un trabajo de muestreo para actualizar el recuento. La forma en que se activa la muestra depende del tipo de ingesta que se utilice:
 
-* Para **flujos de trabajo de datos**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si es así, se activa automáticamente un trabajo de muestra para actualizar el recuento.
-* Para **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
+* Para **flujos de trabajo de datos de streaming**, se realiza una comprobación cada hora para determinar si se ha alcanzado el umbral de aumento o disminución del 5 %. Si es así, se activa automáticamente un trabajo de muestra para actualizar el recuento.
+* Para la **ingesta por lotes**, en los 15 minutos siguientes a la ingesta correcta de un lote en el almacén de perfiles, si se alcanza el umbral de aumento o disminución del 5 %, se ejecuta un trabajo para actualizar el recuento. Con la API de perfil puede obtener una vista previa del último trabajo de ejemplo correcto, así como una distribución de perfiles de lista por conjunto de datos y por área de nombres de identidad.
 
-El recuento de perfiles y los perfiles por métricas de área de nombres también están disponibles en la variable [!UICONTROL Perfiles] de la interfaz de usuario de Experience Platform. Para obtener información sobre cómo acceder a los datos de perfil mediante la interfaz de usuario de, visite [[!DNL Profile] Guía de IU](../ui/user-guide.md).
+El recuento de perfiles y los perfiles por métricas de área de nombres también están disponibles en la sección [!UICONTROL Perfiles] de la interfaz de usuario del Experience Platform. Para obtener información sobre cómo obtener acceso a los datos del perfil mediante la interfaz de usuario, visite la [[!DNL Profile] guía de la interfaz de usuario](../ui/user-guide.md).
 
 ## Ver el último estado de muestra {#view-last-sample-status}
 
-Puede realizar una solicitud de GET a `/previewsamplestatus` extremo para ver los detalles del último trabajo de muestra correcto que se ejecutó para su organización. Esto incluye el número total de perfiles en la muestra, así como la métrica de recuento de perfiles o el número total de perfiles que su organización tiene dentro del Experience Platform.
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus` para ver los detalles del último trabajo de ejemplo correcto que se ejecutó para su organización. Esto incluye el número total de perfiles en la muestra, así como la métrica de recuento de perfiles o el número total de perfiles que su organización tiene dentro del Experience Platform.
 
 El recuento de perfiles se genera después de combinar fragmentos de perfil para formar un único perfil para cada cliente individual. En otras palabras, cuando los fragmentos de perfil se combinan, devuelven un recuento de &quot;1&quot; perfiles porque todos están relacionados con el mismo individuo.
 
@@ -75,7 +75,7 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
 
 >[!NOTE]
 >
->En esta respuesta de ejemplo, `numRowsToRead` y `totalRows` son iguales entre sí. Según el número de perfiles que tenga su organización en Experience Platform, este puede ser el caso. Sin embargo, generalmente estos dos números son diferentes, con `numRowsToRead` siendo el número menor porque representa la muestra como un subconjunto del número total de perfiles (`totalRows`).
+>En esta respuesta de ejemplo, `numRowsToRead` y `totalRows` son iguales entre sí. Según el número de perfiles que tenga su organización en Experience Platform, este puede ser el caso. Sin embargo, generalmente estos dos números son diferentes, siendo `numRowsToRead` el número más pequeño porque representa la muestra como un subconjunto del número total de perfiles (`totalRows`).
 
 ```json
 {
@@ -100,7 +100,7 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
 | Propiedad | Descripción |
 |---|---|
 | `numRowsToRead` | Número total de perfiles combinados en la muestra. |
-| `sampleJobRunning` | Un valor booleano que devuelve `true` cuando hay un trabajo de muestra en curso. Proporciona transparencia sobre la latencia que se produce cuando se carga un archivo por lotes en, cuando se agrega realmente al almacén de perfiles. |
+| `sampleJobRunning` | Un valor booleano que devuelve `true` cuando un trabajo de muestra está en curso. Proporciona transparencia sobre la latencia que se produce cuando se carga un archivo por lotes en, cuando se agrega realmente al almacén de perfiles. |
 | `cosmosDocCount` | Recuento total de documentos en Cosmos. |
 | `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de perfiles. |
 | `lastSuccessfulBatchTimestamp` | Marca de tiempo de la última ingesta correcta por lotes. |
@@ -108,13 +108,13 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
 | `totalRows` | Número total de perfiles combinados en Experience Platform, también conocidos como &quot;recuento de perfiles&quot;. |
 | `lastBatchId` | ID de la última ingesta por lotes. |
 | `status` | Estado de la última muestra. |
-| `samplingRatio` | Proporción de perfiles combinados muestreados (`numRowsToRead`) al total de perfiles combinados (`totalRows`), expresado como porcentaje en formato decimal. |
+| `samplingRatio` | Proporción de perfiles combinados muestreados (`numRowsToRead`) respecto al total de perfiles combinados (`totalRows`), expresada como porcentaje en formato decimal. |
 | `mergeStrategy` | Estrategia de combinación utilizada en el ejemplo. |
 | `lastSampledTimestamp` | Última marca de tiempo de muestra correcta. |
 
 ## Enumerar la distribución de perfiles por conjunto de datos
 
-Para ver la distribución de perfiles por conjunto de datos, puede realizar una solicitud de GET al `/previewsamplestatus/report/dataset` punto final.
+Para ver la distribución de perfiles por conjunto de datos, puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/dataset`.
 
 **Formato de API**
 
@@ -129,7 +129,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud utiliza el `date` para devolver el informe más reciente de la fecha especificada.
+La siguiente solicitud usa el parámetro `date` para devolver el informe más reciente para la fecha especificada.
 
 ```shell
 curl -X GET \
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una `data` matriz, que contiene una lista de objetos del conjunto de datos. La respuesta mostrada se ha truncado para mostrar tres conjuntos de datos.
+La respuesta incluye una matriz `data`, que contiene una lista de objetos del conjunto de datos. La respuesta mostrada se ha truncado para mostrar tres conjuntos de datos.
 
 >[!NOTE]
 >
@@ -195,21 +195,21 @@ La respuesta incluye una `data` matriz, que contiene una lista de objetos del co
 | Propiedad | Descripción |
 |---|---|
 | `sampleCount` | Número total de perfiles combinados muestreados con este ID de conjunto de datos. |
-| `samplePercentage` | El `sampleCount` como porcentaje del número total de perfiles combinados muestreados (la variable `numRowsToRead` como se devuelve en la variable [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
+| `samplePercentage` | `sampleCount` como porcentaje del número total de perfiles combinados muestreados (el valor `numRowsToRead` devuelto en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
 | `fullIDsCount` | Número total de perfiles combinados con este ID de conjunto de datos. |
-| `fullIDsPercentage` | El `fullIDsCount` como porcentaje del número total de perfiles combinados (la variable `totalRows` como se devuelve en la variable [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
+| `fullIDsPercentage` | `fullIDsCount` como porcentaje del número total de perfiles combinados (el valor `totalRows` devuelto en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
 | `name` | El nombre del conjunto de datos, tal como se proporciona durante la creación del conjunto de datos. |
 | `description` | La descripción del conjunto de datos, tal como se proporciona durante la creación del conjunto de datos. |
 | `value` | El ID del conjunto de datos. |
 | `streamingIngestionEnabled` | Si el conjunto de datos está habilitado para la ingesta de transmisión. |
 | `createdUser` | El ID del usuario que creó el conjunto de datos. |
-| `reportTimestamp` | La marca de tiempo del informe. Si un `date` se ha proporcionado durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no `date` Si se proporciona el parámetro, se devuelve el informe más reciente. |
+| `reportTimestamp` | La marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
 ## Enumerar la distribución de perfiles por área de nombres de identidad
 
-Puede realizar una solicitud de GET a `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por Adobe como las identidades personalizadas definidas por su organización.
+Puede realizar una solicitud de GET al extremo `/previewsamplestatus/report/namespace` para ver el desglose por área de nombres de identidad en todos los perfiles combinados del almacén de perfiles. Esto incluye tanto las identidades estándar proporcionadas por Adobe como las identidades personalizadas definidas por su organización.
 
-Las áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service, y sirven de indicadores del contexto al que se relacionan los datos de los clientes. Para obtener más información, comience por leer el [información general del área de nombres de identidad](../../identity-service/features/namespaces.md).
+Las áreas de nombres de identidad son un componente importante de Adobe Experience Platform Identity Service, y sirven de indicadores del contexto al que se relacionan los datos de los clientes. Para obtener más información, comience por leer la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud no especifica un `date` y, por lo tanto, devuelve el informe más reciente.
+La siguiente solicitud no especifica un parámetro `date` y, por lo tanto, devuelve el informe más reciente.
 
 ```shell
 curl -X GET \
@@ -241,7 +241,7 @@ curl -X GET \
 
 **Respuesta**
 
-La respuesta incluye una `data` , con objetos individuales que contienen los detalles de cada área de nombres. La respuesta mostrada se ha truncado para mostrar cuatro áreas de nombres.
+La respuesta incluye una matriz `data`, con objetos individuales que contienen los detalles de cada área de nombres. La respuesta mostrada se ha truncado para mostrar cuatro áreas de nombres.
 
 ```json
 {
@@ -294,21 +294,21 @@ La respuesta incluye una `data` , con objetos individuales que contienen los det
 | Propiedad | Descripción |
 |---|---|
 | `sampleCount` | Número total de perfiles combinados muestreados en el área de nombres. |
-| `samplePercentage` | El `sampleCount` como porcentaje de perfiles combinados muestreados (la variable `numRowsToRead` como se devuelve en la variable [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
-| `reportTimestamp` | La marca de tiempo del informe. Si un `date` se ha proporcionado durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no `date` Si se proporciona el parámetro, se devuelve el informe más reciente. |
+| `samplePercentage` | `sampleCount` como porcentaje de perfiles combinados muestreados (el valor `numRowsToRead` devuelto en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
+| `reportTimestamp` | La marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 | `fullIDsFragmentCount` | Número total de fragmentos de perfil en el área de nombres. |
 | `fullIDsCount` | Número total de perfiles combinados en el área de nombres. |
-| `fullIDsPercentage` | El `fullIDsCount` como porcentaje del total de perfiles combinados (la variable `totalRows` como se devuelve en la variable [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
-| `code` | El `code` para el área de nombres. Esto se puede encontrar al trabajar con áreas de nombres utilizando [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) y también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
-| `value` | El `id` valor del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres utilizando [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | `fullIDsCount` como porcentaje del total de perfiles combinados (el valor `totalRows` devuelto en el [último estado de muestra](#view-last-sample-status)), expresado en formato decimal. |
+| `code` | El `code` del área de nombres. Esto se encuentra al trabajar con áreas de nombres mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md), y también se denomina [!UICONTROL Experience Platform de identidad] en la interfaz de usuario. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
+| `value` | El valor `id` del área de nombres. Esto se puede encontrar al trabajar con áreas de nombres usando la [API del servicio de identidad](../../identity-service/api/list-namespaces.md). |
 
 ## Generar el informe de superposición de conjuntos de datos
 
 El informe de superposición de conjuntos de datos proporciona visibilidad de la composición del almacén de perfiles de su organización al exponer los conjuntos de datos que más contribuyen a su audiencia a la que se puede dirigir (perfiles combinados). Además de proporcionar perspectivas sobre sus datos, este informe puede ayudarle a realizar acciones para optimizar el uso de las licencias, como configurar las caducidades de ciertos conjuntos de datos.
 
-GET Puede generar el informe de superposición de conjuntos de datos realizando una solicitud al `/previewsamplestatus/report/dataset/overlap` punto final.
+Puede generar el informe de superposición de conjuntos de datos realizando una solicitud de GET al extremo `/previewsamplestatus/report/dataset/overlap`.
 
-Para obtener instrucciones paso a paso sobre cómo generar el informe de superposición de conjuntos de datos mediante la línea de comandos o la interfaz de usuario de Postman, consulte la [tutorial generación del informe de superposición de conjuntos de datos](../tutorials/dataset-overlap-report.md).
+Para obtener instrucciones paso a paso sobre cómo generar el informe de superposición de conjuntos de datos mediante la línea de comandos o la interfaz de usuario de Postman, consulte el tutorial [generación del informe de superposición de conjuntos de datos](../tutorials/dataset-overlap-report.md).
 
 **Formato de API**
 
@@ -323,7 +323,7 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud utiliza el `date` para devolver el informe más reciente de la fecha especificada.
+La siguiente solicitud usa el parámetro `date` para devolver el informe más reciente para la fecha especificada.
 
 ```shell
 curl -X GET \
@@ -350,12 +350,12 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de superpos
 
 | Propiedad | Descripción |
 |---|---|
-| `data` | El `data` contiene listas de conjuntos de datos separados por comas y sus respectivos recuentos de perfiles. |
-| `reportTimestamp` | La marca de tiempo del informe. Si un `date` se ha proporcionado durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no `date` Si se proporciona el parámetro, se devuelve el informe más reciente. |
+| `data` | El objeto `data` contiene listas de conjuntos de datos separados por comas y sus respectivos recuentos de perfiles. |
+| `reportTimestamp` | La marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
 ### Interpretación del informe de superposición de conjuntos de datos
 
-Los resultados del informe se pueden interpretar a partir de los conjuntos de datos y los recuentos de perfiles de la respuesta. Consideremos el siguiente informe de ejemplo `data` objeto:
+Los resultados del informe se pueden interpretar a partir de los conjuntos de datos y los recuentos de perfiles de la respuesta. Consideremos el siguiente objeto de informe de ejemplo `data`:
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -366,15 +366,15 @@ Los resultados del informe se pueden interpretar a partir de los conjuntos de da
 Este informe proporciona la siguiente información:
 
 * Hay 123 perfiles compuestos de datos procedentes de los siguientes conjuntos de datos: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
-* Hay 454 412 perfiles compuestos de datos procedentes de estos dos conjuntos de datos: `5d92921872831c163452edc8` y `5eb2cdc6fa3f9a18a7592a98`.
-* Hay 107 perfiles que solo están compuestos por datos de conjuntos de datos `5eeda0032af7bb19162172a7`.
+* Hay 454.412 perfiles compuestos de datos procedentes de estos dos conjuntos de datos: `5d92921872831c163452edc8` y `5eb2cdc6fa3f9a18a7592a98`.
+* Hay 107 perfiles que están compuestos solamente de datos del conjunto de datos `5eeda0032af7bb19162172a7`.
 * Hay un total de 454.642 perfiles en la organización.
 
 ## Generar el informe de superposición del área de nombres de identidad {#identity-overlap-report}
 
 El informe de superposición de áreas de nombres de identidad proporciona visibilidad sobre la composición del almacén de perfiles de su organización al exponer las áreas de nombres de identidad que más contribuyen a su audiencia a la que se puede dirigir (perfiles combinados). Esto incluye tanto las áreas de nombres de identidad estándar proporcionadas por Adobe, como las áreas de nombres de identidad personalizadas definidas por su organización.
 
-GET Puede generar el informe de superposición de área de nombres de identidad realizando una solicitud a la variable `/previewsamplestatus/report/namespace/overlap` punto final.
+Puede generar el informe de superposición de área de nombres de identidad realizando una solicitud de GET al extremo `/previewsamplestatus/report/namespace/overlap`.
 
 **Formato de API**
 
@@ -389,7 +389,7 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 **Solicitud**
 
-La siguiente solicitud utiliza el `date` para devolver el informe más reciente de la fecha especificada.
+La siguiente solicitud usa el parámetro `date` para devolver el informe más reciente para la fecha especificada.
 
 ```shell
 curl -X GET \
@@ -444,15 +444,15 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de superpos
 
 | Propiedad | Descripción |
 |---|---|
-| `data` | El `data` contiene listas separadas por comas con combinaciones únicas de códigos de área de nombres de identidad y sus respectivos recuentos de perfiles. |
-| Códigos de área de nombres | El `code` es una forma abreviada para cada nombre de área de nombres de identidad. Una asignación de cada `code` a su `name` se puede encontrar utilizando la variable [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). El `code` también se denomina la variable [!UICONTROL Símbolo de identidad] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [información general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
-| `reportTimestamp` | La marca de tiempo del informe. Si un `date` se ha proporcionado durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no `date` Si se proporciona el parámetro, se devuelve el informe más reciente. |
+| `data` | El objeto `data` contiene listas separadas por comas con combinaciones únicas de códigos de área de nombres de identidad y sus respectivos recuentos de perfiles. |
+| Códigos de área de nombres | `code` es una forma abreviada de cada nombre de área de nombres de identidad. Se puede encontrar una asignación de cada `code` a su `name` mediante la [API del servicio de identidad de Adobe Experience Platform](../../identity-service/api/list-namespaces.md). `code` también se conoce como [!UICONTROL Identity symbol] en la interfaz de usuario de Experience Platform. Para obtener más información, visite la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
+| `reportTimestamp` | La marca de tiempo del informe. Si se proporcionó un parámetro `date` durante la solicitud, el informe devuelto es para la fecha proporcionada. Si no se proporciona ningún parámetro `date`, se devuelve el informe más reciente. |
 
 ### Interpretación del informe de superposición de área de nombres de identidad
 
 Los resultados del informe se pueden interpretar a partir de las identidades y los recuentos de perfiles de la respuesta. El valor numérico de cada fila indica cuántos perfiles están compuestos de esa combinación exacta de áreas de nombres de identidad estándar y personalizadas.
 
-Consideremos el siguiente extracto de la `data` objeto:
+Considere el siguiente extracto del objeto `data`:
 
 ```json
   "AAID,ECID,Email,crmid": 142,
@@ -462,15 +462,15 @@ Consideremos el siguiente extracto de la `data` objeto:
 
 Este informe proporciona la siguiente información:
 
-* Hay 142 perfiles compuestos por `AAID`, `ECID`, y `Email` identidades estándar, así como de una lista personalizada `crmid` área de nombres de identidad.
+* Hay 142 perfiles compuestos de `AAID`, `ECID` y `Email` identidades estándar, así como de un área de nombres de identidad `crmid` personalizada.
 * Hay 24 perfiles compuestos por `AAID` y `ECID` áreas de nombres de identidad.
-* Hay 6565 perfiles que solo incluyen un `ECID` identidad.
+* Hay 6565 perfiles que solo incluyen una identidad `ECID`.
 
 ## Generación del informe de perfiles no enlazados
 
-Puede obtener más visibilidad sobre la composición del almacén de perfiles de su organización a través del informe de perfiles no enlazados. Un perfil &quot;no identificado&quot; es un perfil que contiene solo un fragmento de perfil. Un perfil &quot;desconocido&quot; es un perfil asociado a áreas de nombres de identidad seudónimas como `ECID` y `AAID`. Los perfiles desconocidos están inactivos, lo que significa que no han agregado nuevos eventos para el período de tiempo especificado. El informe de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
+Puede obtener más visibilidad sobre la composición del almacén de perfiles de su organización a través del informe de perfiles no enlazados. Un perfil &quot;no identificado&quot; es un perfil que contiene solo un fragmento de perfil. Un perfil &quot;desconocido&quot; es un perfil asociado con áreas de nombres de identidad seudónimas como `ECID` y `AAID`. Los perfiles desconocidos están inactivos, lo que significa que no han agregado nuevos eventos para el período de tiempo especificado. El informe de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
 
-GET Puede generar el informe de perfiles no enlazados realizando una solicitud a la variable `/previewsamplestatus/report/unstitchedProfiles` punto final.
+Puede generar el informe de perfiles no enlazados realizando una solicitud de GET al extremo `/previewsamplestatus/report/unstitchedProfiles`.
 
 **Formato de API**
 
@@ -496,7 +496,7 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles
 
 >[!NOTE]
 >
->A los efectos de esta guía, el informe se ha truncado para incluir solo `"120days"` y &quot;`7days`&quot; periodos de tiempo. El informe completo de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
+>A los efectos de esta guía, el informe se ha truncado para incluir solamente `"120days"` y &quot;`7days`&quot; períodos de tiempo. El informe completo de perfiles no enlazados proporciona un desglose de perfiles para un periodo de 7, 30, 60, 90 y 120 días.
 
 ```json
 {
@@ -548,20 +548,20 @@ Una solicitud correcta devuelve el estado HTTP 200 (OK) y el informe de perfiles
 
 | Propiedad | Descripción |
 |---|---|
-| `data` | El `data` contiene la información devuelta para el informe de perfiles no enlazados. |
+| `data` | El objeto `data` contiene la información devuelta para el informe de perfiles no enlazados. |
 | `totalNumberOfProfiles` | Recuento total de perfiles únicos en el almacén de perfiles. Es equivalente al recuento de audiencias a las que se puede dirigir. Incluye perfiles conocidos y no enlazados. |
 | `totalNumberOfEvents` | Número total de ExperienceEvents en el almacén de perfiles. |
 | `unstitchedProfiles` | Un objeto que contiene un desglose de perfiles no enlazados por periodo de tiempo. El informe de perfiles no enlazados proporciona un desglose de perfiles para los períodos de tiempo de 7, 30, 60, 90 y 120 días. |
 | `countOfProfiles` | El recuento de perfiles no enlazados para el periodo de tiempo o el recuento de perfiles no enlazados para el área de nombres. |
 | `eventsAssociated` | El número de ExperienceEvents para el intervalo de tiempo o el número de eventos para el área de nombres. |
-| `nsDistribution` | Un objeto que contiene áreas de nombres de identidad individuales con la distribución de perfiles y eventos no enlazados para cada área de nombres. Nota: Sumando el total `countOfProfiles` para cada área de nombres de identidad en `nsDistribution` objeto es igual a `countOfProfiles` para el periodo de tiempo. Lo mismo se aplica a `eventsAssociated` por área de nombres y el total `eventsAssociated` por período de tiempo. |
+| `nsDistribution` | Un objeto que contiene áreas de nombres de identidad individuales con la distribución de perfiles y eventos no enlazados para cada área de nombres. Nota: La suma del total de `countOfProfiles` para cada área de nombres de identidad en el objeto `nsDistribution` es igual a `countOfProfiles` para el período de tiempo. Lo mismo se aplica a `eventsAssociated` por área de nombres y al total de `eventsAssociated` por período de tiempo. |
 | `reportTimestamp` | La marca de tiempo del informe. |
 
 ### Interpretación del informe de perfiles no enlazados
 
 Los resultados del informe pueden proporcionar una perspectiva de cuántos perfiles no enlazados e inactivos tiene su organización dentro de su almacén de perfiles.
 
-Consideremos el siguiente extracto de la `data` objeto:
+Considere el siguiente extracto del objeto `data`:
 
 ```json
   "7days": {
@@ -593,5 +593,5 @@ Este informe proporciona la siguiente información:
 
 ## Pasos siguientes
 
-Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el almacén de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre sus definiciones de segmento. Esta información le ayuda a aislar la audiencia esperada. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones mediante la API de segmentación, visite la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
+Ahora que sabe cómo obtener una vista previa de los datos de ejemplo en el almacén de perfiles y ejecutar varios informes sobre los datos, también puede utilizar los extremos de estimación y vista previa de la API del servicio de segmentación para ver información de resumen sobre sus definiciones de segmento. Esta información le ayuda a aislar la audiencia esperada. Para obtener más información sobre cómo trabajar con vistas previas y estimaciones mediante la API de segmentación, visita la [guía de vista previa y estimación de extremos](../../segmentation/api/previews-and-estimates.md).
 

@@ -4,7 +4,7 @@ description: Descubra cómo se establecen las relaciones de recursos en la API d
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '809'
 ht-degree: 99%
 
 ---
@@ -150,8 +150,8 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ | | |
+| `entity` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ | | |
+| `library` | ✓ | | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `updated_with_extension` | ✓ | | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ | ✓ | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension_package` | ✓ | ✓ | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ |
+| `data_elements` | | | ✓ |
+| `extensions` | | | ✓ |
+| `rules` | | | ✓ |
+| `notes` | | | |
+| `upstream_library` | ✓ | | |
+| `property` | ✓ | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -260,28 +260,28 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
-### Regla componentes
+### Componentes de regla
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ | | |
+| `updated_with_extension` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `notes` | | | |
+| `origin` | ✓ | | |
+| `property` | ✓ | | |
+| `rules` | ✓ | ✓ | |
+| `revisions` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ En las tablas siguientes se describen las relaciones disponibles para cada tipo 
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `rule_components` | | | |
 
 ### Secretos
 
 | Relación | Requerido | Crear por carga útil | Crear por dirección URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ | | ✓ |
+| `environment` | ✓ | ✓ | |
 

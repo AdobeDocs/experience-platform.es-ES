@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Los elementos de acción del cliente de esta página se aplican a usted si su organización ha configurado flujos de datos para exportar datos a Pinterest antes del 16 de noviembre de 2023, la fecha en que se creó el nuevo **[!UICONTROL Pinterest]** El destino de, que utiliza la última API de Pinterest, se añadió al catálogo de destinos.
+>Los elementos de acción del cliente de esta página se aplican a usted si su organización ha configurado flujos de datos para exportar datos a Pinterest antes del 16 de noviembre de 2023, la fecha en la que se agregó el nuevo destino **[!UICONTROL Pinterest]**, con la última API de Pinterest, al catálogo de destinos.
 
 ## ¿Qué está sucediendo?
 
-Pinterest ha desaprobado la API de anunciante v4 que utilizaba [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) en Real-Time CDP. El Adobe ha actualizado el destino para utilizar el [API de anunciante v5](https://developers.pinterest.com/docs/getting-started/migration/). Lea esta página para comprender los elementos de su acción con el fin de realizar una transición sin problemas a la nueva API sin interrupciones para sus campañas de Pinterest.
+Pinterest ha desaprobado la API de anunciante v4 que usaba [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) en Real-Time CDP. El Adobe actualizó el destino para usar la API del anunciante [v5](https://developers.pinterest.com/docs/getting-started/migration/). Lea esta página para comprender los elementos de su acción con el fin de realizar una transición sin problemas a la nueva API sin interrupciones para sus campañas de Pinterest.
 
 ## ¿Por qué se me notifica?
 
@@ -35,22 +35,22 @@ Sí, antes del 18 de enero de 2024, debe autenticarse en el nuevo destino de Pin
 
 ### Volver a autenticar en Pinterest {#reauthenticate}
 
-1. Ir a **[!UICONTROL Destinos > Cuentas]** y utilice el filtro de la pantalla para filtrar solo el destino de Pinterest.
-   ![Filtrar solo cuentas de Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. En el **Pinterest** destino, seleccione el símbolo de tres puntos ... y seleccione **[!UICONTROL Editar detalles]**.
-   ![Seleccione Editar detalles](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Seleccionar **[!UICONTROL Volver a conectar OAuth]** e inicie sesión en su cuenta de Pinterest.
-   ![Seleccione Volver a conectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+1. Vaya a **[!UICONTROL Destinos > Cuentas]** y use el filtro de la pantalla para filtrar solo el destino de Pinterest.
+   ![Solo filtrar cuentas de Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+2. En el destino **Pinterest**, seleccione el símbolo de tres puntos... y seleccione **[!UICONTROL Editar detalles]**.
+   ![Seleccionar Editar detalles](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
+3. Seleccione **[!UICONTROL Volver a conectar OAuth]** e inicie sesión en su cuenta de Pinterest.
+   ![Seleccionar OAuth de reconexión](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Continúe con el elemento de acción en la sección siguiente
 
 ### Habilitar flujos a un nuevo destino {#disable-old-enable-new-flows}
 
-A continuación, debe habilitar los flujos de datos en el nuevo  **[!UICONTROL Pinterest]** Tarjeta de.
+A continuación, debe habilitar los flujos de datos en la nueva tarjeta **[!UICONTROL Pinterest]**.
 
-1. Ir a **[!UICONTROL Destinos > Examinar]** y utilice el filtro de la pantalla para filtrar el **[!UICONTROL Pinterest]** solo destino.
-   ![Filtre los flujos de datos de Pinterest solo en la pestaña Examinar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Seleccione el nombre de la conexión hipervinculada (campaña de fidelización en el ejemplo de captura de pantalla anterior) a la **[!UICONTROL Pinterest]** y cambie el **[!UICONTROL Activar]** cambiar a **el**.
-   ![Activar para conexiones nuevas y desactivar para conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+1. Vaya a **[!UICONTROL Destinos > Examinar]** y utilice el filtro de la pantalla para filtrar solo el destino **[!UICONTROL Pinterest]**.
+   ![Filtrar flujos de datos de Pinterest solo en la ficha Examinar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
+2. Seleccione el nombre de la conexión con hipervínculo (campaña de fidelización en el ejemplo de captura de pantalla anterior) al destino **[!UICONTROL Pinterest]** y cambie el conmutador **[!UICONTROL Habilitar]** a **activado**.
+   ![Activar y desactivar para las conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
 
@@ -62,9 +62,9 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 Sí, consulte lo siguiente:
 
-**Para el 16 de noviembre de 2023**: el nuevo destino está listo y debería ver dos tarjetas de Pinterest en paralelo en el catálogo hasta que Pinterest deje de admitir la antigua API v4. Todos los flujos de datos existentes en la tarjeta de Pinterest actual se copian en el nuevo destino.
+**Antes del 16 de noviembre de 2023**: el nuevo destino está listo y debería ver dos tarjetas de Pinterest una al lado de la otra en el catálogo hasta que Pinterest deje de admitir la antigua API v4. Todos los flujos de datos existentes en la tarjeta de Pinterest actual se copian en el nuevo destino.
 
-![Destino de Pinterest antiguo y nuevo en paralelo](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
+![Paralelo de destino de Pinterest antiguo y nuevo](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 <!--
 
@@ -77,7 +77,7 @@ Sí, consulte lo siguiente:
 
 **Para el 15 de diciembre de 2023**: <span class="preview">Acción del cliente 1</span>. Debe volver a autenticarse en Pinterest para que la nueva tarjeta esté conectada a Pinterest. Ver instrucciones completas en [esta sección](#reauthenticate).
 
-<span class="preview">Acción del cliente 2</span>A continuación, debe habilitar los flujos de datos en la nueva tarjeta. Ver instrucciones completas en [esta sección](#disable-old-enable-new-flows).
+<span class="preview">Acción del cliente 2</span>. A continuación, debe habilitar los flujos de datos en la nueva tarjeta. Ver instrucciones completas en [esta sección](#disable-old-enable-new-flows).
 
 <!--
 
@@ -87,7 +87,7 @@ Sí, consulte lo siguiente:
 
 -->
 
-**Después del 18 de enero de 2024**: <span class="preview">Pinterest ha desactivado el acceso a la API del anunciante V4. Los clientes de Real-Time CDP que no hayan actualizado al nuevo destino encontrarán ahora que sus flujos de datos al destino de Pinterest fallan. [Volver a autenticar en Pinterest](#reauthenticate) y [habilitar los flujos de datos](#disable-old-enable-new-flows) al destino actualizado para reanudar las campañas en Pinterest.</span>
+**Después del 18 de enero de 2024**: <span class="preview">Pinterest ha desactivado el acceso a la API de anunciante V4. Los clientes de Real-Time CDP que no hayan actualizado al nuevo destino encontrarán ahora que sus flujos de datos al destino de Pinterest fallan. [Vuelva a autenticarse en Pinterest](#reauthenticate) y [habilite los flujos de datos](#disable-old-enable-new-flows) en el destino actualizado para reanudar sus campañas en Pinterest.</span>
 
 <!--
 

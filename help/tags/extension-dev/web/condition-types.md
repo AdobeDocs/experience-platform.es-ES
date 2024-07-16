@@ -29,7 +29,7 @@ Este documento explica cómo definir los tipos de condición para una extensión
 
 Los tipos de condición suelen consistir en lo siguiente:
 
-1. A [vista](./views.md) se muestra dentro de la interfaz de usuario del Experience Platform y de la recopilación de datos que permite a los usuarios modificar la configuración de la condición.
+1. Una [vista](./views.md) que se muestra dentro de la IU del Experience Platform y la IU de recopilación de datos y que permite a los usuarios modificar la configuración de la condición.
 2. Módulo de biblioteca que se emite dentro de la biblioteca de tiempo de ejecución de la etiqueta para interpretar la configuración y evaluar una condición.
 
 Un módulo de biblioteca de tipo condición tiene un objetivo: evaluar si algo es verdadero o falso. Lo que evalúan depende de usted.

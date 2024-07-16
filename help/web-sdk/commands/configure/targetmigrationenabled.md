@@ -1,7 +1,8 @@
 ---
 title: targetMigrationEnabled
 description: Permita que el SDK web lea y escriba cookies de Adobe Target.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -10,22 +11,22 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-El `targetMigrationEnabled` La propiedad es un booleano que permite al SDK web leer y escribir las cookies mbox y mboxEdgeCluster que utilizan las bibliotecas Adobe Target 1.x y 2.x. Esta opción le permite conservar el perfil del visitante entre páginas que utilizan implementaciones anteriores de Adobe Target y páginas que utilizan el SDK web.
+La propiedad `targetMigrationEnabled` es un booleano que permite al SDK web leer y escribir las cookies mbox y mboxEdgeCluster que utilizan las bibliotecas Adobe Target 1.x y 2.x. Esta opción le permite conservar el perfil del visitante entre páginas que utilizan implementaciones anteriores de Adobe Target y páginas que utilizan el SDK web.
 
 ## Habilitar la migración de Target desde at.js mediante la extensión de etiqueta del SDK web
 
-Seleccione el **[!UICONTROL Migración de Target de at.js al SDK web]** casilla de verificación cuando [configuración de la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Seleccione la casilla de verificación **[!UICONTROL Migrar Target de at.js al SDK web]** al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Iniciar sesión en [experience.adobe.com](https://experience.adobe.com) usando sus credenciales de Adobe ID.
+1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
 1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
 1. Seleccione la propiedad de etiquetas que desee.
-1. Vaya a **[!UICONTROL Extensiones]**, luego haga clic en **[!UICONTROL Configurar]** en el [!UICONTROL SDK web de Adobe Experience Platform] Tarjeta de.
-1. Desplácese hacia abajo hasta el [!UICONTROL Personalización] y, a continuación, seleccione la casilla de verificación **[!UICONTROL Migración de Target de at.js al SDK web]**.
-1. Clic **[!UICONTROL Guardar]** y, a continuación, publique los cambios.
+1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
+1. Desplácese hacia abajo hasta la sección [!UICONTROL Personalization] y, a continuación, active la casilla de verificación **[!UICONTROL Migrar Target de at.js al SDK web]**.
+1. Haz clic en **[!UICONTROL Guardar]** y después publica los cambios.
 
 ## Habilitar la migración de Target desde at.js mediante la biblioteca JavaScript del SDK web
 
-Configure las variables `targetMigrationEnabled` booleano al ejecutar el `configure` comando. Si omite esta propiedad al configurar el SDK web, el valor predeterminado es `false`. Establezca este valor en `true` si tiene páginas que todavía utilizan las bibliotecas Adobe Target 1.x o 2.x.
+Establezca el booleano `targetMigrationEnabled` al ejecutar el comando `configure`. Si omite esta propiedad al configurar el SDK web, el valor predeterminado es `false`. Establezca este valor en `true` si tiene algunas páginas que todavía usan las bibliotecas Adobe Target 1.x o 2.x.
 
 ```js
 alloy("configure", {

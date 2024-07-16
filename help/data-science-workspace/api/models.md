@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;modelos;api de aprendizaje automático de sensei
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;modelos;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Extremo de API de modelos
 description: Un modelo es una instancia de una fórmula de aprendizaje automático que se forma con datos históricos y configuraciones para resolver un caso de uso empresarial.
@@ -18,7 +18,7 @@ Un modelo es una instancia de una fórmula de aprendizaje automático que se for
 
 ## Recuperación de una lista de modelos
 
-Puede recuperar una lista de detalles de modelo que pertenezcan a todos los modelos realizando una única solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a partir del modelo creado más antiguo y limitará los resultados a 25. Puede filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de detalles de modelo que pertenezcan a todos los modelos realizando una única solicitud de GET a /models. De forma predeterminada, esta lista se ordenará a partir del modelo creado más antiguo y limitará los resultados a 25. Puede filtrar los resultados especificando algunos parámetros de consulta. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -94,13 +94,13 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles de los
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `name` valor del modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. La URI termina con el valor `name` para el modelo. |
 | `experimentId` | ID de experimento válido. |
 | `experimentRunId` | ID de ejecución de experimento válido. |
 
 ## Recuperar un modelo específico
 
-Puede recuperar una lista de detalles de modelo que pertenezcan a un modelo concreto realizando una única solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de detalles de modelo que pertenezcan a un modelo concreto realizando una única solicitud de GET y proporcionando un ID de modelo válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -158,13 +158,13 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `name` valor del modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. La URI termina con el valor `name` para el modelo. |
 | `experimentId` | ID de experimento válido. |
 | `experimentRunId` | ID de ejecución de experimento válido. |
 
 ## Registro de un modelo generado previamente {#register-a-model}
 
-Puede registrar un modelo generado previamente realizando una solicitud de POST a la variable `/models` punto final. Para registrar su modelo, la variable `modelArtifact` archivo y `model` los valores de propiedad deben incluirse en el cuerpo de la solicitud.
+Puede registrar un modelo generado previamente realizando una solicitud de POST al extremo `/models`. Para registrar el modelo, es necesario incluir el archivo `modelArtifact` y los valores de propiedad `model` en el cuerpo de la solicitud.
 
 **Formato de API**
 
@@ -174,7 +174,7 @@ POST /models
 
 **Solicitud**
 
-El siguiente POST contiene el `modelArtifact` archivo y `model` valores de propiedad necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
+El siguiente POST contiene el archivo `modelArtifact` y `model` valores de propiedad necesarios. Consulte la tabla siguiente para obtener más información sobre estos valores.
 
 ```shell
 curl -X POST \
@@ -214,7 +214,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del mo
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID correspondiente al modelo. |
-| `modelArtifactUri` | URI que indica dónde se almacena el modelo. El URI termina con `id` valor para el modelo. |
+| `modelArtifactUri` | URI que indica dónde se almacena el modelo. La URI termina con el valor `id` para el modelo. |
 
 ## Actualización de un modelo por ID
 
@@ -318,7 +318,7 @@ Una respuesta correcta devuelve una carga útil que contiene un estado 200 que c
 
 ## Creación de una nueva transcodificación para un modelo {#create-transcoded-model}
 
-La transcodificación es la conversión digital a digital directa de una codificación a otra. Para crear una nueva transcodificación para un modelo, proporcione el `{MODEL_ID}` y una `targetFormat` desea que el nuevo resultado esté en.
+La transcodificación es la conversión digital a digital directa de una codificación a otra. Crea una nueva transcodificación para un modelo proporcionando los `{MODEL_ID}` y un `targetFormat` en los que desea que esté el nuevo resultado.
 
 **Formato de API**
 
@@ -355,7 +355,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único de transcodificaciones (`id`) utilizado en [Recuperación de un modelo transcodificado específico](#retrieve-transcoded-model).
+Una respuesta correcta devuelve una carga útil que contiene un objeto JSON con la información de la transcodificación. Esto incluye el identificador único de transcodificaciones (`id`) usado en [recuperar un modelo transcodificado específico](#retrieve-transcoded-model).
 
 ```json
 {
@@ -433,7 +433,7 @@ Una respuesta correcta devuelve una carga útil que contiene un objeto json con 
 
 ## Recuperación de un modelo transcodificado específico {#retrieve-transcoded-model}
 
-Puede recuperar un modelo transcodificado específico realizando una solicitud de GET con su `{MODEL_ID}` y el id de un modelo transcodificado.
+Puede recuperar un modelo transcodificado específico realizando una solicitud de GET con su `{MODEL_ID}` y el ID de un modelo transcodificado.
 
 **Formato de API**
 

@@ -10,21 +10,21 @@ ht-degree: 2%
 
 ---
 
-# Actualice las especificaciones de flujo utilizando [!DNL Flow Service] API
+# Actualizar especificaciones de flujo mediante la API [!DNL Flow Service]
 
 Una vez que haya generado un nuevo ID de especificación de conexión, debe agregar este ID a una especificación de flujo para crear un flujo de datos.
 
-Las especificaciones de flujo contienen información que define un flujo, incluidos los ID de conexión de origen y destino que admite, las especificaciones de transformación que se deben aplicar a los datos y los parámetros de programación necesarios para generar un flujo. Puede editar las especificaciones de flujo mediante el `/flowSpecs` punto final.
+Las especificaciones de flujo contienen información que define un flujo, incluidos los ID de conexión de origen y destino que admite, las especificaciones de transformación que se deben aplicar a los datos y los parámetros de programación necesarios para generar un flujo. Puede editar las especificaciones de flujo mediante el extremo `/flowSpecs`.
 
-El siguiente documento proporciona pasos sobre cómo recuperar y actualizar especificaciones de flujo mediante el [!DNL Flow Service] API para orígenes de autoservicio (SDK por lotes).
+El siguiente documento proporciona pasos sobre cómo recuperar y actualizar las especificaciones de flujo mediante la API [!DNL Flow Service] para orígenes de autoservicio (SDK por lotes).
 
 ## Introducción
 
-Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Búsqueda de una especificación de flujo {#lookup}
 
-Fuentes creadas con `generic-rest-extension` todas las plantillas utilizan el `RestStorageToAEP` especificación de flujo. Esta especificación de flujo se puede recuperar realizando una solicitud de GET al `/flowSpecs/` extremo y proporciona el `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Todos los orígenes creados con la plantilla `generic-rest-extension` utilizan la especificación de flujo `RestStorageToAEP`. Esta especificación de flujo se puede recuperar realizando una solicitud de GET al extremo `/flowSpecs/` y proporcionando el `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **Formato de API**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **Solicitud**
 
-La siguiente solicitud recupera el `6499120c-0b15-42dc-936e-847ea3c24d72` especificación de conexión.
+La siguiente solicitud recupera la especificación de conexión `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 ```shell
 curl -X GET \
@@ -247,7 +247,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **Solicitud**
 
-La siguiente solicitud actualiza la especificación de flujo de `6499120c-0b15-42dc-936e-847ea3c24d72` para incluir el ID de especificación de conexión `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
+La siguiente solicitud actualiza la especificación de flujo de `6499120c-0b15-42dc-936e-847ea3c24d72` para incluir el identificador de especificación de conexión `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
 
 ```shell
 PUT -X GET \
@@ -610,4 +610,4 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo cons
 
 ## Pasos siguientes
 
-Con la nueva especificación de conexión añadida a la especificación de flujo adecuada, ahora puede continuar con la prueba y el envío del nuevo origen. Consulte la guía de [prueba y envío de un nuevo origen](./submit.md) para obtener más información.
+Con la nueva especificación de conexión añadida a la especificación de flujo adecuada, ahora puede continuar con la prueba y el envío del nuevo origen. Consulte la guía sobre [probar y enviar un nuevo origen](./submit.md) para obtener más información.

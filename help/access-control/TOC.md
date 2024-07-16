@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -28,13 +28,13 @@ ht-degree: 44%
       * [Funciones](abac/ui/roles.md)
       * [Zonas protegidas](abac/ui/sandboxes.md)
       * [Usuarios](abac/ui/users.md)
-   * API de control de acceso basado en atributos {#abac-api}
+   * API de control de acceso basada en atributos {#abac-api}
       * [Información general](abac/api/overview.md)
       * [Primeros pasos](abac/api/getting-started.md)
       * [Funciones](abac/api/roles.md)
       * [Políticas](abac/api/policies.md)
       * [Productos](abac/api/products.md)
-* IU de control de acceso {#ui}
+* Interfaz de usuario de control de acceso {#ui}
    * [Información general](ui/overview.md)
    * [Seleccione un perfil de producto](ui/browse.md)
    * [Administración de permisos para un perfil de producto](ui/permissions.md)
@@ -47,4 +47,4 @@ ht-degree: 44%
    * [Ver directivas efectivas](api/effective-policies.md)
 * [Guía de resolución de problemas](troubleshooting-guide.md)
 * [Referencia de API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Notas de la versión de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)

@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 8%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=es" text="Información general de gobernanza de datos"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=es" text="Información general sobre etiquetas de gobernanza de datos"
 
-Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las políticas de uso de datos.
+Una de las funciones principales de Adobe Experience Platform es reunir datos de varios sistemas empresariales para permitir que los especialistas en marketing identifiquen, comprendan y capturen clientes. Estos datos pueden estar sujetos a restricciones de uso definidas por su organización o por la normativa legal. Por lo tanto, es importante asegurarse de que las operaciones de datos dentro de [!DNL Platform] cumplen con las directivas de uso de datos.
 
 Administre los datos de los clientes y garantice el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos con el control de datos de Adobe Experience Platform. La gobernanza de datos desempeña un papel clave dentro del Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de datos, las políticas de uso de datos y el control del uso de datos para acciones de marketing.
 
@@ -57,9 +57,9 @@ El marco de trabajo de control de datos simplifica y optimiza el proceso de cate
 
 El marco de trabajo de gobernanza de datos consta de tres elementos clave: etiquetas, políticas y aplicación.
 
-1. **Etiquetas:** Clasifique los datos que reflejan consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las regulaciones y políticas de la organización.
-1. **Políticas:** Describa qué tipos de acciones de marketing se permiten o no se permiten realizar en datos específicos.
-1. **Aplicación:** Utiliza el marco de directivas para aconsejar y aplicar directivas en distintos patrones de acceso a datos.
+1. **Etiquetas:** Clasifique datos que reflejen consideraciones relacionadas con la privacidad y condiciones contractuales para cumplir con las regulaciones y políticas de la organización.
+1. **Directivas:** Describa qué tipos de acciones de marketing se permiten o no se permiten realizar en datos específicos.
+1. **Aplicación:** Utiliza el marco de directivas para aconsejar y aplicar directivas en diferentes patrones de acceso a datos.
 
 ## Etiquetas de uso de datos {#data-usage-labels}
 
@@ -69,17 +69,17 @@ El marco de trabajo de control de datos incluye etiquetas de uso de datos predef
 
 ![Las tres categorías de etiquetas de uso de datos.](./images/overview/label-categories.png)
 
-* **Etiquetas de datos del contrato &quot;C&quot;:** Etiquete y categorice los datos que tienen obligaciones contractuales o están relacionados con las políticas de gobernanza de datos del cliente.
-* **Etiquetas de datos de identidad &quot;I&quot;:** Etiquete y categorice datos que puedan identificar o contactar a una persona específica.
-* **Etiquetas De Datos &quot;S&quot; Confidenciales:** Etiquete y categorice los datos relacionados con datos confidenciales, como datos geográficos.
+* **Etiquetas de datos del contrato &quot;C&quot;:** Etiquete y categorice los datos que tienen obligaciones contractuales o están relacionados con las directivas de control de datos de clientes.
+* **Etiquetas de datos de identidad &quot;I&quot;:** Etiquete y categorice los datos que pueden identificar a una persona específica o ponerse en contacto con ella.
+* **Etiquetas de datos confidenciales de tipo &quot;S&quot;:** Etiquete y categorice los datos relacionados con datos confidenciales, como datos geográficos.
 
 >[!NOTE]
 >
->Consulte la guía de [etiquetas de uso de datos admitidas](labels/reference.md) para obtener una lista completa de las etiquetas disponibles y definiciones para cada tipo de etiqueta.
+>Consulte la guía de [etiquetas de uso de datos compatibles](labels/reference.md) para obtener una lista completa de las etiquetas disponibles y las definiciones de cada tipo de etiqueta.
 
-Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Una práctica recomendada recomienda etiquetar los datos cuando se incorporan en Experience Platform o en cuanto los datos están disponibles en [!DNL Platform].
+Las etiquetas se pueden aplicar en cualquier momento, lo que proporciona flexibilidad en la forma en que se decide administrar los datos. Una práctica recomendada recomienda etiquetar los datos cuando se ingieren en Experience Platform o en cuanto estén disponibles los datos en [!DNL Platform].
 
-Consulte la información general sobre [etiquetas de uso de datos](./labels/overview.md) para obtener más información sobre cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos.
+Consulte la descripción general de [etiquetas de uso de datos](./labels/overview.md) para obtener más información sobre cómo se utilizan las etiquetas de uso de datos para ayudar a aplicar el cumplimiento de la gobernanza de datos.
 
 ## Políticas de uso de datos {#data-usage-policies}
 
@@ -90,10 +90,10 @@ Un ejemplo de acción de marketing puede ser el deseo de exportar un conjunto de
 
 Hay dos tipos de directivas disponibles:
 
-* **[!UICONTROL Política de gobernanza de datos]**: Restrinja la activación de datos en función de la acción de marketing que se esté realizando y las etiquetas de uso de datos que lleven los datos en cuestión.
-* **[!UICONTROL Política de consentimiento]**: filtre los perfiles que se pueden activar en [destinos](../destinations/home.md) en función del consentimiento o las preferencias de los clientes.
+* **[!UICONTROL Política de control de datos]**: Restrinja la activación de datos en función de la acción de marketing que se esté realizando y de las etiquetas de uso de datos que lleven los datos en cuestión.
+* **[!UICONTROL Política de consentimiento]**: filtre los perfiles que se pueden activar a [destinos](../destinations/home.md) según las preferencias o el consentimiento de sus clientes.
 
-Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear directivas mediante la API del servicio de directivas o la interfaz de usuario del Experience Platform. Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [información general sobre directivas](./policies/overview.md).
+Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pueden crear directivas mediante la API del servicio de directivas o la interfaz de usuario del Experience Platform. Para obtener más información sobre las políticas de uso de datos y las acciones de marketing, consulte la [descripción general de las políticas](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Una vez aplicadas las etiquetas de uso de datos, los administradores de datos pu
 
 ## Pasos siguientes
 
-Este documento proporciona una introducción de alto nivel a la gobernanza de datos y al marco de trabajo de gobernanza de datos. Ahora puede continuar con el [guía del usuario sobre etiquetas de uso de datos](labels/user-guide.md) y empiece a añadir etiquetas de uso a los datos de experiencia.
+Este documento proporciona una introducción de alto nivel a la gobernanza de datos y al marco de trabajo de gobernanza de datos. Ahora puede continuar con la [guía del usuario sobre etiquetas de uso de datos](labels/user-guide.md) y empezar a agregar etiquetas de uso a sus datos de experiencia.
 
 ## Apéndice
 
@@ -121,10 +121,10 @@ En la tabla siguiente se describen los términos clave relacionados con la gober
 | **Etiquetas de conjuntos de datos** | Las etiquetas se pueden añadir a un esquema. Todos los campos de un conjunto de datos heredan las etiquetas del esquema. |
 | **Etiquetas de campo** | Las etiquetas de campo son etiquetas de control de datos que se heredan de un esquema o se aplican directamente a un campo. Las etiquetas de gobernanza de datos aplicadas a un campo no se heredan hasta el nivel de esquema. |
 | **Geoperímetro** | Una geovalla es un límite geográfico virtual, definido por la tecnología GPS o RFID, que permite al software almacenar en déclencheur una respuesta cuando un dispositivo móvil entra o sale de una zona en particular. |
-| **Etiquetas de identidad** | Las etiquetas de identidad &quot;I&quot; se utilizan para categorizar los datos que pueden identificar o contactar a una persona específica. |
+| **Etiquetas de identidad** | Las etiquetas de identidad “I” se utilizan para categorizar los datos que permiten identificar a una persona específica o ponerse en contacto con ella. |
 | **Direccionamiento basado en intereses** | La segmentación basada en intereses, también conocida como personalización, se produce si se cumplen las tres condiciones siguientes:<br>Los datos recopilados en el sitio son,<br><ul><li>Se utiliza para hacer deducciones sobre los intereses de un usuario,</li><li>Se utiliza en otro contexto, como en otro sitio o aplicación (fuera del sitio)</li><li>Se utiliza para seleccionar qué contenido o anuncios se muestran en función de esas deducciones.</li></ul> |
 | **Acción de marketing** | Una acción de marketing, en el contexto del marco de trabajo de control de datos, es una acción que realiza un consumidor de datos Experience Platform, para la que es necesario comprobar si se han infringido las políticas de uso de datos |
-| **Política** | En el marco de trabajo de gobernanza de datos, una política es una regla que describe qué tipos de acciones de marketing se permiten o no en datos específicos. |
+| **Directiva** | En el marco de trabajo de gobernanza de datos, una política es una regla que describe qué tipos de acciones de marketing se permiten o no en datos específicos. |
 | **Etiquetas de esquema** | Administre las etiquetas para la gobernanza de datos, el consentimiento y el control de acceso en el nivel de esquema. Esto propaga las etiquetas a cada conjunto de datos que utiliza ese esquema. |
 | **Etiquetas confidenciales** | Las etiquetas confidenciales &quot;S&quot; se utilizan para categorizar los datos que usted y su organización consideran confidenciales. |
 

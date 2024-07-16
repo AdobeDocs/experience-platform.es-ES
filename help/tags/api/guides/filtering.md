@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo filtrar los resultados al enumerar
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 100%
 
 ---

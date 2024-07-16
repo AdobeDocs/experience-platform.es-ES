@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Las perspectivas derivadas del análisis del modelo de datos hacen que los datos
 
 Comprenda sus perspectivas de perfil accediendo al SQL que las alimenta y, a continuación, genere sus propias perspectivas para explorar aún más a sus clientes y a sus experiencias de consumidor que conforman sus perfiles. Transforme los datos sin procesar en nuevas perspectivas procesables mediante el uso del modelo de datos SQL de Real-Time CDP existente como inspiración para crear consultas para sus necesidades comerciales únicas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de Platform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la interfaz de usuario de Platform.
 
-Las siguientes perspectivas están disponibles para que las utilice como parte de [Panel de perfiles](../guides/profiles.md) o un personalizado [tablero definido por el usuario](../user-defined-dashboards.md). Consulte la [información general sobre personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar widgets nuevos](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
+Las siguientes perspectivas están disponibles para que las use como parte del [panel de perfiles](../guides/profiles.md) o un [panel personalizado definido por el usuario](../user-defined-dashboards.md). Consulte la [descripción general de la personalización](../customize/overview.md) para obtener instrucciones sobre cómo personalizar el tablero o [crear y editar nuevos widgets](../customize/custom-widgets.md) en la biblioteca de widgets y [tablero definido por el usuario](../user-defined-dashboards.md#create-widget).
 
-## Superposición de audiencias por política de combinación {#audience-overlap-by-merge-policy}
+## Superposición de público por política de combinación {#audience-overlap-by-merge-policy}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [Superposición de audiencias por documentación del widget de políticas de combinación](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de política de combinación que se superpone con la audiencia](../guides/profiles.md#audience-overlap-by-merge-policy) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Informe de superposición de audiencia {#audience-overlap-report}
+## Informe de superposición de público {#audience-overlap-report}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Consulte la [Documentación del widget de informe de superposición de audiencia](../guides/profiles.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de informe de superposición de audiencias](../guides/profiles.md#audience-overlap-report) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Audiencias (recuento) {#audiences}
 
@@ -159,9 +159,9 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Consulte la [Documentación del widget Audiencias](../guides/profiles.md#audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias](../guides/profiles.md#audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Audiencias asignadas al estado de destino {#audiences-mapped-to-destination-status}
+## Público asignado al estado de destino {#audiences-mapped-to-destination-status}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -191,9 +191,9 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consulte la [Audiencias asignadas a la documentación del widget de estado de destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de audiencias asignadas al widget de estado de destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Tamaño de audiencia {#audiences-size}
+## Tamaño de público {#audiences-size}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Consulte la [Documentación del widget de tamaño de audiencias](../guides/profiles.md#audiences-size) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tamaño de audiencias](../guides/profiles.md#audiences-size) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
-## Distribución de puntuaciones de Customer AI {#customer-ai-distribution-of-scores}
+## Distribución de puntuaciones de inteligencia artificial aplicada al cliente {#customer-ai-distribution-of-scores}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-Consulte la [Documentación del widget de distribución de puntuaciones de la inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de distribución de puntuaciones de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
-## Resumen de puntuación de Customer AI {#customer-ai-scoring-summary}
+## Resumen de puntuaciones de la inteligencia artificial aplicada al cliente {#customer-ai-scoring-summary}
 
 Preguntas respondidas por esta perspectiva:
 
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-Consulte la [Documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-scoring-summary) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de resumen de puntuación de inteligencia artificial aplicada al cliente](../guides/profiles.md#customer-ai-scoring-summary) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Superposición de identidad {#identity-overlap}
 
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte la [Documentación del widget de superposición de identidad](../guides/profiles.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de superposición de identidad](../guides/profiles.md#identity-overlap) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Recuento de perfiles {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Encontrará información completa sobre el aspecto y la funcionalidad de esta perspectiva en la [Guía del widget de recuento de perfiles](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Encontrará información completa sobre el aspecto y la funcionalidad de esta perspectiva en la [guía del widget de recuento de perfiles](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Consulte la [Documentación del widget de recuento de perfiles](../guides/profiles.md#profile-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de recuento de perfiles](../guides/profiles.md#profile-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Cambio de recuento de perfiles {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Consulte la [Documentación del widget de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Tendencia de cambio de recuento de perfiles {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profile-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Tendencia de recuento de perfiles {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de recuento de perfiles](../guides/profiles.md#profile-count-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de recuento de perfiles](../guides/profiles.md#profile-count-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Perfiles por identidad {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte la [Documentación de perfiles por widget de identidad](../guides/profiles.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget Perfiles por identidad](../guides/profiles.md#profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Tendencia de cambio de recuento de perfiles {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-Consulte la [Documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profiles-count-change-trend) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de cambio de recuento de perfiles](../guides/profiles.md#profiles-count-change-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Tendencia de cambio de recuento de perfiles por identidad {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Consulte la [Tendencia de cambio de recuento de perfiles por documentación del widget de identidad](../guides/profiles.md#profiles-count-change-trend-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [Tendencia de cambio de recuento de perfiles por documentación del widget de identidad](../guides/profiles.md#profiles-count-change-trend-by-identity) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
 
 ## Perfiles de identidad únicos {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte la [Documentación del widget de perfiles de identidad única](../guides/profiles.md#single-identity-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de perfiles de identidad única](../guides/profiles.md#single-identity-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Perfiles de identidad únicos por identidad {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte la [Documentación de perfiles de identidad única por widget de identidad](../guides/profiles.md#single-identity-profiles-by-identity) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de identidad ](../guides/profiles.md#single-identity-profiles-by-identity) con perfiles de identidad únicos para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Perfiles no segmentados {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte la [Documentación del widget de perfiles no segmentados](../guides/profiles.md#unsegmented-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de perfiles no segmentados](../guides/profiles.md#unsegmented-profiles) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
 
 ## Pasos siguientes
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar en SQL para generar sus propias perspectivas.
 
-Consulte la [Ver documentación de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
+Consulte la [Documentación de vista de SQL](../view-sql.md) para obtener más información sobre cómo adaptar el SQL de sus perspectivas directamente a través de la IU de PLatform.
 
-También puede leer y comprender el SQL que genera perspectivas para [Audiencias](./audiences.md), [Perfiles de cuenta](./account-profiles.md), y [Destinos](./destinations.md) paneles.
+También puede leer y comprender el SQL que genera perspectivas para los paneles de [Audiencias](./audiences.md), [Perfiles de cuenta](./account-profiles.md) y [Destinos](./destinations.md).

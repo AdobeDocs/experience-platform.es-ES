@@ -59,7 +59,7 @@ console.log(turbine.environment.stage);
 | Propiedad | Descripción |
 | --- | --- |
 | `id` | El ID del entorno. |
-| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging`, y `production`. |
+| `stage` | El entorno para el que se creó esta biblioteca. Los valores posibles son `development`, `staging` y `production`. |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ Recupera un módulo que se ha compartido desde otra extensión. Si no se encuent
 turbine.logger.error('Error!');
 ```
 
-Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La forma recomendada de activar la depuración es utilizar [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
+Utilidad de registro utilizada para registrar mensajes en la consola. Los mensajes solo se mostrarán en la consola si el usuario ha activado la depuración. La manera recomendada de activar la depuración es usar el [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Como alternativa, el usuario puede ejecutar el siguiente comando `_satellite.setDebug(true)` en la consola de desarrollo del explorador. El registrador tiene los métodos siguientes:
 
 * `logger.log(message: string)`: Registra un mensaje en la consola.
 * `logger.info(message: string)`: Registra un mensaje informativo en la consola.

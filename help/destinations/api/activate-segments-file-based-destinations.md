@@ -18,7 +18,7 @@ Utilice las funciones mejoradas de exportación de archivos para acceder a la fu
 * [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionales.
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través del [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Capacidad para seleccionar [tipo de archivo](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del archivo exportado.
-* [Capacidad para personalizar el formato de archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+* [Capacidad para personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Esta funcionalidad es compatible con las seis tarjetas de almacenamiento en la nube que se enumeran a continuación:
 
@@ -29,11 +29,11 @@ Esta funcionalidad es compatible con las seis tarjetas de almacenamiento en la n
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-Este artículo explica el flujo de trabajo necesario para utilizar [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfiles cualificados de Adobe Experience Platform a una de las ubicaciones de almacenamiento en la nube vinculadas anteriormente.
+En este artículo se explica el flujo de trabajo necesario para usar la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfiles calificados de Adobe Experience Platform a una de las ubicaciones de almacenamiento en la nube vinculadas anteriormente.
 
 >[!TIP]
 >
->También puede utilizar la interfaz de usuario del Experience Platform para exportar perfiles a destinos de almacenamiento en la nube. Lea el [tutorial activar destinos basados en archivos](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener más información.
+>También puede utilizar la interfaz de usuario del Experience Platform para exportar perfiles a destinos de almacenamiento en la nube. Lea el tutorial [activar destinos basados en archivos](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener más información.
 
 <!--
 
@@ -50,44 +50,44 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite crear audiencias y generarlas en [!DNL Adobe Experience Platform] de su [!DNL Real-Time Customer Profile] datos.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que necesita conocer para activar datos en destinos basados en archivos en Platform.
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]** [para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 ### Lectura de llamadas de API de muestra {#reading-sample-api-calls}
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilar valores para encabezados obligatorios y opcionales {#gather-values-headers}
 
-Para realizar llamadas a [!DNL Platform] API, primero debe completar el [tutorial de autenticación de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Platform], primero debe completar el tutorial de autenticación de Experience Platform [2}. ](https://www.adobe.com/go/platform-api-authentication-en) Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 * Autorización: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Recursos en [!DNL Experience Platform] se puede aislar a zonas protegidas virtuales específicas. En solicitudes a [!DNL Platform] API, puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
+Los recursos de [!DNL Experience Platform] se pueden aislar en zonas protegidas virtuales específicas. En las solicitudes a las API de [!DNL Platform], puede especificar el nombre y el ID de la zona protegida en la que se realizará la operación. Son parámetros opcionales.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
+>Para obtener más información sobre las zonas protegidas en [!DNL Experience Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
-Todas las solicitudes que contienen una carga útil (`POST`, `PUT`, `PATCH`) requiere un encabezado de tipo de medios adicional:
+Todas las solicitudes que contienen una carga útil (`POST`, `PUT`, `PATCH`) requieren un encabezado de tipo multimedia adicional:
 
 * Tipo de contenido: `application/json`
 
 ### Documentación de referencia del API {#api-reference-documentation}
 
-Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte la [Flow Service: documentación de la API de destinos en el sitio web de Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Le recomendamos que utilice este tutorial y la documentación de referencia de la API en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte [Servicio de flujo: documentación de la API de destinos en el sitio web de Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Le recomendamos que utilice este tutorial y la documentación de referencia de la API en paralelo.
 
 ### Glosario {#glossary}
 
@@ -133,7 +133,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Respuesta**
 
-+++[!DNL Amazon S3] - Especificaciones de conexión
++++[!DNL Amazon S3] - Especificación de conexión
 
 ```json
 {
@@ -148,7 +148,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
 **Solicitud**
 
@@ -250,7 +250,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
 **Solicitud**
 
@@ -303,7 +303,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Respuesta**
 
-+++SFTP - [!DNL Connection spec]
++++SFTP: [!DNL Connection spec]
 
 ```json
 {
@@ -320,13 +320,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Siga los pasos a continuación para configurar un flujo de datos de exportación de audiencia a un destino de almacenamiento en la nube. En algunos pasos, las solicitudes y respuestas difieren entre los distintos destinos de almacenamiento en la nube. En estos casos, utilice las pestañas de la página para recuperar las solicitudes y respuestas específicas del destino al que desea conectar y exportar audiencias. Asegúrese de utilizar el correcto `connection spec` y `flow spec` para el destino que está configurando.
+Siga los pasos a continuación para configurar un flujo de datos de exportación de audiencia a un destino de almacenamiento en la nube. En algunos pasos, las solicitudes y respuestas difieren entre los distintos destinos de almacenamiento en la nube. En estos casos, utilice las pestañas de la página para recuperar las solicitudes y respuestas específicas del destino al que desea conectar y exportar audiencias. Asegúrese de usar los `connection spec` y `flow spec` correctos para el destino que está configurando.
 
-## Crear una conexión de origen {#create-source-connection}
+## Crear una conexión de Source {#create-source-connection}
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Después de decidir a qué destino están exportando las audiencias, debe crear una conexión de origen. El [conexión de origen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa la conexión con el [Almacén de perfiles de Experience Platform](/help/profile/home.md#profile-data-store).
+Después de decidir a qué destino están exportando las audiencias, debe crear una conexión de origen. La [conexión de origen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa la conexión con el almacén interno de [perfiles de Experience Platform](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -370,13 +370,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-Una respuesta correcta devuelve el ID (`id`) de la conexión de origen recién creada y una `etag`. Tenga en cuenta el ID de conexión de origen, ya que lo necesitará más adelante al crear el flujo de datos.
+Una respuesta correcta devuelve el identificador (`id`) de la conexión de origen recién creada y un `etag`. Tenga en cuenta el ID de conexión de origen, ya que lo necesitará más adelante al crear el flujo de datos.
 
 ## Crear una conexión base {#create-base-connection}
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [conexión base](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) almacena de forma segura las credenciales de en su destino. Según el tipo de destino, las credenciales necesarias para autenticarse en ese destino pueden variar. Para encontrar estos parámetros de autenticación, recupere primero la variable `connection spec` para el destino deseado, tal como se describe en la sección [Seleccione el destino donde desea exportar las audiencias](#select-destination) y luego mira el `authSpec` de la respuesta. Consulte las pestañas siguientes para ver el `authSpec` propiedades de todos los destinos admitidos.
+Una [conexión base](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) almacena de forma segura las credenciales en su destino. Según el tipo de destino, las credenciales necesarias para autenticarse en ese destino pueden variar. Para encontrar estos parámetros de autenticación, primero recupere `connection spec` para el destino deseado tal como se describe en la sección [Seleccione el destino donde exportar las audiencias](#select-destination) y luego observe el `authSpec` de la respuesta. Haga referencia a las fichas siguientes para las propiedades de `authSpec` de todos los destinos admitidos.
 
 >[!BEGINTABS]
 
@@ -384,7 +384,7 @@ A [conexión base](https://developer.adobe.com/experience-platform-apis/referenc
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
-Observe la línea resaltada con comentarios en línea en [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en la [!DNL connection spec].
+Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -447,11 +447,11 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
-Observe la línea resaltada con comentarios en línea en [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en la [!DNL connection spec].
+Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -492,7 +492,7 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
-Observe la línea resaltada con comentarios en línea en [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en la [!DNL connection spec].
+Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -550,7 +550,7 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 >[!NOTE]
 >
->El destino de la zona de aterrizaje de datos no requiere un [!DNL auth spec].
+>El destino de la zona de aterrizaje de datos no requiere [!DNL auth spec].
 
 ```json
 {
@@ -566,11 +566,11 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
-Observe la línea resaltada con comentarios en línea en [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en la [!DNL connection spec].
+Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -613,13 +613,13 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] mostrando [!DNL auth spec]
++++SFTP: [!DNL Connection spec] muestra [!DNL auth spec]
 
 >[!NOTE]
 >
->El destino SFTP contiene dos elementos independientes en la variable [!DNL auth spec], ya que admite la autenticación de contraseña y clave SSH.
+>El destino SFTP contiene dos elementos independientes en [!DNL auth spec], ya que admite la autenticación mediante contraseña y clave SSH.
 
-Observe la línea resaltada con comentarios en línea en [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en la [!DNL connection spec].
+Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros de autenticación en [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -703,7 +703,7 @@ Observe la línea resaltada con comentarios en línea en [!DNL connection spec] 
 
 >[!ENDTABS]
 
-Utilizando las propiedades especificadas en la especificación de autenticación (es decir, `authSpec` desde la respuesta ) puede crear una conexión base con las credenciales necesarias, específicas para cada tipo de destino, como se muestra en los ejemplos siguientes:
+Con las propiedades especificadas en la especificación de autenticación (es decir, `authSpec` de la respuesta) puede crear una conexión base con las credenciales necesarias, específicas para cada tipo de destino, como se muestra en los ejemplos siguientes:
 
 >[!BEGINTABS]
 
@@ -711,11 +711,11 @@ Utilizando las propiedades especificadas en la especificación de autenticación
 
 **Solicitud**
 
-+++[!DNL Amazon S3] - Solicitud de conexión base con autenticación de clave de acceso y clave secreta
++++[!DNL Amazon S3]: solicitud de conexión base con autenticación de clave de acceso y clave secreta
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la página de documentación de destino de Amazon S3.
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la página de documentación de destino de Amazon S3.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -745,11 +745,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Amazon S3] - Solicitud de conexión base con autenticación de función asumida
++++[!DNL Amazon S3] - Solicitud de conexión base con autenticación de rol asumida
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la página de documentación de destino de Amazon S3.
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la página de documentación de destino de Amazon S3.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -780,7 +780,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Respuesta**
 
-+++[!DNL Amazon S3] Respuesta de conexión base
++++[!DNL Amazon S3] respuesta de conexión base
 
 ```json
 {
@@ -791,7 +791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
 **Solicitud**
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la página de documentación de destino de almacenamiento de Azure Blob.
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la página de documentación de destino de Azure Blob Storage.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la página de documentación de destino de Azure Data Lake Gen 2(ADLS Gen2).
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en el destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la página de documentación de destino de Azure Data Lake Gen 2(ADLS Gen2).
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -902,7 +902,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->No se requieren credenciales de autenticación para el destino de la zona de aterrizaje de datos. Para obtener más información, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la página de documentación de destino de la zona de aterrizaje de datos.
+>No se requieren credenciales de autenticación para el destino de la zona de aterrizaje de datos. Para obtener más información, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la página de documentación de destino de la zona de aterrizaje de datos.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -932,7 +932,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
 **Solicitud**
 
@@ -940,7 +940,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la página de documentación de destino de Google Cloud Storage.
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la página de documentación de destino de Google Cloud Storage.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -991,7 +991,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la página de documentación de destino SFTP.
+>Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la página de documentación de destino SFTP.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -1023,7 +1023,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `specName` | Uso `SFTP with Password`. |
+| `specName` | Usar `SFTP with Password`. |
 | `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
 | `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
 | `password` | Contraseña para iniciar sesión en la ubicación de almacenamiento SFTP. |
@@ -1037,7 +1037,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la [autenticar en destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la página de documentación de destino SFTP.
+>Para obtener información sobre cómo obtener las credenciales de autenticación requeridas, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la página de documentación de destino SFTP.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -1069,7 +1069,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propiedad | Descripción |
 | --------- | ----------- |
-| `specName` | Uso `SFTP with Password`. |
+| `specName` | Usar `SFTP with Password`. |
 | `domain` | La dirección IP o el nombre de dominio de su ubicación de almacenamiento SFTP. |
 | `username` | El nombre de usuario para iniciar sesión en la ubicación de almacenamiento SFTP. |
 | `sshKey` | La clave SSH privada utilizada para iniciar sesión en la ubicación de almacenamiento SFTP. La clave privada debe tener el formato de una cadena codificada en Base64 y no debe estar protegida con contraseña. |
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Añadir cifrado a los archivos exportados
 
-Opcionalmente, puede agregar cifrado a los archivos exportados. Para ello, debe agregar elementos de la variable `encryptionSpecs`. Consulte el ejemplo de solicitud que aparece a continuación con los parámetros obligatorios resaltados:
+Opcionalmente, puede agregar cifrado a los archivos exportados. Para ello, debe agregar elementos de `encryptionSpecs`. Consulte el ejemplo de solicitud que aparece a continuación con los parámetros obligatorios resaltados:
 
 
 >[!BEGINSHADEBOX]
@@ -1200,17 +1200,17 @@ Observe el ID de conexión de la respuesta. Este ID será necesario en el siguie
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-A continuación, debe crear una conexión de destino. [Conexiones de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) almacene los parámetros de exportación de las audiencias exportadas. Los parámetros de exportación incluyen la ubicación de exportación, el formato de archivo, la compresión y otros detalles. Por ejemplo, para los archivos CSV, puede seleccionar varias opciones de exportación. Obtenga información detallada acerca de todas las opciones de exportación de CSV compatibles en la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+A continuación, debe crear una conexión de destino. [Las conexiones de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) almacenan los parámetros de exportación de las audiencias exportadas. Los parámetros de exportación incluyen la ubicación de exportación, el formato de archivo, la compresión y otros detalles. Por ejemplo, para los archivos CSV, puede seleccionar varias opciones de exportación. Obtenga información detallada sobre todas las opciones de exportación de CSV admitidas en la página [configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Consulte la `targetSpec` propiedades proporcionadas en el `connection spec` para comprender las propiedades admitidas para cada tipo de destino. Consulte las pestañas siguientes para ver el `targetSpec` propiedades de todos los destinos admitidos.
+Consulte las propiedades de `targetSpec` proporcionadas en `connection spec` del destino para conocer las propiedades admitidas para cada tipo de destino. Haga referencia a las fichas siguientes para las propiedades de `targetSpec` de todos los destinos admitidos.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++[!DNL Amazon S3] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1417,11 +1417,11 @@ Observe las líneas resaltadas con comentarios en línea en la [!DNL connection 
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1619,9 +1619,9 @@ Observe las líneas resaltadas con comentarios en línea en la [!DNL connection 
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1810,9 +1810,9 @@ Observe las líneas resaltadas con comentarios en línea en la [!DNL connection 
 
 >[!TAB Zona de aterrizaje de datos (DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1998,11 +1998,11 @@ Observe las líneas resaltadas con comentarios en línea en la [!DNL connection 
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -2199,9 +2199,9 @@ Observe las líneas resaltadas con comentarios en línea en la [!DNL connection 
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] mostrar parámetros de conexión de destino
++++SFTP: [!DNL Connection spec] muestra los parámetros de conexión de destino
 
-Observe las líneas resaltadas con comentarios en línea en la [!DNL connection spec] ejemplo siguiente, que proporciona información adicional sobre dónde encontrar la variable [!DNL target spec] parámetros en la especificación de conexión. También puede ver en el ejemplo debajo de qué parámetros de destinatario están *no* aplicable a los destinos de exportación de audiencia.
+Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL connection spec] siguiente, que proporciona información adicional sobre dónde encontrar los parámetros [!DNL target spec] en la especificación de conexión. También puede ver en el ejemplo a continuación cuáles son los parámetros de destino *no* aplicables a los destinos de exportación de audiencia.
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2402,7 +2402,7 @@ Con la especificación anterior, puede construir una solicitud de conexión de d
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la sección [!DNL Amazon S3] página de documentación de destino.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la página de documentación de destino [!DNL Amazon S3].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2433,11 +2433,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Amazon S3] - Solicitud de conexión de Target con opciones de CSV
++++[!DNL Amazon S3] - Solicitud de conexión de destino con opciones de CSV
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2486,7 +2486,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
 **Solicitud**
 
@@ -2494,7 +2494,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la sección [!DNL Azure Blob Storage] página de documentación de destino.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la página de documentación de destino [!DNL Azure Blob Storage].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2525,11 +2525,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Blob Storage] - Solicitud de conexión de Target con opciones de CSV
++++[!DNL Azure Blob Storage] - Solicitud de conexión de destino con opciones de CSV
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2586,7 +2586,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de Azure [!DNL Data Lake Gen 2(ADLS Gen2)] página de documentación de destino.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la página de documentación de destino de Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2616,11 +2616,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Solicitud de conexión de Target con opciones de CSV
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Solicitud de conexión de destino con opciones de CSV
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2677,7 +2677,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la sección [!DNL Data Landing Zone] página de documentación de destino.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la página de documentación de destino [!DNL Data Landing Zone].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2707,11 +2707,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Data Landing Zone] - Solicitud de conexión de Target con opciones de CSV
++++[!DNL Data Landing Zone] - Solicitud de conexión de destino con opciones de CSV
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2760,7 +2760,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
 **Solicitud**
 
@@ -2768,7 +2768,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la sección [!DNL Google Cloud Storage] página de documentación de destino.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la página de documentación de destino [!DNL Google Cloud Storage].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2799,11 +2799,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Google Cloud Storage] - Solicitud de conexión de Target con opciones de CSV
++++[!DNL Google Cloud Storage] - Solicitud de conexión de destino con opciones de CSV
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2860,7 +2860,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la página de documentación de destino SFTP.
+>Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la página de documentación de destino SFTP.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2894,7 +2894,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2945,15 +2945,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Tenga en cuenta `target connection ID` de la respuesta. Este ID será necesario en el siguiente paso al crear el flujo de datos para exportar audiencias.
+Observe `target connection ID` de la respuesta. Este ID será necesario en el siguiente paso al crear el flujo de datos para exportar audiencias.
 
-Una respuesta correcta devuelve el ID (`id`) de la nueva conexión de origen de destino y un `etag`. Tenga en cuenta el ID de conexión de destino, ya que lo necesitará más adelante al crear el flujo de datos.
+Una respuesta correcta devuelve el identificador (`id`) de la conexión de origen de destino reciente y un `etag`. Tenga en cuenta el ID de conexión de destino, ya que lo necesitará más adelante al crear el flujo de datos.
 
 ## Creación de un flujo de datos {#create-dataflow}
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-El siguiente paso en la configuración de destino es crear un flujo de datos. A [flujo de datos](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) une las entidades creadas anteriormente y también proporciona opciones para configurar la programación de exportación de audiencias. Para crear el flujo de datos, utilice las cargas útiles que se indican a continuación, según el destino de almacenamiento en la nube deseado, y reemplace los ID de entidad de flujo de los pasos anteriores. Tenga en cuenta que en este paso no se agrega ninguna información relacionada con la asignación de atributos o identidades al flujo de datos. Esto seguirá en el siguiente paso.
+El siguiente paso en la configuración de destino es crear un flujo de datos. Un [flujo de datos](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vincula las entidades creadas anteriormente y también proporciona opciones para configurar la programación de exportación de audiencias. Para crear el flujo de datos, utilice las cargas útiles que se indican a continuación, según el destino de almacenamiento en la nube deseado, y reemplace los ID de entidad de flujo de los pasos anteriores. Tenga en cuenta que en este paso no se agrega ninguna información relacionada con la asignación de atributos o identidades al flujo de datos. Esto seguirá en el siguiente paso.
 
 >[!BEGINTABS]
 
@@ -3005,7 +3005,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Azure Blob]
+>[!TAB Almacenamiento de blob de Azure]
 
 **Solicitud**
 
@@ -3161,7 +3161,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de Google Cloud]
+>[!TAB Almacenamiento en la nube de Google]
 
 **Solicitud**
 
@@ -3263,7 +3263,7 @@ Tenga en cuenta el ID de flujo de datos de la respuesta. Este ID será necesario
 
 ### Añadir audiencias a la exportación
 
-En este paso, también puede seleccionar qué audiencias desea exportar al destino. Para obtener información detallada sobre este paso y el formato de solicitud para agregar una audiencia al flujo de datos, vea los ejemplos en la [Actualización de un flujo de datos de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentación de referencia de la API.
+En este paso, también puede seleccionar qué audiencias desea exportar al destino. Para obtener información detallada sobre este paso y el formato de solicitud para agregar una audiencia al flujo de datos, vea los ejemplos en la sección [Actualizar un flujo de datos de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentación de referencia de la API.
 
 
 ## Configurar asignación de atributos e identidades {#attribute-and-identity-mapping}
@@ -3282,7 +3282,7 @@ Por ejemplo, para obtener la siguiente asignación que se muestra en la interfaz
 
 ### Creación de un esquema de entrada
 
-Para crear un esquema de entrada, primero debe recuperar la variable [esquema de unión](/help/profile/ui/union-schema.md) y las identidades que se pueden exportar al destino. Este es el esquema de atributos e identidades que puede seleccionar como asignación de origen.
+Para crear un esquema de entrada, primero debe recuperar su [esquema de unión](/help/profile/ui/union-schema.md) y las identidades que se pueden exportar al destino. Este es el esquema de atributos e identidades que puede seleccionar como asignación de origen.
 
 ![Grabación que muestra las opciones de atributo e identidad en la vista Seleccionar campo de origen](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Ver las identidades disponibles para usar en el esquema de entrada
 
-La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve ambas [standard](/help/identity-service/features/namespaces.md#standard) y [personalizado](/help/identity-service/features/namespaces.md#manage-namespaces) identifique las áreas de nombres que configuró en Experience Platform.
+La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve las áreas de nombres de identidad [standard](/help/identity-service/features/namespaces.md#standard) y [custom](/help/identity-service/features/namespaces.md#manage-namespaces) que configuró en el Experience Platform.
 
 ```json
 [
@@ -3671,7 +3671,7 @@ La respuesta devuelve las identidades que puede utilizar al crear el esquema de 
 
 >[!ENDSHADEBOX]
 
-A continuación, debe copiar la respuesta de arriba y utilizarla para crear el esquema de entrada. Puede copiar toda la respuesta JSON de la respuesta anterior y colocarla en el `jsonSchema` objeto indicado a continuación.
+A continuación, debe copiar la respuesta de arriba y utilizarla para crear el esquema de entrada. Puede copiar la respuesta JSON completa de la respuesta anterior y colocarla en el objeto `jsonSchema` indicado a continuación.
 
 >[!BEGINSHADEBOX]
 
@@ -3728,7 +3728,7 @@ A continuación, debe configurar el esquema de salida para la exportación. En p
 
 +++Solicitud para obtener el esquema de socio para el esquema de salida
 
-Tenga en cuenta que el ejemplo siguiente utiliza el `connection spec ID` para Amazon S3. Sustituya este valor por el ID de especificación de conexión específico de su destino.
+Tenga en cuenta que el ejemplo siguiente utiliza `connection spec ID` para Amazon S3. Sustituya este valor por el ID de especificación de conexión específico de su destino.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -4028,7 +4028,7 @@ Inspect devuelve la respuesta que obtiene al realizar la llamada anterior. Debe 
 
 >[!ENDSHADEBOX]
 
-A continuación, debe crear un esquema de salida. Copie la respuesta JSON que obtuvo arriba y péguela en el `jsonSchema` objeto debajo de.
+A continuación, debe crear un esquema de salida. Copie la respuesta JSON que obtuvo arriba y péguela en el objeto `jsonSchema` abajo.
 
 >[!BEGINSHADEBOX]
 
@@ -4364,7 +4364,7 @@ El ID de la respuesta representa el identificador único del esquema de entrada 
 
 ### Crear conjunto de asignaciones {#create-mapping-set}
 
-A continuación, utilice el [API de preparación de datos](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) para crear el conjunto de asignaciones mediante el ID de esquema de entrada, el ID de esquema de salida y las asignaciones de campo deseadas.
+A continuación, utilice la [API de preparación de datos](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) para crear el conjunto de asignaciones mediante el ID de esquema de entrada, el ID de esquema de salida y las asignaciones de campo deseadas.
 
 >[!BEGINSHADEBOX]
 
@@ -4374,8 +4374,8 @@ A continuación, utilice el [API de preparación de datos](https://developer.ado
 
 >[!IMPORTANT]
 >
->* En el objeto de asignaciones que se muestra a continuación, la variable `destination` El parámetro no acepta puntos `"."`. Por ejemplo, deberá utilizar personalEmail_address o segmentMembership_status como se indica en el ejemplo de configuración.
->* Hay un caso particular cuando el atributo de origen es un atributo de identidad y contiene un punto. En este caso, el atributo debe evitarse con `//`, como se indica a continuación.
+>* En el objeto de asignaciones que se muestra a continuación, el parámetro `destination` no acepta puntos `"."`. Por ejemplo, deberá utilizar personalEmail_address o segmentMembership_status como se indica en el ejemplo de configuración.
+>* Hay un caso particular cuando el atributo de origen es un atributo de identidad y contiene un punto. En este caso, el atributo debe tener un carácter de escape con `//`, como se indica a continuación.
 >* Tenga en cuenta también que aunque la configuración de ejemplo siguiente incluye `Email` y `Phone_E.164`, solo puede exportar un atributo de identidad por flujo de datos.
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
@@ -4454,7 +4454,7 @@ Consulte [recuperar los detalles de un flujo de datos de destino](https://develo
 
 >[!ENDSHADEBOX]
 
-Finalmente, debe hacer lo siguiente `PATCH` el flujo de datos con la información del conjunto de asignaciones que acaba de crear.
+Finalmente, debe `PATCH` el flujo de datos con la información del conjunto de asignaciones que acaba de crear.
 
 >[!BEGINSHADEBOX]
 
@@ -4504,19 +4504,19 @@ La respuesta de la API de Flow Service devuelve el ID del flujo de datos actuali
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Para realizar actualizaciones en el flujo de datos, utilice el `PATCH` operación. Por ejemplo, puede agregar una acción de marketing a los flujos de datos. O bien, puede actualizar los flujos de datos para seleccionar campos como claves obligatorias o claves de anulación de duplicación.
+Para realizar actualizaciones en el flujo de datos, utilice la operación `PATCH`. Por ejemplo, puede agregar una acción de marketing a los flujos de datos. O bien, puede actualizar los flujos de datos para seleccionar campos como claves obligatorias o claves de anulación de duplicación.
 
 ### Añadir una acción de marketing {#add-marketing-action}
 
-Para agregar un [acción de marketing](/help/data-governance/api/marketing-actions.md), consulte los ejemplos de solicitud y respuesta que aparecen a continuación.
+Para agregar una [acción de marketing](/help/data-governance/api/marketing-actions.md), vea los ejemplos de solicitud y respuesta que aparecen a continuación.
 
 >[!IMPORTANT]
 >
->El `If-Match` se requiere al realizar una `PATCH` solicitud. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
+>Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET a `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` extremo, donde `{ID}` es el ID del flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
-> Asegúrese de ajustar el valor del `If-Match` encabezado entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
+> Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
 >[!BEGINSHADEBOX]
 
@@ -4562,7 +4562,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++Agregar una acción de marketing: respuesta
 
-Una respuesta correcta devuelve el código de respuesta. `200` junto con el ID del flujo de datos actualizado y la eTag actualizada.
+Una respuesta correcta devuelve el código de respuesta `200` junto con el ID del flujo de datos actualizado y la etiqueta electrónica actualizada.
 
 ```json
 {
@@ -4577,15 +4577,15 @@ Una respuesta correcta devuelve el código de respuesta. `200` junto con el ID d
 
 ### Añadir una clave obligatoria {#add-mandatory-key}
 
-Para agregar un [clave obligatoria](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), consulte los ejemplos de solicitud y respuesta que aparecen a continuación.
+Para agregar una [clave obligatoria](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), vea los ejemplos de solicitud y respuesta que aparecen a continuación.
 
 >[!IMPORTANT]
 >
->El `If-Match` se requiere al realizar una `PATCH` solicitud. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
+>Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET a `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` extremo, donde `{ID}` es el ID del flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
-> Asegúrese de ajustar el valor del `If-Match` encabezado entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
+> Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
 >[!BEGINSHADEBOX]
 
@@ -4656,15 +4656,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Añadir una clave de anulación de duplicación {#add-deduplication-key}
 
-Para agregar un [clave de deduplicación](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), consulte los ejemplos de solicitud y respuesta que aparecen a continuación
+Para agregar una [clave de anulación de duplicación](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), consulte los ejemplos de solicitud y respuesta que aparecen a continuación
 
 >[!IMPORTANT]
 >
->El `If-Match` se requiere al realizar una `PATCH` solicitud. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
+>Se requiere el encabezado `If-Match` al realizar una solicitud `PATCH`. El valor de este encabezado es la versión única del flujo de datos que desea actualizar. El valor de la etiqueta se actualiza con cada actualización correcta de una entidad de flujo, como flujo de datos, conexión de destino y otras.
 >
-> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET a `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` extremo, donde `{ID}` es el ID del flujo de datos que desea actualizar.
+> Para obtener la última versión del valor de etiqueta, realice una solicitud de GET al extremo `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, donde `{ID}` es el identificador de flujo de datos que desea actualizar.
 >
-> Asegúrese de ajustar el valor del `If-Match` encabezado entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
+> Asegúrese de encerrar el valor del encabezado `If-Match` entre comillas dobles, como en los ejemplos siguientes, al realizar `PATCH` solicitudes.
 
 >[!BEGINSHADEBOX]
 
@@ -4813,11 +4813,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Puede encontrar información sobre el [Varios parámetros devueltos por el flujo de datos ejecuta la API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) en la documentación de referencia de la API.
+Puede encontrar información sobre los [diversos parámetros devueltos por el flujo de datos ejecuta la API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) en la documentación de referencia de la API.
 
 ## Administración de errores de API {#api-error-handling}
 
-Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la Guía de solución de problemas de Platform para obtener más información sobre cómo interpretar las respuestas de error.
+Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API del Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform para obtener más información sobre la interpretación de respuestas de error.
 
 ## Pasos siguientes {#next-steps}
 

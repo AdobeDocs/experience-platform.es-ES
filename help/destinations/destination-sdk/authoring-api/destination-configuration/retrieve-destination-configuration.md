@@ -4,30 +4,30 @@ title: Recuperación de una configuración de destino
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 2%
+source-wordcount: '367'
+ht-degree: 1%
 
 ---
 
 # Recuperación de una configuración de destino
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar información sobre una configuración de destino existente, utilizando `/authoring/destination` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para recuperar información sobre una configuración de destino existente mediante el extremo de API `/authoring/destination`.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperación de una configuración de destino {#retrieve}
 
-Puede recuperar un [existente](create-destination-configuration.md) configuración de destino realizando una `GET` solicitud a la `/authoring/destination` punto final.
+Puede recuperar una configuración de destino [existing](create-destination-configuration.md) realizando una solicitud `GET` al extremo `/authoring/destination`.
 
 >[!TIP]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 
 **Formato de API**
@@ -38,13 +38,13 @@ Utilice el siguiente formato de API para recuperar todas las configuraciones de 
 GET /authoring/destinations
 ```
 
-Utilice el siguiente formato de API para recuperar una configuración de destino específica, definida por la variable `{INSTANCE_ID}` parámetro.
+Utilice el siguiente formato de API para recuperar una configuración de destino específica, definida por el parámetro `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-Las dos solicitudes siguientes recuperan todas las configuraciones de destino para la organización IMS o una configuración de destino específica, en función de si pasa la variable `INSTANCE_ID` en la solicitud.
+Las dos solicitudes siguientes recuperan todas las configuraciones de destino para su organización de IMS o una configuración de destino específica, en función de si pasa el parámetro `INSTANCE_ID` en la solicitud.
 
 Seleccione cada pestaña a continuación para ver la carga útil correspondiente.
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con una lista de configuraciones de destino a las que tiene acceso en función de la variable [!DNL IMS Org ID] y el nombre de la zona protegida que ha utilizado. Uno `instanceId` corresponde a una configuración de destino.
+Una respuesta correcta devuelve el estado HTTP 200 con una lista de configuraciones de destino a las que tiene acceso, en función del [!DNL IMS Org ID] y el nombre de la zona protegida que ha utilizado. Un `instanceId` corresponde a una configuración de destino.
 
 ```json
 {
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Respuesta
 
-Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la configuración de destino correspondientes a `{INSTANCE_ID}` indicada en la llamada.
+Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la configuración de destino correspondientes a `{INSTANCE_ID}` proporcionados en la llamada.
 
 ```json
 {
@@ -310,7 +310,7 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes
 
-Después de leer este documento, ahora sabe cómo recuperar una configuración de destino a través del Destination SDK `/authoring/destinations` Extremo de API.
+Después de leer este documento, ahora sabe cómo recuperar una configuración de destino a través del extremo de API del Destination SDK `/authoring/destinations`.
 
 Para obtener más información acerca de lo que puede hacer con este extremo, consulte los siguientes artículos:
 

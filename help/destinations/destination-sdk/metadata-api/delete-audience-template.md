@@ -4,7 +4,7 @@ title: Eliminación de una plantilla de audiencia
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '288'
 ht-degree: 2%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**Extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**extremo de API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una plantilla de audiencia mediante `/authoring/audience-templates` Extremo de API.
+Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar para eliminar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`.
 
-Para obtener una descripción detallada de las funciones que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
+Para obtener una descripción detallada de las funcionalidades que puede configurar a través de este extremo, consulte [gestión de metadatos de audiencia](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK son **distingue mayúsculas de minúsculas**. Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, consulte la [guía de introducción](../getting-started.md) para obtener información importante que necesita conocer para realizar llamadas correctamente a la API, incluido cómo obtener el permiso de creación de destino requerido y los encabezados necesarios.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Eliminación de una plantilla de audiencia {#delete}
 
-Puede eliminar un [existente](create-audience-template.md) plantilla de audiencia creando un `DELETE` solicitud a la `/authoring/audience-templates` punto final con `{INSTANCE_ID}`de la plantilla de audiencia que desea eliminar.
+Puede eliminar una plantilla de audiencia [existing](create-audience-template.md) realizando una solicitud `DELETE` al extremo `/authoring/audience-templates` con el `{INSTANCE_ID}`de la plantilla de audiencia que desea eliminar.
 
-Para obtener una plantilla de audiencia existente y su correspondiente `{INSTANCE_ID}`, consulte el artículo sobre [recuperación de una plantilla de audiencia](retrieve-audience-template.md).
+Para obtener una plantilla de audiencia existente y sus `{INSTANCE_ID}` correspondientes, consulte el artículo acerca de [recuperar una plantilla de audiencia](retrieve-audience-template.md).
 
 **Formato de API**
 
@@ -41,7 +41,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | El `ID` de la plantilla de audiencia que desea eliminar. |
+| `{INSTANCE_ID}` | `ID` de la plantilla de audiencia que desea eliminar. |
 
 +++Solicitud
 
@@ -67,4 +67,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Pasos siguientes {#next-steps}
 
-Después de leer este documento, ahora sabe cómo eliminar una plantilla de audiencia utilizando `/authoring/audience-templates` Extremo de API. Leer [cómo utilizar Destination SDK para configurar el destino](../guides/configure-destination-instructions.md) para comprender dónde encaja este paso en el proceso de configuración del destino.
+Después de leer este documento, ahora sabe cómo eliminar una plantilla de audiencia mediante el extremo de API `/authoring/audience-templates`. Lee [cómo usar el Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

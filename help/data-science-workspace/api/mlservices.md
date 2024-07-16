@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;punto final;Data Science Workspace;temas populares;mlservices;api de aprendizaje automático de sensei
+keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;mlservices;api de aprendizaje automático de sensei
 solution: Experience Platform
 title: Punto final de API de MLServices
 description: Un MLService es un modelo entrenado publicado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad de automatizar la formación y la puntuación de forma programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficiencia y precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que las nuevas perspectivas se generen de forma coherente.
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Un MLService es un modelo entrenado publicado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad de automatizar la formación y la puntuación de forma programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficiencia y precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que las nuevas perspectivas se generen de forma coherente.
 
-Las programaciones de puntuación y formación automatizadas se definen con una marca de tiempo de inicio, una marca de tiempo de finalización y una frecuencia representada como [expresión cron](https://en.wikipedia.org/wiki/Cron). Los horarios se pueden definir cuando [crear un MLService](#create-an-mlservice) o aplicado por [actualizar un MLService existente](#update-an-mlservice).
+Las programaciones de entrenamiento y puntuación automatizadas se definen con una marca de tiempo inicial, una marca de tiempo final y una frecuencia representada como una [expresión cron](https://en.wikipedia.org/wiki/Cron). Los horarios se pueden definir al [crear un MLService](#create-an-mlservice) o aplicar al [actualizar un MLService existente](#update-an-mlservice).
 
 ## Crear un MLService {#create-an-mlservice}
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que contiene los detalles del MLService recién creado, incluido su identificador único (`id`), ID del experimento para formación (`trainingExperimentId`), ID del experimento de puntuación (`scoringExperimentId`) y el ID del conjunto de datos de formación de entrada (`trainingDataSetId`).
+Una respuesta correcta devuelve una carga útil que contiene los detalles del MLService recién creado, incluido su identificador único (`id`), el identificador de experimento para formación (`trainingExperimentId`), el identificador de experimento para puntuación (`scoringExperimentId`) y el identificador del conjunto de datos de formación de entrada (`trainingDataSetId`).
 
 ```json
 {
@@ -108,7 +108,7 @@ Una respuesta correcta devuelve una carga útil que contiene los detalles del ML
 
 ## Recuperar una lista de MLServices {#retrieve-a-list-of-mlservices}
 
-Puede recuperar una lista de MLServices realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para recuperación de recursos](./appendix.md#query).
+Puede recuperar una lista de MLServices realizando una única solicitud de GET. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
 
 **Formato de API**
 
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) se utiliza para filtrar los resultados. |
+| `{QUERY_PARAMETER}` | Uno de los [parámetros de consulta disponibles](./appendix.md#query) que se usa para filtrar los resultados. |
 | `{VALUE}` | El valor del parámetro de consulta anterior. |
 
 **Solicitud**
 
-La siguiente solicitud contiene una consulta y recupera una lista de MLServices que comparten el mismo ID de MLInstance (`{MLINSTANCE_ID}`).
+La siguiente solicitud contiene una consulta y recupera una lista de MLServices que comparten el mismo identificador de MLInstance (`{MLINSTANCE_ID}`).
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una lista de servicios MLS y sus detalles, incluido su ID de servicio MLS (`{MLSERVICE_ID}`), ID del experimento para formación (`{TRAINING_ID}`), ID del experimento de puntuación (`{SCORING_ID}`) y el ID del conjunto de datos de formación de entrada (`{DATASET_ID}`).
+Una respuesta correcta devuelve una lista de MLServices y sus detalles, incluidos el identificador de MLService (`{MLSERVICE_ID}`), el identificador de experimento para formación (`{TRAINING_ID}`), el identificador de experimento para puntuación (`{SCORING_ID}`) y el identificador del conjunto de datos de formación de entrada (`{DATASET_ID}`).
 
 ```json
 {
@@ -215,7 +215,7 @@ Puede actualizar un MLService existente sobrescribiendo sus propiedades a travé
 
 >[!TIP]
 >
->Para garantizar el éxito de esta solicitud de PUT, se recomienda que realice primero una solicitud de GET a [recuperar el MLService por identificador](#retrieve-a-specific-mlservice). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
+>Para garantizar el éxito de esta solicitud de PUT, se recomienda que primero realice una solicitud de GET para [recuperar el MLService por ID](#retrieve-a-specific-mlservice). A continuación, modifique y actualice el objeto JSON devuelto y aplique la totalidad del objeto JSON modificado como carga útil para la solicitud del PUT.
 
 **Formato de API**
 

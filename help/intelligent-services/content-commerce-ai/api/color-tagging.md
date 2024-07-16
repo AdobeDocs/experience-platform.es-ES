@@ -6,8 +6,8 @@ description: Cuando se proporciona una imagen, el servicio de etiquetado de colo
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 6%
+source-wordcount: '662'
+ht-degree: 5%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 6%
 
 El servicio de etiquetado de colores, cuando se proporciona una imagen, puede calcular un histograma de colores de píxeles y ordenarlos por colores dominantes en bloques. Los colores de los píxeles de la imagen se agrupan en 40 colores predominantes que son representativos del espectro de colores. A continuación, se calcula un histograma de los valores de color entre esos 40 colores. El servicio tiene dos variantes:
 
-**Etiquetado de colores (imagen completa)**
+**Etiquetado de color (imagen completa)**
 
 Este método extrae un histograma de colores en toda la imagen.
 
-**Etiquetado de colores (con máscara)**
+**Etiquetado de color (con máscara)**
 
 Este método utiliza un extractor de primer plano basado en aprendizaje profundo para identificar objetos en primer plano. Una vez extraídos los objetos de primer plano, se calcula un histograma sobre los colores dominantes para las regiones de primer plano y de fondo, junto con toda la imagen.
 
@@ -40,7 +40,7 @@ La siguiente imagen se utilizó en el ejemplo mostrado en este documento:
 POST /services/v2/predict
 ```
 
-**Solicitud: variante de imagen completa**
+**Solicitud - variante de imagen completa**
 
 La siguiente solicitud de ejemplo utiliza el método de imagen completa para el etiquetado de colores y extrae colores de una imagen en función de los parámetros de entrada proporcionados en la carga útil. Consulte la tabla debajo de la carga útil de ejemplo para obtener más información sobre los parámetros de entrada que se muestran.
 
@@ -83,13 +83,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Respuesta: variante de imagen completa**
 
-Una respuesta correcta devuelve los detalles de los colores extraídos. Cada color se representa mediante una `feature_value` , que contiene la siguiente información:
+Una respuesta correcta devuelve los detalles de los colores extraídos. Cada color está representado por una clave `feature_value`, que contiene la siguiente información:
 
 - Un nombre de color
 - El porcentaje en que aparece este color en relación con la imagen
 - El valor RGB del color
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`significa que el color encontrado es blanco, que se encuentra en el 58,34% de la imagen, y tiene un valor RGB promedio de 254, 254, 243.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`significa que el color encontrado es blanco, que se encuentra en el 58,34% de la imagen, y tiene un valor de RGB promedio de 254, 254, 243.
 
 ```json
 {
@@ -159,9 +159,9 @@ Una respuesta correcta devuelve los detalles de los colores extraídos. Cada col
 
 Observe que el resultado aquí tiene un color extraído en la región de imagen &quot;general&quot;.
 
-**Solicitud: variante de imagen con máscara**
+**Solicitud - variante de imagen enmascarada**
 
-La siguiente solicitud de ejemplo utiliza el método de enmascaramiento para el etiquetado de colores. Esto se habilita configurando la variable `enable_mask` parámetro a `true` en la solicitud.
+La siguiente solicitud de ejemplo utiliza el método de enmascaramiento para el etiquetado de colores. Esto se habilita al establecer el parámetro `enable_mask` en `true` en la solicitud.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,9 +204,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Además, la variable `retrieve_tone` El parámetro también se establece en `true` en la solicitud anterior. Esto nos permite recuperar un histograma de distribución de tonos sobre tonos cálidos, neutros y fríos en las regiones general, frontal y de fondo de la imagen.
+>Además, el parámetro `retrieve_tone` también está establecido en `true` en la solicitud anterior. Esto nos permite recuperar un histograma de distribución de tonos sobre tonos cálidos, neutros y fríos en las regiones general, frontal y de fondo de la imagen.
 
-**Respuesta: variante de imagen con máscara**
+**Respuesta: variante de imagen enmascarada**
 
 ```json
 {
@@ -360,18 +360,18 @@ Además de los colores de la imagen general, ahora también puede ver colores de
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | matriz (objeto de documento) | Sí | - | Vea lo siguiente | Lista de elementos JSON con cada elemento de la lista que representa un documento. |
-| `top_n` | number | No | 0 | Entero no negativo | Número de resultados que se van a devolver. 0, para devolver todos los resultados. Cuando se utiliza junto con Umbral, el número de resultados devueltos será menor entre ambos límites. |
-| `min_coverage` | number | No | 0.05 | Número real | Umbral de cobertura por encima del cual se deben devolver los resultados. Excluir parámetro para devolver todos los resultados. |
-| `resize_image` | number | No | True | Verdadero/falso | Si se cambia o no el tamaño de la imagen de entrada. De forma predeterminada, se cambia el tamaño de las imágenes a 320*320 píxeles antes de realizar la extracción de color. Para fines de depuración, podemos permitir que el código se ejecute en imagen completa también, estableciendo esto en `False`. |
-| `enable_mask` | number | No | False | Verdadero/falso | Activa/Desactiva la extracción de color |
-| `retrieve_tone` | number | No | False | Verdadero/falso | Activa/desactiva la extracción de tonos |
+| `documents` | matriz (objeto de documento) | Sí | - | Consulte a continuación | Lista de elementos JSON con cada elemento de la lista que representa un documento. |
+| `top_n` | número | No | 0 | Entero no negativo | Número de resultados que se van a devolver. 0, para devolver todos los resultados. Cuando se utiliza junto con Umbral, el número de resultados devueltos será menor entre ambos límites. |
+| `min_coverage` | número | No | 0,05 | Número real | Umbral de cobertura por encima del cual se deben devolver los resultados. Excluir parámetro para devolver todos los resultados. |
+| `resize_image` | número | No | True | Verdadero/falso | Si se cambia o no el tamaño de la imagen de entrada. De forma predeterminada, se cambia el tamaño de las imágenes a 320*320 píxeles antes de realizar la extracción de color. Para fines de depuración, podemos permitir que el código se ejecute también en imagen completa, estableciendo este valor en `False`. |
+| `enable_mask` | número | No | False | Verdadero/falso | Activa/Desactiva la extracción de color |
+| `retrieve_tone` | número | No | False | Verdadero/falso | Activa/desactiva la extracción de tonos |
 
 **Objeto de documento**
 
 | Nombre | Tipo de datos | Requerido | Predeterminado | Valores | Descripción |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | Dirección URL del documento con prefijo. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo de repositorio donde se almacena la imagen. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilícelo al pasar el archivo de imagen como un argumento de varias partes en lugar de usar direcciones URL con prefijo. |
-| `dc:format` | string | Sí | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | La codificación de imagen se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |
+| `repo:path` | cadena | - | - | - | Dirección URL del documento con prefijo. |
+| `sensei:repoType` | cadena | - | - | HTTPS | Tipo de repositorio donde se almacena la imagen. |
+| `sensei:multipart_field_name` | cadena | - | - | - | Utilícelo al pasar el archivo de imagen como un argumento de varias partes en lugar de usar direcciones URL con prefijo. |
+| `dc:format` | cadena | Sí | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | La codificación de imagen se comprueba con los tipos de codificación de entrada permitidos antes de procesarse. |

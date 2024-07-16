@@ -6,8 +6,8 @@ description: En SQL, las instrucciones preparadas se utilizan para crear plantil
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 11%
+source-wordcount: '364'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +25,7 @@ Cuando se utilizan instrucciones preparadas, se admiten las siguientes sintaxis:
 
 ### Preparar una instrucción preparada {#prepare}
 
-Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede utilizar variables, como `$1` en lugar de los valores reales. Esta instrucción preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de plan son **no** distingue mayúsculas de minúsculas.
+Esta consulta SQL guarda la consulta SELECT escrita con el nombre dado como `PLAN_NAME`. Puede usar variables, como `$1` en lugar de valores reales. Esta instrucción preparada se guardará durante la sesión actual. Tenga en cuenta que los nombres de plan **no** distinguen entre mayúsculas y minúsculas.
 
 #### Formato SQL
 
@@ -81,14 +81,14 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 La consulta SQL anterior devolverá la siguiente respuesta:
 
-| id | firstname | apellido | fecha de nacimiento | email | city | país |
+| Identificación | firstname | apellido | fecha de nacimiento | email | ciudad | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10 000 | alejandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
-| 10003 | lino | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | Fernando | ríos | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alejandro | Davis | 15-09-1993 | example@example.com | Vancouver | Canadá |
+| 10001 | antoína | dubois | 14-03-1967 | example2@example.com | París | Francia |
+| 10002 | kyoko | sakura | 26-11-1999 | example3@example.com | Tokio | Japón |
+| 10003 | lino | pettersson | 03-06-1982 | example4@example.com | Estocolmo | Suecia |
+| 10004 | aasir | waithaka | 17-12-1976 | example5@example.com | Nairobi | Kenia |
+| 10005 | Fernando | ríos | 30-07-2002 | example6@example.com | Santiago | Chile |
 
 Esta consulta SQL se puede parametrizar mediante la siguiente instrucción preparada:
 
@@ -104,14 +104,14 @@ EXECUTE getIdRange(10000, 10005);
 
 Cuando se realice esta llamada, verá exactamente los mismos resultados que antes:
 
-| id | firstname | apellido | fecha de nacimiento | email | city | país |
+| Identificación | firstname | apellido | fecha de nacimiento | email | ciudad | país |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10 000 | alejandro | Davis | 1993-09-15 | example@example.com | Vancouver | Canadá |
-| 10001 | antoína | dubois | 1967-03-14 | example2@example.com | París | Francia |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japón |
-| 10003 | lino | pettersson | 1982-06-03 | example4@example.com | Estocolmo | Suecia |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | Fernando | ríos | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alejandro | Davis | 15-09-1993 | example@example.com | Vancouver | Canadá |
+| 10001 | antoína | dubois | 14-03-1967 | example2@example.com | París | Francia |
+| 10002 | kyoko | sakura | 26-11-1999 | example3@example.com | Tokio | Japón |
+| 10003 | lino | pettersson | 03-06-1982 | example4@example.com | Estocolmo | Suecia |
+| 10004 | aasir | waithaka | 17-12-1976 | example5@example.com | Nairobi | Kenia |
+| 10005 | Fernando | ríos | 30-07-2002 | example6@example.com | Santiago | Chile |
 
 Una vez que haya terminado de utilizar la instrucción preparada, puede desasignarla mediante la llamada siguiente:
 

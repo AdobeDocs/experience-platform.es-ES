@@ -20,7 +20,7 @@ ht-degree: 6%
 
 La API de higiene de datos le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform.
 
-Puede acceder a la API a través de la misma ruta raíz que el [API de Privacy Service](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
+Puede acceder a la API a través de la misma ruta raíz que la [API de Privacy Service](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Introducción
 
@@ -28,7 +28,7 @@ Esta sección proporciona una introducción a los conceptos principales que nece
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para realizar llamadas a la API de higiene de datos, primero debe recopilar sus credenciales de autenticación. Son las mismas credenciales que se utilizan para acceder a la API de Privacy Service. Consulte la [Resumen de API](./overview.md#getting-started) para generar valores para cada uno de los encabezados requeridos para la API de higiene de datos, como se muestra a continuación:
+Para realizar llamadas a la API de higiene de datos, primero debe recopilar sus credenciales de autenticación. Son las mismas credenciales que se utilizan para acceder a la API de Privacy Service. Consulte la [descripción general de la API](./overview.md#getting-started) para generar valores para cada uno de los encabezados necesarios para la API de higiene de datos, como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,7 +40,7 @@ Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren
 
 ### Lectura de llamadas de API de muestra
 
-Este documento proporciona una llamada de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción para las API de Experience Platform.
+Este documento proporciona una llamada de API de ejemplo para demostrar cómo dar formato a sus solicitudes. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/api-guide.md#sample-api) en la guía de introducción a las API de Experience Platform.
 
 ## Creación de un trabajo de eliminación
 
@@ -54,7 +54,7 @@ POST /jobs
 
 **Solicitud**
 
-La carga útil de la solicitud tiene una estructura similar a la de un [Eliminar solicitud en la API de Privacy Service](../../privacy-service/api/privacy-jobs.md#access-delete). Incluye un `users` matriz cuyos objetos representan a los usuarios cuyos datos se van a eliminar.
+La carga de la solicitud tiene una estructura similar a la de una [solicitud de eliminación en la API del Privacy Service](../../privacy-service/api/privacy-jobs.md#access-delete). Incluye una matriz `users` cuyos objetos representan a los usuarios cuyos datos se van a eliminar.
 
 ```shell
 curl -X POST \
@@ -108,8 +108,8 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `companyContexts` | Matriz que contiene información de autenticación de su organización. Debe contener un solo objeto con las siguientes propiedades: <ul><li>`namespace`: debe configurarse como `imsOrgID`.</li><li>`value`: su ID de organización de. Es el mismo valor que se proporciona en la variable `x-gw-ims-org-id` encabezado.</li></ul> |
-| `users` | Matriz que contiene una colección de al menos un usuario cuya información desea eliminar. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: Identificador de un usuario que se utiliza para clasificar los ID de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a él o buscarlo más tarde.</li><li>`action`: una matriz que enumera las acciones deseadas que se deben realizar en los datos del usuario. Debe contener un solo valor de cadena: `delete`.</li><li>`userIDs`: una colección de identidades del usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad contiene las siguientes propiedades: <ul><li>`namespace`: La [área de nombres de identidad](../../identity-service/features/namespaces.md) asociado con el ID. Puede ser un [espacio de nombres estándar](../../privacy-service/api/appendix.md#standard-namespaces) Platform o puede ser un área de nombres personalizada definida por su organización. El tipo de área de nombres utilizado debe reflejarse en la variable `type` propiedad.</li><li>`value`: El valor de identidad.</li><li>`type`: debe configurarse como `standard` si se utiliza un área de nombres reconocida globalmente, o `custom` si utiliza un área de nombres definida por su organización.</li></ul></li></ul> |
+| `companyContexts` | Matriz que contiene información de autenticación de su organización. Debe contener un solo objeto con las siguientes propiedades: <ul><li>`namespace`: debe establecerse en `imsOrgID`.</li><li>`value`: su ID de organización. Este es el mismo valor que se proporciona en el encabezado `x-gw-ims-org-id`.</li></ul> |
+| `users` | Matriz que contiene una colección de al menos un usuario cuya información desea eliminar. Cada objeto de usuario contiene la siguiente información: <ul><li>`key`: identificador de un usuario que se usa para calificar los identificadores de trabajo independientes en los datos de respuesta. Se recomienda elegir una cadena única y fácilmente identificable para este valor, de modo que se pueda hacer referencia a él o buscarlo más tarde.</li><li>`action`: una matriz que enumera las acciones que se deben realizar con los datos del usuario. Debe contener un solo valor de cadena: `delete`.</li><li>`userIDs`: una colección de identidades del usuario. El número de identidades que un solo usuario puede tener está limitado a nueve. Cada identidad contiene las siguientes propiedades: <ul><li>`namespace`: el [área de nombres de identidad](../../identity-service/features/namespaces.md) asociado con el identificador. Puede ser un [espacio de nombres estándar](../../privacy-service/api/appendix.md#standard-namespaces) reconocido por Platform o puede ser un espacio de nombres personalizado definido por su organización. El tipo de área de nombres utilizado debe reflejarse en la propiedad `type`.</li><li>`value`: el valor de identidad.</li><li>`type`: debe establecerse en `standard` si usa un área de nombres reconocida globalmente, o en `custom` si usa un área de nombres definida por su organización.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

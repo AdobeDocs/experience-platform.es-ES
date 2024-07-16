@@ -15,14 +15,14 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita el **[!UICONTROL Ver destinos]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]**, y **[!UICONTROL Ver segmentos]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea el [información general de control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar *identidades*, necesita el **[!UICONTROL Ver gráfico de identidad]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
+>* Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**[para ](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar *identidades*, necesita el **[!UICONTROL permiso de control de acceso](/help/access-control/home.md#permissions) de]** Ver gráfico de identidad[. <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Adobe Experience Platform admite una amplia gama de destinos. El flujo de trabajo de activación de audiencia varía según el destino, el tipo de datos de audiencia que admite y la frecuencia de exportación de datos.
 
 ## Métodos de activación {#activation-methods}
 
-Después de usted [configuración del destino](connect-destination.md)Además, las audiencias se pueden activar de varias formas:
+Después de [configurar el destino](connect-destination.md), puede activar audiencias de varias maneras:
 
 ### Activar audiencias desde el catálogo de destinos
 
@@ -32,19 +32,19 @@ Consulte las siguientes guías para obtener información detallada sobre la acti
 * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](activate-streaming-profile-destinations.md)
 * [Activar datos de audiencia en destinos de exportación de perfiles por lotes](activate-batch-profile-destinations.md)
 
-### Activar audiencias desde el [!UICONTROL Examinar] página
+### Activar audiencias desde la página [!UICONTROL Examinar]
 
-Siga los pasos a continuación para activar los datos en sus destinos desde el **[!UICONTROL Examinar]** página.
+Siga los pasos a continuación para activar los datos en sus destinos desde la página **[!UICONTROL Examinar]**.
 
-1. Ir a **[!UICONTROL Conexiones > Destinos]** y seleccione la opción **[!UICONTROL Examinar]** pestaña.
+1. Vaya a **[!UICONTROL Conexiones > Destinos]** y seleccione la pestaña **[!UICONTROL Examinar]**.
 
    ![Ficha Examinar](../assets/ui/activation-overview/browse-tab.png)
 
-1. Busque la conexión de destino que desee utilizar para activar los segmentos, seleccione los tres puntos en la [!UICONTROL Nombre] y, a continuación, seleccione **[!UICONTROL Activar audiencias]**.
+1. Busque la conexión de destino que desee usar para activar los segmentos, seleccione los tres puntos de la columna [!UICONTROL Nombre] y, a continuación, seleccione **[!UICONTROL Activar audiencias]**.
 
    ![Botón Activar audiencias](../assets/ui/activation-overview/activate-segments.png)
 
-1. Según el destino seleccionado, siga los pasos descritos en los artículos siguientes, empezando por **[!UICONTROL Seleccionar segmentos]** para finalizar el flujo de trabajo de activación:
+1. Según el destino seleccionado, siga los pasos descritos en los artículos siguientes, empezando por el paso **[!UICONTROL Seleccionar segmentos]** para finalizar el flujo de trabajo de activación:
 
    * [Activar datos de audiencia en destinos de exportación de audiencia de flujo continuo](activate-segment-streaming-destinations.md)
    * [Activación de datos de audiencia en destinos de exportación de perfil de flujo continuo](activate-streaming-profile-destinations.md)

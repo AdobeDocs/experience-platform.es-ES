@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Fuentes en Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] le permite introducir datos de fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros, su sistema CRM y mucho más.
+[!DNL Adobe Real-Time Customer Data Platform] le permite introducir datos de orígenes externos al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform]. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, software de terceros, su sistema CRM y mucho más.
 
-Para obtener una descripción más detallada de las fuentes, incluida una lista de fuentes disponibles y vínculos a tutoriales, lea la [documentación de orígenes](../../sources/home.md).
+Para obtener una descripción más detallada de los orígenes, incluida una lista de orígenes disponibles y vínculos a tutoriales, lea [documentación de orígenes](../../sources/home.md).

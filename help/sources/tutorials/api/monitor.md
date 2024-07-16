@@ -7,33 +7,33 @@ description: Este tutorial cubre los pasos para monitorizar los datos de ejecuci
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
 
 # Monitorización de flujos de datos de origen mediante la API de Flow Service
 
-Este tutorial cubre los pasos para monitorizar los datos de ejecución de flujo en busca de integridad, errores y métricas mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial cubre los pasos para supervisar los datos de ejecución de flujo en busca de integridad, errores y métricas mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Este tutorial requiere que tenga el valor ID de un flujo de datos válido. Si no tiene un ID de flujo de datos válido, seleccione el conector que desee en el [información general de orígenes](../../home.md) y siga los pasos descritos para crear un flujo de datos antes de intentar realizar este tutorial.
+>Este tutorial requiere que tenga el valor ID de un flujo de datos válido. Si no tiene un ID de flujo de datos válido, seleccione el conector que elija en la [descripción general de las fuentes](../../home.md) y siga los pasos descritos para crear un flujo de datos antes de intentar realizar este tutorial.
 
-## Primeros pasos
+## Introducción
 
 Este tutorial también requiere tener una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos desde varias fuentes, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante [!DNL Platform] servicios.
-* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [Fuentes](../../home.md): [!DNL Experience Platform] permite la ingesta de datos de varias fuentes al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de [!DNL Platform].
+* [Zonas protegidas](../../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 ### Uso de API de Platform
 
-Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía de [introducción a las API de Platform](../../../landing/api-guide.md).
+Para obtener información sobre cómo realizar llamadas correctamente a las API de Platform, consulte la guía sobre [introducción a las API de Platform](../../../landing/api-guide.md).
 
 ## Monitorización de flujos de datos
 
-Para ver el estado del flujo de datos, realice una solicitud de GET al [!DNL Flow Service] API, mientras proporciona el ID de flujo correspondiente del flujo de datos.
+Para ver el estado del flujo de datos, realice una solicitud de GET a la API [!DNL Flow Service], proporcionando al mismo tiempo el ID de flujo correspondiente del flujo de datos.
 
 **Formato de API**
 
@@ -43,7 +43,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parámetro | Descripción |
 | --------- | ----------- |
-| `{FLOW_ID}` | La exclusiva `id` valor del flujo de datos que desea monitorizar. |
+| `{FLOW_ID}` | El valor `id` único del flujo de datos que desea supervisar. |
 
 **Solicitud**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve detalles sobre la ejecución de flujo, incluida información sobre su fecha de creación, las conexiones de origen y destino, así como el identificador único de la ejecución de flujo (`id`).
+Una respuesta correcta devuelve detalles sobre la ejecución de flujo, incluida la información sobre su fecha de creación, las conexiones de origen y destino, así como el identificador único de la ejecución de flujo (`id`).
 
 ```json
 {
@@ -235,4 +235,4 @@ Una respuesta correcta devuelve detalles sobre la ejecución de flujo, incluida 
 
 ## Pasos siguientes
 
-Con este tutorial, ha recuperado las métricas y la información de error del flujo de datos con la variable [!DNL Flow Service] API. Ahora puede seguir monitorizando el flujo de datos, según la programación de ingesta, para rastrear su estado y las tasas de ingesta. Para obtener información sobre cómo realizar las mismas tareas mediante la interfaz de usuario de, consulte el tutorial sobre [monitorización de flujos de datos mediante la interfaz de usuario](../ui/monitor.md)
+Al seguir este tutorial, ha recuperado las métricas y la información de error del flujo de datos mediante la API [!DNL Flow Service]. Ahora puede seguir monitorizando el flujo de datos, según la programación de ingesta, para rastrear su estado y las tasas de ingesta. Para obtener información sobre cómo realizar las mismas tareas con la interfaz de usuario, consulte el tutorial sobre [supervisión de flujos de datos mediante la interfaz de usuario](../ui/monitor.md)

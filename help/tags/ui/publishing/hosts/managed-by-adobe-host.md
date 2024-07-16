@@ -4,7 +4,7 @@ description: Obtenga información acerca de la opción de alojamiento predetermi
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 88%
 
 ---
@@ -23,7 +23,7 @@ Este documento proporciona información general sobre los hosts administrados po
 
 ## Akamai
 
-Actualmente, el proveedor de CDN principal de Adobe es [Akamai](https://www.akamai.com/es). La CDN robusta de Akamai está diseñada para ofrecer contenido a una audiencia global y de gran volumen de visitantes en línea. La CDN ejecuta redes redundantes de nodos de carga equilibrada y optimizados para ofrecer contenido lo más rápido posible a visitantes ubicados en todo el mundo.
+Actualmente, el proveedor de CDN principal de Adobe es [Akamai](https://www.akamai.com/es). La CDN robusta de Akamai está diseñada para ofrecer contenido a un público global y de gran volumen de visitantes en línea. La CDN ejecuta redes redundantes de nodos de carga equilibrada y optimizados para ofrecer contenido lo más rápido posible a visitantes ubicados en todo el mundo.
 
 En particular, Akamai ejecuta más de 137 000 servidores en más de 1150 redes de 87 países. En cuanto a la redundancia, la red de distribución de contenido (CDN) no solo enruta de un servidor a otro, sino que también puede enrutar de un nodo de servidores a otro según sea necesario. En otras palabras, cada nodo consta de varios servidores, de modo que un servidor que se está apagando nunca se convierte en un problema, ya que los demás servidores del mismo nodo pueden asumir el control.
 
@@ -76,7 +76,7 @@ Estas anulaciones de caché escalonadas dan tiempo a los grupos de servidores de
 
 Las compilaciones de biblioteca también se almacenan en caché en el explorador mediante el uso del encabezado `cache-control` HTTP. Al utilizar hosts administrados por Adobe, no controla los encabezados que aparecen en las respuestas de API, por lo que se utiliza el Adobe predeterminado para el almacenamiento en caché. En otras palabras, no puede utilizar encabezados personalizados para hosts administrados por Adobe. Si necesita un `cache-control` encabezado personalizado, puede considerar [el alojamiento propio](self-hosting-libraries.md).
 
-El tiempo de caducidad de la compilación de la biblioteca en caché del explorador (determinado por la variable `cache-control` encabezado) variarán según el entorno de etiquetas que utilice:
+El tiempo de caducidad de la compilación de la biblioteca en caché del explorador (determinado por el encabezado `cache-control`) variará según el entorno de etiquetas que utilice:
 
 | Entorno | `cache-control` valor |
 | --- | --- |
@@ -88,7 +88,7 @@ Como se indica en la tabla anterior, el almacenamiento en caché del navegador n
 
 Los encabezados de control de caché solo se aplican a la compilación de la biblioteca principal. Los recursos secundarios debajo de la biblioteca principal siempre se consideran nuevos y, por lo tanto, no es necesario almacenarlos en caché en el explorador.
 
-## Uso del hosting gestionado por Adobe en la interfaz de usuario de 
+## Uso del hosting gestionado por Adobe en la IU de
 
 La primera vez que se crea una propiedad en la IU de Platform o en la IU de recopilación de datos, se crea automáticamente un host administrado por Adobe. De forma predeterminada, todos los entornos disponibles que tienen propiedades utilizables inmediatamente también se asignan al host administrado por Adobe.
 
@@ -98,7 +98,6 @@ La primera vez que se crea una propiedad en la IU de Platform o en la IU de reco
 >
 >1. Seleccione la pestaña **[!UICONTROL Hosts]** de la propiedad y, a continuación, seleccione **[!UICONTROL Añadir host]**.
 >1. Proporcione un nombre para el host, seleccione **[!UICONTROL Gestionado por Adobe]** como tipo de host y, a continuación, seleccione **[!UICONTROL Guardar]**.
-
 >
 >A continuación, puede volver a asignar sus entornos al host administrado por Adobe según sus preferencias.
 

@@ -25,16 +25,16 @@ Este documento proporciona un tutorial para administrar el acceso a los datos co
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
-* [Sistema de modelo de datos de experiencia (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Aprenda a crear y administrar esquemas y otros recursos en la IU de Platform.
-* [[!DNL Data Governance]](../../data-governance/home.md): Aprenda cómo [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
-* [Control de acceso basado en atributos](../../access-control/abac/overview.md): el control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo de esquema ad hoc o normal. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
+* Sistema [Experience Data Model (XDM)](../../xdm/home.md): El marco estandarizado mediante el cual Experience Platform organiza los datos de experiencia del cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Aprenda a crear y administrar esquemas y otros recursos en la interfaz de usuario de Platform.
+* [[!DNL Data Governance]](../../data-governance/home.md): descubra cómo [!DNL Data Governance] le permite administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de los datos.
+* [Control de acceso basado en atributos](../../access-control/abac/overview.md): El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que permite a los administradores controlar el acceso a objetos específicos o a funcionalidades basadas en atributos. Los atributos pueden ser metadatos añadidos a un objeto, como una etiqueta añadida a un campo de esquema ad hoc o normal. Un administrador define directivas de acceso que incluyen atributos para administrar permisos de acceso de usuarios.
 
 ## Creación de un esquema ad hoc
 
 Una vez que se ha ejecutado la consulta y se han generado los resultados, se genera automáticamente un esquema ad hoc que se añade al inventario de esquemas.
 
-Para agregar una etiqueta de datos, vaya a [!UICONTROL Esquemas] pestaña examinar del panel seleccionando [!UICONTROL Esquemas] en el carril izquierdo de la interfaz de usuario de Platform. Se muestra el inventario de esquemas.
+Para agregar una etiqueta de datos, vaya a la pestaña de exploración del panel [!UICONTROL Esquemas] seleccionando [!UICONTROL Esquemas] en el carril izquierdo de la interfaz de usuario de Platform. Se muestra el inventario de esquemas.
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ Para agregar una etiqueta de datos, vaya a [!UICONTROL Esquemas] pestaña examin
 
 ## Descubra esquemas ad hoc en el inventario de esquemas de la IU de Platform {#discover-ad-hoc-schemas}
 
-Para habilitar la visualización de esquemas ad hoc en la IU de Platform, seleccione el icono de filtro (![Un icono de filtro.](../images/data-governance/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
+Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](../images/data-governance/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
 
-![El carril izquierdo de las opciones de filtro del panel de esquemas tiene activada la opción Mostrar esquema ad hoc.](../images/data-governance/adhoc-schema-toggle.png)
+![El carril izquierdo de las opciones de filtro del panel de esquemas tiene habilitada la opción &#39;Mostrar esquema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 
 Seleccione el nombre del esquema ad hoc creado recientemente en la lista disponible. Aparecerá una visualización de la estructura de esquema ad hoc.
 
@@ -52,21 +52,21 @@ Seleccione el nombre del esquema ad hoc creado recientemente en la lista disponi
 
 ## Editar etiquetas de gobernanza
 
-Para editar las etiquetas de datos para el esquema ad hoc, seleccione la [!UICONTROL Etiquetas] pestaña. El espacio de trabajo de etiquetas le permite aplicar, crear y editar etiquetas a los campos de esquema ad hoc y controlar los permisos de acceso a través de la interfaz de usuario. Todos los campos del esquema ad hoc se representan aquí.
+Para editar las etiquetas de datos de su esquema ad hoc, seleccione la pestaña [!UICONTROL Etiquetas]. El espacio de trabajo de etiquetas le permite aplicar, crear y editar etiquetas a los campos de esquema ad hoc y controlar los permisos de acceso a través de la interfaz de usuario. Todos los campos del esquema ad hoc se representan aquí.
 
 ## Editar etiquetas para el esquema o campo
 
-Para editar las etiquetas para todo el esquema, seleccione el icono de lápiz (![Un icono de lápiz.](../images/data-governance/edit-icon.png)) al lado del nombre del esquema en la sección [!UICONTROL Etiquetas] pestaña.
+Para editar las etiquetas de todo el esquema, seleccione el icono de lápiz (![Un icono de lápiz.](../images/data-governance/edit-icon.png)) al lado del nombre del esquema en la ficha [!UICONTROL Etiquetas].
 
-![La vista de etiquetas del espacio de trabajo de esquemas con el icono de lápiz resaltado.](../images/data-governance/edit-entire-schema-labels.png)
+![Vista de etiquetas en el área de trabajo de esquemas con el icono de lápiz resaltado.](../images/data-governance/edit-entire-schema-labels.png)
 
-Para aplicar una etiqueta a un campo existente, seleccione uno o varios campos de la lista seguido de [!UICONTROL Editar etiquetas de gobernanza] en la barra lateral derecha.
+Para aplicar una etiqueta a un campo existente, seleccione uno o más campos de la lista seguidos de [!UICONTROL Editar etiquetas de gobernanza] en la barra lateral derecha.
 
-![La vista de etiquetas en el espacio de trabajo de esquemas con la opción &quot;Editar etiquetas de gobernanza&quot; resaltada en la barra lateral derecha.](../images/data-governance/edit-governance-labels.png)
+![La vista de etiquetas en el área de trabajo de esquemas con la opción &#39;Editar etiquetas de control&#39; resaltada en la barra lateral derecha.](../images/data-governance/edit-governance-labels.png)
 
 ## Ventana emergente Editar etiquetas
 
-El [!UICONTROL Editar etiquetas] aparece la ventana emergente. Desde esta vista puede crear o editar etiquetas de gobernanza existentes a través de la IU de.
+Aparece la ventana emergente [!UICONTROL Editar etiquetas]. Desde esta vista puede crear o editar etiquetas de gobernanza existentes a través de la IU de.
 
 ![La ventana emergente Editar etiquetas.](../images/data-governance/edit-labels-popover.png)
 
@@ -76,7 +76,7 @@ Consulte la documentación para obtener instrucciones sobre cómo [crear o edita
 >
 >La creación de una etiqueta nueva o la edición de una etiqueta existente requieren permisos de administrador para su organización. Si no tiene privilegios de administrador, póngase en contacto con el administrador del sistema para organizar el acceso.
 
-Las etiquetas también se pueden crear mediante el espacio de trabajo de permisos. Consulte la [guía sobre creación de etiquetas en el espacio de trabajo de permisos](../../access-control/abac/ui/labels.md) para obtener instrucciones.
+Las etiquetas también se pueden crear mediante el espacio de trabajo de permisos. Consulte la [guía sobre la creación de etiquetas en el área de trabajo de permisos](../../access-control/abac/ui/labels.md) para obtener instrucciones.
 
 Una vez aplicado el nivel adecuado de control de acceso basado en atributos, el siguiente comportamiento del sistema se aplica a cualquier consulta ejecutada mediante el Servicio de consulta cuando un usuario intenta acceder a datos no accesibles:
 

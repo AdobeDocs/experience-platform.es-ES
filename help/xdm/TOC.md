@@ -65,7 +65,7 @@ ht-degree: 46%
       * [Detalles de contacto de trabajo](./field-groups/profile/work-contact-details.md)
       * [Componentes de la persona empresarial de XDM](./field-groups/profile/business-person-components.md)
       * [Detalles de la persona empresarial de XDM](./field-groups/profile/business-person-details.md)
-   * Perfil de cliente potencial individual XDM {#prospect-profile}
+   * Perfil de cliente potencial individual de XDM {#prospect-profile}
       * [Detalles del cliente potencial del socio (ejemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * ExperienceEvent de XDM {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
@@ -95,13 +95,13 @@ ht-degree: 46%
       * [Detalles de la Web](./field-groups/event/web-details.md)
    * Campaña empresarial de XDM {#b2b-campaign}
       * [Detalles de la campaña empresarial de XDM](./field-groups/b2b-campaign/details.md)
-   * Miembros de campaña empresarial de XDM {#b2b-campaign-members}
+   * Miembros de XDM Business Campaign {#b2b-campaign-members}
       * [Detalles de miembros de XDM Business Campaign](./field-groups/b2b-campaign-members/details.md)
-   * Medicación {#medication}
+   * Medicamento {#medication}
       * [Medicación sanitaria](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
       * [Detalles del plan de atención médica](./field-groups/plan/healthcare-plan-details.md)
-   * Product {#product}
+   * Producto {#product}
       * [Catálogo de productos](./field-groups/product/product-catalog.md)
       * [Categoría de productos](./field-groups/product/product-category.md)
    * Proveedor {#provider}
@@ -187,15 +187,15 @@ ht-degree: 46%
    * [Información web](./data-types/web-information.md)
    * [Interacción web](./data-types/web-interaction.md)
    * [Detalles de la página web](./data-types/webpage-details.md)
-* [!UICONTROL Esquemas] IU {#ui}
+* [!UICONTROL Esquemas] interfaz de usuario {#ui}
    * [Información general](./ui/overview.md)
    * [Exploración de recursos XDM](./ui/explore.md)
-   * Creación y edición de recursos {#resources}
+   * Crear y editar recursos {#resources}
       * [Esquemas](./ui/resources/schemas.md)
       * [Clases](./ui/resources/classes.md)
       * [Grupos de campo](./ui/resources/field-groups.md)
       * [Tipos de datos](./ui/resources/data-types.md)
-   * Definición de campos {#fields}
+   * Definir campos {#fields}
       * [Información general](./ui/fields/overview.md)
       * [Campos de matriz](./ui/fields/array.md)
       * [Campos de enumeración](./ui/fields/enum.md)

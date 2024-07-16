@@ -20,9 +20,9 @@ Aprenda a solucionar errores al trabajar con libros de reproducción de casos de
 
 Un par de limitaciones conocidas se muestran al crear una instancia de un manual y generar recursos.
 
-* Para los esquemas generados, si se genera un esquema en una instancia de un manual y se edita, otro esquema *no* se generan si habilita otra instancia del manual de implementación. En su lugar, siga utilizando el esquema editado también dentro de la instancia.
+* En el caso de los esquemas generados, si se genera un esquema en una instancia de un libro de reproducción y usted lo edita, entonces no se generará otro esquema ** si habilita otra instancia del libro de reproducción. En su lugar, siga utilizando el esquema editado también dentro de la instancia.
 
-* Al usar el [funcionalidad de sensibilización de datos](/help/use-case-playbooks/playbooks/data-awareness.md) para promocionar el esquema de la zona protegida de inspiración a la de desarrollo, podría ver algunos errores similares a los siguientes:
+* Al usar la [funcionalidad de reconocimiento de datos](/help/use-case-playbooks/playbooks/data-awareness.md) para promocionar el esquema de la zona protegida inspiracional a la zona protegida de desarrollo, es posible que vea algunos errores similares a los siguientes:
 
 ![Errores mostrados en el flujo de trabajo de asignación de esquemas.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 

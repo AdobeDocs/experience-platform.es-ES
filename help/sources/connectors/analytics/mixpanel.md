@@ -1,11 +1,11 @@
 ---
-title: Información general sobre el conector de origen Mixpanel
+title: Información general sobre el conector Mixpanel Source
 description: Obtenga información sobre cómo conectar Mixpanel a Adobe Experience Platform mediante API o la interfaz de usuario.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -14,45 +14,45 @@ ht-degree: 0%
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Experience Platform es compatible con la ingesta de datos desde una aplicación de análisis de terceros. La compatibilidad con proveedores de análisis incluye [!DNL Mixpanel].
+Experience Platform es compatible con la ingesta de datos desde una aplicación de análisis de terceros. Los proveedores de análisis admiten [!DNL Mixpanel].
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) es una herramienta de análisis de productos que le permite capturar datos sobre cómo los usuarios interactúan con un producto digital. Mixpanel le permite analizar estos datos de producto con informes sencillos e interactivos que le permiten consultar y visualizar los datos con solo unos clics.
 
-Fuentes aprovecha el [API de exportación de eventos de Mixpanel > Descargar](https://developer.mixpanel.com/reference/raw-event-export) para descargar los datos de evento a medida que se reciben y almacenan en [!DNL Mixpanel], junto con todas las propiedades de evento (incluidas las siguientes `distinct_id`) y la marca de tiempo exacta en la que se envió el evento al Experience Platform. Mixpanel utiliza tokens de portador como mecanismo de autenticación para comunicarse con la API de exportación de eventos de Mixpanel.
+Sources aprovecha [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) para descargar los datos de evento a medida que se reciben y almacenan en [!DNL Mixpanel], junto con todas las propiedades de evento (incluido `distinct_id`) y la marca de tiempo exacta en que se envió el evento al Experience Platform. Mixpanel utiliza tokens de portador como mecanismo de autenticación para comunicarse con la API de exportación de eventos de Mixpanel.
 
 ## LISTA DE PERMITIDOS de direcciones IP
 
-Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la [LISTA DE PERMITIDOS de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
-## Autentique su [!DNL Mixpanel] account
+## Autenticar su cuenta de [!DNL Mixpanel]
 
-Esta sección describe los pasos previos que debe seguir para autenticar su cuenta y traer su [!DNL Mixpanel] datos a Platform.
+Esta sección describe los pasos previos que se deben seguir para autenticar su cuenta y llevar los datos de [!DNL Mixpanel] a Platform.
 
-Para crear un [!DNL Mixpanel] conexión de origen y flujo de datos, primero debe tener un [!DNL Mixpanel] cuenta. Si no tiene un válido [!DNL Mixpanel] cuenta de, consulte la [Registro de Mixpanel](https://mixpanel.com/register/) para crear su cuenta de.
+Para crear una conexión de origen y un flujo de datos de [!DNL Mixpanel], primero debe tener una cuenta de [!DNL Mixpanel] válida. Si no tiene una cuenta de [!DNL Mixpanel] válida, consulte la página [Registro de Mixpanel](https://mixpanel.com/register/) para crear su cuenta.
 
-Una vez que haya creado correctamente una [!DNL Mixpanel] cuenta de, vaya a la [!DNL Project Details] en la pestaña [!DNL Project Seettings] página de la [!DNL Mixpanel] IU para recuperar el ID de proyecto y configurar la zona horaria.
+Una vez que haya creado correctamente una cuenta de [!DNL Mixpanel], vaya a la pestaña [!DNL Project Details] en la página [!DNL Project Seettings] de la interfaz de usuario de [!DNL Mixpanel] para recuperar el ID de proyecto y configurar la zona horaria.
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 
-A continuación, vaya a [!DNL Service Accounts] en la pestaña [!DNL Project Settings] página en la [!DNL Mixpanel] IU para recuperar las credenciales de la cuenta de servicio.
+A continuación, vaya a la ficha [!DNL Service Accounts] en la página [!DNL Project Settings] de la interfaz de usuario de [!DNL Mixpanel] para recuperar las credenciales de la cuenta de servicio.
 
 >[!TIP]
 >
->Para una práctica recomendada, seleccione una cuenta de servicio que [no caduca](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration).
+>Para una práctica recomendada, seleccione una cuenta de servicio que [no caduque](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration).
 
-![Cuenta de servicio de Mixpanel](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
+![Cuenta De Servicio De Mixpanel](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-Finalmente, cree una plataforma [esquema](../../../xdm/schema/composition.md) necesario para el [!DNL Mixpanel Event Export API]. Para obtener más información sobre las asignaciones necesarias para el esquema, consulte la guía de [creación de un [!DNL Mixpanel] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
+Finalmente, cree un [esquema](../../../xdm/schema/composition.md) de plataforma necesario para [!DNL Mixpanel Event Export API]. Para obtener más información sobre las asignaciones necesarias para su esquema, consulte la guía sobre [creación de una conexión de origen en la interfaz de usuario [!DNL Mixpanel] .](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)
 
 ![Crear esquema](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## Connect [!DNL Mixpanel] a Platform mediante API
+## Conectar [!DNL Mixpanel] a Platform mediante API
 
-La siguiente documentación proporciona información sobre cómo conectarse [!DNL Mixpanel] Vaya a Platform mediante las API o la interfaz de usuario de:
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Mixpanel] a Platform mediante API o la interfaz de usuario:
 
-* [Crear una conexión de origen y un flujo de datos para [!DNL Mixpanel] uso de la API de Flow Service](../../tutorials/api/create/analytics/mixpanel.md)
+* [Cree una conexión de origen y un flujo de datos para [!DNL Mixpanel] usando la API de Flow Service](../../tutorials/api/create/analytics/mixpanel.md)
 
-## Connect [!DNL Mixpanel] a Platform mediante la IU
+## Conectar [!DNL Mixpanel] a Platform mediante la interfaz de usuario
 
-* [Crear un [!DNL Mixpanel] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/analytics/mixpanel.md)
+* [Crear una  [!DNL Mixpanel] conexión de origen en la interfaz de usuario](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Crear un flujo de datos para una conexión de origen de éxito de cliente en la interfaz de usuario](../../tutorials/ui/dataflow/analytics.md)

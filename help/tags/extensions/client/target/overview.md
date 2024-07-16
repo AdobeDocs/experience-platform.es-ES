@@ -4,7 +4,7 @@ description: Obtenga información sobre la extensión de etiquetas para Adobe Ta
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1179'
 ht-degree: 93%
 
 ---

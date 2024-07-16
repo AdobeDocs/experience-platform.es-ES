@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 28%
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 28%
 * [Descargar tableros para el PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Información general](data-distiller/overview.md)
-   * Perspectivas personalizables para informes de aplicaciones ampliados {#customizable-insights}
+   * Perspectivas personalizables para informes de aplicaciones extendidos {#customizable-insights}
       * [Información general](data-distiller/customizable-insights/overview.md)
       * [Modo de profesional de consultas (creación de gráficos SQL)](data-distiller/customizable-insights/query-pro-mode.md)
       * Filtros {#filters}
@@ -37,7 +37,7 @@ ht-degree: 28%
    * [Públicos](guides/audiences.md)
    * [Destinos](guides/destinations.md)
    * [Uso de licencias](guides/license-usage.md)
-* Perspectivas disponibles {#insights}
+* Datos disponibles {#insights}
    * [Perfiles](insights/profiles.md)
    * [Públicos](insights/audiences.md)
    * [Destinos](insights/destinations.md)

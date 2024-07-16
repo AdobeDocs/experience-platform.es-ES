@@ -4,28 +4,28 @@ description: Aprenda a conectarse a Data Distiller desde un Jupyter Notebook.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 1%
+source-wordcount: '684'
+ht-degree: 0%
 
 ---
 
 # Conexión a Data Distiller desde un Jupyter Notebook
 
-Para enriquecer sus canalizaciones de aprendizaje automático con datos de experiencia del cliente de alto valor, primero debe conectarse a Data Distiller desde [!DNL Jupyter Notebooks]. Este documento describe los pasos para conectarse a Data Distiller desde un [!DNL Python] portátil en su entorno de aprendizaje automático.
+Para enriquecer las canalizaciones de aprendizaje automático con datos de experiencia del cliente de alto valor, primero debe conectarse a Data Distiller desde [!DNL Jupyter Notebooks]. Este documento describe los pasos para conectarse a Data Distiller desde un bloc de notas de [!DNL Python] en su entorno de aprendizaje automático.
 
 ## Introducción
 
-En esta guía se da por hecho que está familiarizado con la comunicación interactiva [!DNL Python] y tienen acceso a un entorno de portátiles. El portátil puede alojarse en un entorno de aprendizaje automático basado en la nube o localmente con [[!DNL Jupyter Notebook]](https://jupyter.org/).
+En esta guía se da por hecho que está familiarizado con los blocs de notas [!DNL Python] interactivos y tiene acceso a un entorno de bloc de notas. El bloc de notas puede alojarse en un entorno de aprendizaje automático basado en la nube o localmente con [[!DNL Jupyter Notebook]](https://jupyter.org/).
 
 ### Obtener credenciales de conexión {#obtain-credentials}
 
-Para conectarse a Data Distiller y otros servicios de Adobe Experience Platform, necesita una credencial de API de Experience Platform. Las credenciales de la API se pueden crear en la  [Consola de Adobe Developer](https://developer.adobe.com/console/home) por alguien con acceso de Desarrollador al Experience Platform. Se recomienda crear una credencial de la API Oauth2 específicamente para flujos de trabajo de ciencia de datos y hacer que un administrador del sistema de Adobe de su organización asigne la credencial a una función con los permisos adecuados.
+Para conectarse a Data Distiller y otros servicios de Adobe Experience Platform, necesita una credencial de API de Experience Platform. Alguien con acceso de desarrollador al Experience Platform puede crear las credenciales de la API en [Adobe Developer Console](https://developer.adobe.com/console/home). Se recomienda crear una credencial de la API Oauth2 específicamente para flujos de trabajo de ciencia de datos y hacer que un administrador del sistema de Adobe de su organización asigne la credencial a una función con los permisos adecuados.
 
-Consulte [Autenticación y acceso a las API de Experience Platform](../../../landing/api-authentication.md) para obtener instrucciones detalladas sobre la creación de una credencial de API y la obtención de los permisos necesarios.
+Consulte [Autenticar y acceder a las API de Experience Platform](../../../landing/api-authentication.md) para obtener instrucciones detalladas sobre cómo crear una credencial de API y obtener los permisos necesarios.
 
 Los permisos recomendados para la ciencia de datos incluyen:
 
-- Zona protegida que se utilizará para la ciencia de datos (normalmente) `prod`)
+- Zonas protegidas que se utilizarán para la ciencia de datos (normalmente `prod`)
 - Modelado de datos: [!UICONTROL Administrar esquemas]
 - Administración de datos: [!UICONTROL Administrar conjuntos de datos]
 - Ingesta de datos: [!UICONTROL Ver orígenes]
@@ -50,7 +50,7 @@ scopes=openid, AdobeID, read_organizations, additional_info.projectedProductCont
 tech_acct_id=<YOUR_TECHNICAL_ACCOUNT_ID>
 ```
 
-En el bloc de notas, puede leer la información de credenciales en la memoria mediante el `configParser` paquete desde el estándar [!DNL Python] biblioteca:
+En el bloc de notas, puede leer la información de credenciales en la memoria mediante el paquete `configParser` de la biblioteca estándar [!DNL Python]:
 
 ```python
 from configparser import ConfigParser
@@ -69,16 +69,16 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## Instalación de la biblioteca de App Python {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) es un código abierto administrado por Adobe [!DNL Python] que proporciona funciones para conectarse a Data Distiller y enviar consultas, como realizar solicitudes a otros servicios de Experience Platform. El `aepp` a su vez, se basa en el paquete del adaptador de base de datos PostgreSQL  `psycopg2` para consultas interactivas de Data Distiller. Es posible conectarse a Data Distiller y consultar conjuntos de datos del Experience Platform con `psycopg2` solo, pero `aepp` proporciona una mayor comodidad y funcionalidad adicional para realizar solicitudes a todos los servicios de API de Experience Platform.
+[aepp](https://github.com/adobe/aepp/tree/main) es una biblioteca de código abierto [!DNL Python] administrada por Adobe que proporciona funciones para conectarse a Data Distiller y enviar consultas, como realizar solicitudes a otros servicios de Experience Platform. A su vez, la biblioteca `aepp` se basa en el paquete del adaptador de base de datos PostgreSQL `psycopg2` para consultas interactivas de Data Distiller. Es posible conectarse a Data Distiller y consultar los conjuntos de datos del Experience Platform solo con `psycopg2`, pero `aepp` proporciona una mayor comodidad y funcionalidad adicional para realizar solicitudes a todos los servicios de API del Experience Platform.
 
-Para instalar o actualizar `aepp` y `psycopg2` en su entorno, puede utilizar el complemento `%pip` mágica orden en su cuaderno:
+Para instalar o actualizar `aepp` y `psycopg2` en su entorno, puede usar el comando mágico `%pip` en su bloc de notas:
 
 ```python
 %pip install --upgrade aepp
 %pip install --upgrade psycopg2-binary
 ```
 
-A continuación, puede configurar la variable `aepp` con sus credenciales mediante el siguiente código:
+A continuación, puede configurar la biblioteca `aepp` con sus credenciales mediante el siguiente código:
 
 ```python
 from configparser import ConfigParser
@@ -103,7 +103,7 @@ aepp.configure(
 
 ## Creación de una conexión con Data Distiller {#create-connection}
 
-Una `aepp` está configurado con sus credenciales de, puede utilizar el siguiente código para crear una conexión con Data Distiller e iniciar una sesión interactiva de la siguiente manera:
+Una vez que `aepp` se haya configurado con sus credenciales, puede usar el siguiente código para crear una conexión con Data Distiller e iniciar una sesión interactiva de la siguiente manera:
 
 ```python
 from aepp import queryservice
@@ -122,7 +122,7 @@ dd_cursor.query(simple_query)
 
 ### Conéctese a un único conjunto de datos para obtener un rendimiento de consulta más rápido {#connect-to-single-dataset}
 
-De forma predeterminada, la conexión de Data Distiller se conecta a todos los conjuntos de datos de la zona protegida. Para consultas más rápidas y un uso de recursos reducido, puede conectarse a un conjunto de datos específico de interés. Para ello, cambie la variable `dbname` en el objeto de conexión de Data Distiller a `{sandbox}:{table_name}`:
+De forma predeterminada, la conexión de Data Distiller se conecta a todos los conjuntos de datos de la zona protegida. Para consultas más rápidas y un uso de recursos reducido, puede conectarse a un conjunto de datos específico de interés. Para ello, cambie `dbname` en el objeto de conexión de Data Distiller a `{sandbox}:{table_name}`:
 
 ```python
 from aepp import queryservice
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Pasos siguientes
 
-Al leer este documento, ha aprendido a conectarse a Data Distiller desde un [!DNL Python] portátil en su entorno de aprendizaje automático. El siguiente paso para crear canalizaciones de funciones de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [explorar y analizar sus conjuntos de datos](./exploratory-analysis.md).
+Al leer este documento, ha aprendido a conectarse a Data Distiller desde un bloc de notas de [!DNL Python] en su entorno de aprendizaje automático. El siguiente paso para crear canalizaciones de características de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [explorar y analizar sus conjuntos de datos](./exploratory-analysis.md).

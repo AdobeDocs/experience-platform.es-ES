@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Aplicación] tipo de datos
+# Tipo de datos [!UICONTROL Aplicación]
 
 [!UICONTROL Aplicación] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe detalles relacionados con las interacciones generadas por una aplicación. Una aplicación hace referencia a una experiencia de software, como una aplicación móvil o de escritorio que un usuario final puede instalar, ejecutar, cerrar o desinstalar. Las propiedades de este tipo de datos no están pensadas para describir agentes como bots de chat, complementos basados en explorador u otras experiencias que no se aplican a las aplicaciones.
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 | `upgrades` | [[!UICONTROL Medida]](./measure.md) | Contiene datos sobre la actualización de una aplicación previamente instalada. Se activa en el primer inicio después de una actualización. |
 | `id` | Cadena | Un identificador único de la aplicación. |
 | `name` | Cadena | Nombre de la aplicación. |
-| `userPerspective` | Cadena | La perspectiva o relación física entre el usuario y la aplicación o marca en el momento en que se produjo un evento. Comprender la perspectiva del usuario en relación con la aplicación ayuda a generar sesiones con precisión, ya que la mayoría de las veces no se desea incluir `background` y `detached` eventos como parte de una sesión &quot;activa&quot;. El valor de esta propiedad debe ser igual a uno de los valores de enumeración enumerados a continuación. <li> `foreground`: el usuario y la aplicación interactúan directamente entre sí. </li> <li> `background`: la aplicación y el usuario interactúan indirectamente entre sí. Por ejemplo, la aplicación podría medir un valor y actualizarse mientras la pantalla está bloqueada o se está utilizando otra aplicación en primer plano.  </li> <li> `detached`: desconectado significa que el evento estaba relacionado con la aplicación, pero no provenía directamente de la aplicación, como el envío de un correo electrónico o una notificación push desde un sistema externo. |
+| `userPerspective` | Cadena | La perspectiva o relación física entre el usuario y la aplicación o marca en el momento en que se produjo un evento. Comprender la perspectiva del usuario en relación con la aplicación ayuda a generar sesiones con precisión, ya que la mayoría de las veces no se desean incluir `background` y `detached` eventos como parte de una sesión &quot;activa&quot;. El valor de esta propiedad debe ser igual a uno de los valores de enumeración enumerados a continuación. <li> `foreground`: el usuario y la aplicación están interactuando directamente entre sí. </li> <li> `background`: la aplicación y el usuario están interactuando indirectamente entre sí. Por ejemplo, la aplicación podría medir un valor y actualizarse mientras la pantalla está bloqueada o se está utilizando otra aplicación en primer plano.  </li> <li> `detached`: independiente significa que el evento estaba relacionado con la aplicación, pero no provenía directamente de la aplicación, como el envío de un correo electrónico o una notificación push desde un sistema externo. |
 | `version` | Cadena | La versión de la aplicación. |
 
 {style="table-layout:auto"}

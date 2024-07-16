@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Etiquetas de uso de datos en la API del servicio de conjuntos de datos
 
-Independiente de la API del servicio de catálogo, la variable [!DNL Dataset Service] La API proporciona puntos finales para administrar las etiquetas de uso de datos de los conjuntos de datos. Para ver los pasos sobre cómo realizar llamadas a estos extremos, consulte la guía de [administración de etiquetas de uso de datos mediante la API](../../data-governance/labels/dataset-api.md) en la documentación de Control de datos de Adobe Experience Platform.
+Independientemente de la API del servicio de catálogo, la API [!DNL Dataset Service] proporciona puntos finales para administrar las etiquetas de uso de datos de los conjuntos de datos. Para ver los pasos de cómo realizar llamadas a estos extremos, consulte la guía de [administración de etiquetas de uso de datos mediante la API](../../data-governance/labels/dataset-api.md) en la documentación de control de datos de Adobe Experience Platform.

@@ -5,82 +5,82 @@ description: Obtenga información sobre cómo crear una conexión de origen YOUR
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
 source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '720'
 ht-degree: 1%
 
 ---
 
-# Crear un *SU ORIGEN* conexión de origen en la interfaz de usuario
+# Crear una conexión de origen *YOURSOURCE* en la interfaz de usuario
 
-*A medida que avanza por esta plantilla, reemplace o elimine todos los párrafos en cursiva (empezando por esta).*
+*A medida que revise esta plantilla, reemplace o elimine todos los párrafos en cursiva (comenzando por este párrafo).*
 
 *Comience por actualizar los metadatos (título y descripción) en la parte superior de la página. Ignore todas las instancias de UICONTROL en esta página. Esta es una etiqueta que ayuda a nuestros procesos de traducción automática a traducir correctamente la página a los múltiples idiomas que admitimos. Agregaremos etiquetas a su documentación después de que la envíe.*
 
-Este tutorial proporciona los pasos para crear una *SU ORIGEN* conector de origen mediante la interfaz de usuario de Platform.
+Este tutorial proporciona los pasos para crear un conector de origen *YOURSOURCE* mediante la interfaz de usuario de Platform.
 
 ## Información general
 
-*Proporcione una breve descripción general de su empresa, incluido el valor que proporciona a los clientes. Incluya un vínculo a la página de inicio de la documentación del producto para obtener más información.*
+*Proporcione una breve descripción general de su compañía, incluido el valor que proporciona a los clientes. Incluya un vínculo a la página principal de la documentación del producto para obtener más información.*
 
 >[!IMPORTANT]
 >
->Este conector de origen y esta página de documentación los crea y mantiene el *SuOrigen* equipo. Para cualquier consulta o solicitud de actualización, póngase en contacto directamente con ellos en *Insertar vínculo o dirección de correo electrónico donde se pueda contactar para obtener actualizaciones*.
+>El equipo *YourSource* crea y mantiene este conector de origen y esta página de documentación. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en *Inserte un enlace o una dirección de correo electrónico donde pueda obtener información sobre actualizaciones*.
 
 ## Requisitos previos
 
-*Agregue información en esta sección sobre todo lo que los clientes deben tener en cuenta antes de comenzar a configurar el origen en la interfaz de usuario de Adobe Experience Platform. Puede tratarse de lo siguiente:*
+*Agregue información en esta sección acerca de todo lo que los clientes deban tener en cuenta antes de comenzar a configurar el origen en la interfaz de usuario de Adobe Experience Platform. Puede ser aproximadamente:*
 
-* *necesidad de añadirse a una lista de permitidos*
+* *es necesario agregarlo a una lista de permitidos*
 * *requisitos para el hash de correo electrónico*
-* *cualquier detalle de la cuenta de su parte*
-* *cómo obtener las credenciales de autenticación para conectarse a la plataforma*
+* *cualquier detalle de la cuenta a su lado*
+* *cómo obtener las credenciales de autenticación para conectarse a su plataforma*
 
 ### Recopilar credenciales necesarias
 
-Para poder conectarse *SU ORIGEN* En Platform, debe proporcionar valores para las siguientes propiedades de conexión:
+Para conectar *YOURSOURCE* a Platform, debe proporcionar valores para las siguientes propiedades de conexión:
 
 | Credencial | Descripción | Ejemplo |
 | --- | --- | --- |
-| *credencial uno* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
-| *credencial dos* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
-| *credencial tres* | *Agregue una breve descripción a la credencial de autenticación de su fuente aquí* | *Agregue un ejemplo de la credencial de autenticación de su origen aquí* |
+| *credencial uno* | *Agregue una breve descripción a la credencial de autenticación de origen aquí* | *Agregue un ejemplo de la credencial de autenticación de origen aquí* |
+| *credencial dos* | *Agregue una breve descripción a la credencial de autenticación de origen aquí* | *Agregue un ejemplo de la credencial de autenticación de origen aquí* |
+| *credencial tres* | *Agregue una breve descripción a la credencial de autenticación de origen aquí* | *Agregue un ejemplo de la credencial de autenticación de origen aquí* |
 
-Para obtener más información sobre estas credenciales, consulte la *SU ORIGEN* documentación de autenticación. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
+Para obtener más información sobre estas credenciales, consulte la documentación de autenticación *YOURSOURCE*. *Agregue un vínculo a la documentación de autenticación de su plataforma aquí*.
 
-## Conecte su *SU ORIGEN* account
+## Conecta tu cuenta de *YOURSOURCE*
 
-En la IU de Platform, seleccione **[!UICONTROL Fuentes]** desde la barra de navegación izquierda para acceder a [!UICONTROL Fuentes] workspace. El [!UICONTROL Catálogo] La pantalla muestra una variedad de fuentes con las que puede crear una cuenta.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En el *CATEGORÍA DEL ORIGEN* categoría, seleccionar *SU ORIGEN*, y luego seleccione **[!UICONTROL Añadir datos]**.
+En la categoría *CATEGORÍA DE TU FUENTE*, selecciona *TU FUENTE* y, a continuación, selecciona **[!UICONTROL Agregar datos]**.
 
 >[!TIP]
 >
->Las capturas de pantalla utilizadas a continuación son ejemplos. Al crear su documentación, reemplace las imágenes por capturas de pantalla de su origen real. Puede utilizar la misma trama de marcado y el mismo color, así como los mismos nombres de archivo. Asegúrese de que la captura de pantalla capture toda la pantalla de la interfaz de usuario de Platform. Para obtener información sobre cómo cargar las capturas de pantalla, consulte la guía de [enviar la documentación para su revisión](./github.md).
+>Las capturas de pantalla utilizadas a continuación son ejemplos. Al crear su documentación, reemplace las imágenes por capturas de pantalla de su origen real. Puede utilizar la misma trama de marcado y el mismo color, así como los mismos nombres de archivo. Asegúrese de que la captura de pantalla capture toda la pantalla de la interfaz de usuario de Platform. Para obtener información sobre cómo cargar tus capturas de pantalla, consulta la guía sobre [enviar tu documentación para revisión](./github.md).
 
-![catalogar](../assets/ui/catalog.png)
+![catálogo](../assets/ui/catalog.png)
 
-El **[!UICONTROL Conectar su cuenta de origen]** página. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Conectar su cuenta de origen]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para utilizar una cuenta existente, seleccione la *SU ORIGEN* cuenta con la que desea crear un nuevo flujo de datos y seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, selecciona la cuenta de *YOURSOURCE* con la que deseas crear un nuevo flujo de datos y luego selecciona **[!UICONTROL Siguiente]** para continuar.
 
 ![existente](../assets/ui/existing.png)
 
 ### Nueva cuenta
 
-Si está creando una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectar con el origen]** y, a continuación, espere un poco para que se establezca la nueva conexión.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
 ![nuevo](../assets/ui/new.png)
 
 ## Pasos siguientes
 
-*Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su fuente, consulte la sección de recursos adicionales a continuación.*
+*Los flujos de trabajo para los pasos restantes de la creación de un flujo de datos están modularizados. Si desea realizar alguna llamada específica con respecto a su origen, consulte la sección de recursos adicionales a continuación.*
 
-Al seguir este tutorial, ha establecido una conexión con su *SU ORIGEN* cuenta. Ahora puede continuar con el siguiente tutorial y [configuración de un flujo de datos para introducir datos en Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Siguiendo este tutorial, ha establecido una conexión con su cuenta de *YOURSOURCE*. Ahora puede continuar con el siguiente tutorial y [configurar un flujo de datos para introducir datos en la plataforma](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionales
 
-*Esta es una sección opcional en la que puede proporcionar más vínculos a la documentación del producto o a cualquier otro paso, captura de pantalla o matiz que considere importante para que el cliente tenga éxito. Puede utilizar esta sección para agregar información o sugerencias sobre todo el flujo de trabajo del origen, especialmente si hay problemas concretos que un usuario final podría encontrar.*
+*Esta es una sección opcional donde puede proporcionar más vínculos a la documentación del producto o a cualquier otro paso, captura de pantalla o matiz que considere importante para que el cliente tenga éxito. Puede utilizar esta sección para agregar información o sugerencias sobre todo el flujo de trabajo del origen, especialmente si hay problemas específicos que podría encontrar un usuario final.*

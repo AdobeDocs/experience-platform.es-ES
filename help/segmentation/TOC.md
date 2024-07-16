@@ -44,7 +44,7 @@ ht-degree: 42%
    - [Segmentación de streaming (vídeo)](video/streaming-segmentation-overview.md)
    - [Actualización de la restricción temporal de Ignorar año](ui/ignore-year.md)
    - [Refactorización de restricciones de tiempo](ui/segment-refactoring.md)
-   - Coincidencia de segmentos {#segment-match}
+   - Coincidencia de segmento {#segment-match}
       - [Resumen de coincidencia de segmentos](ui/segment-match/overview.md)
       - [Resolución de problemas](ui/segment-match/troubleshooting.md)
 - [Respeto del consentimiento](consents.md)

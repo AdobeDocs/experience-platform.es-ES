@@ -4,7 +4,7 @@ description: Aprenda a cifrar valores confidenciales al utilizar la API de React
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '366'
 ht-degree: 100%
 
 ---

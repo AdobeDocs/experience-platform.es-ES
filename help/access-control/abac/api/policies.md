@@ -18,19 +18,19 @@ ht-degree: 3%
 >
 >Si se pasa un token de usuario, el usuario del token debe tener un rol de &quot;administrador de organización&quot; para la organización solicitada.
 
-Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Estas directivas pueden ser locales o globales, y pueden anular otras directivas. El `/policies` El punto final de la API de control de acceso basado en atributos le permite administrar directivas mediante programación, incluida la información sobre las reglas que las rigen, así como las condiciones de los respectivos sujetos.
+Las políticas de control de acceso son instrucciones que unen atributos para establecer acciones permisibles e inadmisibles. Estas directivas pueden ser locales o globales, y pueden anular otras directivas. El extremo `/policies` de la API de control de acceso basado en atributos le permite administrar directivas mediante programación, incluida información sobre las reglas que las rigen, así como las condiciones de los respectivos sujetos.
 
 >[!IMPORTANT]
 >
->Este extremo no debe confundirse con el `/policies` punto final en la [API del servicio de directivas](../../../data-governance/api/policies.md), que se utiliza para administrar las políticas de uso de datos.
+>Este extremo no se debe confundir con el extremo `/policies` de la [API del servicio de directivas](../../../data-governance/api/policies.md), que se usa para administrar directivas de uso de datos.
 
 ## Introducción
 
-El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, consulte la [guía de introducción](./getting-started.md) para obtener vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
+El extremo de API utilizado en esta guía forma parte de la API de control de acceso basada en atributos. Antes de continuar, revisa la [guía de introducción](./getting-started.md) para ver vínculos a documentación relacionada, una guía para leer las llamadas de API de ejemplo en este documento e información importante sobre los encabezados necesarios para realizar correctamente llamadas a cualquier API de Experience Platform.
 
 ## Recuperación de una lista de directivas {#list}
 
-Realice una solicitud de GET a `/policies` extremo para enumerar todas las directivas existentes en su organización.
+Realice una solicitud de GET al extremo `/policies` para enumerar todas las directivas existentes en su organización.
 
 **Formato de API**
 
@@ -136,22 +136,22 @@ Una respuesta correcta devuelve una lista de directivas existentes.
 | `id` | El ID que corresponde a una directiva. Este identificador se genera automáticamente y se puede utilizar para buscar, actualizar y eliminar una directiva. |
 | `imsOrgId` | Organización donde se puede acceder a la directiva consultada. |
 | `createdBy` | El ID del usuario que creó la directiva. |
-| `createdAt` | Hora a la que se creó la directiva. El `createdAt` la propiedad se muestra en unix epoch timestamp. |
+| `createdAt` | Hora a la que se creó la directiva. La propiedad `createdAt` se muestra en la marca de tiempo unix epoch. |
 | `modifiedBy` | El ID del usuario que actualizó la directiva por última vez. |
-| `modifiedAt` | Hora a la que se actualizó la directiva por última vez. El `modifiedAt` la propiedad se muestra en unix epoch timestamp. |
+| `modifiedAt` | Hora a la que se actualizó la directiva por última vez. La propiedad `modifiedAt` se muestra en la marca de tiempo unix epoch. |
 | `name` | Nombre de la directiva. |
 | `description` | (Opcional) Una propiedad que se puede agregar para proporcionar más información sobre una directiva en particular. |
-| `status` | El estado actual de una directiva. Esta propiedad define si una directiva se encuentra actualmente `active` o `inactive`. |
+| `status` | El estado actual de una directiva. Esta propiedad define si una directiva es actualmente `active` o `inactive`. |
 | `subjectCondition` | Las condiciones aplicadas a un asunto. Un sujeto es un usuario con ciertos atributos que solicitan acceso a un recurso para realizar una acción. En este caso, `subjectCondition` son condiciones de tipo consulta aplicadas a los atributos del asunto. |
 | `rules` | Conjunto de reglas que definen una directiva. Las reglas definen qué combinaciones de atributos están autorizadas para que el sujeto realice correctamente una acción en el recurso. |
-| `rules.effect` | El efecto que se produce después de tener en cuenta los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | El efecto que se produce después de considerar los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto.  Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
 | `rules.condition` | Las condiciones aplicadas a un recurso. Por ejemplo, si un recurso es un esquema, un esquema puede tener aplicadas ciertas etiquetas que contribuyen a determinar si una acción contra ese esquema es permisible o no. |
-| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit`, y `delete`. |
+| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit` y `delete`. |
 
 ## Buscar detalles de directivas por identificador {#lookup}
 
-Realice una solicitud de GET a `/policies` al proporcionar un ID de política en la ruta de solicitud para recuperar información sobre esa política individual.
+Realice una solicitud de GET al extremo `/policies` mientras proporciona un ID de directiva en la ruta de solicitud para recuperar información sobre esa directiva individual.
 
 **Formato de API**
 
@@ -232,23 +232,23 @@ Una solicitud correcta devuelve información sobre el ID de directiva consultado
 | `id` | El ID que corresponde a una directiva. Este identificador se genera automáticamente y se puede utilizar para buscar, actualizar y eliminar una directiva. |
 | `imsOrgId` | Organización donde se puede acceder a la directiva consultada. |
 | `createdBy` | El ID del usuario que creó la directiva. |
-| `createdAt` | Hora a la que se creó la directiva. El `createdAt` la propiedad se muestra en unix epoch timestamp. |
+| `createdAt` | Hora a la que se creó la directiva. La propiedad `createdAt` se muestra en la marca de tiempo unix epoch. |
 | `modifiedBy` | El ID del usuario que actualizó la directiva por última vez. |
-| `modifiedAt` | Hora a la que se actualizó la directiva por última vez. El `modifiedAt` la propiedad se muestra en unix epoch timestamp. |
+| `modifiedAt` | Hora a la que se actualizó la directiva por última vez. La propiedad `modifiedAt` se muestra en la marca de tiempo unix epoch. |
 | `name` | Nombre de la directiva. |
 | `description` | (Opcional) Una propiedad que se puede agregar para proporcionar más información sobre una directiva en particular. |
-| `status` | El estado actual de una directiva. Esta propiedad define si una directiva se encuentra actualmente `active` o `inactive`. |
+| `status` | El estado actual de una directiva. Esta propiedad define si una directiva es actualmente `active` o `inactive`. |
 | `subjectCondition` | Las condiciones aplicadas a un asunto. Un sujeto es un usuario con ciertos atributos que solicitan acceso a un recurso para realizar una acción. En este caso, `subjectCondition` son condiciones de tipo consulta aplicadas a los atributos del asunto. |
 | `rules` | Conjunto de reglas que definen una directiva. Las reglas definen qué combinaciones de atributos están autorizadas para que el sujeto realice correctamente una acción en el recurso. |
-| `rules.effect` | El efecto que se produce después de tener en cuenta los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | El efecto que se produce después de considerar los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto.  Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
 | `rules.condition` | Las condiciones aplicadas a un recurso. Por ejemplo, si un recurso es un esquema, un esquema puede tener aplicadas ciertas etiquetas que contribuyen a determinar si una acción contra ese esquema es permisible o no. |
-| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit`, y `delete`. |
+| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit` y `delete`. |
 
 
 ## Crear una directiva {#create}
 
-Para crear una directiva nueva, realice una solicitud de POST al `/policies` punto final.
+Para crear una directiva nueva, realice una solicitud de POST al extremo `/policies`.
 
 **Formato de API**
 
@@ -289,10 +289,10 @@ curl -X POST \
 | `description` | (Opcional) Una propiedad que se puede agregar para proporcionar más información sobre una directiva en particular. |
 | `imsOrgId` | La organización que contiene la directiva. |
 | `rules` | Conjunto de reglas que definen una directiva. Las reglas definen qué combinaciones de atributos están autorizadas para que el sujeto realice correctamente una acción en el recurso. |
-| `rules.effect` | El efecto que se produce después de tener en cuenta los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | El efecto que se produce después de considerar los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto.  Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
 | `rules.condition` | Las condiciones aplicadas a un recurso. Por ejemplo, si un recurso es un esquema, un esquema puede tener aplicadas ciertas etiquetas que contribuyen a determinar si una acción contra ese esquema es permisible o no. |
-| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit`, y `delete`. |
+| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit` y `delete`. |
 
 **Respuesta**
 
@@ -329,15 +329,15 @@ Una solicitud correcta devuelve la política recién creada, incluido su ID de p
 | `id` | El ID que corresponde a una directiva. Este identificador se genera automáticamente y se puede utilizar para buscar, actualizar y eliminar una directiva. |
 | `name` | Nombre de una directiva. |
 | `rules` | Conjunto de reglas que definen una directiva. Las reglas definen qué combinaciones de atributos están autorizadas para que el sujeto realice correctamente una acción en el recurso. |
-| `rules.effect` | El efecto que se produce después de tener en cuenta los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | El efecto que se produce después de considerar los valores de `action`, `condition` y `resource`. Los valores posibles incluyen: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | Recurso u objeto al que puede tener acceso o al que no puede tener acceso un sujeto.  Los recursos pueden ser archivos, aplicaciones, servidores o incluso API. |
 | `rules.condition` | Las condiciones aplicadas a un recurso. Por ejemplo, si un recurso es un esquema, un esquema puede tener aplicadas ciertas etiquetas que contribuyen a determinar si una acción contra ese esquema es permisible o no. |
-| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit`, y `delete`. |
+| `rules.action` | Acción que un sujeto puede realizar contra un recurso consultado. Los valores posibles incluyen: `read`, `create`, `edit` y `delete`. |
 
 
 ## Actualizar una directiva por ID de directiva {#put}
 
-Para actualizar las reglas de una directiva individual, realice una solicitud de PUT a `/policies` al proporcionar el ID de la política que desea actualizar en la ruta de solicitud.
+Para actualizar las reglas de una directiva individual, realice una solicitud de PUT al extremo `/policies` y proporcione el ID de la directiva que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -406,7 +406,7 @@ Una respuesta correcta devuelve la directiva actualizada.
 
 ## Actualizar propiedades de la directiva {#patch}
 
-Para actualizar las propiedades de una directiva individual, realice una solicitud de PATCH a `/policies` al proporcionar el ID de la política que desea actualizar en la ruta de solicitud.
+Para actualizar las propiedades de una directiva individual, realice una solicitud de PATCH al extremo `/policies` y proporcione el ID de la directiva que desea actualizar en la ruta de solicitud.
 
 **Formato de API**
 
@@ -420,7 +420,7 @@ PATCH /policies/{POLICY_ID}
 
 **Solicitud**
 
-La siguiente solicitud reemplaza el valor de `/description` en ID de política `c3863937-5d40-448d-a7be-416e538f955e`.
+La siguiente solicitud reemplaza el valor de `/description` en el id. de directiva `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -441,7 +441,7 @@ curl -X PATCH \
 
 | Operaciones | Descripción |
 | --- | --- |
-| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace`, y `remove`. |
+| `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar la función. Las operaciones incluyen: `add`, `replace` y `remove`. |
 | `path` | Ruta del parámetro que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
@@ -477,7 +477,7 @@ Una respuesta correcta devuelve el ID de directiva consultado con la descripció
 
 ## Eliminar una política {#delete}
 
-Para eliminar una directiva, realice una solicitud de DELETE al `/policies` al proporcionar el ID de la política que desea eliminar.
+Para eliminar una directiva, realice una solicitud de DELETE al extremo `/policies` y proporcione el identificador de la directiva que desea eliminar.
 
 **Formato de API**
 
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **Solicitud**
 
-La siguiente solicitud elimina la directiva con el ID de `c3863937-5d40-448d-a7be-416e538f955e`.
+La siguiente solicitud elimina la directiva con el identificador `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X DELETE \

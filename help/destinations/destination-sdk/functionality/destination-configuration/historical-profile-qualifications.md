@@ -13,11 +13,11 @@ ht-degree: 2%
 
 Todos los destinos creados mediante Destination SDK admiten cualificaciones de perfil históricas de forma predeterminada. Esto significa que, cuando los usuarios configuran por primera vez un flujo de datos de activación en sus destinos, la primera exportación contiene todos los miembros de la audiencia que han cumplido los requisitos para ese segmento.
 
-Este comportamiento se define mediante la variable `"backfillHistoricalProfileData":true` en la configuración de destino.
+Este comportamiento se define mediante el parámetro `"backfillHistoricalProfileData":true` en la configuración de destino.
 
 >[!IMPORTANT]
 >
->Las cualificaciones de perfil históricas están habilitadas para todos los destinos creados mediante Destination SDK y `backfillHistoricalProfileData` El parámetro no se puede configurar por el usuario.
+>Las clasificaciones de perfil históricas están habilitadas para todos los destinos creados mediante Destination SDK y el parámetro `backfillHistoricalProfileData` no se puede configurar por el usuario.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 

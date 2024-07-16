@@ -4,7 +4,7 @@ description: Aprenda a realizar llamadas al extremo de la búsqueda en la API de
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 97%
 
 ---
@@ -36,7 +36,6 @@ Todas las consultas tienen ámbitos de la empresa actual y propiedades accesible
 >* meta no se puede buscar y no se devuelve en los resultados de búsqueda.
 >* Campos de esquema para delegados de paquetes de extensiones (acciones, condiciones, etc.) se pueden buscar como texto, no como una estructura de datos anidada.
 >* Actualmente, las consultas de rango solo admiten números enteros.
-
 
 Para obtener información detallada sobre cómo utilizar esta funcionalidad, consulte la [guía de búsqueda](../guides/search.md).
 

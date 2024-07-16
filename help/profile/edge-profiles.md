@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# Perfiles de borde
+# Perfiles de Edge
 
 En Adobe Experience Platform, el perfil del cliente en tiempo real es la única fuente fiable para los datos de entidades. Estos datos de perfil se encuentran en un concentrador central y se ocupan de casos de uso que dependen de la exhaustividad e integridad de los datos. Sin embargo, en casos de uso más en tiempo real, en los que la sensibilidad temporal es más importante, los perfiles de Edge son la opción preferida. Los perfiles de Edge son perfiles ligeros que se sientan en los bordes y ayudan en casos de uso de personalización en tiempo real.
 
-Por ejemplo, las aplicaciones de Adobe como Adobe Target, Personalization Destination y Adobe Campaign utilizan perímetros para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos.
+Por ejemplo, las aplicaciones de Adobe como Adobe Target, Destino personalizado de Personalization y Adobe Campaign utilizan perímetros para ofrecer experiencias del cliente personalizadas en tiempo real. Los datos se enrutan a un borde mediante una proyección, con un destino de proyección que define el borde al que se enviarán los datos.
 
 ## Terminología {#terminology}
 
 Cuando trabaje con aristas, asegúrese de comprender los siguientes conceptos:
 
 - **Edge**: un perímetro es un servidor ubicado geográficamente que almacena datos y hace que sea fácilmente accesible para las aplicaciones.
-- **Proyección de borde**: una proyección de Edge es la vista de proyección del sistema de un perfil en un perímetro específico para representar datos de perfil con un ID único que se ajusta a un esquema determinado para un cliente determinado. Por ejemplo, una entidad que respeta el esquema de Perfil con ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, visitante del sitio web de Luma, replicado en el centro de datos VA6, que contiene los campos `age = 35` y `gender = male`.
+- **proyección de Edge**: una proyección de Edge es la vista de proyección del sistema de un perfil en un perímetro específico para representar datos de perfil con un ID único que se ajusta a un esquema determinado para un cliente determinado. Por ejemplo, una entidad que respeta el esquema Perfil con ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, visitante del sitio web de Luma, replicó en el centro de datos de VA6, y que contiene los campos `age = 35` y `gender = male`.
 
-En otros términos, los datos se enrutan a un borde mediante una proyección, con el **destino de proyección** definitorio **que** edge al que se enviarán los datos.
+En otros términos, los datos se enrutan a un borde mediante una proyección, con el **destino de proyección** que define **a qué borde** se enviarán los datos.
 
 ## Regiones disponibles {#regions}
 
@@ -51,11 +51,11 @@ El servicio de trabajo de proyección (MEPW) supervisa los cambios que se produc
 
 ### Servicio de perfil rápido {#xps}
 
-El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extremos. Este servicio recibe solicitudes de soluciones descendentes, como destinos de Adobe Target o Personalización personalizada, busca los perfiles de las bases de datos en los perímetros y envía el perfil solicitado a la solución solicitante. Si no se encuentra el perfil, se envía una solicitud de actualización al concentrador asociado.
+El servicio de perfil rápido (XPS) recupera los perfiles en los distintos extremos. Este servicio recibe solicitudes de soluciones de flujo descendente, como destinos de Adobe Target o Personalization personalizados, busca los perfiles de las bases de datos en los perímetros y envía el perfil solicitado a la solución solicitante. Si no se encuentra el perfil, se envía una solicitud de actualización al concentrador asociado.
 
 ## Pasos siguientes
 
-Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre Adobe Experience Edge, lea la [Introducción al Edge Network](../web-sdk/home.md#edge-network).
+Después de leer esta guía, debe tener una comprensión básica de los perfiles de Edge, incluida información sobre las regiones y servicios disponibles para los perfiles de Edge. Para obtener más información sobre el Adobe Experience Edge, lea [descripción general del Edge Network](../web-sdk/home.md#edge-network).
 
 ## Apéndice
 
@@ -63,13 +63,13 @@ La siguiente sección enumera las preguntas más frecuentes sobre los perfiles d
 
 ### ¿En qué regiones pueden aterrizar los perfiles de Edge?
 
-Los perfiles de borde pueden aterrizar en diferentes regiones según la situación en cuestión.
+Los perfiles de Edge pueden aterrizar en diferentes regiones según la situación.
 
 Además, cada perfil perimetral tiene un atributo de esquema denominado Región de actividad de usuario (UAR). Todos los bordes que ha visitado este perfil en los últimos 14 días se enumeran en este atributo de perfil. Como resultado, cuando este atributo está presente en un perfil, cualquier cambio en el perfil también se envía a todas las regiones enumeradas en la UAR.
 
 ### ¿Cómo funciona la caducidad de los datos con los perfiles de Edge?
 
-En el caso de los perfiles Edge, la caducidad de los datos determina cuánto tiempo permanecerá el perfil en Edge antes de eliminarlo. La caducidad de los datos es **laminado**, lo que significa que, cada vez que se accede al perfil en Edge, se restablece el tiempo de caducidad de los datos. De forma predeterminada, la caducidad de los datos dura 14 días.
+En el caso de los perfiles Edge, la caducidad de los datos determina cuánto tiempo permanecerá el perfil en Edge antes de eliminarlo. La caducidad de los datos es **móvil**, lo que significa que cada vez que se accede al perfil en Edge, la hora de caducidad de los datos se restablece. De forma predeterminada, la caducidad de los datos dura 14 días.
 
 ### ¿Qué datos se almacenan en el perfil de Edge?
 

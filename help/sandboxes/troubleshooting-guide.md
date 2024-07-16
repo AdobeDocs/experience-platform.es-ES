@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # Guía de solución de problemas de zonas protegidas
 
-Este documento proporciona respuestas a las preguntas frecuentes acerca de los entornos limitados de Adobe Experience Platform. Si tiene alguna pregunta o solución de problemas relacionados con otros servicios de Platform, consulte la [guía de solución de problemas del Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas frecuentes acerca de los entornos limitados de Adobe Experience Platform. Si tiene preguntas o necesita solución de problemas en relación con otros servicios de Platform, consulte la [guía de solución de problemas para Experience Platform](../landing/troubleshooting.md).
 
 Los entornos limitados dividen una sola instancia de Platform en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital. Consulte la [información general sobre las zonas protegidas](home.md) para obtener más detalles.
 
@@ -31,11 +31,11 @@ Las zonas protegidas son particiones virtuales en una sola instancia de Experien
 
 Hay dos tipos de zonas protegidas disponibles en Experience Platform:
 
-* **Zona protegida de producción**: una zona protegida de producción está diseñada para utilizarse con perfiles en el entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el nivel de la licencia [!DNL Profile] compromiso (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar un perfil promedio con licencia por usuario autorizado [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
-* **Zona protegida de desarrollo**: una zona protegida de desarrollo es una zona protegida que se puede utilizar exclusivamente para el desarrollo y las pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10 % de su licencia [!DNL Profile] compromiso (medido acumulativamente en todas sus zonas protegidas de desarrollo autorizado). Tiene derecho a hasta:
+* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar el perfil promedio con licencia por cada [!DNL Profile] autorizado (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+* **Entorno aislado de desarrollo**: Un entorno aislado de desarrollo es un entorno aislado que se puede usar exclusivamente para el desarrollo y las pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10 % de la asignación [!DNL Profile] con licencia (medida de forma acumulativa en todos los entornos limitados de desarrollo autorizados). Tiene derecho a hasta:
    * Una riqueza promedio de perfiles de no producción de 75 kilobytes por perfil de no producción autorizado (medida acumulativamente en todas las zonas protegidas de desarrollo autorizadas).
    * Un trabajo de segmentación por lotes al día, por zona protegida de desarrollo;
-   * Un promedio de 120 [!DNL Profile] llamadas de API, por [!DNL Profile], por año (medido acumulativamente en todas sus zonas protegidas de desarrollo autorizado).
+   * Un promedio de 120 [!DNL Profile] llamadas de API, por [!DNL Profile], por año (medidas acumulativamente en todas sus zonas protegidas de desarrollo autorizadas).
 
 Consulte la [información general sobre las zonas protegidas](./home.md) para obtener más detalles.
 
@@ -53,7 +53,7 @@ Una instancia de Experience Platform admite varios entornos limitados de producc
 
 Una licencia de Experience Platform predeterminada le concede un total de cinco zonas protegidas, que puede clasificar como producción o desarrollo. Puede obtener una licencia de paquetes adicionales de 10 zonas protegidas, hasta un máximo de 75 zonas protegidas en total.
 
-Los entornos limitados de producción se pueden restablecer o eliminar, excepto para los de producción que también se utilizan en Adobe Analytics para [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es) o si Adobe Audience Manager también está utilizando el gráfico de identidades alojado en él para la función [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es) función.
+Las zonas protegidas de producción se pueden restablecer o eliminar, excepto las que también se están usando en Adobe Analytics para la característica [Análisis entre dispositivos (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=es), o si Adobe Audience Manager también está usando el gráfico de identidades alojado en ellas para la característica [Destinos basados en personas (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=es).
 
 Puede actualizar el título de una zona protegida de producción. Sin embargo, no se puede cambiar el nombre de una zona protegida de producción.
 
@@ -69,7 +69,7 @@ Los entornos limitados de desarrollo admiten las funcionalidades de restablecimi
 
 ## Acabo de crear una zona protegida. ¿Cómo configuro permisos para los usuarios que trabajarán con esta zona protegida?
 
-Adobe Admin Console vincula a los usuarios a zonas protegidas y permisos mediante el uso de perfiles de producto. Después de crear una nueva zona protegida, vaya a **Permisos** del perfil de producto al que desea conceder acceso y, a continuación, haga clic en **Zonas protegidas**. Desde aquí, puede agregar o quitar el acceso a la nueva zona protegida de la misma manera que otros permisos.
+Adobe Admin Console vincula a los usuarios a zonas protegidas y permisos mediante el uso de perfiles de producto. Después de crear una nueva zona protegida, vaya a la pestaña **Permisos** del perfil de producto al que desea conceder acceso y, a continuación, haga clic en **Zonas protegidas**. Desde aquí, puede agregar o quitar el acceso a la nueva zona protegida de la misma manera que otros permisos.
 
 Si desea agregar permisos únicos a los usuarios de una zona protegida determinada, es posible que tenga que crear un nuevo perfil de producto con las zonas protegidas y los permisos adecuados aplicados y asignar esos usuarios a ese perfil.
 

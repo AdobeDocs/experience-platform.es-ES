@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Solo puede utilizar la restricción de tiempo &quot;ignorar año&quot; en una definición de segmento evaluada mediante **segmentación por lotes**. Si agrega la restricción de tiempo &quot;ignorar año&quot; a la definición del segmento, la audiencia resultante **inelegible** para la segmentación de streaming o Edge.
+>Solo puede usar la restricción de tiempo &quot;ignorar año&quot; en una definición de segmento evaluada mediante **segmentación por lotes**. Si agrega la restricción de tiempo &quot;omitir año&quot; a la definición del segmento, la audiencia resultante **no será elegible** para la segmentación de Edge o streaming.
 
 La versión de febrero de 2024 para Adobe Experience Platform ha introducido cambios en el servicio de segmentación de Adobe Experience Platform, que resuelve un problema con la opción &quot;ignorar año&quot; en la creación y evaluación de audiencias.
 

@@ -4,7 +4,7 @@ title: Categorías de etiquetas
 description: Este documento proporciona información sobre la administración de categorías de etiquetas unificadas en Adobe Experience Cloud
 exl-id: 0369d4e1-c091-4702-890a-3882a4916217
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 

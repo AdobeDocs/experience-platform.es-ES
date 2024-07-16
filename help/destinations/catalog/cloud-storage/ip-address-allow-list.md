@@ -22,12 +22,12 @@ ht-degree: 1%
 La información del rango de IP de esta página se aplica a los siguientes conectores de almacenamiento en la nube basados en archivos en el catálogo de destinos:
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Almacenamiento de Google Cloud]](google-cloud-storage.md)
+* [[!UICONTROL Almacenamiento en la nube de Google]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->Los intervalos de IP documentados en esta página son *no* compatible con los siguientes destinos de almacenamiento en la nube basado en archivos: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] y [!UICONTROL Zona de aterrizaje de datos].
+>Los rangos de IP documentados en esta página son *no* compatibles con los siguientes destinos de almacenamiento en la nube basado en archivos: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] y [!UICONTROL Data Landing Zone].
 
 ## Información general {#overview}
 

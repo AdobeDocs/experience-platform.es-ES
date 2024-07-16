@@ -38,8 +38,8 @@ Lea esta página para obtener una descripción general de todos los libros de re
 | Aumentar la compra de productos durante la visita a la tienda | Empuje a los compradores a comprar productos mientras están cerca de la tienda. |
 | Aumentar la compra de productos y servicios durante la estancia | El hotel ofrece una variedad excelente de instalaciones recreativas, incluyendo piscina al aire libre. |
 | Aumentar compras de un solo juego | Segmenta a los fans para aumentar las compras repetidas de un solo juego. |
-| Encuesta posterior al evento y promoción de incentivos | Empuje a los fans a responder a una encuesta posterior al evento ofreciendo una promoción de incentivo. |
-| Encuesta posterior al viaje | Empuje a los invitados a responder a una encuesta posterior al viaje ofreciendo una promoción de incentivo. |
+| Encuesta de eventos de Post y promoción de incentivos | Empuje a los fans a responder a una encuesta posterior al evento ofreciendo una promoción de incentivo. |
+| Encuesta Post-Trip | Empuje a los invitados a responder a una encuesta posterior al viaje ofreciendo una promoción de incentivo. |
 | Promoción de productos | Empuje a los compradores a comprar productos durante una campaña de promoción de productos en curso. |
 | Confirmación de compra: mercancía | Confirmar una nueva compra de mercancía Fan. |
 | Confirmación de compra: Producto | Confirmar la compra de un nuevo producto por parte del comprador. |
@@ -77,4 +77,4 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 ## Pasos siguientes
 
-Ahora que conoce los libros de reproducción disponibles, lea esto [guía](/help/use-case-playbooks/playbooks/choose.md) para comprender cómo empezar a utilizar los libros de reproducción y elegir el más adecuado para usted en la interfaz de usuario.
+Ahora que está al tanto de los libros de reproducción disponibles, lea esta [guía](/help/use-case-playbooks/playbooks/choose.md) para entender cómo empezar a usar los libros de reproducción y elija el más adecuado para usted en la interfaz de usuario.

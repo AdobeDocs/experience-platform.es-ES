@@ -4,8 +4,8 @@ description: La API de consulta de auditoría le permite recuperar datos de mét
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
 source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 9%
+source-wordcount: '389'
+ht-degree: 11%
 
 ---
 
@@ -17,13 +17,13 @@ La API de consulta de auditoría le permite auditar la actividad del usuario par
 
 ## Requisitos previos
 
-Para administrar eventos de auditoría, debe tener **[!UICONTROL Ver registro de actividades de usuario]** permiso de control de acceso concedido (se encuentra en la sección [!UICONTROL Gobernanza de datos] categoría). Para obtener información sobre cómo administrar permisos individuales para funciones de Platform, consulte la [documentación de control de acceso](../../../../access-control/home.md).
+Para administrar eventos de auditoría, debe contar con el permiso de control de acceso **[!UICONTROL Ver registro de actividad de usuario]** concedido (que se encuentra en la categoría [!UICONTROL Control de datos]). Para obtener información sobre cómo administrar permisos individuales para las características de Platform, consulte la [documentación de control de acceso](../../../../access-control/home.md).
 
-### Leer llamadas de API de muestra
+### Lectura de llamadas de API de muestra
 
-Esta guía proporciona ejemplos de llamadas API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
+Esta guía proporciona ejemplos de llamadas de API para mostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación para las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas del Experience Platform.
 
-### Recopilar valores para los encabezados obligatorios
+### Recopilación de valores para los encabezados obligatorios
 
 Esta guía requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar correctamente llamadas a las API de Platform. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en todas las llamadas a la API de Experience Platform, como se muestra a continuación:
 
@@ -31,7 +31,7 @@ Esta guía requiere que haya completado el [tutorial de autenticación](https://
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para zonas protegidas virtuales específicas. Todas las solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../../../sandboxes/home.md).
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Todas las solicitudes a las API de [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación. Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -41,4 +41,4 @@ Todas las solicitudes que contienen una carga útil (POST, PUT y PATCH) requiere
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas utilizando [!DNL Audit Query] API, consulte la [guía de extremo de eventos](./events.md) y el [guía de extremo de exportación](./export.md).
+Para empezar a realizar llamadas mediante la API [!DNL Audit Query], consulte la [guía de extremo de eventos](./events.md) y la [guía de extremo de exportación](./export.md).

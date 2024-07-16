@@ -4,7 +4,7 @@ description: Empiece a desarrollar sus propias extensiones de etiqueta en Adobe 
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 91%
 
 ---
@@ -61,7 +61,6 @@ Por ejemplo, esto puede devolver si el explorador del usuario es Chrome, si est�
 >* Se puede añadir más de un evento, condición o acción.
 >* Solo puede existir una vista de configuración.
 
-
 ## Pasos siguientes
 
-* Siga las [Resumen del proceso de envío](./submit/overview.md) y prepararse para [validate](./submit/upload-and-test.md#validate) y [cargar](./submit/upload-and-test.md#integration) Seleccione la extensión para realizar pruebas dentro del ecosistema de etiquetas.
+* Siga la [Información general del proceso de envío](./submit/overview.md) y prepárese para [validar](./submit/upload-and-test.md#validate) y [cargar](./submit/upload-and-test.md#integration) su extensión para probarla dentro del ecosistema de etiquetas.

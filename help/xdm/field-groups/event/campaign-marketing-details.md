@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >Los nombres de varios grupos de campos de esquema han cambiado. Consulte el documento sobre [actualizaciones de nombre de grupo de campos](../name-updates.md) para obtener más información.
 
-[!UICONTROL Detalles de marketing de campaña] es un grupo de campos de esquema estándar para [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), se utiliza para describir la información de la campaña de marketing, como el grupo, el nombre y el código de seguimiento de la campaña.
+[!UICONTROL Detalles de marketing de campaña] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que se usa para describir información de campaña de marketing como grupo de campañas, nombre y código de seguimiento.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

@@ -12,40 +12,40 @@ ht-degree: 6%
 
 ---
 
-# Introducción a la [!DNL Real-Time Customer Profile] API {#getting-started}
+# Introducción a la API [!DNL Real-Time Customer Profile] {#getting-started}
 
 Con los extremos de la API del perfil del cliente en tiempo real, puede realizar operaciones básicas de CRUD con datos de perfil, como configurar atributos calculados, acceder a entidades, exportar datos de perfil y eliminar conjuntos de datos o lotes innecesarios.
 
-El uso de la guía para desarrolladores requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform implicados en trabajar con [!DNL Profile] datos. Antes de comenzar a trabajar con [!DNL Real-Time Customer Profile] API, consulte la documentación de los siguientes servicios:
+El uso de la guía para desarrolladores requiere una comprensión práctica de los distintos servicios de Adobe Experience Platform implicados en el trabajo con datos de [!DNL Profile]. Antes de comenzar a trabajar con la API [!DNL Real-Time Customer Profile], revise la documentación de los siguientes servicios:
 
-* [[!DNL Real-Time Customer Profile]](../home.md): Proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
+* [[!DNL Real-Time Customer Profile]](../home.md): proporciona un perfil de cliente unificado en tiempo real en función de los datos agregados de varias fuentes.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): obtenga una mejor vista de su cliente y de su comportamiento al unir identidades entre dispositivos y sistemas.
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Permite crear audiencias a partir de los datos del perfil del cliente en tiempo real.
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): permite crear audiencias a partir de los datos del perfil del cliente en tiempo real.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): el marco estandarizado mediante el cual Platform organiza los datos de experiencia del cliente.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que deberá conocer para poder realizar llamadas correctamente a [!DNL Profile] Extremos de API.
+Las secciones siguientes proporcionan información adicional que necesitará conocer para realizar llamadas exitosas a [!DNL Profile] extremos de API.
 
 ## Lectura de llamadas de API de muestra
 
-El [!DNL Real-Time Customer Profile] La documentación de la API proporciona ejemplos de llamadas a la API para demostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en el [!DNL Experience Platform] guía de solución de problemas.
+La documentación de la API [!DNL Real-Time Customer Profile] proporciona ejemplos de llamadas a la API para mostrar cómo dar formato a las solicitudes correctamente. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ## Encabezados obligatorios
 
-La documentación de la API también requiere que haya completado la [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Platform] puntos finales. Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados necesarios en [!DNL Experience Platform] Llamadas de API, como se muestra a continuación:
+La documentación de la API también requiere que haya completado el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en) para realizar llamadas correctamente a [!DNL Platform] extremos. Al completar el tutorial de autenticación, se proporcionan los valores de cada uno de los encabezados necesarios en las llamadas a la API [!DNL Experience Platform], como se muestra a continuación:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos los recursos de [!DNL Experience Platform] están aisladas para zonas protegidas virtuales específicas. Solicitudes a [!DNL Platform] Las API requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
+Todos los recursos de [!DNL Experience Platform] están aislados en zonas protegidas virtuales específicas. Las solicitudes a las API [!DNL Platform] requieren un encabezado que especifique el nombre de la zona protegida en la que se realizará la operación:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación general de zona protegida](../../sandboxes/home.md).
+Para obtener más información sobre las zonas protegidas en [!DNL Platform], consulte la [documentación de información general sobre las zonas protegidas](../../sandboxes/home.md).
 
-Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como llamadas de POST, PUT y PATCH) deben incluir un `Content-Type` encabezado. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
+Todas las solicitudes con una carga útil en el cuerpo de la solicitud (como llamadas de POST, PUT y PATCH) deben incluir un encabezado `Content-Type`. Los valores aceptados específicos de cada llamada se proporcionan en los parámetros de llamada.
 
 ## Pasos siguientes
 
-Para empezar a realizar llamadas utilizando [!DNL Real-Time Customer Profile] API, seleccione una de las guías de extremos disponibles.
+Para empezar a realizar llamadas mediante la API [!DNL Real-Time Customer Profile], seleccione una de las guías de extremos disponibles.

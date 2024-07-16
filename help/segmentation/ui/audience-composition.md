@@ -14,175 +14,175 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Esta guía explica cómo crear audiencias mediante Composición de audiencias. Para aprender a crear audiencias a través de las definiciones de segmentos mediante el Generador de segmentos, lea la [Guía de IU del Generador de segmentos](./segment-builder.md).
+>Esta guía explica cómo crear audiencias mediante Composición de audiencias. Para aprender a crear audiencias a través de las definiciones de segmentos mediante el Generador de segmentos, lea la [guía de la interfaz de usuario del Generador de segmentos](./segment-builder.md).
 
 Composición de audiencia proporciona un espacio de trabajo para crear y editar audiencias, utilizando bloques que se utilizan para representar diferentes acciones.
 
-![La interfaz de usuario de Composición de audiencia.](../images/ui/audience-composition/audience-composition.png)
+![Interfaz de usuario de composición de audiencia.](../images/ui/audience-composition/audience-composition.png)
 
-Para cambiar los detalles de la composición, incluidos el título y la descripción, seleccione la ![controles deslizantes](../images/ui/audience-composition/sliders.png) botón.
+Para cambiar los detalles de la composición, incluidos el título y la descripción, seleccione el botón ![controles deslizantes](../images/ui/audience-composition/sliders.png).
 
-El **[!UICONTROL Propiedades de composición]** aparece la ventana emergente. Puede insertar detalles de la composición, incluidos el título y la descripción aquí.
+Aparece la ventana emergente **[!UICONTROL Propiedades de composición]**. Puede insertar detalles de la composición, incluidos el título y la descripción aquí.
 
-![Se muestra la ventana emergente Propiedades de composición.](../images/ui/audience-composition/composition-properties.png)
+![Se muestra la ventana emergente de propiedades de composición.](../images/ui/audience-composition/composition-properties.png)
 
 >[!NOTE]
 >
->Si lo hace **no** Si le asigna un título a la composición, tendrá un título de &quot;Composición&quot; seguido de la fecha y hora de creación de forma predeterminada. Además, cada composición **debe** tienen su propio nombre único.
+>Si **no** le asigna un título a la composición, tendrá un título de &quot;Composición&quot; seguido de la fecha y hora de creación de forma predeterminada. Además, cada composición **debe** tener su propio nombre único.
 
 Después de actualizar los detalles de la composición, seleccione **[!UICONTROL Guardar]** para confirmar estas actualizaciones. El lienzo de composición de audiencia vuelve a aparecer.
 
-El lienzo de composición de audiencia se compone de cuatro tipos diferentes de bloques: **[[!UICONTROL Audiencia]](#audience-block)**, **[[!UICONTROL Excluir]](#exclude-block)**, **[[!UICONTROL Rango]](#rank-block)**, y **[[!UICONTROL Split]](#split-block)**.
+El lienzo de composición de audiencia consta de cuatro tipos diferentes de bloques: **[[!UICONTROL Audiencia]](#audience-block)**, **[[!UICONTROL Excluir]](#exclude-block)**, **[[!UICONTROL Rango]](#rank-block)** y **[[!UICONTROL División]](#split-block)**.
 
 ## [!UICONTROL Audiencia] {#audience-block}
 
-El **[!UICONTROL Audiencia]** el tipo de bloque le permite añadir las subaudiencias que desea para componer su nueva audiencia más grande. De forma predeterminada, una **[!UICONTROL Audiencia]** El bloque de se incluye en la parte superior del lienzo de composición.
+El tipo de bloque **[!UICONTROL Audiencia]** le permite agregar las subaudiencias que desea para componer la nueva audiencia más grande. De manera predeterminada, se incluye un bloque **[!UICONTROL Audience]** en la parte superior del lienzo de composición.
 
-Al seleccionar la variable **[!UICONTROL Audiencia]** , el carril derecho muestra controles para etiquetar la audiencia y añadir audiencias al bloque, así como crear reglas personalizadas para el bloque de audiencia.
+Cuando selecciona el bloque **[!UICONTROL Audience]**, el carril derecho muestra controles para etiquetar la audiencia, agregar audiencias al bloque y crear reglas personalizadas para el bloque de audiencia.
 
 >[!NOTE]
 >
->Puede añadir audiencias **o** crear una regla personalizada. Estas dos funcionalidades **no puede** se usarán juntos.
+>Puede agregar audiencias **o** para crear una regla personalizada. Estas dos funcionalidades **no se pueden** usar juntas.
 
-![Se muestran los detalles del bloque Audiencia.](../images/ui/audience-composition/audience-block.png)
+![Se muestran los detalles del bloque de audiencia.](../images/ui/audience-composition/audience-block.png)
 
-### [!UICONTROL Añadir audiencia] {#add-audience}
+### [!UICONTROL Agregar audiencia] {#add-audience}
 
-Para añadir audiencias al bloque Audiencia. select **[!UICONTROL Añadir audiencia]**.
+Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Agregar audiencia]**.
 
-![Se resalta el botón Añadir audiencia.](../images/ui/audience-composition/add-audience.png)
+![El botón Agregar audiencia está resaltado.](../images/ui/audience-composition/add-audience.png)
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que **solamente** aparecerán las audiencias definidas con la política de combinación predeterminada.
+>Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
 >
->Además, solo **publicado** se pueden utilizar las audiencias creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencia y audiencias generadas externamente son **no** disponible.
+>Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
-Aparecerá una lista de audiencias. Seleccione las audiencias que desee incluir, seguidas de **[!UICONTROL Añadir]** para anexarlas al bloque de audiencia.
+Aparecerá una lista de audiencias. Seleccione las audiencias que desee incluir, seguidas de **[!UICONTROL Agregar]** para anexarlas al bloque de audiencias.
 
-![Aparecerá una lista de audiencias. Puede seleccionar la audiencia que desea agregar en este cuadro de diálogo.](../images/ui/audience-composition/select-audience.png)
+![Aparece una lista de audiencias. Puede seleccionar la audiencia que desea agregar en este cuadro de diálogo.](../images/ui/audience-composition/select-audience.png)
 
-Las audiencias seleccionadas aparecerán ahora en el carril derecho cuando el **[!UICONTROL Audiencia]** El bloque está seleccionado. Desde aquí puede cambiar el tipo de combinación de las audiencias combinadas.
+Las audiencias seleccionadas aparecerán ahora dentro del carril derecho cuando se seleccione el bloque **[!UICONTROL Audiencia]**. Desde aquí puede cambiar el tipo de combinación de las audiencias combinadas.
 
 ![Se resaltan los posibles tipos de combinación de las audiencias.](../images/ui/audience-composition/merge-types.png)
 
 | Tipo de combinación | Descripción |
 | ---------- | ----------- |
-| [!UICONTROL Union] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
-| [!UICONTROL Intersección] | Las audiencias se combinan, y solo se comparten las audiencias en **todo** de ellos que se van a añadir. Esto sería el equivalente de una operación AND. |
-| [!UICONTROL Excluir superposición] | Las audiencias se combinan, y solo se comparten las audiencias en **uno, pero no todos** de ellos que se van a añadir. Esto sería el equivalente de una operación XOR. |
+| [!UICONTROL Unión] | Las audiencias se combinan en una sola audiencia. Sería el equivalente de una operación O. |
+| [!UICONTROL Intersección] | Las audiencias se combinan y solo se agregan las audiencias que se comparten en **todas**. Esto sería el equivalente de una operación AND. |
+| [!UICONTROL Excluir superposición] | Las audiencias se combinan y solo se agregan las audiencias que se comparten en **una, pero no todas**. Esto sería el equivalente de una operación XOR. |
 
 ### [!UICONTROL Generar regla] {#build-rule}
 
-Para añadir una regla personalizada al bloque Audiencia, seleccione **[!UICONTROL Generar regla]**.
+Para agregar una regla personalizada al bloque Audiencia, seleccione **[!UICONTROL Generar regla]**.
 
-![Se resalta el botón Generar regla.](../images/ui/audience-composition/build-rule.png)
+![El botón Generar regla está resaltado.](../images/ui/audience-composition/build-rule.png)
 
-Aparecerá el Generador de segmentos. Puede usar el Generador de segmentos para crear una regla personalizada para la audiencia que seguirá. Encontrará más información sobre el uso del Generador de segmentos en la [Guía del Generador de segmentos](./segment-builder.md).
+Aparecerá el Generador de segmentos. Puede usar el Generador de segmentos para crear una regla personalizada para la audiencia que seguirá. Encontrará más información sobre el uso del Generador de segmentos en la [guía del Generador de segmentos](./segment-builder.md).
 
 ![Se muestra la interfaz de usuario del Generador de segmentos.](../images/ui/audience-composition/segment-builder.png)
 
-Después de agregar una regla personalizada, seleccione **[!UICONTROL Guardar]** para añadir la regla a la audiencia.
+Después de agregar una regla personalizada, selecciona **[!UICONTROL Guardar]** para agregar la regla a tu audiencia.
 
 ![](../images/ui/audience-composition/custom-rule.png)
 
 ## [!UICONTROL Excluir] {#exclude-block}
 
-El **[!UICONTROL Excluir]** el tipo de bloque le permite excluir subaudiencias o atributos especificados de la nueva audiencia más grande.
+El tipo de bloque **[!UICONTROL Exclude]** le permite excluir subaudiencias o atributos especificados de la nueva audiencia mayor.
 
-Para agregar un **[!UICONTROL Excluir]** , seleccione la **+** icono, seguido de **[!UICONTROL Excluir]**.
+Para agregar un bloque **[!UICONTROL Exclude]**, selecciona el icono **+**, seguido de **[!UICONTROL Exclude]**.
 
-![La opción Excluir está seleccionada.](../images/ui/audience-composition/add-exclude-block.png)
+![Se ha seleccionado la opción Excluir.](../images/ui/audience-composition/add-exclude-block.png)
 
-El **[!UICONTROL Excluir]** se ha añadido un bloque de. Cuando se selecciona este bloque, los detalles sobre la exclusión aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el tipo de exclusión. Puede excluir [por audiencia](#exclude-audience) o [por atributo](#exclude-attribute).
+Se ha agregado el bloque **[!UICONTROL Exclude]**. Cuando se selecciona este bloque, los detalles sobre la exclusión aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el tipo de exclusión. Puede excluir [por audiencia](#exclude-audience) o [por atributo](#exclude-attribute).
 
-![El bloque Exclude, que resalta los dos tipos diferentes de exclusión disponibles.](../images/ui/audience-composition/exclude.png)
+![Bloque Exclude, que resalta los dos tipos de exclusión disponibles.](../images/ui/audience-composition/exclude.png)
 
 ### Excluir por audiencia {#exclude-audience}
 
-Si excluye por audiencia, puede seleccionar las audiencias que desea excluir seleccionando **[!UICONTROL Añadir audiencia]**.
+Si excluyes por audiencia, puedes seleccionar las audiencias que deseas excluir seleccionando **[!UICONTROL Agregar audiencia]**.
 
-![El [!UICONTROL Añadir audiencia] El botón está seleccionado, lo que le permite elegir qué audiencia desea excluir.](../images/ui/audience-composition/add-excluded-audience.png)
+![El botón [!UICONTROL Agregar audiencia] está seleccionado, lo que le permite elegir la audiencia que desea excluir.](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
->Solo **publicado** se pueden utilizar las audiencias creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencia y audiencias generadas externamente son **no** disponible.
+>Solo se pueden usar las **audiencias publicadas** creadas mediante el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
-Aparecerá una lista de audiencias. Seleccionar **[!UICONTROL Añadir]** para añadir las audiencias que desee excluir al bloque de exclusión.
+Aparecerá una lista de audiencias. Seleccione **[!UICONTROL Agregar]** para agregar las audiencias que desee excluir al bloque de exclusión.
 
-![Aparecerá una lista de audiencias. Puede seleccionar la audiencia que desea agregar en este cuadro de diálogo.](../images/ui/audience-composition/select-audience.png)
+![Aparece una lista de audiencias. Puede seleccionar la audiencia que desea agregar en este cuadro de diálogo.](../images/ui/audience-composition/select-audience.png)
 
 ### Excluir por atributo {#exclude-attribute}
 
-Si excluye por atributo, puede seleccionar qué atributos desea excluir seleccionando la variable ![filter](../images/ui/audience-composition/filter-attribute.png) dentro de la **[!UICONTROL Regla de exclusión]** sección.
+Si excluye por atributo, puede seleccionar qué atributos desea excluir seleccionando el icono ![filter](../images/ui/audience-composition/filter-attribute.png) dentro de la sección **[!UICONTROL Regla de exclusión]**.
 
-![La sección de atributos aparece resaltada y muestra dónde seleccionar para elegir el atributo que desea excluir.](../images/ui/audience-composition/exclude-attribute.png)
+![La sección de atributos está resaltada y muestra dónde seleccionar para elegir el atributo que se excluirá.](../images/ui/audience-composition/exclude-attribute.png)
 
-Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que desea excluir, seguido de **[!UICONTROL Seleccionar]** para añadirlos al bloque de exclusión.
+Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo que desea excluir, seguido de **[!UICONTROL Select]** para agregarlo al bloque de exclusión.
 
 ![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-exclude.png)
 
 >[!IMPORTANT]
 >
->Al excluir por atributo, solo puede especificar **uno** valor que se excluirá. El uso de cualquier tipo de separador, como una coma o un punto y coma, solo hará que se excluya ese valor exacto. Por ejemplo, configurar el valor como `red, blue` resultará en la exclusión del término `red, blue` del atributo, pero lo hará **no** resulten en la exclusión del término `red` o `blue`.
+>Al excluir por atributo, solo puede especificar **un** valor que excluir. El uso de cualquier tipo de separador, como una coma o un punto y coma, solo hará que se excluya ese valor exacto. Por ejemplo, si establece el valor como `red, blue`, se excluirá el término `red, blue` del atributo, pero **no** se excluirá el término `red` o `blue`.
 
 ## [!UICONTROL Enriquecer] {#enrich-block}
 
 >[!IMPORTANT]
 >
->En este momento, los atributos de enriquecimiento pueden **solamente** se utilizará en escenarios de Adobe Journey Optimizer descendentes.
+>En este momento, los atributos de enriquecimiento **solo** se pueden usar en escenarios de Adobe Journey Optimizer descendentes.
 
-El **[!UICONTROL Enriquecer]** el tipo de bloque permite enriquecer la audiencia con atributos adicionales de un conjunto de datos. Puede utilizar estos atributos en casos de uso de personalización.
+El tipo de bloque **[!UICONTROL Enrich]** le permite enriquecer su audiencia con atributos adicionales de un conjunto de datos. Puede utilizar estos atributos en casos de uso de personalización.
 
-Para agregar un **[!UICONTROL Enriquecer]** , seleccione la **+** icono, seguido de **[!UICONTROL Enriquecer]**.
+Para agregar un bloque **[!UICONTROL Enrich]**, selecciona el icono **+**, seguido de **[!UICONTROL Enrich]**.
 
-![El [!UICONTROL Enriquecer] La opción está seleccionada.](../images/ui/audience-composition/add-enrich-block.png)
+![Se ha seleccionado la opción [!UICONTROL Enrich].](../images/ui/audience-composition/add-enrich-block.png)
 
-El **[!UICONTROL Enriquecer]** se ha añadido un bloque de. Cuando se selecciona este bloque, los detalles sobre el enriquecimiento aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el conjunto de datos de enriquecimiento.
+Se ha agregado el bloque **[!UICONTROL Enrich]**. Cuando se selecciona este bloque, los detalles sobre el enriquecimiento aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el conjunto de datos de enriquecimiento.
 
-Para seleccionar el conjunto de datos con el que enriquecer la audiencia, seleccione ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+Para seleccionar el conjunto de datos con el que enriquecer la audiencia, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
 
-![El botón de filtro está resaltado. Si selecciona esta opción, accederá al [!UICONTROL Seleccionar conjunto de datos] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+![El botón de filtro está resaltado. Si selecciona esto, accederá a la ventana emergente [!UICONTROL Seleccionar conjunto de datos].](../images/ui/audience-composition/enrich-select-dataset.png)
 
-El **[!UICONTROL Seleccionar conjunto de datos]** aparece la ventana emergente. Seleccione el conjunto de datos que desee agregar para el enriquecimiento, seguido de **[!UICONTROL Seleccionar]** para añadir el conjunto de datos para el enriquecimiento.
+Aparece la ventana emergente **[!UICONTROL Seleccionar conjunto de datos]**. Seleccione el conjunto de datos que desee agregar para el enriquecimiento, seguido de **[!UICONTROL Select]** para agregar el conjunto de datos para el enriquecimiento.
 
-![El conjunto de datos seleccionado está seleccionado.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![El conjunto de datos elegido está seleccionado.](../images/ui/audience-composition/enrich-dataset-selected.png)
 
 >[!IMPORTANT]
 >
->El conjunto de datos seleccionado **debe** cumplen los siguientes criterios:
+>El conjunto de datos seleccionado **debe** cumplir con los siguientes criterios:
 >
->- El conjunto de datos **debe** ser de tipo registro.
->   - El conjunto de datos **no puede** ser de tipo de evento, generarse por el sistema o marcarse para Perfil.
->- El conjunto de datos **debe** ser de 1 GB o menor.
+>- El conjunto de datos **debe** ser de tipo de registro.
+>   - El conjunto de datos **no puede** ser de tipo de evento, generado por el sistema o marcado para el perfil.
+>- El conjunto de datos **debe** tener 1 GB o menos.
 
-El **[!UICONTROL Criterios de enriquecimiento]** ahora aparece la sección en el carril derecho. En esta sección, puede seleccionar la variable **[!UICONTROL Clave de combinación de origen]** y el **[!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento]**, que le permite vincular el conjunto de datos enriquecido con la audiencia que intenta crear.
+La sección **[!UICONTROL Criterios de enriquecimiento]** aparece ahora en el carril derecho. En esta sección, puede seleccionar **[!UICONTROL Source join key]** y **[!UICONTROL Enrichment dataset join key]**, que le permiten vincular el conjunto de datos enriquecido con la audiencia que está intentando crear.
 
-![El [!UICONTROL Criterios de enriquecimiento] área resaltada.](../images/ui/audience-composition/enrichment-criteria.png)
+![El área [!UICONTROL Criterios de enriquecimiento] está resaltada.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Para seleccionar **[!UICONTROL Clave de combinación de origen]**, seleccione la ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+Para seleccionar la clave de unión de **[!UICONTROL Source]**, seleccione el icono ![filtro](../images/ui/audience-composition/filter-attribute.png).
 
-![El icono de filtro para [!UICONTROL Clave de combinación de origen] está resaltado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+![El icono de filtro de la [!UICONTROL clave de unión de Source] está resaltado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
-El **[!UICONTROL Seleccionar un atributo de perfil]** aparece la ventana emergente. Seleccione el atributo de perfil que desee utilizar como clave de unión de origen, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión de origen.
+Aparece la ventana emergente **[!UICONTROL Seleccionar un atributo de perfil]**. Seleccione el atributo de perfil que desee usar como clave de unión de origen, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión de origen.
 
-![El atributo que desee utilizar como clave de unión de origen aparece resaltado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![El atributo que desea usar como clave de combinación de origen está resaltado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Para seleccionar **[!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento]**, seleccione la ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+Para seleccionar la clave de unión del conjunto de datos **[!UICONTROL Enrichment]**, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
 
-![El icono de filtro para [!UICONTROL Clave de combinación del conjunto de datos de enriquecimiento] está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+![El icono de filtro de la clave de unión del conjunto de datos de enriquecimiento [!UICONTROL 2} está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)]
 
-El **[!UICONTROL Atributos de enriquecimiento]** aparece la ventana emergente. Seleccione el atributo que desee utilizar como clave de unión del conjunto de datos de enriquecimiento, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión del conjunto de datos de enriquecimiento.
+Aparece la ventana emergente **[!UICONTROL Atributos de enriquecimiento]**. Seleccione el atributo que desee usar como clave de unión del conjunto de datos enriquecido, seguido de **[!UICONTROL Seleccionar]** para elegir ese atributo como clave de unión del conjunto de datos enriquecido.
 
-![El atributo que desee utilizar como clave de unión del conjunto de datos de enriquecimiento aparece resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![El atributo que desea usar como clave de unión del conjunto de datos de enriquecimiento está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
-Ahora que ha agregado ambas claves de unión, la variable **[!UICONTROL Atributos de enriquecimiento]** aparece la sección. Ahora puede añadir el atributo con el que desee mejorar la audiencia. Para añadir estos atributos, seleccione **[!UICONTROL Añadir atributo]**.
+Ahora que ha agregado ambas claves de combinación, aparece la sección **[!UICONTROL Atributos de enriquecimiento]**. Ahora puede añadir el atributo con el que desee mejorar la audiencia. Para agregar estos atributos, seleccione **[!UICONTROL Agregar atributo]**.
 
-![El [!UICONTROL Añadir atributo] botón resaltado.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+![El botón [!UICONTROL Agregar atributo] está resaltado.](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
-El **[!UICONTROL Atributos de enriquecimiento]** aparece la ventana emergente. Puede seleccionar los atributos del conjunto de datos con los que enriquecer la audiencia, seguidos de **[!UICONTROL Seleccionar]** para añadir los atributos a la audiencia.
+Aparece la ventana emergente **[!UICONTROL Atributos de enriquecimiento]**. Puede seleccionar los atributos del conjunto de datos con los que enriquecer la audiencia, seguidos de **[!UICONTROL Select]** para agregarlos a la audiencia.
 
-![Los atributos de enriquecimiento que desee añadir aparecen resaltados.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Los atributos de enriquecimiento que desea agregar están resaltados.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -206,37 +206,37 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rango] {#rank-block}
 
-El **[!UICONTROL Rango]** el tipo de bloque permite clasificar y ordenar perfiles en función de un atributo especificado e incluir estos perfiles clasificados en la composición.
+El tipo de bloque **[!UICONTROL Rank]** le permite clasificar y ordenar perfiles según un atributo especificado e incluir estos perfiles clasificados en la composición.
 
-Para agregar un **[!UICONTROL Rango]** , seleccione la **+** icono, seguido de **[!UICONTROL Rango]**.
+Para agregar un bloque **[!UICONTROL Rank]**, selecciona el icono **+**, seguido de **[!UICONTROL Rank]**.
 
-![La opción Rank está seleccionada.](../images/ui/audience-composition/add-rank-block.png)
+![La opción Clasificación está seleccionada.](../images/ui/audience-composition/add-rank-block.png)
 
 Al seleccionar el bloque, los detalles sobre la clasificación se muestran en el carril derecho, incluida la etiqueta del bloque, el atributo por el que clasificar, el orden de clasificación y una opción para limitar el número de perfiles que clasificar.
 
-![Se resaltará el bloque de clasificación, así como los detalles del bloque de clasificación.](../images/ui/audience-composition/rank.png)
+![Se resalta el bloque de clasificación, así como los detalles del bloque de clasificación.](../images/ui/audience-composition/rank.png)
 
-Para seleccionar por qué atributo clasificar las audiencias, seleccione el ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+Para seleccionar por qué atributo clasificar las audiencias, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
 
-![El icono de filtro se resalta y muestra lo que debe seleccionar para acceder a la pantalla de selección de atributos de perfil.](../images/ui/audience-composition/select-rank-attribute.png)
+![El icono de filtro está resaltado y muestra lo que debe seleccionar para tener acceso a la pantalla de selección de atributos de perfil.](../images/ui/audience-composition/select-rank-attribute.png)
 
-Aparecerá una lista de atributos de perfil. En esta ventana emergente, puede seleccionar el tipo de atributo por el que desea clasificar la audiencia. Seleccionar **[!UICONTROL Seleccionar]** para añadirlo a su bloque de clasificación. Tenga en cuenta que el atributo seleccionado **solamente** ser números.
+Aparecerá una lista de atributos de perfil. En esta ventana emergente, puede seleccionar el tipo de atributo por el que desea clasificar la audiencia. Seleccione **[!UICONTROL Select]** para agregarlo a su bloque de clasificación. Tenga en cuenta que el atributo seleccionado **solamente** puede ser números.
 
 ![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-rank.png)
 
 Después de seleccionar el atributo, puede seleccionar el orden por el que desea clasificarlo. Puede ser ascendente (de menor a mayor) o descendente (de mayor a menor).
 
-Además, puede limitar el número de perfiles devueltos habilitando la variable **[!UICONTROL Añadir límite de perfil]** alternar. Cuando esta opción está habilitada, puede establecer el número máximo de perfiles devueltos dentro de la variable **[!UICONTROL Perfiles incluidos]** field.
+Además, puede limitar el número de perfiles devueltos habilitando la opción **[!UICONTROL Agregar límite de perfiles]**. Cuando se habilita esta opción, puede establecer el número máximo de perfiles devueltos dentro del campo **[!UICONTROL Perfiles incluidos]**.
 
-![Se resalta la opción Add profile limit, que permite limitar el número de perfiles devueltos.](../images/ui/audience-composition/add-profile-limit.png)
+![Se ha resaltado la opción Agregar límite de perfil, que le permite limitar el número de perfiles devueltos.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Split] {#split-block}
+## [!UICONTROL División] {#split-block}
 
-El **[!UICONTROL Split]** el tipo de bloque le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo. Al dividir la audiencia en subaudiencias, esta división es **persistente**. Esto significa que el perfil estará en la misma subaudiencia en cada evaluación.
+El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo. Al dividir la audiencia en subaudiencias, esta división es **persistente**. Esto significa que el perfil estará en la misma subaudiencia en cada evaluación.
 
-Para agregar un **[!UICONTROL Split]** , seleccione la **+** icono, seguido de **[!UICONTROL Split]**.
+Para agregar un bloque **[!UICONTROL Split]**, selecciona el icono **+**, seguido de **[!UICONTROL Split]**.
 
-![La opción Split está seleccionada.](../images/ui/audience-composition/add-split-block.png)
+![Se ha seleccionado la opción Dividir.](../images/ui/audience-composition/add-split-block.png)
 
 Al dividir la audiencia, puede hacerlo por porcentaje o por atributo.
 
@@ -246,35 +246,35 @@ Al dividir por porcentaje, las audiencias se dividirán aleatoriamente en funci�
 
 Por ejemplo, puede tener tres rutas, cada una con un porcentaje diferente de perfiles.
 
-![Se muestra el desglose en número de audiencias guardadas y porcentajes.](../images/ui/audience-composition/percentages.png)
+![Se muestra el desglose en número de audiencias y porcentajes guardados.](../images/ui/audience-composition/percentages.png)
 
 ### Dividir por atributo {#split-attribute}
 
-Al dividir por atributo, las audiencias se dividen según los atributos proporcionados. Para seleccionar el atributo por el que dividir, seleccione **[!UICONTROL Split]** bloque, seguido de la variable ![filter](../images/ui/audience-composition/filter-attribute.png) icono.
+Al dividir por atributo, las audiencias se dividen según los atributos proporcionados. Para seleccionar el atributo por el que dividir, selecciona el bloque **[!UICONTROL Split]**, seguido del icono ![filter](../images/ui/audience-composition/filter-attribute.png).
 
-![Se selecciona el botón de filtro, que muestra cómo filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
+![Se ha seleccionado el botón de filtro, que muestra cómo filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
 
-Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo, seguido de **[!UICONTROL Seleccionar]** para añadirlo a su bloque de división.
+Aparecerá una lista de atributos de perfil. Seleccione el tipo de atributo, seguido de **[!UICONTROL Select]** para agregarlo al bloque dividido.
 
 ![Se muestra una lista de atributos.](../images/ui/audience-composition/select-attribute-exclude.png)
 
-Después de seleccionar el atributo, puede elegir qué perfiles pertenecen a cada subaudiencia añadiendo los valores dentro de la variable **[!UICONTROL Valores]** field.
+Después de seleccionar el atributo, puede elegir qué perfiles pertenecerán a cada subaudiencia agregando los valores dentro del campo **[!UICONTROL Valores]**.
 
-![Se añaden los valores por los que desea dividir los atributos.](../images/ui/audience-composition/attribute-split-values.png)
+![Se agregan los valores por los que desea dividir los atributos.](../images/ui/audience-composition/attribute-split-values.png)
 
-Además, puede habilitar la variable **[!UICONTROL Otros perfiles]** active esta opción para crear una subaudiencia que incluya todos los perfiles no seleccionados.
+Además, puede habilitar la opción **[!UICONTROL Otros perfiles]** para crear una subaudiencia que incluya todos los perfiles no seleccionados.
 
-![Se resaltará la opción Otros perfiles.](../images/ui/audience-composition/split-other-profiles.png)
+![Se ha resaltado la opción Otros perfiles.](../images/ui/audience-composition/split-other-profiles.png)
 
 ## Publicación de la audiencia
 
 Una vez maquetada la audiencia, puede guardarla y publicarla seleccionando **[!UICONTROL Publish]**.
 
-![El botón Publicar aparece resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/publish.png)
+![El botón Publish está resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/publish.png)
 
 Si se produce algún error al crear la audiencia, aparece una alerta que le permite saber cómo resolver el problema.
 
-![El botón Publicar aparece resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/audience-alert.png)
+![El botón Publish está resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/audience-alert.png)
 
 ## Pasos siguientes
 

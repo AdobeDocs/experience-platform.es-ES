@@ -6,7 +6,7 @@ description: El etiquetado de contenido es un conjunto de servicios de IA que le
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ El contenido es un componente esencial de estas experiencias. Para responder mej
 | Tipo de contenido | Funcionalidades | Descripción general de la funcionalidad |
 | --- | --- | --- |
 | Texto | - Etiquetado de palabras clave <br> | : extraiga automáticamente palabras clave y etiquetas de documentos empresariales y páginas web mediante un servicio de IA listo para usar. <br> |
-| Imágenes | - Etiquetado de color <br> - Reconocimiento óptico de caracteres (OCR) | - Extraer con precisión los colores dominantes (etiquetas y valores hexadecimales) y su peso de una imagen de producto. <br> - Extraiga con precisión cualquier texto presente en una imagen de producto. |
+| Imágenes | - Etiquetado de colores <br> - Reconocimiento óptico de caracteres (OCR) | - Extraer con precisión los colores dominantes (etiquetas y valores hexadecimales) y su peso de una imagen de producto. <br>: extraiga con precisión cualquier texto presente en una imagen de producto. |
 
 ## Explicación del etiquetado de contenido
 
@@ -40,7 +40,7 @@ La visión general del etiquetado de contenido se divide en tres pasos para logr
 - Obtenga las preferencias y afinidades del cliente a partir del contenido y las acciones.
 - Añadir preferencias al perfil del cliente.
 
-**Paso 3: Habilitar la optimización de experiencias**
+**Paso 3: Habilitando la optimización de experiencias**
 - Utilice el perfil del cliente para ofrecer experiencias mejoradas y personalizadas, en la sesión y para las experiencias posteriores.
 - Utilice las funciones de contenido para obtener información sobre los comportamientos de los clientes que impulsan los KPI.
 - Utilice perspectivas de contenido para mejorar la creación, creación y selección de contenido.

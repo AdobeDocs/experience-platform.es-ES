@@ -1,11 +1,11 @@
 ---
-title: Resumen de origen de Chatlio
+title: Información general sobre Chatlio Source
 description: Aprenda a conectar Chatlio a Adobe Experience Platform mediante API o la interfaz de usuario de aprovechando los webhooks
 badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
 source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El [!DNL Chatlio] el origen está en versión beta. Lea el [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de fuentes etiquetadas como beta.
+>El origen [!DNL Chatlio] está en la versión beta. Lea [información general de orígenes](../../home.md#terms-and-conditions) para obtener más información sobre el uso de orígenes etiquetados como beta.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
-Experience Platform es compatible con la ingesta de datos desde aplicaciones de streaming. Los proveedores de streaming admiten [!DNL Chatlio].
+Experience Platform es compatible con la ingesta de datos desde aplicaciones de streaming. La compatibilidad con los proveedores de streaming incluye [!DNL Chatlio].
 
-[[!DNL Chatlio]](https://chatlio.com/) es una aplicación de chat en vivo totalmente integrada con [!DNL Slack] y facilita que varios agentes de soporte ayuden simultáneamente a un visitante individual del sitio. [!DNL Chatlio] utiliza el [!DNL Chatio Zapier App] para conectar [!DNL Chatlio] con más de 2000 aplicaciones y servicios diferentes.
+[[!DNL Chatlio]](https://chatlio.com/) es una aplicación de chat en vivo que está totalmente integrada con [!DNL Slack] y que facilita que varios agentes de soporte ayuden simultáneamente a un visitante individual del sitio. [!DNL Chatlio] usa [!DNL Chatio Zapier App] para conectar [!DNL Chatlio] con más de 2000 aplicaciones y servicios diferentes.
 
-El [!DNL Chatlio] La fuente de permite introducir esquemas de eventos de webhook admitidos y sus datos de evento asociados de [!DNL Chatlio.com] uso del [[!DNL Chatlio] Webhooks](https://chatlio.com/docs/webhooks/).
+El origen [!DNL Chatlio] le permite introducir esquemas de eventos de gancho web admitidos y sus datos de evento asociados de [!DNL Chatlio.com] mediante [[!DNL Chatlio] los ganchos web](https://chatlio.com/docs/webhooks/).
 
 Los webhooks admitidos son:
 
@@ -34,25 +34,25 @@ Los webhooks admitidos son:
 
 ## Requisitos previos {#prerequisites}
 
-Antes de crear un [!DNL Chatlio] conexión de origen, primero debe asegurarse de que dispone de lo siguiente:
+Para poder crear una conexión de origen de [!DNL Chatlio], primero debe asegurarse de que dispone de lo siguiente:
 
-* A [!DNL Chatlio] cuenta. Si todavía no dispone de una, visite la [[!DNL Chatlio] página de suscripción](https://chatlio.com/app/#/signup) para registrarse y crear su cuenta.
-* Después de registrar correctamente una cuenta de, siga el [[!DNL Chatlio] documentación de configuración](https://chatlio.com/docs/setup/) para completar la configuración de su cuenta.
+* Una cuenta de [!DNL Chatlio]. Si todavía no tiene una, visite la [[!DNL Chatlio] página de suscripción](https://chatlio.com/app/#/signup) para registrarse y crear su cuenta.
+* Una vez que haya registrado correctamente una cuenta, siga la [[!DNL Chatlio] documentación de instalación](https://chatlio.com/docs/setup/) para completar la configuración de la cuenta.
 
-### Configurar [!DNL Chatlio] webhook {#set-up-webhook}
+### Configurar el webhook [!DNL Chatlio] {#set-up-webhook}
 
-Una vez que haya creado correctamente el flujo de datos, debe configurar un webhook para informar a Platform sobre [!DNL Chatlio] eventos. Los webhooks pueden notificarle inmediatamente cuando cambian los atributos del cliente o cuando las personas abren sus mensajes y envían esta información a su [!DNL Chatlio] origen.
+Una vez que haya creado correctamente su flujo de datos, debe configurar un webhook para informar a Platform sobre [!DNL Chatlio] eventos. Los webhooks pueden notificarle inmediatamente cuando cambien los atributos del cliente o cuando las personas abran sus mensajes y envíen esta información a su origen de [!DNL Chatlio].
 
-Para obtener más información, lea los tutoriales sobre [obteniendo la URL de extremo de flujo continuo](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) y [configuración de un [!DNL Chatlio] Webhook](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
+Para obtener más información, lee los tutoriales sobre [cómo obtener la URL del extremo de streaming](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) y [cómo configurar un  [!DNL Chatlio] webhook](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
 
-## Connect [!DNL Chatlio] a Platform {#connect-to-platform}
+## Conectar [!DNL Chatlio] a Platform {#connect-to-platform}
 
-La siguiente documentación proporciona información sobre cómo crear un [!DNL Chatlio] conector de flujo continuo con el que conectarse [!DNL Platform] mediante las API de o la interfaz de usuario de:
+La documentación siguiente proporciona información sobre cómo crear un conector de flujo continuo [!DNL Chatlio] para conectarse con [!DNL Platform] mediante API o la interfaz de usuario:
 
-### Connect [!DNL Chatlio] a Platform mediante API {#connect-to-platform-using-api}
+### Conectar [!DNL Chatlio] a Platform mediante API {#connect-to-platform-using-api}
 
-* [Cree una conexión de origen para traer [!DNL Chatlio] datos a Platform mediante API.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
+* [Cree una conexión de origen para llevar  [!DNL Chatlio] datos a Platform mediante API.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
 
-### Connect [!DNL Chatlio] a Platform mediante la IU {#connect-to-platform-using-ui}
+### Conectar [!DNL Chatlio] a Platform mediante la interfaz de usuario {#connect-to-platform-using-ui}
 
-* [Cree una conexión de origen para traer [!DNL Chatlio] datos a Platform mediante la interfaz de usuario de](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+* [Crear una conexión de origen para llevar  [!DNL Chatlio] datos a Platform mediante la interfaz de usuario](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)

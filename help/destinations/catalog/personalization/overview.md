@@ -1,20 +1,20 @@
 ---
-keywords: personalización;Personalización
-title: Información general sobre destinos de personalización
-description: Las plataformas de personalización recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
+keywords: personalización;Personalization
+title: Información general sobre destinos Personalization
+description: Las plataformas Personalization recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 14%
+source-wordcount: '150'
+ht-degree: 12%
 
 ---
 
-# Información general sobre destinos de personalización {#personalization-destinations}
+# Información general sobre destinos Personalization {#personalization-destinations}
 
 ## Información general {#overview}
 
-Las plataformas de personalización recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
+Las plataformas Personalization recopilan datos y perspectivas de comportamientos individuales. Estas plataformas pueden ayudar a los especialistas en marketing a navegar por datos anónimos, ofrecer ofertas o anuncios a los posibles clientes en función de actividades anteriores o como parte de audiencias con hábitos similares.
 
 ## Destinos de personalización admitidos {#supported-destinations}
 
@@ -37,4 +37,4 @@ Actualmente, Platform admite los destinos de personalización que se enumeran a 
 * [Extensión de Experience Cloud ID Service](adobe-ecid.md)
 * [Extensión de Gainsight](gainsight.md)
 * [Extensión de Kickfire](kickfire.md)
-* [Extensión de personalización web de Marketo](marketo-web-personalization.md)
+* [Extensión de Marketo Web Personalization](marketo-web-personalization.md)

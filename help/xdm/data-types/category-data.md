@@ -1,24 +1,25 @@
 ---
 title: Tipo de datos de categoría
 description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia (XDM) de categoría.
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '98'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
-# [!UICONTROL Datos de categoría] tipo de datos
+# [!UICONTROL Tipo de datos de categoría]
 
 [!UICONTROL Datos de categoría] es un tipo de datos estándar del Modelo de datos de experiencia (XDM) que describe información relacionada con la categoría de un producto.
 
-![Diagrama del tipo de datos Categoría.](../images/data-types/category-data.png)
+![Un diagrama del tipo de datos de categoría.](../images/data-types/category-data.png)
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Descripción |
 |-----------------|--------------------|-----------|------------------------------------------|
-| [!UICONTROL Identificador de categoría] | `categoryID` | string | El identificador de la categoría del producto. |
-| [!UICONTROL Nombre de categoría] | `categoryName` | string | El nombre de la categoría del producto. |
-| [!UICONTROL Ruta de categoría] | `categoryPath` | string | La ruta de la categoría del producto. |
+| [!UICONTROL Identificador de categoría] | `categoryID` | cadena | El identificador de la categoría del producto. |
+| [!UICONTROL Nombre de categoría] | `categoryName` | cadena | El nombre de la categoría del producto. |
+| [!UICONTROL Ruta de categoría] | `categoryPath` | cadena | La ruta de la categoría del producto. |
 
 {style="table-layout:auto"}
 

@@ -4,18 +4,18 @@ description: Aprenda a utilizar Data Distiller para explorar y analizar datos de
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 16%
+source-wordcount: '760'
+ht-degree: 13%
 
 ---
 
 # Análisis exploratorio de datos
 
-Este documento proporciona algunos ejemplos básicos y prácticas recomendadas para utilizar Data Distiller con el fin de explorar y analizar datos de un [!DNL Python] cuaderno.
+Este documento proporciona algunos ejemplos básicos y prácticas recomendadas para utilizar Data Distiller con el fin de explorar y analizar datos de un bloc de notas de [!DNL Python].
 
 ## Primeros pasos
 
-Antes de continuar con esta guía, asegúrese de haber creado una conexión con Data Distiller en su [!DNL Python] cuaderno. Consulte la documentación para obtener instrucciones sobre cómo [conectar a [!DNL Python] de portátil a Data Distiller](./establish-connection.md).
+Antes de continuar con esta guía, asegúrese de haber creado una conexión con Data Distiller en el bloc de notas [!DNL Python]. Consulte la documentación para obtener instrucciones sobre cómo [conectar un bloc de notas [!DNL Python] a Data Distiller](./establish-connection.md).
 
 ## Adquisición de estadísticas básicas {#basic-statistics}
 
@@ -42,9 +42,9 @@ df
 
 ## Creación de una versión de muestra de conjuntos de datos grandes {#create-dataset-sample}
 
-Si el conjunto de datos que desea consultar es muy grande o si no son necesarios los resultados exactos de consultas exploratorias, utilice el [funcionalidad de muestreo](../../key-concepts/dataset-samples.md) disponible para consultas de Data Distiller. Este es un proceso de dos pasos:
+Si el conjunto de datos que desea consultar es muy grande o si no se necesitan resultados exactos de consultas exploratorias, utilice la [funcionalidad de muestreo](../../key-concepts/dataset-samples.md) disponible para las consultas de Data Distiller. Este es un proceso de dos pasos:
 
-- Primero, **analizar** el conjunto de datos para crear una versión de muestra con una proporción de muestra especificada
+- En primer lugar, **analice** el conjunto de datos para crear una versión muestreada con una proporción de muestreo especificada
 - A continuación, consulte la versión muestreada del conjunto de datos. Según las funciones que aplique al conjunto de datos muestreado, es posible que desee escalar la salida a los números del conjunto de datos completo
 
 ### Crear una muestra al 5 % {#create-sample}
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### Ver sus muestras {#view-sample}
 
-Puede usar el complemento `sample_meta` para ver cualquier muestra que se haya creado a partir de un conjunto de datos determinado. El siguiente fragmento de código muestra cómo utilizar la variable `sample_meta` función.
+Puede utilizar la función `sample_meta` para ver cualquier muestra que se haya creado a partir de un conjunto de datos determinado. El siguiente fragmento de código muestra cómo utilizar la función `sample_meta`.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -105,7 +105,7 @@ Approximate count: 1284600.0 using 5.0% sample
 
 ## Análisis de canal de correo electrónico {#email-funnel-analysis}
 
-Un análisis de canal es un método para comprender los pasos necesarios para alcanzar un resultado objetivo y cuántos usuarios pasan por cada uno de esos pasos. El ejemplo siguiente ilustra un análisis de canal sencillo de los pasos que llevan a que un usuario se suscriba a un boletín informativo. El resultado de la suscripción se representa mediante un tipo de evento de `web.formFilledOut`.
+Un análisis de canal es un método para comprender los pasos necesarios para alcanzar un resultado objetivo y cuántos usuarios pasan por cada uno de esos pasos. El ejemplo siguiente ilustra un análisis de canal sencillo de los pasos que llevan a que un usuario se suscriba a un boletín informativo. El resultado de la suscripción está representado por un tipo de evento de `web.formFilledOut`.
 
 En primer lugar, ejecute una consulta para obtener el número de usuarios en cada paso.
 
@@ -138,7 +138,7 @@ funnel_df
 
 ### Trazar resultados de consulta {#plot-results}
 
-A continuación, trace los resultados de la consulta utilizando [!DNL Python] `plotly` biblioteca:
+A continuación, trace los resultados de la consulta utilizando la biblioteca [!DNL Python] `plotly`:
 
 ```python
 import plotly.express as px
@@ -152,18 +152,18 @@ fig.show()
 
 **Salida de ejemplo**
 
-![Una infografía del canal de correo electrónico eventType.](../../images/data-distiller/email-funnel.png)
+![Infografía del canal de correo electrónico eventType.](../../images/data-distiller/email-funnel.png)
 
 ## Correlaciones de eventos {#event-correlations}
 
-Otro análisis común es calcular las correlaciones entre los tipos de evento y un tipo de evento de conversión de destino. En este ejemplo, el evento de suscripción se representa mediante `web.formFilledOut`. Este ejemplo utiliza el [!DNL Spark] funciones disponibles en las consultas de Data Distiller para lograr los siguientes pasos:
+Otro análisis común es calcular las correlaciones entre los tipos de evento y un tipo de evento de conversión de destino. En este ejemplo, el evento de suscripción está representado por `web.formFilledOut`. Este ejemplo utiliza las funciones [!DNL Spark] disponibles en las consultas de Data Distiller para realizar los pasos siguientes:
 
 1. Contar el número de eventos para cada tipo de evento por perfil.
 2. Agregue los recuentos de cada tipo de evento entre perfiles y calcule las correlaciones de cada tipo de evento con `web,formFilledOut`.
 3. Transforme el marco de datos de recuentos y correlaciones en una tabla de coeficientes de correlación de Pearson de cada función (recuentos de tipo de evento) con el evento de destino.
 4. Visualice los resultados en un diagrama.
 
-El [!DNL Spark] Las funciones de acumulan los datos para devolver una pequeña tabla de resultados, de modo que puede ejecutar este tipo de consulta en el conjunto de datos completo.
+Las funciones [!DNL Spark] agregan los datos para devolver una pequeña tabla de resultados, de modo que puede ejecutar este tipo de consulta en todo el conjunto de datos.
 
 ```python
 large_correlation_query=f'''
@@ -215,7 +215,7 @@ large_correlation_df
 
 |   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totalUsers | propositionDisplay_totalUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0.026805 | 0.2779 | Ninguna | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | Ninguna |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | Ninguna | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | Ninguna |
 
 {style="table-layout:auto"}
 
@@ -234,22 +234,22 @@ corrdf.fillna(0)
 
 **Salida de ejemplo**:
 
-|    | campaign | valor | característica | pearsonCorrelation |
+|    | variable | valor | característica | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0.218874 | EmailOpens | 0.218874 |
-| 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
-| 2 | `webForms_productViews` | 0.277900 | productViews | 0.277900 |
-| 3 | `webForms_productPurchases` | 0.000000 | productPurchases | 0.000000 |
-| 4 | `webForms_propositionDismisses` | 0.060140 | propositionDismisses | 0.060140 |
-| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteracts | 0.143656 |
-| 6 | `webForms_emailClicks` | 0.305657 | emailClicks | 0.305657 |
-| 7 | `webForms_emailOpens` | 0.218874 | emailOpens | 0.218874 |
-| 8 | `webForms_emailSends` | 0.192836 | emailSends | 0.192836 |
-| 9 | `webForms_webLinkClicks` | 0.259353 | webLinkClicks | 0.259353 |
-| 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
+| 0 | `webForms_EmailOpens` | 0,218874 | EmailOpens | 0,218874 |
+| 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
+| 2 | `webForms_productViews` | 0,277900 | productViews | 0,277900 |
+| 3 | `webForms_productPurchases` | 0,000000 | productPurchases | 0,000000 |
+| 4 | `webForms_propositionDismisses` | 0,060140 | propositionDismisses | 0,060140 |
+| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteracts | 0,143656 |
+| 6 | `webForms_emailClicks` | 0,305657 | emailClicks | 0,305657 |
+| 7 | `webForms_emailOpens` | 0,218874 | emailOpens | 0,218874 |
+| 8 | `webForms_emailSends` | 0,192836 | emailSends | 0,192836 |
+| 9 | `webForms_webLinkClicks` | 0,259353 | webLinkClicks | 0,259353 |
+| 10 | `webForms_webPageViews` | 0,000000 | webPageViews | 0,000000 |
 
 
-Finalmente, puede visualizar las correlaciones con el `matplotlib` [!DNL Python] biblioteca:
+Finalmente, puede visualizar las correlaciones con la biblioteca `matplotlib` [!DNL Python]:
 
 ```python
 import matplotlib.pyplot as plt
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Pasos siguientes
 
-Al leer este documento, ha aprendido a utilizar Data Distiller para explorar y analizar datos de un [!DNL Python] cuaderno. El siguiente paso para crear canalizaciones de funciones de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [características de ingeniero para aprendizaje automático](./feature-engineering.md).
+Al leer este documento, ha aprendido a utilizar Data Distiller para explorar y analizar datos de un bloc de notas [!DNL Python]. El siguiente paso para crear canalizaciones de características de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es crear [funciones de ingeniería para aprendizaje automático](./feature-engineering.md).

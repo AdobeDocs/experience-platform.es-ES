@@ -1,6 +1,6 @@
 ---
 title: Recopilación de datos
-description: Descubra cómo la API del servidor de red perimetral de Adobe Experience Platform estructura los datos recopilados.
+description: Descubra cómo la API de Adobe Experience Platform Edge Network Server estructura los datos recopilados.
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '131'
@@ -11,14 +11,14 @@ ht-degree: 6%
 
 # Recopilación de datos
 
-El [!DNL Server API] ofrece dos tipos de extremos de recopilación de datos:
+[!DNL Server API] ofrece dos tipos de extremos de recopilación de datos:
 
-* [Extremos de recopilación de datos interactivos](interactive-data-collection.md), se utiliza cuando el cliente espera que el servidor devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de red perimetral, mientras realizan la recopilación de datos.
-* [Recopilación de datos de evento no interactiva](non-interactive-data-collection.md), se utiliza cuando no se espera ninguna respuesta del servidor. Estos extremos solo se utilizan para la recopilación de datos.
+* [Extremos de recopilación de datos interactivos](interactive-data-collection.md), utilizados cuando el cliente espera que el servidor devuelva una respuesta. Estos extremos también pueden devolver contenido de otros servicios de Edge Network, mientras realizan la recopilación de datos.
+* [Recopilación de datos de evento no interactiva](non-interactive-data-collection.md), utilizada cuando no se espera ninguna respuesta del servidor. Estos extremos solo se utilizan para la recopilación de datos.
 
 ## `Event` objeto {#event-object}
 
-Datos recopilados por el [!DNL Server API] está estructurado en la variable `Event` objeto. A continuación se describe la estructura de este objeto.
+Los datos recopilados por [!DNL Server API] están estructurados en el objeto `Event`. A continuación se describe la estructura de este objeto.
 
 ```json
 {
@@ -57,5 +57,5 @@ Datos recopilados por el [!DNL Server API] está estructurado en la variable `Ev
 | Atributo | Tipo | Descripción |
 | --- | --- | --- |
 | `xdm` | Objeto | *Requerido*. Objeto JSON que contiene datos en formato XDM, correspondiente al esquema del conjunto de datos. |
-| `data` | Objeto | *Opcional*. Objeto JSON que contiene datos de forma libre que la red perimetral puede asignar a XDM. |
+| `data` | Objeto | *Opcional*. Objeto JSON que contiene datos de forma libre que el Edge Network puede asignar a XDM. |
 

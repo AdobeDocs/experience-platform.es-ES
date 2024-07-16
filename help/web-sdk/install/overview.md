@@ -14,8 +14,8 @@ ht-degree: 0%
 
 Hay tres formas de utilizar el SDK web de Adobe Experience Platform:
 
-1. **[Extensión de etiqueta de SDK web](extension.md)**: el Adobe recomienda utilizar este método. Instale un cargador de etiquetas en el sitio y, a continuación, utilice la IU de recopilación de datos de Adobe Experience Platform para configurar la implementación.
-1. **[Biblioteca JavaScript del SDK web](library.md)**: Haga referencia a un archivo de biblioteca alojado en CDN o aloje el archivo de biblioteca con su propia infraestructura. Realice llamadas a la biblioteca dentro del código del sitio.
+1. **[Extensión de etiquetas de SDK web](extension.md)**: el Adobe recomienda utilizar este método. Instale un cargador de etiquetas en el sitio y, a continuación, utilice la IU de recopilación de datos de Adobe Experience Platform para configurar la implementación.
+1. **[Biblioteca JavaScript de SDK web](library.md)**: Haga referencia a un archivo de biblioteca alojado en CDN o aloje el archivo de biblioteca con su propia infraestructura. Realice llamadas a la biblioteca dentro del código del sitio.
 1. **[NPM](npm.md)**: instale el SDK web en su sitio mediante el administrador de paquetes NPM
 
 ## Requisitos previos
