@@ -29,7 +29,7 @@ En Audience Portal, puede realizar las siguientes tareas:
 
 Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
 
-## Lista de audiencias {#list}
+## Lista de público {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
