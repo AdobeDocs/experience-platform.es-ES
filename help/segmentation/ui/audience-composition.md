@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Además, puede habilitar la opción **[!UICONTROL Otros perfiles]** para crear u
 
 ## Publicación de la audiencia
 
-Una vez maquetada la audiencia, puede guardarla y publicarla seleccionando **[!UICONTROL Publish]**.
+>[!IMPORTANT]
+>
+>Al publicar la composición de audiencia, tenga en cuenta que puede tardar hasta 48 horas en evaluarse y activarse para su uso en servicios descendentes como un destino de Real-Time CDP o un canal de Adobe Journey Optimizer.
 
-![El botón Publish está resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/publish.png)
+Después de crear la composición, puede guardarla y publicarla seleccionando **[!UICONTROL Publish]**.
+
+![El botón Publish está resaltado y muestra cómo guardar y publicar la composición.](../images/ui/audience-composition/publish.png)
 
 Si se produce algún error al crear la audiencia, aparece una alerta que le permite saber cómo resolver el problema.
 
-![El botón Publish está resaltado y muestra cómo guardar y publicar la audiencia.](../images/ui/audience-composition/audience-alert.png)
+![El botón Publish está resaltado y muestra cómo guardar y publicar la composición.](../images/ui/audience-composition/audience-alert.png)
 
 ## Pasos siguientes
 
-Composición de audiencia proporciona un flujo de trabajo enriquecido que le permite crear audiencias a partir de los diferentes tipos de bloques. Para obtener más información acerca de otras partes de la interfaz de usuario del servicio de segmentación, lea la [Guía del usuario del servicio de segmentación](./overview.md).
+Composición de audiencia proporciona un flujo de trabajo enriquecido que le permite crear composiciones a partir de los distintos tipos de bloques. Para obtener más información acerca de otras partes de la interfaz de usuario del servicio de segmentación, lea la [Guía del usuario del servicio de segmentación](./overview.md).

@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Para obtener más información acerca del uso de Composición de audiencia, lea 
 
 Las audiencias se guardan automáticamente al crearlas en Composición de audiencia. La hora de creación de la audiencia es la primera vez que se realiza este guardado automático.
 
-Una vez creada la audiencia, puede tardar hasta 24 horas en evaluarse.
+Una vez creada la composición de audiencias, pueden pasar hasta 48 horas hasta que se evalúe y active para su uso en servicios descendentes como un destino de Real-Time CDP o un canal de Adobe Journey Optimizer.
 
 ### ¿Cuándo puedo utilizar la audiencia que he creado?
 
@@ -337,11 +337,7 @@ La división de audiencias permite subdividir aún más la audiencia en grupos m
 
 Al dividir por atributo, existe exclusividad mutua entre los grupos. Esto significa que si un registro cumple los criterios de varias rutas de acceso divididas, se le asignará la ruta **first** desde la izquierda y **no** se asignará a ninguna de las otras rutas.
 
-Al dividir por porcentaje, las divisiones se **realizan de forma aleatoria**. Esto significa que los perfiles se asignan aleatoriamente a cada ruta. La división **es** persistente, lo que significa que el perfil estará en la misma subaudiencia en cada evaluación.
-
->[!NOTE]
->
->Anteriormente, las divisiones en Composición de audiencia eran **no** persistentes.
+Al dividir por porcentaje, las divisiones se **realizan de forma aleatoria**. Esto significa que los perfiles se asignan aleatoriamente a cada ruta.
 
 Para obtener más información sobre el bloque dividido, lea la [guía de la interfaz de usuario de la composición de audiencias](./ui/audience-composition.md#split).
 
