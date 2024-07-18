@@ -3,7 +3,7 @@ keywords: crm;CRM;destinos de crm;salesforce crm;destino de crm de salesforce
 title: Conexión de Salesforce CRM
 description: El destino de CRM de Salesforce le permite exportar los datos de su cuenta y activarlos dentro de CRM de Salesforce para sus necesidades comerciales.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -134,7 +134,7 @@ Si el administrador de cuentas de [!DNL Salesforce] ha impuesto restricciones de
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
 | Elemento | Tipo | Notas |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo de exportación | **[!UICONTROL Basado en perfil]** | <ul><li>Va a exportar todos los miembros de un segmento, junto con los campos de esquema deseados *(por ejemplo: dirección de correo electrónico, número de teléfono, apellidos)*, según la asignación de campos.</li><li> Cada estado de audiencia de [!DNL Salesforce CRM] se actualiza con el estado de audiencia correspondiente de Platform, según el valor de **[!UICONTROL ID de asignación]** proporcionado durante el paso [programación de audiencia](#schedule-segment-export-example).</li></ul> |
 | Frecuencia de exportación | **[!UICONTROL Transmisión]** | <ul><li>Los destinos de streaming son conexiones basadas en API &quot;siempre activadas&quot;. Tan pronto como se actualiza un perfil en Experience Platform según la evaluación de audiencias, el conector envía la actualización de forma descendente a la plataforma de destino. Más información sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
@@ -153,10 +153,11 @@ En **[!UICONTROL destinos]** > **[!UICONTROL catálogo]**, busque [!DNL Salesfor
 ### Autenticarse en el destino {#authenticate}
 
 Para autenticarte en el destino, rellena los campos obligatorios a continuación y selecciona **[!UICONTROL Conectarse al destino]**. Consulte la sección [Recopilar [!DNL Salesforce CRM] credenciales](#gather-credentials) para obtener instrucciones.
+
 | Credencial | Descripción |
-| — | — |
-| **[!UICONTROL Nombre de usuario]** | Su nombre de usuario de cuenta [!DNL Salesforce]. |
-| **[!UICONTROL Contraseña]** | Una cadena concatenada compuesta por la contraseña de su cuenta [!DNL Salesforce] anexada con el token de seguridad [!DNL Salesforce].<br>El valor concatenado adopta la forma de `{PASSWORD}{TOKEN}`.<br> Tenga en cuenta que no utilice llaves ni espacios.<br>Por ejemplo, si la contraseña de [!DNL Salesforce] es `MyPa$$w0rd123` y el token de seguridad de [!DNL Salesforce] es `TOKEN12345....0000`, el valor concatenado que usará en el campo **[!UICONTROL Contraseña]** es `MyPa$$w0rd123TOKEN12345....0000`. |
+| --- | --- |
+| **[!UICONTROL Nombre de usuario]** | Su nombre de usuario de la cuenta [!DNL Salesforce]. |
+| **[!UICONTROL Contraseña]** | Cadena concatenada compuesta por la contraseña de su cuenta [!DNL Salesforce] anexada al token de seguridad [!DNL Salesforce].<br>El valor concatenado adopta la forma de `{PASSWORD}{TOKEN}`.<br> Tenga en cuenta que no utilice llaves ni espacios.<br>Por ejemplo, si la contraseña de [!DNL Salesforce] es `MyPa$$w0rd123` y el token de seguridad de [!DNL Salesforce] es `TOKEN12345....0000`, el valor concatenado que usará en el campo **[!UICONTROL Contraseña]** es `MyPa$$w0rd123TOKEN12345....0000`. |
 | **[!UICONTROL Dominio personalizado]** | Prefijo de dominio [!DNL Salesforce]. <br>Por ejemplo, si su dominio es *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, debe proporcionar `d5i000000isb4eak-dev-ed` como valor. |
 | **[!UICONTROL ID de cliente]** | Su [!DNL Salesforce] conectó la aplicación `Consumer Key`. |
 | **[!UICONTROL Secreto de cliente]** | Su [!DNL Salesforce] conectó la aplicación `Consumer Secret`. |
@@ -212,12 +213,13 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL (API) Sa
    * Si está trabajando con *Contactos* dentro de su segmento, consulte la Referencia de objeto en Salesforce para [Contacto](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) para definir asignaciones para los campos que se van a actualizar.
    * Puede identificar los campos obligatorios si busca la palabra *Requerido*, que se menciona en las descripciones de los campos del vínculo anterior.
    * Según los campos que desee exportar o actualizar, agregue asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce CRM]:
-|Campo de Source|Campo de destino| Notas |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Apellidos del contacto de hasta 80 caracteres. |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| Nombre del contacto de hasta 40 caracteres. |
-|`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del contacto. |
+
+     | Campo de origen | Campo de destino | Notas |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Apellidos del contacto de hasta 80 caracteres. |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | Nombre del contacto de hasta 40 caracteres. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | La dirección de correo electrónico del contacto. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -227,12 +229,13 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL (API) Sa
    * Si está trabajando con *posibles clientes* dentro del segmento, consulte la Referencia de objeto en Salesforce para [Posible cliente](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) para definir asignaciones para los campos que se van a actualizar.
    * Puede identificar los campos obligatorios si busca la palabra *Requerido*, que se menciona en las descripciones de los campos del vínculo anterior.
    * Según los campos que desee exportar o actualizar, agregue asignaciones entre el esquema de perfil XDM y [!DNL (API) Salesforce CRM]:
-|Campo de Source|Campo de destino| Notas |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Apellidos del posible cliente de hasta 80 caracteres. |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. La compañía del líder. |
-|`xdm: personalEmail.address`|`Attribute: Email`| La dirección de correo electrónico del posible cliente. |
+
+     | Campo de origen | Campo de destino | Notas |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Apellidos del posible cliente de hasta 80 caracteres. |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory`. La compañía del líder. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | La dirección de correo electrónico del posible cliente. |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -256,8 +259,9 @@ A continuación se muestra un ejemplo que indica la ubicación de [!DNL Salesfor
 Como se muestra arriba del [!DNL Salesforce] **[!UICONTROL Nombre de campo]** coincide exactamente con el valor especificado en [!DNL Salesforce CRM] **[!UICONTROL Id. de asignación]**.
 
 Según el caso de uso, todas las audiencias activadas se pueden asignar al mismo campo personalizado de [!DNL Salesforce] o a diferentes **[!UICONTROL nombres de campo]** en [!DNL Salesforce CRM]. Un ejemplo típico basado en la imagen mostrada arriba podría ser.
+
 | [!DNL Salesforce CRM] nombre de segmento | [!DNL Salesforce] **[!UICONTROL Nombre de campo]** | [!DNL Salesforce CRM] **[!UICONTROL ID de asignación]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
