@@ -3,9 +3,9 @@ title: Punto final de API de caducidad del conjunto de datos
 description: El extremo /ttl de la API de higiene de datos le permite programar la caducidad de los conjuntos de datos en Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido) y el atributo `status` de la caducidad está establecido en `cancelled`.
 
-## Recuperar el historial de estado de caducidad de un conjunto de datos {#retrieve-expiration-history}
-
-Para buscar el historial de estado de caducidad de un conjunto de datos específico, use los parámetros de consulta `{DATASET_ID}` y `include=history` en una solicitud de búsqueda. El resultado incluye información sobre la creación de la caducidad del conjunto de datos, cualquier actualización que se haya aplicado y su cancelación o ejecución (si corresponde). También puede usar `{DATASET_EXPIRATION_ID}` para recuperar el historial de estado de caducidad del conjunto de datos.
-
-**Formato de API**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| Parámetro | Descripción |
-| --- | --- |
-| `{DATASET_ID}` | El ID del conjunto de datos cuyo historial de caducidad desea buscar. |
-| `{DATASET_EXPIRATION_ID}` | ID de caducidad del conjunto de datos. Nota: Esto se conoce como `ttlId` en la respuesta. |
-
-{style="table-layout:auto"}
-
-**Solicitud**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Respuesta**
-
-Una respuesta correcta devuelve los detalles de la caducidad del conjunto de datos, con una matriz `history` que proporciona los detalles de sus atributos `status`, `expiry`, `updatedAt` y `updatedBy` para cada una de sus actualizaciones registradas.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `ttlId` | ID de caducidad del conjunto de datos. |
-| `datasetId` | El ID del conjunto de datos al que se aplica esta caducidad. |
-| `datasetName` | El nombre para mostrar del conjunto de datos al que se aplica esta caducidad. |
-| `sandboxName` | El nombre de la zona protegida en la que se encuentra el conjunto de datos de destinatario. |
-| `displayName` | El nombre para mostrar de la solicitud de caducidad. |
-| `description` | Una descripción para la solicitud de caducidad. |
-| `imsOrg` | ID de su organización. |
-| `history` | Enumera el historial de actualizaciones para la caducidad como una matriz de objetos, cada uno de los cuales contiene los atributos `status`, `expiry`, `updatedAt` y `updatedBy` para la caducidad en el momento de la actualización. |
-
-{style="table-layout:auto"}
-
 ## Apéndice
 
 ### Parámetros de consulta aceptados {#query-params}
@@ -482,18 +400,14 @@ En la tabla siguiente se describen los parámetros de consulta disponibles al [e
 
 | Parámetro | Descripción | Ejemplo |
 | --- | --- | --- |
-| `author` | Coincide con caducidades cuyo `created_by` coincide con la cadena de búsqueda. Si la cadena de búsqueda comienza por `LIKE` o `NOT LIKE`, el resto se trata como un patrón de búsqueda SQL. De lo contrario, toda la cadena de búsqueda se tratará como una cadena literal que debe coincidir exactamente con todo el contenido de un campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Coincide con las caducidades que se cancelaron en cualquier momento en el intervalo indicado. Esto se aplica incluso si la caducidad se volvió a abrir más tarde (estableciendo una nueva caducidad para el mismo conjunto de datos). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Coincide con las caducidades completadas durante el intervalo especificado. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Coincide con las caducidades creadas en la ventana de 24 horas a partir de la hora indicada.<br><br>Tenga en cuenta que las fechas sin una hora (como `2021-12-07`) representan la fecha y hora al principio de ese día. Por lo tanto, `createdDate=2021-12-07` hace referencia a cualquier caducidad creada el 7 de diciembre de 2021, desde `00:00:00` hasta `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Coincide con las caducidades creadas en la hora indicada o posteriormente. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Coincide con las caducidades creadas en la hora indicada o antes. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | Utilice el parámetro de consulta `author` para encontrar a la persona que actualizó recientemente la caducidad del conjunto de datos. Si no se ha realizado ninguna actualización desde su creación, coincidirá con el creador original de la caducidad. Este parámetro coincide con las caducidades en las que el campo `created_by` corresponde a la cadena de búsqueda.<br>Si la cadena de búsqueda empieza por `LIKE` o `NOT LIKE`, el resto se trata como un patrón de búsqueda SQL. De lo contrario, toda la cadena de búsqueda se tratará como una cadena literal que debe coincidir exactamente con todo el contenido de un campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | Coincide con las caducidades que se aplican a un conjunto de datos específico. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | Coincide con las caducidades cuyo nombre de conjunto de datos contiene la cadena de búsqueda proporcionada. La coincidencia distingue entre mayúsculas y minúsculas. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Coincide con las caducidades cuyo nombre para mostrar contiene la cadena de búsqueda proporcionada. La coincidencia distingue entre mayúsculas y minúsculas. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtra los resultados en función de una fecha de ejecución exacta, una fecha de finalización para la ejecución o una fecha de inicio para la ejecución. Se utilizan para recuperar datos o registros asociados a la ejecución de una operación en una fecha específica, antes de una fecha determinada o después de una fecha determinada. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Coincide con las caducidades que se van a ejecutar o que ya se han ejecutado durante el intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | Coincide con las caducidades que se produjeron en la ventana de 24 horas de la fecha especificada. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | Coincide con las caducidades que se van a ejecutar o que ya se han ejecutado durante el intervalo especificado. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Un entero entre 1 y 100 que indica el número máximo de caducidades que se van a devolver. Valor predeterminado 25. | `limit=50` |
 | `orderBy` | El parámetro de consulta `orderBy` especifica el orden de clasificación de los resultados devueltos por la API. Utilícelo para organizar los datos en función de uno o varios campos, ya sea en orden ascendente (ASC) o descendente (DESC). Utilice el prefijo + o - para indicar ASC y DESC, respectivamente. Se aceptan los siguientes valores: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Coincide con las caducidades de los conjuntos de datos cuyo ID de organización coincide con el del parámetro. Este valor toma como valor predeterminado el de los encabezados `x-gw-ims-org-id` y se omite a menos que la solicitud proporcione un token de servicio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ En la tabla siguiente se describen los parámetros de consulta disponibles al [e
 | `search` | Coincide con caducidades en las que la cadena especificada coincide exactamente con el identificador de caducidad o está **contenida** en cualquiera de estos campos:<br><ul><li>autor</li><li>nombre para mostrar</li><li>descripción</li><li>nombre para mostrar</li><li>nombre del conjunto de datos</li></ul> | `search=TESTING` |
 | `status` | Una lista de estados separados por comas. Cuando se incluye, la respuesta coincide con las caducidades del conjunto de datos cuyo estado actual está entre los enumerados. | `status=pending,cancelled` |
 | `ttlId` | Coincide la solicitud de caducidad con el ID determinado. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Como `createdDate` / `createdFromDate` / `createdToDate`, pero coincide con la hora de actualización de una caducidad del conjunto de datos en lugar de la hora de creación.<br><br>Se considera que una caducidad está actualizada en cada edición, incluso cuando se crea, cancela o ejecuta. | `updatedDate=2022-01-01` |
+| `updatedDate` | Coincide con las caducidades actualizadas en la ventana de 24 horas de la fecha especificada. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | Coincide con las caducidades actualizadas en la ventana de 24 horas a partir de la hora indicada.<br><br>Se considera que una caducidad está actualizada en cada edición, incluso cuando se crea, cancela o ejecuta. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
