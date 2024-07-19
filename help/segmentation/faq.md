@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4092'
+source-wordcount: '4187'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Al cargar una audiencia generada externamente, se crean los siguientes elementos
 
 Durante el flujo de trabajo de importación de audiencia externa, debe especificar qué columna del archivo CSV corresponde con la **Identidad principal**. Un ejemplo de identidad principal incluye una dirección de correo electrónico, un ECID o un área de nombres de identidad personalizada específica de la organización.
 
-Los datos asociados con esta columna de identidad principal son los datos **solamente** que se adjuntaron al perfil. Si no hay perfiles que coincidan con los datos en la columna de identidad principal, se creará un nuevo perfil. Sin embargo, este perfil es esencialmente un perfil huérfano, ya que **no** atributos o eventos de experiencia están asociados a este perfil.
+Los datos asociados con esta columna de identidad principal son los **únicos** datos adjuntos al perfil. Si no hay perfiles que coincidan con los datos en la columna de identidad principal, se creará un nuevo perfil. Sin embargo, este perfil es esencialmente un perfil huérfano, ya que **no** atributos o eventos de experiencia están asociados a este perfil.
 
 El resto de los datos de la audiencia generada externamente se consideran **atributos de carga útil**. Estos atributos **solo** se pueden usar para la personalización y el enriquecimiento durante la activación, y **no** están adjuntos a un perfil. Sin embargo, estos atributos se almacenan en el lago de datos.
 
@@ -59,6 +59,10 @@ Sí, la audiencia generada de forma externa se combinará con el perfil existent
 ### ¿Puedo utilizar una audiencia generada externamente para crear otras audiencias?
 
 Sí, cualquier audiencia generada externamente aparecerá en el inventario de audiencias y se puede usar al crear audiencias en [Generador de segmentos](./ui/segment-builder.md).
+
+### ¿Con qué frecuencia se evalúan las audiencias generadas externamente?
+
+Las audiencias generadas externamente son **solamente** evaluadas durante el tiempo de la importación. Dado que los atributos asociados a estas audiencias de importación no son duraderos y son **no** parte del almacén de perfiles, la única vez que se actualizará una audiencia generada externamente es si la audiencia existente se actualiza manualmente.
 
 ### ¿Puedo utilizar atributos cargados externamente como parte de la segmentación?
 
@@ -97,6 +101,10 @@ Si ha cargado accidentalmente una audiencia generada externamente y desea elimin
 La caducidad de los datos actuales para las audiencias generadas externamente es de **30 días**. Esta caducidad de datos se eligió para reducir la cantidad de datos sobrantes almacenados en su organización.
 
 Una vez transcurrido el período de caducidad de los datos, el conjunto de datos asociado seguirá visible en el inventario de conjuntos de datos, pero **no** podrá activar la audiencia y el recuento de perfiles se mostrará como cero.
+
+### ¿Hay un número máximo de audiencias generadas externamente que pueda importar?
+
+No hay límite en el número de audiencias generadas externamente que puede importar. Sin embargo, tenga en cuenta que las audiencias importadas **do** cuentan en el límite general de audiencias.
 
 ### ¿Cómo interactúan Audience Portal y Composición de audiencias con la versión de los datos de socios de Real-Time CDP?
 
