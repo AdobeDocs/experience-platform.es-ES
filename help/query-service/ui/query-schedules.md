@@ -2,9 +2,9 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Aparecerá el espacio de trabajo programaciones. La interfaz de usuario muestra 
 ### Añadir detalles de programación {#schedule-details}
 
 Aparecerá la página de detalles de la programación. En esta página, puede editar diversos detalles para la consulta programada. Los detalles incluyen la [frecuencia y el día de la semana de la ejecución programada de la consulta](#scheduled-query-frequency), la fecha de inicio y finalización, el conjunto de datos al que exportar los resultados y [alertas de estado de la consulta](#alerts-for-query-status).
+
+>[!IMPORTANT]
+>
+>La IU del programador de consultas no admite la programación indefinida o perpetua. Se debe especificar una fecha de finalización. No hay límite superior para la fecha de finalización.
 
 ![Se resaltó el panel Detalles de programación.](../images/ui/query-schedules/schedule-details.png)
 
