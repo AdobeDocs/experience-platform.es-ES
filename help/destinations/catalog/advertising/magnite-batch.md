@@ -1,34 +1,34 @@
 ---
-title: Destino del lote de flujo Magnite
+title: Destino del lote Magnite
 description: Utilice este destino para enviar audiencias CDP de Adobe a la plataforma de streaming Magnite en lote.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 1%
 
 ---
 
 
-# Magnite Streaming: conexión por lotes {#magnite-streaming-batch}
+# Magnite: Conexión por lotes {#magnite-streaming-batch}
 
 ## Información general {#overview}
 
-Este documento describe Magnite Streaming: destino por lotes y proporciona casos de uso de muestra para ayudarle a comprender mejor cómo activar y exportar audiencias a él.
+Este documento describe el destino Magnite: Batch y proporciona casos de uso de muestra para ayudarle a comprender mejor cómo activar y exportar audiencias a él.
 
-Las audiencias de Adobe Real-Time CDP se pueden enviar a Magnite: Streaming platform de dos formas: se pueden enviar una vez al día o en tiempo real:
+Las audiencias de Adobe Real-Time CDP se pueden enviar a la plataforma Magnite Streaming de dos formas: una al día o en tiempo real:
 
-1. Si solo desea o necesita enviar audiencias una vez al día, puede utilizar el destino Magnite: Streaming Batch, que envía audiencias a Magnite: Streaming a través de una entrega diaria de archivos por lotes S3. Estas audiencias por lotes se almacenan indefinidamente en nuestra plataforma, a diferencia de las audiencias en tiempo real, que solo se almacenan durante un par de días.
+1. Si solo desea o necesita enviar audiencias una vez al día, puede utilizar el destino Magnite: Batch, que envía audiencias al flujo Magnite mediante una entrega diaria de archivos por lotes S3. Estas audiencias por lotes se almacenan indefinidamente en la plataforma Magnite, a diferencia de las audiencias en tiempo real, que solo se almacenan durante un par de días.
 
-2. Sin embargo, si desea o necesita enviar audiencias en tiempo real, debe utilizar el destino Magnite: Streaming Real-Time. Al utilizar el destino en tiempo real, Magnite: Streaming recibirá audiencias en tiempo real, pero solo podemos almacenar audiencias en tiempo real temporalmente en nuestra plataforma y se eliminarán de nuestro sistema en un par de días. Por este motivo, si desea utilizar el destino Magnite: Streaming Real-Time, TAMBIÉN debe utilizar el destino Magnite: Streaming Batch: cada audiencia que active al destino Real-Time, también debe activarlo al destino Batch.
+2. Sin embargo, si desea o necesita enviar audiencias con más frecuencia, deberá utilizar el destino [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Al utilizar el destino en tiempo real, Magnite Streaming recibirá audiencias en tiempo real, pero Magnite solo puede almacenar audiencias en tiempo real temporalmente en su plataforma y se eliminarán del sistema en un par de días. Por este motivo, si desea usar el destino Magnite Real-Time, *también* necesitará usar el destino Magnite: Batch: cada audiencia que active en el destino Real-Time, también deberá activarlo en el destino Batch.
 
-Para recapitular: si solo desea enviar audiencias de Adobe Real-Time CDP una vez al día, solo utilizará Magnite: Streaming Batch destination, y las audiencias se enviarán una vez al día. Si desea enviar audiencias de Adobe Real-Time CDP en tiempo real, utilice los destinos Magnite: Streaming Batch y Magnite: Streaming Real-Time. Para obtener más información, consulte Magnite: Streaming.
+Para recapitular: si solo desea enviar audiencias de Adobe Real-Time CDP una vez al día, solo utilizará Magnite: Batch destination y las audiencias se enviarán una vez al día. Si desea enviar audiencias de Adobe Real-Time CDP en tiempo real, usará *tanto* Magnite: Batch destination como Magnite Real-Time destination. Para obtener más información, consulte Magnite: Streaming.
 
 
-Siga leyendo a continuación para obtener más información sobre Magnite: Streaming Batch destination, cómo conectarse a él y cómo activar audiencias de Adobe Real-Time CDP en él.
-Para obtener más información sobre el destino en tiempo real, consulte [este documento](magnite-streaming.md).
+Siga leyendo a continuación para obtener más información sobre Magnite: Destino por lotes, cómo conectarse a él y cómo activar audiencias de Adobe Real-Time CDP en él.
+Para obtener más información sobre el destino en tiempo real, consulte [esta página de documentación](magnite-streaming.md).
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Para obtener más información sobre el destino en tiempo real, consulte [este d
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar Magnite Streaming: Batch destination, estos son algunos casos de uso que los clientes de Adobe Experience Platform pueden resolver mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino Magnite: Batch, estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar con este destino.
 
 ### Caso de uso #1 {#use-case-1}
 
-Ha activado una audiencia en Magnite Streaming: destino en tiempo real.
+Ha activado una audiencia en el destino Magnite Real-Time.
 
-Cualquier audiencia activada a través de Magnite Streaming: destino en tiempo real también debe utilizar Magnite Streaming: destino por lotes, ya que los datos de la entrega por lotes están pensados para reemplazar/mantener los datos de la entrega en tiempo real dentro de la plataforma Magnite Streaming.
+Las audiencias activadas a través del destino Magnite Real-Time también deben utilizar el destino Magnite: Batch, ya que los datos de la entrega por lotes están pensados para reemplazar/mantener los datos de la entrega en tiempo real dentro de la plataforma Magnite Streaming.
 
 ### Caso de uso #2 {#use-case-2}
 
 Desea activar una audiencia solo en una cadencia por lotes/diaria a la plataforma Magnite Streaming.
 
-Cualquier audiencia activada a través de Magnite Streaming: destino del lote se enviará en una cadencia por lotes/diaria y, a continuación, se podrá segmentar en la plataforma Magnite Streaming.
+Cualquier audiencia activada a través del destino Magnite: Batch se entregará en una cadencia por lotes/diaria y, a continuación, estará disponible para la segmentación en la plataforma Magnite Streaming.
 
 ## Requisitos previos {#prerequisites}
 
-Para utilizar los destinos de Magnite en Adobe Experience Platform, primero debe tener una cuenta de Magnite Streaming. Si tiene una cuenta de [!DNL Magnite Streaming], póngase en contacto con el administrador de cuentas de [!DNL Magnite] para que se le proporcionen credenciales para acceder a los destinos de [!DNL Magnite's]. Si no tiene una cuenta de [!DNL Magnite Streaming], comuníquese con adobe-tech@magnite.com
+Para usar los destinos [!DNL Magnite] en Adobe Experience Platform, primero debe tener una cuenta de Magnite Streaming. Si tiene una cuenta de [!DNL Magnite Streaming], póngase en contacto con el administrador de cuentas de [!DNL Magnite] para que se le proporcionen credenciales para acceder a los destinos de [!DNL Magnite's]. Si no tiene una cuenta de [!DNL Magnite Streaming], comuníquese con adobe-tech@magnite.com
 
 ## Identidades admitidas {#supported-identities}
 
-Magnite Streaming: el destino por lotes puede recibir *cualquier* origen de identidad de la CDP de Adobe. Actualmente, este destino tiene tres campos de identidad de destino a los que puede asignar.
+Magnite: el destino por lotes puede recibir *cualquier* origen de identidad de la CDP de Adobe. Actualmente, este destino tiene tres campos de identidad de destino a los que puede asignar.
 
 >[!NOTE]
 >
->*Cualquier* origen de identidad puede asignarse a cualquiera de las identidades de destino magnite_deviceId.
+>*Cualquier* origen de identidad puede asignarse a cualquiera de las `magnite_deviceId` identidades de destino.
 
 | Identidad de destino | Descripción | Consideraciones |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Magnite Streaming: el destino por lotes puede recibir *cualquier* origen de iden
 
 | Elemento | Tipo | Notas |
 |-----------------------------|----------|----------|
-| Tipo de exportación | Exportación de audiencia | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en Magnite Streaming: destino por lotes. |
+| Tipo de exportación | Exportación de audiencia | Va a exportar todos los miembros de una audiencia con los identificadores (nombre, número de teléfono u otros) utilizados en el destino Magnite: Batch. |
 | Frecuencia de exportación | Lote | Los destinos por lotes exportan archivos a plataformas descendentes en incrementos de tres, seis, ocho, doce o veinticuatro horas. Obtenga más información sobre los [destinos basados en archivos](/help/destinations/destination-types.md) por lotes. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Una vez que se haya aprobado el uso de destino y Magnite Streaming haya comparti
 
 ### Autenticarse en el destino {#authenticate}
 
-Busque Magnite Streaming: Batch destination en el catálogo de experiencias de Adobe. Haga clic en el botón de opciones adicionales (\...) y, a continuación, configure la conexión o instancia de destino.
+Busque Magnite: Batch destination en el catálogo de Adobe Experience. Haga clic en el botón de opciones adicionales (\...) y, a continuación, configure la conexión o instancia de destino.
 
 Si ya tiene una cuenta, puede localizarla cambiando la opción Account type a &quot;Existing account&quot;. De lo contrario, creará una cuenta a continuación:
 
@@ -126,7 +126,7 @@ conexión/instancia de destino en el futuro.
 
 Puede continuar seleccionando **[!UICONTROL Siguiente]**
 
-En la siguiente pantalla, titulada &quot;Política de gobernanza y acciones de aplicación (opcional)&quot;, puede seleccionar opcionalmente cualquier política de gobernanza de datos relevante. &quot;Exportación de datos&quot; se selecciona generalmente como destino del lote de flujo magnético.
+En la siguiente pantalla, titulada &quot;Política de gobernanza y acciones de aplicación (opcional)&quot;, puede seleccionar opcionalmente cualquier política de gobernanza de datos relevante. Por lo general, se selecciona &quot;Exportación de datos&quot; para el destino Magnite: Batch.
 
 ![Política de gobernanza opcional y acciones de aplicación](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ En la pantalla &quot;Configure a filename and export schedule for each audience&
 
 Una vez que las audiencias se hayan cargado, puede validar que se hayan creado y cargado correctamente.
 
-* El destino Magnite Streaming Batch entrega archivos S3 a Magnite Streaming en una cadencia diaria. Después de la entrega y la ingesta, se espera que las audiencias y los segmentos aparezcan en Magnite Streaming y se puedan aplicar a una oferta. Puede confirmarlo consultando el ID de segmento o el nombre de segmento compartido durante los pasos de activación en Adobe Experience Platform.
+* El destino Magnite: Batch entrega archivos S3 a Magnite Streaming en una cadencia diaria. Después de la entrega y la ingesta, se espera que las audiencias y los segmentos aparezcan en Magnite Streaming y se puedan aplicar a una oferta. Puede confirmarlo consultando el ID de segmento o el nombre de segmento compartido durante los pasos de activación en Adobe Experience Platform.
 
 >[!NOTE]
 >
->Las audiencias activadas/entregadas en el destino del lote de streaming de Magnite *reemplazarán* a las mismas audiencias que se activaron/entregaron a través del destino de streaming en tiempo real de Magnite. Si está buscando un segmento con el nombre, es posible que no encuentre el segmento en tiempo real, hasta que la plataforma Magnite Streaming haya ingerido y procesado el lote.
+>Audiencias activadas/entregadas en Magnite: el destino por lotes *reemplazará* a las mismas audiencias que se activaron/entregaron a través del destino en tiempo real de Magnite. Si está buscando un segmento con el nombre, es posible que no encuentre el segmento en tiempo real, hasta que la plataforma Magnite Streaming haya ingerido y procesado el lote.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

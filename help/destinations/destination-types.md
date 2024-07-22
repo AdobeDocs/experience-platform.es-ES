@@ -3,9 +3,9 @@ keywords: destinos;destino;tipos de destino
 title: Tipos y categorías de destino
 description: Obtenga información sobre los distintos tipos y categorías de destinos en Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '804'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ En Adobe Experience Platform, distinguimos entre diferentes tipos de destino: co
 
 Por último, las conexiones también se pueden distinguir entre destinos públicos disponibles en todas las organizaciones del catálogo de destinos y destinos privados que los clientes de Real-Time CDP Ultimate pueden crear para satisfacer sus casos de uso de exportación específicos.
 
-![Diagrama de tipos de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Diagrama de tipos de destinos.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagrama de tipos de destinos."){zoomable="yes"}
 
 ## Conexiones {#connections}
 
@@ -33,17 +33,17 @@ Los destinos de exportación de perfiles reciben datos sin procesar, a menudo co
 * [Destinos de exportación de perfiles de streaming (destinos empresariales)](#streaming-profile-export)
 * [Destinos por lotes (basados en archivos)](#file-based)
 
-### Destinos de exportación de perfiles de streaming (destinos empresariales) {#streaming-profile-export}
+### Destinos empresariales avanzados (destinos de exportación de perfiles de flujo continuo) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Los destinos empresariales o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+>Los destinos empresariales avanzados o los destinos de exportación de perfiles de flujo continuo solo están disponibles para los clientes de [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
-Utilice los conectores de datos de destino empresariales para ofrecer perfiles de Adobe Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
+Utilice los conectores de datos de destino empresariales avanzados para ofrecer perfiles de Adobe Real-time Customer Data Platform en tiempo casi real a sistemas internos o a otros sistemas de terceros para la sincronización de datos, el análisis y más casos de uso de enriquecimiento de perfiles.
 
 Estos destinos reciben datos de audiencia y perfil como flujos de datos de Experience Platform.
 
-Los destinos empresariales incluyen:
+Los destinos empresariales avanzados incluyen:
 
 * [Destino de API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Más información sobre los [distintos tipos de audiencia](/help/segmentation/ui
 
 Un símbolo en la tarjeta de destino muestra qué tipos de audiencias puede exportar a cada destino.
 
-![Tarjeta de destino de ejemplo con símbolos que muestran los tipos de audiencia que se pueden exportar.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Tarjeta de destino de ejemplo con símbolos que muestran los tipos de audiencia que se pueden exportar.](/help/destinations/assets/destination-types/types-of-audiences.png "Tarjeta de destino de ejemplo con símbolos que muestran los tipos de audiencia que se pueden exportar."){zoomable="yes"}
 
 
 ## Destinos de exportación de conjuntos de datos {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Las extensiones son útiles cuando los datos de evento se utilizan para almacena
 
 Las conexiones y extensiones del [catálogo de destinos](https://platform.adobe.com/destination/catalog) se agrupan por categoría de destino (**Advertising**, **almacenamiento en la nube**, **plataformas de encuestas**, **marketing por correo electrónico**, etc.), según la acción de marketing que le ayuden a lograr. Para obtener más información sobre cada una de las categorías, así como los destinos incluidos en cada categoría, consulte la [documentación del catálogo de destinos](./catalog/overview.md).
 
-![Categorías de destino resaltadas en la página del catálogo.](./assets/destination-types/destination-categories-menu.png)
+![Categorías de destino resaltadas en la página del catálogo.](./assets/destination-types/destination-categories-menu.png "Categorías de destino resaltadas en la página del catálogo."){zoomable="yes"}
