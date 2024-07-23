@@ -6,10 +6,10 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 44%
+source-wordcount: '773'
+ht-degree: 43%
 
 ---
 
@@ -316,6 +316,7 @@ ht-degree: 44%
       * [Delegación de ID de descriptor](./api/guides/delegate-descriptor-ids.md)
       * [Cifrado de valores](./api/guides/encrypting-values.md)
       * [Control de errores](./api/guides/error-handling.md)
+      * [Uso compartido de paquetes de extensiones privadas](./api/guides/extension-packages.md)
       * [Filtrado de respuestas](./api/guides/filtering.md)
       * [Paginación de respuestas](./api/guides/pagination.md)
       * [Clasificación de respuestas](./api/guides/sorting.md)

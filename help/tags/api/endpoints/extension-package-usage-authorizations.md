@@ -1,13 +1,13 @@
 ---
 title: Punto final de autorizaciones de uso del paquete de extensiones
 description: Aprenda a realizar llamadas al extremo de autorizaciones /extension_package_usage en la API de Reactor.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 16%
 
 ---
-
 
 # Extremo de autorizaciones de uso del paquete de extensiones
 
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve los detalles de la autorización de uso del paqu
 >
 >En la respuesta de ejemplo anterior, la autorización se encuentra actualmente en la fase `pending_approval`. Antes de utilizar el paquete de extensión, la organización debe aprobar la autorización. Los usuarios de la organización pueden examinar el paquete de extensión privado mientras la autorización esté pendiente de aprobación, pero no pueden instalarlo y no pueden encontrarlo en su catálogo de extensiones.
 
-## Recuperación de una lista de autorizaciones de uso de paquetes de extensiones {#list_authorizations}
+## Recuperación de una lista de autorizaciones de uso de paquetes de extensiones {#list-authorizations}
 
 Puede recuperar una lista de autorizaciones de uso de paquetes de extensiones realizando una solicitud de GET.
 
@@ -386,7 +386,7 @@ Una respuesta correcta devuelve los detalles de la autorización de uso del paqu
 >
 >Una vez aprobada la autorización, su organización puede instalar el paquete de extensión en sus propiedades.
 
-## Recuperación de datos para el paquete de extensión para una autorización de uso del paquete de extensión {#retrieve_data}
+## Recuperación de datos para el paquete de extensión para una autorización de uso del paquete de extensión {#retrieve-data}
 
 Puede recuperar datos para el paquete de extensión para una autorización de uso del paquete de extensión realizando una solicitud de GET.
 
