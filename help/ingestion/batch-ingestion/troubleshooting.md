@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas de ingesta por lotes
 description: Esta documentación le ayudará a responder a las preguntas más frecuentes sobre las API de ingesta de datos por lotes de Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -212,11 +212,11 @@ Cuando un lote está en &quot;Cargando&quot;, significa que no se ha llamado al 
 
 ### ¿Existe alguna manera de saber si un lote se ha ingerido correctamente?
 
-Una vez que el estado del lote es &quot;Activo&quot;, el lote se ha introducido correctamente. Para averiguar el estado del lote, siga los pasos detallados [anteriormente](#how-is-batch-ingestion-monitored).
+Sí, una vez que el estado del lote es &quot;Activo&quot;, el lote se ha introducido correctamente. Para averiguar el estado del lote, siga los pasos detallados [anteriormente](#how-is-batch-ingestion-monitored).
 
-### ¿Qué sucede después de que falla un lote?
+### ¿Qué sucede después de que falla un lote? {#what-if-a-batch-fails}
 
-Cuando falla un lote, el motivo por el que falla se puede identificar en la sección `errors` de la carga útil. A continuación se muestran ejemplos de errores:
+Cuando un lote falla, el proceso se detiene y devuelve un estado `Failure`. El motivo del error se puede identificar en la sección `errors` de la carga útil. A continuación se muestran ejemplos de errores:
 
 ```json
     "errors":[

@@ -1,16 +1,16 @@
 ---
-title: Casos de uso compatibles con el servicio de consultas de Adobe Experience Platform
+title: Ejemplos prácticos
 description: Descubra qué casos de uso son compatibles con Adobe Experience Platform Query Service.
 keywords: Servicio de consultas;casos de uso
 exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 8d8cceafa5def20b64d06dcc3b52629f9ee4b39d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-# Casos de uso admitidos
+# Ejemplos prácticos
 
 El servicio de consulta proporciona soluciones para una variedad de casos de uso en industrias y escenarios empresariales. Estos ejemplos prácticos demuestran la flexibilidad y el impacto del servicio para abordar diversas necesidades. Para descubrir cómo el servicio de consultas puede aportar valor a sus necesidades comerciales específicas, explore la colección completa de documentos de casos de uso. Aprenda a utilizar el servicio de consulta para proporcionar perspectivas y soluciones que mejoren la eficacia operativa y el éxito empresarial.
 

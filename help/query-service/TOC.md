@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de consultas
 user-guide-description: Utilice SQL estándar para consultar los datos dentro del lago de datos en Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '323'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 19%
       - [Funciones de ingeniero para ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportación de datos a entornos XML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flujo de trabajo completo de enriquecimiento de la canalización de datos AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Casos de uso {#use-cases}
+- Ejemplos prácticos {#use-cases}
    - [Información general](use-cases/overview.md)
    - [Exploración abandonada](use-cases/abandoned-browse.md)
    - [Análisis de atribución](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 19%
    - [Creación de un informe de tendencias de eventos](use-cases/trended-report-of-events.md)
    - [Análisis de consentimiento](use-cases/consent-analysis.md)
    - [Valor de duración del cliente](use-cases/customer-lifetime-value.md)
+   - [Exploración de datos](./use-cases/data-exploration.md)
    - [Conjuntos de datos derivados basados en deciles](use-cases/deciles-use-case.md)
    - [Coincidencia aproximada](use-cases/fuzzy-match.md)
    - [Enumeración de las vistas de página de un usuario](use-cases/list-visitor-sessions.md)
