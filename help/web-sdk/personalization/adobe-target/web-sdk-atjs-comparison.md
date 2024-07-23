@@ -3,9 +3,9 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -614,20 +614,42 @@ alloy("sendEvent", {
 Este ejemplo rastrea un evento que se activó después de realizar una acción específica, como hacer clic en un botón.
 Puede agregar cualquier parámetro personalizado adicional a través del objeto de datos `__adobe.target`.
 
+También puede agregar el objeto XDM `commerce`.
+
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
-                "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
-});
+})
 ```
 
 ## Cómo almacenar en déclencheur un cambio de vista en una aplicación de una sola página
