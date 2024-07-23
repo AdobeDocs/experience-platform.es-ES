@@ -5,7 +5,7 @@ title: Punto final de API de trabajos de privacidad
 description: Obtenga información sobre cómo administrar los trabajos de privacidad para aplicaciones de Experience Cloud mediante la API de Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Nota: esto también se usa para solicitudes relacionadas con las regulaciones de **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte la descripción general de [regulaciones admitidas](../regulations/overview.md) para obtener más información sobre las regulaciones de privacidad que representan los valores anteriores. |
+| `{REGULATION}` | Tipo de regulación que se va a consultar. Los valores aceptados incluyen: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: esto también se usa para solicitudes relacionadas con las regulaciones de **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte la descripción general de [regulaciones admitidas](../regulations/overview.md) para obtener más información sobre las regulaciones de privacidad que representan los valores anteriores. |
 | `{PAGE}` | Página de datos que se va a mostrar, con numeración basada en 0. El valor predeterminado es `0`. |
 | `{SIZE}` | El número de resultados que se mostrarán en cada página. El valor predeterminado es `100` y el máximo es `1000`. Si se supera el máximo, la API devolverá un error de 400 códigos. |
 | `{status}` | El comportamiento predeterminado es incluir todos los estados. Si especifica un tipo de estado, la solicitud solo devolverá los trabajos de privacidad que coincidan con ese tipo de estado. Los valores aceptados incluyen: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -51,10 +51,6 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 | `{filterDate}` | Este parámetro limita los resultados a los procesados en una fecha especificada. Acepta el formato AAAA-MM-DD. El sistema puede mirar atrás en los últimos 45 días. |
 
 {style="table-layout:auto"}
-
-<!-- Not released yet:
-<li>`pdpd_vnm`</li> 
- -->
 
 **Solicitud**
 

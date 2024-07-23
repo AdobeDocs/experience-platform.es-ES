@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminología de normas de privacidad
 description: Este documento proporciona definiciones de términos clave relacionados con las regulaciones de privacidad admitidas por Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 **Sistema de archivo**: Cualquier conjunto específico de datos personales al que se pueda acceder según criterios específicos o que se pueda consultar.
 
+**FDBR**: [!DNL Florida Digital Bill of Rights] (FDBR) es una ley que otorga a los residentes de Florida los derechos para acceder, corregir, eliminar y copiar sus datos personales. Exige transparencia en las prácticas de datos, permite la exclusión de la venta de datos o de la publicidad segmentada y prohíbe la vigilancia no autorizada. El Departamento de Asuntos Legales de Florida hace cumplir estos derechos, exigiendo a los controladores de datos que respondan a las solicitudes en un plazo de 45 días.
+
 ## G
 
 **RGPD**: [!DNL General Data Protection Regulation] (RGPD) es un marco legal que establece directrices para la recopilación y el procesamiento de información personal de individuos dentro del Espacio Económico Europeo (EEE). El RGPD establece los principios para la gestión de datos y los derechos de las personas, al tiempo que impone multas que pueden basarse en los ingresos. El RGPD cubre todas las compañías que tratan con los datos de los ciudadanos del EEE, por lo que es una regulación crítica para los funcionarios de cumplimiento corporativo en bancos, aseguradoras y otras compañías financieras.
@@ -107,13 +109,11 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 
 ## O
 
+**OCPA**: La legislación de la Ley de Privacidad del Consumidor de Oregón (OCPA) otorga a los residentes de Oregón derechos clave sobre sus datos personales, incluidos los derechos a conocer, corregir, eliminar y obtener una copia de sus datos. Impone obligaciones estrictas a las empresas, obligándolas a proporcionar avisos de privacidad detallados, obtener el consentimiento para determinados usos de los datos e implementar protecciones reforzadas para la información confidencial. La legislación tiene como objetivo equilibrar la privacidad del consumidor con los intereses comerciales.
+
 ## P
 
 **PDPA**: La [!DNL Personal Data Protection Act] de Tailandia (PDPA) se introdujo para proteger a los propietarios de datos tailandeses de la recopilación, el uso o la divulgación ilegales de sus datos personales. Inspirada en el RGPD de la Unión Europea, la normativa concede a los ciudadanos tailandeses el derecho de solicitar el acceso a sus datos personales almacenados o la eliminación de los mismos.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Datos personales**: Cualquier información relacionada con una persona física o un &#39;Sujeto de datos&#39;, que se pueda usar para identificar a la persona directa o indirectamente.
 
@@ -152,6 +152,8 @@ Este documento proporciona definiciones de términos clave relacionados con las 
 **Autoridad supervisora**: Autoridad pública establecida por un Estado miembro de conformidad con el artículo 46.
 
 ## T
+
+**TDPSA**: La Ley de Privacidad y Seguridad de Datos de Texas (TDPSA) es una ley integral que protege los derechos de datos personales de los residentes de Texas. Otorga a las personas el derecho a acceder, corregir, eliminar y obtener copias de sus datos, así como a excluirse de las ventas de datos y la publicidad segmentada. Las empresas que violen esta legislación pueden enfrentarse a sanciones económicas.
 
 **Trílogos**: Los Trílogos son negociaciones informales entre la Comisión Europea, el Parlamento Europeo y el Consejo de la Unión Europea. Estas negociaciones se suelen celebrar después de las primeras lecturas de la legislación propuesta para acordar más rápidamente un texto de compromiso que se adopte.
 acordar la adopción de un texto de compromiso más rápidamente.
