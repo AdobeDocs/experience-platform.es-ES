@@ -1,13 +1,13 @@
 ---
 title: clickCollection
 description: Ajuste la configuración de la colección de clics.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollection`
 
@@ -25,26 +25,27 @@ Las siguientes variables están disponibles en el objeto `clickCollection`:
 * **`clickCollection.eventGroupingEnabled`**: un booleano que determina si la biblioteca espera hasta la siguiente página para enviar los datos de seguimiento de vínculos. Cuando se cargue la página siguiente, combine los datos de seguimiento de vínculos con el evento de carga de página. Al habilitar esta opción, se reduce el número de eventos que se envían al Adobe. Si `internalLinkEnabled` está deshabilitado, esta variable no hace nada.
 * **`clickCollection.sessionStorageEnabled`**: un booleano que determina si los datos de seguimiento de vínculos se almacenan en el almacenamiento de sesión en lugar de en las variables locales. Si `internalLinkEnabled` o `eventGroupingEnabled` están deshabilitados, esta variable no hace nada.
 
-  El Adobe recomienda habilitar esta variable al usar `eventGroupingEnabled`. Si `eventGroupingEnabled` está habilitado mientras que `sessionStorageEnabled` está deshabilitado, hacer clic en una nueva página resulta en la pérdida de datos de seguimiento de vínculos, ya que no se conservan en el almacenamiento de sesión. SPA Aunque se puede deshabilitar `sessionStorageEnabled` en aplicaciones de una sola página, no es ideal para páginas que no sean de una sola página
+  El Adobe recomienda habilitar esta variable cuando se use `eventGroupingEnabled` fuera de aplicaciones de una sola página. Si `eventGroupingEnabled` está habilitado mientras que `sessionStorageEnabled` está deshabilitado, hacer clic en una nueva página resulta en la pérdida de datos de seguimiento de vínculos, ya que no se conservan en el almacenamiento de sesión. SPA Dado que las aplicaciones de una sola página no suelen navegar a una nueva página, no se requiere almacenamiento de sesión para las páginas de la página de la página de la página de la página de la página de la página de la página de la página de la página de la página de la página de la página de la página de inicio
 * **`filterClickDetails`**: función de devolución de llamada que proporciona controles completos sobre los datos de seguimiento de vínculos que recopila. Puede utilizar esta función de llamada de retorno para alterar, ofuscar o cancelar el envío de datos de seguimiento de vínculos. Esta llamada de retorno es útil cuando desea omitir información específica, como información de identificación personal dentro de los vínculos.
 
 ## Haga clic en Configuración de colección mediante la extensión de etiqueta del SDK web
 
-Seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]** al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Al activar esta casilla de verificación, se muestran las siguientes opciones relacionadas con la recopilación de clics:
+Seleccione cualquiera de las siguientes opciones al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
 
-* [!UICONTROL Vínculos internos]
-   * [!UICONTROL Habilitar agrupación de eventos]
-   * [!UICONTROL Habilitar almacenamiento de sesión]
-* [!UICONTROL Vínculos externos]
-* [!UICONTROL Vínculos de descarga]
+* [!UICONTROL Recopilar vínculos internos]
+   * [!UICONTROL Opciones de agrupación de eventos]:
+      * [!UICONTROL Sin agrupación de eventos]
+      * [!UICONTROL Agrupación de eventos mediante el almacenamiento de sesión]
+      * [!UICONTROL Agrupación de eventos con objeto local]
+* [!UICONTROL Recopilar vínculos externos]
+* [!UICONTROL Recopilar vínculos de descarga]
 * [!UICONTROL Propiedades de clic en filtro]
 
 1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
 1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
 1. Seleccione la propiedad de etiquetas que desee.
 1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
-1. Desplácese hacia abajo hasta la sección [!UICONTROL Recopilación de datos] y, a continuación, active la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
-1. Seleccione la configuración de recopilación de clics que desee.
+1. Desplácese hacia abajo hasta la sección [!UICONTROL Recopilación de datos] y, a continuación, seleccione la configuración de recopilación de clics que desee.
 1. Haz clic en **[!UICONTROL Guardar]** y después publica los cambios.
 
 La llamada de retorno [!UICONTROL Filter click properties] abre un editor de código personalizado que le permite insertar el código deseado. En el editor de código, tiene acceso a las siguientes variables:
@@ -72,11 +73,11 @@ Establezca las variables deseadas dentro del objeto `clickCollection` al ejecuta
 * `filterClickDetails`: no contiene una función; debe estar registrado explícitamente
 
 >[!TIP]
->Adobe recomienda habilitar `eventGroupingEnabled`, ya que ayuda a reducir el número de eventos que se contabilizan en el uso contractual.
+>Adobe recomienda habilitar `eventGroupingEnabled` cuando `internalLinkEnabled` está habilitado, ya que reduce el número de eventos que se contabilizan para el uso contractual.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

@@ -3,7 +3,7 @@ title: Comparación de at.js con el SDK web de Experience Platform
 description: Descubra cómo se comparan las funciones de at.js con el SDK web de Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '2175'
 ht-degree: 3%
@@ -746,7 +746,7 @@ Mediante el SDK web, el cliente puede configurar su estilo de ocultamiento previ
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "configurationId",
+  datastreamId: "configurationId",
   orgId: "orgId@AdobeOrg",
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"

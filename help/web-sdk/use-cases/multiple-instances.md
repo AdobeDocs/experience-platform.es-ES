@@ -1,11 +1,11 @@
 ---
 title: Uso de varias instancias del SDK web
 description: Obtenga información sobre cómo interactuar con varias propiedades del SDK web de Experience Platform.
-keywords: varias propiedades;configurar;sendEvent;edgeConfigId;orgId;
+keywords: varias propiedades
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -38,24 +38,24 @@ Después del ejemplo anterior, puede ejecutar comandos utilizando cada instancia
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ Asegúrese de ejecutar el comando `configure` para cada instancia antes de ejecu
 
 >[!IMPORTANT]
 >
->Para evitar conflictos con las cookies, cada instancia del SDK web debe tener su propio `edgeConfigId` único y su propio `orgId` único.
+>Para evitar conflictos con las cookies, cada instancia del SDK web debe tener su propio `datastreamId` único y su propio `orgId` único.

@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Obtenga información sobre cómo configurar el SDK web para determinar si los datos de clics en vínculos se recopilan automáticamente.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ En todos los casos, `xdm.web.webInteraction.name` se establece en la etiqueta de
 
 ## Habilitar el seguimiento automático de vínculos mediante la extensión de etiqueta del SDK web {#tag-extension}
 
-Seleccione la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]** al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+La extensión de etiqueta administra automáticamente esta variable; no es necesario configurarla explícitamente. Si se selecciona alguna de las siguientes opciones al [configurar la extensión de etiqueta](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), se recopilarán los datos de seguimiento de vínculos aplicables:
 
-1. Inicie sesión en [experience.adobe.com](https://experience.adobe.com) con sus credenciales de Adobe ID.
-1. Vaya a **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Etiquetas]**.
-1. Seleccione la propiedad de etiquetas que desee.
-1. Vaya a **[!UICONTROL Extensions]** y, a continuación, haga clic en **[!UICONTROL Configure]** en la tarjeta de [!UICONTROL Adobe Experience Platform Web SDK].
-1. Desplácese hacia abajo hasta la sección [!UICONTROL Recopilación de datos] y, a continuación, active la casilla de verificación **[!UICONTROL Habilitar la recopilación de datos de clics]**.
-1. Haz clic en **[!UICONTROL Guardar]** y después publica los cambios.
+* [!UICONTROL Recopilar clics en vínculos internos]
+* [!UICONTROL Recopilar clics en vínculos externos]
+* [!UICONTROL Recopilar clics en vínculos de descarga]
+
+Consulte [`clickCollection`](clickcollection.md) para obtener más información.
 
 ## Habilitar el seguimiento automático de vínculos mediante la biblioteca de JavaScript del SDK web {#library}
 
@@ -48,7 +47,7 @@ Establezca el booleano `clickCollectionEnabled` al ejecutar el comando `configur
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

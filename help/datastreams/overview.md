@@ -2,7 +2,7 @@
 title: Información general de secuencias de datos
 description: Descubra cómo los flujos de datos le ayudan a conectar la integración del SDK de Experience Platform del lado del cliente con productos de Adobe y destinos de terceros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Información general de secuencias de datos
 
-Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el comando [`configure`](/help/web-sdk/commands/configure/overview.md) del SDK controla las cosas que se deben controlar en el cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `edgeConfigId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
+Una secuencia de datos representa la configuración del lado del servidor al implementar los SDK web y móvil de Adobe Experience Platform. Mientras que el comando [`configure`](/help/web-sdk/commands/configure/overview.md) del SDK controla las cosas que se deben controlar en el cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones del SDK. Cuando se envía una solicitud a Adobe Experience Platform Edge Network, el `datastreamId` se utiliza para hacer referencia a la secuencia de datos. Esto le permite actualizar la configuración del lado del servidor sin tener que realizar cambios en el código del sitio web.
 
 Puede crear y administrar secuencias de datos seleccionando **[!UICONTROL Secuencias de datos]** en el panel de navegación izquierdo dentro de la IU de Adobe Experience Platform o de la IU de recopilación de datos.
 

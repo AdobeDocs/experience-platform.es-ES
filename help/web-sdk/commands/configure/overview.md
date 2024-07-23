@@ -2,7 +2,7 @@
 title: Configuración del SDK web de Adobe Experience Platform
 description: Utilice el comando configure para establecer la configuración necesaria al utilizar el SDK web.
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 1c614ef525d55d7476d037c6838b35c3471e4501
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Estos ajustes de configuración se establecen cada vez que se utiliza la extensi
 
 Ejecute el comando `configure`. Este comando es necesario para poder llamar a cualquier otro comando del SDK web, como [`sendEvent`](../sendevent/overview.md).
 
-Se requieren las propiedades [`edgeConfigId`](edgeconfigid.md) y [`orgId`](orgid.md). Todas las demás propiedades son opcionales, según los requisitos de implementación de su organización.
+Se requieren las propiedades [`datastreamId`](datastreamid.md) y [`orgId`](orgid.md). Todas las demás propiedades son opcionales, según los requisitos de implementación de su organización.
 
 Consulte la tabla de contenido de esta guía del usuario para obtener información detallada sobre cada uno de los comandos admitidos.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {
