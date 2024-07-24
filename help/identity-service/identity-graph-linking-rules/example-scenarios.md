@@ -1,16 +1,16 @@
 ---
-title: Ejemplo De Escenarios Para Configurar La Identidad
-description: Obtenga información sobre escenarios de ejemplo para configurar Ajustes de identidad.
+title: Ejemplo De Escenarios De Cliente Resueltos Por Reglas De Vinculación De Gráficos De Identidad
+description: Obtenga información acerca de los escenarios de cliente de ejemplo que se resuelven mediante reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
-# Casos de ejemplo para configurar reglas de vinculación de gráficos de identidad
+# Ejemplo de escenarios de cliente resueltos por reglas de vinculación de gráficos de identidad
 
 >[!AVAILABILITY]
 >
@@ -30,22 +30,22 @@ Hay casos en los que se pueden producir varios inicios de sesión en un solo dis
 
 ![dispositivos compartidos](../images/identity-settings/shared-devices.png)
 
-En estos casos, desde un punto de vista gráfico y sin límites habilitados, un solo ECID se vinculará a varios ID de CRM.
+En estos casos, desde un punto de vista gráfico, sin límites habilitados, un solo ECID se vinculará a varios CRMID.
 
 Con las reglas de vinculación de gráficos de identidad, puede:
 
-* Configure el ID utilizado para iniciar sesión como identificador único. Por ejemplo, puede limitar un gráfico para almacenar solo una identidad con un área de nombres de ID de CRM y, por lo tanto, definir ese ID de CRM como el identificador único de un dispositivo compartido.
-   * Al hacer esto, puede asegurarse de que los ID de CRM no se fusionen con el ECID.
+* Configure el ID utilizado para iniciar sesión como identificador único. Por ejemplo, puede limitar un gráfico para almacenar solo una identidad con un área de nombres CRMID y, por lo tanto, definir ese CRMID como el identificador único de un dispositivo compartido.
+   * Al hacer esto, puede asegurarse de que los CRMID no se fusionen con el ECID.
 
 ## Escenarios de correo electrónico/teléfono no válidos
 
-También hay casos de usuarios que proporcionan valores falsos como números de teléfono o direcciones de correo electrónico al registrarse. En estos casos, si los límites no están activados, las identidades relacionadas con el teléfono/correo electrónico terminarán vinculándose a varios ID de CRM diferentes.
+También hay casos de usuarios que proporcionan valores falsos como números de teléfono o direcciones de correo electrónico al registrarse. En estos casos, si los límites no están habilitados, las identidades relacionadas con el teléfono/correo electrónico terminarán vinculándose a varios CRMID diferentes.
 
 ![correo electrónico-teléfono no válido](../images/identity-settings/invalid-email-phone.png)
 
 Con las reglas de vinculación de gráficos de identidad, puede:
 
-* Configure el ID de CRM, el número de teléfono o la dirección de correo electrónico como identificador único y, por lo tanto, limite a una persona a un ID de CRM, número de teléfono o dirección de correo electrónico asociados a su cuenta.
+* Configure el CRMID, el número de teléfono o la dirección de correo electrónico como identificador único y, por lo tanto, limite una persona a un solo CRMID, número de teléfono o dirección de correo electrónico asociados a su cuenta.
 
 ## Valores de identidad erróneos o incorrectos
 
@@ -56,11 +56,11 @@ Hay casos en los que se incorporan valores de identidad erróneos y no únicos e
 * Área de nombres del número de teléfono con el valor de identidad &quot;no especificado&quot;.
    * Los números de teléfono no deben contener caracteres alfabéticos.
 
-Estas identidades podrían resultar en los siguientes gráficos, donde varios ID de CRM se combinan con la identidad &quot;incorrecta&quot;:
+Estas identidades podrían resultar en los siguientes gráficos, donde varios CRMID se combinan con la identidad &quot;mala&quot;:
 
 ![datos erróneos](../images/identity-settings/bad-data.png)
 
-Con las reglas de vinculación de gráficos de identidad puede configurar el CRM ID como identificador único para evitar que el perfil no deseado se contraiga debido a este tipo de datos.
+Con las reglas de vinculación de gráficos de identidad, puede configurar el CRMID como identificador único para evitar que el perfil no deseado se contraiga debido a este tipo de datos.
 
 ## Pasos siguientes
 
