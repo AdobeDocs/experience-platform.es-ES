@@ -3,7 +3,7 @@ title: Conexión de Google Cloud Storage
 description: Obtenga información sobre cómo conectarse a Google Cloud Storage y activar audiencias o exportar conjuntos de datos.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 2%
@@ -119,15 +119,15 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 Para conectar y exportar datos correctamente a la ubicación de almacenamiento [!DNL Google Cloud Storage], necesita los siguientes permisos de [!DNL Google Cloud Storage] para los contenedores:
 
-*`orgpolicy.policy.get`
-*`resourcemanager.projects.get`
-*`resourcemanager.projects.list`
-*`storage.managedFolders.create`
-*`storage.multipartUploads.abort`
-*`storage.multipartUploads.create`
-*`storage.multipartUploads.listParts`
-*`storage.objects.create`
-*`storage.objects.list`
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
 
 Más información sobre [control de acceso y permisos](https://cloud.google.com/storage/docs/access-control/iam-permissions) en [!DNL Google Cloud Storage].
 
