@@ -1,9 +1,10 @@
 ---
 title: Explorar, solucionar problemas y comprobar la ingesta por lotes con SQL
-description: Aprenda a comprender y administrar el proceso de ingesta de datos en Adobe Experience Platform. Este documento incluye cómo verificar lotes, controlar errores y consultar datos ingeridos.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Aprenda a comprender y administrar el proceso de ingesta de datos en Adobe Experience Platform. Este documento incluye cómo verificar lotes y consultar datos ingeridos.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 En este documento se explica cómo comprobar y validar registros en lotes ingeridos con SQL. Este documento le enseña cómo:
 
-- Gestionar errores que puedan surgir durante el proceso de ingesta
 - Acceder a metadatos por lotes
 - Solucione problemas y garantice la integridad de los datos consultando lotes
 
@@ -26,7 +26,6 @@ Para facilitar su comprensión de los conceptos mencionados en este documento, d
 
 - **Ingesta de datos**: consulte la [descripción general de la ingesta de datos](../../ingestion/home.md) para conocer los conceptos básicos de cómo se incorporan los datos en la plataforma, incluidos los diferentes métodos y procesos involucrados.
 - **Ingesta por lotes**: Consulte la [descripción general de la API de ingesta por lotes](../../ingestion/batch-ingestion/overview.md) para conocer los conceptos básicos de la ingesta por lotes. En concreto, qué es un &quot;lote&quot; y cómo funciona dentro del proceso de ingesta de datos de Platform.
-- **Control de errores en la ingesta de datos**: Obtenga información sobre los [diferentes tipos de errores que pueden producirse](../../ingestion/quality/error-diagnostics.md#retrieve-errors) durante la ingesta de datos y [cómo manejarlos](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **Metadatos del sistema en conjuntos de datos**: consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener información sobre cómo se utilizan los campos de metadatos del sistema para realizar el seguimiento y consultar los datos ingeridos.
 - **Modelo de datos de experiencia (XDM)**: Consulte la [descripción general de la interfaz de usuario de esquemas](../../xdm/ui/overview.md) y los [&#39;conceptos básicos de la composición de esquemas&#39;](../../xdm/schema/composition.md) para obtener información sobre los esquemas XDM y cómo representan y validan la estructura y el formato de los datos ingeridos en Platform.
 
@@ -57,11 +56,7 @@ Los resultados de esta consulta se muestran en la siguiente imagen.
 
 Estos resultados demuestran que el número de lotes de entrada no coincide necesariamente con el número de lotes de salida, ya que el sistema determina la forma más eficaz de procesar por lotes y almacenar los datos en el lago de datos.
 
-El siguiente ejemplo utiliza un conjunto de datos diferente para ilustrar este punto.
-
->[!NOTE]
->
->Si desea probar este ejemplo, puede ingerir el archivo de muestra proporcionado ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) en Platform y configurar la asignación de esquema.
+Para el propósito de este ejemplo, se da por hecho que ha ingerido un archivo CSV en Platform y ha creado un conjunto de datos denominado `drug_checkout_data`.
 
 El archivo `drug_checkout_data` es un conjunto de 35.000 registros profundamente anidados. Utilice la instrucción SQL `SELECT * FROM drug_orders;` para obtener una vista previa del primer conjunto de registros en el conjunto de datos `drug_orders` basado en JSON.
 
@@ -97,7 +92,7 @@ A continuación, valide y compruebe los registros que se han introducido en el c
 
 >[!TIP]
 >
->Para recuperar el ID de lote y los registros de consulta asociados a dicho ID de lote, primero debe crear un lote en Platform. Si desea probar el proceso usted mismo, puede introducir datos CSV en Platform. Lea la guía sobre cómo [asignar un archivo CSV a un esquema XDM existente mediante recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md). Hay un [archivo CSV de perfil de muestra](../images/use-cases/sample-profiles.csv) disponible aquí para su comodidad.
+>Para recuperar el ID de lote y los registros de consulta asociados a dicho ID de lote, primero debe crear un lote en Platform. Si desea probar el proceso usted mismo, puede introducir datos CSV en Platform. Lea la guía sobre cómo [asignar un archivo CSV a un esquema XDM existente mediante recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Una vez que haya ingerido un lote, debe navegar a la [!UICONTROL pestaña de actividad Conjuntos de datos] para el conjunto de datos en el que ha ingerido los datos.
 
