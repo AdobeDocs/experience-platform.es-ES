@@ -3,7 +3,7 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -28,19 +28,19 @@ Siga los pasos a continuación para ver más detalles sobre un destino existente
 
    ![Destinos de exploración](../assets/ui/details-page/browse-destinations.png)
 
-1. Seleccione el icono de filtro ![Filter-icon](../assets/ui/details-page/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
    ![Filtrar destinos](../assets/ui/details-page/filter-destinations.png)
 
-1. Seleccione la fila del destino para el que desea que aparezca más información. Esto abre un carril derecho con información sobre el destino, incluido el ID de destino, el usuario que creó la conexión de destino y otra información.
+3. Seleccione la fila del destino para el que desea que aparezca más información. Esto abre un carril derecho con información sobre el destino, incluido el ID de destino, el usuario que creó la conexión de destino y otra información.
 
    ![ID de destino en carril derecho](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. También puede mostrar otra información sobre el destino seleccionando *el nombre del destino* que desea ver.
+4. También puede mostrar otra información sobre el destino seleccionando *el nombre del destino* que desea ver.
 
    ![Seleccionar destino](../assets/ui/details-page/destination-select.png)
 
-1. La página de detalles del destino aparece en el carril derecho, con sus controles disponibles.
+5. La página de detalles del destino aparece en el carril derecho, con sus controles disponibles.
 
    ![Detalles del destino](../assets/ui/details-page/destination-details.png)
 

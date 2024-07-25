@@ -2,7 +2,7 @@
 title: Crear un filtro global
 description: Obtenga información sobre cómo filtrar las perspectivas de datos con un filtro personalizado aplicado globalmente.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para crear un filtro global, primero selecciona **[!UICONTROL Agregar filtro]** 
 
 Puede cambiar rápidamente las perspectivas proporcionadas por su SQL con filtros globales personalizados.
 
-Se abre el cuadro de diálogo [!UICONTROL Crear un filtro global]. La creación de un filtro global sigue el mismo proceso que la creación de una perspectiva con SQL. En primer lugar, seleccione una base de datos (modelo de datos de perspectivas) para realizar una consulta y, a continuación, escriba el SQL personalizado en el Editor de consultas y, finalmente, seleccione el icono de ejecución (![Icono de ejecución.](../../../images/customizable-insights/run-icon.png)).
+Se abre el cuadro de diálogo [!UICONTROL Crear un filtro global]. La creación de un filtro global sigue el mismo proceso que la creación de una perspectiva con SQL. En primer lugar, seleccione una base de datos (modelo de datos de perspectivas) para realizar una consulta y, a continuación, escriba el SQL personalizado en el Editor de consultas y, finalmente, seleccione el icono de ejecución (![Icono de ejecución.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Después de crear el filtro global para el tablero, la opción de ese filtro glo
 
 ## Seleccionar un filtro global {#select-global-filter}
 
-Para abrir el cuadro de diálogo [!UICONTROL Filtros] que enumera todos los filtros personalizados, seleccione el icono de filtro (![Un icono de filtro.](../../../images/customizable-insights/filter.png)) a la izquierda del tablero. A continuación, para aplicar los efectos en las perspectivas del panel, elija una opción en el menú desplegable del filtro global y seleccione **[!UICONTROL Aplicar]**.
+Para abrir el cuadro de diálogo [!UICONTROL Filtros] que enumera todos los filtros personalizados, seleccione el icono de filtro (![Un icono de filtro.](/help/images/icons/filter.png)) a la izquierda del tablero. A continuación, para aplicar los efectos en las perspectivas del panel, elija una opción en el menú desplegable del filtro global y seleccione **[!UICONTROL Aplicar]**.
 
 ![Un panel personalizado con el cuadro de diálogo de filtro resaltado.](../../../images/customizable-insights/custom-filters.png)

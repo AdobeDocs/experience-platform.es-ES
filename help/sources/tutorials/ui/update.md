@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Actualización de los detalles de la cuenta de Source Connection en la IU
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Inicie sesión en la [interfaz de usuario del Experience Platform](https://platf
 
 Aparecerá la página **[!UICONTROL Cuentas]**. En esta página hay una lista de cuentas visibles, que incluye información sobre su fuente, nombre de usuario, número de flujos de datos y fecha de creación.
 
-Seleccione el icono de filtro ![filter](../../images/tutorials/update/filter.png) en la parte superior izquierda para iniciar el panel de ordenación.
+Seleccione el icono de filtro ![filter](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación.
 
 ![lista de cuentas](../../images/tutorials/update/accounts-list.png)
 

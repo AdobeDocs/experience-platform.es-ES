@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 17%
@@ -71,7 +71,7 @@ Las etiquetas se pueden aplicar a todo el conjunto de datos desde la pestaña **
 
 ![La ficha [!UICONTROL Control de datos] del área de trabajo de [!UICONTROL Conjuntos de datos] con el control de datos resaltado.](../images/labels/dataset-governance.png)
 
-Para editar las etiquetas de uso de datos en el nivel de conjunto de datos, comience por seleccionar el icono de lápiz (![Un icono de lápiz.](../images/labels/edit-icon.png)) en la fila del nombre del conjunto de datos.
+Para editar las etiquetas de uso de datos en el nivel de conjunto de datos, comience por seleccionar el icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)) en la fila del nombre del conjunto de datos.
 
 ![La ficha [!UICONTROL Control de datos] del área de trabajo de [!UICONTROL Conjuntos de datos] con el icono de lápiz de edición resaltado.](../images/labels/dataset-level-edit.png)
 

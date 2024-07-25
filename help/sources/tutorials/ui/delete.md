@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Eliminación de flujos de datos en la IU
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -33,7 +33,7 @@ En la [interfaz de usuario del Experience Platform](https://platform.adobe.com),
 
 Aparecerá la página **[!UICONTROL Flujos de datos]**. En esta página hay una lista de flujos de datos visibles, incluida la información sobre su conjunto de datos de destinatario, origen, nombre de cuenta y fecha de creación.
 
-Seleccione el icono de filtro (![filter-icon](../../images/tutorials/delete/filter.png)) en la parte superior izquierda para iniciar el panel de ordenación.
+Seleccione el icono de filtro (![filter-icon](/help/images/icons/filter.png)) en la parte superior izquierda para iniciar el panel de ordenación.
 
 ![flujos de datos](../../images/tutorials/delete/dataflows.png)
 

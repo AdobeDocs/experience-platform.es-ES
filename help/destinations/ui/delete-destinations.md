@@ -4,7 +4,7 @@ title: Eliminar destinos
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar un destino existente en la interfaz de usuario de Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -32,11 +32,11 @@ Siga los pasos a continuación para eliminar un destino de la ficha [!UICONTROL 
 
    ![Destinos de exploración](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Seleccione el icono de filtro ![Filter-icon](../assets/ui/delete-destinations/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Seleccione el botón ![Más](../assets/ui/delete-destinations/more-icon.png) en la columna Nombre y, a continuación, seleccione ![Eliminar botón](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Eliminar]** para eliminar una conexión de destino existente.
+3. Seleccione el botón ![Más](/help/images/icons/more.png) en la columna Nombre y, a continuación, seleccione ![Eliminar botón](/help/images/icons/delete.png) **[!UICONTROL Eliminar]** para eliminar una conexión de destino existente.
    ![Eliminar destinos](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Seleccione **[!UICONTROL Eliminar]** para confirmar la eliminación de la conexión de destino.
@@ -51,7 +51,7 @@ Siga los pasos a continuación para eliminar un destino de la página de detalle
 
    ![Destinos de exploración](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Seleccione el icono de filtro ![Filter-icon](../assets/ui/delete-destinations/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
    ![Filtrar destinos](../assets/ui/delete-destinations/filter-destinations.png)
 

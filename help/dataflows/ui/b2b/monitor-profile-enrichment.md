@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supervisión de trabajos de enriquecimiento de perfil
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -77,7 +77,7 @@ Las siguientes métricas están disponibles para trabajos predictivos de enrique
 
 En esta sección se describen varias opciones de la interfaz de usuario (IU) de la interfaz de monitorización, que le permiten filtrar las métricas que se muestran en la página.
 
-Utilice el icono de flecha (![icono de flecha](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir o descartar la tarjeta en la parte superior de la pantalla, que muestra información rápida sobre los trabajos de enriquecimiento de perfiles.
+Utilice el icono de flecha (![icono de flecha](/help/images/icons/chevron-up.png)) para expandir o descartar la tarjeta en la parte superior de la pantalla, que muestra información rápida sobre los trabajos de enriquecimiento de perfiles.
 
 ![Grabación de pantalla que muestra el icono de flecha del control de IU.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

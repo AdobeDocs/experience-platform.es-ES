@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;control de acceso;control d
 title: Control de acceso basado en atributos Administrar permisos de funciones
 description: Este documento proporciona información sobre la configuración de permisos para una función a través de la interfaz Permisos en Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Inmediatamente después de que [cree un nuevo rol](#create-a-new-role), volverá
 
 ## Filtrar funciones
 
-Seleccione el icono de canal (![Icono de filtro](../../images/icon.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
+Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 

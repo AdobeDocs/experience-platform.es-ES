@@ -4,7 +4,7 @@ title: Resumen de alertas
 description: Obtenga información sobre las alertas en Adobe Experience Platform, incluida la estructura de cómo se definen las reglas de alerta.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Las alertas de plataforma se pueden enviar una vez o pueden repetirse a lo largo
 | --- | --- |
 | No indica necesariamente un problema. | Indica un estado potencialmente no deseable. |
 | No repetir. | Se puede repetir si la condición anómala persiste. |
-| Algunos ejemplos son:<ul><li>La ingesta de datos se ha completado correctamente.</li><li>Ha finalizado la ejecución de una consulta.</li><li>Se han eliminado los datos.</li></ul> | Algunos ejemplos son:<ul><li>La duración de la ingesta supera el contrato de nivel de servicio (SLA).</li><li>La ingestión diaria no se ha producido en las últimas 24 horas.</li><li>La tasa de error del procesador de flujo está por encima del umbral configurado.</li><li>El número total de perfiles supera el derecho.</li></ul> |
+| Algunos ejemplos son:<ul><li>La ingesta de datos se ha completado correctamente.</li><li>Ha finalizado la ejecución de una consulta.</li><li>Se han eliminado los datos.</li></ul> | Algunos ejemplos son:<ul><li>La duración de la ingesta supera el acuerdo de nivel de servicio (SLA).</li><li>La ingestión diaria no se ha producido en las últimas 24 horas.</li><li>La tasa de error del procesador de flujo está por encima del umbral configurado.</li><li>El número total de perfiles supera el derecho.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Para trabajar con alertas en la IU de Platform, debe tener los siguientes permis
 >
 >Para obtener más información sobre cómo administrar permisos en Platform, consulte la [documentación de control de acceso](../../access-control/ui/overview.md).
 
-Con el permiso Ver alertas, puede ver las alertas recibidas seleccionando el icono de campana (![Icono de campana](../images/alerts/overview/icon.png)) en la esquina superior derecha.
+Con el permiso Ver alertas, puede ver las alertas recibidas seleccionando el icono de campana (![Icono de campana](/help/images/icons/bell.png)) en la esquina superior derecha.
 
 ![](../images/alerts/overview/ui.png)
 

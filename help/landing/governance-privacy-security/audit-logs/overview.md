@@ -2,7 +2,7 @@
 title: Resumen de registros de auditoría
 description: Descubra cómo los registros de auditoría le permiten ver quién realizó qué acciones en Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 36%
@@ -94,7 +94,7 @@ Seleccione un evento de la lista para ver los detalles en el carril derecho.
 >Como es una función nueva, los datos mostrados solo se remontan a marzo de 2022. Según el recurso seleccionado, los datos anteriores podrían estar disponibles a partir de enero de 2022.
 
 
-Seleccione el icono de canal (![Icono de filtro](../../images/audit-logs/icon.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los distintos filtros seleccionados.
+Seleccione el icono de canal (![Icono de filtro](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados. Solo se muestran los últimos 1000 registros, independientemente de los distintos filtros seleccionados.
 
 ![Panel de auditorías con el registro de actividad filtrado resaltado.](../../images/audit-logs/filters.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 3%
@@ -161,11 +161,11 @@ Aparecerá el cuadro de diálogo [!UICONTROL Mover] conjunto de datos a la carpe
 
 >[!TIP]
 >
->También puede crear carpetas directamente desde el cuadro de diálogo Mover conjunto de datos. Para crear una carpeta, seleccione el icono Crear carpeta (![El icono Crear carpeta.](../images/datasets/user-guide/create-folder-icon.png)) en la parte superior derecha del cuadro de diálogo.
+>También puede crear carpetas directamente desde el cuadro de diálogo Mover conjunto de datos. Para crear una carpeta, seleccione el icono Crear carpeta (![El icono Crear carpeta.](/help/images/icons/folder-add.png)) en la parte superior derecha del cuadro de diálogo.
 >
 >![Cuadro de diálogo [!UICONTROL Mover] conjunto de datos con el icono de crear carpeta resaltado.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Una vez que el conjunto de datos esté en una carpeta, puede elegir mostrar solo los conjuntos de datos que pertenecen a una carpeta específica. Para abrir la estructura de carpetas, seleccione el icono mostrar carpetas (![El icono mostrar carpetas](../images/datasets/user-guide/show-folders-icon.png)). A continuación, seleccione la carpeta elegida para ver todos los conjuntos de datos asociados.
+Una vez que el conjunto de datos esté en una carpeta, puede elegir mostrar solo los conjuntos de datos que pertenecen a una carpeta específica. Para abrir la estructura de carpetas, seleccione el icono mostrar carpetas (![El icono mostrar carpetas](/help/images/icons/rail-left.png)). A continuación, seleccione la carpeta elegida para ver todos los conjuntos de datos asociados.
 
 ![Paneles de [!UICONTROL Conjuntos de datos] con la estructura de carpetas de conjuntos de datos mostrada, el icono de mostrar carpetas y una carpeta seleccionada resaltada.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ Puede eliminar los datos de perfil asociados a un conjunto de datos del almacén
 
 ## Buscar y filtrar conjuntos de datos {#search-and-filter}
 
-Para buscar o filtrar la lista de conjuntos de datos disponibles, seleccione el icono de filtro (![El icono de filtro.](../images/datasets/user-guide/icon.png)) en la parte superior izquierda del área de trabajo. Aparecerá un conjunto de opciones de filtro en el carril izquierdo. Existen varios métodos para filtrar los conjuntos de datos disponibles. Estos incluyen: [[!UICONTROL Mostrar conjuntos de datos del sistema]](#show-system-datasets), [[!UICONTROL Incluido en el perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Etiquetas]](#filter-by-tag), [[!UICONTROL Fecha de creación]](#filter-by-creation-date), [[!UICONTROL Fecha de modificación], [!UICONTROL Creado por]](#filter-by-creation-date) y [[!UICONTROL Esquema]](#filter-by-schema).
+Para buscar o filtrar la lista de conjuntos de datos disponibles, seleccione el icono de filtro (![El icono de filtro.](/help/images/icons/filter.png)) en la parte superior izquierda del área de trabajo. Aparecerá un conjunto de opciones de filtro en el carril izquierdo. Existen varios métodos para filtrar los conjuntos de datos disponibles. Estos incluyen: [[!UICONTROL Mostrar conjuntos de datos del sistema]](#show-system-datasets), [[!UICONTROL Incluido en el perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Etiquetas]](#filter-by-tag), [[!UICONTROL Fecha de creación]](#filter-by-creation-date), [[!UICONTROL Fecha de modificación], [!UICONTROL Creado por]](#filter-by-creation-date) y [[!UICONTROL Esquema]](#filter-by-schema).
 
 La lista de filtros aplicados se muestra encima de los resultados filtrados.
 

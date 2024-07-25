@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Composición de audiencia proporciona un espacio de trabajo para crear y editar 
 
 ![Interfaz de usuario de composición de audiencia.](../images/ui/audience-composition/audience-composition.png)
 
-Para cambiar los detalles de la composición, incluidos el título y la descripción, seleccione el botón ![controles deslizantes](../images/ui/audience-composition/sliders.png).
+Para cambiar los detalles de la composición, incluidos el título y la descripción, seleccione el botón ![controles deslizantes](/help/images/icons/properties.png).
 
 Aparece la ventana emergente **[!UICONTROL Propiedades de composición]**. Puede insertar detalles de la composición, incluidos el título y la descripción aquí.
 
@@ -114,7 +114,7 @@ Aparecerá una lista de audiencias. Seleccione **[!UICONTROL Agregar]** para agr
 
 ### Excluir por atributo {#exclude-attribute}
 
-Si excluye por atributo, puede seleccionar qué atributos desea excluir seleccionando el icono ![filter](../images/ui/audience-composition/filter-attribute.png) dentro de la sección **[!UICONTROL Regla de exclusión]**.
+Si excluye por atributo, puede seleccionar qué atributos desea excluir seleccionando el icono ![filter](/help/images/icons/project-edit.png) dentro de la sección **[!UICONTROL Regla de exclusión]**.
 
 ![La sección de atributos está resaltada y muestra dónde seleccionar para elegir el atributo que se excluirá.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Para agregar un bloque **[!UICONTROL Enrich]**, selecciona el icono **+**, segui
 
 Se ha agregado el bloque **[!UICONTROL Enrich]**. Cuando se selecciona este bloque, los detalles sobre el enriquecimiento aparecen en el carril derecho. Esto incluye la etiqueta del bloque y el conjunto de datos de enriquecimiento.
 
-Para seleccionar el conjunto de datos con el que enriquecer la audiencia, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
+Para seleccionar el conjunto de datos con el que enriquecer la audiencia, seleccione el icono ![filter](/help/images/icons/project-edit.png).
 
 ![El botón de filtro está resaltado. Si selecciona esto, accederá a la ventana emergente [!UICONTROL Seleccionar conjunto de datos].](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ La sección **[!UICONTROL Criterios de enriquecimiento]** aparece ahora en el ca
 
 ![El área [!UICONTROL Criterios de enriquecimiento] está resaltada.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Para seleccionar la clave de unión de **[!UICONTROL Source]**, seleccione el icono ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Para seleccionar la clave de unión de **[!UICONTROL Source]**, seleccione el icono ![filtro](/help/images/icons/project-edit.png).
 
 ![El icono de filtro de la [!UICONTROL clave de unión de Source] está resaltado.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ Aparece la ventana emergente **[!UICONTROL Seleccionar un atributo de perfil]**.
 
 ![El atributo que desea usar como clave de combinación de origen está resaltado.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Para seleccionar la clave de unión del conjunto de datos **[!UICONTROL Enrichment]**, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
+Para seleccionar la clave de unión del conjunto de datos **[!UICONTROL Enrichment]**, seleccione el icono ![filter](/help/images/icons/project-edit.png).
 
 ![El icono de filtro de la clave de unión del conjunto de datos de enriquecimiento [!UICONTROL 2} está resaltado.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)]
 
@@ -216,7 +216,7 @@ Al seleccionar el bloque, los detalles sobre la clasificación se muestran en el
 
 ![Se resalta el bloque de clasificación, así como los detalles del bloque de clasificación.](../images/ui/audience-composition/rank.png)
 
-Para seleccionar por qué atributo clasificar las audiencias, seleccione el icono ![filter](../images/ui/audience-composition/filter-attribute.png).
+Para seleccionar por qué atributo clasificar las audiencias, seleccione el icono ![filter](/help/images/icons/project-edit.png).
 
 ![El icono de filtro está resaltado y muestra lo que debe seleccionar para tener acceso a la pantalla de selección de atributos de perfil.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Por ejemplo, puede tener tres rutas, cada una con un porcentaje diferente de per
 
 ### Dividir por atributo {#split-attribute}
 
-Al dividir por atributo, las audiencias se dividen según los atributos proporcionados. Para seleccionar el atributo por el que dividir, selecciona el bloque **[!UICONTROL Split]**, seguido del icono ![filter](../images/ui/audience-composition/filter-attribute.png).
+Al dividir por atributo, las audiencias se dividen según los atributos proporcionados. Para seleccionar el atributo por el que dividir, selecciona el bloque **[!UICONTROL Split]**, seguido del icono ![filter](/help/images/icons/project-edit.png).
 
 ![Se ha seleccionado el botón de filtro, que muestra cómo filtrar por atributo.](../images/ui/audience-composition/select-split-attribute.png)
 

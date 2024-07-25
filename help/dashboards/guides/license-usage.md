@@ -4,7 +4,7 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 7%
@@ -101,7 +101,7 @@ Para ver **una métrica de uso en particular de una zona protegida específica**
 
 ![Pestaña Detalles del tablero de uso de licencias.](../images/license-usage/details-tab.png)
 
-Desde esta vista, puede seleccionar ![El icono de inspección.](../images/license-usage/inspect-icon.png) junto al nombre de una zona protegida para ver la visualización de esa métrica. Se abrirá un cuadro de diálogo con una visualización para esa métrica.
+Desde esta vista, puede seleccionar ![El icono de inspección.](/help/images/icons/inspect.png) junto al nombre de una zona protegida para ver la visualización de esa métrica. Se abrirá un cuadro de diálogo con una visualización para esa métrica.
 
 ### Visualizaciones {#visualizations}
 

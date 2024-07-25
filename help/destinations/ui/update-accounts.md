@@ -4,7 +4,7 @@ title: Actualizar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para actualizar las cuentas de destino en la IU de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Siga los pasos a continuación para actualizar los detalles de conexión a desti
 
    ![Pestaña Cuentas](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Seleccione el icono de filtro ![Filter-icon](../assets/ui/update-accounts/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de cuentas asociadas con los destinos seleccionados.
+2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de cuentas asociadas con los destinos seleccionados.
 
    ![Filtrar cuentas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]** la cuenta. Seleccione el botón ![Editar detalles](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Editar detalles]** para editar la información de la cuenta.
+3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]** la cuenta. Seleccione el botón ![Editar detalles](/help/images/icons/edit.png) **[!UICONTROL Editar detalles]** para editar la información de la cuenta.
 
    ![Editar cuenta](../assets/ui/update-accounts/accounts-edit.png)
 

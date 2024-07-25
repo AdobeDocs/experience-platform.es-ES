@@ -4,7 +4,7 @@ title: Eliminar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para eliminar cuentas de destino en la interfaz de usuario de Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Siga los pasos a continuación para eliminar las cuentas de destino existentes.
 
    ![Pestaña Cuentas](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Seleccione el icono de filtro ![Filter-icon](../assets/ui/update-accounts/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de cuentas asociadas con los destinos seleccionados.
+2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de cuentas asociadas con los destinos seleccionados.
 
    ![Filtrar destinos](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]** la cuenta. Seleccione el botón ![Eliminar](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Eliminar]** para eliminar la cuenta que desee.
+3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea eliminar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]** la cuenta. Seleccione el botón ![Eliminar](/help/images/icons/delete.png) **[!UICONTROL Eliminar]** para eliminar la cuenta que desee.
 
    ![Eliminar cuenta de destino](../assets/ui/delete-accounts/delete-accounts.png)
 

@@ -3,7 +3,7 @@ description: Aprenda a utilizar plantillas en la IU de Adobe Experience Platform
 title: Creación de un flujo de datos de origen mediante plantillas en la IU
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -174,7 +174,7 @@ En la tabla siguiente se describen las plantillas B2C disponibles para el origen
 
 +++
 
-Según el tipo de empresa seleccionado, aparecerá una lista de plantillas. Seleccione el icono de vista previa ![icono de vista previa](../../images/tutorials/templates/preview-icon.png) junto al nombre de una plantilla para obtener una vista previa de los datos de ejemplo de la plantilla.
+Según el tipo de empresa seleccionado, aparecerá una lista de plantillas. Seleccione el icono de vista previa ![icono de vista previa](/help/images/icons/preview.png) junto al nombre de una plantilla para obtener una vista previa de los datos de ejemplo de la plantilla.
 
 ![Una lista de plantillas con el icono de vista previa resaltado.](../../images/tutorials/templates/templates.png)
 

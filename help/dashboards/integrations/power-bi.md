@@ -2,9 +2,9 @@
 title: Plantillas de informe de Power BI para paneles de Platform
 description: Utilice plantillas de informe para explorar los datos del Experience Platform mediante Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Una vez que el tablero tenga las métricas y los atributos adecuados incluidos e
 
 ## Eliminación de la integración de la aplicación Power BI
 
-Para eliminar el tablero, vaya al inventario del tablero y seleccione el icono de eliminación (![](../images/power-bi/delete-icon.png)) junto al nombre del tablero.
+Para eliminar el tablero, vaya al inventario del tablero y seleccione el icono de eliminación (![icono de eliminación](/help/images/icons/delete.png)) junto al nombre del tablero.
 
 >[!NOTE]
 >

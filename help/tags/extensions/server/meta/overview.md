@@ -2,7 +2,7 @@
 title: Información general sobre la extensión API Meta Conversions
 description: Obtenga información acerca de la extensión de la API de metaconversiones para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Espere unos minutos para que se complete el proceso de configuración inicial y,
 
 ![Pantalla de confirmación de configuración inicial completa](../../../images/extensions/server/meta/setup-complete.png)
 
-Desde el cuadro de diálogo **[!UICONTROL Agregar código en su sitio]** copie el código proporcionado mediante la función Copiar ![Copiar](../../../images/extensions/server/meta/copy-icon.png) y péguelo en el `<head>` del sitio web de origen. Una vez implementada, seleccione **[!UICONTROL Iniciar validación]**
+Desde el cuadro de diálogo **[!UICONTROL Agregar código en su sitio]** copie el código proporcionado mediante la función Copiar ![Copiar](/help/images/icons/copy.png) y péguelo en el `<head>` del sitio web de origen. Una vez implementada, seleccione **[!UICONTROL Iniciar validación]**
 
 ![Agregar código en el cuadro de diálogo del sitio](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

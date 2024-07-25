@@ -2,7 +2,7 @@
 title: Integración del registro de auditoría del servicio de consultas
 description: Los registros de auditoría del servicio de consultas mantienen registros de diversas acciones del usuario para formar una pista de auditoría para la resolución de problemas o el cumplimiento de las políticas de administración de datos corporativos y los requisitos regulatorios. Este tutorial proporciona información general sobre las funciones del registro de auditoría específicas del servicio de consultas.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Las categorías de registro de auditoría proporcionadas por [!DNL Query Service
 
 ## Realizar un registro de auditoría [!DNL Query Service] {#perform-an-audit-log}
 
-Para realizar una auditoría de [!DNL Query Service] actividades, seleccione **[!UICONTROL Auditorías]** en el panel de navegación izquierdo, seguido del icono de embudo (![Un icono de filtro.](../images/audit-log/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
+Para realizar una auditoría de [!DNL Query Service] actividades, seleccione **[!UICONTROL Auditorías]** en el panel de navegación izquierdo, seguido del icono de embudo (![Un icono de filtro.](/help/images/icons/filter.png)) para mostrar una lista de controles de filtro y ayudar a reducir los resultados.
 
 ![Panel de registro de auditoría de IU de Platform con &quot;Auditorías&quot; en los controles de navegación y filtro izquierdos resaltados.](../images/audit-log/filter-controls.png)
 

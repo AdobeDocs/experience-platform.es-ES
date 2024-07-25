@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 2%
@@ -36,7 +36,7 @@ La sección **[!UICONTROL Credenciales que caducan]** proporciona la siguiente i
 - **[!UICONTROL Puerto]**: número de puerto del host al que se va a conectar.
 - **[!UICONTROL Base de datos]**: Nombre de la base de datos a la que conectar un cliente.
 - **[!UICONTROL Nombre de usuario]**: El nombre de usuario usado para conectarse al servicio de consultas.
-- **[!UICONTROL Contraseña]**: La contraseña utilizada para conectarse al servicio de consultas. Las contraseñas de la IU se han cifrado en hash por motivos de seguridad. Seleccione el icono de copia (![El icono de copia.](../images/ui/credentials/copy-icon.png)) para copiar sus credenciales completas sin hash en el portapapeles.
+- **[!UICONTROL Contraseña]**: La contraseña utilizada para conectarse al servicio de consultas. Las contraseñas de la IU se han cifrado en hash por motivos de seguridad. Seleccione el icono de copia (![El icono de copia.](/help/images/icons/copy.png)) para copiar sus credenciales completas sin hash en el portapapeles.
 - **[!UICONTROL Comando PSQL]**: Un comando que ha insertado automáticamente toda la información relevante para conectarse al servicio de consultas mediante PSQL en la línea de comandos.
 - **[!UICONTROL Caduca]**: La fecha y hora de caducidad de las credenciales que caducan. La duración de validez predeterminada del token es de 24 horas, pero se puede cambiar en la configuración avanzada del Admin Console.
 
@@ -126,7 +126,7 @@ Una vez guardadas las credenciales generadas, seleccione **[!UICONTROL Cerrar]**
 
 ![Se ha resaltado la pestaña Credenciales del panel Consultas con la sección Credenciales que no caducan.](../images/ui/credentials/list-credentials.png)
 
-Puede editar o eliminar las credenciales que no caducan. Para editar una credencial que no caduque, seleccione el icono de lápiz (![Un icono de lápiz.](../images/ui/credentials/edit-icon.png)). Para eliminar una credencial que no caduque, seleccione el icono Eliminar (![Un icono de papelera.](../images/ui/credentials/delete-icon.png)).
+Puede editar o eliminar las credenciales que no caducan. Para editar una credencial que no caduque, seleccione el icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)). Para eliminar una credencial que no caduque, seleccione el icono Eliminar (![Un icono de papelera.](/help/images/icons/delete.png)).
 
 Al editar una credencial que no caduca, aparece un modal. Puede proporcionar los siguientes detalles para actualizar:
 

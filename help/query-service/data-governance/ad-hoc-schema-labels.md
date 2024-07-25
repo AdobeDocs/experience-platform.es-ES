@@ -2,7 +2,7 @@
 title: Compatibilidad con el control de acceso basado en atributos para esquemas ad hoc
 description: Una guía para restringir el acceso a los campos de datos en esquemas ad hoc generados mediante Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Para agregar una etiqueta de datos, vaya a la pestaña de exploración del panel
 
 ## Descubra esquemas ad hoc en el inventario de esquemas de la IU de Platform {#discover-ad-hoc-schemas}
 
-Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](../images/data-governance/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
+Para habilitar la visualización de esquemas ad hoc en la interfaz de usuario de Platform, seleccione el icono de filtro (![Un icono de filtro.](/help/images/icons/filter.png)) a la izquierda del campo de búsqueda y, a continuación, seleccione **[!UICONTROL Mostrar esquemas ad hoc] en el carril izquierdo que aparece.
 
 ![El carril izquierdo de las opciones de filtro del panel de esquemas tiene habilitada la opción &#39;Mostrar esquema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Para editar las etiquetas de datos de su esquema ad hoc, seleccione la pestaña 
 
 ## Editar etiquetas para el esquema o campo
 
-Para editar las etiquetas de todo el esquema, seleccione el icono de lápiz (![Un icono de lápiz.](../images/data-governance/edit-icon.png)) al lado del nombre del esquema en la ficha [!UICONTROL Etiquetas].
+Para editar las etiquetas de todo el esquema, seleccione el icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)) al lado del nombre del esquema en la ficha [!UICONTROL Etiquetas].
 
 ![Vista de etiquetas en el área de trabajo de esquemas con el icono de lápiz resaltado.](../images/data-governance/edit-entire-schema-labels.png)
 

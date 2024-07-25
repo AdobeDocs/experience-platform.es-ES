@@ -4,7 +4,7 @@ title: Guía de IU de alertas
 description: Obtenga información sobre cómo administrar alertas en la interfaz de usuario del Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Ha agregado correctamente usuarios a su lista de notificaciones de alerta. Los u
 
 Las notificaciones de alerta se pueden enviar directamente al correo electrónico.
 
-Seleccione el icono de campana (![icono de campana](../images/alerts/ui/bell-icon.png)) ubicado en la cinta superior a la derecha para mostrar notificaciones y anuncios. En el menú desplegable que aparece, seleccione el icono de engranaje (![icono de engranaje](../images/alerts/ui/cog-icon.png)) para acceder a la página de preferencias de Experience Cloud.
+Seleccione el icono de campana (![icono de campana](/help/images/icons/bell.png)) ubicado en la cinta superior a la derecha para mostrar notificaciones y anuncios. En el menú desplegable que aparece, seleccione el icono de engranaje (![icono de engranaje](/help/images/icons/settings.png)) para acceder a la página de preferencias de Experience Cloud.
 
 ![Se muestra una lista de alertas resaltando el icono de campana y el icono de engranaje.](../images/alerts/ui/edit-preferences.png)
 

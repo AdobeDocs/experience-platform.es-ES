@@ -2,7 +2,7 @@
 title: Definir una relación entre dos esquemas en Real-time Customer Data Platform B2B Edition
 description: Aprenda a definir una relación varios a uno entre dos esquemas en Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 15%
@@ -97,7 +97,7 @@ Para definir una relación entre dos esquemas, el esquema de origen debe tener u
 >
 >Actualmente, solo se pueden definir relaciones varios a uno y uno a uno desde un esquema de origen a un esquema de referencia. Para las relaciones uno a varios, debe definir el campo de relación en el esquema que representa a &quot;varios&quot;.
 
-Para establecer un campo de relación, seleccione el icono de flecha (![Icono de flecha](../images/tutorials/relationship-b2b/arrow.png)) junto al campo en cuestión en el lienzo. En el caso del esquema [!DNL Opportunities], este es el campo `accountKey.sourceKey`, ya que el objetivo es establecer una relación de varios a uno con una cuenta.
+Para establecer un campo de relación, seleccione el icono de flecha (![Icono de flecha](/help/images/icons/alias.png)) junto al campo en cuestión en el lienzo. En el caso del esquema [!DNL Opportunities], este es el campo `accountKey.sourceKey`, ya que el objetivo es establecer una relación de varios a uno con una cuenta.
 
 ![Botón de relación](../images/tutorials/relationship-b2b/relationship-button.png)
 

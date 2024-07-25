@@ -5,7 +5,7 @@ feature: Customer AI
 title: Configuración de una instancia de Customer AI
 description: Los servicios de inteligencia artificial aplicada al cliente proporcionan inteligencia artificial aplicada al cliente como un servicio de Adobe Sensei fácil de usar que se puede configurar para diferentes casos de uso. En las secciones siguientes se proporcionan los pasos para configurar una instancia de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Después de seleccionar los conjuntos de datos que desea utilizar, seleccione el
 
 ![Seleccionar conjuntos de datos](../images/user-guide/select-datasets.png)
 
-Si selecciona el icono de información ![icono de información](../images/user-guide/info-icon.png) junto al conjunto de datos, se abrirá la ventana emergente de vista previa del conjunto de datos.
+Si selecciona el icono de información ![icono de información](/help/images/icons/info.png) junto al conjunto de datos, se abrirá la ventana emergente de vista previa del conjunto de datos.
 
 ![Seleccionar y buscar conjunto de datos](../images/user-guide/dataset-info.png)
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Junto a cada audiencia hay un icono de puntos suspensivos. Al seleccionar esta o
 | Administrar acceso | Administra las etiquetas de acceso que pertenecen a la audiencia. Para obtener más información sobre las etiquetas de acceso, lea la documentación sobre [administración de etiquetas](../../access-control/abac/ui/labels.md). |
 | Eliminar | Elimina la audiencia seleccionada. Las audiencias que se usan en destinos de flujo descendente o que dependen de otras audiencias **no se pueden** eliminar. Para obtener más información sobre la eliminación de audiencias, lea las [preguntas frecuentes sobre la segmentación](../faq.md#lifecycle-states). |
 
-Puede seleccionar el icono ![Personalizar tabla](../images/ui/overview/customize-table.png) para cambiar los campos que se muestran.
+Puede seleccionar el icono ![Personalizar tabla](/help/images/icons/column-settings.png) para cambiar los campos que se muestran.
 
 ![El botón Personalizar tabla está resaltado. Si selecciona este botón, podrá personalizar los campos que se muestran en la página Composiciones de audiencias.](../images/ui/overview/compositions-select-customize-table.png)
 

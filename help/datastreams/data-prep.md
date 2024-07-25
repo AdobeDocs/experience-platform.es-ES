@@ -2,7 +2,7 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ Para crear una regla de asignación, seleccione **[!UICONTROL Agregar nueva asig
 
 ![Agregando nueva asignación.](assets/data-prep/add-new-mapping.png)
 
-Seleccione el icono de origen (![Icono de origen](assets/data-prep/source-icon.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Seleccionar]** para continuar.
+Seleccione el icono de origen (![Icono de origen](/help/images/icons/source.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Seleccionar]** para continuar.
 
 ![Seleccionando el campo que se va a asignar en el esquema de origen.](assets/data-prep/source-mapping.png)
 
-A continuación, seleccione el icono de esquema (![Icono de esquema](assets/data-prep/schema-icon.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Seleccionar]**.
+A continuación, seleccione el icono de esquema (![Icono de esquema](/help/images/icons/schema.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Seleccionar]**.
 
 ![Seleccionando el campo que se va a asignar en el esquema de destino.](assets/data-prep/target-mapping.png)
 

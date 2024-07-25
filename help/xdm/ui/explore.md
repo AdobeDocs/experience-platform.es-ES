@@ -5,7 +5,7 @@ title: Exploración de los recursos de esquema en la IU
 description: Aprenda a explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Esquemas]** en e
 
 ![](../images/ui/explore/tabs.png)
 
-El icono de filtro (![Imagen del icono de filtro](../images/ui/explore/icon.png)) muestra los controles en el carril izquierdo para reducir los resultados de la lista. Los controles mostrados difieren según el tipo de recurso que se enumere.
+El icono de filtro (![Imagen del icono de filtro](/help/images/icons/filter.png)) muestra los controles en el carril izquierdo para reducir los resultados de la lista. Los controles mostrados difieren según el tipo de recurso que se enumere.
 
 Por ejemplo, para filtrar la lista de modo que solo se muestren los tipos de datos estándar proporcionados por el Adobe, seleccione **[!UICONTROL Tipo de datos]** y **[!UICONTROL Adobe]** en las secciones **[!UICONTROL Tipo]** y **[!UICONTROL Propietario]**, respectivamente.
 
@@ -56,7 +56,7 @@ Todos los campos de tipo de objeto que contienen subpropiedades se contraen de f
 
 ### Indicador de clase y grupo de campos estándar {#standard-class-and-field-group-indicator}
 
-En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](../images/ui/explore/padlock-icon.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
 
 ![Editor de esquemas con el icono de candado resaltado](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Si el campo que está inspeccionando es un campo de enumeración, el carril dere
 
 Al inspeccionar esquemas que contienen campos de identidad, estos campos se enumeran en el carril izquierdo bajo la clase o el grupo de campos que los proporciona al esquema. Seleccione el nombre del campo de identidad en el carril izquierdo para mostrar el campo en el lienzo, independientemente de la profundidad con que esté anidado.
 
-Los campos de identidad se resaltan en el lienzo con un icono de huella digital (![Imagen de icono de huella digital](../images/ui/explore/identity-symbol.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como el [área de nombres de identidad](../../identity-service/features/namespaces.md) y si el campo es o no la identidad principal del esquema.
+Los campos de identidad se resaltan en el lienzo con un icono de huella digital (![Imagen de icono de huella digital](/help/images/icons/identity-service.png)). Si selecciona el nombre del campo de identidad, puede ver información adicional como el [área de nombres de identidad](../../identity-service/features/namespaces.md) y si el campo es o no la identidad principal del esquema.
 
 ![](../images/ui/explore/identity-field.png)
 

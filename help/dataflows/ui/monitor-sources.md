@@ -2,7 +2,7 @@
 description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos desde las fuentes.
 title: Monitorización de flujos de datos para fuentes en la IU
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 11%
@@ -83,13 +83,13 @@ Puede filtrar aún más los datos mediante las opciones proporcionadas sobre la 
 
 {style="table-layout:auto"}
 
-Para monitorizar los datos que se están ingiriendo en un flujo de datos específico, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a un origen.
+Para monitorizar los datos que se están ingiriendo en un flujo de datos específico, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto a un origen.
 
 ![Controle un flujo de datos específico seleccionando el icono de filtro junto a una fuente determinada.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 La tabla de métricas se actualiza a una tabla de flujos de datos activos que corresponden al origen seleccionado. Durante este paso, puede ver información adicional sobre los flujos de datos, incluido su conjunto de datos y tipo de datos correspondientes, así como una marca de tiempo para indicar cuándo fueron los últimos activos.
 
-Para inspeccionar más a fondo un flujo de datos, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto a un flujo de datos.
+Para inspeccionar más a fondo un flujo de datos, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto a un flujo de datos.
 
 ![La tabla de flujos de datos en el panel de supervisión.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ A continuación, se le dirigirá a una interfaz que enumera todas las iteracione
 
 Las ejecuciones de flujo de datos representan una instancia de ejecución de flujo de datos. Por ejemplo, si un flujo de datos está programado para ejecutarse por hora a las 9:00, 10:00 y 11:00 a.m., tendría tres instancias de ejecución de flujo. Las ejecuciones de flujo son específicas de su organización particular.
 
-Para inspeccionar métricas de una iteración de ejecución de flujo de datos específica, seleccione el icono de filtro ![filter](../assets/ui/monitor-sources/filter.png) junto al flujo de datos.
+Para inspeccionar métricas de una iteración de ejecución de flujo de datos específica, seleccione el icono de filtro ![filter](/help/images/icons/filter-add.png) junto al flujo de datos.
 
 ![Página de métrica de ejecución del flujo de datos.](../assets/ui/monitor-sources/dataflow-page.png)
 

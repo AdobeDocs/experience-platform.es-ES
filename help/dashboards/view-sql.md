@@ -2,7 +2,7 @@
 title: Ver Insight SQL
 description: Vea el SQL subyacente a sus perspectivas de perfil, audiencia, destino y personalizadas, y ejecute la consulta bajo demanda mediante el Editor de consultas.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Aparecerá un cuadro de diálogo que contiene el título de la perspectiva y el 
 
 >[!TIP]
 >
->Puede copiar toda la instrucción SQL en el portapapeles seleccionando el icono de copia (![El icono de copia.](./images/view-sql/copy-icon.png)) en la parte superior derecha del cuadro de diálogo.
+>Puede copiar toda la instrucción SQL en el portapapeles seleccionando el icono de copia (![El icono de copia.](/help/images/icons/copy.png)) en la parte superior derecha del cuadro de diálogo.
 
 ![Cuadro de diálogo de perspectiva con la instrucción SQL resaltada.](./images/view-sql/sql-dialog.png)
 

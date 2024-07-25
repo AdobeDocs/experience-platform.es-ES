@@ -5,7 +5,7 @@ feature: Customer AI
 title: Descubra perspectivas con la inteligencia artificial aplicada al cliente
 description: Este documento sirve como guía para interactuar con las perspectivas de la instancia de servicio en la interfaz de usuario de la inteligencia artificial aplicada al cliente de servicios inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Al pasar el ratón por encima de las líneas, se muestran la fecha y la tasa rea
 
 ![Ejemplo de cubo](../images/insights/churn_tab.png)
 
-Puede filtrar el periodo de tiempo para las tasas esperadas y reales que se muestran. Seleccione el **icono de calendario** ![icono](../images/insights/calendar_icon.png)y, a continuación, seleccione un nuevo intervalo de fechas. Los resultados de cada uno de los bloques se actualizan para mostrarse dentro del nuevo intervalo de fechas.
+Puede filtrar el periodo de tiempo para las tasas esperadas y reales que se muestran. Seleccione el **icono de calendario** ![icono](/help/images/icons/calendar.png)y, a continuación, seleccione un nuevo intervalo de fechas. Los resultados de cada uno de los bloques se actualizan para mostrarse dentro del nuevo intervalo de fechas.
 
 ![Selector de fecha](../images/insights/date_selector.png)
 

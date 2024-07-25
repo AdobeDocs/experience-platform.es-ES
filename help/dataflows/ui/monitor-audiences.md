@@ -3,7 +3,7 @@ description: Descubra cómo puede monitorizar los flujos de datos durante la seg
 title: Monitorización de flujos de datos para audiencias en la IU
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 4%
@@ -64,7 +64,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | **[!UICONTROL Identidades de la última activación]** | El número de identidades que se activaron en el último trabajo de activación de la audiencia. |
 | **[!UICONTROL Destino de la última activación]** | El nombre del destino al que se activó el último trabajo de activación de la audiencia. |
 
-Puede filtrar los resultados a una audiencia específica y ver sus trabajos de segmentación seleccionando el icono de filtro (![El icono de filtro.](../assets/ui/monitor-audiences/filter-icon.png)). Los trabajos de segmentación se ordenan en orden cronológico y aparecen primero los trabajos de segmentación más recientes.
+Puede filtrar los resultados a una audiencia específica y ver sus trabajos de segmentación seleccionando el icono de filtro (![El icono de filtro.](/help/images/icons/filter-add.png)). Los trabajos de segmentación se ordenan en orden cronológico y aparecen primero los trabajos de segmentación más recientes.
 
 ![El icono de filtro está resaltado. Si selecciona esta opción, podrá ver los trabajos de segmentación de la audiencia especificada.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ Las siguientes métricas están disponibles para esta vista de panel:
 | **[!UICONTROL Identidad activada]** | El número de identidades que está activando el trabajo de segmentación. Cada perfil puede tener varias identidades. Por ejemplo, un perfil puede tener un correo electrónico, un número de teléfono y un número de fidelidad como identidades. |
 | **[!UICONTROL Nombre de destino]** | El nombre del destino al que se está activando el trabajo de segmentación. |
 
-Puede filtrar a un trabajo de segmentación específico y ver sus detalles seleccionando el icono de filtro (![El icono de filtro.](../assets/ui/monitor-audiences/filter-icon.png)). Existen dos tipos diferentes de trabajos de segmentación que se pueden filtrar: trabajos de activación y trabajos de evaluación.
+Puede filtrar a un trabajo de segmentación específico y ver sus detalles seleccionando el icono de filtro (![El icono de filtro.](/help/images/icons/filter.png)). Existen dos tipos diferentes de trabajos de segmentación que se pueden filtrar: trabajos de activación y trabajos de evaluación.
 
 ### Detalles del trabajo de activación {#activation-job-details}
 

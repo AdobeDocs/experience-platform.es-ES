@@ -2,7 +2,7 @@
 title: Información general de extremo a extremo de recopilación de datos
 description: Información general de alto nivel sobre cómo enviar datos de evento a soluciones de Adobe Experience Cloud mediante las funciones de recopilación de datos de Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 0%
@@ -228,7 +228,7 @@ Aparecerá la página de configuración de la acción. Para que la regla envíe 
 
 ![Tipo de acción](./images/e2e/action-type.png)
 
-La pantalla se actualiza para mostrar opciones adicionales para configurar la acción de envío de eventos. En **[!UICONTROL Type]**, puede proporcionar un valor de tipo personalizado para rellenar el campo XDM `eventType`. En **[!UICONTROL Datos XDM]**, proporcione el nombre del tipo de datos XDM que creó anteriormente (rodeado de símbolos de porcentaje) o seleccione el icono de la base de datos (![Icono de la base de datos](./images/e2e/database-symbol.png)) para seleccionarlo en una lista. Estos son los datos que finalmente se envían al Edge Network.
+La pantalla se actualiza para mostrar opciones adicionales para configurar la acción de envío de eventos. En **[!UICONTROL Type]**, puede proporcionar un valor de tipo personalizado para rellenar el campo XDM `eventType`. En **[!UICONTROL Datos XDM]**, proporcione el nombre del tipo de datos XDM que creó anteriormente (rodeado de símbolos de porcentaje) o seleccione el icono de la base de datos (![Icono de la base de datos](/help/images/icons/database.png)) para seleccionarlo en una lista. Estos son los datos que finalmente se envían al Edge Network.
 
 Seleccione **[!UICONTROL Conservar cambios]** cuando haya terminado.
 

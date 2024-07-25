@@ -2,7 +2,7 @@
 title: Monitorización de consultas programadas
 description: Obtenga información sobre cómo monitorizar las consultas a través de la IU del servicio de consultas.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -25,7 +25,7 @@ La siguiente tabla describe cada columna disponible.
 
 >[!NOTE]
 >
->El icono de suscripciones de alerta (![Un icono de suscripciones de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) está contenido en cada fila de una columna sin título. Consulte la sección [suscripciones de alerta](#alert-subscription) para obtener más información.
+>El icono de suscripciones de alerta (![Un icono de suscripciones de alerta.](/help/images/icons/alert-add.png)) está contenido en cada fila de una columna sin título. Consulte la sección [suscripciones de alerta](#alert-subscription) para obtener más información.
 
 | Columna | Descripción |
 |---|---|
@@ -45,7 +45,7 @@ La siguiente tabla describe cada columna disponible.
 
 ## Personalizar la configuración de tablas para consultas programadas {#customize-table}
 
-Puede ajustar las columnas de la ficha [!UICONTROL Consultas programadas] según sus necesidades. Para abrir el cuadro de diálogo [!UICONTROL Personalizar la tabla] y editar las columnas disponibles, seleccione el icono de configuración (![Un icono de configuración.](../images/ui/monitor-queries/settings-icon.png)) desde la parte superior derecha de la pantalla.
+Puede ajustar las columnas de la ficha [!UICONTROL Consultas programadas] según sus necesidades. Para abrir el cuadro de diálogo [!UICONTROL Personalizar la tabla] y editar las columnas disponibles, seleccione el icono de configuración (![Un icono de configuración.](/help/images/icons/column-settings.png)) desde la parte superior derecha de la pantalla.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Si desea programar ejecuciones para esa plantilla de consulta, seleccione el nom
 
 ### Suscribirse a alertas {#alert-subscription}
 
-Para suscribirse a alertas para ejecuciones de consultas programadas, seleccione el icono `...` (elipsis) o el icono de suscripción de alerta (![Un icono de suscripción de alerta.](../images/ui/monitor-queries/alert-subscription-icon.png)) para la consulta programada que desea administrar. Aparecerá el menú desplegable de acciones en línea. A continuación, selecciona **[!UICONTROL Suscribirse]** de las opciones disponibles.
+Para suscribirse a alertas para ejecuciones de consultas programadas, seleccione el icono `...` (elipsis) o el icono de suscripción de alerta (![Un icono de suscripción de alerta.](/help/images/icons/alert-add.png)) para la consulta programada que desea administrar. Aparecerá el menú desplegable de acciones en línea. A continuación, selecciona **[!UICONTROL Suscribirse]** de las opciones disponibles.
 
 ![Se resaltó el área de trabajo de consultas programadas con elipses, icono de suscripción de alerta y el menú desplegable de acciones en línea.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Consulte la [documentación de API de suscripciones de alerta](../api/alert-subs
 
 ### Ver los detalles de la consulta {#query-details}
 
-Seleccione el icono de información (![Un icono de información.](../images/ui/monitor-queries/information-icon.png)) para ver el panel de detalles de la consulta. El panel de detalles contiene toda la información relevante sobre la consulta más allá de los hechos incluidos en la tabla de consultas programadas. La información adicional incluye el ID de consulta, la fecha de última modificación, el SQL de la consulta, el ID de programación y la programación definida actual.
+Seleccione el icono de información (![Un icono de información.](/help/images/icons/info.png)) para ver el panel de detalles de la consulta. El panel de detalles contiene toda la información relevante sobre la consulta más allá de los hechos incluidos en la tabla de consultas programadas. La información adicional incluye el ID de consulta, la fecha de última modificación, el SQL de la consulta, el ID de programación y la programación definida actual.
 
 ![La ficha Consultas programadas con el icono de información y el panel de detalles resaltados.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Consulte la sección Suscribirse a alertas para obtener información sobre cómo
 
 ## Filtrar consultas {#filter}
 
-Puede filtrar las consultas en función de la frecuencia de ejecución. En la ficha [!UICONTROL Consultas programadas], seleccione el icono de filtro (![Un icono de filtro](../images/ui/monitor-queries/filter-icon.png)) para abrir la barra lateral del filtro.
+Puede filtrar las consultas en función de la frecuencia de ejecución. En la ficha [!UICONTROL Consultas programadas], seleccione el icono de filtro (![Un icono de filtro](/help/images/icons/filter.png)) para abrir la barra lateral del filtro.
 
 ![Ficha de consultas programadas con el icono de filtro resaltado.](../images/ui/monitor-queries/filter-queries.png)
 

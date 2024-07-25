@@ -1,13 +1,13 @@
 ---
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 3%
 
 ---
-
 
 # Información general de Audience Portal
 
@@ -90,7 +90,7 @@ Aparece un gráfico circular que muestra un desglose de las audiencias por evalu
 
 ### Personalizar {#customize}
 
-Puede agregar campos adicionales al Portal de audiencias seleccionando ![el icono de atributo de filtro](../images/ui/audience-portal/filter-attribute.png). Estos campos adicionales incluyen el estado del ciclo vital, la frecuencia de actualización, la última actualización por, la descripción, la creación por y las etiquetas de acceso.
+Puede agregar campos adicionales al Portal de audiencias seleccionando ![el icono de atributo de filtro](/help/images/icons/column-settings.png). Estos campos adicionales incluyen el estado del ciclo vital, la frecuencia de actualización, la última actualización por, la descripción, la creación por y las etiquetas de acceso.
 
 | Campo | Descripción |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Si se selecciona desglose, la pantalla muestra un gráfico de barras que indica 
 | [!UICONTROL Existente] | Recuento de perfiles que **permanecieron** en el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
 | [!UICONTROL Saliendo] | Recuento de perfiles que **abandonaron** el segmento en las últimas 24 horas desde que se ejecutó el último trabajo de segmentación por lotes. |
 
-Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione el ![icono de flecha](../images/ui/audience-portal/arrow-icon.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
+Después de seleccionar los campos que desea mostrar, también puede cambiar el tamaño del ancho de las columnas mostradas. Para ello, arrastre el área entre las columnas o seleccione el ![icono de flecha](/help/images/icons/chevron-down.png) de la columna cuyo tamaño desea cambiar, seguido de **[!UICONTROL Cambiar tamaño de columna]**.
 
 ![El botón Cambiar tamaño de columna está resaltado.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Se muestran ![audiencias que pertenecen a una carpeta específica.](../images/ui
 
 También puede filtrar las audiencias en función de diversos ajustes.
 
-Para filtrar las audiencias disponibles, seleccione el ![icono de filtro](../images/ui/audience-portal/filter-icon.png).
+Para filtrar las audiencias disponibles, seleccione el ![icono de filtro](/help/images/icons/filter.png).
 
 ![Se muestra la página examinar audiencias, con el icono de filtro resaltado.](../images/ui/audience-portal/browse-select-filter.png)
 

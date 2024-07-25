@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 10%
@@ -178,7 +178,7 @@ La página de detalles también muestra una lista de identidades que fallaron y 
 >title="Activation"
 >abstract="La vista de activación de destino contiene información sobre el estado de activación de un público y las métricas obtenidas del perfil del cliente en tiempo real para generar identidades únicas."
 
-Para acceder al panel [!UICONTROL Supervisión], seleccione **[!UICONTROL Supervisión]** (![icono de supervisión](../assets/ui/monitor-destinations/monitoring-icon.png)) en el panel de navegación izquierdo. Una vez en la página [!UICONTROL Supervisión], seleccione [!UICONTROL Destinos]. El panel [!UICONTROL Supervisión] contiene métricas e información sobre los trabajos de ejecución de destino.
+Para acceder al panel [!UICONTROL Supervisión], seleccione **[!UICONTROL Supervisión]** (![icono de supervisión](/help/images/icons/monitoring.png)) en el panel de navegación izquierdo. Una vez en la página [!UICONTROL Supervisión], seleccione [!UICONTROL Destinos]. El panel [!UICONTROL Supervisión] contiene métricas e información sobre los trabajos de ejecución de destino.
 
 Use el panel [!UICONTROL Destinos] para tener una idea general del estado de los flujos de activación. Comience por obtener perspectivas en un nivel agregado para todos los destinos de lote y flujo continuo y, a continuación, explore las vistas detalladas de flujos de datos, ejecuciones de flujos de datos y audiencias activadas para obtener una vista detallada de los datos de activación. Las pantallas del tablero [!UICONTROL Supervisión] proporcionan información procesable a través de métricas y descripciones de error para ayudarle a solucionar cualquier problema que pueda surgir en sus escenarios de activación.
 
@@ -199,7 +199,7 @@ De forma predeterminada, los datos mostrados contienen la información de activa
 
 ![Cambiar el control de intervalo de fecha retrospectiva resaltado para los destinos activados](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Utilice el icono de flecha (![icono de flecha](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) para expandir o descartar las tarjetas en la parte superior de la pantalla, que muestran información rápida sobre los detalles de activación, según el tipo de destino: flujo continuo o lote:
+Utilice el icono de flecha (![icono de flecha](/help/images/icons/chevron-up.png)) para expandir o descartar las tarjetas en la parte superior de la pantalla, que muestran información rápida sobre los detalles de activación, según el tipo de destino: flujo continuo o lote:
 
 - **[!UICONTROL Tasa de activación de transmisión]**: Representa el porcentaje de identidades recibidas que se activaron u omitieron correctamente. La fórmula utilizada para calcular este porcentaje se describe más arriba en esta página, en la sección [Flujo de datos se ejecuta para destinos de flujo continuo](#dataflow-runs-for-streaming-destinations).
 - **[!UICONTROL Ejecuciones de flujo de datos con errores en lote]**: Representa el número de ejecuciones de flujo de datos con errores en el intervalo de tiempo seleccionado.
@@ -226,13 +226,13 @@ También puede filtrar la lista de destinos para mostrar solo la categoría de d
 
 ![Filtrar destinos usando el selector desplegable](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Además, puede introducir un destino en la barra de búsqueda para aislar a un solo destino. Si desea ver los flujos de datos del destino, puede seleccionar el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) que está junto a él para ver una lista de sus flujos de datos activos.
+Además, puede introducir un destino en la barra de búsqueda para aislar a un solo destino. Si desea ver los flujos de datos del destino, puede seleccionar el filtro ![filter](/help/images/icons/filter-add.png) que está junto a él para ver una lista de sus flujos de datos activos.
 
 ![Filtrar destinos usando la barra de búsqueda resaltada en la vista de supervisión.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Si desea ver todos los flujos de datos existentes en todos los destinos, seleccione **[!UICONTROL Flujos de datos]**.
 
-Aparecerá una lista de flujos de datos, ordenados por la última ejecución del flujo de datos. Puede ver detalles adicionales de un flujo de datos específico localizando el destino que desea monitorizar, seleccionando el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) al lado y, a continuación, seleccionando el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) al lado del flujo de datos del que desea obtener más información.
+Aparecerá una lista de flujos de datos, ordenados por la última ejecución del flujo de datos. Puede ver detalles adicionales de un flujo de datos específico localizando el destino que desea monitorizar, seleccionando el filtro ![filter](/help/images/icons/filter-add.png) al lado y, a continuación, seleccionando el filtro ![filter](/help/images/icons/filter-add.png) al lado del flujo de datos del que desea obtener más información.
 
 ![Todos los flujos de datos resaltados en el panel de supervisión.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ Por ejemplo, está activando una audiencia denominada &quot;Miembros socio en Ca
 ![Audiencias resaltadas en el panel de flujo de datos.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 En la vista a nivel de audiencia, las métricas se agregan en varias ejecuciones de flujo de datos dentro del intervalo de tiempo seleccionado. Si hay varias ejecuciones de flujo de datos, puede explorar en profundidad el nivel de audiencia para ver el desglose de cada ejecución de flujo de datos, filtrado por la audiencia seleccionada.
-Utilice el botón de filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) para explorar en profundidad la vista de ejecuciones de flujo de datos para cada audiencia en el flujo de datos.
+Utilice el botón de filtro ![filter](/help/images/icons/filter-add.png) para explorar en profundidad la vista de ejecuciones de flujo de datos para cada audiencia en el flujo de datos.
 
 ### Página de ejecuciones de flujo de datos {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Cuando explora la página de ejecuciones de flujo de datos desde la [vista de ni
 
 ![Botones de radio que muestran cómo filtrar las ejecuciones de flujo de datos para las audiencias.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Para ver más detalles sobre una ejecución de flujo de datos específica, seleccione el filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) junto al tiempo de inicio de la ejecución de flujo de datos para ver la página de detalles de la ejecución de flujo de datos.
+Para ver más detalles sobre una ejecución de flujo de datos específica, seleccione el filtro ![filter](/help/images/icons/filter-add.png) junto al tiempo de inicio de la ejecución de flujo de datos para ver la página de detalles de la ejecución de flujo de datos.
 
 ![Flujo de datos ejecuta el filtro en el panel de supervisión para obtener más información para una determinada ejecución de flujo de datos.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

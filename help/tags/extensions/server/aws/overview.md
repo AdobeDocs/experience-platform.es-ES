@@ -3,7 +3,7 @@ title: Información general sobre la extensión AWS
 description: Obtenga información acerca de la extensión de AWS para reenvío de eventos en Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 4%
@@ -66,7 +66,7 @@ El panel derecho se actualiza para mostrar las opciones de configuración de có
 
 | Entrada | Descripción |
 | --- | --- |
-| [!UICONTROL Carga] | Este campo contiene los datos que se reenviarán al flujo de datos [!DNL Kinesis], en formato JSON.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionarlo de una lista de elementos de datos existentes para representar la carga útil.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
+| [!UICONTROL Carga] | Este campo contiene los datos que se reenviarán al flujo de datos [!DNL Kinesis], en formato JSON.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](/help/images/icons/database.png)) para seleccionarlo de una lista de elementos de datos existentes para representar la carga útil.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
 
 {style="table-layout:auto"}
 

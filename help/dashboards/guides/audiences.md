@@ -4,7 +4,7 @@ title: Tablero de audiencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de las audiencias que ha creado su organización.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Seleccione **[!UICONTROL Ver más]** para abrir un cuadro de diálogo de pantall
 
 ![Widget del informe de superposición de audiencia con Ver más resaltado .](../images/audiences/audience-overlap-report.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audiencias]. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Seleccione el icono de configuración (![El icono de configuración.](../images/audiences/settings-icon.png)) para quitar o agregar columnas de la tabla.
+Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audiencias]. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Seleccione el icono de configuración (![El icono de configuración.](/help/images/icons/settings.png)) para quitar o agregar columnas de la tabla.
 
 ![Cuadro de diálogo del informe de superposición de audiencias.](../images/audiences/audience-overlap-report-dialog.png)
 

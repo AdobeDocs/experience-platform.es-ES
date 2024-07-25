@@ -4,7 +4,7 @@ title: Explorar, comprobar y procesar conjuntos de datos del panel mediante el s
 type: Documentation
 description: Aprenda a utilizar el servicio de consultas para explorar y procesar conjuntos de datos sin procesar y activar paneles de perfil, audiencia y destino en Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Puede usar [!DNL Query Service] para consultar conjuntos de datos sin procesar d
 >
 >Los conjuntos de datos generados por el sistema están ocultos de forma predeterminada. De manera predeterminada, la pestaña [!UICONTROL Examinar] solo muestra los conjuntos de datos en los que ha ingerido datos.
 
-Para ver los conjuntos de datos generados por el sistema, seleccione el icono de filtro (![Un icono de filtro.](./images/query/filter.png)) ubicado a la izquierda de la barra de búsqueda.
+Para ver los conjuntos de datos generados por el sistema, seleccione el icono de filtro (![Un icono de filtro.](/help/images/icons/filter.png)) ubicado a la izquierda de la barra de búsqueda.
 
 ![Ficha Examinar conjuntos de datos con el icono de filtro resaltado.](./images/query/filter-datasets.png)
 

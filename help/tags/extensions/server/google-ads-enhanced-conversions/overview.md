@@ -3,7 +3,7 @@ title: Extensión de conversiones mejoradas de Google Ads
 description: Obtenga información acerca de la extensión de conversiones mejoradas de Google Ads para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Busque la extensión [!UICONTROL Conversiones mejoradas de Google Ads] en el cat
 Para configurar la extensión, debe rellenar los dos campos obligatorios:
 
 1. **[!UICONTROL ID de cliente]**: El ID que identifica de forma exclusiva su cuenta de [!DNL Google Ads]. Para encontrar este valor, inicie sesión en [!DNL Google Ads] y navegue hasta **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Elemento de datos de token de acceso]**: seleccione el icono de elemento de datos (![icono de elemento de datos](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) y elija el elemento de datos secreto de OAuth 2 de Google que [configuró en el paso anterior](#create-secret-data-element) del menú.
+2. **[!UICONTROL Elemento de datos de token de acceso]**: seleccione el icono de elemento de datos (![icono de elemento de datos](/help/images/icons/database.png)) y elija el elemento de datos secreto de OAuth 2 de Google que [configuró en el paso anterior](#create-secret-data-element) del menú.
 
 Cuando termine, seleccione **[!UICONTROL Guardar]** para instalar la extensión.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar audiencias en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Debajo del resumen de la infracción se muestra un gráfico de linaje de datos, 
 
 ![Cuadro de diálogo de infracción de directiva con el gráfico de linaje de datos resaltado.](../images/enforcement/data-lineage.png)
 
-También puede usar el icono **[!UICONTROL Filter]** (![Un icono de filtro.](../images/enforcement/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
+También puede usar el icono **[!UICONTROL Filter]** (![Un icono de filtro.](/help/images/icons/filter.png)) para filtrar las entidades mostradas por categoría. Se deben seleccionar al menos dos categorías para que se muestren los datos.
 
 ![Cuadro de diálogo de infracción de directiva con el filtro de linaje de datos y el menú desplegable resaltados.](../images/enforcement/lineage-filter.png)
 

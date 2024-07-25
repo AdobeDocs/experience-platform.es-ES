@@ -3,7 +3,7 @@ title: Extensión de reenvío de eventos de API de conversiones de LinkedIn
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform le permite medir el rendimiento de su campaña de marketing de LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 2%
@@ -52,7 +52,7 @@ Después de la selección, aparecen controles adicionales para configurar aún m
 | --- | --- |
 | [!UICONTROL Correo electrónico] | Dirección de correo electrónico del contacto asociado con el evento de conversión. El código de extensión SHA256 codificará el valor de correo electrónico a menos que el valor proporcionado ya sea una cadena SHA256. |
 | [!UICONTROL UUID de seguimiento de anuncios de origen de LinkedIn] | Este es un ID de cookie de origen. Los anunciantes deben habilitar el seguimiento de conversión mejorado desde [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) para activar las cookies de origen que adjuntan un parámetro de ID de clic `li_fat_id` a las direcciones URL de clic. |
-| [!UICONTROL Datos de información del cliente] | Este campo contiene un objeto JSON con atributos adicionales que se envían junto con el mensaje.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. Los valores de clave aceptados son: `firstName`, `lastName`, `companyName`, `title` y `country`. |
+| [!UICONTROL Datos de información del cliente] | Este campo contiene un objeto JSON con atributos adicionales que se envían junto con el mensaje.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](/help/images/icons/database.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. Los valores de clave aceptados son: `firstName`, `lastName`, `companyName`, `title` y `country`. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Guía de Attribution AI UI
 description: Este documento sirve como guía para interactuar con Attribution AI en la interfaz de usuario de servicios inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Después de seleccionar los conjuntos de datos que desea utilizar, seleccione el
 
 ![Seleccionar conjuntos de datos](./images/user-guide/select-datasets.png)
 
-Si selecciona el icono de información ![icono de información](./images/user-guide/info-icon.png) junto a un conjunto de datos, se abrirá la ventana emergente de vista previa del conjunto de datos.
+Si selecciona el icono de información ![icono de información](/help/images/icons/info.png) junto a un conjunto de datos, se abrirá la ventana emergente de vista previa del conjunto de datos.
 
 ![Seleccionar y buscar conjunto de datos](./images/user-guide/dataset-preview.png)
 

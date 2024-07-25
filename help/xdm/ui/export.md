@@ -4,7 +4,7 @@ title: Exportación de esquemas XDM en la IU
 description: Obtenga información sobre cómo exportar un esquema existente a una zona protegida u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ Para generar una carga útil de exportación, seleccione **[!UICONTROL Esquemas]
 >
 >Consulte la guía [Exploración de recursos XDM](./explore.md) para obtener más información sobre cómo encontrar el recurso XDM que está buscando.
 
-A continuación, seleccione el icono **[!UICONTROL Copiar JSON]** (![Copiar icono](../images/ui/export/icon.png)) de las opciones disponibles.
+A continuación, seleccione el icono **[!UICONTROL Copiar JSON]** (![Copiar icono](/help/images/icons/copy.png)) de las opciones disponibles.
 
 ![Se resaltó el área de trabajo de esquemas con una fila de esquema y [!UICONTROL Copiar a JSON].](../images/ui/export/copy-json.png)
 

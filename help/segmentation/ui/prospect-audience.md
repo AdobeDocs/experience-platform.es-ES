@@ -3,7 +3,7 @@ title: Audiencias potenciales
 description: Aprenda a crear y utilizar audiencias de clientes potenciales para dirigirse a clientes desconocidos mediante información de terceros.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Se muestra la página Examinar. Se mostrará una lista de todas las audiencias d
 
 Esta vista muestra información sobre la audiencia, incluido el nombre, el recuento de perfiles, el origen, el estado del ciclo vital, la fecha de creación, la última fecha de actualización y el desglose.
 
-Puede agregar campos adicionales a esta pantalla seleccionando ![el icono de atributo de filtro](../images/ui/prospect-audience/filter-attribute.png). Estos campos adicionales incluyen la frecuencia de actualización y la última actualización de.
+Puede agregar campos adicionales a esta pantalla seleccionando ![el icono de atributo de filtro](/help/images/icons/column-settings.png). Estos campos adicionales incluyen la frecuencia de actualización y la última actualización de.
 
 Encontrará más información sobre la página de exploración, incluidos detalles sobre los campos enumerados, en la [descripción general de Audience Portal](./audience-portal.md#list).
 

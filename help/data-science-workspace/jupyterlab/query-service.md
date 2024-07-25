@@ -5,7 +5,7 @@ title: Servicio de consultas en Jupyter Notebook
 type: Tutorial
 description: Adobe Experience Platform le permite utilizar el Lenguaje de consulta estructurado (SQL) en Data Science Workspace integrando el Servicio de consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de ejemplo para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
 
 Introduzca las siguientes consultas SQL en celdas individuales del bloc de notas. Ejecute una consulta seleccionando en su celda y después el botón **[!UICONTROL reproducir]**. Los resultados de la consulta o los registros de errores correctos se muestran debajo de la celda ejecutada.
 
-Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y [!DNL Query Service] puede romperse. En estos casos, reinicie [!DNL JupyterLab] seleccionando el botón **Reiniciar** ![botón de reinicio](../images/jupyterlab/user-guide/restart_button.png) situado en la esquina superior derecha junto al botón de encendido.
+Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y [!DNL Query Service] puede romperse. En estos casos, reinicie [!DNL JupyterLab] seleccionando el botón **Reiniciar** ![botón de reinicio](/help/images/icons/restart.png) situado en la esquina superior derecha junto al botón de encendido.
 
 El núcleo del bloc de notas se restablece, pero las celdas permanecen, vuelva a ejecutar todas las celdas para continuar donde lo dejó.
 

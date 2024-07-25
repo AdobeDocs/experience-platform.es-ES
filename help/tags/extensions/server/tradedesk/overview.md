@@ -4,7 +4,7 @@ description: Obtenga información acerca de la extensión de la API de Conversio
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
@@ -90,7 +90,7 @@ Consulte la documentación para desarrolladores de [!DNL The Trade Desk] para ob
 
 **[!UICONTROL Parámetros de solicitud de objeto]**
 
-Objeto JSON que contiene más información. Tiene la opción de utilizar un conjunto reducido de entradas clave-valor o de proporcionar JSON sin procesar. Además, puede recuperar datos dinámicos de un elemento de datos seleccionando los discos (![Icono de disco](../../../images/extensions/server/tradedesk/disk-icon.png)) a la derecha.
+Objeto JSON que contiene más información. Tiene la opción de utilizar un conjunto reducido de entradas clave-valor o de proporcionar JSON sin procesar. Además, puede recuperar datos dinámicos de un elemento de datos seleccionando los discos (![Icono de disco](/help/images/icons/database.png)) a la derecha.
 
 
 ![La sección [!DNL Object Request Parameters] muestra los campos disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

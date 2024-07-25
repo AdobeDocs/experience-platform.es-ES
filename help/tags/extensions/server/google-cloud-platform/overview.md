@@ -3,7 +3,7 @@ title: Extensión de reenvío de eventos de Google Cloud Platform
 description: Esta extensión de reenvío de eventos de Adobe Experience Platform envía eventos de Edge Network a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 2%
@@ -47,8 +47,8 @@ Una vez instalada la extensión, cree una nueva regla de reenvío de eventos [ru
 | Entrada | Descripción |
 | --- | --- |
 | [!UICONTROL Tema] | Tema que recibirá los eventos del reenvío de eventos. El valor debe tener el formato `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Datos] | Este campo contiene los datos que se van a reenviar al tema [!DNL Cloud Pub/Sub] en formato JSON.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
-| [!UICONTROL Atributos] | Este campo contiene el objeto JSON con atributos adicionales que se envían junto con el mensaje.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](../../../images/extensions/server/aws/data-element-icon.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
+| [!UICONTROL Datos] | Este campo contiene los datos que se van a reenviar al tema [!DNL Cloud Pub/Sub] en formato JSON.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](/help/images/icons/database.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
+| [!UICONTROL Atributos] | Este campo contiene el objeto JSON con atributos adicionales que se envían junto con el mensaje.<br><br>En la opción **[!UICONTROL Sin procesar]**, puede pegar el objeto JSON directamente en el campo de texto proporcionado o puede seleccionar el icono del elemento de datos (![Icono del conjunto de datos](/help/images/icons/database.png)) para seleccionarlo de una lista de elementos de datos existentes para representar los datos.<br><br>También puede usar la opción **[!UICONTROL Editor de pares clave-valor de JSON]** para agregar manualmente cada par clave-valor a través de un editor de interfaz de usuario. Cada valor se puede representar mediante una entrada sin procesar o se puede seleccionar un elemento de datos en su lugar. |
 
 {style="table-layout:auto"}
 

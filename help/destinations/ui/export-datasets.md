@@ -3,7 +3,7 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 4%
@@ -205,21 +205,21 @@ Para eliminar conjuntos de datos de un flujo de datos existente, siga los pasos 
 
    >[!TIP]
    > 
-   >Seleccione el icono de filtro ![Filter-icon](../assets/ui/edit-activation/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+   >Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
-1. En la columna **[!UICONTROL Datos de activación]**, seleccione el control de conjuntos de datos para ver todos los conjuntos de datos asignados a este flujo de datos de exportación.
+2. En la columna **[!UICONTROL Datos de activación]**, seleccione el control de conjuntos de datos para ver todos los conjuntos de datos asignados a este flujo de datos de exportación.
 
    ![La opción de navegación de conjuntos de datos disponible resaltada en la columna de datos de activación.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta] Aparecerá la página **[!UICONTROL Datos de activación]** para el destino. Utilice las casillas de verificación del lado izquierdo de la lista de conjuntos de datos para seleccionar los conjuntos de datos que desea eliminar y, a continuación, seleccione **[!UICONTROL Eliminar conjuntos de datos]** en el carril derecho para almacenar en déclencheur el cuadro de diálogo de confirmación Eliminar conjunto de datos.
+3. [!BADGE Beta] Aparecerá la página **[!UICONTROL Datos de activación]** para el destino. Utilice las casillas de verificación del lado izquierdo de la lista de conjuntos de datos para seleccionar los conjuntos de datos que desea eliminar y, a continuación, seleccione **[!UICONTROL Eliminar conjuntos de datos]** en el carril derecho para almacenar en déclencheur el cuadro de diálogo de confirmación Eliminar conjunto de datos.
 
    >[!NOTE]
    >
-   >Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
+Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
 
    ![Cuadro de diálogo Quitar conjunto de datos que muestra el control Quitar conjunto de datos en el carril derecho.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-1. En el cuadro de diálogo de confirmación, seleccione **[!UICONTROL Quitar]** para eliminar inmediatamente el conjunto de datos de las exportaciones al destino.
+4. En el cuadro de diálogo de confirmación, seleccione **[!UICONTROL Quitar]** para eliminar inmediatamente el conjunto de datos de las exportaciones al destino.
 
    ![Cuadro de diálogo que muestra la opción Confirmar eliminación del conjunto de datos del flujo de datos.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 

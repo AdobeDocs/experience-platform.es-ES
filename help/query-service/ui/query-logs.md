@@ -2,7 +2,7 @@
 title: Registros de consultas
 description: Los registros de consultas se generan automáticamente cada vez que se ejecuta una consulta y están disponibles a través de la interfaz de usuario para ayudar a solucionar problemas. Este documento describe cómo utilizar y navegar por la sección Registros del servicio de consulta de la interfaz de usuario.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Para comprobar los registros de consultas, seleccione [!UICONTROL Consultas] par
 
 ## Personalizar y buscar {#customize-and-search}
 
-Los registros del servicio de consultas se presentan en un formato de tabla personalizable. Para personalizar las columnas de la tabla, seleccione el icono de configuración (![A icono de configuración.](../images/ui/query-log/settings-icon.png)) a la derecha de la pantalla. Aparece un cuadro de diálogo [!UICONTROL Personalizar tabla] en el que se puede anular la selección de cada columna.
+Los registros del servicio de consultas se presentan en un formato de tabla personalizable. Para personalizar las columnas de la tabla, seleccione el icono de configuración (![A icono de configuración.](/help/images/icons/column-settings.png)) a la derecha de la pantalla. Aparece un cuadro de diálogo [!UICONTROL Personalizar tabla] en el que se puede anular la selección de cada columna.
 
 También puede buscar registros relacionados con plantillas de consulta específicas escribiendo el nombre de la plantilla en el campo de búsqueda.
 
@@ -67,13 +67,13 @@ También puede seleccionar un nombre de plantilla de consulta de la columna [!UI
 
 ## Editar registros {#edit-logs}
 
-Junto al nombre de plantilla o al fragmento SQL de cada fila hay un icono de lápiz (![Un icono de lápiz.](../images/ui/query-log/edit-icon.png)) que puede utilizar para desplazarse hasta el Editor de consultas. A continuación, la consulta se rellena previamente en el editor para su edición.
+Junto al nombre de plantilla o al fragmento SQL de cada fila hay un icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)) que puede utilizar para desplazarse hasta el Editor de consultas. A continuación, la consulta se rellena previamente en el editor para su edición.
 
 ![Área de trabajo del registro de consultas con un icono de lápiz resaltado.](../images/ui/query-log/edit-query.png)
 
 ## Filtrar registros {#filter-logs}
 
-Puede filtrar la lista de registros de consultas en función de diferentes configuraciones. Seleccione el icono de filtro (![El icono de filtro.](../images/ui/query-log/filter-icon.png)) en la parte superior izquierda del espacio de trabajo para abrir un conjunto de opciones de filtro en el carril izquierdo.
+Puede filtrar la lista de registros de consultas en función de diferentes configuraciones. Seleccione el icono de filtro (![El icono de filtro.](/help/images/icons/filter.png)) en la parte superior izquierda del espacio de trabajo para abrir un conjunto de opciones de filtro en el carril izquierdo.
 
 ![Área de trabajo del registro de consultas con el icono de filtro resaltado.](../images/ui/query-log/log-filter.png)
 

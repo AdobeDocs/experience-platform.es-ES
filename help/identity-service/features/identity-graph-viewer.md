@@ -2,7 +2,7 @@
 title: Visor de gráficos de identidad
 description: Un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Para ver un gráfico de identidad, proporcione un área de nombres de identidad 
 
 >[!TIP]
 >
->Seleccione el icono de tabla ![icono de tabla](../images/identity-graph-viewer/table-icon.png) para ver un panel con una lista de todas las áreas de nombres de identidad disponibles en su organización. Puede utilizar cualquiera de las áreas de nombres de identidad siempre que tenga un valor de identidad válido conectado a ellas. Para obtener más información, lea la [guía del área de nombres de identidad](./namespaces.md).
+>Seleccione el icono de tabla ![icono de tabla](/help/images/icons/table.png) para ver un panel con una lista de todas las áreas de nombres de identidad disponibles en su organización. Puede utilizar cualquiera de las áreas de nombres de identidad siempre que tenga un valor de identidad válido conectado a ellas. Para obtener más información, lea la [guía del área de nombres de identidad](./namespaces.md).
 
 ![Un área de nombres de identidad y su valor correspondiente, proporcionados en la pantalla de búsqueda del gráfico de identidad.](../images/graph-viewer/namespace-and-value.png)
 

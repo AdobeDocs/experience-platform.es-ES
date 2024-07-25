@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de IU de Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,17 +75,17 @@ Al seleccionar el conmutador, se abre un menú desplegable de organizaciones a l
 
 ### Cambiar aplicaciones
 
-El siguiente elemento a la derecha de la navegación superior es el **conmutador de aplicaciones**, representado por el icono ![conmutador de aplicaciones](./images/user-guide/app-switcher-icon.png). Al seleccionar este icono, puede cambiar entre las aplicaciones de Adobe a las que su organización tiene acceso, como Experience Platform, Analytics, Assets y otras.
+El siguiente elemento a la derecha de la navegación superior es el **conmutador de aplicaciones**, representado por el icono ![conmutador de aplicaciones](/help/images/icons/apps.png). Al seleccionar este icono, puede cambiar entre las aplicaciones de Adobe a las que su organización tiene acceso, como Experience Platform, Analytics, Assets y otras.
 
 ### Ayuda
 
-A la derecha del conmutador de aplicaciones se encuentra el **menú de ayuda y soporte técnico**, que se representa mediante el icono de ![signo de interrogación/ayuda](./images/user-guide/help-icon.png). Al seleccionar este icono, aparece un menú emergente con varios recursos de ayuda y asistencia. La ficha **[!UICONTROL Ayuda]** muestra una lista de la documentación relevante para la página en la que se encuentra actualmente. La ficha **[!UICONTROL Asistencia]** le permite crear un vale de soporte con el equipo de soporte de Adobe. La pestaña **[!UICONTROL Comentarios]** le permite enviar comentarios sobre Platform al Adobe.
+A la derecha del conmutador de aplicaciones se encuentra el **menú de ayuda y soporte técnico**, que se representa mediante el icono de ![signo de interrogación/ayuda](/help/images/icons/help.png). Al seleccionar este icono, aparece un menú emergente con varios recursos de ayuda y asistencia. La ficha **[!UICONTROL Ayuda]** muestra una lista de la documentación relevante para la página en la que se encuentra actualmente. La ficha **[!UICONTROL Asistencia]** le permite crear un vale de soporte con el equipo de soporte de Adobe. La pestaña **[!UICONTROL Comentarios]** le permite enviar comentarios sobre Platform al Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notificaciones y anuncios
 
-En la sección **notificaciones**, que está representada por el icono ![campana/notificaciones y anuncios](images/user-guide/notification-icon.png). La ficha **[!UICONTROL Notificaciones]** muestra información importante sobre el producto y otras actualizaciones relevantes, mientras que la ficha **[!UICONTROL Anuncios]** muestra información sobre el mantenimiento del servicio.
+En la sección **notificaciones**, que está representada por el icono ![campana/notificaciones y anuncios](/help/images/icons/bell.png). La ficha **[!UICONTROL Notificaciones]** muestra información importante sobre el producto y otras actualizaciones relevantes, mientras que la ficha **[!UICONTROL Anuncios]** muestra información sobre el mantenimiento del servicio.
 
 ### Perfil de usuario
 

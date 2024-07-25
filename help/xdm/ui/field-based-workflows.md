@@ -2,7 +2,7 @@
 title: Flujos de trabajo basados en campos en el Editor de esquemas
 description: Aprenda a añadir individualmente campos de grupos de campos existentes a los esquemas XDM (Experience Data Model).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ En **[!UICONTROL Nombre de campo]**, empiece a escribir el nombre del campo que 
 
 Aunque algunos campos estándar comparten el mismo nombre, su estructura puede variar según el grupo de campos del que procedan. Si un campo estándar está anidado en un objeto principal en la estructura de grupo de campos, el campo principal también se incluye en el esquema si se agrega el campo secundario.
 
-Seleccione el icono de vista previa (![Icono de vista previa](../images/ui/field-based-workflows/preview-icon.png)) junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para agregar el campo estándar al esquema, seleccione el icono más (![Icono más](../images/ui/field-based-workflows/add-icon.png)).
+Seleccione el icono de vista previa (![Icono de vista previa](/help/images/icons/preview.png)) junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para agregar el campo estándar al esquema, seleccione el icono más (![Icono más](/help/images/icons/add-circle.png)).
 
 ![El icono de agregar resaltado en un elemento de los campos estándar sugeridos.](../images/ui/field-based-workflows/add-standard-field.png)
 

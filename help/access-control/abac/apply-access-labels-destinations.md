@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Con el control de acceso de nivel de objeto para destinos, limite equipos espec�
 Para aplicar etiquetas de acceso a un flujo de datos específico:
 
 1. Vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Examinar]** y busque el flujo de datos de destino al que desea limitar el acceso de los usuarios.
-1. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar detalles](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Aplicar etiquetas de acceso]** para agregar nuevas etiquetas y administrar las etiquetas existentes para el flujo de datos.
+1. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Nombre] y use el control ![Editar detalles](/help/images/icons/key.png) **[!UICONTROL Aplicar etiquetas de acceso]** para agregar nuevas etiquetas y administrar las etiquetas existentes para el flujo de datos.
    ![Seleccione Aplicar etiquetas de acceso en la vista Examinar del área de trabajo de destinos.](/help/access-control/images/olac/apply-access-labels.png)
 1. Seleccione las etiquetas que desee agregar al flujo de datos de destino y seleccione **[!UICONTROL Guardar]**.
    ![Seleccione las etiquetas de acceso en que deben aplicarse al flujo de datos de destino.](/help/access-control/images/olac/view-access-labels.png)

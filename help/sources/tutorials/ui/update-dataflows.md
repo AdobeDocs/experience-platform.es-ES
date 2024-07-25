@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Actualización de un flujo de datos de conexión de Source en la IU
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 9%
@@ -36,7 +36,7 @@ En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el
 
 La página [!UICONTROL Flujos de datos] contiene una lista de todos los flujos de datos existentes, incluida la información sobre su conjunto de datos de destino, origen y nombre de cuenta correspondientes.
 
-Para ordenar en la lista, seleccione el icono de filtro ![filter](../../images/tutorials/update/filter.png) en la parte superior izquierda para usar el panel de ordenación.
+Para ordenar en la lista, seleccione el icono de filtro ![filter](/help/images/icons/filter.png) en la parte superior izquierda para usar el panel de ordenación.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

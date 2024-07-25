@@ -2,7 +2,7 @@
 title: Examinar órdenes de trabajo del ciclo vital de datos
 description: Obtenga información sobre cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 27%
@@ -31,7 +31,7 @@ La lista sólo muestra las órdenes de trabajo de una categoría cada vez. Selec
 
 ![Imagen que muestra la ficha [!UICONTROL Conjunto de datos]](../images/ui/browse/dataset-tab.png)
 
-Seleccione el icono de canal (![Imagen del icono de canal](../images/ui/browse/funnel-icon.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
+Seleccione el icono de canal (![Imagen del icono de canal](/help/images/icons/filter.png)) para ver una lista de filtros para las órdenes de trabajo mostradas.
 
 ![Imagen de los filtros de orden de trabajo mostrados](../images/ui/browse/filters.png)
 

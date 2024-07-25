@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El editor de consultas es una herramienta interactiva proporcionada por Adobe Experience Platform Query Service, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Un icono de configuración sobre el campo de entrada del Editor de consultas inc
 >
 >Puede [!UICONTROL Deshabilitar sintaxis para autocompletar] al crear una consulta sin perder el progreso.
 
-Para habilitar los temas oscuros o claros, seleccione el icono de configuración (![Un icono de configuración.](../images/ui/query-editor/settings-icon.png)) seguido de la opción en el menú desplegable que aparece.
+Para habilitar los temas oscuros o claros, seleccione el icono de configuración (![Un icono de configuración.](/help/images/icons/settings.png)) seguido de la opción en el menú desplegable que aparece.
 
 ![Se resaltó el Editor de consultas con el icono de configuración y la opción de menú desplegable Habilitar tema oscuro.](../images/ui/query-editor/query-editor-settings.png)
 

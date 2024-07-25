@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Seleccione la casilla de verificación situada junto al nombre del grupo de camp
 
 >[!TIP]
 >
->Para cualquier grupo de campos enumerado, puede situarse sobre el icono de información (![](../../images/ui/resources/schemas/info-icon.png)) o centrarse en él para ver una breve descripción del tipo de datos que captura el grupo de campos. También puede seleccionar el icono de vista previa (![](../../images/ui/resources/schemas/preview-icon.png)) para ver la estructura de los campos que proporciona el grupo de campos antes de decidir agregarlo al esquema.
+>Para cualquier grupo de campos enumerado, puede situarse sobre el icono de información (![icono de información](/help/images/icons/info.png)) o centrarse en él para ver una breve descripción del tipo de datos que captura el grupo de campos. También puede seleccionar el icono de vista previa (![icono de vista previa](/help/images/icons/preview.png)) para ver la estructura de los campos que proporciona el grupo de campos antes de decidir agregarlo al esquema.
 
 Una vez que haya elegido los grupos de campos, seleccione **[!UICONTROL Agregar grupos de campos]** para agregarlos al esquema.
 
@@ -129,7 +129,7 @@ Una vez que haya elegido los grupos de campos, seleccione **[!UICONTROL Agregar 
 
 >[!NOTE]
 >
->En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](../../images/ui/explore/padlock-icon.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
+>En el Editor de esquemas, las clases y los grupos de campos estándar (generados por el Adobe) se indican con el icono de candado (![Icono de candado.](/help/images/icons/lock-closed.png). El candado aparece en el carril izquierdo junto al nombre de la clase o del grupo de campos, así como junto a cualquier campo del diagrama de esquema que forme parte de un recurso generado por el sistema.
 >
 >![Editor de esquemas con el icono de candado resaltado](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ En **[!UICONTROL Nombre de campo]**, empiece a escribir el nombre del campo que 
 
 Aunque algunos campos estándar comparten el mismo nombre, su estructura puede variar según el grupo de campos del que procedan. Si un campo estándar está anidado en un objeto principal en la estructura de grupo de campos, el campo principal también se incluye en el esquema si se agrega el campo secundario.
 
-Seleccione el icono de vista previa (![Icono de vista previa](../../images/ui/resources/schemas/preview-icon.png)) junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para agregar el campo estándar al esquema, seleccione el icono más (![Icono más](../../images/ui/resources/schemas/add-icon.png)).
+Seleccione el icono de vista previa (![Icono de vista previa](/help/images/icons/preview.png)) junto a un campo estándar para ver la estructura de su grupo de campos y comprender mejor cómo se puede anidar. Para agregar el campo estándar al esquema, seleccione el icono más (![Icono más](/help/images/icons/add-circle.png)).
 
 ![Agregar campo estándar](../../images/ui/resources/schemas/add-standard-field.png)
 

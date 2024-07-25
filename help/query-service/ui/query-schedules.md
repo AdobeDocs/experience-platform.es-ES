@@ -2,7 +2,7 @@
 title: Horarios de consulta
 description: Obtenga información sobre cómo automatizar las ejecuciones de consultas programadas, eliminar o deshabilitar una programación de consultas y utilizar las opciones de programación disponibles a través de la interfaz de usuario de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Seleccione **[!UICONTROL Crear y anexar a nuevo conjunto de datos]** para crear 
 
 ![Se han resaltado las opciones del panel Detalles de programación con detalles del conjunto de datos y [!UICONTROL Crear y anexar al nuevo conjunto de datos].](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-También puede seleccionar **[!UICONTROL Anexar al conjunto de datos existente]** seguido del icono del conjunto de datos (![El icono del conjunto de datos.](../images/ui/query-schedules/dataset-icon.png)).
+También puede seleccionar **[!UICONTROL Anexar al conjunto de datos existente]** seguido del icono del conjunto de datos (![El icono del conjunto de datos.](/help/images/icons/database.png)).
 
 ![Se resaltó el panel Detalles de programación con los detalles del conjunto de datos y la opción Anexar al conjunto de datos existente.](../images/ui/query-schedules/dataset-details-existing.png)
 

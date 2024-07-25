@@ -2,7 +2,7 @@
 title: Caducidad automatizada de conjuntos de datos
 description: Obtenga información sobre cómo programar la caducidad de un conjunto de datos en la IU de Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 18%
@@ -55,11 +55,11 @@ Aparecerá el flujo de trabajo de creación de solicitudes. En la sección [!UIC
 
 ### Seleccionar una fecha y un conjunto de datos {#select-date-and-dataset}
 
-En la sección **[!UICONTROL Acción solicitada]**, seleccione una fecha en la que desee eliminar el conjunto de datos. Puede escribir la fecha manualmente (con el formato `mm/dd/yyyy`) o seleccionar el icono de calendario (![Un icono de calendario.](../images/ui/ttl/calendar-icon.png)) para seleccionar la fecha en un cuadro de diálogo.
+En la sección **[!UICONTROL Acción solicitada]**, seleccione una fecha en la que desee eliminar el conjunto de datos. Puede escribir la fecha manualmente (con el formato `mm/dd/yyyy`) o seleccionar el icono de calendario (![Un icono de calendario.](/help/images/icons/calendar.png)) para seleccionar la fecha en un cuadro de diálogo.
 
 ![Cuadro de diálogo de calendario con una fecha de caducidad seleccionada y resaltada para el conjunto de datos.](../images/ui/ttl/select-date.png)
 
-A continuación, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione el icono de la base de datos (![El icono de la base de datos.](../images/ui/ttl/database-icon.png)) para abrir un cuadro de diálogo de selección de conjunto de datos. Elija un conjunto de datos de la lista al que aplicar la caducidad y, a continuación, seleccione **[!UICONTROL Listo]**.
+A continuación, en **[!UICONTROL Detalles del conjunto de datos]**, seleccione el icono de la base de datos (![El icono de la base de datos.](/help/images/icons/database.png)) para abrir un cuadro de diálogo de selección de conjunto de datos. Elija un conjunto de datos de la lista al que aplicar la caducidad y, a continuación, seleccione **[!UICONTROL Listo]**.
 
 ![Cuadro de diálogo [!UICONTROL Seleccionar conjunto de datos] con un conjunto de datos seleccionado y [!UICONTROL Listo] resaltado.](../images/ui/ttl/select-dataset.png)
 

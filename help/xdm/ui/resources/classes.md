@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -74,7 +74,7 @@ Seleccione un botón de opción para filtrar las clases en función de si son cl
 
 ![Se ha resaltado el flujo de trabajo [!UICONTROL Crear esquema] con la barra de búsqueda, [!UICONTROL Personalizado] y [!UICONTROL Industrias].](../../images/ui/resources/classes/filter-and-search.png)
 
-Para ayudarle a decidir la clase adecuada, hay información (![Un icono de información.](../../images/ui/resources/classes/info.png)) y vista previa (![Un icono de vista previa.](../../images/ui/resources/classes/preview.png)) para cada clase. El icono de información abre un cuadro de diálogo que proporciona una descripción de la clase y del sector al que está asociada. El icono de vista previa abre un cuadro de diálogo de vista previa para la clase que contiene un diagrama de esquema y sus propiedades.
+Para ayudarle a decidir la clase adecuada, hay información (![Un icono de información.](/help/images/icons/info.png)) y vista previa (![Un icono de vista previa.](/help/images/icons/preview.png)) para cada clase. El icono de información abre un cuadro de diálogo que proporciona una descripción de la clase y del sector al que está asociada. El icono de vista previa abre un cuadro de diálogo de vista previa para la clase que contiene un diagrama de esquema y sus propiedades.
 
 ![Vista previa de la clase seleccionada con el diagrama de esquema y las propiedades de clase resaltadas.](../../images/ui/resources/classes/class-preview.png)
 

@@ -2,7 +2,7 @@
 title: Asignar un archivo CSV a un esquema XDM mediante Recommendations generado por IA
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante recomendaciones generadas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
@@ -90,7 +90,7 @@ Los campos CSV se asignan automáticamente a grupos de campos XDM existentes med
 
 ![Se está seleccionando el botón [!UICONTROL Editar] junto al árbol de esquema.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Aparece un cuadro de diálogo que le permite editar el nombre para mostrar, el tipo de datos y el grupo de campos de cualquier campo de la asignación. Seleccione el icono de edición (![Editar icono](../../images/tutorials/map-csv-recommendations/edit-icon.png)) junto a un campo de origen para editar sus detalles en la columna derecha antes de seleccionar **[!UICONTROL Aplicar]**.
+Aparece un cuadro de diálogo que le permite editar el nombre para mostrar, el tipo de datos y el grupo de campos de cualquier campo de la asignación. Seleccione el icono de edición (![Editar icono](/help/images/icons/edit.png)) junto a un campo de origen para editar sus detalles en la columna derecha antes de seleccionar **[!UICONTROL Aplicar]**.
 
 ![Se está cambiando el grupo de campos recomendado para un campo de origen.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

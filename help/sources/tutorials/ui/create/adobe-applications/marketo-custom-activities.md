@@ -2,7 +2,7 @@
 title: Crear una conexión y un flujo de datos de Marketo Engage Source para los datos de actividad personalizados en la IU de
 description: Este tutorial proporciona los pasos para crear una conexión de origen de Marketo Engage y un flujo de datos en la IU para llevar los datos de las actividades personalizadas a Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Desplácese por la estructura de datos de origen y busque el campo de actividad 
 
 ![La estructura de datos de origen.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Para agregar un campo de destino, seleccione el icono de esquema ![icono de esquema](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) y, a continuación, seleccione los campos de actividad personalizados del esquema de destino.
+Para agregar un campo de destino, seleccione el icono de esquema ![icono de esquema](/help/images/icons/schema.png) y, a continuación, seleccione los campos de actividad personalizados del esquema de destino.
 
 ![La estructura de esquema de destino.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 6%
@@ -141,7 +141,7 @@ Si se selecciona un valor de esta lista de enumeraciones, el valor se delineará
 
 ![Advertencia que se muestra si inserta un valor que no forma parte de la lista de enumeración.](../images/ui/segment-builder/enum-warning.png)
 
-Si está creando varios valores, puede añadirlos todos a la vez mediante la carga masiva. Seleccione el ![icono más](../images/ui/segment-builder/plus-icon.png) para mostrar la ventana emergente **[!UICONTROL Agregar valores de forma masiva]**.
+Si está creando varios valores, puede añadirlos todos a la vez mediante la carga masiva. Seleccione el ![icono más](/help/images/icons/add-circle.png) para mostrar la ventana emergente **[!UICONTROL Agregar valores de forma masiva]**.
 
 ![Se resalta el icono de signo más, que muestra el botón que puede seleccionar para acceder a la ventana emergente de carga masiva.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ A medida que vaya creando la definición del segmento, podrá obtener una vista 
 >
 >Encontrará más información sobre la generación de estimaciones para las definiciones de segmentos en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de definiciones de segmentos.
 
-También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionarlo mediante la lista desplegable. Si desea saber para qué tipos de evaluación se califica esta definición de segmento, puede seleccionar el icono de examinar ![icono de carpeta con una lupa](../images/ui/segment-builder/segment-evaluation-select-icon.png) para ver una lista de los métodos de evaluación de definición de segmento disponibles.
+También puede seleccionar el método de evaluación. Si sabe qué método de evaluación desea utilizar, puede seleccionarlo mediante la lista desplegable. Si desea saber para qué tipos de evaluación se califica esta definición de segmento, puede seleccionar el icono de examinar ![icono de carpeta con una lupa](/help/images/icons/folder-search.png) para ver una lista de los métodos de evaluación de definición de segmento disponibles.
 
 Aparece la ventana emergente [!UICONTROL Idoneidad del método de evaluación]. Esta ventana emergente muestra los métodos de evaluación disponibles, que son por lotes, flujo continuo y Edge. La ventana emergente muestra qué métodos de evaluación son elegibles e inelegibles. Según los parámetros que haya utilizado en la definición del segmento, es posible que no cumpla los requisitos para determinados métodos de evaluación. Para obtener más información sobre los requisitos de cada método de evaluación, lea la [segmentación por transmisión](./streaming-segmentation.md#query-types) o las descripciones generales de [segmentación por perímetros](./edge-segmentation.md#query-types).
 

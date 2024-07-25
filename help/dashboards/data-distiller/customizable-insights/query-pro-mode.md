@@ -2,7 +2,7 @@
 title: Modo Query Pro
 description: Aprenda a utilizar consultas SQL en la interfaz de usuario de Adobe Experience Platform para generar gráficos para sus paneles personalizados.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Para incluir [filtros globales](./filters/global-filter.md) o [filtros de fecha]
 >
 >Si desea utilizar un filtro global, debe colocar un parámetro de consulta en el SQL y luego vincular ese parámetro de consulta al filtro global en el compositor de widgets. En la captura de pantalla siguiente, `CONSENT_VALUE_FILTER` se usa en SQL como parámetro de consulta para un filtro global. Consulte la [documentación del filtro global](./filters/global-filter.md#enable-global-filter) para obtener más información sobre cómo hacerlo.
 
-Para ejecutar la consulta, seleccione el icono de ejecución (![Icono de ejecución.](../../images/customizable-insights/run-icon.png)). El Editor de consultas muestra la pestaña de resultados. A continuación, para confirmar la configuración y abrir el compositor de widgets, seleccione **[!UICONTROL Seleccionar]**.
+Para ejecutar la consulta, seleccione el icono de ejecución (![Icono de ejecución.](/help/images/icons/play.png)). El Editor de consultas muestra la pestaña de resultados. A continuación, para confirmar la configuración y abrir el compositor de widgets, seleccione **[!UICONTROL Seleccionar]**.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Para ejecutar la consulta, seleccione el icono de ejecución (![Icono de ejecuci
 
 ## Rellenar widget {#populate-widget}
 
-El compositor de widgets ahora se rellena con las columnas del SQL ejecutado. El tipo de panel se indica en la parte superior izquierda, en este caso es [!UICONTROL Entrada SQL Manual]. Seleccione el icono de lápiz (![Un icono de lápiz.](../../images/customizable-insights/edit-icon.png)) para editar el SQL en cualquier momento.
+El compositor de widgets ahora se rellena con las columnas del SQL ejecutado. El tipo de panel se indica en la parte superior izquierda, en este caso es [!UICONTROL Entrada SQL Manual]. Seleccione el icono de lápiz (![Un icono de lápiz.](/help/images/icons/edit.png)) para editar el SQL en cualquier momento.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Para crear su widget, utilice los atributos enumerados en la columna [!UICONTROL
 
 ### Añadir atributos {#add-attributes}
 
-Para agregar un atributo al widget, seleccione el icono más (![Un icono más.](../../images/customizable-insights/add-icon.png)) junto a un nombre de atributo. El menú desplegable que aparece permite agregar un atributo al gráfico desde las opciones determinadas por el SQL. Los distintos tipos de gráfico tienen diferentes opciones, como una lista desplegable de ejes X e Y.
+Para agregar un atributo al widget, seleccione el icono más (![Un icono más.](/help/images/icons/add-circle.png)) junto a un nombre de atributo. El menú desplegable que aparece permite agregar un atributo al gráfico desde las opciones determinadas por el SQL. Los distintos tipos de gráfico tienen diferentes opciones, como una lista desplegable de ejes X e Y.
 
 En este ejemplo de gráfico circular, las opciones son tamaño y color. El color desglosa los resultados del gráfico de anillo y el tamaño es la métrica real utilizada. Agregue un atributo al campo [!UICONTROL Color] para dividir los resultados en diferentes colores según su composición de ese atributo.
 
 >[!TIP]
 >
->Seleccione el icono de flecha arriba y abajo (![El icono de flecha arriba y abajo.](../../images/customizable-insights/switch-axis-icon.png)) para cambiar la disposición del eje X e Y en gráficos de barras o de líneas.
+>Seleccione el icono de flecha arriba y abajo (![El icono de flecha arriba y abajo.](/help/images/icons/switch.png)) para cambiar la disposición del eje X e Y en gráficos de barras o de líneas.
 
 ![El compositor de widgets con la lista desplegable de iconos de complemento y las flechas de cambio resaltadas.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Para cambiar el tipo de gráfico del widget, selecciona una de las opciones disp
 
 ## Propiedades del widget {#properties}
 
-Seleccione el icono de propiedades (![El icono de propiedades.](../../images/customizable-insights/properties-icon.png)) en el carril derecho para abrir el panel de propiedades. En el panel [!UICONTROL Propiedades], escriba un nombre para el widget en el campo de texto **[!UICONTROL Título del widget]**. También puede cambiar el nombre de varios aspectos del gráfico.
+Seleccione el icono de propiedades (![El icono de propiedades.](/help/images/icons/properties.png)) en el carril derecho para abrir el panel de propiedades. En el panel [!UICONTROL Propiedades], escriba un nombre para el widget en el campo de texto **[!UICONTROL Título del widget]**. También puede cambiar el nombre de varios aspectos del gráfico.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Seleccione **[!UICONTROL Editar]** para editar todo el tablero o cualquiera de s
 
 ![Panel personalizado con la opción Editar resaltada.](../../images/customizable-insights/edit-dashboard.png)
 
-Seleccione **[!UICONTROL Agregar filtro]** para crear un [[!UICONTROL Filtro de fecha]](#create-date-filter) o un [[!UICONTROL Filtro global]](#create-global-filter). Una vez creados, todos los filtros globales y de fecha están disponibles en [el icono de filtro](#select-global-filter) (![Un icono de filtro.](../../images/customizable-insights/filter.png)) de su tablero.
+Seleccione **[!UICONTROL Agregar filtro]** para crear un [[!UICONTROL Filtro de fecha]](#create-date-filter) o un [[!UICONTROL Filtro global]](#create-global-filter). Una vez creados, todos los filtros globales y de fecha están disponibles en [el icono de filtro](#select-global-filter) (![Un icono de filtro.](/help/images/icons/filter.png)) de su tablero.
 
 ![Panel personalizado con el menú desplegable Agregar filtro resaltado.](../../images/customizable-insights/add-filter.png)
 

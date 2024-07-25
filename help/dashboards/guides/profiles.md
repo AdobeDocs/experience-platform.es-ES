@@ -4,7 +4,7 @@ title: Panel de perfiles
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real de su organización.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 9%
@@ -470,7 +470,7 @@ Seleccione **[!UICONTROL Ver más]** para abrir un cuadro de diálogo de pantall
 
 ![Widget del informe de superposición de audiencia con Ver más resaltado .](../images/profiles/profiles-audience-overlap-report.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audiencias]. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Para quitar o agregar columnas de la tabla, seleccione el icono de configuración (![El icono de configuración.](../images/profiles/settings-icon.png)).
+Aparecerá el cuadro de diálogo [!UICONTROL Informe de superposición de audiencias]. Este cuadro de diálogo puede contener hasta 50 filas de análisis de superposición de audiencias divididas en seis columnas. Para quitar o agregar columnas de la tabla, seleccione el icono de configuración (![El icono de configuración.](/help/images/icons/settings.png)).
 
 ![Cuadro de diálogo del informe de superposición de audiencias.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
