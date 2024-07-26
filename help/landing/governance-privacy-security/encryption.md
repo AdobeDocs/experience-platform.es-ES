@@ -2,9 +2,9 @@
 title: Cifrado de datos en Adobe Experience Platform
 description: Descubra cómo se cifran los datos en tránsito y en reposo en Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,8 @@ Si desea comprobar el CN o SAN para realizar una validación adicional de tercer
 
 - [El certificado público de Adobe Journey Optimizer](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [El certificado público del servicio de destinos](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+También puede recuperar de forma segura certificados públicos realizando una solicitud de GET al extremo MTLS. Consulte la [documentación de extremo de certificado público](../../data-governance/mtls-api/public-certificate-endpoint.md) para obtener más información.
 
 ## Datos en reposo {#at-rest}
 

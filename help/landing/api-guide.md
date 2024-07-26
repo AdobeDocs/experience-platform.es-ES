@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Introducción a las API de Adobe Experience Platform
 description: Adobe Experience Platform proporciona servicios de API estrechamente vinculados entre sí. Esta guía contiene información sobre los servicios disponibles, los encabezados necesarios para las operaciones de CRUD, los mensajes de error, las colecciones de Postman y las llamadas de API de ejemplo.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ Para obtener más información sobre extremos específicos en las API de Platfor
 | [[!DNL Catalog Service] Guía de API](.././catalog/api/getting-started.md) | La API [!DNL Catalog Service] permite a los desarrolladores administrar los metadatos del conjunto de datos en Adobe Experience Platform. Esto incluye ubicaciones de datos, etapas de procesamiento, errores que se produjeron durante el procesamiento e informes de datos. |
 | [[!DNL Data Access] Guía de API](.././data-access/api.md) | La API [!DNL Data Access] permite a los desarrolladores recuperar información sobre conjuntos de datos ingeridos dentro de Experience Platform. Esto incluye el acceso y la descarga de archivos de conjuntos de datos, la recuperación de información de encabezado, la lista de lotes fallidos y exitosos y la descarga de archivos de previsualización CSV / Parquet. |
 | [[!DNL Dataset Service] Guía de API](.././data-governance/labels/dataset-api.md) | La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | La API [!DNL Data Hygiene] le permite corregir o eliminar mediante programación los datos personales almacenados de sus clientes en Adobe Experience Platform, así como programar fechas de caducidad para conjuntos de datos. |
 | [[!DNL Edge Network Server] Guía de API](../server-api/overview.md) | [!DNL Edge Network Server API] se puede usar para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. [!DNL Server API] se puede usar en servidores, [!DNL IoT] dispositivos, descodificadores y muchos otros dispositivos. |
 | [[!DNL Identity Service] Guía de API](.././identity-service/api/getting-started.md) | La API [!DNL Identity Service] permite a los desarrolladores administrar la identificación de sus clientes en varios dispositivos, canales cruzados y casi en tiempo real mediante gráficos de identidad en Adobe Experience Platform. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | La API [!DNL MTLS Service] le permite recuperar de forma segura los certificados públicos emitidos por el Adobe para su organización. |
 | [[!DNL Observability Insights] Guía de API](.././observability/api/overview.md) | [!DNL Observability Insights] es una API RESTful que permite a los desarrolladores exponer métricas clave de observabilidad en Adobe Experience Platform. Estas métricas proporcionan perspectivas sobre las estadísticas de uso de Platform, las comprobaciones de estado de los servicios de Platform, las tendencias históricas y los indicadores de rendimiento de varias funcionalidades de Platform. |
 | [[!DNL Policy Service] Guía de API](.././data-governance/api/overview.md) <br> (Control de datos) | La API [!DNL Policy Service] le permite crear y administrar etiquetas y directivas de uso de datos para determinar qué acciones de marketing se pueden llevar a cabo con los datos que contienen determinadas etiquetas de uso de datos. Para aplicar etiquetas a conjuntos de datos y campos, consulte la guía [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) |
 | [[!DNL Privacy Service] Guía de API](.././privacy-service/api/getting-started.md) | La API [!DNL Privacy Service] permite a los desarrolladores crear y administrar solicitudes de clientes para acceder a sus datos personales o eliminarlos en aplicaciones de Experience Cloud, de conformidad con las normas legales de privacidad. |

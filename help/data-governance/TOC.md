@@ -5,10 +5,10 @@ breadcrumb-title: Guía de administración de datos
 user-guide-description: Haga cumplir las restricciones del uso de datos mediante el uso de etiquetas, acciones de marketing y políticas de gobernanza.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 44%
+source-wordcount: '99'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 44%
    * [Información general](enforcement/overview.md)
    * [Aplicación automática](enforcement/auto-enforcement.md)
    * [Aplicación basada en API](enforcement/api-enforcement.md)
+* API del servicio MTLS {#mtls-api}
+   * [Información general](mtls-api/overview.md)
+   * [Primeros pasos](mtls-api/getting-started.md)
+   * [Extremo de certificado público](mtls-api/public-certificate-endpoint.md)
 * API de servicio de directivas {#api}
    * [Información general](api/overview.md)
    * [Primeros pasos](api/getting-started.md)
