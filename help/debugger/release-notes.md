@@ -4,14 +4,20 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: debugger;extensión de experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '781'
 ht-degree: 4%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
+
+## Versión 1.6.1: 25 de julio de 2024
+
+### Correcciones y mejoras
+
+* Se ha corregido un problema que impedía a los usuarios añadir nuevos códigos incrustados de etiquetas a las páginas sin ellos.
 
 ## Versión 1.6.0: 11 de julio de 2024
 
@@ -31,7 +37,7 @@ ht-degree: 4%
 ### Correcciones y mejoras
 
 * Se ha corregido un problema por el que no se conservaba la configuración de.
-* Se ha corregido un problema que hacía que Debugger se bloqueara al ver las visitas procesadas por Post de Analytics.
+* Se ha corregido un problema que hacía que Debugger se bloqueara al ver las visitas posteriores al procesamiento de Analytics.
 
 ## Versión 1.5.3: 6 de diciembre de 2023
 
