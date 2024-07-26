@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Aunque se puede hacer referencia a la audiencia generada externamente al crear a
 
 Sí, la audiencia generada de forma externa se combinará con el perfil existente en Platform si coinciden los identificadores principales. Estos datos pueden tardar hasta 24 horas en conciliarse. Si los datos del perfil no existen, se creará un nuevo perfil a medida que se incorporen los datos.
 
+### ¿Cómo se respetan las preferencias de consentimiento del cliente para las audiencias generadas externamente que se importan en Audience Portal?{#consent}
+
+A medida que los datos del cliente se capturan desde varios canales, la vinculación de identidad y las políticas de combinación permiten que estos datos se consoliden en un único perfil del cliente en tiempo real. La información sobre las preferencias de consentimiento de los clientes se almacena y evalúa en el nivel de perfil.
+
+Los destinos descendentes comprueban cada perfil para obtener información de consentimiento antes de la activación. La información de consentimiento de cada perfil se compara con los requisitos de consentimiento para un destino en particular. Si el perfil no cumple los requisitos, no se envía a un destino.
+
+Cuando se incorpora una audiencia externa en Audience Portal, se une a perfiles existentes mediante un ID principal como correo electrónico o ECID. Como resultado, las políticas de consentimiento existentes permanecerán en vigor durante toda la activación.
+
+Tenga en cuenta que **no** debe incluir información de consentimiento con audiencias generadas externamente, ya que las variables de carga útil **no** están almacenadas en el almacén de perfiles, sino en el lago de datos. En su lugar, **debe** utilizar un canal de ingesta de Adobe Experience Platform donde se importen los datos del perfil.
+
 ### ¿Puedo utilizar una audiencia generada externamente para crear otras audiencias?
 
 Sí, cualquier audiencia generada externamente aparecerá en el inventario de audiencias y se puede usar al crear audiencias en [Generador de segmentos](./ui/segment-builder.md).
@@ -80,7 +90,7 @@ La política de combinación predeterminada específica de la organización se a
 
 ### ¿Dónde puedo activar audiencias generadas externamente para?
 
-Una audiencia generada externamente se puede asignar a cualquier destino RTCDP y se puede utilizar en campañas de Adobe Journey Optimizer.
+Una audiencia generada externamente se puede asignar a cualquier destino y se puede utilizar en campañas de Adobe Journey Optimizer.
 
 ### ¿Cuándo están listas las audiencias generadas externamente para su activación?
 

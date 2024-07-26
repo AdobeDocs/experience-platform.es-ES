@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3693'
+source-wordcount: '3725'
 ht-degree: 3%
 
 ---
@@ -391,7 +391,9 @@ Después de confirmar que los detalles son correctos, seleccione **[!UICONTROL F
 >
 >De forma predeterminada, las audiencias generadas externamente tienen una caducidad de datos de 30 días. La caducidad de los datos se restablece si la audiencia se actualiza o modifica de alguna manera.
 >
->Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención médica, **debe** aplicar las etiquetas de uso de datos necesarias antes de activarla en cualquier destino. Dado que las variables de audiencias generadas externamente se almacenan en el lago de datos en lugar de en el perfil del cliente en tiempo real, **no** debe incluir datos de consentimiento en su archivo CSV. Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md).
+>Además, si la audiencia generada externamente contiene información confidencial o relacionada con la atención médica, **debe** aplicar las etiquetas de uso de datos necesarias antes de activarla en cualquier destino. Dado que las variables de audiencias generadas externamente se almacenan en el lago de datos en lugar de en el perfil del cliente en tiempo real, **no** debe incluir datos de consentimiento en su archivo CSV.
+>
+>Para obtener más información sobre cómo aplicar etiquetas de uso de datos, lea la documentación de [administrar etiquetas](../../access-control/abac/ui/labels.md). Para obtener más información sobre las etiquetas de uso de datos en Platform en general, lea la [descripción general de las etiquetas de uso de datos](../../data-governance/labels/overview.md). Para obtener más información sobre cómo funciona el consentimiento en audiencias generadas externamente, lea las [preguntas frecuentes sobre audiencias](../faq.md#consent).
 
 ## Pasos siguientes
 
