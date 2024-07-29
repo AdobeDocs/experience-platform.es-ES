@@ -2,9 +2,9 @@
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, se utilizará por Adobe para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ Puede usar la plantilla genérica para [crear una nueva plantilla de audiencia](
 
 El equipo de ingeniería de Adobes puede trabajar con usted para expandir la plantilla genérica con campos personalizados si sus casos de uso lo requieren.
 
-## Ejemplos de configuración {#configuration-examples}
 
-Esta sección incluye tres ejemplos de configuraciones de metadatos de audiencia genéricas, para su referencia, junto con descripciones de las secciones principales de la configuración. Observe cómo la dirección URL, los encabezados, la solicitud y el cuerpo de respuesta difieren entre las tres configuraciones de ejemplo. Esto se debe a las diferentes especificaciones de la API de marketing de las tres plataformas de ejemplo.
+## Eventos de plantilla admitidos {#supported-events}
 
-Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData.accessToken}}` o `{{segment.name}}` en la dirección URL, y en otros ejemplos se usan en los encabezados o en el cuerpo de la solicitud. Realmente depende de las especificaciones de su API de marketing.
+En la tabla siguiente se describen los eventos admitidos por las plantillas de metadatos de audiencia.
 
 | Sección de plantilla | Descripción |
 |--- |--- |
@@ -66,10 +65,21 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 | `delete` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y eliminar segmentos/audiencias en la plataforma mediante programación. |
 | `validate` | Ejecuta las validaciones de cualquier campo en la configuración de la plantilla antes de realizar una llamada a la API del socio. Por ejemplo, puede validar que el ID de cuenta del usuario se introduzca correctamente. |
 | `notify` | Solo se aplica a destinos basados en archivos. Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y notificarle las exportaciones de archivos correctas. |
+| `createDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, crear mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
+| `updateDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, para actualizar mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
+| `deleteDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y eliminar mediante programación un flujo de datos de la plataforma. |
 
 {style="table-layout:auto"}
 
-### Ejemplo 1 de transmisión {#example-1}
+## Ejemplos de configuración {#configuration-examples}
+
+Esta sección incluye ejemplos de configuraciones de metadatos de audiencia genéricas, para su referencia.
+
+Observe cómo la dirección URL, los encabezados y los cuerpos de solicitud difieren entre las tres configuraciones de ejemplo. Esto se debe a las diferentes especificaciones de la API de marketing de las tres plataformas de ejemplo.
+
+Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData.accessToken}}` o `{{segment.name}}` en la dirección URL, y en otros ejemplos se usan en los encabezados o en el cuerpo de la solicitud. Su uso depende de las especificaciones de la API de marketing.
+
++++Ejemplo 1 de transmisión por secuencias
 
 ```json
 {
@@ -178,7 +188,9 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 }
 ```
 
-### Ejemplo 2 de streaming {#example-2}
++++
+
++++Ejemplo 2 de transmisión por secuencias
 
 ```json
 {
@@ -272,7 +284,9 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 }
 ```
 
-### Ejemplo 3 de transmisión {#example-3}
++++
+
++++Ejemplo 3 de transmisión por secuencias
 
 ```json
 {
@@ -374,8 +388,9 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 }
 ```
 
++++
 
-### Ejemplo basado en archivos {#example-file-based}
++++Ejemplo basado en archivos
 
 ```json
 {
@@ -521,6 +536,8 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 }
 ```
 
++++
+
 Busque descripciones de todos los parámetros en la plantilla en la referencia de API [Crear una plantilla de audiencia](../metadata-api/create-audience-template.md).
 
 ## Macros utilizadas en plantillas de metadatos de audiencia {#macros}
@@ -537,5 +554,12 @@ Para pasar información como ID de audiencia, tokens de acceso, mensajes de erro
 | `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si el Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
 | `{{body.segments[0].segment.id}}` | Devuelve el identificador único de la audiencia creada, como el valor de la clave `externalAudienceId`. |
 | `{{error.message}}` | Devuelve un mensaje de error que se mostrará a los usuarios en la interfaz de usuario de Experience Platform. |
+| `{{{segmentEnrichmentAttributes}}}` | Permite acceder a todos los atributos de enriquecimiento de una audiencia específica.  Los eventos `create`, `update` y `delete` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.name}}` | Devuelve el nombre del destino. |
+| `{{destination.sandboxName}}` | Devuelve el nombre de la zona protegida de Experience Platform donde está configurado el destino. |
+| `{{destination.id}}` | Devuelve el ID de la configuración de destino. |
+| `{{destination.imsOrgId}}` | Devuelve el ID de organización de IMS donde está configurado el destino. |
+| `{{destination.enrichmentAttributes}}` | Permite acceder a todos los atributos de enriquecimiento de todas las audiencias asignadas a un destino. Los eventos `createDestination`, `updateDestination` y `deleteDestination` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acceder a atributos de enriquecimiento para audiencias externas específicas asignadas a un destino. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
 
 {style="table-layout:auto"}
