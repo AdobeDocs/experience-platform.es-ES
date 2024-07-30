@@ -3,9 +3,9 @@ keywords: Experience Platform;solución de problemas;protecciones;directrices;
 title: Protecciones para la ingesta de datos
 description: Obtenga información sobre las protecciones para la ingesta de datos en Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,9 @@ En la tabla siguiente se describen las protecciones que se deben tener en cuenta
 | Ingesta del lago de datos mediante fuentes por lotes | <ul><li>Puede ingerir hasta 200 GB de datos por hora en un lago de datos mediante fuentes de ingesta por lotes como [!DNL Azure Blob], [!DNL Amazon S3] y [!DNL SFTP].</li><li>Un tamaño de lote debe estar entre 256 MB y 100 GB. Esto se aplica a los datos sin comprimir y comprimidos. Cuando los datos comprimidos no están comprimidos en el lago de datos, se aplicarán estas limitaciones.</li><li>El número máximo de archivos por lote es de 1500.</li><li>El tamaño mínimo de un archivo o carpeta es de 1 byte. No se pueden introducir archivos o carpetas con un tamaño de 0 bytes.</li></ul> | Lea la [descripción general de orígenes](../sources/home.md) para ver un catálogo de orígenes que puede usar para la ingesta de datos. |
 | Ingesta por lotes en el perfil | <ul><li>El tamaño máximo de una clase de registro es 100 KB (duro).</li><li>El tamaño máximo de una clase ExperienceEvent es 10 KB (duro).</li></ul> | |
 | Número de lotes de Perfil o ExperienceEvent introducidos por día | **El número máximo de lotes de Perfil o ExperienceEvent ingeridos por día es 90.** Esto significa que el total combinado de lotes Profile y ExperienceEvent ingeridos cada día no puede superar los 90. La ingesta de lotes adicionales afectará al rendimiento del sistema. | Este es un límite flexible. Es posible ir más allá de un límite flexible, sin embargo, los límites flexibles proporcionan una guía recomendada para el rendimiento del sistema. |
+| Ingesta de datos cifrados | El tamaño máximo admitido de un solo archivo cifrado es de 1 GB. Por ejemplo, aunque puede introducir datos de 2 GB o más en una sola ejecución de flujo de datos, ningún archivo individual de la ejecución de flujo de datos puede superar 1 GB. | Lea la [guía de API de ingesta de datos cifrados](../sources/tutorials/api/encrypt-data.md) para obtener más información. |
+
+{style="table-layout:auto"}
 
 ## Protecciones para la ingesta por streaming
 
@@ -46,6 +49,8 @@ La siguiente tabla describe las protecciones que se deben tener en cuenta al uti
 | Tipo de ingesta | Directrices | Notas |
 | --- | --- | --- |
 | Fuentes de streaming | <ul><li>El tamaño máximo de registro es 1 MB, con un tamaño recomendado de 10 KB.</li><li>Las fuentes de streaming admiten entre 4000 y 5000 solicitudes por segundo al ingerir en el lago de datos. Esto se aplica tanto a las conexiones de origen recién creadas como a las conexiones de origen existentes. **Nota**: la transmisión de datos puede tardar hasta 30 minutos en procesarse completamente en el lago de datos.</li><li>Las fuentes de streaming admiten un máximo de 1500 solicitudes por segundo al ingerir datos en un perfil o una segmentación de streaming.</li></ul> | Los orígenes de transmisión por secuencias como [!DNL Kafka], [!DNL Azure Event Hubs] y [!DNL Amazon Kinesis] no utilizan la ruta [!DNL Data Collection Core Service] (DCCS) y pueden tener límites de rendimiento diferentes. Consulte la [descripción general de orígenes](../sources/home.md) para ver un catálogo de orígenes que puede usar para la ingesta de datos. |
+
+{style="table-layout:auto"}
 
 ## Pasos siguientes
 
