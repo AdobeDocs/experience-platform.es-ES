@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3826'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,7 @@ En Audience Portal, puede realizar las siguientes tareas:
 - [Crear un público](#create-audience)
    - [Utilice el Generador de segmentos para crear una audiencia](#segment-builder)
    - [Usar Composición de audiencia para crear una audiencia](#audience-composition)
+   - [Use la composición de audiencia federada para crear una audiencia usando datos de su almacén de datos existente](#fac) (disponibilidad limitada)
 - [Importación de audiencias generadas externamente](#import-audience)
 
 Para abrir Audience Portal, seleccione la ficha **[!UICONTROL Examinar]** en la sección Segmentación.
@@ -339,6 +340,12 @@ Si selecciona **[!UICONTROL Componer audiencias]**, accederá a Composición de 
 Si selecciona **[!UICONTROL Generar regla]**, accederá al Generador de segmentos. Este espacio de trabajo proporciona controles intuitivos para crear y editar definiciones de segmentos, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos. Para obtener más información sobre cómo crear definiciones de segmentos, lea la [guía del Generador de segmentos](./segment-builder.md)
 
 ![Se muestra el área de trabajo del Generador de segmentos.](../images/ui/audience-portal/segment-builder.png)
+
+### Composición de público federado {#fac}
+
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importación de una audiencia {#import-audience}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del servicio de segmentación
 description: Obtenga información sobre cómo crear y administrar audiencias y definiciones de segmentos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 1%
+source-wordcount: '1043'
+ht-degree: 2%
 
 ---
 
@@ -89,6 +89,12 @@ Aparece una ventana emergente que enumera todos los campos que se pueden mostrar
 Para ver la composición de la audiencia, seleccione el nombre de una audiencia en la ficha [!UICONTROL Audiencias].
 
 La página Composición de audiencia aparece con los componentes básicos que componen la audiencia. Para obtener más información acerca de cómo usar la Composición de audiencia, lea la [guía de la interfaz de usuario de la Composición de audiencia](./audience-composition.md).
+
+## Composición de público federado {#fac}
+
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
 
 ## Segmentación de streaming {#streaming-segmentation}
 

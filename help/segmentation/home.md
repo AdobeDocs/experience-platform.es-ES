@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Resumen del servicio de segmentación
 description: Obtenga información acerca del servicio de segmentación de Adobe Experience Platform y la función que desempeña en el ecosistema de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 12%
+source-wordcount: '1700'
+ht-degree: 13%
 
 ---
 
@@ -51,6 +51,14 @@ Para obtener información sobre cómo generar definiciones de segmentos mediante
 >En caso de que se amplíe un esquema, todas las cargas futuras deben actualizar los campos recién añadidos en consecuencia. Para obtener más información sobre cómo personalizar [!DNL Experience Data Model] (XDM), visite el [tutorial del editor de esquemas](../xdm/tutorials/create-schema-ui.md).
 >
 >Además, si un valor de caducidad de Evento de experiencia está habilitado en el conjunto de datos, esto podría afectar al abono de la definición de segmento creada. Lea la guía sobre [Caducidad de eventos de experiencia](../profile/event-expirations.md) para obtener más información sobre cómo esta característica puede afectar la segmentación.
+
+### Composición de público federado {#fac}
+
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>Ahora mismo, la composición de público federado solo está disponible para un conjunto de organizaciones (disponibilidad limitada). Para obtener más información, contacte con su representante de Adobe.
 
 ## Evaluar públicos {#evaluate-segments}
 

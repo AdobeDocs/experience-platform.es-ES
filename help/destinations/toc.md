@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 6%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 6%
       * [conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Conexión de composición de audiencia federada (disponibilidad limitada)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
       * [Información general sobre destinos Advertising](./catalog/advertising/overview.md)
       * [Conexión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -141,7 +142,7 @@ ht-degree: 6%
       * [Conexión de divulgación](catalog/crm/outreach.md)
       * [Conexión de Zendesk](catalog/crm/zendesk.md)
    * Destinos de la plataforma de administración de datos {#data-management}
-      * [Información general sobre los destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
+      * [Información general sobre destinos de Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extensión de DIL de Audience Manager](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing de Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Socio de datos e identidad {#data-partner}
