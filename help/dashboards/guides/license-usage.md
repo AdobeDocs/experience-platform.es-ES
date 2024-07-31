@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 7%
+source-wordcount: '2328'
+ht-degree: 6%
 
 ---
 
@@ -64,6 +64,7 @@ Este tablero muestra todos sus productos de Adobe Experience Platform con licenc
 | **[!UICONTROL Importe de licencia]** | El valor contratado para la cantidad máxima de la métrica principal según lo acordado en el contrato de licencia del producto. |
 | **[!UICONTROL Uso]** | Cantidad de la métrica principal utilizada. Este valor proporciona el uso total de esa métrica en todas las zonas protegidas, ya sea de producción o desarrollo. |
 | **[!UICONTROL Uso %]** | El porcentaje de la métrica principal utilizado según la cantidad de licencia. |
+| **[!UICONTROL Uso de predicción]** | (**Beta**) El porcentaje de uso previsto de la métrica principal según la cantidad de licencia. |
 
 >[!NOTE]
 >
@@ -71,29 +72,57 @@ Este tablero muestra todos sus productos de Adobe Experience Platform con licenc
 
 La tabla indica la métrica principal de cada producto, ya que cada producto puede realizar el seguimiento de numerosas métricas.
 
+### [!BADGE Beta]{type=Informative} predijo el uso {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+La funcionalidad para predecir el uso futuro de las licencias está actualmente en versión beta. La documentación y las funcionalidades están sujetas a cambios.
+
+Administre y optimice de forma proactiva sus recursos de licencias en función de predicciones de uso reveladoras. La columna [!UICONTROL Uso predicho] predice con precisión el uso futuro de licencias en el nivel de zona protegida, en todas las zonas protegidas de producción y desarrollo, para todos los productos que haya comprado. Esta capacidad de alerta proporciona una previsión del uso de licencias para seis semanas en el futuro, en función de su uso hasta el 15 de este mes natural. Las predicciones se proporcionan con un límite inferior y otro superior.
+
+>[!IMPORTANT]
+>
+Las predicciones se actualizan mensualmente. La fecha de actualización se incluye en un icono de información (![Este icono de información.](../images/license-usage/info-icon.png)) sobre el título de columna.
+
+Para ver un resumen del uso de derechos de productos, selecciona un producto de la lista [!UICONTROL Información general].
+
+![El [!UICONTROL uso de licencias] [!UICONTROL Información general] con un producto y la columna de uso previsto resaltada.](../images/license-usage/product-predicted-usage.png)
+
+Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las fichas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
+
+![Vista de resumen de un producto de Platform con la columna de uso previsto resaltada.](../images/license-usage/summary-predicted-usage.png)
+
+La función de uso previsto admite las siguientes métricas:
+
+- [!UICONTROL Audiencia a la que se puede dirigir]
+- [!UICONTROL Promedio de riqueza de perfiles]
+- [!UICONTROL Calcular horas]
+- [!UICONTROL Número de filas de la audiencia del Recorrido del cliente]
+- [!UICONTROL Almacenamiento total]
+
 ## Pestaña [!UICONTROL Resumen] {#summary-tab}
 
 Para ver más métricas e información detallada sobre el uso de la licencia del producto, seleccione un nombre de producto de la lista. Aparece la vista [!UICONTROL Resumen] de ese producto. Todas las métricas disponibles se muestran en la ficha [!UICONTROL Resumen]. Las métricas disponibles dependen del producto con licencia. Esta vista proporciona **una vista consolidada de todas las métricas en todos los entornos limitados de producción o desarrollo**. El mismo nivel de análisis se proporciona para los entornos limitados de producción y desarrollo.
 
 ![Vista de resumen de un producto de Platform que muestra todas las métricas disponibles para ese producto.](../images/license-usage/summary-tab.png)
 
-En la ficha Resumen, la tabla incluye la columna [!UICONTROL Métrica]. Estas descripciones legibles en lenguaje natural indican todas las métricas utilizadas para ese tipo de zona protegida.
+En la ficha Resumen, la tabla incluye la columna [!UICONTROL Métrica]. Estas descripciones legibles en lenguaje natural indican todas las métricas utilizadas para ese tipo of zona protegida.
 
 ### Seleccionar una zona protegida {#select-sandbox}
 
-Para cambiar la vista entre los tipos de zonas protegidas de producción y desarrollo, seleccione [!UICONTROL zonas protegidas de producción] o [!UICONTROL zonas protegidas de desarrollo]. El tipo de zona protegida seleccionado se indica con el botón de opción situado junto al nombre de la zona protegida.
+Para cambiar la vista entre los tipos de zona protegida de producción y desarrollo, haga lo siguiente: select [!UICONTROL zonas protegidas de producción] o [!UICONTROL zonas protegidas de desarrollo]. El tipo de zona protegida seleccionado is se indica mediante el botón de opción situado junto al nombre de la zona protegida.
 
-Los informes de consumo para las zonas protegidas son acumulativos para todas las zonas protegidas del mismo tipo. En otras palabras, al seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] se proporcionan informes de consumo para todas las zonas protegidas de producción o desarrollo, respectivamente.
+Los informes de consumo para las zonas protegidas son acumulativos para todas las zonas protegidas del mismo tipo. In En otras palabras, al seleccionar [!UICONTROL Producción] o [!UICONTROL Desarrollo] se proporcionan informes de consumo para todas las zonas protegidas de producción o desarrollo, respectivamente.
 
 ![Vista de resumen de un producto de Platform con las zonas protegidas de producción y las de desarrollo resaltadas.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->El permiso para ver el tablero de uso de licencias debe especificarse en el nivel de zona protegida. Añada permisos a cada zona protegida individual para verlos dentro del panel. Esta limitación se solucionará en una versión futura. Mientras tanto, está disponible la siguiente solución:
+El permiso para ver el tablero de uso de licencias debe especificarse en el nivel de zona protegida. Añada permisos a cada zona protegida individual para verlos dentro del panel. Esta limitación se solucionará en una versión futura. Mientras tanto, está disponible la siguiente solución:
 >
->1. Cree un perfil de producto en Adobe Admin Console.
->2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
->3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
+1. Cree un perfil de producto en Adobe Admin Console.
+2. En Permiso en la categoría Zona protegida, agregue todas las zonas protegidas que desee ver en el panel de uso de licencias.
+3. En la categoría Permiso del tablero de usuarios, agregue el permiso &quot;Ver tablero de uso de licencias&quot;.
 
 ## La ficha [!UICONTROL Detalles] {#details-tab}
 
@@ -154,7 +183,7 @@ El panel de uso de licencias informa sobre varias métricas únicas que se aplic
 
 >[!TIP]
 >
->Puede comprobar los derechos de licencia en su pedido de ventas para calcular métricas como la &quot;asignación de almacenamiento&quot;.<br>Por ejemplo,<ul><li>Asignación de Almacenamiento = El número de &quot;perfiles autorizados&quot; en su contrato X La riqueza promedio de perfiles</li></ul>
+Puede comprobar los derechos de licencia en su pedido de ventas para calcular métricas como la &quot;asignación de almacenamiento&quot;.<br>Por ejemplo,<ul><li>Asignación de Almacenamiento = El número de &quot;perfiles autorizados&quot; en su contrato X La riqueza promedio de perfiles</li></ul>
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización. Para obtener definiciones detalladas de cada métrica, consulte la documentación de descripción del producto correspondiente:
 
@@ -169,7 +198,7 @@ La disponibilidad de estas métricas y la definición específica de cada una de
 
 >[!WARNING]
 >
->El tablero de uso de licencias solo informa de la licencia más reciente aprovisionada para su organización. Si la licencia más reciente aprovisionada para su organización no aparece en la tabla anterior, es posible que el panel de uso de licencias no se muestre correctamente. La compatibilidad con licencias adicionales y múltiples licencias en una sola organización está planificada para una versión futura.
+El tablero de uso de licencias solo informa de la licencia más reciente aprovisionada para su organización. Si la licencia más reciente aprovisionada para su organización no aparece en la tabla anterior, es posible que el panel de uso de licencias no se muestre correctamente. La compatibilidad con licencias adicionales y múltiples licencias en una sola organización está planificada para una versión futura.
 
 ## Pasos siguientes
 
