@@ -4,10 +4,10 @@ title: Casos de uso y libros de reproducción disponibles para Real-time Custome
 description: Una lista de todos los libros de reproducción de Real-time Customer Data Platform y Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 3%
+source-wordcount: '965'
+ht-degree: 2%
 
 ---
 
@@ -25,10 +25,12 @@ Lea esta página para obtener una descripción general de todos los libros de re
 | Nombre del manual | Descripción |
 | ------------- |  ----------- |
 | Navegación abandonada: Productos | Empuje a los seguidores a volver a interactuar después de salir del sitio web o la aplicación después de examinar un producto. |
+| Exploración abandonada: producto | Empuje a los compradores a volver a interactuar después de abandonar su sitio web o aplicación después de navegar por un producto. |
+| Navegación abandonada: Reserva | Aconseje a los invitados a volver a participar después de salir de su sitio web o aplicación después de navegar por una reserva potencial. |
 | Carro abandonado: mercancía | Empuje a los seguidores a volver a participar después de salir del sitio web o la aplicación después de agregar mercancía al carro de compras. |
 | Carro abandonado: producto | Empuje a los compradores a volver a participar después de abandonar su sitio web o aplicación después de agregar productos al carro de compras. |
 | Carro abandonado: reserva | Empuje a los invitados a volver a participar después de que abandonen su sitio web o aplicación después de agregar una nueva reserva al carro de compras. |
-| Recordatorio de registro con el CTA de descarga de la aplicación | Recuerde a los huéspedes que deben registrarse y animarlos a descargar la aplicación para acceder a la información fácilmente. |
+| Recordatorio de llegada con la descarga de la aplicación para CTA | Recuerde a los huéspedes que deben registrarse y animarlos a descargar la aplicación para acceder a la información fácilmente. |
 | Promoción de destino | Empuje a los huéspedes a hacer una nueva reserva durante una campaña de promoción turística en curso. |
 | Promoción de juegos | Empuje a los fans a comprar entradas para un próximo juego. |
 | Bienvenida en la aplicación para fans | Bienvenidos nuevos fans. |
@@ -38,12 +40,15 @@ Lea esta página para obtener una descripción general de todos los libros de re
 | Aumentar la compra de productos durante la visita a la tienda | Empuje a los compradores a comprar productos mientras están cerca de la tienda. |
 | Aumentar la compra de productos y servicios durante la estancia | El hotel ofrece una variedad excelente de instalaciones recreativas, incluyendo piscina al aire libre. |
 | Aumentar compras de un solo juego | Segmenta a los fans para aumentar las compras repetidas de un solo juego. |
-| Encuesta de eventos de Post y promoción de incentivos | Empuje a los fans a responder a una encuesta posterior al evento ofreciendo una promoción de incentivo. |
-| Encuesta Post-Trip | Empuje a los invitados a responder a una encuesta posterior al viaje ofreciendo una promoción de incentivo. |
+| Encuesta posterior al evento y promoción de incentivos | Empuje a los fans a responder a una encuesta posterior al evento ofreciendo una promoción de incentivo. |
+| Encuesta posterior al viaje | Empuje a los invitados a responder a una encuesta posterior al viaje ofreciendo una promoción de incentivo. |
 | Promoción de productos | Empuje a los compradores a comprar productos durante una campaña de promoción de productos en curso. |
 | Confirmación de compra: mercancía | Confirmar una nueva compra de mercancía Fan. |
 | Confirmación de compra: Producto | Confirmar la compra de un nuevo producto por parte del comprador. |
 | Confirmación de compra: Reserva | Confirma un nuevo invitado de reserva. |
+| Reactivar los ventiladores | Vuelva a atraer de forma inteligente y responsable a los seguidores que han abandonado una conversión antes de completarla. Actúa con inteligencia y empatía para crear experiencias para tus fans, y no simples recordatorios. |
+| Volver a atraer invitados | Reactivar de forma inteligente y responsable a los huéspedes que hayan abandonado una reserva antes de completarla. Actúe con inteligencia y empatía para crear experiencias para sus invitados, y no simples recordatorios. |
+| Volver a atraer compradores | Vuelva a atraer de forma inteligente y responsable a los clientes que han abandonado una compra antes de completarla. Actúe con inteligencia y empatía para crear experiencias para sus clientes y no meros recordatorios. |
 | Enviar Un Mensaje De Cumpleaños A Los Fans | Saluda a los fans en su cumpleaños con una oferta exclusiva. |
 | Enviar un mensaje de cumpleaños a los invitados | Recibe a los invitados en su cumpleaños con una oferta exclusiva. |
 | Enviar un mensaje de cumpleaños a los compradores | Reciba a los compradores en su cumpleaños con una oferta exclusiva. |
@@ -60,7 +65,10 @@ Lea esta página para obtener una descripción general de todos los libros de re
 
 | Nombre del manual | Descripción |
 | ------------- | ----------- |
-| Carro abandonado: mercancía: para su activación | Reasigne los seguidores a una acción después de que abandonen el sitio web o la aplicación después de agregar la mercancía al carro de compras. |
+| Exploración abandonada: mercancía para activación | Reasigne los seguidores a una acción después de que abandonen el sitio web o la aplicación después de agregar la mercancía al carro de compras. |
+| Exploración abandonada: producto para activación | Vuelva a dirigirse a los compradores después de que abandonen el sitio web o la aplicación después de agregar los productos al carro de compras. |
+| Exploración abandonada: reserva para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
+| Carro abandonado: mercancía: para su activación | Reasigne a los seguidores después de que abandonen el sitio web o la aplicación después de agregar el artículo deportivo al carro de compras. |
 | Carro abandonado: producto: para activación | Reasigne a los compradores después de que abandonen el sitio web o la aplicación después de agregar productos al carro de compras. |
 | Carro abandonado: reserva para activación | Reasigne a los invitados después de que abandonen el sitio web o la aplicación después de agregar una nueva reserva al carro de compras. |
 | Promoción de destino: para activación | Dirija a los huéspedes a hacer una reserva durante una promoción de destino de viaje en curso. |
