@@ -3,7 +3,7 @@ keywords: crm;CRM;destinos de crm;Divulgación;Destino de crm de divulgación
 title: Conexión de divulgación
 description: El destino de Divulgación le permite exportar los datos de su cuenta y activarlos dentro de Divulgación para sus necesidades comerciales.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -155,18 +155,20 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      ![Captura de pantalla de la IU de Platform que muestra la asignación de Target mediante OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Agregue la siguiente asignación entre su esquema de perfil XDM y su instancia [!DNL Outreach]:
-|Esquema de perfil XDM|[!DNL Outreach] instancia| Obligatorio|
-|—|—|—|
-|`Oid`|`OutreachId`| Sí |
+
+     | Esquema de perfil XDM | Instancia de [!DNL Outreach] | Obligatorio |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Sí |
 
    * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en el campo [!UICONTROL Nombre de atributo]. Consulte la [[!DNL Outreach] documentación del cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obtener una lista completa de los atributos admitidos.
      ![Captura de pantalla de IU de Platform que muestra la asignación de destino con LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por ejemplo, según los valores que desee actualizar, agregue la siguiente asignación entre el esquema de perfil XDM y la instancia [!DNL Outreach]:
-|Esquema de perfil XDM|[!DNL Outreach] instancia|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | Esquema de perfil XDM | Instancia de [!DNL Outreach] |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/outreach/mappings.png)

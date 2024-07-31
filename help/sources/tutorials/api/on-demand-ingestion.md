@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: Creación de una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 description: Obtenga información sobre cómo crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 2%
@@ -104,6 +104,7 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 | --- | --- |
 | `id` | El ID de la ejecución del flujo recién creada. Consulte la guía de [recuperación de especificaciones de flujo](../api/collect/database-nosql.md#specs) para obtener más información sobre las especificaciones de ejecución basadas en tablas. |
 | `etag` | La versión de recurso de la ejecución de flujo. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

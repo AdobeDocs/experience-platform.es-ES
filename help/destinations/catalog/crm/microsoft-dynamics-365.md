@@ -4,7 +4,7 @@ title: Conexión de Microsoft Dynamics 365
 description: El destino de Microsoft Dynamics 365 le permite exportar los datos de su cuenta y activarlos en Microsoft Dynamics 365 para sus necesidades comerciales.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 1%
@@ -170,9 +170,10 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      ![Captura de pantalla de IU de Platform que muestra la asignación de Target para contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Agregue la siguiente asignación entre su esquema de perfil XDM y su instancia [!DNL Dynamics 365]:
-|Esquema de perfil XDM|[!DNL Dynamics 365] instancia| Obligatorio|
-|—|—|—|
-|`contactid`|`contactid`| Sí |
+
+     | Esquema de perfil XDM | Instancia de [!DNL Dynamics 365] | Obligatorio |
+     |---|---|---|
+     | `contactid` | `contactid` | Sí |
 
    * **[!UICONTROL Seleccionar atributos personalizados]**: seleccione esta opción para asignar el campo de origen a un atributo personalizado que defina en el campo **[!UICONTROL Nombre de atributo]**. Consulte [[!DNL Dynamics 365] documentación](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obtener una lista completa de los atributos admitidos.
      ![Captura de pantalla de IU de Platform que muestra la asignación de destino para correo electrónico.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -183,14 +184,16 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
      > * Además, si tiene un campo de origen de fecha u hora asignado a un campo de destino [!DNL Dynamics 365] [fecha o marca de hora](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest), asegúrese de que el valor asignado no esté vacío. Si el valor del campo exportado está vacío, aparecerá un mensaje de error *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* y los datos no se actualizarán. Esta es una limitación de [!DNL Dynamics 365].
 
    * Por ejemplo, según los valores que desee actualizar, agregue la siguiente asignación entre el esquema de perfil XDM y la instancia [!DNL Dynamics 365]:
-|Esquema de perfil XDM|[!DNL Dynamics 365] instancia|
-|—|—|
-|`person.name.firstName`|`firstname`|
-|`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+
+     | Esquema de perfil XDM | Instancia de [!DNL Dynamics 365] |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
-     ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Programar exportación de audiencias y ejemplo {#schedule-audience-export-example}
 

@@ -3,7 +3,7 @@ title: Etiquetas de Mailchimp
 description: El destino de Etiquetas de Mailchimp te permite exportar los datos de tu cuenta y activarlos dentro de Mailchimp para interactuar con tus contactos.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -175,9 +175,10 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL Mailchim
    ![Captura de pantalla de IU de plataforma con campo de destino como correo electrónico desde el área de nombres de identidad.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Las asignaciones entre su esquema de perfil XDM y [!DNL Mailchimp Tags] serán las siguientes:
-| Campo de Source | Campo de destino | Obligatorio |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| Sí |
+
+   | Campo de origen | Campo de destino | Obligatorio |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Sí |
 
    A continuación, se muestra un ejemplo con las asignaciones completadas:
    ![Ejemplo de captura de pantalla de IU de Platform que muestra asignaciones de campos.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

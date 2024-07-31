@@ -4,7 +4,7 @@ title: Conexión LINE
 description: El destino LINE le permite añadir perfiles a la audiencia de Platform y ofrecer experiencias personalizadas a los usuarios conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -121,8 +121,9 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL LINE], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL LINE], siga estos pasos:
 
 Según la identidad de origen, se deben asignar las siguientes áreas de nombres de identidad de destino:
-| Identidad de destino | Campo de Source | Campo de destino |
-| — | — | — |
+
+| Identidad de destino | Campo de origen | Campo de destino |
+| --- | --- | --- |
 | ID para anunciantes (IFA) | `IDFA` o `GAID` | `LineId` |
 | ID de usuario de LINE | `UserID` | `LineId` |
 

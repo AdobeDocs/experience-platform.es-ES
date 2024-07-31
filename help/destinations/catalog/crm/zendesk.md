@@ -3,10 +3,10 @@ title: Conexión de Zendesk
 description: El destino de Zendesk le permite exportar los datos de su cuenta y activarlos dentro de Zendesk para sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -121,12 +121,14 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL Zendesk]
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija la categoría **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad de destino, o bien elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione uno de los atributos de esquema admitidos.
+
    * Repita estos pasos para agregar las siguientes asignaciones obligatorias, también puede agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la instancia [!DNL Zendesk]:
-|Campo de Source|Campo de destino| Obligatorio|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| Sí |
-|`IdentityMap: Email`|`Identity: email`| Sí |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Campo de origen | Campo de destino | Obligatorio |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Sí |
+     | `IdentityMap: Email` | `Identity: email` | Sí |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * A continuación se muestra un ejemplo con estas asignaciones:
      ![Ejemplo de captura de pantalla de IU de plataforma con asignaciones de atributos.](../../assets/catalog/crm/zendesk/mappings.png)

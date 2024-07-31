@@ -3,10 +3,10 @@ title: (API) Conexión de Oracle Eloqua
 description: El Oracle (API) Eloqua permite exportar los datos de la cuenta y activarlos dentro de Oracle Eloqua para satisfacer sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -148,19 +148,21 @@ Para asignar los campos XDM a los campos de destino [!DNL Oracle Eloqua], siga e
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Verá una nueva fila de asignación en la pantalla.
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM o elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad.
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad, o elija **[!UICONTROL Seleccionar atributos personalizados]** y escriba el nombre de atributo deseado en el campo **[!UICONTROL Nombre de atributo]**. El nombre de atributo que proporcione debe coincidir con un atributo de contacto existente en [!DNL Oracle Eloqua]. Vea [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) para conocer los nombres de atributo exactos que puede usar en [!DNL Oracle Eloqua].
+
    * Repita estos pasos para agregar las asignaciones de atributos necesarias y deseadas entre su esquema de perfil XDM y [!DNL Oracle Eloqua]:
-| Campo de Source | Campo de destino | Obligatorio |
-|—|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`| Sí |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`| Sí |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | Campo de origen | Campo de destino | Obligatorio |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | Sí |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | Sí |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * A continuación, se muestra un ejemplo con las asignaciones anteriores:
      ![Ejemplo de captura de pantalla de IU de plataforma con asignaciones de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

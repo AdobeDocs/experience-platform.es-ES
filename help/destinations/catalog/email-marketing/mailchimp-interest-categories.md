@@ -3,10 +3,10 @@ title: Categorías de interés en Mailchimp
 description: Mailchimp (también conocido como Intuit Mailchimp) es una popular plataforma de automatización de marketing y servicio de marketing por correo electrónico que utilizan las empresas para administrar y hablar con contactos (clientes, clientes u otras partes interesadas) mediante listas de correo y campañas de marketing por correo electrónico. Utilice este conector para ordenar contactos según sus intereses y preferencias.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2299'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -168,12 +168,13 @@ Para asignar correctamente los campos XDM a los campos de destino [!DNL Mailchim
 1. En la ventana **[!UICONTROL Seleccionar campo de destino]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione una identidad o elija **[!UICONTROL Seleccionar atributos]** categoría y selecciónela de la lista de atributos rellenados desde la API [!DNL Mailchimp]. *Cualquier atributo personalizado que haya agregado a la audiencia [!DNL Mailchimp] seleccionada también estará disponible para su selección como campos de destino.*
 
    Las asignaciones disponibles entre su esquema de perfil XDM y [!DNL Mailchimp Interest Categories] son las siguientes:
-| Campo de Source | Campo de destino | Notas |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Obligatorio: sí |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | Campo de origen | Campo de destino | Notas |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | Obligatorio: sí |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    Además, `ADDRESS` es un campo de destino especial conocido como `merge field` dentro de su audiencia [!DNL Mailchimp]. La [[!DNL Mailchimp] documentación](https://mailchimp.com/developer/marketing/docs/merge-fields/) define las claves necesarias como `addr1`, `city`, `state` y `zip`, y las claves opcionales `addr2` y `country`. Los valores de estos campos deben ser cadenas. Si alguna de las asignaciones de campo `ADDRESS` está presente, el destino pasa el objeto `ADDRESS` a la API [!DNL Mailchimp] para su actualización. Cualquier campo `ADDRESS` que no esté asignado tiene su valor predeterminado `NULL`, excepto el país, que tiene el valor predeterminado `US`.
 

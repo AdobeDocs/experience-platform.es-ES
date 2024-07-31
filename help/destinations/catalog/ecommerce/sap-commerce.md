@@ -3,7 +3,7 @@ title: Conexión de SAP Commerce
 description: Utilice el conector de destino de SAP Commerce para actualizar los registros de clientes en su cuenta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -194,6 +194,7 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
 #### Asignar la identidad `customerNumberSAP`
 
 La identidad `customerNumberSAP` es una asignación obligatoria para este destino. Siga los pasos a continuación para asignarlo:
+
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
    ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija **[!UICONTROL Seleccionar área de nombres de identidad]** y seleccione `customerNumberSAP`.
@@ -211,6 +212,7 @@ A continuación, se muestra un ejemplo con la asignación de identidad:
 #### Atributos de asignación
 
 Para agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la cuenta [!DNL SAP Subscription Billing], repita los pasos a continuación:
+
 1. En el paso **[!UICONTROL Asignación]**, seleccione **[!UICONTROL Agregar nueva asignación]**. Ahora puede ver una nueva fila de asignación en la pantalla.
    ![Captura de pantalla de la interfaz de usuario de Platform con el botón Agregar nueva asignación resaltado.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. En la ventana **[!UICONTROL Seleccionar campo de origen]**, elija la categoría **[!UICONTROL Seleccionar atributos]** y seleccione el atributo XDM.
@@ -302,8 +304,9 @@ Como se muestra, el valor dentro del campo **[!UICONTROL ID de asignación]** de
 Repita esta sección para cada audiencia de Platform activada.
 
 En función de la imagen que se muestra arriba, donde ha seleccionado dos audiencias, la asignación sería la siguiente:
-| [!DNL SAP Commerce] nombre de audiencia | [!DNL SAP Subscription Billing] **[!UICONTROL Tipo de referencia]** | Valor de [!DNL SAP Commerce] **[!UICONTROL ID de asignación]** |
-| — | — | — |
+
+| [!DNL SAP Commerce] nombre de audiencia | [!DNL SAP Subscription Billing] **[!UICONTROL Tipo de referencia]** | [!DNL SAP Commerce] **[!UICONTROL Valor de ID de asignación]** |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | Audiencia SAP2 | `SAP_2` | `SAP_2` |
 

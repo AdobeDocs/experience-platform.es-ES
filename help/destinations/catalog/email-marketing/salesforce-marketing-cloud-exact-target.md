@@ -2,7 +2,7 @@
 title: (API) Conexión de Marketing Cloud de Salesforce
 description: El Marketing Cloud de Salesforce (anteriormente conocido como ExactTarget) le permite exportar los datos de su cuenta y activarlos dentro del Marketing Cloud de Salesforce para sus necesidades comerciales.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -242,6 +242,7 @@ A continuación se muestra un atributo de ejemplo de [!DNL Salesforce Marketing 
 ![Captura de pantalla de la interfaz de usuario de Salesforce Marketing Cloud que muestra un atributo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 A continuación se muestra un ejemplo que indica la ubicación de [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de asignación]**:
+
 ![Ejemplo de captura de pantalla de la IU de Platform que muestra Programar exportación de audiencias.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Como se muestra, el [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID. de asignación]** debe coincidir exactamente con el valor especificado en [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOMBRE DE CAMPO]**.
@@ -249,8 +250,9 @@ Como se muestra, el [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID. de
 Repita esta sección para cada segmento de Platform activado.
 
 Un ejemplo típico basado en la imagen mostrada arriba podría ser.
+
 | [!DNL (API) Salesforce Marketing Cloud] nombre de segmento | [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOMBRE DE CAMPO]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de asignación]** |
-| — | — | — |
+| --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
