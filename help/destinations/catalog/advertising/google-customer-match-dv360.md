@@ -3,7 +3,7 @@ title: Conexión Google Customer Match + Display & Video 360
 description: Con el conector de destino Google Customer Match + Display & Video 360, puede utilizar los datos en línea y sin conexión de Experience Platform para llegar a sus clientes y volver a interactuar con ellos en las propiedades de Google y en las que opera, como Search, Shopping, Gmail y YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 1%
@@ -223,11 +223,11 @@ Los datos de origen de los atributos no se cifran automáticamente. Si el campo 
 
 ![Aplicar control de transformación resaltado en el paso Asignación del flujo de trabajo de activación.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
-## Supervisar destino
+## Supervisar destino {#monitor-destination}
 
 Después de conectarse al destino y establecer un flujo de datos de destino, puede usar la [funcionalidad de supervisión](/help/dataflows/ui/monitor-destinations.md) en Real-Time CDP para obtener información detallada acerca de los registros de perfil activados en el destino en cada ejecución de flujo de datos.
 
-La información de supervisión de la conexión [!DNL Google Customer Match + Display & Video 360] incluye información de nivel de audiencia relacionada con identidades activadas, excluidas y fallidas en cada flujo de datos y ejecución de flujo de datos. Obtenga más información sobre la funcionalidad.
+La información de supervisión de la conexión [!DNL Google Customer Match + Display & Video 360] incluye información de nivel de audiencia relacionada con identidades activadas, excluidas y fallidas en cada flujo de datos y ejecución de flujo de datos. [Más información](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sobre la funcionalidad.
 
 ## Compruebe que la activación de la audiencia se haya realizado correctamente {#verify-activation}
 
