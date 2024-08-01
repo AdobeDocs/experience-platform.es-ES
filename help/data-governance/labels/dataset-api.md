@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 description: La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 2%
 
 ---
@@ -166,6 +166,10 @@ Una respuesta correcta devuelve el conjunto actualizado de etiquetas para el con
 ## Eliminación de etiquetas de un conjunto de datos {#remove}
 
 Puede quitar cualquier etiqueta de campo aplicada anteriormente actualizando los valores de `optionalLabels` existentes con un subconjunto de las etiquetas de campo existentes o con una lista vacía para quitarlos por completo. Realice una solicitud de PUT a la API [!DNL Dataset Service] para actualizar o quitar las etiquetas aplicadas anteriormente.
+
+>[!NOTE]
+>
+>Puede quitar por completo las etiquetas de un conjunto de datos proporcionando una lista vacía para el parámetro `labels`. No es obligatorio que un conjunto de datos conserve etiquetas.
 
 **Formato de API**
 

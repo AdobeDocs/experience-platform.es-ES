@@ -5,9 +5,9 @@ title: Extremo de API de etiquetas
 description: Obtenga información sobre cómo administrar las etiquetas de uso de datos en Experience Platform mediante la API del servicio de directivas.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '536'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ Las etiquetas de uso de datos le permiten categorizar los datos según las polí
 
 >[!NOTE]
 >
->El extremo `/labels` solo se usa para recuperar, crear y actualizar etiquetas de uso de datos. Para ver los pasos sobre cómo agregar etiquetas a conjuntos de datos y campos mediante llamadas API, consulte la guía sobre [administración de etiquetas de conjuntos de datos](../labels/dataset-api.md).
+>El extremo `/labels` solo se usa para recuperar, crear y actualizar etiquetas de uso de datos. No puede eliminar etiquetas. Sin embargo, puede agregar o quitar etiquetas a conjuntos de datos y campos mediante llamadas a la API. Consulte la guía del documento [administración de etiquetas de conjuntos de datos](../labels/dataset-api.md) para obtener instrucciones.
 
 ## Introducción
 
@@ -163,6 +163,10 @@ Una respuesta correcta devuelve los detalles de la etiqueta personalizada.
 ## Crear o actualizar una etiqueta personalizada {#create-update}
 
 Para crear o actualizar una etiqueta personalizada, debe realizar una solicitud de PUT a la API [!DNL Policy Service].
+
+>[!NOTE]
+>
+>Si desea quitar etiquetas de un conjunto de datos, puede realizar una [solicitud de PUT en la API del servicio de conjuntos de datos](../labels/dataset-api.md#remove) o usar la [IU de conjuntos de datos](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **Formato de API**
 
