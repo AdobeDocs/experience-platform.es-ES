@@ -2,9 +2,9 @@
 title: Preguntas frecuentes sobre Adobe Experience Platform Web SDK
 description: Obtenga respuestas a las preguntas frecuentes sobre el SDK web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
+source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2184'
 ht-degree: 2%
 
 ---
@@ -198,16 +198,6 @@ Si ha determinado que debe rellenar correctamente `window.Promise`, incluya la s
 ```
 
 Esta etiqueta carga un script que garantiza que `window.Promise` sea una implementación Promise válida.
-
->[!NOTE]
->
->Si decide cargar una implementación Promise diferente, asegúrese de que admita `Promise.prototype.finally`.
-
-### Compatibilidad con Internet Explorer
-
-El SDK de Adobe Experience Platform utiliza promesas, que son un método de comunicación de la finalización de tareas asincrónicas. La implementación [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que usa el SDK es compatible de forma nativa con todos los navegadores de destino excepto [!DNL Internet Explorer]. Para usar el SDK en [!DNL Internet Explorer], debe tener `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-Una biblioteca que podría usar para polyfill promise es promise-polyfill. Consulte la [documentación de promise-polyfill](https://www.npmjs.com/package/promise-polyfill) para obtener más información sobre cómo realizar la instalación con NPM.
 
 >[!NOTE]
 >
