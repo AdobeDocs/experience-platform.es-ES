@@ -6,9 +6,9 @@ title: Requisitos de datos en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información acerca de los eventos, las entradas y los resultados necesarios que utiliza la inteligencia artificial aplicada al cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2545'
 ht-degree: 1%
 
 ---
@@ -63,9 +63,9 @@ En la tabla siguiente se describen algunos términos comunes utilizados en este 
 | Término | Definición |
 | --- | --- |
 | [Modelo de datos de experiencia (XDM)](../../xdm/home.md) | XDM es el marco de trabajo básico que permite a Adobe Experience Cloud, con tecnología Adobe Experience Platform, entregar el mensaje correcto a la persona adecuada, en el canal correcto, en el momento justo. Platform utiliza el sistema XDM para organizar los datos de una manera determinada que facilite su uso para los servicios de Platform. |
-| [Esquema XDM](../../xdm/schema/composition.md) | Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de forma coherente en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos. Antes de poder ingerir los datos en Platform, se debe crear un esquema para describir la estructura de los datos y proporcionar restricciones al tipo de datos que se pueden contener en cada campo. Los esquemas constan de una clase XDM base y cero o más grupos de campos de esquema. |
-| [clase XDM](../../xdm/schema/field-constraints.md) | Todos los esquemas XDM describen datos que se pueden categorizar como `Experience Event`. El comportamiento de los datos de un esquema se define mediante la clase del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM describen el número más pequeño de propiedades que debe contener un esquema para representar un comportamiento de datos determinado. |
-| [Grupos de campo](../../xdm/schema/composition.md) | Componente que define uno o varios campos de un esquema. Los grupos de campos aplican la forma en que sus campos aparecen en la jerarquía del esquema y, por lo tanto, muestran la misma estructura en cada esquema en el que se incluyen. Los grupos de campos solo son compatibles con clases específicas, identificadas por su atributo `meta:intendedToExtend`. |
+| [Esquema XDM](../../xdm/schema/composition.md) | Experience Platform utiliza esquemas para describir la estructura de los datos de una manera uniforme y reutilizable. Al definir los datos de forma coherente en todos los sistemas, resulta más fácil conservar el significado y, por lo tanto, obtener valor de los datos. Antes de poder introducir datos en Platform, se debe crear un esquema para describir la estructura de los datos y proporcionar restricciones al tipo de datos que se pueden contener en cada campo. Los esquemas constan de una clase XDM base y cero o más grupos de campos de esquema. |
+| [clase XDM](../../xdm/schema/field-constraints.md) | Todos los esquemas XDM describen datos que se pueden categorizar como `Experience Event`. El comportamiento de datos de un esquema se define mediante la clase del esquema, que se asigna a un esquema cuando se crea por primera vez. Las clases XDM describen el número más pequeño de propiedades que debe contener un esquema para representar un comportamiento de datos determinado. |
+| [Grupos de campo](../../xdm/schema/composition.md) | Componente que define uno o varios campos de un esquema. Los grupos de campos aplican la forma en que sus campos aparecen en la jerarquía del esquema y, por lo tanto, muestran la misma estructura en todos los esquemas en los que se incluyen. Los grupos de campos solo son compatibles con clases específicas, identificadas por su atributo `meta:intendedToExtend`. |
 | [Tipo de datos](../../xdm/schema/composition.md) | Componente que también puede proporcionar uno o más campos para un esquema. Sin embargo, a diferencia de los grupos de campos, los tipos de datos no están restringidos a una clase en particular. Esto hace que los tipos de datos sean una opción más flexible para describir estructuras de datos comunes que se pueden reutilizar en varios esquemas con clases potencialmente diferentes. Los tipos de datos descritos en este documento son compatibles con los esquemas CEE y Adobe Analytics. |
 | [Perfil del cliente en tiempo real](../../profile/home.md) | El Perfil del cliente en tiempo real proporciona un perfil de consumidor centralizado para la administración de experiencias personalizada y dirigida. Cada perfil contiene datos agregados de todos los sistemas, así como cuentas con marca de tiempo procesables de eventos que implican a la persona que ha tenido lugar en cualquiera de los sistemas que utiliza con Experience Platform. |
 
@@ -158,6 +158,8 @@ La inteligencia artificial aplicada al cliente requiere datos históricos para l
 De forma predeterminada, la inteligencia artificial aplicada al cliente busca un usuario que haya tenido actividad en los últimos 45 días si no se proporciona ninguna definición de población apta durante la configuración de la aplicación. Además, la inteligencia artificial aplicada al cliente requiere un mínimo de 500 eventos clasificatorios y 500 no clasificatorios (1000 en total) a partir de datos históricos basados en una definición de objetivo predicha.
 
 Los siguientes ejemplos muestran el uso de una fórmula simple que ayuda a determinar la cantidad mínima de datos necesaria. Si tiene más datos que el requisito mínimo, es probable que el modelo proporcione resultados más precisos. Si tiene menos de la cantidad mínima requerida, el modelo fallará, ya que no hay suficientes datos para la formación del modelo.
+
+La inteligencia artificial aplicada al cliente emplea un modelo de supervivencia para estimar la probabilidad de que un evento se produzca en un momento determinado e identificar los factores que influyen, junto con el aprendizaje supervisado que define las poblaciones positivas y negativas y árboles basados en decisiones como `lightgbm` para generar una puntuación de probabilidad.
 
 **fórmula**:
 
