@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos en la IU
 description: Esta guía describe los pasos para trabajar con las etiquetas de uso de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
+source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1549'
 ht-degree: 17%
 
 ---
@@ -36,7 +36,7 @@ Puede agregar etiquetas directamente a un esquema o campos dentro de ese esquema
 >
 >![Se ha detectado una infracción de directiva de gobernanza de datos en el cuadro de diálogo con el resumen de la infracción y el diagrama de linaje de datos resaltados.](../images/labels/policy-violation-dialog.png)
 >
->Consulte la [documentación de infracción de directiva de uso de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) para obtener más información sobre infracciones de directiva parciales.
+>Consulte la [documentación de infracción de directiva de uso de datos](../enforcement/auto-enforcement.md#data-usage-violation) para obtener más información sobre infracciones de directiva parciales.
 
 Para administrar etiquetas de uso de datos en el nivel de esquema, debe seleccionar un esquema existente o crear uno nuevo. Después de iniciar sesión en Adobe Experience Platform, seleccione **[!UICONTROL Esquemas]** en el panel de navegación izquierdo para abrir el área de trabajo **[!UICONTROL Esquemas]**. Esta página lista todos los esquemas creados que pertenecen a su organización, junto con detalles útiles relacionados con cada esquema.
 

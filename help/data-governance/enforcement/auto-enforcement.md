@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aplicación automática de políticas
 description: Este documento explica cómo se aplican automáticamente las políticas de uso de datos al activar audiencias en destinos en Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2118'
 ht-degree: 0%
 
 ---
@@ -70,8 +70,8 @@ Cada etapa de la cronología anterior representa una entidad que puede contribui
 | --- | --- |
 | Conjunto de datos | Los conjuntos de datos contienen etiquetas de uso de datos (aplicadas en el nivel de campo de esquema o en todo el nivel de conjunto de datos) que definen para qué casos de uso se puede utilizar todo el conjunto de datos o campos específicos. Se producirán infracciones de directivas si se utiliza un conjunto de datos o un campo que contenga determinadas etiquetas para un fin restringido por una directiva.<br><br>Todos los atributos de consentimiento recopilados de sus clientes también se almacenan en conjuntos de datos. Si tiene acceso a las políticas de consentimiento, los perfiles que no cumplan los requisitos de atributo de consentimiento de las políticas se excluirán de las audiencias activadas en un destino. |
 | Política de combinación | Las políticas de combinación son las reglas que utiliza Platform para determinar la prioridad que se dará a los datos al combinar fragmentos de varios conjuntos de datos. Se producirán infracciones de directivas si las políticas de combinación se configuran de modo que los conjuntos de datos con etiquetas restringidas se activen en un destino. Consulte la [descripción general de las políticas de combinación](../../profile/merge-policies/overview.md) para obtener más información. |
-| Público | Las reglas de segmentación definen qué atributos se deben incluir desde los perfiles del cliente. Según los campos que incluya una definición de segmento, la audiencia heredará las etiquetas de uso aplicadas a esos campos. Se producirán violaciones de política si activa una audiencia cuyas etiquetas heredadas estén restringidas por las políticas aplicables del destino de destino, según su caso de uso de marketing. |
-| Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Las violaciones de políticas de uso de datos se producen si activa una audiencia cuyas etiquetas de uso están restringidas para la acción de marketing del destino de destino.<br><br>(Beta) Cuando se activa una audiencia, los perfiles que no contienen los atributos de consentimiento necesarios para la acción de marketing (según se definen en las directivas de consentimiento) se excluyen de la audiencia activada. |
+| Público | Las reglas de segmentación definen qué atributos se deben incluir desde los perfiles del cliente. Según los campos que incluya una definición de segmento, la audiencia heredará las etiquetas de uso aplicadas a esos campos. Se producirán infracciones de directivas si intenta activar una audiencia cuyas etiquetas heredadas estén restringidas por las directivas aplicables del destino de destino, según su caso de uso de marketing. |
+| Destino | Al configurar un destino, se puede definir una acción de marketing (a veces denominada caso de uso de marketing). Este caso de uso se correlaciona con una acción de marketing tal como se define en una directiva. En otras palabras, la acción de marketing que defina para un destino determina qué políticas de uso de datos y políticas de consentimiento son aplicables a ese destino.<br><br>Se producen violaciones de la directiva de uso de datos si intenta activar una audiencia cuyas etiquetas de uso estén restringidas para la acción de marketing del destino de destino.<br><br>(Beta) Cuando se activa una audiencia, los perfiles que no contienen los atributos de consentimiento necesarios para la acción de marketing (según se definen en las directivas de consentimiento) se excluyen de la audiencia activada. |
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Utilice el diagrama de linaje de datos para comprender qué otros cambios de con
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-Al activar una audiencia en un destino, puede ver cómo las [políticas de consentimiento](../policies/user-guide.md#consent-policy) afectan a distintos porcentajes de perfiles incluidos en la activación.
+Al activar una audiencia en un destino, puedes ver cómo tus [políticas de consentimiento](../policies/user-guide.md) afectan el alcance de tu audiencia durante la [etapa de revisión del flujo de trabajo [!UICONTROL Activar destinos]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -138,13 +138,13 @@ Estas mejoras garantizan una mayor confianza en la estrategia de marketing, ya q
 >
 >No hay cambios en la interfaz de usuario como resultado de esta mejora.
 
-#### Evaluación previa a la activación
+#### Evaluación previa a la activación {#pre-activation-evaluation}
 
-Una vez que llegue al paso **[!UICONTROL Revisar]** al [activar un destino](../../destinations/ui/activation-overview.md), seleccione **[!UICONTROL Ver directivas aplicadas]**.
+Cuando llegue al paso **[!UICONTROL Revisar]** al [activar un destino](../../destinations/ui/activation-overview.md), seleccione **[!UICONTROL Ver directivas aplicadas]**.
 
 ![Botón Ver directivas aplicadas en el flujo de trabajo de activación de destino](../images/enforcement/view-applied-policies.png)
 
-Aparece un cuadro de diálogo de comprobación de directivas que muestra una previsualización de cómo las directivas de consentimiento afectan a la audiencia consentida de las audiencias activadas.
+Aparece un cuadro de diálogo de comprobación de directivas que muestra una previsualización de cómo las políticas de consentimiento afectan a la audiencia de consentimiento de las audiencias que se van a activar.
 
 ![Cuadro de diálogo de comprobación de directivas de consentimiento en la IU de Platform](../images/enforcement/consent-policy-check.png)
 
