@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform de julio de 2024
 description: Las notas de la versión de julio de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 20%
+source-wordcount: '1225'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,9 @@ Actualizaciones de funciones y documentación existentes en Experience Platform:
 - [Recopilación de datos](#data-collection)
 - [Gobernanza de datos](#data-governance)
 - [Destinos](#destinations)
+- [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
+- [Etiquetas unificadas](#unified-tags)
 
 ## Composición de público federado {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Para obtener más información, lea la [descripción general del control de dato
 
 Para obtener más información, lea la [descripción general de destinos](../../destinations/home.md).
 
+## Servicio de segmentación {#segmentation}
+
+[!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
+
+**Nueva documentación**
+
+| Nuevo documentación | Descripción |
+| ----------------- | ----------- | 
+| [Portal de audiencias](../../segmentation/ui/audience-portal.md) | Aprenda a utilizar Audience Portal, que le permite ver, administrar y crear audiencias en Adobe Experience Platform de forma centralizada. |
+
+{style="table-layout:auto"}
+
 ## Fuentes
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
@@ -113,10 +127,25 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 **Documentación actualizada**
 
-| Documentación actualizada | descripción |
+| Documentación actualizada | Descripción |
 | --- | --- |
 | Guía de autenticación expandida para [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Lea la guía de autenticación expandida de [!DNL Snowflake] para obtener información sobre cómo recuperar su [identificador de cuenta](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) y su [clave privada](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) para la autenticación. Además, usa la guía de autenticación expandida para ver los pasos de cómo [comprobar las configuraciones de almacén y rol](../../sources/connectors/databases/snowflake.md#verify-configurations). |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [descripción general de orígenes](../../sources/home.md).
+
+## Etiquetas unificadas
+
+Las etiquetas unificadas le permiten categorizar y administrar sus objetos empresariales en Adobe Experience Platform. Con la API de Etiquetas unificadas, puede crear carpetas y etiquetas para organizar mejor los objetos de Platform, como audiencias o conjuntos de datos.
+
+**Nueva documentación**
+
+| Nuevo documentación | Descripción |
+| ----------------- | ----------- |
+| [Guía de API de etiquetas unificadas](../../administrative-tags/api/overview.md) | Lea la guía de la API de etiquetas unificadas para aprender a crear carpetas y etiquetas para ordenar los objetos empresariales. |
+| [Referencia de API de etiquetas unificadas](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Utilice la referencia de la API de etiquetas unificadas para probar de forma interactiva los extremos de las etiquetas unificadas. |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea la [Información general sobre etiquetas unificadas](../../administrative-tags/overview.md).
