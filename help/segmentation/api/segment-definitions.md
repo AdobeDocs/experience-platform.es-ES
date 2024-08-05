@@ -4,7 +4,7 @@ title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 4%
@@ -68,7 +68,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
@@ -108,7 +107,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de definiciones
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
@@ -196,8 +194,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "schema": {
             "name": "_xdm.context.profile"
         },
-        "payloadSchema": "string",
-        "ttlInDays": 60
+        "payloadSchema": "string"
     }'
 ```
 
@@ -228,7 +225,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -303,7 +299,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -394,7 +389,6 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -433,7 +427,6 @@ Una respuesta correcta devuelve el estado HTTP 207 con las definiciones de segme
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -556,7 +549,6 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
         "name": "_xdm.context.profile"
     },
     "payloadSchema": "string",
-    "ttlInDays": 60,
     "creationTime": 0,
     "updateTime": 0,
     "updateEpoch": 0
@@ -573,7 +565,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -642,8 +633,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
         "schema": {
             "name": "_xdm.context.profile"
         },
-        "payloadSchema": "string",
-        "ttlInDays": 60
+        "payloadSchema": "string"
     }'
 ```
 
@@ -653,7 +643,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la definició
 
 ```json
 {
-    "ttlInDays": 60,
     "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
