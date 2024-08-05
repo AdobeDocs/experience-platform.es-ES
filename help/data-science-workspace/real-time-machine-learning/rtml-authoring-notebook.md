@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Administrar portátiles de aprendizaje automático en tiempo real
 description: La siguiente guía describe los pasos necesarios para crear una aplicación de aprendizaje automático en tiempo real en Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1686'
 ht-degree: 0%
 
 ---
 
 # Administración de portátiles de aprendizaje automático en tiempo real (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -86,11 +92,11 @@ Comience cargando los datos de formación.
 
 ![Cargar datos de formación](../images/rtml/load_training.png)
 
-Si desea utilizar un conjunto de datos desde Adobe Experience Platform, quite el comentario de la celda siguiente. A continuación, debe reemplazar `DATASET_ID` con el valor apropiado.
+Si desea utilizar un conjunto de datos desde dentro de Adobe Experience Platform, quite la marca de comentario de la celda de abajo. Siguiente, debe reemplazarlo `DATASET_ID` por el valor apropiado.
 
-![conjunto de datos rtml](../images/rtml/rtml-dataset.png)
+![conjunto de datos RTML](../images/rtml/rtml-dataset.png)
 
-Para obtener acceso a un conjunto de datos del bloc de notas [!DNL JupyterLab], seleccione la ficha **Datos** en el panel de navegación izquierdo de [!DNL JupyterLab]. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda contiene su `dataset_id`.
+Para acceder a un conjunto de datos del [!DNL JupyterLab] bloc de notas, seleccione el **** pestaña datos del navegación izquierdo de [!DNL JupyterLab]. Aparecen los directorios **[!UICONTROL Datasets]** y **[!UICONTROL Schemas]**. Seleccione **[!UICONTROL Conjuntos de datos]**, haga clic con el botón derecho y, a continuación, seleccione la opción **[!UICONTROL Explorar datos en el bloc de notas]** en el menú desplegable del conjunto de datos que desee utilizar. Aparece una entrada de código ejecutable en la parte inferior del bloc de notas. Esta celda contiene su `dataset_id`.
 
 ![acceso al conjunto de datos](../images/rtml/access-dataset.png)
 
@@ -109,7 +115,7 @@ config_properties = {
 }
 ```
 
-### Preparación del modelo
+### Preparar el modelo
 
 Con la plantilla **[!UICONTROL ML]** en tiempo real, debe analizar, preprocesar, entrenar y evaluar su modelo ML. Para ello, aplique transformaciones de datos y cree una canalización de formación.
 
@@ -194,15 +200,15 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de resultados devuelta del conjunto de datos `carinsurancedataset.csv` devuelve las modificaciones definidas.
+Ejecute la celda proporcionada para ver un resultado de ejemplo. La tabla de salida devuelta por el `carinsurancedataset.csv` conjunto de datos devuelve las modificaciones definidas.
 
 ![Ejemplo de transformaciones de datos](../images/rtml/table-return.png)
 
-**Canalización de formación**
+**Flujo de capacitación**
 
-A continuación, debe crear la canalización de formación. Esto será similar a cualquier otro archivo de canalización de formación, excepto que necesita convertir y generar un archivo ONNX.
+Siguiente debe crear la canalización de aprendizaje. Se verá como cualquier otro archivo de canalización de aprendizaje, excepto que debe convertir y generar un archivo ONNX.
 
-Con las transformaciones de datos definidas en la celda anterior, modifique la plantilla. El siguiente código resaltado a continuación se utiliza para generar un archivo ONNX en la canalización de funciones. Vea la *plantilla ML* en tiempo real para la celda completa del código de canalización.
+Mediante las transformaciones de datos definidas en la celda anterior, modifique el plantilla. El siguiente código resaltado a continuación se utiliza para generar un archivo ONNX en la canalización de funciones. Vea la *plantilla ML* en tiempo real para la celda completa del código de canalización.
 
 ```python
 #for generating onnx
@@ -244,7 +250,7 @@ model.generate_onnx_resources()
 
 >[!NOTE]
 >
->Cambie el valor de cadena `model_path` (`model.onnx`) para cambiar el nombre del modelo.
+>Cambie el valor de cadena `model_path` (`model.onnx`) para cambiar el nombre de su modelo.
 
 ```python
 model_path = "model.onnx"
@@ -353,13 +359,13 @@ Una vez finalizado, se devuelve un objeto `edge` que contiene cada uno de los no
 
 >[!NOTE]
 >
->El aprendizaje automático en tiempo real se implementa temporalmente en Adobe Experience Platform Hub y se administra mediante este. Para obtener más información, visite la sección de información general sobre [Arquitectura de aprendizaje automático en tiempo real](./home.md#architecture).
+>El aprendizaje automático en tiempo real se implementa y administra temporalmente en el Adobe Experience Platform Hub. Para obtener más información, visita la sección de descripción general de [la arquitectura](./home.md#architecture) del aprendizaje automático en tiempo real.
 
-Ahora que ha creado un gráfico DSL, puede implementar su gráfico en [!DNL Edge].
+Ahora que ha creado un gráfico DSL, puede implementar el [!DNL Edge]gráfico al archivo .
 
 >[!IMPORTANT]
 >
->No publique en [!DNL Edge] con frecuencia, ya que podría sobrecargar los nodos de [!DNL Edge]. No se recomienda publicar el mismo modelo varias veces.
+>No publicar a [!DNL Edge] menudo, esto puede sobrecargar los [!DNL Edge] nodos. No se recomienda Publicación el mismo modelo varias veces.
 
 ```python
 edge_utils = EdgeUtils()
@@ -408,7 +414,7 @@ Se le devolverá el DSL actualizado.
 
 ## Puntuación {#scoring}
 
-Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud de POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puede hacerlo desde Postman. La plantilla **[!UICONTROL ML]** en tiempo real usa EdgeUtils para mostrar este proceso.
+Después de publicar en [!DNL Edge], la puntuación se realiza mediante una solicitud de POST de un cliente. Normalmente, esto se puede hacer desde una aplicación cliente que necesita puntuaciones ML. También puede hacerlo desde Postman. El **[!UICONTROL plantilla de ML]** en tiempo real utiliza EdgeUtils para demostrar este proceso.
 
 >[!NOTE]
 >
@@ -420,7 +426,7 @@ import time
 time.sleep(20)
 ```
 
-Con el mismo esquema que se utilizó en la formación, se generan datos de puntuación de muestra. Estos datos se utilizan para crear un marco de datos de puntuación y luego se convierten en un diccionario de puntuación. Vea la *plantilla ML* en tiempo real para la celda de código completa.
+Si se utiliza la misma esquema que se utilizó en aprendizaje, se generan datos de puntuación de muestra. Estos datos se utilizan para versión un marco de datos de puntuación y luego se convierten en un diccionario de puntuación. vista la plantilla de ML ** en tiempo real para la celda de código completa.
 
 ![Datos de puntuación](../images/rtml/generate-score-data.png)
 
@@ -434,7 +440,7 @@ Una vez completada la puntuación, se devuelve la dirección URL [!DNL Edge], la
 
 ## Enumere las aplicaciones implementadas a partir de [!DNL Edge]
 
-Para generar una lista de las aplicaciones implementadas actualmente en [!DNL Edge], ejecute la siguiente celda de código. Esta celda no se puede editar ni eliminar.
+Para generar un lista de las aplicaciones implementadas actualmente en el [!DNL Edge], ejecute la siguiente celda de código. Esta celda no se puede editar ni eliminar.
 
 ```python
 services = edge_utils.list_deployed_services()

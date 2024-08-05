@@ -1,17 +1,23 @@
 ---
-keywords: Experience Platform;receta de compra de producto;Data Science Workspace;temas populares;recetas;receta previa a la compilación
+keywords: Experience Platform; fórmula de compra de productos; Data Science Espacio de trabajo; temas populares; Recetas; Pre versión fórmula
 solution: Experience Platform
 title: Fórmula de predicción de compra de productos
-description: 'La fórmula de predicción de compra de productos le permite predecir la probabilidad de un determinado tipo de evento de compra de cliente: una compra de producto, por ejemplo.'
+description: El fórmula de predicción de compra de productos le permite predecir la probabilidad de un determinado tipo de Evento de compra de cliente, es decir, la compra de un producto, por instancia.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '415'
 ht-degree: 5%
 
 ---
 
-# Fórmula de predicción de compra de productos
+# Predicción de compra de productos fórmula
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 La fórmula de predicción de compra de productos le permite predecir la probabilidad de un determinado tipo de evento de compra de cliente: una compra de producto, por ejemplo.
 
@@ -21,9 +27,9 @@ El siguiente documento responderá preguntas como las siguientes:
 * ¿Para quién está diseñada esta receta?
 * ¿Qué hace esta receta?
 
-## ¿Para quién está diseñada esta receta?
+## ¿Para quién está diseñado este fórmula?
 
-Su marca busca impulsar las ventas trimestrales para su línea de productos a través de promociones efectivas y dirigidas a sus clientes. Sin embargo, no todos los clientes son iguales y usted quiere el valor de su dinero. ¿A quién se dirige? ¿Cuáles de sus clientes tienen más probabilidades de responder sin que su promoción resulte intrusiva? ¿Cómo personalizas tus promociones para cada cliente? ¿En qué canales debería confiar y cuándo debería enviar promociones?
+Su marca busca aumentar las ventas trimestrales de su línea de productos a través de promociones efectivas y dirigidas a sus clientes. Sin embargo, no todos los clientes son iguales y usted quiere el valor de su dinero. ¿A quién destino? ¿Cuál de sus clientes tiene más probabilidades de responder sin encontrar su promoción intrusivo? ¿Cómo personalizas tus promociones para cada cliente? ¿En qué canales debe confiar y cuándo debe enviar promociones?
 
 ## ¿Qué hace esta receta?
 
@@ -35,8 +41,8 @@ Esta fórmula usa [esquemas XDM](../../xdm/home.md) para modelar los datos. El e
 
 | Nombre del campo | Tipo |
 | --- | --- |
-| userId | Cadena |
-| genderRatio | Número |
+| Id de usuario | Cadena |
+| Proporción de género | Número |
 | ageY | Número |
 | ageM | Número |
 | optinEmail | Booleano |
@@ -46,11 +52,11 @@ Esta fórmula usa [esquemas XDM](../../xdm/home.md) para modelar los datos. El e
 | totalOrders | Número |
 | totalItems | Número |
 | orderDate1 | Número |
-| shippingDate1 | Número |
+| Fecha de envío1 | Número |
 | totalPrice1 | Número |
 | impuesto1 | Número |
 | orderDate2 | Número |
-| shippingDate2 | Número |
+| Fecha de envío2 | Número |
 | totalPrice2 | Número |
 
 
@@ -58,4 +64,4 @@ Esta fórmula usa [esquemas XDM](../../xdm/home.md) para modelar los datos. El e
 
 Primero, se carga el conjunto de datos de aprendizaje en el esquema *ProductPrediction*. Desde aquí, el modelo se entrena con un [clasificador de bosque aleatorio](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). El clasificador de bosque aleatorio es un tipo de algoritmo ensamblado que hace referencia a un algoritmo que combina varios algoritmos para obtener un rendimiento predictivo mejorado. La idea detrás del algoritmo es que el clasificador de bosque aleatorio construye múltiples árboles de decisión y los combina para crear una predicción más precisa y estable.
 
-Este proceso comienza con la creación de un conjunto de árboles de decisión que selecciona aleatoriamente subconjuntos de datos de formación. Después, se promedia el resultado de cada árbol de decisión.
+Este proceso comienza con la creación de un conjunto de árboles de decisión que selecciona aleatoriamente subconjuntos de datos de capacitación. Después, se promedian los resultados de cada árbol de decisión.

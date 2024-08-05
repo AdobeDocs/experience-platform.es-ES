@@ -5,15 +5,21 @@ title: Crear el esquema de ventas minoristas y el conjunto de datos
 type: Tutorial
 description: Este tutorial le proporciona los requisitos previos y los recursos necesarios para todos los demás tutoriales de Adobe Experience Platform Data Science Workspace. Una vez finalizados, el esquema y los conjuntos de datos de ventas minoristas estarán disponibles para usted y los miembros de su organización en Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
 
 
 # Creación del esquema de ventas minoristas y el conjunto de datos
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 Este tutorial le proporciona los requisitos previos y los recursos necesarios para los demás tutoriales de [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Una vez finalizados, el esquema y los conjuntos de datos de ventas minoristas estarán disponibles para usted y los miembros de su organización en [!DNL Experience Platform].
 

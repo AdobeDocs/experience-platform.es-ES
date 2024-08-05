@@ -5,14 +5,20 @@ title: Punto final de API de MLServices
 description: Un MLService es un modelo entrenado publicado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad de automatizar la formación y la puntuación de forma programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficiencia y precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que las nuevas perspectivas se generen de forma coherente.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '910'
 ht-degree: 2%
 
 ---
 
 # Extremo de MLServices
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 Un MLService es un modelo entrenado publicado que proporciona a su organización la capacidad de acceder y reutilizar modelos desarrollados anteriormente. Una característica clave de MLServices es la capacidad de automatizar la formación y la puntuación de forma programada. Las ejecuciones de formación programadas pueden ayudar a mantener la eficiencia y precisión de un modelo, mientras que las ejecuciones de puntuación programadas pueden garantizar que las nuevas perspectivas se generen de forma coherente.
 

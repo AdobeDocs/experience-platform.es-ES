@@ -5,14 +5,20 @@ title: Extremo de API de MLInstances
 description: Una MLInstance es un emparejamiento de un motor existente con un conjunto adecuado de configuraciones que define cualquier parámetro de formación, parámetro de puntuación o configuración de recursos de hardware.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '642'
 ht-degree: 3%
 
 ---
 
 # Extremo de MLInstances
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 Una MLInstance es un emparejamiento de un [Motor](./engines.md) existente con un conjunto adecuado de configuraciones que define cualquier parámetro de entrenamiento, parámetro de puntuación o configuración de recursos de hardware.
 
@@ -76,7 +82,7 @@ curl -X POST \
 
 | Propiedad | Descripción |
 | --- | --- |
-| `name` | El nombre deseado para la MLInstance. El modelo correspondiente a esta MLInstance heredará este valor para que se muestre en la interfaz de usuario como el nombre del modelo. |
+| `name` | Nombre deseado para MLInstance. El modelo correspondiente a esta MLInstance heredará este valor para que se muestre en la interfaz de usuario como el nombre del modelo. |
 | `description` | Una descripción opcional para la instancia de MLI. El modelo correspondiente a esta MLInstance heredará este valor para que se muestre en la interfaz de usuario como la descripción del modelo. Esta propiedad es obligatoria. Si no desea proporcionar una descripción, establezca su valor como una cadena vacía. |
 | `engineId` | El ID de un motor existente. |
 | `tasks` | Un conjunto de configuraciones para aprendizaje, puntuación o canalizaciones de funciones. |

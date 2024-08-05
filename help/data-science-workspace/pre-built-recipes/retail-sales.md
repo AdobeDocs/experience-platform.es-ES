@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Fórmula de ventas minoristas
 description: La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
 
 # Fórmula de ventas minoristas
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 La fórmula de ventas minoristas permite predecir la previsión de ventas de todas las tiendas predefinidas para un período de tiempo determinado. Con un modelo de predicción preciso, el minorista podría encontrar la relación entre las políticas de demanda y precios y tomar decisiones de precios optimizadas para maximizar las ventas y los ingresos.
 

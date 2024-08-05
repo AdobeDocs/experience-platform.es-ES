@@ -5,14 +5,20 @@ title: Servicio de consultas en Jupyter Notebook
 type: Tutorial
 description: Adobe Experience Platform le permite utilizar el Lenguaje de consulta estructurado (SQL) en Data Science Workspace integrando el Servicio de consulta en JupyterLab como función estándar. Este tutorial muestra consultas SQL de ejemplo para casos de uso comunes para explorar, transformar y analizar datos de Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
 
 # Servicio de consultas en Jupyter Notebook
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 [!DNL Adobe Experience Platform] le permite usar el Lenguaje de consulta estructurado (SQL) en [!DNL Data Science Workspace] al integrar [!DNL Query Service] en [!DNL JupyterLab] como característica estándar.
 
@@ -20,11 +26,11 @@ Este tutorial muestra consultas SQL de ejemplo para casos de uso comunes con el 
 
 ## Introducción
 
-Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
+Antes de comenzar este tutorial, debe cumplir los siguientes requisitos previos:
 
-- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización en [!DNL Experience Platform], comuníquese con el administrador del sistema antes de continuar
+- Acceso a [!DNL Adobe Experience Platform]. Si no tiene acceso a una organización en [!DNL Experience Platform], hable con el administrador del sistema antes de continuar
 
-- Un conjunto de datos [!DNL Adobe Analytics]
+- Un [!DNL Adobe Analytics] conjunto de datos
 
 - Una comprensión práctica de los siguientes conceptos clave utilizados en este tutorial:
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -42,13 +48,13 @@ Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
    >
    >Si no aparece automáticamente una nueva ficha de lanzador, ábrala haciendo clic en **[!UICONTROL Archivo]** y, a continuación, seleccione **[!UICONTROL Nuevo lanzador]**.
 
-2. En la ficha Lanzador, haga clic en el icono **[!UICONTROL En blanco]** en un entorno de Python 3 para abrir un bloc de notas vacío.
+2. En el pestaña del iniciador, haga clic en el **[!UICONTROL icono En blanco]** en un entorno de Python 3 para abrir un bloc de notas vacío.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    >[!NOTE]
    >
-   >Python 3 es actualmente el único entorno compatible con el servicio de consultas en portátiles.
+   >Python 3 es actualmente la única entorno admitida para el servicio de consultas en blocs de notas.
 
 3. En el carril izquierdo de la selección, haga clic en el icono **[!UICONTROL Datos]** y haga doble clic en el directorio **[!UICONTROL Conjuntos de datos]** para ver una lista de todos los conjuntos de datos.
 
@@ -87,24 +93,24 @@ Antes de iniciar este tutorial, debe cumplir los siguientes requisitos previos:
 
    - `target_table`: nombre de su conjunto de datos [!DNL Adobe Analytics].
    - `target_year`: año específico del que proceden los datos de destinatario.
-   - `target_month`: mes específico del que procede el destino.
-   - `target_day`: día específico del que proceden los datos de destinatario.
+   - `target_month`: mes específico del que proviene el destino.
+   - `target_day`: Día específico del que proceden los datos de la destino.
 
    >[!NOTE]
    >
    >Puede cambiar estos valores en cualquier momento. Al hacerlo, asegúrese de ejecutar la celda de variables para que se apliquen los cambios.
 
-## Consulta de datos {#query-your-data}
+## Consulta tus datos {#query-your-data}
 
-Introduzca las siguientes consultas SQL en celdas individuales del bloc de notas. Ejecute una consulta seleccionando en su celda y después el botón **[!UICONTROL reproducir]**. Los resultados de la consulta o los registros de errores correctos se muestran debajo de la celda ejecutada.
+Escriba las siguientes consultas SQL en celdas de bloc de notas individuales. Ejecute una consulta seleccionando en su celda y luego seleccionando el botón de **[!UICONTROL reproducción]** . Los resultados de la consulta o los registros de errores correctos se muestran debajo de la celda ejecutada.
 
 Cuando un bloc de notas está inactivo durante un período de tiempo prolongado, la conexión entre el bloc de notas y [!DNL Query Service] puede romperse. En estos casos, reinicie [!DNL JupyterLab] seleccionando el botón **Reiniciar** ![botón de reinicio](/help/images/icons/restart.png) situado en la esquina superior derecha junto al botón de encendido.
 
-El núcleo del bloc de notas se restablece, pero las celdas permanecen, vuelva a ejecutar todas las celdas para continuar donde lo dejó.
+El kernel del cuaderno se restablece pero las celdas permanecerán, vuelva a ejecutar todas las celdas para continuar donde lo había dejado.
 
-### Recuento de visitantes por hora {#hourly-visitor-count}
+### Recuento de visitante por hora {#hourly-visitor-count}
 
-La siguiente consulta devuelve el recuento de visitantes por hora para una fecha especificada:
+La siguiente consulta devuelve el recuento de visitante por hora para una fecha especificada:
 
 #### Consulta
 
@@ -160,13 +166,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Si se ejecuta la consulta anterior, los resultados se almacenarán en `hourly_actions` como un marco de datos. Ejecute la siguiente función en una nueva celda para previsualizar los resultados:
+La ejecución de los consulta anteriores tienda los resultados se colocan como `hourly_actions` un marco de datos. Ejecute la siguiente función en una celda nueva para previsualización los resultados:
 
 ```python
 hourly_actions.head()
 ```
 
-La consulta anterior se puede modificar para que devuelva el recuento de acciones por hora de un intervalo de fechas especificado mediante operadores lógicos en la cláusula **WHERE**:
+La consulta anterior se puede modificar para devolver el recuento de acciones por hora para un intervalo de fecha especificado utilizando operadores lógicos en la **cláusula WHERE** :
 
 #### Consulta <!-- omit in toc -->
 
@@ -208,7 +214,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Ejecute el siguiente código [!DNL Python] para generar un histograma para la cantidad de eventos por sesión de visita:
+Ejecute el código siguiente [!DNL Python] para generar un histograma para el número de eventos por sesión visita:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -276,4 +282,4 @@ LIMIT  10;
 
 ## Pasos siguientes
 
-Este tutorial muestra algunos casos de uso de ejemplo para utilizar [!DNL Query Service] en [!DNL Jupyter] blocs de notas. Siga el tutorial de [Analizar sus datos con Jupyter Notebooks](./analyze-your-data.md) para ver cómo se realizan operaciones similares mediante el SDK de acceso a datos.
+Este tutorial muestra algunos casos de uso de ejemplo para utilizar [!DNL Query Service] en [!DNL Jupyter] blocs de notas. Siga la [tutorial Análisis de datos con Jupyter Notebooks](./analyze-your-data.md) para ver cómo se realizan operaciones similares con el SDK de acceso a datos.

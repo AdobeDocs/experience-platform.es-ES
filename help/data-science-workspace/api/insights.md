@@ -1,26 +1,32 @@
 ---
-keywords: Experience Platform;guía para desarrolladores;extremo;Workspace de ciencia de datos;temas populares;perspectivas;api de aprendizaje automático de sensei
+keywords: Experience Platform; guía de desarrolladores; Extremo; Data Science Espacio de trabajo; temas populares; Ideas; API de aprendizaje automático de Sensei
 solution: Experience Platform
 title: Punto final de API de Insights
 description: Las perspectivas contienen métricas que se utilizan para que un científico de datos pueda evaluar y elegir modelos XML óptimos mediante la visualización de métricas de evaluación relevantes.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
 
 # Punto final de perspectivas
 
-Las perspectivas contienen métricas que se utilizan para que un científico de datos pueda evaluar y elegir modelos XML óptimos mediante la visualización de métricas de evaluación relevantes.
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos previos a Data Science Espacio de trabajo.
 
-## Recuperación de una lista de perspectivas
+Insights contienen métricas que se utilizan para capacitar a un científico de datos para evaluar y elegir modelos óptimos de ML mediante la visualización de métricas de evaluación relevantes.
 
-Puede recuperar una lista de perspectivas realizando una única solicitud de GET al extremo de las perspectivas.  Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+## Recuperar un lista de Insights
 
-**Formato de API**
+Puede recuperar un lista de Insights realizando una sola petición GET al punto final de perspectivas.  Para filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [consulta parámetros para recurso recuperación](./appendix.md#query).
+
+**Formato API**
 
 ```http
 GET /insights
@@ -101,14 +107,14 @@ Una respuesta correcta devuelve una carga útil que incluye una lista de perspec
 
 | Propiedad | Descripción |
 | --- | --- |
-| `id` | El ID correspondiente a la perspectiva. |
-| `experimentId` | ID de experimento válido. |
-| `experimentRunId` | ID de ejecución de experimento válido. |
-| `modelId` | ID de modelo válido. |
+| `id` | ID correspondiente al Insight. |
+| `experimentId` | Un ID de Experimento válido. |
+| `experimentRunId` | Un ID válido de Experimento ejecución. |
+| `modelId` | Un ID de modelo válido. |
 
-## Recuperar una perspectiva específica
+## Recuperar un Insight específico
 
-Para buscar una perspectiva concreta, realice una solicitud de GET y proporcione un `{INSIGHT_ID}` válido en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [parámetros de consulta para la recuperación de recursos](./appendix.md#query).
+Para buscar un conocimiento en particular, realice un petición GET y proporcione un documento válido `{INSIGHT_ID}` en la ruta de solicitud. Para ayudar a filtrar los resultados, puede especificar parámetros de consulta en la ruta de solicitud. Para obtener una lista de las consultas disponibles, consulte la sección del apéndice sobre [consulta parámetros para recurso recuperación](./appendix.md#query).
 
 **Formato de API**
 
@@ -118,7 +124,7 @@ GET /insights/{INSIGHT_ID}
 
 | Parámetro | Descripción |
 | --- | --- |
-| `{INSIGHT_ID}` | El identificador único de una perspectiva de Sensei. |
+| `{INSIGHT_ID}` | El identificador único de un conocimiento Sensei. |
 
 **Solicitud**
 
@@ -133,7 +139,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el identificador único de perspectivas (`id`). Además, recibirá `context`, que contiene los identificadores únicos asociados con la perspectiva particular que sigue a los datos de eventos y métricas de Insights.
+Una respuesta correcta devuelve una carga útil que incluye el identificador único de información (`id`). Además, recibirá `context` que contiene los identificadores únicos que están asociados con el conocimiento particular que sigue con los eventos de Insights y los datos de las métricas.
 
 ```json
 {
@@ -171,7 +177,7 @@ Una respuesta correcta devuelve una carga útil que incluye el identificador ún
 
 ## Añadir una nueva perspectiva del modelo
 
-Puede crear una nueva perspectiva del modelo realizando una solicitud del POST y una carga útil que proporcione contexto, eventos y métricas para la nueva perspectiva del modelo. El campo de contexto utilizado para crear una nueva perspectiva del modelo no es necesario para tener servicios existentes asociados a él, pero puede elegir crear la nueva perspectiva del modelo con servicios existentes proporcionando uno o más de los ID correspondientes:
+Puede crear una nueva conocimiento modelo realizando una petición POST y una carga útil que proporcionen contexto, eventos y métricas para la nueva conocimiento modelo. No es necesario que el campo de contexto utilizado para crear un nuevo modelo conocimiento tenga asociados los servicios existentes, pero puede optar por crear el nuevo modelo conocimiento con los servicios existentes proporcionando uno o varios de los ID correspondientes:
 
 ```json
 "context": {
@@ -186,7 +192,7 @@ Puede crear una nueva perspectiva del modelo realizando una solicitud del POST y
   }
 ```
 
-**Formato de API**
+**Formato API**
 
 ```http
 POST /insights
@@ -229,7 +235,7 @@ curl -X POST \
 
 **Respuesta**
 
-Una respuesta correcta devolverá una carga útil que tiene un `{INSIGHT_ID}` y cualquier parámetro que haya proporcionado en la solicitud inicial.
+Una respuesta correcta devolverá una carga útil que tiene uno `{INSIGHT_ID}` y cualquiera de los parámetros proporcionados en la solicitud inicial.
 
 ```json
 {
@@ -266,7 +272,7 @@ Una respuesta correcta devolverá una carga útil que tiene un `{INSIGHT_ID}` y 
 
 Puede recuperar una lista de todas las métricas predeterminadas y del algoritmo realizando una única solicitud de GET al extremo de las métricas. Para consultar una métrica en particular, realice una solicitud de GET y proporcione un `{ALGORITHM}` válido en la ruta de solicitud.
 
-**Formato de API**
+**Formato API**
 
 ```http
 GET /insights/metrics
@@ -279,7 +285,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Solicitud**
 
-La siguiente solicitud contiene una consulta y recupera una métrica específica mediante el identificador de algoritmo `{ALGORITHM}`
+La siguiente solicitud contiene un consulta y recupera un Métrica específico mediante el identificador de algoritmo `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -292,7 +298,7 @@ curl -X GET \
 
 **Respuesta**
 
-Una respuesta correcta devuelve una carga útil que incluye el identificador único `algorithm` y una matriz de métricas predeterminadas.
+Una respuesta correcta devuelve una carga útil que incluye el `algorithm` identificador único y una matriz de métricas predeterminadas.
 
 ```json
 {

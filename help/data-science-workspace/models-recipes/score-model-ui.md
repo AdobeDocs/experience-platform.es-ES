@@ -5,14 +5,20 @@ title: Puntuación de un modelo en la IU de Workspace de ciencia de datos
 type: Tutorial
 description: La puntuación en Adobe Experience Platform Data Science Workspace se puede lograr alimentando los datos de entrada en un modelo entrenado existente. A continuación, los resultados de puntuación se almacenan y pueden verse en un conjunto de datos de salida especificado como un nuevo lote.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
 
 # Puntuación de un modelo en la IU de Workspace de ciencia de datos
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 La puntuación en Adobe Experience Platform [!DNL Data Science Workspace] se puede lograr suministrando datos de entrada a un modelo entrenado existente. A continuación, los resultados de puntuación se almacenan y pueden verse en un conjunto de datos de salida especificado como un nuevo lote.
 
@@ -26,7 +32,7 @@ Este tutorial requiere un modelo entrenado. Si no tiene un modelo entrenado, sig
 
 ## Crear una nueva ejecución de puntuación
 
-Se crea una ejecución de puntuación utilizando configuraciones optimizadas de una ejecución de formación previamente completada y evaluada. El conjunto de configuraciones óptimas de un modelo se suele determinar revisando las métricas de evaluación de ejecución de formación.
+Se crea una ejecución de puntuación mediante configuraciones optimizadas de una ejecución aprendizaje previamente completada y evaluada. El conjunto de configuraciones óptimas para un modelo generalmente se determina revisando aprendizaje ejecutando métricas de evaluación.
 
 Busque la ejecución de formación más óptima para utilizar sus configuraciones de puntuación. A continuación, abra la ejecución de formación deseada seleccionando el hipervínculo adjunto a su nombre.
 
@@ -63,9 +69,9 @@ Los estados se actualizan automáticamente. Continúe con el paso siguiente si e
 
 ## Ver resultados de puntuación
 
-Para ver los resultados de la puntuación, comience seleccionando una ejecución de formación.
+Para vista resultados de puntuación, inicio seleccionando una carrera aprendizaje.
 
-![Seleccionar ejecución de formación](../images/models-recipes/score/select-run.png)
+![Seleccionar aprendizaje ejecutar](../images/models-recipes/score/select-run.png)
 
 Se le redirigirá a la página **[!UICONTROL Evaluación]** de ejecuciones de formación. Cerca de la parte superior de la página de evaluación de la ejecución de formación, seleccione la ficha **[!UICONTROL Ejecuciones de puntuación]** para ver una lista de las ejecuciones de puntuación existentes.
 
@@ -95,4 +101,4 @@ Para obtener el conjunto completo de resultados de puntuación, seleccione el v�
 
 ## Pasos siguientes
 
-Este tutorial lo guió para puntuar los datos mediante un modelo entrenado en [!DNL Data Science Workspace]. Siga el tutorial de [publicación de un modelo como servicio en la interfaz de usuario](./publish-model-service-ui.md) para permitir que los usuarios de su organización puntúen los datos proporcionando un acceso fácil a un servicio de aprendizaje automático.
+Este tutorial guiarle a través de los pasos para puntuar los datos utilizando un modelo entrenado en [!DNL Data Science Workspace]. Siga el tutorial de [publicar un modelo como servicio en el IU](./publish-model-service-ui.md) para permitir que los usuarios de su organización puntúen datos proporcionando un acceso fácil a un servicio de aprendizaje automático.

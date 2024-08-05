@@ -5,14 +5,20 @@ title: Vista previa del esquema y el conjunto de datos de ventas minoristas
 type: Tutorial
 description: El siguiente documento describe la vista previa de esquemas y conjuntos de datos en Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '259'
 ht-degree: 3%
 
 ---
 
 # Previsualizar el esquema de ventas minoristas y el conjunto de datos
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 Una vez completado correctamente el script de bootstrap del tutorial [retail sales schema and dataset](./create-retails-sales-dataset.md). Los esquemas y conjuntos de datos de salida se pueden ver en [!DNL Experience Platform]. Para ver los esquemas y conjuntos de datos, siga los pasos a continuación:
 

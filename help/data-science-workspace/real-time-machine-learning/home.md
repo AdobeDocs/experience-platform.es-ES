@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Información general sobre el aprendizaje automático en tiempo real
 description: El aprendizaje automático en tiempo real puede mejorar en gran medida la relevancia del contenido de su experiencia digital para los usuarios finales. Esto es posible aprovechando la inferencia en tiempo real y el aprendizaje continuo en el Edge Network Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '576'
 ht-degree: 1%
 
 ---
 
 # Resumen del aprendizaje automático en tiempo real (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 >[!IMPORTANT]
 >

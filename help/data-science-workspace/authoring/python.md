@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;inicio;temas populares;acceso a datos;sdk de python;api de acceso a datos;leer python;escribir python
+keywords: Experience Platform; hogar; temas populares; acceso a los datos; SDK de Python; API de acceso a datos; leer python; escribir python
 solution: Experience Platform
-title: Acceder a datos mediante Python en Data Science Workspace
+title: Acceso a datos usando Python en Data Science Espacio de trabajo
 type: Tutorial
-description: El siguiente documento contiene ejemplos sobre cómo acceder a los datos de Python para utilizarlos en Data Science Workspace.
+description: El siguiente documento contiene ejemplos sobre cómo acceder a datos en Python para su uso en Data Science Espacio de trabajo.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
-# Acceso a datos mediante Python en Data Science Workspace
+# Acceso a datos con Python en Data Science Espacio de trabajo
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 El siguiente documento contiene ejemplos sobre cómo acceder a los datos mediante Python para utilizarlo en Data Science Workspace. Para obtener información sobre el acceso a los datos mediante los blocs de notas de JupyterLab, visite la documentación de [acceso a los datos de los blocs de notas de JupyterLab](../jupyterlab/access-notebook-data.md).
 
@@ -51,9 +57,9 @@ partitions = dataset.get_partitions_info()
 
 ### Cláusula DISTINCT
 
-La cláusula DISTINCT permite recuperar todos los valores distintos en el nivel de fila/columna, eliminando todos los valores duplicados de la respuesta.
+La cláusula DISTINCT le permite obtener todos los valores distintos en un nivel de fila/columna, eliminando todos los valores duplicado de la respuesta.
 
-A continuación se muestra un ejemplo del uso de la función `distinct()`:
+A continuación se muestra un ejemplo de uso de la `distinct()` función:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,7 +93,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 La cláusula ORDER BY permite ordenar los resultados recibidos por una columna especificada en un orden específico (ascendente o descendente). Esto se hace mediante la función `sort()`.
 
-A continuación se muestra un ejemplo del uso de la función `sort()`:
+A continuación se muestra un ejemplo de uso de la `sort()` función:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -95,9 +101,9 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 ### Cláusula LIMIT
 
-La cláusula LIMIT permite limitar el número de registros recibidos del conjunto de datos.
+La cláusula LIMIT le permite limitar el número de registros recibidos del conjunto de datos.
 
-A continuación se muestra un ejemplo del uso de la función `limit()`:
+A continuación se muestra un ejemplo de uso de la `limit()` función:
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -132,11 +138,11 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 ## Directorio del espacio de usuario (Checkpoints)
 
-Para trabajos de mayor duración, es posible que necesite almacenar pasos intermedios. En instancias como esta, puede leer y escribir en un espacio de usuario.
+Para trabajos de mayor duración, es posible que deba tienda pasos intermedios. En casos gustar este, puede leer y escribir en un espacio de usuario.
 
 >[!NOTE]
 >
->Se han almacenado las rutas a los datos **no**. Debe almacenar la ruta correspondiente en sus datos respectivos.
+>Las rutas a los datos no **se almacenan**. Debe tienda la ruta correspondiente a sus datos respectivos.
 
 ### Escribir en el espacio de usuario
 

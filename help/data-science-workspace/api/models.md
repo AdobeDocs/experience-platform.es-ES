@@ -5,14 +5,20 @@ title: Extremo de API de modelos
 description: Un modelo es una instancia de una fórmula de aprendizaje automático que se forma con datos históricos y configuraciones para resolver un caso de uso empresarial.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '887'
 ht-degree: 4%
 
 ---
 
 # Extremo de modelos
+
+>[!NOTE]
+>
+>Data Science Workspace ya no se puede adquirir.
+>
+>Esta documentación está destinada a clientes existentes con derechos anteriores a Data Science Workspace.
 
 Un modelo es una instancia de una fórmula de aprendizaje automático que se forma con datos históricos y configuraciones para resolver un caso de uso empresarial.
 
