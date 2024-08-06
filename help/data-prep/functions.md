@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
+source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
 workflow-type: tm+mt
 source-wordcount: '5805'
 ht-degree: 2%
@@ -130,7 +130,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | set_date_part | Reemplaza un componente en una fecha determinada. Se aceptan los siguientes componentes: <br><br>&quot;año&quot;<br>&quot;aaaa&quot;<br>&quot;aa&quot;<br><br>&quot;mes&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;día&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hora&quot;<br>&quot;hh&quot;<br><br>&quot;minuto&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;segundo&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPONENTE: **Requerido** Una cadena que representa la parte de la fecha. </li><li>VALOR: **Requerido** Valor que se va a establecer para el componente en una fecha determinada.</li><li>FECHA: **Requerida** La fecha, en un formato estándar.</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
 | make_date_time | Crea una fecha a partir de artículos. Esta función también se puede inducir usando make_timestamp. | <ul><li>AÑO: **Obligatorio** El año, escrito con cuatro dígitos.</li><li>MES: **Requerido** mes. Los valores permitidos son del 1 al 12.</li><li>DÍA: **Requerido** El día. Los valores permitidos son del 1 al 31.</li><li>HORA: **Requerido** La hora. Los valores permitidos son de 0 a 23.</li><li>MINUTO: **Requerido** El minuto. Los valores permitidos son de 0 a 59.</li><li>NANOSECOND: **Requerido** Los valores de nanosegundos. Los valores permitidos son de 0 a 999999999.</li><li>ZONA HORARIA: **Requerida** La zona horaria de la fecha y hora.</li></ul> | make_date_time&#x200B;(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;América/Los_Ángeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Convierte una fecha de cualquier zona horaria en una fecha en UTC. | <ul><li>FECHA: **Requerida** La fecha que intenta convertir.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | Convierte una fecha de una zona horaria a otra. | <ul><li>FECHA: **Requerida** La fecha que intenta convertir.</li><li>ZONA: **Requerida** Zona horaria a la que intenta convertir la fecha.</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | Convierte una fecha de una zona horaria a otra. | <ul><li>FECHA: **Requerida** La fecha que intenta convertir.</li><li>ZONA: **Requerida** Zona horaria a la que intenta convertir la fecha.</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
