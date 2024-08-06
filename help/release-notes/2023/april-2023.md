@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Cloud: abril de 2023'
 description: Las notas de la versión de abril de 2023 de Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | ------- | ----------- |
-| Mapa de abono de segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono del segmento para eliminar la redundancia en el ciclo vital del abono del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si está interesado en identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de abono a segmentos. Para obtener más información, póngase en contacto con su representante de Adobe. |
+| Mapa de abono de segmento | Como continuación del anuncio anterior, realizado en febrero, el 15 de mayo de 2023, el estado `Existing` quedará obsoleto en el mapa de abono del segmento para eliminar la redundancia en el ciclo vital del abono del segmento. Después de este cambio, los perfiles clasificados en un segmento se representarán como `Realized` y los perfiles descalificados seguirán representándose como `Exited`.<br/><br/> Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y pueden tener procesos descendentes automatizados basados en el estado `Existing`. Si este es su caso, revise las integraciones posteriores. Si está interesado en identificar perfiles recién cualificados más allá de un cierto tiempo, considere la posibilidad de utilizar una combinación del estado `Realized` y el `lastQualificationTime` en el mapa de abono a segmentos. Para obtener más información, póngase en contacto con su representante de Adobe. |
 
 {style="table-layout:auto"}
 

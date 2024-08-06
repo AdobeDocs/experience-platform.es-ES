@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 2%
@@ -92,7 +92,7 @@ Las siguientes protecciones se aplican al método [activación ad hoc](/help/des
 
 ### Activación de destinos de personalización de Edge {#edge-destinations-activation}
 
-Las siguientes protecciones se aplican a la activación a través de [destinos de personalización Edge](/help/destinations/destination-types.md#streaming-profile-export).
+Las siguientes protecciones se aplican a la activación a través de [destinos de personalización Edge](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |

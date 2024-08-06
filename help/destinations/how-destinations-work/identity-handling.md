@@ -2,7 +2,7 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 1%
@@ -92,7 +92,7 @@ Al configurar una secuencia de datos como se describe en la documentación vincu
 
 ## Destinos empresariales {#enterprise-destinations}
 
-[Los destinos empresariales](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) no requieren identificadores específicos en la exportación de datos, ya que están diseñados para casos de uso de integración empresarial. Sin embargo, puede exportar identidades como atributos XDM o desde el mapa de identidad, si lo desea. Vea un [ejemplo de datos exportados al destino HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), que incluye el atributo XDM `personalEmail.address` y las identidades `ECID` y `email_lc_sha256` (dirección de correo electrónico con hash) del mapa de identidad.
+[Los destinos empresariales](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) no requieren identificadores específicos en la exportación de datos, ya que están diseñados para casos de uso de integración empresarial. Sin embargo, puede exportar identidades como atributos XDM o desde el mapa de identidad, si lo desea. Vea un [ejemplo de datos exportados al destino HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), que incluye el atributo XDM `personalEmail.address` y las identidades `ECID` y `email_lc_sha256` (dirección de correo electrónico con hash) del mapa de identidad.
 
 ## Destinos de Personalization {#personalization-destinations}
 

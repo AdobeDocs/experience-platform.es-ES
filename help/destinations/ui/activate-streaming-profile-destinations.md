@@ -4,7 +4,7 @@ type: Tutorial
 description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar los datos de audiencia en Adobe Experience Platform a destinos de perfil de flujo continuo (también denominados [destinos empresariales](/help/destinations/destination-types.md#streaming-profile-export)).
+En este artículo se explica el flujo de trabajo necesario para activar los datos de audiencia en Adobe Experience Platform a destinos de perfil de flujo continuo (también denominados [destinos empresariales](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 Este artículo se aplica a los siguientes tres destinos:
 

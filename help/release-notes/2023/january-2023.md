@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2023
 description: Las notas de la versión de enero de 2023 de Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Para eliminar la redundancia en el ciclo vital del abono a segmentos, el estado 
 
 Tras la retirada, los perfiles calificados en un segmento se representarán como `Realized` y los perfiles no calificados seguirán representándose como `Exited`. Esto igualará los destinos basados en archivos con los estados de segmentos `Active` y `Expired`.
 
-Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) y ha automatizado los procesos descendentes en su lugar, en función del estado `Existing`. Revise sus integraciones posteriores si este es el caso para usted. Si está interesado en identificar perfiles recién calificados más allá de un cierto tiempo, considere utilizar una combinación de los estados `Realized` y `lastQualificationTime` en el mapa de abono a segmentos. Para obtener más información, póngase en contacto con su representante de Adobe.
+Este cambio podría afectarle si está utilizando [destinos empresariales](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) y ha automatizado los procesos descendentes en su lugar, en función del estado `Existing`. Revise sus integraciones posteriores si este es el caso para usted. Si está interesado en identificar perfiles recién calificados más allá de un cierto tiempo, considere utilizar una combinación de los estados `Realized` y `lastQualificationTime` en el mapa de abono a segmentos. Para obtener más información, póngase en contacto con su representante de Adobe.
 
 Para obtener más información sobre el perfil del cliente en tiempo real, incluidos tutoriales y prácticas recomendadas para trabajar con datos de perfil, comience por leer la [Información general sobre el perfil del cliente en tiempo real](../../profile/home.md).
 
