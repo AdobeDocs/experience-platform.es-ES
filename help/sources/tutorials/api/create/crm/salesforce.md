@@ -2,9 +2,9 @@
 title: Creación de una conexión base de Salesforce mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante aute
 
 | Credencial | Descripción |
 | --- | --- |
-| `environmentUrl` | Dirección URL de la instancia de origen [!DNL Salesforce]. |
+| `environmentUrl` | Dirección URL de la instancia de origen [!DNL Salesforce]. El formato de `environmentUrl` es `https://[domain].my.salesforce.com`. |
 | `username` | Nombre de usuario para la cuenta de usuario [!DNL Salesforce]. |
 | `password` | Contraseña de la cuenta de usuario [!DNL Salesforce]. |
 | `securityToken` | Token de seguridad para la cuenta de usuario [!DNL Salesforce]. |
@@ -51,7 +51,7 @@ Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante la c
 
 | Credencial | Descripción |
 | --- | --- |
-| `environmentUrl` | Dirección URL de la instancia de origen [!DNL Salesforce]. |
+| `environmentUrl` | Dirección URL de la instancia de origen [!DNL Salesforce]. El formato de `environmentUrl` es `https://[domain].my.salesforce.com` |
 | `clientId` | El ID de cliente se utiliza junto con el secreto de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce]. |
 | `clientSecret` | El secreto de cliente se utiliza junto con el ID de cliente como parte de la autenticación OAuth2. Juntos, el ID de cliente y el secreto de cliente permiten que su aplicación funcione en nombre de su cuenta al identificar su aplicación en [!DNL Salesforce]. |
 | `apiVersion` | La versión de la API de REST de la instancia [!DNL Salesforce] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, el Experience Platform utilizará automáticamente la última versión disponible. Este valor es obligatorio para la autenticación de credenciales de cliente de OAuth2. |
