@@ -3,9 +3,9 @@ title: Tipos de acción en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de los diferentes tipos de acción que proporciona la extensión de etiqueta SDK web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
@@ -93,10 +93,6 @@ Utilice el selector **[!UICONTROL Instancia]** para elegir la instancia del SDK 
 
 * **[!UICONTROL Instancia]**: seleccione la instancia del SDK web que desea configurar. Si solo tiene una instancia, se preseleccionará.
 * **[!UICONTROL Usar eventos guiados]**: habilite esta opción para rellenar u ocultar automáticamente ciertos campos y habilitar un caso de uso determinado. Al habilitar esta opción, se déclencheur la visualización de la siguiente configuración.
-
-  >[!NOTE]
-  >
-  >Los eventos guiados que se muestran a continuación están relacionados con [los eventos superiores e inferiores de la página](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Solicitar personalización]**: se pretende llamar a este evento en la parte superior de la página. Cuando se selecciona, este evento establece los siguientes campos:
       * **[!UICONTROL Tipo]**: **[!UICONTROL Recuperación de propuesta de decisión]**
       * **[!UICONTROL Enviar automáticamente un evento de visualización]**: **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Utilice el selector **[!UICONTROL Instancia]** para elegir la instancia del SDK 
    * **[!UICONTROL Recopilar análisis]**: se pretende llamar a este evento en la parte inferior de la página. Cuando se selecciona, este evento establece los siguientes campos:
       * **[!UICONTROL Incluir propuestas procesadas]**: **[!UICONTROL true]**
       * La configuración de **[!UICONTROL Personalization]** está oculta
+
+  >[!NOTE]
+  >
+  >Los eventos guiados están relacionados con [los eventos superiores e inferiores de la página](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Datos {#data}
