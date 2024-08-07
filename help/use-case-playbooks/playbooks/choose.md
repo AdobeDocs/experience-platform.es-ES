@@ -4,16 +4,16 @@ title: Elija entre una selección de libros de reproducción
 description: Aprenda a elegir el manual adecuado para su caso de uso y active los libros de reproducción.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
 # Elija entre una selección de libros de reproducción
 
-Para usar el manual de tácticas, vaya a **[!UICONTROL Casos de uso de manuales de tácticas] > [!UICONTROL Manuales de tácticas]**. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
+Para usar un libro de reproducción, selecciona **[!UICONTROL Libros de reproducción]** en el panel de navegación izquierdo. Examine y utilice las distintas opciones de búsqueda y filtrado de la página para seleccionar y utilizar un manual de tácticas específico.
 
 ## Búsqueda y filtrado {#search-and-filter}
 

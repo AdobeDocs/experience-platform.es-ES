@@ -4,7 +4,7 @@ title: Introducción a los manuales de casos de uso
 description: Obtenga información sobre cómo empezar a utilizar la funcionalidad de manuales de tácticas de casos de uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 14%
@@ -20,7 +20,7 @@ Aprenda a configurar su cuenta para libros de reproducción de casos de uso, dis
 * Configuración de permisos de usuario
 * Configuración de las superficies de canal de Journey Optimizer para notificaciones por correo electrónico, push y SMS (si planea utilizar libros de reproducción de Journey Optimizer)
 
-Para acceder a una amplia galería de libros de casos de uso en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Libros de reproducción]** en el panel de navegación izquierdo. Lea la documentación sobre cómo [navegar por los manuales de casos de uso](../playbooks/navigate.md)y empezar a usar una [zona protegida inspiradora](../playbooks/navigate.md).
+Para acceder a una amplia galería de libros de casos de uso en la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Libros de reproducción]** en el panel de navegación izquierdo. Lea la documentación sobre cómo [navegar por los manuales de casos de uso](../playbooks/navigate.md) y comience con una [zona protegida inspiradora](../playbooks/navigate.md).
 
 ## Configuración de libros de casos de uso: tutorial en vídeo {#video}
 
