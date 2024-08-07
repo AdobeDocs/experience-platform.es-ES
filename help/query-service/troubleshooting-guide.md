@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preguntas frecuentes
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
+source-wordcount: '4564'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,11 @@ Este documento proporciona respuestas a las preguntas más frecuentes sobre el s
 La siguiente lista de respuestas a las preguntas más frecuentes se divide en las siguientes categorías:
 
 - [General](#general)
+- [IU de consultas](#queries-ui) 
+- [Ejemplos de conjuntos de datos](#dataset-samples)
 - [Exportación de datos](#exporting-data)
+- [Sintaxis SQL](#sql-syntax) 
+- [Consultas de ITAS](#itas-queries)
 - [Herramientas de terceros](#third-party-tools)
 - [Errores de API de PostgreSQL](#postgresql-api-errors)
 - [Errores de API de REST](#rest-api-errors)
@@ -603,6 +607,22 @@ Sí, puede usar el comando `CREATE VIEW` sin acceso a Data Distiller. Este coman
 Sí. Sin embargo, algunos clientes de terceros, como DbVisualizer, pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de un script debe gestionarse como una sola instrucción. Encontrará más detalles en la [documentación de bloque anónimo](./key-concepts/anonymous-block.md) o en [la documentación oficial de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## IU de consultas
+
+### La opción &quot;Crear consulta&quot; se bloquea &quot;Inicializando conexión...&quot; al intentar conectarse al servicio de consultas. ¿Cómo puedo solucionar el problema?
+
++++Respuesta
+Si &quot;Crear consulta&quot; se queda en &quot;Inicializando conexión...&quot;, es probable que se trate de un problema de conexión o de sesión. Actualice el explorador si utiliza la interfaz de usuario de Platform e inténtelo de nuevo.
++++
+
+## Ejemplos de conjuntos de datos
+
+### ¿Puedo crear muestras en un conjunto de datos del sistema?
+
++++Respuesta
+No. Los permisos de escritura están restringidos en los conjuntos de datos del sistema, por lo que no se pueden crear muestras.
++++
+
 ## Exportación de datos {#exporting-data}
 
 Esta sección proporciona información sobre la exportación de datos y límites.
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## Sintaxis SQL
+
+### ¿Data Distiller o Query Service admiten MERGE INTO?
+
++++Respuesta
+La construcción MERGE INTO SQL no es compatible con Data Distiller o Query Service.
++++
+
+## Consultas de ITAS
+
+### ¿Qué son las consultas ITAS?
+
++++Respuesta
+Las consultas INSERT INTO se denominan consultas ITAS. Tenga en cuenta que las consultas CREATE TABLE se denominan consultas CTAS.
 +++
 
 ## Herramientas de terceros {#third-party-tools}
