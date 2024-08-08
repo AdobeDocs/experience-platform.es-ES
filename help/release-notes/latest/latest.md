@@ -31,7 +31,7 @@ Actualizaciones de funciones y documentación existentes en Experience Platform:
 
 La Composición de audiencias federada permite a las empresas componer datos para una mejor aplicación en varios casos de uso. Con este nuevo enfoque, como usuario de Adobe Real-time Customer Data Platform o Adobe Journey Optimizer, puede federar conjuntos de datos directamente desde el almacén de datos existente para crear y enriquecer audiencias y atributos de Adobe Experience Platform, todo en un sistema.
 
-Para obtener más información, lea la [documentación de la composición de audiencias federadas](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Para obtener más información, lea la [documentación de la composición de audiencias federadas](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ## Administración avanzada del ciclo vital de datos {#advanced-data-lifecycle-management}
 
