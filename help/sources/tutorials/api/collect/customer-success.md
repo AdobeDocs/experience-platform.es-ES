@@ -5,9 +5,9 @@ title: Creación de un flujo de datos para fuentes de éxito de clientes mediant
 type: Tutorial
 description: Este tutorial cubre los pasos para recuperar datos de un sistema de éxito de clientes e ingerirlos en Platform mediante conectores de origen y API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1258'
 ht-degree: 3%
 
 ---
@@ -604,7 +604,7 @@ Una respuesta correcta devuelve los detalles de la especificación de flujo de d
 | `transformations.params.mappingId` | ID de asignación asociado con la base de datos. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>**Una vez**: n/a</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Día**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Respuesta**
 

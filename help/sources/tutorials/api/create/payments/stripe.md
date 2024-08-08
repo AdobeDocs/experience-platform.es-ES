@@ -3,9 +3,9 @@ title: Ingesta de datos de pagos desde tu cuenta de  [!DNL Stripe] al Experience
 description: Aprenda a introducir datos de pagos de su cuenta de Stripe en Experience Platform mediante la API de Flow Service
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -881,7 +881,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | La versión correspondiente del ID de asignación. El valor predeterminado es `0`. |
 | `scheduleParams.startTime` | Hora a la que comenzará el flujo de datos. Debe proporcionar el valor de hora de inicio en formato de marca de tiempo Unix. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Puede configurar la frecuencia de ingesta para:  <ul><li>**Una vez**: establezca su frecuencia en `once` para crear una ingesta única. Las configuraciones para intervalo y relleno no están disponibles al crear un flujo de datos de ingesta único. De forma predeterminada, la frecuencia de programación se establece en una vez.</li><li>**Minuto**: establezca su frecuencia en `minute` para programar el flujo de datos e ingerir datos por minuto.</li><li>**Hora**: Establezca su frecuencia en `hour` para programar su flujo de datos e ingerir datos por hora.</li><li>**Día**: Establezca su frecuencia en `day` para programar su flujo de datos e ingerir datos por día.</li><li>**Semana**: establezca su frecuencia en `week` para programar el flujo de datos e ingerir datos por semana.</li></ul> |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. El valor del intervalo debe ser un entero distinto de cero. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. Por ejemplo, si establece la frecuencia en día y configura el intervalo en 15, el flujo de datos se ejecutará cada 15 días. El valor del intervalo debe ser un entero distinto de cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>**Una vez**: n/a</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Día**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Respuesta**
 

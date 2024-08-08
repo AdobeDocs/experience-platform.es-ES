@@ -5,9 +5,9 @@ title: Crear un flujo de datos para fuentes de almacenamiento en la nube mediant
 type: Tutorial
 description: Este tutorial cubre los pasos para recuperar datos de un almacenamiento en la nube de terceros e incluirlos en Platform mediante conectores de origen y API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1742'
 ht-degree: 3%
 
 ---
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [ID de asignación](#mapping) recuperado en un paso anterior. |
 | `scheduleParams.startTime` | Hora de inicio del flujo de datos en tiempo epoch. |
 | `scheduleParams.frequency` | Frecuencia con la que el flujo de datos recopilará datos. Los valores aceptables incluyen: `once`, `minute`, `hour`, `day` o `week`. |
-| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El intervalo no es necesario cuando la frecuencia está establecida como `once` y debe ser mayor o igual que `15` para otros valores de frecuencia. |
+| `scheduleParams.interval` | El intervalo designa el período entre dos ejecuciones de flujo consecutivas. El valor del intervalo debe ser un entero distinto de cero. El valor mínimo del intervalo aceptado para cada frecuencia es el siguiente:<ul><li>**Una vez**: n/a</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Día**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Respuesta**
 
