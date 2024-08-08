@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
+source-wordcount: '4069'
 ht-degree: 11%
 
 ---
@@ -32,8 +32,13 @@ Para activar audiencias en destinos, debes haber [conectado correctamente a un d
 ## Formatos de archivo compatibles para la exportación {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Actualizar la fecha de finalización de este flujo de datos"
+>abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. El Adobe ha establecido una fecha de finalización predeterminada para el 1 de marzo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Actualizar la fecha de finalización de este cuerpo de flujo de datos"
 >abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. El Adobe ha establecido una fecha de finalización predeterminada para el 1 de marzo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
 
 Se admiten los siguientes formatos de archivo al exportar audiencias:
@@ -522,7 +527,6 @@ Las exportaciones de archivos varían de las siguientes maneras, dependiendo de 
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Excluir atributos de enriquecimiento"
 abstract="Active esta opción para exportar los perfiles de los públicos que se han cargado, personalizado y seleccionado a su destino, excluyendo al mismo tiempo todos sus atributos."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#select-enrichment-attributes" text="Obtenga más información en la documentación"
 
 >[!IMPORTANT]
 >
