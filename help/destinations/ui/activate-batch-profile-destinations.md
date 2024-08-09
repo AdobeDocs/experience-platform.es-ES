@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 11%
 
 ---
@@ -40,6 +40,16 @@ Para activar audiencias en destinos, debes haber [conectado correctamente a un d
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Actualizar la fecha de finalización de este cuerpo de flujo de datos"
 >abstract="Debido a las recientes actualizaciones en este destino, el flujo de datos ahora requiere una fecha de finalización. El Adobe ha establecido una fecha de finalización predeterminada para el 1 de marzo de 2025. Actualice a la fecha de finalización deseada; de lo contrario, las exportaciones de datos se detendrán en la fecha predeterminada."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Editar ruta de la carpeta"
+>abstract="Utilice varias macros proporcionadas para personalizar la ruta de la carpeta donde se exportan los conjuntos de datos."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Previsualización de ruta de carpeta de conjuntos de datos"
+>abstract="Obtenga una vista previa de la estructura de carpetas que se crea en su ubicación de almacenamiento en función de las macros agregadas en esta ventana."
 
 Se admiten los siguientes formatos de archivo al exportar audiencias:
 
