@@ -3,9 +3,9 @@ keywords: Experience Platform;identidad;servicio de identidad;resolución de pro
 title: Protecciones del servicio de identidad
 description: Este documento proporciona información sobre los límites de uso y tasa de los datos del servicio de identidad para ayudarle a optimizar su uso del gráfico de identidad.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ En la tabla siguiente se describen las reglas existentes que debe seguir para ga
 ### Ingesta del área de identidad
 
 A partir del 31 de marzo de 2023, el servicio de identidad bloqueará la ingesta de Adobe Analytics ID (AAID) para nuevos clientes. Esta identidad se incorpora generalmente a través de [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) y [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md), y es redundante porque el ECID representa el mismo explorador web. Si desea cambiar esta configuración predeterminada, póngase en contacto con el equipo de la cuenta de Adobe.
+
+## Protecciones de rendimiento {#performance-guardrails}
+
+El servicio de identidad supervisa continuamente los datos entrantes para garantizar un alto rendimiento y fiabilidad a escala. Sin embargo, la afluencia de datos de eventos de experiencia en un corto periodo de tiempo puede provocar una degradación del rendimiento y una latencia. El Adobe no es responsable de esta degradación del rendimiento.
 
 ## Explicación de la lógica de eliminación cuando se actualiza un gráfico de identidades en capacidad {#deletion-logic}
 
