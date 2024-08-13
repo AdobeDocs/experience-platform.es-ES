@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de credenciales de Query Service
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,11 @@ Puede utilizar credenciales que no caduquen para configurar una conexión más p
 
 >[!NOTE]
 >
->Las credenciales que no caducan tienen las siguientes limitaciones:<br><ul><li>Los usuarios deben iniciar sesión con un nombre de usuario y una contraseña que incluyan `{technicalAccountId}:{credential}`. Encontrará más información en la sección [Generar credenciales](#generate-credentials).</li><li>Tras la creación de las credenciales que caducan, se crea una nueva función con un conjunto de permisos básicos que permite a los usuarios ver esquemas y conjuntos de datos. El permiso &quot;administrar consultas&quot; también se asigna a esta función para su uso con el servicio de consultas.</li><li>Los clientes de terceros pueden tener un rendimiento diferente del esperado al enumerar objetos de consulta. Por ejemplo, algunos clientes de terceros como [!DNL DB Visualizer] no mostrarán el nombre de la vista en el panel izquierdo. Sin embargo, el nombre de vista es accesible si se llama dentro de una consulta SELECT. Del mismo modo, es posible que [!DNL PowerUI] no muestre las vistas temporales creadas a través de SQL que se van a seleccionar para la creación de paneles.</li></ul>
+>Las credenciales que no caducan tienen las siguientes limitaciones:
+>
+>- Los usuarios deben iniciar sesión con su nombre de usuario y contraseña en el formato de `{technicalAccountId}:{credential}`. Encontrará más información en la sección [Generar credenciales](#generate-credentials).
+>- De manera predeterminada, las credenciales que no caducan tienen permisos para ejecutar solamente `SELECT` consultas. Para ejecutar `CTAS` o `ITAS` consultas, agregue manualmente los permisos &quot;Administrar conjunto de datos&quot; y &quot;Administrar esquemas&quot; a la función asociada con la credencial que no caduca. El permiso &quot;Administrar esquemas&quot; se encuentra en la sección &quot;Modelado de datos&quot;, y el permiso &quot;Administrar conjuntos de datos&quot; se encuentra en la sección &quot;Administración de datos&quot; de [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Los clientes de terceros pueden tener un rendimiento diferente del esperado al enumerar objetos de consulta. Por ejemplo, algunos clientes de terceros como [!DNL DB Visualizer] no mostrarán el nombre de la vista en el panel izquierdo. Sin embargo, se puede obtener acceso al nombre de vista si se llama en una consulta `SELECT`. Del mismo modo, [!DNL PowerUI] podría no enumerar las vistas temporales creadas a través de SQL para su selección en la creación de paneles.
 
 ### Requisitos previos
 
