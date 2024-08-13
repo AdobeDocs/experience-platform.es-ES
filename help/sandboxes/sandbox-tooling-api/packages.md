@@ -2,10 +2,10 @@
 title: Punto final de API de paquetes de herramientas de zona protegida
 description: El extremo /packages en la API de herramientas de espacio aislado le permite administrar paquetes mediante programación en Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 7%
+source-wordcount: '1621'
+ht-degree: 9%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | El ID del paquete que se va a actualizar. | Cadena | Sí |
 | `action` | Para agregar artefactos al paquete, el valor de la acción debe ser **ADD**. Esta acción solo es compatible con los tipos de paquete **PARTIAL**. | Cadena | Sí |
-| `artifacts` | Una lista de artefactos que se añadirán en el paquete. No habrá cambios en el paquete si la lista es **null** o **empty**. Los artefactos se deduplican antes de agregarse al paquete. | Matriz | No |
+| `artifacts` | Una lista de artefactos que se añadirán en el paquete. No habrá cambios en el paquete si la lista es **null** o **empty**. Los artefactos se deduplican antes de agregarse al paquete. Consulte la tabla siguiente para obtener una lista completa de los artefactos admitidos. | Matriz | No |
 | `expiry` | La marca de tiempo que define la fecha de caducidad del paquete. El valor predeterminado es de 90 días desde la hora en que se llama a la API del PUT si no se especifica la caducidad en la carga útil. El campo de caducidad de la respuesta será la hora UTC epoch. | Cadena (formato de marca de hora UTC) | No |
+
+Actualmente se admiten los siguientes tipos de artefactos.
+
+|  Artefacto | Plataforma | Objeto | Flujo parcial | Espacio aislado completo |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Recorridos | Sí | No |
+| `ID_NAMESPACE` | Plataforma de datos del cliente | Identidades | Sí | Sí |
+| `REGISTRY_DATATYPE` | Plataforma de datos del cliente | Tipo de datos | Sí | Sí |
+| `REGISTRY_CLASS` | Plataforma de datos del cliente | Clase | Sí | Sí |
+| `REGISTRY_MIXIN` | Plataforma de datos del cliente | Grupo de campo | Sí | Sí |
+| `REGISTRY_SCHEMA` | Plataforma de datos del cliente | Esquemas | Sí | Sí |
+| `CATALOG_DATASET` | Plataforma de datos del cliente | Conjuntos de datos | Sí | Sí |
+| `DULE_CONSENT_POLICY` | Plataforma de datos del cliente | Políticas de consentimiento y gobernanza | Sí | Sí |
+| `PROFILE_SEGMENT` | Plataforma de datos del cliente | Públicos | Sí | Sí |
+| `FLOW` | Plataforma de datos del cliente | Flujo de datos de fuentes | Sí | Sí |
 
 **Respuesta**
 
