@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,10 @@ Puede obtener una vista previa de los datos de ejemplo del conjunto de datos des
 ![La pestaña Examinar del área de trabajo Conjuntos de datos con la opción de puntos suspensivos y Vista previa del conjunto de datos resaltada para el conjunto de datos elegido.](../images/datasets/user-guide/preview-dataset-option.png)
 
 Esto abre la ventana de vista previa, donde la vista jerárquica del esquema para el conjunto de datos se muestra a la derecha.
+
+>[!NOTE]
+>
+>El diagrama de esquema de la parte izquierda de la vista solo muestra los campos que contienen datos. Los campos sin datos se ocultan automáticamente para optimizar la interfaz de usuario y centrarse en la información relevante.
 
 ![Se muestra el cuadro de diálogo de vista previa del conjunto de datos con información sobre la estructura y los valores de muestra del conjunto de datos.](../images/datasets/user-guide/preview-dataset.png)
 
