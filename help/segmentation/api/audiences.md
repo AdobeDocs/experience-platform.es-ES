@@ -3,10 +3,10 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 2%
+source-wordcount: '1406'
+ht-degree: 3%
 
 ---
 
@@ -207,10 +207,6 @@ POST /audiences
 
 **Solicitud**
 
->[!BEGINTABS]
-
->[!TAB Audiencia generada por la plataforma]
-
 +++ Una solicitud de ejemplo para crear una audiencia generada por Platform
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB Audiencia generada externamente]
-
-+++ Una solicitud de ejemplo para crear una audiencia generada externamente
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| Propiedad | Descripción |
-| -------- | ----------- | 
-| `audienceId` | ID proporcionado por el usuario para la audiencia. |
-| `name` | Nombre de la audiencia. |
-| `namespace` | El área de nombres de la audiencia. |
-| `description` | Una descripción de la audiencia. |
-| `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. Un `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
-| `originName` | Nombre del origen de la audiencia. Para audiencias generadas externamente, el valor predeterminado es `CUSTOM_UPLOAD`. Otros valores admitidos son `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` y `AUDIENCE_MATCH`. |
-| `lifecycleState` | Campo opcional que determina el estado inicial de la audiencia que intenta crear. Los valores admitidos son `draft`, `published` y `inactive`. |
-| `datasetId` | El ID del conjunto de datos en el que se pueden encontrar los datos que comprenden la audiencia. |
-| `labels` | Etiquetas de uso de datos a nivel de objeto y de control de acceso basadas en atributos que son relevantes para la audiencia. |
-| `audienceMeta` | Metadatos que pertenecen a la audiencia generada externamente. |
-| `linkedAudienceRef` | Un objeto que contiene identificadores de otros sistemas relacionados con la audiencia. Esto puede incluir lo siguiente: <ul><li>`flowId`: este ID se usa para conectar la audiencia con el flujo de datos que se usó para introducir los datos de audiencia. Encontrará más información sobre los ID necesarios en la guía [crear un flujo de datos](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: este ID se usa para conectar la audiencia a una composición relacionada de Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: este ID se utiliza para hacer referencia al esquema de grupo de campos XDM que describe la estructura de la audiencia. Encontrará más información sobre el valor de este campo en la [guía de extremo del grupo de campos XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: este ID se usa para hacer referencia al ID de carpeta en Adobe Audience Manager para la audiencia. Encontrará más información sobre esta API en [Guía de API de Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
-
-+++
-
->[!ENDTABS]
-
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia recién creada.
-
->[!BEGINTABS]
-
->[!TAB Audiencia generada por la plataforma]
 
 +++Una respuesta de ejemplo al crear una audiencia generada por Platform.
 
@@ -373,46 +318,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 +++
 
->[!TAB Audiencia generada externamente]
-
-+++Una respuesta de ejemplo al crear una audiencia generada externamente.
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## Búsqueda de una audiencia especificada {#get}
 
 Puede buscar información detallada sobre una audiencia específica realizando una solicitud de GET al extremo `/audiences` y proporcionando el ID de la audiencia que desea recuperar en la ruta de solicitud.
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **Respuesta**
 
-Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia especificada. La respuesta variará según si la audiencia se genera con Adobe Experience Platform o fuentes externas.
-
->[!BEGINTABS]
-
->[!TAB Audiencia generada por la plataforma]
+Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia especificada.
 
 +++Respuesta de ejemplo al recuperar una audiencia generada por Platform.
 
@@ -516,161 +417,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la aud
 
 +++
 
->[!TAB Audiencia generada externamente]
-
-+++Una respuesta de ejemplo al recuperar una audiencia generada externamente.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## Actualización de un campo en una audiencia {#update-field}
-
-Puede actualizar los campos de una audiencia específica realizando una solicitud de PATCH al extremo `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
-
-**Formato de API**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | El ID de la audiencia que desea actualizar. Tenga en cuenta que este es el campo `id` y es **no** el campo `audienceId`. |
-
-**Solicitud**
-
-+++Solicitud de ejemplo para actualizar un campo en una audiencia.
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| Propiedad | Descripción |
-| -------- | ----------- |
-| `op` | Para actualizar audiencias, este valor siempre es `add`. |
-| `path` | La ruta del campo que desea actualizar. |
-| `value` | El valor al que desea actualizar el campo. |
-
-+++
-
-**Respuesta**
-
-Una respuesta correcta devuelve el estado HTTP 200 con información sobre la audiencia recién actualizada.
-
-+++Una respuesta de ejemplo al actualizar un campo en una audiencia.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## Actualización de una audiencia {#put}
 
 Puede actualizar (sobrescribir) una audiencia específica realizando una solicitud de PUT al extremo `/audiences` y proporcionando el ID de la audiencia que desea actualizar en la ruta de solicitud.
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la audiencia 
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
