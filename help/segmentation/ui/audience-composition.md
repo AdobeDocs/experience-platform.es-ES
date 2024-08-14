@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
+source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Además, puede limitar el número de perfiles devueltos habilitando la opción *
 
 ## [!UICONTROL División] {#split-block}
 
-El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo. Al dividir la audiencia en subaudiencias, esta división es **no** persistente. Esto significa que los perfiles pueden estar en las diferentes subaudiencias de cada evaluación.
+El tipo de bloque **[!UICONTROL Split]** le permite dividir la nueva audiencia en varias subaudiencias. Puede dividir esta audiencia según el porcentaje o por un atributo. Al dividir la audiencia en subaudiencias, esta división es **no** persistente. Esto significa que los perfiles pueden estar en diferentes subaudiencias para cada evaluación.
 
 Para agregar un bloque **[!UICONTROL Split]**, selecciona el icono **+**, seguido de **[!UICONTROL Split]**.
 
