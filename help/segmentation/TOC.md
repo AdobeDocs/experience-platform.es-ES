@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de segmentación
 user-guide-description: Cree públicos a partir de los datos de su perfil del cliente en tiempo real utilizando definiciones de segmentos generadas por Adobe Experience Platform o fuentes externas.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 40%
+source-wordcount: '194'
+ht-degree: 43%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 40%
    - [Audience Portal](ui/audience-portal.md)
    - [Composición de público](ui/audience-composition.md)
    - [Generador de segmentos](ui/segment-builder.md)
-   - [Composición de audiencia federada (disponibilidad limitada)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [Composición de público federado (disponibilidad limitada)](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home)
    - [Públicos de la cuenta](ui/account-audiences.md)
    - [Públicos de similitud](ui/lookalike-audiences.md)
    - [Públicos de clientes potenciales](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 40%
    - [Importación y uso de audiencias externas](tutorials/using-external-audiences.md)
    - [Creación de un conjunto de datos para exportar datos](tutorials/create-dataset-export-segment.md)
    - [Aplicar el cumplimiento de uso de datos para segmentos](tutorials/governance.md)
+- [Actualización de criterios de idoneidad](./eligibility-criteria-update.md)
 - [Preguntas frecuentes](./faq.md)
 - [Referencia de API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notas de la versión de Platform](https://experienceleague.adobe.com/es/docs/experience-platform/release-notes/latest)
