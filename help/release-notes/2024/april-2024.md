@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform
 description: Las notas de la versión de abril de 2024 de Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -74,7 +74,7 @@ Para obtener más información acerca de las colecciones de datos, lea la [descr
 | Funcionalidad | Descripción |
 | ----------- | ----------- |
 | El parámetro `isRequired` ya está disponible para los campos de datos de clientes anidados en Destination SDK | Al configurar un destino en Destination SDK, ahora puede [establecer campos de datos de clientes anidados según sea necesario](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). De este modo, los usuarios que configuren el destino no pueden continuar con su flujo de activación hasta que seleccionen un valor para ese campo. |
-| La segmentación de Edge ya no es un requisito obligatorio al configurar un destino de Adobe Target con SDK web | Anteriormente, al configurar un [destino de Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) con SDK web, el conjunto de datos tenía que habilitarse para la personalización y la segmentación de Edge. Se ha eliminado el requisito de que la secuencia de datos esté habilitada para la segmentación de Edge [](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Tenga en cuenta que este patrón de integración solo le permite beneficiarse de un subconjunto de casos de uso de personalización al utilizar Adobe Target con Real-Time CDP. Obtenga más información sobre los [casos de uso habilitados por el tipo de integración](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| La segmentación de Edge ya no es un requisito obligatorio al configurar un destino de Adobe Target con SDK web | Anteriormente, al configurar un [destino de Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) con SDK web, el conjunto de datos tenía que habilitarse para la personalización y la segmentación de Edge. Se ha eliminado el requisito de que la secuencia de datos esté habilitada para la segmentación de Edge [](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Tenga en cuenta que este patrón de integración solo le permite beneficiarse de un subconjunto de casos de uso de personalización al utilizar Adobe Target con Real-Time CDP. Obtenga más información sobre los [casos de uso habilitados por el tipo de integración](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
 | [!BADGE Beta]{type=Informative}: elimine varias audiencias y conjuntos de datos de los flujos de activación | Ahora puede seleccionar y eliminar varias audiencias y conjuntos de datos de los flujos de activación de destino. Consulte la documentación de [detalles de destino](../../destinations/ui/destination-details-page.md#bulk-remove) y [exportación de conjuntos de datos](../../destinations/ui/export-datasets.md) para obtener más detalles. |
 
 {style="table-layout:auto"}
