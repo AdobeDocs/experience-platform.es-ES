@@ -3,9 +3,9 @@ title: User agent client hints
 description: Descubra cómo funcionan las sugerencias del cliente del agente de usuario en el SDK web. Las sugerencias del cliente permiten a los propietarios de sitios web acceder a gran parte de la misma información disponible en la cadena del agente de usuario, pero de una manera que preserva la privacidad.
 keywords: user-agent;sugerencias del cliente; cadena; cadena de user-agent; baja entropía; alta entropía
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1245'
 ht-degree: 3%
 
 ---
@@ -98,13 +98,16 @@ Las sugerencias de cliente de baja entropía están habilitadas de forma predete
 
 Las sugerencias de cliente de alta entropía son información más detallada sobre el dispositivo cliente, como la versión de plataforma, la arquitectura, el modelo, los bits (plataformas de 64 o 32 bits) o la versión completa del sistema operativo. Esta información podría utilizarse potencialmente en la toma de huellas digitales.
 
-| Encabezado HTTP | JavaScript | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Sí | No |
-| `Sec-CH-UA-Arc` | `architecture` | Sí | No |
-| `Sec-CH-UA-Model` | `model` | Sí | No |
-| `Sec-CH-UA-Bitness` | `Bitness` | Sí | No |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Sí | No |
+| Propiedad | Descripción | Encabezado HTTP | Ruta de XDM | Ejemplo | Incluido en el agente de usuario de forma predeterminada | Incluido en las sugerencias del cliente de forma predeterminada |
+| --- | --- | --- | --- | --- |---|---|
+| Versión de sistema operativo | La versión del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Sí | No |
+| Arquitectura | Arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Sí | No |
+| Modelo de dispositivo | Nombre del dispositivo utilizado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Sí | No |
+| Mordacidad | Número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Sí | No |
+| Proveedor del explorador | Compañía que creó el explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Sí | No |
+| Nombre del explorador | El explorador utilizado. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Sí | No |
+| Versión del explorador | La versión significativa del explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. La versión exacta del explorador no se recopila automáticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Sí | No |
+
 
 Las sugerencias de cliente de alta entropía están deshabilitadas de forma predeterminada en el SDK web. Para habilitarlas, debe configurar manualmente el SDK web para solicitar sugerencias de cliente de alta entropía.
 

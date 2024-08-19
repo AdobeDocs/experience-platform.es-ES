@@ -2,9 +2,9 @@
 title: contexto
 description: Recopilar automáticamente datos de dispositivos, entornos o ubicaciones.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 7%
 
 ---
@@ -89,21 +89,25 @@ La palabra clave `implementationDetails` recopila información sobre la versión
 | Entorno | Entorno donde se recopilaron los datos. Siempre se establece en `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### Sugerencias de cliente de alta entropía
+### Sugerencias de cliente de alta entropía {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>Consulte la documentación de [sugerencias del cliente del agente de usuario](../../use-cases/client-hints.md) para obtener información detallada sobre cómo configurarlas.
 
 La palabra clave `"highEntropyUserAgentHints"` recopila información detallada acerca del dispositivo del usuario. Estos datos se incluyen en el encabezado HTTP de la solicitud enviada al Adobe. Una vez que los datos han llegado a la red de Edge, el objeto XDM rellena su ruta XDM correspondiente. Si establece la ruta XDM correspondiente en la llamada a `sendEvent`, tiene prioridad sobre el valor del encabezado HTTP.
 
 Si usa búsquedas de dispositivos al [configurar su secuencia de datos](/help/datastreams/configure.md), los datos se pueden borrar en favor de los valores de búsqueda de dispositivos. Algunos campos de sugerencias del cliente y de búsqueda de dispositivos no pueden existir en la misma visita.
 
-| Dimensión | Descripción | Encabezado HTTP | Ruta de XDM | Valor de ejemplo |
+| Propiedad | Descripción | Encabezado HTTP | Ruta de XDM | Ejemplo |
 | --- | --- | --- | --- | --- |
-| Versión de sistema operativo | La versión del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Arquitectura | Arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Modelo de dispositivo | Nombre del dispositivo utilizado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Mordacidad | Número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Proveedor del explorador | Compañía que creó el explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-CH-UA-Full-Version-List` | | |
-| Nombre del explorador | El explorador utilizado. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Versión del explorador | La versión significativa del explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. La versión exacta del explorador no se recopila automáticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Versión de sistema operativo | La versión del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Arquitectura | Arquitectura de CPU subyacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Modelo de dispositivo | Nombre del dispositivo utilizado. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Mordacidad | Número de bits que admite la arquitectura de CPU subyacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Proveedor del explorador | Compañía que creó el explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| Nombre del explorador | El explorador utilizado. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Versión del explorador | La versión significativa del explorador. La sugerencia de baja entropía `Sec-CH-UA` también recopila este elemento. La versión exacta del explorador no se recopila automáticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
