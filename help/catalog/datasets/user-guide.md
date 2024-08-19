@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,22 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 >id="platform_datasets_browse_daysRemaining"
 >title="Caducidad del conjunto de datos"
 >abstract="Esta columna indica el número de días que le quedan al conjunto de datos de destinatario antes de que caduque automáticamente."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Retención de Datalake"
+>abstract="Muestra la política de retención actual para cada conjunto de datos. Este valor se puede modificar en la configuración de retención de cada conjunto de datos. Solo puede establecer el tiempo de retención del conjunto de datos de ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Retención de perfiles"
+>abstract="Muestra la política de retención actual para cada conjunto de datos. Este valor se puede modificar en la configuración de retención de cada conjunto de datos. Solo puede establecer el tiempo de retención de un conjunto de datos de ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Retención de conjuntos de datos"
+>abstract="La retención de Datalake establece reglas sobre cuánto tiempo se almacenan los datos y cuándo se deben eliminar en diferentes servicios. Esto garantiza el cumplimiento de las regulaciones, la administración de los costes de almacenamiento y el mantenimiento de la calidad de los datos."
+
 
 En la interfaz de usuario [!DNL Experience Platform], seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el panel **[!UICONTROL Conjuntos de datos]**. El panel enumera todos los conjuntos de datos disponibles para su organización. Se muestran los detalles de cada conjunto de datos enumerado, incluido su nombre, el esquema al que se adhiere el conjunto de datos y el estado de la ejecución de ingesta más reciente.
 

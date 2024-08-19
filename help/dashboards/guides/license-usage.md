@@ -4,9 +4,9 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2466'
 ht-degree: 6%
 
 ---
@@ -89,6 +89,10 @@ Para ver un resumen del uso de derechos de productos, selecciona un producto de 
 ![El [!UICONTROL uso de licencias] [!UICONTROL Información general] con un producto y la columna de uso previsto resaltada.](../images/license-usage/product-predicted-usage.png)
 
 Aparecerá la pestaña Resumen. Puede usar las predicciones detalladas disponibles en las fichas [!UICONTROL Resumen] y [!UICONTROL Detalles] para garantizar una toma de decisiones informada y un uso eficiente de la licencia.
+
+>[!NOTE]
+>
+Tenga en cuenta que las predicciones del uso de licencias son aproximaciones basadas en el uso anterior. Usted es responsable de comprender el uso real de su organización y de garantizar que el uso no vaya más allá del ámbito de la licencia de su organización con Adobe.
 
 ![Vista de resumen de un producto de Platform con la columna de uso previsto resaltada.](../images/license-usage/summary-predicted-usage.png)
 
