@@ -2,9 +2,9 @@
 title: Acceso al ECID
 description: Obtenga información sobre cómo acceder al ID de Experience Cloud desde la preparación de datos o las etiquetas
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 Puede acceder al ECID a través de [Preparación de datos para la recopilación de datos](../../../../datastreams/data-prep.md) (recomendado) o mediante etiquetas.
 
 ## Acceso al ECID a través de la preparación de datos (método preferido) {#accessing-ecid-data-prep}
+
+Este método usa [preparación de datos para la recopilación de datos](../../../../datastreams/data-prep.md) para configurar una asignación personalizada para `ECID`.
+
+Consulte la documentación de [Preparación de datos para la recopilación de datos](../../../../datastreams/data-prep.md) para aprender a utilizar esta función.
 
 Si desea establecer el ECID en un campo XDM personalizado, además de tenerlo en el mapa de identidad, puede hacerlo estableciendo `source` en la siguiente ruta:
 
