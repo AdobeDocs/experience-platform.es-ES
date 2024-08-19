@@ -2,9 +2,9 @@
 description: Aprenda a utilizar el tablero de monitorización para monitorizar los datos introducidos desde las fuentes.
 title: Monitorización de flujos de datos para fuentes en la IU
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1320'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ La parte inferior del panel muestra una tabla que describe el informe de métric
 
 | Métricas | Descripción |
 | --- | --- |
-| Registros recibidos | Número total de registros recibidos del origen. |
+| Registros recibidos | Número total de registros recibidos de un origen determinado. |
 | Registros ingeridos | Número total de registros ingeridos en el lago de datos. |
-| Registros omitidos | Número total de registros omitidos. |
+| Registros omitidos | Número total de registros omitidos. Un registro omitido hace referencia a campos que se omitieron porque no eran necesarios para la ingesta. Por ejemplo, si crea un flujo de datos de origen con la ingesta parcial habilitada, puede configurar un umbral de tasa de error aceptable. Durante el proceso de ingesta, la ingesta omite los registros de campos que no son obligatorios, como los campos de identidad, siempre y cuando se encuentren dentro del umbral de error. |
 | Error de registros | Número total de registros que no se pudieron ingerir debido a errores. |
 | Tasa de ingesta | El porcentaje de registros que se ingirieron en función del número total de registros recibidos. |
 | Total de flujos de datos fallidos | Número total de flujos de datos que han fallado. |
