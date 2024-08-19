@@ -3,9 +3,9 @@ title: Prioridad de área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ Para estructuras de gráficos relativamente complejas, la prioridad del área de
 * En el caso de los eventos de experiencia, una vez que haya configurado la Configuración de identidad para una zona protegida determinada, la identidad principal se determinará según la prioridad de área de nombres más alta a partir de ahora.
    * Esto se debe a que los eventos de experiencia son de naturaleza dinámica. Un mapa de identidad puede contener tres o más identidades y la prioridad del área de nombres garantiza que el área de nombres más importante esté asociada al evento de experiencia.
 * Como resultado, Real-Time Customer Profile **ya no usará las siguientes configuraciones**:
-   * Casilla de verificación &quot;Principal&quot; en el tipo de elemento de datos en WebSDK.
+   * La casilla &quot;Principal&quot; del tipo de elemento de datos en WebSDK (que se traduce como `primary=true` en identityMap). **Nota**: el área de nombres de identidad y el valor de identidad se seguirán usando en el perfil. Además, debe seguir configurando la casilla de verificación &quot;Principal&quot;, ya que los servicios fuera del perfil del cliente en tiempo real seguirán haciendo referencia a esta configuración.
    * Cualquier campo marcado como identidad principal en un esquema de clase de evento de experiencia XDM.
    * Configuración de identidad principal predeterminada en el conector de origen de Adobe Analytics (ECID o AAID).
 * Por otro lado, la prioridad **namespace no determina la identidad principal para los registros de perfil**.
    * Para los registros de perfil, puede utilizar el espacio de trabajo de esquemas de la interfaz de usuario de Experience Platform para definir los campos de identidad, incluida la identidad principal. Lea la guía [definición de campos de identidad en la interfaz de usuario](../../xdm/ui/fields/identity.md) para obtener más información.
 
->[!NOTE]
+>[!TIP]
 >
 >* La prioridad del área de nombres es **una propiedad de un área de nombres**. Es un valor numérico asignado a un área de nombres para indicar su importancia relativa.
 >
@@ -183,3 +183,7 @@ Para obtener más información sobre, lea los documentos sobre [Attribution AI](
 * Lago de datos: elimina cualquier registro con la identidad especificada como identidad principal o secundaria.
 
 Para obtener más información, lea la [descripción general del servicio de privacidad](../../privacy-service/home.md).
+
+### Personalización de Adobe Target y Edge
+
+La [personalización de Edge](../../server-api/personalization-target.md) seguirá haciendo referencia a cómo configuró su casilla de verificación &quot;Principal&quot; en el tipo de elemento de datos en WebSDK (que se traduce como `primary=true` en identityMap).
