@@ -2,9 +2,9 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ Lea el siguiente documento para obtener más información sobre lo que puede hac
 >abstract="Un valor de identidad es un identificador que representa a un particular, organización o recurso únicos. El contexto o tipo de identidad que representa el valor se define mediante un área de nombres de identidad correspondiente. Al hacer coincidir los datos de los registros en los fragmentos del perfil, el área de nombres y el valor de identidad deben coincidir. Al hacer coincidir los datos de los registros en los fragmentos de perfil, el área de nombres y el valor de identidad deben coincidir."
 >text="Learn more in documentation"
 
-Una identidad completa incluye dos componentes: un **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como ID de CRM. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registro en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] combina datos de perfil, tanto el valor de identidad como el área de nombres deben coincidir.
+Una identidad completa incluye dos componentes: un **valor de identidad** y un **área de nombres de identidad**. Por ejemplo, si el valor de una identidad es `scott@acme.com`, un área de nombres proporciona contexto a este valor distinguiéndolo como una dirección de correo electrónico. Del mismo modo, un área de nombres puede distinguir `555-123-456` como número de teléfono y `3126ABC` como CRMID. Básicamente, **un área de nombres proporciona contexto a una identidad determinada**. Al hacer coincidir datos de registro en fragmentos de perfil, como cuando [!DNL Real-Time Customer Profile] combina datos de perfil, tanto el valor de identidad como el área de nombres deben coincidir.
 
 Por ejemplo, dos fragmentos de perfil pueden contener ID principales diferentes, pero comparten el mismo valor para el área de nombres &quot;Correo electrónico&quot;, por lo que Experience Platform puede ver que estos fragmentos son realmente la misma persona y reúne los datos en el gráfico de identidades para la persona.
 
@@ -47,8 +47,8 @@ Otra manera de entender mejor el concepto de área de nombres es considerar ejem
 
 Aplicación de la misma lógica al servicio de identidad:
 
-* De un vistazo, el valor de identidad de: `1-234-567-8900` puede parecer un número de teléfono. Sin embargo, desde la perspectiva del sistema, este valor podría haberse configurado como un ID de CRM. El servicio de identidad no tendría forma de aplicar el contexto necesario a este valor de identidad sin un área de nombres correspondiente.
-* Otro ejemplo es el valor de identidad de: `john@gmail.com`. Aunque este valor de identidad puede asumirse fácilmente como un correo electrónico, es totalmente posible que esté configurado como un ID de CRM de área de nombres personalizado. Con el área de nombres, puede distinguir `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+* De un vistazo, el valor de identidad de: `1-234-567-8900` puede parecer un número de teléfono. Sin embargo, desde la perspectiva del sistema, este valor podría haberse configurado como CRMID. El servicio de identidad no tendría forma de aplicar el contexto necesario a este valor de identidad sin un área de nombres correspondiente.
+* Otro ejemplo es el valor de identidad de: `john@gmail.com`. Aunque se puede suponer fácilmente que este valor de identidad es un correo electrónico, es totalmente posible que esté configurado como un CRMID de área de nombres personalizado. Con el área de nombres, puede distinguir `Email:john@gmail.com` de `CRMID:john@gmail.com`.
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ Los siguientes tipos de identidad están disponibles en Experience Platform:
 | Tipo de identidad | Descripción |
 | --- | --- |
 | ID de cookies | Los ID de cookie identifican los navegadores web. Estas identidades son críticas para la expansión y constituyen la mayoría del gráfico de identidades. Sin embargo, por naturaleza se descomponen rápidamente y pierden su valor con el tiempo. |
-| ID entre dispositivos | Los ID entre dispositivos identifican a un individuo y, por lo general, vinculan otros ID. Algunos ejemplos son un ID de inicio de sesión, un ID de CRM y un ID de fidelidad. Esto es una indicación para que [!DNL Identity Service] gestione el valor de forma confidencial. |
+| ID entre dispositivos | Los ID entre dispositivos identifican a un individuo y, por lo general, vinculan otros ID. Algunos ejemplos son un ID de inicio de sesión, CRMID y un ID de fidelidad. Esto es una indicación para que [!DNL Identity Service] gestione el valor de forma confidencial. |
 | ID de dispositivo | Los ID de dispositivo identifican dispositivos de hardware, como IDFA (iPhone y iPad), GAID (Android) y RIDA (Roku), y pueden compartirse por varias personas en hogares. |
 | Dirección de correo electrónico | Las direcciones de correo electrónico suelen estar asociadas a una sola persona y, por lo tanto, se pueden utilizar para identificarla en diferentes canales. Las identidades de este tipo incluyen información de identificación personal (PII). Esto es una indicación para que [!DNL Identity Service] gestione el valor de forma confidencial. |
 | Identificador de no personas | Los ID que no son personas se utilizan para almacenar identificadores que requieren espacios de nombres, pero no están conectados a un clúster de personas. Por ejemplo, un SKU de producto, datos relacionados con productos, organizaciones o tiendas. |

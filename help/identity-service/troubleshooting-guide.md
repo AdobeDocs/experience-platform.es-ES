@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de resolución de problemas del servicio de identidad
 description: Este documento proporciona respuestas a las preguntas frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2165'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ El etiquetado de determinados campos de datos como identidades en los datos de r
 
 ## ¿Qué son las identidades conocidas y anónimas?
 
-Una identidad conocida hace referencia a un valor de identidad que puede utilizarse, tanto por sí solo como con otra información, para identificar, contactar o localizar a una persona individual. Algunos ejemplos de identidades conocidas son direcciones de correo electrónico, números de teléfono e ID de CRM.
+Una identidad conocida hace referencia a un valor de identidad que puede utilizarse, tanto por sí solo como con otra información, para identificar, contactar o localizar a una persona individual. Algunos ejemplos de identidades conocidas son direcciones de correo electrónico, números de teléfono y CRMID.
 
 Una identidad anónima hace referencia a un valor de identidad que no se puede utilizar, ni por sí solo ni con otra información, para identificar, contactar o localizar a una persona individual (como un ID de cookie).
 

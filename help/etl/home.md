@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Desarrollo de integraciones de ETL para Adobe Experience Platform
 description: La guía de integración de ETL describe los pasos generales para crear conectores seguros de alto rendimiento para Experience Platform e ingerir datos en Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
+source-wordcount: '3977'
 ht-degree: 3%
 
 ---
@@ -789,5 +789,5 @@ Adobe Experience Platform no identifica datos diferidos actualmente, por lo que 
 | ---- | ------ | ----------- |
 | 19-01-2019 | Se ha eliminado la propiedad &quot;fields&quot; de los conjuntos de datos | Anteriormente, los conjuntos de datos incluían una propiedad &quot;fields&quot; que contenía una copia del esquema. Esta capacidad ya no debe utilizarse. Si se encuentra la propiedad &quot;fields&quot;, debe ignorarse y se debe utilizar &quot;observedSchema&quot; o &quot;schemaRef&quot; en su lugar. |
 | 15-03-2019 | Propiedad &quot;schemaRef&quot; agregada a conjuntos de datos | La propiedad &quot;schemaRef&quot; de un conjunto de datos contiene un URI que hace referencia al esquema XDM en el que se basa el conjunto de datos y representa todos los campos potenciales que el conjunto de datos podría utilizar. |
-| 15-03-2019 | Todos los identificadores de usuario final se asignan a la propiedad identityMap | El &quot;identityMap&quot; es una encapsulación de todos los identificadores únicos de un asunto, como ID de CRM, ECID o ID del programa de fidelidad. [[!DNL Identity Service]](../identity-service/home.md) utiliza este mapa para resolver todas las identidades conocidas y anónimas de un asunto, formando un único gráfico de identidad para cada usuario final. |
+| 15-03-2019 | Todos los identificadores de usuario final se asignan a la propiedad identityMap | El &quot;identityMap&quot; es una encapsulación de todos los identificadores únicos de un sujeto, como CRMID, ECID o ID de programa de fidelidad. [[!DNL Identity Service]](../identity-service/home.md) utiliza este mapa para resolver todas las identidades conocidas y anónimas de un asunto, formando un único gráfico de identidad para cada usuario final. |
 | 30-05-2019 | EOL y Quitar la propiedad &quot;schema&quot; de los conjuntos de datos | La propiedad &quot;schema&quot; del conjunto de datos proporcionó un vínculo de referencia al esquema mediante el extremo `/xdms` obsoleto en la API [!DNL Catalog]. Esto se ha reemplazado por un &quot;schemaRef&quot; que proporciona el &quot;id&quot;, &quot;version&quot; y &quot;contentType&quot; del esquema como se hace referencia en la nueva API [!DNL Schema Registry]. |

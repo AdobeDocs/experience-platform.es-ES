@@ -2,9 +2,9 @@
 title: Eliminaciones en el servicio de identidad
 description: Este documento proporciona información general sobre los distintos mecanismos que puede utilizar para eliminar los datos de identidad en Experience Platform y para aclarar cómo pueden verse afectados los gráficos de identidad.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ El siguiente documento hace referencia a las siguientes funciones de Experience 
 
 * [Servicio de identidad](../home.md): obtenga una mejor vista de los clientes individuales y su comportamiento al unir identidades entre dispositivos y sistemas.
    * [Gráfico de identidad](./identity-graph-viewer.md): un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que proporciona una representación visual de cómo el cliente interactúa con su marca en diferentes canales.
-   * [Áreas de nombres de identidad](./namespaces.md): Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como ID numérico de CRM.
+   * [Áreas de nombres de identidad](./namespaces.md): Las áreas de nombres de identidad son un componente del servicio de identidad que sirve de indicadores del contexto al que se relaciona una identidad. Por ejemplo, distinguen un valor de &quot;name<span>@email.com&quot; como dirección de correo electrónico o &quot;443522&quot; como CRMID numérico.
 * [Servicio de catálogo](../../catalog/home.md): explore el linaje de datos, los metadatos, las descripciones de archivos, los directorios y los conjuntos de datos dentro del lago de datos.
 * [Higiene de los datos](../../hygiene/home.md): administre los datos de consumidores almacenados programando caducidades automatizadas de conjuntos de datos o eliminando registros individuales de un conjunto de datos o de todos.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): administre las solicitudes de los clientes para obtener acceso, desactivar la venta o eliminar sus datos personales en las aplicaciones de Adobe Experience Cloud.

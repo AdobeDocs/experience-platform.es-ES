@@ -3,9 +3,9 @@ title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Para designar un área de nombres única, active la casilla de verificación [!U
 
 ![Dos áreas de nombres seleccionadas y definidas como únicas.](../images/rules/unique-namespace.png)
 
-Una vez establecidas las áreas de nombres únicas, los gráficos ya no podrán tener varias identidades que contengan un área de nombres única. Por ejemplo, si ha designado el CRM ID como un área de nombres única, un gráfico solo puede tener una identidad con el área de nombres del CRM ID. Para obtener más información, lea la [descripción general del algoritmo de optimización de identidad](./identity-optimization-algorithm.md#unique-namespace).
+Una vez establecidas las áreas de nombres únicas, los gráficos ya no podrán tener varias identidades que contengan un área de nombres única. Por ejemplo, si ha designado CRMID como un área de nombres única, un gráfico solo puede tener una identidad con el área de nombres CRMID. Para obtener más información, lea la [descripción general del algoritmo de optimización de identidad](./identity-optimization-algorithm.md#unique-namespace).
 
 Cuando haya terminado con sus configuraciones, seleccione **[!UICONTROL Siguiente]**. Aparecerá un mensaje de confirmación, aprovecha esta oportunidad para comprobar que las configuraciones son correctas y, a continuación, selecciona **[!UICONTROL Finalizar]**.
 

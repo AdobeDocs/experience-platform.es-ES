@@ -5,9 +5,9 @@ description: La detección de dispositivos compartidos identifica diferentes usu
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Es importante entender la siguiente terminología al trabajar con
 [!DNL Shared Device Detection] funciona estableciendo dos áreas de nombres: el **Área de nombres de identidad compartida** y el **Área de nombres de identidad de usuario**.
 
 * El área de nombres de identidad compartida representa el dispositivo que varios usuarios podrían usar. El Adobe recomienda que los clientes utilicen ECID como identificador de dispositivo compartido.
-* El área de nombres de identidad del usuario está asignada al área de nombres de identidad que corresponde al ID de inicio de sesión de un usuario, puede ser el ID de CRM, la dirección de correo electrónico, el correo electrónico con hash o el número de teléfono de un usuario.
+* El área de nombres de identidad del usuario está asignada al área de nombres de identidad que corresponde al ID de inicio de sesión de un usuario; puede ser el CRMID, la dirección de correo electrónico, el correo electrónico con hash o el número de teléfono de un usuario.
 
 Un dispositivo compartido, como una tableta, tiene un solo **Área de nombres de identidad compartida**. Por otro lado, cada usuario de un dispositivo compartido tiene su propio **espacio de nombres de identidad de usuario** designado que corresponde con sus respectivos ID de inicio de sesión. Por ejemplo, una tableta que Kevin y Nora comparten para uso en comercio electrónico tiene su propio ECID de `1234`, mientras que Kevin tiene su propia área de nombres de identidad de usuario asignada a su cuenta de `kevin@email.com` y Nora tiene su propia área de nombres de identidad de usuario asignada a su cuenta de `nora@email.com`.
 
@@ -72,17 +72,17 @@ Considere el siguiente ejemplo para comprender mejor cómo funciona [!DNL Shared
 
 >[!NOTE]
 >
->En este diagrama, el área de nombres de identidad compartida se configura como ECID y el área de nombres de identidad de usuario se configura como ID de CRM.
+>En este diagrama, el área de nombres de identidad compartida se configura como ECID y el área de nombres de identidad de usuario se configura como CRMID.
 
 ![diagrama](./images/shared-device/diagram.png)
 
 * Kevin y Nora comparten una tableta para visitar un sitio web de comercio electrónico. Sin embargo, ambos tienen sus propias cuentas independientes que cada uno utiliza para navegar y comprar en línea;
    * Como dispositivo compartido, la tableta tiene un ECID correspondiente, que representa el ID de cookie del explorador web de la tableta;
-* Supongamos que Kevin usa la tableta y **inicia sesión** en su cuenta de comercio electrónico para buscar auriculares, lo que significa que el ID de CRM de Kevin (**Área de nombres de identidad de usuario**) ahora está vinculado con el ECID de la tableta (**Área de nombres de identidad compartida**). Los datos de navegación de la tableta ahora están incorporados con el gráfico de identidad de Kevin.
-   * Si Kevin **cierra la sesión** y Nora usa la tableta y **inicia sesión** en su propia cuenta y compra una cámara, entonces su ID de CRM ahora está vinculado al ECID de la tableta. Por lo tanto, los datos de navegación de la tableta ahora están incorporados con el gráfico de identidad de Nora.
-   * Si Nora **no cierra la sesión** y Kevin usa la tableta, pero **no inicia la sesión**, entonces los datos de navegación de la tableta aún se incorporan con Nora, porque permanece como el usuario autenticado y su ID de CRM sigue vinculado al ECID de la tableta.
-   * Si Nora **cierra la sesión** y Kevin usa la tableta, pero **no inicia la sesión**, entonces los datos de navegación de la tableta aún se incorporan con el gráfico de identidad de Nora, porque como **último usuario autenticado**, su ID de CRM permanece vinculado con el ECID de la tableta.
-   * Si Kevin **inicia sesión** de nuevo, su CRM ID ahora se vincula al ECID de la tableta, ya que ahora es el último usuario autenticado y los datos de navegación de la tableta ahora se incorporan con su gráfico de identidad.
+* Supongamos que Kevin usa la tableta y **inicia sesión** en su cuenta de comercio electrónico para buscar auriculares, lo que significa que el CRMID de Kevin (**Área de nombres de identidad de usuario**) ahora está vinculado con el ECID de la tableta (**Área de nombres de identidad compartida**). Los datos de navegación de la tableta ahora están incorporados con el gráfico de identidad de Kevin.
+   * Si Kevin **cierra la sesión** y Nora usa la tableta y **inicia sesión** en su propia cuenta y compra una cámara, entonces su CRMID ahora está vinculado al ECID de la tableta. Por lo tanto, los datos de navegación de la tableta ahora están incorporados con el gráfico de identidad de Nora.
+   * Si Nora **no cierra la sesión** y Kevin usa la tableta, pero **no inicia la sesión**, entonces los datos de navegación de la tableta aún se incorporan con Nora, porque ella permanece como el usuario autenticado y su CRMID sigue vinculado al ECID de la tableta.
+   * Si Nora **cierra la sesión** y Kevin usa la tableta, pero **no inicia la sesión**, entonces los datos de navegación de la tableta aún se incorporan con el gráfico de identidad de Nora, porque como **último usuario autenticado**, su CRMID permanece vinculado con el ECID de la tableta.
+   * Si Kevin **inicia sesión** de nuevo, su CRMID ahora se vincula al ECID de la tableta, porque ahora es el último usuario autenticado y los datos de navegación de la tableta ahora se incorporan con su gráfico de identidad.
 
 ### Cómo [!DNL Profile Service] combina fragmentos de perfil con [!DNL Shared Device Detection] habilitado
 

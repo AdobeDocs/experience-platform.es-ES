@@ -3,9 +3,9 @@ title: Resumen de reglas de vinculación de gráficos de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 * [Ejemplo de configuraciones de gráficos](./configuration.md)
 * [Casos de ejemplo](./example-scenarios.md)
 
-Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona individual a través de un identificador de persona, como un ID de CRM. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
+Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona a través de un identificador de persona, como un CRMID. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
 ## Casos de ejemplo en los que podría producirse un colapso de gráfico
 
 * **Dispositivo compartido**: El dispositivo compartido hace referencia a dispositivos que utilizan más de un individuo. Algunos ejemplos de dispositivos compartidos son tabletas, equipos de biblioteca y quioscos.
 * **Correo electrónico y números de teléfono incorrectos**: Los números de correo electrónico y de teléfono incorrectos hacen referencia a usuarios finales que registran información de contacto no válida, como &quot;test<span>@test.com&quot; para correo electrónico y &quot;+1-111-111-1111&quot; para número de teléfono.
-* **Valores de identidad erróneos o incorrectos**: Los valores de identidad erróneos o incorrectos hacen referencia a valores de identidad no únicos que podrían combinar ID de CRM. Por ejemplo, aunque los IDFA deben tener 36 caracteres (32 caracteres alfanuméricos y cuatro guiones), hay escenarios en los que se puede introducir un IDFA con un valor de identidad &quot;user_null&quot;. Del mismo modo, los números de teléfono solo admiten caracteres numéricos, pero se puede introducir un área de nombres de teléfono con un valor de identidad &quot;no especificado&quot;.
+* **Valores de identidad erróneos o incorrectos**: Los valores de identidad erróneos o incorrectos hacen referencia a valores de identidad no únicos que podrían combinar CRMID. Por ejemplo, aunque los IDFA deben tener 36 caracteres (32 caracteres alfanuméricos y cuatro guiones), hay escenarios en los que se puede introducir un IDFA con un valor de identidad &quot;user_null&quot;. Del mismo modo, los números de teléfono solo admiten caracteres numéricos, pero se puede introducir un área de nombres de teléfono con un valor de identidad &quot;no especificado&quot;.
 
 Para obtener más información sobre los casos de uso de las reglas de vinculación de gráficos de identidad, lea el documento [ejemplos](./example-scenarios.md).
 
@@ -60,15 +60,15 @@ Considere el siguiente escenario:
 * Scott usa una tableta y abre su navegador Google Chrome para ir a nike<span>.com, donde inicia sesión y busca nuevos zapatos de baloncesto.
    * En segundo plano, este escenario registra las siguientes identidades:
       * Un área de nombres y valor ECID para representar el uso del explorador
-      * Un área de nombres y valor de ID de CRM para representar al usuario autenticado (Scott inició sesión con su nombre de usuario y contraseña combinados).
+      * Un área de nombres CRMID y un valor para representar al usuario autenticado (Scott inició sesión con su nombre de usuario y contraseña combinados).
 * A continuación, su hijo Peter usa la misma tableta y también usa Google Chrome para ir a nike<span>.com, donde inicia sesión con su propia cuenta para buscar equipos de fútbol.
    * En segundo plano, este escenario registra las siguientes identidades:
       * El mismo espacio de nombres y valor de ECID para representar el explorador.
-      * Un nuevo área de nombres y valor de ID de CRM para representar al usuario autenticado.
+      * Un nuevo espacio de nombres CRMID y valor para representar al usuario autenticado.
 
-Si CRM ID se configuró como un área de nombres única, el algoritmo de optimización de identidad divide los CRM ID en dos gráficos de identidad independientes, en lugar de combinarlos juntos.
+Si CRMID se configuró como un área de nombres única, el algoritmo de optimización de identidad divide los CRMID en dos gráficos de identidad independientes, en lugar de combinarlos.
 
-Si no configura un área de nombres única, puede terminar con combinaciones de gráficos no deseadas, como dos identidades con el mismo área de nombres de ID de CRM, pero con valores de identidad diferentes (escenarios como estos suelen representar dos entidades de persona diferentes en el mismo gráfico).
+Si no configura un área de nombres única, puede terminar con combinaciones de gráficos no deseadas, como dos identidades con el mismo área de nombres CRMID, pero con valores de identidad diferentes (escenarios como estos suelen representar dos entidades de persona diferentes en el mismo gráfico).
 
 Debe configurar un área de nombres única para informar al algoritmo de optimización de identidad a fin de aplicar limitaciones a los datos de identidad que se incorporan en un gráfico de identidad determinado.
 

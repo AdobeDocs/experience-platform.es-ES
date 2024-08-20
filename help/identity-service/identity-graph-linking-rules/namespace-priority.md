@@ -3,9 +3,9 @@ title: Prioridad de área de nombres
 description: Obtenga información acerca de la prioridad de área de nombres en Identity Service.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1626'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 
 Cada implementación de cliente es única y está diseñada para satisfacer los objetivos de una organización en particular y, como tal, la importancia de un área de nombres determinada varía según el cliente. Algunos ejemplos del mundo real son:
 
-* Por un lado, puede considerar que el área de nombres de correo electrónico representa una entidad de persona y, por lo tanto, es única por persona. Por otro lado, otro cliente puede considerar el área de nombres de correo electrónico como un identificador no fiable y, por lo tanto, puede permitir que un único ID de CRM se asocie a varias identidades con el área de nombres de correo electrónico.
-* Puede recopilar el comportamiento en línea mediante un área de nombres de &quot;ID de inicio de sesión&quot;. Este ID de inicio de sesión podría tener una relación 1:1 con el ID de CRM, que a su vez almacena atributos de un sistema CRM y puede considerarse el área de nombres más importante. En este caso, está determinando que el área de nombres del ID de CRM es una representación más precisa de una persona, mientras que el área de nombres del ID de inicio de sesión es la segunda más importante.
+* Por un lado, puede considerar que el área de nombres de correo electrónico representa una entidad de persona y, por lo tanto, es única por persona. Por otro lado, otro cliente puede considerar el área de nombres de correo electrónico como un identificador no fiable y, por lo tanto, puede permitir que un único CRMID se asocie a varias identidades con el área de nombres de correo electrónico.
+* Puede recopilar el comportamiento en línea mediante un área de nombres de &quot;ID de inicio de sesión&quot;. Este ID de inicio de sesión podría tener una relación 1:1 con el CRMID, que luego almacena atributos de un sistema CRM y puede considerarse el área de nombres más importante. En este caso, está determinando que el área de nombres CRMID es una representación más precisa de una persona, mientras que el área de nombres de ID de inicio de sesión es la segunda más importante.
 
 Debe realizar configuraciones en el servicio de identidad que reflejen la importancia de sus áreas de nombres, ya que esto influye en la forma y segmentación de los perfiles.
 
@@ -49,7 +49,7 @@ Una identidad representa un objeto real. Hay tres objetos que se representan en 
 
 Las áreas de nombres de persona son relativamente inmutables en comparación con los dispositivos de hardware (como IDFA y GAID), que son relativamente inmutables en comparación con los exploradores web. Básicamente, usted (persona) siempre será una sola entidad, que puede tener varios dispositivos de hardware (teléfono, portátil, tableta, etc.) y utilizar varios navegadores (Google Chrome, Safari, FireFox, etc.)
 
-Otra forma de abordar este tema es a través de la cardinalidad. Para una entidad de persona determinada, ¿cuántas identidades se crearán? En la mayoría de los casos, una persona tendrá un ID de CRM, un puñado de identificadores de dispositivo de hardware (los restablecimientos IDFA/GAID no deberían ocurrir con frecuencia) e incluso más cookies (es concebible que una persona navegue en varios dispositivos, utilice el modo incógnito o restablezca cookies en un momento dado). Por lo general, **la cardinalidad inferior indica un área de nombres con un valor más alto**.
+Otra forma de abordar este tema es a través de la cardinalidad. Para una entidad de persona determinada, ¿cuántas identidades se crearán? En la mayoría de los casos, una persona tendrá un CRMID, un puñado de identificadores de dispositivos de hardware (los restablecimientos IDFA/GAID no deberían ocurrir con frecuencia) e incluso más cookies (es concebible que una persona navegue en varios dispositivos, use el modo incógnito o restablezca cookies en un momento dado). Por lo general, **la cardinalidad inferior indica un área de nombres con un valor más alto**.
 
 ## Validar la configuración de prioridad del área de nombres
 
@@ -112,9 +112,9 @@ Dadas las configuraciones descritas anteriormente, las acciones del usuario y la
 | --- | --- | --- | --- | --- |
 | Ver página de oferta de tarjeta de crédito | No autenticado (anónimo) | SDK web | {ECID} | ECID |
 | Ver página de ayuda | No autenticado | SDK móvil | {ECID, IDFA} | IDFA |
-| Ver saldo de cuenta corriente | Authenticated | SDK web | {CRM ID, ECID} | ID de CRM |
-| Regístrese para obtener un préstamo hipotecario | Authenticated | Conector de origen de Analytics | {CRM ID, ECID, AAID} | ID de CRM |
-| Transferir $1,000 de cheques a ahorros | Authenticated | SDK móvil | {CRM ID, GAID, ECID} | ID de CRM |
+| Ver saldo de cuenta corriente | Authenticated | SDK web | {CRMID, ECID} | CRMID |
+| Regístrese para obtener un préstamo hipotecario | Authenticated | Conector de origen de Analytics | {CRMID, ECID, AAID} | CRMID |
+| Transferir $1,000 de cheques a ahorros | Authenticated | SDK móvil | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Para obtener más información, lea la [descripción general avanzada de la admi
 
 ### Atributos calculados
 
-Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el ID de CRM esté designado como su identidad principal para WebSDK. Se espera que esta limitación se resuelva en agosto de 2024.
+Los atributos calculados no utilizan la prioridad de área de nombres para calcular valores. Si utiliza atributos calculados, debe asegurarse de que el CRMID está designado como su identidad principal para WebSDK. Se espera que esta limitación se resuelva en agosto de 2024.
 
 Para obtener más información, lea la [guía de IU de atributos calculados](../../profile/computed-attributes/ui.md).
 
@@ -168,8 +168,8 @@ Para obtener más información sobre los esquemas XDM, lea la [descripción gene
 
 Al seleccionar los datos, deberá especificar un área de nombres, que se utilizará para determinar los eventos que calculan las puntuaciones y los eventos que almacenan las puntuaciones calculadas. Se recomienda seleccionar el área de nombres que representa a una persona.
 
-* Si recopila datos de comportamiento web mediante WebSDK, se recomienda elegir el área de nombres de ID de CRM dentro del mapa de identidad.
-* Si está recopilando datos de comportamiento web mediante el conector de origen de Analytics, debe seleccionar el descriptor de identidad (ID de CRM).
+* Si recopila datos de comportamiento web mediante WebSDk, se recomienda elegir el área de nombres CRMID dentro del mapa de identidad.
+* Si está recopilando datos de comportamiento web mediante el conector de origen de Analytics, debe seleccionar el descriptor de identidad (CRMID).
 
 Esta configuración resulta en calcular puntuaciones solo mediante eventos autenticados.
 

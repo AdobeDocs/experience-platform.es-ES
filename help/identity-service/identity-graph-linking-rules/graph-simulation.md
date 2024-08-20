@@ -3,9 +3,9 @@ title: Guía de IU de simulación de gráficos
 description: Aprenda a utilizar la simulación de gráfico en la interfaz de usuario del servicio de ID.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1435'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ Aparecerá una fila de configuración vacía. En primer lugar, escriba el mismo 
 
 A continuación, repita los mismos pasos y agregue la segunda área de nombres, que en este caso es el ECID. Una vez introducidas todas las áreas de nombres, puede empezar a configurar sus prioridades y exclusividad.
 
-* **Prioridad de área de nombres**: La prioridad de un área de nombres determina su importancia relativa en comparación con las otras áreas de nombres de un gráfico de identidad determinado. Por ejemplo, si el gráfico de identidad tiene cuatro áreas de nombres diferentes: CRM ID, ECID, Correo electrónico y Apple IDFA, puede configurar prioridades para determinar un orden de importancia para las cuatro áreas de nombres.
+* **Prioridad de área de nombres**: La prioridad de un área de nombres determina su importancia relativa en comparación con las otras áreas de nombres de un gráfico de identidad determinado. Por ejemplo, si el gráfico de identidad tiene cuatro áreas de nombres diferentes: CRMID, ECID, Correo electrónico y Apple IDFA, puede configurar prioridades para determinar un orden de importancia para las cuatro áreas de nombres.
 * **Área de nombres única**: Si se designa un área de nombres como única, el Servicio de identidad generará gráficos con la advertencia de que solo puede existir una identidad con un área de nombres única. Por ejemplo, si el área de nombres de correo electrónico está designada como un área de nombres única, un gráfico solo puede tener una identidad con el correo electrónico. Si hay más de una identidad con el área de nombres de correo electrónico, se eliminará el vínculo más antiguo.
 
 Para configurar la prioridad del área de nombres, seleccione y arrastre las filas de área de nombres al orden de prioridad que desee, donde la fila superior representa la prioridad superior y la fila inferior representa la prioridad inferior. Para designar un área de nombres como única, active la casilla de verificación **[!UICONTROL Única por gráfico]**.
