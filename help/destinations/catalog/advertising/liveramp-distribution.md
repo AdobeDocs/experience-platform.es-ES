@@ -201,7 +201,7 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_iheartmedia_client"
->title="Nombre de cliente"
+>title="Nombre del cliente"
 >abstract="El nombre de la cuenta del anunciante, tal como desea que se muestre al socio de destino. Utilice el nombre de su empresa. No utilice espacios ni caracteres especiales."
 
 Para configurar los detalles del destino, rellene los campos siguientes.

@@ -175,7 +175,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origen del público"
+>title="Origen de la audiencia"
 >abstract="Elija cómo se recopilaron originalmente los datos del cliente en el público. Los datos se muestran en Facebook cuando un usuario sea el objetivo del segmento"
 
 >[!CONTEXTUALHELP]

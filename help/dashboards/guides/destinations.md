@@ -217,11 +217,11 @@ Este widget proporciona una lista de los cinco públicos principales **asignados
 
 El widget **[!UICONTROL Audiencias asignadas por identidad]** resalta de un vistazo la probabilidad de segmentar correctamente las oportunidades de perfil para una campaña dentro del destino elegido. Una campaña objetivo eficaz no depende del número de perfiles enviados al destino, sino del número de ID de origen que es probable que coincidan con los ID de destino para proporcionar datos útiles y procesables.
 
-### Públicos comunes {#common-audiences}
+### Audiencias comunes {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Públicos comunes"
+>title="Audiencias comunes"
 >abstract="Este widget proporciona una lista de los cinco públicos principales activados en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en el menú desplegable del widget. La lista de públicos se ordena según la fecha de activación. El público activado más recientemente se muestra en la parte superior."
 
 El widget de **[!UICONTROL audiencias comunes]** proporciona una lista de las cinco audiencias principales activadas en la cuenta de destino elegida en la parte superior de la página y el destino seleccionado en la lista desplegable del widget. La lista de públicos se ordena según la fecha de activación. El público activado más recientemente se muestra en la parte superior.
