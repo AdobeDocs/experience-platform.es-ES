@@ -1,123 +1,93 @@
 ---
-title: Notas de la versión de Adobe Experience Platform de julio de 2024
-description: Las notas de la versión de julio de 2024 de Adobe Experience Platform.
+title: Notas de la versión de Adobe Experience Platform, agosto de 2024
+description: Notas de la versión de agosto de 2024 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 22%
+source-wordcount: '1028'
+ht-degree: 26%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: miércoles, 30 de julio de 2024**
+**Fecha de lanzamiento: miércoles, 20 de agosto de 2024**
 
-Nuevas funciones de Adobe Experience Platform:
-
-- [!BADGE Disponibilidad limitada]{type=Informative}[Composición de audiencia federada](#federated-audience-composition)
+>[!TIP]
+>
+>Vea [información general sobre la documentación de casos de uso de ejemplo](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) para obtener más información sobre varios casos de uso, como prospección, adquisición y mucho más que su organización puede lograr con Real-Time CDP.
 
 Actualizaciones de funciones y documentación existentes en Experience Platform:
 
-- [Administración avanzada del ciclo vital de datos](#advanced-data-lifecycle-management)
-- [Recopilación de datos](#data-collection)
-- [Gobernanza de datos](#data-governance)
 - [Destinos](#destinations)
+- [Modelo de datos de experiencia (XDM)](#xdm)
+- [Servicio de identidad](#identity-service)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
-- [Etiquetas unificadas](#unified-tags)
-
-## Composición de público federado {#federated-audience-composition}
-
-La Composición de audiencias federada permite a las empresas componer datos para una mejor aplicación en varios casos de uso. Con este nuevo enfoque, como usuario de Adobe Real-time Customer Data Platform o Adobe Journey Optimizer, puede federar conjuntos de datos directamente desde el almacén de datos existente para crear y enriquecer audiencias y atributos de Adobe Experience Platform, todo en un sistema.
-
-Para obtener más información, lea la [documentación de la composición de audiencias federadas](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
-
-## Administración avanzada del ciclo vital de datos {#advanced-data-lifecycle-management}
-
-Experience Platform proporciona un conjunto de funciones de higiene de datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con Data Lifecycle Workspace en la interfaz de usuario o a través de llamadas a la API de higiene de los datos, puede administrar de forma eficaz los almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas de la organización lo consideran necesario.
-
-**Nueva documentación**
-
-| Nuevo documentación | Descripción |
-| --- | --- |
-| Referencia de [!DNL Data Hygiene API] | Utilice la API de higiene de datos para administrar de forma eficaz los almacenes de datos en Experience Platform. Con estas funciones, se puede garantizar que la información se utilice según lo esperado, se actualice cuando sea incorrecta y se elimine cuando las políticas de la organización lo consideren necesario.<br><br>Lea el [documento de referencia de la API de higiene de datos](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/) para obtener información detallada sobre cómo usar la API. Puede utilizar la API de higiene de datos para programar las fechas de caducidad de los conjuntos de datos, corregir o eliminar mediante programación los datos personales de los clientes almacenados y comprobar las cuotas de higiene de datos. El documento de referencia de la API incluye los extremos disponibles, los parámetros de solicitud y los formatos de respuesta para ayudarle a administrar de manera eficaz los datos de clientes almacenados.</br></br> |
-
-Para obtener más información, lea la [descripción general avanzada de la administración del ciclo de vida de datos](../../hygiene/home.md).
-
-## Recopilación de datos {#data-collection}
-
-Adobe Experience Platform proporciona un conjunto de tecnologías que le permiten recopilar datos de experiencia del cliente del lado del cliente y enviarlos al Edge Network del Experience Platform, donde se pueden enriquecer, transformar y distribuir a destinos de Adobe o que no sean de Adobe.
-
-**Funciones nuevas o actualizadas**
-
-| Tipo | Función | Descripción |
-| --- | --- | --- |
-| SDK web | Rastrear automáticamente interacciones de propuestas | Ahora puede usar la propiedad `autoTrackPropositionInteractionsEnabled` en el SDK web para determinar si el SDK web debe recopilar automáticamente interacciones de propuestas. Consulte la documentación de [`autoTrackPropositionInteractionsEnabled`](../../web-sdk/commands/configure/autotrackpropositioninteractionsenabled.md) para obtener información detallada. |
-
-{style="table-layout:auto"}
-
-**Documentación nueva o actualizada**
-
-| Documentación nueva o actualizada | Descripción |
-| --- | --- |
-| Nuevos extremos de API documentados para la API de Reactor | Los extremos de las autorizaciones de uso del paquete de extensión ahora se encuentran en la [documentación de referencia de la API de Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor/). Los propietarios de extensiones pueden añadir, eliminar y recuperar autorizaciones de paquetes para un paquete de extensión utilizando estos extremos. |
-| Nuevo documento de extremos de autorizaciones de uso de paquetes de extensiones | Encontrará información general sobre cómo los propietarios de paquetes de extensiones pueden autorizar a otras empresas a utilizar sus versiones privadas de los paquetes en la API de Reactor en la documentación de [autorizaciones de uso de paquetes de extensiones para extremos](/help/tags/api/endpoints/extension-package-usage-authorizations.md). |
-| Nueva guía de uso compartido de extensiones privadas | Los procedimientos de creación, aprobación y eliminación de autorización de paquetes de la API de Reactor se describen en la documentación de [Uso compartido de extensiones privadas](/help/tags/api/guides/extension-packages.md). |
-
-{style="table-layout:auto"}
-
-Para obtener más información, lea la [descripción general de la recopilación de datos](../../collection/home.md).
-
-## Gobernanza de datos {#data-governance}
-
-La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña una función clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de acceso a los datos y el control de acceso de los datos para las acciones de marketing.
-
-**Nueva funcionalidad**
-
-| Función | Descripción |
-| --- | --- |
-| API del servicio mTLS | La API del servicio [mTLS](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/overview) se ha diseñado para mejorar la seguridad en los intercambios de datos. Utilice esta API para recuperar de forma segura los certificados públicos emitidos por Adobe para las aplicaciones de su organización. Estos certificados garantizan que todas las comunicaciones se autentican y cifran, y se pueden utilizar para verificar externamente la autenticidad de los certificados. Lea la [guía de extremo de certificado público](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/public-certificate-endpoint) para obtener información sobre cómo recuperar de forma segura los certificados públicos para las aplicaciones de Adobe de su organización. |
-
-{style="table-layout:auto"}
-
-Para obtener más información, lea la [descripción general del control de datos](../../data-governance/home.md).
 
 ## Destinos {#destinations}
 
 [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Nuevos destinos** {#new-destinations}
-
-| Destino | Descripción |
-| ----------- | ----------- |
-| [(Beta) Conexiones de Merkury Enterprise](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md) | Use el destino [!DNL Merkury Enterprise Connections] para entregar audiencias a [!DNL Merkury] de forma segura. [!DNL Merkury] proporciona a los especialistas en marketing una fácil coincidencia y entrega de audiencias basadas en personas a las conexiones de TV/CTV, editor y tecnología de publicidad premium de [!DNL Merkury] con más de 80 direcciones. [!DNL Merkury] cuenta con la tecnología de un gráfico completo de identidad de consumidor adulto de EE. UU. de más de 268 millones de personas. |
-| [(Beta) identidad empresarial de mercurio](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md) | Utilice el destino [!DNL Merkury Enterprise Identity] para generar perfiles de consumidores más precisos, completos y perspicaces. Con los datos de perfil mejorados, los especialistas en marketing pueden obtener mejores perspectivas, segmentos y modelos, lo que da como resultado un direccionamiento y un modelado predictivo más precisos. |
-
-{style="table-layout:auto"}
-
 **Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
 
-| Funcionalidad | Descripción |
+| Función | Descripción |
 | ----------- | ----------- |
-| Monitorización de flujo de datos en el nivel de audiencia | Anteriormente, la monitorización de los flujos de datos agrupados por audiencias solo estaba disponible para destinos por lotes (basados en archivos). A partir de esta versión, la monitorización a nivel de audiencia también está disponible para [(Beta) Google Customer Match + DV360 streaming destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md). Obtenga más información sobre la [monitorización a nivel de audiencia](/help/dataflows/ui/monitor-destinations.md#segment-level-view) y póngase en contacto con su representante de Adobe si desea unirse al programa beta para usar el destino Google Customer Match + DV360. |
-| Compatibilidad con atributos de enriquecimiento en macros de metadatos de audiencia para Destination SDK | Ahora puede tener acceso a los atributos de enriquecimiento en [plantillas de metadatos de audiencia de Destination SDK](../../destinations/destination-sdk/functionality/audience-metadata-management.md) mediante macros especializadas. Los atributos de enriquecimiento solo están disponibles para [audiencias de carga personalizadas](../../destinations/destination-sdk/functionality/destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. Consulte la plantilla de audiencia [lista de macros](../../destinations/destination-sdk/functionality/audience-metadata-management.md#macros) para obtener más información. |
+| Ya está disponible de forma general la exportación de archivos bajo demanda a destinos por lotes. | La opción de exportar archivos bajo demanda a destinos por lotes ya está disponible para todos los clientes. Consulte la [documentación dedicada](../../destinations/ui/export-file-now.md) para obtener más detalles. |
+| Edite las programaciones de exportación de varias audiencias exportadas en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los programas de exportación para varias audiencias exportadas directamente desde el paso de programación del flujo de trabajo de activación de audiencia ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Editar programación en el paso de programación.](../2024/assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
+| Edite los nombres de archivo para varias audiencias exportadas en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los nombres de varios archivos exportados directamente desde el paso de programación del flujo de trabajo de activación de audiencia ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Editar nombre de archivo en el paso de programación.](../2024/assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| Elimine varias audiencias de un flujo de datos de la página [Detalles del destino](../../destinations/ui/destination-details-page.md#bulk-remove). | La opción de quitar varias audiencias de flujos de datos existentes de la página **[!UICONTROL Detalles del destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Quitar audiencias en la página Detalles de destino.](../2024/assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| Exporte varios archivos bajo demanda a destinos por lotes desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-export). | La opción de exportar varios archivos bajo demanda a destinos por lotes desde la página **[!UICONTROL Detalles de destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Exportar archivo ahora en la página Detalles de destino.](../2024/assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| Edite los nombres de archivo de varias audiencias exportadas desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Ahora puede editar los nombres de varios archivos exportados directamente desde la página **[!UICONTROL Detalles del destino]**. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción de editar nombre de archivo en la página de detalles de destino.](../2024/assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| Elimine varios conjuntos de datos de un flujo de datos de la página [Detalles de destino](../../destinations/ui/export-datasets.md#remove-dataset). | La opción de quitar varios conjuntos de datos de un flujo de datos ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Quitar conjuntos de datos en la página de detalles de destino.](../2024/assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [descripción general de destinos](../../destinations/home.md).
 
+## Modelo de datos de experiencia (XDM) {#xdm}
+
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos que se incorporan a Adobe Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada. Puede obtener información valiosa de las acciones de los clientes, definir sus públicos mediante segmentos y utilizar sus atributos para fines de personalización.
+
+**Nuevas funciones**
+
+| Función | Descripción |
+| --- | --- |
+| Flujo de creación de esquema asistido por ML | Utilice algoritmos avanzados de aprendizaje automático para analizar los archivos de datos CSV de ejemplo y crear automáticamente esquemas optimizados con campos estándar y personalizados.<br>Características principales:<br><ul><li>Creación de esquemas más rápida: genere esquemas directamente a partir de archivos de datos de ejemplo utilizando campos XDM generados y recomendados por ML.</li><li>Evolución del esquema flexible: añada o actualice fácilmente los campos en el esquema generado.</li><li>Integración perfecta: se integra completamente con el flujo de creación de esquemas principal en la URL del esquema, lo que garantiza una experiencia de usuario uniforme y coherente.</li><li>Revisión y edición eficientes: vea y actualice rápidamente su esquema con el editor de vista plana, lo que hace que el proceso de creación sea más eficiente y fácil de usar.</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Para obtener más información sobre XDM en Platform, consulte la [Información general del sistema XDM](../../xdm/home.md).
+
+## Servicio de identidad {#identity-service}
+
+Utilice el servicio de identidad de Adobe Experience Platform para crear una vista completa de sus clientes y sus comportamientos mediante la fusión de identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
+
+**Documentación actualizada**
+
+| Función | Descripción |
+| --- | --- |
+| Guía de configuraciones de gráficos | Lea la [guía de configuraciones de gráficos](../../identity-service/identity-graph-linking-rules/example-configurations.md) para obtener información sobre escenarios de gráficos comunes que podrían encontrarse al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad. La guía de configuraciones de gráficos proporciona ejemplos que van desde escenarios de gráficos simples de una sola persona a escenarios de gráficos complejos y jerárquicos de varias personas. También puede usar la guía para ver ejemplos de eventos y configuraciones de algoritmo que puede introducir en la [IU de simulación de gráficos](../../identity-service/identity-graph-linking-rules/graph-simulation.md), así como desgloses de cómo se seleccionan las identidades principales en determinados escenarios de gráficos. |
+
+{style="table-layout:auto"}
+
+Para obtener más información sobre el servicio de identidad, lea la [descripción general del servicio de identidad](../../identity-service/home.md).
+
 ## Servicio de segmentación {#segmentation}
 
 [!DNL Segmentation Service] le permite segmentar los datos almacenados en [!DNL Experience Platform] que se relacionan con personas (como clientes, clientes potenciales, usuarios u organizaciones) en públicos. Puede crear públicos a través de definiciones de segmentos u otras fuentes a partir de sus datos de [!DNL Real-Time Customer Profile]. Estos públicos se configuran de forma centralizada y se mantienen en [!DNL Platform] y son fácilmente accesibles desde cualquier solución de Adobe.
 
-**Nueva documentación**
+**Funciones actualizadas**
 
-| Nuevo documentación | Descripción |
-| ----------------- | ----------- | 
-| [Portal de audiencias](../../segmentation/ui/audience-portal.md) | Aprenda a utilizar Audience Portal, que le permite ver, administrar y crear audiencias en Adobe Experience Platform de forma centralizada. |
+| Función | Descripción |
+| ------- | ----------- |
+| Detalles de ingesta | En el caso de las audiencias con el origen de carga personalizada, puede ver de forma más completa los detalles de la ingesta de la audiencia en la página de detalles de audiencia. Además, puede aplicar etiquetas a los atributos de carga útil seleccionando el esquema y los atributos deseados para el etiquetado. Encontrará más información sobre la sección de detalles de ingesta en la [guía de Audience Portal](../../segmentation/ui/audience-portal.md#ingestion-details). |
 
 {style="table-layout:auto"}
+
+Para obtener más información sobre [!DNL Segmentation Service], consulte la [Información general sobre segmentación](../../segmentation/home.md).
 
 ## Fuentes
 
@@ -129,23 +99,8 @@ Utilice fuentes en Experience Platform para introducir datos de una aplicación 
 
 | Documentación actualizada | Descripción |
 | --- | --- |
-| Guía de autenticación expandida para [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Lea la guía de autenticación expandida de [!DNL Snowflake] para obtener información sobre cómo recuperar su [identificador de cuenta](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) y su [clave privada](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) para la autenticación. Además, usa la guía de autenticación expandida para ver los pasos de cómo [comprobar las configuraciones de almacén y rol](../../sources/connectors/databases/snowflake.md#verify-configurations). |
+| Documentación ampliada sobre la actualización de flujos de datos | La guía sobre [actualización de flujos de datos de origen existentes en la interfaz de usuario](../../sources/tutorials/ui/update-dataflows.md) se ha actualizado para proporcionar más información sobre la variedad de configuraciones que puede realizar en un flujo de datos existente. La guía también se ha actualizado para aclarar el comportamiento esperado cuando se vuelve a habilitar un flujo de datos deshabilitado. |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [descripción general de orígenes](../../sources/home.md).
-
-## Etiquetas unificadas
-
-Las etiquetas unificadas le permiten categorizar y administrar sus objetos empresariales en Adobe Experience Platform. Con la API de Etiquetas unificadas, puede crear carpetas y etiquetas para organizar mejor los objetos de Platform, como audiencias o conjuntos de datos.
-
-**Nueva documentación**
-
-| Nuevo documentación | Descripción |
-| ----------------- | ----------- |
-| [Guía de API de etiquetas unificadas](../../administrative-tags/api/overview.md) | Lea la guía de la API de etiquetas unificadas para aprender a crear carpetas y etiquetas para ordenar los objetos empresariales. |
-| [Referencia de API de etiquetas unificadas](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Utilice la referencia de la API de etiquetas unificadas para probar de forma interactiva los extremos de las etiquetas unificadas. |
-
-{style="table-layout:auto"}
-
-Para obtener más información, lea la [Información general sobre etiquetas unificadas](../../administrative-tags/overview.md).
