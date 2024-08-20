@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 3%
 
 ---
@@ -386,6 +386,10 @@ Aparece el flujo de trabajo **[!UICONTROL Importar CSV]** de audiencia. Puede se
 >[!NOTE]
 >
 >La audiencia externa generada **debe** estar en formato CSV, tener **máximo** de 25 columnas y tener menos de 1 GB.
+>
+>Además, **no puede** usar espacios o guiones en la primera fila o en las columnas asociadas del CSV.
+>
+>Por ejemplo, el valor de la primera fila puede ser &quot;FirstName&quot; o &quot;First_Name&quot;, pero no puede ser &quot;First Name&quot; o &quot;First-Name&quot;.
 
 Después de seleccionar el archivo CSV para importar, se muestra una lista de datos de ejemplo para esta audiencia generada externamente. Después de confirmar que los datos de ejemplo son correctos, seleccione **[!UICONTROL Siguiente]**.
 

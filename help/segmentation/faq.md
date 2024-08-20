@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 0%
 
 ---
@@ -33,14 +33,7 @@ Para cargar audiencias generadas externamente, debe tener los permisos de &quot;
 
 ### ¿Qué sucede cuando se carga una audiencia generada externamente?
 
-Al cargar una audiencia generada externamente, se crean los siguientes elementos:
-
-- Conjunto de datos
-   - El conjunto de datos será visible dentro del inventario del conjunto de datos, y el nombre del conjunto de datos será **same** como nombre de la audiencia generada externamente que usted subió.
-- Trabajo por lotes
-   - Se ejecutará un trabajo por lotes **automáticamente** al cargar una audiencia generada externamente. Esto significa que **no** necesita esperar a que se ejecute el trabajo de segmentación diario para activar la audiencia generada externamente.
-- Esquema ad hoc
-   - Se creará un **nuevo** esquema XDM para utilizarlo con la audiencia generada externamente. Los campos de este esquema XDM tienen un espacio de nombres para su uso con el conjunto de datos también creado.
+Al cargar una audiencia generada externamente, se crea un conjunto de datos y este se puede ver en el inventario de conjuntos de datos. El nombre del conjunto de datos será **igual** que el nombre de la audiencia generada externamente que usted subió.
 
 ### ¿De qué se compone una audiencia generada externamente y qué sucede con estos datos cuando se importan en Platform?
 
@@ -91,12 +84,6 @@ La política de combinación predeterminada específica de la organización se a
 ### ¿Dónde puedo activar audiencias generadas externamente para?
 
 Una audiencia generada externamente se puede asignar a cualquier destino y se puede utilizar en campañas de Adobe Journey Optimizer.
-
-### ¿Cuándo están listas las audiencias generadas externamente para su activación?
-
-Si se activa en un destino de flujo continuo, los datos de la audiencia generada externamente estarán disponibles en un plazo de dos horas.
-
-Si se activa en un destino por lotes, los datos de la audiencia generada externamente se sincronizarán con el siguiente trabajo de segmentación de 24 horas.
 
 ### ¿Puedo eliminar una audiencia generada externamente?
 
