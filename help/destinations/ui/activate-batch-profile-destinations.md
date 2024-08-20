@@ -3,7 +3,7 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
+source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
 ht-degree: 11%
@@ -346,7 +346,7 @@ Consideremos los dos perfiles siguientes.
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -377,10 +377,10 @@ Consideremos los dos perfiles siguientes.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -420,8 +420,8 @@ Suponiendo la anulación de duplicación por el espacio de nombres [!DNL Email],
 
 | Correo electrónico* | personalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
+| doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Caso de uso de deduplicación 3: deduplicación basada en un único atributo de perfil {#deduplication-use-case-3}
 
