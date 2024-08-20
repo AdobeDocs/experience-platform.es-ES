@@ -2,9 +2,9 @@
 title: Asignar un archivo CSV a un esquema XDM mediante Recommendations generado por IA
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM mediante recomendaciones generadas por IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
@@ -101,3 +101,5 @@ Cuando termine de ajustar las recomendaciones del esquema para los campos de ori
 En esta guía se explica cómo asignar un archivo CSV a un esquema XDM mediante recomendaciones generadas por IA, lo que le permite introducir esos datos en Platform mediante la ingesta por lotes.
 
 Para ver los pasos de asignación de un archivo CSV a un esquema existente, consulte el [flujo de trabajo de asignación de esquemas existente](./existing-schema.md). Para obtener información sobre la transmisión de datos a Platform en tiempo real a través de conexiones de origen precompiladas, consulte [descripción general de las fuentes](../../../sources/home.md).
+
+También puede usar algoritmos de aprendizaje automático (ML) para **generar un esquema a partir de datos CSV de ejemplo**. Este flujo de trabajo crea automáticamente un nuevo esquema basado en la estructura y el contenido del archivo CSV. Este esquema recién creado coincide con el formato de los datos para ahorrarle tiempo y aumentar la precisión al definir la estructura, los campos y los tipos de datos para conjuntos de datos complejos y grandes. Consulte la [guía de creación de esquemas asistidos por ML](../../../xdm/ui/ml-assisted-schema-creation.md) para obtener más información sobre este flujo de trabajo.

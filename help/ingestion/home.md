@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de ingesta de datos
 description: Este documento presenta las tres formas principales de introducir los datos en Platform, con vínculos a su documentación general respectiva para obtener información más detallada.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,12 @@ Consulte la [descripción general de la ingesta de transmisión](./streaming-ing
 Las conexiones de Source se pueden configurar para recopilar datos de otras aplicaciones de Adobe (como Adobe Analytics y Adobe Audience Manager), fuentes de almacenamiento en la nube de terceros (como [!DNL Azure Blob], [!DNL Amazon] S3, servidores FTP y servidores SFTP) y sistemas CRM de terceros (como [!DNL Microsoft Dynamics] y [!DNL Salesforce]).
 
 Consulte [Resumen de orígenes](../sources/home.md) para obtener más información.
+
+### Creación de esquemas asistidos por ML {#ml-assisted-schema-creation}
+
+Para integrar rápidamente nuevas fuentes de datos, ahora puede utilizar algoritmos de aprendizaje automático para generar un esquema a partir de datos de ejemplo. Esta automatización simplifica la creación de esquemas precisos, reduce los errores y acelera el proceso desde la recopilación de datos hasta el análisis y las perspectivas.
+
+Consulte la [guía de creación de esquemas asistidos por ML](../xdm/ui/ml-assisted-schema-creation.md) para obtener más información sobre este flujo de trabajo.
 
 ## Pasos siguientes y recursos adicionales
 

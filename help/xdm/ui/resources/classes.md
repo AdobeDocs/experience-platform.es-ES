@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,15 @@ La clase que ha creado está disponible y se enumera en la vista [!UICONTROL Cla
 
 ### Crear o editar una clase {#create-or-edit}
 
-Alternativamente, si selecciona **[!UICONTROL Crear esquema]**, aparecerá el flujo de trabajo [!UICONTROL Crear esquema]. En la sección [!UICONTROL Detalles del esquema], seleccione **[!UICONTROL Otro]**. Aparecerá una lista de las clases disponibles. Desde aquí puede examinar y filtrar las clases preexistentes en las que basar la nueva clase.
+Alternativamente, si decide crear manualmente un esquema, puede crear o editar una clase existente como parte de ese flujo de trabajo. Seleccione **[!UICONTROL Crear esquema]** seguido de **[!UICONTROL Manual]** en el cuadro de diálogo [!UICONTROL Crear un esquema] que aparece.
+
+>[!NOTE]
+>
+>Si utiliza el flujo de trabajo de creación de esquemas asistidos por ML, puede cargar un archivo y utilizar algoritmos XML para generar un esquema recomendado. En ese flujo de trabajo de creación de esquemas, no es necesario especificar la clase base para el esquema. Para saber cómo ML puede recomendar una estructura de esquema basada en un archivo csv, consulte la [guía de creación de esquemas asistida por aprendizaje automático](../ml-assisted-schema-creation.md).
+
+![El cuadro de diálogo Crear un esquema con las opciones de flujo de trabajo y la selección resaltadas.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+Aparecerá el flujo de trabajo de creación de esquemas. En la sección [!UICONTROL Detalles del esquema], seleccione **[!UICONTROL Otro]**. Aparecerá una lista de las clases disponibles. Desde aquí puede examinar y filtrar las clases preexistentes en las que basar la nueva clase.
 
 >[!NOTE]
 >

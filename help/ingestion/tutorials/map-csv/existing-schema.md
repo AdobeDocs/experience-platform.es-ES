@@ -5,9 +5,9 @@ title: Asignar un archivo CSV a un esquema XDM existente
 type: Tutorial
 description: Este tutorial explica cómo asignar un archivo CSV a un esquema XDM existente mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
@@ -121,3 +121,7 @@ Una vez asignado y creado el archivo CSV, puede monitorizar los datos que se est
 ## Pasos siguientes
 
 Al seguir este tutorial, ha asignado correctamente un archivo CSV sin formato a un esquema XDM y lo ha introducido en [!DNL Platform]. Estos datos ahora pueden ser utilizados por servicios de flujo descendente [!DNL Platform] como [!DNL Real-Time Customer Profile]. Vea la descripción general de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obtener más información.
+
+>[!TIP]
+>
+>También puede usar algoritmos de aprendizaje automático (ML) para **generar un esquema a partir de datos de ejemplo** del espacio de trabajo de esquemas. Este flujo de trabajo crea automáticamente un nuevo esquema basado en la estructura y el contenido del archivo, lo que garantiza que el esquema coincida con el formato de los datos. Esto le ahorra tiempo y aumenta la precisión al definir la estructura, los campos y los tipos de datos para conjuntos de datos grandes y complejos. Consulte la [guía de creación de esquemas asistidos por ML](../../../xdm/ui/ml-assisted-schema-creation.md) para obtener más información sobre este flujo de trabajo.

@@ -5,9 +5,9 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4922'
 ht-degree: 1%
 
 ---
@@ -46,14 +46,23 @@ Para empezar a maquetar un esquema, seleccione **[!UICONTROL Crear esquema]** en
 
 ![La ficha [!UICONTROL Examinar] del área de trabajo [!UICONTROL Esquemas] con [!UICONTROL Crear esquema] resaltado.](../images/tutorials/create-schema/create-schema-button.png)
 
+Aparecerá el cuadro de diálogo [!UICONTROL Crear un esquema]. En este cuadro de diálogo, puede elegir crear manualmente un esquema añadiendo campos y grupos de campos, o puede cargar un archivo CSV y utilizar algoritmos XML para generar un esquema. Seleccione un flujo de trabajo de creación de esquemas en el cuadro de diálogo.
+
+![El cuadro de diálogo Crear un esquema con las opciones de flujo de trabajo y la selección resaltadas.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Creación manual o asistida por ML de esquemas {#manual-or-assisted}
+
+Para obtener información sobre cómo utilizar un algoritmo XML para recomendar una estructura de esquema basada en un archivo cargado, consulte la [guía de creación de esquemas asistida por aprendizaje automático](../ui/ml-assisted-schema-creation.md). Esta guía de la interfaz de usuario se centra en el flujo de trabajo de creación manual.
+
+### Elegir una clase base {#choose-a-class}
+
 Aparece el flujo de trabajo [!UICONTROL Crear esquema]. A continuación, elija una clase base para el esquema. Puede elegir entre las clases principales de [!UICONTROL XDM Individual Profile] y [!UICONTROL XDM ExperienceEvent], o [!UICONTROL Other] si estas clases no se ajustan a sus propósitos. La opción [!UICONTROL Otras] clases permite [crear una clase nueva](#create-new-class) o elegir entre otras clases preexistentes.
 
-Consulte la documentación de [XDM individual profile](../classes/individual-profile.md) y [XDM ExperienceEvent](../classes/experienceevent.md) para obtener más información sobre estas clases. A los efectos de este tutorial, seleccione **[!UICONTROL Perfil individual de XDM]** seguido de **[!UICONTROL Siguiente]**.
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+Consulte la documentación de [[!UICONTROL XDM individual profile]](../classes/individual-profile.md) y [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) para obtener más información sobre estas clases. A los efectos de este tutorial, seleccione **[!UICONTROL Perfil individual de XDM]** seguido de **[!UICONTROL Siguiente]**.
 
 ![El flujo de trabajo [!UICONTROL Crear esquema] con las opciones de [!UICONTROL perfil individual XDM] y [!UICONTROL Siguiente] resaltadas.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Nombre y revisión {#name-and-review}
 
 Después de seleccionar una clase, aparece la sección [!UICONTROL Nombre y revisión]. En esta sección, proporcione un nombre y una descripción para identificar el esquema. Hay varias consideraciones importantes que se deben tener en cuenta al decidir un nombre para el esquema:
 
@@ -68,6 +77,8 @@ Este tutorial crea un esquema para introducir datos relacionados con los miembro
 Escriba un [!UICONTROL nombre para mostrar del esquema] descriptivo en el campo de texto. A continuación, introduzca una descripción adecuada para ayudar a identificar el esquema. Cuando haya revisado la estructura de esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finalizar]** para crear el esquema.
 
 ![Se ha resaltado la sección [!UICONTROL Nombre y revisión] del flujo de trabajo [!UICONTROL Crear esquema] con [!UICONTROL Nombre para mostrar esquema], [!UICONTROL Descripción] y [!UICONTROL Finalizar].](../images/ui/resources/schemas/name-and-review.png)
+
+### Componga su esquema {#compose-your-schema}
 
 Aparece [!DNL Schema Editor]. Este es el lienzo sobre el que compondrá el esquema. El esquema con título propio se crea automáticamente en la sección **[!UICONTROL Structure]** del lienzo cuando llega al editor, junto con los campos estándar incluidos en la clase base que ha seleccionado. La clase asignada para el esquema también se enumera en **[!UICONTROL Class]** en la sección **[!UICONTROL Composition]**.
 
