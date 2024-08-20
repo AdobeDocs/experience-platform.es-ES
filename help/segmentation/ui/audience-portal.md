@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '4125'
 ht-degree: 3%
 
 ---
@@ -254,17 +254,39 @@ Si selecciona **[!UICONTROL Editar audiencia]**, podrá editar su audiencia en e
 
 Si selecciona **[!UICONTROL Editar propiedades]**, podrá editar los detalles básicos de la audiencia, como el nombre, la descripción y las etiquetas.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![El botón Editar propiedades está resaltado en la página de detalles de la audiencia.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Total de público {#audience-total}
 
-La sección **[!UICONTROL Total de audiencia]** muestra la cantidad total de perfiles aptos para la audiencia.
+Para audiencias y composiciones generadas por Platform, la sección **[!UICONTROL Audiencia total]** muestra la cantidad total de perfiles aptos para la audiencia.
 
 >[!NOTE]
 >
 >El recuento total de audiencias puede tardar hasta 30 minutos en actualizarse una vez completado el trabajo de exportación.
 
 Las estimaciones se generan utilizando un tamaño de muestra de los datos de muestra de ese día. Si hay menos de 1 millón de entidades en el almacén de perfiles, se utiliza el conjunto de datos completo; para entre 1 y 20 millones de entidades, se utiliza 1 millón de entidades; y para más de 20 millones de entidades, se utiliza el 5% del total de entidades. Encontrará más información sobre la generación de estimaciones en la [sección de generación de estimaciones](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) del tutorial de creación de audiencias.
+
+### Detalles de ingesta {#ingestion-details}
+
+Para audiencias con un origen de **[!UICONTROL carga personalizada]**, la sección **[!UICONTROL Detalles de ingesta]** muestra tanto el total del perfil como los detalles del conjunto de datos en el que se ingirió la audiencia generada externamente.
+
+![Se muestra la sección de detalles de ingesta de la página de detalles de audiencia.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Propiedad | Descripción |
+| -------- | ----------- |
+| Recuento de perfiles | Número total de perfiles aptos para la audiencia. |
+| Nombre del conjunto de datos | Nombre del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el nombre del conjunto de datos para obtener más información sobre este. Para obtener más información sobre los conjuntos de datos, lea la [guía de la interfaz de usuario del conjunto de datos](../../catalog/datasets/user-guide.md). |
+| Lote de conjuntos de datos | El ID del conjunto de datos en el que se ingirió la audiencia. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lote de perfiles | El ID del lote que creó los perfiles en Platform. Puede seleccionar el ID del lote para obtener más información sobre el lote. Para obtener más información sobre los lotes, lea la [guía de supervisión de la ingesta de datos](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Esquema | El nombre del esquema al que pertenece la audiencia. Puede seleccionar el nombre del esquema para ver información sobre la estructura del esquema y aplicar etiquetas de uso de datos. Para obtener más información, lea las [etiquetas de uso de datos administradas para una guía de esquema](../../xdm/tutorials/labels.md). |
+| Registros ingeridos | El número de registros ingeridos en el conjunto de datos. |
+| Error de registros | El número de registros que no se pudieron introducir en el conjunto de datos. |
+| Nuevos fragmentos de perfil | El número de perfiles nuevos que se crearon. |
+| Fragmentos de perfil existentes | El número de perfiles existentes que se actualizaron. |
+
+>[!NOTE]
+>
+>La práctica recomendada es aplicar etiquetas de uso de datos al esquema. Usted **no puede** aplicar una etiqueta de uso de datos directamente a la audiencia.
 
 ### Destinos activados {#activated-destinations}
 
@@ -343,7 +365,7 @@ Si selecciona **[!UICONTROL Generar regla]**, accederá al Generador de segmento
 
 ### Composición de público federado {#fac}
 
-Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Además de las composiciones de audiencias y las definiciones de segmentos, puede utilizar Composición de audiencia federada de Adobe para crear nuevas audiencias a partir de conjuntos de datos empresariales sin copiar los datos subyacentes y almacenarlas en Adobe Experience Platform Audience Portal. También puede enriquecer las audiencias existentes en Adobe Experience Platform utilizando datos de audiencia compuestos que se han federado desde Enterprise Data Warehouse. Lea la guía de [Composición federada de audiencias](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/home).
 
 ![Lista de audiencias creadas en la Composición de audiencias federadas para su organización.](../images/ui/overview/federated-audience-composition.png)
 
