@@ -3,20 +3,15 @@ title: Exportar archivos bajo demanda a destinos por lotes mediante la interfaz 
 type: Tutorial
 description: Obtenga información sobre cómo exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 8%
+source-wordcount: '690'
+ht-degree: 9%
 
 ---
 
 
 # Exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform
-
->[!IMPORTANT]
->
->La opción **[!UICONTROL Exportar archivo ahora]** de Adobe Experience Platform se encuentra actualmente en Beta. La documentación y la funcionalidad están sujetas a cambios.
->Póngase en contacto con el representante del Adobe para obtener acceso a esta funcionalidad.
 
 >[!IMPORTANT]
 > 

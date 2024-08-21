@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,7 @@ Para quitar varias audiencias de los flujos de activación existentes, selecció
 
 ![Pantalla de datos de activación que resalta la opción Quitar audiencias.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Exporta varios archivos bajo demanda a destinos por lotes {#bulk-export}
-
->[!NOTE]
->
-Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
+### Exportar varios archivos bajo demanda a destinos por lotes {#bulk-export}
 
 Puede [exportar varios archivos bajo demanda](../ui/export-file-now.md) desde la página de **[!UICONTROL datos de activación]**. Para ello, seleccione las audiencias para las que desea exportar archivos bajo demanda y seleccione el control **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo para cada audiencia seleccionada a su destino de lote.
 
@@ -162,7 +158,7 @@ Para editar la programación de activación existente de varias audiencias al mi
 
 >[!NOTE]
 >
-Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+>Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
 
 ### Editar nombres de archivo para varias audiencias exportadas a destinos por lotes {#bulk-edit-file-names}
 
