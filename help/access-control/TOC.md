@@ -5,9 +5,9 @@ breadcrumb-title: Guía de control de acceso
 user-guide-description: Use perfiles de producto en Adobe Admin Console para administrar permisos de usuario. Obtenga información sobre cómo asignar usuarios a productos y zonas protegidas.
 feature: Access Control
 role: Admin
-source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
+source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '131'
 ht-degree: 45%
 
 ---
@@ -28,6 +28,9 @@ ht-degree: 45%
       * [Funciones](abac/ui/roles.md)
       * [Zonas protegidas](abac/ui/sandboxes.md)
       * [Usuarios](abac/ui/users.md)
+   * Administrador de permisos {#permissions-manager}
+      * [Información general](abac/permission-manager/overview.md)
+      * [Permisos](abac/permission-manager/permissions.md)
    * API de control de acceso basada en atributos {#abac-api}
       * [Información general](abac/api/overview.md)
       * [Primeros pasos](abac/api/getting-started.md)
