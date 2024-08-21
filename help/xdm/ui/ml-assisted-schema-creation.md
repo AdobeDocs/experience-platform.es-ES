@@ -1,14 +1,19 @@
 ---
 title: Creación de esquemas asistida por aprendizaje automático
 description: Aprenda a crear esquemas en la interfaz de usuario de Experience Platform.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # Creación de esquemas asistida por aprendizaje automático
+
+>[!AVAILABILITY]
+>
+>* La creación de esquemas asistida por aprendizaje automático está actualmente en fase beta. La documentación y las funcionalidades están sujetas a cambios.
 
 Utilice algoritmos XML para generar un esquema a partir de datos de ejemplo. Este proceso ahorra tiempo y aumenta la precisión al definir la estructura, los campos y los tipos de datos para conjuntos de datos complejos y grandes.
 

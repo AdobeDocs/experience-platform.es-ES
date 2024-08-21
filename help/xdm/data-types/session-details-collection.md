@@ -2,10 +2,10 @@
 title: Tipo de datos de recopilación de detalles de sesión
 description: Obtenga información acerca del tipo de datos del Modelo de datos de experiencia (XDM) de recopilación de detalles de sesión.
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,9 +31,8 @@ La colección [!UICONTROL Detalles de la sesión] es un tipo de datos estándar 
 | [[!UICONTROL Tipo de contenido de difusión]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | Cadena | Sí | El [!UICONTROL tipo de contenido de difusión] del envío de flujo. Los valores disponibles por [!UICONTROL Tipo de emisión] incluyen:<br>Audio: &quot;song&quot;, &quot;podcast&quot;, &quot;audiobook&quot; y &quot;radio&quot;;<br>Video: &quot;VoD&quot;, &quot;Live&quot;, &quot;Linear&quot;, &quot;UGC&quot; y &quot;DVoD&quot;.<br>Los clientes pueden proporcionar valores personalizados para este parámetro. |
 | [[!UICONTROL Red de difusión]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | Cadena | No | El nombre de la red/canal. |
 | [[!UICONTROL Canal de contenido]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | Cadena | Sí | [!UICONTROL Canal de contenido] es el canal de distribución desde el que se reprodujo el contenido. |
-| [[!UICONTROL Contenido finalizado]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Booleano | No | [!UICONTROL Contenido finalizado] indica si un recurso de medios cronometrados se vio hasta su finalización. Este evento no significa necesariamente que el usuario haya visto todo el vídeo, ya que podría haberse saltado algunas partes. |
 | [!UICONTROL Red de distribución de contenido] | `cdn` | Cadena | No | [!UICONTROL Red de distribución de contenido] del contenido reproducido. |
-| [[!UICONTROL ID de contenido]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | cadena | Sí | [!UICONTROL Content ID] es un identificador único del contenido. Se puede utilizar para vincular con otros ID de CMS o del sector. |
+| [[!UICONTROL ID de contenido]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | cadena | Sí | [!UICONTROL Content ID] es un identificador único del contenido. Se puede utilizar para volver a vincularse a otros ID de CMS o del sector. |
 | [[!UICONTROL Nombre de contenido]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | Cadena | No | [!UICONTROL Nombre de contenido] es el nombre &quot;descriptivo&quot; (en lenguaje natural) del contenido. |
 | [[!UICONTROL Nombre del reproductor de contenido]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-player-name) | `playerName` | Cadena | Sí | Nombre del reproductor de contenido. |
 | [[!UICONTROL Nombre del creador]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#originator) | `originator` | Cadena | No | Nombre del creador del contenido. |
@@ -45,7 +44,6 @@ La colección [!UICONTROL Detalles de la sesión] es un tipo de datos estándar 
 | [[!UICONTROL Género]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | Cadena | No | El tipo o agrupación de contenido según lo definido por el productor de contenido. Los valores deben estar delimitados por comas en la implementación de variables. |
 | [[!UICONTROL Medios autorizados]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | Cadena | No | Confirma si el usuario ha sido autorizado a través de la autenticación de Adobe. |
 | [[!UICONTROL Longitud del contenido de medios]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Entero | Sí | La [!UICONTROL duración del contenido multimedia] contiene la duración/duración del clip: es la longitud (o duración) máxima del contenido que se está consumiendo (en segundos). |
-| [[!UICONTROL Comienzo de medio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Booleano | No | El evento de carga para los medios. Esto ocurre cuando el usuario selecciona el botón de reproducción. Esto cuenta incluso si hay anuncios previos a la emisión, almacenamiento en búfer, errores, etc. |
 | [[!UICONTROL Identificador De MVPD]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | Cadena | No | Identificador del distribuidor de programación de vídeo multicanal (MVPD) proporcionado mediante autenticación de Adobe. |
 | [[!UICONTROL Editor]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | Cadena | No | Nombre del editor del contenido de audio. |
 | [[!UICONTROL Estación de radio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | Cadena | No | El nombre de la emisora de radio en la que se reproduce el audio. |
@@ -60,10 +58,3 @@ La colección [!UICONTROL Detalles de la sesión] es un tipo de datos estándar 
 | [[!UICONTROL Versión]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | Cadena | No | La versión del SDK utilizada por el reproductor. Podría tener cualquier valor personalizado que sea adecuado para el reproductor. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

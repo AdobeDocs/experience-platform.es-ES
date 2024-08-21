@@ -2,7 +2,7 @@
 title: Tipo de datos de recopilación de detalles de Advertising Pod
 description: Obtenga información acerca del tipo de datos del modelo de datos de experiencia (XDM) de recopilación de detalles de Advertising Pod.
 exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
@@ -16,7 +16,9 @@ La colección [!UICONTROL Advertising Pod Details] es un tipo de datos estándar
 ![Un diagrama del tipo de datos de recopilación de información de detalles de Advertising Pod.](../images/data-types/advertising-pod-details-collection.png)
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Requerido | Descripción |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | [!UICONTROL Posición del anuncio en la secuencia] | `index` | entero | Sí | Índice de la publicidad dentro del inicio de pausa publicitaria principal. |
 | [!UICONTROL Nombre descriptivo de la secuencia] | `friendlyName` | cadena | No | El nombre fácilmente comprensible de la pausa publicitaria. |
 | [!UICONTROL Desplazamiento de secuencia] | `offset` | entero | Sí | El desplazamiento del desglose de anuncios dentro del contenido, en segundos. |
+
+{style="table-layout:auto"}
