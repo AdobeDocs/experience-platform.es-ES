@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Siga los pasos a continuación para ver más detalles sobre un destino existente
 
    ![Destinos de exploración](../assets/ui/details-page/browse-destinations.png)
 
-2. Seleccione el icono de filtro ![Filter-icon](/help/images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
+2. Seleccione el icono de filtro ![Filter-icon](../../images/icons/filter.png) en la parte superior izquierda para iniciar el panel de ordenación. El panel de ordenación proporciona una lista de todos sus destinos. Puede seleccionar más de un destino de la lista para ver una selección filtrada de flujos de datos asociados al destino seleccionado.
 
    ![Filtrar destinos](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Para obtener más información, lea acerca de [ejecuciones de flujo de datos a d
 
 Para que el flujo de datos se ejecute en destinos basados en archivos, la **[!UICONTROL duración del procesamiento]** depende del tamaño de los datos que se exportan y de la carga del sistema. Tenga en cuenta también que el flujo de datos se ejecuta en destinos basados en archivos y se desglosa por audiencia.
 
-![Imagen del flujo de datos ejecuta la página con la columna Tiempo de procesamiento resaltada para un destino basado en archivos.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![Imagen del flujo de datos ejecuta la página con la columna Tiempo de procesamiento resaltada para un destino basado en archivos.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Para obtener más información, lea acerca de [las ejecuciones de flujo de datos a destinos por lotes (basados en archivos)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en la documentación de supervisión.
 
 ## [!UICONTROL Datos de activación] {#activation-data}
 
-La pestaña [!UICONTROL Datos de activación] muestra una lista de audiencias que se han asignado al destino, incluidas su fecha de inicio y finalización (si corresponde), y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia determinada, seleccione su nombre en la lista.
+La pestaña **[!UICONTROL Datos de activación]** muestra una lista de audiencias que se han asignado al destino, incluidas su fecha de inicio y finalización (si corresponde), y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia determinada, seleccione su nombre en la lista.
 
 >[!TIP]
 >
 >Para ver y editar los detalles sobre los atributos y las identidades asignados a un destino, seleccione **[!UICONTROL Activar audiencias]** en el [carril derecho](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+Ficha **[!UICONTROL Datos de activación]** para un destino basado en archivos.
+
 ![Destino del lote de vista de datos de activación](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+Ficha **[!UICONTROL Datos de activación]** para un destino de flujo continuo.
 
 ![Destino de flujo de vista de datos de activación](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Quitar varias audiencias de los flujos de activación {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
+### Filtrar audiencias activadas {#filter-audiences}
+
+Para filtrar por la lista de audiencias activadas en un destino, introduzca un nombre de audiencia en el cuadro de búsqueda. La lista de audiencias se actualiza automáticamente con los resultados de búsqueda.
+
+![Cuadro de búsqueda para filtrar audiencias.](../assets/ui/details-page/filter-audiences.png)
+
+### Eliminar varias audiencias de los flujos de activación {#bulk-remove}
 
 Para quitar varias audiencias de los flujos de activación existentes, selecciónelas y, a continuación, seleccione **[!UICONTROL Quitar audiencias]**.
 
 ![Pantalla de datos de activación que resalta la opción Quitar audiencias.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Exportar varios archivos bajo demanda a destinos por lotes {#bulk-export}
+### [!BADGE Beta]{type=Informative} Exporta varios archivos bajo demanda a destinos por lotes {#bulk-export}
+
+>[!NOTE]
+>
+Esta función está en versión beta y solo está disponible para clientes seleccionados. Para solicitar acceso a esta función, póngase en contacto con el representante del Adobe.
 
 Puede [exportar varios archivos bajo demanda](../ui/export-file-now.md) desde la página de **[!UICONTROL datos de activación]**. Para ello, seleccione las audiencias para las que desea exportar archivos bajo demanda y seleccione el control **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo para cada audiencia seleccionada a su destino de lote.
 
@@ -144,3 +163,9 @@ Para editar la programación de activación existente de varias audiencias al mi
 >[!NOTE]
 >
 Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+
+### Editar nombres de archivo para varias audiencias exportadas a destinos por lotes {#bulk-edit-file-names}
+
+Para editar los nombres de archivo exportados de varias audiencias al mismo tiempo, seleccione las audiencias que desee y, a continuación, seleccione **[!UICONTROL Editar nombre de archivo]**. Para obtener información detallada sobre cómo definir o editar un nombre de archivo, lea la sección sobre cómo [configurar nombres de archivo](../ui/activate-batch-profile-destinations.md#configure-file-names).
+
+![Pantalla de datos de activación que resalta la opción de editar los nombres de archivo para varias audiencias.](../assets/ui/details-page/bulk-edit-file-name.png)

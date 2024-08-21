@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4202'
 ht-degree: 13%
 
 ---
@@ -110,6 +110,10 @@ Experience Platform establece automáticamente una programación predeterminada 
 
 ![Editar control de programación resaltado en el paso Programación.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Para editar varias programaciones al mismo tiempo, selecciona las audiencias mediante las casillas de verificación de la izquierda de la pantalla y, a continuación, selecciona **[!UICONTROL Editar programación]**. La programación que configure se aplicará a todos los archivos exportados para las audiencias seleccionadas.
+
+![Imagen de la interfaz de usuario del Experience Platform que muestra la opción de programación de edición para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >Puede editar las programaciones de activación de audiencia para los flujos de activación existentes desde la página **[!UICONTROL Datos de activación]**. Consulte la documentación sobre [programación de activación de edición masiva](../ui/destination-details-page.md#bulk-edit-schedule) para obtener más información.
@@ -200,7 +204,7 @@ Seleccione **[!UICONTROL Exportar archivos incrementales]** para almacenar en d�
 
 4. Seleccione **[!UICONTROL Crear]** para guardar la programación.
 
-### Configuración de nombres de archivo
+### Configuración de nombres de archivo {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ El nombre de destino y el ID de audiencia no se pueden eliminar de los nombres d
 | **[!UICONTROL Nombre de zona protegida]** | El ID de la zona protegida que utiliza para exportar la audiencia. |
 
 {style="table-layout:auto"}
+
+Para editar varios nombres de archivo al mismo tiempo, seleccione las audiencias mediante las casillas de verificación de la izquierda de la pantalla y, a continuación, seleccione **[!UICONTROL Editar nombre de archivo]**. Las opciones de nombre de archivo que configure se aplicarán a todos los archivos exportados para las audiencias seleccionadas.
+
+![Imagen de la interfaz de usuario del Experience Platform que muestra la opción de editar nombre de archivo para varias audiencias seleccionadas.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Seleccione **[!UICONTROL Aplicar cambios]** para confirmar su selección.
 
