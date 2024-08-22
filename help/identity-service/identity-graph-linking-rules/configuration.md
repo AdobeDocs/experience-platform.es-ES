@@ -3,9 +3,9 @@ title: Guía de configuración de reglas de vinculación de gráfico de identida
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
+source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1358'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ Para obtener instrucciones sobre cómo crear un conjunto de datos, lea la [guía
 >
 >* Durante el proceso previo a la implementación, debe asegurarse de que los eventos autenticados que el sistema enviará al Experience Platform siempre contengan un identificador de persona, como CRMID.
 >* Durante la implementación, debe asegurarse de que el área de nombres única con la prioridad más alta esté siempre presente en cada perfil. Consulte el [apéndice](#appendix) para ver ejemplos de escenarios de gráficos que se solucionan asegurándose de que cada perfil contenga el área de nombres única con la prioridad más alta.
->* Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para la ingesta de datos, debe dar a sus ECID una prioridad mayor que AAID, ya que el servicio de identidad bloquea AAID. Al priorizar ECID, puede indicar al servicio de identidad que almacene eventos no autenticados en ECID en lugar de AAID.
+>* Si usa el [conector de origen de Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para la ingesta de datos, debe dar a sus ECID una prioridad mayor que AAID, ya que el servicio de identidad bloquea AAID. Al priorizar ECID, puede indicar al Perfil del cliente en tiempo real que almacene eventos no autenticados en ECID en lugar de AAID.
 
 En este punto, debería tener lo siguiente:
 
