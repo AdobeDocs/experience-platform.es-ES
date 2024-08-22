@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2024
 description: Notas de la versión de agosto de 2024 de Adobe Experience Platform.
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1352'
 ht-degree: 21%
 
 ---
@@ -45,7 +45,16 @@ Para obtener más información sobre el control de acceso basado en atributos, v
 
 [!DNL Destinations] son integraciones generadas previamente con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 
-**Funcionalidad nueva o actualizada**
+**Destinos nuevos o actualizados** {#new-updated-destinations}
+
+| Destino | Descripción |
+| ----------- | ----------- |
+| [Brazo](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] administra varias instancias diferentes para sus extremos de panel y REST. Los clientes de [!UICONTROL Braze] deben usar el extremo REST correcto en función de la instancia en la que esté aprovisionado. Esta versión agrega un nuevo punto final US-07 que puede seleccionar al conectarse a [!UICONTROL Braze]. |
+
+{style="table-layout:auto"}
+
+**Funcionalidad nueva o actualizada** {#destinations-new-updated-functionality}
+
 
 | Función | Descripción |
 | ----------- | ----------- |
