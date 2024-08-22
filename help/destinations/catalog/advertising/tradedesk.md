@@ -3,9 +3,9 @@ keywords: publicidad; mostrador comercial; mostrador comercial de publicidad
 title: La conexión con la Oficina de Comercio
 description: Trade Desk es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en pantallas, vídeos y fuentes de inventario móviles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '778'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-El destino [!DNL The Trade Desk] le ayuda a enviar datos de perfil a [!DNL The Trade Desk].
+Utilice este conector de destino para enviar datos de perfil a [!DNL The Trade Desk]. Este conector envía datos al extremo de origen [!DNL The Trade Desk]. La integración entre Adobe Experience Platform y [!DNL The Trade Desk] no permite exportar datos al extremo de terceros [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en pantallas, vídeos y fuentes de inventario móviles.
 
-Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al destino.
+Para enviar datos de perfil a [!DNL Trade Desk], primero debe conectarse al destino, tal como se describe en las secciones siguientes de esta página.
 
 ## Casos de uso {#use-cases}
 
-Como especialista en marketing, quiero poder usar audiencias creadas a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales de retargeting o segmentación de audiencia.
+Como especialista en marketing, quiero poder usar audiencias creadas a partir de [!DNL Trade Desk IDs] o ID de dispositivo para crear campañas digitales de retargeting o dirigidas a audiencias.
 
 ## Identidades admitidas {#supported-identities}
 
@@ -62,7 +62,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Si desea crear su primer destino con [!DNL The Trade Desk] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que configuró se transferirán a Platform.
+>Si desea crear su primer destino con [!DNL The Trade Desk] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) en el servicio de ID de Experience Cloud en el pasado (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar las sincronizaciones de ID. Si ya había configurado [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID que configuró se transferirán a Platform.
 
 ## Conexión al destino {#connect}
 
@@ -79,7 +79,7 @@ Mientras [configura](../../ui/connect-destination.md) este destino, debe proporc
 * **[!UICONTROL Nombre]**: Un nombre por el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Descripción]**: Una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL ID de cuenta]**: [!DNL Trade Desk] [!UICONTROL ID de cuenta].
-* **[!UICONTROL Ubicación del servidor]**: pregunte al representante de [!DNL Trade Desk] qué servidor regional debe utilizar. Estos son los servidores regionales disponibles entre los que puede elegir:
+* **[!UICONTROL Ubicación del servidor]**: pregunte al representante de [!DNL Trade Desk] qué servidor regional debe utilizar. A continuación se muestran los servidores regionales disponibles entre los que puede elegir:
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapur]**
    * **[!UICONTROL Tokio]**
@@ -104,7 +104,7 @@ Consulte [Activar datos de audiencia en destinos de exportación de audiencia de
 
 En el paso [Programación de audiencias](../../ui/activate-segment-streaming-destinations.md#scheduling), debe asignar manualmente sus audiencias a su ID correspondiente o nombre descriptivo en la plataforma de destino.
 
-Al asignar segmentos, le recomendamos que utilice el nombre de audiencia de Platform o una forma más corta de él, para facilitar el uso. Sin embargo, el ID de audiencia o el nombre en el destino no tienen por qué coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
+Al asignar audiencias, Adobe recomienda utilizar el nombre de audiencia de Platform o una forma más corta de él para facilitar el uso. Sin embargo, el ID de audiencia o el nombre en el destino no tienen por qué coincidir con el de su cuenta de Platform. El destino reflejará cualquier valor que inserte en el campo de asignación.
 
 Si utiliza varias asignaciones de dispositivos (identificadores de cookie, [!DNL IDFA], [!DNL GAID]), asegúrese de utilizar el mismo valor de asignación para las tres asignaciones. [!DNL The Trade Desk] los agregará todos en un solo segmento, con un desglose de nivel de dispositivo.
 
