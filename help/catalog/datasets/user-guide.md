@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -51,7 +51,7 @@ Esta guía del usuario requiere una comprensión práctica de los siguientes com
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
->title="Retención de conjuntos de datos"
+>title="Retención del conjunto de datos"
 >abstract="La retención de Datalake establece reglas sobre cuánto tiempo se almacenan los datos y cuándo se deben eliminar en diferentes servicios. Esto garantiza el cumplimiento de las regulaciones, la administración de los costes de almacenamiento y el mantenimiento de la calidad de los datos."
 
 

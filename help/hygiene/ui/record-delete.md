@@ -67,7 +67,7 @@ Si desea eliminar registros de todos los conjuntos de datos, seleccione **[!UICO
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Espacio de nombres de identidad"
+>title="Área de nombres de identidad"
 >abstract="Un espacio de nombres de identidad es un atributo que vincula un registro al perfil de un consumidor en Experience Platform. El campo de espacio de nombres de identidad de un conjunto de datos se define mediante el esquema en el que se basa el conjunto de datos. En esta columna, debe proporcionar el tipo (o espacio de nombres) para el espacio de nombres de identidad del registro, como `email` para direcciones de correo electrónico y `ecid` para los ID de Experience Cloud. Para obtener más información, consulte la guía de la interfaz de usuario sobre el ciclo de vida de datos."
 
 >[!CONTEXTUALHELP]
