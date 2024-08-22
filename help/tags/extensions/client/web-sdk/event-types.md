@@ -3,9 +3,9 @@ title: Tipos de eventos en la extensión SDK para web de Adobe Experience Platfo
 description: Obtenga información acerca de cómo utilizar los tipos de eventos proporcionados por la extensión SDK para web de Adobe Experience Platform en Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Suscribir elementos del conjunto de reglas] {#subscribe-ruleset-items}
+
+El tipo de evento **[!UICONTROL Suscribir elementos del conjunto de reglas]** le permite suscribirse a tarjetas de contenido de Adobe Journey Optimizer para una superficie. Cada vez que se evalúan los conjuntos de reglas, la llamada de retorno proporcionada a este comando recibe un objeto result con propuestas que contienen los datos de la tarjeta de contenido.
+
+![Imagen de la interfaz de usuario de etiquetas de Experience Platform que muestra el tipo de evento Suscribir elementos de conjunto de reglas.](assets/subscribe-ruleset-items.png)
+
+Este tipo de evento admite las siguientes propiedades configurables:
+
+* **[!UICONTROL Esquemas]**: una matriz de esquemas a los que desea suscribirse para las tarjetas de contenido. Puede introducir los esquemas manualmente o proporcionando un elemento de datos.
+* **[!UICONTROL Superficies]**: Matriz de superficies a las que desea suscribirse a tarjetas de contenido. Puede introducir las superficies manualmente o proporcionando un elemento de datos.
