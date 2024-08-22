@@ -2,9 +2,9 @@
 title: Información general de Audience Portal
 description: Aprenda a utilizar Audience Portal para ver, administrar y crear audiencias en Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4250'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,18 @@ Para obtener más información sobre cómo crear y administrar etiquetas, lea la
 #### Carpetas {#folders}
 
 Puede colocar audiencias dentro de carpetas para mejorar la gestión de audiencias.
+
+Para crear una carpeta para albergar tus audiencias, selecciona **[!UICONTROL Crear carpeta]**.
+
+![El botón Crear carpeta está resaltado.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>Solo puede crear una carpeta si está dentro de otra carpeta. Esto significa que **no puede** crear una carpeta si tiene **[!UICONTROL Todas las audiencias]** seleccionadas en la barra de navegación izquierda.
+
+Aparece una ventana emergente que le permite asignar un nombre a la carpeta recién creada. Seleccione **[!UICONTROL Guardar]** después de darle un nombre a la carpeta para terminar de crearla. Tenga en cuenta que los nombres **deben** ser exclusivos de la carpeta principal.
+
+![El botón Guardar del cuadro de diálogo Crear carpeta está resaltado.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Para mover una audiencia a una carpeta, seleccione **[!UICONTROL Mover a la carpeta]** de la audiencia que desee mover.
 
