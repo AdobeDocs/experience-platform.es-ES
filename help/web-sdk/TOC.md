@@ -6,10 +6,10 @@ breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
 role: Developer
-source-git-commit: 86d46abe5a8da441e7c89d6dceb2ebca06d3c2af
+source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 23%
+source-wordcount: '227'
+ht-degree: 22%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 23%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurar anulaciones de secuencia de datos](commands/datastream-overrides.md)
    * [Respuestas de comando](commands/command-responses.md)
 
