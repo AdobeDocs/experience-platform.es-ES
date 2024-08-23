@@ -1,9 +1,9 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2024
 description: Notas de la versión de agosto de 2024 de Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 21%
 Actualizaciones de funciones y documentación existentes en Experience Platform:
 
 - [Control de acceso basado en atributos](#abac)
+- [Ingesta de datos](#data-ingestion)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de identidad](#identity-service)
@@ -40,6 +41,19 @@ Mediante el control de acceso basado en atributos, los administradores de su org
 {style="table-layout:auto"}
 
 Para obtener más información sobre el control de acceso basado en atributos, vea la [descripción general del control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
+
+## Ingesta de datos (actualizado el 23 de agosto) {#data-ingestion}
+
+Adobe Experience Platform proporciona un completo conjunto de funciones para ingerir cualquier tipo y latencia de datos. Puede hacerlo mediante las API por lotes o de streaming, utilizando fuentes creadas por Adobe, socios de integración de datos o la IU de Adobe Experience Platform.
+
+**Actualización de la administración del formato de fecha en la ingesta de datos por lotes**
+
+Esta versión corrige un problema con la *administración del formato de fecha* en la ingesta de datos por lotes. Anteriormente, el sistema transformaba los campos de fecha insertados por los clientes como `Date` en formato `DateTime`. Esto significa que la zona horaria se agregó automáticamente a los campos y causó dificultades a los usuarios que prefirieron o requirieron el formato `Date`. En adelante, la zona horaria no se agregará automáticamente a los campos de tipo `Date`. Esta actualización garantiza que el formato exportado de datos coincida con el formato representado en el perfil para ese campo según lo solicitado por los clientes.
+
+`Date` campos antes de la versión: `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` campos después de la versión: `"birthDate": "2018-01-12"`
+
+Más información sobre [ingesta por lotes](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinos {#destinations}
 
