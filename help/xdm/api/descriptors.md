@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Punto final de API de descriptores
 description: El extremo /descriptors de la API de Registro de esquemas le permite administrar mediante programación descriptores XDM dentro de la aplicación de experiencia.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1920'
 ht-degree: 2%
 
 ---
@@ -291,7 +291,7 @@ La siguiente sección proporciona información adicional sobre cómo trabajar co
 
 >[!NOTE]
 >
->El número máximo de descriptores que se pueden aplicar a un esquema es 4000.
+>El número máximo de descriptores que se pueden aplicar a la zona protegida de una organización es 4000.
 
 En las secciones siguientes se ofrece una descripción general de los tipos de descriptor disponibles, incluidos los campos obligatorios para definir un descriptor de cada tipo.
 
