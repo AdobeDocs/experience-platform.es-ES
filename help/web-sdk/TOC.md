@@ -6,10 +6,10 @@ breadcrumb-title: Guía del SDK web
 user-guide-description: Interactúe con los servicios de Experience Cloud a través de la red perimetral.
 feature: Web SDK
 role: Developer
-source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
+source-git-commit: da0d9d0976dc0f7244500e62bb364b11fab7baca
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
