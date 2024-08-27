@@ -2,7 +2,7 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en el servicio de consultas de Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 0%
@@ -93,7 +93,7 @@ La palabra clave `CREATE VIEW` define una vista de una consulta, pero la vista n
 
 #### Crear restricciones de acceso basadas en el campo en conjuntos de datos acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Con la [capacidad de control de acceso basada en atributos](../../access-control/abac/overview.md), puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en el [almacén acelerado](../data-distiller/customizable-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
+Con la [capacidad de control de acceso basada en atributos](../../access-control/abac/overview.md), puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en el [almacén acelerado](../data-distiller/sql-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
 
 Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [agregar y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a sus esquemas desde el área de trabajo [!UICONTROL Etiquetas] en la interfaz de usuario de [!UICONTROL Esquemas].
 

@@ -2,7 +2,7 @@
 title: Notas de la versión de Adobe Experience Platform de octubre de 2022
 description: Las notas de la versión de octubre de 2022 de Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 30%
@@ -101,7 +101,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 | Función | Descripción |
 | --- | --- |
 | Monitorización de consultas a través de la IU de Platform | La ficha Consultas programadas [!UICONTROL del servicio de consultas] proporciona una visibilidad mejorada para el estado de todos los trabajos de consulta a través de la interfaz de usuario. Ahora puede encontrar información importante sobre el estado de las ejecuciones de consultas, incluidos mensajes de error y códigos en caso de error, en la ficha [!UICONTROL Consultas programadas]. También puede suscribirse a alertas a través de la interfaz de usuario para cualquiera de estas consultas en función de su estado. Consulte el [documento Supervisar consultas](../../query-service/ui/monitor-queries.md) para obtener más información sobre esta característica. |
-| Consultar modelo de datos de perspectivas de informes acelerados | Como parte del SKU de Data Distiller, el almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Con el almacén acelerado de consultas puede crear un modelo de datos personalizado o ampliar los modelos de datos de Adobe Real-time Customer Data Platform existentes para mejorar las perspectivas de creación de informes y sus visualizaciones. Consulte el [documento de información de informes de almacén acelerado de consultas](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) para obtener más información acerca de esta característica. |
+| Consultar modelo de datos de perspectivas de informes acelerados | Como parte del SKU de Data Distiller, el almacén acelerado de consultas le permite reducir el tiempo y la potencia de procesamiento necesarios para obtener perspectivas críticas de sus datos. Con el almacén acelerado de consultas puede crear un modelo de datos personalizado o ampliar los modelos de datos de Adobe Real-time Customer Data Platform existentes para mejorar las perspectivas de creación de informes y sus visualizaciones. Consulte el [documento de información de informes de almacén acelerado de consultas](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) para obtener más información acerca de esta característica. |
 
 {style="table-layout:auto"}
 

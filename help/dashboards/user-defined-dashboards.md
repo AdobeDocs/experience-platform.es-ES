@@ -2,7 +2,7 @@
 title: Paneles personalizados
 description: Obtenga información sobre cómo crear y administrar paneles personalizados, donde puede crear, añadir y editar widgets personalizados para visualizar métricas clave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Aparecerá el cuadro de diálogo [!UICONTROL Crear tablero]. Escriba un nombre d
 
 ![Cuadro de diálogo Crear tablero.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Los usuarios que hayan adquirido la SKU de Data Distiller tienen la opción de utilizar consultas SQL personalizadas para crear sus perspectivas. Consulte la [Guía de creación de perspectiva personalizable](./data-distiller/customizable-insights/overview.md) para obtener instrucciones sobre este flujo de trabajo.
+Los usuarios que hayan adquirido la SKU de Data Distiller tienen la opción de utilizar consultas SQL personalizadas para crear sus perspectivas. Consulte la [Guía de creación de SQL Insight](./data-distiller/sql-insights/overview.md) para obtener instrucciones sobre este flujo de trabajo.
 
 El tablero en blanco recién creado aparecerá con el nombre elegido en la esquina superior izquierda de la vista.
 

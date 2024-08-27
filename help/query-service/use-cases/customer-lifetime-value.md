@@ -2,7 +2,7 @@
 title: Seguimiento de señales de datos para generar el valor de duración del cliente
 description: Esta guía proporciona una demostración completa sobre cómo utilizar Data Distiller y los paneles definidos por el usuario con Real-time Customer Data Platform para medir y visualizar el valor de duración del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ El primer paso para establecer el CLV es crear un conjunto de datos derivado a p
 
 ## Ampliación del modelo de datos de perspectivas y programación de actualizaciones {#extend-data-model-and-set-refresh-schedule}
 
-Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para aprender a [crear un modelo de datos de perspectivas de informes a través del servicio de consultas para usarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
+Adobe Real-Time CDP A continuación, debe crear un modelo de datos personalizado o ampliar uno existente para que se involucre con las perspectivas de creación de informes de CLV. Consulte la documentación para aprender a [crear un modelo de datos de perspectivas de informes a través del servicio de consultas para usarlo con datos de almacenamiento acelerados y paneles definidos por el usuario](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). El tutorial cubre los siguientes pasos:
 
 * Cree un modelo para informar sobre perspectivas con Data Distiller.
 * Crear tablas, relaciones y rellenar datos.

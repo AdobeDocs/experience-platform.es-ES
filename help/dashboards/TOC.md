@@ -5,10 +5,10 @@ breadcrumb-title: Guía de paneles
 user-guide-description: Obtenga información sobre cómo visualizar datos en Experience Platform a través de paneles personalizables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 34%
+source-wordcount: '133'
+ht-degree: 35%
 
 ---
 
@@ -22,15 +22,17 @@ ht-degree: 34%
 * [Descargar tableros para el PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Información general](data-distiller/overview.md)
-   * Perspectivas personalizables para informes de aplicaciones extendidos {#customizable-insights}
-      * [Información general](data-distiller/customizable-insights/overview.md)
-      * [Modo de profesional de consultas (creación de gráficos SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+   * SQL Insights para el sistema de informes de aplicaciones extendidas {#sql-insights}
+      * [Información general](data-distiller/sql-insights/overview.md)
+   * Modo de consulta profesional {#query-pro-mode}
+      * [Información general](data-distiller/query-pro-mode/overview.md)
       * Filtros {#filters}
-         * [Filtro de fecha](data-distiller/customizable-insights/filters/date-filter.md)
-         * [Filtro global](data-distiller/customizable-insights/filters/global-filter.md)
-      * [Ver más](data-distiller/customizable-insights/view-more.md)
-      * [Ver SQL](data-distiller/customizable-insights/view-sql.md)
-      * [Descargar como CSV](data-distiller/customizable-insights/download-csv.md)
+         * [Filtro de fecha](data-distiller/query-pro-mode/filters/date-filter.md)
+         * [Filtro global](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Ver más](data-distiller/query-pro-mode/view-more.md)
+      * [Ver SQL](data-distiller/query-pro-mode/view-sql.md)
+      * [Descargar como CSV](data-distiller/query-pro-mode/download-csv.md)
+      * [Exportar como PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Paneles disponibles {#guides}
    * [Perfiles](guides/profiles.md)
    * [Perfiles de cuenta](guides/account-profiles.md)
