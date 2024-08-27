@@ -3,7 +3,7 @@ title: Algoritmo de optimización de identidad
 description: Obtenga información acerca del algoritmo de optimización de identidad en el servicio de identidad.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Cuando se infringe la restricción de área de nombres única, el algoritmo de o
 * El gráfico se restablecería en función del orden anterior. Si al agregar el vínculo se infringe la restricción del límite (por ejemplo, el gráfico contiene dos o más identidades con un área de nombres única), los vínculos se eliminan.
 * El gráfico resultante será compatible con la restricción de área de nombres única que ha configurado.
 
-![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido.png)
+![Diagrama que visualiza el algoritmo de optimización de identidad.](../images/ido_algorithm.png)
 
 ## Ejemplo de escenarios de algoritmo de optimización de identidad
 
