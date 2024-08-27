@@ -3,9 +3,9 @@ title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Cuando haya terminado con sus configuraciones, seleccione **[!UICONTROL Siguient
 
 ![La página de validación con el estado Fin resaltado.](../images/rules/finish.png)
 
-Aparece una advertencia que indica que la nueva configuración no tendrá implicaciones en los vínculos existentes de un gráfico de identidades y en los fragmentos de perfil de evento de experiencia que ya se han introducido. Además, se le notifica que la nueva configuración del sistema tardará hasta seis horas en reflejarse. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
+Aparece un mensaje de advertencia que indica que los gráficos existentes solo se verán afectados por el algoritmo de gráficos si los gráficos se actualizan **después de guardar la configuración** y que la identidad principal de los fragmentos de evento en el Perfil del cliente en tiempo real no se actualizará incluso después de que cambie la prioridad del área de nombres. Además, se le notifica que la nueva configuración tardará **seis horas** en surtir efecto. Para confirmar, escribe el nombre de tu zona protegida y selecciona **[!UICONTROL Confirmar]**.
 
 ![Ventana de confirmación que muestra una advertencia sobre un retraso de seis horas antes de que se procesen las configuraciones.](../images/rules/confirm-settings.png)
 
