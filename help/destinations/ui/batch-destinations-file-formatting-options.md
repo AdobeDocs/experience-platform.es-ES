@@ -2,10 +2,10 @@
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
 title: Configurar las opciones de formato de archivo para los destinos basados en archivos
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 17%
 
 ---
 
@@ -68,17 +68,21 @@ Vea los ejemplos siguientes del contenido en los archivos CSV exportados con cad
 >title="Carácter de comillas"
 >abstract="Utilice esta opción si desea quitar las comillas dobles de las cadenas exportadas. Vea la documentación para ver ejemplos de cada selección."
 
-Utilice esta opción si desea quitar las comillas dobles de las cadenas exportadas. Entre las opciones disponibles se encuentran:
+Utilice esta opción para controlar si las comillas dobles deben eliminarse o mantenerse dentro de las cadenas exportadas.
+
+Las opciones disponibles son:
 
 * **[!UICONTROL Carácter Nulo (\0000)]**. Utilice esta opción para eliminar comillas dobles de los archivos CSV exportados.
-* **[!UICONTROL Comillas dobles (&quot;)]**. Utilice esta opción para mantener las comillas dobles en los archivos CSV exportados.
+* **[!UICONTROL Comillas dobles (&quot;)]**. Utilice esta opción cuando los valores de cadena contengan un delimitador o comillas dobles. Esta opción le ayuda a mantener los delimitadores o las comillas dobles en los archivos CSV exportados, para que pueda identificar correctamente qué valor corresponde a cada campo.
 
 #### Ejemplos
 
+Considere el valor de entrada `Anna,"Doe,John"`.
+
 Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL Carácter nulo (\0000)]** seleccionado: `Test,John,LastName`
-* Ejemplo de salida con **[!UICONTROL comillas dobles (&quot;)]** seleccionadas: `"Test","John","LastName"`
+* Ejemplo de salida con **[!UICONTROL Carácter nulo (\0000)]** seleccionado: `Anna,Doe,John`
+* Ejemplo de salida con **[!UICONTROL comillas dobles (&quot;)]** seleccionadas: `Anna,"Doe,John"`
 
 ### Carácter de escape {#escape-character}
 
