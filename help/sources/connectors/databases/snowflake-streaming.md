@@ -5,9 +5,9 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
@@ -33,13 +33,19 @@ Utilizando [!DNL Kafka Connect], el origen de flujo [!DNL Snowflake] realiza un 
 
 En la siguiente sección se describen los pasos necesarios que se deben seguir para poder transmitir datos de la base de datos [!DNL Snowflake] al Experience Platform:
 
+### Actualice la lista de permitidos de direcciones IP
+
+Se debe agregar una lista de direcciones IP a una lista de permitidos antes de trabajar con conectores de origen. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Consulte la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) para obtener más información.
+
+La siguiente documentación proporciona información sobre cómo conectar [!DNL Amazon Redshift] a Platform mediante API o la interfaz de usuario:
+
 ### Recopilar credenciales necesarias
 
 Para que [!DNL Flow Service] se conecte con [!DNL Snowflake], debe proporcionar las siguientes propiedades de conexión:
 
 | Credencial | Descripción |
 | --- | --- |
-| `account` | El nombre completo de la cuenta asociada con su cuenta de [!DNL Snowflake]. Un nombre de cuenta [!DNL Snowflake] completo incluye su nombre de cuenta, región y plataforma en la nube. Por ejemplo, `cj12345.east-us-2.azure`. Para obtener más información sobre los nombres de cuenta, consulte esta [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | El identificador de cuenta completo (nombre de cuenta o localizador de cuentas) de su cuenta [!DNL Snowflake], anexado con el sufijo `snowflakecomputing.com`. El identificador de cuenta puede tener diferentes formatos: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (p. ej. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (p. ej. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (p. ej. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Para obtener más información, lea [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
 | `warehouse` | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Platform. |
 | `database` | La base de datos [!DNL Snowflake] contiene los datos que desea obtener de Platform. |
 | `username` | El nombre de usuario de la cuenta [!DNL Snowflake]. |
@@ -47,6 +53,7 @@ Para que [!DNL Flow Service] se conecte con [!DNL Snowflake], debe proporcionar 
 | `role` | (Opcional) Una función personalizada que se puede proporcionar a un usuario para una conexión determinada. Si no se proporciona, el valor predeterminado es `public`. |
 | `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Snowflake] es `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
+{style="table-layout:auto"}
 
 ### Configurar las opciones de rol {#configure-role-settings}
 

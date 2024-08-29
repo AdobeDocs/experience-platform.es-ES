@@ -4,9 +4,9 @@ type: Tutorial
 description: Aprenda a transmitir datos de su base de datos de Snowflake a Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un
 
 | Credencial | Descripción |
 | --- | --- |
-| Cuenta | El nombre de su cuenta de [!DNL Snowflake]. |
+| Cuenta | El nombre de su cuenta de [!DNL Snowflake]. Para conocer las convenciones sobre los nombres de cuenta, lea la [[!DNL Snowflake Streaming] guía de autenticación](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Almacén | Nombre de su almacén de [!DNL Snowflake]. Los almacenes administran la ejecución de consultas en [!DNL Snowflake]. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe tener acceso a él de forma individual para llevar los datos al Experience Platform. |
 | Base de datos | Nombre de su base de datos [!DNL Snowflake]. La base de datos contiene los datos que desea llevar al Experience Platform. |
 | Esquema | (Opcional) El esquema de base de datos asociado con su cuenta de [!DNL Snowflake]. |
@@ -78,7 +78,9 @@ Seleccione **[!UICONTROL Siguiente]** para continuar.
 
 >[!IMPORTANT]
 >
->Debe existir una columna de marca de tiempo en la tabla de origen para poder crear un flujo de datos de flujo continuo. La marca de tiempo es necesaria para que el Experience Platform sepa cuándo se incorporarán los datos y cuándo se transmitirán los datos incrementales. Puede agregar de forma retroactiva una columna de marca de tiempo para una conexión existente y crear un nuevo flujo de datos.
+>* Debe existir una columna de marca de tiempo en la tabla de origen para poder crear un flujo de datos de flujo continuo. La marca de tiempo es necesaria para que el Experience Platform sepa cuándo se incorporarán los datos y cuándo se transmitirán los datos incrementales. Puede agregar de forma retroactiva una columna de marca de tiempo para una conexión existente y crear un nuevo flujo de datos.
+>
+>* Asegúrese de que las mayúsculas y minúsculas de los campos de datos del archivo de datos de origen de ejemplo cumplan las directrices de [!DNL Snowflake] sobre la resolución de mayúsculas y minúsculas para los identificadores. Lea el [[!DNL Snowflake] documento sobre el uso de mayúsculas y minúsculas en el identificador](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) para obtener más información.
 
 Aparecerá el paso [!UICONTROL Seleccionar datos]. En este paso, debe seleccionar los datos que desea importar en Experience Platform, configurar las marcas de tiempo y las zonas horarias, y proporcionar un archivo de datos de origen de muestra para la ingesta de datos sin procesar.
 
