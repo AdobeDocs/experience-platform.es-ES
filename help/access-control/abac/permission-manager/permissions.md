@@ -1,9 +1,10 @@
 ---
 title: Administrador de permisos de control de acceso basado en atributos
 description: Aprenda a utilizar el Administrador de permisos en Adobe Experience Platform para generar informes y validar permisos de acceso.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -40,7 +41,7 @@ Para un informe más granular, puede especificar el recurso con acciones en una 
 
 >[!INFO]
 >
->[!UICONTROL El recurso], [!UICONTROL las acciones] y [!UICONTROL las zonas protegidas] no son campos obligatorios. Solo se puede seleccionar un [!UICONTROL recurso] para cada informe. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
+>[!UICONTROL El recurso], [!UICONTROL las acciones] y [!UICONTROL las zonas protegidas] no son campos obligatorios. Una acción o zona protegida se puede eliminar una vez agregada seleccionando **&#39;x&#39;** junto a la selección que desee eliminar.
 
 ![Se resaltaron el recurso, las acciones, las zonas protegidas y los resultados de la presentación](../../images/permission-manager/users-additional-attributes-select.png)
 
