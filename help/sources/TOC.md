@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 30%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 30%
       - Asignaciones de campo {#mapping}
          - [Asignaciones de campos de Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Asignaciones de campos de Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Asignaciones de campos de destino](connectors/adobe-applications/mapping/target.md)
          - [Asignaciones de campos de Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Asignaciones de campo de Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Asignaciones de campos de Salesforce](connectors/adobe-applications/mapping/salesforce.md)
