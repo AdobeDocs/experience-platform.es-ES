@@ -3,10 +3,10 @@ keywords: destino de almacenamiento en nube;almacenamiento en nube
 title: Información general sobre destinos de Cloud Storage
 description: Adobe Experience Platform puede enviar audiencias como archivos de datos a sus ubicaciones de Amazon S3, AWS Kinesis, Azure Event Hubs o almacenamiento en la nube SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 6%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
@@ -62,6 +62,13 @@ Ruta de la carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/2576
 
 Entrada: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Ruta de la carpeta en su ubicación de almacenamiento: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Más macros**
+
+De forma similar a los ejemplos anteriores, puede utilizar más macros para crear una estructura de carpetas personalizada en su ubicación de carpetas:
+
+* `%DATETIME%` o `%TIMESTAMP%` para agregar un nombre de carpeta personalizado basado en el tiempo de exportación de los archivos. El formato de la primera macro es `MMDDYYYY_HHMMSS` y un formato de 10 dígitos de UNIX para la segunda macro.
+* `%DESTINATION_NAME%` para agregar una carpeta personalizada basada en el nombre del flujo de datos de destino.
 
 ## Tipo de exportación de datos {#export-type}
 
