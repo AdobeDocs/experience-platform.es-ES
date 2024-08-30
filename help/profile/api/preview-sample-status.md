@@ -4,7 +4,7 @@ title: Punto final de API de previsualización de estado de muestra (previsualiz
 description: El punto final de vista previa del estado de muestra de la API de Perfil del cliente en tiempo real le permite obtener una vista previa de la última muestra correcta de los datos de perfil, mostrar la distribución de perfiles por conjunto de datos y por identidad, y generar informes que muestren la superposición de conjuntos de datos, la superposición de identidades y perfiles no enlazados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -84,7 +84,7 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ La respuesta incluye los detalles del último trabajo de muestra correcto que se
 |---|---|
 | `numRowsToRead` | Número total de perfiles combinados en la muestra. |
 | `sampleJobRunning` | Un valor booleano que devuelve `true` cuando un trabajo de muestra está en curso. Proporciona transparencia sobre la latencia que se produce cuando se carga un archivo por lotes en, cuando se agrega realmente al almacén de perfiles. |
-| `cosmosDocCount` | Recuento total de documentos en Cosmos. |
+| `docCount` | Recuento total de documentos en la base de datos. |
 | `totalFragmentCount` | Número total de fragmentos de perfil en el almacén de perfiles. |
 | `lastSuccessfulBatchTimestamp` | Marca de tiempo de la última ingesta correcta por lotes. |
 | `streamingDriven` | *Este campo ha quedado obsoleto y no contiene ningún significado para la respuesta.* |
