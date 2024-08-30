@@ -2,9 +2,9 @@
 title: Claves administradas por el cliente en Adobe Experience Platform
 description: Obtenga información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Los datos almacenados en Adobe Experience Platform se cifran en reposo mediante 
 
 >[!NOTE]
 >
->Los datos del lago de datos de Adobe Experience Platform y del almacén de perfiles se cifran con CMK. Se consideran sus almacenes de datos principales.
+>Los datos de perfil del cliente almacenados en el almacén de perfiles [!DNL Azure Data Lake] de Platform y [!DNL Azure Cosmos DB] se cifran exclusivamente mediante CMK, una vez habilitado. La revocación de claves en los almacenes de datos principales puede tardar entre **unos minutos y 24 horas**, y puede tardar más, **hasta 7 días** para los almacenes de datos transitorios o secundarios. Para obtener más información, consulte las [implicaciones de revocar el acceso a claves en la sección](#revoke-access).
 
 Este documento proporciona información general de alto nivel sobre el proceso para habilitar la función de claves administradas por el cliente (CMK) en Platform y la información sobre los requisitos previos necesaria para completar estos pasos.
 
@@ -54,15 +54,22 @@ El proceso es el siguiente:
 
 Una vez completado el proceso de configuración, todos los datos incorporados en Platform en todas las zonas protegidas se cifrarán con la configuración de clave de [!DNL Azure]. Para usar CMK, aprovechará la funcionalidad [!DNL Microsoft Azure] que puede formar parte de su [programa de vista previa pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Revocar acceso {#revoke-access}
+## Implicaciones de revocar el acceso a claves {#revoke-access}
 
-Si desea revocar el acceso de Platform a sus datos, puede quitar el rol de usuario asociado con la aplicación del almacén de claves en [!DNL Azure].
+Revocar o deshabilitar el acceso a la aplicación Key Vault, key o CMK puede causar interrupciones significativas, que incluyen cambios importantes en las operaciones de la plataforma. Una vez deshabilitadas estas claves, es posible que no se pueda acceder a los datos en Platform y que las operaciones de flujo descendente que dependan de estos datos dejen de funcionar. Es crucial comprender completamente los impactos descendentes antes de realizar cambios en las configuraciones clave.
 
->[!WARNING]
->
->Deshabilitar el almacén de claves, la clave o la aplicación CMK puede provocar un cambio importante. Una vez que la aplicación key vault, Key o CMK esté deshabilitada y ya no se pueda acceder a los datos en Platform, ya no será posible realizar ninguna operación descendente relacionada con esos datos. Asegúrese de comprender el impacto descendente de la revocación del acceso de Platform a la clave antes de realizar cambios en la configuración.
+Si decide revocar el acceso de Platform a sus datos, puede hacerlo eliminando el rol de usuario asociado con la aplicación de Key Vault en [!DNL Azure].
 
-Después de quitar el acceso a la clave o de deshabilitar o eliminar la clave del almacén de claves [!DNL Azure], esta configuración puede tardar entre unos minutos y 24 horas en propagarse a los almacenes de datos principales. Los flujos de trabajo de Platform también incluyen los almacenes de datos en caché y transitorios necesarios para el rendimiento y la funcionalidad de la aplicación principal. La propagación de la revocación de CMK a través de estos almacenes en caché y transitorios puede tardar hasta siete días, según lo determinado por sus flujos de trabajo de procesamiento de datos. Por ejemplo, esto significa que el panel Perfil conservaría y mostraría datos de su almacén de datos de caché y tardaría siete días en caducar los datos que se mantienen en los almacenes de datos de caché como parte del ciclo de actualización. El mismo retraso de tiempo se aplica a los datos que vuelven a estar disponibles cuando se vuelve a habilitar el acceso a la aplicación.
+### Escalas de tiempo de propagación {#propagation-timelines}
+
+Una vez revocado el acceso a la clave desde el almacén de claves [!DNL Azure], los cambios se propagarán de la siguiente manera:
+
+| **Tipo de tienda** | **Descripción** | **Cronología** |
+|---|---|---|
+| Almacenes de datos principales | Estas tiendas incluyen Azure Data Lake y Azure Cosmos DB Profile. Una vez revocado el acceso a las claves, los datos se vuelven inaccesibles. | Entre **pocos minutos y 24 horas**. |
+| Almacenes de datos en caché/transitorios | Incluye almacenes de datos utilizados para el rendimiento y la funcionalidad de la aplicación principal. El impacto de la revocación de claves se retrasa. | **Hasta 7 días**. |
+
+Por ejemplo, el panel Perfil seguirá mostrando los datos de su caché durante un máximo de siete días antes de que los datos caduquen y se actualicen. Del mismo modo, volver a habilitar el acceso a la aplicación tarda la misma cantidad de tiempo en restaurar la disponibilidad de los datos en estas tiendas.
 
 >[!NOTE]
 >
