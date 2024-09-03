@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1985'
 ht-degree: 7%
 
 ---
@@ -80,7 +80,7 @@ Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los 
   >[!IMPORTANT]
   >
   > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. Se requiere el permiso para la integración de [!DNL Adobe Experience Platform].
-* Lea y firme los términos de servicio de [!DNL Facebook Custom Audiences]. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
+* Lea y firme los términos de servicio de [!DNL Facebook Custom Audiences]. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, donde `accountID` es su [!DNL Facebook Ad Account ID]. Asegúrese de que la sección `business_id=206617933627973` esté presente en la dirección URL al firmar los Términos de servicio.
   >[!IMPORTANT]
   >
   >Al firmar los términos de servicio de [!DNL Facebook Custom Audiences], asegúrese de usar la misma cuenta de usuario que utilizó para autenticarse en la API de Facebook.
@@ -251,4 +251,10 @@ Al configurar este destino, puede recibir el siguiente error:
 
 Este error se produce cuando los clientes utilizan cuentas recién creadas y los permisos de [!DNL Facebook] aún no están activos.
 
+>[!IMPORTANT]
+>
+>Asegúrese de aceptar [!DNL Facebook Custom Audience Terms of Service] en `business ID 206617933627973`, tal como se muestra en la plantilla URL de la sección [requisitos previos de la cuenta](#facebook-account-prerequisites).
+
 Si recibe el mensaje de error `400 Bad Request` después de seguir los pasos de los [requisitos previos de la cuenta de Facebook](#facebook-account-prerequisites), espere unos días para que los permisos de [!DNL Facebook] entren en vigor.
+
+
