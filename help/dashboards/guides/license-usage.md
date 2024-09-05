@@ -4,14 +4,19 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
+source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '2641'
 ht-degree: 6%
 
 ---
 
 # Panel de uso de licencias {#license-usage-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="Cuadro de diálogo de prueba que no debería estar visible"
+>abstract="El objeto {name} se está viendo en {date}."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
