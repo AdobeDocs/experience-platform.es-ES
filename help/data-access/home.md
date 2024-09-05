@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de acceso a datos
 description: El acceso a datos es compatible con Adobe Experience Platform al proporcionar a los usuarios herramientas centradas en la detección y accesibilidad de conjuntos de datos de Platform ingeridos.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -29,4 +29,4 @@ Para obtener más información acerca de [!DNL Data Science Workspace], comience
 
 ## Suscripción a eventos de ingesta de datos
 
-[!DNL Platform] hace que ciertos eventos de alto valor estén disponibles para la suscripción a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a las notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.
+[!DNL Platform] hace que ciertos eventos de alto valor estén disponibles para la suscripción a través de [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.

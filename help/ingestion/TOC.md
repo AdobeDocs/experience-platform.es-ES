@@ -5,10 +5,10 @@ breadcrumb-title: Guía de ingesta de datos
 user-guide-description: Incluya sus datos en Experience Platform mediante la ingestión por lotes o streaming.
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 18%
+source-wordcount: '142'
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 18%
    - [Recuperar diagnósticos de error](quality/error-diagnostics.md)
    - [Recuperar lotes fallidos](quality/retrieve-failed-batches.md)
    - [Validación de ingesta de streaming](quality/streaming-validation.md)
-   - [Notificaciones de ingesta de datos](quality/subscribe-events.md)
 - [Protecciones para la ingesta de datos](guardrails.md)
 - [Conectores de Source](source-connectors.md)
 - [Referencia de API de ingesta por lotes](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)

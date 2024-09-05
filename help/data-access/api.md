@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de API de acceso a datos
 description: La API de acceso a datos es compatible con Adobe Experience Platform al proporcionar a los desarrolladores una interfaz RESTful centrada en la detección y accesibilidad de conjuntos de datos ingeridos dentro de Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 5%
@@ -243,4 +243,4 @@ Para obtener más ejemplos, consulte el [tutorial de acceso a datos](tutorials/d
 
 ## Suscripción a eventos de ingesta de datos {#subscribe-to-data-ingestion-events}
 
-Puede suscribirse a eventos de alto valor específicos mediante [Adobe Developer Console](https://developer.adobe.com/console/). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a las notificaciones de ingesta de datos](../ingestion/quality/subscribe-events.md) para obtener más información.
+Puede suscribirse a eventos de alto valor específicos mediante [Adobe Developer Console](https://developer.adobe.com/console/). Por ejemplo, puede suscribirse a eventos de ingesta de datos para recibir notificaciones de posibles retrasos y errores. Consulte el tutorial sobre [suscripción a notificaciones de eventos de Adobe](../observability/alerts/subscribe.md) para obtener más información.
