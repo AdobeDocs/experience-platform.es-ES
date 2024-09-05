@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1845'
 ht-degree: 4%
 
 ---
@@ -234,6 +234,7 @@ Puede ver y rastrear sus exportaciones de perfil en relación con sus límites c
 Tenga en cuenta las siguientes limitaciones para la publicación de disponibilidad general de las exportaciones de conjuntos de datos:
 
 * Actualmente, solo puede exportar archivos incrementales y no se puede seleccionar una fecha de finalización para las exportaciones de conjuntos de datos.
+* El Experience Platform puede exportar varios archivos incluso para conjuntos de datos pequeños. La exportación de conjuntos de datos está diseñada para la integración entre sistemas y optimizada para el rendimiento, por lo que el número de archivos exportados no se puede personalizar.
 * Los nombres de archivo exportados no se pueden personalizar en este momento.
 * Actualmente, los conjuntos de datos creados mediante API no están disponibles para la exportación.
 * Actualmente, la IU no impide eliminar un conjunto de datos que se exporta a un destino. No elimine ningún conjunto de datos que se esté exportando a destinos. [Quite el conjunto de datos](#remove-dataset) de un flujo de datos de destino antes de eliminarlo.
