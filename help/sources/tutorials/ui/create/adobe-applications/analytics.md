@@ -2,10 +2,10 @@
 title: Creación de una conexión de Adobe Analytics Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 4%
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -301,7 +301,7 @@ Aparece una lista de los flujos de datos de Analytics existentes en su organizac
 
 ![Una lista de flujos de datos de Adobe Analytics existentes en su organización.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La página [!UICONTROL Actividad del conjunto de datos] proporciona información sobre el progreso de los datos que se envían de Analytics al Experience Platform. La interfaz muestra métricas como el número de registros ingeridos, el número de lotes ingeridos y el número de lotes fallidos.
+La página [!UICONTROL Actividad del conjunto de datos] proporciona información sobre el progreso de los datos que se envían de Analytics al Experience Platform. La interfaz muestra métricas como el total de registros del mes anterior, el total de registros ingeridos en los últimos siete días y el tamaño de los datos del mes anterior.
 
 El origen crea una instancia de dos flujos de conjuntos de datos. Un flujo representa los datos de relleno y el otro es para los datos activos. Los datos de relleno no están configurados para su incorporación al Perfil del cliente en tiempo real, sino que se envían al lago de datos para casos de uso analíticos y de ciencia de datos.
 
@@ -309,35 +309,9 @@ Para obtener más información sobre el relleno, los datos activos y sus respect
 
 ![Página de actividad del conjunto de datos de un conjunto de datos de destinatario determinado para los datos de Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Ver lotes individuales mediante la interfaz de monitorización heredada
-
-La página de actividad del conjunto de datos no muestra una lista de lotes individuales. Para ver una lista de lotes individuales, seleccione un gráfico en la interfaz de actividad del conjunto de datos.
-
-![Página de actividad del conjunto de datos con un gráfico seleccionado.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-Se le redirigirá al panel de monitorización. A continuación, seleccione **[!UICONTROL SOLO ERRORES DE INGESTA: SÍ]** para borrar el filtro y ver una lista de lotes individuales.
-
-![Panel de supervisión con el filtro de error seleccionado.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-La interfaz se actualiza a una lista de lotes individuales, que incluye información sobre sus métricas respectivas.
-
-![La página de supervisión heredada para los datos por lotes.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Métricas | Descripción |
-| --- | --- |
-| ID de lote | El ID de un lote determinado. Este valor se genera internamente. |
-| Nombre del conjunto de datos | Nombre de un conjunto de datos determinado que se utiliza para los datos de Analytics. |
-| Fuente | Origen de los datos introducidos. |
-| Actualizado   | La fecha de la iteración de ejecución de flujo más reciente. |
-| Registros en conjunto de datos | Recuento total de registros en el conjunto de datos. **Nota**: este parámetro mostrará ocasionalmente un estado de `in-progress`. Este estado indica que el proceso de ingesta de registros aún no ha finalizado. |
-| Nuevos fragmentos de perfil | Recuento total de nuevos fragmentos de perfil que se ingirieron. |
-| Fragmentos de perfil existentes | Recuento total de fragmentos de perfil existentes. |
-| Registros de identidad vinculados | El recuento total de registros de identidad que se vincularon después de la ingesta. |
-| Registros en el perfil | Recuento total de registros que se ingirieron en el perfil del cliente en tiempo real. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de origen de Analytics se administra completamente mediante el Adobe. Puede monitorizar que los datos fluyen mirando las métricas alrededor de los registros ingeridos.
 
 ## Pasos siguientes y recursos adicionales
 
