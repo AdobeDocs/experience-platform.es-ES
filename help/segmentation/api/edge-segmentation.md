@@ -4,9 +4,9 @@ title: Segmentación de Edge mediante la API
 description: Este documento contiene ejemplos sobre cómo utilizar la segmentación de Edge con la API del servicio de segmentación de Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -41,22 +41,15 @@ Para realizar llamadas correctamente a cualquier extremo de API de Experience Pl
 
 Para que se pueda evaluar un segmento mediante la segmentación de Edge, la consulta debe cumplir las siguientes directrices:
 
-| Tipo de consulta | Detalles | Ejemplo | Ejemplo de PQL |
-| ---------- | ------- | ------- | ----------- |
-| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. | Personas que han agregado un elemento al carro de compras. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Perfil único | Cualquier definición de segmento que haga referencia a un único atributo de solo perfil | Personas que viven en los Estados Unidos. | `homeAddress.countryCode = "US"` |
-| Evento único que hace referencia a un perfil | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un único evento entrante sin restricción horaria. | Personas que viven en los EE.UU. que visitaron la página principal. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Evento único anulado con un atributo de perfil | Cualquier definición de segmento que haga referencia a un evento entrante único negado y a uno o más atributos de perfil | Las personas que viven en los Estados Unidos y **no** visitaron la página de inicio. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| Evento único dentro de una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante en un período de tiempo establecido. | Personas que visitaron la página principal en las últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. | Personas que viven en Estados Unidos y que visitaron la página principal en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| Evento único anulado con un atributo de perfil en un período de tiempo | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un evento entrante único y negado en un período de tiempo. | Las personas que viven en los Estados Unidos y **no** visitaron la página de inicio en las últimas 24 horas. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
-| Evento de frecuencia en un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a un evento que se produce un determinado número de veces en un intervalo de tiempo de 24 horas. | Personas que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Evento de frecuencia con un atributo de perfil en un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un evento que se produce un determinado número de veces en un intervalo de tiempo de 24 horas. | Personas de los Estados Unidos que visitaron la página principal **al menos** cinco veces en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Evento de frecuencia anulado con un perfil dentro de un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a un evento denegado que se produce un determinado número de veces en un intervalo de tiempo de 24 horas. | Personas que no han visitado la página principal **más** que cinco veces en las últimas 24 horas. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| Varias visitas entrantes en un perfil de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a varios eventos que se producen en un intervalo de tiempo de 24 horas. | Las personas que visitaron la página de inicio **o** visitaron la página de cierre de compra en las últimas 24 horas. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Varios eventos con un perfil en un intervalo de tiempo de 24 horas | Cualquier definición de segmento que haga referencia a uno o varios atributos de perfil y a varios eventos que se producen en un período de tiempo de 24 horas. | Las personas de EE. UU. que visitaron la página de inicio **y** visitaron la página de pago en las últimas 24 horas. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. | Personas que viven en Estados Unidos y están en el segmento &quot;segmento existente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| Consulta que hace referencia a un mapa | Cualquier definición de segmento que haga referencia a un mapa de propiedades. | Personas que han agregado a su carro de compras en función de datos de segmentos externos. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| Tipo de consulta | Detalles |
+| ---------- | ------- |
+| Evento único | Cualquier definición de segmento que haga referencia a un único evento entrante sin restricción horaria. |
+| Evento único dentro de un intervalo de tiempo relativo | Cualquier definición de segmento que haga referencia a un único evento entrante. |
+| Evento único con una ventana de tiempo | Cualquier definición de segmento que haga referencia a un único evento entrante con un intervalo de tiempo. |
+| Solo perfil | Cualquier definición de segmento que haga referencia únicamente a un atributo de perfil. |
+| Evento único con un atributo de perfil en un intervalo de tiempo relativo inferior a 24 horas | Cualquier definición de segmento que haga referencia a un único evento entrante, con uno o más atributos de perfil, y que se produzca en un intervalo de tiempo relativo inferior a 24 horas. |
+| Segmento de segmentos | Cualquier definición de segmento que contenga uno o más segmentos de flujo continuo o por lotes. **Nota:** Si se usa un segmento de segmentos, la descalificación del perfil se producirá **cada 24 horas**. |
+| Varios eventos con un atributo de perfil | Cualquier definición de segmento que haga referencia a varios eventos **en las últimas 24 horas** y (opcionalmente) tenga uno o más atributos de perfil. |
 
 Además, el segmento **debe** estar vinculado a una política de combinación que esté activa en Edge. Para obtener más información acerca de las políticas de combinación, lea la [guía de políticas de combinación](../../profile/api/merge-policies.md).
 

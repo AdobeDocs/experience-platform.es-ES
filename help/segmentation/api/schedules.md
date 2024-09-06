@@ -4,9 +4,9 @@ title: Programa el extremo de API
 description: Los programas son una herramienta que se puede utilizar para ejecutar automáticamente trabajos de segmentación por lotes una vez al día.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -29,18 +29,25 @@ El extremo `/config/schedules` admite varios parámetros de consulta para filtra
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{START}` | Especifica desde qué página comenzará el desplazamiento. De forma predeterminada, este valor es 0. |
-| `{LIMIT}` | Especifica el número de programaciones devueltas. De forma predeterminada, este valor es 100. |
+**Parámetros de consulta**
+
++++ Una lista de parámetros de consulta disponibles.
+
+| Parámetro | Descripción | Ejemplo |
+| --------- | ----------- | ------- |
+| `start` | Especifica desde qué página comenzará el desplazamiento. De forma predeterminada, este valor es 0. | `start=5` |
+| `limit` | Especifica el número de programaciones devueltas. De forma predeterminada, este valor es 100. | `limit=20` |
+
++++
 
 **Solicitud**
 
 La siguiente solicitud recupera las diez últimas programaciones publicadas en su organización.
+
++++ Una solicitud de ejemplo para recuperar una lista de programaciones.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con una lista de programaciones para la organización especificada como JSON.
@@ -57,6 +66,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de programacion
 >[!NOTE]
 >
 >La siguiente respuesta se ha truncado para el espacio y muestra solo la primera programación devuelta.
+
++++ Una respuesta de ejemplo al recuperar una lista de programaciones.
 
 ```json
 {
@@ -102,6 +113,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de programacion
 | `children.schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `children.state` | Cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
++++
+
 ## Crear una nueva programación {#create}
 
 Puede crear una nueva programación realizando una solicitud de POST al extremo `/config/schedules`.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Solicitud**
+
++++ Una solicitud de ejemplo para crear una programación.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Opcional.* Una cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. <br><br>Si no se proporciona esta cadena, se generará automáticamente una programación generada por el sistema. |
 | `state` | *Opcional.* Una cadena que contiene el estado de programación. Los dos estados admitidos son &quot;activo&quot; e &quot;inactivo&quot;. De forma predeterminada, el estado se establece en &quot;inactivo&quot;. |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la programación recién creada.
+
++++ Una respuesta de ejemplo al crear una programación.
 
 ```json
 {
@@ -172,6 +191,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la programaci
 }
 ```
 
++++
+
 ## Recuperar una programación específica {#get}
 
 Puede recuperar información detallada sobre una programación específica realizando una solicitud de GET al extremo `/config/schedules` y proporcionando el ID de la programación que desea recuperar en la ruta de solicitud.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para recuperar una programación.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la programación especificada.
+
++++ Una respuesta de ejemplo al recuperar una programación.
 
 ```json
 {
@@ -233,15 +260,13 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `schedule` | Cadena que contiene la programación del trabajo. Los trabajos solo se pueden programar para que se ejecuten una vez al día, lo que significa que no puede programar un trabajo para que se ejecute más de una vez durante un período de 24 horas. Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix). En este ejemplo, &quot;0 0 1 * *&quot; significa que esta programación se ejecutará a la 1 a. m. todos los días. |
 | `state` | Cadena que contiene el estado de programación. Los dos estados admitidos son `active` y `inactive`. De manera predeterminada, el estado se establece en `inactive`. |
 
++++
+
 ## Actualizar los detalles de una programación específica {#update}
 
 Puede actualizar una programación específica realizando una solicitud de PATCH al extremo `/config/schedules` y proporcionando el ID de la programación que está intentando actualizar en la ruta de solicitud.
 
 La solicitud del PATCH le permite actualizar el [estado](#update-state) o la [programación cron](#update-schedule) para una programación individual.
-
-### Actualizar estado de programación {#update-state}
-
-Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, declare la propiedad `path` como `/state` y establezca `value` como `active` o `inactive`. Para obtener más información sobre el parche JSON, lea la documentación de [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902).
 
 **Formato de API**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | El valor `id` de la programación que desea actualizar. |
 
+>[!BEGINTABS]
+
+>[!TAB Actualizar estado de programación]
+
+Puede utilizar una operación de parche JSON para actualizar el estado de la programación. Para actualizar el estado, declare la propiedad `path` como `/state` y establezca `value` como `active` o `inactive`. Para obtener más información sobre el parche JSON, lea la documentación de [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902).
+
 **Solicitud**
+
++++ Una solicitud de ejemplo para actualizar el estado de la programación.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Propiedad | Descripción |
 | -------- | ----------- |
 | `path` | La ruta del valor al que desea aplicar el parche. En este caso, ya que está actualizando el estado de la programación, debe establecer el valor de `path` en &quot;/state&quot;. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
 
-### Actualizar programación de cron {#update-schedule}
+>[!TAB Actualizar programación de cron]
 
 Puede utilizar una operación de parche de JSON para actualizar la programación de cron. Para actualizar la programación, declare la propiedad `path` como `/schedule` y establezca `value` como una programación cron válida. Para obtener más información sobre el parche JSON, lea la documentación de [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902). Para obtener más información acerca de las programaciones de cron, lea el apéndice del [formato de expresión cron](#appendix).
 
-**Formato de API**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | El valor `id` de la programación que desea actualizar. |
+>[!ENDTABS]
 
 **Solicitud**
+
++++ Una solicitud de ejemplo para actualizar la programación.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | La ruta del valor que desea actualizar. En este caso, ya que está actualizando la programación de cron, debe establecer el valor de `path` en `/schedule`. |
 | `value` | El valor actualizado de la programación de cron. Este valor debe estar en forma de programación cron. En este ejemplo, la programación se ejecutará el segundo de cada mes. |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 204 (sin contenido).
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para eliminar una programación.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Respuesta**
 

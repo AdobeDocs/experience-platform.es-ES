@@ -4,10 +4,10 @@ title: Previsualizaciones y estimaciones de extremos de API
 description: A medida que se desarrollan las definiciones de segmentos, puede utilizar las herramientas de estimación y vista previa de Adobe Experience Platform para ver información de resumen a fin de asegurarse de aislar la audiencia esperada.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 3%
+source-wordcount: '1016'
+ht-degree: 2%
 
 ---
 
@@ -62,6 +62,8 @@ POST /preview
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para crear una vista previa.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | Nombre de la clase de esquema [!DNL Experience Data Model] (XDM) en la que se basan los datos de perfil. |
 | `graphType` | El tipo de gráfico del que desea obtener el clúster. Los valores admitidos son `none` (no realiza la vinculación de identidad) y `pdg` (realiza la vinculación de identidad en función de su gráfico de identidad privado). |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 201 (Creado) con detalles de la previsualización recién creada.
+
++++ Una respuesta de ejemplo al crear una vista previa.
 
 ```json
 {
@@ -103,6 +109,8 @@ Una respuesta correcta devuelve el estado HTTP 201 (Creado) con detalles de la p
 | -------- | ----------- |
 | `state` | Estado actual del trabajo de vista previa. Cuando se cree inicialmente, estará en el estado &quot;NUEVO&quot;. Posteriormente, estará en estado &quot;EN EJECUCIÓN&quot; hasta que se complete el procesamiento, momento en el que pasa a estar &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
 | `previewId` | El ID del trabajo de vista previa, que se utilizará para fines de búsqueda al ver una estimación o vista previa, como se describe en la sección siguiente. |
+
++++
 
 ## Recuperación de los resultados de una previsualización específica {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para recuperar una vista previa.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
+
++++ Una respuesta de ejemplo al recuperar una previsualización.
 
 Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre la previsualización especificada.
 
@@ -181,6 +195,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | -------- | ----------- |
 | `results` | Una lista de ID de entidad, junto con sus identidades relacionadas. Los vínculos proporcionados se pueden usar para buscar las entidades especificadas mediante el [extremo de API de acceso a perfiles](../../profile/api/entities.md). |
 
++++
+
 ## Recuperar los resultados de un trabajo de estimación específico {#get-estimate}
 
 Una vez que haya creado un trabajo de vista previa, puede usar su `previewId` en la ruta de una solicitud de GET al extremo `/estimate` para ver información estadística sobre la definición del segmento, incluido el tamaño de audiencia proyectado, el intervalo de confianza y la desviación estándar de error.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 La siguiente solicitud recupera los resultados de un trabajo de estimación específico.
 
++++ Una solicitud de muestra para recuperar un trabajo de estimación.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de estimación.
+
++++ Una respuesta de muestra al recuperar un trabajo de estimación.
 
 ```json
 {
@@ -243,9 +265,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de e
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Matriz de objetos que muestra el número de perfiles dentro del segmento desglosado por área de nombres de identidad. El número total de perfiles por área de nombres (sumando los valores mostrados para cada área de nombres) puede ser mayor que la métrica de recuento de perfiles, ya que un perfil se puede asociar con varias áreas de nombres. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias áreas de nombres a ese cliente individual. |
+| `estimatedNamespaceDistribution` | Matriz de objetos que muestra el número de perfiles dentro de la definición del segmento desglosados por área de nombres de identidad. El número total de perfiles por área de nombres (sumando los valores mostrados para cada área de nombres) puede ser mayor que la métrica de recuento de perfiles, ya que un perfil se puede asociar con varias áreas de nombres. Por ejemplo, si un cliente interactúa con su marca en más de un canal, se asociarán varias áreas de nombres a ese cliente individual. |
 | `state` | Estado actual del trabajo de vista previa. El estado será &quot;EN EJECUCIÓN&quot; hasta que se complete el procesamiento, momento en el que pasará a ser &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
 | `_links.preview` | Cuando `state` es &quot;RESULT_READY&quot;, este campo proporciona una dirección URL para ver la estimación. |
+
++++
 
 ## Pasos siguientes
 

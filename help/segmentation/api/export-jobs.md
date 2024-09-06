@@ -4,9 +4,9 @@ title: Extremo de API de trabajos de exportación de segmentos
 description: Los trabajos de exportación son procesos asincrónicos que se utilizan para mantener los miembros de segmentos de audiencia en conjuntos de datos. Puede utilizar el extremo /export/job en la API del servicio de segmentación de Adobe Experience Platform, que le permite recuperar, crear y cancelar mediante programación los trabajos de exportación.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 2%
 
 ---
@@ -33,20 +33,26 @@ El extremo `/export/jobs` admite varios parámetros de consulta para filtrar los
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parámetro | Descripción |
-| --------- | ----------- |
-| `{LIMIT}` | Especifica el número de trabajos de exportación devueltos. |
-| `{OFFSET}` | Especifica el desplazamiento de las páginas de resultados. |
-| `{STATUS}` | Filtra los resultados según el estado. Los valores admitidos son &quot;NEW&quot;, &quot;SUCCEEDED&quot; y &quot;FAILED&quot;. |
+**Parámetros de consulta**
+
++++ Una lista de parámetros de consulta disponibles.
+
+| Parámetro | Descripción | Ejemplo |
+| --------- | ----------- | ------- |
+| `limit` | Especifica el número de trabajos de exportación devueltos. | `limit=10` |
+| `offset` | Especifica el desplazamiento de las páginas de resultados. | `offset=1540974701302_96` |
+| `status` | Filtra los resultados según el estado. Los valores admitidos son &quot;NEW&quot;, &quot;SUCCEEDED&quot; y &quot;FAILED&quot;. | `status=NEW` |
+
++++
 
 **Solicitud**
 
 La siguiente solicitud recuperará los dos últimos trabajos de exportación dentro de su organización.
+
++++ Una solicitud de ejemplo para recuperar los trabajos de exportación.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 La siguiente respuesta devuelve el estado HTTP 200 con una lista de los trabajos de exportación completados correctamente, según el parámetro de consulta proporcionado en la ruta de solicitud.
+
++++ Una respuesta de ejemplo al recuperar los trabajos de exportación.
 
 ```json
 {
@@ -207,6 +217,8 @@ La siguiente respuesta devuelve el estado HTTP 200 con una lista de los trabajos
 | `page` | Información sobre la paginación de los trabajos de exportación solicitados. |
 | `link.next` | Un vínculo a la página siguiente de los trabajos de exportación. |
 
++++
+
 ## Creación de un nuevo trabajo de exportación {#create}
 
 Puede crear un nuevo trabajo de exportación realizando una solicitud de POST al extremo `/export/jobs`.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Solicitud**
 
 La siguiente solicitud crea un nuevo trabajo de exportación, configurado por los parámetros proporcionados en la carga útil.
+
++++ Una solicitud de ejemplo para crear un trabajo de exportación.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Obligatorio)** El nombre del esquema asociado con el conjunto de datos donde se exportarán los datos. |
 | `evaluationInfo.segmentation` | *(opcional)* Un valor booleano que, si no se proporciona, toma el valor predeterminado `false`. El valor `true` indica que es necesario realizar la segmentación en el trabajo de exportación. |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de exportación recién creado.
+
++++ Una respuesta de ejemplo al crear un trabajo de exportación.
 
 ```json
 {
@@ -380,6 +398,8 @@ Alternativamente, si `destination.segmentPerBatch` se hubiera establecido en `tr
     }
 ```
 
++++
+
 ## Recuperación de un trabajo de exportación específico {#get}
 
 Puede recuperar información detallada sobre un trabajo de exportación específico realizando una solicitud al extremo `/export/jobs` y proporcionando el ID del trabajo de GET que desea recuperar en la ruta de solicitud.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para recuperar un trabajo de exportación.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre el trabajo de exportación especificado.
+
++++ Una respuesta de ejemplo al recuperar un trabajo de exportación.
 
 ```json
 {
@@ -476,6 +502,8 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `metrics.profileExportTime` | Campo que indica el tiempo que tardan los perfiles en exportar. |
 | `totalExportedProfileCounter` | Número total de perfiles exportados en todos los lotes. |
 
++++
+
 ## Cancelar o eliminar un trabajo de exportación específico {#delete}
 
 Puede solicitar que se elimine el trabajo de exportación especificado realizando una solicitud de DELETE al extremo `/export/jobs` y proporcionando el identificador del trabajo de exportación que desea eliminar en la ruta de solicitud.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para eliminar un trabajo de exportación.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Respuesta**
 

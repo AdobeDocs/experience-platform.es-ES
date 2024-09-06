@@ -4,10 +4,10 @@ title: Extremo de API de trabajos de segmento
 description: El extremo de trabajos de segmento de la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmento de su organización.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 3%
+source-wordcount: '1655'
+ht-degree: 2%
 
 ---
 
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **Parámetros de consulta**
 
++++ Una lista de parámetros de consulta disponibles.
+
 | Parámetro | Descripción | Ejemplo |
 | --------- | ----------- | ------- |
 | `start` | Especifica el desplazamiento inicial para los trabajos de segmento devueltos. | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | Ordena los trabajos de segmento devueltos. Está escrito en el formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Filtra los trabajos de segmento y obtiene coincidencias exactas para el filtro dado. Se puede escribir en cualquiera de los siguientes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrado en la clave del objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrado dentro de la matriz</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **Solicitud**
+
++++ Una solicitud de ejemplo para ver una lista de trabajos de segmentos.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con una lista de trabajos de segmento para la organización especificada como JSON. Sin embargo, la respuesta será diferente, según el número de definiciones de segmentos dentro del trabajo de segmentación.
 
-**Definiciones de segmentos inferiores o iguales a 1500 en su trabajo de segmentación**
+>[!BEGINTABS]
+
+>[!TAB Definiciones de segmentos inferiores o iguales a 1500 en su trabajo de segmentación]
 
 Si tiene menos de 1500 definiciones de segmento en ejecución en su trabajo de segmentación, se mostrará una lista completa de todas las definiciones de segmento dentro del atributo `children.segments`.
 
 >[!NOTE]
 >
 >La siguiente respuesta se ha truncado para el espacio y solo mostrará el primer trabajo devuelto.
+
++++ Una respuesta de ejemplo al recuperar una lista de trabajos de segmentos.
 
 ```json
 {
@@ -166,13 +178,17 @@ Si tiene menos de 1500 definiciones de segmento en ejecución en su trabajo de s
 }
 ```
 
-**Más de 1500 definiciones de segmento**
++++
+
+>[!TAB Más de 1500 definiciones de segmento]
 
 Si tiene más de 1500 definiciones de segmento en ejecución en su trabajo de segmento, el atributo `children.segments` mostrará `*`, lo que indica que se están evaluando todas las definiciones de segmento.
 
 >[!NOTE]
 >
 >La siguiente respuesta se ha truncado para el espacio y solo mostrará el primer trabajo devuelto.
+
++++ Una respuesta de ejemplo al ver una lista de trabajos de segmentos.
 
 ```json
 {
@@ -276,6 +292,10 @@ Si tiene más de 1500 definiciones de segmento en ejecución en su trabajo de se
 | `metrics.segmentProfileByStatusCounter` | Recuento de perfiles para cada estado. Se admiten los tres estados siguientes: <ul><li>&quot;realizado&quot;: número de perfiles que cumplen los requisitos para la definición del segmento.</li><li>&quot;saliente&quot;: el número de perfiles que ya no existen en la definición del segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Número total de perfiles combinados por política de combinación. |
 
++++
+
+>[!ENDTABS]
+
 ## Creación de un nuevo trabajo de segmentación {#create}
 
 Puede crear un nuevo trabajo de segmento realizando una solicitud de POST al extremo `/segment/jobs` e incluyendo en el cuerpo el ID de la definición del segmento a partir de la cual desea crear una nueva audiencia.
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 Al crear un nuevo trabajo de segmento, la solicitud y la respuesta diferirán según el número de definiciones de segmento dentro del trabajo de segmento.
 
-**Definiciones de segmentos inferiores o iguales a 1500 en su trabajo de segmentación**
+>[!BEGINTABS]
+
+>[!TAB Menos o igual a 1500 segmentos en su trabajo de segmentación]
 
 **Solicitud**
+
++++Una solicitud de ejemplo para crear un nuevo trabajo de segmentación
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | El ID de la definición del segmento para el que desea crear un trabajo de segmento. Estas definiciones de segmentos pueden pertenecer a distintas políticas de combinación. Encontrará más información sobre las definiciones de segmentos en la [guía de extremo de definición de segmento](./segment-definitions.md). |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre el trabajo de segmento recién creado.
+
++++ Una respuesta de ejemplo al crear un nuevo trabajo de segmentación.
 
 ```json
 {
@@ -335,6 +366,22 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el tra
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre el tra
 | `segments.segment.id` | El ID de la definición de segmento proporcionada. |
 | `segments.segment.expression` | Un objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 
-**Más de 1500 definiciones de segmento**
++++
+
+>[!TAB Más de 1500 definiciones de segmento en su trabajo de segmentación]
 
 **Solicitud**
 
 >[!NOTE]
 >
 >Aunque puede crear un trabajo de segmento con más de 1500 definiciones de segmento, esto es **altamente no recomendado**.
+
++++ Una solicitud de ejemplo para crear un trabajo de segmentación.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | Nombre del esquema para las definiciones de segmentos. |
 | `segments.segmentId` | Al ejecutar un trabajo de segmentación con más de 1500 segmentos, deberá pasar `*` como ID del segmento para que indique que desea ejecutar un trabajo de segmentación con todos los segmentos. |
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de segmento recién creado.
+
++++ Una respuesta de ejemplo al crear un trabajo de segmentación.
 
 ```json
 {
@@ -530,6 +585,11 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles del trabajo de s
 | `segments` | Un objeto que contiene información sobre las definiciones de segmento para las que se ejecuta este trabajo de segmento. |
 | `segments.segment.id` | `*` significa que este trabajo de segmento se está ejecutando para todas las definiciones de segmento de su organización. |
 
++++
+
+>[!ENDTABS]
+
+
 ## Recuperar un trabajo de segmento específico {#get}
 
 GET Puede recuperar información detallada sobre un trabajo de segmento específico realizando una solicitud al extremo `/segment/jobs` y proporcionando el ID del trabajo de segmento que desea recuperar en la ruta de solicitud.
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para recuperar un trabajo de segmentación.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 200 con información detallada sobre el trabajo de segmento especificado.  Sin embargo, la respuesta variará según el número de definiciones de segmentos dentro del trabajo de segmentación.
 
-**Definiciones de segmentos inferiores o iguales a 1500 en su trabajo de segmentación**
+>[!BEGINTABS]
+
+>[!TAB Definiciones de segmentos inferiores o iguales a 1500 en su trabajo de segmentación]
 
 Si tiene menos de 1500 definiciones de segmento en ejecución en su trabajo de segmentación, se mostrará una lista completa de todas las definiciones de segmento dentro del atributo `children.segments`.
+
++++ Una respuesta de ejemplo para recuperar un trabajo de segmentación.
 
 ```json
 {
@@ -622,9 +690,13 @@ Si tiene menos de 1500 definiciones de segmento en ejecución en su trabajo de s
 }
 ```
 
-**Más de 1500 definiciones de segmento**
++++
+
+>[!TAB Más de 1500 definiciones de segmento]
 
 Si tiene más de 1500 definiciones de segmento en ejecución en su trabajo de segmento, el atributo `children.segments` mostrará `*`, lo que indica que se están evaluando todas las definiciones de segmento.
+
++++ Una respuesta de ejemplo para recuperar un trabajo de segmentación.
 
 ```json
 {
@@ -711,6 +783,10 @@ Si tiene más de 1500 definiciones de segmento en ejecución en su trabajo de se
 | `segments.segment.expression` | Un objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 | `metrics` | Un objeto que contiene información de diagnóstico sobre el trabajo de segmentación. |
 
++++
+
+>[!ENDTABS]
+
 ## Recuperar trabajos de segmentos por lotes {#bulk-get}
 
 Puede recuperar información detallada sobre varios trabajos de segmento realizando una solicitud de POST al extremo `/segment/jobs/bulk-get` y proporcionando los valores `id` de los trabajos de segmento en el cuerpo de la solicitud.
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **Solicitud**
+
++++ Una solicitud de ejemplo para utilizar el extremo de recuperación masiva.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento solicitados. Sin embargo, el valor del atributo `children.segments` difiere según si el trabajo de segmento se está ejecutando para más de 1500 definiciones de segmento.
@@ -749,6 +829,8 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 >[!NOTE]
 >
 >La siguiente respuesta se ha truncado para el espacio, y solo muestra detalles parciales de cada trabajo de segmento. La respuesta completa enumerará los detalles completos para los trabajos de segmento solicitados.
+
++++ Una respuesta de ejemplo al utilizar la respuesta de obtención masiva.
 
 ```json
 {
@@ -804,6 +886,8 @@ Una respuesta correcta devuelve el estado HTTP 207 con los trabajos de segmento 
 | `segments.segment.id` | El ID de la definición del segmento. |
 | `segments.segment.expression` | Un objeto que contiene información sobre la expresión de la definición del segmento, escrita en PQL. |
 
++++
+
 ## Cancelar o eliminar un trabajo de segmento específico {#delete}
 
 Puede eliminar un trabajo de segmento específico realizando una solicitud de DELETE al extremo `/segment/jobs` y proporcionando el ID del trabajo de segmento que desea eliminar en la ruta de solicitud.
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **Solicitud**
 
++++ Una solicitud de ejemplo para eliminar un trabajo de segmentación.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Respuesta**
 
 Una respuesta correcta devuelve el estado HTTP 204 con la siguiente información.
+
++++ Una respuesta de ejemplo al eliminar un trabajo de segmentación.
 
 ```json
 {
@@ -842,6 +932,8 @@ Una respuesta correcta devuelve el estado HTTP 204 con la siguiente información
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## Pasos siguientes
 
