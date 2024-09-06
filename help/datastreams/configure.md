@@ -2,10 +2,10 @@
 title: Creación y configuración de flujos de datos
 description: Obtenga información sobre cómo conectar la integración del SDK web del lado del cliente con otros productos de Adobe y destinos de terceros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 52%
 
 ---
 
@@ -189,7 +189,7 @@ Ese servicio controla si los datos se envían a Adobe Target y cómo.
 | --- | --- |
 | [!UICONTROL Token de propiedad] | [!DNL Target] permite que los clientes controlen los permisos mediante propiedades. Para obtener más información sobre las propiedades, consulte la guía sobre [configuración de permisos de empresa](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es) en la documentación de [!DNL Target].<br><br>El token de propiedad se puede encontrar en la interfaz de usuario de Adobe Target en [!UICONTROL Configurar] > [!UICONTROL Propiedades]. |
 | [!UICONTROL ID de entornos de Target] | [Entornos en Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es) le ayuda a administrar la implementación en todas las etapas de desarrollo. Este ajuste especifica qué entorno va a utilizar con esta secuencia de datos.<br><br>La práctica recomendada es establecerlo de forma diferente para cada uno de sus entornos de secuencia de datos `dev`, `stage` y `prod` para mantener las cosas simples. Sin embargo, si ya tiene definidos los entornos de Adobe Target, puede utilizarlos. |
-| [!UICONTROL Área de nombres de ID de terceros de Target] | El área de nombres de identidad para `mbox3rdPartyId` que desee utilizar para esta secuencia de datos. Consulte la guía sobre [implementación `mbox3rdPartyId` con el SDK web](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) para obtener más información. |
+| [!UICONTROL Área de nombres de ID de terceros de Target] | El área de nombres de identidad para `mbox3rdPartyId` que desee utilizar para esta secuencia de datos. Si usa una integración de [!DNL Customer Attributes] con Adobe Target o usa `thirdPartyId` para actualizar o crear perfiles mediante la [API de perfiles de Adobe Target](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api), debe proporcionar un valor de área de nombres de su elección. Debe utilizar este área de nombres en la sección `IdentityMap` del esquema XDM para enviar los `customerID` o `thirdPartyId` utilizados en las cargas del archivo de atributos del cliente o en las llamadas a la API de actualización de perfil.  Consulte la guía sobre [implementación `mbox3rdPartyId` con el SDK web](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) para obtener más información. |
 | [!UICONTROL Anulaciones de tókenes de propiedad] | En esta sección, puede definir tokens de propiedad adicionales que puede utilizar para anular el predeterminado. |
 
 ### Configuración del [!UICONTROL reenvío de eventos]
