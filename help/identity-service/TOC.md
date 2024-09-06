@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 29%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 29%
 - [Introducción al servicio de identidad](home.md)
 - [Servicio de identidad y perfil del cliente en tiempo real](identity-and-profile.md)
 - Funciones {#features}
-   - [Espacio de nombres de identidad](./features/namespaces.md)
+   - [Área de nombres de identidad](./features/namespaces.md)
    - [Lógica de vinculación de identidad](./features/identity-linking-logic.md)
    - [Visualizador de gráficos de identidad](./features/identity-graph-viewer.md)
    - [Eliminaciones en el servicio de identidad](./features/deletion.md)
@@ -31,6 +31,7 @@ ht-degree: 29%
       - [Configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
       - [Casos de cliente de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
       - [Ejemplo de configuraciones de gráficos](./identity-graph-linking-rules/example-configurations.md)
+      - [Solución de problemas de reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/troubleshooting.md)
    - [Información general de ECID](./features/ecid.md)
 - [Guía de implementación](implementation.md)
 - [Protecciones para datos de identidad](guardrails.md)
