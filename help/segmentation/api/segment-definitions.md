@@ -4,9 +4,9 @@ title: Punto final de API de definiciones de segmento
 description: El punto final de las definiciones de segmentos en la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación las definiciones de segmentos de su organización.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 3%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Propiedad | Descripción |
+| -------- | ----------- |
+| `ids` | Matriz que contiene objetos que indican los ID de las definiciones de segmento que desea recuperar. |
+
 +++
 
 **Respuesta**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Solicitud**
 
 La siguiente solicitud actualizará la dirección de trabajo del país de EE. UU. a Canadá.
+
+>[!NOTE]
+>
+>Dado que esta llamada de API **reemplaza** el contenido de la definición del segmento, asegúrese de **que todos** los campos que desea conservar se incluyan como parte del cuerpo de la solicitud.
 
 +++ Una solicitud de ejemplo para actualizar una definición de segmento.
 
