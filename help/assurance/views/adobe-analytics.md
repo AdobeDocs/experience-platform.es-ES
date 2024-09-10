@@ -2,35 +2,70 @@
 title: Vista de Adobe Analytics en Assurance
 description: En esta guía se explica cómo utilizar Adobe Analytics con Adobe Experience Platform Assurance.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
+source-git-commit: 66c9b8c1489b86b0b928fc37380f2187a7d237cf
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 89%
+source-wordcount: '912'
+ht-degree: 17%
 
 ---
 
-# Vista de Adobe Analytics en Assurance
+# Vista de eventos de Adobe Analytics en Assurance
 
->[!IMPORTANT]
->
->La vista Eventos de Analytics está consolidada en el complemento **Analytics Events 2.0 (Beta)**.  Se eliminará de Assurance en el futuro próximo. Se recomienda usar el complemento **Analytics Events 2.0 (Beta)** para la depuración de Analytics en las sesiones de Assurance.
-
-La integración de Adobe Experience Platform Assurance con Adobe Analytics ofrece una vista más completa de los eventos de SDK a los usuarios que depuran y validan la implementación de Adobe Analytics. La vista ahora muestra los eventos de ciclo vital y acción/estado enviados a Adobe Analytics desde el [SDK de Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/). La vista también incluye detalles de “respuesta” que proporcionan información sobre cómo se procesaron los eventos después de la aplicación de las reglas de procesamiento de cada grupo de informes respectivo.
-
-![](./images/adobe-analytics/overview.png)
+Los eventos de Analytics proporcionan una vista más completa de los eventos de SDK a los usuarios que depuran y validan su implementación de Adobe Analytics. La vista muestra eventos enviados a Adobe Analytics desde [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) así como el [SDK de Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). La vista también incluye un panel de detalles, que proporciona contexto sobre cómo el SDK de cliente y los servicios de flujo ascendente procesaron el evento después de que abandonara el dispositivo.
 
 ## Introducción
 
-Antes de continuar, asegúrese de que dispone de los siguientes servicios:
+Para utilizar esta vista, complete los siguientes pasos:
 
-- El [IU de recopilación de datos de Adobe Experience Platform](https://experience.adobe.com/#/data-collection/)
-- [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
+1. [Configurar Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
+2. [Crear y conectarse a una sesión de Assurance](../tutorials/using-assurance.md).
+3. En la interfaz de usuario de Assurance del menú de vista de navegación izquierda **Inicio**, seleccione **Eventos de Analytics**. Si no ve esta opción, seleccione **Configurar** en la parte inferior izquierda de la ventana, agregue los **Eventos de Analytics** y seleccione **Guardar**.
 
-Para obtener información sobre cómo instalar Assurance en su aplicación, lea la [guía de implementación de Assurance](../tutorials/implement-assurance.md).
+## Vista de Edge de Analytics
 
-## Estado posterior al procesamiento
+Use la vista Edge de Analytics si usa las extensiones móviles **Edge Network** o **Edge Bridge**. Esta vista se habilita cuando se activa el conmutador &quot;Vista de Edge de Analytics&quot; en la esquina superior derecha, y muestra los eventos de Analytics enviados a través de la red de Edge en la sesión actual. Esto incluye todos los eventos activados por la extensión de ciclo vital, la extensión de Edge o la extensión de Edge Bridge.
 
-Una vez que el SDK realiza la solicitud de red con Adobe Analytics, el estado le dirá si Assurance pudo recuperar la información posterior al procesamiento de la solicitud de Adobe Analytics.
+![Imagen que muestra la opción que cambió a la vista de Analytics Edge.](./images/adobe-analytics/edge-analytics-view-toggle.png)
+
+La vista de Edge de Analytics contiene información sobre los eventos de Edge relacionados con Analytics y los eventos de ciclo de vida que envía el cliente. Al elegir un evento en la lista, el panel de vista de detalles de evento de la derecha muestra los eventos procesados por el SDK de cliente y por el servicio ascendente después de que abandonaron el dispositivo. Esto permite ver fácilmente la cadena de eventos que resultaron de una llamada a.
+
+![Imagen que muestra diferentes componentes en la vista de Edge de Analytics para el escenario de Edge Bridge.](./images/adobe-analytics/edgebridge-analytics-events.png)
+
+El evento **Datos posteriores al procesamiento** de la lista confirma que los datos se han procesado y enviado correctamente a Adobe Analytics. Si falta este evento o cualquier dato procesado, los usuarios pueden expandir cada evento de la lista para ver información de depuración detallada.
+
+### Vista de detalles de evento de Analytics Edge
+
+Para un evento de solicitud de Edge o un evento de seguimiento de Analytics, la vista detallada contiene la siguiente información:
+
+* Detalles del evento: un evento de solicitud perimetral del SDK de origen.
+* Solicitud de Edge Bridge: un evento exclusivamente para el flujo de trabajo de la extensión de Edge Bridge.
+* Flujo de datos: un evento representado para el flujo de datos de esta sesión.
+* Visita recibida de Edge: Representa la visita recibida de Edge.
+* Visita de Edge procesada: representa la visita procesada en Edge.
+* Visita de Analytics: Representa la visita recibida de Analytics.
+* Asignación de Analytics: representa el estado de asignación de datos en Analytics.
+* Analytics respondido: estado de respuesta de Analytics.
+* Datos posteriores al proceso: Información sobre el evento que contiene la asignación de variables, evars y props.
+
+### Validación de Edge de Analytics
+
+La vista de validación de Edge de Analytics permite ver fácilmente los resultados de los scripts de validación relacionados con la sesión de Edge de Analytics. Los errores mostrados por los validadores pueden contener vínculos a dónde deben corregirse o mostrar eventos que están en estado de error.
+
+![Imagen que muestra la ficha validadores en la vista Edge de Analytics.](./images/adobe-analytics/edge-analytics-validation-view.png)
+
+## Vista de eventos de Analytics
+
+Utilice la vista de eventos de Analytics si utiliza la extensión móvil **Adobe Analytics**. Esta vista le permite ver fácilmente los eventos de Analytics enviados desde su cliente conectado, incluidos los eventos de seguimiento de acción, seguimiento de estado y ciclo vital. Esta vista está activa cuando la opción &quot;Analytics Edge View&quot; de la parte superior derecha está desactivada.
+
+![Imagen que muestra la opción que cambió a la vista de Analytics.](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
+
+Al seleccionar uno de los eventos de Analytics en la tabla de eventos, se pueden ver los detalles de cómo se procesó el evento en el panel derecho.
+
+![Imagen que muestra diferentes componentes en la vista Eventos de Analytics.](./images/adobe-analytics/analytics-events.png)
+
+### Estado posterior al procesamiento
+
+Una vez que el SDK realiza una solicitud de red con Adobe Analytics, el estado le dirá si Assurance pudo recuperar la información de posprocesamiento de la solicitud de Adobe Analytics. La vista Eventos de Analytics debe permanecer activa mientras el estado posterior al procesamiento esté en funcionamiento una vez activada la solicitud.
 
 Tenga en cuenta que para recuperar la información posterior al procesamiento, el usuario que ha iniciado sesión debe tener acceso al grupo de informes correspondiente.
 
@@ -45,10 +80,16 @@ Tenga en cuenta que para recuperar la información posterior al procesamiento, e
 | `No Debug Flag` | Es posible que la versión actual del SDK de Adobe Analytics o Assurance no admita la función de depuración de Analytics. Para obtener más información, lea la [guía de resolución de problemas](../troubleshooting.md). |
 | `Expired` | El evento `AnalyticsTrack` o `LifecycleStart` tiene más de 24 horas. |
 
-## Vista de detalles del evento
+### Vista de detalles del evento
 
-Para un evento de seguimiento de Analytics, la vista detallada contiene las siguientes partes útiles:
+Para un evento de seguimiento de Analytics, la vista detallada contiene las siguientes partes:
 
-- Un evento de solicitud de SDK Analytics de origen.
-- Metadatos de OOTB y datos de contexto de la solicitud, como el ID del grupo de informes, las versiones de extensión del SDK, los datos de contexto de OOTB, etc.
-- Información posprocesada sobre el evento de Analytics que contiene la asignación de revars, evars, props, etc.
+* Un evento de solicitud de SDK Analytics de origen.
+* Datos de metadatos y contexto de la solicitud, como el ID del grupo de informes, las versiones de extensión del SDK y los datos de contexto.
+* Información posprocesada sobre el evento de Analytics que contiene la asignación de variables, evars y props.
+
+### Validación de vista de Analytics
+
+La vista de validación le permite ver fácilmente los resultados de los scripts de validación relacionados con Analytics. Los errores mostrados por los validadores pueden contener vínculos a dónde deben corregirse o mostrar eventos que están en estado de error.
+
+![Imagen que muestra la ficha validadores en la vista de Analytics.](./images/adobe-analytics/analytics-validation-view.png)
