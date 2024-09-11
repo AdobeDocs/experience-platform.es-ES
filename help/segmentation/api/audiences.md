@@ -3,9 +3,9 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 3%
 
 ---
@@ -30,6 +30,10 @@ El extremo `/audiences` admite varios parámetros de consulta para filtrar los r
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Si usa este extremo sin parámetros de consulta, se devolverán las audiencias inactivas **no**. Sin embargo, si usa este extremo junto con el parámetro de consulta `property=audienceId`, se devolverán las audiencias inactivas **will**.
 
 Al recuperar una lista de audiencias, se pueden utilizar los siguientes parámetros de consulta:
 
