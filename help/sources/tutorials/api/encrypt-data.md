@@ -2,9 +2,9 @@
 title: Ingesta de datos cifrados
 description: Obtenga información sobre cómo introducir archivos cifrados a través de fuentes por lotes de almacenamiento en la nube mediante la API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1806'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ Puede introducir archivos de datos cifrados en Adobe Experience Platform mediant
 
 El proceso de ingesta de datos cifrados es el siguiente:
 
-1. [Cree un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, el Experience Platform almacena la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descifrarse antes de usar.
+1. [Cree un par de claves de cifrado mediante las API de Experience Platform](#create-encryption-key-pair). El par de claves de cifrado consta de una clave privada y una clave pública. Una vez creada, puede copiar o descargar la clave pública, junto con su ID de clave pública y hora de caducidad correspondientes. Durante este proceso, el Experience Platform almacena la clave privada en un almacén seguro. **NOTA:** La clave pública de la respuesta está codificada en Base64 y debe descodificarse antes de usar.
 2. Utilice la clave pública para cifrar el archivo de datos que desea introducir.
 3. Coloque el archivo cifrado en el almacenamiento en la nube.
 4. Una vez que el archivo cifrado esté listo, [cree una conexión de origen y un flujo de datos para el origen de almacenamiento en la nube](#create-a-dataflow-for-encrypted-data). Durante el paso de creación de flujo, debe proporcionar un parámetro `encryption` e incluir su ID de clave pública.
@@ -64,6 +64,10 @@ La lista de extensiones de archivo compatibles con los archivos cifrados es la s
 
 ## Crear par de claves de cifrado {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Las claves de cifrado son específicas de una zona protegida determinada. Por lo tanto, debe crear nuevas claves de cifrado si desea introducir datos cifrados en una zona protegida diferente, dentro de su organización.
+
 El primer paso para la ingesta de datos cifrados en Experience Platform es crear el par de claves de cifrado realizando una solicitud del POST al extremo `/encryption/keys` de la API [!DNL Connectors].
 
 **Formato de API**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- |
+| `name` | Nombre del par de claves de cifrado. |
 | `encryptionAlgorithm` | El tipo de algoritmo de cifrado que está utilizando. Los tipos de cifrado admitidos son `PGP` y `GPG`. |
 | `params.passPhrase` | La frase de contraseña proporciona una capa adicional de protección para las claves de cifrado. Una vez creada, el Experience Platform almacena la frase de contraseña en un almacén seguro diferente de la clave pública. Debe proporcionar una cadena que no esté vacía como frase de contraseña. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++Ver respuesta de ejemplo
 
-Una respuesta correcta devuelve el algoritmo de cifrado, la clave pública, el ID de clave pública y la hora de caducidad correspondiente de las claves.
+Una respuesta correcta devuelve el algoritmo de cifrado, el nombre, la clave pública, el ID de clave pública, el tipo de clave y la hora de caducidad correspondiente de las claves.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++Ver respuesta de ejemplo
 
-Una respuesta correcta devuelve el algoritmo de cifrado, la clave pública, el ID de clave pública y la hora de caducidad correspondiente de las claves.
+Una respuesta correcta devuelve el algoritmo de cifrado, el nombre, la clave pública, el ID de clave pública, el tipo de clave y la hora de caducidad correspondiente de las claves.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | Propiedad | Descripción |
 | --- | --- |
 | `publicKeyId` | Este ID de clave pública se devuelve en respuesta a compartir la clave gestionada por el cliente con el Experience Platform. Puede proporcionar este ID de clave pública como ID de clave de verificación de firma al crear un flujo de datos para datos firmados y cifrados. |
+
++++
+
+### Recuperar par de claves administrado por el cliente
+
+Para recuperar las claves administradas por el cliente, realice una solicitud de GET al extremo `/customer-keys`.
+
+**Formato de API**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Solicitud**
+
++++Ver solicitud de ejemplo
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Respuesta**
+
++++Ver respuesta de ejemplo
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
