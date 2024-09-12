@@ -5,10 +5,10 @@ breadcrumb-title: Guía del servicio de identidad de Experience Platform
 user-guide-description: Una las identidades de los clientes entre dispositivos y sistemas para ofrecer experiencias digitales personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 28%
+source-wordcount: '149'
+ht-degree: 26%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 28%
    - [Eliminaciones en el servicio de identidad](./features/deletion.md)
    - Reglas de vinculación de gráfico de identidad {#identity-graph-linking-rules}
       - [Resumen de funciones](./identity-graph-linking-rules/overview.md)
-      - [Guía de configuración](./identity-graph-linking-rules/configuration.md)
       - [Algoritmo de optimización de identidad](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Prioridad de área de nombres](./identity-graph-linking-rules/namespace-priority.md)
-      - [IU de simulación de gráficos](./identity-graph-linking-rules/graph-simulation.md)
-      - [Configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Casos de cliente de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
+      - [Guía de implementación para reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/configuration.md)
       - [Ejemplo de configuraciones de gráficos](./identity-graph-linking-rules/example-configurations.md)
       - [Solución de problemas de reglas de vinculación de gráficos de identidad](./identity-graph-linking-rules/troubleshooting.md)
+      - [Prioridad de área de nombres](./identity-graph-linking-rules/namespace-priority.md)
+      - [IU de simulación de gráficos](./identity-graph-linking-rules/graph-simulation.md)
+      - [IU de configuración de identidad](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Casos de cliente de ejemplo](./identity-graph-linking-rules/example-scenarios.md)
    - [Información general de ECID](./features/ecid.md)
 - [Guía de implementación](implementation.md)
 - [Protecciones para datos de identidad](guardrails.md)

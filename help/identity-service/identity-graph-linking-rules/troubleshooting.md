@@ -3,9 +3,9 @@ title: Guía de resolución de problemas para reglas de vinculación de gráfico
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Existen varias razones que explican por qué los fragmentos de eventos de experi
 * [Es posible que se haya producido un error de validación en el perfil](../../xdm/classes/experienceevent.md).
    * Por ejemplo, un evento de experiencia debe contener un `_id` y un `timestamp`.
    * Además, `_id` debe ser único para cada evento (registro).
+* El área de nombres con la prioridad más alta es una cadena vacía.
 
-En el contexto de la prioridad de área de nombres, el perfil rechazará cualquier evento que contenga dos o más identidades con la prioridad de área de nombres más alta. Por ejemplo, si GAID no está marcado como un área de nombres única y llegaron dos identidades con un área de nombres GAID y valores de identidad diferentes, Profile no almacenará ninguno de los eventos.
+En el contexto de la prioridad del área de nombres, el perfil rechazará:
+
+* Cualquier evento que contenga dos o más identidades con la prioridad de área de nombres más alta. Por ejemplo, si GAID no está marcado como un área de nombres única y llegaron dos identidades con un área de nombres GAID y valores de identidad diferentes, Profile no almacenará ninguno de los eventos.
+* Cualquier evento en el que el área de nombres con la prioridad más alta sea una cadena vacía.
 
 **Pasos para solucionar problemas**
 
-Para resolver este error, lea los pasos de solución de problemas descritos en la guía anterior sobre [solución de problemas de errores relacionados con datos que no se están introduciendo en el servicio de identidad](#my-identities-are-not-getting-ingested-into-identity-service).
+Si los datos se envían al lago de datos, pero no al perfil, y cree que esto se debe a enviar dos o más identidades con la prioridad de área de nombres más alta en un solo evento, puede ejecutar la siguiente consulta para validar que hay dos valores de identidad diferentes enviados con el mismo área de nombres:
+
+>[!TIP]
+>
+>En las siguientes consultas, debe:
+>
+>* Reemplace `_testimsorg.identification.core.email` por la ruta de acceso que envía la identidad.
+>* Reemplazar `Email` por el área de nombres con la prioridad más alta. Este es el mismo área de nombres que no se está ingiriendo.
+>* Reemplace `dataset_name` por el conjunto de datos que desee consultar.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+También puede ejecutar la siguiente consulta para comprobar si la ingesta en el perfil no se está produciendo debido a que el área de nombres más alta tiene una cadena vacía:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Estas dos consultas suponen que se envía una identidad desde el identityMap y otra identidad desde un descriptor de identidad. **NOTA**: en esquemas XDM (Experience Data Model), el descriptor de identidad es el campo marcado como identidad.
 
 ### Mis fragmentos de eventos de experiencia se han introducido, pero tienen la identidad principal &quot;incorrecta&quot; en el perfil
 
@@ -296,3 +326,79 @@ Puede utilizar la siguiente consulta en el conjunto de datos de exportación de 
 >[!TIP]
 >
 >Las dos consultas enumeradas anteriormente arrojarán los resultados esperados si la zona protegida no está habilitada para el método provisional de dispositivos compartidos y se comportarán de forma diferente a las reglas de vinculación de gráficos de identidad.
+
+## Preguntas frecuentes {#faq}
+
+En esta sección se describe una lista de respuestas a las preguntas más frecuentes sobre las reglas de vinculación de gráficos de identidad.
+
+### Algoritmo de optimización de identidad {#identity-optimization-algorithm}
+
+#### Tengo un CRMID para cada una de mis unidades de negocio (B2C CRMID, B2B CRMID), pero no tengo un área de nombres única en todos mis perfiles. ¿Qué sucederá si marco B2C CRMID y B2B CRMID como únicos y habilito mi configuración de identidad?
+
+Este escenario no es compatible. Por lo tanto, es posible que vea que los gráficos se contraen cuando un usuario utiliza su CRMID B2C para iniciar sesión y otro usuario utiliza su CRMID B2B para iniciar sesión. Para obtener más información, lea la sección sobre [requisito del área de nombres de una sola persona](./configuration.md#single-person-namespace-requirement) en la página de implementación.
+
+#### ¿El algoritmo de optimización de identidad &quot;corrige&quot; los gráficos contraídos existentes?
+
+Los gráficos contraídos existentes solo se verán afectados (&quot;corregidos&quot;) por el algoritmo de gráficos si estos gráficos se actualizan después de guardar la nueva configuración.
+
+#### Si dos personas inician y finalizan sesión con el mismo dispositivo, ¿qué sucede con los eventos? ¿Se transferirán todos los eventos al último usuario autenticado?
+
+* Los eventos anónimos (eventos con ECID como identidad principal en el Perfil del cliente en tiempo real) se transferirán al último usuario autenticado. Esto se debe a que el ECID se vinculará al CRMID del último usuario autenticado (en el servicio de identidad).
+* Todos los eventos autenticados (eventos con CRMID definidos como identidad principal) permanecerán con la persona.
+
+Para obtener más información, lea la guía sobre [determinar la identidad principal para los eventos de experiencia](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### ¿Cómo se verán afectados los recorridos en Adobe Journey Optimizer cuando el ECID se transfiera de una persona a otra?
+
+El CRMID del último usuario autenticado se vinculará al ECID (dispositivo compartido). Los ECID se pueden reasignar de una persona a otra según el comportamiento del usuario. El impacto dependerá de cómo se construya la recorrido, por lo que es importante que los clientes prueben la recorrido en un entorno de zona protegida de desarrollo para validarla.
+
+Los puntos clave a destacar son los siguientes:
+
+* Una vez que un perfil introduce un recorrido, la reasignación de ECID no provoca que el perfil se cierre en mitad de un recorrido.
+   * Las salidas de recorrido no se activan mediante cambios de gráfico.
+* Si un perfil ya no está asociado a un ECID, esto puede provocar un cambio en la ruta de recorrido si hay una condición que utilice la calificación de audiencia.
+   * La eliminación de ECID puede cambiar los eventos asociados a un perfil, lo que podría provocar cambios en la calificación de la audiencia.
+* La reentrada de un recorrido depende de las propiedades del recorrido.
+   * Si desactiva la reentrada de un recorrido, una vez que un perfil sale de ese recorrido, el mismo perfil no se vuelve a introducir durante 91 días (según el tiempo de espera de recorrido global).
+* Si un recorrido comienza con un área de nombres de ECID, el perfil que introduce y el perfil que recibe la acción (por ejemplo, correo electrónico, oferta) pueden variar según el diseño del recorrido.
+   * Por ejemplo, si hay una condición de espera entre las acciones y el ECID se transfiere durante el período de espera, se puede establecer un perfil diferente.
+   * Con esta función, los ECID ya no siempre se asocian a un perfil.
+   * Se recomienda iniciar recorridos con áreas de nombres de persona (CRMID).
+
+### Prioridad de área de nombres
+
+#### He habilitado mi configuración de identidad. ¿Qué sucede con mi configuración si deseo agregar un área de nombres personalizada después de habilitar la configuración?
+
+Hay dos &quot;bloques&quot; de áreas de nombres: áreas de nombres de persona y áreas de nombres de dispositivo/cookie. El área de nombres personalizada recién creada tendrá la prioridad más baja en cada &quot;bloque&quot; para que este nuevo área de nombres personalizada no afecte a la ingesta de datos existente.
+
+#### Si el perfil del cliente en tiempo real ya no utiliza el indicador &quot;principal&quot; en identityMap, ¿sigue siendo necesario enviar este valor?
+
+Sí, otros servicios utilizan el indicador &quot;principal&quot; en identityMap. Para obtener más información, lea la guía sobre [las implicaciones de la prioridad del área de nombres en otros servicios de Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### ¿Se aplicará la prioridad de área de nombres a los conjuntos de datos de registro de perfil en el Perfil del cliente en tiempo real?
+
+No. La prioridad de área de nombres solo se aplicará a los conjuntos de datos de Experience Event que utilicen la clase XDM ExperienceEvent.
+
+#### ¿Cómo funciona esta función en conjunto con las protecciones del gráfico de identidad de 50 identidades por gráfico? ¿Afecta la prioridad de área de nombres a esta protección definida por el sistema?
+
+El algoritmo de optimización de identidad se aplicará primero para garantizar la representación de la entidad de la persona. Después, si el gráfico intenta superar la [protección del gráfico de identidad](../guardrails.md) (50 identidades por gráfico), se aplicará esta lógica. La prioridad del área de nombres no afecta a la lógica de eliminación de la protección de 50 identidades/gráficos.
+
+### Pruebas
+
+#### ¿Cuáles son algunos de los escenarios que debería probar en un entorno de zona protegida de desarrollo?
+
+En términos generales, las pruebas en una zona protegida de desarrollo deben imitar los casos de uso que tiene intención de ejecutar en la zona protegida de producción. Consulte la siguiente tabla para conocer algunas áreas clave que se deben validar al realizar pruebas exhaustivas:
+
+| Caso de prueba | Pasos de prueba | Resultado esperado |
+| --- | --- | --- |
+| Representación precisa de la entidad de persona | <ul><li>Imitar la exploración anónima</li><li>Imita el inicio de sesión de dos personas (John, Jane) utilizando el mismo dispositivo</li></ul> | <ul><li>Tanto John como Jane deben asociarse a sus atributos y eventos autenticados.</li><li>El último usuario autenticado debe estar asociado a los eventos de navegación anónimos.</li></ul> |
+| Segmentación | Crear cuatro definiciones de segmento (**NOTA**: Cada par de definiciones de segmento debe tener una evaluada mediante un lote y otra de flujo continuo.) <ul><li>Definición del segmento A: Calificación de segmentos basada en los eventos autenticados de John.</li><li>Definición del segmento B: Calificación de segmentos basada en los eventos autenticados de Jane.</li></ul> | Independientemente de los escenarios de dispositivos compartidos, John y Jane siempre deben cumplir los requisitos para sus respectivos segmentos. |
+| Calificación de audiencias / recorridos unitarios en Adobe Journey Optimizer | <ul><li>Cree un recorrido que comience con una actividad de calificación de audiencia (como la segmentación de streaming creada anteriormente).</li><li>Cree un recorrido que comience con un evento unitario. Este evento unitario debe ser un evento autenticado.</li><li>Debe deshabilitar la reentrada al crear estos recorridos.</li></ul> | <ul><li>Independientemente de los escenarios de dispositivos compartidos, John y Jane deben almacenar en déclencheur los recorridos respectivos que deben introducir.</li><li>John y Jane no deben volver a entrar en el recorrido cuando se les transfiera el ECID.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### ¿Cómo valido que esta función funciona según lo esperado?
+
+Use la [herramienta de simulación de gráficos](./graph-simulation.md) para comprobar que la característica funciona a nivel de gráfico individual.
+
+Para validar la característica en un nivel de zona protegida, consulte la sección [!UICONTROL Recuento de gráficos con varias áreas de nombres] en el panel de identidad.

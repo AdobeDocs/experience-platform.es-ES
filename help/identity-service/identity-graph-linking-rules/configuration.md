@@ -1,16 +1,16 @@
 ---
-title: Guía de configuración de reglas de vinculación de gráfico de identidad
+title: Guía de implementación para reglas de vinculación de gráficos de identidad
 description: Conozca los pasos recomendados a seguir al implementar sus datos con las configuraciones de reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1361'
 ht-degree: 2%
 
 ---
 
-# Guía de configuración de reglas de vinculación de gráfico de identidad
+# Guía de implementación para reglas de vinculación de gráficos de identidad
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Para obtener cualquier comentario, use la opción **[!UICONTROL comentarios de B
 
 Lea esta sección para obtener información adicional a la que puede hacer referencia al implementar la configuración de identidad y las áreas de nombres únicas.
 
-### Escenario de dispositivo compartido {#shared-device-scenario}
+### Requisito de área de nombres de persona única {#single-person-namespace-requirement}
 
 Debe asegurarse de que se utiliza un solo área de nombres en todos los perfiles que representen a una persona. Al hacerlo, el servicio de identidad puede detectar el identificador de persona adecuado en un gráfico determinado.
 
