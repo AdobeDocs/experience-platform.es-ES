@@ -3,9 +3,9 @@ title: Guía de resolución de problemas para reglas de vinculación de gráfico
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ En esta sección se describe una lista de respuestas a las preguntas más frecue
 
 ### Algoritmo de optimización de identidad {#identity-optimization-algorithm}
 
+Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca del [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
+
 #### Tengo un CRMID para cada una de mis unidades de negocio (B2C CRMID, B2B CRMID), pero no tengo un área de nombres única en todos mis perfiles. ¿Qué sucederá si marco B2C CRMID y B2B CRMID como únicos y habilito mi configuración de identidad?
 
 Este escenario no es compatible. Por lo tanto, es posible que vea que los gráficos se contraen cuando un usuario utiliza su CRMID B2C para iniciar sesión y otro usuario utiliza su CRMID B2B para iniciar sesión. Para obtener más información, lea la sección sobre [requisito del área de nombres de una sola persona](./configuration.md#single-person-namespace-requirement) en la página de implementación.
@@ -367,6 +369,8 @@ Los puntos clave a destacar son los siguientes:
 
 ### Prioridad de área de nombres
 
+Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de [prioridad del área de nombres](./namespace-priority.md).
+
 #### He habilitado mi configuración de identidad. ¿Qué sucede con mi configuración si deseo agregar un área de nombres personalizada después de habilitar la configuración?
 
 Hay dos &quot;bloques&quot; de áreas de nombres: áreas de nombres de persona y áreas de nombres de dispositivo/cookie. El área de nombres personalizada recién creada tendrá la prioridad más baja en cada &quot;bloque&quot; para que este nuevo área de nombres personalizada no afecte a la ingesta de datos existente.
@@ -384,6 +388,8 @@ No. La prioridad de área de nombres solo se aplicará a los conjuntos de datos 
 El algoritmo de optimización de identidad se aplicará primero para garantizar la representación de la entidad de la persona. Después, si el gráfico intenta superar la [protección del gráfico de identidad](../guardrails.md) (50 identidades por gráfico), se aplicará esta lógica. La prioridad del área de nombres no afecta a la lógica de eliminación de la protección de 50 identidades/gráficos.
 
 ### Pruebas
+
+Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de las características de prueba y depuración en las reglas de vinculación de gráficos de identidad.
 
 #### ¿Cuáles son algunos de los escenarios que debería probar en un entorno de zona protegida de desarrollo?
 
