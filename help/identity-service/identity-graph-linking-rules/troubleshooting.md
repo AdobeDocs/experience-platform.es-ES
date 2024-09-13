@@ -3,7 +3,7 @@ title: Guía de resolución de problemas para reglas de vinculación de gráfico
 description: Obtenga información sobre cómo solucionar problemas comunes en las reglas de vinculación de gráficos de identidad.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -176,7 +176,7 @@ La prioridad del área de nombres desempeña un papel importante en la forma en 
 * Una vez que haya configurado y guardado la [configuración de identidad](./identity-settings-ui.md) para una zona protegida determinada, el perfil usará [prioridad de área de nombres](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) para determinar la identidad principal. En el caso de identityMap, el perfil ya no usará el indicador `primary=true`.
 * Aunque el perfil ya no hará referencia a este indicador, es posible que otros servicios del Experience Platform sigan utilizando el indicador `primary=true`.
 
-Para que [eventos de usuario autenticados](configuration.md#ingest-your-data) se vinculen al área de nombres de persona, todos los eventos autenticados deben contener el área de nombres de persona (CRMID). Esto significa que, incluso después de que un usuario inicie sesión, el área de nombres de persona debe estar presente en cada evento autenticado.
+Para que [eventos de usuario autenticados](implementation-guide.md#ingest-your-data) se vinculen al área de nombres de persona, todos los eventos autenticados deben contener el área de nombres de persona (CRMID). Esto significa que, incluso después de que un usuario inicie sesión, el área de nombres de persona debe estar presente en cada evento autenticado.
 
 Puede seguir viendo el indicador &quot;eventos&quot; de `primary=true` al buscar un perfil en el visor de perfiles. Sin embargo, se ignora y el perfil no lo utiliza.
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 Consulte la documentación sobre [algoritmo de optimización de identidad](./identity-optimization-algorithm.md), así como los tipos de estructuras de gráficos admitidos.
 
 * Lea la [guía de configuración de gráficos](./example-configurations.md) para ver ejemplos de estructuras de gráficos compatibles.
-* También puede leer la [guía de implementación](./configuration.md#appendix) para ver ejemplos de estructuras de gráficos no admitidas. Hay dos escenarios que podrían ocurrir:
+* También puede leer la [guía de implementación](./implementation-guide.md#appendix) para ver ejemplos de estructuras de gráficos no admitidas. Hay dos escenarios que podrían ocurrir:
    * No hay un área de nombres única en todos los perfiles.
-   * Se produce un escenario [&quot;colgando ID&quot;](./configuration.md#dangling-loginid-scenario). En esta situación, el servicio de identidad no puede determinar si el ID colgado está asociado con ninguna de las entidades de persona de los gráficos.
+   * Se produce un escenario [&quot;colgando ID&quot;](./implementation-guide.md#dangling-loginid-scenario). En esta situación, el servicio de identidad no puede determinar si el ID colgado está asociado con ninguna de las entidades de persona de los gráficos.
 
 También puede usar la [herramienta de simulación de gráficos de la interfaz de usuario](./graph-simulation.md) para simular eventos y configurar su propia configuración de área de nombres y prioridad de área de nombres únicas. Hacerlo puede ayudarle a comprender una línea de base del comportamiento del algoritmo de optimización de identidad.
 
@@ -331,26 +331,26 @@ Puede utilizar la siguiente consulta en el conjunto de datos de exportación de 
 
 En esta sección se describe una lista de respuestas a las preguntas más frecuentes sobre las reglas de vinculación de gráficos de identidad.
 
-### Algoritmo de optimización de identidad {#identity-optimization-algorithm}
+## Algoritmo de optimización de identidad {#identity-optimization-algorithm}
 
 Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca del [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
 
-#### Tengo un CRMID para cada una de mis unidades de negocio (B2C CRMID, B2B CRMID), pero no tengo un área de nombres única en todos mis perfiles. ¿Qué sucederá si marco B2C CRMID y B2B CRMID como únicos y habilito mi configuración de identidad?
+### Tengo un CRMID para cada una de mis unidades de negocio (B2C CRMID, B2B CRMID), pero no tengo un área de nombres única en todos mis perfiles. ¿Qué sucederá si marco B2C CRMID y B2B CRMID como únicos y habilito mi configuración de identidad?
 
-Este escenario no es compatible. Por lo tanto, es posible que vea que los gráficos se contraen cuando un usuario utiliza su CRMID B2C para iniciar sesión y otro usuario utiliza su CRMID B2B para iniciar sesión. Para obtener más información, lea la sección sobre [requisito del área de nombres de una sola persona](./configuration.md#single-person-namespace-requirement) en la página de implementación.
+Este escenario no es compatible. Por lo tanto, es posible que vea que los gráficos se contraen cuando un usuario utiliza su CRMID B2C para iniciar sesión y otro usuario utiliza su CRMID B2B para iniciar sesión. Para obtener más información, lea la sección sobre [requisito del área de nombres de una sola persona](./implementation-guide.md#single-person-namespace-requirement) en la página de implementación.
 
-#### ¿El algoritmo de optimización de identidad &quot;corrige&quot; los gráficos contraídos existentes?
+### ¿El algoritmo de optimización de identidad &quot;corrige&quot; los gráficos contraídos existentes?
 
 Los gráficos contraídos existentes solo se verán afectados (&quot;corregidos&quot;) por el algoritmo de gráficos si estos gráficos se actualizan después de guardar la nueva configuración.
 
-#### Si dos personas inician y finalizan sesión con el mismo dispositivo, ¿qué sucede con los eventos? ¿Se transferirán todos los eventos al último usuario autenticado?
+### Si dos personas inician y finalizan sesión con el mismo dispositivo, ¿qué sucede con los eventos? ¿Se transferirán todos los eventos al último usuario autenticado?
 
 * Los eventos anónimos (eventos con ECID como identidad principal en el Perfil del cliente en tiempo real) se transferirán al último usuario autenticado. Esto se debe a que el ECID se vinculará al CRMID del último usuario autenticado (en el servicio de identidad).
 * Todos los eventos autenticados (eventos con CRMID definidos como identidad principal) permanecerán con la persona.
 
 Para obtener más información, lea la guía sobre [determinar la identidad principal para los eventos de experiencia](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### ¿Cómo se verán afectados los recorridos en Adobe Journey Optimizer cuando el ECID se transfiera de una persona a otra?
+### ¿Cómo se verán afectados los recorridos en Adobe Journey Optimizer cuando el ECID se transfiera de una persona a otra?
 
 El CRMID del último usuario autenticado se vinculará al ECID (dispositivo compartido). Los ECID se pueden reasignar de una persona a otra según el comportamiento del usuario. El impacto dependerá de cómo se construya la recorrido, por lo que es importante que los clientes prueben la recorrido en un entorno de zona protegida de desarrollo para validarla.
 
@@ -367,31 +367,31 @@ Los puntos clave a destacar son los siguientes:
    * Con esta función, los ECID ya no siempre se asocian a un perfil.
    * Se recomienda iniciar recorridos con áreas de nombres de persona (CRMID).
 
-### Prioridad de área de nombres
+## Prioridad de área de nombres
 
 Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de [prioridad del área de nombres](./namespace-priority.md).
 
-#### He habilitado mi configuración de identidad. ¿Qué sucede con mi configuración si deseo agregar un área de nombres personalizada después de habilitar la configuración?
+### He habilitado mi configuración de identidad. ¿Qué sucede con mi configuración si deseo agregar un área de nombres personalizada después de habilitar la configuración?
 
 Hay dos &quot;bloques&quot; de áreas de nombres: áreas de nombres de persona y áreas de nombres de dispositivo/cookie. El área de nombres personalizada recién creada tendrá la prioridad más baja en cada &quot;bloque&quot; para que este nuevo área de nombres personalizada no afecte a la ingesta de datos existente.
 
-#### Si el perfil del cliente en tiempo real ya no utiliza el indicador &quot;principal&quot; en identityMap, ¿sigue siendo necesario enviar este valor?
+### Si el perfil del cliente en tiempo real ya no utiliza el indicador &quot;principal&quot; en identityMap, ¿sigue siendo necesario enviar este valor?
 
 Sí, otros servicios utilizan el indicador &quot;principal&quot; en identityMap. Para obtener más información, lea la guía sobre [las implicaciones de la prioridad del área de nombres en otros servicios de Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### ¿Se aplicará la prioridad de área de nombres a los conjuntos de datos de registro de perfil en el Perfil del cliente en tiempo real?
+### ¿Se aplicará la prioridad de área de nombres a los conjuntos de datos de registro de perfil en el Perfil del cliente en tiempo real?
 
 No. La prioridad de área de nombres solo se aplicará a los conjuntos de datos de Experience Event que utilicen la clase XDM ExperienceEvent.
 
-#### ¿Cómo funciona esta función en conjunto con las protecciones del gráfico de identidad de 50 identidades por gráfico? ¿Afecta la prioridad de área de nombres a esta protección definida por el sistema?
+### ¿Cómo funciona esta función en conjunto con las protecciones del gráfico de identidad de 50 identidades por gráfico? ¿Afecta la prioridad de área de nombres a esta protección definida por el sistema?
 
 El algoritmo de optimización de identidad se aplicará primero para garantizar la representación de la entidad de la persona. Después, si el gráfico intenta superar la [protección del gráfico de identidad](../guardrails.md) (50 identidades por gráfico), se aplicará esta lógica. La prioridad del área de nombres no afecta a la lógica de eliminación de la protección de 50 identidades/gráficos.
 
-### Pruebas
+## Pruebas
 
 Lea esta sección para obtener respuestas a las preguntas más frecuentes acerca de las características de prueba y depuración en las reglas de vinculación de gráficos de identidad.
 
-#### ¿Cuáles son algunos de los escenarios que debería probar en un entorno de zona protegida de desarrollo?
+### ¿Cuáles son algunos de los escenarios que debería probar en un entorno de zona protegida de desarrollo?
 
 En términos generales, las pruebas en una zona protegida de desarrollo deben imitar los casos de uso que tiene intención de ejecutar en la zona protegida de producción. Consulte la siguiente tabla para conocer algunas áreas clave que se deben validar al realizar pruebas exhaustivas:
 
@@ -403,7 +403,7 @@ En términos generales, las pruebas en una zona protegida de desarrollo deben im
 
 {style="table-layout:auto"}
 
-#### ¿Cómo valido que esta función funciona según lo esperado?
+### ¿Cómo valido que esta función funciona según lo esperado?
 
 Use la [herramienta de simulación de gráficos](./graph-simulation.md) para comprobar que la característica funciona a nivel de gráfico individual.
 

@@ -1,15 +1,16 @@
 ---
-title: Guía de configuración de Graph
+title: Ejemplos de configuraciones de gráficos
 description: Obtenga información sobre los escenarios de gráficos comunes que podrían surgir al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad.
 badge: Beta
-source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2786'
 ht-degree: 6%
 
 ---
 
-# Guía de configuraciones de gráficos
+# Ejemplos de configuraciones de gráficos
 
 >[!AVAILABILITY]
 >
@@ -19,6 +20,7 @@ ht-degree: 6%
 >
 >* &quot;CRMID&quot; y &quot;loginID&quot; son áreas de nombres personalizadas. En este documento, &quot;CRMID&quot; es un identificador de persona y &quot;loginID&quot; es un identificador de inicio de sesión asociado a una persona determinada.
 >* Para simular los escenarios de gráficos de ejemplo descritos en este documento, primero debe crear dos áreas de nombres personalizadas, una con el símbolo de identidad &quot;CRMID&quot; y otra con el símbolo de identidad &quot;loginID&quot;. Los símbolos de identidad distinguen entre mayúsculas y minúsculas.
+
 
 Este documento describe ejemplos de configuración de gráficos de escenarios comunes que podrían surgir al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad.
 
@@ -478,7 +480,7 @@ En este escenario, hay un solo CRMID que representa una entidad de persona. Sin 
 
 | Áreas de nombres utilizadas | método de colección de comportamiento web |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Conector de origen de Adobe Analytics. <br> **Nota:** De forma predeterminada, los AAID están bloqueados en el servicio de identidad, por lo que debe asignar una prioridad mayor a los ECID que a los AAID al usar el origen de Analytics. Lea la [guía de implementación](configuration.md#ingest-your-data) para obtener más información.</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Conector de origen de Adobe Analytics. <br> **Nota:** De forma predeterminada, los AAID están bloqueados en el servicio de identidad, por lo que debe asignar una prioridad mayor a los ECID que a los AAID al usar el origen de Analytics. Lea la [guía de implementación](./implementation-guide.md#ingest-your-data) para obtener más información.</br> |
 
 **Eventos:**
 
@@ -756,3 +758,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## Pasos siguientes
+
+Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
+
+* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
+* [Guía de implementación](./implementation-guide.md)
+* [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
+* [Prioridad de área de nombres](./namespace-priority.md)
+* [IU de simulación de gráficos](./graph-simulation.md)
+* [IU de configuración de identidad](./identity-settings-ui.md)

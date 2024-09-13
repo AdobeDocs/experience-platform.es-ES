@@ -1,11 +1,11 @@
 ---
-title: Resumen de reglas de vinculación de gráficos de identidad
+title: Reglas de vinculación de gráfico de identidad
 description: Obtenga información acerca de las reglas de vinculación de gráficos de identidad en Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,19 @@ ht-degree: 1%
 >
 >Las reglas de vinculación de gráficos de identidad están actualmente en fase beta. Póngase en contacto con el equipo de su cuenta de Adobe para obtener información sobre los criterios de participación. La funcionalidad y la documentación están sujetas a cambios.
 
-## Índice 
+Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona a través de un identificador de persona, como un CRMID. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
-* [Información general](./overview.md)
+## Introducción 
+
+Los siguientes documentos son esenciales para comprender las reglas de vinculación de gráficos de identidad.
+
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
+* [Guía de implementación](./implementation-guide.md)
+* [Ejemplos de configuraciones de gráficos](./example-configurations.md)
+* [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
 * [Prioridad de área de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)
-* [Ejemplo de configuraciones de gráficos](./configuration.md)
-* [Casos de ejemplo](./example-scenarios.md)
-
-Con el servicio de identidad de Adobe Experience Platform y el perfil del cliente en tiempo real, es fácil suponer que los datos se incorporan perfectamente y que todos los perfiles combinados representan a una sola persona a través de un identificador de persona, como un CRMID. Sin embargo, hay escenarios posibles en los que ciertos datos podrían intentar combinar varios perfiles dispares en un único perfil (&quot;colapso de gráfico&quot;). Para evitar estas combinaciones no deseadas, puede utilizar las configuraciones proporcionadas mediante reglas de vinculación de gráficos de identidad y permitir una personalización precisa para los usuarios.
 
 ## Casos de ejemplo en los que podría producirse un colapso de gráfico
 
@@ -34,7 +36,7 @@ Con el servicio de identidad de Adobe Experience Platform y el perfil del client
 * **Correo electrónico y números de teléfono incorrectos**: Los números de correo electrónico y de teléfono incorrectos hacen referencia a usuarios finales que registran información de contacto no válida, como &quot;test<span>@test.com&quot; para correo electrónico y &quot;+1-111-111-1111&quot; para número de teléfono.
 * **Valores de identidad erróneos o incorrectos**: Los valores de identidad erróneos o incorrectos hacen referencia a valores de identidad no únicos que podrían combinar CRMID. Por ejemplo, aunque los IDFA deben tener 36 caracteres (32 caracteres alfanuméricos y cuatro guiones), hay escenarios en los que se puede introducir un IDFA con un valor de identidad &quot;user_null&quot;. Del mismo modo, los números de teléfono solo admiten caracteres numéricos, pero se puede introducir un área de nombres de teléfono con un valor de identidad &quot;no especificado&quot;.
 
-Para obtener más información sobre los casos de uso de las reglas de vinculación de gráficos de identidad, lea el documento [ejemplos](./example-scenarios.md).
+Para obtener más información sobre los casos de uso de las reglas de vinculación de gráficos de identidad, lea la sección de [ejemplos](#example-scenarios).
 
 ## Reglas de vinculación de gráfico de identidad {#identity-graph-linking-rules}
 
@@ -94,10 +96,63 @@ Las áreas de nombres únicas y las prioridades de área de nombres se pueden co
 
 Para obtener más información, lea la guía sobre [prioridad del área de nombres](./namespace-priority.md).
 
+## Ejemplo de escenarios de cliente resueltos por reglas de vinculación de gráficos de identidad {#example-scenarios}
+
+En esta sección se describen ejemplos de escenarios que se pueden tener en cuenta al configurar reglas de vinculación de gráficos de identidad.
+
+### Dispositivo compartido
+
+Hay casos en los que se pueden producir varios inicios de sesión en un solo dispositivo:
+
+| Dispositivo compartido | Descripción |
+| --- | --- |
+| Ordenadores familiares y tabletas | El marido y la mujer inician sesión en sus respectivas cuentas bancarias. |
+| Quiosco público | Viajeros en un aeropuerto que inician sesión con su ID de fidelidad para facturar maletas e imprimir tarjetas de embarque. |
+| Centro de llamadas | El personal del centro de llamadas inicia sesión en un solo dispositivo en nombre de los clientes que llaman al servicio de atención al cliente para resolver problemas. |
+
+![Diagrama de algunos dispositivos compartidos comunes.](../images/identity-settings/shared-devices.png)
+
+En estos casos, desde un punto de vista gráfico, sin límites habilitados, un solo ECID se vinculará a varios CRMID.
+
+Con las reglas de vinculación de gráficos de identidad, puede:
+
+* Configure el ID utilizado para iniciar sesión como identificador único. Por ejemplo, puede limitar un gráfico para almacenar solo una identidad con un área de nombres CRMID y, por lo tanto, definir ese CRMID como el identificador único de un dispositivo compartido.
+   * Al hacer esto, puede asegurarse de que los CRMID no se fusionen con el ECID.
+
+### Escenarios de correo electrónico/teléfono no válidos
+
+También hay casos de usuarios que proporcionan valores falsos como números de teléfono o direcciones de correo electrónico al registrarse. En estos casos, si los límites no están habilitados, las identidades relacionadas con el teléfono/correo electrónico terminarán vinculándose a varios CRMID diferentes.
+
+![Diagrama que representa situaciones de correo electrónico o teléfono no válidas.](../images/identity-settings/invalid-email-phone.png)
+
+Con las reglas de vinculación de gráficos de identidad, puede:
+
+* Configure el CRMID, el número de teléfono o la dirección de correo electrónico como identificador único y, por lo tanto, limite una persona a un solo CRMID, número de teléfono o dirección de correo electrónico asociados a su cuenta.
+
+### Valores de identidad erróneos o incorrectos
+
+Hay casos en los que se incorporan valores de identidad erróneos y no únicos en el sistema, independientemente del área de nombres. Algunos ejemplos son:
+
+* Área de nombres IDFA con el valor de identidad &quot;user_null&quot;.
+   * Los valores de identidad IDFA deben tener 36 caracteres: 32 caracteres alfanuméricos y cuatro guiones.
+* Área de nombres del número de teléfono con el valor de identidad &quot;no especificado&quot;.
+   * Los números de teléfono no deben contener caracteres alfabéticos.
+
+Estas identidades podrían resultar en los siguientes gráficos, donde varios CRMID se combinan con la identidad &quot;mala&quot;:
+
+![Ejemplo gráfico de datos de identidad con valores de identidad erróneos o incorrectos.](../images/identity-settings/bad-data.png)
+
+Con las reglas de vinculación de gráficos de identidad, puede configurar el CRMID como identificador único para evitar que el perfil no deseado se contraiga debido a este tipo de datos.
+
+
 ## Pasos siguientes
 
 Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
 
-* [algoritmo de optimización de identidad](./identity-optimization-algorithm.md).
-* [Prioridad de área de nombres](./namespace-priority.md).
-* [Ejemplos de escenarios para configurar reglas de vinculación de gráficos de identidad](./example-scenarios.md).
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
+* [Guía de implementación](./implementation-guide.md)
+* [Ejemplos de configuraciones de gráficos](./example-configurations.md)
+* [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
+* [Prioridad de área de nombres](./namespace-priority.md)
+* [IU de simulación de gráficos](./graph-simulation.md)
+* [IU de configuración de identidad](./identity-settings-ui.md)

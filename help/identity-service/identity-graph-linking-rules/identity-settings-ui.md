@@ -3,9 +3,9 @@ title: IU de configuración de identidad
 description: Aprenda a utilizar la interfaz de usuario de configuración de identidad.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ Lea esta guía para aprender a configurar los ajustes de identidad en la interfa
 
 Lea los siguientes documentos antes de empezar a trabajar con la configuración de identidad:
 
-* [Guía de configuración de reglas de vinculación de gráfico de identidad](./configuration.md)
+* [Reglas de vinculación de gráfico de identidad](./overview.md)
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
+* [Guía de implementación](./implementation-guide.md)
+* [Ejemplos de configuraciones de gráficos](./example-configurations.md)
 * [Prioridad de área de nombres](./namespace-priority.md)
 * [Simulación de gráfico](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Aparece un mensaje de advertencia que indica que los gráficos existentes solo s
 
 ## Pasos siguientes
 
-Ahora ha configurado las prioridades del área de nombres y ha designado las áreas de nombres únicas mediante la página de interfaz de usuario de configuración de identidad. Para obtener más información, lea la [descripción general de las reglas de vinculación de gráficos de identidad](./overview.md).
+Para obtener más información sobre las reglas de vinculación de gráficos de identidad, lea la siguiente documentación:
+
+* [Resumen de reglas de vinculación de gráficos de identidad](./overview.md)
+* [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
+* [Guía de implementación](./implementation-guide.md)
+* [Ejemplos de configuraciones de gráficos](./example-configurations.md)
+* [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
+* [Prioridad de área de nombres](./namespace-priority.md)
+* [IU de simulación de gráficos](./graph-simulation.md)
