@@ -2,9 +2,9 @@
 title: Asistente de IA en Adobe Experience Platform
 description: Aprenda a utilizar el asistente de IA para desplazarse por los conceptos de Experience Platform y Real-time Customer Data Platform, y comprender sus conceptos, así como la información de uso de sus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Guía de IU del asistente de IA
 
 Lea esta guía para aprender a utilizar el asistente de IA en la interfaz de usuario de Adobe Experience Platform.
-
-El siguiente vídeo tiene como objetivo ayudarle a comprender el asistente de IA.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Acceso al Asistente de IA en la IU de Experience Platform
 
