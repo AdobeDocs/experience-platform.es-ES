@@ -4,10 +4,10 @@ title: Tablero de uso de licencias
 description: Adobe Experience Platform proporciona un tablero a través del cual puede ver información importante acerca del uso de licencias de su organización.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 6%
+source-wordcount: '2720'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 6%
 >id="testy-mctestface"
 >title="Cuadro de diálogo de prueba que no debería estar visible"
 >abstract="El objeto {name} se está viendo en {date}."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Tabla de productos principales"
+>abstract="Los productos principales enumerados en la tabla tienen sus propias métricas, seguimiento de uso y vistas de obtención de detalles a nivel de zona protegida. Estos productos principales proporcionan las métricas clave para el seguimiento y todos los complementos se incluyen en estas métricas."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Tabla de complementos"
+>abstract="La tabla Complementos enumera los productos cuyas cantidades de licencias se combinan con las métricas admitidas por los productos principales. Estos complementos no tienen métricas independientes, pero mejoran el seguimiento de uso de los productos principales con los que están asociados."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
