@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: SDK web de Adobe Experience Platform;SDK web de Platform;SDK web;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1920'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,21 @@ ht-degree: 2%
 Este documento describe las notas de la versión del SDK web de Adobe Experience Platform.
 Para obtener las últimas notas de la versión de la extensión de etiquetas SDK web, consulte las [notas de la versión de la extensión de etiquetas SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versión 2.23.0: 19 de septiembre de 2024
+
+**Nuevas funciones**
+
+- Se ha agregado compatibilidad para solicitar la [ID principal](identity/overview.md#tracking-coreid-web-sdk) en el comando [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library).
+
+**Correcciones y mejoras**
+
+- Se ha corregido un problema por el cual las cookies no se escribían correctamente al ejecutar el SDK web localmente.
+
 ## Versión 2.22.0: 22 de agosto de 2024
 
 **Nuevas funciones**
 
-- Se han añadido monitores de personalización.
+- Se ha añadido compatibilidad con los enlaces de monitorización de personalización.
 
 **Correcciones y mejoras**
 
