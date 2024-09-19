@@ -2,9 +2,9 @@
 title: getIdentity
 description: Obtenga la identidad de un visitante sin enviar datos de evento.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: a884790aa48fb97eebe2421124fc5d5f76c8a79d
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '206'
 ht-degree: 2%
 
 ---
@@ -23,12 +23,12 @@ La extensión de etiqueta del SDK web no ofrece este comando a través de la int
 
 Ejecute el comando `getIdentity` al llamar a la instancia configurada del SDK web. Las siguientes opciones están disponibles al configurar este comando:
 
-* **`namespaces`**: una matriz de áreas de nombres. El valor predeterminado es `["ECID"]`. Los valores válidos incluyen `["ECID"]`, `null` o `undefined`.
+* **`namespaces`**: una matriz de áreas de nombres. El valor predeterminado es `["ECID"]`. Otros valores admitidos son: `["CORE"]`, `null`, `undefined`. Puede solicitar [!DNL ECID] y [!DNL CORE ID] al mismo tiempo. Ejemplo: `"namespaces": ["ECID","CORE"]`.
 * **`edgeConfigOverrides`**: un objeto [de anulación de configuración de secuencia de datos](datastream-overrides.md).
 
 ```js
 alloy("getIdentity",{
-  "namespaces": ["ECID"]
+  "namespaces": ["ECID","CORE"] //this command retrieves both ECID and CORE IDs.
 });
 ```
 
@@ -37,4 +37,5 @@ alloy("getIdentity",{
 Si decide [controlar las respuestas](command-responses.md) con este comando, las siguientes propiedades están disponibles en el objeto de respuesta:
 
 * **`identity.ECID`**: una cadena que contiene el ECID del visitante.
+* **`identity.CORE`**: una cadena que contiene el CORE ID del visitante.
 * **`edge.regionID`**: un entero que representa la región del Edge Network que el explorador visitó al adquirir una identidad. Es igual que la sugerencia de ubicación del Audience Manager heredado.
