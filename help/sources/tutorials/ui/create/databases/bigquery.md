@@ -3,22 +3,22 @@ title: Creación de una conexión de Google Big Query Source en la interfaz de u
 description: Obtenga información sobre cómo crear una conexión de origen de Google Big Query mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 2%
+source-wordcount: '526'
+ht-degree: 1%
 
 ---
 
-# Crear una conexión de origen [!DNL Google Big Query] en la interfaz de usuario
+# Crear una conexión de origen [!DNL Google BigQuery] en la interfaz de usuario
 
 >[!IMPORTANT]
 >
 >El origen [!DNL Google BigQuery] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-time Customer Data Platform Ultimate.
 
-Los conectores de Source en Adobe Experience Platform permiten introducir datos de origen externo de forma programada. Este tutorial proporciona los pasos para crear una conexión de origen [!DNL Google Big Query] mediante la interfaz de usuario de Platform.
+Lea este tutorial para aprender a conectar su cuenta de [!DNL Google BigQuery] a Adobe Experience Platform mediante la interfaz de usuario.
 
-## Introducción
+## Introducción 
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Experience Platform:
 
@@ -31,26 +31,19 @@ Si ya tiene una conexión [!DNL Google BigQuery] válida, puede omitir el resto 
 
 ### Recopilar credenciales necesarias
 
-Para acceder a su cuenta de [!DNL Google BigQuery] en Platform, debe proporcionar los siguientes valores de autenticación OAuth 2.0:
-
-| Credencial | Descripción |
-| ---------- | ----------- |
-| `project` | Identificador de proyecto del proyecto predeterminado [!DNL Google BigQuery] con el que se va a realizar la consulta. |
-| `clientID` | El valor de ID utilizado para generar el token de actualización. |
-| `clientSecret` | El valor secreto utilizado para generar el token de actualización. |
-| `refreshToken` | El token de actualización obtenido de [!DNL Google] se usó para autorizar el acceso a [!DNL Google BigQuery]. |
-
-Para obtener más información sobre estos valores, consulte [este [!DNL Google BigQuery] documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Lea la [[!DNL Google BigQuery] guía de autenticación](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) para ver los pasos detallados sobre cómo recopilar las credenciales requeridas.
 
 ## Conecte su cuenta de Google BigQuery
 
-En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
-
-Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
+En la interfaz de usuario de Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar en la barra de búsqueda.
 
 En la categoría [!UICONTROL Bases de datos], seleccione **[!UICONTROL Google BigQuery]** y, a continuación, seleccione **[!UICONTROL Agregar datos]**.
 
-![](../../../../images/tutorials/create/google-big-query/catalog.png)
+>[!TIP]
+>
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+
+![El catálogo de orígenes con Google BigQuery seleccionado.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 Aparecerá la página **[!UICONTROL Conectarse a Google Big Query]**. En esta página, puede usar credenciales nuevas o existentes.
 
@@ -58,13 +51,29 @@ Aparecerá la página **[!UICONTROL Conectarse a Google Big Query]**. En esta p�
 
 Para conectar una cuenta existente, seleccione la cuenta de [!DNL Google BigQuery] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
 
-![](../../../../images/tutorials/create/google-big-query/existing.png)
+![Página de la cuenta existente donde se presenta una lista de cuentas existentes.](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ### Nueva cuenta
 
-Si está usando credenciales nuevas, seleccione **[!UICONTROL Nueva cuenta]**. En el formulario de entrada que aparece, proporcione un nombre, una descripción opcional y sus credenciales de [!DNL Google BigQuery]. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL Nueva cuenta]** y, a continuación, proporcione un nombre y una descripción opcional para la nueva cuenta de [!DNL Google BigQuery].
 
-![](../../../../images/tutorials/create/google-big-query/new.png)
+![La nueva interfaz de cuenta en el flujo de trabajo de orígenes.](../../../../images/tutorials/create/google-big-query/new.png)
+
+>[!BEGINTABS]
+
+>[!TAB Usar autenticación básica]
+
+Para usar la autenticación básica, selecciona **[!UICONTROL Autenticación básica]** y proporciona valores para tu [proyecto, ID de cliente, secreto de cliente, token de actualización y (opcional) conjunto de datos de resultados grandes](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
+
+![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación básica.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+
+>[!TAB Usar autenticación de servicio]
+
+Para usar la autenticación del servicio, selecciona **[!UICONTROL Autenticación del servicio]** y proporciona valores para tu [ID de proyecto, contenido de archivos de claves y (opcional) ID de conjuntos de datos de resultados grandes](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y espere unos momentos para que se establezca la conexión.
+
+![Interfaz de la nueva cuenta donde se ha seleccionado la autenticación del servicio.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+
+>[!ENDTABS]
 
 ## Pasos siguientes
 
