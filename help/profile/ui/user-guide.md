@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2212'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,11 @@ Una vez que se haya introducido un valor, seleccione **[!UICONTROL Ver]** y se d
 ![El perfil que coincide con el valor de identidad está resaltado.](../images/user-guide/filtered-identity-value.png)
 
 ## Ver detalles del perfil {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="Entidad no encontrada"
+>abstract="Esto significa que Platform no pudo encontrar la entidad solicitada. Para resolver este error, pruebe una de las siguientes soluciones:<ul><li>Asegúrese de que el ID de perfil correcto aparece en la dirección URL de la entidad a la que intenta acceder.</li><li>Asegúrese de que tiene la combinación correcta de organización y zona protegida para la entidad a la que intenta acceder.</li></ul>"
 
 Después de seleccionar un **[!UICONTROL ID de perfil]**, se abre la pestaña **[!UICONTROL Detalle]**. La información de perfil mostrada en la ficha **[!UICONTROL Detail]** se ha combinado a partir de varios fragmentos de perfil para formar una sola vista del cliente individual. Esto incluye detalles del cliente, como atributos básicos, identidades vinculadas y preferencias de canal.
 
