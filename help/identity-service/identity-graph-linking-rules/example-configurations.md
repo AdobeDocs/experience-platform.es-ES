@@ -3,7 +3,7 @@ title: Ejemplos de configuraciones de gráficos
 description: Obtenga información sobre los escenarios de gráficos comunes que podrían surgir al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad.
 badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
 workflow-type: tm+mt
 source-wordcount: '2786'
 ht-degree: 6%
@@ -767,6 +767,6 @@ Para obtener más información sobre las reglas de vinculación de gráficos de 
 * [Algoritmo de optimización de identidad](./identity-optimization-algorithm.md)
 * [Guía de implementación](./implementation-guide.md)
 * [Resolución de problemas y preguntas frecuentes](./troubleshooting.md)
-* [Prioridad de área de nombres](./namespace-priority.md)
+* [Prioridad de espacios de nombres](./namespace-priority.md)
 * [IU de simulación de gráficos](./graph-simulation.md)
 * [IU de configuración de identidad](./identity-settings-ui.md)

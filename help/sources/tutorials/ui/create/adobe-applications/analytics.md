@@ -2,9 +2,9 @@
 title: Creación de una conexión de Adobe Analytics Source en la IU
 description: Obtenga información sobre cómo crear una conexión de origen de Adobe Analytics en la interfaz de usuario para llevar los datos de los consumidores a Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2672'
 ht-degree: 3%
 
 ---
@@ -312,6 +312,13 @@ Para obtener más información sobre el relleno, los datos activos y sus respect
 >[!NOTE]
 >
 >La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de origen de Analytics se administra completamente mediante el Adobe. Puede monitorizar que los datos fluyen mirando las métricas alrededor de los registros ingeridos.
+
+## Eliminar el flujo de datos {#delete-dataflow}
+
+Para eliminar el flujo de datos de Analytics, seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior del área de trabajo de orígenes. Utilice la página de flujos de datos para localizar el flujo de datos de Analytics que desea eliminar y, a continuación, seleccione los puntos suspensivos (`...`) que aparecen junto a él. A continuación, usa el menú desplegable y selecciona **[!UICONTROL Eliminar]**.
+
+* Al eliminar el flujo de datos activo de Analytics, también se eliminará su conjunto de datos subyacente.
+* Al eliminar el flujo de datos de Analytics de relleno no se elimina el conjunto de datos subyacente, pero se detendrá el proceso de relleno para su grupo de informes correspondiente. Si elimina el flujo de datos de relleno, los datos ingeridos pueden seguir viéndose a través del conjunto de datos.
 
 ## Pasos siguientes y recursos adicionales
 
