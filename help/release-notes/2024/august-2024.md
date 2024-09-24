@@ -1,21 +1,21 @@
 ---
 title: Notas de la versión de Adobe Experience Platform, agosto de 2024
-description: Notas de la versión de agosto de 2024 de Adobe Experience Platform.
+description: Las notas de la versión de agosto de 2024 de Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1562'
-ht-degree: 21%
+ht-degree: 100%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform
 
-**Fecha de la versión: 20 de agosto de 2024**
+**Fecha de lanzamiento: 20 de agosto de 2024**
 
 >[!TIP]
 >
->Vea [información general sobre la documentación de casos de uso de ejemplo](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) para obtener más información sobre varios casos de uso, como prospección, adquisición y mucho más que su organización puede lograr con Real-Time CDP.
+>Consulte la [documentación de información general sobre casos de uso de ejemplo](https://experienceleague.adobe.com/es/docs/experience-platform/rtcdp/use-cases/overview) para conocer varios casos de uso, como los de prospección y adquisición entre otros muchos, que su organización puede lograr con Real-Time CDP.
 
 Actualizaciones de funciones y documentación existentes en Experience Platform:
 
@@ -29,19 +29,19 @@ Actualizaciones de funciones y documentación existentes en Experience Platform:
 
 ## Control de acceso basado en atributos {#abac}
 
-El control de acceso basado en atributos es una función de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función le permite conceder o revocar el acceso a objetos individuales para usuarios de Platform específicos de su organización.
+El control de acceso basado en atributos es una capacidad de Adobe Experience Platform que proporciona a las marcas conscientes de la privacidad una mayor flexibilidad para administrar el acceso de los usuarios. Los objetos individuales, como los campos de esquema y los segmentos, se pueden asignar a funciones de usuario. Esta función permite conceder o revocar el acceso a objetos individuales para usuarios específicos de Platform de su organización.
 
-Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de la plataforma. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos y datos específicos que correspondan a esos campos.
+Mediante el control de acceso basado en atributos, los administradores de su organización pueden controlar el acceso de los usuarios a los datos personales confidenciales (SPD), la información de identificación personal (PII) y otro tipo personalizado de datos en todos los flujos de trabajo y recursos de Platform. Los administradores pueden definir funciones de usuario que solo tengan acceso a campos específicos y a los datos que correspondan a esos campos.
 
 **Nueva funcionalidad**
 
 | Actualización de funciones | Descripción |
 | --- | --- |
-| Nueva característica del Administrador de permisos | Ahora puede usar [Administrador de permisos](../../access-control/abac/permission-manager/overview.md) para generar informes mediante consultas simples, lo que le ayudará a comprender la administración de acceso y a ahorrar tiempo en la verificación de los permisos de acceso en varios flujos de trabajo y niveles de granularidad. Para obtener más información sobre la creación de informes para usuarios y funciones, consulte la [Guía del usuario del Administrador de permisos](../../access-control/abac/permission-manager/permissions.md). ![La interfaz de usuario del Experience Platform de imágenes resalta el Administrador de permisos en la barra de navegación izquierda.](assets/august/permission-manager-rn.png "Administrador de permisos en la interfaz de usuario."){width="250" align="center" zoomable="yes"} |
+| Nueva función del Administrador de permisos | Ahora puede usar el [Administrador de permisos](../../access-control/abac/permission-manager/overview.md) para generar informes mediante consultas simples, lo que le ayudará a comprender la administración de acceso y a ahorrar tiempo en la verificación de los permisos de acceso en varios flujos de trabajo y niveles de granularidad. Para obtener más información sobre la creación de informes para usuarios y funciones, consulte la [Guía del usuario del Administrador de permisos](../../access-control/abac/permission-manager/permissions.md). ![Imagen de la interfaz de usuario de Experience Platform con el Administrador de permisos resaltado en la barra de navegación izquierda.](assets/august/permission-manager-rn.png "Administrador de permisos en la interfaz de usuario."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el control de acceso basado en atributos, vea la [descripción general del control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
+Para obtener más información sobre el control de acceso basado en atributos, consulte la [información general sobre el control de acceso basado en atributos](../../access-control/abac/overview.md). Para obtener una guía completa sobre el flujo de trabajo de control de acceso basado en atributos, lea la [guía completa de control de acceso basado en atributos](../../access-control/abac/end-to-end-guide.md).
 
 ## Ingesta de datos (actualizado el 23 de agosto) {#data-ingestion}
 
@@ -49,12 +49,12 @@ Adobe Experience Platform proporciona un completo conjunto de funciones para ing
 
 **Actualización de la administración del formato de fecha en la ingesta de datos por lotes**
 
-Esta versión corrige un problema con la *administración del formato de fecha* en la ingesta de datos por lotes. Anteriormente, el sistema transformaba los campos de fecha insertados por los clientes como `Date` en formato `DateTime`. Esto significa que la zona horaria se agregó automáticamente a los campos y causó dificultades a los usuarios que prefirieron o requirieron el formato `Date`. En adelante, la zona horaria no se agregará automáticamente a los campos de tipo `Date`. Esta actualización garantiza que el formato exportado de datos coincida con el formato representado en el perfil para ese campo según lo solicitado por los clientes.
+Esta versión corrige un problema con la *administración del formato de fecha* en la ingesta de datos por lotes. Anteriormente, el sistema transformaba los campos de fecha insertados por los clientes como `Date` al formato `DateTime`. Esto significaba que la zona horaria se añadía automáticamente a los campos y causaba dificultades a los usuarios que preferían o requerían el formato `Date`. En adelante, la zona horaria no se añadirá automáticamente a los campos de tipo `Date`. Esta actualización garantiza que el formato exportado de los datos coincide con el formato representado en el perfil para ese campo, según lo solicitado por los clientes.
 
-`Date` campos antes de la versión: `"birthDate": "2018-01-12T00:00:00Z"`
-`Date` campos después de la versión: `"birthDate": "2018-01-12"`
+Campos de `Date` antes de la versión: `"birthDate": "2018-01-12T00:00:00Z"`
+Campos de `Date` después de la versión: `"birthDate": "2018-01-12"`
 
-Más información sobre [ingesta por lotes](/help/ingestion/batch-ingestion/overview.md).
+Más información sobre la [ingesta por lotes](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinos {#destinations}
 
@@ -64,7 +64,7 @@ Más información sobre [ingesta por lotes](/help/ingestion/batch-ingestion/over
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| [Brazo](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] administra varias instancias diferentes para sus extremos de panel y REST. Los clientes de [!UICONTROL Braze] deben usar el extremo REST correcto en función de la instancia en la que esté aprovisionado. Esta versión agrega un nuevo punto final US-07 que puede seleccionar al conectarse a [!UICONTROL Braze]. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] administra varias instancias diferentes para su panel de control y los puntos finales de REST. Los clientes de [!UICONTROL Braze] deben usar el punto final de REST correcto en función de la instancia en la que esté aprovisionado. Esta versión añade un nuevo punto final US-07 que puede seleccionar al conectarse a [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
@@ -72,17 +72,17 @@ Más información sobre [ingesta por lotes](/help/ingestion/batch-ingestion/over
 
 | Función | Descripción |
 | ----------- | ----------- |
-| Ya está disponible de forma general la exportación de archivos bajo demanda a destinos por lotes. | La opción de exportar archivos bajo demanda a destinos por lotes ya está disponible para todos los clientes. Consulte la [documentación dedicada](../../destinations/ui/export-file-now.md) para obtener más detalles. |
-| Edite las programaciones de exportación de varias audiencias exportadas en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los programas de exportación para varias audiencias exportadas directamente desde el paso de programación del flujo de trabajo de activación de audiencia ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Editar programación en el paso de programación.](assets/august/edit-schedule.png "Editar opción de horario en el paso de horario."){width="250" align="center" zoomable="yes"} |
-| Edite los nombres de archivo para varias audiencias exportadas en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los nombres de varios archivos exportados directamente desde el paso de programación del flujo de trabajo de activación de audiencia ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Editar nombre de archivo en el paso de programación.](assets/august/edit-file-name.png "Editar opción de nombre de archivo en el paso de programación."){width="250" align="center" zoomable="yes"} |
-| Elimine varias audiencias de un flujo de datos de la página [Detalles del destino](../../destinations/ui/destination-details-page.md#bulk-remove). | La opción de quitar varias audiencias de flujos de datos existentes de la página **[!UICONTROL Detalles del destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Quitar audiencias en la página Detalles de destino.](assets/august/bulk-remove-audiences.png "Opción Quitar audiencias en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
-| Exporte varios archivos bajo demanda a destinos por lotes desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-export). | La opción de exportar varios archivos bajo demanda a destinos por lotes desde la página **[!UICONTROL Detalles de destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Exportar archivo ahora en la página Detalles de destino.](assets/august/bulk-export-file-now.png "Opción Exportar archivo ahora en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
-| Edite los nombres de archivo de varias audiencias exportadas desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Ahora puede editar los nombres de varios archivos exportados directamente desde la página **[!UICONTROL Detalles del destino]**. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Editar nombre de archivo en la página de detalles de destino.](assets/august/edit-file-name-destination-details.png "Editar opción de nombre de archivo en la página de detalles de destino."){width="250" align="center" zoomable="yes"} |
-| Elimine varios conjuntos de datos de un flujo de datos de la página [Detalles de destino](../../destinations/ui/export-datasets.md#remove-dataset). | La opción de quitar varios conjuntos de datos de un flujo de datos ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario del Experience Platform que resalta la opción Quitar conjuntos de datos en la página de detalles de destino.](assets/august/bulk-remove-datasets.png "Quitar opción de conjuntos de datos en la página de detalles de destino."){width="250" align="center" zoomable="yes"} |
+| Ya está disponible de forma general la exportación de archivos bajo demanda a destinos por lotes. | La opción de exportar archivos bajo demanda a destinos por lotes ya está disponible para todos los clientes. Para obtener más información, consulte la [documentación específica](../../destinations/ui/export-file-now.md). |
+| Edite los programas de exportación para varios públicos exportados en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los programas de exportación para varios públicos exportados directamente desde el paso de programación del flujo de trabajo de Audience Activation ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Editar programación en el paso de programación.](assets/august/edit-schedule.png "Opción Editar programación en el paso de programación."){width="250" align="center" zoomable="yes"} |
+| Edite los nombres de archivo para varios públicos exportados en el [paso de programación](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | La opción para editar los nombres de varios archivos exportados directamente desde el paso de programación del flujo de trabajo de Audience Activation ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Editar nombre de archivo en el paso de programación.](assets/august/edit-file-name.png "Opción Editar nombre de archivo en el paso de programación."){width="250" align="center" zoomable="yes"} |
+| Elimine varios públicos de un flujo de datos de la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-remove). | La opción de quitar varios públicos de flujos de datos existentes desde la página **[!UICONTROL Detalles de destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Quitar públicos en la página Detalles de destino.](assets/august/bulk-remove-audiences.png "Opción Quitar públicos en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
+| Exporte varios archivos bajo demanda a destinos por lotes desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-export). | La opción de exportar varios archivos bajo demanda a destinos por lotes desde la página **[!UICONTROL Detalles de destino]** ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Exportar archivo ahora en la página Detalles de destino.](assets/august/bulk-export-file-now.png "Opción Exportar archivo ahora en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
+| Edite los nombres de archivo para varios públicos exportados desde la página [Detalles de destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Ahora puede editar los nombres de varios archivos exportados directamente desde la página **[!UICONTROL Detalles de destino]**. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Editar nombre de archivo en la página Detalles de destino.](assets/august/edit-file-name-destination-details.png "Opción Editar nombre de archivo en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
+| Quite varios conjuntos de datos de un flujo de datos desde la página [Detalles de destino](../../destinations/ui/export-datasets.md#remove-dataset). | La opción Quitar varios conjuntos de datos de un flujo de datos ya está disponible para todos los clientes. ![Imagen de la interfaz de usuario de Experience Platform que resalta la opción Quitar conjuntos de datos en la página Detalles de destino.](assets/august/bulk-remove-datasets.png "Opción Quitar conjuntos de datos en la página Detalles de destino."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [descripción general de destinos](../../destinations/home.md).
+Para obtener más información, consulte la [Información general de destinos](../../destinations/home.md).
 
 ## Modelo de datos de experiencia (XDM) {#xdm}
 
@@ -92,7 +92,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | --- | --- |
-| Flujo de creación de esquema asistido por ML | Utilice algoritmos avanzados de aprendizaje automático para analizar los archivos de datos de ejemplo y crear automáticamente esquemas optimizados con campos estándar y personalizados.<br>Características principales:<br><ul><li>Creación de esquemas más rápida: genere esquemas directamente a partir de archivos de datos de ejemplo utilizando campos XDM generados y recomendados por ML.</li><li>Evolución del esquema flexible: añada o actualice fácilmente los campos en el esquema generado.</li><li>Integración perfecta: se integra completamente con el flujo de creación de esquemas principal en la URL del esquema, lo que garantiza una experiencia de usuario uniforme y coherente.</li><li>Revisión y edición eficientes: vea y actualice rápidamente su esquema con el editor de vista plana, lo que hace que el proceso de creación sea más eficiente y fácil de usar.</li></ul><br>Para obtener más información, lea la [guía de flujo de trabajo para la creación de esquemas asistida por ML](../../xdm/ui/ml-assisted-schema-creation.md). |
+| Flujo de creación de esquema asistido por ML | Utilice algoritmos avanzados de aprendizaje automático para analizar los archivos de datos de muestra y crear automáticamente esquemas optimizados con campos estándar y personalizados.<br>Funciones principales:<br><ul><li>Creación de esquemas más rápida: genere esquemas directamente a partir de archivos de datos de muestra utilizando campos XDM generados y recomendados por ML.</li><li>Evolución de esquema flexible: añada o actualice fácilmente los campos en el esquema generado.</li><li>Integración perfecta: se integra completamente con el flujo de creación de esquemas principal en la interfaz de usuario del esquema, lo que garantiza una experiencia de usuario uniforme y coherente.</li><li>Revisión y edición eficientes: vea y actualice rápidamente su esquema con el editor de vista plana, lo que hace que el proceso de creación sea más eficiente y fácil de usar.</li></ul><br>Para obtener más información, consulte la [guía de flujo de trabajo para la creación de esquemas asistida por ML](../../xdm/ui/ml-assisted-schema-creation.md). |
 
 {style="table-layout:auto"}
 
@@ -100,17 +100,17 @@ Para obtener más información sobre XDM en Platform, consulte la [Información 
 
 ## Servicio de identidad {#identity-service}
 
-Utilice el servicio de identidad de Adobe Experience Platform para crear una vista completa de sus clientes y sus comportamientos mediante la fusión de identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
+El servicio de identidad de Adobe Experience Platform le ofrece una vista completa de sus clientes y de su comportamiento al unir identidades entre dispositivos y sistemas, lo que le permite ofrecer experiencias digitales personales impactantes en tiempo real.
 
 **Documentación actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Guía de configuraciones de gráficos | Lea la [guía de configuraciones de gráficos](../../identity-service/identity-graph-linking-rules/example-configurations.md) para obtener información sobre escenarios de gráficos comunes que podrían encontrarse al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad. La guía de configuraciones de gráficos proporciona ejemplos que van desde escenarios de gráficos simples de una sola persona a escenarios de gráficos complejos y jerárquicos de varias personas. También puede usar la guía para ver ejemplos de eventos y configuraciones de algoritmo que puede introducir en la [IU de simulación de gráficos](../../identity-service/identity-graph-linking-rules/graph-simulation.md), así como desgloses de cómo se seleccionan las identidades principales en determinados escenarios de gráficos. |
+| Guía de configuraciones de gráficos | Lea la [guía de configuraciones de gráficos](../../identity-service/identity-graph-linking-rules/example-configurations.md) para obtener información sobre escenarios de gráficos comunes que podría encontrarse al trabajar con reglas de vinculación de gráficos de identidad y datos de identidad. La guía de configuraciones de gráficos proporciona ejemplos que van desde escenarios de gráficos simples de una sola persona a escenarios de gráficos complejos y jerárquicos de varias personas. También puede usar la guía para ver ejemplos de eventos y configuraciones de algoritmo que puede introducir en la [IU de simulación de gráficos](../../identity-service/identity-graph-linking-rules/graph-simulation.md), así como desgloses de cómo se seleccionan las identidades principales en determinados escenarios de gráficos. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre el servicio de identidad, lea la [descripción general del servicio de identidad](../../identity-service/home.md).
+Para obtener más información sobre el servicio de identidad, consulte la [Información general del servicio de identidad](../../identity-service/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
@@ -120,7 +120,7 @@ Para obtener más información sobre el servicio de identidad, lea la [descripci
 
 | Función | Descripción |
 | ------- | ----------- |
-| Detalles de ingesta | En el caso de las audiencias con el origen de carga personalizada, puede ver de forma más completa los detalles de la ingesta de la audiencia en la página de detalles de audiencia. Además, puede aplicar etiquetas a los atributos de carga útil seleccionando el esquema y los atributos deseados para el etiquetado. Encontrará más información sobre la sección de detalles de ingesta en la [guía de Audience Portal](../../segmentation/ui/audience-portal.md#ingestion-details). |
+| Detalles de ingesta | En el caso de públicos con origen de carga personalizada, puede ver de forma más completa los detalles de la ingesta del público en la página de detalles de público. Además, puede aplicar etiquetas a los atributos de carga útil seleccionando el esquema y los atributos deseados para el etiquetado. Encontrará más información sobre la sección de detalles de ingesta en la [guía del portal de público](../../segmentation/ui/audience-portal.md#ingestion-details). |
 
 {style="table-layout:auto"}
 
@@ -130,20 +130,20 @@ Para obtener más información sobre [!DNL Segmentation Service], consulte la [I
 
 Experience Platform proporciona una API RESTful y una IU interactiva que le permite configurar conexiones de origen para varios proveedores de datos con facilidad. Estas conexiones de origen le permiten autenticarse y conectarse a sistemas de almacenamiento externos y servicios CRM, establecer tiempos para ejecuciones de ingesta y administrar el rendimiento de ingesta de datos.
 
-Utilice fuentes en Experience Platform para introducir datos de una aplicación de Adobe o una fuente de datos de terceros.
+Utilice las fuentes en Experience Platform para la ingesta de datos desde una aplicación de Adobe o una fuente de datos de terceros.
 
-**Característica actualizada**
+**Función actualizada**
 
 | Función | Descripción |
 | --- | --- |
-| Actualizaciones del conector de origen de Adobe Analytics | La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de Source de Analytics se administra completamente mediante el Adobe. Puede monitorizar que los datos fluyen mirando las métricas alrededor de los registros ingeridos. Lea la guía sobre la creación de una conexión de origen [para datos de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
+| Actualizaciones del conector de origen de Adobe Analytics | La página de actividad del conjunto de datos no muestra información sobre los lotes, ya que el conector de origen de Analytics lo administra completamente Adobe. Puede monitorizar que los datos fluyen fijándose en las métricas de los registros ingeridos. Lea la guía sobre la creación de una[ conexión de origen para datos de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
 
 **Documentación actualizada**
 
 | Documentación actualizada | Descripción |
 | --- | --- |
-| Documentación ampliada sobre la actualización de flujos de datos | La guía sobre [actualización de flujos de datos de origen existentes en la interfaz de usuario](../../sources/tutorials/ui/update-dataflows.md) se ha actualizado para proporcionar más información sobre la variedad de configuraciones que puede realizar en un flujo de datos existente. La guía también se ha actualizado para aclarar el comportamiento esperado cuando se vuelve a habilitar un flujo de datos deshabilitado. |
+| Documentación ampliada sobre la actualización de flujos de datos | La guía sobre [actualización de flujos de datos de origen existentes en la interfaz de usuario](../../sources/tutorials/ui/update-dataflows.md) se ha actualizado para proporcionar más información sobre las diversas configuraciones que puede aplicar a un flujo de datos existente. La guía también se ha actualizado para aclarar el comportamiento esperado cuando se vuelve a habilitar un flujo de datos deshabilitado. |
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [descripción general de orígenes](../../sources/home.md).
+Para obtener más información, lea la [Información general de fuentes](../../sources/home.md).
