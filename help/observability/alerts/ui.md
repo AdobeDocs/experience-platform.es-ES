@@ -4,10 +4,10 @@ title: Guía de IU de alertas
 description: Obtenga información sobre cómo administrar alertas en la interfaz de usuario del Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Para empezar, seleccione **[!UICONTROL Alertas]** en el panel de navegación izq
 
 ![Alertas que resaltan la página [!UICONTROL Alertas] en la navegación izquierda.](../images/alerts/ui/workspace.png)
 
-## Administrar reglas de alerta
+## Administrar reglas de alerta {#manage-rules}
 
 La ficha **[!UICONTROL Examinar]** enumera las reglas disponibles que pueden almacenar en déclencheur una alerta.
 
@@ -37,7 +37,7 @@ Seleccione los puntos suspensivos (**...**) junto al nombre de una regla y apare
 
 ![Los puntos suspensivos seleccionados muestran el menú desplegable.](../images/alerts/ui/disable-subscribe.png)
 
-## Administrar suscriptores de alertas
+## Administrar suscriptores de alertas {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Ha agregado correctamente usuarios a su lista de notificaciones de alerta. Los u
 
 ![Ejemplo de correo electrónico de la notificación de alerta recibida.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Activar alertas de correo electrónico
+## Activar alertas de correo electrónico {#enable-email}
 
 Las notificaciones de alerta se pueden enviar directamente al correo electrónico.
 
@@ -85,7 +85,35 @@ Desplácese a la sección **Correos electrónicos** en la parte inferior de la p
 
 Las alertas a las que se haya suscrito ahora se enviarán a la dirección de correo electrónico conectada a la cuenta de Adobe ID.
 
-## Ver historial de alertas
+## Personalizar umbral de alerta {#alert-threshold}
+
+Los umbrales de alerta se pueden personalizar para los siguientes tipos de alerta:
+
+| Tipo de alerta | Parámetro personalizado |
+|---|---|
+| Retraso del trabajo del segmento | Umbral de retraso |
+| Retraso de exportación de segmentos | Umbral de retraso |
+| Retraso de ejecución de flujo de destino | Umbral de retraso |
+| Retraso de ejecución de flujo de servicio de identidad | Umbral de retraso |
+| Retraso de ejecución de flujo de perfil | Umbral de retraso |
+| Retraso de ejecución de flujo de orígenes | Umbral de retraso |
+| Retraso de ejecución de consulta | Umbral de retraso |
+| Tasa de omisión de activación superada | Umbral de error |
+| Tasa de error de ingesta de fuentes superada | Umbral de error |
+
+Seleccione los puntos suspensivos (**...**) junto al nombre de una regla y aparecerá un menú desplegable con los controles. Seleccione **[!UICONTROL Editar]**.
+
+![La opción [!UICONTROL Editar] está resaltada para la regla seleccionada.](../images/alerts/ui/threshold-edit.png)
+
+Aparecerá la página **[!UICONTROL Personalizar alerta]**. Actualice el umbral a los minutos que desee y luego seleccione **[!UICONTROL Confirmar]**.
+
+![La página Personalizar alerta resalta [!UICONTROL Umbral] y [!UICONTROL Confirmar] opciones.](../images/alerts/ui/threshold-update.png)
+
+Ha vuelto a la página **[!UICONTROL Alertas]**. Para ver la configuración de umbral de la alerta, seleccione la regla en la lista. Puede ver la configuración de umbral de la alerta en el carril derecho, incluidos detalles como el estado y la gravedad.
+
+![Se resaltó una alerta que muestra detalles en el carril derecho y resalta [!UICONTROL Umbral].](../images/alerts/ui/threshold-view.png)
+
+## Ver historial de alertas {#alert-history}
 
 La ficha **[!UICONTROL Historial]** muestra el historial de alertas recibidas para su organización, incluida la regla que activó la alerta, la fecha desencadenada y la fecha resuelta (si corresponde).
 
