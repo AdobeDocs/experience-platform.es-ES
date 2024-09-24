@@ -3,10 +3,10 @@ title: Complemento de perfiles de origen con atributos proporcionados por socios
 description: Aprenda a complementar los perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nuevas perspectivas sobre la base de clientes y mejorar Audience Optimization.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ A medida que considere la posibilidad de complementar sus propios perfiles de or
 
 >[!WARNING]
 >
->Los atributos adicionales proporcionados por socios introducidos en Real-Time CDP afectan a su *riqueza del perfil promedio*. Lea la [Descripción del producto de Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información acerca de la riqueza del perfil.
+>Los atributos adicionales proporcionados por el socio introducidos en Real-Time CDP afectan a su *volumen total de datos*. Lea la [Descripción del producto de Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es) para obtener más información sobre el volumen total de datos.
 
 ## Tutorial de vídeo {#video-walkthrough}
 

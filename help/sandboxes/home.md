@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Información general sobre zonas protegidas
 description: Los entornos limitados son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 0%
+source-wordcount: '971'
+ht-degree: 2%
 
 ---
 
@@ -23,9 +23,9 @@ Este documento proporciona información general de alto nivel sobre los entornos
 
 Los entornos limitados son particiones virtuales en una sola instancia de Experience Platform, lo que permite una integración perfecta con el proceso de desarrollo de sus aplicaciones de experiencia digital. Todo el contenido y las acciones realizadas en una zona protegida se limitan únicamente a esa zona protegida y no afectan a ninguna otra. Existen dos tipos de zonas protegidas compatibles con Experience Platform:
 
-* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar el perfil promedio con licencia por cada [!DNL Profile] autorizado (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar todo el volumen total de datos con licencia (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+
 * **Entorno aislado de desarrollo**: Un entorno aislado de desarrollo es un entorno aislado que se puede usar exclusivamente para el desarrollo y las pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10 % de la asignación [!DNL Profile] con licencia (medida de forma acumulativa en todos los entornos limitados de desarrollo autorizados). Tiene derecho a hasta:
-   * Una riqueza promedio de perfiles de no producción de 75 kilobytes por perfil de no producción autorizado (medida acumulativamente en todas las zonas protegidas de desarrollo autorizadas).
    * Un trabajo de segmentación por lotes al día, por zona protegida de desarrollo;
    * Un promedio de 120 [!DNL Profile] llamadas de API, por [!DNL Profile], por año (medidas acumulativamente en todas sus zonas protegidas de desarrollo autorizadas).
 

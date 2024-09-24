@@ -2,10 +2,10 @@
 title: Guía de preguntas para el asistente de IA
 description: Lea este documento para conocer las preguntas de ejemplo que puede utilizar al consultar el Ayudante de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 1%
+source-wordcount: '1519'
+ht-degree: 3%
 
 ---
 
@@ -69,18 +69,17 @@ Las preguntas siguientes están agrupadas por objetos de datos y se clasifican c
    * ¿Qué recorridos se han creado en {RELATIVE_DATE} (por ejemplo, la última semana) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?
    * ¿Desea mostrarme la lista de recorridos que se modificaron en {RELATIVE_DATE} (por ejemplo, la última semana) o {RELATIVE_DATE} (por ejemplo, antes/después/en una fecha específica)?
    * Enumerar los recorridos activos que tengo.
-   * Enumerar las audiencias que se utilizan en recorridos activos.
+   * Enumerar los públicos que se utilizan en recorridos activos.
 * **Fuentes - Datos operativos**
    * ¿Qué fuentes están en estado activo?
    * Qué conector de origen está asociado con el conjunto de datos {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
    * ¿Qué conector de origen tiene el número más alto de cuentas asociadas?
    * Mostrar los flujos de datos y sus conectores de origen asociados.
 * **Aprendizaje puntual: conocimiento del producto (Real-Time CDP y Journey Optimizer)**
-   * ¿Qué son las audiencias de similitud?
+   * ¿Qué es el Público similar?
    * ¿Cómo se relacionan los grupos de usuarios con las funciones?
    * ¿Cuándo debo usar un tipo de datos o un grupo de campos?
    * ¿Cuál es la diferencia entre una identidad y una clave principal o externa?
-   * ¿Cómo se calcula la riqueza de perfiles?
 * **Solución de problemas - Conocimiento del producto (Real-Time CDP y Journey Optimizer)**
    * ¿En qué puede ayudar el Asistente de IA?
    * ¿Puedo eliminar un esquema habilitado para perfiles después de la ingesta de datos?

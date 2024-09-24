@@ -2,9 +2,9 @@
 title: Prácticas recomendadas de licencia de administración de datos
 description: Obtenga información acerca de las prácticas recomendadas y herramientas que puede utilizar para administrar mejor sus derechos de licencia con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2145'
 ht-degree: 2%
 
 ---
@@ -42,12 +42,7 @@ Al otorgar la licencia al Experience Platform, se le otorgan derechos de uso de 
 
 **[!DNL Addressable Audience]**: el número total de perfiles de clientes que están permitidos contractualmente en Experience Platform, incluidos los perfiles conocidos y seudónimos.
 
-**[!DNL Profile Richness]**: el tamaño promedio de los datos de perfil en Experience Platform. Puede aumentar sus derechos de [!DNL Profile Richness] comprando un paquete richness.
-
-La métrica [!DNL Profile Richness] varía según la licencia que haya adquirido. Hay dos cálculos disponibles para [!DNL Profile Richness]:
-
-* La suma de todos los datos de producción almacenados en Adobe Real-time Customer Data Platform (es decir, el perfil del cliente en tiempo real y el servicio de identidad) en cualquier momento, dividida por [!DNL Addressable Audience];
-* La suma de todos los datos almacenados en Platform (incluidos, entre otros, [!DNL data lake], el perfil del cliente en tiempo real y el servicio de identidad) en cualquier momento y cualquier dato que haya retransmitido a través de Platform (en lugar de almacenarlo) en los últimos 12 meses, dividida por [!DNL Addressable Audience].
+**[!DNL Total Data Volume]**: cantidad total de datos disponibles para que el servicio de perfil de Adobe Experience Platform los use en los flujos de trabajo de participación.
 
 La disponibilidad de estas métricas y la definición específica de cada una de ellas varían según la licencia que haya adquirido su organización.
 
@@ -108,7 +103,7 @@ Los filtros de ingesta le permiten introducir únicamente los datos necesarios p
 | --- | --- |
 | Filtrado de origen de Adobe Audience Manager | Al crear una conexión de origen de Adobe Audience Manager, puede elegir qué segmentos y características incorporar al [!DNL data lake] y al Perfil del cliente en tiempo real, en lugar de ingerir los datos del Audience Manager en su totalidad. Consulte la guía de [creación de una conexión de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obtener más información. |
 | Preparación de datos de Adobe Analytics | Puede utilizar las funcionalidades [!DNL Data Prep] al crear una conexión de origen de Analytics para filtrar los datos que no son necesarios para sus casos de uso. A través de [!DNL Data Prep], puede definir qué atributos/columnas se deben publicar en el perfil. También puede proporcionar afirmaciones condicionales para informar a Platform de si se espera que los datos se publiquen en el perfil o solo en [!DNL data lake]. Consulte la guía de [creación de una conexión de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) para obtener más información. |
-| Compatibilidad con habilitar/deshabilitar conjuntos de datos para el perfil | Para introducir datos en el Perfil del cliente en tiempo real, debe habilitar un conjunto de datos para su uso en el almacén de perfiles. Al hacerlo, agrega a sus derechos de [!DNL Addressable Audience] y [!DNL Profile Richness]. Una vez que un conjunto de datos ya no es necesario para casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos a Perfil para garantizar que los datos sigan siendo compatibles con la licencia. Consulte la guía sobre [habilitar y deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
+| Compatibilidad con habilitar/deshabilitar conjuntos de datos para el perfil | Para introducir datos en el Perfil del cliente en tiempo real, debe habilitar un conjunto de datos para su uso en el almacén de perfiles. Al hacerlo, agrega a sus derechos de [!DNL Addressable Audience] y [!DNL Total Data Volume]. Una vez que un conjunto de datos ya no es necesario para casos de uso de perfiles de clientes, puede deshabilitar la integración de ese conjunto de datos a Perfil para garantizar que los datos sigan siendo compatibles con la licencia. Consulte la guía sobre [habilitar y deshabilitar conjuntos de datos para el perfil](../../catalog/datasets/enable-for-profile.md) para obtener más información. |
 | Exclusión de datos de SDK web y SDK móvil | El SDK web y móvil recopilan dos tipos de datos: datos que se recopilan automáticamente y datos que el desarrollador recopila explícitamente. Para administrar mejor el cumplimiento de la licencia, puede deshabilitar la recopilación automática de datos en la configuración del SDK a través de la configuración de contexto. El desarrollador también puede eliminar o no definir datos personalizados. |
 | Exclusión de datos del reenvío del lado del servidor | Si está enviando datos a Platform mediante el reenvío del lado del servidor, puede excluir qué datos se envían eliminando la asignación en una acción de regla para excluirlos en todos los eventos o añadiendo condiciones a la regla para que los datos solo se activen para determinados eventos. Consulte la documentación sobre [eventos y condiciones](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) para obtener más información. |
 | Filtrado de datos en el nivel de origen | Puede utilizar operadores lógicos y de comparación para filtrar los datos de nivel de fila a partir de los orígenes antes de crear una conexión e introducir datos en Experience Platform. Para obtener más información, lea la guía sobre [filtrado de datos de nivel de fila para un origen mediante la [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |

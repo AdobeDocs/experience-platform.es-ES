@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de solución de problemas de zonas protegidas
 description: Este documento proporciona respuestas a las preguntas frecuentes acerca de los entornos limitados de Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '820'
 ht-degree: 8%
 
 ---
@@ -31,9 +31,9 @@ Las zonas protegidas son particiones virtuales en una sola instancia de Experien
 
 Hay dos tipos de zonas protegidas disponibles en Experience Platform:
 
-* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar el perfil promedio con licencia por cada [!DNL Profile] autorizado (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+* **Zona protegida de producción**: Una zona protegida de producción está pensada para utilizarse con perfiles en su entorno de producción. Platform le permite crear varios entornos limitados de producción para proporcionar la funcionalidad adecuada para los datos sin perder el aislamiento operativo. Esta función le permite dedicar entornos limitados de producción específicos a distintas líneas de negocio, marcas, proyectos o regiones. Las zonas protegidas de producción admiten un volumen de perfiles de producción hasta el compromiso con licencia [!DNL Profile] (medido acumulativamente en todas las zonas protegidas de producción autorizadas). Tiene derecho a utilizar todo el volumen total de datos con licencia (medido acumulativamente en todas las zonas protegidas de producción autorizadas).
+
 * **Entorno aislado de desarrollo**: Un entorno aislado de desarrollo es un entorno aislado que se puede usar exclusivamente para el desarrollo y las pruebas con perfiles que no sean de producción. Los entornos limitados de desarrollo admiten un volumen de perfiles que no son de producción de hasta el 10 % de la asignación [!DNL Profile] con licencia (medida de forma acumulativa en todos los entornos limitados de desarrollo autorizados). Tiene derecho a hasta:
-   * Una riqueza promedio de perfiles de no producción de 75 kilobytes por perfil de no producción autorizado (medida acumulativamente en todas las zonas protegidas de desarrollo autorizadas).
    * Un trabajo de segmentación por lotes al día, por zona protegida de desarrollo;
    * Un promedio de 120 [!DNL Profile] llamadas de API, por [!DNL Profile], por año (medidas acumulativamente en todas sus zonas protegidas de desarrollo autorizadas).
 
