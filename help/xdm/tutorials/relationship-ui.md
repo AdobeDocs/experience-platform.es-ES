@@ -5,10 +5,10 @@ title: Definición de una relación entre dos esquemas con el Editor de esquemas
 description: Este documento proporciona un tutorial para definir una relación entre dos esquemas mediante el Editor de esquemas en la interfaz de usuario del Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 10%
+source-wordcount: '1376'
+ht-degree: 9%
 
 ---
 
@@ -109,19 +109,49 @@ Una vez que el esquema de origen tenga definido un campo de referencia dedicado,
 
 >[!NOTE]
 >
->Los pasos siguientes tratan sobre cómo definir un campo de relación mediante los controles del carril derecho en el lienzo. Si tiene acceso a Real-Time CDP B2B Edition, también puede definir una relación uno a uno con el [mismo cuadro de diálogo](./relationship-b2b.md#relationship-field) que al crear relaciones varios a uno.
+>Las relaciones solo se pueden admitir en campos de cadena o de matriz de cadenas.
 
-Seleccione el campo `preferredHotel` en el lienzo y, a continuación, desplácese hacia abajo bajo **[!UICONTROL Propiedades del campo]** hasta que aparezca la casilla de verificación **[!UICONTROL Relación]**. Seleccione la casilla de verificación para mostrar los parámetros necesarios para configurar un campo de relación.
+Seleccione el campo `preferredHotel` en el lienzo y, a continuación, seleccione **[!UICONTROL Agregar relación]** en la barra lateral **[!UICONTROL Propiedades del campo]**.
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![Editor de esquemas con la relación Agregar resaltada en la barra lateral de propiedades del campo.](../images/tutorials/relationship/add-relationship.png)
 
-Seleccione el menú desplegable de **[!UICONTROL Esquema de referencia]** y seleccione el esquema de referencia para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo). En **[!UICONTROL Área de nombres de identidad de referencia]**, seleccione el área de nombres del campo de identidad del esquema de referencia (en este caso, &quot;[!DNL Hotel ID]&quot;). Seleccione **[!UICONTROL Aplicar]** cuando haya terminado.
+Aparecerá el cuadro de diálogo [!UICONTROL Agregar relación]. Desde este cuadro de diálogo, puede definir los parámetros necesarios para configurar un campo de relación. Para los usuarios de Real-Time CDP B2C, **solamente** puede establecer una relación uno a uno entre el esquema de origen y el de referencia.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Si tiene acceso a Real-Time CDP B2B Edition, puede utilizar los controles del carril derecho del lienzo para definir un campo de relación, así como crear una relación de varios a uno mediante [el mismo cuadro de diálogo](./relationship-b2b.md#relationship-field).
+
+![Cuadro de diálogo Agregar relación.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Utilice el menú desplegable de **[!UICONTROL Esquema de referencia]** y seleccione el esquema de referencia para la relación (&quot;[!DNL Hotels]&quot; en este ejemplo).
+
+>[!NOTE]
+>
+>En el menú desplegable esquema de referencia solo se incluyen los esquemas que contienen una identidad principal. Esta protección evita que cree accidentalmente una relación con un esquema que aún no está configurado correctamente.
+
+El área de nombres de identidad del esquema de referencia (en este caso, &quot;[!DNL Hotel ID]&quot;) se rellena automáticamente en **[!UICONTROL Área de nombres de identidad de referencia]**. Seleccione **[!UICONTROL Aplicar]** cuando haya terminado.
+
+![Cuadro de diálogo Agregar relación con los parámetros de relación configurados y Aplicar resaltados.](../images/tutorials/relationship/apply-relationship.png)
 
 El campo `preferredHotel` ahora se resalta como una relación en el lienzo, mostrando el nombre del esquema de referencia. Seleccione **[!UICONTROL Guardar]** para guardar los cambios y completar el flujo de trabajo.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![El editor de esquemas con las referencias de relación y Guardar resaltados.](../images/tutorials/relationship/relationship-save.png)
+
+### Editar un campo de relación existente {#edit-relationship}
+
+Para cambiar el esquema de referencia, seleccione un campo con una relación existente y, a continuación, seleccione **[!UICONTROL Editar relación]** en la barra lateral **[!UICONTROL Propiedades del campo]**.
+
+![Editor de esquemas con la relación de edición resaltada.](../images/tutorials/relationship/edit-relationship.png)
+
+Aparecerá el cuadro de diálogo [!UICONTROL Editar relación]. Desde aquí, puede seguir el proceso descrito en [definición de un campo de relación](#relationship-field) o eliminar la relación. Seleccione **[!UICONTROL Eliminar relación]** para eliminar la relación con el esquema de referencia.
+
+![Cuadro de diálogo Editar relación.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filtrar y buscar relaciones {#filter-and-search}
+
+Puede filtrar y buscar relaciones específicas dentro de sus esquemas desde la pestaña [!UICONTROL Relaciones] del área de trabajo [!UICONTROL Esquemas]. Puede utilizar esta vista para localizar y administrar rápidamente sus relaciones. Lea el documento sobre [explorar recursos de esquema](../ui/explore.md#lookup) para obtener instrucciones detalladas sobre las opciones de filtrado.
+
+![La ficha Relaciones en el área de trabajo Esquemas.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Pasos siguientes
 
