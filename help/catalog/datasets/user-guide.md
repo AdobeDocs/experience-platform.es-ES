@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guía de IU de conjuntos de datos
 description: Obtenga información sobre cómo realizar acciones comunes al trabajar con conjuntos de datos en la interfaz de usuario de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3203'
-ht-degree: 6%
+source-wordcount: '3801'
+ht-degree: 5%
 
 ---
 
@@ -96,6 +96,7 @@ La IU de conjuntos de datos ahora ofrece colecciones de acciones en línea para 
 * [[!UICONTROL Administrar datos y etiquetas de acceso]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Habilitar perfil unificado]](#enable-profile)
 * [[!UICONTROL Administrar etiquetas]](#manage-tags)
+* [(Beta) [!UICONTROL Establecer directiva de retención de datos]](#data-retention-policy)
 * [[!UICONTROL Mover a carpetas]](#move-to-folders)
 * [[!UICONTROL Eliminar]](#delete).
 
@@ -168,6 +169,53 @@ El cuadro de diálogo [!UICONTROL Administrar etiquetas] también puede quitar l
 Una vez que se ha añadido una etiqueta a un conjunto de datos, los conjuntos de datos se pueden filtrar según la etiqueta correspondiente. Consulte la sección sobre cómo [filtrar conjuntos de datos por etiquetas](#enable-profile) para obtener más información.
 
 Para obtener más información sobre cómo clasificar objetos de negocio para facilitar la detección y la categorización, consulte la guía sobre [administración de taxonomías de metadatos](../../administrative-tags/ui/managing-tags.md). Esta guía detalla cómo un usuario con los permisos adecuados puede crear etiquetas predefinidas, asignar categorías a las etiquetas y realizar todas las operaciones de CRUD relacionadas en etiquetas y categorías de etiquetas en la IU de Platform.
+
+### (Beta) Establecer una directiva de retención de datos {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>La configuración de retención de datos está actualmente en versión beta y solo está disponible en **versión limitada** para algunas organizaciones. Es posible que la interfaz de usuario no refleje la función que se describe a continuación.
+
+Administre las directivas de caducidad y retención del conjunto de datos en el nivel de conjunto de datos desde la ficha [!UICONTROL Examinar] del área de trabajo de [!UICONTROL Conjuntos de datos]. Puede utilizar esta función para configurar políticas de retención de datos ya introducidos en el lago de datos y en los servicios de perfil. La fecha de caducidad se basa en el momento en que se ingirieron los datos en Platform y en las reglas de retención.
+
+Para abrir el cuadro de diálogo [!UICONTROL Establecer retención de datos], seleccione los puntos suspensivos junto al conjunto de datos seguido de **[!UICONTROL Establecer directiva de retención de datos]** en el menú desplegable.
+
+![La ficha Examinar del área de trabajo Conjuntos de datos con la opción de puntos suspensivos y Establecer directiva de retención de datos resaltada.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+Aparecerá el cuadro de diálogo [!UICONTROL Establecer retención de datos]. El cuadro de diálogo muestra las métricas de uso de licencias a nivel de zona protegida, los detalles a nivel de conjunto de datos y la configuración del lago de datos. Estas métricas muestran su uso en comparación con sus derechos. Los detalles del conjunto de datos incluyen el nombre del conjunto de datos, el tipo, el estado de habilitación del perfil y el uso actual del almacenamiento del lago de datos.
+
+>[!NOTE]
+>
+>Las métricas de almacenamiento del lago de datos con licencia a nivel de zona protegida siguen en desarrollo y no están disponibles.
+
+![Cuadro de diálogo Establecer retención de datos.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Antes de configurar la directiva de retención de conjuntos de datos, el cuadro de diálogo muestra la configuración de retención recomendada. Un mes es el período de retención predeterminado recomendado. Para ajustar la política de retención estándar, seleccione y actualice el número y, a continuación, elija el período de tiempo deseado (días, meses, años). Puede configurar los ajustes de retención para el lago de datos y el servicio de perfil de forma independiente.
+
+>[!NOTE]
+> 
+>La duración mínima de retención de datos para el lago de datos es de 30 días. La duración mínima de retención de datos para el servicio de perfil es de un día.
+
+![Cuadro de diálogo Establecer retención de datos con la lista desplegable de duración y Guardar resaltados.](../images/datasets/user-guide/time-unit-dropdown.png)
+
+Consulte la página [preguntas más frecuentes](../catalog-faq.md) para obtener más información sobre las reglas que definen los intervalos de fechas de caducidad de los conjuntos de datos y las prácticas recomendadas para configurar su directiva de retención de datos.
+
+#### (Beta) Visibilidad mejorada de los períodos de retención y las métricas de almacenamiento {#retention-and-storage-metrics}
+
+Hay cuatro columnas nuevas disponibles para los usuarios beta que proporcionan una mayor visibilidad de la administración de datos: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** y **[!UICONTROL Profile Retention]**. Estas métricas muestran cuánto almacenamiento consumen los datos y su duración de retención, tanto en el lago de datos como en los servicios de perfil. Estos detalles le ayudan a optimizar las políticas de retención, realizar un seguimiento del uso en relación con las autorizaciones y garantizar el cumplimiento de las normas organizativas y reglamentarias. Esta mayor visibilidad le permite tomar decisiones informadas, administrar los costes, optimizar la gobernanza y comprender claramente su panorama de datos.
+
+![Pestaña Examinar del área de trabajo Conjuntos de datos con las cuatro nuevas columnas de almacenamiento y retención resaltadas.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+La siguiente tabla proporciona información general sobre las nuevas métricas de retención y almacenamiento disponibles en la versión beta. Detalla el propósito de cada columna y cómo ayuda a administrar la retención y el almacenamiento de datos dentro de la interfaz de usuario de Platform.
+
+| Título de columna | Descripción |
+|---|---|
+| [!UICONTROL Retención de lago de datos] | Muestra la duración de retención actual para cada conjunto de datos. Este valor se puede modificar en la configuración de retención de cada conjunto de datos. La política de retención del lago de datos establece reglas sobre cuánto tiempo se almacenan los datos y cuándo se deben eliminar en diferentes servicios. |
+| [!UICONTROL Almacenamiento de lago de datos] | Muestra el uso de almacenamiento actual para cada conjunto de datos del lago de datos. Esta métrica ayuda a rastrear cuánto espacio ocupa cada conjunto de datos, lo que ayuda a administrar los límites de almacenamiento y a optimizar el uso. |
+| [!UICONTROL Almacenamiento de perfil] | Muestra el uso de almacenamiento actual para cada conjunto de datos dentro de los servicios de perfil. Utilice esta información para monitorizar el consumo de almacenamiento y asegurarse de que se ajusta a sus objetivos de administración de datos. |
+| [!UICONTROL Retención de perfil] | Indica la duración de retención de cada conjunto de datos de perfil. Este valor se puede ajustar en la configuración de retención del conjunto de datos, lo que le ayuda a controlar cuánto tiempo se almacenan los datos de perfil antes de la eliminación. |
+
+{style="table-layout:auto"}
 
 ### Mover a carpetas {#move-to-folders}
 
@@ -344,3 +392,4 @@ Esta guía del usuario proporciona instrucciones para realizar acciones comunes 
 * [Creación de un conjunto de datos mediante API](create.md)
 * [Consulta de datos de conjuntos de datos mediante la API de acceso a datos](../../data-access/home.md)
 * [Configuración de un conjunto de datos para el perfil del cliente en tiempo real y el servicio de identidad mediante API](../../profile/tutorials/dataset-configuration.md)
+
